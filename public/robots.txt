@@ -1,0 +1,10 @@
+# Hi and welcome to this robots.txt!
+# You are not a robot, are you?
+
+User-agent: *
+Disallow: /admin
+Disallow: /flarum
+Disallow: /vendor
+Disallow: /?sort=*
+
+Sitemap: https://gwillem.freeflarum.com/sitemap.xml

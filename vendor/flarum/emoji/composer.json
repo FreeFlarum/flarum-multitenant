@@ -1,0 +1,32 @@
+{
+    "name": "flarum/emoji",
+    "description": "Convert text and unicode emoji into Twemoji.",
+    "type": "flarum-extension",
+    "keywords": ["formatting"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toby Zerner",
+            "email": "toby.zerner@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flarum/core/issues",
+        "source": "https://github.com/flarum/emoji"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Emoji",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#FECC4D"
+            }
+        }
+    }
+}
