@@ -1,0 +1,19 @@
+# https://github.com/FriendsOfFlarum/split/blob/master/locale/en.yml
+# Tue, 16 Jul 2019 10:18:36 +0800
+
+fof-split:
+    admin:
+      permissions:
+        split_discussion_label: 拆分主题
+
+    forum:
+        post:
+            was_split_to: "{count} 个回复被拆分至 {target}"
+            was_split_from: "{count} 个回复拆分自 {target}"
+        split:
+            from: 开始拆分主题
+            to: 结束拆分主题
+        modal:
+            title: 拆分主题
+            new_discussion_label: 设置新主题标题
+            submit_button: 确认

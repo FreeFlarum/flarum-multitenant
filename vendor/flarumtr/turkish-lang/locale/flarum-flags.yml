@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: Mesajları İşaretler
+      view_flags_label: İşaretli mesajları görüntüler
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: Topluluk Kuralları URL
+      title: İşaretleme Ayarları
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: Bu mesajı işaretlediğiniz için teşekkür ederiz. Moderatörlerimiz inceleyecekler.
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: Uygunsuz
+      reason_inappropriate_text: "Bu mesaj saldırgan, rahatsız edici veya <a>topluluk yönergelerimizi</a> ihlal ediyor."
+      reason_off_topic_label: "Konu-dışı"
+      reason_off_topic_text: Bu mesaj mevcut tartışma ile alakalı değil ve başka bir yere taşınmalıdır.
+      reason_other_label: Diğer
+      reason_spam_label: Spam
+      reason_spam_text: Bu mesaj bir reklam içeriyor.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: İşaretli mesaj yok
+      item_text: "{username} <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: İşareti Reddet
+      flagged_by_text: "{username} tarafından işaretlendi"
+      flagged_by_with_reason_text: "{username} tarafından {reason} olarak işaretlendi"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: İşaretle
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: Mesajı İşaretle
+    flagged_posts: İşaretli Mesajlar

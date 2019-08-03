@@ -1,0 +1,106 @@
+validation:
+  accepted: ":attribute kabul edilmek zorunda."
+  active_url: ":attribute geçerli bir URL adresi değil."
+  after: ":attribute şu tarihten sonrası olmalı; :date."
+  after_or_equal: ":attribute şu tarihten sonra yada şu tarihe eşit olmalı; :date."
+  alpha: ":attribute sadece harf içerebilir."
+  alpha_dash: ":attribute sadece harf, sayı ve çizgiler içerebilir."
+  alpha_num: ":attribute sadece harf ve sayı içerebilir"
+  array: ":attribute bir dizi olmalıdır."
+  before: ":attribute şu tarihten önce olmalıdır :date."
+  before_or_equal: ":attribute şu tarihten önce yada şu tarihe eşit omlaı; :date."
+  between:
+    numeric: ":attribute şu değerlerin arsaında olmalıdır; :min ve :max."
+    file: ":attribute şu değerlerin arasında olmalıdır :min ve :max kilobytes."
+    string: ":attribute şu değerlerin arasında olmalıdır :min ve :max karakter."
+    array: "The :attribute şu değerlerin arasında olmalıdır :min ve :max."
+  boolean: ":attribute alanı sadece doğru yada yanlış olabilir."
+  confirmed: ":attribute doğrulanamıyor."
+  date: ":attribute geçerli bir tarih değil."
+  date_equals: ":attribute, :date eşit bir tarih olmalıdır."
+  date_format: ":attribute şu format ile uyuşmuyor; :other."
+  different: ":attribute ve :other aynı olamaz."
+  digits: ":attribute sadece :digits olabilir."
+  digits_between: ":attribute şu değerler arasında olmaldır; :min ve :max"
+  dimensions: ":attribute uygun olmayan en ve boy ölçütlerine sahip."
+  distinct: ":attribute alanı aynı değerlere sahip."
+  email: ":attribute geçerli bir e-posta adresi olmalıdır."
+  ends_with: ":attribute aşağıdakilerden biriyle bitmelidir: :values"
+  exists: "Seçilmiş :attribute geçersiz."
+  file: ":attribute dosya olmalıdır."
+  filled: ":attribute alanını doldurmak zorunludur."
+  gt:
+    numeric: ":attribute :value büyük olmalı."
+    file: ":attribute, :value kilobayttan daha büyük olmalıdır."
+    string: ":attribute, :value karakterden büyük olmalıdır."
+    array: ":attribute, :value daha fazla olmalıdır."
+  gte:
+    numeric: ":attribute, :value büyük veya eşit olmalıdır."
+    file: ":attribute, :value kilobayttan büyük veya eşit olmalıdır."
+    string: ":attribute, :value karakterlerinden büyük veya eşit olmalıdır."
+    array: ":attribute, :value öğelerini veya daha fazlasını içermelidir."
+  image: ":attribute resim olmalıdır."
+  in: "seçilmiş :attribute geçersizdir."
+  in_array: ":attribute şunun içerisinde mevcut değil :other."
+  integer: ":attribute tam sayı olmalıdır."
+  ip: ":attribute geçerli bir IP adresi değildir."
+  ipv4: ":attribute geçerli bir IPv4 objesi olmalıdır."
+  ipv6: ":attribute geçerli bir IPv6 objesi olmalıdır."
+  json: ":attribute geçerli bir JSON objesi olmalıdır."
+  lt:
+    numeric: ":attribute, :value daha az olmalıdır."
+    file: ":attribute, :value kilobayttan daha az olmalıdır."
+    string: ":attribute, :value karakterden daha az olmalıdır."
+    array: ":attribute, :value öğelerinden daha az olmalıdır."
+  lte:
+    numeric: ":attribute, :value küçük veya eşit olmalıdır"
+    file: ":attribute, :value kilobayttan az veya eşit olmalıdır."
+    string: ":attribute, :value karakterlerinden küçük veya eşit olmalıdır."
+    array: ":attribute, :value daha fazla olmamalıdır."
+  max:
+    numeric: ":attribute şu değerden büyük olmamalı; :max."
+    file: ":attribute şu değerden büyük olmamalı; :max kilobyte."
+    string: ":attribute şu değerden büyük olmamalı :max karakter."
+    array: ":attribute şu değerden büyük olmamalı :max eleman."
+  mimes: ":attribute şu dosya tipinde olmalıdır; :values."
+  mimetypes: ":attribute şu dosya tiplerinden biri olmalıdır; :values."
+  min:
+    numeric: ":attribute şu değerden küçük olmamalıdır; :min."
+    file: ":attribute şu değerden küçük olmamalıdır; :min kilobyte."
+    string: ":attribute şu değerden küçük olmamalıdır; :min karakter."
+    array: ":attribute şu değerden küçük olmamalıdır; :min eleman."
+  not_in: "Seçilmiş :attribute geçersiz."
+  numeric: ":attribute sayı tipinde olmalıdır."
+  present: ":attribute alanı hazır olmalıdır."
+  regex: ":attribute formatı uygun değil."
+  required: ":attribute alanı zorunludur."
+  required_if: ":attribute alanı :other değeri :value olduğunda zorunludur."
+  required_unless: ":attribute alanı :other şu değerler arasında olduğu sürece zorunludur; :values."
+  required_with: ":attribute alanı :values olduğunda zorunludur."
+  required_with_all: ":attribute alanı :values olduğunda zorunludur."
+  required_without: ":attribute alanı :values olmadığında zorunludur."
+  required_without_all: ":attribute alanı şunlardan hiç biri olmadığında :values zorunludur."
+  same: ":attribute ve :other eşleşmelidir."
+  size:
+    numeric: ":attribute :size olmalıdır."
+    file: ":attribute :size kilobyte olmalıdır."
+    string: ":attribute :size karakter olmalıdır."
+    array: ":attribute :size eleman içermelidir."
+  starts_with: ":attribute aşağıdakilerden biriyle başlamalıdır: :values"
+  string: ":attribute yazı dizisi olmalı."
+  timezone: ":attribute uygun saat diliminde olmalı."
+  unique: ":attribute sistemde zaten mevcut."
+  uploaded: ":attribute yüklenirken hata meydana geldi."
+  url: ":attribute formatı uygun değil."
+  uuid: ":attribute geçerli bir UUID olmalıdır."
+
+  attributes:
+    username: Kullanıcı Adı
+    password: Şifre
+    email: E-Posta
+    title: Başlık
+    content: İçerik
+    name_singular: Tekil İsim
+    name_plural: Çoğul İsim
+    tag_count_primary: birincil etiket sayısı
+    tag_count_secondary: ikincil etiket sayısı

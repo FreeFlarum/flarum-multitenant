@@ -1,0 +1,38 @@
+{
+    "name": "darkfoxdeveloper/flarum-ext-spanish",
+    "type": "flarum-extension",
+    "description": "Spanish language pack.",
+    "keywords": ["locale"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DaRkFoxDeveloper",
+            "email": "darkfoxdeveloper@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/DaRkFoxDeveloper/flarum-ext-spanish/issues",
+        "source": "https://github.com/DaRkFoxDeveloper/flarum-ext-spanish"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.9"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Spanish",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#AD1519",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "es",
+            "title": "Spanish"
+        }
+    }
+}

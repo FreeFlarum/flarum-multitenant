@@ -21,15 +21,18 @@
         "docs": "https://flarum.org/docs/"
     },
     "require": {
-        "flarum/core": "^0.1.0",
+        "csineneo/lang-simplified-chinese": "v0.1.0-beta.9.3",
+        "csineneo/lang-traditional-chinese": "v0.1.0-beta.9.3",
+        "darkfoxdeveloper/flarum-ext-spanish": "^1.0",
         "flarum/approval": "^0.1.0",
         "flarum/auth-facebook": "^0.1.0",
         "flarum/auth-github": "^0.1.0",
         "flarum/auth-twitter": "^0.1.0",
         "flarum/bbcode": "^0.1.0",
+        "flarum/core": "^0.1.0",
         "flarum/emoji": "^0.1.0",
-        "flarum/lang-english": "^0.1.0",
         "flarum/flags": "^0.1.0",
+        "flarum/lang-english": "^0.1.0",
         "flarum/likes": "^0.1.0",
         "flarum/lock": "^0.1.0",
         "flarum/markdown": "^0.1.0",
@@ -39,7 +42,12 @@
         "flarum/sticky": "^0.1.0",
         "flarum/subscriptions": "^0.1.0",
         "flarum/suspend": "^0.1.0",
-        "flarum/tags": "^0.1.0"
+        "flarum/tags": "^0.1.0",
+        "flarumtr/turkish-lang": "^0.1.6",
+        "fof/user-bio": "^0.1.2",
+        "milescellar/lang-french": "^1.3",
+        "nearata/lang-italian": "^0.1.0@beta",
+        "rob006/flarum-lang-polish": "^0.1.1"
     },
     "config": {
         "preferred-install": "dist",

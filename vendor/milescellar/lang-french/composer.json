@@ -1,0 +1,41 @@
+{
+    "name": "milescellar/lang-french",
+    "description": "French language pack for Flarum and its bundled extensions.",
+    "type": "flarum-extension",
+    "keywords": ["extension", "flarum", "french", "locale", "translation"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miles Cellar",
+            "email": "milescellar@protonmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/milescellar/lang-french/issues",
+        "source": "https://github.com/milescellar/lang-french"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.9"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.3.x-dev"
+        },
+        "flarum-extension": {
+            "title": "French",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#fff",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "fr",
+            "title": "Français"
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/615-french-language-pack"
+        }
+    }
+}

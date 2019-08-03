@@ -1,0 +1,70 @@
+# https://github.com/FriendsOfFlarum/gamification/blob/master/resources/locale/en.yml
+# Tue, 16 Jul 2019 10:18:36 +0800
+
+core:
+  forum:
+    index_sort:
+      hot_button: 最多被顶
+      
+fof-gamification:
+  forum:
+    vote_title: 投票者
+    nav:
+      name: 排名
+    ranking:
+      rank: 排名
+      name: 用户
+      amount: 👍
+    notification:
+      upvote: "{username} 顶了您的帖文"
+      downvote: "{username} 踩了您的帖文"
+    user:
+      points: "👍: {points}"
+      rank: "{rank}"
+    modal:
+      title: 打分
+      upvotes_label: 顶
+      downvotes_label: 踩
+    mod_item: 投票人
+  admin:
+    permissions:
+      vote_label: 顶/踩帖文
+      see_votes_label: 查看帖文顶/踩
+      see_ranking_page: 查看等级
+    nav:
+      desc: 增强 Flarum 论坛游戏性
+    page:
+      rankings:
+        blocked:
+          placeholder: CDK2020, Ralkage, AngelAvila
+          title: 忽略的用户
+          help: 这些用户不会在排名页面上显示。 用户名应以逗号分隔，后跟空格。
+        title: 排名页面
+        enable: 启用自定义图片
+        custom_image_1: 冠军图片
+        custom_image_2: 亚军图片
+        custom_image_3: 季军图片
+      votes:
+        points_title: 占位符
+        points_placeholder: "👍: "
+        color_holder: '#ffffff'
+        auto_upvote: 当帖文发布时自动顶帖
+        title: 顶
+        vote_color: 顶贴颜色
+        icon_name: 顶/踩小图标
+        icon_help: "输入任何 Font Awesome 图标，后缀为 -up 和 -down。 示例：箭头，拇指，人字纹"
+      save_settings: 保存设置
+      convert:
+        button: 转换“喜欢”为“顶”
+        help: 将 Likes 插件产生的“喜欢”转换成“顶”，并计算所有当前讨论的热度
+        converting: 您的 Likes 数据正在转换，请等待几分钟再刷新页面查看转换结果。（转换可能需要一段时间，具体取决于您的论坛）
+        converted: "成功转换 {number} 个喜欢"
+      ranks:
+        title: 等级
+        ranks: 自定义评分
+        number_title: 要显示多少个徽章？
+        help:
+          color: '#ffffff'
+          help: "输入所需数量的顶，级别名称，以及等级颜色"
+          points: 👍
+          name: 名称

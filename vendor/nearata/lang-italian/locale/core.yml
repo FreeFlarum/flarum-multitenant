@@ -1,0 +1,596 @@
+core:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the placeholder Add Extension modal dialog.
+    add_extension:
+      developer_text: "Se sei uno sviluppatore, puoi leggere la <a>documentazione</a> e provare a scrivere una tua estensione."
+      install_text: "Nel frattempo, puoi cercare estensioni sul sito della <a>Community di Flarum</a> e installarli manualmente usando Composer."
+      temporary_text: "Un giorno, in un futuro non troppo lontano, questa finestra di dialogo ti permetterà di aggiungere un'estensione al tuo forum con facilità. Stiamo costruendo un ecosistema mentre parliamo!"
+      title: Aggiungi estensione
+
+    # These translations are used in the Appearance page.
+    appearance:
+      colored_header_label: Header colorato
+      colors_heading: Colori
+      colors_text: "Scegli due colori per personalizzare il tema. Il primo verrà utilizzato come colore in evidenzia, mentre il secondo verrà usato come colore per gli elementi di sfondo."
+      custom_footer_heading: Footer personalizzato
+      custom_footer_text: => core.ref.custom_footer_text
+      custom_header_heading: Header personalizzato
+      custom_header_text: => core.ref.custom_header_text
+      custom_styles_heading: Stili personalizzati
+      custom_styles_text: Personalizza l'aspetto del tuo forum aggiungendo codice LESS/CSS da applicare sulla parte superiore degli <a>stili predefiniti</a> di Flarum.
+      dark_mode_label: Modalità scura
+      edit_css_button: Modifica CSS
+      edit_footer_button: => core.ref.custom_footer_title
+      edit_header_button: => core.ref.custom_header_title
+      enter_hex_message: Inserisci un codice colore esadecimale
+      favicon_heading: Favicon
+      favicon_text: Carica un'immagine da visualizzare come favicon
+      logo_heading: Logo
+      logo_text: Carica un'immagine da visualizzare al posto del nome del forum
+      submit_button: => core.ref.save_changes
+
+    # These translations are used in the Basics page.
+    basics:
+      all_discussions_label: => core.ref.all_discussions
+      default_language_heading: Lingua predefinita
+      forum_description_heading: Descrizione del Forum
+      forum_description_text: Inserisci una breve descrizione della tua community. Verrà usato nel meta tag description e sarà mostrato ai motori di ricerca
+      forum_title_heading: Nome del Forum
+      home_page_heading: Homepage
+      home_page_text: "Scegli la pagina che deve essere mostrata agli utenti prima di mostrare il forum."
+      saved_message: Le modifiche sono state salvate
+      show_language_selector_label: Mostra il selettore lingua
+      submit_button: => core.ref.save_changes
+      welcome_banner_heading: Banner di Benvenuto
+      welcome_banner_text: Configura il testo da visualizzare sul banner che apparirà su tutte le pagine. Usalo per accogliere gli ospiti sul tuo forum.
+
+    # These translations are used in the Dashboard page.
+    dashboard:
+      clear_cache_button: Pulisci cache
+      tools_button: Strumenti
+
+    # These translations are used in the Edit Custom CSS modal dialog.
+    edit_css:
+      customize_text: "Personalizza l'aspetto del tuo forum aggiungendo codice LESS/CSS da applicare sulla parte superiore degli <a>stili predefiniti</a> di Flarum."
+      submit_button: => core.ref.save_changes
+      title: Modifica CSS
+
+    # These translations are used in the Edit Custom Footer modal dialog.
+    edit_footer:
+      customize_text: => core.ref.custom_footer_text
+      submit_button: => core.ref.save_changes
+      title: => core.ref.custom_footer_title
+
+    # These translations are used in the Edit Group modal dialog.
+    edit_group:
+      color_label: => core.ref.color
+      delete_button: Cancella gruppo
+      delete_confirmation: "Sei sicuro di voler cancellare questo gruppo? Gli utenti che sono in questo gruppo NON verranno cancellati."
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      name_label: Nome
+      plural_placeholder: Plurale (es. Utenti)
+      singular_placeholder: Singolare (es. Utente)
+      submit_button: => core.ref.save_changes
+      title: Crea gruppo
+
+    # These translations are used in the Edit Custom Header modal dialog.
+    edit_header:
+      customize_text: "Aggiungi codice HTML da visualizzare in cima della pagina, sopra l'header di Flarum."
+      submit_button: => core.ref.save_changes
+      title: Modifica Header
+
+    # These translations are used in the email page of the admin interface.
+    email:
+      addresses_heading: Indirizzi
+      driver_heading: Scegli un Driver
+      driver_label: Driver
+      from_label: Mittente
+      heading: => core.ref.email
+      mail_encryption_label: Crittografia
+      mail_host_label: Host
+      mail_mailgun_domain_label: Dominio
+      mail_mailgun_secret_label: Chiave segreta
+      mail_mandrill_secret_label: Chiave segreta
+      mail_password_label: => core.ref.password
+      mail_port_label: Porta
+      mail_ses_key_label: Chiave
+      mail_ses_region_label: Regione
+      mail_ses_secret_label: Segreto
+      mail_username_label: => core.ref.username
+      mailgun_heading: Impostazioni Mailgun
+      mandrill_heading: Impostazioni Mandrill
+      ses_heading: Impostazioni SES
+      smtp_heading: Impostazioni SMTP
+      submit_button: => core.ref.save_changes
+      text: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare email
+
+    # These translations are used in the Extensions page.
+    extensions:
+      add_button: Aggiungi Estensione
+      settings_button: => core.ref.settings
+      uninstall_button: Disinstalla
+
+    # These translations are used in the session dropdown menu.
+    header:
+      log_out_button: => core.ref.log_out
+
+    # These translations are used in the modal dialog displayed when loading extensions.
+    loading:
+      title: Caricamento...
+
+    # These translations are used in the navigation bar.
+    nav:
+      appearance_button: Aspetto
+      appearance_text: "Personalizza i colori, logo e altre variabili del forum."
+      basics_button: Impostazioni di base
+      basics_text: "Imposta il titolo del forum, la lingua e altre impostazioni di base."
+      dashboard_button: Dashboard
+      dashboard_text: Il tuo forum a colpo d'occhio
+      email_button: => core.ref.email
+      email_text: "Configura le impostazioni e-mail del tuo forum"
+      extensions_button: Estensioni
+      extensions_text: Aggiungi funzionalità extra al tuo forum e rendilo tuo
+      permissions_button: Permessi
+      permissions_text: Configura chi può vedere e fare cosa
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_renaming_label: Consenti ridenominazione
+      allow_post_editing_label: Consenti la modifica del messaggio
+      create_heading: Creazione
+      delete_discussions_forever_label: Eliminare le discussioni per sempre
+      delete_discussions_label: Eliminare le discussioni
+      delete_posts_forever_label: Eliminare messaggi per sempre
+      delete_posts_label: Cancellare messaggi
+      edit_posts_label: Modificare messaggi
+      global_heading: Globale
+      moderate_heading: Moderazione
+      new_group_button: Nuovo Gruppo
+      participate_heading: Partecipazione
+      read_heading: Lettura
+      rename_discussions_label: Rinominare le discussioni
+      reply_to_discussions_label: Rispondere alle discussioni
+      sign_up_label: Registrazione
+      start_discussions_label: Iniziare una discussione
+      view_discussions_label: Leggere le discussioni
+      view_last_seen_at_label: Vedere l'ultimo accesso di un utente
+      view_post_ips_label: Visualizzare indirizzi IP del messaggio
+      view_user_list_label: Visualizzare la lista utenti
+
+    # These translations are used in the dropdown menus on the Permissions page.
+    permissions_controls:
+      allow_indefinitely_button: Indefinitamente
+      allow_some_minutes_button: "Per {count} minuto|Per {count} minuti"
+      allow_ten_minutes_button: Per 10 minuti
+      allow_until_reply_button: Fino alla prossima risposta
+      everyone_button: Tutti
+      members_button: => core.group.members
+      signup_closed_button: Chiuso
+      signup_open_button: Aperta
+
+    # These translations are used in the Settings modal dialog.
+    settings:
+      submit_button: => core.ref.save_changes
+
+    # These translations are used in image upload buttons.
+    upload_image:
+      remove_button: => core.ref.remove
+      upload_button: Scegli un'immagine...
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used in the Change Email modal dialog.
+    change_email:
+      confirmation_message: => core.ref.confirmation_email_sent
+      confirm_password_placeholder: => core.ref.confirm_password
+      dismiss_button: => core.ref.okay
+      incorrect_password_message: La password è errata.
+      submit_button: => core.ref.save_changes
+      title: => core.ref.change_email
+
+    # These translations are used in the Change Password modal dialog.
+    change_password:
+      send_button: Cambia Password
+      text: Clicca sul pulsante qui sotto per ricevere una e-mail e cambiare password
+      title: => core.ref.change_password
+
+    # These translations are used by the composer controls.
+    composer:
+      close_tooltip: Chiuso
+      exit_full_screen_tooltip: Esci da Schermo intero
+      full_screen_tooltip: Schermo intero
+      minimize_tooltip: Minimizza
+      preview_tooltip: Anteprima
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      body_placeholder: Messaggio...
+      discard_confirmation: "Non hai creato la discussione. Desideri disfartene?"
+      submit_button: Crea discussione
+      title: => core.ref.start_a_discussion
+      title_placeholder: Titolo della Discussione
+
+    # These translations are used by the composer when editing a post.
+    composer_edit:
+      discard_confirmation: "Non hai salvato le tue modifiche. Desideri disfartene?"
+      post_link: "Messaggio #{number} in {discussion}"
+      submit_button: => core.ref.save_changes
+
+    # These translations are used by the composer when replying to a discussion.
+    composer_reply:
+      body_placeholder: => core.ref.write_a_reply
+      discard_confirmation: "Sei sicuro di voler cancellare il messaggio?"
+      posted_message: La tua risposta è stata pubblicata.
+      submit_button: Rispondi
+      view_button: Mostra
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      cannot_reply_button: Non puoi rispondere
+      cannot_reply_text: Non hai il permesso di rispondere a questa discussione.
+      delete_button: => core.ref.delete
+      delete_confirmation: "Sei sicuro di voler cancellare questa discussione? Questa azione è irreversibile."
+      delete_forever_button: => core.ref.delete_forever
+      log_in_to_reply_button: Rispondi
+      rename_button: => core.ref.rename
+      reply_button: => core.ref.reply
+      restore_button: => core.ref.restore
+
+    # These translations are used in the discussion list.
+    discussion_list:
+      empty_text: Non ci sono discussioni.
+      load_more_button: => core.ref.load_more
+      mark_as_read_tooltip: Segna come letto
+      replied_text: "{username} ha risposto {ago}"
+      started_text: "Iniziata da {username} {ago}"
+
+    # These translations are used in the Edit User modal dialog (admin function).
+    edit_user:
+      activate_button: Attiva utente
+      email_heading: => core.ref.email
+      email_label: => core.ref.email
+      groups_heading: Gruppi
+      password_heading: => core.ref.password
+      password_label: => core.ref.password
+      set_password_label: Imposta nuova password
+      submit_button: => core.ref.save_changes
+      title: Modifica utente
+      username_heading: => core.ref.username
+      username_label: => core.ref.username
+
+    # These translations are used in the Forgot Password modal dialog.
+    forgot_password:
+      dismiss_button: => core.ref.okay
+      email_placeholder: => core.ref.email
+      email_sent_message: Ti abbiamo inviato una e-mail contenente un link per reimpostare la password. Controlla la cartella SPAM se non la ricevi entro 1-2 minuti.
+      not_found_message: E-mail o password errata.
+      submit_button: Recupera Password
+      text: Inserisci il tuo indirizzo e-mail per reimpostare la password
+      title: Password dimenticata
+
+    # These translations are used in the header and session dropdown menu.
+    header:
+      admin_button: Amministrazione
+      back_to_index_tooltip: "Torna all'elenco delle discussioni"
+      log_in_link: => core.ref.log_in
+      log_out_button: => core.ref.log_out
+      profile_button: Profilo
+      search_placeholder: Cerca...
+      settings_button: => core.ref.settings
+      sign_up_link: => core.ref.sign_up
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      all_discussions_link: => core.ref.all_discussions
+      cannot_start_discussion_button: Impossibile iniziare una discussione
+      mark_all_as_read_confirmation: "Sei sicuro di voler contrassegnare tutte le discussioni come lette?"
+      mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      refresh_tooltip: Ricarica
+      start_discussion_button: => core.ref.start_a_discussion
+
+    # These translations are used by the sorting control above the discussion list.
+    index_sort:
+      latest_button: Recenti
+      newest_button: Nuove
+      oldest_button: Vecchie
+      relevance_button: Rilevanza
+      top_button: Top
+
+    # These translations are used in the Log In modal dialog.
+    log_in:
+      forgot_password_link: "Password dimenticata?"
+      invalid_login_message: I dati inseriti non sono corretti.
+      password_placeholder: => core.ref.password
+      remember_me_label: Ricordami
+      sign_up_text: "Non hai un account? <a>Registrati</a>"
+      submit_button: => core.ref.log_in
+      title: => core.ref.log_in
+      username_or_email_placeholder: Nome utente o e-mail
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      discussion_renamed_text: "{username} ha cambiato il titolo"
+      empty_text: Non ci sono notifiche
+      mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      title: Notifiche
+      tooltip: Notifiche
+
+    # These translations are used by tooltips displayed for individual posts.
+    post:
+      edited_text: Modificato
+      edited_tooltip: "Modificato da {username} {ago}"
+      number_tooltip: "Messaggio #{number}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      delete_button: => core.ref.delete
+      delete_forever_button: => core.ref.delete_forever
+      edit_button: => core.ref.edit
+      restore_button: => core.ref.restore
+
+    # These translations are used in the scrubber to the right of the post stream.
+    post_scrubber:
+      now_link: Ora
+      original_post_link: Messaggio originale
+      unread_text: "{count} non letti"
+      viewing_text: "{index} di {count} messaggio|{index} di {count} messaggi"
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      discussion_renamed_old_tooltip: 'Il vecchio titolo era: "{old}"'
+      discussion_renamed_text: "{username} ha cambiato il titolo in {new}"
+      load_more_button: => core.ref.load_more
+      reply_placeholder: => core.ref.write_a_reply
+      time_lapsed_text: "{period} dopo"
+
+    # These translations are used by the rename discussion modal.
+    rename_discussion:
+      title: Rinomina discussione
+      submit_button: => core.ref.rename
+
+    # These translations are used by the search results dropdown list.
+    search:
+      all_discussions_button: 'Cerca tutte le discussioni per "{query}"'
+      discussions_heading: => core.ref.discussions
+      users_heading: => core.ref.users
+
+    # These translations are used in the Settings page.
+    settings:
+      account_heading: Account
+      change_email_button: => core.ref.change_email
+      change_password_button: => core.ref.change_password
+      notifications_heading: => core.ref.notifications
+      notify_by_email_heading: => core.ref.email
+      notify_by_web_heading: Web
+      notify_discussion_renamed_label: Qualcuno ha modificato una discussione che ho iniziato
+      privacy_disclose_online_label: Permetti agli altri utenti di vedere quando sono online
+      privacy_heading: Privacy
+      title: => core.ref.settings
+
+    # These translations are used in the Sign Up modal dialog.
+    sign_up:
+      email_placeholder: => core.ref.email
+      dismiss_button: => core.ref.okay
+      log_in_text: "Hai già un account? <a>Accedi</a>"
+      password_placeholder: => core.ref.password
+      submit_button: => core.ref.sign_up
+      title: => core.ref.sign_up
+      username_placeholder: => core.ref.username
+      welcome_text: "Benvenuto, {username}!"
+
+    # These translations are used in the user profile page and profile popup.
+    user:
+      avatar_remove_button: Rimuovi
+      avatar_upload_button: Carica
+      avatar_upload_tooltip: Carica un avatar
+      discussions_link: => core.ref.discussions
+      in_discussion_text: "In {discussion}"
+      joined_date_text: "Si è iscritto {ago}"
+      online_text: Online
+      posts_empty_text: Non ci sono messaggi.
+      posts_load_more_button: => core.ref.load_more
+      posts_link: => core.ref.posts
+      settings_link: => core.ref.settings
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      button: Controlli
+      delete_button: => core.ref.delete
+      delete_confirmation: "Sei sicuro di voler eliminare questo utente? Tutti i messaggi di questo utente verrano cancellati."
+      edit_button: => core.ref.edit
+
+    # These translations are used in the alert that is shown when a new user has not confirmed their email address.
+    user_email_confirmation:
+      alert_message: => core.ref.confirmation_email_sent
+      resend_button: Reinvia e-mail di conferma
+      sent_message: Inviata
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      hidden_tooltip: Nascosto
+
+    # These translations are displayed as error messages.
+    error:
+      generic_message: "Oops! Qualcosa è andato storto. Ricarica la pagina e riprova."
+      not_found_message: La risorsa richiesta non è stata trovata.
+      permission_denied_message: Non hai il permesso di farlo.
+      rate_limit_exceeded_message: Stai scrivendo un po' troppo in fretta. Riprova tra qualche secondo.
+
+    # These translations are used as suffixes when abbreviating numbers.
+    number_suffix:
+      kilo_text: K
+      mega_text: M
+
+    # These translations are used to punctuate a series of items.
+    series:
+      glue_text: ", "
+      three_text: "{first}, {second} e {third}"
+      two_text: "{first} e {second}"
+
+    # These translations are used to modify usernames.
+    username:
+      deleted_text: "[cancellato]"
+
+  # Translations in this namespace are used in views other than Flarum's normal JS client.
+  views:
+
+    # Translations in this namespace are displayed by the basic HTML content loader.
+    content:
+      javascript_disabled_message: Questo sito è ottimizzato per un browser moderno con JavaScript abilitato.
+      load_error_message: Qualcosa è andato storto durante il tentativo di caricare la versione completa di questo sito.
+      loading_text: Caricamento...
+
+    # Translations in this namespace are displayed in the basic HTML discussion view.
+    discussion:
+      next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed when Flarum encounters an error.
+    error:
+      403_message: Non sei autorizzato ad accedere a questa pagina.
+      404_message: La pagina che hai richiesto non esiste.
+      404_return_link: "Ritorna su {forum}"
+      419_message: Sei stato inattivo per troppo tempo.
+      419_return_link: Torna indietro e riprova.
+      500_message: Si è verificato un errore durante il caricamento di questa pagina.
+      503_message: "{forum} è in manutenzione. Ritonerà operativo il prima possibile!"
+
+    # Translations in this namespace are displayed by the basic HTML discussion index.
+    index:
+      all_discussions_heading: => core.ref.all_discussions
+      next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed by the Log Out confirmation interface.
+    log_out:
+      log_out_button: => core.ref.log_out
+      log_out_confirmation: "Sei sicuro di voler eseguire il log out su {forum}?"
+      title: => core.ref.log_out
+
+    # Translations in this namespace are displayed by the Reset Password interface.
+    reset_password:
+      confirm_password_label: Conferma la nuova password
+      new_password_label: Nuova Password
+      submit_button: => core.ref.save_changes
+      title: => core.ref.reset_your_password
+
+  # Translations in this namespace are used in messages output by the API.
+  api:
+    invalid_username_message: "Il nome utente può contenere solo lettere, numeri e trattini"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when users register new accounts.
+    activate_account:
+      subject: Attiva il tuo account
+      body: |
+        Ciao {username}!
+
+        Qualcuno si è registrato su {forum} con questo indirizzo e-mail.
+
+        Se sei stato tu, clicca sul seguente link e il tuo account verrà attivato:
+        {url}
+
+        Se non ti sei iscritto, per favore ignora questa e-mail.
+
+    # These translations are used in emails sent when users change their email address.
+    confirm_email:
+      subject: Conferma il nuovo indirizzo e-mail
+      body: |
+        Ciao {username}!
+
+        Qualcuno ha cambiato la sua e-mail in questa su {forum}.
+
+        Se sei stato tu, clicca sul seguente link e il tuo nuovo indirizzo verrà confermato:
+        {url}
+
+        Se non hai richiesto tu di cambiare l'e-mail, per favore ignora questa e-mail.
+
+    # These translations are used in emails sent when users ask to reset their passwords.
+    reset_password:
+      subject: => core.ref.reset_your_password
+      body: |
+        Ciao {username}!
+
+        Qualcuno ha richiesto una nuova password su {forum}.
+
+        Se sei stato tu, clicca sul seguente link per reimpostare la password:
+        {url}
+
+        Se non desideri cambiare la password, semplicemente ignora questa e-mail e non accadrà nulla.
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    all_discussions: Tutte le discussioni
+    change_email: Cambia e-mail
+    change_password: Cambia password
+    color: Colore                                 # Referenced by flarum-tags.yml
+    confirm_password: Conferma password
+    confirmation_email_sent: "Abbiamo inviato una e-mail di conferma a {email}. Ricordati di controllare la cartella spam."
+    custom_footer_text: Aggiungi codice HTML nella parte inferiore della pagina
+    custom_footer_title: Modifica footer
+    custom_header_text: "Aggiungi codice HTML da visualizzare in cima della pagina, sopra l'header di Flarum."
+    custom_header_title: Modifica header
+    delete: Cancella
+    delete_forever: Cancella per sempre
+    discussions: Discussioni                     # Referenced by flarum-statistics.yml
+    edit: Modifica
+    email: E-mail
+    icon: Icona
+    icon_text: "Inserisci il nome di una qualsiasi icona di <a>FontAwesome</a>, <em>includendo</em> il prefisso <code>fas fa-</code>."
+    load_more: Carica di più
+    log_in: Accedi
+    log_out: Esci
+    mark_all_as_read: Segna tutto come letto
+    next_page: Pagina successiva
+    notifications: Notificami se...
+    okay: OK                                     # Referenced by flarum-tags.yml
+    password: Password
+    posts: Messaggi                                 # Referenced by flarum-statistics.yml
+    previous_page: Pagina precedente
+    remove: Rimuovi
+    rename: Rinomina
+    reply: Rispondi                                 # Referenced by flarum-mentions.yml
+    reset_your_password: Ripristina la password
+    restore: Ripristina
+    save_changes: Salva cambiamenti                   # Referenced by flarum-suspend.yml, flarum-tags.yml
+    settings: Impostazioni
+    sign_up: Registrati
+    some_others: "{count} altro|{count} altri"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    start_a_discussion: Inizia una discussione
+    username: Nome utente
+    users: Utenti                                 # Referenced by flarum-statistics.yml
+    write_a_reply: Rispondi alla discussione...
+    you: Tu                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+
+  ##
+  # GROUP NAMES - These keys are translated at the back end.
+  ##
+
+  # Translations in this namespace are used to translate default group names.
+  group:
+    admin: Admin
+    admins: Admin
+    guest: Ospite
+    guests: Ospiti
+    member: Utente
+    members: Utenti
+    mod: Mod
+    mods: Mod

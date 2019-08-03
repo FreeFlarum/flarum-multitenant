@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: Signaler les messages
+      view_flags_label: Voir les messages signalés
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: Lien vers les règles de la communauté
+      title: Paramètres des signalements
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: Merci d’avoir signalé ce message. Les modérateurs s’en occuperont dès que possible.
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: inapproprié
+      reason_inappropriate_text: "Ce message est offensant, vulgaire, ou ne respecte pas les <a>règles de la communauté</a>."
+      reason_off_topic_label: "hors-sujet"
+      reason_off_topic_text: Ce message n’est pas pertinent à la discussion actuelle et devrait être déplacé ailleurs.
+      reason_other_label: autre
+      reason_spam_label: indésirable
+      reason_spam_text: Ce message est publicitaire.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: Aucun message signalé
+      item_text: "{username} dans <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: Annuler le signalement
+      flagged_by_text: "{username} a signalé ça"
+      flagged_by_with_reason_text: "{username} a signalé ça comme {reason}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: Signaler
+
+  ##
+  # REUSED KEYS - The following keys are used in several locations and should not be used directly in code.
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: Signaler le message
+    flagged_posts: Messages signalés
