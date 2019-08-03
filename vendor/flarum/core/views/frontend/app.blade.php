@@ -37,5 +37,6 @@
         </script>
 
         {!! $foot !!}
+	<div id="ff-footer" style="text-align: center;">A <a href="https://www.freeflarum.com">free forum</a> powered by Free Flarum.</div>
     </body>
 </html>
