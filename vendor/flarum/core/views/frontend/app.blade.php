@@ -37,6 +37,10 @@
         </script>
 
         {!! $foot !!}
-	<div id="ff-footer" style="text-align: center;">A <a href="https://www.freeflarum.com">free forum</a> powered by Free Flarum.</div>
+@php
+if (!file_exists("/etc/hide_powered_by")) {
+        print('<div id="ff-footer" style="text-align: center;">A <a href="https://www.freeflarum.com">free forum</a> powered by Free Flarum.</div>');
+}
+@endphp
     </body>
 </html>
