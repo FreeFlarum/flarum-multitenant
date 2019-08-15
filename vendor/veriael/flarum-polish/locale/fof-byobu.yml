@@ -1,0 +1,45 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Prywatna dyskusja
+        buttons:
+            add_recipients: Odbiorcy
+            submit: OK
+            edit_recipients: Edytuj odbiorców
+            send_pd: "Wyślij wiadomość do {username}"
+        labels:
+            recipients: "{count} odbiorca|{count} odbiorców"
+            user_deleted: -usunięty-
+        nav:
+            private_discussions: Prywatna dyskusja
+        input:
+            search_recipients: Szukaj odbiorców wpisując pierwsze trzy litery...
+        search:
+            headings:
+                groups: Grupy uprawnień
+        modal:
+            titles:
+                update_recipients: Zaktualizuj odbiorców {title}
+                add_recipients: Dodaj odbiorców do swojej dyskusji
+        post:
+            recipients_modified:
+                added_and_removed: "{username} dodał odbiorców {added} i usunął {removed}."
+                added: "{username} dodał odbiorców {added}."
+                removed: "{username} usunął odbiorców {removed}."
+        user:
+            settings:
+                block_pd: Blokuj dyskusje prywatne
+
+            byobu_link: Prywatne dyskusje
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Twórz prywatne dyskusje z innymi
+            create_private_discussions_with_groups: Twórz prywatne dyskusje z grupami
+            create_private_discussions_with_blocking_users: Twórz prywatne dyskusje z osobami, które to blokują
+            edit_user_recipients: Edytuj osoby biorące udział w prywatnej dyskusji
+            edit_group_recipients: Edytuj grupy biorące udział w prywatnej dyskusji
+
+        settings:
+            byobu_users_page_label: Dodaj prywatne dyskusje do zakładki profil

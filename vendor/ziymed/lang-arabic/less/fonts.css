@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "GE_SS";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/vendor/ziymed/lang-arabic/fonts/gess-med.eot?#iefix") format("embedded-opentype"), url("/vendor/ziymed/lang-arabic/fonts/gess-med.woff2") format("woff2"), url("/vendor/ziymed/lang-arabic/fonts/gess-med.woff") format("woff"), url("/vendor/ziymed/lang-arabic/fonts/gess-med.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GE_SS";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/vendor/ziymed/lang-arabic/fonts/gess-light.eot?#iefix") format("embedded-opentype"), url("/vendor/ziymed/lang-arabic/fonts/gess-light.woff2") format("woff2"), url("/vendor/ziymed/lang-arabic/fonts/gess-light.woff") format("woff"), url("/vendor/ziymed/lang-arabic/fonts/gess-light.ttf") format("truetype");
+  font-display: swap;
+}
+.TagLabel {
+  font-size: 85%;
+  font-weight: 600;
+}
+.TagLabel.colored .TagLabel-text {
+  font-family: 'GE_SS', tahoma;
+  font-weight: 200;
+}
+.DiscussionHero .TagsLabel .TagLabel {
+  font-size: 14px;
+}
+.DiscussionHero .TagsLabel .TagLabel.colored .TagLabel-text {
+  font-family: 'GE_SS', tahoma;
+  font-weight: 200;
+}

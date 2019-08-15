@@ -1,0 +1,85 @@
+.ComposerBody-header .item-flagrow-mason-fields {
+    display: block;
+    padding: 10px 0;
+}
+
+.DiscussionHero .item-flagrow-mason-fields {
+    display: block;
+    margin-top: 15px; // Same as tags-title margin
+}
+
+.Mason-Fields {
+    border: 1px solid #e8ecf3;
+    border-radius: @border-radius;
+    padding: 20px;
+}
+
+.Mason-Fields--viewer {
+    background-color: @body-bg; // Force background color so it can be read when in .DiscussionHero
+}
+
+.PostStream-item .Mason-Fields {
+    margin-bottom: 20px;
+}
+
+.Mason-Fields--edit {
+    float: right;
+}
+
+.Mason-Field--title {
+    line-height: 1;
+    margin: 0 0 20px;
+    font-size: 1.1em;
+    color: @muted-color;
+}
+
+.Mason-Field--label-as-placeholder {
+    label {
+        display: none;
+    }
+}
+
+.Mason-Inline-Answer {
+    &::after {
+        content: ', ';
+    }
+
+    &:last-of-type::after {
+        content: '';
+    }
+}
+
+.Mason-Column {
+    // Counterbalance the .Form-group margin that is removed on the last element
+    margin-bottom: 24px;
+}
+
+.Mason-Row:last-of-type .Mason-Column:last-of-type {
+    // Do not apply the .Form-group -like margin for the last item
+    margin-bottom: 0;
+}
+
+@media (min-width: @screen-desktop) {
+    .Mason-Grid-Wrapper {
+        margin: 0 -10px;
+    }
+
+    .Mason-Grid {
+        display: table;
+        width: 100%;
+    }
+
+    .Mason-Row {
+        display: table-row;
+    }
+
+    .Mason-Column {
+        display: table-cell;
+        padding: 5px 10px;
+    }
+
+    .Mason-Row:last-of-type .Mason-Column {
+        // Do not apply the .Form-group -like margin for the items of the last row
+        margin-bottom: 0;
+    }
+}

@@ -9,4 +9,6 @@ return array(
     'UpdateHelper\\' => array($vendorDir . '/kylekatarnls/update-helper/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Less' => array($vendorDir . '/oyejorge/less.php/lib'),
+    'Behat\\Transliterator' => array($vendorDir . '/behat/transliterator/src'),
+    'Authy' => array($vendorDir . '/authy/php/lib'),
 );

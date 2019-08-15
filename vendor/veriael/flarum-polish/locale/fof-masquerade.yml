@@ -1,0 +1,61 @@
+fof-masquerade:
+    forum:
+        alerts:
+            profile-completion-required: >
+                Uzupełnij proszę wymagane elementy profilu poniżej.
+        buttons:
+            view-profile: Zobacz profil
+            save-profile: Zapisz
+        fields:
+            select:
+                none-optional: Nie wybrano żadnej opcji (niewymagane)
+                none-required: Wybierz proszę którąś z opcji (wymagane)
+            boolean:
+                yes: Tak
+                no: Nie
+    admin:
+        buttons:
+            add-field: Stwórz pole
+            edit-field: Zapisz zmiany
+            delete-field: Usuń pole
+        permissions:
+            have-profile: Miej profil masquerade
+            view-profile: Przeglądaj profile masquerade
+        menu:
+            description: >
+                Konfiguruj pola profilu użytkowników.
+        fields:
+            add: Dodaj pole {field}
+            edit: Edytuj pole {field}
+            name: Nazwa pola
+            name-help: >
+                Publicznie widzialna (nieprzetłumaczalna) etykieta pola.
+            description: Opis pola
+            description-help: >
+                Opcjonalny opis wyjaśniający użycie/użyteczność tego pola.
+            required: Zaznaczenie pola jest wymagane
+            on_bio: Pokaż odpowiedź na to pole w biografii użytkownika
+            type: Rodzaj
+            validation: Poprawność
+            validation-help: >
+                Sprawdź wspierane <a>zasady poprawności Laravel</a>, np.
+                "string|min:5" lub "url".
+            prefix: Przedrostek pola
+            prefix-help: >
+                Wyświetla twój przedrostek przed wartościami wprowadzonymi do tego pola przez użytkownika.
+            icon: Ikona
+            icon-help: >
+                Pokazuje ikonę przed wartościami wprowadzonymi przez gracza. 
+                Dostępne ikony: <a>FontAwesome website</a>. Używaj nazw ikon z
+                przedrostkiem "fa-", np. "fas fa-info".
+            force-user-to-completion: Zmuszaj użytkowników do uzupełnienia profilu
+            disable-user-bio: Wyłącz pole biografii użytkownika
+            options: Opcje
+            option-new: Nowa opcja
+            option-coma-warning: Etykieta opcji nie może zawierać przecinka - (",").
+        types:
+            advanced: Zaawansowane
+            boolean: Pole wyboru
+            email: Email
+            select: Lista
+            url: Url

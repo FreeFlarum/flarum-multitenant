@@ -1,0 +1,10 @@
+
+fof-formatting:
+  admin:
+    plugins:
+      Autoimage: Converter links em imagens
+      Autovideo: Converter links em vídeos
+      FancyPants: Usar fonte personalizada
+      HTMLEntities: Usar entradas HTML
+      MediaEmbed: Incorporar conteúdo de sites permitidos
+      PipeTables: Usar tabelas ASCII

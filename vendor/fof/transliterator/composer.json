@@ -1,0 +1,43 @@
+{
+  "name": "fof/transliterator",
+  "description": "Transliterate non-ASCII characters in discussion URL",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8",
+    "behat/transliterator": "^1.2"
+  },
+  "authors": [
+    {
+      "name": "Nikolai Morozov",
+      "email": "avanmorozov@gmail.com",
+      "role": "Developer (Original)"
+    },
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\Transliterator\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF URL Transliterator",
+      "icon": {
+        "name": "fas fa-link",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18074-friendsofflarum-url-transliterator"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+validation:
+  accepted: ":attribute musi być zaakceptowany."
+  active_url: ":attribute nie jest prawidłowym adresem URL."
+  after: ":attribute musi być datą następującą po :date."
+  after_or_equal: ":attribute musi być datą następującą po, lub równą :date."
+  alpha: ":attribute może zawierać jedynie litery."
+  alpha_dash: ":attribute może zawierać jedynie litery, cyfry, myślniki i podkreślenia."
+  alpha_num: ":attribute może zawierać jedynie litery i cyfry."
+  array: "The :attribute must be an array."
+  before: ":attribute musi być datą przed :date."
+  before_or_equal: ":attribute musi być datą przed, lub równą :date."
+  between:
+    numeric: ":attribute musi być pomiędzy :min a :max."
+    file: ":attribute musi mieć pomiędzy :min a :max kilobajtów."
+    string: ":attribute musi mieć pomiędzy :min a :max znaków."
+    array: ":attribute musi mieć pomiędzy :min a :max elementów."
+  boolean: "Pole :attribute musi stanowić prawdę lub fałsz."
+  confirmed: ":attribute - potwierdzenie się nie zgadza."
+  date: ":attribute nie jest prawidłową datą."
+  date_equals: ":attribute musi być datą równą :date."
+  date_format: ":attribute nie zgadza się z formatem :other."
+  different: ":attribute i :other muszą być od siebie różne."
+  digits: ":attribute musi mieć :digits cyfr."
+  digits_between: ":attribute musi mieć pomiędzy :min a :max cyfr."
+  dimensions: ":attribute ma niedozwolone wymiary."
+  distinct: "Pole :attribute ma zduplikowaną wartość."
+  email: ":attribute musi być prawidłowym adresem email."
+  ends_with: ":attribute musi się kończyć jednym z następujących: :values"
+  exists: "Wybrany :attribute jest nieprawidłowy."
+  file: ":attribute musi być plikiem."
+  filled: "Pole :attribute musi mieć wartość."
+  gt:
+    numeric: ":attribute musi być numerem większym niż :value."
+    file: ":attribute musi ważyć więcej niż :value kilobajtów."
+    string: ":attribute musi mieć więcej niż :value znaków."
+    array: ":attribute musi mieć więcej niż :value elementów."
+  gte:
+    numeric: ":attribute musi być numerem równym :value lub większym"
+    file: ":attribute musi ważyć :value lub więcej kilobajtów."
+    string: ":attribute musi mieć :value lub więcej znaków."
+    array: ":attribute musi mieć :value elementów lub więcej."
+  image: ":attribute musi być obrazem."
+  in: "Wskazany :attribute jest nieprawidłowy."
+  in_array: "The :attribute field does not exist in :other."
+  integer: "The :attribute must be an integer."
+  ip: ":attribute musi być prawidłowym adresem IP."
+  ipv4: ":attribute musi być prawidłowym adresem IPv4"
+  ipv6: ":attribute musi być prawidłowym adresem IPv6."
+  json: ":attribute musi być prawidłową linią JSON."
+  lt:
+    numeric: "The :attribute must be less than :value."
+    file: ":attribute musi ważyć mniej niż :value kilobajtów."
+    string: ":attribute musi mieć mniej niż :value znaków."
+    array: ":attribute musi mieć mniej niż :value elementów."
+  lte:
+    numeric: ":attribute musi być numerem mniejszym, lub równym :value."
+    file: ":attribute musi ważyć maksymalnie :value kilobajtów."
+    string: ":attribute musi mieć maksymalnie :value znaków."
+    array: ":attribute nie może mieć więcej, niż :value elementów."
+  max:
+    numeric: ":attribute nie może być numerem większym, niż :max."
+    file: ":attribute nie może ważyć więcej, niż :max kilobajtów."
+    string: ":attribute nie może mieć więcej, niż :max znaków."
+    array: ":attribute nie może mieć więcej, niż :max elementów."
+  mimes: ":attribute musi być plikiem rodzaju: :values."
+  mimetypes: ":attribute musi być plikiem rodzaju: :values."
+  min:
+    numeric: ":attribute musi mieć co najmniej :min."
+    file: ":attribute musi ważyć co najmniej :min kilobajtów."
+    string: ":attribute musi mieć co najmniej :min znaków."
+    array: ":attribute musi mieć co najmniej :min elementów."
+  not_in: "Wybrany :attribute jest nieprawidłowy."
+  not_regex: "Format :attribute jest nieprawidłowy."
+  numeric: ":attribute musi być numerem."
+  present: "Pole :attribute musi być zawarte."
+  regex: "Format :attribute jest nieprawidłowy."
+  required: "Pole :attribute jest wymagane."
+  required_if: "The :attribute field is required when :other is :value."
+  required_unless: "The :attribute field is required unless :other is in :values."
+  required_with: "The :attribute field is required when :values is present."
+  required_with_all: "The :attribute field is required when :values are present."
+  required_without: "The :attribute field is required when :values is not present."
+  required_without_all: "Pole :attribute field is required when none of :values are present."
+  same: ":attribute oraz :other muszą się zgadzać."
+  size:
+    numeric: ":attribute musi mieć :size."
+    file: ":attribute musi ważyć :size kilobytes."
+    string: ":attribute musi mieć :size znaków."
+    array: ":attribute musi zawierać :size elementów."
+  starts_with: ":attribute musi zaczynać się jednym z następujących: :values"
+  string: "The :attribute must be a string."
+  timezone: "The :attribute must be a valid zone."
+  unique: ":attribute jest już zajęta."
+  uploaded: "Nie udało się wysłać :attribute."
+  url: "Format :attribute jest nieprawidłowy."
+  uuid: ":attribute musi być poprawnym UUID."
+
+  attributes:
+    username: Nazwa użytkownika
+    password: Hasło
+    email: Email
+    title: tytuł
+    content: zawartość
+    name_singular: pojedyncza nazwa
+    name_plural: mnoga nazwa
+    tag_count_primary: liczba tagów podstawowych
+    tag_count_secondary: liczba tagów pobocznych

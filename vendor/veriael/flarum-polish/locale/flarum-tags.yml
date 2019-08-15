@@ -1,0 +1,106 @@
+flarum-tags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Basics page.
+    basics:
+      tags_label: => flarum-tags.ref.tags
+
+    # These translations are used in the Edit Tag modal dialog.
+    edit_tag:
+      color_label: => core.ref.color
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      delete_tag_button: Usuń tag
+      delete_tag_confirmation: "Czy na pewno chcesz usunąć ten tag? Dyskusje używające tego tagu, nie zostaną usunięte."
+      description_label: Opis
+      hide_label: Ukryj ze Wszystkich Dyskusji
+      name_label: => flarum-tags.ref.name
+      name_placeholder: => flarum-tags.ref.name
+      slug_label: Slug
+      submit_button: => core.ref.save_changes
+      title: => flarum-tags.ref.create_tag
+
+    # These translations are used in the navigation bar.
+    nav:
+      tags_button: => flarum-tags.ref.tags
+      tags_text: Kieruj listą tagów, które są dostępne do organizowania nimi dyskusji.
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_edit_tags_label: Zezwól na edycję tagów
+      restrict_by_tag_heading: Rozgraniczaj poprzez tagi
+      tag_discussions_label: Taguj dyskusje
+
+    # These translations are used in the Tag Settings modal dialog.
+    tag_settings:
+      range_separator_text: " do "
+      required_primary_heading: Wymagana liczba głównych tagów
+      required_primary_text: Wpisz minimalną i maksymalną ilość głównych tagów, jakimi może być opisana dyskusja.
+      required_secondary_heading: Wymagana liczba pobocznych tagów
+      required_secondary_text: Wpisz minimalną i maksymalną ilość pobocznych tagów, jakimi może być opisana dyskusja.
+      title: Ustawienia tagów
+
+    # These translations are used in the Tags page.
+    tags:
+      about_tags_text: "Tagi są używane, aby opisywać nimi dyskusje. Główne tagi, są jak tradycyjne kategorie forum: mogą być zorganizowane w dwustopniowej hierarchii. Poboczne tagi nie mają hierarchii ani porządku, są więc użyteczne bardziej do mikroorganizacji."
+      create_tag_button: => flarum-tags.ref.create_tag
+      primary_heading: Główne tagi
+      secondary_heading: Poboczne tagi
+      settings_button: Ustawienia
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Choose Tags modal dialog.
+    choose_tags:
+      choose_primary_placeholder: "Wybierz tag główny|Wybierz więcej tagów głównych: {count}"
+      choose_secondary_placeholder: "Wybierz 1 więcej tag|Wybierz więcej tagów: {count}"
+      edit_title: "Edytuj tagi dla {title}"
+      submit_button: => core.ref.okay
+      title: Wybierz tagi dla swojej dyskusji
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      choose_tags_link: Wybierz tagi
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      edit_tags_button: Edytuj tagi
+
+    header:
+      back_to_tags_tooltip: Wróć do listy tagów
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      more_link: Więcej...
+      tags_link: => flarum-tags.ref.tags
+      untagged_link: Usunięto tag(i)
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      added_and_removed_tags_text: "{username} dodał {tagsAdded} i usunął {tagsRemoved}."
+      added_tags_text: "{username} dodał {tagsAdded}."
+      removed_tags_text: "{username} usunął {tagsRemoved}."
+      tags_text: "tag {tags}|tagi {tags}"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # This translation is displayed in place of the name of a tag that's been deleted.
+    deleted_tag_text: Usunięto
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    create_tag: Utwórz tag
+    name: Nazwa
+    tags: Tagi

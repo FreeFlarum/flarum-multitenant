@@ -1,0 +1,33 @@
+{
+    "name": "v17development/flarum-seo",
+    "description": "Adds SEO tags for your Flarum forum",
+    "type": "flarum-extension",
+    "authors": [
+        {
+            "name": "Jasper Vriends - V17 Development",
+            "email": "jasper@v17.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "V17Development\\FlarumSeo\\": "src/"
+        }
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.9",
+        "ext-json": "*"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "SEO",
+            "icon": {
+                "name": "fas fa-check",
+                "backgroundColor": "#0072ff",
+                "color": "#ffffff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/18316"
+        }
+    }
+}

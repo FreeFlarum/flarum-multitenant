@@ -1,0 +1,42 @@
+{
+  "name": "fof/default-group",
+  "description": "Assign a default group to new users automatically",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "authors": [
+    {
+      "name": "Daniël Klabbers",
+      "email": "daniel+hyn@klabbers.email",
+      "homepage": "https://luceos.com"
+    },
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\DefaultGroup\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Default Group",
+      "icon": {
+        "name": "fas fa-users",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18158-friendsofflarum-default-group"
+    }
+  }
+}

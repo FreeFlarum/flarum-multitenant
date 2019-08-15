@@ -1,0 +1,41 @@
+{
+  "name": "fof/secure-https",
+  "description": "Changes all images using http to https",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta-8"
+  },
+  "authors": [
+    {
+      "name": "Connor Davis",
+      "email": "davis@produes.co"
+    },
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\SecureHttps\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Secure HTTPS",
+      "icon": {
+        "name": "fas fa-lock",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

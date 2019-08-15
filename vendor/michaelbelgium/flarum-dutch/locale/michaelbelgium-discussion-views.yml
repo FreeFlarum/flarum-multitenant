@@ -1,0 +1,17 @@
+core:
+  forum:
+    index_sort:
+      popular_button: Populair
+      unpopular_button: Onpopulair
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: Wijzig aantal keer bekeken
+      submit: Opslaan
+      label: Aantal
+    discussion_controls:
+      resetviews_button: Wijzig aantal keer bekeken
+  admin:
+      permissions:
+          reset_views_label: Wijzigen discussie's keer bekeken

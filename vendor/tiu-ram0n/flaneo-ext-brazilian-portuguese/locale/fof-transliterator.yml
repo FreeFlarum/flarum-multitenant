@@ -1,0 +1,6 @@
+rafof-transliterator:
+  admin:
+    settings:
+      title: Configurações do Transliterador
+      parse_button: Aplicar à discussões existentes
+      result: "Aplicado à 1 discussão|Aplicado à {count} discussões"

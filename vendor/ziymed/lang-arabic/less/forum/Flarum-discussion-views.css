@@ -1,0 +1,25 @@
+.item-discussion-views {
+  font-size: 14px;
+  float: left;
+  width: 10px;
+  margin-left: -46px;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .item-discussion-views:before {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-size: inherit;
+    text-rendering: auto;
+    content: "\f06e";
+    float: right;
+    margin-right: -21px;
+    margin-left: auto;
+    margin-top: 1px;
+  }
+}
+@media (max-width: 767px) {
+  .item-discussion-views {
+    display: none;
+  }
+}

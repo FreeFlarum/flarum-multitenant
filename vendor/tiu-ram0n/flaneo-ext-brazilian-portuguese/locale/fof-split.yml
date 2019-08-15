@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: Divida postagens das discussões
+    forum:
+        post:
+            was_split_to: "{count} post foi dividido em {target}.|{count} posts foram divididos para {target}."
+            was_split_from: "{count} post foi dividido a partir de {target}.|{count} posts foram divididos de {target}."
+        split:
+            from: Dividir daqui
+            to: Dividir aqui
+        modal:
+            title: Dividir discussão
+            new_discussion_label: Especifique o título para a nova discussão
+            submit_button: Dividir

@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: Zgłaszaj posty
+      view_flags_label: Przeglądaj zgłoszone posty
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: Wytyczne społeczności - URL
+      title: Ustawienia zgłoszeń
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: Dziękujemy za zgłoszenie tego posta. Nasi moderatorzy go sprawdzą.
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: Nieodpowiedni
+      reason_inappropriate_text: "Ten post jest agresywny, obraźliwy, albo łamie nasze <a>zasady społeczności</a>."
+      reason_off_topic_label: "Off-topic"
+      reason_off_topic_text: Ten post nie jest odpowiedni do tej dyskusji i powinien być przeniesiony gdzie indziej.
+      reason_other_label: Inne
+      reason_spam_label: Spam
+      reason_spam_text: Ten post jest reklamą.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: Brak zgłoszeń
+      item_text: "{username} w <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: Odwołaj zgłoszenie
+      flagged_by_text: "Zgłoszony przez {username}"
+      flagged_by_with_reason_text: "Zgłoszony przez {username} z powodu: {reason}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: Zgłoś
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: Zgłoś post
+    flagged_posts: Zgłoszone posty

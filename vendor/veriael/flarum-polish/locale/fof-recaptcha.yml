@@ -1,0 +1,12 @@
+fof-recaptcha:
+  admin:
+    settings:
+      help_text: Uzyskaj swoje dane Google reCAPTCHA <a>tutaj</a>.
+
+      type_label: Rodzaj reCAPTCHA
+
+      site_key_label: Klucz witryny
+      secret_key_label: Tajny klucz
+
+validation:
+  recaptcha: Weryfikacja reCAPTCHA nieudana.

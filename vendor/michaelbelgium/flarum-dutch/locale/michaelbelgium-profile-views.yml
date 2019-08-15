@@ -1,0 +1,5 @@
+flarum_profile_views:
+  forum:
+    user:
+      views_count_text: "{viewcount} keer bekeken"
+      title_last_viewers: Laatste bezoekers

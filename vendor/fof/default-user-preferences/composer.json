@@ -1,0 +1,44 @@
+{
+  "name": "fof/default-user-preferences",
+  "description": "Enable emails for replies and mentions by default in user preferences",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "replace": {
+    "piotr-tokarczyk/flarum-user-default-preferences": "*"
+  },
+  "authors": [
+    {
+      "name": "Piotr Tokarczyk",
+      "role": "Developer (Original)"
+    },
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\DefaultUserPreferences\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Default User Preferences",
+      "icon": {
+        "name": "fas fa-reply-all",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18607-friendsofflarum-default-user-preferences"
+    }
+  }
+}

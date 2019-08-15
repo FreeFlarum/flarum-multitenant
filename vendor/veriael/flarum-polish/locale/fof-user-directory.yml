@@ -1,0 +1,25 @@
+fof-user-directory:
+    forum:
+        search:
+            users_heading: 'Przejrzyj wszystkich użytkowników, szukając "{query}"'
+        page:
+            nav: Baza użytkowników
+            sort:
+                relevance: Stosowność
+                default: Domyślne
+                username_az: Nazwa (A-Z)
+                username_za: Nazwa (Z-A)
+                newest: Od najnowszych
+                oldest: Od najstarszych
+                seen_recent: Ostatnio aktywni
+                seen_oldest: Najdłużej nieaktywni
+                most_posts: Mający najwięcej postów
+                least_posts: Mający najmniej postów
+                most_discussions: Mający najwięcej dyskusji
+                least_discussions: Mający najmniej dyskusji
+    admin:
+        permissions:
+            view_user_directory: Przeglądaj bazę użytkowników
+        settings:
+            title: Ustawienia bazy użytkowników
+            link: Dodaj na stronie głównej forum link, pozwalający na przeglądanie bazy użytkowników

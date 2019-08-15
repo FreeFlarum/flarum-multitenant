@@ -1,0 +1,67 @@
+core:
+  forum:
+    index_sort:
+      hot_button: Popularne
+      
+fof-gamification:
+  forum:
+    vote_title: Pokaż kto głosował
+    nav:
+      name: Rankingi
+    ranking:
+      rank: Miejsce
+      name: Użytkownik
+      amount: Punkty
+    notification:
+      upvote: "{username} zagłosował pozytywnie na twój post"
+      downvote: "{username} zagłosował negatywnie na twój post"
+    user:
+      points: "Punkty: {points}"
+      rank: "{rank}"
+    modal:
+      title: Głosujący
+      upvotes_label: 'Pozytywnie:'
+      downvotes_label: 'Negatywnie:'
+    mod_item: Przeglądaj głosujących
+  admin:
+    permissions:
+      vote_label: Głosuj pozytywnie/negatywnie na posty
+      see_votes_label: Przeglądaj pozytywne/negatywne głosy
+      see_ranking_page: Przeglądaj stronę z rankingiem
+    nav:
+      desc: Grywalizacja dla twojej społeczności Flarum.
+    page:
+      rankings:
+        blocked:
+          placeholder: CDK2020, Ralkage, AngelAvila
+          title: Ignorowani użytkownicy
+          help: Ci użytkownicy nie będą pokazywani na stronie z rankingiem. Nazwy użytkowników powinny być separowane przy pomocy spacji poprzedzonej przecinkiem.
+        title: Strona rankingowa
+        enable: Włącz niestandardowe obrazki
+        custom_image_1: Obrazek 1 miejsca
+        custom_image_2: Obrazek 2 miejsca
+        custom_image_3: Obrazek 3 miejsca
+      votes:
+        points_title: Symbol zastępczy dla punktów
+        points_placeholder: "Punkty: "
+        color_holder: '#ffffff'
+        auto_upvote: Automatycznie dodawaj upvotes pisanym przez siebie postom
+        title: Głosy
+        vote_color: Kolor po zagłosowaniu
+        icon_name: Ikona głosowania pozytywnie/negatywnie
+        icon_help: "Wprowadź jakąkolwiek ikonę Font-Awesome z przyrostkiem -up oraz -down. Przykłady: arrow, thumbs, chevron"
+      save_settings: Zapisz ustawienia
+      convert:
+        button: Przekonwertuj polubienia do upvotes
+        help: Konwertuj swoje obecne polubienia z flarum-ext-likes do upvotes, tak samo kalkuluj popularność obecnych dyskusji.
+        converting: Twoje polubienia są teraz konwertowane. Odśwież stronę po kilku minutach, kiedy proces będzie już ukończony. (Konwersja może chwilę potrwać, zależnie od ilości polubień)
+        converted: "Pomyślnie przekonwertowano wszystkie {number} polubień."
+      ranks:
+        title: Rangi
+        ranks: Niestandardowe rangi
+        number_title: Ile odznak rang powinno być pokazywanych?
+        help:
+          color: '#ffffff'
+          help: "Wprowadź wymaganą liczbę upvotes, nazwę rangi, oraz kod koloru hex rangi"
+          points: Punkty
+          name: Nazwa

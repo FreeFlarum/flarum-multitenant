@@ -1,0 +1,49 @@
+{
+	"name": "tolgaaaltas/flarum-ext-turkish",
+	"description": "Turkish language pack for Flarum's third party extensions.",
+	"keywords": [
+		"flarum",
+		"extension",
+		"turkish",
+		"locale",
+		"translation"
+	],
+	"type": "flarum-extension",
+	"license": "MIT",
+	"require": {
+		"flarum/core": "^0.1.0-beta.8"
+	},
+	"suggest": {
+		"flarum/lang-turkish": "Flarum language package for Turkish."
+	},
+	"support": {
+		"issues": "https://github.com/tolgaaaltas/flarum-ext-turkish/issues",
+		"source": "https://github.com/tolgaaaltas/flarum-ext-turkish/"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1.x-dev"
+		},
+		"authors": [{
+			"name": "tolgaaaltas",
+			"role": "Developer"
+		}],
+		"flarum-extension": {
+			"title": "Turkish Extended Pack",
+			"icon": {
+				"name": "fas fa-language",
+				"background": "#ff3838",
+				"backgroundSize": "cover",
+				"backgroundPosition": "center",
+				"color": "#f5f5f5"
+			}
+		},
+		"flagrow": {
+			"discuss": "https://discuss.flarum.org/d/20684-flarum-extensions-turkish-language-pack"
+		},
+		"flarum-locale": {
+			"code": "tr",
+			"title": "Turkish"
+		}
+	}
+}

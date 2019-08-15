@@ -33,12 +33,17 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
             's9e\\TextFormatter\\' => 18,
+        ),
+        'm' => 
+        array (
+            'michaelbelgium\\views\\' => 21,
         ),
         'a' => 
         array (
@@ -49,6 +54,8 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         ),
         'Z' => 
         array (
+            'Ziymed\\LangArabic\\' => 18,
+            'ZerosOnesFun\\bbbbcode\\' => 22,
             'Zend\\Stratigility\\' => 18,
             'Zend\\HttpHandlerRunner\\' => 23,
             'Zend\\Escaper\\' => 13,
@@ -58,15 +65,22 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             'Whoops\\' => 7,
         ),
+        'V' => 
+        array (
+            'V17Development\\FlarumSeo\\' => 25,
+        ),
         'T' => 
         array (
+            'Twilio\\' => 7,
             'Tobscure\\JsonApi\\' => 17,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Util\\' => 22,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
@@ -82,6 +96,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'Saleksin\\Auth\\Google\\' => 21,
+        ),
+        'R' => 
+        array (
+            'Reflar\\twofactor\\' => 17,
+            'Reflar\\NightMode\\' => 17,
+            'Reflar\\Doorman\\' => 15,
+            'ReFlar\\CookieConsent\\' => 21,
         ),
         'P' => 
         array (
@@ -90,10 +112,15 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'PragmaRX\\Google2FA\\Tests\\' => 25,
+            'PragmaRX\\Google2FA\\' => 19,
+            'PersianFla\\Persian\\' => 19,
+            'ParagonIE\\ConstantTime\\' => 23,
         ),
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MigrateToFlarum\\Canonical\\' => 26,
             'Middlewares\\Utils\\' => 18,
             'Middlewares\\' => 12,
             'MatthiasMullie\\PathConverter\\' => 29,
@@ -105,9 +132,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'League\\OAuth1\\' => 14,
             'League\\Flysystem\\' => 17,
         ),
+        'J' => 
+        array (
+            'JordanJay29\\Summaries\\' => 22,
+        ),
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
+            'ImgurUpload\\' => 12,
             'Illuminate\\View\\' => 16,
             'Illuminate\\Validation\\' => 22,
             'Illuminate\\Translation\\' => 23,
@@ -134,7 +166,27 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
+            'FoF\\Transliterator\\' => 19,
+            'FoF\\Split\\' => 10,
+            'FoF\\SocialProfile\\' => 18,
+            'FoF\\SecureHttps\\' => 16,
+            'FoF\\ProfileImageCrop\\' => 21,
+            'FoF\\Polls\\Migrations\\' => 21,
+            'FoF\\Polls\\' => 10,
+            'FoF\\Pages\\' => 10,
+            'FoF\\MergeDiscussions\\' => 21,
+            'FoF\\Masquerade\\' => 15,
+            'FoF\\Links\\' => 10,
+            'FoF\\Gamification\\' => 17,
+            'FoF\\Formatting\\' => 15,
+            'FoF\\Drafts\\' => 11,
+            'FoF\\DefaultUserPreferences\\' => 27,
+            'FoF\\DefaultGroup\\' => 17,
+            'FoF\\Byobu\\' => 10,
+            'FoF\\BanIPs\\' => 11,
+            'FoF\\BBCodeDetails\\' => 18,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -145,11 +197,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Flarum\\Lock\\' => 12,
             'Flarum\\Likes\\' => 13,
             'Flarum\\Flags\\' => 13,
+            'Flarum\\Embed\\' => 13,
             'Flarum\\Auth\\Twitter\\' => 20,
             'Flarum\\Auth\\Github\\' => 19,
             'Flarum\\Auth\\Facebook\\' => 21,
             'Flarum\\Approval\\' => 16,
             'Flarum\\' => 7,
+            'Flagrow\\Sitemap\\' => 16,
+            'Flagrow\\Mason\\' => 14,
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
         ),
@@ -166,12 +221,20 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Doctrine\\Common\\' => 16,
             'Dflydev\\FigCookies\\' => 19,
         ),
+        'A' => 
+        array (
+            'AmauryCarrade\\FlarumFeeds\\' => 26,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         's9e\\TextFormatter\\' => 
         array (
             0 => __DIR__ . '/..' . '/s9e/text-formatter/src',
+        ),
+        'michaelbelgium\\views\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/michaelbelgium/flarum-discussion-views/src',
         ),
         'axy\\sourcemap\\' => 
         array (
@@ -188,6 +251,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'axy\\backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace',
+        ),
+        'Ziymed\\LangArabic\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ziymed/lang-arabic/src',
+        ),
+        'ZerosOnesFun\\bbbbcode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerosonesfun/bbbbcode/src',
         ),
         'Zend\\Stratigility\\' => 
         array (
@@ -209,6 +280,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
         ),
+        'V17Development\\FlarumSeo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/v17development/flarum-seo/src',
+        ),
+        'Twilio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twilio/sdk/Twilio',
+        ),
         'Tobscure\\JsonApi\\' => 
         array (
             0 => __DIR__ . '/..' . '/tobscure/json-api/src',
@@ -217,6 +296,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
         ),
+        'Symfony\\Polyfill\\Util\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-util',
+        ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php73',
@@ -224,6 +307,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Symfony\\Polyfill\\Php72\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
+        'Symfony\\Polyfill\\Php56\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -285,6 +372,26 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
         ),
+        'Saleksin\\Auth\\Google\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/saleksin/flarum-auth-google/src',
+        ),
+        'Reflar\\twofactor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reflar/twofactor/src',
+        ),
+        'Reflar\\NightMode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reflar/nightmode/src',
+        ),
+        'Reflar\\Doorman\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reflar/doorman/src',
+        ),
+        'ReFlar\\CookieConsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reflar/cookie-consent/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -307,9 +414,29 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'PragmaRX\\Google2FA\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pragmarx/google2fa/tests',
+        ),
+        'PragmaRX\\Google2FA\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pragmarx/google2fa/src',
+        ),
+        'PersianFla\\Persian\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/persianfla/flarum-ext-persian/src',
+        ),
+        'ParagonIE\\ConstantTime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'MigrateToFlarum\\Canonical\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/migratetoflarum/canonical/src',
         ),
         'Middlewares\\Utils\\' => 
         array (
@@ -334,6 +461,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             0 => __DIR__ . '/..' . '/league/oauth2-client/src',
             1 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
             2 => __DIR__ . '/..' . '/league/oauth2-github/src',
+            3 => __DIR__ . '/..' . '/league/oauth2-google/src',
         ),
         'League\\OAuth1\\' => 
         array (
@@ -343,9 +471,17 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'JordanJay29\\Summaries\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jordanjay29/flarum-ext-summaries/src',
+        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+        ),
+        'ImgurUpload\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matteocontrini/flarum-imgur-upload/src',
         ),
         'Illuminate\\View\\' => 
         array (
@@ -427,9 +563,89 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
         ),
+        'FoF\\UserDirectory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/user-directory/src',
+        ),
         'FoF\\UserBio\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/user-bio/src',
+        ),
+        'FoF\\Transliterator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/transliterator/src',
+        ),
+        'FoF\\Split\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/split/src',
+        ),
+        'FoF\\SocialProfile\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/socialprofile/src',
+        ),
+        'FoF\\SecureHttps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/secure-https/src',
+        ),
+        'FoF\\ProfileImageCrop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
+        ),
+        'FoF\\Polls\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/polls/migrations',
+        ),
+        'FoF\\Polls\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/polls/src',
+        ),
+        'FoF\\Pages\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/pages/src',
+        ),
+        'FoF\\MergeDiscussions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/merge-discussions/src',
+        ),
+        'FoF\\Masquerade\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/masquerade/src',
+        ),
+        'FoF\\Links\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/links/src',
+        ),
+        'FoF\\Gamification\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/gamification/src',
+        ),
+        'FoF\\Formatting\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/formatting/src',
+        ),
+        'FoF\\Drafts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/drafts/src',
+        ),
+        'FoF\\DefaultUserPreferences\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/default-user-preferences/src',
+        ),
+        'FoF\\DefaultGroup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/default-group/src',
+        ),
+        'FoF\\Byobu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/byobu/src',
+        ),
+        'FoF\\BanIPs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/ban-ips/src',
+        ),
+        'FoF\\BBCodeDetails\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/bbcode-details/src',
         ),
         'Flarum\\Tags\\' => 
         array (
@@ -471,6 +687,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/flarum/flags/src',
         ),
+        'Flarum\\Embed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flarum/embed/src',
+        ),
         'Flarum\\Auth\\Twitter\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/auth-twitter/src',
@@ -490,6 +710,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Flarum\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/core/src',
+        ),
+        'Flagrow\\Sitemap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flagrow/sitemap/src',
+        ),
+        'Flagrow\\Mason\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flagrow/mason/src',
         ),
         'Fig\\Http\\Message\\' => 
         array (
@@ -527,6 +755,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/dflydev/fig-cookies/src/Dflydev/FigCookies',
         ),
+        'AmauryCarrade\\FlarumFeeds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/amaurycarrade/flarum-ext-syndication/src',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -553,6 +785,20 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Less' => 
             array (
                 0 => __DIR__ . '/..' . '/oyejorge/less.php/lib',
+            ),
+        ),
+        'B' => 
+        array (
+            'Behat\\Transliterator' => 
+            array (
+                0 => __DIR__ . '/..' . '/behat/transliterator/src',
+            ),
+        ),
+        'A' => 
+        array (
+            'Authy' => 
+            array (
+                0 => __DIR__ . '/..' . '/authy/php/lib',
             ),
         ),
     );

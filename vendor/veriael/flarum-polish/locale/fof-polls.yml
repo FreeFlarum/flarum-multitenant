@@ -1,0 +1,44 @@
+fof-polls:
+  admin:
+    permissions:
+      moderate: Edytuj i usuwaj ankiety
+      self_edit: Pozwalaj użytkownikom na edytowanie ich własnych ankiet
+      start: Stwórz ankietę
+      vote: Zagłosuj w ankiecie
+
+  forum:
+    days_remaining: Ankieta kończy się {time}.
+    no_permission: Nie masz uprawnień wymaganych, aby zagłosować
+    poll_ended: Ta ankieta się zakończyła.
+    public_poll: Zobacz głosujących
+
+    composer_discussion:
+      add_poll: Dodaj ankietę
+      edit_poll: => fof-polls.forum.moderation.edit
+
+    modal:
+      add_title: Dodaj ankietę
+      add_option_label: Dodaj opcję
+      date_placeholder: Data zakończenia ankiety (opcjonalne)
+      edit_title: Edytuj ankietę
+      include_question: Musisz zawrzeć pytanie
+      max: Możesz mieć maksymalnie 10 odpowiedzi
+      min: Musisz dodać minimum dwie odpowiedzi
+      no_voters: Brak głosów
+      option_placeholder: Odpowiedz
+      options_label: Odpowiedzi
+      public_poll_label: Pozwalaj innym widzieć, kto zagłosował
+      question_placeholder: Pytanie
+      submit: Zapisz
+
+    moderation:
+      delete: Usuń ankietę
+      delete_confirm: Czy na pewno chcesz usunąć tę ankietę?
+      edit: Edytuj ankietę
+
+    tooltip:
+      badge: Ankieta
+      votes: "1 głos|Głosów: {count}"
+
+    votes_modal:
+      title: Głosujący

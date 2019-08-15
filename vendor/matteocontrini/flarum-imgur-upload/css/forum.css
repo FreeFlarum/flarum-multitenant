@@ -1,0 +1,35 @@
+.imgur-upload-button {
+	overflow: hidden;
+	position: relative;
+}
+
+.imgur-upload-button input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	width: 100%;
+	height: 100%;
+}
+
+.imgur-upload-button .LoadingIndicator {
+	display: inline;
+	margin: 0 12px 0 2px;
+}
+
+.imgur-upload-button .LoadingIndicator .spinner {
+	transform: scale(0.7) !important;
+}
+
+.green {
+	color: rgb(46, 204, 113) !important;
+}
+
+.red {
+	color: rgb(242, 38, 19) !important;
+}

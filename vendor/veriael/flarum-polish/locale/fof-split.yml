@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: Wydzielaj posty z dyskusji
+    forum:
+        post:
+            was_split_to: "{count} post został wydzielony do {target}.|{count} postów zostało wydzielonych do {target}."
+            was_split_from: "{count} post został wydzielony z {target}.|{count} posty zostały wydzielone z {target}."
+        split:
+            from: Wydziel stąd
+            to: Wydziel do...
+        modal:
+            title: Wydzielaj nieodpowiednie posty z dyskusji
+            new_discussion_label: Wprowadź tytuł dla nowej dyskusji
+            submit_button: Wydziel

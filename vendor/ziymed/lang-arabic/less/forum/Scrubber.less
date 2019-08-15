@@ -1,0 +1,100 @@
+.Scrubber {
+  & a {
+    margin-right: -1px;
+    margin-left: auto;
+    color: @muted-color;
+    
+    & .fa {
+      font-size: 14px;
+      margin-left: 2px;
+      margin-right: auto;
+    }
+    &:hover, &:focus {
+      text-decoration: none;
+      color: @link-color;
+    }
+  }
+}
+.Scrubber-scrollbar {
+  margin: 8px 3px 8px 0;
+  height: 300px;
+  min-height: 50px; // JavaScript sets a max-height
+  position: relative;
+}
+.Scrubber-before, .Scrubber-after {
+  border-right: 1px solid @control-bg;
+  border-left: 0;
+}
+.Scrubber-unread {
+  position: absolute;
+  border-right: 1px solid lighten(@muted-color, 10%);
+  width: 100%;
+  background-image: linear-gradient(to right, @control-bg, fade(@control-bg, 0) 10px, fade(@control-bg, 0));
+  display: flex;
+  align-items: center;
+  color: @muted-color;
+  text-transform: none;
+  font-size: 11px;
+  font-weight: bold;
+  padding-right: 13px;
+  overflow: hidden;
+}
+.Scrubber-handle {
+  position: relative;
+  z-index: 1;
+  background: @body-bg;
+  width: 100%;
+  padding: 5px 0;
+}
+.Scrubber-bar {
+  height: 100%;
+  width: 5px;
+  background: @primary-color;
+  border-radius: 4px;
+  float: right;
+  margin-right: -2px;
+  margin-left: auto;
+  transition: background 0.2s;
+
+  .disabled & {
+    background: @control-bg;
+  }
+}
+.Scrubber-info {
+  margin-top: -1.5em;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  right: 15px;
+
+  & strong {
+    display: block;
+  }
+}
+.Scrubber-description {
+  color: @muted-color;
+}
+
+@media @phone {
+  .PostStreamScrubber {
+    .Dropdown-toggle {
+      font-size: 14px;
+    }
+    .Dropdown-menu {
+      padding: 30px;
+      font-size: 13px;
+    }
+  }
+  .Scrubber-scrollbar {
+    height: 40vh !important;
+    max-height: none !important;
+  }
+}
+
+@media @tablet-up {
+  .PostStreamScrubber {
+    margin: 30px 0 0 0;
+
+    .Dropdown--expanded();
+  }
+}

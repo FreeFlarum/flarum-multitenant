@@ -1,0 +1,48 @@
+{
+  "name": "fof/profile-image-crop",
+  "description": "Allow cropping when uploading profile picture",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "replace": {
+    "wiseclock/flarum-ext-profile-image-crop": "*"
+  },
+  "authors": [
+    {
+      "name": "WiseClock",
+      "role": "Developer (Original)"
+    },
+    {
+      "name": "foliotek",
+      "role": "Developer (Original)"
+    },
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\ProfileImageCrop\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Profile Image Crop",
+      "icon": {
+        "name": "fas fa-crop",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18286-friendsofflarum-profile-image-crop"
+    }
+  }
+}

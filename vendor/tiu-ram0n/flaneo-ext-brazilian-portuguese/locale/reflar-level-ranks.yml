@@ -1,0 +1,11 @@
+reflar-level-ranks:
+  admin:
+    settings:
+      title: Configurações de Níveis
+      levelText: Texto a ser exíbido como nome personalizado dos níveis. (ex Classificação, Nível)
+  forum:
+    desc:
+      expText: EXP
+  lib:
+    defaults:
+      level: Nível

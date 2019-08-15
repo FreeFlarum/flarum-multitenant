@@ -1,0 +1,21 @@
+flarum-best-answer:
+    admin:
+        permissions:
+            best_answer: Wybierz najlepszą odpowiedź (własna dyskusja)
+            best_answer_not_own_discussion: Wybierz najlepszą odpowiedź (czyjaś dyskusja)
+        settings:
+            title: "Najlepsza odpowiedź - ustawienia"
+            allow_select_own_post: "Pozwalaj użytkownikowi na wybranie własnego posta"
+            select_best_answer_reminder_days: Przypomnij użytkownikowi o wybraniu najlepszej odpowiedzi po X dniach
+    forum:
+        this_best_answer: "To jest najlepsza odpowiedź"
+        remove_best_answer: "Usuń aktualną najlepszą odpowiedź"
+        header_best_answer: "Wskazana jako autora d jako najlepsza odpowiedź"
+        best_answer_button: Najlepsza odpowiedź
+        best_answer_label: wybrana przez <a>{username}</a>
+        best_answer: => flarum-best-answer.ref.best_answer
+
+        notification:
+            content: Wybierz proszę najlepszą odpowiedź, jeśli twój problem został rozwiązany
+    ref:
+      best_answer: 'Najlepsza odpowiedź'

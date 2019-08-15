@@ -1,0 +1,41 @@
+fof-follow-tags:
+  forum:
+    settings:
+      notify_new_discussion_label: Alguém cria uma discussão em uma tag que estou seguindo
+      notify_new_post_label: Alguém posta em uma tag que eu estou seguindo
+
+
+    index:
+      follow_tag_button: Seguir
+      unfollow_tag_button: Parar de Seguir
+
+
+    sub_controls:
+      follow_button: => fof-follow-tags.ref.follow
+      following_button: => fof-follow-tags.ref.following
+      following_text: Seja notificado de todas as novas discussões.
+      hiding_button: => fof-follow-tags.ref.hiding
+      hiding_text: Ocultar discussões da página "Todas as discussões".
+      ignoring_button: => fof-follow-tags.ref.ignoring
+      ignoring_text: Nunca seja notificado.
+      lurking_button: => fof-follow-tags.ref.lurking
+      lurking_text: Ser notificado de todas as novas discussões e respostas.
+      not_following_button: Não Seguir
+      not_following_text: "Seja notificado apenas quando @mencionado."
+      notify_alert_tooltip: Receba uma notificação do fórum quando houver novas discussões ou postagens
+      notify_email_tooltip: Receber um email quando houver novas discussões ou postagens
+
+    notifications:
+      new_discussion_text: "{username} iniciou"
+      new_post_text: "{username} postou"
+
+  email:
+    newDiscussionInTag: "[Tag | Nova Discussão] title"
+    newPostInTag: "[Tag | Novo Post] title"
+
+  ref:
+    follow: Seguir
+    following: Seguir
+    hiding: Ocultar
+    ignoring: Ignorar
+    lurking: Tudo

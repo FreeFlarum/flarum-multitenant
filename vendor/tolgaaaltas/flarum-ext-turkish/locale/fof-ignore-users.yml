@@ -1,0 +1,23 @@
+fof-ignore-users:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      can_not_be_ignored_label: Engellenemez
+
+
+  # Translations in this namespace are used by the forum interface.
+  forum:
+
+    profile_link: Engellenmiş Kullanıcılar
+
+    # These strings are used in the User Controls menu.
+    user_controls:
+      ignore_button: Engelle
+      ignore_confirmation: Bu kullanıcıyı engellemek istediğinize emin misiniz?
+      unignore_button: Engeli kaldır
+      unignore_confirmation: Bu kullanıcının engelini kaldırmak istediğinize emin misiniz?

@@ -1,0 +1,25 @@
+fof-ignore-users:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      can_not_be_ignored_label: Não pode ser ignorado
+
+
+  # Translations in this namespace are used by the forum interface.
+  forum:
+
+    profile_link: Usuários Ignorados
+
+    # These strings are used in the User Controls menu.
+    user_controls:
+      ignore_button: Ignorar
+      ignore_confirmation: Tem certeza de que deseja ignorar este usuário?
+      unignore_button: Não ignorar
+      unignore_confirmation: Você deseja parar de ignorar este usuário?
+
+

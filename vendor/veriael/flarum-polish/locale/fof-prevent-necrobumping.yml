@@ -1,0 +1,18 @@
+fof-prevent-necrobumping:
+  forum:
+    composer:
+      warning:
+        title: Ta dyskusja jest starsza niż <b>{time}</b>!
+        description: Jest bardzo prawdopodobne, iż nie wymaga ona już żadnych dalszych wypowiedzi i odkopywanie jej jest bezsensowne.
+        checkbox_label: Jestem świadomy(a), że ta dyskusja jest raczej przedawniona, lecz wciąż chcę na nią odpowiedzieć.
+        error: Ta dyskusja jest zbyt stara, aby na nią odpowiadać.
+
+  admin:
+    settings:
+      days_label: Dni
+      days_help: Dyskusja zostanie oznaczona jako przestarzała, kiedy podana liczba dni minie od czasu ostatniej odpowiedzi.
+
+      message_title_label: Niestandardowy tytuł wiadomości
+      message_title_help: 'Użyj <code>[time]</code> dla wprowadzenia czasu, np. "14 dni".'
+      message_description_label: Niestandardowa treść wiadomości
+      message_agreement_label: Niestandardowa wiadomość o umowie (Pole wyboru)

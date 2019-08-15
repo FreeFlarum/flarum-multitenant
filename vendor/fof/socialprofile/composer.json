@@ -1,0 +1,45 @@
+{
+  "name": "fof/socialprofile",
+  "description": "Add custom social media pages to your user profile",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "replace": {
+    "davis/flarum-ext-socialprofile": "*"
+  },
+  "authors": [
+    {
+      "name": "Connor Davis",
+      "email": "davis@produes.co"
+    },
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "FoF\\SocialProfile\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Social Profile",
+      "icon": {
+        "name": "fas fa-globe",
+        "backgroundColor": "#e74c3c",
+        "color": "#ffff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18775-friendsofflarum-social-profile"
+    }
+  }
+}

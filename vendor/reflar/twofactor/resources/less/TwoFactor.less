@@ -1,0 +1,130 @@
+TwoFactor {
+  padding-bottom: 40px;
+
+  @media @desktop-up {
+    .container {
+      max-width: 600px;
+      margin: 0;
+    }
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+
+    > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.TwoFactor-approved {
+  color: green;
+}
+
+.TwoFactor-icon {
+  text-align: center;
+  font-size: 40px;
+  margin-top: -20px;
+}
+
+.TwoFactor-title {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+.TwoFactor-oneTime {
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.TwoFactor-input {
+
+  label {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .FormControl {
+    margin-bottom: 7px;
+    margin-top: 7px;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.TwoFactor-switch {
+  margin-bottom: 30px;
+}
+
+.TwoFactor-img {
+  text-align: center;
+}
+
+.TwoFactor-button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.TwoFactor-oneButton {
+  margin-top: 50px;
+  transform: translateX(203%);
+}
+
+.TwoFactor-inputButton {
+  margin-top: 30px;
+  transform: translateX(274%);
+}
+
+.TwoFactor-inputButton.loading {
+  transform: translateX(205%);
+}
+
+.Country-dropdown {
+  list-style: none;
+  float: left;
+  margin: 0 auto;
+  margin-right: 100%;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.Country-Dropdown-actual {
+  top: auto;
+  bottom: -200%;
+  overflow: scroll;
+  max-height: 350px;
+}
+
+#phone {
+  float: left;
+  max-width: 38%
+}
+
+.Switch-button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.Submit-Button {
+  margin-top: 10px;
+}
+
+.Phone-Input {
+  margin: 0 10px 15px 0px;
+}
+
+@media (min-width: 768px) {
+  .Carrier-Dropdown-actual {
+    max-height: 200px;
+    overflow: auto;
+    position: relative !important;
+  }
+}

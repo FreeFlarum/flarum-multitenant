@@ -1,0 +1,8 @@
+dem13n:
+  forum:
+    nickname:
+      nick: Kullanıcı adı
+      success: başarıyla değiştirildi.
+      close: Kapat
+      change: Kullanıcı Adını Değiştir
+      done: Değiştir

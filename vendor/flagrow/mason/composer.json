@@ -1,0 +1,45 @@
+{
+    "name": "flagrow/mason",
+    "description": "Add custom fields to discussions",
+    "keywords": [
+        "extension",
+        "flarum",
+        "flagrow",
+        "discussion",
+        "custom-fields"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flagrow/mason/issues",
+        "source": "https://github.com/flagrow/mason"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Mason",
+            "icon": {
+                "name": "fas fa-dungeon",
+                "backgroundColor": "#f4f4f4",
+                "color": "#5f4bb6"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/7028"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Flagrow\\Mason\\": "src/"
+        }
+    }
+}

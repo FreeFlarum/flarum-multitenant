@@ -1,0 +1,54 @@
+reflar-twofactor:
+  forum:
+    text: "Votre code de vérification sur {forum} est le suivant : {code}"
+    onetouch:  "Demande de connexion à {forum}"
+    accountlabel: Authentification à deux facteurs
+    incorrect_2fa: Code de vérification invalide
+    2fa_disabled: L'authentification à deux facteurs a été désactivée avec succès.
+    2fa_enabled: L'authentification à deux facteurs activée avec succès
+    email:
+      body: Ceci est un rappel amical que l'authentification à deux facteurs a été activée sur votre compte. Cela signifie que lors de la connexion, vous devrez entrer un code généré par votre application TOTP, Authy, ou via un message texte sur votre téléphone, en plus de saisir votre nom d'utilisateur et votre mot de passe habituels. N'oubliez pas de conserver vos codes de récupération dans un endroit sûr. Vous aurez besoin de l'un d'eux pour vous connecter à votre compte si vous perdez l'accès à votre appareil mobile.
+      subject: L'authentification à deux facteurs a été activée sur votre compte.
+    modal:
+      useACode: Utilisez un code
+      twofactor_title: Configuration de l'authentification deux facteurs
+      oneTouchTitle: Autorisation requise via Authy
+      oneTouchHeader: En attente de l'approbation OneTouch
+      oneTouchCodeHeader: Code affiché depuis l'application Authy
+      oneTouchHeaderVerified: Approuvé!
+      heading: Paramètres de l'authentification à deux facteurs
+      switch: Authentification deux facteurs
+      2fa_heading: Code à deux facteurs
+      authy_heading: Paramétage Authy
+      phone_heading: Vérification par SMS
+      helpQR: Scannez le code QR ou ajoutez manuellement le code à Google Authenticator ou à une autre application TOTP..
+      helpPhone: 'Sélectionnez votre pays, entrez votre numéro de téléphone, puis cliquez sur "Enregistrer le téléphone"'
+      helpPhone2: 'Vous devriez maintenant recevoir un SMS avec un code, entrez-le ci-dessous et cliquez sur "envoyer"'
+      helpAuthy: 'Sélectionnez votre pays, entrez votre numéro de téléphone, puis cliquez sur "Configuration"'
+      helpAuthy2: 'Vous devriez maintenant recevoir soit un texte avec des instructions pour configurer Authy, soit une notification de votre application Authy. Une fois la configuration effectuée, entrez votre code ci-dessous et cliquez sur "envoyer"'
+      submitPhone: Enregistrer le téléphone
+      otSetup: Configuration
+      placeholder: Code d'accès unique
+      button: Envoyer
+      2fa_help: Saissiez le code reçu par SMS ou le code TOTP à usage unique.
+      close: J'ai sauvegardé mes codes
+      recov: Codes de récupération
+      login_title: Authentification à deux facteurs
+      recov_header: Codes de récupération
+      recov_help1: Veuillez sauvegarder ces codes, ils ne seront plus affichés!
+      recov_help2: C’est votre seul moyen de revenir dans votre compte si vous perdez l’accès à votre téléphone ou à votre application TOTP.
+      stPhone: Passer à la configuration téléphone
+      stAuthy: Passer à la configuration Authy
+      stTOTP: Passer à la configuration TOTP
+      back: Retour
+  admin:
+      settings:
+        title: Paramètres de l'authentification à deux facteurs
+        help: "Obtenez votre compte SID et votre jeton d'authentification auprès via <a>https://twilio.com/console</a>, ainsi que votre numéro de téléphone sur <a2>https://twilio.com/console/phone-numbers/incoming</a2>"
+        enable: Activer Twilio
+        authyHelp: "Obtenez votre clé API et personnalisez l'apparence de votre forum dans l'application Authy ici: <a>https://www.twilio.com/console/authy</a>"
+        enableAuthy: Activer Authy OneTouch
+        authyApi: Clé API Authy
+        sid: Twillio Account SID
+        token: Twillio Auth Token
+        number: Twillio Phone Number

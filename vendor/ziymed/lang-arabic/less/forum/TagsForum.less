@@ -1,0 +1,83 @@
+@import "../common/TagLabel";
+@import "../common/TagIcon";
+
+@import "TagCloud";
+@import "TagDiscussionModal";
+@import "TagTiles";
+
+.DiscussionHero {
+  .item-title {
+    display: block;
+    margin-top: 15px;
+  }
+}
+.TagLinkButton.child {
+  @media @tablet-up {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  margin-right: 10px;
+  margin-left: auto;
+
+  .TagIcon {
+    display: none;
+  }
+}
+.DiscussionComposer-changeTags {
+  margin-left: 15px;
+  margin-right: auto;
+  vertical-align: 2px;
+}
+.DiscussionListItem-info > .item-tags {
+  margin-left: 4px;
+  margin-right: auto;
+  opacity: 1;
+}
+@media @tablet-up {
+  .IndexPage, .UserPage {
+    .DiscussionListItem-title {
+      margin-left: 155px;
+      margin-right: auto;
+    }
+    .DiscussionListItem-info > .item-tags {
+      margin-left: 0;
+      margin-right: auto;
+      position: absolute;
+      left: 80px;
+      right: auto;
+      top: 14px;
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: max-width 0.2s ease-in-out, -webkit-mask-image 0.2s;
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 140px, rgba(0,0,0,0) 150px);
+      font-size: 12px;
+
+      &:hover {
+        max-width: 400px;
+        -webkit-mask-image: none;
+      }
+    }
+  }
+}
+@media @desktop-up {
+  .TagsPage {
+    .sideNav {
+      .sideNav--horizontal();
+      float: none;
+      width: auto;
+      padding-top: 0;
+
+      &:after {
+        display: none;
+      }
+
+      > ul > li:first-child {
+        width: 190px;
+      }
+    }
+    .sideNavOffset {
+      // margin: 15px 0 0;
+    }
+  }
+}

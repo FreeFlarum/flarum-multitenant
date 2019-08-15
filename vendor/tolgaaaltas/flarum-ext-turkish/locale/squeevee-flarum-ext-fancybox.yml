@@ -1,0 +1,5 @@
+fancybox:
+  forum:
+    next: Sonraki
+    prev: Önceki
+    error: Görsel yüklenirken bir hata oluştu.

@@ -1,0 +1,15 @@
+flagrow-split:
+    admin:
+        permissions:
+            split_discussion_label: Separar postagem das discussões
+    forum:
+        post:
+            was_split_to: "{count} foi separado para {target}.|{count} foram separados para {target}."
+            was_split_from: "{count} foi separado de {target}.|{count} foi separado de {target}."
+        split:
+            from: Separar de
+            to: Separar para
+        modal:
+            title: Separar discussão
+            new_discussion_label: Especifique o título para a nova discussão
+            submit_button: Separar

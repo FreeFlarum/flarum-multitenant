@@ -1,0 +1,43 @@
+{
+    "name": "saleksin/flarum-auth-google",
+    "description": "Allow users to log in with Google.",
+    "type": "flarum-extension",
+    "keywords": ["authentication"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toby Zerner",
+            "email": "toby.zerner@gmail.com"
+        },
+        {
+            "name": "Stanisław Aleksiński",
+            "email": "s.aleksinski@yahoo.pl"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/saleksin/flarum-auth-google/issues",
+        "source": "https://github.com/saleksin/flarum-auth-google"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.8",
+        "league/oauth2-google": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Saleksin\\Auth\\Google\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Google Login",
+            "icon": {
+                "name": "fab fa-google",
+                "backgroundColor": "#4285F4",
+                "color": "#fff"
+            }
+        }
+    }
+}

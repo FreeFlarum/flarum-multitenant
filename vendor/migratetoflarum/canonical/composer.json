@@ -1,0 +1,44 @@
+{
+    "name": "migratetoflarum/canonical",
+    "description": "Create redirects to the canonical url of your forum",
+    "keywords": [
+        "extension",
+        "flarum",
+        "canonical",
+        "url"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/migratetoflarum/canonical/issues",
+        "source": "https://github.com/migratetoflarum/canonical"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Canonical Url",
+            "icon": {
+                "name": "fas fa-directions",
+                "backgroundColor": "#e7672e",
+                "color": "#fafafa"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/19307"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MigrateToFlarum\\Canonical\\": "src/"
+        }
+    }
+}

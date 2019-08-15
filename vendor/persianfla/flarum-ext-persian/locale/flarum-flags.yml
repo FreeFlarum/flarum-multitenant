@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: Flag posts
+      view_flags_label: View flagged posts
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: Community Guidelines URL
+      title: Flags Settings
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: با تشکر از علامت زدن این پست. مدیران انجمن به‌زودی این مورد را بررسی می‌کند.
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: نامناسب
+      reason_inappropriate_text: "این نوشته توهین‌آمیز. زشت و نامناسب است و یا <a>مقررات انجمن</a> را نقض می‌کند."
+      reason_off_topic_label: "خارج از موضوع"
+      reason_off_topic_text: این نوشته مرتبط با این مبحث نیست و باید به‌جایی دیگر منتقل شود.
+      reason_other_label: دیگر
+      reason_spam_label: هرزنامه
+      reason_spam_text: این یک نوشته تبلیغاتی است.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: علامت نخورده
+      item_text: "{username} در <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: حذف علامت
+      flagged_by_text: "علامت زده شده توسط {username}"
+      flagged_by_with_reason_text: "علامت زده شده توسط {username} به عنوان {reason}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: علامت
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: علامت نوشته
+    flagged_posts: نوشته‌های علامت خورده

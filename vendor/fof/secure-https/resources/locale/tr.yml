@@ -1,0 +1,8 @@
+fof-secure-https:
+  admin:
+    settings:
+      title: Konfigürasyon
+      replace: Resimleri HTTPS üzerinden gönder
+  forum:
+    removed: "HTTPS desteği olmadığından fotoğraf kaldırıldı."
+show: Yine de göster

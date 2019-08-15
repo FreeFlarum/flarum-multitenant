@@ -1,0 +1,9 @@
+imgur-upload:
+  admin:
+    settings:
+        title: Impostazioni Imgur Upload
+  forum:
+    upload: Premi o incolla per caricare
+    loading: Caricamento...
+    done: Fatto!
+    error: Errore

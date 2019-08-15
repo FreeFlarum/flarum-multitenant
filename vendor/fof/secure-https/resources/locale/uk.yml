@@ -1,0 +1,8 @@
+fof-secure-https:
+  admin:
+    settings:
+      title: Налаштування
+      replace: Проксі-зображення через HTTPS
+  forum:
+    removed: "Зображення видалено через відсутність підтримки протоколу HTTPS."
+    show: Показати в будь-якому випадку
