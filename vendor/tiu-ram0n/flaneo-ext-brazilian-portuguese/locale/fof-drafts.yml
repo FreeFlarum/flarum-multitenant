@@ -1,0 +1,13 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Criar rascunhos de discussão
+  forum:
+    composer:
+      title: Salvar rascunho
+      alert: Rascunho salvo.
+    dropdown:
+      title: Rascunhos
+      button: Deletar Rascunho
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Tem certeza de que deseja excluir seu rascunho?

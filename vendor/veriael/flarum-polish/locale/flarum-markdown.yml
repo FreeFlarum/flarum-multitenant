@@ -12,6 +12,7 @@ flarum-markdown:
       bold_tooltip: Dodaj pogrubiony tekst
       code_tooltip: Wprowadź kod
       header_tooltip: Dodaj nagłówek
+      image_tooltip: Dodaj obrazek
       italic_tooltip: Dodaj pochylony tekst
       link_tooltip: Dodaj link
       ordered_list_tooltip: Dodaj ponumerowaną listę

@@ -1,0 +1,62 @@
+--- 
+fof-ban-ips: 
+  admin: 
+    empty_text: "Nenhum IP bloquado foi encontrado."
+    modal: 
+      ban_ip_no_users: "O usuário será desbanido."
+      update_title: "Atualizar IP Banido"
+    nav: 
+      desc: "Adicione, remova e veja endereços IP banidos."
+      title: "Ban IPs"
+    page: 
+      address_label: "=> fof-ban-ips.ref.address_label"
+      create_button: "=> fof-ban-ips.ref.ban_ip_button"
+      creator_label: Criador
+      date_label: Data
+      reason_label: "=> fof-ban-ips.ref.reason_label"
+      user_label: Usuário
+    permissions: 
+      ban_ip_label: "=> fof-ban-ips.ref.ban_ip_addresses"
+      view_banned_ip_list_label: "Ver lista de endereços IP banidos"
+  error: 
+    banned_ip_message: "Me desculpe, mas você está banido."
+    no_ips_found_message: "Nenhum IP encontrado para o usuário."
+  forum: 
+    ban_ip_button: "=> fof-ban-ips.ref.ban_ip_button"
+    modal: 
+      ban_ip_no_users: "Verificação concluída."
+      ban_options_all_ip: "Proibir todos os IPs usados ​​por <i>{username}</i>"
+      ban_options_only_ip: "Proibir apenas o IP atual (<code>{ip}</code>)"
+    unban_ip_button: "=> fof-ban-ips.ref.unban_ip_button"
+    user_badge: 
+      banned_tooltip: Banido
+    user_controls: 
+      ban_button: "=> fof-ban-ips.ref.ban_label"
+      unban_button: "=> fof-ban-ips.ref.unban_label"
+  lib: 
+    modal: 
+      address_label: "=> fof-ban-ips.ref.address_label"
+      ban_button: "=> fof-ban-ips.ref.ban_label"
+      ban_ip_confirmation: "Tem certeza de que deseja bloquear este endereço IP de uso no fórum? Isso bloqueará os usuários com este (s) endereço (s) IP de efetuar login e registro."
+      ban_ip_users: "O usuário {users} será banido|Os Usuários {users} serão banidos"
+      check_button: Verificar
+      reason_label: "=> fof-ban-ips.ref.reason_label"
+      save_button: Salvar
+      title: "=> fof-ban-ips.ref.ban_ip_addresses"
+      unban_button: "=> fof-ban-ips.ref.unban_label"
+      unban_ip_confirmation: "Tem certeza de que deseja desbanir este usuário e todos os outros usuários não banidos por outros IPs?"
+      unban_ip_no_users: "Verificação concluída.s"
+      unban_ip_users: "O usuário {users} será desbanido|Os usuários {users} serão desbanidos"
+      unban_options_all_ip: "Desbanir todos os IPs usados ​​por <i>{username}</i>"
+      unban_options_only_ip: "Apenas desbanir o IP atual (<code>{ip}</code>)"
+      unban_title: "=> fof-ban-ips.ref.unban_ip_addresses"
+      unbanned_ips: "Unbanned <code>{ips}</code>."
+  ref: 
+    address_label: "Endereço IP"
+    ban_ip_addresses: "Banir IP(s)"
+    ban_ip_button: "Banir IP"
+    ban_label: Banir
+    reason_label: Razão
+    unban_ip_addresses: "Desbanir IP(s)"
+    unban_ip_button: "Desbanir IP"
+    unban_label: Desbanir

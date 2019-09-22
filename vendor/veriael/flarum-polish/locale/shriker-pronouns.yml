@@ -1,0 +1,17 @@
+shriker-pronouns:
+
+  admin:
+    settings:
+      title: Ustawienia zwrotów personalnych
+      prefix_label: Przedrostek zwrotów
+      prefix_help_text: Ten tekst zostanie pokazany przed zwrotami użytkownika.
+
+  forum:
+    change_pronouns_title: Zmień zwroty personalne
+    change_pronouns_button: Zmień zwroty
+    my_pronouns_are_label: Moimi zwrotami są
+    my_pronouns_are_placeholder: "Dla przykładu: oni/im, on/jemu, czy ona/jej"
+    my_pronouns_are_help_text: Twoje zwroty personalne zostaną wyświetlone w profilu, oraz karcie użytkownika. <a>Czym są zwroty personalne i dlaczego mają znaczenie?</a>
+    submit_button: Zapisz zmiany
+    submit_success_text: Twoje zwroty personalne zostały zapisane.
+    dismiss_button: Ok

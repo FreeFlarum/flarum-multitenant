@@ -151,6 +151,7 @@ core:
       delete_posts_forever_label: "Удалять сообщения (физически)"
       delete_posts_label: "Удалить сообщения"
       edit_posts_label: "Править сообщения"
+      edit_users_label: "Править пользователей"
       global_heading: "Глобальные"
       moderate_heading: "Модерация"
       new_group_button: "Новая группа"
@@ -321,6 +322,7 @@ core:
       discussion_renamed_text: "{username} изменил(а) название"
       empty_text: "Уведомления отсутствуют"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: "Отметить как прочитанное"
       title: => core.ref.notifications
       tooltip: => core.ref.notifications
 
@@ -406,6 +408,8 @@ core:
       button: "Управление"
       delete_button: => core.ref.delete
       delete_confirmation: "Вы уверены, что хотите удалить пользователя? Все сообщения пользователя также будут удалены."
+      delete_error_message: "Не удалось удалить пользователя <i>{username} ({email})</i>"
+      delete_success_message: "Пользователь <i>{username} ({email})</i> удалён"
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -459,13 +463,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: "У Вас нет прав доступа к этой странице."
-      404_message: "Страница по Вашему запросу не найдена."
-      404_return_link: "Вернуться на {forum}"
-      419_message: "Вы были неактивны продолжительное время."
-      419_return_link: "Вернитесь назад и попробуйте ещё раз"
-      500_message: "Произошла ошибка при попытке загрузить страницу."
-      503_message: "{forum} проходит техническое обслуживание. Спасибо за ожидание!"
+      csrf_token_mismatch: "Вы были неактивны продолжительное время."
+      csrf_token_mismatch_return_link: "Вернитесь назад и попробуйте ещё раз"
+      invalid_confirmation_token: "Ссылка для подтверждения недействительна или уже была использована."
+      not_authenticated: "У Вас нет прав доступа к этой странице. Попробуйте ещё раз после входа в свой аккаунт."
+      not_found: "Страница по Вашему запросу не найдена."
+      not_found_return_link: "Вернуться на {forum}"
+      permission_denied: "У Вас нет прав доступа к этой странице."
+      unknown: "Произошла ошибка при попытке загрузить страницу."
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:

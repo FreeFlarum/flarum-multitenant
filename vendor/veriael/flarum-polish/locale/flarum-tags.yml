@@ -29,7 +29,7 @@ flarum-tags:
     # These translations are used in the navigation bar.
     nav:
       tags_button: => flarum-tags.ref.tags
-      tags_text: Kieruj listą tagów, które są dostępne do organizowania nimi dyskusji.
+      tags_text: Zarządzaj listą tagów, przy pomocy których można opisywać i segregować dyskusje.
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:

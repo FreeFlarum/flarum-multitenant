@@ -17,13 +17,13 @@ flarum-likes:
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
       others_text: => core.ref.some_others
-      post_liked_text: "{username} polubił twój post"  # Can be pluralized to agree with the number of users!
+      post_liked_text: "{username} polubił(a) twój post"  # Can be pluralized to agree with the number of users!
 
     # These translations are displayed beneath individual posts.
     post:
       like_link: Lubię to
-      liked_by_self_text: "{users} lubi to."  # Can be pluralized to agree with the number of users!
-      liked_by_text: "{users} polubili to.|{users} lubią to."
+      liked_by_self_text: "{users} lubisz to.|{users} lubicie to."  # Can be pluralized to agree with the number of users!
+      liked_by_text: "{users} lubi to.|{users} lubią to."
       others_link: => core.ref.some_others
       unlike_link: Przestań lubić
       you_text: => core.ref.you

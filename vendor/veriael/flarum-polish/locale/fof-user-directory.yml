@@ -6,7 +6,7 @@ fof-user-directory:
             nav: Baza użytkowników
             sort:
                 relevance: Stosowność
-                default: Domyślne
+                default: Domyślnie
                 username_az: Nazwa (A-Z)
                 username_za: Nazwa (Z-A)
                 newest: Od najnowszych
@@ -15,8 +15,8 @@ fof-user-directory:
                 seen_oldest: Najdłużej nieaktywni
                 most_posts: Mający najwięcej postów
                 least_posts: Mający najmniej postów
-                most_discussions: Mający najwięcej dyskusji
-                least_discussions: Mający najmniej dyskusji
+                most_discussions: Najwięcej dyskusji
+                least_discussions: Najmniej dyskusji
     admin:
         permissions:
             view_user_directory: Przeglądaj bazę użytkowników

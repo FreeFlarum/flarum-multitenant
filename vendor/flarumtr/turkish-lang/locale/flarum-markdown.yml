@@ -12,6 +12,7 @@ flarum-markdown:
       bold_tooltip: Kalın
       code_tooltip: Kod
       header_tooltip: Başlık
+      image_tooltip: Resim Ekle
       italic_tooltip: İtalik
       link_tooltip: Bağlantı
       ordered_list_tooltip: Numaralı liste

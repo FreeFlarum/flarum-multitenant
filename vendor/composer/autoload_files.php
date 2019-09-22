@@ -24,6 +24,7 @@ return array(
     'f598d06aa772fa33d905e87be6398fb1' => $vendorDir . '/symfony/polyfill-intl-idn/bootstrap.php',
     'def43f6c87e4f8dfd0c9e1b1bab14fe8' => $vendorDir . '/symfony/polyfill-iconv/bootstrap.php',
     '2c102faa651ef8ea5874edb585946bce' => $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
+    '538ca81a9a966a6716601ecf48f4eaef' => $vendorDir . '/opis/closure/functions.php',
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
     'c0c684e103c597a31a3e514398f79ec1' => $vendorDir . '/zendframework/zend-stratigility/src/functions/double-pass-middleware.php',
     '968cb91a78f08ea033c0e1afe256c864' => $vendorDir . '/zendframework/zend-stratigility/src/functions/host.php',

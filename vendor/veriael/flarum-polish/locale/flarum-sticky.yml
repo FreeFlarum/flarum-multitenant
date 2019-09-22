@@ -16,7 +16,7 @@ flarum-sticky:
 
     # These translations are displayed as tooltips for discussion badges.
     badge:
-      sticky_tooltip: => flarum-sticky.ref.sticky
+      sticky_tooltip: Przypięta
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
@@ -25,8 +25,8 @@ flarum-sticky:
 
     # These translations are displayed between posts in the post stream.
     post_stream:
-      discussion_stickied_text: "{username} przypiął tę dyskusję."
-      discussion_unstickied_text: "{username} odpiął tę dyskusję."
+      discussion_stickied_text: "{username} zmienił(a) status dyskusji - przypięta."
+      discussion_unstickied_text: "{username} zmienił(a) status dyskusji - odpięta."
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
@@ -34,4 +34,4 @@ flarum-sticky:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    sticky: Przypięta
+    sticky: Przypnij

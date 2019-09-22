@@ -1,0 +1,54 @@
+fajuu-icons:
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Edit Icon component.
+    edit_icon:
+      elementPath: Ścieżka elementu (np. "li.item-administration>a>i")
+      originalIcon: Oryginalna ikona
+      modifiedIcon: Zmodyfikowana ikona
+
+    # These translations are used in the navigation bar.
+    nav:
+      icons_button: => fajuu-icons.ref.icons
+      icons_text: Zmieniaj ikony forum i ich wygląd.
+
+    # These translations are used in the Icon Settings modal dialog.
+    icon_settings:
+      title: Ustawienia ikon
+      key_heading: Kod zestawu
+      key_text: |
+        <a>Gdzie mogę znaleźć kod zestawu?</a> Darmowa wersja wymaga także rejestracji. Musisz wygenerować zestaw, po czym w kodzie zestawu znajdziesz 10-cyfrowy klucz. Jeśli posiadasz już kod zestawu, wybierz go i skopiuj. 
+
+    # These translations are used in the Icon Import modal dialog.
+    icon_import:
+      title: Importowanie ikon
+      about: Wprowadź tutaj importowane ikony w formie kodu JSON.
+      not_json: Zawartość musi być prawidłowym kodem JSON.
+      import_button: Importuj
+      restore_button: Przywróć domyślne ikony
+
+    # These translations are used in the Icon Export modal dialog.
+    icon_export:
+      title: Eksportowanie ikon
+      close_button: Zamknij
+      copy_button: Skopiuj
+      copy_success: Zawartość została skopiowana.
+      copy_error: Zawartość nie została skopiowana.
+
+    # These translations are used in the Icons page.
+    icons:
+      about_icons_text: |
+        Tutaj możesz zmienić obecne ikony forum na jakiekolwiek tylko chcesz!
+        Znajdź ikonę forum, którą chcesz zmienić (originalną ikonę), wprowadź ścieżkę do niej prowadzącą (ścieżka elementu) i wybierz ikonę (zmodyfikowana ikona).
+        Wszystkie ikony są częścią pakietu ikon <a>Font Awesome</a>.
+      settings_button: Ustawienia
+      list_icons_button: Lista ikon
+      import_icons_button: Importuj ikony
+      export_icons_button: Eksportuj ikony
+      key_error: Kod zestawu nie został odnaleziony, bądź jest nieprawidłowy. Sprawdź swoje ustawienia ikon i zmień go! Po zapisaniu zmian, odśwież stronę.
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    icons: Ikony

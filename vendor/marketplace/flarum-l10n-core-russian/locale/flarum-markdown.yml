@@ -12,6 +12,7 @@ flarum-markdown:
       bold_tooltip: "Жирный текст"
       code_tooltip: "Код"
       header_tooltip: "Заголовок"
+      image_tooltip: "Добавить изображение"
       italic_tooltip: "Курсивный текст"
       link_tooltip: "Ссылка"
       ordered_list_tooltip: "Нумерованный список"

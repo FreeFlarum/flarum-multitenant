@@ -151,6 +151,7 @@ core:
       delete_posts_forever_label: Eliminare messaggi per sempre
       delete_posts_label: Cancellare messaggi
       edit_posts_label: Modificare messaggi
+      edit_users_label: Modificare utenti
       global_heading: Globale
       moderate_heading: Moderazione
       new_group_button: Nuovo Gruppo
@@ -321,6 +322,7 @@ core:
       discussion_renamed_text: "{username} ha cambiato il titolo"
       empty_text: Non ci sono notifiche
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: Segna come letto
       title: Notifiche
       tooltip: Notifiche
 
@@ -406,6 +408,8 @@ core:
       button: Controlli
       delete_button: => core.ref.delete
       delete_confirmation: "Sei sicuro di voler eliminare questo utente? Tutti i messaggi di questo utente verrano cancellati."
+      delete_error_message: "Cancellazione dell'utente <i>{username} ({email})</i> fallito"
+      delete_success_message: "L'utente <i>{username} ({email})</i> è stato cancellato"
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -459,13 +463,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: Non sei autorizzato ad accedere a questa pagina.
-      404_message: La pagina che hai richiesto non esiste.
-      404_return_link: "Ritorna su {forum}"
-      419_message: Sei stato inattivo per troppo tempo.
-      419_return_link: Torna indietro e riprova.
-      500_message: Si è verificato un errore durante il caricamento di questa pagina.
-      503_message: "{forum} è in manutenzione. Ritonerà operativo il prima possibile!"
+      csrf_token_mismatch: Sei stato inattivo per troppo tempo.
+      csrf_token_mismatch_return_link: Torna indietro e riprova
+      invalid_confirmation_token: Questo link di conferma è già stato usato oppure non è valido.
+      not_authenticated: Non hai i permessi necessarie per accedere a questa pagina. Riprova dopo aver effettuato l'accesso.
+      not_found: La pagina che hai richiesto non è stata trovata.
+      not_found_return_link: "Ritorna su {forum}"
+      permission_denied: Non hai i permessi necessarie per accedere a questa pagina.
+      unknown: Si è verificato un errore durante il caricamento di questa pagina.
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:

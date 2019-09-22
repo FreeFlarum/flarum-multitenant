@@ -1,0 +1,8 @@
+fof-secure-https:
+  admin:
+    settings:
+      title: Konfiguracja
+      replace: Przekierowuj obrazki przez HTTPS
+  forum:
+    removed: Obrazek usunięty w związku z brakiem wsparcia dla HTTPS.
+    show: Pokaż mimo to

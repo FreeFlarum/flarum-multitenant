@@ -30,6 +30,17 @@ export default class RecipientSearch extends Search {
             $search.$('.RecipientsInput').focus();
         });
 
+        $('.RecipientsInput').on('keyup', () => {
+            clearTimeout(this.typingTimer);
+            this.doSearch = false;
+            this.typingTimer = setTimeout(() => {
+                this.doSearch = true;
+                m.redraw();
+            }, 900);
+        }).on('keydown', () => {
+            clearTimeout(this.typingTimer);
+        });
+
         super.config(isInitialized);
     }
 
@@ -77,7 +88,7 @@ export default class RecipientSearch extends Search {
                 className: 'Dropdown-menu Search-results fade ' + classList({
                     in: !!loading
                 })
-            }, this.loadingSources
+            }, !this.doSearch
                 ? LoadingIndicator.component({size: 'tiny', className: 'Button Button--icon Button--link'})
                 : this.sources.map(source => source.view(this.value()))
             )

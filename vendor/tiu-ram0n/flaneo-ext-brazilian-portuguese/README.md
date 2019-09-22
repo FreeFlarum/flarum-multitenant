@@ -6,7 +6,7 @@
 
 Para saber mais, acesse o [Pacote de Idiomas Português Brasileiro](https://discuss.flarum.org/d/18543-language-pack-portuguese-brazilian).
 
-[Reportar Erro](https://github.com/tiuram0n/flaneo-ext-brazilian-portuguese/issues): Encontrou algum problema? Informe-nos!
+[Reportar Erro](https://github.com/tiuram0n/brazilian-portuguese/issues): Encontrou algum problema? Informe-nos!
 
 Pacotes de Extensões Traduzidas:
 
@@ -36,22 +36,22 @@ Pacotes de Extensões Traduzidas:
 Utilize o comando:
 
 ```bash
-composer require tiu-ram0n/flaneo-ext-brazilian-portuguese
+composer require tiuram0n/brazilian-portuguese
 ```
 
-Também disponível na loja de extensões do flarum: [Bazaar](https://flagrow.io/extensions/tiu-ram0n/flaneo-ext-brazilian-portuguese).
+Também disponível na loja de extensões do flarum: [Bazaar](https://flagrow.io/extensions/tiu-ram0n/brazilian-portuguese).
 
 ## Como atualizar:
 
 Utilize o comando:
 
 ```bash
-composer update tiu-ram0n/flaneo-ext-brazilian-portuguese
+composer update tiuram0n/brazilian-portuguese
 php flarum cache:clear
 ```
 
 ## Links
 
-- [GitHub](https://github.com/tiuram0n/flaneo-ext-brazilian-portuguese "GitHub")
-- [Packagist](https://packagist.org/packages/tiu-ram0n/flaneo-ext-brazilian-portuguese "Packagist")
-- [Flarow](https://flagrow.io/extensions/tiu-ram0n/flaneo-ext-brazilian-portuguese "Flarow")
+- [GitHub](https://github.com/tiuram0n/brazilian-portuguese "GitHub")
+- [Packagist](https://packagist.org/packages/tiu-ram0n/brazilian-portuguese "Packagist")
+- [Flarow](https://flagrow.io/extensions/tiu-ram0n/brazilian-portuguese "Flarow")

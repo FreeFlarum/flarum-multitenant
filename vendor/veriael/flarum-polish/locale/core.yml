@@ -31,9 +31,9 @@ core:
       edit_header_button: => core.ref.custom_header_title
       enter_hex_message: Wprowadź proszę kod koloru hex.
       favicon_heading: Favicon
-      favicon_text: Wyślij zdjęcie, które zostanie wyświetlone jako ikona forum na zakładce w przeglądarce.
+      favicon_text: Wyślij obrazek, który będzie wyświetlany jako ikona forum na zakładce w przeglądarce.
       logo_heading: Logo
-      logo_text: Wyślij zdjęcie, które będzie wyświetlane zamiast nazwy forum.
+      logo_text: Wyślij obrazek, który będzie wyświetlany zamiast nazwy forum.
       submit_button: => core.ref.save_changes
 
     # These translations are used in the Basics page.
@@ -90,7 +90,7 @@ core:
     # These translations are used in the email page of the admin interface.
     email:
       addresses_heading: Adresy
-      driver_heading: Wybierz driver
+      driver_heading: Wybierz sterownik
       driver_label: Driver
       from_label: Nadawca
       heading: => core.ref.email
@@ -129,17 +129,17 @@ core:
     # These translations are used in the navigation bar.
     nav:
       appearance_button: Wygląd
-      appearance_text: "Dostosuj kolory, loga i inne zmienne używane w celu zapewnienia odpowiedniego wyglądu twojego forum."
+      appearance_text: "Dostosuj kolory, logo i inne zmienne, pozwalające na jak najlepsze, wizualne dostosowanie twojego forum."
       basics_button: Podstawy
-      basics_text: "Zmień nazwę forum, język, i inne podstawowe ustawienia."
+      basics_text: "Zmień nazwę forum, jego język i dostosuj inne podstawowe ustawienia."
       dashboard_button: Tablica
       dashboard_text: Twoje forum jak na dłoni.
       email_button: => core.ref.email
-      email_text: "Konfiguruj ustawienia email swojego forum."
+      email_text: "Konfiguruj ustawienia wysyłki maili swojego forum."
       extensions_button: Rozszerzenia
-      extensions_text: Dodaj więcej funkcjonalności swojemu forum i spraw, aby było jak twoje własne.
+      extensions_text: Dodaj więcej funkcjonalności swojemu forum i spraw, że bez problemu sprosta twoim oczekiwaniom.
       permissions_button: Uprawnienia
-      permissions_text: Skonfiguruj kto i co może zobaczyć, zrobić.
+      permissions_text: Skonfiguruj kto i co może zobaczyć, lub zrobić.
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
@@ -151,6 +151,7 @@ core:
       delete_posts_forever_label: Usuwaj posty na zawsze
       delete_posts_label: Usuwaj posty
       edit_posts_label: Edytuj posty
+      edit_users_label: Edytuj użytkowników
       global_heading: Globalnie
       moderate_heading: Moderuj
       new_group_button: Nowa grupa
@@ -162,7 +163,7 @@ core:
       start_discussions_label: Rozpoczynaj dyskusje
       view_discussions_label: Przeglądaj dyskusje
       view_last_seen_at_label: Zobacz, kiedy użytkownik był ostatnio aktywny
-      view_post_ips_label: Zobacz adres IP, z którego był napisany post
+      view_post_ips_label: Zobacz adres IP, z którego został napisany post
       view_user_list_label: Zobacz listę użytkowników
 
     # These translations are used in the dropdown menus on the Permissions page.
@@ -183,7 +184,7 @@ core:
     # These translations are used in image upload buttons.
     upload_image:
       remove_button: => core.ref.remove
-      upload_button: Dodaj obrazek...
+      upload_button: Dodaj obrazek
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -250,8 +251,8 @@ core:
       empty_text: Wygląda na to, że nie ma tu żadnych dyskusji.
       load_more_button: => core.ref.load_more
       mark_as_read_tooltip: Oznacz jako przeczytane
-      replied_text: "{username} odpowiedział {ago}"
-      started_text: "{username} rozpoczął {ago}"
+      replied_text: "{username} odpowiedział(a) {ago}"
+      started_text: "{username} utworzył(a) {ago}"
 
     # These translations are used in the Edit User modal dialog (admin function).
     edit_user:
@@ -299,11 +300,11 @@ core:
 
     # These translations are used by the sorting control above the discussion list.
     index_sort:
-      latest_button: Ostatnie
+      latest_button: Ostatnio aktywne
       newest_button: Najnowsze
       oldest_button: Najstarsze
-      relevance_button: Najbardziej odpowiednie
-      top_button: Najlepsze
+      relevance_button: Najbardziej trafne
+      top_button: Najbardziej aktywne
 
     # These translations are used in the Log In modal dialog.
     log_in:
@@ -318,7 +319,7 @@ core:
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
-      discussion_renamed_text: "{username} zmienił tytuł dyskusji"
+      discussion_renamed_text: "{username} zmienił(a) tytuł dyskusji"
       empty_text: Brak powiadomień
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
       title: => core.ref.notifications
@@ -347,7 +348,7 @@ core:
     # These translations are displayed between posts in the post stream.
     post_stream:
       discussion_renamed_old_tooltip: 'Stary tytuł brzmiał: "{old}"'
-      discussion_renamed_text: "{username} zmienił tytuł dyskusji na {new}."
+      discussion_renamed_text: "{username} zmienił(a) tytuł dyskusji na {new}."
       load_more_button: => core.ref.load_more
       reply_placeholder: => core.ref.write_a_reply
       time_lapsed_text: "{period} później"
@@ -395,7 +396,7 @@ core:
       discussions_link: => core.ref.discussions
       in_discussion_text: "W {discussion}"
       joined_date_text: "Dołączył(a) {ago}"
-      online_text: Aktywny teraz
+      online_text: Dostępny teraz
       posts_empty_text: Wygląda na to, że nie ma tu żadnych postów.
       posts_link: => core.ref.posts
       posts_load_more_button: => core.ref.load_more
@@ -501,7 +502,7 @@ core:
 
         Ktoś (oby ty!) zarejestrował się na {forum} używając tego adresu email.
 
-        Jeśli byłeś to ty, kliknij proszę poniższy link, a twoje konto zostanie aktywowane:
+        Jeśli to to ty, kliknij proszę poniższy link, a twoje konto zostanie aktywowane:
         {url}
 
         Jeśli nie rejestrowałeś się na naszym forum, zignoruj proszę tego maila.
@@ -544,9 +545,9 @@ core:
     color: Kolor                                 # Referenced by flarum-tags.yml
     confirm_password: Potwierdź hasło
     confirmation_email_sent: "Wysłaliśmy email z potwierdzeniem do {email}. Jeśli wkrótce nie dotrze, sprawdź folder ze spamem."
-    custom_footer_text: Dodaj HTML do wyświetlenia na samym dole strony.
+    custom_footer_text: Dodaj kod HTML do wyświetlenia na samym dole strony.
     custom_footer_title: Edytuj niestandardową stopkę
-    custom_header_text: "Dodaj HTML do wyświetlenia na samej górze strony, nad własnym nagłówkiem Flarum."
+    custom_header_text: "Dodaj kod HTML do wyświetlenia na samej górze strony, nad nagłówkiem własnym Flarum."
     custom_header_title: Edytuj niestandardowy nagłówek
     delete: Usuń
     delete_forever: Usuń na zawsze
@@ -566,7 +567,7 @@ core:
     posts: Posty                                 # Referenced by flarum-statistics.yml
     previous_page: Poprzednia strona
     remove: Usuń
-    rename: Zmień nazwę
+    rename: Zmień tytuł
     reply: Odpowiedz                                 # Referenced by flarum-mentions.yml
     reset_your_password: Zresetuj swoje hasło
     restore: Przywróć

@@ -1,0 +1,82 @@
+fof-ban-ips:
+  forum:
+    ban_ip_button: => fof-ban-ips.ref.ban_ip_button
+    unban_ip_button: => fof-ban-ips.ref.unban_ip_button
+
+    modal:
+      ban_options_only_ip: Banuj tylko obecny adres IP (<code>{ip}</code>)
+      ban_options_all_ip: Banuj wszystkie adresy IP użyte przez <i>{username}</i>
+      ban_ip_no_users: Nikt więcej nie zostanie zbanowany
+
+    user_badge:
+      banned_tooltip: Zbanowany
+
+    user_controls:
+      ban_button: => fof-ban-ips.ref.ban_label
+      unban_button: => fof-ban-ips.ref.unban_label
+
+  admin:
+    permissions:
+      ban_ip_label: => fof-ban-ips.ref.ban_ip_addresses
+      view_banned_ip_list_label: Przeglądaj listę zbanowanych adresów IP
+
+    page:
+      create_button: => fof-ban-ips.ref.ban_ip_button
+
+      creator_label: Nadał
+      user_label: Użytkownik
+      address_label: => fof-ban-ips.ref.address_label
+      reason_label: => fof-ban-ips.ref.reason_label
+      date_label: Data
+
+    modal:
+      update_title: Zaktualizuj zbanowane IP
+      ban_ip_no_users: Nikt nie zostanie zbanowany
+
+    nav:
+      title: Banuj adresy IP
+
+      desc: Dodawaj, usuwaj i przeglądaj zbanowane adresy IP.
+
+    empty_text: Nie znaleziono zbanowanych adresów IP.
+
+  error:
+    banned_ip_message: Autoryzacja nieudana.
+    no_ips_found_message: Nie znaleziono adresów IP dla tego użytkownika.
+
+  lib:
+    modal:
+      title: => fof-ban-ips.ref.ban_ip_addresses
+      unban_title: => fof-ban-ips.ref.unban_ip_addresses
+
+      address_label: => fof-ban-ips.ref.address_label
+      reason_label: => fof-ban-ips.ref.reason_label
+
+      check_button: Sprawdź
+      save_button: Zapisz
+
+      ban_ip_confirmation: "Czy na pewno chcesz zablokować ten adres IP? Wykluczy to logowanie i rejestrację wszystkich użytkowników z tym adresem IP."
+      ban_ip_users: Użytkownik {users} zostanie zbanowany|Użytkownicy {users} zostaną zbanowani
+
+      unban_ip_confirmation: Czy na pewno chcesz odbanować tego użytkownika i wszystkich, niezbanowanych na inne adresy IP?
+      unban_options_only_ip: Odbanuj jedynie obecny adres IP (<code>{ip}</code>)
+      unban_options_all_ip: Odbanuj wszystkie adresy IP użyte przez <i>{username}</i>
+      unban_ip_no_users: Nikt więcej nie zostanie odbanowany
+      unban_ip_users: Użytkownik {users} zostanie odbanowany|Użytkownicy {users} zostaną odbanowani
+      unbanned_ips: Odbanowano <code>{ips}</code>.
+
+      ban_button: => fof-ban-ips.ref.ban_label
+      unban_button: => fof-ban-ips.ref.unban_label
+
+  ref:
+    ban_label: Zbanuj
+    ban_ip_addresses: Zbanuj adresy IP
+    ban_ip_button: Zbanuj IP
+
+    unban_label: Odbanuj
+    unban_ip_addresses: Odbanuj adresy IP
+    unban_ip_button: Odbanuj IP
+
+    address_label: Adresy IP
+    reason_label: Powód
+

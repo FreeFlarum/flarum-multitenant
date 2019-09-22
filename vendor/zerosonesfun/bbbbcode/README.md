@@ -33,9 +33,7 @@ The following BBcodes are available:
 
 **Spoiler:** 
 
-`[spoiler="I wanted to make you click something in order to see this just because."]Click here[/spoiler]`
-
-(The hidden part is placed inside the opening tag, and then the word(s) you click on are in between the opening and closing tags.)
+`[spoiler="The text you click on"]The hidden text goes here.[/spoiler]`
 
 **Accordion:**
 ~~~

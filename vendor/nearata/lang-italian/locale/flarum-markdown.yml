@@ -12,6 +12,7 @@ flarum-markdown:
       bold_tooltip: Grassetto
       code_tooltip: Inserisci codice
       header_tooltip: Intestazione
+      image_tooltip: Aggiungi un immagine
       italic_tooltip: Corsivo
       link_tooltip: Link
       ordered_list_tooltip: Elenco numerato

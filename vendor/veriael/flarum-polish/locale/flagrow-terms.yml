@@ -1,0 +1,76 @@
+flagrow-terms:
+    admin:
+        settings:
+            title: Ustawienia regulaminów
+
+            field:
+                signup-legal-text: Dodatkowy tekst w formularzu rejestracyjnym
+                hide-updated-at: Nie pokazuj daty uaktualnienia regulaminów, kiedy dostępne jest uaktualnienie
+                date-format: Format daty
+                date-format-help: Możesz użyć dowolny poprawny format <a>Moment.js</a>. Zostaw pole pustym, jeśli chcesz użyć domyślnego.
+
+        titles:
+            policies: Regulaminy
+
+        buttons:
+            new-policy: Nowy regulamin
+            edit-policy: Edytuj regulamin
+            add-policy: Dodaj regulamin
+            save-policy: Zapisz regulamin
+            delete-policy: Usuń regulamin
+            set-to-now: Ustaw na teraz
+
+        messages:
+            delete-policy-confirmation: >
+                This will permanently delete the policy {name} and the associated accept dates from the database.
+                Please make sure you made a backup of those dates if you need them for legal reasons.
+                Are you sure you want to delete this policy ?
+
+        policies:
+            name: Nazwa
+            name-help: This name will be shown beside the checkbox and as the title of the update modal.
+            url: Url
+            url-help: The url to the page where you can read the terms. Will open in a new tab when clicked.
+            update-message: Komunikat aktualizacji
+            update-message-help: A message to show to existing users who have not yet accepted the latest terms.
+            terms-updated-at: Uaktualniony
+            terms-updated-at-placeholder: YYYY-MM-DD (hh:mm:ss)
+            terms-updated-at-help: >
+                The date of the last terms update.
+                Setting this value will require all users who accepted prior to that date to accept again.
+                Must be in the past (otherwise users would never be able to accept after the date and get past the modal).
+            export-url: Export url
+            export-url-help: >
+                Any user with permission "Export all policies data" can access those urls to download the list of users who accepted this policy.
+                You can find more details about the available options on the <a>extension wiki</a>.
+
+        permissions:
+            see-user-policies-state: Status zapoznania się z nowym regulaminem
+            postpone-policies-accept: Może odłożyć akceptację nowego regulaminu
+            export-policies: Eksportuj wszystkich użytkowników i dane regulaminów
+
+    forum:
+        signup:
+            i-accept: Akceptuję <a>{policy}</a>
+            must-accept: <a>{policy}</a> musi zostać zaakceptowany.
+
+        accept-modal:
+            title: Aktualizacja Regulaminu
+            updated-at: Regulamin został uaktualniony {date}.
+            updated-recently: Ten regulamin został uaktualniony od czasu twojej ostatniej wizyty.
+            i-accept: Akceptuję nowy <a>{policy}</a>
+            accept: Potwierdź
+            close: Możesz teraz zamknąć to okno
+
+        state-modal:
+            title: Status akceptacji regulaminu dla {username}
+            accepted-at: Zaakceptowany {date}
+            not-accepted: Niezaakceptowany
+
+        update-alert:
+            must-accept-message: Tymczasowo ograniczyliśmy dostęp do twojego konta, dopóki nie zaakceptujesz nowego regulaminu.
+            can-accept-message: Zaktualizowaliśmy ostatnio regulamin. Musisz go zaakceptować, aby móc dalej korzystać z forum.
+            review: Kliknij tutaj, aby to zrobić
+
+        user_controls:
+            state_button: Status akceptacji regulaminu

@@ -13,8 +13,8 @@ fof-gamification:
       name: Użytkownik
       amount: Punkty
     notification:
-      upvote: "{username} zagłosował pozytywnie na twój post"
-      downvote: "{username} zagłosował negatywnie na twój post"
+      upvote: "{username} zagłosował(a) pozytywnie na twój post"
+      downvote: "{username} zagłosował(a) negatywnie na twój post"
     user:
       points: "Punkty: {points}"
       rank: "{rank}"

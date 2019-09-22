@@ -10,7 +10,7 @@ fof-byobu:
             send_pd: "Wyślij wiadomość do {username}"
         labels:
             recipients: "{count} odbiorca|{count} odbiorców"
-            user_deleted: -usunięty-
+            user_deleted: -Użytkownik usunięty-
         nav:
             private_discussions: Prywatna dyskusja
         input:
@@ -24,9 +24,9 @@ fof-byobu:
                 add_recipients: Dodaj odbiorców do swojej dyskusji
         post:
             recipients_modified:
-                added_and_removed: "{username} dodał odbiorców {added} i usunął {removed}."
-                added: "{username} dodał odbiorców {added}."
-                removed: "{username} usunął odbiorców {removed}."
+                added_and_removed: "{username} zmienił(a) odbiorców - dodano {added}, usunięto {removed}."
+                added: "Odbiorcy {added} zostali dodani przez {username}."
+                removed: "Odbiorcy {removed} zostali usunięci przez {username}."
         user:
             settings:
                 block_pd: Blokuj dyskusje prywatne

@@ -1,15 +1,23 @@
 # Italian Language Pack for Flarum
 
-## Installation / Updating
+## Installation
 
 ```shell
 composer require nearata/lang-italian
+```
+
+## Updating
+
+```shell
+composer update nearata/lang-italian
+php flarum cache:clear
 ```
 
 ## Uninstall
 
 ```shell
 composer remove nearata/lang-italian
+php flarum cache:clear
 ```
 
 ## Supported Extensions:

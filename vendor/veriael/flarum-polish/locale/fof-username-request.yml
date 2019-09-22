@@ -1,0 +1,39 @@
+fof-username-request:
+  admin:
+    permissions:
+      start: Wyślij prośbę o zmianę nazwy
+      moderate: Zatwierdzaj prośby użytkowników o zmianę nazwy
+  forum:
+    action:
+      title: => fof-username-request.forum.results.title
+      help_text: Upewnij się, że nazwa jest zgodna z regulaminem forum.
+      decision_title: Decyzja
+      approval_label: Zatwierdź
+      denial_label: Odrzuć
+      submit_button: Zapisz
+      reason_title: Powód odrzucenia
+      success: Decyzja została wysłana.
+      name: 'Użytkownik {username} wysłał prośbę o zmianę swojej nazwy na "{newUsername}"'
+    results:
+      title: Zmiana nazwy
+      approved: 'Twoja prośba o zmianę nazwy została zatwierdzona!'
+      new_username: 'Twoja nazwa, to teraz "{username}"'
+      denied: Twoja prośba o zmianę nazwy została odrzucona.
+      reason: 'Powód: <i>"{reason}"</i>'
+      resubmit: Możesz ponownie poprosić o zmianę nazwy z poziomu ustawień swojego konta.
+    request:
+      title: Wyślij prośbę o zmianę nazwy
+      current_request: Poprosiłeś już o zmianę nazwy na "{username}." Możesz zaktualizować, lub usunąć tę prośbę.
+      submit_button: Zapisz prośbę
+      delete_button: Usuń prośbę
+      confirmation_message: Twoja prośba została otrzymana i zostanie wkrótce rozważona.
+      dismiss_button: Rozumiem
+      deleted: Prośba o zmianę nazwy usunięta.
+    account_label: Zmień nazwę użytkownika
+    profile_link: Historia nazw
+    dropdown:
+      empty_text: Nie znaleziono żadnych próśb użytkowników
+      tooltip: => fof-username-request.forum.dropdown.title
+      title: Prośby o zmianę nazw wysłane przez użytkowników
+      item_text: "Użytkownik {username} poprosił o zmianę nazwy"
+      exerpt: "Nowa nazwa: {requestedUsername}"

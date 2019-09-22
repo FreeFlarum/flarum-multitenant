@@ -132,11 +132,9 @@ class MessageCatalogueTest extends TestCase
         $this->assertEquals([$r, $r1, $r2], $catalogue->getResources());
     }
 
-    /**
-     * @expectedException \Symfony\Component\Translation\Exception\LogicException
-     */
     public function testAddFallbackCatalogueWithParentCircularReference()
     {
+        $this->expectException('Symfony\Component\Translation\Exception\LogicException');
         $main = new MessageCatalogue('en_US');
         $fallback = new MessageCatalogue('fr_FR');
 
@@ -144,11 +142,9 @@ class MessageCatalogueTest extends TestCase
         $main->addFallbackCatalogue($fallback);
     }
 
-    /**
-     * @expectedException \Symfony\Component\Translation\Exception\LogicException
-     */
     public function testAddFallbackCatalogueWithFallbackCircularReference()
     {
+        $this->expectException('Symfony\Component\Translation\Exception\LogicException');
         $fr = new MessageCatalogue('fr');
         $en = new MessageCatalogue('en');
         $es = new MessageCatalogue('es');
@@ -158,11 +154,9 @@ class MessageCatalogueTest extends TestCase
         $en->addFallbackCatalogue($fr);
     }
 
-    /**
-     * @expectedException \Symfony\Component\Translation\Exception\LogicException
-     */
     public function testAddCatalogueWhenLocaleIsNotTheSameAsTheCurrentOne()
     {
+        $this->expectException('Symfony\Component\Translation\Exception\LogicException');
         $catalogue = new MessageCatalogue('en');
         $catalogue->addCatalogue(new MessageCatalogue('fr', []));
     }

@@ -1,8 +1,8 @@
 {
-    "name": "tiu-ram0n/flaneo-ext-brazilian-portuguese",
+    "name": "tiu-ram0n/brazilian-portuguese",
     "type": "flarum-extension",
-    "description": "Language package for Brazilian Portuguese.",
-    "homepage": "https://flaneo.com.br/",	
+    "description": "Pacote de idioma Português do Brasil.",
+    "homepage": "https://coode.in",	
     "keywords": [
 			"brazilian",
 			"portuguese",
@@ -14,13 +14,13 @@
         {
             "name": "Ramon Guilherme",
             "email": "ramonguilherme@outlook.com",
-            "homepage": "https://flaneo.com.br/"
+            "homepage": "https://coode.in"
         }
            
     ],
     "support": {
-	    "issues": "https://github.com/tiu-ram0n/flaneo-ext-brazilian-portuguese/issues",
-	    "source": "https://github.com/tiu-ram0n/flaneo-ext-brazilian-portuguese"
+	    "issues": "https://github.com/tiu-ram0n/brazilian-portuguese/issues",
+	    "source": "https://github.com/tiu-ram0n/brazilian-portuguese"
     },	
     "require": {
         "flarum/core": "^0.1.0-beta.8"

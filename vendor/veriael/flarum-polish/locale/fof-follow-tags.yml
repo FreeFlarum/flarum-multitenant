@@ -1,0 +1,41 @@
+fof-follow-tags:
+  forum:
+    settings:
+      notify_new_discussion_label: Ktoś rozpoczyna dyskusję z tagiem, który obserwuję
+      notify_new_post_label: Ktoś odpisuje w dyskusji z tagiem, który obserwuję
+
+
+    index:
+      follow_tag_button: Obserwuj
+      unfollow_tag_button: Przestań obserwować
+
+
+    sub_controls:
+      follow_button: => fof-follow-tags.ref.follow
+      following_button: => fof-follow-tags.ref.following
+      following_text: Bądź powiadamiany o wszystkich nowych dyskusjach.
+      hiding_button: => fof-follow-tags.ref.hiding
+      hiding_text: Ukrywaj dyskusje z tym tagiem ze strony wszystkich dyskusji.
+      ignoring_button: => fof-follow-tags.ref.ignoring
+      ignoring_text: Nigdy nie bądź powiadamiany o nowych dyskusjach oraz odpowiedziach pod tym tagiem.
+      lurking_button: => fof-follow-tags.ref.lurking
+      lurking_text: Bądź powiadamiany o wszystkich nowych dyskusjach oraz odpowiedziach.
+      not_following_button: Nie obserwujesz
+      not_following_text: "Bądź powiadamiany tylko, kiedy ktoś cię @wspomni."
+      notify_alert_tooltip: Otrzymaj powiadomienie na forum, kiedy pojawią się nowe dyskusje lub odpowiedzi
+      notify_email_tooltip: Otrzymaj wiadomość email, kiedy pojawią się nowe dyskusje lub odpowiedzi
+
+    notifications:
+      new_discussion_text: "{username} utworzył(a)"
+      new_post_text: "{username} odpisał(a)"
+
+  email:
+    newDiscussionInTag: "[Tag | New Discussion] title"
+    newPostInTag: "[Tag | New Post] title"
+
+  ref:
+    follow: Obserwuj
+    following: Obserwujesz
+    hiding: Ukrywasz
+    ignoring: Ignorujesz
+    lurking: Lurkujesz

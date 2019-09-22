@@ -1,0 +1,35 @@
+flagrow-analytics:
+    admin:
+        popup:
+            title: Ustawienia analityki
+
+            section:
+                googleAnalytics: Google Analytics
+                piwik: Matomo
+
+            field:
+                statusGoogle: Włącz Google Analytics
+                googleTrackingCode: Kod śledzenia
+                statusPiwik: Włącz Matomo
+                piwikUrl: Domena lub adres Matomo
+                piwikSiteId: ID strony
+                piwikTrackSubdomain: Śledź odwiedzających w obrębie wszystkich subdomen Flarum
+                piwikPrependDomain: Dodaj domenę do tytułu strony, gdy śledzisz
+                piwikHideAliasUrl: W raporcie "Outlinks", ukrywaj kliknięcia w znane aliasy adresów URL
+                piwikAliasUrl: Alias Url
+                piwikTrackAccounts: Śledź indywidualne konta użytkowników
+                piwikAuthToken: Token autoryzacji
+
+            placeholder:
+                piwikAuthToken: |
+                    Wypełnij pole Authentication Token, aby aktywować widok statystyk Matomo w panelu administracyjnym.
+
+            trackAccounts:
+                none: Nie śledź
+                username: Śledź przez nazwy
+                email: Śledź przez adresy email
+
+        page:
+            nav:
+                title: Analityka
+                description: Rzuć okiem na statystyki forum.

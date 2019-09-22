@@ -38,7 +38,7 @@ flarum-subscriptions:
       following_text: Bądź powiadamiany o wszystkich odpowiedziach.
       ignoring_button: => flarum-subscriptions.ref.ignoring
       ignoring_text: Nigdy nie bądź powiadamiany. Ukryj dyskusję z listy dyskusji.
-      not_following_button: Nie śledzisz
+      not_following_button: Nie obserwuj
       not_following_text: "Bądź powiadamiany tylko, kiedy zostaniesz @wspomniany."
       notify_alert_tooltip: Dostań powiadomienie na forum, kiedy pojawią się nowe posty
       notify_email_tooltip: Otrzymaj wiadomość email, kiedy pojawią się nowe posty
@@ -50,5 +50,5 @@ flarum-subscriptions:
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
     follow: Obserwuj
-    following: Obserwowane
-    ignoring: Ignorowane
+    following: Obserwujesz
+    ignoring: Ignorowana

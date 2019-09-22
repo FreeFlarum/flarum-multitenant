@@ -151,6 +151,7 @@ core:
       delete_posts_forever_label: Delete posts forever
       delete_posts_label: Delete posts
       edit_posts_label: Edit posts
+      edit_users_label: Edit users
       global_heading: Global
       moderate_heading: Moderate
       new_group_button: New Group
@@ -321,6 +322,7 @@ core:
       discussion_renamed_text: "{username} changed the title"
       empty_text: No Notifications
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: Mark as Read
       title: => core.ref.notifications
       tooltip: => core.ref.notifications
 
@@ -406,6 +408,8 @@ core:
       button: Controls
       delete_button: => core.ref.delete
       delete_confirmation: "Are you sure you want to delete this user? All of the user's posts will be deleted."
+      delete_error_message: "Deletion of user <i>{username} ({email})</i> failed"
+      delete_success_message: "User <i>{username} ({email})</i> was deleted"
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -459,13 +463,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: You do not have permission to access this page.
-      404_message: The page you requested could not be found.
-      404_return_link: "Return to {forum}"
-      419_message: You have been inactive for too long.
-      419_return_link: Go back, to try again
-      500_message: An error occurred while trying to load this page.
-      503_message: "{forum} is undergoing maintenance. Thanks for your patience!"
+      csrf_token_mismatch: You have been inactive for too long.
+      csrf_token_mismatch_return_link: Go back, to try again
+      invalid_confirmation_token: This confirmation link has already been used or is invalid.
+      not_authenticated: You do not have permission to access this page. Try again after logging in.
+      not_found: The page you requested could not be found.
+      not_found_return_link: "Return to {forum}"
+      permission_denied: You do not have permission to access this page.
+      unknown: An error occurred while trying to load this page.
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:

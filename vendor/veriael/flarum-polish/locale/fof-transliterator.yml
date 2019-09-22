@@ -1,0 +1,6 @@
+fof-transliterator:
+  admin:
+    settings:
+      title: Ustawienia Transliteratora
+      parse_button: Konwertuj linki do istniejących dyskusji
+      result: "Przekonwertowano 1 dyskusję|Przekonwertowano dyskusje: {count}"

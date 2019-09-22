@@ -1,7 +1,7 @@
 fof-reactions:
   forum:
     warning: Twoja reakcja została przekonwertowana
-    notification: '{username} zareagował {reaction} na twój post'
+    notification: '{username} zareagował(a) {reaction} na twój post'
     settings:
         notify_post_reacted_label: Ktoś reaguje na jeden z moich postów
 

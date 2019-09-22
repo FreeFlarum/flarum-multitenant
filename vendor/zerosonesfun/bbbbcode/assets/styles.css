@@ -120,16 +120,18 @@ span[data-tooltip][data-placement="bottom"]::after {
   left: 0px;
   top: 0px;
   height: 40px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  -khtml-appearance: none;
-  appearance: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -o-appearance: none !important;
+  -khtml-appearance: none !important;
+  appearance: none !important;
   cursor: pointer;
   box-sizing: border-box;
   padding: 0 20px;
   z-index: 2;
   margin: 0px;
+  border: 0;
+  outline: none;
 }
 
 input.accordion-chk:checked {
@@ -280,6 +282,7 @@ div[id^="popmodal-"] {
   padding: 10px 20px;
   box-sizing: border-box;
   border-radius: 4px;
+  color: #222 !important;
 }
 
 .popcontainer h2 {
@@ -296,6 +299,10 @@ div[id^="popmodal-"]:target {
   z-index: 100;
 }
 
+a.popbtn.Button.Button--primary {
+    border-bottom: none !important;
+}
+
 /* Chat */
 .chat-a {
   display: block;
@@ -305,6 +312,8 @@ div[id^="popmodal-"]:target {
   text-align: left;
   clear: both;
   cursor: default;
+  overflow-wrap: break-word;
+  white-space:inherit;
 }
 .chat-b {
   display: block;
@@ -315,6 +324,8 @@ div[id^="popmodal-"]:target {
   text-align: left;
   clear: both;
   cursor: default;
+  overflow-wrap: break-word;
+  white-space:inherit;
 }
 .space {
   clear: both;
@@ -332,7 +343,8 @@ a[class^="show-"] {
 }
 
 a[class^="hide-"]:target + a[class^="show-"] {
-  display: inline; 
+  display: inline;
+  border-bottom: none !important;
 }
 
 a[class^="hide-"]:target {

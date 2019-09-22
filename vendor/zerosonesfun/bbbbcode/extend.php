@@ -57,16 +57,16 @@ return [
                 '<span class="{TEXT7}"></span>'
             );
              $config->BBCodes->addCustom(
-               '[pop button="{TEXT8}" title="{TEXT9}" content="{ANYTHING}"]',
+               '[pop button="{TEXT8}" title="{ANYTHING}" content="{ANYTHING1}"]',
                '<div id="popmain">
-                    <a href="#popmodal-{TEXT9}" class="popbtn Button Button--primary">{TEXT8}</a>
+                    <a href="#popmodal-{ANYTHING}{ANYTHING1}" class="popbtn Button Button--primary">{TEXT8}</a>
                 </div>
-                    <div id="popmodal-{TEXT9}">
+                    <div id="popmodal-{ANYTHING}{ANYTHING1}">
                     <div class="popcontainer">
-                            <h2>{TEXT9}</h2>
-                                <p>{ANYTHING}</p>
+                            <h2>{ANYTHING}</h2>
+                                <p>{ANYTHING1}</p>
                     <div class="poplink">
-                    <a href="#popmain" class="popbtn Button Button--primary"><i class="fas fa-window-close"></i> close</a>
+                    <a href="#popmain" class="popbtn Button Button--primary"><i class="fas fa-window-close"></i>&nbsp; close</a>
                     </div>
                 </div>
             </div>'
@@ -107,11 +107,11 @@ return [
                '<p class="space"></p>'
             );
              $config->BBCodes->addCustom(
-               '[spoiler="{TEXT31}"]{ANYTHING}[/spoiler]',
-               '<a href="#hide-{TEXT31}" class="hide-{TEXT31} btn" id="hide-{TEXT31}"><span class="getinline">{TEXT31}</span> <i class="fas fa-chevron-down"></i></a>
-                <a href="#show-{TEXT31}" class="show-{TEXT31} btn" id="show-{TEXT31}"><span class="getinline">{TEXT31}</span> <i class="fas fa-chevron-up"></i></a>
+               '[spoiler="{ANYTHING2}"]{ANYTHING3}[/spoiler]',
+               '<a href="#hide-{ANYTHING2}{ANYTHING3}" class="hide-{ANYTHING2}{ANYTHING3} btn" id="hide-{ANYTHING2}{ANYTHING3}"><span class="getinline">{ANYTHING2}</span> <i class="fas fa-chevron-down"></i></a>
+                <a href="#show-{ANYTHING2}{ANYTHING3}" class="show-{ANYTHING2}{ANYTHING3} btn" id="show-{ANYTHING2}{ANYTHING3}"><span class="getinline">{ANYTHING2}</span> <i class="fas fa-chevron-up"></i></a>
                 <div class="spoiler">
-                     <p class="spoiler-content">{ANYTHING}</p>
+                     <p class="spoiler-content">{ANYTHING3}</p>
                 </div>'
             );
         })

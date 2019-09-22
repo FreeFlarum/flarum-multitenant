@@ -1,0 +1,19 @@
+fof-pretty-mail:
+  admin:
+    nav:
+      desc: Dostosuj swoje wzory HTML maili.
+    settings:
+      label: Wzory maili
+      reset: Przywróć standardowy
+      confirm: Czy na pewno chcesz przywrócić standardowy wzór maila dla
+      default: <strong>Standardowy wzór</strong>:
+      newPost: <strong>Flarum/subscriptions</strong> - mail o nowym poście:
+      userMentioned: <strong>Flarum/mentions</strong> - mail o wspomnieniu użytkownika:
+      postMentioned: <strong>Flarum/mentions</strong> - mail o wspomnieniu odpowiedzi:
+      notifications: Wzory powiadomień
+      notificationHelp: 'Zaleca się używać "$forumStyle" dla tych maili, gdyż zawierają one BBCode. Te maile mają także dostępną zmienną "$user", która zawiera cały model użytkownika, do którego wysyłany jest mail.'
+      help: '"$body" zawiera faktyczną treść maila, "$forumStyle" <strong>cały kod CSS forum</strong>, "$baseUrl" adres URL twojego forum, "$settings" pozwala ci na interakcję z interfejsem ustawień repozytorium, a "$link" zawiera link w obrębie wiadomości. Sprawdź wszystkie wzory, aby poznać kontekst użycia każdej ze zmiennych.'
+    css_settings:
+      label: Ustawienia CSS
+      help: Możesz zdecydować, czy chcesz zawrzeć pełny CSS forum w kodzie HTML maili. Jeśli to włączysz, możesz mieć problem z niektórymi dostawcami e-mail.
+      switch_label: Pełny CSS forum

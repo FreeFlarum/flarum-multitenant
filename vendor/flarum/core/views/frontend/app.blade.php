@@ -37,10 +37,5 @@
         </script>
 
         {!! $foot !!}
-@php
-if (!file_exists("/etc/hide_powered_by")) {
-        print('<div id="" style="text-align: center;">A <a href="https://www.freeflarum.com">free forum</a> powered by Free Flarum (<a href="https://www.freeflarum.com/docs/#can-i-pay-to-remove-the-powered-by-freeflarum-footer">remove</a>)</div>');
-}
-@endphp
     </body>
 </html>

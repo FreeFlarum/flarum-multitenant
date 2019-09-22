@@ -15,8 +15,8 @@ flarum-suspend:
   forum:
     # These translations are used in the suspension notifications
     notifications:
-      user_suspended_text: "{username} zablokował cię na {timeReadable}"
-      user_unsuspended_text: "{username} odblokował cię"
+      user_suspended_text: "{username} zablokował(a) cię na {timeReadable}"
+      user_unsuspended_text: "{username} odblokował(a) cię"
 
     # These translations are used in the Suspend User modal dialog (admin function).
     suspend_user:
@@ -30,7 +30,7 @@ flarum-suspend:
 
     # These translations are displayed as tooltips for user badges.
     user_badge:
-      suspended_tooltip: Zablokowany
+      suspended_tooltip: Użytkownik zablokowany
 
     # These translations are found on the user profile page (admin function).
     user_controls:
