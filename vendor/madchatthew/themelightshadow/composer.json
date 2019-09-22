@@ -1,0 +1,38 @@
+{
+  "name": "madchatthew/themelightshadow",
+  "description": "Theme for Flarum",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "authors": [
+    {
+      "name": "Madchatthew",
+      "email": "chad.jessen@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Madchatthew\\ThemeLightShadow\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Theme Light Shadow",
+      "icon": {
+        "Image": "resources/icon.png",
+        "backgroundSize": "75%",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat"
+        }
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/17106-theme-light-shadow"
+    }
+  }

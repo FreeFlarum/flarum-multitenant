@@ -1,0 +1,9 @@
+fof-formatting:
+  admin:
+    plugins:
+      Autoimage: Chuyển đổi URL hình ảnh thành hình ảnh thực tế
+      Autovideo: Chuyển đổi URL video thành video có thể phát
+      FancyPants: Sử dụng kiểu chữ typography
+      HTMLEntities: Dùng HTML entities
+      MediaEmbed: Nhúng nội dung từ các trang web được phép
+      PipeTables: Bảng kiểu-ASCII

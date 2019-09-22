@@ -1,0 +1,27 @@
+nomiscz-auth-steam:
+  forum:
+    buttons:
+      login: Đăng nhập bằng Steam
+      link: Liên kết tài khoản Steam
+      unlink: Hủy liên kết tài khoản Steam
+    alerts:
+      already_linked: Tài khoản Steam đã được liên kết!
+      already_used: Tài khoản Steam đã được liên kết với người dùng khác!
+      link_success: Liên kết tài khoản Steam thành công.
+      unlink_success: Tài khoản Steam hủy liên kết thành công.
+      error: Đã xảy ra lỗi, vui lòng thử lại sau!
+    modals:
+      link:
+        title: Liên kết tài khoản Steam
+      unlink:
+        title: Hủy liên kết tài khoản Steam
+        info:
+          confirm: Bạn có chắc chắn, bạn muốn hủy liên kết tài khoản Steam của mình?
+          no_providers: Bạn không có bất kỳ hình thức đăng nhập nào khác! Bạn có thể sẽ phải thiết lập lại mật khẩu của bạn.
+        buttons:
+          confirm: Có, hủy liên kết tài khoản
+          cancel: Không!
+  admin:
+    settings:
+      title: Cài đặt Steam Auth
+      api_key_label: API Key

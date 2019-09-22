@@ -1,0 +1,96 @@
+reflar-webhooks:
+  actions:
+    discussion:
+      started: "Bắt đầu thảo luận `{1}`"
+      renamed:
+        title: "Đổi tên thảo luận `{1}`"
+        description: "Tiêu đề mới: {1}"
+      hidden: "Ẩn thảo luận `{1}`"
+      restored: "Đã khôi phục thảo luận `{1}`"
+      deleted: "Đã xóa thảo luận `{1}`"
+
+    group:
+      created: "Đã tạo `{1}` nhóm"
+      renamed: "Đã đổi tên một nhóm thành `{1}`"
+      deleted: "Đã xóa `{1}` nhóm"
+
+    post:
+      posted: "Bài mới trong `{1}`"
+      revised: "Đã chỉnh sửa bài trong `{1}`"
+      hidden: "Đã ẩn bài trong `{1}`"
+      restored: "Đã khôi phục bài trong `{1}`"
+      deleted: "Đã xóa bài trong `{1}`"
+
+    user:
+      registered: Thành viên mới đã đăng ký
+      renamed:
+        title: "Đã đổi tên người dùng của `{1}`"
+        description: "Tên thành viên mới: {1}"
+      deleted: "Đã xóa người dùng `{1}`"
+
+  adapters:
+    errors:
+      404: Không tìm thấy Webhook
+
+  admin:
+    errors:
+      service_not_found: Dịch vụ '{service}' không được tìm thấy.
+      url_invalid: URL không hợp lệ cho dịch vụ được chọn.
+
+    nav:
+      desc: Tùy chỉnh webhooks bên ngoài cho diễn đàn của bạn.
+    settings:
+      title: Webhooks
+
+      help:
+        disabled: Webhook này bị vô hiệu hóa vì nó không có bất kỳ sự kiện nào được kích hoạt.
+        general: Tại đây bạn có thể thêm, chỉnh sửa và xóa webhooks khỏi diễn đàn của mình.
+        url: Đầu cuối của webhook đã được thực thi
+
+      modal:
+        title: Cài đặt Webhook
+        description: Tại đây bạn sửa đổi những sự kiện mà webhook được kích hoạt.
+
+      services:
+        discord: Discord
+        slack: Slack
+
+      actions:
+        flarum:
+          discussion:
+            title: Thảo luận trên diễn đàn
+
+            started: Started
+            renamed: => reflar-webhooks.ref.renamed
+            hidden: => reflar-webhooks.ref.hidden
+            restored: => reflar-webhooks.ref.restored
+            deleted: => reflar-webhooks.ref.deleted
+
+          group:
+            title: Nhóm diễn trên đàn
+
+            created: Đã tạo
+            renamed: => reflar-webhooks.ref.renamed
+            deleted: => reflar-webhooks.ref.deleted
+
+          post:
+            title: Bài đăng trên diễn đàn
+
+            posted: Đã đăng
+            revised: Đã sửa
+            hidden: => reflar-webhooks.ref.hidden
+            restored: => reflar-webhooks.ref.restored
+            deleted: => reflar-webhooks.ref.deleted
+
+          user:
+            title: Thành viên trên diễn đàn
+
+            registered: Đã đăng ký
+            renamed: => reflar-webhooks.ref.renamed
+            deleted: => reflar-webhooks.ref.deleted
+
+  ref:
+    deleted: Đã xóa
+    hidden: Đã ẩn
+    renamed: Đã đổi tên
+    restored: Đã khôi phục

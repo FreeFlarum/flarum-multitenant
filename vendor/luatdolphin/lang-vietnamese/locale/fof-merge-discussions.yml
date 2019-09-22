@@ -1,0 +1,26 @@
+fof-merge-discussions:
+  forum:
+    modal:
+      title: Hợp nhất thảo luận
+
+      type_target_label: Hợp nhất với tôi
+      type_target_help_text: Chọn (các) cuộc thảo luận để hợp nhất với <b>{title}</b>.
+
+      type_from_label: Hợp nhất cuộc thảo luận này thành một cuộc thảo luận khác
+      type_from_help_text: Chọn mục tiêu thảo luận để hợp nhất với <b>{title}</b>.
+
+      load_preview_button: Preview
+      submit_button: => fof-merge-discussions.ref.merge
+
+    discussion:
+      merge: => fof-merge-discussions.ref.merge
+
+    post:
+      merged: Hợp nhất <b>{count}</b> bài đăng từ {titles}.|Hợp nhất <b>{count}</b> bài đăng từ {titles}.
+
+  admin:
+    permissions:
+      merge_discussions_label: Hợp nhất thảo luận
+
+  ref:
+    merge: Hợp nhất

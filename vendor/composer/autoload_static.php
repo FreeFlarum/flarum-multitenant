@@ -54,7 +54,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         ),
         'Z' => 
         array (
-            'Ziymed\\LangArabic\\' => 18,
+            'Ziymed\\LangAr\\' => 14,
             'ZerosOnesFun\\bbbbcode\\' => 22,
             'Zend\\Stratigility\\' => 18,
             'Zend\\HttpHandlerRunner\\' => 23,
@@ -101,9 +101,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'R' => 
         array (
             'Reflar\\twofactor\\' => 17,
-            'Reflar\\NightMode\\' => 17,
+            'Reflar\\Webhooks\\' => 16,
             'Reflar\\Doorman\\' => 15,
             'ReFlar\\CookieConsent\\' => 21,
+            'ReCaptcha\\' => 10,
         ),
         'P' => 
         array (
@@ -117,6 +118,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'PersianFla\\Persian\\' => 19,
             'ParagonIE\\ConstantTime\\' => 23,
         ),
+        'N' => 
+        array (
+            'NomisCZ\\SteamAuth\\' => 18,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -125,6 +130,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Middlewares\\' => 12,
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
+            'Madchatthew\\ThemeLightShadow\\' => 29,
         ),
         'L' => 
         array (
@@ -171,7 +177,9 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Transliterator\\' => 19,
             'FoF\\Split\\' => 10,
             'FoF\\SocialProfile\\' => 18,
+            'FoF\\ShareSocial\\' => 16,
             'FoF\\SecureHttps\\' => 16,
+            'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
@@ -181,6 +189,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Links\\' => 10,
             'FoF\\Gamification\\' => 17,
             'FoF\\Formatting\\' => 15,
+            'FoF\\Extend\\' => 11,
             'FoF\\Drafts\\' => 11,
             'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\DefaultGroup\\' => 17,
@@ -252,9 +261,9 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace',
         ),
-        'Ziymed\\LangArabic\\' => 
+        'Ziymed\\LangAr\\' => 
         array (
-            0 => __DIR__ . '/..' . '/ziymed/lang-arabic/src',
+            0 => __DIR__ . '/..' . '/ziymed/lang-ar/src',
         ),
         'ZerosOnesFun\\bbbbcode\\' => 
         array (
@@ -380,9 +389,9 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/reflar/twofactor/src',
         ),
-        'Reflar\\NightMode\\' => 
+        'Reflar\\Webhooks\\' => 
         array (
-            0 => __DIR__ . '/..' . '/reflar/nightmode/src',
+            0 => __DIR__ . '/..' . '/reflar/webhooks/src',
         ),
         'Reflar\\Doorman\\' => 
         array (
@@ -391,6 +400,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'ReFlar\\CookieConsent\\' => 
         array (
             0 => __DIR__ . '/..' . '/reflar/cookie-consent/src',
+        ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -430,6 +443,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
+        'NomisCZ\\SteamAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nomiscz/flarum-ext-auth-steam/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -455,6 +472,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'MatthiasMullie\\Minify\\' => 
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
+        ),
+        'Madchatthew\\ThemeLightShadow\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/madchatthew/themelightshadow/src',
         ),
         'League\\OAuth2\\Client\\' => 
         array (
@@ -583,9 +604,17 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/fof/socialprofile/src',
         ),
+        'FoF\\ShareSocial\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/share-social/src',
+        ),
         'FoF\\SecureHttps\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/secure-https/src',
+        ),
+        'FoF\\ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/recaptcha/src',
         ),
         'FoF\\ProfileImageCrop\\' => 
         array (
@@ -622,6 +651,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\Formatting\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/formatting/src',
+        ),
+        'FoF\\Extend\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/extend/src',
         ),
         'FoF\\Drafts\\' => 
         array (

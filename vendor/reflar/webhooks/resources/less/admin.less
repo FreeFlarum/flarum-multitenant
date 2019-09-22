@@ -1,0 +1,117 @@
+@media (min-width: 992px) {
+  .WebhooksPage .container {
+    max-width: 900px;
+    padding: 0 30px;
+    margin: 0;
+  }
+}
+
+.Webhooks--row {
+  margin: 10px 0;
+
+  .Webhook-input {
+    display: flex;
+    flex-direction: row;
+    flex-basis: fit-content;
+
+    .Select, button, input {
+      margin: 0 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .Select {
+      flex-shrink: 1;
+    }
+
+    .Webhook-url {
+      flex-grow: 1;
+    }
+
+    .Webhook-button {
+      .Button-icon {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .Webhook-error {
+    margin: 5px 0;
+    padding: 5px 10px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &:last-of-type {
+    margin-top: 40px;
+
+    &:first-of-type {
+      margin-top: 10px;
+    }
+  }
+}
+
+.ReflarWebhooksModal {
+  .Webhook-events {
+    margin-top: 7.5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div {
+      flex: 50%;
+    }
+
+    .Checkbox {
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+      &:first-of-type {
+        margin-top: -10px;
+      }
+
+      margin-bottom: 10px;
+      padding-left: 50px;
+
+      .Checkbox-display {
+        width: 40px;
+        height: 20px;
+        margin-top: -1px;
+        margin-left: -50px;
+
+        &::before {
+          width: 18px;
+          height: 18px;
+          top: 1px;
+          left: 1px;
+        }
+      }
+
+      &.on {
+        .Checkbox-display::before {
+          left: 21px;
+        }
+      }
+
+      &.off {
+        .Checkbox-display {
+          background: darken(@control-bg, 10%);
+        }
+      }
+
+      .spinner {
+        transform: scale(0.7) !important;
+        left: -0.5px !important;
+        top: 35% !important;
+      }
+    }
+  }
+}

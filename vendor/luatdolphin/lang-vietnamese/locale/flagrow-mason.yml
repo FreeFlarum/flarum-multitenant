@@ -1,0 +1,108 @@
+flagrow-mason:
+    forum:
+        discussion-controls:
+            edit-answers: Chỉnh sửa các mục
+        answers-modal:
+            edit-title: Chỉnh sửa các mục cho {title}
+            save: Lưu lại
+        post-answers:
+            no-answer: Không có câu trả lời
+        answers:
+            choose-option: Chọn một tùy chọn
+            no-option-selected: Không có tùy chọn nào được chọn
+        tags:
+            inadequate-settings: >
+                Cài đặt Tag không được cấu hình đúng.
+                Cho phép tối đa một thẻ chính và thẻ phụ hoặc vô hiệu hóa tính năng "Tag dưới dạng đề mục".
+            tags-label: Tags
+    admin:
+        buttons:
+            new-field: Mục mới
+            add-field: Thêm mục
+            save-field: Lưu thay đổi
+            delete-field: Xóa mục
+            edit-field: Nhấn để sửa mục
+            add-answer: Thêm câu trả lời
+            save-answer: Lưu thay đổi
+            delete-answer: Xóa câu trả lời
+            show-user-answers: Hiển thị câu trả lời không được đề xuất ({count})
+        menu:
+            description: >
+                Cấu hình các mục thảo luận tùy chỉnh.
+        fields:
+            add: Thêm mục {field}
+            edit: Sửa mục {field}
+            required: Bắt buộc
+            name: Tên mục
+            name-help: >
+                Nhãn mục hiển thị công khai (không dịch được).
+            description: Mô tả mục
+            description-help: >
+                Một mô tả tùy chọn để giải thích việc sử dụng / sự cần thiết của mục này.
+            min_answers_count: Câu trả lời yêu cầu tối thiểu
+            max_answers_count: Câu trả lời tối đa được phép
+            show_when_empty: Hiển thị khi trống
+            show_when_empty-help:
+                Có hiển thị trường trên thảo luận khi không có câu trả lời
+            validation: Xác thực user values
+            user_values_allowed: User values được cho phép
+            user_values_allowed-help: >
+                Nếu được bật, người dùng có thể thêm các giá trị của riêng họ thay vì giá trị được xác định bởi quản trị viên.
+                Các giá trị này sẽ được kiểm tra theo cài đặt "Xác thực".
+                Nếu bị vô hiệu hóa, họ chỉ có thể sử dụng các câu trả lời "được đề xuất".
+            validation-help: >
+                Kiểm tra <a>Laravel validation rules</a> được hỗ trợ. VD:
+                "string|min:5" or "url".
+            enable-user-values-for-validation: Kích hoạt "user values" để định cấu hình quy tắc xác thực validation rules
+            icon: Icon
+            icon-help: >
+                Hiển thị một icon ở phía trước các giá trị được nhập bởi người dùng. Để tham khảo
+                icons có sẵn, truy cập <a>FontAwesome website</a>.
+                Sử dụng tên lớp icon đầy đủ bao gồm tiền tố, ví dụ "fas fa-bolt".
+            icon-preview: "preview: {preview}"
+            save-field-for-answers: Lưu mục để thêm câu trả lời
+            is_suggested: Đề xuất câu trả lời cho người dùng
+            new-answer-placeholder: Viết gì đó
+        messages:
+            delete-answer-confirmation: >
+                Bạn có chắc chắn muốn xóa câu trả lời "{content}" ?
+                Nó sẽ bị xóa khỏi tất cả các cuộc thảo luận sử dụng nó.
+                Thay vào đó, nếu bạn muốn giữ câu trả lời, hãy tắt đề xuất câu trả lời.
+                Xóa câu trả lời ?
+            delete-field-confirmation: >
+                Bạn có chắc chắn muốn xóa mục "{name}" ?
+                Mục và câu trả lời của nó sẽ bị xóa khỏi tất cả các cuộc thảo luận sử dụng chúng.
+                Xóa mục ?
+        settings:
+            fields-section-title: Tiêu đề của section tùy chỉnh
+            fields-section-title-placeholder: Theo mặc định, không có tiêu đề được hiển thị
+            fields-section-title-help: >
+                Người dùng sẽ thấy văn bản này phía trên các mục tùy chỉnh trong trình chỉnh sửa và trong cuộc thảo luận.
+            column-count: Số cột khi hiển thị các trường
+            n-columns: "{count} cột"
+            labels-as-placeholders: Hiển thị nhãn dưới dạng placeholders trong biểu mẫu
+            labels-as-placeholders-help: >
+                Các trường sẽ sử dụng ít không gian dọc hơn và các biểu tượng sẽ không được hiển thị nữa.
+                Hãy nhớ rằng điều này có thể có tác động đến khả năng sử dụng, đặc biệt là khi chỉnh sửa các mục hiện có.
+            fields-in-hero: Hiển thị các mục trong banner thảo luận thay vì bài đăng đầu tiên
+            hide-empty-fields-section: Ẩn tiêu đề và điều khiển khi tất cả các mục trống và ẩn
+            hide-empty-fields-section-help: >
+                Theo mặc định nếu người dùng có thể chỉnh sửa các mục hoặc tiêu đề đã được đặt, section sẽ luôn được hiển thị, ngay cả khi tất cả các mục bị ẩn.
+                Với tùy chọn này được bật, section này sẽ bị ẩn và nút "chỉnh sửa mục" sẽ chỉ khả dụng trong phần "trả lời" của dropdown menu khi tất cả các mục đều trống.
+            tags-as-field: Hiển thị bộ chọn tag dưới dạng một mục
+            tags-as-field-help: >
+                Điều này sẽ ẩn bộ chọn tag mặc định và thay vào đó hiển thị mục dropdown tùy chỉnh.
+                Điều này sẽ chỉ hoạt động nếu bạn cho phép tối đa một tag chính và một tag phụ!
+            tags-field-name: Nhãn của mục thẻ
+            tags-field-name-placeholder: => flagrow-mason.forum.tags.tags-label
+        titles:
+            settings: Cài đặt
+            fields: Đề mục
+        permissions:
+            mason-heading: Mason
+            see-own-fields: Xem các mục trong các cuộc thảo luận bạn làm chủ
+            see-other-fields: Xem các mục trên tất cả các cuộc thảo luận hiện có
+            fill-fields: Điền vào các mục trong các cuộc thảo luận mới
+            update-own-fields: Cập nhật các mục thảo luận bạn làm chủ
+            update-other-fields: Cập nhật các mục của bất kỳ cuộc thảo luận nào
+            skip-required-fields: Được phép bỏ qua các mục bắt buộc

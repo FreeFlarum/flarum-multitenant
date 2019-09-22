@@ -1,0 +1,64 @@
+fof-masquerade:
+    forum:
+        alerts:
+            profile-completion-required: >
+                Vui lòng hoàn thành các mục cần thiết dưới đây.
+        buttons:
+            view-profile: Xem profile
+            save-profile: Lưu
+        fields:
+            select:
+                none-optional: Không có mục được chọn (tùy ý)
+                none-required: Vui lòng chọn một mục (bắt buộc)
+            boolean:
+                yes: Yes
+                no: No
+    admin:
+        title: Masquerade
+        general-options: Tùy chọn chung
+        buttons:
+            add-field: Tạo đề mục
+            edit-field: Lưu thay đổi
+            delete-field: Xóa đề mục
+        permissions:
+            have-profile: Có hồ sơ masquerade
+            view-profile: Xem hồ sơ masquerade
+        menu:
+            description: >
+                Cấu hình đề mục cho hồ sơ người dùng.
+        fields:
+            title: Đề mục
+            add: Thêm đề mục {field}
+            edit: Sửa đề mục {field}
+            name: Tên đề mục
+            name-help: >
+                Đề mục được hiển thị không khai (Không được dịch).
+            description: Mô tả đề mục
+            description-help: >
+                Một mô tả tùy chọn để giải thích việc sử dụng/sự cần thiết của mục này.
+            required: Đánh dấu mục bắt buộc
+            on_bio: Hiển thị câu trả lời cho mục này trong tiểu sử người dùng
+            type: Kiểu
+            validation: Validation
+            validation-help: >
+                Kiểm tra <a>các quy tắc Laravel validation</a> được hỗ trợ. Eg:
+                "string|min:5" hoặc "url".
+            prefix: Tiền tố đề mục
+            prefix-help: >
+                Hiển thị tiền tố của bạn trước các giá trị được nhập bởi người dùng cho mục này.
+            icon: Icon
+            icon-help: >
+                Hiển thị một biểu tượng ở phía trước các giá trị được nhập bởi người dùng. Để tham khảo các
+                biểu tượng có sẵn, hãy kiểm tra <a>FontAwesome website</a>. Sử dụng tên icon theo sau
+                tiền tố "fa-", ví dụ "fas fa-info".
+            force-user-to-completion: Buộc người dùng hoàn thành hồ sơ
+            disable-user-bio: Vô hiệu hóa mục tiểu sử người dùng
+            options: Tùy chọn
+            option-new: Tùy chọn mới
+            option-coma-warning: Nhãn của một tùy chọn không được chứa bất kỳ dấu phẩy (",") nào.
+        types:
+            advanced: Khác
+            boolean: Checkbox
+            email: Email
+            select: Dropdown
+            url: Url

@@ -1,0 +1,30 @@
+{
+  "name": "ziymed/lang-ar",
+  "type": "flarum-extension",
+  "description": "Arabic Language Pack v2",
+  "keywords": ["locale", "Arabic", "العربية"],
+  "license": "MIT",
+  "require": {
+      "flarum/core": "^0.1.0-beta.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ziymed\\LangAr\\": "src/"
+    }
+  },
+  "extra": {
+      "flarum-extension": {
+          "title": "Arabic Lang V2",
+          "icon": {
+              "image": "icon.svg",
+              "backgroundColor": "#006233",
+              "backgroundSize": "cover",
+              "backgroundPosition": "center"
+          }
+      },
+      "flarum-locale": {
+          "code": "ar",
+          "title": "العربية"
+      }
+  }
+}

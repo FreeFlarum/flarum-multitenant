@@ -1,0 +1,11 @@
+fof-socialprofile:
+  forum:
+    edit:
+      edit: Sửa
+      add: Thêm
+      headtitle: Nút sửa
+      title: Tiêu đề
+      url: Url
+      submit: Lưu
+      delete: Xóa
+      deletetitle: Nút xóa

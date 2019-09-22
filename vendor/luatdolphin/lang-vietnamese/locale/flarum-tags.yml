@@ -1,0 +1,106 @@
+flarum-tags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Basics page.
+    basics:
+      tags_label: => flarum-tags.ref.tags
+
+    # These translations are used in the Edit Tag modal dialog.
+    edit_tag:
+      color_label: => core.ref.color
+      delete_tag_button: Xóa thẻ
+      delete_tag_confirmation: "Bạn muốn xóa thẻ này? Bài viết có gắn thẻ sẽ KHÔNG bị xóa."
+      description_label: Mô tả
+      hide_label: Ẩn tất cả
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      name_label: => flarum-tags.ref.name
+      name_placeholder: => flarum-tags.ref.name
+      slug_label: Slug
+      submit_button: => core.ref.save_changes
+      title: => flarum-tags.ref.create_tag
+
+    # These translations are used in the navigation bar.
+    nav:
+      tags_button: => flarum-tags.ref.tags
+      tags_text: Quản lý tất cả thẻ để gắn vào bài viết.
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_edit_tags_label: Cho phép chỉnh sửa thẻ
+      restrict_by_tag_heading: Hạn chế các thẻ
+      tag_discussions_label: Các bài thảo luận trong thẻ
+
+    # These translations are used in the Tag Settings modal dialog.
+    tag_settings:
+      range_separator_text: " đến "
+      required_primary_heading: Số thẻ chính cần có
+      required_primary_text: Nhập số lượng nhỏ nhất và lớn nhất mà thẻ chính cần có trong thảo luận.
+      required_secondary_heading: Số thẻ phụ cần có
+      required_secondary_text: Nhập số lượng nhỏ nhất và lớn nhất mà thẻ phụ cần có trong thảo luận.
+      title: Thiết lập thẻ
+
+    # These translations are used in the Tags page.
+    tags:
+      about_tags_text: "Thẻ dùng để phân loại thảo luận. Thẻ chính giống như Loại Forum trước đây: chúng có thể sắp xếp thành hai cấp quản lý. Thẻ phụ thì không có phân cấp hay thứ tự, chỉ dùng để phân loại rõ hơn cho chủ đề."
+      create_tag_button: => flarum-tags.ref.create_tag
+      primary_heading: Các thẻ chính
+      secondary_heading: Các thẻ phụ
+      settings_button: Thiết lập
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Choose Tags modal dialog.
+    choose_tags:
+      choose_primary_placeholder: "Chọn thẻ chính|Chọn {count} thẻ chính"
+      choose_secondary_placeholder: "Chọn thêm 1 thẻ|Chọn {count} thẻ"
+      edit_title: "Sửa thẻ cho bài viết {title}"
+      submit_button: => core.ref.okay
+      title: Chọn thẻ cho bài viết
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      choose_tags_link: Chọn thẻ
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      edit_tags_button: Cập nhật thẻ
+
+    header:
+      back_to_tags_tooltip: Trở lại danh sách thẻ
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      more_link: Thêm...
+      tags_link: => flarum-tags.ref.tags
+      untagged_link: Bỏ gắn thẻ
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      added_and_removed_tags_text: "{username} đã gắn thẻ {tagsAdded} và xóa thẻ {tagsRemoved}."
+      added_tags_text: "{username} đã gắn thẻ {tagsAdded}."
+      removed_tags_text: "{username} đã xóa thẻ {tagsRemoved}."
+      tags_text: "{tags} thẻ|{tags} thẻ"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # This translation is displayed in place of the name of a tag that's been deleted.
+    deleted_tag_text: Đã xóa
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    create_tag: Tạo mới thẻ
+    name: Tên
+    tags: Thẻ

@@ -2906,6 +2906,44 @@
         ]
     },
     {
+        "name": "fof/extend",
+        "version": "0.2.0",
+        "version_normalized": "0.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/extend.git",
+            "reference": "f2314f82c3e838e0ee19ac65441b8a1a5a29c391"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/extend/zipball/f2314f82c3e838e0ee19ac65441b8a1a5a29c391",
+            "reference": "f2314f82c3e838e0ee19ac65441b8a1a5a29c391",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-06-16T12:18:08+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Extend\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Sevilla Martín",
+                "email": "david.s@redevs.org"
+            }
+        ],
+        "description": "Configurable PHP components for your Flarum extension"
+    },
+    {
         "name": "fof/formatting",
         "version": "0.1.2",
         "version_normalized": "0.1.2.0",
@@ -2962,17 +3000,17 @@
     },
     {
         "name": "fof/gamification",
-        "version": "0.1.3",
-        "version_normalized": "0.1.3.0",
+        "version": "0.1.4",
+        "version_normalized": "0.1.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FriendsOfFlarum/gamification.git",
-            "reference": "f3908a2bcf532a5c80e9fe94546dc1a6b52058ec"
+            "reference": "fc9605ab1540be9a27c251e90d6c3b313e2ea538"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/f3908a2bcf532a5c80e9fe94546dc1a6b52058ec",
-            "reference": "f3908a2bcf532a5c80e9fe94546dc1a6b52058ec",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/fc9605ab1540be9a27c251e90d6c3b313e2ea538",
+            "reference": "fc9605ab1540be9a27c251e90d6c3b313e2ea538",
             "shasum": ""
         },
         "require": {
@@ -2981,7 +3019,7 @@
         "replace": {
             "reflar/gamification": "*"
         },
-        "time": "2019-07-22T00:02:51+00:00",
+        "time": "2019-08-10T02:58:14+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -3409,6 +3447,69 @@
         ]
     },
     {
+        "name": "fof/recaptcha",
+        "version": "0.1.1",
+        "version_normalized": "0.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/recaptcha.git",
+            "reference": "7e73bbdbe3bff21202fdd7e0b250ab7e9fb2d5a6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/recaptcha/zipball/7e73bbdbe3bff21202fdd7e0b250ab7e9fb2d5a6",
+            "reference": "7e73bbdbe3bff21202fdd7e0b250ab7e9fb2d5a6",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8",
+            "google/recaptcha": "^1.2"
+        },
+        "replace": {
+            "sijad/flarum-ext-recaptcha": "*"
+        },
+        "time": "2019-07-17T14:37:22+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF reCAPTCHA",
+                "icon": {
+                    "name": "fas fa-robot",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/18399-friendsofflarum-recaptcha"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\ReCaptcha\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sajjad Hashemian",
+                "email": "wolaws@gmail.com"
+            },
+            {
+                "name": "David Sevilla Martín",
+                "role": "Developer",
+                "email": "david.s@redevs.org"
+            }
+        ],
+        "description": "Increase your forum's security with Google reCAPTCHA",
+        "keywords": [
+            "flarum"
+        ]
+    },
+    {
         "name": "fof/secure-https",
         "version": "v0.1.0",
         "version_normalized": "0.1.0.0",
@@ -3463,6 +3564,65 @@
             }
         ],
         "description": "Changes all images using http to https",
+        "keywords": [
+            "flarum"
+        ]
+    },
+    {
+        "name": "fof/share-social",
+        "version": "0.1.1",
+        "version_normalized": "0.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/share-social.git",
+            "reference": "df0217f4f2080d978059fa4406454ef63eb1b1a9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/share-social/zipball/df0217f4f2080d978059fa4406454ef63eb1b1a9",
+            "reference": "df0217f4f2080d978059fa4406454ef63eb1b1a9",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8",
+            "fof/extend": ">=0.2.0"
+        },
+        "replace": {
+            "avatar4eg/flarum-ext-share-social": "*"
+        },
+        "time": "2019-06-21T19:07:51+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF Share Social",
+                "icon": {
+                    "name": "fas fa-share-alt",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/20401-friendsofflarum-share-social"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\ShareSocial\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Sevilla Martín",
+                "role": "Developer",
+                "email": "david.s@redevs.org"
+            }
+        ],
+        "description": "Add a button to share discussions through social networks",
         "keywords": [
             "flarum"
         ]
@@ -3812,6 +3972,55 @@
             }
         },
         "notification-url": "https://packagist.org/downloads/"
+    },
+    {
+        "name": "google/recaptcha",
+        "version": "1.2.3",
+        "version_normalized": "1.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/google/recaptcha.git",
+            "reference": "98c4a6573b27e8b0990ea8789c74ea378795134c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/google/recaptcha/zipball/98c4a6573b27e8b0990ea8789c74ea378795134c",
+            "reference": "98c4a6573b27e8b0990ea8789c74ea378795134c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.2.20|^2.15",
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7.5.11"
+        },
+        "time": "2019-08-16T15:48:25+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ReCaptcha\\": "src/ReCaptcha"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+        "homepage": "https://www.google.com/recaptcha/",
+        "keywords": [
+            "Abuse",
+            "captcha",
+            "recaptcha",
+            "spam"
+        ]
     },
     {
         "name": "guzzlehttp/guzzle",
@@ -5379,6 +5588,109 @@
         ]
     },
     {
+        "name": "luatdolphin/lang-vietnamese",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/luatdolphin/lang-vietnamese.git",
+            "reference": "b75296761d712f9d1804dae1a0e2039656d0d50d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/b75296761d712f9d1804dae1a0e2039656d0d50d",
+            "reference": "b75296761d712f9d1804dae1a0e2039656d0d50d",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9"
+        },
+        "time": "2019-08-30T03:19:37+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.1.x-dev"
+            },
+            "flarum-extension": {
+                "title": "Vietnamese",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#00247d",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "vi",
+                "title": "Vietnamese"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Vietnamese language pack.",
+        "keywords": [
+            "locale",
+            "vietnam",
+            "vietnamese"
+        ]
+    },
+    {
+        "name": "madchatthew/themelightshadow",
+        "version": "0.1.2",
+        "version_normalized": "0.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Madchatthew/themelightshadow.git",
+            "reference": "575adf1e3d2509480ae6c605c4c5bd14ec9c80db"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Madchatthew/themelightshadow/zipball/575adf1e3d2509480ae6c605c4c5bd14ec9c80db",
+            "reference": "575adf1e3d2509480ae6c605c4c5bd14ec9c80db",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-03-18T23:04:06+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Theme Light Shadow",
+                "icon": {
+                    "Image": "resources/icon.png",
+                    "backgroundSize": "75%",
+                    "backgroundPosition": "center",
+                    "backgroundRepeat": "no-repeat"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Madchatthew\\ThemeLightShadow\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Madchatthew",
+                "role": "Developer",
+                "email": "chad.jessen@gmail.com"
+            }
+        ],
+        "description": "Theme for Flarum",
+        "keywords": [
+            "flarum"
+        ]
+    },
+    {
         "name": "marketplace/flarum-l10n-core-russian",
         "version": "0.1.0-beta.9-8",
         "version_normalized": "0.1.0.0-beta9-8",
@@ -6344,6 +6656,62 @@
         ]
     },
     {
+        "name": "nomiscz/flarum-ext-auth-steam",
+        "version": "v0.1.2",
+        "version_normalized": "0.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/NomisCZ/flarum-ext-auth-steam.git",
+            "reference": "06158d284690ed43fa6aa2fcf39e63afb43ad0a4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/NomisCZ/flarum-ext-auth-steam/zipball/06158d284690ed43fa6aa2fcf39e63afb43ad0a4",
+            "reference": "06158d284690ed43fa6aa2fcf39e63afb43ad0a4",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-07-20T17:21:15+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "NomisCZ Steam Login",
+                "icon": {
+                    "name": "fab fa-steam",
+                    "backgroundColor": "#171a21",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": ""
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "NomisCZ\\SteamAuth\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "NomisCZ",
+                "role": "Developer",
+                "email": "nomiscz@outlook.com"
+            }
+        ],
+        "description": "Allow users to log in with Steam",
+        "keywords": [
+            "Authentication",
+            "flarum"
+        ]
+    },
+    {
         "name": "oyejorge/less.php",
         "version": "v1.7.0.14",
         "version_normalized": "1.7.0.14",
@@ -7093,6 +7461,60 @@
         "description": "A polyfill for getallheaders."
     },
     {
+        "name": "realodix/flarum-ext-indonesian",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/realodix/flarum-ext-indonesian.git",
+            "reference": "8e498d519dc94acc0e85781a321c8a6ea1f720c3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/8e498d519dc94acc0e85781a321c8a6ea1f720c3",
+            "reference": "8e498d519dc94acc0e85781a321c8a6ea1f720c3",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9"
+        },
+        "time": "2019-07-11T18:18:17+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.4.x-dev"
+            },
+            "flarum-extension": {
+                "title": "Indonesian",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#00247d",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "id",
+                "title": "Indonesian"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Realodix",
+                "email": "keigarrix@gmail.com"
+            }
+        ],
+        "description": "Indonesian language pack.",
+        "keywords": [
+            "locale"
+        ]
+    },
+    {
         "name": "reflar/cookie-consent",
         "version": "0.2.0",
         "version_normalized": "0.2.0.0",
@@ -7209,68 +7631,6 @@
         ]
     },
     {
-        "name": "reflar/nightmode",
-        "version": "0.2.0",
-        "version_normalized": "0.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ReFlar/nightmode.git",
-            "reference": "b28d54e4baaa95626e45a5bbaa6dfbd082b592c7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ReFlar/nightmode/zipball/b28d54e4baaa95626e45a5bbaa6dfbd082b592c7",
-            "reference": "b28d54e4baaa95626e45a5bbaa6dfbd082b592c7",
-            "shasum": ""
-        },
-        "require": {
-            "flarum/core": "^0.1.0-beta.8"
-        },
-        "time": "2018-12-25T01:37:50+00:00",
-        "type": "flarum-extension",
-        "extra": {
-            "flarum-extension": {
-                "title": "ReFlar Night Mode",
-                "icon": {
-                    "name": "far fa-moon",
-                    "backgroundColor": "#263238",
-                    "color": "#fff"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Reflar\\NightMode\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Shahiem Seymor",
-                "email": "shahiem.seymor@reflar.email",
-                "homepage": "https://reflar.io"
-            },
-            {
-                "name": "Christian Lopez",
-                "email": "Christian.L@redevs.org",
-                "homepage": "https://reflar.redevs.org"
-            }
-        ],
-        "description": "Turn your flarum forum to dark as user",
-        "keywords": [
-            "extension",
-            "flarum",
-            "mode",
-            "moon",
-            "night",
-            "reflar"
-        ]
-    },
-    {
         "name": "reflar/twofactor",
         "version": "0.1.2",
         "version_normalized": "0.1.2.0",
@@ -7331,6 +7691,62 @@
         "description": "Add factor authentication to Flarum",
         "keywords": [
             "twofactor"
+        ]
+    },
+    {
+        "name": "reflar/webhooks",
+        "version": "0.1.7",
+        "version_normalized": "0.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ReFlar/webhooks.git",
+            "reference": "c872f29d205e13f5481deaf50c0d9db6f1804e25"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ReFlar/webhooks/zipball/c872f29d205e13f5481deaf50c0d9db6f1804e25",
+            "reference": "c872f29d205e13f5481deaf50c0d9db6f1804e25",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8",
+            "guzzlehttp/guzzle": "~6.0"
+        },
+        "time": "2019-03-04T23:35:07+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "ReFlar Webhooks",
+                "icon": {
+                    "name": "fas fa-external-link-alt",
+                    "backgroundColor": "#263238",
+                    "color": "#FFF"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/17812-webhooks-by-reflar"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Reflar\\Webhooks\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Sevilla Martín",
+                "role": "Developer",
+                "email": "david.s@redevs.org"
+            }
+        ],
+        "description": "Flarum with webhooks",
+        "keywords": [
+            "flarum"
         ]
     },
     {
@@ -9391,28 +9807,28 @@
         "description": "Big Beautiful BBcode"
     },
     {
-        "name": "ziymed/lang-arabic",
+        "name": "ziymed/lang-ar",
         "version": "0.1.0",
         "version_normalized": "0.1.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/ziymed/lang-arabic.git",
-            "reference": "11d7f7dbc64fb3d8c1df4cf08d6d79a56d9f97d8"
+            "url": "https://github.com/ziymed/lang-ar.git",
+            "reference": "4b76535bcac81b052499e1b0410006913ea35236"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ziymed/lang-arabic/zipball/11d7f7dbc64fb3d8c1df4cf08d6d79a56d9f97d8",
-            "reference": "11d7f7dbc64fb3d8c1df4cf08d6d79a56d9f97d8",
+            "url": "https://api.github.com/repos/ziymed/lang-ar/zipball/4b76535bcac81b052499e1b0410006913ea35236",
+            "reference": "4b76535bcac81b052499e1b0410006913ea35236",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2019-01-02T20:13:33+00:00",
+        "time": "2019-09-01T18:48:52+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
-                "title": "Arabic Language",
+                "title": "Arabic Lang V2",
                 "icon": {
                     "image": "icon.svg",
                     "backgroundColor": "#006233",
@@ -9422,24 +9838,24 @@
             },
             "flarum-locale": {
                 "code": "ar",
-                "title": "Arabic"
+                "title": "العربية"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Ziymed\\LangArabic\\": "src/"
+                "Ziymed\\LangAr\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
-        "description": "Arabic Language Pack.",
+        "description": "Arabic Language Pack v2",
         "keywords": [
             "arabic",
-            "language",
-            "locale"
+            "locale",
+            "العربية"
         ]
     }
 ]

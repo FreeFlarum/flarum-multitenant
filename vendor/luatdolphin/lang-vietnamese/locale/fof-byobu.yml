@@ -1,0 +1,45 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Thảo luận riêng tư
+        buttons:
+            add_recipients: Người nhận
+            submit: OK
+            edit_recipients: Sửa người nhận
+            send_pd: "Gửi {username} một tin nhắn"
+        labels:
+            recipients: "{count} người nhận|{count} người nhận"
+            user_deleted: -deleted-
+        nav:
+            private_discussions: Thảo luận riêng tư
+        input:
+            search_recipients: Tìm kiếm thành viên bằng cách gõ ba ký tự đầu...
+        search:
+            headings:
+                groups: Nhóm
+        modal:
+            titles:
+                update_recipients: Cập nhật thành viên tham gia {title}
+                add_recipients: Thêm thành viên vào
+        post:
+            recipients_modified:
+                added_and_removed: "{username} đã thêm thành viên {added} và xóa thành viên {removed}."
+                added: "{username} đã thêm thành viên {added}."
+                removed: "{username} đã xóa thành viên {removed}."
+        user:
+            settings:
+                block_pd: Block thảo luận riêng tư
+
+            byobu_link: Thảo luận bí mật
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Tạo cuộc thảo luận riêng tư với Users
+            create_private_discussions_with_groups: Tạo cuộc thảo luận riêng tư với nhóm
+            create_private_discussions_with_blocking_users: Tạo cuộc thảo luận riêng tư với người dùng đã Block
+            edit_user_recipients: Chỉnh sửa người dùng tham gia vào các cuộc thảo luận riêng tư
+            edit_group_recipients: Chỉnh sửa các nhóm tham gia vào các cuộc thảo luận riêng tư
+
+        settings:
+            byobu_users_page_label: Thêm các cuộc thảo luận riêng tư vào trang người dùng

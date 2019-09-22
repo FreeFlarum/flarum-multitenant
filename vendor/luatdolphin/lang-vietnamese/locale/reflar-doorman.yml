@@ -1,0 +1,35 @@
+reflar-doorman:
+  forum:
+    sign_up:
+      invalid_doorkey: Invite code bạn nhập không hợp lệ.
+      doorkey_required: Hãy nhập vào Invite code.
+      doorman_placeholder: Invite Code
+      doorman_placeholder_optional: Invite Code (Tùy chọn)
+
+  admin:
+    invalid_doorkey: Invite code bạn nhập không hợp lệ.
+    doorkey_required: Bạn phải cung cấp một Invite Code
+    nav:
+      desc: Tạo Invite code để người dùng đăng ký và được chỉ định tới một nhóm
+    page:
+      title: Doorman
+      doorkey:
+        used_times: "Còn 1 lần sử dụng|Còn {remaining} lần sử dụng"
+        title: Invite Codes
+        help:
+          key: "Key: Mã người dùng sẽ nhập khi đăng ký."
+          group: "Nhóm: Nhóm người dùng sẽ được thêm vào khi đăng ký."
+          max: "Số lần tối đa: Số lần tối đa mã được sử dụng, đặt thành 0 để sử dụng không giới hạn"
+          activates: "Kích hoạt User: Tự động kích hoạt người dùng khi họ đăng ký."
+        warning: Invite code này đã được sử dụng số lần tối đa.
+        key: Key
+        max_uses: Số lần tối đa
+        heading:
+          key: Key
+          group: Nhóm
+          activate: Kích hoạt User
+          max_uses: Số lần tối đa
+        allow-public:
+          title: Cho phép Đăng ký công khai
+          switch-label: Tạo tùy chọn sử dụng Invite code khi đăng ký
+        

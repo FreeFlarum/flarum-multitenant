@@ -1,0 +1,27 @@
+nomiscz-auth-steam:
+  forum:
+    buttons:
+      login: 通过steam登录
+      link: 绑定steam账号
+      unlink: 解绑steam账号
+    alerts:
+      already_linked: steam账号已绑定！
+      already_used: steam账号已绑定至其他账号!
+      link_success: steam账号绑定成功.
+      unlink_success: steam账号解绑成功.
+      error: 有些地方出问题，请稍后再试!
+    modals:
+      link:
+        title: 绑定steam账号
+      unlink:
+        title: 解绑steam账号
+        info:
+          confirm: 你是否想要解绑你的steam账号?
+          no_providers: 你没有其他登录手段，请先重置账户密码.
+        buttons:
+          confirm: 是的，我确定
+          cancel: 不，我不确定!
+  admin:
+    settings:
+      title: steam登录设置
+      api_key_label: steam密匙
