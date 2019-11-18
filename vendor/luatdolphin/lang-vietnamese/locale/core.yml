@@ -24,7 +24,7 @@ core:
       custom_header_heading: Tùy chỉnh header
       custom_header_text: => core.ref.custom_header_text
       custom_styles_heading: Tùy chỉnh giao diện
-      custom_styles_text: Bạn có thể tùy chỉnh giao diện bằng việc thêm vào các file LESS/CSS để áp dụng cho các giao diện Flarum.
+      custom_styles_text: Bạn có thể tùy chỉnh giao diện bằng việc thêm vào các file LESS/CSS để cải thiện giao diện trang.
       dark_mode_label: Nền tối
       edit_css_button: Chỉnh sửa CSS
       edit_footer_button: => core.ref.custom_footer_title
@@ -58,7 +58,7 @@ core:
 
     # These translations are used in the Edit Custom CSS modal dialog.
     edit_css:
-      customize_text: "Tùy chỉnh giao diện bằng việc thêm vào các file LESS/CSS để áp dụng cho các <a>giao diện mặc định</a> của Flarum."
+      customize_text: "Tùy chỉnh giao diện bằng việc thêm vào các file LESS/CSS để átùy chỉnh <a>giao diện mặc định</a> của trang."
       submit_button: => core.ref.save_changes
       title: Tùy chỉnh CSS
 
@@ -240,7 +240,7 @@ core:
       delete_button: => core.ref.delete
       delete_confirmation: "Bạn chắc chắn muốn xóa thảo luận này chứ?"
       delete_forever_button: => core.ref.delete_forever
-      log_in_to_reply_button: Đăng nhập để bình luận
+      log_in_to_reply_button: Login để bình luận
       rename_button: => core.ref.rename
       reply_button: => core.ref.reply
       restore_button: => core.ref.restore
@@ -292,7 +292,7 @@ core:
     index:
       all_discussions_link: => core.ref.all_discussions
       cannot_start_discussion_button: Không thể tạo thảo luận
-      mark_all_as_read_confirmation: "Bạn chắc chắn muốn đánh dấu tất cả là đã đọc chứ?"
+      mark_all_as_read_confirmation: "Bạn chắc chắn muốn đánh dấu đã đọc tất cả chứ?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
       refresh_tooltip: Làm mới
       start_discussion_button: => core.ref.start_a_discussion
@@ -303,7 +303,7 @@ core:
       newest_button: Gần nhất
       oldest_button: Cũ nhất
       relevance_button: Phù hợp
-      top_button: Lên trên
+      top_button: Hot nhất
 
     # These translations are used in the Log In modal dialog.
     log_in:
@@ -321,6 +321,7 @@ core:
       discussion_renamed_text: "{username} đã thay đổi tiêu đề"
       empty_text: Không có thông báo
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: Đánh dấu đã đọc
       title: => core.ref.notifications
       tooltip: => core.ref.notifications
 
@@ -589,8 +590,8 @@ core:
     admin: Quản trị viên
     admins: Quản trị viên
     guest: Khách
-    guests: Guests
+    guests: Khách
     member: Thành viên
-    members: Thành viên
-    mod: Ban điều hành
+    members: Các thành viên
+    mod: Người điều hành
     mods: Ban điều hành

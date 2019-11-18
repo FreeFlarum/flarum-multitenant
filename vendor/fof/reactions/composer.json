@@ -1,0 +1,51 @@
+{
+    "name": "fof/reactions",
+    "description": "Reactions for Flarum",
+    "keywords": [
+        "misc",
+        "settings",
+        "flarum",
+        "reflar",
+        "reactions"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^0.1.0-beta.9"
+    },
+    "replace": {
+        "reflar/reactions": "*"
+    },
+    "authors": [
+        {
+            "name": "David Sevilla Martín",
+            "email": "david.s@redevs.org",
+            "homepage": "https://redevs.org",
+            "role": "Developer"
+        },
+        {
+            "name": "Charlie K",
+            "email": "issyrocks12@reflar.email",
+            "homepage": "https://redevs.org",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FoF\\Reactions\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Reactions",
+            "icon": {
+                "name": "far fa-smile",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/6542-friendsofflarum-reactions"
+        }
+    }
+}

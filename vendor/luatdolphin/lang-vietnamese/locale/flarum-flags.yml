@@ -36,14 +36,14 @@ flarum-flags:
 
     # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
     flagged_posts:
-      empty_text: No Flags
+      empty_text: Không có bài nào
       item_text: "{username} trong <em>{discussion}</em>"
       title: => flarum-flags.ref.flagged_posts
       tooltip: => flarum-flags.ref.flagged_posts
 
     # These translations are used by the frame displayed around flagged posts.
     post:
-      dismiss_flag_tooltip: Dismiss Flag
+      dismiss_flag_tooltip: Bỏ gắn cờ
       flagged_by_text: "{username} đã gắn cờ"
       flagged_by_with_reason_text: "{username} đã gắn cờ vì {reason}"
 

@@ -1,0 +1,42 @@
+{
+    "name": "tolgaaaltas/flarum-lang-turkish",
+    "type": "flarum-extension",
+    "description": "Turkish language pack for Flarum's core.",
+    "keywords": ["locale"],
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "suggest": {
+		"tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."
+	},
+	"support": {
+		"issues": "https://github.com/tolgaaaltas/flarum-lang-turkish/issues",
+		"source": "https://github.com/tolgaaaltas/flarum-lang-turkish/"
+	},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "authors": [{
+			"name": "tolgaaaltas",
+			"role": "Developer"
+		}],
+        "flarum-extension": {
+            "title": "Turkish Core Pack",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#00247d",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flagrow": {
+			"discuss": "https://discuss.flarum.org/d/21356-flarum-core-turkish-language-pack"
+		},
+        "flarum-locale": {
+            "code": "tr",
+            "title": "Turkish Core Pack"
+        }
+    }
+}

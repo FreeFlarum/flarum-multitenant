@@ -37,6 +37,7 @@
 
 namespace AmauryCarrade\FlarumFeeds\Controller;
 
+use Flarum\Settings\SettingsRepositoryInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Flarum\User\User;
 use Flarum\Api\Client as ApiClient;
@@ -76,9 +77,9 @@ class DiscussionsActivityFeedController extends AbstractFeedController
      * @param TranslatorInterface $translator
      * @param bool                $lastTopics
      */
-    public function __construct(Factory $view, ApiClient $api, TranslatorInterface $translator, $lastTopics = false)
+    public function __construct(Factory $view, ApiClient $api, TranslatorInterface $translator, SettingsRepositoryInterface $settings, $lastTopics = false)
     {
-        parent::__construct($view, $api, $translator);
+        parent::__construct($view, $api, $translator, $settings);
 
         $this->lastTopics = $lastTopics;
     }
@@ -107,7 +108,7 @@ class DiscussionsActivityFeedController extends AbstractFeedController
         $params = [
             'sort' => $sort && isset($this->sortMap[$sort]) ? $this->sortMap[$sort] : ($this->lastTopics ? $this->sortMap['newest'] : $this->sortMap['latest']),
             'filter' => compact('q'),
-            'page' => ['offset' => 0, 'limit' => 20],
+            'page' => ['offset' => 0, 'limit' => $this->getSetting("entries-count", 100)],
             'include' => $this->lastTopics ? 'firstPost,user' : 'lastPost,lastPostedUser'
         ];
 
@@ -116,6 +117,7 @@ class DiscussionsActivityFeedController extends AbstractFeedController
         $last_discussions = $this->getDocument($actor, $params);
 
         $entries = [];
+        $lastModified = null;
 
         foreach ($last_discussions->data as $discussion)
         {
@@ -129,7 +131,7 @@ class DiscussionsActivityFeedController extends AbstractFeedController
             {
                 $content = $this->getRelationship($last_discussions, $discussion->relationships->lastPost);
             }
-            else  // Happens when the first or last post is (soft-)deleted
+            else  // Happens when the first or last post is soft-deleted
             {
                 $content = new \stdClass();
                 $content->contentHtml = '';
@@ -137,13 +139,19 @@ class DiscussionsActivityFeedController extends AbstractFeedController
 
             $entries[] = [
                 'title'       => $discussion->attributes->title,
-                'description' => $this->summary($content->contentHtml),
-                'content'     => $content->contentHtml,
+                'content'     => $this->summarize($this->stripHTML($content->contentHtml)),
                 'id'          => $this->url->to('forum')->route('discussion', ['id' => $discussion->id . '-' . $discussion->attributes->slug]),
                 'permalink'   => $this->url->to('forum')->route('discussion', ['id' => $discussion->id . '-' . $discussion->attributes->slug, 'near' => $content->number]) . '/' . $content->number,  // TODO same than DiscussionFeedController
                 'pubdate'     => $this->parseDate($this->lastTopics ? $discussion->attributes->createdAt : $discussion->attributes->lastPostedAt),
                 'author'      => $this->getRelationship($last_discussions, $this->lastTopics ? $discussion->relationships->user : $discussion->relationships->lastPostedUser)->username
             ];
+
+            $modified = $this->parseDate($this->lastTopics ? $discussion->attributes->createdAt : $discussion->attributes->lastPostedAt);
+
+            if ($lastModified === null || $lastModified < $modified)
+            {
+                $lastModified = $modified;
+            }
         }
 
         // TODO real tag names
@@ -175,12 +183,13 @@ class DiscussionsActivityFeedController extends AbstractFeedController
         }
 
         return [
-            'forum'       => $forum,
-            'title'       => $title,
-            'description' => $description,
-            'link'        => $forum->attributes->baseUrl,
-            'pubDate'     => new \DateTime(),
-            'entries'     => $entries
+            'forum'        => $forum,
+            'title'        => $title,
+            'description'  => $description,
+            'link'         => $forum->attributes->baseUrl,
+            'pubDate'      => new \DateTime(),
+            'lastModified' => $lastModified,
+            'entries'      => $entries
         ];
     }
 

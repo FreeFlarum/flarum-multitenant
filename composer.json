@@ -21,7 +21,7 @@
         "docs": "https://flarum.org/docs/"
     },
     "require": {
-        "amaurycarrade/flarum-ext-syndication": "^0.2.0",
+        "amaurycarrade/flarum-ext-syndication": "^0.3.1",
         "cbmainz/flarum-de": "^0.9.1",
         "csineneo/lang-simplified-chinese": "v0.1.0-beta.9.3",
         "csineneo/lang-traditional-chinese": "v0.1.0-beta.9.3",
@@ -49,7 +49,7 @@
         "flarum/subscriptions": "^0.1.0",
         "flarum/suspend": "^0.1.0",
         "flarum/tags": "^0.1.0",
-        "flarumtr/turkish-lang": "^0.1.6",
+        "fof/auth-discord": "^0.1.3",
         "fof/ban-ips": "dev-master",
         "fof/bbcode-details": "^0.1.0",
         "fof/byobu": "*",
@@ -58,12 +58,14 @@
         "fof/drafts": "^0.1.3",
         "fof/formatting": "^0.1.2",
         "fof/gamification": "^0.1.4",
+        "fof/linguist": "^0.4.0",
         "fof/links": "^0.2.1",
         "fof/masquerade": "^0.3.3",
         "fof/merge-discussions": "^0.3.1",
         "fof/pages": "^0.2.6",
         "fof/polls": "^0.1.1",
         "fof/profile-image-crop": "^0.1.1",
+        "fof/reactions": "^0.1.0",
         "fof/recaptcha": "^0.1.1",
         "fof/secure-https": "^0.1.0",
         "fof/share-social": "^0.1.1",
@@ -94,10 +96,10 @@
         "saleksin/flarum-auth-google": "v0.1.0-beta.8.0.3",
         "tiu-ram0n/flaneo-ext-brazilian-portuguese": "^1.1",
         "tolgaaaltas/flarum-ext-turkish": "0.1.10.5",
+        "tolgaaaltas/flarum-lang-turkish": "0.0.0.6",
         "v17development/flarum-seo": "^1.0",
         "veriael/flarum-polish": "^1.0",
-        "zerosonesfun/bbbbcode": "^1.1",
-        "ziymed/lang-ar": "^0.1.0"
+        "zerosonesfun/bbbbcode": "^1.1"
     },
     "config": {
         "preferred-install": "dist",

@@ -1,0 +1,15 @@
+clarkwinkelmann-emojionearea:
+    forum:
+        picker_button: Chọn Emoji
+        search_placeholder: Tìm kiếm...
+
+    admin:
+        settings:
+            title: Cài đặt EmojioneArea
+            enableSearch: Kích hoạt tìm kiếm
+            enableRecent: Kích hoạt lịch sử
+            enableTones: Bật âm thanh
+            filtersPosition: Di chuyển danh mục xuống dưới cùng
+            searchPosition: Di chuyển tìm kiếm và âm báo xuống dưới cùng
+            hideFlarumButton: Ẩn nút chọn emoji
+            hideFlarumButtonHelp: Tiện ích mở rộng Emoji Picker phải được bật sau tiện ích mở rộng Emoji để có thể hoạt động

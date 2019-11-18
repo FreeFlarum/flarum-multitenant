@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f162b22e582b75a5ec1d3a5136337bd0",
+    "content-hash": "468c6d705e335bb945d0012ce61f6a43",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
-            "version": "v0.2.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AmauryCarrade/flarum-ext-syndication.git",
-                "reference": "3d74000fc1aeb89cbf7855f6bc51445061fde937"
+                "reference": "829c0752675119931b3574fa7cf6b8d7e398f793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AmauryCarrade/flarum-ext-syndication/zipball/3d74000fc1aeb89cbf7855f6bc51445061fde937",
-                "reference": "3d74000fc1aeb89cbf7855f6bc51445061fde937",
+                "url": "https://api.github.com/repos/AmauryCarrade/flarum-ext-syndication/zipball/829c0752675119931b3574fa7cf6b8d7e398f793",
+                "reference": "829c0752675119931b3574fa7cf6b8d7e398f793",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.10"
             },
             "type": "flarum-extension",
             "extra": {
@@ -34,6 +34,9 @@
                         "backgroundPosition": "center",
                         "color": "#fff"
                     }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/4395-syndication-extension-rss-atom-feeds"
                 }
             },
             "autoload": {
@@ -45,8 +48,18 @@
             "license": [
                 "CECILL-B"
             ],
+            "authors": [
+                {
+                    "name": "Amaury Carrade",
+                    "email": "amaury@carrade.eu",
+                    "role": "Developer"
+                }
+            ],
             "description": "Brings RSS and Atom feeds to Flarum",
-            "time": "2019-03-23T15:26:27+00:00"
+            "keywords": [
+                "flarum"
+            ],
+            "time": "2019-10-16T00:33:50+00:00"
         },
         {
             "name": "authy/php",
@@ -2420,50 +2433,59 @@
             "time": "2019-09-16T07:30:46+00:00"
         },
         {
-            "name": "flarumtr/turkish-lang",
-            "version": "v0.1.7",
+            "name": "fof/auth-discord",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/flarumtr/turkish-lang.git",
-                "reference": "80a48ae37a24e9349c5c769c8dd70de919901ff9"
+                "url": "https://github.com/FriendsOfFlarum/auth-discord.git",
+                "reference": "1a77f68cbffa31a4fc4f62ca585e670399b010ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarumtr/turkish-lang/zipball/80a48ae37a24e9349c5c769c8dd70de919901ff9",
-                "reference": "80a48ae37a24e9349c5c769c8dd70de919901ff9",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/auth-discord/zipball/1a77f68cbffa31a4fc4f62ca585e670399b010ca",
+                "reference": "1a77f68cbffa31a4fc4f62ca585e670399b010ca",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.9"
+                "flarum/core": "^0.1.0-beta.8",
+                "fof/extend": ">=0.1.0",
+                "wohali/oauth2-discord-new": "^1.0.0"
             },
             "type": "flarum-extension",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.x-dev"
-                },
                 "flarum-extension": {
-                    "title": "Turkish",
+                    "title": "FoF Discord Login",
                     "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#00247d",
-                        "backgroundSize": "cover",
-                        "backgroundPosition": "center"
+                        "name": "fab fa-discord",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
                     }
                 },
-                "flarum-locale": {
-                    "code": "tr",
-                    "title": "Turkish"
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20184-friendsofflarum-discord-login"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\AuthDiscord\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Turkish language pack.",
-            "keywords": [
-                "locale"
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
             ],
-            "time": "2019-09-16T16:11:31+00:00"
+            "description": "Allow users to log in with Discord",
+            "keywords": [
+                "flarum"
+            ],
+            "time": "2019-07-14T14:36:25+00:00"
         },
         {
             "name": "fof/ban-ips",
@@ -2969,6 +2991,65 @@
             "time": "2019-08-10T02:58:14+00:00"
         },
         {
+            "name": "fof/linguist",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/linguist.git",
+                "reference": "30c54585362b1ed656281ba3cd71c9e7c27fef0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/linguist/zipball/30c54585362b1ed656281ba3cd71c9e7c27fef0d",
+                "reference": "30c54585362b1ed656281ba3cd71c9e7c27fef0d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.9 <0.1.0-beta.12"
+            },
+            "replace": {
+                "flagrow/linguist": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Linguist",
+                    "icon": {
+                        "name": "fas fa-italic",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/7026"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Linguist\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Customize translations",
+            "keywords": [
+                "extension",
+                "flarum",
+                "locale",
+                "translation"
+            ],
+            "time": "2019-09-22T20:48:39+00:00"
+        },
+        {
             "name": "fof/links",
             "version": "0.2.1",
             "source": {
@@ -3335,6 +3416,73 @@
                 "flarum"
             ],
             "time": "2019-01-01T20:38:53+00:00"
+        },
+        {
+            "name": "fof/reactions",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/reactions.git",
+                "reference": "b8ccd0ed481348e217cb0580292838335e89077c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/b8ccd0ed481348e217cb0580292838335e89077c",
+                "reference": "b8ccd0ed481348e217cb0580292838335e89077c",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.9"
+            },
+            "replace": {
+                "reflar/reactions": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Reactions",
+                    "icon": {
+                        "name": "far fa-smile",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/6542-friendsofflarum-reactions"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Reactions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie K",
+                    "email": "issyrocks12@reflar.email",
+                    "homepage": "https://redevs.org",
+                    "role": "Developer"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "homepage": "https://redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Reactions for Flarum",
+            "keywords": [
+                "Settings",
+                "flarum",
+                "misc",
+                "reactions",
+                "reflar"
+            ],
+            "time": "2019-07-08T16:32:19+00:00"
         },
         {
             "name": "fof/recaptcha",
@@ -5511,20 +5659,20 @@
         },
         {
             "name": "luatdolphin/lang-vietnamese",
-            "version": "v0.1.0-beta.9",
+            "version": "0.1.0-beta.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luatdolphin/lang-vietnamese.git",
-                "reference": "f54308a34483dcd93395a3f9bb6d334bf12b9255"
+                "reference": "bbde9b2168c442ce4a85f418129b19bc7304aa70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/f54308a34483dcd93395a3f9bb6d334bf12b9255",
-                "reference": "f54308a34483dcd93395a3f9bb6d334bf12b9255",
+                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/bbde9b2168c442ce4a85f418129b19bc7304aa70",
+                "reference": "bbde9b2168c442ce4a85f418129b19bc7304aa70",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.9"
+                "flarum/core": "^0.1.0-beta.10"
             },
             "type": "flarum-extension",
             "extra": {
@@ -5555,7 +5703,7 @@
                 "vietnam",
                 "vietnamese"
             ],
-            "time": "2019-08-30T03:19:37+00:00"
+            "time": "2019-09-25T03:33:37+00:00"
         },
         {
             "name": "madchatthew/themelightshadow",
@@ -5613,7 +5761,7 @@
             "version": "0.1.0-beta.10-2",
             "source": {
                 "type": "git",
-                "url": "https://gitlab.com/marketplace-flarum/languages/flarum-l10n-core-russian.git",
+                "url": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian.git",
                 "reference": "c0c3a355005fd0beb5c7d58df689465afe7671fd"
             },
             "dist": {
@@ -9273,6 +9421,64 @@
             "time": "2019-08-04T21:42:51+00:00"
         },
         {
+            "name": "tolgaaaltas/flarum-lang-turkish",
+            "version": "0.0.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
+                "reference": "ab1ec63e9b8d0d5b009ca66483f3d183be8ebbd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/ab1ec63e9b8d0d5b009ca66483f3d183be8ebbd0",
+                "reference": "ab1ec63e9b8d0d5b009ca66483f3d183be8ebbd0",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "suggest": {
+                "tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "authors": [
+                    {
+                        "name": "tolgaaaltas",
+                        "role": "Developer"
+                    }
+                ],
+                "flarum-extension": {
+                    "title": "Turkish Core Pack",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/21356-flarum-core-turkish-language-pack"
+                },
+                "flarum-locale": {
+                    "code": "tr",
+                    "title": "Turkish Core Pack"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Turkish language pack for Flarum's core.",
+            "keywords": [
+                "locale"
+            ],
+            "time": "2019-11-04T14:53:03+00:00"
+        },
+        {
             "name": "twilio/sdk",
             "version": "5.36.0",
             "source": {
@@ -9412,6 +9618,65 @@
                 "locale"
             ],
             "time": "2019-09-19T11:24:56+00:00"
+        },
+        {
+            "name": "wohali/oauth2-discord-new",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wohali/oauth2-discord-new.git",
+                "reference": "990bdfb59b4cd2086e0524b429dc12b5142d66ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/990bdfb59b4cd2086e0524b429dc12b5142d66ad",
+                "reference": "990bdfb59b4cd2086e0524b429dc12b5142d66ad",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "conflict": {
+                "team-reflex/oauth2-discord": ">=1.0"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "~0.9",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wohali\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joan Touzet",
+                    "email": "wohali@gmail.com",
+                    "homepage": "https://github.com/wohali"
+                }
+            ],
+            "description": "Discord OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "discord",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2017-10-15T23:24:28+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -9688,56 +9953,6 @@
             ],
             "description": "Big Beautiful BBcode",
             "time": "2019-08-19T21:02:37+00:00"
-        },
-        {
-            "name": "ziymed/lang-ar",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ziymed/lang-ar.git",
-                "reference": "9e62fb8a0b2a138d1953c68c1922930ec0f785a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ziymed/lang-ar/zipball/9e62fb8a0b2a138d1953c68c1922930ec0f785a1",
-                "reference": "9e62fb8a0b2a138d1953c68c1922930ec0f785a1",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.9"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "Arabic Lang V2",
-                    "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#006233",
-                        "backgroundSize": "cover",
-                        "backgroundPosition": "center"
-                    }
-                },
-                "flarum-locale": {
-                    "code": "ar",
-                    "title": "العربية"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ziymed\\LangAr\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Arabic Language Pack v2",
-            "keywords": [
-                "arabic",
-                "locale",
-                "العربية"
-            ],
-            "time": "2019-09-01T18:48:52+00:00"
         }
     ],
     "packages-dev": [],

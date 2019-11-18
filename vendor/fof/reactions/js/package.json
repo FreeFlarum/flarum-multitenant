@@ -1,0 +1,20 @@
+{
+  "name": "@fof/reactions",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "lint": "prettier --single-quote --trailing-comma es5 --print-width 150 --tab-width 4 --write 'src/**/*'",
+    "generate-emoji-map": "node ./scripts/generate-emoji-map.js"
+  },
+  "dependencies": {
+    "flarum-webpack-config": "0.1.0-beta.10",
+    "simple-emoji-map": "^0.3.0",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

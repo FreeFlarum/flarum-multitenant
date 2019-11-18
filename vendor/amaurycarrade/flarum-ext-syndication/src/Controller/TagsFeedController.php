@@ -37,6 +37,10 @@
 
 namespace AmauryCarrade\FlarumFeeds\Controller;
 
+use Flarum\Extension\ExtensionManager;
+use Flarum\Http\Exception\RouteNotFoundException;
+use Flarum\Settings\SettingsRepositoryInterface;
+use Flarum\Tags\TagRepository;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Flarum\Api\Client as ApiClient;
 use Illuminate\Contracts\View\Factory;
@@ -50,14 +54,31 @@ use Symfony\Component\Translation\TranslatorInterface;
  */
 class TagsFeedController extends DiscussionsActivityFeedController
 {
-    public function __construct(Factory $view, ApiClient $api, TranslatorInterface $translator, $lastTopics = false)
+    /**
+     * @var TagRepository
+     */
+    private $tagRepository;
+
+    public function __construct(Factory $view, ApiClient $api, TranslatorInterface $translator, SettingsRepositoryInterface $settings, ExtensionManager $extensions, TagRepository $tagRepository, $lastTopics = false)
     {
-        parent::__construct($view, $api, $translator, $lastTopics);
+        parent::__construct($view, $api, $translator, $settings, $lastTopics);
+
+        $this->tagRepository = $tagRepository;
+
+        if (!$extensions->isEnabled("flarum-tags"))
+            throw new RouteNotFoundException("Tag feeds not available without the tag extension.");
     }
 
     protected function getTags(Request $request)
     {
         $queryParams = $request->getQueryParams();
-        return [array_get($queryParams, 'tag')];
+        $tag_slug = array_get($queryParams, 'tag');
+
+        if (!$this->tagRepository->getIdForSlug($tag_slug))
+        {
+            throw new RouteNotFoundException("This tag does not exist.");
+        }
+
+        return [$tag_slug];
     }
 }

@@ -44,6 +44,58 @@ composer require luatdolphin/lang-vietnamese
 1. Tải [phiên bản mới nhất tại](https://github.com/luatdolphin/lang-vietnamese/releases) (hoặc [tải phiển bản đang phát triển mới nhất tại](https://github.com/luatdolphin/lang-vietnamese/archive/master.zip)).
 2. Giải nép file bằng [a file archiver](https://en.wikipedia.org/wiki/Comparison_of_file_archivers).
 3. Truy cập vào server của bản qua [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol), [SSH](https://en.wikipedia.org/wiki/Secure_Shell) hoặc trình quản lý của bạn.
-4. Chuyển qua thư mục *extensions/* tại mục cài đặt của Flarum.
-5. Tạo mới thư mục con *luatdolphin-lang-vietnamese/*  trong thư mục *extensions/* .
-6. Tải nội dung ngôn ngữ mà bạn vừa giải nén vào thư mục.
+4. Mở file *composer.json* của Flarum sau đó thêm dòng "luatdolphin/lang-vietnamese": "^0.1.0@beta" bao gồm dấu nháy kép "" sau dòng *"require": {* rồi lưu lại
+5. Chuyển qua thư mục *vendor/* tại mục cài đặt của Flarum.
+6. Tạo mới thư mục con *luatdolphin/lang-vietnamese/*  trong thư mục *vendor/* .
+7. Tải nội dung ngôn ngữ mà bạn vừa giải nén vào thư mục. (*composer.json, extend.php....*)
+8. Quay lại thư mục gốc chứa file *composer.lock* thêm dòng bên dưới vào sau phần *"time":" thời gian " },* của extension trước đó rồi lưu lại.
+```
+       {
+            "name": "luatdolphin/lang-vietnamese",
+            "version": "v0.1.0-beta.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/luatdolphin/lang-vietnamese.git",
+                "reference": "b75296761d712f9d1804dae1a0e2039656d0d50d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/b75296761d712f9d1804dae1a0e2039656d0d50d",
+                "reference": "b75296761d712f9d1804dae1a0e2039656d0d50d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.9"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Vietnamese",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "vi",
+                    "title": "Vietnamese"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Vietnamese language pack.",
+            "keywords": [
+                "locale",
+                "vietnam",
+                "vietnamese"
+            ],
+            "time": "2019-08-30T03:19:37+00:00"
+        },
+```

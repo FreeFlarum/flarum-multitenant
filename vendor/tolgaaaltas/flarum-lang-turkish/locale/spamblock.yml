@@ -1,0 +1,9 @@
+fof-spamblock:
+  forum:
+    user_controls:
+      spammer_button: Spamcı
+      spammer_confirmation: "Bunu yapmak istediğine emin misin \n• kullanıcının tüm tartışmalarını ve yayınlarını gizle \n• [flarum/suspend] Suspend the user"
+
+  admin:
+    permissions:
+      spamblock_users_label: Kullanıcıyı spam yapan olarak işaretle

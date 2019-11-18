@@ -38,6 +38,9 @@
 namespace AmauryCarrade\FlarumFeeds\Controller;
 
 use Flarum\Api\Client as ApiClient;
+use Flarum\Extension\ExtensionManager;
+use Flarum\Settings\SettingsRepositoryInterface;
+use Flarum\Tags\TagRepository;
 use Illuminate\Contracts\View\Factory;
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -52,8 +55,8 @@ use Symfony\Component\Translation\TranslatorInterface;
  */
 class LastDiscussionsByTagFeedController extends TagsFeedController
 {
-    public function __construct(Factory $view, ApiClient $api, TranslatorInterface $translator)
+    public function __construct(Factory $view, ApiClient $api, TranslatorInterface $translator, SettingsRepositoryInterface $settings, ExtensionManager $extensions, TagRepository $tagRepository)
     {
-        parent::__construct($view, $api, $translator, true);
+        parent::__construct($view, $api, $translator, $settings, $extensions, $tagRepository, true);
     }
 }
