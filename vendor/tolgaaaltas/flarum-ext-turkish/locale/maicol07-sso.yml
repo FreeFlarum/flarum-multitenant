@@ -1,0 +1,7 @@
+maicol07-sso:
+  admin:
+    settings:
+      title: "SSO Ayarları"
+      signup_url: "Kayıt Bağlantısı"
+      login_url: "Giriş Bağlantısı"
+      logout_url: "Çıkış Bağlantısı"

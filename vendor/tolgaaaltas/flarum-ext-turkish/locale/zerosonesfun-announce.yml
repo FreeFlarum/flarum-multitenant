@@ -1,0 +1,9 @@
+zerosonesfun-announce:
+  admin:
+    settings:
+      title: Duyuru Ayarları
+
+      text: Duyuru metni
+      height: Duyurunun yüksekliği
+      css: CSS
+      js: JS

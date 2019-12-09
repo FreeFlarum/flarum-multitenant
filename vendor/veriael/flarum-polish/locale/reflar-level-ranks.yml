@@ -1,0 +1,11 @@
+reflar-level-ranks:
+  admin:
+    settings:
+      title: Ustawienia Level Ranks
+      levelText: Wprowadź tekst, który zostanie wyświetlony zamiast "Poziom" dla zdobytych punktów - np. "Ranga", czy "Stopień".
+  forum:
+    desc:
+      expText: EXP
+  lib:
+    defaults:
+      level: Poziom

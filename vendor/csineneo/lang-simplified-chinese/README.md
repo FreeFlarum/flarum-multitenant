@@ -25,27 +25,30 @@ composer remove csineneo/lang-simplified-chinese
   - antoinefr-money
   - antoinefr-online
   - backtowebsite
+  - clarkwinkelmann-author-change
+  - clarkwinkelmann-emojionearea
+  - clarkwinkelmann-post-date
   - datitisev-dashboard
+  - dem13n
   - extiverse-bazaar
   - fajuu-contactbutton
+  - fajuu-icons
   - flagrow-ads
   - flagrow-analytics
   - flagrow-fonts
   - flagrow-html-errors
   - flagrow-impersonate
-  - flagrow-linguist
   - flagrow-mason
   - flagrow-passport
-  - flagrow-terms
   - flagrow-upload
   - flarum-akismet
   - flarum-approval
   - flarum-auth-facebook
   - flarum-auth-github
   - flarum-auth-twitter
-  - flarum-best-answer
   - flarum-discussion-views
   - flarum-emoji
+  - flarum-ext-close
   - flarum-ext-fancybox
   - flarum-flags
   - flarum-likes
@@ -59,48 +62,66 @@ composer remove csineneo/lang-simplified-chinese
   - flarum-subscriptions
   - flarum-suspend
   - flarum-tags
+  - fof-amazon-affiliation
   - fof-auth-gitlab
+  - fof-ban-ips
+  - fof-best-answer
   - fof-byobu
   - fof-custom-footer
   - fof-default-group
+  - fof-drafts
   - fof-email-checker
   - fof-follow-tags
   - fof-formatting
   - fof-frontpage
   - fof-gamification
+  - fof-geoip
   - fof-ignore-users
+  - fof-linguist
   - fof-links
   - fof-merge-discussions
+  - fof-nightmode
   - fof-pages
   - fof-polls
+  - fof-pretty-mail
   - fof-prevent-necrobumping
   - fof-reactions
   - fof-recaptcha
   - fof-secure-https
+  - fof-sentry
   - fof-share-social
   - fof-socialprofile
   - fof-spamblock
+  - fof-stopforumspam
   - fof-split
+  - fof-subscribed
+  - fof-terms
   - fof-transliterator
   - fof-user-directory
   - fof-userbio
+  - fof-username-request
   - imgur-upload
+  - kilowhat-affiliation-links
+  - kilowhat-mailing
   - kvothe-sub
+  - maicol07-sso
   - michaelBelgium-profile-views
+  - migratetoflarum-fake-data
   - migratetoflarum-vbulletin-redirects
   - mybbtoflarum
   - nikovonlas-webpush
+  - perspective
   - reflar-cookie-consent
   - reflar-doorman
   - reflar-level-ranks
-  - reflar-nightmode
   - reflar-pwned-passwords
   - reflar-twofactor
   - reflar-webhooks
   - saleksin-auth-google
+  - shriker-pronouns
   - tpokorra-post-notification
-  - wuethrich44-sso
   - v17development-flarum-seo
+  - zerosonesfun-announce
 
 ### 示例 / Demo
   - https://vivaldi.club 

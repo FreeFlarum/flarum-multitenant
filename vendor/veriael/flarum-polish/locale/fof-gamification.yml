@@ -46,6 +46,8 @@ fof-gamification:
         points_placeholder: "Punkty: "
         color_holder: '#ffffff'
         auto_upvote: Automatycznie dodawaj upvotes pisanym przez siebie postom
+        rate_limit: Wymuś limit częstotliwości głosowania (10 sekund)
+        discussion_page: Pokazuj łączną liczbę głosów oryginalnego postu dyskusji na stronie listy dyskusji, obok liczby odpowiedzi
         title: Głosy
         vote_color: Kolor po zagłosowaniu
         icon_name: Ikona głosowania pozytywnie/negatywnie

@@ -104,7 +104,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             'Reflar\\twofactor\\' => 17,
             'Reflar\\Webhooks\\' => 16,
-            'Reflar\\Doorman\\' => 15,
             'ReFlar\\CookieConsent\\' => 21,
             'ReCaptcha\\' => 10,
         ),
@@ -407,10 +406,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Reflar\\Webhooks\\' => 
         array (
             0 => __DIR__ . '/..' . '/reflar/webhooks/src',
-        ),
-        'Reflar\\Doorman\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/reflar/doorman/src',
         ),
         'ReFlar\\CookieConsent\\' => 
         array (

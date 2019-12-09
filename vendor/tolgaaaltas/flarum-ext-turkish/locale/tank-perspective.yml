@@ -1,0 +1,20 @@
+perspective:
+  admin:
+    settings:
+      title: Perspective Ayarları
+      donotstore: Saklama
+      usemax: Maksimum Planı Kullan
+      useexperimental: Deneyimsel Modeli Kullan
+      field:
+        api_key: API Anahtarı
+        threshold: Bildirilme Sınırı
+        toxicity: Kötü Söz
+        threat: Tehdit
+        profanity: Küfür
+        sexually_explicit: Cinsel Taciz
+        flirtation: Flört
+
+  forum:
+    post:
+      not_toxic_button: Bu gönderiyi kötü söz olarak işaretleme
+      perspective_flagged_text: Perspective tarafından otomatik olarak bildirildi

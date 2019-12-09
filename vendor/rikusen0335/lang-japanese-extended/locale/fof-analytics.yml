@@ -1,0 +1,35 @@
+flagrow-analytics:
+  admin:
+    popup:
+      title: Analytics設定
+
+      section:
+        googleAnalytics: Google Analytics
+        piwik: Piwik(matomo)
+
+      field:
+        statusGoogle: Google Analyticsを有効化する
+        googleTrackingCode: トラッキングコードID
+        statusPiwik: Piwik(matomo)を有効化する
+        piwikUrl: Piwik(matomo)のドメインまたはURL
+        piwikSiteId: サイトID
+        piwikTrackSubdomain: Flarumのサブドメインにアクセスしているビジターもトラックする
+        piwikPrependDomain: トラッキング時にサイトドメインをページタイトルの前に追加する
+        piwikHideAliasUrl: "[アウトリンク]レポートで、既知のエイリアスURLに対するクリックを非表示にする"
+        piwikAliasUrl: エイリアスURL
+        piwikTrackAccounts: ユーザー個人個人をトラックする
+        piwikAuthToken: 認証トークン
+
+      placeholder:
+        piwikAuthToken: |
+            ここにトークンをいれることでアドミンパネルのPiwik(matomo)ステータスタブを有効化します。
+            トークンはSettings > Personal > API Authentication Tokenにあります。
+      trackAccounts:
+        none: トラックしない
+        username: ユーザーネームをトラックする
+        email: eメールをトラックする
+
+    page:
+      nav:
+        title: Analytics
+        description: 統計を見る

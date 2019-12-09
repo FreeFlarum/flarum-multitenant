@@ -1,0 +1,28 @@
+fof-linguist:
+    admin:
+        menu:
+            title: Linguist
+            description: Modyfikuj i dodawaj tłumaczenia.
+        buttons:
+            apply: Zastosuj
+            reset: Przywróć oryginał
+            copy-original: Kopiuj oryginalny tekst
+            load-more: Załaduj więcej
+        locales:
+            all: Wszystkie
+        placeholder:
+            not-translated: Nieprzetłumaczone
+            all-locales: Tekst wprowadzony tutaj, zostanie pokazany w przypadku wszystkich języków
+            hint: Oryginalna wartość:
+        filters:
+            search: Szukaj linijek tłumaczeń...
+            with-own-translations: Moje tłumaczenia
+            with-original-translations-in-locales: Z oryginalnymi tłumaczeniami w...
+            without-original-translations-in-locales: Bez oryginalnych tłumaczeń w...
+            for-extension: Dla rozszerzenia
+            results: Pokazuje {shown} z {total} pasujących tłumaczeń
+        clear-cache:
+            text: >
+                Nowe tłumaczenia nie zostały jeszcze zastosowane.
+                Uwaga: wyczyszczenie cache może chwilowo spowolnić działanie forum.
+            button: Wyczyść pliki cache teraz

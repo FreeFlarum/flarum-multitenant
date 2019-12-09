@@ -1,0 +1,24 @@
+fof-stopforumspam:
+  admin:
+    settings:
+      title: FoF Stop Forum Spam
+
+      username_label: Kontrola nazwy użytkownika
+      ip_label: Kontrola adresu IP
+      email_label: Kontrola adresu email
+
+      frequency_label: Próg aktywacji
+      frequency_text: Liczba zgłoszeń w obrębie wszystkich włączonych kontroli, wystarczająca do aktywacji filtra spamu.
+      frequency_example_text: "Np.: Jeżeli email ma 1 zgłoszenie, a adres IP 2 zgłoszenia, łącznie jest ich 3. Jeśli próg aktywacji jest ustawiony na 3 lub mniej, użytkownik nie będzie mógł zarejestrować się na forum."
+
+      api_key_label: Klucz API
+      api_key_text: Włączyłeś fof/spamblock - masz teraz opcję zgłaszania spamerów do StopForumSpam, aby utrzymać najlepszą społeczność forum wolną od spamerów.
+      api_key_instructions_text: <register>Zarejestruj się w StopForumSpam</register>. Następnie będziesz musiał <key>zdobyć klucz API</key>.
+
+  forum:
+    message:
+      spam: Twoje "o mnie" zostało oznaczone jako spam.
+
+  api:
+    error:
+      unknown: Nie udało się zgłosić użytkownika do StopForumSpam.

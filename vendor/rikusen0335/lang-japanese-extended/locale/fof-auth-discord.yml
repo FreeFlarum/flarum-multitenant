@@ -1,0 +1,10 @@
+fof-auth-discord:
+  admin:
+    discord_settings:
+      client_id_label: クライアントID
+      client_secret_label: クライアントシークレット
+      title: FriendsOfFlarum Discord Login
+
+  forum:
+    log_in:
+      with_discord_button: Discordでログインする

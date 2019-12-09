@@ -1,0 +1,26 @@
+flarum-ext-close:
+  admin:
+    permissions:
+      close_discussions_label: Kapalı tartışmalar
+      
+  forum:
+    badge:
+      closed_tooltip: Kapalı
+      
+    discussion_controls:
+      close_button: Kapat
+      unclosed_button: Kapatma
+      
+    notifications:
+      discussion_closed_text: "{username} kapattı"
+      
+    post_stream:
+      discussion_closed_text: "{username} tartışmayı kapattı."
+      discussion_unclosed_text: "{username} tartışmayı açtı."
+      closed_discussion_title: Bu tartışma kapatıldı
+      closed_discussion_text: Yalnızca tartışmanın sahibi bu içeriği görebilir.
+      closed_post_title: Bu gönderi kapatıldı
+      closed_post_text: Yalnızca bu gönderinin sahibi bu içeriği görebilir.
+      
+    settings:
+      notify_discussion_closed_label: Başlatılan tartışmaları kapatabilecekler

@@ -46,7 +46,6 @@ return array(
     'Saleksin\\Auth\\Google\\' => array($vendorDir . '/saleksin/flarum-auth-google/src'),
     'Reflar\\twofactor\\' => array($vendorDir . '/reflar/twofactor/src'),
     'Reflar\\Webhooks\\' => array($vendorDir . '/reflar/webhooks/src'),
-    'Reflar\\Doorman\\' => array($vendorDir . '/reflar/doorman/src'),
     'ReFlar\\CookieConsent\\' => array($vendorDir . '/reflar/cookie-consent/src'),
     'ReCaptcha\\' => array($vendorDir . '/google/recaptcha/src/ReCaptcha'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),

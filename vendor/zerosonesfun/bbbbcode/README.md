@@ -1,7 +1,7 @@
 # bbbbcode
 **Big Beautiful BBcode**
 
-A Flarum extension which adds additional bbcodes. The code which gets generated is pure HTML and CSS. No JavaScript. I have nothing against JavaScript. I just thought it would be interesting to make all the BBcodes CSS only.
+A Flarum extension which adds additional bbcodes. It is lightweight; all of the bbcodes are HTML and CSS only. However, currently a JavaScript polyfill is added which ensures that the spoiler bbcode will work in IE and Edge browsers. One day, this small bit of JavaScript may be removed if it is determined that it is no longer necessary.
 
 ## Install
 
@@ -35,6 +35,12 @@ The following BBcodes are available:
 
 `[spoiler="The text you click on"]The hidden text goes here.[/spoiler]`
 
+**Blurred Hover Spoiler:**
+
+`[blur]This is the blurred secret.[/blur]`
+
+(hover/press for 4 seconds to reveal)
+
 **Accordion:**
 ~~~
 [accordion header="YOUR HEADER TEXT"]The text that is hidden at first but then appears goes here[/accordion]
@@ -53,6 +59,18 @@ The following BBcodes are available:
 
 ("space" BBcode at end of chat is optional - it adds some extra space)
 
+**Quick font colors:**
+
+`[red]This will be red.[/red]`
+
+(colors included: red, orange, yellow, green, blue, purple)
+
+**Highlighter:**
+
+`[hl]This text will be highlighted.[/hl]`
+
+(That's a "L" not a one; it's hl for highlight.)
+
 **Audio:**
 ~~~
 [audio mp3="https://archive.org/download/MLKDream/MLKDream_64kb.mp3" ogg="https://archive.org/download/MLKDream/MLKDream.ogg"]
@@ -65,16 +83,8 @@ The following BBcodes are available:
 
 `[action]Walks into a wall[/action]`
 
-**Animal:** 
-
-`[animal="ducky"]`
-
-(Currently there are three animals available: ducky, monkey, and squirrel)
-
 **Popup:** 
 
 `[pop button="Click Here" title="Hello" content="Thank you for being a friend."]`
-
-(_Important notice:_ Previous versions had a popup, but this is an updated even more minimally coded version. I also decided to change the verbiage used inside of the BBcode. Which means if you used this extension prior to version 1.0 and used the popup BBcode, if you update, your existing popups will be broken. You will need to rewrite the BBcode in those posts. You don't need to delete everything, but you will need to change "linktext=" to "button=" and "header=" to "title=". Also, I'm sure hardly no one used it, but the "5 step" "tour" style popup has been removed.)
 
 This Flarum post has screenshots: https://discuss.flarum.org/d/18958-big-beautiful-bbcodes

@@ -32,6 +32,10 @@ fof-byobu:
                 block_pd: Özel tartışmaları engelle
 
             byobu_link: Özel Tartışmalar
+            
+        notifications:
+            pd_label: Birisi beni özel tartışmaya dahil etti
+            pd_text: "{username} seninle yeni bir özel tartışma başlattı"
 
     admin:
         permission:
@@ -40,6 +44,13 @@ fof-byobu:
             create_private_discussions_with_blocking_users: Özel tartışmaları engelleyen kullanıcılarla özel tartışma oluştur
             edit_user_recipients: Özel tartışmalarda yer alan kullanıcıları düzenle
             edit_group_recipients: Özel tartışmalarda yer alan grupları düzenle
+            
+        settings:
+            byobu_users_page_label: Kullanıcı sayfasına özel tartışma butonu ekle
+
+    notifications:
+        private_discussion_created:
+            title: "[forum-name] Yeni özel tartışma"
 
         settings:
             byobu_users_page_label: Kullanıcı sayfasına özel tartışma alanı ekle

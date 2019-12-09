@@ -2,7 +2,7 @@ bazaar:
     admin:
         loader:
             is_loading: Przetwarzanie..
-            error: Wystąpił błąd. Check the History tab and your Flarum log for details. Don't be afraid to report it to us.
+            error: Wystąpił błąd. Sprawdź zakładkę Historii i logi twojej instalacji Flarum po szczegóły. Nie obawiaj się wysłać do nas raport o błędzie.
             refresh: Odśwież stronę
             close: Zamknij
             report_issue: Zgłoś problem

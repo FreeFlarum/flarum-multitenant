@@ -1,0 +1,13 @@
+flagrow-html-errors:
+    admin:
+        settings:
+            title: Niestandardowe strony błędów w HTML
+
+            error:
+                403: Błąd 403 - odmowa dostępu
+                404: Błąd 404 - wybrana strona nie istnieje
+                500: Błąd 500 - wewnętrzny błąd serwera
+                503: Błąd 503 - usługa niedostępna
+
+            placeholder:
+                empty_for_default: Pozostaw puste, aby uzyskać standardową stronę błędu Flarum

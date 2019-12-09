@@ -11,9 +11,9 @@
 
 namespace FoF\Transliterator\Controllers;
 
-use Behat\Transliterator\Transliterator;
 use Flarum\Discussion\Discussion;
 use Flarum\User\AssertPermissionTrait;
+use FoF\Transliterator\Transliterator;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;

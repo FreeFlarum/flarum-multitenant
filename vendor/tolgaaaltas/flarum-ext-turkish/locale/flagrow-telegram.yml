@@ -1,0 +1,18 @@
+flagrow-telegram: 
+  admin: 
+    settings: 
+    
+      field: 
+        botToken: "Bot Token"
+        botUsername: "Bot Kullaıncı Adı"
+        enableNotifications: "Bildirimleri Aktif Et"
+        
+      title: "Telegram Ayarları"
+      
+  forum: 
+    link_telegram_button: "Telegram'ı Bağla"
+    log_in_with_telegram_button: "Telegram ile Giriş Yap"
+    
+    settings: 
+      notify_by_telegram_heading: Telegram
+      unblock_telegram_bot: "Görünüşe göre Telegram botuna yetki vermediniz veya engellediniz. Bildirimleri yeniden etkinleştirmek için <a>{username}</a> Telegram'dan mesaj gönderin"

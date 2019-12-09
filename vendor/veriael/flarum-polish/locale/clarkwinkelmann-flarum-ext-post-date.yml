@@ -1,0 +1,12 @@
+clarkwinkelmann-post-date:
+    forum:
+        post_controls:
+            edit_button: Edytuj czas
+        modal:
+            title: Edytuj datę treści
+            created_at: Data utworzenia
+            edited_at: Data edycji
+            submit: Zapisz
+    admin:
+        permissions:
+            edit-post-date: Edytuj datę treści

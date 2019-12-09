@@ -21,8 +21,8 @@
         }
     ],
     "support": {
-        "issues": "https://gitlab.com/marketplace-flarum/languages/flarum-l10n-core-russian/issues",
-        "source": "https://gitlab.com/marketplace-flarum/languages/flarum-l10n-core-russian"
+        "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian/issues",
+        "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian"
     },
     "require": {
         "flarum/core": "^0.1.0-beta.9"

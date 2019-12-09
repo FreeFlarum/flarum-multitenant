@@ -5,6 +5,7 @@ core:
       
 fof-gamification:
   forum:
+    votes: Oylar
     vote_title: Oy Verenleri Göster
     nav:
       name: Sıralamalar
@@ -46,6 +47,8 @@ fof-gamification:
         points_placeholder: "Points: "
         color_holder: '#ffffff'
         auto_upvote: Paylaşıldığında otomatik yukarı oyla
+        rate_limit: Bir oy oranı limiti uygula (10 saniye)
+        discussion_page: Orijinal gönderilerin toplam oylarını tartışma listesinde göster
         title: Oylar
         vote_color: Oylandığındaki renk
         icon_name: Upvote/downvote icon

@@ -22,5 +22,11 @@ fof-merge-discussions:
     permissions:
       merge_discussions_label: Łącz dyskusje
 
+  api:
+    error:
+      merging_failed: Nie udało się połączyć dyskusji.
+      updating_failed: Nie udało się zaktualizować szczegółów dyskusji.
+      deleting_failed: Nie udało się usunąć pustych dyskusji.
+
   ref:
     merge: Złącz

@@ -1,0 +1,17 @@
+core:
+  forum:
+    index_sort:
+      popular_button: 人気
+      unpopular_button: 不人気
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: ディスカッションが見られた回数をリセットする
+      submit: 保存する
+      label: 見られた回数をセットする
+    discussion_controls:
+      resetviews_button: 見られた回数をセットする
+  admin:
+      permissions:
+          reset_views_label: 見られた回数をセットする

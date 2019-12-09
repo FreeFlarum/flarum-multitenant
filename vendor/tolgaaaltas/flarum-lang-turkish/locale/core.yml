@@ -151,42 +151,13 @@ core:
         invalid_username_message: 'Kullanıcı adı sadece harfler, rakamlar ve kısa çizgiler içerebilir.'
     email:
         activate_account:
-            body: |
-				Hey {username} !
-				
-				Birisi (umarım sensindir!) bu e-posta hseabı ile {forum} sitesine kaydoldu.
-				
-				
-				Bu sen isen, hesabını aktifleştirmek için aşağıdaki bağlantıyı tıkla:
-				{url}
-				
-				Eğer sen kaydolmadıysan, bu e-postayı dikkate alma.
-			
+            body: 'Hey {username} !\n\nBirisi (umarım sensindir!) bu e-posta hseabı ile {forum} sitesine kaydoldu.\n\n Bu sen isen, hesabını aktifleştirmek için aşağıdaki bağlantıyı tıkla: \n {url} \n \nEğer sen kaydolmadıysan, bu e-postayı dikkate alma. \n'
             subject: 'Yeni Hesabını Etkinleştir'
         confirm_email:
-            body: |
-				
-				Hey {username} !
-				
-				Birisi (umarım sensindir!) {forum} sitesindeki hesabının e-posta adresini değiştirdi.
-				
-				Bu sen isen, e-postanı doğrulamak için aşağıdaki bağlantıyı tıkla:
-				{url}
-				
-				Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma. 
-				
+            body: 'Hey {username} !\n\nBirisi (umarım sensindir!) {forum} sitesindeki hesabının e-posta adresini değiştirdi.\n\n Bu sen isen, e-postanı doğrulamak için aşağıdaki bağlantıyı tıkla: \n {url} \n \n Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma. \n'
             subject: 'Yeni E-posta Adresini Doğrula'
         reset_password:
-            body: |
-				Hey {username} !
-				
-				Birisi (umarım sensindir!) {forum} sitesindeki hesabın için şifre sıfırlama talebinde bulundu.
-				
-				Bu sen isen, şifreni sıfırlamak için aşağıdaki bağlantıyı tıkla:
-				{url}
-				
-				Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma; hiçbir şey olmayacak.
-				
+            body: 'Hey {username} !\n\nBirisi (umarım sensindir!) {forum} sitesindeki hesabın için şifre sıfırlama talebinde bulundu.\n\n Bu sen isen, şifreni sıfırlamak için aşağıdaki bağlantıyı tıkla: \n {url} \n \n Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma; hiçbir şey olmayacak. \n'
             subject: '=> core.ref.reset_your_password'
     forum:
         change_email:

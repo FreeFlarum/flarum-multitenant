@@ -15,7 +15,7 @@ use s9e\TextFormatter\Configurator;
 return [
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
-            $document->head[] = '<link rel="stylesheet" type="text/css" href="/assets/extensions/zerosonesfun-bbbbcode/styles.css">';
+            $document->head[] = '<link rel="stylesheet" type="text/css" href="/assets/extensions/zerosonesfun-bbbbcode/styles.css"><script src="/assets/extensions/zerosonesfun-bbbbcode/index.js"></script>';
         }),
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
@@ -54,7 +54,7 @@ return [
             );
             $config->BBCodes->addCustom(
                 '[animal="{TEXT7}"]',
-                '<span class="{TEXT7}"></span>'
+                '<span class="{TEXT7}"><strong>Sorry. There was bbcode here which showed an image of a cartoon animal but that particular bbcode is no longer supported. Admin/mod feel free to edit and delete this code from this post.</strong></span>'
             );
              $config->BBCodes->addCustom(
                '[pop button="{TEXT8}" title="{ANYTHING}" content="{ANYTHING1}"]',
@@ -72,22 +72,17 @@ return [
             </div>'
             );
              $config->BBCodes->addCustom(
-               '[audio mp3="{URL22}" ogg="{URL23}"]',
-               '<p><audio controls>
+               '[audio mp3="{URL22?}" ogg="{URL23?}"]',
+               '<p><audio class="bbaudio inline-exclude" controls>
                         <source src="{URL22}" type="audio/mpeg">
                         <source src="{URL23}" type="audio/ogg">
                 </audio></p>'
             );
              $config->BBCodes->addCustom(
-               '[audio mp3="{URL24}"]',
-               '<p><audio controls>
-                        <source src="{URL24}" type="audio/mpeg">
-                </audio></p>'
-            );
-             $config->BBCodes->addCustom(
-               '[audio ogg="{URL25}"]',
-               '<p><audio controls>
-                        <source src="{URL25}" type="audio/ogg">
+               '[audio m4a="{URL3?}" oggm4a="{URL4?}"]',
+               '<p><audio class="bbaudio inline-exclude" style="width:100%;outline:none;" controls>
+                        <source src="{URL3}" type="audio/mp4">
+                        <source src="{URL4}" type="audio/ogg">
                 </audio></p>'
             );
              $config->BBCodes->addCustom(
@@ -99,7 +94,7 @@ return [
              $config->BBCodes->addCustom(
                '[chat-b="{TEXT29}" who="{TEXT28}"]',
                '<p class="chat-b Button--primary">
-                    <strong>{TEXT28}:</strong> {TEXT29}
+                    <strong>{TEXT28}:</strong> <span class="chat-b-normal">{TEXT29}</span>
                 </p>'
             );
              $config->BBCodes->addCustom(
@@ -107,12 +102,53 @@ return [
                '<p class="space"></p>'
             );
              $config->BBCodes->addCustom(
-               '[spoiler="{ANYTHING2}"]{ANYTHING3}[/spoiler]',
-               '<a href="#hide-{ANYTHING2}{ANYTHING3}" class="hide-{ANYTHING2}{ANYTHING3} btn" id="hide-{ANYTHING2}{ANYTHING3}"><span class="getinline">{ANYTHING2}</span> <i class="fas fa-chevron-down"></i></a>
-                <a href="#show-{ANYTHING2}{ANYTHING3}" class="show-{ANYTHING2}{ANYTHING3} btn" id="show-{ANYTHING2}{ANYTHING3}"><span class="getinline">{ANYTHING2}</span> <i class="fas fa-chevron-up"></i></a>
-                <div class="spoiler">
-                     <p class="spoiler-content">{ANYTHING3}</p>
-                </div>'
+               '[spoiler={ANYTHING2;optional;defaultValue=Read More}]{ANYTHING3}[/spoiler]',
+               '<details>
+                <summary>{ANYTHING2}</summary>
+                <p>{ANYTHING3}</p>
+                </details>'
             );
+             $config->BBCodes->addCustom(
+               '[blur]{ANYTHING4}[/blur]',
+               '<p class="bbspoiler-blur">
+                {ANYTHING4}
+                </p>'
+            );
+             $config->BBCodes->addCustom(
+               '[red]{TEXT30}[/red]',
+               '<span class="bbred">{TEXT30}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[orange]{TEXT31}[/orange]',
+               '<span class="bborange">{TEXT31}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[yellow]{TEXT32}[/yellow]',
+               '<span class="bbyellow">{TEXT32}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[green]{TEXT33}[/green]',
+               '<span class="bbgreen">{TEXT33}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[blue]{TEXT34}[/blue]',
+               '<span class="bbblue">{TEXT34}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[purple]{TEXT35}[/purple]',
+               '<span class="bbpurple">{TEXT35}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[hl]{TEXT36}[/hl]',
+               '<span class="bbhighlight">{TEXT36}</span>'
+            );
+             $config->BBCodes->addFromRepository('BACKGROUND');
+             $config->BBCodes->addFromRepository('FONT');
+             $config->BBCodes->addFromRepository('TABLE');
+             $config->BBCodes->addFromRepository('TBODY');
+             $config->BBCodes->addFromRepository('TD');
+             $config->BBCodes->addFromRepository('TH');
+             $config->BBCodes->addFromRepository('TR');
+             $config->BBCodes->addFromRepository('THEAD');
         })
 ];

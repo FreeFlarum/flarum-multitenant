@@ -4,3 +4,8 @@ fof-transliterator:
       title: Ustawienia Transliteratora
       parse_button: Konwertuj linki do istniejących dyskusji
       result: "Przekonwertowano 1 dyskusję|Przekonwertowano dyskusje: {count}"
+      
+      package_label: Pakiet Transliteratora
+      package_behat_label: Behat (domyślny)
+      package_php_label: PHP (wymaga ext-intl)
+      package_php2_label: "PHP #2 (wymaga ext-intl)"

@@ -1,0 +1,4 @@
+v17development-flarum-seo:
+  forum:
+    profile_title: "Profil użytkownika {username}"
+    profile_description: "Profil {username} | {discussion_count} dyskusji | {comment_count} odpowiedzi"

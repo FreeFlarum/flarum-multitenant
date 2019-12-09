@@ -10,6 +10,9 @@
     "flarum/core": "^0.1.0-beta.8",
     "behat/transliterator": "^1.2"
   },
+  "suggest": {
+    "ext-intl": "Needed for vanilla transliteration"
+  },
   "authors": [
     {
       "name": "Nikolai Morozov",

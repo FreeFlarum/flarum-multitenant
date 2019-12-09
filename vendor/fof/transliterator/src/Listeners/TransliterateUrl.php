@@ -11,8 +11,8 @@
 
 namespace FoF\Transliterator\Listeners;
 
-use Behat\Transliterator\Transliterator;
 use Flarum\Discussion\Event\Saving;
+use FoF\Transliterator\Transliterator;
 use Illuminate\Support\Arr;
 
 class TransliterateUrl

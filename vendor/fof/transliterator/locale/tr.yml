@@ -1,6 +1,0 @@
-fof-transliterator:
-  admin:
-    settings:
-      title: FriendsOfFlarum Transliterator Ayarları
-      parse_button: Var olan tartışmaları işle
-      result: "{num} işlenmiş tartışmalar"

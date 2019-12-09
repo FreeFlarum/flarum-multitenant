@@ -152,6 +152,7 @@ core:
       delete_posts_forever_label: Verwijder berichten permanent
       delete_posts_label: Verwijder berichten
       edit_posts_label: Wijzig berichten
+      edit_users_label: Wijzig gebruikers
       global_heading: Globaal
       moderate_heading: Moderatie
       new_group_button: Nieuwe groep
@@ -322,6 +323,7 @@ core:
       discussion_renamed_text: "{username} heeft de titel veranderd"
       empty_text: Geen notificaties
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: Markeren als gelezen
       title: => core.ref.notifications
       tooltip: => core.ref.notifications
 
@@ -407,6 +409,8 @@ core:
       button: Acties
       delete_button: => core.ref.delete
       delete_confirmation: Weet je zeker dat je deze gebruiker wilt verwijderen? Alle berichten van de gebruiker worden verwijdert.
+      delete_error_message: "Het verwijderen van gebruiker <i>{username} ({email})</i> is niet gelukt"
+      delete_success_message: "Gebruiker <i>{username} ({email})</i> is verwijderd"
       edit_button: => core.ref.edit
     
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -464,13 +468,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: Je hebt geen toegang tot deze pagina.
-      404_message: De pagina kan niet gevonden worden.
-      404_return_link: "Terug naar {forum}"
-      419_message: U bent te lang inactief geweest.
-      419_return_link: Ga terug, om opnieuw te proberen
-      500_message: Er is een fout opgetreden bij het laden van de pagina.
-      503_message: "{forum} ondergaat onderhoud. Bedankt voor uw geduld!"
+      csrf_token_mismatch: Je bent te lang inactief geweest.
+      csrf_token_mismatch_return_link: Ga terug om het opnieuw te proberen
+      invalid_confirmation_token: Deze bevestigingslink is al gebruikt of is ongeldig.
+      not_authenticated: U hebt geen toestemming om deze pagina te openen. Probeer het opnieuw na het inloggen.
+      not_found: De door u opgevraagde pagina kon niet worden gevonden.
+      not_found_return_link: "Terug naar {forum}"
+      permission_denied: U hebt geen toestemming om deze pagina te openen.
+      unknown: Er is een fout opgetreden bij het laden van deze pagina.
     
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:

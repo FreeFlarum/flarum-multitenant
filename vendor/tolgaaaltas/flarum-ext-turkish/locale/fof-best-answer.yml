@@ -1,0 +1,18 @@
+fof-best-answer:
+    admin:
+        permissions:
+            best_answer: En iyi yanıtı seç (kendi tartışmasında)
+            best_answer_not_own_discussion: En iyi yanıtı seç (başkasının tartışmasında)
+        settings:
+            title: "En İyi Yanıt Ayarları"
+            allow_select_own_post: "Kullanıcının kendi gönderisini seçmesine izin ver"
+            select_best_answer_reminder_days: Kullanıcıya X günden sonra en iyi yanıtı seçmesini hatırlat
+    forum:
+        answered_badge: Yanıtlandı
+        this_best_answer: "En iyi yanıt"
+        remove_best_answer: "Mevcut en iyi yanıtı kaldır"
+        best_answer_button: En İyi Yanıt
+        best_answer_label: <a>{username}</a> tarafından
+
+        notification:
+            content: Sorunuz cevaplandıysa lütfen en iyi yanıtı seçin

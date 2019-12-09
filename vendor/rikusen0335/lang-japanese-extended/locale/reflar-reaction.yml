@@ -1,0 +1,38 @@
+reflar-reactions:
+  admin:
+    nav:
+      desc: 新しいリアクションを追加して、設定を変更する
+    page:
+      convert:
+        button: 古いリアクションを変換する
+        converted: '{number}個全てのイイねの変換に成功しました。'
+        converting: リアクションを変換中です。変換が終了するまで数分待ってから、サイトをリロードして下さい。(変換時間はリアクションの量に比例します)
+        help: 'どれかのエクステンションをアップデートした場合に、 あなたのリアクションは変換されます。このエクステンションをインストールした場合は、このメッセージを無視しても構いません。'
+      reactions:
+        Helptext: リアクションの名前(識別名)を入力、もしくはあなたの好きなFontAwesomeのアイコンを選択して下さい
+        help:
+          identifier: 識別名
+        reactions: 現在のリアクション
+        title: カスタムリアクション
+      settings:
+        integrations:
+          gamification:
+            downvoteHelptext: 低評価に変換したいリアクションの識別名を入力して下さい
+            downvoteLabel: リアクションを低評価に変換する
+            legend: Gamification
+            upvoteHelptext: 高評価に変換したいリアクションの識別名を入力して下さい
+            upvoteLabel: リアクションを高評価に変換する
+          legend: 統合機能
+          likes:
+            Helptext: イイねに変換したいリアクションの識別名を入力して下さい
+            Label: リアクションをイイねに変換する
+            legend: イイね
+          warning: 同じリアクションはイイねと高評価に<strong>変換できません</strong>
+        save_settings: 設定を保存する
+    permissions:
+      react_posts_label: 投稿にリアクションをつける
+  forum:
+    notification: '{username}があなたの投稿に{reaction}をつけました'
+    settings:
+      notify_post_reacted_label: 誰かがあなたの投稿にリアクションをつけたとき
+    warning: あなたのリアクションは変換されました。

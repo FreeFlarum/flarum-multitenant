@@ -1,0 +1,25 @@
+fof-geoip:
+  admin:
+    settings:
+      title: FriendsOfFlarum GeoIP
+
+      service_label: Servis
+
+      service_freegeoip_label: FreeGeoIP
+      service_freegeoip_description: Saatte 15.000 IP ülke kodunu ücretsiz almak için <b>https://freegeoip.app</b> kullanın.
+
+      service_ipstack_label: IPStack
+      service_ipstack_description: Ücretsiz olarak ayda 10.000 arama yapmak için <b>https://ipstack.com</b> adresini kullanın. Ücretli planlar arasında bağlantı bilgileri (ISS, organizasyon) ve tehdit seviyesi bulunur.
+
+      service_ipdata_label: IPData
+      service_ipdata_description: Ücretsiz olarak günlük 1500 arama yapabilmek için <b>https://ipdata.co</b> adresini kullanın.
+
+      service_ipapi_label: IP Api
+      service_ipapi_description: Dakikada 150 arama yapabilmek için <b>http://ip-api.com</b> adresini kullanın. Daha fazla sorgu yaparsanız, IP’niz kara listeye alınabilir, engeli kaldırmak için <b>http://ip-api.com/docs/unban</b> adresinden talepte bulunulabilinir.
+
+      access_key_label: Erişim Anahtarı
+      security_label: Güvenlik Modülü (professional plus gerektirir)
+
+  forum:
+    alerts:
+      ip_copied: IP Adresi Kopyalandı

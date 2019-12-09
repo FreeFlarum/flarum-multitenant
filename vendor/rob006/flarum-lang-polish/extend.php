@@ -9,4 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-return new Flarum\Extend\LanguagePack();
+return [
+	new Flarum\Extend\LanguagePack(),
+	(new Flarum\Extend\Frontend('forum'))->css(__DIR__ . '/less/main.less'),
+];

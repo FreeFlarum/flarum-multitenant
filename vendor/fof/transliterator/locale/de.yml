@@ -1,6 +1,0 @@
-fof-transliterator:
-  admin:
-    settings:
-      modal_title: FriendsOfFlarum Transliterator-Einstellungen
-      parse_button: Existierende Diskussionen analysieren
-      result: "{num} Analysierte Diskussionen"

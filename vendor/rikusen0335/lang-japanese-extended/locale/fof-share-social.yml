@@ -1,0 +1,18 @@
+fof-share-social:
+  admin:
+    settings:
+      title: FriendsOfFlarum Share Social
+  forum:
+    discussion:
+      share_button: 共有する
+    modal:
+      title: 共有する
+  lib:
+    networks:
+      facebook: Facebook
+      linkedin: LinkedIn
+      my_mail: My World
+      odnoklassniki: Odnoklassniki
+      reddit: Reddit
+      twitter: Twitter
+      vkontakte: VKontakte

@@ -315,13 +315,14 @@ core:
       sign_up_text: "Nie masz jeszcze konta? <a>Zarejestruj się</a>"
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
-      username_or_email_placeholder: Nazwa lub email
+      username_or_email_placeholder: Nazwa użytkownika lub email
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
       discussion_renamed_text: "{username} zmienił(a) tytuł dyskusji"
       empty_text: Brak powiadomień
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: Oznacz jako przeczytane
       title: => core.ref.notifications
       tooltip: => core.ref.notifications
 
@@ -407,6 +408,8 @@ core:
       button: Sterowanie
       delete_button: => core.ref.delete
       delete_confirmation: "Czy jesteś pewny, że chcesz usunąć tego użytkownika? Wszystkie jego posty zostaną usunięte."
+      delete_error_message: "Usuwanie użytkownika <i>{username} ({email})</i> zakończyło się niepowodzeniem"
+      delete_success_message: "Użytkownik <i>{username} ({email})</i> został usunięty"
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -460,13 +463,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: Nie masz uprawnień wymaganych, aby wejść na tę stronę.
-      404_message: Strona, której szukasz, nie mogła zostać znaleziona.
-      404_return_link: "Wróć do {forum}"
-      419_message: Byłeś nieaktywny zbyt długo.
-      419_return_link: Wróć, aby spróbować ponownie
-      500_message: Wystąpił błąd podczas próby załadowania tej strony.
-      503_message: "{forum} ma obecnie przerwę techniczną. Dziękujemy za cierpliwość!"
+      csrf_token_mismatch: Byłeś nieaktywny zbyt długo.
+      csrf_token_mismatch_return_link: Wróć, aby spróbować ponownie
+      invalid_confirmation_token: Ten link aktywacyjny został już użyty, lub jest nieprawidłowy.
+      not_authenticated: Nie masz uprawnień wymaganych, aby wejść na tę stronę. Spróbuj ponownie po zalogowaniu się.
+      not_found: Strona, której szukasz, nie mogła zostać znaleziona.
+      not_found_return_link: "Wróć do {forum}"
+      permission_denied: Nie masz uprawnień wymaganych, aby wejść na tę stronę.
+      unknown: Wystąpił błąd podczas próby załadowania tej strony.
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:

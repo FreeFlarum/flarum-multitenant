@@ -14,7 +14,7 @@
 		"flarum/core": "^0.1.0-beta.8"
 	},
 	"suggest": {
-		"flarum/lang-turkish": "Flarum language package for Turkish."
+		"tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
 	},
 	"support": {
 		"issues": "https://github.com/tolgaaaltas/flarum-ext-turkish/issues",

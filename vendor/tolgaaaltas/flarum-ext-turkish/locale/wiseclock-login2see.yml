@@ -1,0 +1,22 @@
+wiseclock-login2see:
+  forum:
+    post: "Tüm içeriği görebilmek için {login} veya {register} gerekmektedir"
+    link: GÖRMEK İÇİN GİRİŞ YAP
+    image: GÖRMEK İÇİN GİRİŞ YAP
+  admin:
+    title: Login2See
+    post:
+      title: Bu uzunluğu aşan içeriği gizle
+      help: Tümünü göstermek için <em>-1</em> değerini girin.
+    link:
+      title: Bağlantılar
+      no_replace: Değiştirme
+      replace_address: Yalnızca bağlantıyı gizle
+      replace_all: Bağlantı ve metni değiştir
+    image:
+      title: Resimler
+      label: Kutularla değiştir
+    php:
+      title: Eski Mod
+      help: "*ÖNERİLMEMEKTEDİR* Eski tarayıcıların desteklenmesi içindir. <code>mb_substr</code> ve <code>mb_strlen</code> mutlaka aktif olmalıdır."
+      label: PHP kullan

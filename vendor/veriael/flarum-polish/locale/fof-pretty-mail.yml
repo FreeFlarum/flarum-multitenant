@@ -1,7 +1,7 @@
 fof-pretty-mail:
   admin:
     nav:
-      desc: Dostosuj swoje wzory HTML maili.
+      desc: Dostosuj wzory HTML maili swojego forum.
     settings:
       label: Wzory maili
       reset: Przywróć standardowy
