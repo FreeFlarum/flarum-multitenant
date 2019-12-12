@@ -23,7 +23,7 @@ class ShortCodeContext extends InstanceContext {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param string $serviceSid The SID of the Service to fetch the resource from
-     * @param string $sid The unique string that identifies this resource
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Service\ShortCodeContext
      */
     public function __construct(Version $version, $serviceSid, $sid) {
@@ -32,7 +32,7 @@ class ShortCodeContext extends InstanceContext {
         // Path Solution
         $this->solution = array('serviceSid' => $serviceSid, 'sid' => $sid, );
 
-        $this->uri = '/Services/' . rawurlencode($serviceSid) . '/ShortCodes/' . rawurlencode($sid) . '';
+        $this->uri = '/Services/' . \rawurlencode($serviceSid) . '/ShortCodes/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -78,6 +78,6 @@ class ShortCodeContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.ShortCodeContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.ShortCodeContext ' . \implode(' ', $context) . ']';
     }
 }

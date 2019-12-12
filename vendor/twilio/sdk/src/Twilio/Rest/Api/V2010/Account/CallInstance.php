@@ -54,7 +54,7 @@ class CallInstance extends InstanceResource {
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
      * @param string $accountSid The SID of the Account that created this resource
-     * @param string $sid The unique string that identifies this resource
+     * @param string $sid The SID of the Call resource to fetch
      * @return \Twilio\Rest\Api\V2010\Account\CallInstance
      */
     public function __construct(Version $version, array $payload, $accountSid, $sid = null) {
@@ -177,12 +177,12 @@ class CallInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -199,6 +199,6 @@ class CallInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Api.V2010.CallInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Api.V2010.CallInstance ' . \implode(' ', $context) . ']';
     }
 }

@@ -20,7 +20,7 @@ class WorkspaceRealTimeStatisticsContext extends InstanceContext {
      * Initialize the WorkspaceRealTimeStatisticsContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
+     * @param string $workspaceSid The SID of the Workspace to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\WorkspaceRealTimeStatisticsContext
      */
     public function __construct(Version $version, $workspaceSid) {
@@ -29,7 +29,7 @@ class WorkspaceRealTimeStatisticsContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/RealTimeStatistics';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/RealTimeStatistics';
     }
 
     /**
@@ -68,6 +68,6 @@ class WorkspaceRealTimeStatisticsContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkspaceRealTimeStatisticsContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkspaceRealTimeStatisticsContext ' . \implode(' ', $context) . ']';
     }
 }

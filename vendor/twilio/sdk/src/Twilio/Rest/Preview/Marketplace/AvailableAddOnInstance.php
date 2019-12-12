@@ -33,7 +33,7 @@ class AvailableAddOnInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid The unique Available Add-on Sid
+     * @param string $sid The SID of the AvailableAddOn resource to fetch
      * @return \Twilio\Rest\Preview\Marketplace\AvailableAddOnInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -96,12 +96,12 @@ class AvailableAddOnInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -118,6 +118,6 @@ class AvailableAddOnInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.Marketplace.AvailableAddOnInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.Marketplace.AvailableAddOnInstance ' . \implode(' ', $context) . ']';
     }
 }

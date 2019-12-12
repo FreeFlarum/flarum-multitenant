@@ -15,8 +15,8 @@ use Twilio\Rest\Insights\V1;
 
 /**
  * @property \Twilio\Rest\Insights\V1 $v1
- * @property \Twilio\Rest\Insights\V1\CallSummaryList $summary
- * @method \Twilio\Rest\Insights\V1\CallSummaryContext summary(string $callSid)
+ * @property \Twilio\Rest\Insights\V1\CallList $calls
+ * @method \Twilio\Rest\Insights\V1\CallContext calls(string $sid)
  */
 class Insights extends Domain {
     protected $_v1 = null;
@@ -52,8 +52,8 @@ class Insights extends Domain {
      * @throws TwilioException For unknown versions
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -69,27 +69,27 @@ class Insights extends Domain {
      * @throws TwilioException For unknown resource
      */
     public function __call($name, $arguments) {
-        $method = 'context' . ucfirst($name);
-        if (method_exists($this, $method)) {
-            return call_user_func_array(array($this, $method), $arguments);
+        $method = 'context' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
+            return \call_user_func_array(array($this, $method), $arguments);
         }
 
         throw new TwilioException('Unknown context ' . $name);
     }
 
     /**
-     * @return \Twilio\Rest\Insights\V1\CallSummaryList
+     * @return \Twilio\Rest\Insights\V1\CallList
      */
-    protected function getSummary() {
-        return $this->v1->summary;
+    protected function getCalls() {
+        return $this->v1->calls;
     }
 
     /**
-     * @param string $callSid The call_sid
-     * @return \Twilio\Rest\Insights\V1\CallSummaryContext
+     * @param string $sid The sid
+     * @return \Twilio\Rest\Insights\V1\CallContext
      */
-    protected function contextSummary($callSid) {
-        return $this->v1->summary($callSid);
+    protected function contextCalls($sid) {
+        return $this->v1->calls($sid);
     }
 
     /**

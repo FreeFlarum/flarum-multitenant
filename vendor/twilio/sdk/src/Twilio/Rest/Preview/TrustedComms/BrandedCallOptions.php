@@ -17,7 +17,7 @@ use Twilio\Values;
  */
 abstract class BrandedCallOptions {
     /**
-     * @param string $callSid The call_sid
+     * @param string $callSid The Call sid this Branded Call should link to
      * @return CreateBrandedCallOptions Options builder
      */
     public static function create($callSid = Values::NONE) {
@@ -27,16 +27,16 @@ abstract class BrandedCallOptions {
 
 class CreateBrandedCallOptions extends Options {
     /**
-     * @param string $callSid The call_sid
+     * @param string $callSid The Call sid this Branded Call should link to
      */
     public function __construct($callSid = Values::NONE) {
         $this->options['callSid'] = $callSid;
     }
 
     /**
-     * The call_sid
+     * The Call sid this Branded Call should link to.
      *
-     * @param string $callSid The call_sid
+     * @param string $callSid The Call sid this Branded Call should link to
      * @return $this Fluent Builder
      */
     public function setCallSid($callSid) {
@@ -56,6 +56,6 @@ class CreateBrandedCallOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Preview.TrustedComms.CreateBrandedCallOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Preview.TrustedComms.CreateBrandedCallOptions ' . \implode(' ', $options) . ']';
     }
 }

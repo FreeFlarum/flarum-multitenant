@@ -688,17 +688,17 @@
     },
     {
         "name": "doctrine/cache",
-        "version": "v1.8.0",
-        "version_normalized": "1.8.0.0",
+        "version": "1.10.0",
+        "version_normalized": "1.10.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/cache.git",
-            "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
+            "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
-            "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
+            "url": "https://api.github.com/repos/doctrine/cache/zipball/382e7f4db9a12dc6c19431743a2b096041bcdd62",
+            "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62",
             "shasum": ""
         },
         "require": {
@@ -709,7 +709,7 @@
         },
         "require-dev": {
             "alcaeus/mongo-php-adapter": "^1.1",
-            "doctrine/coding-standard": "^4.0",
+            "doctrine/coding-standard": "^6.0",
             "mongodb/mongodb": "^1.1",
             "phpunit/phpunit": "^7.0",
             "predis/predis": "~1.0"
@@ -717,11 +717,11 @@
         "suggest": {
             "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
         },
-        "time": "2018-08-21T18:01:43+00:00",
+        "time": "2019-11-29T15:36:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.8.x-dev"
+                "dev-master": "1.9.x-dev"
             }
         },
         "installation-source": "dist",
@@ -736,16 +736,16 @@
         ],
         "authors": [
             {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
                 "name": "Roman Borschel",
                 "email": "roman@code-factory.org"
             },
             {
                 "name": "Benjamin Eberlei",
                 "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
             },
             {
                 "name": "Jonathan Wage",
@@ -756,53 +756,59 @@
                 "email": "schmittjoh@gmail.com"
             }
         ],
-        "description": "Caching library offering an object-oriented API for many cache backends",
-        "homepage": "https://www.doctrine-project.org",
+        "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
+        "homepage": "https://www.doctrine-project.org/projects/cache.html",
         "keywords": [
+            "abstraction",
+            "apcu",
             "cache",
-            "caching"
+            "caching",
+            "couchdb",
+            "memcached",
+            "php",
+            "redis",
+            "xcache"
         ]
     },
     {
         "name": "doctrine/dbal",
-        "version": "v2.9.2",
-        "version_normalized": "2.9.2.0",
+        "version": "v2.10.0",
+        "version_normalized": "2.10.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/dbal.git",
-            "reference": "22800bd651c1d8d2a9719e2a3dc46d5108ebfcc9"
+            "reference": "0c9a646775ef549eb0a213a4f9bd4381d9b4d934"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/dbal/zipball/22800bd651c1d8d2a9719e2a3dc46d5108ebfcc9",
-            "reference": "22800bd651c1d8d2a9719e2a3dc46d5108ebfcc9",
+            "url": "https://api.github.com/repos/doctrine/dbal/zipball/0c9a646775ef549eb0a213a4f9bd4381d9b4d934",
+            "reference": "0c9a646775ef549eb0a213a4f9bd4381d9b4d934",
             "shasum": ""
         },
         "require": {
             "doctrine/cache": "^1.0",
             "doctrine/event-manager": "^1.0",
             "ext-pdo": "*",
-            "php": "^7.1"
+            "php": "^7.2"
         },
         "require-dev": {
-            "doctrine/coding-standard": "^5.0",
-            "jetbrains/phpstorm-stubs": "^2018.1.2",
-            "phpstan/phpstan": "^0.10.1",
-            "phpunit/phpunit": "^7.4",
-            "symfony/console": "^2.0.5|^3.0|^4.0",
-            "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
+            "doctrine/coding-standard": "^6.0",
+            "jetbrains/phpstorm-stubs": "^2019.1",
+            "phpstan/phpstan": "^0.11.3",
+            "phpunit/phpunit": "^8.4.1",
+            "symfony/console": "^2.0.5|^3.0|^4.0|^5.0"
         },
         "suggest": {
             "symfony/console": "For helpful console commands such as SQL execution and import of files."
         },
-        "time": "2018-12-31T03:27:51+00:00",
+        "time": "2019-11-03T16:50:43+00:00",
         "bin": [
             "bin/doctrine-dbal"
         ],
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.9.x-dev",
+                "dev-master": "2.10.x-dev",
                 "dev-develop": "3.0.x-dev"
             }
         },
@@ -818,16 +824,16 @@
         ],
         "authors": [
             {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
                 "name": "Roman Borschel",
                 "email": "roman@code-factory.org"
             },
             {
                 "name": "Benjamin Eberlei",
                 "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
             },
             {
                 "name": "Jonathan Wage",
@@ -839,27 +845,38 @@
         "keywords": [
             "abstraction",
             "database",
+            "db2",
             "dbal",
+            "mariadb",
+            "mssql",
             "mysql",
-            "persistence",
+            "oci8",
+            "oracle",
+            "pdo",
             "pgsql",
-            "php",
-            "queryobject"
+            "postgresql",
+            "queryobject",
+            "sasql",
+            "sql",
+            "sqlanywhere",
+            "sqlite",
+            "sqlserver",
+            "sqlsrv"
         ]
     },
     {
         "name": "doctrine/event-manager",
-        "version": "v1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/event-manager.git",
-            "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3"
+            "reference": "629572819973f13486371cb611386eb17851e85c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/event-manager/zipball/a520bc093a0170feeb6b14e9d83f3a14452e64b3",
-            "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+            "url": "https://api.github.com/repos/doctrine/event-manager/zipball/629572819973f13486371cb611386eb17851e85c",
+            "reference": "629572819973f13486371cb611386eb17851e85c",
             "shasum": ""
         },
         "require": {
@@ -869,10 +886,10 @@
             "doctrine/common": "<2.9@dev"
         },
         "require-dev": {
-            "doctrine/coding-standard": "^4.0",
+            "doctrine/coding-standard": "^6.0",
             "phpunit/phpunit": "^7.0"
         },
-        "time": "2018-06-11T11:59:03+00:00",
+        "time": "2019-11-10T09:48:07+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -891,16 +908,16 @@
         ],
         "authors": [
             {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
                 "name": "Roman Borschel",
                 "email": "roman@code-factory.org"
             },
             {
                 "name": "Benjamin Eberlei",
                 "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
             },
             {
                 "name": "Jonathan Wage",
@@ -915,27 +932,29 @@
                 "email": "ocramius@gmail.com"
             }
         ],
-        "description": "Doctrine Event Manager component",
+        "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
         "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
         "keywords": [
             "event",
-            "eventdispatcher",
-            "eventmanager"
+            "event dispatcher",
+            "event manager",
+            "event system",
+            "events"
         ]
     },
     {
         "name": "doctrine/inflector",
-        "version": "v1.3.0",
-        "version_normalized": "1.3.0.0",
+        "version": "1.3.1",
+        "version_normalized": "1.3.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/inflector.git",
-            "reference": "5527a48b7313d15261292c149e55e26eae771b0a"
+            "reference": "ec3a55242203ffa6a4b27c58176da97ff0a7aec1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/inflector/zipball/5527a48b7313d15261292c149e55e26eae771b0a",
-            "reference": "5527a48b7313d15261292c149e55e26eae771b0a",
+            "url": "https://api.github.com/repos/doctrine/inflector/zipball/ec3a55242203ffa6a4b27c58176da97ff0a7aec1",
+            "reference": "ec3a55242203ffa6a4b27c58176da97ff0a7aec1",
             "shasum": ""
         },
         "require": {
@@ -944,7 +963,7 @@
         "require-dev": {
             "phpunit/phpunit": "^6.2"
         },
-        "time": "2018-01-09T20:05:19+00:00",
+        "time": "2019-10-30T19:59:35+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -963,16 +982,16 @@
         ],
         "authors": [
             {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
                 "name": "Roman Borschel",
                 "email": "roman@code-factory.org"
             },
             {
                 "name": "Benjamin Eberlei",
                 "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
             },
             {
                 "name": "Jonathan Wage",
@@ -994,17 +1013,17 @@
     },
     {
         "name": "doctrine/lexer",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/lexer.git",
-            "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea"
+            "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/lexer/zipball/e17f069ede36f7534b95adec71910ed1b49c74ea",
-            "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea",
+            "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+            "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
             "shasum": ""
         },
         "require": {
@@ -1015,11 +1034,11 @@
             "phpstan/phpstan": "^0.11.8",
             "phpunit/phpunit": "^8.2"
         },
-        "time": "2019-07-30T19:33:28+00:00",
+        "time": "2019-10-30T14:39:59+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.1.x-dev"
+                "dev-master": "1.2.x-dev"
             }
         },
         "installation-source": "dist",
@@ -1667,17 +1686,17 @@
     },
     {
         "name": "flarum/core",
-        "version": "v0.1.0-beta.10",
-        "version_normalized": "0.1.0.0-beta10",
+        "version": "v0.1.0-beta.11.1",
+        "version_normalized": "0.1.0.0-beta11.1",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/core.git",
-            "reference": "fb0a875c6daf70e2ab9ad38fe1e2bb0be8511377"
+            "reference": "8a1bcf30d289238342c056f930c0da93884a697f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/core/zipball/fb0a875c6daf70e2ab9ad38fe1e2bb0be8511377",
-            "reference": "fb0a875c6daf70e2ab9ad38fe1e2bb0be8511377",
+            "url": "https://api.github.com/repos/flarum/core/zipball/8a1bcf30d289238342c056f930c0da93884a697f",
+            "reference": "8a1bcf30d289238342c056f930c0da93884a697f",
             "shasum": ""
         },
         "require": {
@@ -1717,6 +1736,7 @@
             "s9e/text-formatter": "^1.2.0",
             "symfony/config": "^3.3",
             "symfony/console": "^4.2",
+            "symfony/event-dispatcher": "^4.3.2",
             "symfony/translation": "^3.3",
             "symfony/yaml": "^3.3",
             "tobscure/json-api": "^0.3.0",
@@ -1728,7 +1748,7 @@
             "mockery/mockery": "^1.0",
             "phpunit/phpunit": "^7.0"
         },
-        "time": "2019-09-16T08:37:51+00:00",
+        "time": "2019-12-02T08:28:48+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1771,23 +1791,23 @@
     },
     {
         "name": "flarum/embed",
-        "version": "v0.1.0-beta.9",
-        "version_normalized": "0.1.0.0-beta9",
+        "version": "v0.1.0-beta.10",
+        "version_normalized": "0.1.0.0-beta10",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/embed.git",
-            "reference": "96fb2d37aa95c96eb600b18c1472c0febec434b1"
+            "reference": "86b652d3b35b663f8d1ad31b667b7480d7ab50c1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/embed/zipball/96fb2d37aa95c96eb600b18c1472c0febec434b1",
-            "reference": "96fb2d37aa95c96eb600b18c1472c0febec434b1",
+            "url": "https://api.github.com/repos/flarum/embed/zipball/86b652d3b35b663f8d1ad31b667b7480d7ab50c1",
+            "reference": "86b652d3b35b663f8d1ad31b667b7480d7ab50c1",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2019-06-24T10:44:10+00:00",
+        "time": "2019-09-15T20:43:36+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1796,7 +1816,7 @@
             "flarum-extension": {
                 "title": "Embed",
                 "icon": {
-                    "name": "code",
+                    "name": "fas fa-code",
                     "backgroundColor": "#B9D233",
                     "color": "#fff"
                 }
@@ -1873,23 +1893,23 @@
     },
     {
         "name": "flarum/flags",
-        "version": "v0.1.0-beta.9",
-        "version_normalized": "0.1.0.0-beta9",
+        "version": "v0.1.0-beta.10",
+        "version_normalized": "0.1.0.0-beta10",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/flags.git",
-            "reference": "6ed3da0a08f64603a9906163643b1f21c16a4cd8"
+            "reference": "26f64ca2e89dc3bcb21526e8358cefcf24243d3e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/flags/zipball/6ed3da0a08f64603a9906163643b1f21c16a4cd8",
-            "reference": "6ed3da0a08f64603a9906163643b1f21c16a4cd8",
+            "url": "https://api.github.com/repos/flarum/flags/zipball/26f64ca2e89dc3bcb21526e8358cefcf24243d3e",
+            "reference": "26f64ca2e89dc3bcb21526e8358cefcf24243d3e",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2019-06-24T10:02:29+00:00",
+        "time": "2019-11-26T15:22:04+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1927,23 +1947,23 @@
     },
     {
         "name": "flarum/lang-english",
-        "version": "v0.1.0-beta.10",
-        "version_normalized": "0.1.0.0-beta10",
+        "version": "v0.1.0-beta.11",
+        "version_normalized": "0.1.0.0-beta11",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/lang-english.git",
-            "reference": "8a76061201c5a9b02d2614675f5f7e773b2fdf6a"
+            "reference": "6199c55407fbdab220789895602f78526198e233"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/lang-english/zipball/8a76061201c5a9b02d2614675f5f7e773b2fdf6a",
-            "reference": "8a76061201c5a9b02d2614675f5f7e773b2fdf6a",
+            "url": "https://api.github.com/repos/flarum/lang-english/zipball/6199c55407fbdab220789895602f78526198e233",
+            "reference": "6199c55407fbdab220789895602f78526198e233",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2019-09-13T16:02:47+00:00",
+        "time": "2019-11-11T12:56:07+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -2409,23 +2429,23 @@
     },
     {
         "name": "flarum/suspend",
-        "version": "v0.1.0-beta.9",
-        "version_normalized": "0.1.0.0-beta9",
+        "version": "v0.1.0-beta.10",
+        "version_normalized": "0.1.0.0-beta10",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/suspend.git",
-            "reference": "102ed0f692c06c07dbc60b199edaaa80595921b0"
+            "reference": "c04fc89454d724c98c3c7f8ba5040ed4ea3dd6e9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/suspend/zipball/102ed0f692c06c07dbc60b199edaaa80595921b0",
-            "reference": "102ed0f692c06c07dbc60b199edaaa80595921b0",
+            "url": "https://api.github.com/repos/flarum/suspend/zipball/c04fc89454d724c98c3c7f8ba5040ed4ea3dd6e9",
+            "reference": "c04fc89454d724c98c3c7f8ba5040ed4ea3dd6e9",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2019-06-24T10:03:49+00:00",
+        "time": "2019-11-26T15:28:50+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -2463,23 +2483,23 @@
     },
     {
         "name": "flarum/tags",
-        "version": "v0.1.0-beta.10",
-        "version_normalized": "0.1.0.0-beta10",
+        "version": "v0.1.0-beta.11",
+        "version_normalized": "0.1.0.0-beta11",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/tags.git",
-            "reference": "b70bc9150f4b5711796d311ba54207f7f7325c15"
+            "reference": "6d639ce7dc12c9219ec8e9cfdc72e96065cf4d68"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/tags/zipball/b70bc9150f4b5711796d311ba54207f7f7325c15",
-            "reference": "b70bc9150f4b5711796d311ba54207f7f7325c15",
+            "url": "https://api.github.com/repos/flarum/tags/zipball/6d639ce7dc12c9219ec8e9cfdc72e96065cf4d68",
+            "reference": "6d639ce7dc12c9219ec8e9cfdc72e96065cf4d68",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.10"
         },
-        "time": "2019-09-16T07:30:46+00:00",
+        "time": "2019-11-26T15:31:25+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -2754,6 +2774,49 @@
         ]
     },
     {
+        "name": "fof/components",
+        "version": "0.1.1",
+        "version_normalized": "0.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/components.git",
+            "reference": "d8e337372128d60ae4911d3910b03be71b5ce29a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/components/zipball/d8e337372128d60ae4911d3910b03be71b5ce29a",
+            "reference": "d8e337372128d60ae4911d3910b03be71b5ce29a",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-12-04T22:41:16+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Components\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Sevilla Martín",
+                "email": "me+fof@datitisev.me",
+                "role": "Developer"
+            }
+        ],
+        "description": "[NOT EXT] Reusable JavaScript components for your Flarum extension",
+        "keywords": [
+            "flarum",
+            "friendsofflarum"
+        ]
+    },
+    {
         "name": "fof/default-group",
         "version": "0.1.0",
         "version_normalized": "0.1.0.0",
@@ -2877,23 +2940,23 @@
     },
     {
         "name": "fof/drafts",
-        "version": "0.1.3",
-        "version_normalized": "0.1.3.0",
+        "version": "0.1.4",
+        "version_normalized": "0.1.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FriendsOfFlarum/drafts.git",
-            "reference": "4727ccf140d8efb21fd9426b6a71a5b8bc59b654"
+            "reference": "6f5c37de56d3daa544dff224f37cd055d65fd381"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/4727ccf140d8efb21fd9426b6a71a5b8bc59b654",
-            "reference": "4727ccf140d8efb21fd9426b6a71a5b8bc59b654",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/6f5c37de56d3daa544dff224f37cd055d65fd381",
+            "reference": "6f5c37de56d3daa544dff224f37cd055d65fd381",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.8"
         },
-        "time": "2019-08-05T01:18:21+00:00",
+        "time": "2019-11-21T22:25:07+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -2905,7 +2968,7 @@
                 }
             },
             "flagrow": {
-                "discuss": ""
+                "discuss": "https://discuss.flarum.org/d/20957-friendsofflarum-drafts"
             }
         },
         "installation-source": "dist",
@@ -2921,9 +2984,9 @@
         "authors": [
             {
                 "name": "Charlie K",
-                "role": "Developer",
                 "email": "charlie.k@redevs.org",
-                "homepage": "https://redevs.org"
+                "homepage": "https://redevs.org",
+                "role": "Developer"
             }
         ],
         "description": "Allow users to create post and discussion drafts",
@@ -2972,23 +3035,24 @@
     },
     {
         "name": "fof/formatting",
-        "version": "0.1.2",
-        "version_normalized": "0.1.2.0",
+        "version": "0.1.4",
+        "version_normalized": "0.1.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FriendsOfFlarum/formatting.git",
-            "reference": "a6108aebc499cd8a119fed5976cd3550f8f2aa25"
+            "reference": "19bd9b3d1ab773c442b1023daf19c1b7a1d688ea"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/a6108aebc499cd8a119fed5976cd3550f8f2aa25",
-            "reference": "a6108aebc499cd8a119fed5976cd3550f8f2aa25",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/19bd9b3d1ab773c442b1023daf19c1b7a1d688ea",
+            "reference": "19bd9b3d1ab773c442b1023daf19c1b7a1d688ea",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.8",
+            "fof/components": ">=0.1.0"
         },
-        "time": "2018-12-10T16:23:30+00:00",
+        "time": "2019-12-06T20:18:19+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -3536,17 +3600,17 @@
     },
     {
         "name": "fof/reactions",
-        "version": "0.1.0",
-        "version_normalized": "0.1.0.0",
+        "version": "0.1.2",
+        "version_normalized": "0.1.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FriendsOfFlarum/reactions.git",
-            "reference": "b8ccd0ed481348e217cb0580292838335e89077c"
+            "reference": "3286b88321fd4409cc4a25b7bc2829a0d4c6448c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/b8ccd0ed481348e217cb0580292838335e89077c",
-            "reference": "b8ccd0ed481348e217cb0580292838335e89077c",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/3286b88321fd4409cc4a25b7bc2829a0d4c6448c",
+            "reference": "3286b88321fd4409cc4a25b7bc2829a0d4c6448c",
             "shasum": ""
         },
         "require": {
@@ -3555,7 +3619,7 @@
         "replace": {
             "reflar/reactions": "*"
         },
-        "time": "2019-07-08T16:32:19+00:00",
+        "time": "2019-12-07T21:32:23+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -3567,7 +3631,7 @@
                 }
             },
             "flagrow": {
-                "discuss": "https://discuss.flarum.org/d/6542-friendsofflarum-reactions"
+                "discuss": "https://discuss.flarum.org/d/20655-friendsofflarum-reactions"
             }
         },
         "installation-source": "dist",
@@ -3582,14 +3646,14 @@
         ],
         "authors": [
             {
-                "name": "Charlie K",
-                "email": "issyrocks12@reflar.email",
+                "name": "David Sevilla Martín",
+                "email": "david.s@redevs.org",
                 "homepage": "https://redevs.org",
                 "role": "Developer"
             },
             {
-                "name": "David Sevilla Martín",
-                "email": "david.s@redevs.org",
+                "name": "Charlie K",
+                "email": "issyrocks12@reflar.email",
                 "homepage": "https://redevs.org",
                 "role": "Developer"
             }
@@ -4184,47 +4248,49 @@
     },
     {
         "name": "guzzlehttp/guzzle",
-        "version": "6.3.3",
-        "version_normalized": "6.3.3.0",
+        "version": "6.5.0",
+        "version_normalized": "6.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+            "reference": "dbc2bc3a293ed6b1ae08a3651e2bfd213d19b6a5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-            "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/dbc2bc3a293ed6b1ae08a3651e2bfd213d19b6a5",
+            "reference": "dbc2bc3a293ed6b1ae08a3651e2bfd213d19b6a5",
             "shasum": ""
         },
         "require": {
+            "ext-json": "*",
             "guzzlehttp/promises": "^1.0",
-            "guzzlehttp/psr7": "^1.4",
+            "guzzlehttp/psr7": "^1.6.1",
             "php": ">=5.5"
         },
         "require-dev": {
             "ext-curl": "*",
             "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-            "psr/log": "^1.0"
+            "psr/log": "^1.1"
         },
         "suggest": {
+            "ext-intl": "Required for Internationalized Domain Name (IDN) support",
             "psr/log": "Required for using the Log middleware"
         },
-        "time": "2018-04-22T15:46:56+00:00",
+        "time": "2019-12-07T18:20:45+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "6.3-dev"
+                "dev-master": "6.5-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
-            "files": [
-                "src/functions_include.php"
-            ],
             "psr-4": {
                 "GuzzleHttp\\": "src/"
-            }
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -5297,17 +5363,17 @@
     },
     {
         "name": "intervention/image",
-        "version": "2.5.0",
-        "version_normalized": "2.5.0.0",
+        "version": "2.5.1",
+        "version_normalized": "2.5.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Intervention/image.git",
-            "reference": "39eaef720d082ecc54c64bf54541c55f10db546d"
+            "reference": "abbf18d5ab8367f96b3205ca3c89fb2fa598c69e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Intervention/image/zipball/39eaef720d082ecc54c64bf54541c55f10db546d",
-            "reference": "39eaef720d082ecc54c64bf54541c55f10db546d",
+            "url": "https://api.github.com/repos/Intervention/image/zipball/abbf18d5ab8367f96b3205ca3c89fb2fa598c69e",
+            "reference": "abbf18d5ab8367f96b3205ca3c89fb2fa598c69e",
             "shasum": ""
         },
         "require": {
@@ -5324,7 +5390,7 @@
             "ext-imagick": "to use Imagick based image processing.",
             "intervention/imagecache": "Caching extension for the Intervention Image library"
         },
-        "time": "2019-06-24T14:06:31+00:00",
+        "time": "2019-11-02T09:15:47+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5478,17 +5544,17 @@
     },
     {
         "name": "league/flysystem",
-        "version": "1.0.55",
-        "version_normalized": "1.0.55.0",
+        "version": "1.0.61",
+        "version_normalized": "1.0.61.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "33c91155537c6dc899eacdc54a13ac6303f156e6"
+            "reference": "4fb13c01784a6c9f165a351e996871488ca2d8c9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/33c91155537c6dc899eacdc54a13ac6303f156e6",
-            "reference": "33c91155537c6dc899eacdc54a13ac6303f156e6",
+            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4fb13c01784a6c9f165a351e996871488ca2d8c9",
+            "reference": "4fb13c01784a6c9f165a351e996871488ca2d8c9",
             "shasum": ""
         },
         "require": {
@@ -5518,7 +5584,7 @@
             "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
             "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
         },
-        "time": "2019-08-24T11:17:19+00:00",
+        "time": "2019-12-08T21:46:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5964,17 +6030,17 @@
     },
     {
         "name": "marketplace/flarum-l10n-core-russian",
-        "version": "0.1.0-beta.10-3",
-        "version_normalized": "0.1.0.0-beta10-3",
+        "version": "0.1.0-beta.11-1",
+        "version_normalized": "0.1.0.0-beta11-1",
         "source": {
             "type": "git",
             "url": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian.git",
-            "reference": "9269a3943114420789a7e2374c14340a12ee7ba4"
+            "reference": "a1ba6e868824349fa6e67be76baf625dcc793006"
         },
         "dist": {
             "type": "zip",
-            "url": "https://gitlab.com/api/v4/projects/marketplace-flarum%2Fflarum-l10n-core-russian/repository/archive.zip?sha=9269a3943114420789a7e2374c14340a12ee7ba4",
-            "reference": "9269a3943114420789a7e2374c14340a12ee7ba4",
+            "url": "https://gitlab.com/api/v4/projects/marketplace-flarum%2Fflarum-l10n-core-russian/repository/archive.zip?sha=a1ba6e868824349fa6e67be76baf625dcc793006",
+            "reference": "a1ba6e868824349fa6e67be76baf625dcc793006",
             "shasum": ""
         },
         "require": {
@@ -5984,7 +6050,7 @@
             "flarum/flarum": "Flarum",
             "marketplace/flarum-l10n-ext-russian": "Russian language pack for Flarum Extensions."
         },
-        "time": "2019-09-25T20:31:14+00:00",
+        "time": "2019-12-01T19:50:59+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -6637,17 +6703,17 @@
     },
     {
         "name": "monolog/monolog",
-        "version": "1.25.1",
-        "version_normalized": "1.25.1.0",
+        "version": "1.25.2",
+        "version_normalized": "1.25.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Seldaek/monolog.git",
-            "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf"
+            "reference": "d5e2fb341cb44f7e2ab639d12a1e5901091ec287"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
-            "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/d5e2fb341cb44f7e2ab639d12a1e5901091ec287",
+            "reference": "d5e2fb341cb44f7e2ab639d12a1e5901091ec287",
             "shasum": ""
         },
         "require": {
@@ -6683,7 +6749,7 @@
             "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
             "sentry/sentry": "Allow sending log messages to a Sentry server"
         },
-        "time": "2019-09-06T13:49:17+00:00",
+        "time": "2019-11-13T10:00:05+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6771,17 +6837,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "1.39.0",
-        "version_normalized": "1.39.0.0",
+        "version": "1.39.1",
+        "version_normalized": "1.39.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0"
+            "reference": "4be0c005164249208ce1b5ca633cd57bdd42ff33"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
-            "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4be0c005164249208ce1b5ca633cd57bdd42ff33",
+            "reference": "4be0c005164249208ce1b5ca633cd57bdd42ff33",
             "shasum": ""
         },
         "require": {
@@ -6794,7 +6860,7 @@
             "friendsofphp/php-cs-fixer": "~2",
             "phpunit/phpunit": "^4.8.35 || ^5.7"
         },
-        "time": "2019-06-11T09:07:59+00:00",
+        "time": "2019-10-14T05:51:36+00:00",
         "bin": [
             "bin/upgrade-carbon"
         ],
@@ -6985,17 +7051,17 @@
     },
     {
         "name": "opis/closure",
-        "version": "3.4.0",
-        "version_normalized": "3.4.0.0",
+        "version": "3.5.1",
+        "version_normalized": "3.5.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/opis/closure.git",
-            "reference": "60a97fff133b1669a5b1776aa8ab06db3f3962b7"
+            "reference": "93ebc5712cdad8d5f489b500c59d122df2e53969"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/opis/closure/zipball/60a97fff133b1669a5b1776aa8ab06db3f3962b7",
-            "reference": "60a97fff133b1669a5b1776aa8ab06db3f3962b7",
+            "url": "https://api.github.com/repos/opis/closure/zipball/93ebc5712cdad8d5f489b500c59d122df2e53969",
+            "reference": "93ebc5712cdad8d5f489b500c59d122df2e53969",
             "shasum": ""
         },
         "require": {
@@ -7005,11 +7071,11 @@
             "jeremeamia/superclosure": "^2.0",
             "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
         },
-        "time": "2019-09-02T21:07:33+00:00",
+        "time": "2019-11-29T22:36:02+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.3.x-dev"
+                "dev-master": "3.5.x-dev"
             }
         },
         "installation-source": "dist",
@@ -7112,27 +7178,27 @@
     },
     {
         "name": "paragonie/constant_time_encoding",
-        "version": "v2.2.3",
-        "version_normalized": "2.2.3.0",
+        "version": "v2.3.0",
+        "version_normalized": "2.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/paragonie/constant_time_encoding.git",
-            "reference": "55af0dc01992b4d0da7f6372e2eac097bbbaffdb"
+            "reference": "47a1cedd2e4d52688eb8c96469c05ebc8fd28fa2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/55af0dc01992b4d0da7f6372e2eac097bbbaffdb",
-            "reference": "55af0dc01992b4d0da7f6372e2eac097bbbaffdb",
+            "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/47a1cedd2e4d52688eb8c96469c05ebc8fd28fa2",
+            "reference": "47a1cedd2e4d52688eb8c96469c05ebc8fd28fa2",
             "shasum": ""
         },
         "require": {
-            "php": "^7"
+            "php": "^7|^8"
         },
         "require-dev": {
             "phpunit/phpunit": "^6|^7",
-            "vimeo/psalm": "^1|^2"
+            "vimeo/psalm": "^1|^2|^3"
         },
-        "time": "2019-01-03T20:26:31+00:00",
+        "time": "2019-11-06T19:20:29+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -7147,15 +7213,15 @@
         "authors": [
             {
                 "name": "Paragon Initiative Enterprises",
-                "role": "Maintainer",
                 "email": "security@paragonie.com",
-                "homepage": "https://paragonie.com"
+                "homepage": "https://paragonie.com",
+                "role": "Maintainer"
             },
             {
                 "name": "Steve 'Sc00bz' Thomas",
-                "role": "Original Developer",
                 "email": "steve@tobtu.com",
-                "homepage": "https://www.tobtu.com"
+                "homepage": "https://www.tobtu.com",
+                "role": "Original Developer"
             }
         ],
         "description": "Constant-time Implementations of RFC 4648 Encoding (Base-64, Base-32, Base-16)",
@@ -7610,27 +7676,27 @@
     },
     {
         "name": "psr/log",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "1.1.2",
+        "version_normalized": "1.1.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-fig/log.git",
-            "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+            "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-            "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
+            "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2018-11-20T15:27:04+00:00",
+        "time": "2019-11-01T11:05:21+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.0.x-dev"
+                "dev-master": "1.1.x-dev"
             }
         },
         "installation-source": "dist",
@@ -8086,23 +8152,23 @@
     },
     {
         "name": "rob006/flarum-lang-polish",
-        "version": "v0.2.13",
-        "version_normalized": "0.2.13.0",
+        "version": "v0.2.13.2",
+        "version_normalized": "0.2.13.2",
         "source": {
             "type": "git",
             "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-            "reference": "a0cf6debf924823f969a5c8f66dee1c0e31f8e64"
+            "reference": "c820399359677d28c239357d9bd136af2278a9f3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/a0cf6debf924823f969a5c8f66dee1c0e31f8e64",
-            "reference": "a0cf6debf924823f969a5c8f66dee1c0e31f8e64",
+            "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/c820399359677d28c239357d9bd136af2278a9f3",
+            "reference": "c820399359677d28c239357d9bd136af2278a9f3",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.8.1"
         },
-        "time": "2019-11-15T16:43:00+00:00",
+        "time": "2019-11-22T23:30:11+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -8270,17 +8336,17 @@
     },
     {
         "name": "swiftmailer/swiftmailer",
-        "version": "v6.2.1",
-        "version_normalized": "6.2.1.0",
+        "version": "v6.2.3",
+        "version_normalized": "6.2.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/swiftmailer/swiftmailer.git",
-            "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a"
+            "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
-            "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
+            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
+            "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
             "shasum": ""
         },
         "require": {
@@ -8298,7 +8364,7 @@
             "ext-intl": "Needed to support internationalized email addresses",
             "true/punycode": "Needed to support internationalized email addresses, if ext-intl is not installed"
         },
-        "time": "2019-04-21T09:21:45+00:00",
+        "time": "2019-11-12T09:31:26+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -8334,17 +8400,17 @@
     },
     {
         "name": "symfony/config",
-        "version": "v3.4.31",
-        "version_normalized": "3.4.31.0",
+        "version": "v3.4.36",
+        "version_normalized": "3.4.36.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/config.git",
-            "reference": "24a60c0d7ad98a0fa5d1f892e9286095a389404f"
+            "reference": "a599a867d0e4a07c342b5f1e656b3915a540ddbe"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/config/zipball/24a60c0d7ad98a0fa5d1f892e9286095a389404f",
-            "reference": "24a60c0d7ad98a0fa5d1f892e9286095a389404f",
+            "url": "https://api.github.com/repos/symfony/config/zipball/a599a867d0e4a07c342b5f1e656b3915a540ddbe",
+            "reference": "a599a867d0e4a07c342b5f1e656b3915a540ddbe",
             "shasum": ""
         },
         "require": {
@@ -8365,7 +8431,7 @@
         "suggest": {
             "symfony/yaml": "To use the yaml reference dumper"
         },
-        "time": "2019-08-26T07:52:57+00:00",
+        "time": "2019-12-01T10:45:41+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -8400,28 +8466,29 @@
     },
     {
         "name": "symfony/console",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/console.git",
-            "reference": "de63799239b3881b8a08f8481b22348f77ed7b36"
+            "reference": "f0aea3df20d15635b3cb9730ca5eea1c65b7f201"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/console/zipball/de63799239b3881b8a08f8481b22348f77ed7b36",
-            "reference": "de63799239b3881b8a08f8481b22348f77ed7b36",
+            "url": "https://api.github.com/repos/symfony/console/zipball/f0aea3df20d15635b3cb9730ca5eea1c65b7f201",
+            "reference": "f0aea3df20d15635b3cb9730ca5eea1c65b7f201",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3",
             "symfony/polyfill-mbstring": "~1.0",
             "symfony/polyfill-php73": "^1.8",
-            "symfony/service-contracts": "^1.1"
+            "symfony/service-contracts": "^1.1|^2"
         },
         "conflict": {
             "symfony/dependency-injection": "<3.4",
-            "symfony/event-dispatcher": "<4.3",
+            "symfony/event-dispatcher": "<4.3|>=5",
+            "symfony/lock": "<4.4",
             "symfony/process": "<3.3"
         },
         "provide": {
@@ -8429,12 +8496,12 @@
         },
         "require-dev": {
             "psr/log": "~1.0",
-            "symfony/config": "~3.4|~4.0",
-            "symfony/dependency-injection": "~3.4|~4.0",
+            "symfony/config": "^3.4|^4.0|^5.0",
+            "symfony/dependency-injection": "^3.4|^4.0|^5.0",
             "symfony/event-dispatcher": "^4.3",
-            "symfony/lock": "~3.4|~4.0",
-            "symfony/process": "~3.4|~4.0",
-            "symfony/var-dumper": "^4.3"
+            "symfony/lock": "^4.4|^5.0",
+            "symfony/process": "^3.4|^4.0|^5.0",
+            "symfony/var-dumper": "^4.3|^5.0"
         },
         "suggest": {
             "psr/log": "For using the console logger",
@@ -8442,11 +8509,11 @@
             "symfony/lock": "",
             "symfony/process": ""
         },
-        "time": "2019-08-26T08:26:39+00:00",
+        "time": "2019-12-01T10:06:17+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "4.4-dev"
             }
         },
         "installation-source": "dist",
@@ -8477,27 +8544,27 @@
     },
     {
         "name": "symfony/css-selector",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v5.0.1",
+        "version_normalized": "5.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/css-selector.git",
-            "reference": "c6e5e2a00db768c92c3ae131532af4e1acc7bd03"
+            "reference": "19d29e7098b7b2c3313cb03902ca30f100dcb837"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/css-selector/zipball/c6e5e2a00db768c92c3ae131532af4e1acc7bd03",
-            "reference": "c6e5e2a00db768c92c3ae131532af4e1acc7bd03",
+            "url": "https://api.github.com/repos/symfony/css-selector/zipball/19d29e7098b7b2c3313cb03902ca30f100dcb837",
+            "reference": "19d29e7098b7b2c3313cb03902ca30f100dcb837",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1.3"
+            "php": "^7.2.5"
         },
-        "time": "2019-08-20T14:07:54+00:00",
+        "time": "2019-11-18T17:27:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "5.0-dev"
             }
         },
         "installation-source": "dist",
@@ -8532,17 +8599,17 @@
     },
     {
         "name": "symfony/debug",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/debug.git",
-            "reference": "afcdea44a2e399c1e4b52246ec8d54c715393ced"
+            "reference": "b8600a1d7d20b0e80906398bb1f50612fa074a8e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/debug/zipball/afcdea44a2e399c1e4b52246ec8d54c715393ced",
-            "reference": "afcdea44a2e399c1e4b52246ec8d54c715393ced",
+            "url": "https://api.github.com/repos/symfony/debug/zipball/b8600a1d7d20b0e80906398bb1f50612fa074a8e",
+            "reference": "b8600a1d7d20b0e80906398bb1f50612fa074a8e",
             "shasum": ""
         },
         "require": {
@@ -8553,13 +8620,13 @@
             "symfony/http-kernel": "<3.4"
         },
         "require-dev": {
-            "symfony/http-kernel": "~3.4|~4.0"
+            "symfony/http-kernel": "^3.4|^4.0|^5.0"
         },
-        "time": "2019-08-20T14:27:59+00:00",
+        "time": "2019-11-28T13:33:56+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "4.4-dev"
             }
         },
         "installation-source": "dist",
@@ -8589,29 +8656,161 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "symfony/filesystem",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "name": "symfony/event-dispatcher",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/symfony/filesystem.git",
-            "reference": "9abbb7ef96a51f4d7e69627bc6f63307994e4263"
+            "url": "https://github.com/symfony/event-dispatcher.git",
+            "reference": "b3c3068a72623287550fe20b84a2b01dcba2686f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/filesystem/zipball/9abbb7ef96a51f4d7e69627bc6f63307994e4263",
-            "reference": "9abbb7ef96a51f4d7e69627bc6f63307994e4263",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b3c3068a72623287550fe20b84a2b01dcba2686f",
+            "reference": "b3c3068a72623287550fe20b84a2b01dcba2686f",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/event-dispatcher-contracts": "^1.1"
+        },
+        "conflict": {
+            "symfony/dependency-injection": "<3.4"
+        },
+        "provide": {
+            "psr/event-dispatcher-implementation": "1.0",
+            "symfony/event-dispatcher-implementation": "1.1"
+        },
+        "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/config": "^3.4|^4.0|^5.0",
+            "symfony/dependency-injection": "^3.4|^4.0|^5.0",
+            "symfony/expression-language": "^3.4|^4.0|^5.0",
+            "symfony/http-foundation": "^3.4|^4.0|^5.0",
+            "symfony/service-contracts": "^1.1|^2",
+            "symfony/stopwatch": "^3.4|^4.0|^5.0"
+        },
+        "suggest": {
+            "symfony/dependency-injection": "",
+            "symfony/http-kernel": ""
+        },
+        "time": "2019-11-28T13:33:56+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\EventDispatcher\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony EventDispatcher Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/event-dispatcher-contracts",
+        "version": "v1.1.7",
+        "version_normalized": "1.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+            "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+            "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "suggest": {
+            "psr/event-dispatcher": "",
+            "symfony/event-dispatcher-implementation": ""
+        },
+        "time": "2019-09-17T09:54:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Contracts\\EventDispatcher\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Generic abstractions related to dispatching event",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "abstractions",
+            "contracts",
+            "decoupling",
+            "interfaces",
+            "interoperability",
+            "standards"
+        ]
+    },
+    {
+        "name": "symfony/filesystem",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/filesystem.git",
+            "reference": "40c2606131d56eff6f193b6e2ceb92414653b591"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/filesystem/zipball/40c2606131d56eff6f193b6e2ceb92414653b591",
+            "reference": "40c2606131d56eff6f193b6e2ceb92414653b591",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3",
             "symfony/polyfill-ctype": "~1.8"
         },
-        "time": "2019-08-20T14:07:54+00:00",
+        "time": "2019-11-26T23:16:41+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "4.4-dev"
             }
         },
         "installation-source": "dist",
@@ -8642,27 +8841,27 @@
     },
     {
         "name": "symfony/finder",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/finder.git",
-            "reference": "86c1c929f0a4b24812e1eb109262fc3372c8e9f2"
+            "reference": "ce8743441da64c41e2a667b8eb66070444ed911e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/finder/zipball/86c1c929f0a4b24812e1eb109262fc3372c8e9f2",
-            "reference": "86c1c929f0a4b24812e1eb109262fc3372c8e9f2",
+            "url": "https://api.github.com/repos/symfony/finder/zipball/ce8743441da64c41e2a667b8eb66070444ed911e",
+            "reference": "ce8743441da64c41e2a667b8eb66070444ed911e",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3"
         },
-        "time": "2019-08-14T12:26:46+00:00",
+        "time": "2019-11-17T21:56:56+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "4.4-dev"
             }
         },
         "installation-source": "dist",
@@ -8693,33 +8892,33 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "d804bea118ff340a12e22a79f9c7e7eb56b35adc"
+            "reference": "8bccc59e61b41963d14c3dbdb23181e5c932a1d5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d804bea118ff340a12e22a79f9c7e7eb56b35adc",
-            "reference": "d804bea118ff340a12e22a79f9c7e7eb56b35adc",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8bccc59e61b41963d14c3dbdb23181e5c932a1d5",
+            "reference": "8bccc59e61b41963d14c3dbdb23181e5c932a1d5",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3",
-            "symfony/mime": "^4.3",
+            "symfony/mime": "^4.3|^5.0",
             "symfony/polyfill-mbstring": "~1.1"
         },
         "require-dev": {
             "predis/predis": "~1.0",
-            "symfony/expression-language": "~3.4|~4.0"
+            "symfony/expression-language": "^3.4|^4.0|^5.0"
         },
-        "time": "2019-08-26T08:55:16+00:00",
+        "time": "2019-11-28T13:33:56+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "4.4-dev"
             }
         },
         "installation-source": "dist",
@@ -8750,33 +8949,36 @@
     },
     {
         "name": "symfony/mime",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v5.0.1",
+        "version_normalized": "5.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/mime.git",
-            "reference": "987a05df1c6ac259b34008b932551353f4f408df"
+            "reference": "0e6a4ced216e49d457eddcefb61132173a876d79"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/mime/zipball/987a05df1c6ac259b34008b932551353f4f408df",
-            "reference": "987a05df1c6ac259b34008b932551353f4f408df",
+            "url": "https://api.github.com/repos/symfony/mime/zipball/0e6a4ced216e49d457eddcefb61132173a876d79",
+            "reference": "0e6a4ced216e49d457eddcefb61132173a876d79",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1.3",
+            "php": "^7.2.5",
             "symfony/polyfill-intl-idn": "^1.10",
             "symfony/polyfill-mbstring": "^1.0"
         },
+        "conflict": {
+            "symfony/mailer": "<4.4"
+        },
         "require-dev": {
             "egulias/email-validator": "^2.1.10",
-            "symfony/dependency-injection": "~3.4|^4.1"
+            "symfony/dependency-injection": "^4.4|^5.0"
         },
-        "time": "2019-08-22T08:16:11+00:00",
+        "time": "2019-11-30T14:12:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "5.0-dev"
             }
         },
         "installation-source": "dist",
@@ -8811,17 +9013,17 @@
     },
     {
         "name": "symfony/polyfill-ctype",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-ctype.git",
-            "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
+            "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
-            "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
+            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+            "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
             "shasum": ""
         },
         "require": {
@@ -8830,11 +9032,11 @@
         "suggest": {
             "ext-ctype": "For best performance"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T13:56:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -8871,17 +9073,17 @@
     },
     {
         "name": "symfony/polyfill-iconv",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-iconv.git",
-            "reference": "685968b11e61a347c18bf25db32effa478be610f"
+            "reference": "a019efccc03f1a335af6b4f20c30f5ea8060be36"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/685968b11e61a347c18bf25db32effa478be610f",
-            "reference": "685968b11e61a347c18bf25db32effa478be610f",
+            "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/a019efccc03f1a335af6b4f20c30f5ea8060be36",
+            "reference": "a019efccc03f1a335af6b4f20c30f5ea8060be36",
             "shasum": ""
         },
         "require": {
@@ -8890,11 +9092,11 @@
         "suggest": {
             "ext-iconv": "For best performance"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T13:56:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -8932,17 +9134,17 @@
     },
     {
         "name": "symfony/polyfill-intl-idn",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-intl-idn.git",
-            "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2"
+            "reference": "6f9c239e61e1b0c9229a28ff89a812dc449c3d46"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
-            "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/6f9c239e61e1b0c9229a28ff89a812dc449c3d46",
+            "reference": "6f9c239e61e1b0c9229a28ff89a812dc449c3d46",
             "shasum": ""
         },
         "require": {
@@ -8953,11 +9155,11 @@
         "suggest": {
             "ext-intl": "For best performance"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T13:56:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -8996,17 +9198,17 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17"
+            "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b42a2f66e8f1b15ccf25652c3424265923eb4f17",
-            "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+            "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
             "shasum": ""
         },
         "require": {
@@ -9015,11 +9217,11 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T14:18:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -9057,28 +9259,28 @@
     },
     {
         "name": "symfony/polyfill-php56",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php56.git",
-            "reference": "0e3b212e96a51338639d8ce175c046d7729c3403"
+            "reference": "53dd1cdf3cb986893ccf2b96665b25b3abb384f4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/0e3b212e96a51338639d8ce175c046d7729c3403",
-            "reference": "0e3b212e96a51338639d8ce175c046d7729c3403",
+            "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/53dd1cdf3cb986893ccf2b96665b25b3abb384f4",
+            "reference": "53dd1cdf3cb986893ccf2b96665b25b3abb384f4",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3",
             "symfony/polyfill-util": "~1.0"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T13:56:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -9115,27 +9317,27 @@
     },
     {
         "name": "symfony/polyfill-php72",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php72.git",
-            "reference": "04ce3335667451138df4307d6a9b61565560199e"
+            "reference": "66fea50f6cb37a35eea048d75a7d99a45b586038"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/04ce3335667451138df4307d6a9b61565560199e",
-            "reference": "04ce3335667451138df4307d6a9b61565560199e",
+            "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/66fea50f6cb37a35eea048d75a7d99a45b586038",
+            "reference": "66fea50f6cb37a35eea048d75a7d99a45b586038",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T13:56:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -9172,27 +9374,27 @@
     },
     {
         "name": "symfony/polyfill-php73",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php73.git",
-            "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188"
+            "reference": "4b0e2222c55a25b4541305a053013d5647d3a25f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/2ceb49eaccb9352bff54d22570276bb75ba4a188",
-            "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188",
+            "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/4b0e2222c55a25b4541305a053013d5647d3a25f",
+            "reference": "4b0e2222c55a25b4541305a053013d5647d3a25f",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T16:25:15+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -9232,27 +9434,27 @@
     },
     {
         "name": "symfony/polyfill-util",
-        "version": "v1.12.0",
-        "version_normalized": "1.12.0.0",
+        "version": "v1.13.1",
+        "version_normalized": "1.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-util.git",
-            "reference": "4317de1386717b4c22caed7725350a8887ab205c"
+            "reference": "964a67f293b66b95883a5ed918a65354fcd2258f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/4317de1386717b4c22caed7725350a8887ab205c",
-            "reference": "4317de1386717b4c22caed7725350a8887ab205c",
+            "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/964a67f293b66b95883a5ed918a65354fcd2258f",
+            "reference": "964a67f293b66b95883a5ed918a65354fcd2258f",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2019-08-06T08:03:45+00:00",
+        "time": "2019-11-27T13:56:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.12-dev"
+                "dev-master": "1.13-dev"
             }
         },
         "installation-source": "dist",
@@ -9286,27 +9488,27 @@
     },
     {
         "name": "symfony/process",
-        "version": "v4.3.4",
-        "version_normalized": "4.3.4.0",
+        "version": "v4.4.1",
+        "version_normalized": "4.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/process.git",
-            "reference": "e89969c00d762349f078db1128506f7f3dcc0d4a"
+            "reference": "51c0135ef3f44c5803b33dc60e96bf4f77752726"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/process/zipball/e89969c00d762349f078db1128506f7f3dcc0d4a",
-            "reference": "e89969c00d762349f078db1128506f7f3dcc0d4a",
+            "url": "https://api.github.com/repos/symfony/process/zipball/51c0135ef3f44c5803b33dc60e96bf4f77752726",
+            "reference": "51c0135ef3f44c5803b33dc60e96bf4f77752726",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3"
         },
-        "time": "2019-08-26T08:26:39+00:00",
+        "time": "2019-11-28T13:33:56+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.3-dev"
+                "dev-master": "4.4-dev"
             }
         },
         "installation-source": "dist",
@@ -9337,31 +9539,31 @@
     },
     {
         "name": "symfony/service-contracts",
-        "version": "v1.1.6",
-        "version_normalized": "1.1.6.0",
+        "version": "v2.0.1",
+        "version_normalized": "2.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/service-contracts.git",
-            "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
+            "reference": "144c5e51266b281231e947b51223ba14acf1a749"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
-            "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/144c5e51266b281231e947b51223ba14acf1a749",
+            "reference": "144c5e51266b281231e947b51223ba14acf1a749",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1.3",
+            "php": "^7.2.5",
             "psr/container": "^1.0"
         },
         "suggest": {
             "symfony/service-implementation": ""
         },
-        "time": "2019-08-20T14:44:19+00:00",
+        "time": "2019-11-18T17:27:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.1-dev"
+                "dev-master": "2.0-dev"
             }
         },
         "installation-source": "dist",
@@ -9397,17 +9599,17 @@
     },
     {
         "name": "symfony/translation",
-        "version": "v3.4.31",
-        "version_normalized": "3.4.31.0",
+        "version": "v3.4.36",
+        "version_normalized": "3.4.36.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/translation.git",
-            "reference": "49a884e9ac297f99c56052bad30b2af89f716ee1"
+            "reference": "0be25347c4a8695d9423fe897f4c774f46e97b51"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/translation/zipball/49a884e9ac297f99c56052bad30b2af89f716ee1",
-            "reference": "49a884e9ac297f99c56052bad30b2af89f716ee1",
+            "url": "https://api.github.com/repos/symfony/translation/zipball/0be25347c4a8695d9423fe897f4c774f46e97b51",
+            "reference": "0be25347c4a8695d9423fe897f4c774f46e97b51",
             "shasum": ""
         },
         "require": {
@@ -9434,7 +9636,7 @@
             "symfony/config": "",
             "symfony/yaml": ""
         },
-        "time": "2019-08-26T07:52:58+00:00",
+        "time": "2019-11-23T20:30:33+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -9469,17 +9671,17 @@
     },
     {
         "name": "symfony/yaml",
-        "version": "v3.4.31",
-        "version_normalized": "3.4.31.0",
+        "version": "v3.4.36",
+        "version_normalized": "3.4.36.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/yaml.git",
-            "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834"
+            "reference": "dab657db15207879217fc81df4f875947bf68804"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/yaml/zipball/3dc414b7db30695bae671a1d86013d03f4ae9834",
-            "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/dab657db15207879217fc81df4f875947bf68804",
+            "reference": "dab657db15207879217fc81df4f875947bf68804",
             "shasum": ""
         },
         "require": {
@@ -9495,7 +9697,7 @@
         "suggest": {
             "symfony/console": "For validating YAML files using the lint command"
         },
-        "time": "2019-08-20T13:31:17+00:00",
+        "time": "2019-10-24T15:33:53+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -9530,27 +9732,29 @@
     },
     {
         "name": "tijsverkoyen/css-to-inline-styles",
-        "version": "2.2.1",
-        "version_normalized": "2.2.1.0",
+        "version": "2.2.2",
+        "version_normalized": "2.2.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-            "reference": "0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757"
+            "reference": "dda2ee426acd6d801d5b7fd1001cde9b5f790e15"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757",
-            "reference": "0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757",
+            "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/dda2ee426acd6d801d5b7fd1001cde9b5f790e15",
+            "reference": "dda2ee426acd6d801d5b7fd1001cde9b5f790e15",
             "shasum": ""
         },
         "require": {
+            "ext-dom": "*",
+            "ext-libxml": "*",
             "php": "^5.5 || ^7.0",
-            "symfony/css-selector": "^2.7 || ^3.0 || ^4.0"
+            "symfony/css-selector": "^2.7 || ^3.0 || ^4.0 || ^5.0"
         },
         "require-dev": {
             "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
         },
-        "time": "2017-11-27T11:13:29+00:00",
+        "time": "2019-10-24T08:53:34+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -9690,17 +9894,17 @@
     },
     {
         "name": "tolgaaaltas/flarum-ext-turkish",
-        "version": "0.1.20",
-        "version_normalized": "0.1.20.0",
+        "version": "0.1.24",
+        "version_normalized": "0.1.24.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-            "reference": "9e538809720efac6320f6071ef68ec822bcbf5b2"
+            "reference": "b9c162c86b7f0f03e7b02fa2e5f210816166de5b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/9e538809720efac6320f6071ef68ec822bcbf5b2",
-            "reference": "9e538809720efac6320f6071ef68ec822bcbf5b2",
+            "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/b9c162c86b7f0f03e7b02fa2e5f210816166de5b",
+            "reference": "b9c162c86b7f0f03e7b02fa2e5f210816166de5b",
             "shasum": ""
         },
         "require": {
@@ -9709,7 +9913,7 @@
         "suggest": {
             "tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
         },
-        "time": "2019-11-17T19:25:08+00:00",
+        "time": "2019-12-02T08:19:45+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -9815,17 +10019,17 @@
     },
     {
         "name": "twilio/sdk",
-        "version": "5.36.0",
-        "version_normalized": "5.36.0.0",
+        "version": "5.40.0",
+        "version_normalized": "5.40.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/twilio/twilio-php.git",
-            "reference": "ad4093a19762b76b1ec316ebdb6e0766539859ff"
+            "reference": "d9de372a56ac36cd40ba390b21a7dabab71f7fc5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twilio/twilio-php/zipball/ad4093a19762b76b1ec316ebdb6e0766539859ff",
-            "reference": "ad4093a19762b76b1ec316ebdb6e0766539859ff",
+            "url": "https://api.github.com/repos/twilio/twilio-php/zipball/d9de372a56ac36cd40ba390b21a7dabab71f7fc5",
+            "reference": "d9de372a56ac36cd40ba390b21a7dabab71f7fc5",
             "shasum": ""
         },
         "require": {
@@ -9834,12 +10038,12 @@
         "require-dev": {
             "apigen/apigen": "^4.1",
             "guzzlehttp/guzzle": "^6.3",
-            "phpunit/phpunit": "^7.5"
+            "phpunit/phpunit": ">=4.5"
         },
         "suggest": {
             "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
         },
-        "time": "2019-09-18T22:10:18+00:00",
+        "time": "2019-12-04T22:56:36+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -10259,23 +10463,23 @@
     },
     {
         "name": "zerosonesfun/bbbbcode",
-        "version": "2.7",
-        "version_normalized": "2.7.0.0",
+        "version": "2.9.6.1",
+        "version_normalized": "2.9.6.1",
         "source": {
             "type": "git",
             "url": "https://github.com/zerosonesfun/bbbbcode.git",
-            "reference": "5bc4040ddcdd1015f11ac562d9016879e97f2a64"
+            "reference": "00c5dd717d2856179b52bd9a45f02a772e93a034"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/zerosonesfun/bbbbcode/zipball/5bc4040ddcdd1015f11ac562d9016879e97f2a64",
-            "reference": "5bc4040ddcdd1015f11ac562d9016879e97f2a64",
+            "url": "https://api.github.com/repos/zerosonesfun/bbbbcode/zipball/00c5dd717d2856179b52bd9a45f02a772e93a034",
+            "reference": "00c5dd717d2856179b52bd9a45f02a772e93a034",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.8"
         },
-        "time": "2019-11-18T03:42:57+00:00",
+        "time": "2019-11-28T08:09:37+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -10300,8 +10504,6 @@
         "authors": [
             {
                 "name": "Billy Wilcosky",
-                "email": "wilcosky@gmail.com",
-                "homepage": "https://wilcosky.com",
                 "role": "Creator"
             }
         ],

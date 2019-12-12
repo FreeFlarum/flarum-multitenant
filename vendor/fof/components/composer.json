@@ -1,0 +1,22 @@
+{
+    "name": "fof/components",
+    "description": "[NOT EXT] Reusable JavaScript components for your Flarum extension",
+    "keywords": ["flarum", "friendsofflarum"],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+      "flarum/core": "^0.1.0-beta.8"
+    },
+    "authors": [
+      {
+        "name": "David Sevilla Martín",
+        "email": "me+fof@datitisev.me",
+        "role": "Developer"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "FoF\\Components\\": "src/"
+      }
+    }
+  }

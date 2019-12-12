@@ -3,10 +3,8 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Post;
@@ -99,9 +97,13 @@ class PostPolicy extends AbstractPolicy
                             ->from('discussions')
                             ->whereColumn('discussions.id', 'posts.discussion_id')
                             ->where(function ($query) use ($actor) {
-                                $this->events->dispatch(
-                                    new ScopeModelVisibility(Discussion::query()->setQuery($query), $actor, 'hidePosts')
-                                );
+                                $query
+                                    ->whereRaw('1=0')
+                                    ->orWhere(function ($query) use ($actor) {
+                                        $this->events->dispatch(
+                                            new ScopeModelVisibility(Discussion::query()->setQuery($query), $actor, 'hidePosts')
+                                        );
+                                    });
                             });
                     });
             });

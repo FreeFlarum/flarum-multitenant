@@ -50,7 +50,7 @@ class WorkspaceInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid The sid
+     * @param string $sid The SID of the resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\WorkspaceInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -222,12 +222,12 @@ class WorkspaceInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -244,6 +244,6 @@ class WorkspaceInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkspaceInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkspaceInstance ' . \implode(' ', $context) . ']';
     }
 }

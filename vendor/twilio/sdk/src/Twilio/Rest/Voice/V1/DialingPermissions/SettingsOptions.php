@@ -17,7 +17,7 @@ use Twilio\Values;
  */
 abstract class SettingsOptions {
     /**
-     * @param bool $dialingPermissionsInheritance `true` for this sub-account to
+     * @param bool $dialingPermissionsInheritance `true` for the sub-account to
      *                                            inherit voice dialing permissions
      *                                            from the Master Project;
      *                                            otherwise `false`
@@ -30,7 +30,7 @@ abstract class SettingsOptions {
 
 class UpdateSettingsOptions extends Options {
     /**
-     * @param bool $dialingPermissionsInheritance `true` for this sub-account to
+     * @param bool $dialingPermissionsInheritance `true` for the sub-account to
      *                                            inherit voice dialing permissions
      *                                            from the Master Project;
      *                                            otherwise `false`
@@ -40,9 +40,9 @@ class UpdateSettingsOptions extends Options {
     }
 
     /**
-     * `true` for this sub-account to inherit voice dialing permissions from the Master Project; otherwise `false`.
+     * `true` for the sub-account to inherit voice dialing permissions from the Master Project; otherwise `false`.
      *
-     * @param bool $dialingPermissionsInheritance `true` for this sub-account to
+     * @param bool $dialingPermissionsInheritance `true` for the sub-account to
      *                                            inherit voice dialing permissions
      *                                            from the Master Project;
      *                                            otherwise `false`
@@ -65,6 +65,6 @@ class UpdateSettingsOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Voice.V1.UpdateSettingsOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Voice.V1.UpdateSettingsOptions ' . \implode(' ', $options) . ']';
     }
 }

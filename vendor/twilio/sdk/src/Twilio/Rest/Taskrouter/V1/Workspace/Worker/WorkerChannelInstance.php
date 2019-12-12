@@ -37,11 +37,11 @@ class WorkerChannelInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $workspaceSid The unique ID of the Workspace that this
-     *                             WorkerChannel belongs to.
-     * @param string $workerSid The unique ID of the Worker that this WorkerChannel
-     *                          belongs to.
-     * @param string $sid The sid
+     * @param string $workspaceSid The SID of the Workspace that contains the
+     *                             WorkerChannel
+     * @param string $workerSid The SID of the Worker that contains the
+     *                          WorkerChannel
+     * @param string $sid The SID of the to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Worker\WorkerChannelInstance
      */
     public function __construct(Version $version, array $payload, $workspaceSid, $workerSid, $sid = null) {
@@ -119,12 +119,12 @@ class WorkerChannelInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -141,6 +141,6 @@ class WorkerChannelInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkerChannelInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkerChannelInstance ' . \implode(' ', $context) . ']';
     }
 }

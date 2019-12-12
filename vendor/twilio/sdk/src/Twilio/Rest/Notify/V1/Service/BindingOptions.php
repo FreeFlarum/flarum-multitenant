@@ -117,7 +117,7 @@ class CreateBindingOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Notify.V1.CreateBindingOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Notify.V1.CreateBindingOptions ' . \implode(' ', $options) . ']';
     }
 }
 
@@ -162,7 +162,7 @@ class ReadBindingOptions extends Options {
     }
 
     /**
-     * The [User](https://www.twilio.com/docs/chat/rest/users)'s `identity` value of the resources to read.
+     * The [User](https://www.twilio.com/docs/chat/rest/user-resource)'s `identity` value of the resources to read.
      *
      * @param string $identity The `identity` value of the resources to read
      * @return $this Fluent Builder
@@ -195,6 +195,6 @@ class ReadBindingOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Notify.V1.ReadBindingOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Notify.V1.ReadBindingOptions ' . \implode(' ', $options) . ']';
     }
 }

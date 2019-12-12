@@ -21,8 +21,10 @@ class FunctionVersionList extends ListResource {
      * Construct the FunctionVersionList
      *
      * @param Version $version Version that contains the resource
-     * @param string $serviceSid Service Sid.
-     * @param string $functionSid Function Sid.
+     * @param string $serviceSid The SID of the Service that the Function Version
+     *                           resource is associated with
+     * @param string $functionSid The SID of the function that is the parent of the
+     *                            function version
      * @return \Twilio\Rest\Serverless\V1\Service\TwilioFunction\FunctionVersionList
      */
     public function __construct(Version $version, $serviceSid, $functionSid) {
@@ -31,7 +33,7 @@ class FunctionVersionList extends ListResource {
         // Path Solution
         $this->solution = array('serviceSid' => $serviceSid, 'functionSid' => $functionSid, );
 
-        $this->uri = '/Services/' . rawurlencode($serviceSid) . '/Functions/' . rawurlencode($functionSid) . '/Versions';
+        $this->uri = '/Services/' . \rawurlencode($serviceSid) . '/Functions/' . \rawurlencode($functionSid) . '/Versions';
     }
 
     /**
@@ -76,7 +78,7 @@ class FunctionVersionList extends ListResource {
      * @return FunctionVersionInstance[] Array of results
      */
     public function read($limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($limit, $pageSize), false);
+        return \iterator_to_array($this->stream($limit, $pageSize), false);
     }
 
     /**
@@ -123,7 +125,8 @@ class FunctionVersionList extends ListResource {
     /**
      * Constructs a FunctionVersionContext
      *
-     * @param string $sid Function Version Sid.
+     * @param string $sid The SID that identifies the Function Version resource to
+     *                    fetch
      * @return \Twilio\Rest\Serverless\V1\Service\TwilioFunction\FunctionVersionContext
      */
     public function getContext($sid) {

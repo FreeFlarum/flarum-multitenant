@@ -39,10 +39,11 @@ abstract class NotificationOptions {
      * @param string $segment A Segment to notify
      * @param array $alexa Deprecated
      * @param string $toBinding The destination address specified as a JSON string
+     * @param string $deliveryCallbackUrl URL to send webhooks
      * @return CreateNotificationOptions Options builder
      */
-    public static function create($identity = Values::NONE, $tag = Values::NONE, $body = Values::NONE, $priority = Values::NONE, $ttl = Values::NONE, $title = Values::NONE, $sound = Values::NONE, $action = Values::NONE, $data = Values::NONE, $apn = Values::NONE, $gcm = Values::NONE, $sms = Values::NONE, $facebookMessenger = Values::NONE, $fcm = Values::NONE, $segment = Values::NONE, $alexa = Values::NONE, $toBinding = Values::NONE) {
-        return new CreateNotificationOptions($identity, $tag, $body, $priority, $ttl, $title, $sound, $action, $data, $apn, $gcm, $sms, $facebookMessenger, $fcm, $segment, $alexa, $toBinding);
+    public static function create($identity = Values::NONE, $tag = Values::NONE, $body = Values::NONE, $priority = Values::NONE, $ttl = Values::NONE, $title = Values::NONE, $sound = Values::NONE, $action = Values::NONE, $data = Values::NONE, $apn = Values::NONE, $gcm = Values::NONE, $sms = Values::NONE, $facebookMessenger = Values::NONE, $fcm = Values::NONE, $segment = Values::NONE, $alexa = Values::NONE, $toBinding = Values::NONE, $deliveryCallbackUrl = Values::NONE) {
+        return new CreateNotificationOptions($identity, $tag, $body, $priority, $ttl, $title, $sound, $action, $data, $apn, $gcm, $sms, $facebookMessenger, $fcm, $segment, $alexa, $toBinding, $deliveryCallbackUrl);
     }
 }
 
@@ -70,8 +71,9 @@ class CreateNotificationOptions extends Options {
      * @param string $segment A Segment to notify
      * @param array $alexa Deprecated
      * @param string $toBinding The destination address specified as a JSON string
+     * @param string $deliveryCallbackUrl URL to send webhooks
      */
-    public function __construct($identity = Values::NONE, $tag = Values::NONE, $body = Values::NONE, $priority = Values::NONE, $ttl = Values::NONE, $title = Values::NONE, $sound = Values::NONE, $action = Values::NONE, $data = Values::NONE, $apn = Values::NONE, $gcm = Values::NONE, $sms = Values::NONE, $facebookMessenger = Values::NONE, $fcm = Values::NONE, $segment = Values::NONE, $alexa = Values::NONE, $toBinding = Values::NONE) {
+    public function __construct($identity = Values::NONE, $tag = Values::NONE, $body = Values::NONE, $priority = Values::NONE, $ttl = Values::NONE, $title = Values::NONE, $sound = Values::NONE, $action = Values::NONE, $data = Values::NONE, $apn = Values::NONE, $gcm = Values::NONE, $sms = Values::NONE, $facebookMessenger = Values::NONE, $fcm = Values::NONE, $segment = Values::NONE, $alexa = Values::NONE, $toBinding = Values::NONE, $deliveryCallbackUrl = Values::NONE) {
         $this->options['identity'] = $identity;
         $this->options['tag'] = $tag;
         $this->options['body'] = $body;
@@ -89,10 +91,11 @@ class CreateNotificationOptions extends Options {
         $this->options['segment'] = $segment;
         $this->options['alexa'] = $alexa;
         $this->options['toBinding'] = $toBinding;
+        $this->options['deliveryCallbackUrl'] = $deliveryCallbackUrl;
     }
 
     /**
-     * The `identity` value that uniquely identifies the new resource's [User](https://www.twilio.com/docs/chat/rest/users) within the [Service](https://www.twilio.com/docs/notify/api/service-resource). Delivery will be attempted only to Bindings with an Identity in this list. No more than 20 items are allowed in this list.
+     * The `identity` value that uniquely identifies the new resource's [User](https://www.twilio.com/docs/chat/rest/user-resource) within the [Service](https://www.twilio.com/docs/notify/api/service-resource). Delivery will be attempted only to Bindings with an Identity in this list. No more than 20 items are allowed in this list.
      *
      * @param string $identity The `identity` value that identifies the new
      *                         resource's User
@@ -204,7 +207,7 @@ class CreateNotificationOptions extends Options {
     }
 
     /**
-     * The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. See the [GCM documentation](https://developers.google.com/cloud-messaging/http-server-ref) for more details. Target parameters `to`, `registration_ids`, and `notification_key` are not allowed. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. GCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref).
+     * The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. See the [GCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref) for more details. Target parameters `to`, `registration_ids`, and `notification_key` are not allowed. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. GCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref).
      *
      * @param array $gcm The GCM-specific payload that overrides corresponding
      *                   attributes in generic payload for GCM Bindings
@@ -284,6 +287,17 @@ class CreateNotificationOptions extends Options {
     }
 
     /**
+     * URL to send webhooks.
+     *
+     * @param string $deliveryCallbackUrl URL to send webhooks
+     * @return $this Fluent Builder
+     */
+    public function setDeliveryCallbackUrl($deliveryCallbackUrl) {
+        $this->options['deliveryCallbackUrl'] = $deliveryCallbackUrl;
+        return $this;
+    }
+
+    /**
      * Provide a friendly representation
      *
      * @return string Machine friendly representation
@@ -295,6 +309,6 @@ class CreateNotificationOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Notify.V1.CreateNotificationOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Notify.V1.CreateNotificationOptions ' . \implode(' ', $options) . ']';
     }
 }

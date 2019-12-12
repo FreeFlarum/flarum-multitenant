@@ -23,9 +23,11 @@ class VariableContext extends InstanceContext {
      * Initialize the VariableContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $serviceSid Service Sid.
-     * @param string $environmentSid Environment Sid.
-     * @param string $sid Variable Sid.
+     * @param string $serviceSid The SID of the Service to fetch the Variable
+     *                           resource from
+     * @param string $environmentSid The SID of the environment with the Variable
+     *                               resource to fetch
+     * @param string $sid The SID of the Variable resource to fetch
      * @return \Twilio\Rest\Serverless\V1\Service\Environment\VariableContext
      */
     public function __construct(Version $version, $serviceSid, $environmentSid, $sid) {
@@ -38,7 +40,7 @@ class VariableContext extends InstanceContext {
             'sid' => $sid,
         );
 
-        $this->uri = '/Services/' . rawurlencode($serviceSid) . '/Environments/' . rawurlencode($environmentSid) . '/Variables/' . rawurlencode($sid) . '';
+        $this->uri = '/Services/' . \rawurlencode($serviceSid) . '/Environments/' . \rawurlencode($environmentSid) . '/Variables/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -113,6 +115,6 @@ class VariableContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Serverless.V1.VariableContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Serverless.V1.VariableContext ' . \implode(' ', $context) . ']';
     }
 }

@@ -127,7 +127,7 @@ class ReadFaxOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Fax.V1.ReadFaxOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Fax.V1.ReadFaxOptions ' . \implode(' ', $options) . ']';
     }
 }
 
@@ -153,7 +153,7 @@ class CreateFaxOptions extends Options {
     }
 
     /**
-     * The [Fax Quality value](https://www.twilio.com/docs/fax/api/faxes-resource#fax-quality-values) that describes the fax quality. Can be: `standard`, `fine`, or `superfine` and defaults to `fine`.
+     * The [Fax Quality value](https://www.twilio.com/docs/fax/api/fax-resource#fax-quality-values) that describes the fax quality. Can be: `standard`, `fine`, or `superfine` and defaults to `fine`.
      *
      * @param string $quality The quality of this fax
      * @return $this Fluent Builder
@@ -164,7 +164,7 @@ class CreateFaxOptions extends Options {
     }
 
     /**
-     * The URL we should call using the `POST` method to send [status information](https://www.twilio.com/docs/fax/api/faxes-resource#fax-status-callback) to your application when the status of the fax changes.
+     * The URL we should call using the `POST` method to send [status information](https://www.twilio.com/docs/fax/api/fax-resource#fax-status-callback) to your application when the status of the fax changes.
      *
      * @param string $statusCallback The URL we should call to send status
      *                               information to your application
@@ -242,7 +242,7 @@ class CreateFaxOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Fax.V1.CreateFaxOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Fax.V1.CreateFaxOptions ' . \implode(' ', $options) . ']';
     }
 }
 
@@ -255,7 +255,7 @@ class UpdateFaxOptions extends Options {
     }
 
     /**
-     * The new [status](https://www.twilio.com/docs/fax/api/faxes-resource#fax-status-values) of the resource. Can be only `canceled`. This may fail if transmission has already started.
+     * The new [status](https://www.twilio.com/docs/fax/api/fax-resource#fax-status-values) of the resource. Can be only `canceled`. This may fail if transmission has already started.
      *
      * @param string $status The new status of the resource
      * @return $this Fluent Builder
@@ -277,6 +277,6 @@ class UpdateFaxOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Fax.V1.UpdateFaxOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Fax.V1.UpdateFaxOptions ' . \implode(' ', $options) . ']';
     }
 }

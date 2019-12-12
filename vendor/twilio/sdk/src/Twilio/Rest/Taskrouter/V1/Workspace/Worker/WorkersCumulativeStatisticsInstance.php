@@ -36,7 +36,8 @@ class WorkersCumulativeStatisticsInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $workspaceSid The workspace_sid
+     * @param string $workspaceSid The SID of the Workspace that contains the
+     *                             Workers
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Worker\WorkersCumulativeStatisticsInstance
      */
     public function __construct(Version $version, array $payload, $workspaceSid) {
@@ -99,12 +100,12 @@ class WorkersCumulativeStatisticsInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -121,6 +122,6 @@ class WorkersCumulativeStatisticsInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkersCumulativeStatisticsInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkersCumulativeStatisticsInstance ' . \implode(' ', $context) . ']';
     }
 }

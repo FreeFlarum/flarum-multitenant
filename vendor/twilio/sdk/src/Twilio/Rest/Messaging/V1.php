@@ -17,15 +17,15 @@ use Twilio\Rest\Messaging\V1\WebhookList;
 use Twilio\Version;
 
 /**
- * @property \Twilio\Rest\Messaging\V1\SessionList $sessions
  * @property \Twilio\Rest\Messaging\V1\ServiceList $services
+ * @property \Twilio\Rest\Messaging\V1\SessionList $sessions
  * @property \Twilio\Rest\Messaging\V1\WebhookList $webhooks
- * @method \Twilio\Rest\Messaging\V1\SessionContext sessions(string $sid)
  * @method \Twilio\Rest\Messaging\V1\ServiceContext services(string $sid)
+ * @method \Twilio\Rest\Messaging\V1\SessionContext sessions(string $sid)
  */
 class V1 extends Version {
-    protected $_sessions = null;
     protected $_services = null;
+    protected $_sessions = null;
     protected $_webhooks = null;
 
     /**
@@ -40,16 +40,6 @@ class V1 extends Version {
     }
 
     /**
-     * @return \Twilio\Rest\Messaging\V1\SessionList
-     */
-    protected function getSessions() {
-        if (!$this->_sessions) {
-            $this->_sessions = new SessionList($this);
-        }
-        return $this->_sessions;
-    }
-
-    /**
      * @return \Twilio\Rest\Messaging\V1\ServiceList
      */
     protected function getServices() {
@@ -57,6 +47,16 @@ class V1 extends Version {
             $this->_services = new ServiceList($this);
         }
         return $this->_services;
+    }
+
+    /**
+     * @return \Twilio\Rest\Messaging\V1\SessionList
+     */
+    protected function getSessions() {
+        if (!$this->_sessions) {
+            $this->_sessions = new SessionList($this);
+        }
+        return $this->_sessions;
     }
 
     /**
@@ -77,8 +77,8 @@ class V1 extends Version {
      * @throws TwilioException For unknown resource
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -95,8 +95,8 @@ class V1 extends Version {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');

@@ -42,7 +42,7 @@ class AlertInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid A 34 character string that uniquely identifies this Alert.
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Monitor\V1\AlertInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -61,14 +61,14 @@ class AlertInstance extends InstanceResource {
             'moreInfo' => Values::array_get($payload, 'more_info'),
             'requestMethod' => Values::array_get($payload, 'request_method'),
             'requestUrl' => Values::array_get($payload, 'request_url'),
-            'resourceSid' => Values::array_get($payload, 'resource_sid'),
-            'sid' => Values::array_get($payload, 'sid'),
-            'url' => Values::array_get($payload, 'url'),
-            'serviceSid' => Values::array_get($payload, 'service_sid'),
             'requestVariables' => Values::array_get($payload, 'request_variables'),
+            'resourceSid' => Values::array_get($payload, 'resource_sid'),
             'responseBody' => Values::array_get($payload, 'response_body'),
             'responseHeaders' => Values::array_get($payload, 'response_headers'),
+            'sid' => Values::array_get($payload, 'sid'),
+            'url' => Values::array_get($payload, 'url'),
             'requestHeaders' => Values::array_get($payload, 'request_headers'),
+            'serviceSid' => Values::array_get($payload, 'service_sid'),
         );
 
         $this->solution = array('sid' => $sid ?: $this->properties['sid'], );
@@ -106,12 +106,12 @@ class AlertInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -128,6 +128,6 @@ class AlertInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Monitor.V1.AlertInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Monitor.V1.AlertInstance ' . \implode(' ', $context) . ']';
     }
 }

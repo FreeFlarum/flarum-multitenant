@@ -21,8 +21,8 @@ use Twilio\Version;
  * @property string $accountSid
  * @property string $status
  * @property \DateTime $dateCreated
- * @property string $dateCompleted
- * @property string $dateDeleted
+ * @property \DateTime $dateCompleted
+ * @property \DateTime $dateDeleted
  * @property string $sid
  * @property string $roomSid
  * @property string $audioSources
@@ -43,8 +43,7 @@ class CompositionInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid The Composition Sid that uniquely identifies the
-     *                    Composition to fetch.
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\CompositionInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -55,8 +54,8 @@ class CompositionInstance extends InstanceResource {
             'accountSid' => Values::array_get($payload, 'account_sid'),
             'status' => Values::array_get($payload, 'status'),
             'dateCreated' => Deserialize::dateTime(Values::array_get($payload, 'date_created')),
-            'dateCompleted' => Values::array_get($payload, 'date_completed'),
-            'dateDeleted' => Values::array_get($payload, 'date_deleted'),
+            'dateCompleted' => Deserialize::dateTime(Values::array_get($payload, 'date_completed')),
+            'dateDeleted' => Deserialize::dateTime(Values::array_get($payload, 'date_deleted')),
             'sid' => Values::array_get($payload, 'sid'),
             'roomSid' => Values::array_get($payload, 'room_sid'),
             'audioSources' => Values::array_get($payload, 'audio_sources'),
@@ -118,12 +117,12 @@ class CompositionInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -140,6 +139,6 @@ class CompositionInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Video.V1.CompositionInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Video.V1.CompositionInstance ' . \implode(' ', $context) . ']';
     }
 }

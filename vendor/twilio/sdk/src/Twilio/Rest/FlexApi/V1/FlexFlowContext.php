@@ -21,7 +21,7 @@ class FlexFlowContext extends InstanceContext {
      * Initialize the FlexFlowContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid The unique ID of the FlexFlow
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\FlexApi\V1\FlexFlowContext
      */
     public function __construct(Version $version, $sid) {
@@ -30,7 +30,7 @@ class FlexFlowContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/FlexFlows/' . rawurlencode($sid) . '';
+        $this->uri = '/FlexFlows/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -77,6 +77,8 @@ class FlexFlowContext extends InstanceContext {
             'Integration.Priority' => $options['integrationPriority'],
             'Integration.CreationOnMessage' => Serialize::booleanToString($options['integrationCreationOnMessage']),
             'LongLived' => Serialize::booleanToString($options['longLived']),
+            'JanitorEnabled' => Serialize::booleanToString($options['janitorEnabled']),
+            'Integration.RetryCount' => $options['integrationRetryCount'],
         ));
 
         $payload = $this->version->update(
@@ -109,6 +111,6 @@ class FlexFlowContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.FlexApi.V1.FlexFlowContext ' . implode(' ', $context) . ']';
+        return '[Twilio.FlexApi.V1.FlexFlowContext ' . \implode(' ', $context) . ']';
     }
 }

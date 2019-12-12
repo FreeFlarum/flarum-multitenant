@@ -35,9 +35,11 @@ class VariableInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $serviceSid Service Sid.
-     * @param string $environmentSid Environment Sid.
-     * @param string $sid Variable Sid.
+     * @param string $serviceSid The SID of the Service that the Variable resource
+     *                           is associated with
+     * @param string $environmentSid The SID of the environment in which the
+     *                               variable exists
+     * @param string $sid The SID of the Variable resource to fetch
      * @return \Twilio\Rest\Serverless\V1\Service\Environment\VariableInstance
      */
     public function __construct(Version $version, array $payload, $serviceSid, $environmentSid, $sid = null) {
@@ -121,12 +123,12 @@ class VariableInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -143,6 +145,6 @@ class VariableInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Serverless.V1.VariableInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Serverless.V1.VariableInstance ' . \implode(' ', $context) . ']';
     }
 }

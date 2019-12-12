@@ -15,14 +15,14 @@ use Twilio\Rest\FlexApi\V1;
 
 /**
  * @property \Twilio\Rest\FlexApi\V1 $v1
- * @property \Twilio\Rest\FlexApi\V1\FlexFlowList $flexFlow
  * @property \Twilio\Rest\FlexApi\V1\ChannelList $channel
- * @property \Twilio\Rest\FlexApi\V1\WebChannelList $webChannel
  * @property \Twilio\Rest\FlexApi\V1\ConfigurationList $configuration
- * @method \Twilio\Rest\FlexApi\V1\FlexFlowContext flexFlow(string $sid)
+ * @property \Twilio\Rest\FlexApi\V1\FlexFlowList $flexFlow
+ * @property \Twilio\Rest\FlexApi\V1\WebChannelList $webChannel
  * @method \Twilio\Rest\FlexApi\V1\ChannelContext channel(string $sid)
- * @method \Twilio\Rest\FlexApi\V1\WebChannelContext webChannel(string $sid)
  * @method \Twilio\Rest\FlexApi\V1\ConfigurationContext configuration()
+ * @method \Twilio\Rest\FlexApi\V1\FlexFlowContext flexFlow(string $sid)
+ * @method \Twilio\Rest\FlexApi\V1\WebChannelContext webChannel(string $sid)
  */
 class FlexApi extends Domain {
     protected $_v1 = null;
@@ -58,8 +58,8 @@ class FlexApi extends Domain {
      * @throws TwilioException For unknown versions
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -75,27 +75,12 @@ class FlexApi extends Domain {
      * @throws TwilioException For unknown resource
      */
     public function __call($name, $arguments) {
-        $method = 'context' . ucfirst($name);
-        if (method_exists($this, $method)) {
-            return call_user_func_array(array($this, $method), $arguments);
+        $method = 'context' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
+            return \call_user_func_array(array($this, $method), $arguments);
         }
 
         throw new TwilioException('Unknown context ' . $name);
-    }
-
-    /**
-     * @return \Twilio\Rest\FlexApi\V1\FlexFlowList
-     */
-    protected function getFlexFlow() {
-        return $this->v1->flexFlow;
-    }
-
-    /**
-     * @param string $sid The unique ID of the FlexFlow
-     * @return \Twilio\Rest\FlexApi\V1\FlexFlowContext
-     */
-    protected function contextFlexFlow($sid) {
-        return $this->v1->flexFlow($sid);
     }
 
     /**
@@ -106,26 +91,12 @@ class FlexApi extends Domain {
     }
 
     /**
-     * @param string $sid Flex Chat Channel Sid
+     * @param string $sid The SID that identifies the Flex chat channel resource to
+     *                    fetch
      * @return \Twilio\Rest\FlexApi\V1\ChannelContext
      */
     protected function contextChannel($sid) {
         return $this->v1->channel($sid);
-    }
-
-    /**
-     * @return \Twilio\Rest\FlexApi\V1\WebChannelList
-     */
-    protected function getWebChannel() {
-        return $this->v1->webChannel;
-    }
-
-    /**
-     * @param string $sid Flex Chat Channel Sid
-     * @return \Twilio\Rest\FlexApi\V1\WebChannelContext
-     */
-    protected function contextWebChannel($sid) {
-        return $this->v1->webChannel($sid);
     }
 
     /**
@@ -140,6 +111,36 @@ class FlexApi extends Domain {
      */
     protected function contextConfiguration() {
         return $this->v1->configuration();
+    }
+
+    /**
+     * @return \Twilio\Rest\FlexApi\V1\FlexFlowList
+     */
+    protected function getFlexFlow() {
+        return $this->v1->flexFlow;
+    }
+
+    /**
+     * @param string $sid The SID that identifies the resource to fetch
+     * @return \Twilio\Rest\FlexApi\V1\FlexFlowContext
+     */
+    protected function contextFlexFlow($sid) {
+        return $this->v1->flexFlow($sid);
+    }
+
+    /**
+     * @return \Twilio\Rest\FlexApi\V1\WebChannelList
+     */
+    protected function getWebChannel() {
+        return $this->v1->webChannel;
+    }
+
+    /**
+     * @param string $sid The SID of the WebChannel resource to fetch
+     * @return \Twilio\Rest\FlexApi\V1\WebChannelContext
+     */
+    protected function contextWebChannel($sid) {
+        return $this->v1->webChannel($sid);
     }
 
     /**

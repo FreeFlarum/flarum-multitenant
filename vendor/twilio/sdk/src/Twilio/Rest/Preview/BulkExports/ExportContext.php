@@ -12,6 +12,7 @@ namespace Twilio\Rest\Preview\BulkExports;
 use Twilio\Exceptions\TwilioException;
 use Twilio\InstanceContext;
 use Twilio\Rest\Preview\BulkExports\Export\DayList;
+use Twilio\Rest\Preview\BulkExports\Export\ExportCustomJobList;
 use Twilio\Values;
 use Twilio\Version;
 
@@ -19,9 +20,11 @@ use Twilio\Version;
  * PLEASE NOTE that this class contains preview products that are subject to change. Use them with caution. If you currently do not have developer preview access, please contact help@twilio.com.
  *
  * @property \Twilio\Rest\Preview\BulkExports\Export\DayList $days
+ * @property \Twilio\Rest\Preview\BulkExports\Export\ExportCustomJobList $exportCustomJobs
  */
 class ExportContext extends InstanceContext {
     protected $_days = null;
+    protected $_exportCustomJobs = null;
 
     /**
      * Initialize the ExportContext
@@ -36,7 +39,7 @@ class ExportContext extends InstanceContext {
         // Path Solution
         $this->solution = array('resourceType' => $resourceType, );
 
-        $this->uri = '/Exports/' . rawurlencode($resourceType) . '';
+        $this->uri = '/Exports/' . \rawurlencode($resourceType) . '';
     }
 
     /**
@@ -71,6 +74,19 @@ class ExportContext extends InstanceContext {
     }
 
     /**
+     * Access the exportCustomJobs
+     *
+     * @return \Twilio\Rest\Preview\BulkExports\Export\ExportCustomJobList
+     */
+    protected function getExportCustomJobs() {
+        if (!$this->_exportCustomJobs) {
+            $this->_exportCustomJobs = new ExportCustomJobList($this->version, $this->solution['resourceType']);
+        }
+
+        return $this->_exportCustomJobs;
+    }
+
+    /**
      * Magic getter to lazy load subresources
      *
      * @param string $name Subresource to return
@@ -78,8 +94,8 @@ class ExportContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -96,8 +112,8 @@ class ExportContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -113,6 +129,6 @@ class ExportContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.BulkExports.ExportContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.BulkExports.ExportContext ' . \implode(' ', $context) . ']';
     }
 }

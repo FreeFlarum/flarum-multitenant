@@ -29,13 +29,13 @@ Aktualizacje instalujemy za pomocą [Composera](https://getcomposer.org/):
 composer update rob006/flarum-lang-polish
 ```
 
-lub aby wymusić najnowszą wersję (zalecane przy aktualizacji do nowej wersji Flarum - sprawdź wcześniej [changelog](https://github.com/rob006-software/flarum-lang-polish/blob/master/CHANGELOG.md), czy żadne z wykorzystywanych rozszerzeń nie utraciło wsparcia):
+lub aby wymusić najnowszą wersję (zalecane przy aktualizacji do nowej wersji Flarum - sprawdź wcześniej [changelog](https://github.com/rob006-software/flarum-lang-polish/blob/master/CHANGELOG.md), czy żadne z wykorzystywanych przez Ciebie rozszerzeń nie utraciło wsparcia):
 
 ```console
 composer require rob006/flarum-lang-polish
 ```
 
-Jeśli lubisz życie na krawędzi, możesz korzystać z wersji niestabilnej:
+Jeśli lubisz życie na krawędzi, możesz korzystać z wersji niestabilnej (może zawierać niezweryfikonwane frazy zaproponowane przez społeczność):
 
 ```console
 composer require "rob006/flarum-lang-polish:0.2.x-dev"

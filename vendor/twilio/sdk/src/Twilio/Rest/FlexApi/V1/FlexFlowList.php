@@ -76,7 +76,7 @@ class FlexFlowList extends ListResource {
      * @return FlexFlowInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -126,9 +126,9 @@ class FlexFlowList extends ListResource {
     /**
      * Create a new FlexFlowInstance
      *
-     * @param string $friendlyName Human readable description of this FlexFlow
-     * @param string $chatServiceSid Service Sid.
-     * @param string $channelType Channel type
+     * @param string $friendlyName A string to describe the resource
+     * @param string $chatServiceSid The SID of the chat service
+     * @param string $channelType The channel type
      * @param array|Options $options Optional Arguments
      * @return FlexFlowInstance Newly created FlexFlowInstance
      * @throws TwilioException When an HTTP error occurs.
@@ -152,6 +152,8 @@ class FlexFlowList extends ListResource {
             'Integration.Priority' => $options['integrationPriority'],
             'Integration.CreationOnMessage' => Serialize::booleanToString($options['integrationCreationOnMessage']),
             'LongLived' => Serialize::booleanToString($options['longLived']),
+            'JanitorEnabled' => Serialize::booleanToString($options['janitorEnabled']),
+            'Integration.RetryCount' => $options['integrationRetryCount'],
         ));
 
         $payload = $this->version->create(
@@ -167,7 +169,7 @@ class FlexFlowList extends ListResource {
     /**
      * Constructs a FlexFlowContext
      *
-     * @param string $sid The unique ID of the FlexFlow
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\FlexApi\V1\FlexFlowContext
      */
     public function getContext($sid) {

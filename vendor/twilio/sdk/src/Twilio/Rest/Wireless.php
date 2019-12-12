@@ -15,9 +15,9 @@ use Twilio\Rest\Wireless\V1;
 
 /**
  * @property \Twilio\Rest\Wireless\V1 $v1
+ * @property \Twilio\Rest\Wireless\V1\UsageRecordList $usageRecords
  * @property \Twilio\Rest\Wireless\V1\CommandList $commands
  * @property \Twilio\Rest\Wireless\V1\RatePlanList $ratePlans
- * @property \Twilio\Rest\Wireless\V1\UsageRecordList $usageRecords
  * @property \Twilio\Rest\Wireless\V1\SimList $sims
  * @method \Twilio\Rest\Wireless\V1\CommandContext commands(string $sid)
  * @method \Twilio\Rest\Wireless\V1\RatePlanContext ratePlans(string $sid)
@@ -57,8 +57,8 @@ class Wireless extends Domain {
      * @throws TwilioException For unknown versions
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -74,12 +74,19 @@ class Wireless extends Domain {
      * @throws TwilioException For unknown resource
      */
     public function __call($name, $arguments) {
-        $method = 'context' . ucfirst($name);
-        if (method_exists($this, $method)) {
-            return call_user_func_array(array($this, $method), $arguments);
+        $method = 'context' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
+            return \call_user_func_array(array($this, $method), $arguments);
         }
 
         throw new TwilioException('Unknown context ' . $name);
+    }
+
+    /**
+     * @return \Twilio\Rest\Wireless\V1\UsageRecordList
+     */
+    protected function getUsageRecords() {
+        return $this->v1->usageRecords;
     }
 
     /**
@@ -113,13 +120,6 @@ class Wireless extends Domain {
     }
 
     /**
-     * @return \Twilio\Rest\Wireless\V1\UsageRecordList
-     */
-    protected function getUsageRecords() {
-        return $this->v1->usageRecords;
-    }
-
-    /**
      * @return \Twilio\Rest\Wireless\V1\SimList
      */
     protected function getSims() {
@@ -127,7 +127,7 @@ class Wireless extends Domain {
     }
 
     /**
-     * @param string $sid The SID that identifies the resource to fetch
+     * @param string $sid The SID of the Sim resource to fetch
      * @return \Twilio\Rest\Wireless\V1\SimContext
      */
     protected function contextSims($sid) {

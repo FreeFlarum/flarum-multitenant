@@ -39,9 +39,8 @@ class ParticipantInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sessionSid The unique id of the Session for this participant.
-     * @param string $sid A 34 character string that uniquely identifies this
-     *                    resource.
+     * @param string $sessionSid The SID of the Session for the participant
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Session\ParticipantInstance
      */
     public function __construct(Version $version, array $payload, $sessionSid, $sid = null) {
@@ -126,12 +125,12 @@ class ParticipantInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -148,6 +147,6 @@ class ParticipantInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.ParticipantInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.ParticipantInstance ' . \implode(' ', $context) . ']';
     }
 }

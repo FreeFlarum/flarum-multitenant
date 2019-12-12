@@ -74,7 +74,7 @@ class AvailableAddOnList extends ListResource {
      * @return AvailableAddOnInstance[] Array of results
      */
     public function read($limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($limit, $pageSize), false);
+        return \iterator_to_array($this->stream($limit, $pageSize), false);
     }
 
     /**
@@ -121,7 +121,7 @@ class AvailableAddOnList extends ListResource {
     /**
      * Constructs a AvailableAddOnContext
      *
-     * @param string $sid The unique Available Add-on Sid
+     * @param string $sid The SID of the AvailableAddOn resource to fetch
      * @return \Twilio\Rest\Preview\Marketplace\AvailableAddOnContext
      */
     public function getContext($sid) {

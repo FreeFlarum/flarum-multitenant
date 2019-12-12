@@ -5,28 +5,28 @@
 mybbtoflarum:
   admin:
     nav:
-      title: 'MyBB to Flarum'
-      description: 'Convert a MyBB forum into this Flarum instance'
+      title: 'Migracja MyBB do Flarum'
+      description: 'Konwertuj forum MyBB do tej instalacji Flarum'
     page:
-      text: 'Convert a Mybb forum into this Flarum instance. Fill in the required data, aftwards click on "migrate".'
-      btnConvert: Migrate
+      text: 'Konwertuj forum MyBB do tej instalacji Flarum. Wypełnij wymagane dane, po czym kliknij "Migruj".'
+      btnConvert: Migruj
       form:
         general:
-          title: 'General settings'
-          migrateAvatars: 'Migrate avatars'
-          migrateSoftThreads: 'Migrate soft deleted threads'
-          migrateSoftPosts: 'Migrate soft deleted posts'
+          title: 'Ustawienia ogólne'
+          migrateAvatars: 'Migruj awatary'
+          migrateSoftThreads: 'Migruj ukryte (soft deleted) wątki'
+          migrateSoftPosts: 'Migruj ukryte (soft deleted) posty'
         mybb:
-          title: 'MyBB settings'
-          host: 'Database host'
-          user: 'Database user'
-          password: 'Database password'
-          db: 'Database name'
-          prefix: 'Table prefix'
-          mybbPath: 'Absolute MyBB path'
+          title: 'Ustawienia MyBB'
+          host: 'Host bazy danych'
+          user: 'Użytkownik bazy danych'
+          password: 'Hasło do bazy danych'
+          db: 'Nazwa bazy danych'
+          prefix: 'Prefiks tabeli'
+          mybbPath: 'Absolutna ścieżka do MyBB'
         options:
-          title: 'General migrate options'
-          migrateUsers: 'Migrate users'
-          migrateThreadsPosts: 'Migrate threads and posts'
-          migrateUserGroups: 'Migrate user groups'
-          migrateCategories: 'Migrate categories'
+          title: 'Ogólne opcje migracji'
+          migrateUsers: 'Migruj użytkowników'
+          migrateThreadsPosts: 'Migruj wątki i posty'
+          migrateUserGroups: 'Migruj grupy użytkowników'
+          migrateCategories: 'Migruj kategorie'

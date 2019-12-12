@@ -29,6 +29,7 @@ use Twilio\Version;
  * @property string $integrationType
  * @property array $integration
  * @property bool $longLived
+ * @property bool $janitorEnabled
  * @property string $url
  */
 class FlexFlowInstance extends InstanceResource {
@@ -37,7 +38,7 @@ class FlexFlowInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid The unique ID of the FlexFlow
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\FlexApi\V1\FlexFlowInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -57,6 +58,7 @@ class FlexFlowInstance extends InstanceResource {
             'integrationType' => Values::array_get($payload, 'integration_type'),
             'integration' => Values::array_get($payload, 'integration'),
             'longLived' => Values::array_get($payload, 'long_lived'),
+            'janitorEnabled' => Values::array_get($payload, 'janitor_enabled'),
             'url' => Values::array_get($payload, 'url'),
         );
 
@@ -117,12 +119,12 @@ class FlexFlowInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -139,6 +141,6 @@ class FlexFlowInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.FlexApi.V1.FlexFlowInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.FlexApi.V1.FlexFlowInstance ' . \implode(' ', $context) . ']';
     }
 }

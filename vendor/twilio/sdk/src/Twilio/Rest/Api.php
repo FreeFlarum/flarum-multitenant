@@ -94,8 +94,8 @@ class Api extends Domain {
      * @throws TwilioException For unknown versions
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -111,9 +111,9 @@ class Api extends Domain {
      * @throws TwilioException For unknown resource
      */
     public function __call($name, $arguments) {
-        $method = 'context' . ucfirst($name);
-        if (method_exists($this, $method)) {
-            return call_user_func_array(array($this, $method), $arguments);
+        $method = 'context' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
+            return \call_user_func_array(array($this, $method), $arguments);
         }
 
         throw new TwilioException('Unknown context ' . $name);
@@ -218,7 +218,7 @@ class Api extends Domain {
     }
 
     /**
-     * @param string $sid The unique string that identifies this resource
+     * @param string $sid The SID of the Call resource to fetch
      * @return \Twilio\Rest\Api\V2010\Account\CallContext
      */
     protected function contextCalls($sid) {

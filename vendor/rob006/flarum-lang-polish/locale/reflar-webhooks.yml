@@ -5,78 +5,78 @@
 reflar-webhooks:
   actions:
     discussion:
-      started: 'Started discussion `{1}`'
+      started: 'Rozpoczęto dyskusję `{1}`'
       renamed:
-        title: 'Renamed discussion `{1}`'
-        description: 'New title: {1}'
-      hidden: 'Hid discussion `{1}`'
-      restored: 'Restored discussion `{1}`'
-      deleted: 'Deleted discussion `{1}`'
+        title: 'Zmieniono nazwę dyskusji `{1}`'
+        description: 'Nowy tytuł: {1}'
+      hidden: 'Ukryto dyskusję `{1}`'
+      restored: 'Przywrócono dyskusję `{1}`'
+      deleted: 'Usunięto dyskusję `{1}`'
     group:
-      created: 'Created `{1}` group'
-      renamed: 'Renamed a group to `{1}`'
-      deleted: 'Deleted `{1}` group'
+      created: 'Utworzono grupę `{1}`'
+      renamed: 'Zmieniono nazwę grupy na `{1}`'
+      deleted: 'Usunięto grupę `{1}`'
     post:
-      posted: 'New post in `{1}`'
-      revised: 'Edited post in `{1}`'
-      hidden: 'Hid post in `{1}`'
-      restored: 'Restored post in `{1}`'
-      deleted: 'Deleted post in `{1}`'
+      posted: 'Nowy post w `{1}`'
+      revised: 'Edytowano post w `{1}`'
+      hidden: 'Ukryto post w `{1}`'
+      restored: 'Przywrócono post w `{1}`'
+      deleted: 'Usunięto post w `{1}`'
     user:
-      registered: 'New user registered'
+      registered: 'Zarejestrował się nowy użytkownik'
       renamed:
-        title: 'Changed username of `{1}`'
-        description: 'New username: {1}'
-      deleted: 'Deleted user `{1}`'
+        title: 'Zmieniono nazwę użytkownika dla `{1}`'
+        description: 'Nowa nazwa użytkownika: {1}'
+      deleted: 'Usunięto użytkownika `{1}`'
   adapters:
     errors:
-      404: 'Webhook Not Found'
+      404: 'Webhook nie został znaleziony'
   admin:
     errors:
-      service_not_found: 'The service ''{service}'' cannot be found.'
-      url_invalid: 'URL is not valid for selected service.'
+      service_not_found: 'Usługa "{service}" nie została odnaleziona.'
+      url_invalid: 'Ten adres URL jest nieprawidłowy dla wybranej usługi.'
     nav:
-      desc: 'Customizable outgoing webhooks for your forum.'
+      desc: 'Konfigurowalne wychodzące webhooki dla twojego forum.'
     settings:
-      title: Webhooks
+      title: Webhooki
       help:
-        disabled: 'This webhook is disabled because it doesn''t have any events enabled.'
-        general: 'Here you can add, edit, and remove webhooks from your forum.'
-        url: 'The webhook''s endpoint to be executed'
+        disabled: 'Ten webhook jest wyłączony, ponieważ nie ma żadnych aktywnych zdarzeń.'
+        general: 'Tutaj możesz dodać, edytować oraz usuwać webhooki dla swojego forum.'
+        url: 'Docelowy adres URL webhooka'
       modal:
-        title: 'Webhook Settings'
-        description: 'Here you modify what events the webhook is fired on.'
+        title: 'Ustawienia webhooka'
+        description: 'Tutaj możesz ustawić dla jakich zdarzeń webhook będzie wywoływany.'
       services:
         discord: Discord
         slack: Slack
       actions:
         flarum:
           discussion:
-            title: 'Flarum Discussion'
-            started: Started
-            renamed: '=> reflar-webhooks.ref.renamed'
-            hidden: '=> reflar-webhooks.ref.hidden'
-            restored: '=> reflar-webhooks.ref.restored'
-            deleted: '=> reflar-webhooks.ref.deleted'
+            title: Dyskusje
+            started: Rozpoczęto
+            renamed: 'Zmieniono nazwę'
+            hidden: Ukryto
+            restored: Przywrócono
+            deleted: Usunięto
           group:
-            title: 'Flarum Group'
-            created: Created
-            renamed: '=> reflar-webhooks.ref.renamed'
-            deleted: '=> reflar-webhooks.ref.deleted'
+            title: Grupy
+            created: Utworzono
+            renamed: 'Zmieniono nazwę'
+            deleted: Usunięto
           post:
-            title: 'Flarum Post'
-            posted: Posted
-            revised: Edited
-            hidden: '=> reflar-webhooks.ref.hidden'
-            restored: '=> reflar-webhooks.ref.restored'
-            deleted: '=> reflar-webhooks.ref.deleted'
+            title: Posty
+            posted: 'Nowy post'
+            revised: Edytowano
+            hidden: Ukryto
+            restored: Przywrócono
+            deleted: Usunięto
           user:
-            title: 'Flarum User'
-            registered: Registered
-            renamed: '=> reflar-webhooks.ref.renamed'
-            deleted: '=> reflar-webhooks.ref.deleted'
+            title: Użytkownicy
+            registered: Rejestracja
+            renamed: 'Zmieniono nazwę'
+            deleted: Usunięto
   ref:
-    deleted: Deleted
-    hidden: Hidden
-    renamed: Renamed
-    restored: Restored
+    deleted: Usunięto
+    hidden: Ukryto
+    renamed: 'Zmieniono nazwę'
+    restored: Przywrócono

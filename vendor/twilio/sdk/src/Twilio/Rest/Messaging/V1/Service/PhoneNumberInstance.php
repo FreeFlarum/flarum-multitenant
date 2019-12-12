@@ -34,8 +34,9 @@ class PhoneNumberInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $serviceSid The 34 character unique sid of the Service.
-     * @param string $sid The sid
+     * @param string $serviceSid The SID of the Service that the resource is
+     *                           associated with
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Service\PhoneNumberInstance
      */
     public function __construct(Version $version, array $payload, $serviceSid, $sid = null) {
@@ -105,12 +106,12 @@ class PhoneNumberInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -127,6 +128,6 @@ class PhoneNumberInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.PhoneNumberInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.PhoneNumberInstance ' . \implode(' ', $context) . ']';
     }
 }

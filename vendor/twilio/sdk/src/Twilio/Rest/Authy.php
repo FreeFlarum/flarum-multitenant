@@ -15,10 +15,10 @@ use Twilio\Rest\Authy\V1;
 
 /**
  * @property \Twilio\Rest\Authy\V1 $v1
- * @property \Twilio\Rest\Authy\V1\ServiceList $services
  * @property \Twilio\Rest\Authy\V1\FormList $forms
- * @method \Twilio\Rest\Authy\V1\ServiceContext services(string $sid)
+ * @property \Twilio\Rest\Authy\V1\ServiceList $services
  * @method \Twilio\Rest\Authy\V1\FormContext forms(string $formType)
+ * @method \Twilio\Rest\Authy\V1\ServiceContext services(string $sid)
  */
 class Authy extends Domain {
     protected $_v1 = null;
@@ -54,8 +54,8 @@ class Authy extends Domain {
      * @throws TwilioException For unknown versions
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -71,27 +71,12 @@ class Authy extends Domain {
      * @throws TwilioException For unknown resource
      */
     public function __call($name, $arguments) {
-        $method = 'context' . ucfirst($name);
-        if (method_exists($this, $method)) {
-            return call_user_func_array(array($this, $method), $arguments);
+        $method = 'context' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
+            return \call_user_func_array(array($this, $method), $arguments);
         }
 
         throw new TwilioException('Unknown context ' . $name);
-    }
-
-    /**
-     * @return \Twilio\Rest\Authy\V1\ServiceList
-     */
-    protected function getServices() {
-        return $this->v1->services;
-    }
-
-    /**
-     * @param string $sid A string that uniquely identifies this Service.
-     * @return \Twilio\Rest\Authy\V1\ServiceContext
-     */
-    protected function contextServices($sid) {
-        return $this->v1->services($sid);
     }
 
     /**
@@ -107,6 +92,21 @@ class Authy extends Domain {
      */
     protected function contextForms($formType) {
         return $this->v1->forms($formType);
+    }
+
+    /**
+     * @return \Twilio\Rest\Authy\V1\ServiceList
+     */
+    protected function getServices() {
+        return $this->v1->services;
+    }
+
+    /**
+     * @param string $sid A string that uniquely identifies this Service.
+     * @return \Twilio\Rest\Authy\V1\ServiceContext
+     */
+    protected function contextServices($sid) {
+        return $this->v1->services($sid);
     }
 
     /**

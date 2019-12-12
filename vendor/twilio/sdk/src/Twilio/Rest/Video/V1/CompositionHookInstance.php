@@ -23,7 +23,7 @@ use Twilio\Version;
  * @property string $friendlyName
  * @property bool $enabled
  * @property \DateTime $dateCreated
- * @property string $dateUpdated
+ * @property \DateTime $dateUpdated
  * @property string $sid
  * @property string $audioSources
  * @property string $audioSourcesExcluded
@@ -41,8 +41,7 @@ class CompositionHookInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid The Composition Hook Sid that uniquely identifies the
-     *                    Composition Hook to fetch.
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\CompositionHookInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -54,7 +53,7 @@ class CompositionHookInstance extends InstanceResource {
             'friendlyName' => Values::array_get($payload, 'friendly_name'),
             'enabled' => Values::array_get($payload, 'enabled'),
             'dateCreated' => Deserialize::dateTime(Values::array_get($payload, 'date_created')),
-            'dateUpdated' => Values::array_get($payload, 'date_updated'),
+            'dateUpdated' => Deserialize::dateTime(Values::array_get($payload, 'date_updated')),
             'sid' => Values::array_get($payload, 'sid'),
             'audioSources' => Values::array_get($payload, 'audio_sources'),
             'audioSourcesExcluded' => Values::array_get($payload, 'audio_sources_excluded'),
@@ -108,8 +107,7 @@ class CompositionHookInstance extends InstanceResource {
     /**
      * Update the CompositionHookInstance
      *
-     * @param string $friendlyName Friendly name of the Composition Hook to be
-     *                             shown in the console.
+     * @param string $friendlyName A unique string to describe the resource
      * @param array|Options $options Optional Arguments
      * @return CompositionHookInstance Updated CompositionHookInstance
      * @throws TwilioException When an HTTP error occurs.
@@ -126,12 +124,12 @@ class CompositionHookInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -148,6 +146,6 @@ class CompositionHookInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Video.V1.CompositionHookInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Video.V1.CompositionHookInstance ' . \implode(' ', $context) . ']';
     }
 }

@@ -88,7 +88,7 @@ class ReadQueryOptions extends Options {
     }
 
     /**
-     * The status of the resources to read. Can be: `pending_review`, `reviewed`, or `discarded`
+     * The status of the resources to read. Can be: `pending-review`, `reviewed`, or `discarded`
      *
      * @param string $status The status of the resources to read
      * @return $this Fluent Builder
@@ -110,7 +110,7 @@ class ReadQueryOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Autopilot.V1.ReadQueryOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Autopilot.V1.ReadQueryOptions ' . \implode(' ', $options) . ']';
     }
 }
 
@@ -160,7 +160,7 @@ class CreateQueryOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Autopilot.V1.CreateQueryOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Autopilot.V1.CreateQueryOptions ' . \implode(' ', $options) . ']';
     }
 }
 
@@ -188,7 +188,7 @@ class UpdateQueryOptions extends Options {
     }
 
     /**
-     * The new status of the resource. Can be: `pending_review`, `reviewed`, or `discarded`
+     * The new status of the resource. Can be: `pending-review`, `reviewed`, or `discarded`
      *
      * @param string $status The new status of the resource
      * @return $this Fluent Builder
@@ -210,6 +210,6 @@ class UpdateQueryOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Autopilot.V1.UpdateQueryOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Autopilot.V1.UpdateQueryOptions ' . \implode(' ', $options) . ']';
     }
 }

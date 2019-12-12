@@ -30,9 +30,9 @@ class SubscribeRulesInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $roomSid The unique Room identifier for the Subscribe Rules
-     * @param string $participantSid The unique Participant identifier for the
-     *                               Subscribe Rules.
+     * @param string $roomSid The SID of the Room resource for the Subscribe Rules
+     * @param string $participantSid The SID of the Participant resource for the
+     *                               Subscribe Rules
      * @return \Twilio\Rest\Video\V1\Room\Participant\SubscribeRulesInstance
      */
     public function __construct(Version $version, array $payload, $roomSid, $participantSid) {
@@ -58,12 +58,12 @@ class SubscribeRulesInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 

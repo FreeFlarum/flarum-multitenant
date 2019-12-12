@@ -69,7 +69,7 @@ class ReadCountryOptions extends Options {
     }
 
     /**
-     * Filter to retrieve the country permissions by specifying the [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+     * Filter to retrieve the country permissions by specifying the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
      *
      * @param string $isoCode Filter to retrieve the country permissions by
      *                        specifying the ISO country code
@@ -156,6 +156,6 @@ class ReadCountryOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Voice.V1.ReadCountryOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Voice.V1.ReadCountryOptions ' . \implode(' ', $options) . ']';
     }
 }

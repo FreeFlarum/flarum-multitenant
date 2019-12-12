@@ -21,9 +21,11 @@ class WorkerChannelContext extends InstanceContext {
      * Initialize the WorkerChannelContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $workerSid The worker_sid
-     * @param string $sid The sid
+     * @param string $workspaceSid The SID of the Workspace with the WorkerChannel
+     *                             to fetch
+     * @param string $workerSid The SID of the Worker with the WorkerChannel to
+     *                          fetch
+     * @param string $sid The SID of the to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Worker\WorkerChannelContext
      */
     public function __construct(Version $version, $workspaceSid, $workerSid, $sid) {
@@ -32,7 +34,7 @@ class WorkerChannelContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'workerSid' => $workerSid, 'sid' => $sid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Workers/' . rawurlencode($workerSid) . '/Channels/' . rawurlencode($sid) . '';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Workers/' . \rawurlencode($workerSid) . '/Channels/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -100,6 +102,6 @@ class WorkerChannelContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkerChannelContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkerChannelContext ' . \implode(' ', $context) . ']';
     }
 }

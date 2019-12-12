@@ -32,8 +32,11 @@ class WorkflowRealTimeStatisticsInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $workspaceSid The workspace_sid
-     * @param string $workflowSid The workflow_sid
+     * @param string $workspaceSid The SID of the Workspace that contains the
+     *                             Workflow.
+     * @param string $workflowSid Returns the list of Tasks that are being
+     *                            controlled by the Workflow with the specified SID
+     *                            value
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Workflow\WorkflowRealTimeStatisticsInstance
      */
     public function __construct(Version $version, array $payload, $workspaceSid, $workflowSid) {
@@ -94,12 +97,12 @@ class WorkflowRealTimeStatisticsInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -116,6 +119,6 @@ class WorkflowRealTimeStatisticsInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkflowRealTimeStatisticsInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkflowRealTimeStatisticsInstance ' . \implode(' ', $context) . ']';
     }
 }

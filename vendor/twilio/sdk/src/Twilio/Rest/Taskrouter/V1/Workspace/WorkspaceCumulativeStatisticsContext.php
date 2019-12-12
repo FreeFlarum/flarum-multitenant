@@ -21,7 +21,7 @@ class WorkspaceCumulativeStatisticsContext extends InstanceContext {
      * Initialize the WorkspaceCumulativeStatisticsContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
+     * @param string $workspaceSid The SID of the Workspace to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\WorkspaceCumulativeStatisticsContext
      */
     public function __construct(Version $version, $workspaceSid) {
@@ -30,7 +30,7 @@ class WorkspaceCumulativeStatisticsContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/CumulativeStatistics';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/CumulativeStatistics';
     }
 
     /**
@@ -75,6 +75,6 @@ class WorkspaceCumulativeStatisticsContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkspaceCumulativeStatisticsContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkspaceCumulativeStatisticsContext ' . \implode(' ', $context) . ']';
     }
 }

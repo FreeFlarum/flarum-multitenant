@@ -38,8 +38,7 @@ class SessionContext extends InstanceContext {
      * Initialize the SessionContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid A 34 character string that uniquely identifies this
-     *                    resource.
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\SessionContext
      */
     public function __construct(Version $version, $sid) {
@@ -48,7 +47,7 @@ class SessionContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/Sessions/' . rawurlencode($sid) . '';
+        $this->uri = '/Sessions/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -154,8 +153,8 @@ class SessionContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -172,8 +171,8 @@ class SessionContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -189,6 +188,6 @@ class SessionContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.SessionContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.SessionContext ' . \implode(' ', $context) . ']';
     }
 }

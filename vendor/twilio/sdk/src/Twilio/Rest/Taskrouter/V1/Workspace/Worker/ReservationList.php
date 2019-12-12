@@ -19,8 +19,9 @@ class ReservationList extends ListResource {
      * Construct the ReservationList
      *
      * @param Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $workerSid The worker_sid
+     * @param string $workspaceSid The SID of the Workspace that this worker is
+     *                             contained within.
+     * @param string $workerSid The SID of the reserved Worker resource
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Worker\ReservationList
      */
     public function __construct(Version $version, $workspaceSid, $workerSid) {
@@ -29,7 +30,7 @@ class ReservationList extends ListResource {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'workerSid' => $workerSid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Workers/' . rawurlencode($workerSid) . '/Reservations';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Workers/' . \rawurlencode($workerSid) . '/Reservations';
     }
 
     /**
@@ -76,7 +77,7 @@ class ReservationList extends ListResource {
      * @return ReservationInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -126,7 +127,7 @@ class ReservationList extends ListResource {
     /**
      * Constructs a ReservationContext
      *
-     * @param string $sid The sid
+     * @param string $sid The SID of the WorkerReservation resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Worker\ReservationContext
      */
     public function getContext($sid) {

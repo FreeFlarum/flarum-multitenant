@@ -27,12 +27,6 @@ composer update marketplace/flarum-l10n-core-russian
 php flarum cache:clear
 ```
 
-## Support / Поддержка
-
-- [Forum](https://webmasters.community/)
-- [Documentation](https://webmasters.wiki/)
-
 ## Donation / Пожертвование
 
-- [Liberapay](https://liberapay.com/marketplace/donate)
-- [Patreon](https://patreon.com/marketplace)
+- [Donating](https://donating.gitlab.io/)

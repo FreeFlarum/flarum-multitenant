@@ -61,11 +61,11 @@ class NotificationInstance extends InstanceResource {
             'moreInfo' => Values::array_get($payload, 'more_info'),
             'requestMethod' => Values::array_get($payload, 'request_method'),
             'requestUrl' => Values::array_get($payload, 'request_url'),
-            'sid' => Values::array_get($payload, 'sid'),
-            'uri' => Values::array_get($payload, 'uri'),
             'requestVariables' => Values::array_get($payload, 'request_variables'),
             'responseBody' => Values::array_get($payload, 'response_body'),
             'responseHeaders' => Values::array_get($payload, 'response_headers'),
+            'sid' => Values::array_get($payload, 'sid'),
+            'uri' => Values::array_get($payload, 'uri'),
         );
 
         $this->solution = array('accountSid' => $accountSid, 'sid' => $sid ?: $this->properties['sid'], );
@@ -101,16 +101,6 @@ class NotificationInstance extends InstanceResource {
     }
 
     /**
-     * Deletes the NotificationInstance
-     *
-     * @return boolean True if delete succeeds, false otherwise
-     * @throws TwilioException When an HTTP error occurs.
-     */
-    public function delete() {
-        return $this->proxy()->delete();
-    }
-
-    /**
      * Magic getter to access properties
      *
      * @param string $name Property to access
@@ -118,12 +108,12 @@ class NotificationInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -140,6 +130,6 @@ class NotificationInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Api.V2010.NotificationInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Api.V2010.NotificationInstance ' . \implode(' ', $context) . ']';
     }
 }

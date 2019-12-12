@@ -38,10 +38,10 @@ class CountryInstance extends InstanceResource {
         $this->properties = array(
             'country' => Values::array_get($payload, 'country'),
             'isoCountry' => Values::array_get($payload, 'iso_country'),
-            'url' => Values::array_get($payload, 'url'),
             'outboundPrefixPrices' => Values::array_get($payload, 'outbound_prefix_prices'),
             'inboundCallPrices' => Values::array_get($payload, 'inbound_call_prices'),
             'priceUnit' => Values::array_get($payload, 'price_unit'),
+            'url' => Values::array_get($payload, 'url'),
         );
 
         $this->solution = array('isoCountry' => $isoCountry ?: $this->properties['isoCountry'], );
@@ -80,12 +80,12 @@ class CountryInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -102,6 +102,6 @@ class CountryInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Pricing.V1.CountryInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Pricing.V1.CountryInstance ' . \implode(' ', $context) . ']';
     }
 }

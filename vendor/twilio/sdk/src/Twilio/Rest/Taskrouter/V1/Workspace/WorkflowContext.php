@@ -35,8 +35,9 @@ class WorkflowContext extends InstanceContext {
      * Initialize the WorkflowContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $sid The sid
+     * @param string $workspaceSid The SID of the Workspace with the Workflow to
+     *                             fetch
+     * @param string $sid The SID of the resource
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\WorkflowContext
      */
     public function __construct(Version $version, $workspaceSid, $sid) {
@@ -45,7 +46,7 @@ class WorkflowContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'sid' => $sid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Workflows/' . rawurlencode($sid) . '';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Workflows/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -87,6 +88,7 @@ class WorkflowContext extends InstanceContext {
             'FallbackAssignmentCallbackUrl' => $options['fallbackAssignmentCallbackUrl'],
             'Configuration' => $options['configuration'],
             'TaskReservationTimeout' => $options['taskReservationTimeout'],
+            'ReEvaluateTasks' => $options['reEvaluateTasks'],
         ));
 
         $payload = $this->version->update(
@@ -173,8 +175,8 @@ class WorkflowContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -191,8 +193,8 @@ class WorkflowContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -208,6 +210,6 @@ class WorkflowContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkflowContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkflowContext ' . \implode(' ', $context) . ']';
     }
 }

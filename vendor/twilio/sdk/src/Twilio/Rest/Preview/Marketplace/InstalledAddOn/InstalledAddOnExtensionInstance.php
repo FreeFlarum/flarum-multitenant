@@ -31,8 +31,9 @@ class InstalledAddOnExtensionInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $installedAddOnSid The installed_add_on_sid
-     * @param string $sid The unique Extension Sid
+     * @param string $installedAddOnSid The SID of the InstalledAddOn resource to
+     *                                  which this extension applies
+     * @param string $sid The SID of the InstalledAddOn Extension resource to fetch
      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionInstance
      */
     public function __construct(Version $version, array $payload, $installedAddOnSid, $sid = null) {
@@ -88,7 +89,7 @@ class InstalledAddOnExtensionInstance extends InstanceResource {
     /**
      * Update the InstalledAddOnExtensionInstance
      *
-     * @param bool $enabled A Boolean indicating if the Extension will be invoked
+     * @param bool $enabled Whether the Extension should be invoked
      * @return InstalledAddOnExtensionInstance Updated
      *                                         InstalledAddOnExtensionInstance
      * @throws TwilioException When an HTTP error occurs.
@@ -105,12 +106,12 @@ class InstalledAddOnExtensionInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -127,6 +128,6 @@ class InstalledAddOnExtensionInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.Marketplace.InstalledAddOnExtensionInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.Marketplace.InstalledAddOnExtensionInstance ' . \implode(' ', $context) . ']';
     }
 }

@@ -16,14 +16,14 @@ use Twilio\Rest\Authy\V1\ServiceList;
 use Twilio\Version;
 
 /**
- * @property \Twilio\Rest\Authy\V1\ServiceList $services
  * @property \Twilio\Rest\Authy\V1\FormList $forms
- * @method \Twilio\Rest\Authy\V1\ServiceContext services(string $sid)
+ * @property \Twilio\Rest\Authy\V1\ServiceList $services
  * @method \Twilio\Rest\Authy\V1\FormContext forms(string $formType)
+ * @method \Twilio\Rest\Authy\V1\ServiceContext services(string $sid)
  */
 class V1 extends Version {
-    protected $_services = null;
     protected $_forms = null;
+    protected $_services = null;
 
     /**
      * Construct the V1 version of Authy
@@ -37,16 +37,6 @@ class V1 extends Version {
     }
 
     /**
-     * @return \Twilio\Rest\Authy\V1\ServiceList
-     */
-    protected function getServices() {
-        if (!$this->_services) {
-            $this->_services = new ServiceList($this);
-        }
-        return $this->_services;
-    }
-
-    /**
      * @return \Twilio\Rest\Authy\V1\FormList
      */
     protected function getForms() {
@@ -57,6 +47,16 @@ class V1 extends Version {
     }
 
     /**
+     * @return \Twilio\Rest\Authy\V1\ServiceList
+     */
+    protected function getServices() {
+        if (!$this->_services) {
+            $this->_services = new ServiceList($this);
+        }
+        return $this->_services;
+    }
+
+    /**
      * Magic getter to lazy load root resources
      *
      * @param string $name Resource to return
@@ -64,8 +64,8 @@ class V1 extends Version {
      * @throws TwilioException For unknown resource
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -82,8 +82,8 @@ class V1 extends Version {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');

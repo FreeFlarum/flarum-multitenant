@@ -74,7 +74,7 @@ class SimList extends ListResource {
      * @return SimInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -128,7 +128,7 @@ class SimList extends ListResource {
     /**
      * Constructs a SimContext
      *
-     * @param string $sid The SID that identifies the resource to fetch
+     * @param string $sid The SID of the Sim resource to fetch
      * @return \Twilio\Rest\Wireless\V1\SimContext
      */
     public function getContext($sid) {

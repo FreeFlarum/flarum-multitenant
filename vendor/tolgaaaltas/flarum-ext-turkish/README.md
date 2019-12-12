@@ -11,6 +11,7 @@ composer require tolgaaaltas/flarum-ext-turkish
 ## Extension list
 
 - [🌊 Syndication extension (RSS & Atom feeds) by AmauryPi](https://discuss.flarum.org/d/4395-syndication-extension-rss-atom-feeds)
+- [🤑 Money by antoinefr](https://discuss.flarum.org/d/4699-money-extension)
 - [🤹‍♂️ Author Change by clarkwinkelmann](https://discuss.flarum.org/d/21731-discussion-and-post-author-change)
 - [⏲ Change post date by clarkwinkelmann](https://discuss.flarum.org/d/21247-change-post-date)
 - [😆 Status by clarkwinkelmann](https://discuss.flarum.org/d/21983-user-status)
@@ -62,8 +63,11 @@ composer require tolgaaaltas/flarum-ext-turkish
 - [👪 User Directory by FriendsOfFlarum](https://discuss.flarum.org/d/5682-user-directory-by-friendsofflarum)
 - [📖 UserBio by FriendsOfFlarum](https://discuss.flarum.org/d/17775-friendsofflarum-user-bio)
 - [🎃 Username Request by FriendsOfFlarum](https://discuss.flarum.org/d/20956-friendsofflarum-username-request)
-- [🌎GeoIP by FriendsOfFlarum](https://discuss.flarum.org/d/21493-friendsofflarum-geoip)
+- [🌎 GeoIP by FriendsOfFlarum](https://discuss.flarum.org/d/21493-friendsofflarum-geoip)
+- [🖥 Bing Wallpaper by irony](https://github.com/892768447/flarum-ext-bing-wallpaper)
 - [🔦 Google Search by irony](https://github.com/892768447/flarum-ext-google-search)
+- [🙄 Login2See by WiseClock](https://discuss.flarum.org/d/5168-login2see)
+- [💱 Multi-Purpose Affiliation Links Generator by KILOWHAT](https://discuss.flarum.org/d/21833-multi-purpose-affiliation-links-generator)
 - [📤 Mailing by KILOWHAT](https://discuss.flarum.org/d/20443-mailing-by-kilowhat)
 - [⌨ Keyboard Shortcuts by kvothe](https://discuss.flarum.org/d/19301-keyboard-shortcuts)
 - [➕ Sign Up Button by kvothe](https://discuss.flarum.org/d/18812-sign-up-button)

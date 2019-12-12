@@ -21,8 +21,8 @@ class ActivityList extends ListResource {
      * Construct the ActivityList
      *
      * @param Version $version Version that contains the resource
-     * @param string $workspaceSid The unique ID of the Workspace that this
-     *                             Activity belongs to.
+     * @param string $workspaceSid The SID of the Workspace that contains the
+     *                             Activity
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\ActivityList
      */
     public function __construct(Version $version, $workspaceSid) {
@@ -31,7 +31,7 @@ class ActivityList extends ListResource {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Activities';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Activities';
     }
 
     /**
@@ -78,7 +78,7 @@ class ActivityList extends ListResource {
      * @return ActivityInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -129,8 +129,7 @@ class ActivityList extends ListResource {
     /**
      * Create a new ActivityInstance
      *
-     * @param string $friendlyName A human-readable name for the Activity, such as
-     *                             'On Call', 'Break', 'Email', etc.
+     * @param string $friendlyName A string to describe the Activity resource
      * @param array|Options $options Optional Arguments
      * @return ActivityInstance Newly created ActivityInstance
      * @throws TwilioException When an HTTP error occurs.
@@ -156,7 +155,7 @@ class ActivityList extends ListResource {
     /**
      * Constructs a ActivityContext
      *
-     * @param string $sid The sid
+     * @param string $sid The SID of the resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\ActivityContext
      */
     public function getContext($sid) {

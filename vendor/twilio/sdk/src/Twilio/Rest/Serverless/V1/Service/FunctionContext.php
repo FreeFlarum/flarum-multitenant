@@ -28,8 +28,9 @@ class FunctionContext extends InstanceContext {
      * Initialize the FunctionContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $serviceSid Service Sid.
-     * @param string $sid Function Sid.
+     * @param string $serviceSid The SID of the Service to fetch the Function
+     *                           resource from
+     * @param string $sid The SID of the Function resource to fetch
      * @return \Twilio\Rest\Serverless\V1\Service\FunctionContext
      */
     public function __construct(Version $version, $serviceSid, $sid) {
@@ -38,7 +39,7 @@ class FunctionContext extends InstanceContext {
         // Path Solution
         $this->solution = array('serviceSid' => $serviceSid, 'sid' => $sid, );
 
-        $this->uri = '/Services/' . rawurlencode($serviceSid) . '/Functions/' . rawurlencode($sid) . '';
+        $this->uri = '/Services/' . \rawurlencode($serviceSid) . '/Functions/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -77,7 +78,7 @@ class FunctionContext extends InstanceContext {
     /**
      * Update the FunctionInstance
      *
-     * @param string $friendlyName A human-readable description of this Function.
+     * @param string $friendlyName A string to describe the Function resource
      * @return FunctionInstance Updated FunctionInstance
      * @throws TwilioException When an HTTP error occurs.
      */
@@ -124,8 +125,8 @@ class FunctionContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -142,8 +143,8 @@ class FunctionContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -159,6 +160,6 @@ class FunctionContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Serverless.V1.FunctionContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Serverless.V1.FunctionContext ' . \implode(' ', $context) . ']';
     }
 }

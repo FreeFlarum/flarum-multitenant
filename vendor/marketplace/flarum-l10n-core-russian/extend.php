@@ -7,4 +7,4 @@
  * file that was distributed with this source code.
  */
 
-return new Flarum\Extend\LanguagePack;
+return new Flarum\Extend\LanguagePack();

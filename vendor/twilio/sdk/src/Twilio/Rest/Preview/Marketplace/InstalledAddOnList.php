@@ -38,10 +38,8 @@ class InstalledAddOnList extends ListResource {
     /**
      * Create a new InstalledAddOnInstance
      *
-     * @param string $availableAddOnSid A string that uniquely identifies the
-     *                                  Add-on to install
-     * @param bool $acceptTermsOfService A boolean reflecting your acceptance of
-     *                                   the Terms of Service
+     * @param string $availableAddOnSid The SID of the AvaliableAddOn to install
+     * @param bool $acceptTermsOfService Whether the Terms of Service were accepted
      * @param array|Options $options Optional Arguments
      * @return InstalledAddOnInstance Newly created InstalledAddOnInstance
      * @throws TwilioException When an HTTP error occurs.
@@ -108,7 +106,7 @@ class InstalledAddOnList extends ListResource {
      * @return InstalledAddOnInstance[] Array of results
      */
     public function read($limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($limit, $pageSize), false);
+        return \iterator_to_array($this->stream($limit, $pageSize), false);
     }
 
     /**
@@ -155,7 +153,7 @@ class InstalledAddOnList extends ListResource {
     /**
      * Constructs a InstalledAddOnContext
      *
-     * @param string $sid The unique Installed Add-on Sid
+     * @param string $sid The SID of the InstalledAddOn resource to fetch
      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext
      */
     public function getContext($sid) {

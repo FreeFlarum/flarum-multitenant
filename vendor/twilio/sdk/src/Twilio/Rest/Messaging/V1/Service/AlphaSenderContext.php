@@ -22,8 +22,9 @@ class AlphaSenderContext extends InstanceContext {
      * Initialize the AlphaSenderContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $serviceSid The service_sid
-     * @param string $sid The sid
+     * @param string $serviceSid The SID of the Messaging Service to fetch the
+     *                           resource from
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Service\AlphaSenderContext
      */
     public function __construct(Version $version, $serviceSid, $sid) {
@@ -32,7 +33,7 @@ class AlphaSenderContext extends InstanceContext {
         // Path Solution
         $this->solution = array('serviceSid' => $serviceSid, 'sid' => $sid, );
 
-        $this->uri = '/Services/' . rawurlencode($serviceSid) . '/AlphaSenders/' . rawurlencode($sid) . '';
+        $this->uri = '/Services/' . \rawurlencode($serviceSid) . '/AlphaSenders/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -78,6 +79,6 @@ class AlphaSenderContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.AlphaSenderContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.AlphaSenderContext ' . \implode(' ', $context) . ']';
     }
 }

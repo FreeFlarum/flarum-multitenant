@@ -97,6 +97,16 @@ class UserChannelInstance extends InstanceResource {
     }
 
     /**
+     * Deletes the UserChannelInstance
+     *
+     * @return boolean True if delete succeeds, false otherwise
+     * @throws TwilioException When an HTTP error occurs.
+     */
+    public function delete() {
+        return $this->proxy()->delete();
+    }
+
+    /**
      * Update the UserChannelInstance
      *
      * @param string $notificationLevel The push notification level to assign to
@@ -116,12 +126,12 @@ class UserChannelInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -138,6 +148,6 @@ class UserChannelInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Chat.V2.UserChannelInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Chat.V2.UserChannelInstance ' . \implode(' ', $context) . ']';
     }
 }

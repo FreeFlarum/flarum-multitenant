@@ -3,20 +3,22 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Queue;
 
 use Flarum\Console\Event\Configuring;
 use Flarum\Foundation\AbstractServiceProvider;
+use Flarum\Foundation\ErrorHandling\Registry;
+use Flarum\Foundation\ErrorHandling\Reporter;
 use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandling;
 use Illuminate\Contracts\Queue\Factory;
+use Illuminate\Contracts\Queue\Queue;
 use Illuminate\Queue\Connectors\ConnectorInterface;
 use Illuminate\Queue\Console as Commands;
+use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\Failed\NullFailedJobProvider;
 use Illuminate\Queue\Listener as QueueListener;
 use Illuminate\Queue\SyncQueue;
@@ -29,7 +31,7 @@ class QueueServiceProvider extends AbstractServiceProvider
         Commands\ForgetFailedCommand::class,
         Console\ListenCommand::class,
         Commands\ListFailedCommand::class,
-//        Commands\RestartCommand::class,
+        Commands\RestartCommand::class,
         Commands\RetryCommand::class,
         Commands\WorkCommand::class,
     ];
@@ -83,12 +85,19 @@ class QueueServiceProvider extends AbstractServiceProvider
                 {
                     return $this->app['cache.store'];
                 }
+
+                public function __call($name, $arguments)
+                {
+                    return call_user_func_array([$this->driver(), $name], $arguments);
+                }
             };
         });
 
         $this->app->singleton('queue.failer', function () {
             return new NullFailedJobProvider();
         });
+
+        $this->app->alias('flarum.queue.connection', Queue::class);
 
         $this->app->alias(ConnectorInterface::class, 'queue.connection');
         $this->app->alias(Factory::class, 'queue');
@@ -101,8 +110,34 @@ class QueueServiceProvider extends AbstractServiceProvider
     protected function registerCommands()
     {
         $this->app['events']->listen(Configuring::class, function (Configuring $event) {
+            $queue = $this->app->make(Queue::class);
+
+            // There is no need to have the queue commands when using the sync driver.
+            if ($queue instanceof SyncQueue) {
+                return;
+            }
+
             foreach ($this->commands as $command) {
                 $event->addCommand($command);
+            }
+        });
+    }
+
+    public function boot()
+    {
+        $this->app['events']->listen(JobFailed::class, function (JobFailed $event) {
+            /** @var Registry $registry */
+            $registry = $this->app->make(Registry::class);
+
+            $error = $registry->handle($event->exception);
+
+            /** @var Reporter[] $reporters */
+            $reporters = $this->app->tagged(Reporter::class);
+
+            if ($error->shouldBeReported()) {
+                foreach ($reporters as $reporter) {
+                    $reporter->report($error->getException());
+                }
             }
         });
     }

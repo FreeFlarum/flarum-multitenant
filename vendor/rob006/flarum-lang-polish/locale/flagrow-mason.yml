@@ -7,78 +7,78 @@ flagrow-mason:
     discussion-controls:
       edit-answers: 'Edytuj pola'
     answers-modal:
-      edit-title: 'Edit fields for {title}'
-      save: 'Save fields'
+      edit-title: 'Edytuj pola dla {title}'
+      save: 'Zapisz pola'
     post-answers:
-      no-answer: 'No answer'
+      no-answer: 'Brak odpowiedzi'
     answers:
-      choose-option: 'Choose an option'
-      no-option-selected: 'No option selected'
+      choose-option: 'Wybierz opcję'
+      no-option-selected: 'Nie wybrano żadnej opcji'
     tags:
-      inadequate-settings: "Tag settings are not configured correctly. Allow up to one primary and secondary tags or disable the \"Tags as fields\" feature.\n"
-      tags-label: Tags
+      inadequate-settings: "Ustawienia tagów są nieprawidłowe. Pozwól na maksymalnie jeden tag główny i podrzędny lub wyłącz opcję \"Pokaż listę wyboru tagów jako pole\".\n"
+      tags-label: Tagi
   admin:
     buttons:
-      new-field: 'New field'
-      add-field: 'Add field'
-      save-field: 'Save field changes'
-      delete-field: 'Delete field'
-      edit-field: 'Click to edit field'
-      add-answer: 'Add answer'
-      save-answer: 'Save answer changes'
-      delete-answer: 'Delete answer'
-      show-user-answers: 'Show non-suggested answers ({count})'
+      new-field: 'Nowe pole'
+      add-field: 'Dodaj pole'
+      save-field: 'Zapisz zmiany'
+      delete-field: 'Usuń pole'
+      edit-field: 'Kliknij aby edytować pole'
+      add-answer: 'Dodaj odpowiedź'
+      save-answer: 'Zapisz zmiany'
+      delete-answer: 'Usuń odpowiedź'
+      show-user-answers: 'Pokaż niesugerowane odpowiedzi ({count})'
     menu:
-      description: "Configure custom discussion fields.\n"
+      description: "Konfiguruj niestandardowe pola dyskusji.\n"
     fields:
-      add: 'Add field {field}'
-      edit: 'Edit field {field}'
-      required: Required
-      name: 'Field name'
-      name-help: "The publicly visible (non-translatable) field label.\n"
-      description: 'Field description'
-      description-help: "An optional description to explain the use/need of this field.\n"
-      min_answers_count: 'Minimum required answers'
-      max_answers_count: 'Maximum allowed answers'
-      show_when_empty: 'Show when empty'
-      show_when_empty-help: 'Whether to show the field on the discussion when it has no answer'
-      validation: 'Validation for user values'
-      user_values_allowed: 'User values allowed'
-      user_values_allowed-help: "If enabled, users can add their own values instead of the ones defined by the admin. These values will be checked against the \"Validation\" setting. If disabled they will only be able to use \"suggested\" answers.\n"
-      validation-help: "Check the supported <a>Laravel validation rules</a>. Eg: \"string|min:5\" or \"url\".\n"
-      enable-user-values-for-validation: 'Enable "user values" to configure validation rules'
-      icon: Icon
-      icon-help: "Shows an icon in front of values entered by the user. For a reference of available icons, check the <a>FontAwesome website</a>. Use the full icon class name including prefix, for example \"fas fa-bolt\".\n"
-      icon-preview: 'preview: {preview}'
-      save-field-for-answers: 'Save the field to add answers'
-      is_suggested: 'Suggest answer to users'
-      new-answer-placeholder: 'Some text'
+      add: 'Dodaj pole {field}'
+      edit: 'Edytuj pole {field}'
+      required: Wymagane
+      name: 'Nazwa pola'
+      name-help: "Publicznie widoczna (nieprzetłumaczalna) etykieta pola.\n"
+      description: 'Opis pola'
+      description-help: "Opcjonalny opis wyjaśniający w jaki sposób pole będzie wykorzystywane.\n"
+      min_answers_count: 'Minimalna liczba odpowiedzi'
+      max_answers_count: 'Maksymalna liczba odpowiedzi'
+      show_when_empty: 'Pokaż jeśli puste'
+      show_when_empty-help: 'Czy pokazać to pole w dyskusji nawet jeśli nie zostało uzupełnione'
+      validation: 'Walidacja dla wartości wprowadzonych przez użytkownika'
+      user_values_allowed: 'Pozwól użytkowników podawać własne wartości'
+      user_values_allowed-help: "Jeśli włączone, użytkownicy będą mogli podawać własne wartości zamiast tych zdefiniowanych przez administratora. Te wartości zostaną sprawdzone zgodnie z regułami walidacji podanymi poniżej. Jeśli wyłączone, użytkownicy będą mogli używać jedynie \"sugerowanych\" odpowiedzi.\n"
+      validation-help: "Sprawdź wspierane <a>reguły walidacji Laravela</a>. Na przykład: \"string|min:5\" lub \"url\".\n"
+      enable-user-values-for-validation: 'Pozwól użytkownikom wprowadzać własne wartości, aby skonfigurować reguły walidacji'
+      icon: Ikona
+      icon-help: "Pokazuje ikonę przed wartością podaną przez użytkownika. Aby zobaczyć jakie ikony są dostępne, sprawdź <a>stronę FontAwesome</a>. Użyj pełnej klasy ikony zawierającej prefiks, na przykład \"fas fa-bolt\".\n"
+      icon-preview: 'podgląd: {preview}'
+      save-field-for-answers: 'Zapisz pole, aby dodawać odpowiedzi'
+      is_suggested: 'Sugeruj odpowiedź użytkownikom'
+      new-answer-placeholder: 'Jakiś tekst'
     messages:
-      delete-answer-confirmation: "Are you sure you want to delete answer \"{content}\" ? It will be removed from all discussions that use it. If you want to keep existing answers disable answer suggestion instead. Delete answer ?\n"
-      delete-field-confirmation: "Are you sure you want to delete field \"{name}\" ? The field and its answers will be removed from all discussions that use them. Delete field ?\n"
+      delete-answer-confirmation: "Czy jesteś pewien, że chcesz usunąć odpowiedź \"{content}\"? Zostanie ona usunięta ze wszystkich dyskusji, które ją wykorzystują. Jeśli chcesz zachować istniejące odpowiedzi, wyłącz jedynie sugerowanie tej odpowiedzi. Usunąć odpowiedź?\n"
+      delete-field-confirmation: "Czy jesteś pewien, że chcesz usunąć pole \"{name}\"? Pole oraz jego odpowiedzi zostaną usunięte ze wszystkich dyskusji, które je wykorzystują. Usunąć pole?\n"
     settings:
-      fields-section-title: 'Title of the custom fields section'
-      fields-section-title-placeholder: 'By default no title will be shown'
-      fields-section-title-help: "Users will see this text above the custom fields in the editor and on the discussion.\n"
-      column-count: 'Number of columns when showing the fields'
-      n-columns: '{count} columns'
-      labels-as-placeholders: 'Show labels as placeholders in the form'
-      labels-as-placeholders-help: "Fields will use less vertical space and icons won't be shown anymore. Keep in mind this might have an impact on usability, in particular when editing existing fields.\n"
-      fields-in-hero: 'Show fields in the discussion banner instead of the first post'
-      hide-empty-fields-section: 'Hide title and controls when all fields are empty and hidden'
-      hide-empty-fields-section-help: "By default if the user can edit fields or a title has been set, the section will always be shown, even if all fields are hidden. With this option enabled, the section will be hidden and the \"edit fields\" button will only be available inside the \"reply\" dropdown menu when all fields are blank.\n"
-      tags-as-field: 'Show tags selector as a field'
-      tags-as-field-help: "This will hide the default tags selector and show a custom dropdown field instead. This will only work if you allowed up to one primary and one secondary tag !\n"
-      tags-field-name: 'Label of the tags field'
+      fields-section-title: 'Tytuł sekcji z niestandardowymi polami'
+      fields-section-title-placeholder: 'Domyślnie żaden tytuł nie zostanie wyświetlony'
+      fields-section-title-help: "Użytkownicy zobaczą ten tekst nad niestandardowymi polami w edytorze oraz w dyskusji.\n"
+      column-count: 'Liczba kolumn do wyświetlania pól'
+      n-columns: '{count} kolumn'
+      labels-as-placeholders: 'Pokaż etykiety jako placeholdery pól formularza'
+      labels-as-placeholders-help: "Pola będą zajmować mniej przestrzeni w pionie oraz ikony nie będą się wyświetlać. Miej na uwadze, że może mieć to wpływ na czytelność, zwłaszcza podczas edycji uzupełnionych pól.\n"
+      fields-in-hero: 'Pokaż pola w banerze dyskusji zamiast w pierwszym poście'
+      hide-empty-fields-section: 'Ukryj tytuł i kontrolki jeśli wszystkie pola są puste lub ukryte'
+      hide-empty-fields-section-help: "Domyślnie, jeśli użytkownik może edytować pola lub tytuł został ustawiony, sekcja zawsze będzie wyświetlana, nawet jeśli wszystkie pola są ukryte. Po włączeniu tej opcji, cała sekcja zostanie ukryta i przycisk \"Edytuj pola\" będzie dostępny jedynie wewnątrz menu \"Odpowiedz\", jeśli wszystkie pola są puste.\n"
+      tags-as-field: 'Pokaż listę wyboru tagów jako pole'
+      tags-as-field-help: "To schowa standardowe pole do wyboru tagów i zamiast tego wyświetli niestandardową listę wyboru. Ta opcja zadziała jedynie jeśli pozwoliłeś maksymalnie na jeden główny i jeden tag podrzędny!\n"
+      tags-field-name: 'Etykieta dla pola z tagami'
       tags-field-name-placeholder: '=> flagrow-mason.forum.tags.tags-label'
     titles:
-      settings: Settings
-      fields: Fields
+      settings: Ustawienia
+      fields: Pola
     permissions:
       mason-heading: Mason
-      see-own-fields: 'See fields on own existing discussions'
-      see-other-fields: 'See fields on all existing discussions'
-      fill-fields: 'Fill fields on new discussions'
-      update-own-fields: 'Update fields of own discussion'
-      update-other-fields: 'Update fields of any discussion'
-      skip-required-fields: 'Allowed to skip required fields'
+      see-own-fields: 'Przeglądanie pól we własnych dyskusjach'
+      see-other-fields: 'Przeglądanie pól we wszystkich dyskusjach'
+      fill-fields: 'Uzupełnianie pól dla nowych dyskusji'
+      update-own-fields: 'Edycja pól we własnych dyskusjach'
+      update-other-fields: 'Edycja pól we wszystkich dyskusjach'
+      skip-required-fields: 'Pomijanie wymaganych pól'

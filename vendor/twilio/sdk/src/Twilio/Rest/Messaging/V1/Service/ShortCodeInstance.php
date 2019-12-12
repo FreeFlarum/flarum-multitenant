@@ -34,9 +34,9 @@ class ShortCodeInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $serviceSid The SID of the Service that this resource is
+     * @param string $serviceSid The SID of the Service that the resource is
      *                           associated with
-     * @param string $sid The unique string that identifies this resource
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Service\ShortCodeInstance
      */
     public function __construct(Version $version, array $payload, $serviceSid, $sid = null) {
@@ -105,12 +105,12 @@ class ShortCodeInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -127,6 +127,6 @@ class ShortCodeInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.ShortCodeInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.ShortCodeInstance ' . \implode(' ', $context) . ']';
     }
 }

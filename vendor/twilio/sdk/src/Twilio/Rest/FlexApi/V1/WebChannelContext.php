@@ -20,7 +20,7 @@ class WebChannelContext extends InstanceContext {
      * Initialize the WebChannelContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid Flex Chat Channel Sid
+     * @param string $sid The SID of the WebChannel resource to fetch
      * @return \Twilio\Rest\FlexApi\V1\WebChannelContext
      */
     public function __construct(Version $version, $sid) {
@@ -29,7 +29,7 @@ class WebChannelContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/WebChannels/' . rawurlencode($sid) . '';
+        $this->uri = '/WebChannels/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -95,6 +95,6 @@ class WebChannelContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.FlexApi.V1.WebChannelContext ' . implode(' ', $context) . ']';
+        return '[Twilio.FlexApi.V1.WebChannelContext ' . \implode(' ', $context) . ']';
     }
 }

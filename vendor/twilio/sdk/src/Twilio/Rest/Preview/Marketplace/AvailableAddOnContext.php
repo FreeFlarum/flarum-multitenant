@@ -28,7 +28,7 @@ class AvailableAddOnContext extends InstanceContext {
      * Initialize the AvailableAddOnContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid The unique Available Add-on Sid
+     * @param string $sid The SID of the AvailableAddOn resource to fetch
      * @return \Twilio\Rest\Preview\Marketplace\AvailableAddOnContext
      */
     public function __construct(Version $version, $sid) {
@@ -37,7 +37,7 @@ class AvailableAddOnContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/AvailableAddOns/' . rawurlencode($sid) . '';
+        $this->uri = '/AvailableAddOns/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -79,8 +79,8 @@ class AvailableAddOnContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -97,8 +97,8 @@ class AvailableAddOnContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -114,6 +114,6 @@ class AvailableAddOnContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.Marketplace.AvailableAddOnContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.Marketplace.AvailableAddOnContext ' . \implode(' ', $context) . ']';
     }
 }

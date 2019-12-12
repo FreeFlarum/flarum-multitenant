@@ -14,8 +14,7 @@ use Twilio\Values;
 
 abstract class TaskQueueRealTimeStatisticsOptions {
     /**
-     * @param string $taskChannel Filter real-time and cumulative statistics by
-     *                            TaskChannel.
+     * @param string $taskChannel The TaskChannel for which to fetch statistics
      * @return FetchTaskQueueRealTimeStatisticsOptions Options builder
      */
     public static function fetch($taskChannel = Values::NONE) {
@@ -25,18 +24,16 @@ abstract class TaskQueueRealTimeStatisticsOptions {
 
 class FetchTaskQueueRealTimeStatisticsOptions extends Options {
     /**
-     * @param string $taskChannel Filter real-time and cumulative statistics by
-     *                            TaskChannel.
+     * @param string $taskChannel The TaskChannel for which to fetch statistics
      */
     public function __construct($taskChannel = Values::NONE) {
         $this->options['taskChannel'] = $taskChannel;
     }
 
     /**
-     * Filter real-time and cumulative statistics by TaskChannel. Takes in a Unique Name ("voice", "sms", "default", etc.) or a TaskChannelSid.
+     * The TaskChannel for which to fetch statistics. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
      *
-     * @param string $taskChannel Filter real-time and cumulative statistics by
-     *                            TaskChannel.
+     * @param string $taskChannel The TaskChannel for which to fetch statistics
      * @return $this Fluent Builder
      */
     public function setTaskChannel($taskChannel) {
@@ -56,6 +53,6 @@ class FetchTaskQueueRealTimeStatisticsOptions extends Options {
                 $options[] = "$key=$value";
             }
         }
-        return '[Twilio.Taskrouter.V1.FetchTaskQueueRealTimeStatisticsOptions ' . implode(' ', $options) . ']';
+        return '[Twilio.Taskrouter.V1.FetchTaskQueueRealTimeStatisticsOptions ' . \implode(' ', $options) . ']';
     }
 }

@@ -24,9 +24,9 @@ class ParticipantContext extends InstanceContext {
      * Initialize the ParticipantContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sessionSid The unique id of the Session for this participant.
-     * @param string $sid A 34 character string that uniquely identifies this
-     *                    resource.
+     * @param string $sessionSid The SID of the Session with the participant to
+     *                           fetch
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Session\ParticipantContext
      */
     public function __construct(Version $version, $sessionSid, $sid) {
@@ -35,7 +35,7 @@ class ParticipantContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sessionSid' => $sessionSid, 'sid' => $sid, );
 
-        $this->uri = '/Sessions/' . rawurlencode($sessionSid) . '/Participants/' . rawurlencode($sid) . '';
+        $this->uri = '/Sessions/' . \rawurlencode($sessionSid) . '/Participants/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -112,6 +112,6 @@ class ParticipantContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.ParticipantContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.ParticipantContext ' . \implode(' ', $context) . ']';
     }
 }

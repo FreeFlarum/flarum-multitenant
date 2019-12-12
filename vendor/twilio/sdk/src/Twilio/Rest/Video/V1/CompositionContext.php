@@ -22,8 +22,7 @@ class CompositionContext extends InstanceContext {
      * Initialize the CompositionContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid The Composition Sid that uniquely identifies the
-     *                    Composition to fetch.
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\CompositionContext
      */
     public function __construct(Version $version, $sid) {
@@ -32,7 +31,7 @@ class CompositionContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/Compositions/' . rawurlencode($sid) . '';
+        $this->uri = '/Compositions/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -73,6 +72,6 @@ class CompositionContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Video.V1.CompositionContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Video.V1.CompositionContext ' . \implode(' ', $context) . ']';
     }
 }

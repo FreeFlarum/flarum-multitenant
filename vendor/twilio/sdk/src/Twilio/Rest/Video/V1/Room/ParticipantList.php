@@ -20,8 +20,7 @@ class ParticipantList extends ListResource {
      * Construct the ParticipantList
      *
      * @param Version $version Version that contains the resource
-     * @param string $roomSid A system-generated 34-character string that uniquely
-     *                        identifies.
+     * @param string $roomSid The SID of the participant's room
      * @return \Twilio\Rest\Video\V1\Room\ParticipantList
      */
     public function __construct(Version $version, $roomSid) {
@@ -30,7 +29,7 @@ class ParticipantList extends ListResource {
         // Path Solution
         $this->solution = array('roomSid' => $roomSid, );
 
-        $this->uri = '/Rooms/' . rawurlencode($roomSid) . '/Participants';
+        $this->uri = '/Rooms/' . \rawurlencode($roomSid) . '/Participants';
     }
 
     /**
@@ -77,7 +76,7 @@ class ParticipantList extends ListResource {
      * @return ParticipantInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -130,8 +129,7 @@ class ParticipantList extends ListResource {
     /**
      * Constructs a ParticipantContext
      *
-     * @param string $sid A system-generated 34-character string that uniquely
-     *                    identifies this Participant.
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\Room\ParticipantContext
      */
     public function getContext($sid) {

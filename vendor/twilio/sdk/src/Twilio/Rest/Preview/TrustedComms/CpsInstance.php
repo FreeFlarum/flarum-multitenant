@@ -17,8 +17,8 @@ use Twilio\Version;
 /**
  * PLEASE NOTE that this class contains preview products that are subject to change. Use them with caution. If you currently do not have developer preview access, please contact help@twilio.com.
  *
- * @property string $phoneNumber
  * @property string $cpsUrl
+ * @property string $phoneNumber
  * @property string $url
  */
 class CpsInstance extends InstanceResource {
@@ -34,8 +34,8 @@ class CpsInstance extends InstanceResource {
 
         // Marshaled Properties
         $this->properties = array(
-            'phoneNumber' => Values::array_get($payload, 'phone_number'),
             'cpsUrl' => Values::array_get($payload, 'cps_url'),
+            'phoneNumber' => Values::array_get($payload, 'phone_number'),
             'url' => Values::array_get($payload, 'url'),
         );
 
@@ -75,12 +75,12 @@ class CpsInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -97,6 +97,6 @@ class CpsInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.TrustedComms.CpsInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.TrustedComms.CpsInstance ' . \implode(' ', $context) . ']';
     }
 }

@@ -34,9 +34,9 @@ class TaskChannelInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $workspaceSid The unique ID of the Workspace that this
-     *                             TaskChannel belongs to.
-     * @param string $sid The unique ID for this TaskChannel.
+     * @param string $workspaceSid The SID of the Workspace that contains the
+     *                             TaskChannel
+     * @param string $sid The SID of the TaskChannel resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\TaskChannelInstance
      */
     public function __construct(Version $version, array $payload, $workspaceSid, $sid = null) {
@@ -118,12 +118,12 @@ class TaskChannelInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -140,6 +140,6 @@ class TaskChannelInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.TaskChannelInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.TaskChannelInstance ' . \implode(' ', $context) . ']';
     }
 }

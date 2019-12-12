@@ -34,7 +34,7 @@ class MessageList extends ListResource {
         // Path Solution
         $this->solution = array('conversationSid' => $conversationSid, );
 
-        $this->uri = '/Conversations/' . rawurlencode($conversationSid) . '/Messages';
+        $this->uri = '/Conversations/' . \rawurlencode($conversationSid) . '/Messages';
     }
 
     /**
@@ -53,6 +53,7 @@ class MessageList extends ListResource {
             'DateCreated' => Serialize::iso8601DateTime($options['dateCreated']),
             'DateUpdated' => Serialize::iso8601DateTime($options['dateUpdated']),
             'Attributes' => $options['attributes'],
+            'MediaSid' => $options['mediaSid'],
         ));
 
         $payload = $this->version->create(
@@ -107,7 +108,7 @@ class MessageList extends ListResource {
      * @return MessageInstance[] Array of results
      */
     public function read($limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($limit, $pageSize), false);
+        return \iterator_to_array($this->stream($limit, $pageSize), false);
     }
 
     /**

@@ -50,7 +50,7 @@ class ServiceInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $sid The sid
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\ServiceInstance
      */
     public function __construct(Version $version, array $payload, $sid = null) {
@@ -164,12 +164,12 @@ class ServiceInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -186,6 +186,6 @@ class ServiceInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.ServiceInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.ServiceInstance ' . \implode(' ', $context) . ']';
     }
 }

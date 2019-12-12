@@ -19,8 +19,8 @@ class EventContext extends InstanceContext {
      * Initialize the EventContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $sid The sid
+     * @param string $workspaceSid The SID of the Workspace with the Event to fetch
+     * @param string $sid The SID of the resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\EventContext
      */
     public function __construct(Version $version, $workspaceSid, $sid) {
@@ -29,7 +29,7 @@ class EventContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'sid' => $sid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Events/' . rawurlencode($sid) . '';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Events/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -65,6 +65,6 @@ class EventContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.EventContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.EventContext ' . \implode(' ', $context) . ']';
     }
 }

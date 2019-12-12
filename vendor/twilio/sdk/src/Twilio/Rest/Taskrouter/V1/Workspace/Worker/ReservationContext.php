@@ -21,9 +21,11 @@ class ReservationContext extends InstanceContext {
      * Initialize the ReservationContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $workerSid The worker_sid
-     * @param string $sid The sid
+     * @param string $workspaceSid The SID of the Workspace with the
+     *                             WorkerReservation resource to fetch
+     * @param string $workerSid The SID of the reserved Worker resource with the
+     *                          WorkerReservation resource to fetch
+     * @param string $sid The SID of the WorkerReservation resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Worker\ReservationContext
      */
     public function __construct(Version $version, $workspaceSid, $workerSid, $sid) {
@@ -32,7 +34,7 @@ class ReservationContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'workerSid' => $workerSid, 'sid' => $sid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Workers/' . rawurlencode($workerSid) . '/Reservations/' . rawurlencode($sid) . '';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Workers/' . \rawurlencode($workerSid) . '/Reservations/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -149,6 +151,6 @@ class ReservationContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.ReservationContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.ReservationContext ' . \implode(' ', $context) . ']';
     }
 }

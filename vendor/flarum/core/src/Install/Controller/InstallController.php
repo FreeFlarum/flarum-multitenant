@@ -3,16 +3,15 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Install\Controller;
 
 use Flarum\Http\SessionAuthenticator;
 use Flarum\Install\AdminUser;
+use Flarum\Install\BaseUrl;
 use Flarum\Install\DatabaseConfig;
 use Flarum\Install\Installation;
 use Flarum\Install\StepFailed;
@@ -54,7 +53,7 @@ class InstallController implements RequestHandlerInterface
     public function handle(Request $request): ResponseInterface
     {
         $input = $request->getParsedBody();
-        $baseUrl = rtrim((string) $request->getUri(), '/');
+        $baseUrl = BaseUrl::fromUri($request->getUri());
 
         try {
             $pipeline = $this->installation
@@ -63,7 +62,7 @@ class InstallController implements RequestHandlerInterface
                 ->adminUser($this->makeAdminUser($input))
                 ->settings([
                     'forum_title' => Arr::get($input, 'forumTitle'),
-                    'mail_from' => 'noreply@'.preg_replace('/^www\./i', '', parse_url($baseUrl, PHP_URL_HOST)),
+                    'mail_from' => $baseUrl->toEmail('noreply'),
                     'welcome_title' => 'Welcome to '.Arr::get($input, 'forumTitle'),
                 ])
                 ->build();

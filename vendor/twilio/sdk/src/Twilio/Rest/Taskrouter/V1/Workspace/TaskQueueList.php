@@ -26,7 +26,8 @@ class TaskQueueList extends ListResource {
      * Construct the TaskQueueList
      *
      * @param Version $version Version that contains the resource
-     * @param string $workspaceSid The ID of the Workspace that owns this TaskQueue
+     * @param string $workspaceSid The SID of the Workspace that contains the
+     *                             TaskQueue
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\TaskQueueList
      */
     public function __construct(Version $version, $workspaceSid) {
@@ -35,7 +36,7 @@ class TaskQueueList extends ListResource {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/TaskQueues';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/TaskQueues';
     }
 
     /**
@@ -82,7 +83,7 @@ class TaskQueueList extends ListResource {
      * @return TaskQueueInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -134,7 +135,7 @@ class TaskQueueList extends ListResource {
     /**
      * Create a new TaskQueueInstance
      *
-     * @param string $friendlyName Human readable description of this TaskQueue
+     * @param string $friendlyName A string to describe the resource
      * @param array|Options $options Optional Arguments
      * @return TaskQueueInstance Newly created TaskQueueInstance
      * @throws TwilioException When an HTTP error occurs.
@@ -175,7 +176,7 @@ class TaskQueueList extends ListResource {
     /**
      * Constructs a TaskQueueContext
      *
-     * @param string $sid The sid
+     * @param string $sid The SID of the resource to
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\TaskQueueContext
      */
     public function getContext($sid) {
@@ -190,8 +191,8 @@ class TaskQueueList extends ListResource {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -208,8 +209,8 @@ class TaskQueueList extends ListResource {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');

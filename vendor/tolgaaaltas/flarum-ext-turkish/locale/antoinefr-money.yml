@@ -1,0 +1,18 @@
+antoinefr-money:
+  admin:
+    settings:
+      title: Ayarlar
+      moneyforpost: Yeni gönderi için verilen tutar
+      moneyfordiscussion: Yeni tartışma için verilen tutar
+      moneyname: "Para adı (örn: [para] puan)"
+      postminimumlength: Para kazanmak için gönderinin minimum karakter uzunluğu (Devredışı bırakmak için 0 girin)
+      noshowzero: Değer sıfır ise gösterme
+    permissions:
+      edit_money_label: Tutarı Düzenle
+  forum:
+    user_controls:
+      money_button: Tutarı Düzenle
+    modal:
+      title: "{username} kullanıcısının parası"
+      current: Mevcut:
+      submit_button: => core.ref.save_changes

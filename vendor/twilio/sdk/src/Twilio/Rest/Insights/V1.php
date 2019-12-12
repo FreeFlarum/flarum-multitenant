@@ -11,15 +11,15 @@ namespace Twilio\Rest\Insights;
 
 use Twilio\Domain;
 use Twilio\Exceptions\TwilioException;
-use Twilio\Rest\Insights\V1\CallSummaryList;
+use Twilio\Rest\Insights\V1\CallList;
 use Twilio\Version;
 
 /**
- * @property \Twilio\Rest\Insights\V1\CallSummaryList $summary
- * @method \Twilio\Rest\Insights\V1\CallSummaryContext summary(string $callSid)
+ * @property \Twilio\Rest\Insights\V1\CallList $calls
+ * @method \Twilio\Rest\Insights\V1\CallContext calls(string $sid)
  */
 class V1 extends Version {
-    protected $_summary = null;
+    protected $_calls = null;
 
     /**
      * Construct the V1 version of Insights
@@ -33,13 +33,13 @@ class V1 extends Version {
     }
 
     /**
-     * @return \Twilio\Rest\Insights\V1\CallSummaryList
+     * @return \Twilio\Rest\Insights\V1\CallList
      */
-    protected function getSummary() {
-        if (!$this->_summary) {
-            $this->_summary = new CallSummaryList($this);
+    protected function getCalls() {
+        if (!$this->_calls) {
+            $this->_calls = new CallList($this);
         }
-        return $this->_summary;
+        return $this->_calls;
     }
 
     /**
@@ -50,8 +50,8 @@ class V1 extends Version {
      * @throws TwilioException For unknown resource
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -68,8 +68,8 @@ class V1 extends Version {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');

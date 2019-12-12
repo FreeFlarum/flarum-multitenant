@@ -24,9 +24,9 @@ class WebhookContext extends InstanceContext {
      * Initialize the WebhookContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sessionSid The unique id of the Session for this webhook.
-     * @param string $sid A 34 character string that uniquely identifies this
-     *                    resource.
+     * @param string $sessionSid The SID of the Session with the Webhook resource
+     *                           to fetch
+     * @param string $sid The SID of the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Session\WebhookContext
      */
     public function __construct(Version $version, $sessionSid, $sid) {
@@ -35,7 +35,7 @@ class WebhookContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sessionSid' => $sessionSid, 'sid' => $sid, );
 
-        $this->uri = '/Sessions/' . rawurlencode($sessionSid) . '/Webhooks/' . rawurlencode($sid) . '';
+        $this->uri = '/Sessions/' . \rawurlencode($sessionSid) . '/Webhooks/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -117,6 +117,6 @@ class WebhookContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Messaging.V1.WebhookContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Messaging.V1.WebhookContext ' . \implode(' ', $context) . ']';
     }
 }

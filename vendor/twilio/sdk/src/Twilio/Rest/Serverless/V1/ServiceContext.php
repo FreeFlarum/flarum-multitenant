@@ -42,7 +42,7 @@ class ServiceContext extends InstanceContext {
      * Initialize the ServiceContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid Serverless Service Sid or unique name.
+     * @param string $sid The SID of the Service resource to fetch
      * @return \Twilio\Rest\Serverless\V1\ServiceContext
      */
     public function __construct(Version $version, $sid) {
@@ -51,7 +51,7 @@ class ServiceContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/Services/' . rawurlencode($sid) . '';
+        $this->uri = '/Services/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -167,8 +167,8 @@ class ServiceContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -185,8 +185,8 @@ class ServiceContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -202,6 +202,6 @@ class ServiceContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Serverless.V1.ServiceContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Serverless.V1.ServiceContext ' . \implode(' ', $context) . ']';
     }
 }

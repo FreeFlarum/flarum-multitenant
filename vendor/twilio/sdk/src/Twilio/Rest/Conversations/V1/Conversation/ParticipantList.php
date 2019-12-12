@@ -34,7 +34,7 @@ class ParticipantList extends ListResource {
         // Path Solution
         $this->solution = array('conversationSid' => $conversationSid, );
 
-        $this->uri = '/Conversations/' . rawurlencode($conversationSid) . '/Participants';
+        $this->uri = '/Conversations/' . \rawurlencode($conversationSid) . '/Participants';
     }
 
     /**
@@ -54,6 +54,7 @@ class ParticipantList extends ListResource {
             'DateCreated' => Serialize::iso8601DateTime($options['dateCreated']),
             'DateUpdated' => Serialize::iso8601DateTime($options['dateUpdated']),
             'Attributes' => $options['attributes'],
+            'MessagingBinding.ProjectedAddress' => $options['messagingBindingProjectedAddress'],
         ));
 
         $payload = $this->version->create(
@@ -108,7 +109,7 @@ class ParticipantList extends ListResource {
      * @return ParticipantInstance[] Array of results
      */
     public function read($limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($limit, $pageSize), false);
+        return \iterator_to_array($this->stream($limit, $pageSize), false);
     }
 
     /**

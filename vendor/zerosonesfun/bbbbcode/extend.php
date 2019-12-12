@@ -1,11 +1,10 @@
 <?php
 
 /*
- * This file is part of Flarum.
- *
- * The creator of bbbbcode is Billy Wilcosky. https://wilcosky.com
+ * bbbbcode is a Flarum extension created by Billy Wilcosky.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ * For instructions, please view the README file.
  */
 
 use Flarum\Extend;
@@ -72,17 +71,14 @@ return [
             </div>'
             );
              $config->BBCodes->addCustom(
-               '[audio mp3="{URL22?}" ogg="{URL23?}"]',
-               '<p><audio class="bbaudio inline-exclude" controls>
-                        <source src="{URL22}" type="audio/mpeg">
-                        <source src="{URL23}" type="audio/ogg">
-                </audio></p>'
-            );
-             $config->BBCodes->addCustom(
-               '[audio m4a="{URL3?}" oggm4a="{URL4?}"]',
-               '<p><audio class="bbaudio inline-exclude" style="width:100%;outline:none;" controls>
-                        <source src="{URL3}" type="audio/mp4">
+               '[audio mp3="{URL1?}" m4a="{URL2?}" wav="{URL3?}" ogg="{URL4?}" flac="{URL5?}" webm="{URL6?}" width="{NUMBER?;defaultValue=100}"]',
+               '<p><audio class="bbaudio inline-exclude" style="width:{NUMBER}%;" controls>
+                        <source src="{URL1}" type="audio/mpeg">
+                        <source src="{URL2}" type="audio/mp4">
+                        <source src="{URL3}" type="audio/wav">
                         <source src="{URL4}" type="audio/ogg">
+                        <source src="{URL5}" type="audio/flac">
+                        <source src="{URL6}" type="audio/webm">
                 </audio></p>'
             );
              $config->BBCodes->addCustom(
@@ -141,6 +137,10 @@ return [
              $config->BBCodes->addCustom(
                '[hl]{TEXT36}[/hl]',
                '<span class="bbhighlight">{TEXT36}</span>'
+            );
+             $config->BBCodes->addCustom(
+               '[kbd]{TEXT37}[/kbd]',
+               '<kbd>{TEXT37}</kbd>'
             );
              $config->BBCodes->addFromRepository('BACKGROUND');
              $config->BBCodes->addFromRepository('FONT');

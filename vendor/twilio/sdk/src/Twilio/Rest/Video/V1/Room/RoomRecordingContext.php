@@ -19,8 +19,9 @@ class RoomRecordingContext extends InstanceContext {
      * Initialize the RoomRecordingContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $roomSid The room_sid
-     * @param string $sid The sid
+     * @param string $roomSid The SID of the Room resource with the recording to
+     *                        fetch
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\Room\RoomRecordingContext
      */
     public function __construct(Version $version, $roomSid, $sid) {
@@ -29,7 +30,7 @@ class RoomRecordingContext extends InstanceContext {
         // Path Solution
         $this->solution = array('roomSid' => $roomSid, 'sid' => $sid, );
 
-        $this->uri = '/Rooms/' . rawurlencode($roomSid) . '/Recordings/' . rawurlencode($sid) . '';
+        $this->uri = '/Rooms/' . \rawurlencode($roomSid) . '/Recordings/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -75,6 +76,6 @@ class RoomRecordingContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Video.V1.RoomRecordingContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Video.V1.RoomRecordingContext ' . \implode(' ', $context) . ']';
     }
 }

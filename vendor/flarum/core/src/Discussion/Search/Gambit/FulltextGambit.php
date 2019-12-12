@@ -3,10 +3,8 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Discussion\Search\Gambit;
@@ -53,7 +51,7 @@ class FulltextGambit implements GambitInterface
         // discussions that have a relevant title or that contain relevant posts.
         $query
             ->addSelect('posts_ft.most_relevant_post_id')
-            ->leftJoin(
+            ->join(
                 new Expression('('.$subquery->toSql().') '.$grammar->wrapTable('posts_ft')),
                 'posts_ft.discussion_id', '=', 'discussions.id'
             )

@@ -20,8 +20,9 @@ class ActivityContext extends InstanceContext {
      * Initialize the ActivityContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $sid The sid
+     * @param string $workspaceSid The SID of the Workspace with the Activity
+     *                             resources to fetch
+     * @param string $sid The SID of the resource to fetch
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\ActivityContext
      */
     public function __construct(Version $version, $workspaceSid, $sid) {
@@ -30,7 +31,7 @@ class ActivityContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'sid' => $sid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Activities/' . rawurlencode($sid) . '';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Activities/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -103,6 +104,6 @@ class ActivityContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.ActivityContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.ActivityContext ' . \implode(' ', $context) . ']';
     }
 }

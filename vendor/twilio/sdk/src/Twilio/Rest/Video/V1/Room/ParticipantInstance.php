@@ -40,10 +40,8 @@ class ParticipantInstance extends InstanceResource {
      *
      * @param \Twilio\Version $version Version that contains the resource
      * @param mixed[] $payload The response payload
-     * @param string $roomSid A system-generated 34-character string that uniquely
-     *                        identifies.
-     * @param string $sid A system-generated 34-character string that uniquely
-     *                    identifies this Participant.
+     * @param string $roomSid The SID of the participant's room
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\Room\ParticipantInstance
      */
     public function __construct(Version $version, array $payload, $roomSid, $sid = null) {
@@ -143,12 +141,12 @@ class ParticipantInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -165,6 +163,6 @@ class ParticipantInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Video.V1.ParticipantInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Video.V1.ParticipantInstance ' . \implode(' ', $context) . ']';
     }
 }

@@ -21,8 +21,11 @@ class WorkflowStatisticsContext extends InstanceContext {
      * Initialize the WorkflowStatisticsContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $workspaceSid The workspace_sid
-     * @param string $workflowSid The workflow_sid
+     * @param string $workspaceSid The SID of the Workspace with the Workflow to
+     *                             fetch
+     * @param string $workflowSid Returns the list of Tasks that are being
+     *                            controlled by the Workflow with the specified SID
+     *                            value
      * @return \Twilio\Rest\Taskrouter\V1\Workspace\Workflow\WorkflowStatisticsContext
      */
     public function __construct(Version $version, $workspaceSid, $workflowSid) {
@@ -31,7 +34,7 @@ class WorkflowStatisticsContext extends InstanceContext {
         // Path Solution
         $this->solution = array('workspaceSid' => $workspaceSid, 'workflowSid' => $workflowSid, );
 
-        $this->uri = '/Workspaces/' . rawurlencode($workspaceSid) . '/Workflows/' . rawurlencode($workflowSid) . '/Statistics';
+        $this->uri = '/Workspaces/' . \rawurlencode($workspaceSid) . '/Workflows/' . \rawurlencode($workflowSid) . '/Statistics';
     }
 
     /**
@@ -76,6 +79,6 @@ class WorkflowStatisticsContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Taskrouter.V1.WorkflowStatisticsContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Taskrouter.V1.WorkflowStatisticsContext ' . \implode(' ', $context) . ']';
     }
 }

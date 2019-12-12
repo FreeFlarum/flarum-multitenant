@@ -29,7 +29,7 @@ class SimContext extends InstanceContext {
      * Initialize the SimContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $sid The SID that identifies the resource to fetch
+     * @param string $sid The SID of the Sim resource to fetch
      * @return \Twilio\Rest\Wireless\V1\SimContext
      */
     public function __construct(Version $version, $sid) {
@@ -38,7 +38,7 @@ class SimContext extends InstanceContext {
         // Path Solution
         $this->solution = array('sid' => $sid, );
 
-        $this->uri = '/Sims/' . rawurlencode($sid) . '';
+        $this->uri = '/Sims/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -87,6 +87,7 @@ class SimContext extends InstanceContext {
             'VoiceMethod' => $options['voiceMethod'],
             'VoiceUrl' => $options['voiceUrl'],
             'ResetStatus' => $options['resetStatus'],
+            'AccountSid' => $options['accountSid'],
         ));
 
         $payload = $this->version->update(
@@ -143,8 +144,8 @@ class SimContext extends InstanceContext {
      * @throws TwilioException For unknown subresources
      */
     public function __get($name) {
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -161,8 +162,8 @@ class SimContext extends InstanceContext {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');
@@ -178,6 +179,6 @@ class SimContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Wireless.V1.SimContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Wireless.V1.SimContext ' . \implode(' ', $context) . ']';
     }
 }

@@ -1,7 +1,7 @@
 # bbbbcode
-**Big Beautiful BBcode**
+**Big Beautiful BBCode**
 
-A Flarum extension which adds additional bbcodes. It is lightweight; all of the bbcodes are HTML and CSS only. However, currently a JavaScript polyfill is added which ensures that the spoiler bbcode will work in IE and Edge browsers. One day, this small bit of JavaScript may be removed if it is determined that it is no longer necessary.
+A Flarum extension which adds additional BBCodes. It is lightweight; all of the BBCodes are HTML and CSS only. However, currently a JavaScript polyfill is added which ensures that the spoiler BBCode will work in IE and Edge browsers.
 
 ## Install
 
@@ -23,7 +23,7 @@ A Flarum extension which adds additional bbcodes. It is lightweight; all of the 
 
 ## Usage
 
-The following BBcodes are available:
+The following BBCodes are available:
 
 **Tooltip:** 
 
@@ -73,11 +73,16 @@ The following BBcodes are available:
 
 **Audio:**
 ~~~
-[audio mp3="https://archive.org/download/MLKDream/MLKDream_64kb.mp3" ogg="https://archive.org/download/MLKDream/MLKDream.ogg"]
-[audio mp3="https://archive.org/download/MLKDream/MLKDream_64kb.mp3"]
-[audio ogg="https://archive.org/download/MLKDream/MLKDream.ogg"]
+[audio mp3="song.mp3" ogg="song.ogg"]
+[audio mp3="song.mp3"]
+[audio ogg="song.ogg"]
+[audio m4a="song.m4a"]
+[audio wav="song.wav"]
+[audio flac="song.flac"]
+[audio webm="song.webm"]
+[audio mp3="song.mp3" width="50"]
 ~~~
-(You may put a mp3 and ogg file together for maximum browser compatibility, or just post a mp3 alone or an ogg file alone.)
+(You may put a mp3 and ogg file together for maximum browser compatibility, or just post a mp3, ogg, wav, flac, webm or m4a file alone. Also, as the last example shows, you may modify the width. The width will become a percentage and by default, if you choose not to declare a width, the player will be 100% width.)
 
 **Action:** 
 
@@ -87,4 +92,10 @@ The following BBcodes are available:
 
 `[pop button="Click Here" title="Hello" content="Thank you for being a friend."]`
 
-This Flarum post has screenshots: https://discuss.flarum.org/d/18958-big-beautiful-bbcodes
+**KBD:**
+
+`Please type [kbd]Y[/kbd] for yes.`
+
+**Also included:**
+
+`[background]`, `[font]`, and HTML table BBCodes. Finally, Flarum already comes with a core BBCode extension which adds other standard BBCodes such as bold, strikethrough, image, link, etc.

@@ -22,8 +22,8 @@ class AlphaSenderList extends ListResource {
      * Construct the AlphaSenderList
      *
      * @param Version $version Version that contains the resource
-     * @param string $serviceSid The 34 character unique sid of the Messaging
-     *                           Service.
+     * @param string $serviceSid The SID of the Service that the resource is
+     *                           associated with
      * @return \Twilio\Rest\Messaging\V1\Service\AlphaSenderList
      */
     public function __construct(Version $version, $serviceSid) {
@@ -32,14 +32,13 @@ class AlphaSenderList extends ListResource {
         // Path Solution
         $this->solution = array('serviceSid' => $serviceSid, );
 
-        $this->uri = '/Services/' . rawurlencode($serviceSid) . '/AlphaSenders';
+        $this->uri = '/Services/' . \rawurlencode($serviceSid) . '/AlphaSenders';
     }
 
     /**
      * Create a new AlphaSenderInstance
      *
-     * @param string $alphaSender An Alphanumeric Sender ID string, up to 11
-     *                            characters.
+     * @param string $alphaSender The Alphanumeric Sender ID string
      * @return AlphaSenderInstance Newly created AlphaSenderInstance
      * @throws TwilioException When an HTTP error occurs.
      */
@@ -98,7 +97,7 @@ class AlphaSenderList extends ListResource {
      * @return AlphaSenderInstance[] Array of results
      */
     public function read($limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($limit, $pageSize), false);
+        return \iterator_to_array($this->stream($limit, $pageSize), false);
     }
 
     /**
@@ -145,7 +144,7 @@ class AlphaSenderList extends ListResource {
     /**
      * Constructs a AlphaSenderContext
      *
-     * @param string $sid The sid
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Messaging\V1\Service\AlphaSenderContext
      */
     public function getContext($sid) {

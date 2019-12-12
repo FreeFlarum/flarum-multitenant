@@ -20,11 +20,16 @@ use Twilio\Version;
  *
  * @property string $accountSid
  * @property string $bgColor
+ * @property string $brandSid
+ * @property string $brandedChannelSid
+ * @property string $businessSid
+ * @property string $callSid
  * @property string $caller
  * @property \DateTime $createdAt
  * @property string $fontColor
  * @property string $from
  * @property string $logo
+ * @property string $phoneNumberSid
  * @property string $reason
  * @property string $sid
  * @property string $status
@@ -47,11 +52,16 @@ class BrandedCallInstance extends InstanceResource {
         $this->properties = array(
             'accountSid' => Values::array_get($payload, 'account_sid'),
             'bgColor' => Values::array_get($payload, 'bg_color'),
+            'brandSid' => Values::array_get($payload, 'brand_sid'),
+            'brandedChannelSid' => Values::array_get($payload, 'branded_channel_sid'),
+            'businessSid' => Values::array_get($payload, 'business_sid'),
+            'callSid' => Values::array_get($payload, 'call_sid'),
             'caller' => Values::array_get($payload, 'caller'),
             'createdAt' => Deserialize::dateTime(Values::array_get($payload, 'created_at')),
             'fontColor' => Values::array_get($payload, 'font_color'),
             'from' => Values::array_get($payload, 'from'),
             'logo' => Values::array_get($payload, 'logo'),
+            'phoneNumberSid' => Values::array_get($payload, 'phone_number_sid'),
             'reason' => Values::array_get($payload, 'reason'),
             'sid' => Values::array_get($payload, 'sid'),
             'status' => Values::array_get($payload, 'status'),
@@ -71,12 +81,12 @@ class BrandedCallInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 

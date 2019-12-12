@@ -23,6 +23,7 @@ use Twilio\Version;
  */
 class ExportInstance extends InstanceResource {
     protected $_days = null;
+    protected $_exportCustomJobs = null;
 
     /**
      * Initialize the ExportInstance
@@ -80,6 +81,15 @@ class ExportInstance extends InstanceResource {
     }
 
     /**
+     * Access the exportCustomJobs
+     *
+     * @return \Twilio\Rest\Preview\BulkExports\Export\ExportCustomJobList
+     */
+    protected function getExportCustomJobs() {
+        return $this->proxy()->exportCustomJobs;
+    }
+
+    /**
      * Magic getter to access properties
      *
      * @param string $name Property to access
@@ -87,12 +97,12 @@ class ExportInstance extends InstanceResource {
      * @throws TwilioException For unknown properties
      */
     public function __get($name) {
-        if (array_key_exists($name, $this->properties)) {
+        if (\array_key_exists($name, $this->properties)) {
             return $this->properties[$name];
         }
 
-        if (property_exists($this, '_' . $name)) {
-            $method = 'get' . ucfirst($name);
+        if (\property_exists($this, '_' . $name)) {
+            $method = 'get' . \ucfirst($name);
             return $this->$method();
         }
 
@@ -109,6 +119,6 @@ class ExportInstance extends InstanceResource {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.BulkExports.ExportInstance ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.BulkExports.ExportInstance ' . \implode(' ', $context) . ']';
     }
 }

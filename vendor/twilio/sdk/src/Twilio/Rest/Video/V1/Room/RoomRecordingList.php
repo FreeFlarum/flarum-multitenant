@@ -20,7 +20,8 @@ class RoomRecordingList extends ListResource {
      * Construct the RoomRecordingList
      *
      * @param Version $version Version that contains the resource
-     * @param string $roomSid The room_sid
+     * @param string $roomSid The SID of the Room resource the recording is
+     *                        associated with
      * @return \Twilio\Rest\Video\V1\Room\RoomRecordingList
      */
     public function __construct(Version $version, $roomSid) {
@@ -29,7 +30,7 @@ class RoomRecordingList extends ListResource {
         // Path Solution
         $this->solution = array('roomSid' => $roomSid, );
 
-        $this->uri = '/Rooms/' . rawurlencode($roomSid) . '/Recordings';
+        $this->uri = '/Rooms/' . \rawurlencode($roomSid) . '/Recordings';
     }
 
     /**
@@ -76,7 +77,7 @@ class RoomRecordingList extends ListResource {
      * @return RoomRecordingInstance[] Array of results
      */
     public function read($options = array(), $limit = null, $pageSize = null) {
-        return iterator_to_array($this->stream($options, $limit, $pageSize), false);
+        return \iterator_to_array($this->stream($options, $limit, $pageSize), false);
     }
 
     /**
@@ -129,7 +130,7 @@ class RoomRecordingList extends ListResource {
     /**
      * Constructs a RoomRecordingContext
      *
-     * @param string $sid The sid
+     * @param string $sid The SID that identifies the resource to fetch
      * @return \Twilio\Rest\Video\V1\Room\RoomRecordingContext
      */
     public function getContext($sid) {

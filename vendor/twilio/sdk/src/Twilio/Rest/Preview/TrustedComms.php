@@ -20,17 +20,17 @@ use Twilio\Version;
 
 /**
  * @property \Twilio\Rest\Preview\TrustedComms\BrandedCallList $brandedCalls
+ * @property \Twilio\Rest\Preview\TrustedComms\CpsList $cps
+ * @property \Twilio\Rest\Preview\TrustedComms\CurrentCallList $currentCalls
  * @property \Twilio\Rest\Preview\TrustedComms\DeviceList $devices
  * @property \Twilio\Rest\Preview\TrustedComms\PhoneCallList $phoneCalls
- * @property \Twilio\Rest\Preview\TrustedComms\CurrentCallList $currentCalls
- * @property \Twilio\Rest\Preview\TrustedComms\CpsList $cps
  */
 class TrustedComms extends Version {
     protected $_brandedCalls = null;
+    protected $_cps = null;
+    protected $_currentCalls = null;
     protected $_devices = null;
     protected $_phoneCalls = null;
-    protected $_currentCalls = null;
-    protected $_cps = null;
 
     /**
      * Construct the TrustedComms version of Preview
@@ -54,6 +54,26 @@ class TrustedComms extends Version {
     }
 
     /**
+     * @return \Twilio\Rest\Preview\TrustedComms\CpsList
+     */
+    protected function getCps() {
+        if (!$this->_cps) {
+            $this->_cps = new CpsList($this);
+        }
+        return $this->_cps;
+    }
+
+    /**
+     * @return \Twilio\Rest\Preview\TrustedComms\CurrentCallList
+     */
+    protected function getCurrentCalls() {
+        if (!$this->_currentCalls) {
+            $this->_currentCalls = new CurrentCallList($this);
+        }
+        return $this->_currentCalls;
+    }
+
+    /**
      * @return \Twilio\Rest\Preview\TrustedComms\DeviceList
      */
     protected function getDevices() {
@@ -74,26 +94,6 @@ class TrustedComms extends Version {
     }
 
     /**
-     * @return \Twilio\Rest\Preview\TrustedComms\CurrentCallList
-     */
-    protected function getCurrentCalls() {
-        if (!$this->_currentCalls) {
-            $this->_currentCalls = new CurrentCallList($this);
-        }
-        return $this->_currentCalls;
-    }
-
-    /**
-     * @return \Twilio\Rest\Preview\TrustedComms\CpsList
-     */
-    protected function getCps() {
-        if (!$this->_cps) {
-            $this->_cps = new CpsList($this);
-        }
-        return $this->_cps;
-    }
-
-    /**
      * Magic getter to lazy load root resources
      *
      * @param string $name Resource to return
@@ -101,8 +101,8 @@ class TrustedComms extends Version {
      * @throws TwilioException For unknown resource
      */
     public function __get($name) {
-        $method = 'get' . ucfirst($name);
-        if (method_exists($this, $method)) {
+        $method = 'get' . \ucfirst($name);
+        if (\method_exists($this, $method)) {
             return $this->$method();
         }
 
@@ -119,8 +119,8 @@ class TrustedComms extends Version {
      */
     public function __call($name, $arguments) {
         $property = $this->$name;
-        if (method_exists($property, 'getContext')) {
-            return call_user_func_array(array($property, 'getContext'), $arguments);
+        if (\method_exists($property, 'getContext')) {
+            return \call_user_func_array(array($property, 'getContext'), $arguments);
         }
 
         throw new TwilioException('Resource does not have a context');

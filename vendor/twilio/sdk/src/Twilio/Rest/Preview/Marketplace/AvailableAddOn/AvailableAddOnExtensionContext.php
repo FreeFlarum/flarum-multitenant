@@ -22,8 +22,9 @@ class AvailableAddOnExtensionContext extends InstanceContext {
      * Initialize the AvailableAddOnExtensionContext
      *
      * @param \Twilio\Version $version Version that contains the resource
-     * @param string $availableAddOnSid The available_add_on_sid
-     * @param string $sid The unique Extension Sid
+     * @param string $availableAddOnSid The SID of the AvailableAddOn resource with
+     *                                  the extension to fetch
+     * @param string $sid The SID of the AvailableAddOn Extension resource to fetch
      * @return \Twilio\Rest\Preview\Marketplace\AvailableAddOn\AvailableAddOnExtensionContext
      */
     public function __construct(Version $version, $availableAddOnSid, $sid) {
@@ -32,7 +33,7 @@ class AvailableAddOnExtensionContext extends InstanceContext {
         // Path Solution
         $this->solution = array('availableAddOnSid' => $availableAddOnSid, 'sid' => $sid, );
 
-        $this->uri = '/AvailableAddOns/' . rawurlencode($availableAddOnSid) . '/Extensions/' . rawurlencode($sid) . '';
+        $this->uri = '/AvailableAddOns/' . \rawurlencode($availableAddOnSid) . '/Extensions/' . \rawurlencode($sid) . '';
     }
 
     /**
@@ -69,6 +70,6 @@ class AvailableAddOnExtensionContext extends InstanceContext {
         foreach ($this->solution as $key => $value) {
             $context[] = "$key=$value";
         }
-        return '[Twilio.Preview.Marketplace.AvailableAddOnExtensionContext ' . implode(' ', $context) . ']';
+        return '[Twilio.Preview.Marketplace.AvailableAddOnExtensionContext ' . \implode(' ', $context) . ']';
     }
 }
