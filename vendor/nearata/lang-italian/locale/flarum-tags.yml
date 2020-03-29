@@ -17,7 +17,7 @@ flarum-tags:
       delete_tag_button: Cancella Etichetta
       delete_tag_confirmation: "Sei sicuro di voler cancellare questo etichetta? Le discussioni appartenenti a questa etichetta NON verranno cancellate."
       description_label: Descrizione
-      hide_label: Nascondi da Tutte le discussioni
+      hide_label: Nascondi da tutte le discussioni
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: => flarum-tags.ref.name

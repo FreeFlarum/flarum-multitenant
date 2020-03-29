@@ -13,7 +13,7 @@ flarum-notify:
     events:
       title: 通知イベント
       description: 通知をトリガーしたイベントを選択します。 通知を送信する
-      discussion_started: 新しい議論
+      discussion_started: 新規スレッド
       discussion_deleted: ディスカッションを削除しました
       post_posted: 新しい返信
       post_hidden: 返信が非表示になっています

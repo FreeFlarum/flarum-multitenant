@@ -1,52 +1,59 @@
 {
-    "name": "marketplace/flarum-l10n-core-russian",
-    "description": "Russian language pack for Flarum.",
-    "type": "flarum-extension",
-    "license": "GPL-3.0-or-later",
-    "homepage": "https://exts.dev/#flarum",
-    "keywords": [
-        "extension",
-        "flarum",
-        "russian",
-        "language",
-        "locale",
-        "localization",
-        "translation"
-    ],
-    "authors": [
-        {
-            "name": "x06174",
-            "homepage": "https://x06174.gitlab.io/",
-            "role": "Editor"
-        }
-    ],
-    "support": {
-        "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian/issues",
-        "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian"
+  "name": "marketplace/flarum-l10n-core-russian",
+  "description": "Flarum Russian language pack.",
+  "type": "flarum-extension",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://gitlab.com/marketplace-flarum",
+  "keywords": [
+    "extension",
+    "flarum",
+    "russian",
+    "language",
+    "locale",
+    "localization",
+    "translation"
+  ],
+  "authors": [
+    {
+      "name": "z1729 Factory",
+      "email": "z1729.factory@gmail.com",
+      "homepage": "https://z1729.com",
+      "role": "Developer"
     },
-    "require": {
-        "flarum/core": "^0.1.0-beta.9"
-    },
-    "suggest": {
-        "flarum/flarum": "Flarum",
-        "marketplace/flarum-l10n-ext-russian": "Russian language pack for Flarum Extensions."
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.1.x-dev"
-        },
-        "flarum-extension": {
-            "title": "Русский",
-            "icon": {
-                "image": "icon.svg",
-                "backgroundColor": "#f3f6f9",
-                "backgroundSize": "cover",
-                "backgroundPosition": "center"
-            }
-        },
-        "flarum-locale": {
-            "code": "ru",
-            "title": "Русский"
-        }
+    {
+      "name": "Kitsune Solar",
+      "email": "kitsune.solar@gmail.com",
+      "homepage": "https://KitsuneSolar.com",
+      "role": "Editor"
     }
+  ],
+  "support": {
+    "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian/issues",
+    "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian"
+  },
+  "require": {
+    "flarum/core": "^0.1.0-beta.12"
+  },
+  "suggest": {
+    "flarum/flarum": "Flarum",
+    "marketplace/flarum-l10n-ext-russian": "Flarum Extensions Russian language pack."
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    },
+    "flarum-extension": {
+      "title": "Русский",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#f3f6f9",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center"
+      }
+    },
+    "flarum-locale": {
+      "code": "ru",
+      "title": "Русский"
+    }
+  }
 }

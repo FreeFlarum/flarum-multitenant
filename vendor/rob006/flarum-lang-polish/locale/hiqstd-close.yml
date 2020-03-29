@@ -15,11 +15,11 @@ flarum-ext-close:
     notifications:
       discussion_closed_text: '{username} zamknął'
     post_stream:
+      closed_discussion_text: 'Tylko autor tej dyskusji może zobaczyć jej treść.'
+      closed_discussion_title: 'Ta dyskusja jest zamknięta'
+      closed_post_text: 'Tylko autor tego posta może zobaczyć jego treść.'
+      closed_post_title: 'Ten post jest zamknięty'
       discussion_closed_text: '{username} zamknął tę dyskusję.'
       discussion_unclosed_text: '{username} otworzył tę dyskusję.'
-      closed_discussion_title: 'Ta dyskusja jest zamknięta'
-      closed_discussion_text: 'Tylko autor tej dyskusji może zobaczyć jej treść.'
-      closed_post_title: 'Ten post jest zamknięty'
-      closed_post_text: 'Tylko autor tego posta może zobaczyć jego treść.'
     settings:
-      notify_discussion_closed_label: 'Ktoś zamknie dyskusję, którą rozpocząłem'
+      notify_discussion_closed_label: 'Ktoś zamknął dyskusję, którą rozpocząłem'

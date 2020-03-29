@@ -10,18 +10,18 @@ fof-polls:
       start: 'Tworzenie ankiet'
       vote: 'Głosowanie w ankietach'
   forum:
-    days_remaining: 'Ankieta zakończy się {time}.'
-    no_permission: 'Nie masz uprawnień do głosowania'
-    poll_ended: 'Ta ankieta zakończyła się.'
-    public_poll: 'Zobacz głosujących'
     composer_discussion:
       add_poll: 'Dodaj ankietę'
-      edit_poll: '=> fof-polls.forum.moderation.edit'
       edit: '=> reflar-polls.forum.moderation.edit'
+      edit_poll: '=> fof-polls.forum.moderation.edit'
+    days_remaining: 'Ankieta zakończy się {time}.'
     modal:
-      add_title: 'Dodaj ankietę'
+      add: 'Dodaj opcję'
       add_option_label: 'Dodaj opcję'
-      date_placeholder: 'Data zakończenia ankiety (opcjonalnie)'
+      add_title: 'Dodaj ankietę'
+      answer_placeholder: Odpowiedź
+      answers: Odpowiedzi
+      date_placeholder: 'Data zakończenia ankiety (niewymagane)'
       edit_title: 'Edytuj ankietę'
       include_question: 'Ankieta musi zawierać pytanie'
       max: 'Możesz mieć maksymalnie 10 opcji'
@@ -33,16 +33,16 @@ fof-polls:
       question_placeholder: Pytanie
       submit: Zatwierdź
       switch: 'Pozwól użytkownikom zobaczyć, kto głosował'
-      answer_placeholder: Odpowiedź
-      add: 'Dodaj opcję'
-      answers: Odpowiedzi
     moderation:
       delete: 'Usuń ankietę'
       delete_confirm: 'Czy jesteś pewien, że chcesz usunąć tę ankietę?'
       edit: 'Edytuj ankietę'
+    no_permission: 'Nie masz uprawnień do głosowania'
+    poll_ended: 'Ta ankieta zakończyła się.'
+    public_poll: 'Zobacz głosujących'
     tooltip:
       badge: Ankieta
-      votes: '1 głos|{count} głosy|{count} głosów'
       vote: głosów
+      votes: '1 głos|{count} głosy|{count} głosów'
     votes_modal:
       title: 'Głosujący użytkownicy'

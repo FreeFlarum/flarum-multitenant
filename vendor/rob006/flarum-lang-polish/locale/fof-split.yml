@@ -7,13 +7,13 @@ fof-split:
     permissions:
       split_discussion_label: 'Wydzielanie postów z dyskusji'
   forum:
+    modal:
+      new_discussion_label: 'Podaj tytuł nowej dyskusji'
+      submit_button: Przenieś
+      title: 'Przenoszenie postów'
     post:
-      was_split_to: '{count} post został przeniesiony do {target}.|{count} posty zostały przeniesione do {target}.|{count} postów zostało przeniesionych do {target}.'
       was_split_from: '{count} post został przeniesiony z {target}.|{count} posty zostały przeniesione z {target}.|{count} postów zostało przeniesionych z {target}.'
+      was_split_to: '{count} post został przeniesiony do {target}.|{count} posty zostały przeniesione do {target}.|{count} postów zostało przeniesionych do {target}.'
     split:
       from: 'Przenieś od tego posta'
       to: 'Przenieś do tego posta'
-    modal:
-      title: 'Przenoszenie postów'
-      new_discussion_label: 'Podaj tytuł nowej dyskusji'
-      submit_button: Przenieś

@@ -5,16 +5,16 @@
 migratetoflarum-vbulletin-redirects:
   admin:
     settings:
-      title: 'Ustawienia przekierowań VBulletin'
+      button:
+        hideAdvanced: 'Ukryj zaawansowane ustawienia'
+        showAdvanced: 'Pokaż zaawansowane ustawienia'
       disclaimer: "Bądź ostrożny z tymi ustawieniami. Odpowiednie wartości zostały ustawione podczas migracji i prawdopodobnie nie wymagają żadnych zmian!\n"
       field:
         discussionIncrement: 'Przesunięcie ID dyskusji (wątku)'
-        userIncrement: 'Przesunięcie ID użytkownika'
-        tagIncrement: 'Przesunięcie ID tagu (forum)'
         redirectStatus: 'Rodzaj przekierowania'
+        tagIncrement: 'Przesunięcie ID tagu (forum)'
+        userIncrement: 'Przesunięcie ID użytkownika'
       option:
         301: '301 (trwałe przekierowanie - dla środowisk produkcyjnych)'
         302: '302 (tymczasowe przekierowanie - dla testów)'
-      button:
-        showAdvanced: 'Pokaż zaawansowane ustawienia'
-        hideAdvanced: 'Ukryj zaawansowane ustawienia'
+      title: 'Ustawienia przekierowań VBulletin'

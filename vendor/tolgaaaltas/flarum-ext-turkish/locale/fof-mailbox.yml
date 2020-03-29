@@ -1,0 +1,11 @@
+fof-mailbox:
+  admin:
+    edit_tag:
+      mailbox_enabled: Posta kutusunu aktif et
+      mailbox_consequences: >
+        Bir etikette posta kutusunu aktif etmek tartışmaları senkronize eder.
+      mailbox_imap_host: IMAP Host
+      mailbox_imap_port: IMAP Port
+      mailbox_imap_encryption: IMAP Encryption
+      mailbox_imap_username: IMAP Kullanıcı Adı
+      mailbox_imap_password: IMAP Şifre

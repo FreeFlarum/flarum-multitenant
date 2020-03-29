@@ -4,19 +4,19 @@
 
 clarkwinkelmann-status:
   admin:
-    settings:
-      title: 'Ustawienia statusów'
-      only-countries: 'Tylko flagi krajów'
-      enable-text: 'Pozwól na tekstowy status'
     permissions:
+      mod: 'Moderowanie statusów użytkowników'
       see: 'Dostęp do statusu użytkownika'
       set: 'Ustawianie statusu'
-      mod: 'Moderowanie statusów użytkowników'
+    settings:
+      enable-text: 'Pozwól na tekstowy status'
+      only-countries: 'Tylko flagi krajów'
+      title: 'Ustawienia statusów'
   forum:
     menu:
       set-status: 'Ustaw status'
     modal:
-      title: 'Ustaw status'
-      text-placeholder: 'Co się dzieje?'
-      submit: Zatwierdź
       clear: Wyczyść
+      submit: Zatwierdź
+      text-placeholder: 'Co się dzieje?'
+      title: 'Ustaw status'

@@ -3,14 +3,14 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 clarkwinkelmann-post-date:
-  forum:
-    post_controls:
-      edit_button: 'Edytuj czas'
-    modal:
-      title: 'Edytuj datę publikacji'
-      created_at: 'Czas utworzenia'
-      edited_at: 'Edytuj czas'
-      submit: Zapisz
   admin:
     permissions:
       edit-post-date: 'Edytuj datę publikacji'
+  forum:
+    modal:
+      created_at: 'Czas utworzenia'
+      edited_at: 'Edytuj czas'
+      submit: Zapisz
+      title: 'Edytuj datę publikacji'
+    post_controls:
+      edit_button: 'Edytuj czas'

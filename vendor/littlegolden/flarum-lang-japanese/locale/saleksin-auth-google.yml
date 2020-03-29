@@ -15,7 +15,7 @@ saleksin-auth-google:
     google_settings:
       client_id_label: App ID（アプリケーションID）
       client_secret_label: App Secret（アプリケーションシークレット）
-      title: Google 設定
+      title: Google 認証 - 設定
 
   # Translations in this namespace are used by the forum user interface.
   forum:

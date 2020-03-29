@@ -158,6 +158,7 @@ class PageListener
         // Home page
         else if($this->requestType === "") {
             $this->setDescription($this->settings->get('forum_description'));
+            $this->setTitle($this->settings->get('forum_title'));
         }
     }
 
@@ -170,6 +171,7 @@ class PageListener
         $applicationName = $this->settings->get('forum_title');
         $applicationDescription = $this->settings->get('forum_description');
         $applicationFavicon = $this->settings->get('favicon_path');
+        $applicationLogo = $this->settings->get('logo_path');
         $applicationSeoSocialMediaImage = $this->settings->get('seo_social_media_image_path');
 
         $this
@@ -183,24 +185,30 @@ class PageListener
             // Twitter card
             ->setMetaTag('twitter:card', 'summary');
 
-        // Use social media image
+        // Add application information
+        $this->setSchemaJson('publisher', [
+            "@type" => "Organization",
+            "name" => $applicationName,
+            "url" => $this->applicationUrl,
+            "description" => $applicationDescription,
+            "logo" => $applicationLogo ? $this->applicationUrl . '/assets/' . $applicationLogo : null
+        ]);
+
+        // Set image
         if($applicationSeoSocialMediaImage !== null)
         {
             $this->setImage($this->applicationUrl . '/assets/' . $applicationSeoSocialMediaImage);
+        }
+        // Fallback to the logo
+        else if($applicationLogo !== null)
+        {
+            $this->setImage($this->applicationUrl . '/assets/' . $applicationLogo);
         }
         // Fallback to the favicon
         else if($applicationFavicon !== null)
         {
             $this->setImage($this->applicationUrl . '/assets/' . $applicationFavicon);
         }
-
-        // Add application information
-        $this->setSchemaJson('publisher', [
-            "@type" => "Organization",
-            "name" => $applicationName,
-            "url" => $this->applicationUrl,
-            "description" => $applicationDescription
-        ]);
     }
 
     /**
@@ -401,17 +409,16 @@ class PageListener
     /**
      * Set description
      *
-     * @param $description
+     * @param $content
      * @return PageListener
      */
-    public function setDescription($description)
+    public function setDescription($content)
     {
-        $description = strip_tags($description);
+        $description = strip_tags($content);
         $description = trim(preg_replace('/\s+/', ' ', mb_substr($description, 0, 157))) . (mb_strlen($description) > 157 ? '...' : '');
 
         $this
             ->setMetaPropertyTag('og:description', $description)
-
             ->setMetaTag('description', $description)
             ->setMetaTag('twitter:description', $description)
             ->setSchemaJson("description", $description);
@@ -423,6 +430,34 @@ class PageListener
 
         return $this;
     }
+
+    /**
+     * Set setImageFromContent
+     *
+     * @param $content
+     * @return PageListener
+     */
+    public function setImageFromContent($content = null)
+    {
+        // Check post content is not empty
+        if($content !== null) {
+            // Read Post content and filter image url
+            $pattern = '/(http.*\.)(jpe?g|png|[tg]iff?|svg)/';
+
+            // Use image from post for social media og:image
+            if (preg_match_all($pattern, $content, $matches) && count($matches) > 0) {
+                $contentImage = $matches[0][0];
+
+                if ($contentImage !== null) {
+                    $this->setImage($contentImage);
+                    return $this;
+                }
+            }
+        }
+
+        return $this;
+    }
+
 
     /**
      * Set published on

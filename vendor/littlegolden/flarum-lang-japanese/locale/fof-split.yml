@@ -8,8 +8,8 @@ fof-split:
         split_discussion_label: トピックを分割
     forum:
         post:
-            was_split_to: "{count} 件の回答が {target} に分割されました"
-            was_split_from: "{count} 件の回答が {target} から分割されました"
+            was_split_to: "{count} 件の回答が「{target}」に分割されました"
+            was_split_from: "{count} 件の回答が「{target}」から分割されました"
         split:
             from: トピックの分割を開始
             to: 分割トピックを終了

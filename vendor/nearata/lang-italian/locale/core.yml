@@ -18,7 +18,7 @@ core:
     appearance:
       colored_header_label: Header colorato
       colors_heading: Colori
-      colors_text: "Scegli due colori per personalizzare il tema. Il primo verrà utilizzato come colore in evidenzia, mentre il secondo verrà usato come colore per gli elementi di sfondo."
+      colors_text: "Inserisci due colori per personalizzare il tema. Il primo verrà utilizzato come colore in evidenzia, mentre il secondo verrà usato come colore per gli elementi di sfondo."
       custom_footer_heading: Footer personalizzato
       custom_footer_text: => core.ref.custom_footer_text
       custom_header_heading: Header personalizzato
@@ -41,7 +41,7 @@ core:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Lingua predefinita
       forum_description_heading: Descrizione del Forum
-      forum_description_text: Inserisci una breve descrizione della tua community. Verrà usato nel meta tag description e sarà mostrato ai motori di ricerca
+      forum_description_text: Scrivi una breve descrizione della tua community. Apparirà nei meta tag e mostrato ai motori di ricerca.
       forum_title_heading: Nome del Forum
       home_page_heading: Homepage
       home_page_text: "Scegli la pagina che deve essere mostrata agli utenti prima di mostrare il forum."
@@ -90,13 +90,14 @@ core:
     # These translations are used in the email page of the admin interface.
     email:
       addresses_heading: Indirizzi
-      driver_heading: Scegli un Driver
+      driver_heading: Seleziona Driver
       driver_label: Driver
       from_label: Mittente
       heading: => core.ref.email
       mail_encryption_label: Crittografia
       mail_host_label: Host
       mail_mailgun_domain_label: Dominio
+      mail_mailgun_region_label: Regione
       mail_mailgun_secret_label: Chiave segreta
       mail_mandrill_secret_label: Chiave segreta
       mail_password_label: => core.ref.password
@@ -107,10 +108,11 @@ core:
       mail_username_label: => core.ref.username
       mailgun_heading: Impostazioni Mailgun
       mandrill_heading: Impostazioni Mandrill
+      not_sending_message: Flarum al momento non invia e-mail. Ciò può essere dovuto al driver selezionato oppure a errori di configurazione.
       ses_heading: Impostazioni SES
       smtp_heading: Impostazioni SMTP
       submit_button: => core.ref.save_changes
-      text: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare email
+      text: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare e-mail
 
     # These translations are used in the Extensions page.
     extensions:
@@ -156,6 +158,7 @@ core:
       moderate_heading: Moderazione
       new_group_button: Nuovo Gruppo
       participate_heading: Partecipazione
+      post_without_throttle_label: Rispondere consecutivamente molteplici volte senza aspettare
       read_heading: Lettura
       rename_discussions_label: Rinominare le discussioni
       reply_to_discussions_label: Rispondere alle discussioni
@@ -163,7 +166,7 @@ core:
       start_discussions_label: Iniziare una discussione
       view_discussions_label: Leggere le discussioni
       view_last_seen_at_label: Vedere l'ultimo accesso di un utente
-      view_post_ips_label: Visualizzare indirizzi IP del messaggio
+      view_post_ips_label: Visualizzare indirizzi IP di un messaggio
       view_user_list_label: Visualizzare la lista utenti
 
     # These translations are used in the dropdown menus on the Permissions page.
@@ -174,7 +177,7 @@ core:
       allow_until_reply_button: Fino alla prossima risposta
       everyone_button: Tutti
       members_button: => core.group.members
-      signup_closed_button: Chiuso
+      signup_closed_button: Chiusa
       signup_open_button: Aperta
 
     # These translations are used in the Settings modal dialog.
@@ -295,7 +298,7 @@ core:
       cannot_start_discussion_button: Impossibile iniziare una discussione
       mark_all_as_read_confirmation: "Sei sicuro di voler contrassegnare tutte le discussioni come lette?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
-      refresh_tooltip: Ricarica
+      refresh_tooltip: Aggiorna
       start_discussion_button: => core.ref.start_a_discussion
 
     # These translations are used by the sorting control above the discussion list.

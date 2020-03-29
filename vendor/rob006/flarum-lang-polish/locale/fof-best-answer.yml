@@ -8,14 +8,25 @@ fof-best-answer:
       best_answer: 'Wybieranie najlepszej odpowiedzi (własna dyskusja)'
       best_answer_not_own_discussion: 'Wybieranie najlepszej odpowiedzi (cudza dyskusja)'
     settings:
-      title: 'Najlepsza odpowiedź'
-      allow_select_own_post: 'Pozwól użytkownikom wybrać ich własny post'
+      allow_select_own_post: 'Pozwól użytkownikowi wybrać swój własny post'
+      remind_tag_ids: 'Aby wysyłać przypomnienia tylko dla dyskusji w konkretnych tagach, wpisz tutaj ich ID (ID tagów rozdzielone przecinkami)'
+      schedule_log_output: 'Zapisz logi harmonogramu zadań'
+      schedule_on_one_server: 'Użyj dyrektywy ''onOneServer()'' dla harmonogramu zadań (task scheduler) (wymaga Redis/Memcache)'
+      schedule_stop_overnight: 'Wyłącz przypomnienia w godzinach nocnych (21.00 - 8.00 według czasu serwera)'
       select_best_answer_reminder_days: 'Przypomnij użytkownikowi o wybraniu najlepszej odpowiedzi po X dniach'
+      title: 'Najlepsza odpowiedź'
+      use_alt_ui: 'Użyj alternatywnego układu (przycisk najlepszej odpowiedzi w stopce posta)'
   forum:
     answered_badge: Rozwiązane
-    this_best_answer: 'Oznacz jako najlepsza odpowiedź'
-    remove_best_answer: 'To nie jest najlepsza odpowiedź'
     best_answer_button: 'Najlepsza odpowiedź'
-    best_answer_label: 'wybrana przez <a>{username}</a>'
+    best_answer_label: 'wybrana przez <a>{username}</a> {time_set}'
     notification:
+      awarded: 'Twój post został wybrany jako najlepsza odpowiedź przez {username}'
+      awarded_email: 'Twój post został wybrany jako najlepsza odpowiedź'
       content: 'Wybierz najlepszą odpowiedź, jeśli twój problem został rozwiązany'
+      preferences:
+        awarde_best_answer: 'Ktoś oznaczy mój post jako najlepsza odpowiedź'
+        awarded_best_answer: 'Ktoś oznaczył mój post jako najlepsza odpowiedź'
+      select_email_title: 'Czy udało ci się rozwiązać twój problem?'
+    remove_best_answer: 'To nie jest najlepsza odpowiedź'
+    this_best_answer: 'Oznacz jako najlepsza odpowiedź'

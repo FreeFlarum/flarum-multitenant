@@ -27,9 +27,16 @@ use Zend\Diactoros\Uri;
 class SteamAuth implements SteamAuthInterface
 {
     /**
+     * @var array
+     */
+    const OPENID_DOMAINS = [
+        'steamcommunity.com',
+        'steampowered.com'
+    ];
+    /**
      * @var string
      */
-    const OPENID_URL = 'https://steamcommunity.com/openid/login';
+    const OPENID_URL = 'https://{DOMAIN}/openid';
     /**
      * @var string
      */
@@ -87,6 +94,11 @@ class SteamAuth implements SteamAuthInterface
     private $apiKey;
 
     /**
+     * @var bool
+     */
+    private $useSteamPoweredDomain;
+
+    /**
      * SteamAuth constructor.
      * @param SettingsRepositoryInterface $settings
      */
@@ -95,6 +107,7 @@ class SteamAuth implements SteamAuthInterface
         $this->settings = $settings;
         $this->guzzleClient = new GuzzleClient;
         $this->apiKey = $this->settings->get('flarum-ext-auth-steam.api_key');
+        $this->useSteamPoweredDomain = $this->settings->get('flarum-ext-auth-steam.use_steam_powered_domain') == 1;
     }
 
     /**
@@ -123,7 +136,7 @@ class SteamAuth implements SteamAuthInterface
         }
 
         $requestOptions = $this->getDefaultRequestOptions();
-        $response = $this->guzzleClient->request('POST', self::OPENID_URL, $requestOptions);
+        $response = $this->guzzleClient->request('POST', $this->getOpenIdUrl().'/login', $requestOptions);
 
         $this->parseSteamID();
         $this->parseInfo();
@@ -200,7 +213,7 @@ class SteamAuth implements SteamAuthInterface
 
         foreach ($signedParams as $item) {
             $value = array_get($queryParams,'openid_'.str_replace('.', '_', $item));
-            $params['openid.'.$item] = get_magic_quotes_gpc() ? stripslashes($value) : $value;
+            $params['openid.'.$item] = $value;
         }
 
         return $params;
@@ -235,7 +248,7 @@ class SteamAuth implements SteamAuthInterface
             'openid.claimed_id' => 'http://specs.openid.net/auth/2.0/identifier_select',
         ]);
 
-        return (string) (new Uri(self::OPENID_URL))->withQuery($params);
+        return (string) (new Uri($this->getOpenIdUrl().'/login'))->withQuery($params);
     }
 
     /**
@@ -254,7 +267,7 @@ class SteamAuth implements SteamAuthInterface
     private function parseSteamID() : void
     {
         $queryParams = $this->request->getQueryParams();
-        preg_match('#^https?://steamcommunity.com/openid/id/([0-9]{17,25})#', array_get($queryParams,'openid_claimed_id'), $matches);
+        preg_match('#^https?://'.$this->getOpenIdUrl(false).'/id/([0-9]{17,25})#', array_get($queryParams,'openid_claimed_id'), $matches);
         $this->steamId = is_numeric($matches[1]) ? $matches[1] : 0;
     }
 
@@ -275,5 +288,23 @@ class SteamAuth implements SteamAuthInterface
         $response = $this->guzzleClient->request('GET', sprintf(self::STEAM_INFO_URL, $this->apiKey, $this->steamId));
         $jsonResponse = json_decode($response->getBody(), true);
         $this->steamInfo = new Fluent($jsonResponse['response']['players'][0]);
+    }
+
+    /**
+     * Get OpenID API URL depending on setting value (
+     * @param bool $withProtocol
+     * @return string
+     */
+    private function getOpenIdUrl($withProtocol = true) : string
+    {
+       return str_replace($withProtocol ? '{DOMAIN}' : 'https://{DOMAIN}', $this->getOpenIdDomain(), self::OPENID_URL);
+    }
+
+    /**
+     * Get OpenID API DOMAIN depending on setting value
+     */
+    private function getOpenIdDomain() : string
+    {
+        return self::OPENID_DOMAINS[$this->useSteamPoweredDomain];
     }
 }

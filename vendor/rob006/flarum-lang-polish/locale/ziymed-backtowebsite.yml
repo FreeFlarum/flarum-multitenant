@@ -3,11 +3,11 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 backtowebsite:
-  forum:
-    header:
-      back_button: 'Wróć na stronę'
   admin:
     settings:
       backto_label_label: 'Treść przycisku'
       backto_url_label: 'Docelowy adres URL'
       title: 'Ustawienia "Wróć na stronę"'
+  forum:
+    header:
+      back_button: 'Wróć na stronę'

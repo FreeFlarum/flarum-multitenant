@@ -1,0 +1,16 @@
+# https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post/blob/master/resources/locale/en.yml
+# 26d6d6e 9 days ago
+# 2020-3-13 20:39:37 +0800
+
+clarkwinkelmann-see-past-first-post:
+    forum:
+        cant-see: 投稿を表示する権限がありません
+        login-to-see: サインインして投稿を見る
+
+    admin:
+        permissions:
+            see-past-first-post: ログイン後に返信を表示
+        settings:
+            title: 最初の投稿のみを表示 - 設定
+            hide-comment-count: スレッドリストのコメントカウントを非表示にする
+            hide-last-post: スレッドリストの最後の投稿ユーザーと日付を非表示にする

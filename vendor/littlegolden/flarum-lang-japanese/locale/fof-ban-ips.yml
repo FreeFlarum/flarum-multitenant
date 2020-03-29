@@ -1,6 +1,6 @@
 # https://github.com/FriendsOfFlarum/ban-ips/blob/master/resources/locale/en.yml
 # c5e12b1
-# Sat, 25 Jan 2020 22:33:40 +0800
+# 2020-2-29 22:52:57 +0800
 
 fof-ban-ips:
   forum:
@@ -9,11 +9,11 @@ fof-ban-ips:
 
     modal:
       ban_options_only_ip: 現在の IP のみをブロックする (<code>{ip}</code>)
-      ban_options_all_ip: <i>{username}</i> が使用するすべてのIPをブロックする
-      ban_ip_no_users: 誰も禁止されていません
+      ban_options_all_ip: <i>{username}</i> が使用するすべての IP をブロックする
+      ban_ip_no_users: この IP を使用している他のユーザーはいません
 
     user_badge:
-      banned_tooltip: 已封禁
+      banned_tooltip: 禁止された
 
     user_controls:
       ban_button: => fof-ban-ips.ref.ban_label
@@ -35,14 +35,14 @@ fof-ban-ips:
 
     modal:
       update_title: ブロックされた IP を更新
-      ban_ip_no_users: 誰も禁止されていません
+      ban_ip_no_users: この IP を使用している他のユーザーはいません
 
     nav:
       title: ブロック IP
 
       desc: ブロックされた IP アドレスを追加、削除、表示する
 
-    empty_text: 暂无
+    empty_text: 禁止された IP はありません
 
   error:
     banned_ip_message: 検証に失敗しました
@@ -62,10 +62,10 @@ fof-ban-ips:
       ban_ip_confirmation: "この IP をブロックしてもよろしいですか？ これにより、この IP を使用するユーザーはフォーラムにログインして登録できなくなります。"
       ban_ip_users: ユーザー {users} は禁止されます|ユーザー {users} は禁止されます
 
-      unban_ip_confirmation: このユーザーと、他の IP によってブロックされていない他のすべてのユーザーの禁止を解除してもよろしいですか？
+      unban_ip_confirmation: このユーザーとこの IP を使用する他のすべてのユーザーのブロックを解除してもよろしいですか？（別のユーザーが使用する別のIPもブラックリストに含まれている場合、そのユーザーは引き続き禁止されます）
       unban_options_only_ip: 現在の IP のみをブロック解除 (<code>{ip}</code>)
       unban_options_all_ip: <i>{username}</i> が使用するすべての IP のブロックを解除します
-      unban_ip_no_users: 誰もブロック解除されていません
+      unban_ip_no_users: この IP を使用している他のユーザーはいません
       unban_ip_users: ユーザー {users} のブロックを解除します|ユーザー {users} のブロックを解除します
       unbanned_ips: ブロック解除 <code>{ips}</code>.
 
@@ -73,13 +73,13 @@ fof-ban-ips:
       unban_button: => fof-ban-ips.ref.unban_label
 
   ref:
-    ban_label: 禁止
-    ban_ip_addresses: ブロックIP
-    ban_ip_button: ブロックIP
+    ban_label: ブロック IP
+    ban_ip_addresses: ブロック IP
+    ban_ip_button: ブロック IP
 
     unban_label: ブロック解除
     unban_ip_addresses: IP のブロックを解除
     unban_ip_button: IP のブロックを解除
 
     address_label: IP アドレス
-    reason_label: 原因
+    reason_label: 原因（任意）

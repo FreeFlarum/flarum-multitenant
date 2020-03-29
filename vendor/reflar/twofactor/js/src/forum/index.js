@@ -67,7 +67,7 @@ app.initializers.add('reflar-twofactor', () => {
   };
 
   LogInModal.prototype.failure = function(response) {
-    if (parseInt(response.status) === 401) {
+    if (parseInt(response.status) === 403) {
       this.alert = new Alert({
         type: 'error',
         dismissible: false,

@@ -17,11 +17,11 @@ use Flarum\Foundation\Console\InfoCommand;
 use Flarum\Http\Middleware\DispatchRoute;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
+use Laminas\Stratigility\Middleware\OriginalMessages;
+use Laminas\Stratigility\MiddlewarePipe;
 use Middlewares\BasePath;
 use Middlewares\BasePathRouter;
 use Middlewares\RequestHandler;
-use Zend\Stratigility\Middleware\OriginalMessages;
-use Zend\Stratigility\MiddlewarePipe;
 
 class InstalledApp implements AppInterface
 {
@@ -63,9 +63,9 @@ class InstalledApp implements AppInterface
         $pipe->pipe(new OriginalMessages);
         $pipe->pipe(
             new BasePathRouter([
-                $this->subPath('api') => 'flarum.api.middleware',
-                $this->subPath('admin') => 'flarum.admin.middleware',
-                '/' => 'flarum.forum.middleware',
+                $this->subPath('api') => 'flarum.api.handler',
+                $this->subPath('admin') => 'flarum.admin.handler',
+                '/' => 'flarum.forum.handler',
             ])
         );
         $pipe->pipe(new RequestHandler($this->container));
@@ -92,6 +92,7 @@ class InstalledApp implements AppInterface
     private function getUpdaterHandler()
     {
         $pipe = new MiddlewarePipe;
+        $pipe->pipe(new BasePath($this->basePath()));
         $pipe->pipe(
             new DispatchRoute($this->container->make('flarum.update.routes'))
         );

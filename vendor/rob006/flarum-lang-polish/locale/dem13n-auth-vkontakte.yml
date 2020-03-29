@@ -5,10 +5,10 @@
 dem13n-auth-vkontakte:
   admin:
     vkontakte_settings:
-      title: 'Ustawienia logowania Vkontakte'
+      app_desc: 'Możesz zarejestrować aplikację tutaj <a>https://vk.com/apps?act=manage</a>'
       app_id_label: 'App ID'
       app_key_label: 'App Secure Key'
-      app_desc: 'Możesz zarejestrować aplikację tutaj <a>https://vk.com/apps?act=manage</a>'
       app_p: 'Callback URL'
+      title: 'Ustawienia logowania Vkontakte'
   forum:
     login_with_vkontakte_button: 'Zaloguj się za pomocą Vkontakte'

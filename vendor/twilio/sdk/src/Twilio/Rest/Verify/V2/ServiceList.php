@@ -16,9 +16,6 @@ use Twilio\Serialize;
 use Twilio\Values;
 use Twilio\Version;
 
-/**
- * PLEASE NOTE that this class contains beta products that are subject to change. Use them with caution.
- */
 class ServiceList extends ListResource {
     /**
      * Construct the ServiceList
@@ -54,6 +51,7 @@ class ServiceList extends ListResource {
             'DtmfInputRequired' => Serialize::booleanToString($options['dtmfInputRequired']),
             'TtsName' => $options['ttsName'],
             'Psd2Enabled' => Serialize::booleanToString($options['psd2Enabled']),
+            'DoNotShareWarningEnabled' => Serialize::booleanToString($options['doNotShareWarningEnabled']),
         ));
 
         $payload = $this->version->create(

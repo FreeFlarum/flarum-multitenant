@@ -7,7 +7,7 @@ zerosonesfun-announce:
     settings:
       title: アナウンス設定
 
-      text: 発表内容
-      height: 発表高さ
+      text: アナウンス内容
+      height: アナウンスの要素の高さ
       css: CSS
       js: JS

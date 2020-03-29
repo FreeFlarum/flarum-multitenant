@@ -1,6 +1,6 @@
 # https://github.com/FriendsOfFlarum/reactions/blob/master/resources/locale/en.yml
-# 0223f8b
-# Sun, 26 Jan 2020 00:18:51 +0800
+# a000ecd 2 days ago
+# 2020-2-6 00:18:33 +0800
 
 fof-reactions:
   forum:
@@ -9,6 +9,7 @@ fof-reactions:
     notification: '{username} はあなたの投稿に対して {reaction} で反応しました'
     settings:
         notify_post_reacted_label: 誰かが私の投稿の1つに反応します
+    reacting-own-post: 自分の投稿に反応することはできません
 
   admin:
     permissions:

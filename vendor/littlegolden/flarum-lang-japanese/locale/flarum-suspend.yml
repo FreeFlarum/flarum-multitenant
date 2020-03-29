@@ -1,6 +1,6 @@
 # https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-suspend.yml
 # f8f58dd
-# Sat, 25 Jan 2020 22:03:11 +0800
+# 2020-2-29 22:30:12 +0800
 
 flarum-suspend:
 
@@ -13,7 +13,7 @@ flarum-suspend:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      suspend_users_label: アカウント停止中のユーザー
+      suspend_users_label: アカウント停止
 
   # Translations in this namespace are used by the forum user interface.
   forum:

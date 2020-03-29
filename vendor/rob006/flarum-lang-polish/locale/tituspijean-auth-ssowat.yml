@@ -3,15 +3,15 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 tituspijean-auth-ssowat:
+  admin:
+    buttons:
+      save: Zapisz
+    description: 'Ustaw domenę SSOwat'
+    settings:
+      domain: 'Domena SSOwat (bez "https://" oraz końcowego "/")'
+      onlyUse: 'Wyłącz standardowe logowanie Flarum i używaj jednie uwierzytelniania za pomocą SSOwat'
+      title: 'Ustawienia SSOwat'
   forum:
     log_in: '=> core.ref.log_in'
-    log_in_with: 'Log in with SSOwat'
+    log_in_with: 'Zaloguj się za pomocą SSOwat'
     log_out: '=> core.ref.log_out'
-  admin:
-    description: 'Set SSOwat domain'
-    settings:
-      title: 'SSOwat settings'
-      domain: 'SSOwat''s domain (without "https://" or trailing "/")'
-      onlyUse: 'Disable Flarum login and only use SSOwat authentication'
-    buttons:
-      save: Save

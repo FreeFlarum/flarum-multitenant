@@ -5,8 +5,8 @@
 fof-custom-footer:
   admin:
     settings:
-      title: 'Konfiguracja niestandardowej stopki'
-      text: 'Tekst stopki'
-      height: 'Wysokość stopki'
       css: CSS
+      height: 'Wysokość stopki'
       js: JS
+      text: 'Tekst stopki'
+      title: 'Konfiguracja niestandardowej stopki'

@@ -4,28 +4,28 @@
 
 fof-linguist:
   admin:
-    menu:
-      title: Linguist
-      description: 'Dostosuj tłumaczenia do swoich potrzeb.'
     buttons:
       apply: Zastosuj
-      reset: 'Przywróć oryginał'
       copy-original: 'Skopiuj oryginalny tekst'
       load-more: 'Wczytaj więcej'
-    locales:
-      all: Wszystkie
-    placeholder:
-      not-translated: Nieprzetłumaczone
-      all-locales: 'Tekst, który tutaj wpiszesz, zostanie pokazany dla wszystkich języków'
-      hint: 'Oryginalny tekst:'
+      reset: 'Przywróć oryginał'
+    clear-cache:
+      button: 'Wyczyść cache teraz'
+      text: "Nowe tłumaczenia jeszcze nie zostały zastosowane. Uwaga: wyczyszczenie cache może chwilowo spowolnić twoje forum.\n"
     filters:
-      search: 'Szukaj tekstu tłumaczenia...'
-      with-own-translations: 'Moje tłumaczenia'
-      with-original-translations-in-locales: 'Z oryginalnym tłumaczeniem'
-      without-original-translations-in-locales: 'Bez oryginalnego tłumaczenia'
       for-extension: Rozszerzenia
       for-extension-unavailable: "Nie znaleziono żadnych tłumaczeń dla prefiksu \"{namespace}\". Możliwe, że to rozszerzenie nie posiada żadnych testów do przetłumaczenia lub korzysta z innego prefiksu. Spróbuj skorzystać z wyszukiwarki, aby znaleźć brakujące tłumaczenia.\n"
       results: 'Wyświetlono {shown} z {total} pasujących tłumaczeń'
-    clear-cache:
-      text: "Nowe tłumaczenia jeszcze nie zostały zastosowane. Uwaga: wyczyszczenie cache może chwilowo spowolnić twoje forum.\n"
-      button: 'Wyczyść cache teraz'
+      search: 'Szukaj tekstu tłumaczenia...'
+      with-original-translations-in-locales: 'Z oryginalnym tłumaczeniem'
+      with-own-translations: 'Moje tłumaczenia'
+      without-original-translations-in-locales: 'Bez oryginalnego tłumaczenia'
+    locales:
+      all: Wszystkie
+    menu:
+      description: 'Dostosuj tłumaczenia do swoich potrzeb.'
+      title: Linguist
+    placeholder:
+      all-locales: 'Tekst, który tutaj wpiszesz, zostanie pokazany dla wszystkich języków'
+      hint: 'Oryginalny tekst:'
+      not-translated: Nieprzetłumaczone

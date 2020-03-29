@@ -17,11 +17,11 @@ use Flarum\User\Exception\PermissionDeniedException;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Arr;
+use Laminas\Diactoros\Response\EmptyResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Symfony\Component\Translation\TranslatorInterface;
-use Zend\Diactoros\Response\EmptyResponse;
 
 class SendConfirmationEmailController implements RequestHandlerInterface
 {
@@ -71,7 +71,7 @@ class SendConfirmationEmailController implements RequestHandlerInterface
 
         $this->assertRegistered($actor);
 
-        if ($actor->id != $id || $actor->is_activated) {
+        if ($actor->id != $id || $actor->is_email_confirmed) {
             throw new PermissionDeniedException;
         }
 
@@ -86,9 +86,9 @@ class SendConfirmationEmailController implements RequestHandlerInterface
 
         $body = $this->translator->trans('core.email.activate_account.body', $data);
 
-        $this->mailer->raw($body, function (Message $message) use ($actor, $data) {
+        $this->mailer->raw($body, function (Message $message) use ($actor) {
             $message->to($actor->email);
-            $message->subject('['.$data['{forum}'].'] '.$this->translator->trans('core.email.activate_account.subject'));
+            $message->subject($this->translator->trans('core.email.activate_account.subject'));
         });
 
         return new EmptyResponse;

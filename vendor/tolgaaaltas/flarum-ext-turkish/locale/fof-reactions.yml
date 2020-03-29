@@ -5,6 +5,7 @@ fof-reactions:
     notification: '{username}, gönderinize {reaction} ifadesi bıraktı'
     settings:
         notify_post_reacted_label: Birisi gönderime ifade bıraktığında
+    reacting-own-post: Kendi gönderine ifade bırakamazsın
 
   admin:
     permissions:

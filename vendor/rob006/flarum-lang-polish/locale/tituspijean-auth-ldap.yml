@@ -3,23 +3,23 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 tituspijean-auth-ldap:
-  forum:
-    log_in_with: 'Zaloguj się za pomocą'
-    log_out: '=> core.ref.log_out'
   admin:
     settings:
-      title: 'Ustawienia LDAP'
       field:
-        method_name: 'Nazwa serwera LDAP (pojawi się po "Zaloguj się za pomocą")'
-        domain_controllers: 'Domeny LDAP (rozdzielone przecinkami)'
-        base_dn: 'Bazowa nazwa wyróżniająca (base DN)'
-        port: port
         account_prefix: 'Prefiks konta'
         account_suffix: 'Sufiks konta'
         admin_dn: 'Nazwa wyróżniająca (DN) administratora LDAP'
         admin_password: 'Hasło administratora LDAP'
+        base_dn: 'Bazowa nazwa wyróżniająca (base DN)'
+        domain_controllers: 'Domeny LDAP (rozdzielone przecinkami)'
+        method_name: 'Nazwa serwera LDAP (pojawi się po "Zaloguj się za pomocą")'
+        port: port
       follow_referrals: 'Podążaj za odwołaniami (follow referrals)'
+      onlyUse: 'Wyłącz standardowe logowanie Flarum i używaj jednie uwierzytelniania za pomocą LDAP'
+      title: 'Ustawienia LDAP'
+      use_admin: 'Połącz z kontem administratora LDAP'
       use_ssl: 'Użyj SSL'
       use_tls: 'Użyj TLS'
-      use_admin: 'Połącz z kontem administratora LDAP'
-      onlyUse: 'Wyłącz standardowe logowanie Flarum i używaj jednie uwierzytelniania za pomocą LDAP'
+  forum:
+    log_in_with: 'Zaloguj się za pomocą'
+    log_out: '=> core.ref.log_out'

@@ -5,12 +5,12 @@
 flagrow-passport:
   admin:
     popup:
-      title: 'Flagrow Passport'
       field:
         app-auth-url: 'OAuth authorization URL'
+        app-id: 'OAuth application ID'
+        app-scopes: 'OAuth scopes to request'
+        app-secret: 'OAuth application secret'
         app-token-url: 'OAuth token URL'
         app-user-url: 'URL API udostępniający szczegóły użytkownika po uwierzytelnieniu'
-        app-id: 'OAuth application ID'
-        app-secret: 'OAuth application secret'
-        app-scopes: 'OAuth scopes to request'
         button-title: 'Etykieta przycisku logowania'
+      title: 'Flagrow Passport'

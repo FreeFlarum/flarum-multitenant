@@ -6,7 +6,9 @@ fof-drafts:
     composer:
       title: Taslağı Kaydet
       alert: Taslak kaydedildi.
+      exit_alert: Taslaktaki değişiklikler silinsin mi?
     dropdown:
+      empty_text: Herhangi bir taslak kaydetmediniz
       title: Taslaklar
       button: Taslağı Sil
       tooltip: => fof-drafts.forum.dropdown.title

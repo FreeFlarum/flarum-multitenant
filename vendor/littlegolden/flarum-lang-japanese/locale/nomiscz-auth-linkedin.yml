@@ -1,0 +1,13 @@
+# https://github.com/NomisCZ/flarum-ext-auth-linkedin/blob/master/resources/locale/en.yml
+# d727637 on 4 Jun 2019
+# 2020-2-23 14:26:31 +0800
+
+nomiscz-auth-linkedin:
+  forum:
+    buttons:
+      login: LinkedIn でログインする
+  admin:
+    settings:
+      title: LinkedIn 認証 - 設定
+      api_app_id: API App ID
+      api_app_secret: API App Secret

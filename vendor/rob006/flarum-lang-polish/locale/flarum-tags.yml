@@ -40,6 +40,9 @@ flarum-tags:
       secondary_heading: 'Podrzędne tagi'
       settings_button: Ustawienia
   forum:
+    all_tags:
+      meta_description_text: 'Wszystkie tagi'
+      meta_title_text: '=> flarum-tags.ref.tags'
     choose_tags:
       choose_primary_placeholder: 'Wybierz główny tag|Wybierz {count} główne tagi|Wybierz {count} głównych tagów'
       choose_secondary_placeholder: 'Wybierz 1 podrzędny tag|Wybierz {count} podrzędne tagi|Wybierz {count} podrzędnych tagów'
@@ -61,6 +64,8 @@ flarum-tags:
       added_tags_text: '{username} dodał {tagsAdded}.'
       removed_tags_text: '{username} usunął {tagsRemoved}.'
       tags_text: 'tag {tags}|tagi {tags}'
+    tag:
+      meta_description_text: 'Wszystkie dyskusje oznaczone tagiem {tag}'
   lib:
     deleted_tag_text: Usunięty
   ref:

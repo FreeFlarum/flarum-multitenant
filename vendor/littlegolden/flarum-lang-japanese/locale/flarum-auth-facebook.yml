@@ -1,6 +1,6 @@
 # https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-auth-facebook.yml
 # 6bde361
-# Sun, 26 Jan 2020 18:42:15 +0800
+# 2020-2-14 00:07:50 +0800
 
 flarum-auth-facebook:
 
@@ -15,7 +15,7 @@ flarum-auth-facebook:
     facebook_settings:
       app_id_label: App ID
       app_secret_label: App Secret
-      title: Facebook 設定
+      title: Facebook 認証 - 設定
 
   # Translations in this namespace are used by the forum user interface.
   forum:

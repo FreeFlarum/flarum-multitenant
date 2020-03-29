@@ -1,0 +1,32 @@
+fof-linguist:
+  admin:
+    menu:
+      title: "Linguist"
+      description: "Управление переводами."
+    buttons:
+      apply: "Применить"
+      reset: "Восстановить оригинал"
+      copy-original: "Скопировать оригинальный текст"
+      load-more: "Загрузить ещё"
+    locales:
+      all: "Все языки"
+    placeholder:
+      not-translated: "Нет перевода"
+      all-locales: "Введённый здесь текст будет показан на всех языках"
+      hint: "Оригинальное значение:"
+    filters:
+      search: "Поиск строк..."
+      with-own-translations: "Мои переводы"
+      with-original-translations-in-locales: "С оригинальными переводами на"
+      without-original-translations-in-locales: "Без оригинальных переводов на"
+      for-extension: "Для расширения"
+      for-extension-unavailable: >
+        В данном пространстве имен не найдено ни одного перевода "{namespace}".
+        Может быть это расширение не имеет текста для перевода или использует другое пространство имен.
+        Попробуйте использовать поиск, чтобы найти его переводы.
+      results: "Показаны {shown} из {total} найденных переводов"
+    clear-cache:
+      text: >
+        Новые переводы еще не были применены.
+        Note: очистка кеша может на мгновение замедлить ваш форум.
+      button: "Очистить кеш"

@@ -1,0 +1,28 @@
+nomiscz-auth-steam:
+  forum:
+    buttons:
+      login: 通過steam登入
+      link: 綁定steam賬戶
+      unlink: 解綁steam賬戶
+    alerts:
+      already_linked: steam賬戶已綁定！
+      already_used: steam賬戶已綁定至其他賬戶!
+      link_success: steam賬戶綁定成功.
+      unlink_success: steam賬戶解绑成功.
+      error: 出現錯誤，請稍候!
+    modals:
+      link:
+        title: 綁定steam賬戶
+      unlink:
+        title: 解绑steam賬戶
+        info:
+          confirm: 你是否想要解绑你的steam賬戶?
+          no_providers: 你沒有其他登入方式，請先重置賬戶密碼.
+        buttons:
+          confirm: 是的，我確定
+          cancel: 不，我不確定!
+  admin:
+    settings:
+      title: steam登入設置
+      api_key_label: steam密匙
+      use_steam_powered_domain: 使用steampowered.com域名而不是steamcommunity.com(在中國大陸被墻)

@@ -8,11 +8,16 @@ fof-byobu:
             submit: Tamam
             edit_recipients: Alıcıları Düzenle
             send_pd: "{username} kullanıcısına mesaj gönder"
+            cancel: İptal
+        composer_private_discussion:
+            submit_button: Özel Tartışmayı Başlat
+            title_placeholder: Özel Tartışma Başlığı
         labels:
             recipients: "{count} Alıcı|{count} Alıcı"
             user_deleted: -silinmiş-
         nav:
             private_discussions: Özel tartışma
+            start_button: Yeni Özel Tartışma
         input:
             search_recipients: İlk üç karakteri yazarak bir alıcı arayın...
         search:
@@ -22,6 +27,9 @@ fof-byobu:
             titles:
                 update_recipients: "{title} alıcılarını güncelle"
                 add_recipients: Tartışmana alıcı ekle
+            help:
+                add_recipients: Bu tartışma yalnızca burada seçtiğiniz kullanıcılar tarafından görüntülenir. En az 1 alıcı (kendiniz hariç) seçmeniz gerekmektedir.
+                update_recipients: Bu tartışma yalnızca burada seçtiğiniz kullanıcılar tarafından görüntülenir.
         post:
             recipients_modified:
                 added_and_removed: "{username}, {added} alıcılara ekledi ve {removed} alıcılardan kaldırdı."
@@ -32,9 +40,12 @@ fof-byobu:
                 block_pd: Özel tartışmaları engelle
 
             byobu_link: Özel Tartışmalar
+            dropdown_label: Özel Tartışmalar
             
         notifications:
             pd_label: Birisi beni özel tartışmaya dahil etti
+            pd_reply_label: Birisi alıcısı olduğum özel tartışmaya yeni bir gönderi yazdı
+            pd_reply_text: "{username}, alıcısı olduğunuz özel tartışmaya yeni bir gönderi yazdı"
             pd_text: "{username} seninle yeni bir özel tartışma başlattı"
 
     admin:
@@ -44,13 +55,14 @@ fof-byobu:
             create_private_discussions_with_blocking_users: Özel tartışmaları engelleyen kullanıcılarla özel tartışma oluştur
             edit_user_recipients: Özel tartışmalarda yer alan kullanıcıları düzenle
             edit_group_recipients: Özel tartışmalarda yer alan grupları düzenle
+            view_private_discussions-when-flagged: Kullanıcıların bildirdiği özel tarışmaları görüntüle
             
         settings:
-            byobu_users_page_label: Kullanıcı sayfasına özel tartışma butonu ekle
+            use_tag_slug: Özel tartışmaların başlatılacağı etiketi seçin
+            use_tag_slug_help: Özel tartışmaları belirli bir etikette açılmasını zorlamak istemiyorsanız bu alanı boş bırakın, yalnızca yeni başlatılan özel tartışmalar için geçerlidir
 
     notifications:
         private_discussion_created:
-            title: "[forum-name] Yeni özel tartışma"
-
-        settings:
-            byobu_users_page_label: Kullanıcı sayfasına özel tartışma alanı ekle
+            title: "[Özel Tartışma] kullanıcı seninle yeni bir özel tartışma başlattı"
+        private_discussion_replied:
+            title: "[Özel Tartışma] kullanıcı özel tartışmaya yeni bir gönderi yazdı"

@@ -30,24 +30,15 @@ punycode.toASCII;
 /** @constructor */
 function XSLTProcessor() {}
 /**
- * @type {string}
- * @implicitCast
- */
-Element.prototype.innerHTML;
-/**
  * @constructor
  */
 function DOMParser() {}
 /**
- * @param {string} src The UTF16 string to be parsed.
+ * @param {!TrustedHTML|string} src The UTF16 string to be parsed.
  * @param {string} type The content type of the string.
  * @return {Document}
  */
 DOMParser.prototype.parseFromString = function(src, type) {};
-/**
- * @type {!Window}
- */
-var window;
 /**
  * @constructor
  * @extends {Node}
@@ -70,6 +61,13 @@ Document.prototype.createElement = function(tagName, opt_typeExtension) {};
  * @extends {Node}
  */
 function DocumentFragment() {}
+/**
+ * @param {string} name
+ * @param {?number=} flags
+ * @return {string}
+ * @nosideeffects
+ */
+Element.prototype.getAttribute = function(name, flags) {};
 /**
  * @constructor
  * @implements {IObject<(string|number), T>}
@@ -143,12 +141,25 @@ Node.prototype.parentNode;
  */
 Node.prototype.removeChild = function(oldChild) {};
 /**
+ * @param {Node} newChild
+ * @param {Node} oldChild
+ * @return {!Node}
+ */
+Node.prototype.replaceChild = function(newChild, oldChild) {};
+/**
  * @constructor
  * @implements {IArrayLike<T>}
  * @implements {Iterable<T>}
  * @template T
  */
 function NodeList() {}
+/**
+ * @param {?function(this:S, T, number, !NodeList<T>): ?} callback
+ * @param {S=} opt_thisobj
+ * @template S
+ * @return {undefined}
+ */
+NodeList.prototype.forEach = function(callback, opt_thisobj) {};
 /**
  * @type {number}
  */
@@ -163,11 +174,21 @@ function Element() {}
  */
 function Window() {}
 /**
- * @param {Node} externalNode
- * @param {boolean} deep
- * @return {Node}
+ * @param {!Node} externalNode
+ * @param {boolean=} deep
+ * @return {!Node}
  */
 Document.prototype.importNode = function(externalNode, deep) {};
+/**
+ * @type {string}
+ * @implicitCast
+ */
+Element.prototype.innerHTML;
+/**
+ * @type {string}
+ * @implicitCast
+ */
+Element.prototype.outerHTML;
 /**
  * @constructor
  * @extends {Document}
@@ -212,6 +233,12 @@ Element.prototype.setAttributeNS = function(namespaceURI, qualifiedName, value) 
  */
 Node.prototype.isEqualNode = function(arg) {};
 /**
+ * @param {string} query
+ * @return {!NodeList<!Element>}
+ * @nosideeffects
+ */
+Node.prototype.querySelectorAll = function(query) {};
+/**
  * @type {string}
  */
 Node.prototype.namespaceURI;
@@ -220,8 +247,13 @@ Node.prototype.namespaceURI;
  * @implicitCast
  */
 Node.prototype.textContent;
+/** @constructor */
+function TrustedHTML() {}
 /**
- * @type {!HTMLDocument}
- * @const
+ * @const {!HTMLDocument}
  */
 var document;
+/**
+ * @type {!Window}
+ */
+var window;

@@ -1,16 +1,18 @@
-import SettingsModal from "@fof/components/admin/settings/SettingsModal";
-import BooleanItem from "@fof/components/admin/settings/items/BooleanItem";
+import { settings } from '@fof-components';
+
+const { SettingsModal, items: { BooleanItem, StringItem } } = settings;
 
 export default () => {
     app.extensionSettings['fof-byobu'] = () =>
         app.modal.show(
             new SettingsModal({
-                title: 'Byōbu',
+                title: 'FoF Byōbu',
                 size: 'medium',
                 items: [
-                    <BooleanItem key="fof-byobu.enable_byobu_user_page">
-                        {app.translator.trans('fof-byobu.admin.settings.byobu_users_page_label')}
-                    </BooleanItem>,
+                    <StringItem key="fof-byobu.use_tag_slug">
+                        {app.translator.trans('fof-byobu.admin.settings.use_tag_slug')}
+                    </StringItem>,
+                    <p>{app.translator.trans('fof-byobu.admin.settings.use_tag_slug_help')}</p>,
                 ],
             })
         );

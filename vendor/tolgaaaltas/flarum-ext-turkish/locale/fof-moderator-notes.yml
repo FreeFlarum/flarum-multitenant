@@ -1,0 +1,18 @@
+fof-moderator-notes:
+  admin:
+    permissions:
+      createnotes: Moderatör notları oluştur
+      viewnotes: Moderatör notlarını görüntüle
+  forum:
+    moderatorNotes:
+      add_button: Yeni not
+      confirmation_message: Notunuz kaydedildi. Görüntülemek için sayfayı yenilemeniz gerekebilir.
+      create-heading: Yeni bir moderatör notu oluştur
+      dismiss_button: Tamam
+      input_heading: <strong>{username}</strong> için notunuzu girin
+      no_content_given: Bu alan boş bırakılamaz.
+      noNotes: Görünüşe göre burada hiç not yok.
+      submit_button: Notu kaydet
+
+    user:
+      notes: Moderatör Notları

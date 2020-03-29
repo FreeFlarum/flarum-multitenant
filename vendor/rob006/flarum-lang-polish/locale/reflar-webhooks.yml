@@ -5,29 +5,29 @@
 reflar-webhooks:
   actions:
     discussion:
-      started: 'Rozpoczęto dyskusję `{1}`'
-      renamed:
-        title: 'Zmieniono nazwę dyskusji `{1}`'
-        description: 'Nowy tytuł: {1}'
-      hidden: 'Ukryto dyskusję `{1}`'
-      restored: 'Przywrócono dyskusję `{1}`'
       deleted: 'Usunięto dyskusję `{1}`'
+      hidden: 'Ukryto dyskusję `{1}`'
+      renamed:
+        description: 'Nowy tytuł: {1}'
+        title: 'Zmieniono nazwę dyskusji `{1}`'
+      restored: 'Przywrócono dyskusję `{1}`'
+      started: 'Rozpoczęto dyskusję `{1}`'
     group:
       created: 'Utworzono grupę `{1}`'
-      renamed: 'Zmieniono nazwę grupy na `{1}`'
       deleted: 'Usunięto grupę `{1}`'
+      renamed: 'Zmieniono nazwę grupy na `{1}`'
     post:
-      posted: 'Nowy post w `{1}`'
-      revised: 'Edytowano post w `{1}`'
-      hidden: 'Ukryto post w `{1}`'
-      restored: 'Przywrócono post w `{1}`'
       deleted: 'Usunięto post w `{1}`'
+      hidden: 'Ukryto post w `{1}`'
+      posted: 'Nowy post w `{1}`'
+      restored: 'Przywrócono post w `{1}`'
+      revised: 'Edytowano post w `{1}`'
     user:
+      deleted: 'Usunięto użytkownika `{1}`'
       registered: 'Zarejestrował się nowy użytkownik'
       renamed:
-        title: 'Zmieniono nazwę użytkownika dla `{1}`'
         description: 'Nowa nazwa użytkownika: {1}'
-      deleted: 'Usunięto użytkownika `{1}`'
+        title: 'Zmieniono nazwę użytkownika dla `{1}`'
   adapters:
     errors:
       404: 'Webhook nie został znaleziony'
@@ -38,43 +38,43 @@ reflar-webhooks:
     nav:
       desc: 'Konfigurowalne wychodzące webhooki dla twojego forum.'
     settings:
-      title: Webhooki
+      actions:
+        flarum:
+          discussion:
+            deleted: Usunięto
+            hidden: Ukryto
+            renamed: 'Zmieniono nazwę'
+            restored: Przywrócono
+            started: Rozpoczęto
+            title: Dyskusje
+          group:
+            created: Utworzono
+            deleted: Usunięto
+            renamed: 'Zmieniono nazwę'
+            title: Grupy
+          post:
+            deleted: Usunięto
+            hidden: Ukryto
+            posted: 'Nowy post'
+            restored: Przywrócono
+            revised: Edytowano
+            title: Posty
+          user:
+            deleted: Usunięto
+            registered: Rejestracja
+            renamed: 'Zmieniono nazwę'
+            title: Użytkownicy
       help:
         disabled: 'Ten webhook jest wyłączony, ponieważ nie ma żadnych aktywnych zdarzeń.'
         general: 'Tutaj możesz dodać, edytować oraz usuwać webhooki dla swojego forum.'
         url: 'Docelowy adres URL webhooka'
       modal:
-        title: 'Ustawienia webhooka'
         description: 'Tutaj możesz ustawić dla jakich zdarzeń webhook będzie wywoływany.'
+        title: 'Ustawienia webhooka'
       services:
         discord: Discord
         slack: Slack
-      actions:
-        flarum:
-          discussion:
-            title: Dyskusje
-            started: Rozpoczęto
-            renamed: 'Zmieniono nazwę'
-            hidden: Ukryto
-            restored: Przywrócono
-            deleted: Usunięto
-          group:
-            title: Grupy
-            created: Utworzono
-            renamed: 'Zmieniono nazwę'
-            deleted: Usunięto
-          post:
-            title: Posty
-            posted: 'Nowy post'
-            revised: Edytowano
-            hidden: Ukryto
-            restored: Przywrócono
-            deleted: Usunięto
-          user:
-            title: Użytkownicy
-            registered: Rejestracja
-            renamed: 'Zmieniono nazwę'
-            deleted: Usunięto
+      title: Webhooki
   ref:
     deleted: Usunięto
     hidden: Ukryto

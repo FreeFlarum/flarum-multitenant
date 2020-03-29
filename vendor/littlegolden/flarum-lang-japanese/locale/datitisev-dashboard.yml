@@ -1,6 +1,6 @@
 # https://github.com/datitisev/flarum-ext-dashboard/blob/master/resources/locale/en.yml
 # 1216997
-# Sat, 25 Jan 2020 17:25:15 +0800
+# 2020-2-19 12:38:14 +0800
 
 datitisev-dashboard:
   admin:
@@ -20,9 +20,9 @@ datitisev-dashboard:
         december: 十二月
 
       graph:
-        users: 会員
-        discussions: 議論
-        posts: 返信
+        users: 登録会员数
+        discussions: 书込み数
+        posts: 返信数
 
       updates:
         check_button: プラグインの更新を確認する

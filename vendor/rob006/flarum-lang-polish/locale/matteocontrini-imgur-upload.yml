@@ -7,7 +7,7 @@ imgur-upload:
     settings:
       title: 'Ustawienia Imgura'
   forum:
-    upload: 'Wciśnij lub wklej aby wysłać'
-    loading: Wysyłanie...
     done: Gotowe!
     error: Błąd
+    loading: Wysyłanie...
+    upload: 'Wciśnij lub wklej aby wysłać'

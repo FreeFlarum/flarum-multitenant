@@ -6,8 +6,8 @@ kilowhat-mailing:
 
     forum:
         links:
-            mail_individual: Bu kullanıcıya elektronik posta gönder
-            mail_all: Tüm kullanıcılara e-posta gönder
+            mail_individual: Kullanıcıya elektronik posta gönder
+            mail_all: Kullanıcılara e-posta gönder
         modal_mail:
             title_text: Mesaj
             recipients_label: Alıcılar

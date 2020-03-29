@@ -22,3 +22,9 @@ php flarum cache:clear
 ### Links
 
 - [Packagist](https://packagist.org/packages/madchatthew/themelightshadow)
+
+### Screenshots
+
+<img src="https://github.com/Madchatthew/themelightshadow/blob/Master/screenshots/screenshot1.jpg">
+
+<img src="https://github.com/Madchatthew/themelightshadow/blob/Master/screenshots/screenshot2.jpg">

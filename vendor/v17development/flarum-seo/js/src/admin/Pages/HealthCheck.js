@@ -1,7 +1,5 @@
 import Page from 'flarum/components/Page';
-import SeoSettings from "../components/Forms/SeoSettings";
 import Button from 'flarum/components/Button';
-import Dropdown from 'flarum/components/Dropdown';
 import Header from "../components/Header";
 import Alert from 'flarum/components/Alert';
 import saveSettings from 'flarum/utils/saveSettings';
@@ -296,7 +294,7 @@ export default class HealthCheck extends Page {
 
         this.saving = true;
 
-        let data = app.data.settings;
+        let data = {};
         data[setting] = value;
 
         saveSettings(data)

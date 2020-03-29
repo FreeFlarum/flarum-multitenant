@@ -17,8 +17,6 @@ use Twilio\Values;
 use Twilio\Version;
 
 /**
- * PLEASE NOTE that this class contains beta products that are subject to change. Use them with caution.
- *
  * @property string $sid
  * @property string $accountSid
  * @property string $friendlyName
@@ -28,6 +26,7 @@ use Twilio\Version;
  * @property bool $skipSmsToLandlines
  * @property bool $dtmfInputRequired
  * @property string $ttsName
+ * @property bool $doNotShareWarningEnabled
  * @property \DateTime $dateCreated
  * @property \DateTime $dateUpdated
  * @property string $url
@@ -61,6 +60,7 @@ class ServiceInstance extends InstanceResource {
             'skipSmsToLandlines' => Values::array_get($payload, 'skip_sms_to_landlines'),
             'dtmfInputRequired' => Values::array_get($payload, 'dtmf_input_required'),
             'ttsName' => Values::array_get($payload, 'tts_name'),
+            'doNotShareWarningEnabled' => Values::array_get($payload, 'do_not_share_warning_enabled'),
             'dateCreated' => Deserialize::dateTime(Values::array_get($payload, 'date_created')),
             'dateUpdated' => Deserialize::dateTime(Values::array_get($payload, 'date_updated')),
             'url' => Values::array_get($payload, 'url'),

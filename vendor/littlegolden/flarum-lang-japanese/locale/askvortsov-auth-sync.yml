@@ -1,0 +1,12 @@
+# https://github.com/askvortsov1/flarum-auth-sync/blob/master/resources/locale/en.yml
+# 3a81962 yesterday
+# 2020-2-11 19:06:50 +0800
+
+askvortsov-auth-sync:
+  admin:
+    title: 認証同期設定
+    labels:
+      sync_avatar: アバターを同期しますか？
+      sync_groups: グループを同期しますか？
+      sync_bio: パーソナライズされた署名を同期しますか？(FoF User Bio プラグインがインストールされている必要があります)
+      sync_masquerade: マスカレード属性を同期しますか？（FoF Masquerade プラグインが必要です）

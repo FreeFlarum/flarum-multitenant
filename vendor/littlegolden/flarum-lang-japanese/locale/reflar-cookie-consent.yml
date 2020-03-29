@@ -1,6 +1,6 @@
 # https://github.com/ReFlar/cookie-consent/blob/master/resources/locale/en.yml
 # e04f359
-# Sun, 26 Jan 2020 01:19:49 +0800
+# 2020-2-15 23:41:38 +0800
 
 reflar-cookie-consent:
   admin:
@@ -23,9 +23,9 @@ reflar-cookie-consent:
       buttonBackgroundColor: ボタンの背景色
       buttonTextColor: ボタンのテキストの色
 
-    themes:
-        blocky: スクエア
-        edgeless: フチなし
-        classic: クラシック
-        custom: カスタム
-        no_css: テーマなし
+      themes:
+          blocky: スクエア
+          edgeless: フチなし
+          classic: クラシック
+          custom: カスタム
+          no_css: テーマなし

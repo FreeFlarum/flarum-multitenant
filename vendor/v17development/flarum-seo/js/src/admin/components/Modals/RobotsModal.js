@@ -1,7 +1,5 @@
 import Modal from 'flarum/components/Modal';
 import Button from 'flarum/components/Button';
-import FieldSet from 'flarum/components/FieldSet';
-import Switch from 'flarum/components/Switch';
 import saveSettings from 'flarum/utils/saveSettings';
 
 export default class RobotsModal extends Modal {
@@ -68,7 +66,7 @@ export default class RobotsModal extends Modal {
 
         this.loading = true;
 
-        let data = app.data.settings;
+        let data = {};
         data.seo_robots_text = this.value;
 
         saveSettings(data).then(

@@ -5,10 +5,10 @@
 dem13n-auth-mailru:
   admin:
     mailru_settings:
-      title: 'Ustawienia logowania Mail.ru'
-      app_id_label: 'App ID'
-      app_secret_label: 'App Secret Key'
       app_desc: 'Możesz zarejestrować aplikację tutaj <a>https://api.mail.ru/sites/my/add</a>'
+      app_id_label: 'App ID'
       app_p: 'Callback URL'
+      app_secret_label: 'App Secret Key'
+      title: 'Ustawienia logowania Mail.ru'
   forum:
     login_with_mailru_button: 'Zaloguj się za pomocą Mail.ru'

@@ -1,13 +1,12 @@
 # https://github.com/FriendsOfFlarum/follow-tags/blob/master/resources/locale/en.yml
 # b004903
-# Sat, 25 Jan 2020 22:49:09 +0800
+# 2020-2-29 11:27:35 +0800
 
 fof-follow-tags:
   forum:
     settings:
-      notify_new_discussion_label: あなたがフォローしているタグで誰かがディスカッションを作成しました
-      notify_new_post_label: あなたがフォローしているタグで誰かが投稿しました
-
+      notify_new_discussion_label: フォローしているタグに新しいスレッドがあります
+      notify_new_post_label: フォローしているタグに新しい返信があります
 
     index:
       follow_tag_button: フォロー

@@ -15,7 +15,7 @@ flarum-approval:
 
   # Translations in this namespace are used by the forum user interface.
   forum:
-  
+
     # These translations are displayed as tooltips for discussion badges.
     badge:
       awaiting_approval_tooltip: => flarum-approval.ref.awaiting_approval

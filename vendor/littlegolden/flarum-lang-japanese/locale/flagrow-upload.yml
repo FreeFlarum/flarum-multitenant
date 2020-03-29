@@ -1,12 +1,11 @@
 # https://github.com/FriendsOfFlarum/upload/blob/master/resources/locale/en.yml
-# 8ffaa7f
-# Sat, 25 Jan 2020 20:27:10 +0800
+# 87377b4 3 days ago
+# 2020-2-9 20:21:38 +0800
 
 flagrow-upload:
   admin:
     buttons:
       save: 設定を保存する
-
     help_texts:
       description: |
         ファイルアップロードサービスの設定を調整する
@@ -22,19 +21,18 @@ flagrow-upload:
         アップロードする前に画像のサイズを変更するかどうかを選択できます。 ピクセル単位で、画像の最大の長さと幅を選択できます。 画像のサイズを変更すると、画像の縦横比が維持されます。
       watermark: |
         写真をアップロードするときに透かしを添付するかどうかを選択します。 次の設定に従って、非GIF画像に透かしが追加されます。
-
     labels:
       aws-s3:
-        title: AWS S3 ストア設定
-        key: Key
-        secret: Secret
         bucket: Bucket
+        key: Key
         region: 地域
-      disable-hotlink-protection:
-          title: 盗難防止チェーン保護を無効にする
-          toggle: 無効にする
+        secret: Secret
+        title: AWS S3 ストア設定
       disable-download-logging:
           title: ダウンロード履歴統計を無効にする
+          toggle: 無効にする
+      disable-hotlink-protection:
+          title: 盗難防止チェーン保護を無効にする
           toggle: 無効にする
       imgur:
         title: Imgur 画像を保存した設定
@@ -60,19 +58,17 @@ flagrow-upload:
         mime_types: MIME タイプに対応するアップロード方法を設定します
       resize:
         title: 画像のサイズを変更する
-        toggle: 画像調整の切り替え
+        toggle: 開く
         max_width: 最大画像幅
         max_height: 最大画像高さ
       watermark:
         title: 透かし画像
-        toggle: 透かし画像
+        toggle: 開く
         position: 透かしの位置
         file: 透かし画像をアップロードする
-
     permissions:
       upload_label: ファイルアップロード設定
       download_label: ダウンロードファイル
-
     templates:
       file: デフォルトのファイルダウンロードテンプレート
       file_description: |
@@ -83,18 +79,17 @@ flagrow-upload:
         完全な画像をインラインで表示します。 ダウンロード機能も統計情報も収集されず、ホットリンク保護は無視されます。
       image_description: |
         画像のサムネイルを表示し、PHP を介してプロキシをダウンロードします。 統計の収集とホットリンク保護を許可します。
-
     upload_methods:
-      local: ローカル
       aws-s3: Amazon S3
       imgur: Imgur
+      local: ローカル
       ovh-svfs: OVH SVFS
       qiniu: 七牛
-
   forum:
     buttons:
       attach: 添付ファイルを追加
     states:
-      error: 間違った
       loading: 読み込み中
       success: 成功
+      error: 間違った
+      unauthorized: ダウンロードする権限がありません

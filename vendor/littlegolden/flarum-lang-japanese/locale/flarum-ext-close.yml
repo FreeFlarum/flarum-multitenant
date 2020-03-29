@@ -1,6 +1,6 @@
 # https://github.com/HiQStd/flarum-ext-close/blob/master/resources/locale/en.yml
 # db3b7f0
-# Sat, 25 Jan 2020 20:38:22 +0800
+# 2020-2-19 12:46:18 +0800
 
 flarum-ext-close:
 
@@ -13,7 +13,7 @@ flarum-ext-close:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      close_discussions_label: 閉じる議論
+      close_discussions_label: スレッドを閉じる
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -33,15 +33,15 @@ flarum-ext-close:
 
     # These translations are displayed between posts in the post stream.
     post_stream:
-      discussion_closed_text: "{username} トピックは閉じました。"
-      discussion_unclosed_text: "{username} テーマが開きました。"
+      discussion_closed_text: "{username} がスレッドを閉じた。"
+      discussion_unclosed_text: "{username} がスレッドを開いた。"
 
-      closed_discussion_title: このトピックは閉じています
-      closed_discussion_text: コンテンツは出版社にのみ表示されます。
+      closed_discussion_title: このスレッドは閉じています
+      closed_discussion_text: スレッドコンテンツはパブリッシャーのみに表示されます。
 
       closed_post_title: この返信は終了しました
-      closed_post_text: コンテンツは出版社にのみ表示されます。
+      closed_post_text: 返信コンテンツは作成者にのみ表示されます。
 
     # These translations are used in the Settings page.
     settings:
-      notify_discussion_closed_label: 誰かが私が投稿したトピックを閉じました
+      notify_discussion_closed_label: 誰かが私のスレッドを閉じました。

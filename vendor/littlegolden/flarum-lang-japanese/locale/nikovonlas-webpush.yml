@@ -4,7 +4,7 @@
 
 nikovonlas-webpush:
   forum:
-    subscribe: プッシュ通知を購読する
+    subscribe: プッシュ通知を購読する（Firefox または Chromium カーネルブラウザのみをサポート）
   admin:
     settings:
       title: Web プッシュ設定

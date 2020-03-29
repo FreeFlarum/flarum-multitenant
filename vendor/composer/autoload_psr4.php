@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     's9e\\TextFormatter\\' => array($vendorDir . '/s9e/text-formatter/src'),
+    's9e\\RegexpBuilder\\' => array($vendorDir . '/s9e/regexp-builder/src'),
     'michaelbelgium\\views\\' => array($vendorDir . '/michaelbelgium/flarum-discussion-views/src'),
     'axy\\sourcemap\\' => array($vendorDir . '/axy/sourcemap'),
     'axy\\errors\\' => array($vendorDir . '/axy/errors'),
@@ -14,10 +15,6 @@ return array(
     'axy\\backtrace\\' => array($vendorDir . '/axy/backtrace'),
     'Ziymed\\LangArabic\\' => array($vendorDir . '/ziymed/lang-arabic/src'),
     'ZerosOnesFun\\bbbbcode\\' => array($vendorDir . '/zerosonesfun/bbbbcode/src'),
-    'Zend\\Stratigility\\' => array($vendorDir . '/zendframework/zend-stratigility/src'),
-    'Zend\\HttpHandlerRunner\\' => array($vendorDir . '/zendframework/zend-httphandlerrunner/src'),
-    'Zend\\Escaper\\' => array($vendorDir . '/zendframework/zend-escaper/src'),
-    'Zend\\Diactoros\\' => array($vendorDir . '/zendframework/zend-diactoros/src'),
     'Wohali\\OAuth2\\Client\\' => array($vendorDir . '/wohali/oauth2-discord-new/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'V17Development\\FlarumSeo\\' => array($vendorDir . '/v17development/flarum-seo/src'),
@@ -72,6 +69,11 @@ return array(
     'League\\OAuth2\\Client\\' => array($vendorDir . '/league/oauth2-client/src', $vendorDir . '/league/oauth2-facebook/src', $vendorDir . '/league/oauth2-github/src', $vendorDir . '/league/oauth2-google/src'),
     'League\\OAuth1\\' => array($vendorDir . '/league/oauth1-client/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
+    'Laminas\\ZendFrameworkBridge\\' => array($vendorDir . '/laminas/laminas-zendframework-bridge/src'),
+    'Laminas\\Stratigility\\' => array($vendorDir . '/laminas/laminas-stratigility/src'),
+    'Laminas\\HttpHandlerRunner\\' => array($vendorDir . '/laminas/laminas-httphandlerrunner/src'),
+    'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
+    'Laminas\\Diactoros\\' => array($vendorDir . '/laminas/laminas-diactoros/src'),
     'JordanJay29\\Summaries\\' => array($vendorDir . '/jordanjay29/flarum-ext-summaries/src'),
     'Intervention\\Image\\' => array($vendorDir . '/intervention/image/src/Intervention/Image'),
     'ImgurUpload\\' => array($vendorDir . '/matteocontrini/flarum-imgur-upload/src'),
@@ -154,6 +156,7 @@ return array(
     'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/lib/Doctrine/Common'),
     'Dflydev\\FigCookies\\' => array($vendorDir . '/dflydev/fig-cookies/src/Dflydev/FigCookies'),
+    'Behat\\Transliterator\\' => array($vendorDir . '/behat/transliterator/src/Behat/Transliterator'),
     'AmauryCarrade\\FlarumFeeds\\' => array($vendorDir . '/amaurycarrade/flarum-ext-syndication/src'),
     '' => array($vendorDir . '/nesbot/carbon/src'),
 );

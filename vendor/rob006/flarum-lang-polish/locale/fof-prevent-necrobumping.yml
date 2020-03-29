@@ -3,20 +3,20 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 fof-prevent-necrobumping:
+  admin:
+    settings:
+      days_help: 'Dyskusja zostanie oznaczona jako stara, jeśli podana liczba dni minie od czasu opublikowania ostatniej odpowiedzi w tej dyskusji. Użyj <code>0</code> aby domyślnie wyłączyć.'
+      days_label: Dni
+      message_agreement_label: 'Niestandardowa treść potwierdzenia (checkbox)'
+      message_description_label: 'Niestandardowa treść wiadomości'
+      message_title_help: 'Użyj <code>[time]</code> dla podania czasu tekstowo, np. "14 dni".'
+      message_title_label: 'Niestandardowy tytuł wiadomości'
+      tags_help: 'Nadpisz globalne ustawienia dla konkretnego tagu. Zostaw puste, aby użyć domyślnej wartości. Jeśli dyskusja ma wiele tagów z różną liczbą dni, zostanie użyta najniższa wartość.'
+      tags_title: Tagi
   forum:
     composer:
       warning:
-        title: 'Ta dyskusja jest starsza niż <b>{time}</b>.'
-        description: 'Jest bardzo prawdopodobne, że nie jest potrzebna dalsza dyskusja na ten temat i podbijanie go jest bezcelowe.'
         checkbox_label: 'Jestem świadomy, że ta dyskusja jest dość stara, ale chcę w niej odpowiedzieć pomimo to.'
+        description: 'Jest bardzo prawdopodobne, że nie jest potrzebna dalsza dyskusja na ten temat i podbijanie go jest bezcelowe.'
         error: 'Ta dyskusja jest zbyt stara, aby w niej odpowiedzieć.'
-  admin:
-    settings:
-      days_label: Dni
-      days_help: 'Dyskusja zostanie oznaczona jako stara, jeśli podana liczba dni minie od czasu opublikowania ostatniej odpowiedzi w tej dyskusji. Użyj <code>0</code> aby domyślnie wyłączyć.'
-      message_title_label: 'Niestandardowy tytuł wiadomości'
-      message_title_help: 'Użyj <code>[time]</code> dla podania czasu tekstowo, np. "14 dni".'
-      message_description_label: 'Niestandardowa treść wiadomości'
-      message_agreement_label: 'Niestandardowa treść potwierdzenia (checkbox)'
-      tags_title: Tagi
-      tags_help: 'Nadpisz globalne ustawienia dla konkretnego tagu. Zostaw puste, aby użyć domyślnej wartości. Jeśli dyskusja ma wiele tagów z różną liczbą dni, zostanie użyta najniższa wartość.'
+        title: 'Ta dyskusja jest starsza niż <b>{time}</b>.'

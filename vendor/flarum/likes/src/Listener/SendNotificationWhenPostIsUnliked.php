@@ -3,10 +3,8 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Likes\Listener;
@@ -32,7 +30,7 @@ class SendNotificationWhenPostIsUnliked
 
     public function handle(PostWasUnliked $event)
     {
-        if ($event->post->user->id != $event->user->id) {
+        if ($event->post->user && $event->post->user->id != $event->user->id) {
             $this->notifications->sync(
                 new PostLikedBlueprint($event->post, $event->user),
                 []

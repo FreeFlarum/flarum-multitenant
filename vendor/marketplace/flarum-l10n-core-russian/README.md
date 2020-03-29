@@ -29,4 +29,4 @@ php flarum cache:clear
 
 ## Donation / Пожертвование
 
-- [Donating](https://donating.gitlab.io/)
+- [Donation Form](https://donation-form.github.io/)

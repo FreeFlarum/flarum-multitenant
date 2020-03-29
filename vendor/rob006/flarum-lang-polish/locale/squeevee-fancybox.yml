@@ -4,6 +4,6 @@
 
 fancybox:
   forum:
+    error: 'Wystąpił błąd podczas ładowania tego obrazka.'
     next: Następny
     prev: Poprzedni
-    error: 'Wystąpił błąd podczas ładowania tego obrazka.'

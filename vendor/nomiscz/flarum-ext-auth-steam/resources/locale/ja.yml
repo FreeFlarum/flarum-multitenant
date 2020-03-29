@@ -1,0 +1,28 @@
+nomiscz-auth-steam:
+  forum:
+    buttons:
+      login: Steam でログイン
+      link: Steam アカウントのリンク
+      unlink: Steam アカウントのリンク 解除
+    alerts:
+      already_linked: Steam アカウントは既にリンクされています！
+      already_used: Steam アカウントはすでに別のユーザーにリンクされています！
+      link_success: Steam アカウントのリンクが成功しました。
+      unlink_success: Steam アカウントのリンク解除に成功しました。
+      error: 問題が発生しました。しばらくしてからもう一度お試しください！
+    modals:
+      link:
+        title: リンク Steam アカウント
+      unlink:
+        title: Steam アカウントのリンク解除
+        info:
+          confirm: 本当に、Steam アカウントのリンクを解除しますか？
+          no_providers: 他のログインプロバイダーはありません！おそらくパスワードをリセットする必要があります。
+        buttons:
+          confirm: はい、アカウントのリンクを解除します
+          cancel: いいえ！
+  admin:
+    settings:
+      title: Steam 登録設定
+      api_key_label: steam API Key
+      use_steam_powered_domain: steamcommunity.com の代わりに steampowered.com ドメインを使用（中国でブロック）

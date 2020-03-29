@@ -14,7 +14,7 @@ fof-polls:
 
     composer_discussion:
       add_poll: Anket Oluştur
-      edit_poll: => Anketi Düzenle
+      edit_poll: => fof-polls.forum.moderation.edit
 
     modal:
       add_title: Anket Oluştur

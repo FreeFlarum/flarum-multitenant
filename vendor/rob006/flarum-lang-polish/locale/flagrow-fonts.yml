@@ -4,29 +4,29 @@
 
 flagrow-fonts:
   admin:
-    nav:
-      title: Czcionki
-      description: 'Zarządzaj czcionkami na swoim forum.'
     browse:
       label:
-        sort: 'Sortuj według'
         search: Szukaj
-      sort:
-        alpha: Alfabetycznie
-        date: 'Ostatnio dodane/zaktualizowane'
-        popularity: Popularne
-        trending: 'Ostatnie modne'
-        enabled: Włączone
+        sort: 'Sortuj według'
       loader:
-        more: 'Wczytaj więcej'
         loading: Ładowanie...
+        more: 'Wczytaj więcej'
+      sample-text: 'Mężny bądź, chroń pułk twój i sześć flag.'
       select:
         enable: Włącz
         update: Aktualizuj
-      sample-text: 'Mężny bądź, chroń pułk twój i sześć flag.'
+      sort:
+        alpha: Alfabetycznie
+        date: 'Ostatnio dodane/zaktualizowane'
+        enabled: Włączone
+        popularity: Popularne
+        trending: 'Ostatnie modne'
     modal:
       settings:
-        title: 'Ustawienia czcionek'
         field:
           googleApiKey: 'Google API Key'
           googleApiKeyDescription: 'Musisz utworzyć klucz API Google Fonts i podać go tutaj. Najprostszym sposobem jest przejście <a>tutaj</a> i kliknięcie „Get a Key”'
+        title: 'Ustawienia czcionek'
+    nav:
+      description: 'Zarządzaj czcionkami na swoim forum.'
+      title: Czcionki

@@ -1,6 +1,6 @@
 # https://github.com/FriendsOfFlarum/pages/blob/master/resources/locale/en.yml
-# 560a99d
-# Sat, 25 Jan 2020 23:27:29 +0800
+# d8d3662 2 days ago
+# 2020-2-28 16:20:44 +0800
 
 fof-pages:
 
@@ -15,9 +15,10 @@ fof-pages:
     edit_page:
       content_label: => fof-pages.ref.content
       content_placeholder: => fof-pages.ref.content
-      delete_page_button: Delete Page
+      delete_page_button: ページを削除
       delete_page_confirmation: "ページを削除する？"
       hidden_label: 下書きとして保存する
+      restricted_label: アクセス制限（権限ページに移動して、カスタムページにアクセスできるユーザーを設定します）
       html_label: HTML を有効化する
       set_as_home_page_confirmation: "本当にこのページをホームページに設定しますか？"
       slug_label: => fof-pages.ref.slug
@@ -43,6 +44,13 @@ fof-pages:
     pages_list:
       empty_text: ページが存在しないようです
       title: => fof-pages.ref.title
+
+    # These Strings are used in the permission page.
+    permissions:
+      restricted: カスタムの静的ページにアクセスする
+    badges:
+      hidden: 下書き
+      restricted: アクセス制限がある
 
   # These strings are used in the navigation bar.
   ref:

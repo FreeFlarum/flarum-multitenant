@@ -10,13 +10,13 @@
 namespace Flarum\Http;
 
 use Flarum\Foundation\SiteInterface;
+use Laminas\Diactoros\Response;
+use Laminas\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequestFactory;
+use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
+use Laminas\HttpHandlerRunner\RequestHandlerRunner;
+use Laminas\Stratigility\Middleware\ErrorResponseGenerator;
 use Throwable;
-use Zend\Diactoros\Response;
-use Zend\Diactoros\ServerRequest;
-use Zend\Diactoros\ServerRequestFactory;
-use Zend\HttpHandlerRunner\Emitter\SapiEmitter;
-use Zend\HttpHandlerRunner\RequestHandlerRunner;
-use Zend\Stratigility\Middleware\ErrorResponseGenerator;
 
 class Server
 {
@@ -29,10 +29,8 @@ class Server
 
     public function listen()
     {
-        $app = $this->safelyBootApp();
-
         $runner = new RequestHandlerRunner(
-            $app->getRequestHandler(),
+            $this->safelyBootAndGetHandler(),
             new SapiEmitter,
             [ServerRequestFactory::class, 'fromGlobals'],
             function (Throwable $e) {
@@ -45,14 +43,17 @@ class Server
     }
 
     /**
-     * Try to boot Flarum, and prevent exceptions from exposing sensitive info.
+     * Try to boot Flarum, and retrieve the app's HTTP request handler.
      *
-     * @return \Flarum\Foundation\AppInterface
+     * We catch all exceptions happening during this process and format them to
+     * prevent exposure of sensitive information.
+     *
+     * @return \Psr\Http\Server\RequestHandlerInterface
      */
-    private function safelyBootApp()
+    private function safelyBootAndGetHandler()
     {
         try {
-            return $this->site->bootApp();
+            return $this->site->bootApp()->getRequestHandler();
         } catch (Throwable $e) {
             exit($this->formatBootException($e));
         }

@@ -18,4 +18,4 @@ flarum-lock:
       discussion_locked_text: '{username} zamknął dyskusję.'
       discussion_unlocked_text: '{username} otworzył dyskusję.'
     settings:
-      notify_discussion_locked_label: 'Ktoś zamknie dyskusję, którą rozpocząłem'
+      notify_discussion_locked_label: 'Ktoś zamknął dyskusję, którą rozpocząłem'

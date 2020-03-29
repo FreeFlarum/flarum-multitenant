@@ -3,10 +3,8 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Tags;
@@ -54,8 +52,14 @@ class Tag extends AbstractModel
     {
         parent::boot();
 
-        static::deleted(function ($tag) {
-            Permission::where('permission', 'like', "tag{$tag->id}.%")->delete();
+        static::saved(function (self $tag) {
+            if ($tag->wasUnrestricted()) {
+                $tag->deletePermissions();
+            }
+        });
+
+        static::deleted(function (self $tag) {
+            $tag->deletePermissions();
         });
     }
 
@@ -164,6 +168,24 @@ class Tag extends AbstractModel
                 $query->where('user_id', $user->id);
             }
         ]);
+    }
+
+    /**
+     * Has this tag been unrestricted recently?
+     *
+     * @return bool
+     */
+    public function wasUnrestricted()
+    {
+        return ! $this->is_restricted && $this->wasChanged('is_restricted');
+    }
+
+    /**
+     * Delete all permissions belonging to this tag.
+     */
+    public function deletePermissions()
+    {
+        Permission::where('permission', 'like', "tag{$this->id}.%")->delete();
     }
 
     protected static function getIdsWherePermission(User $user, string $permission, bool $condition = true): array

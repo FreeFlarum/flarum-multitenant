@@ -1,0 +1,8 @@
+askvortsov-auth-sync:
+  admin:
+    title: Auth Sync Ayarları
+    labels:
+      sync_avatar: Avatarı Eşitle?
+      sync_groups: Grupları Eşitle?
+      sync_bio: Biyografiyi Eşitle? (Friends of Flarum User Bio uzantısı gerektirir)
+      sync_masquerade: Masquerade Verileri Eşitlensin mi? Friends of Flarum Masquerade uzantısı gerektirir.

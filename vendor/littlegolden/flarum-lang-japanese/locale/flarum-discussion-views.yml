@@ -5,8 +5,8 @@
 core:
   forum:
     index_sort:
-      popular_button: 人気
-      unpopular_button: 不人気
+      popular_button: 多くの人が読む
+      unpopular_button: 読む人は少ない
 
 flarum_discussion_views:
   forum:

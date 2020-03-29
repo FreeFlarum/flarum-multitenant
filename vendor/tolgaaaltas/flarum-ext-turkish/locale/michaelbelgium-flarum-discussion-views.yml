@@ -1,8 +1,8 @@
 core:
   forum:
     index_sort:
-      popular_button: Popüler
-      unpopular_button: Popüler olmayan
+      popular_button: Görüntülenen
+      unpopular_button: Görüntülenmeyen
 
 flarum_discussion_views:
   forum:
@@ -12,6 +12,8 @@ flarum_discussion_views:
       label: Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?|Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?
     discussion_controls:
       resetviews_button: Görüntülenmeyi sıfırla
+    viewlist:
+      title: Son Görüntüleyenler
   admin:
       permissions:
           reset_views_label: Tartışma görüntülenmesini sıfırla
@@ -19,4 +21,6 @@ flarum_discussion_views:
         title: Tartışma Görüntülenme Ayarları
         track_unique: Tekil görüntülenmeleri say
         abbr_numbers: Görüntülenme numaralarını kısalt
-        show_filter: Popüler (olmayan) filtresini etkinleştir
+        show_filter: Görüntülenen (Görüntülenmeyen) filtresini etkinleştir
+        max_viewcount: Görüntüleyenlerin sayısı
+        show_viewlist: Görüntüleyenleri göster

@@ -9,23 +9,15 @@
 
 namespace Flarum\Util;
 
+use Illuminate\Support\Str as Laravel;
+
 class Str
 {
     /**
-     * Create a slug out of the given string.
-     *
-     * Non-alphanumeric characters are converted to hyphens.
-     *
-     * @param string $str
-     * @return string
+     * @deprecated
      */
     public static function slug($str)
     {
-        $str = strtolower($str);
-        $str = preg_replace('/[^a-z0-9]/i', '-', $str);
-        $str = preg_replace('/-+/', '-', $str);
-        $str = preg_replace('/-$|^-/', '', $str);
-
-        return $str;
+        return Laravel::slug($str);
     }
 }

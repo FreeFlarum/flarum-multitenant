@@ -5,5 +5,5 @@
 zhishiq:
   queue:
     admin:
-      setting_title: 'Queue Settings'
-      queue_backend: 'Queue backend(Only redis is supported)'
+      queue_backend: 'Backend kolejki (obecnie tylko redis jest wspierany)'
+      setting_title: 'Ustawienia kolejki'

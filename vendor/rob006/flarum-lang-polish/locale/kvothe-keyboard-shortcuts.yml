@@ -4,75 +4,75 @@
 
 kvothe-keyboard-shortcuts:
   admin:
+    categories:
+      disc-list: 'Lista dyskusji'
+      disc-page: 'Widok dyskusji'
+      global: Globalne
+      logged-in: 'Dla zalogowanych'
+      logged-out: 'Dla wylogowanych'
+    key-descriptions:
+      back: Wróć
+      clear: 'Wyczyść notyfikacje'
+      first-post: 'Pierwszy post'
+      follow: 'Zacznij/przestań obserwować'
+      help: 'Pomoc skrótów klawiaturowych'
+      last-post: 'Ostatni post'
+      login: 'Pokaż okienko logowania'
+      mark-read: 'Oznacz wszystkie posty jako przeczytane'
+      new-disc: 'Nowa dyskusja'
+      next-disc: 'Następna dyskusja'
+      next-post: 'Następny post'
+      notifications: Powiadomienia
+      pin-sidebar: 'Przypnij sidebar'
+      prev-disc: 'Poprzednia dyskusja'
+      prev-post: 'Poprzedni post'
+      refresh: Odśwież
+      reply: Odpowiedz
+      search: Szukaj
+      sidebar: 'Pokaż/ukryj sidebar'
+      signup: 'Pokaż okienko rejestracji'
+      sort-latest: 'Sortuj po ostatnio aktywnych'
+      sort-newest: 'Sortuj po najnowszych dyskusjach'
+      sort-oldest: 'Sortuj po najstarszych dyskusjach'
+      sort-top: 'Sortuj po najbardziej aktywnych'
+      user-menu: 'Otwórz menu użytkownika'
     settings:
-      title: 'Keyboard Shortcut Settings'
-      modifiers: 'For modifier keys you can use shift, ctrl, alt, or meta.'
-      substitute: 'You can substitute option for alt and command for meta.'
-      special: 'Other special keys are backspace, tab, enter, return, capslock, esc, escape, space, pageup, pagedown, end, home, left, up, right, down, ins, del, and plus.'
-      other: 'Any other key you should be able to reference by name like a, /, $, *, or = .'
-    key-descriptions:
-      prev-disc: 'Previous Discussion'
-      next-disc: 'Next Discussion'
-      refresh: Refresh
-      sort-top: 'Sort by Top'
-      sort-latest: 'Sort by Latest'
-      sort-newest: 'Sort by Newest'
-      sort-oldest: 'Sort by Oldest'
-      prev-post: 'Previous Post'
-      next-post: 'Next Post'
-      first-post: 'First Post'
-      last-post: 'Last Post'
-      sidebar: 'Show/Hide Sidebar'
-      pin-sidebar: 'Pin Sidebar'
-      back: Back
-      follow: Follow/Unfollow
-      reply: Reply
-      notifications: Notifications
-      user-menu: 'Open User menu'
-      mark-read: 'Mark all posts as read'
-      clear: 'Clear notifications'
-      new-disc: 'New Discussion'
-      login: 'Show LogIn Modal'
-      signup: 'Show SignUp Modal'
-      search: Search
-      help: 'Keyboard Shortcut Help'
-    categories:
-      disc-list: 'Discussion List'
-      disc-page: 'Discussion Page'
-      logged-in: 'When Logged in'
-      logged-out: 'When Logged out'
-      global: Global
+      modifiers: 'Jako klawisz modyfikujący możesz użyć "shift", "ctrl", "alt" lub "meta".'
+      other: 'Każdy inny klawisz można podać wpisując bezpośrednio jego nazwę, np. "a", "/", "$", "*" lub  "=".'
+      special: 'Inne specjalne klawisze to "backspace", "tab", "enter", "return", "capslock", "esc", "escape", "space", "pageup", "pagedown", "end", "home", "left", "up", "right", "down", "ins", "del" oraz "plus".'
+      substitute: 'Możesz użyć "option" zamiast "alt" i "command" zamiast "meta".'
+      title: 'Ustawienia skrótów klawiaturowych'
   forum:
-    modal-title: 'Keyboard Shortcuts'
-    key-descriptions:
-      prev-disc: 'Previous Discussion'
-      next-disc: 'Next Discussion'
-      refresh: Refresh
-      sort-top: 'Sort by Top'
-      sort-latest: 'Sort by Latest'
-      sort-newest: 'Sort by Newest'
-      sort-oldest: 'Sort by Oldest'
-      prev-post: 'Previous Post'
-      next-post: 'Next Post'
-      first-post: 'First Post'
-      last-post: 'Last Post'
-      sidebar: 'Show/Hide Sidebar'
-      pin-sidebar: 'Pin Sidebar'
-      back: Back
-      follow: Follow/Unfollow
-      reply: Reply
-      notifications: Notifications
-      user-menu: 'Open User menu'
-      mark-read: 'Mark all posts as read'
-      clear: 'Clear notifications'
-      new-disc: 'New Discussion'
-      login: 'Show LogIn Modal'
-      signup: 'Show SignUp Modal'
-      search: Search
-      help: 'Keyboard Shortcut Help'
     categories:
-      disc-list: 'Discussion List'
-      disc-page: 'Discussion Page'
-      logged-in: 'When Logged in'
-      logged-out: 'When Logged out'
-      global: Global
+      disc-list: 'Lista dyskusji'
+      disc-page: 'Widok dyskusji'
+      global: Globalne
+      logged-in: 'Dla zalogowanych'
+      logged-out: 'Dla wylogowanych'
+    key-descriptions:
+      back: Wróć
+      clear: 'Wyczyść notyfikacje'
+      first-post: 'Pierwszy post'
+      follow: 'Zacznij/przestań obserwować'
+      help: 'Pomoc skrótów klawiaturowych'
+      last-post: 'Ostatni post'
+      login: 'Pokaż okienko logowania'
+      mark-read: 'Oznacz wszystkie posty jako przeczytane'
+      new-disc: 'Nowa dyskusja'
+      next-disc: 'Następna dyskusja'
+      next-post: 'Następny post'
+      notifications: Powiadomienia
+      pin-sidebar: 'Przypnij sidebar'
+      prev-disc: 'Poprzednia dyskusja'
+      prev-post: 'Poprzedni post'
+      refresh: Odśwież
+      reply: Odpowiedz
+      search: Szukaj
+      sidebar: 'Pokaż/ukryj sidebar'
+      signup: 'Pokaż okienko rejestracji'
+      sort-latest: 'Sortuj po ostatnio aktywnych'
+      sort-newest: 'Sortuj po najnowszych dyskusjach'
+      sort-oldest: 'Sortuj po najstarszych dyskusjach'
+      sort-top: 'Sortuj po najbardziej aktywnych'
+      user-menu: 'Otwórz menu użytkownika'
+    modal-title: 'Skróty klawiaturowe'

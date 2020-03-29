@@ -7,7 +7,7 @@ core:
     add_extension:
       developer_text: 'Jeśli jesteś deweloperem, możesz <a>zapoznać się z dokumentacją</a> i rozpocząć pracę nad własnymi rozszerzeniami.'
       install_text: 'W międzyczasie możesz poszukać rozszerzeń na <a>stronie Flarum Community</a> i zainstalować je ręcznie przy użyciu Composera.'
-      temporary_text: 'Pewnego dnia, w niedalekiej przyszłości, to okno będzie ci pozwalać na łatwe i szybkie dodanie rozszerzenia do twojego forum. Budujemy ekosystem, tak jak mówimy!'
+      temporary_text: 'Pewnego dnia, w niedalekiej przyszłości, to okienko pozwoli ci na łatwe i szybkie dodanie rozszerzenia do twojego forum. Budujemy ekosystem!'
       title: 'Dodaj rozszerzenie'
     appearance:
       colored_header_label: 'Kolorowy nagłówek'
@@ -71,21 +71,16 @@ core:
     email:
       account_heading: 'Konto SMTP'
       addresses_heading: Adresy
+      driver_heading: 'Wybierz sterownik (driver)'
       driver_label: 'Sterownik (driver)'
       encryption_label: 'Szyfrowanie (encryption)'
       from_label: Nadawca
       heading: '=> core.ref.email'
       host_label: Host
-      password_label: '=> core.ref.password'
-      port_label: Port
-      server_heading: 'Serwer SMTP'
-      submit_button: '=> core.ref.save_changes'
-      text: 'Skonfiguruj sterownik, ustawienia i adresy, z których twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
-      username_label: '=> core.ref.username'
-      driver_heading: 'Wybierz sterownik (driver)'
       mail_encryption_label: 'Szyfrowanie (encryption)'
       mail_host_label: Host
       mail_mailgun_domain_label: Domena
+      mail_mailgun_region_label: Region
       mail_mailgun_secret_label: 'Secret key'
       mail_mandrill_secret_label: 'Secret key'
       mail_password_label: '=> core.ref.password'
@@ -94,10 +89,17 @@ core:
       mail_ses_region_label: Region
       mail_ses_secret_label: Secret
       mail_username_label: '=> core.ref.username'
-      mailgun_heading: 'Ustawienia Mailgun'
-      mandrill_heading: 'Ustawienia Mandrill'
+      mailgun_heading: 'Ustawienia Mailguna'
+      mandrill_heading: 'Ustawienia Mandrilla'
+      not_sending_message: 'Obecnie Flarum nie wysyła żadnych wiadomości e-mail. Może to być skutek wybranego sterownika lub błędów w konfiguracji.'
+      password_label: '=> core.ref.password'
+      port_label: Port
+      server_heading: 'Serwer SMTP'
       ses_heading: 'Ustawienia SES'
       smtp_heading: 'Ustawienia SMTP'
+      submit_button: '=> core.ref.save_changes'
+      text: 'Skonfiguruj sterownik, ustawienia i adresy, z których twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
+      username_label: '=> core.ref.username'
     extensions:
       add_button: 'Dodaj rozszerzenie'
       settings_button: '=> core.ref.settings'
@@ -128,10 +130,12 @@ core:
       delete_posts_forever_label: 'Usuwanie postów na zawsze'
       delete_posts_label: 'Usuwanie postów'
       edit_posts_label: 'Edytowanie postów'
+      edit_users_label: 'Edytowanie użytkowników'
       global_heading: Globalne
       moderate_heading: Moderacja
       new_group_button: 'Nowa grupa'
       participate_heading: Uczestnictwo
+      post_without_throttle_label: 'Odpowiadanie w dyskusjach z pominięciem limitu szybkości'
       read_heading: Czytanie
       rename_discussions_label: 'Zmiana tytułu dyskusji'
       reply_to_discussions_label: 'Odpowiadanie w dyskusji'
@@ -141,7 +145,6 @@ core:
       view_last_seen_at_label: 'Dostęp do daty ostatniej wizyty użytkownika'
       view_post_ips_label: 'Przeglądanie IP użytkowników'
       view_user_list_label: 'Przeglądanie listy użytkowników'
-      edit_users_label: 'Edytowanie użytkowników'
     permissions_controls:
       allow_indefinitely_button: 'Cały czas'
       allow_some_minutes_button: 'Na {count} minutę|Na {count} minuty|Na {count} minut'
@@ -156,6 +159,18 @@ core:
     upload_image:
       remove_button: '=> core.ref.remove'
       upload_button: 'Wybierz obrazek...'
+  api:
+    invalid_username_message: 'Nazwa użytkownika może zawierać jedynie litery, cyfry i myślniki.'
+  email:
+    activate_account:
+      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) zarejestrował się na {forum} używając tego adresu e-mail.\n\nJeśli byłeś to ty, po prostu kliknij ten link i twoje konto zostanie aktywowane:\n{url}\n\nJeśli się nie rejestrowałeś, zignoruj proszę ten e-mail.\n"
+      subject: 'Aktywuj swoje nowe konto'
+    confirm_email:
+      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) zmienił swój adres e-mail na {forum} na ten.\n\nJeśli byłeś to ty, po prostu kliknij ten link, a twój e-mail zostanie zatwierdzony:\n{url}\n\nJeśli to nie ty, zignoruj proszę ten e-mail.\n"
+      subject: 'Potwierdź swój adres e-mail'
+    reset_password:
+      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) poprosił o zresetowanie hasła do swojego konta na {forum}.\n\nJeśli byłeś to ty, kliknij ten link, aby zresetować swoje hasło:\n{url}\n\nJeśli nie chcesz zmieniać hasła, po prostu zignoruj ten e-mail, a nic się nie stanie.\n"
+      subject: '=> core.ref.reset_your_password'
   forum:
     change_email:
       confirm_password_placeholder: '=> core.ref.confirm_password'
@@ -261,9 +276,9 @@ core:
       discussion_renamed_text: '{username} zmienił tytuł dyskusji'
       empty_text: 'Brak powiadomień'
       mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
+      mark_as_read_tooltip: 'Oznacz jako przeczytane'
       title: '=> core.ref.notifications'
       tooltip: '=> core.ref.notifications'
-      mark_as_read_tooltip: 'Oznacz jako przeczytane'
     post:
       edited_text: Edytowany
       edited_tooltip: '{username} edytował {ago}'
@@ -298,7 +313,7 @@ core:
       notifications_heading: '=> core.ref.notifications'
       notify_by_email_heading: '=> core.ref.email'
       notify_by_web_heading: Sieć
-      notify_discussion_renamed_label: 'Ktoś zmienia tytuł dyskusji, którą rozpocząłem'
+      notify_discussion_renamed_label: 'Ktoś zmienił tytuł dyskusji, którą rozpocząłem'
       privacy_disclose_online_label: 'Pozwól innym widzieć, kiedy jestem online'
       privacy_heading: Prywatność
       title: '=> core.ref.settings'
@@ -327,13 +342,22 @@ core:
       button: Opcje
       delete_button: '=> core.ref.delete'
       delete_confirmation: 'Czy jesteś pewien, że chcesz usunąć tego użytkownika? Wszystkie jego posty także zostaną usunięte.'
-      edit_button: '=> core.ref.edit'
       delete_error_message: 'Usunięcie użytkownika <i>{username} ({email})</i> nie powiodło się'
       delete_success_message: 'Użytkownik <i>{username} ({email})</i> został usunięty'
+      edit_button: '=> core.ref.edit'
     user_email_confirmation:
       alert_message: '=> core.ref.confirmation_email_sent'
       resend_button: 'Wyślij ponownie e-mail aktywacyjny'
       sent_message: Wysłano
+  group:
+    admin: Administrator
+    admins: Administratorzy
+    guest: Gość
+    guests: Goście
+    member: Użytkownik
+    members: Użytkownicy
+    mod: Moderator
+    mods: Moderatorzy
   lib:
     badge:
       hidden_tooltip: Ukryte
@@ -351,56 +375,6 @@ core:
       two_text: '{first} i {second}'
     username:
       deleted_text: '[usunięty]'
-  views:
-    content:
-      javascript_disabled_message: 'Ta strona najlepiej działa w nowoczesnych przeglądarkach z włączonym JavaScriptem.'
-      load_error_message: 'Coś poszło nie tak podczas ładowania pełnej wersji strony. Jeśli problem będzie się powtarzał, wyczyść pamięć przeglądarki (cache) i spróbuj ponownie.'
-      loading_text: Ładowanie...
-    discussion:
-      next_page_button: '=> core.ref.next_page'
-      previous_page_button: '=> core.ref.previous_page'
-    error:
-      403_message: 'Nie masz uprawnień, aby przeglądać tę stronę.'
-      404_message: 'Strona której szukasz nie istnieje.'
-      404_return_link: 'Wróć na {forum}'
-      500_message: 'Wystąpił błąd podczas próby załadowania tej strony.'
-      503_message: '{forum} jest w trakcie modernizacji. Prosimy o cierpliwość!'
-      419_message: 'Zbyt długo byłeś nieaktywny.'
-      419_return_link: 'Cofnij się, aby spróbować ponownie'
-      csrf_token_mismatch: 'Zbyt długo byłeś nieaktywny.'
-      csrf_token_mismatch_return_link: 'Cofnij się, aby spróbować ponownie'
-      invalid_confirmation_token: 'Ten link aktywacyjny został już użyty lub jest nieprawidłowy.'
-      not_authenticated: 'Nie masz uprawnień, aby przeglądać tę stronę. Spróbuj ponownie po zalogowaniu.'
-      not_found: 'Strona której szukasz nie istnieje.'
-      not_found_return_link: 'Wróć na {forum}'
-      permission_denied: 'Nie masz uprawnień, aby przeglądać tę stronę.'
-      unknown: 'Wystąpił błąd podczas próby załadowania tej strony.'
-      forbidden: 'Nie masz uprawnień, aby przeglądać tę stronę.'
-    index:
-      all_discussions_heading: '=> core.ref.all_discussions'
-      next_page_button: '=> core.ref.next_page'
-      previous_page_button: '=> core.ref.previous_page'
-    log_out:
-      log_out_button: '=> core.ref.log_out'
-      log_out_confirmation: 'Czy na pewno chcesz się wylogować z {forum}?'
-      title: '=> core.ref.log_out'
-    reset_password:
-      confirm_password_label: 'Potwierdź nowe hasło'
-      new_password_label: 'Nowe hasło'
-      submit_button: '=> core.ref.save_changes'
-      title: '=> core.ref.reset_your_password'
-  api:
-    invalid_username_message: 'Nazwa użytkownika może zawierać jedynie litery, cyfry i myślniki.'
-  email:
-    activate_account:
-      subject: 'Aktywuj swoje nowe konto'
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) zarejestrował się na {forum} używając tego adresu e-mail.\n\nJeśli byłeś to ty, po prostu kliknij ten link i twoje konto zostanie aktywowane:\n{url}\n\nJeśli się nie rejestrowałeś, zignoruj proszę ten e-mail.\n"
-    confirm_email:
-      subject: 'Potwierdź swój adres e-mail'
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) zmienił swój adres e-mail na {forum} na ten.\n\nJeśli byłeś to ty, po prostu kliknij ten link, a twój e-mail zostanie zatwierdzony:\n{url}\n\nJeśli to nie ty, zignoruj proszę ten e-mail.\n"
-    reset_password:
-      subject: '=> core.ref.reset_your_password'
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) poprosił o zresetowanie hasła do swojego konta na {forum}.\n\nJeśli byłeś to ty, kliknij ten link, aby zresetować swoje hasło:\n{url}\n\nJeśli nie chcesz zmieniać hasła, po prostu zignoruj ten e-mail, a nic się nie stanie.\n"
   ref:
     all_discussions: 'Wszystkie dyskusje'
     change_email: 'Zmień adres e-mail'
@@ -417,6 +391,8 @@ core:
     discussions: Dyskusje
     edit: Edytuj
     email: E-mail
+    icon: Ikona
+    icon_text: 'Wpisz nazwę dowolnej klasy z <a>Font Awesome</a>, <em>włącznie</em> z prefiksem <code>fas fa-</code>.'
     load_more: 'Wczytaj więcej'
     log_in: 'Zaloguj się'
     log_out: 'Wyloguj się'
@@ -441,17 +417,44 @@ core:
     users: Użytkownicy
     write_a_reply: 'Napisz odpowiedź...'
     you: Ty
-    icon: Ikona
-    icon_text: 'Wpisz nazwę dowolnej klasy z <a>Font Awesome</a>, <em>włącznie</em> z prefiksem <code>fas fa-</code>.'
-  group:
-    admin: Administrator
-    admins: Administratorzy
-    guest: Gość
-    guests: Goście
-    member: Użytkownik
-    members: Użytkownicy
-    mod: Moderator
-    mods: Moderatorzy
+  views:
+    content:
+      javascript_disabled_message: 'Ta strona najlepiej działa w nowoczesnych przeglądarkach z włączonym JavaScriptem.'
+      load_error_message: 'Coś poszło nie tak podczas ładowania pełnej wersji strony. Jeśli problem będzie się powtarzał, wyczyść pamięć przeglądarki (cache) i spróbuj ponownie.'
+      loading_text: Ładowanie...
+    discussion:
+      next_page_button: '=> core.ref.next_page'
+      previous_page_button: '=> core.ref.previous_page'
+    error:
+      403_message: 'Nie masz uprawnień, aby przeglądać tę stronę.'
+      404_message: 'Strona której szukasz nie istnieje.'
+      404_return_link: 'Wróć na {forum}'
+      419_message: 'Zbyt długo byłeś nieaktywny.'
+      419_return_link: 'Cofnij się, aby spróbować ponownie'
+      500_message: 'Wystąpił błąd podczas próby załadowania tej strony.'
+      503_message: '{forum} jest w trakcie modernizacji. Prosimy o cierpliwość!'
+      csrf_token_mismatch: 'Zbyt długo byłeś nieaktywny.'
+      csrf_token_mismatch_return_link: 'Cofnij się, aby spróbować ponownie'
+      forbidden: 'Nie masz uprawnień, aby przeglądać tę stronę.'
+      invalid_confirmation_token: 'Ten link aktywacyjny został już użyty lub jest nieprawidłowy.'
+      not_authenticated: 'Nie masz uprawnień, aby przeglądać tę stronę. Spróbuj ponownie po zalogowaniu.'
+      not_found: 'Strona której szukasz nie istnieje.'
+      not_found_return_link: 'Wróć na {forum}'
+      permission_denied: 'Nie masz uprawnień, aby przeglądać tę stronę.'
+      unknown: 'Wystąpił błąd podczas próby załadowania tej strony.'
+    index:
+      all_discussions_heading: '=> core.ref.all_discussions'
+      next_page_button: '=> core.ref.next_page'
+      previous_page_button: '=> core.ref.previous_page'
+    log_out:
+      log_out_button: '=> core.ref.log_out'
+      log_out_confirmation: 'Czy na pewno chcesz się wylogować z {forum}?'
+      title: '=> core.ref.log_out'
+    reset_password:
+      confirm_password_label: 'Potwierdź nowe hasło'
+      new_password_label: 'Nowe hasło'
+      submit_button: '=> core.ref.save_changes'
+      title: '=> core.ref.reset_your_password'
 rob006-flarum-translations:
   fof-placeholder: 'This is simple placeholder to keep Weblate component with main translations repository for "Friends of Flarum" project.'
   various-placeholder: 'This is simple placeholder to keep Weblate component with main translations repository for "Flarum extensions" project.'

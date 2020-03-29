@@ -9,29 +9,29 @@ flarum-mentions:
 
     # These translations are used by the composer (reply autocompletion function).
     composer:
-      mention_tooltip: Cita un utente o un messaggio
+      mention_tooltip: Menziona un utente o un messaggio
       reply_to_post_text: "Rispondi a #{number}"
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
       others_text: => core.ref.some_others
       post_mentioned_text: "{username} ha risposto al tuo messaggio|{username} hanno risposto al tuo messaggio"  # Can be pluralized to agree with the number of users!
-      user_mentioned_text: "{username} ti ha citato"
+      user_mentioned_text: "{username} ti ha menzionato"
 
     # These translations are displayed beneath individual posts.
     post:
       mentioned_by_self_text: "{users} hai risposto a questo messaggio|{users} hanno risposto a questo messaggio."  # Can be pluralized to agree with the number of users!
       mentioned_by_text: "{users} ha risposto a questo messaggio|{users} hanno risposto a questo messaggio."       # Can be pluralized to agree with the number of users!
       others_text: => core.ref.some_others
-      quote_button: Cita
+      quote_button: Menziona
       reply_link: => core.ref.reply
       you_text: => core.ref.you
 
     # These translations are used in the Settings page.
     settings:
       notify_post_mentioned_label: Qualcuno ha risposto a un mio messaggio
-      notify_user_mentioned_label: Qualcuno cita un mio messaggio
+      notify_user_mentioned_label: Qualcuno ha menzionato un mio messaggio
 
     # These translations are used in the user profile page and profile popup.
     user:
-      mentions_link: Citazioni
+      mentions_link: Menzioni

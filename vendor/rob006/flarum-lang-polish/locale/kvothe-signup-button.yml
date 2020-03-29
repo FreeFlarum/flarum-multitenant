@@ -3,11 +3,11 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 kvothe-sub:
-  forum:
-    signup: 'Zarejestruj się'
   admin:
     settings:
-      title: 'Ustawienia przycisku rejestracji'
       field:
         hide-desktop: 'Ukryj przycisk na komputerach.'
         replace-discussion-button: 'Podmień przycisk do rozpoczynania dyskusji.'
+      title: 'Ustawienia przycisku rejestracji'
+  forum:
+    signup: 'Zarejestruj się'

@@ -1,16 +1,19 @@
 fof-subscribed:
-    forum:
-        settings:
-            defaults_label: 'Установить "{setting}" включенной по умолчанию'
-            forced_label: 'Принудительно включить "{setting}" для всех пользователей'
-            notify_discussion_created_label: "Кто-то создаёт дискуссию"
-            notify_user_created_label: "Кто-то регистрируется"
-        notifications:
-            discussion_created_text: "{username} создал новую дискуссию"
-            user_created_text: "{username} зарегистрировался"
-    admin:
-        menu:
-            description: "Настройка пользовательских подписок по умолчанию"
-        permission:
-            subscribe_to_discussion_created: "Получать уведомления о создании дискуссий"
-            subscribe_to_user_created: "Получать уведомления о регистрации пользователей"
+  forum:
+    settings:
+      defaults_label: 'Установить "{setting}" включенной по умолчанию'
+      forced_label: 'Принудительно включить "{setting}" для всех пользователей'
+      notify_discussion_created_label: "Кто-то создаёт дискуссию"
+      notify_post_unapproved_label: "Кто-то публикует сообщение, требующее подтверждения"
+      notify_user_created_label: "Кто-то регистрируется"
+    notifications:
+      discussion_created_text: "{username} создал новую дискуссию"
+      post_unapproved_text: "{username} опубликовал сообщение, которое требует подтверждения"
+      user_created_text: "{username} зарегистрировался"
+  admin:
+    menu:
+      description: "Настройка пользовательских подписок по умолчанию"
+    permission:
+      subscribe_to_discussion_created: "Получать уведомления о создании дискуссий"
+      subscribe_to_post_unapproved: "Получать уведомления о неподтверждённых сообщениях"
+      subscribe_to_user_created: "Получать уведомления о регистрации пользователей"

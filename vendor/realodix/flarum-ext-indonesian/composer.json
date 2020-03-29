@@ -12,8 +12,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Realodix",
-      "email": "keigarrix@gmail.com"
+      "name": "Budi Hermawan",
+      "email": "budi03@gmail.com"
     }
   ],
   "support": {
@@ -22,7 +22,7 @@
     "docs": "https://discuss.flarum.org/d/1358-indonesian-language-pack"
   },
   "require": {
-    "flarum/core": "^0.1.0-beta.9"
+    "flarum/core": "^0.1.0-beta.12"
   },
   "extra": {
     "flarum-extension": {

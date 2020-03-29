@@ -1,6 +1,6 @@
 # https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-tags.yml
-# da35609
-# Sat, 25 Jan 2020 22:08:57 +0800
+# bd722e4 9 days ago
+# 2020-3-15 16:14:23 +0800
 
 flarum-tags:
 
@@ -26,7 +26,7 @@ flarum-tags:
       icon_text: => core.ref.icon_text
       name_label: => flarum-tags.ref.name
       name_placeholder: => flarum-tags.ref.name
-      slug_label: 英語名
+      slug_label: 英語名（Slug）
       submit_button: => core.ref.save_changes
       title: => flarum-tags.ref.create_tag
 
@@ -61,6 +61,11 @@ flarum-tags:
   # Translations in this namespace are used by the forum user interface.
   forum:
 
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: すべてのタグ
+      meta_title_text: => flarum-tags.ref.tags
+
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
       choose_primary_placeholder: "1個のプライマリタグを選択|{count}個のプライマリタグを選択"
@@ -92,6 +97,10 @@ flarum-tags:
       added_and_removed_tags_text: "{username} が {tagsAdded} を追加し、 {tagsRemoved} を解除しました。"
       removed_tags_text: "{username} が {tagsRemoved} を解除しました。"
       tags_text: "{tags}|{tags}"
+
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "{tag} タグの下のすべてのスレッド"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:

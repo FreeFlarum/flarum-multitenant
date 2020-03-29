@@ -3,10 +3,8 @@
 /*
  * This file is part of Flarum.
  *
- * (c) Toby Zerner <toby.zerner@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Flarum\Flags\Listener;
@@ -16,6 +14,7 @@ use Flarum\Api\Serializer\CurrentUserSerializer;
 use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Api\Serializer\PostSerializer;
 use Flarum\Flags\Flag;
+use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\User;
 
@@ -51,7 +50,7 @@ class AddFlagsApiAttributes
         }
 
         if ($event->isSerializer(PostSerializer::class)) {
-            $event->attributes['canFlag'] = $event->actor->can('flag', $event->model);
+            $event->attributes['canFlag'] = $event->actor->can('flag', $event->model) && $this->checkFlagOwnPostSetting($event->actor, $event->model);
         }
     }
 
@@ -77,5 +76,15 @@ class AddFlagsApiAttributes
         }
 
         return $query->distinct()->count('flags.post_id');
+    }
+
+    protected function checkFlagOwnPostSetting(User $actor, Post $post): bool
+    {
+        if ($actor->id === $post->user_id) {
+            // If $actor is the post author, check to see if the setting is enabled
+            return (bool) $this->settings->get('flarum-flags.can_flag_own');
+        }
+        // $actor is not the post author
+        return true;
     }
 }

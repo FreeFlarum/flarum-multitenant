@@ -25,3 +25,4 @@ nomiscz-auth-steam:
     settings:
       title: Nastavení Steam přihlášení
       api_key_label: API klíč
+      use_steam_powered_domain: Používat steampowered.com doménu místo steamcommunity.com (blokováno v Číně)

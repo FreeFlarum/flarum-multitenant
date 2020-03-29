@@ -1,3 +1,7 @@
+# https://github.com/simonxeko/follow-users/blob/master/resources/locale/en.yml
+# 7b4c395 8 days ago
+# 2020-2-19 13:16:13 +0800
+
 simonxeko-follow-users:
 
   admin:
@@ -25,29 +29,29 @@ simonxeko-follow-users:
     sub_controls:
       follow_button: => simonxeko-follow-users.ref.follow
       following_button: => simonxeko-follow-users.ref.following
-      following_text: すべての新しいディスカッションについて通知されます。
+      following_text: 新しいスレッドがあるときに通知する。
       hiding_button: => simonxeko-follow-users.ref.hiding
-      hiding_text: すべてのディスカッションページから隠すの議論。
+      hiding_text: 「すべてのスレッド」ページのこのラベルの下にあるすべてのスレッドを非表示にします
       ignoring_button: => simonxeko-follow-users.ref.ignoring
       ignoring_text: 私に通知しません。
       lurking_button: => simonxeko-follow-users.ref.lurking
-      lurking_text: 新しいトピックと新しい返信を通知する。
+      lurking_text: 新しいスレッドまたは新しい返信があるときに通知する
       not_following_button: フォローしていません
-      not_following_text: "誰かが@メンテするときにのみ通知する。"
+      not_following_text: "誰かが私に言及または返信した場合にのみ通知する"
       notify_alert_tooltip: 新しいディスカッションまたは投稿がある場合、フォーラム通知を受け取ります
-      notify_email_tooltip: 新しいディスカッションや投稿があるときにメールを受け取る
+      notify_email_tooltip: 新しいスレッドまたは新しい返信があるときに通知する
 
     notifications:
-      new_discussion_text: "投稿者 {username}"
-      new_post_text: "{username} 返信"
+      new_discussion_text: "{username} は新しいスレッドをリリースしました"
+      new_post_text: "{username} が新しい返信を投稿しました"
 
   email:
-    newDiscussionInTag: "[Tag | New Discussion] 題名"
-    newPostInTag: "[Tag | New Post] 題名"
+    newDiscussionInTag: "[Tag | 新規スレッド] 題名"
+    newPostInTag: "[Tag | 新しい返信] 題名"
 
   ref:
     follow: フォロー
     following: フォロー中
-    hiding: 隠す
-    ignoring: シールド
-    lurking: 見物
+    hiding: 隠れている
+    ignoring: 無視する
+    lurking: 密かに観察

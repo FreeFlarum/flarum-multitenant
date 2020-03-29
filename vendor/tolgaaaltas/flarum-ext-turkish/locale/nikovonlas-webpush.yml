@@ -1,9 +1,8 @@
 nikovonlas-webpush:
   forum:
     subscribe: Tarayıcı bildirimlerine abone olun
-    unsubscribe: Tarayıcı bildirimleri aboneliklerini durdurun
   admin:
-    web-push-settings:
+    settings:
       title: Tarayıcı Bildirimleri Ayarları
       type:
         description: OneSignal bağlantı türü
@@ -14,6 +13,7 @@ nikovonlas-webpush:
       user_key: OneSignal User key
       subdomain: OneSignal Subdomain
       excerpt: Bildirimdeki alıntıların uzunluğu
+      autoprompt: Otomatik sor (Bildirimleri açma isteği göster)
   notify:
     like:
       title: Gönderin beğenildi
@@ -46,7 +46,7 @@ nikovonlas-webpush:
     suspend:
       title: Hesabınız askıya alındı
       message: '{from} hesabını askıya aldı'
-    гтsuspend:
+    unsuspend:
       title: Hesabınız erişilebilir
       message: '{from} hesabınızın erişimini açtı'
     flag:

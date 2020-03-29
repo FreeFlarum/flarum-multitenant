@@ -4,20 +4,20 @@
 
 sycho-profile-cover:
   admin:
-    settings: 'Ustawienia tła profilu'
-    thumbnails: 'Utwórz miniaturki'
-    max_size: 'Maksymalna wielkość tła profilu (w KB)'
     cover_size: 'Wielkość obrazków'
-    thumb_size: 'Wielkość miniatur'
+    max_size: 'Maksymalna wielkość tła profilu (w KB)'
+    settings: 'Ustawienia tła profilu'
     size_of_images: '{size} w {count} obrazku|{size} w {count} obrazkach'
     size_of_thumbs: '{size} w {count} miniaturce|{size} w {count} miniaturkach'
+    thumb_size: 'Wielkość miniatur'
+    thumbnails: 'Utwórz miniaturki'
   forum:
+    added:
+      error: 'Nie udało się wysłać obrazka.'
+      success: 'Tło profilu zostało zaktualizowane.'
     cover: Tło
     edit_cover: 'Edytuj tło'
     notice: 'Maksymalna wielkość: {size}'
-    added:
-      success: 'Tło profilu zostało zaktualizowane.'
-      error: 'Nie udało się wysłać obrazka.'
     removed:
-      success: 'Tło profilu zostało usunięte.'
       error: 'Nie udało się usunąć tła profilu, spróbuj ponownie za jakiś czas.'
+      success: 'Tło profilu zostało usunięte.'

@@ -5,12 +5,12 @@
 zhishiq:
   pusher:
     admin:
-      setting_title: 'Advanced Pusher Settings'
+      app_cluster_label: Cluster
       app_id_label: 'App ID'
       app_key_label: 'App Key'
       app_secret_label: 'App Secret'
-      app_cluster_label: Cluster
-      async_push: 'Enable asynchronous push(1 means enable, 0 means disable)'
+      async_push: 'Włącz push asynchroniczny (1 aby włączyć, 0 aby wyłączyć)'
+      setting_title: 'Zaawansowane ustawienia Pushera'
     forum:
       discussion_list:
-        show_updates_text: 'Show {count} updated discussion|Show {count} updated discussions'
+        show_updates_text: 'Pokaż {count} zaktualizowaną dyskusję|Pokaż {count} zaktualizowane dyskusje|Pokaż {count} zaktualizowanych dyskusji'

@@ -5,9 +5,9 @@
 zhishiq:
   redis:
     admin:
-      setting_title: 'Redis Connector Settings'
-      client: 'Client (Default: phpredis)'
-      host: 'Host (Default: 127.0.0.1)'
-      port: 'Port (Default: 6379)'
-      password: Password
-      database: 'Database (Default: 0)'
+      client: 'Klient (domyślnie: phpredis)'
+      database: 'Baza (domyślnie: 0)'
+      host: 'Host (domyślnie: 127.0.0.1)'
+      password: Hasło
+      port: 'Port (domyślnie: 6379)'
+      setting_title: 'Ustawienia połączenia z Redisem'

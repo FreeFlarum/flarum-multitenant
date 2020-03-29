@@ -15,6 +15,7 @@ use Twilio\Values;
 abstract class CallOptions {
     /**
      * @param string $url The absolute URL that returns TwiML for this call
+     * @param string $twiml TwiML instructions for the call
      * @param string $applicationSid The SID of the Application resource that will
      *                               handle the call
      * @param string $method HTTP method to use to fetch TwiML
@@ -60,11 +61,11 @@ abstract class CallOptions {
      *                                                silence after speech activity
      * @param int $machineDetectionSilenceTimeout Number of milliseconds of initial
      *                                            silence
-     * @param string $twiml TwiML instructions for the call
+     * @param string $byoc BYOC trunk SID (Beta)
      * @return CreateCallOptions Options builder
      */
-    public static function create($url = Values::NONE, $applicationSid = Values::NONE, $method = Values::NONE, $fallbackUrl = Values::NONE, $fallbackMethod = Values::NONE, $statusCallback = Values::NONE, $statusCallbackEvent = Values::NONE, $statusCallbackMethod = Values::NONE, $sendDigits = Values::NONE, $timeout = Values::NONE, $record = Values::NONE, $recordingChannels = Values::NONE, $recordingStatusCallback = Values::NONE, $recordingStatusCallbackMethod = Values::NONE, $sipAuthUsername = Values::NONE, $sipAuthPassword = Values::NONE, $machineDetection = Values::NONE, $machineDetectionTimeout = Values::NONE, $recordingStatusCallbackEvent = Values::NONE, $trim = Values::NONE, $callerId = Values::NONE, $machineDetectionSpeechThreshold = Values::NONE, $machineDetectionSpeechEndThreshold = Values::NONE, $machineDetectionSilenceTimeout = Values::NONE, $twiml = Values::NONE) {
-        return new CreateCallOptions($url, $applicationSid, $method, $fallbackUrl, $fallbackMethod, $statusCallback, $statusCallbackEvent, $statusCallbackMethod, $sendDigits, $timeout, $record, $recordingChannels, $recordingStatusCallback, $recordingStatusCallbackMethod, $sipAuthUsername, $sipAuthPassword, $machineDetection, $machineDetectionTimeout, $recordingStatusCallbackEvent, $trim, $callerId, $machineDetectionSpeechThreshold, $machineDetectionSpeechEndThreshold, $machineDetectionSilenceTimeout, $twiml);
+    public static function create($url = Values::NONE, $twiml = Values::NONE, $applicationSid = Values::NONE, $method = Values::NONE, $fallbackUrl = Values::NONE, $fallbackMethod = Values::NONE, $statusCallback = Values::NONE, $statusCallbackEvent = Values::NONE, $statusCallbackMethod = Values::NONE, $sendDigits = Values::NONE, $timeout = Values::NONE, $record = Values::NONE, $recordingChannels = Values::NONE, $recordingStatusCallback = Values::NONE, $recordingStatusCallbackMethod = Values::NONE, $sipAuthUsername = Values::NONE, $sipAuthPassword = Values::NONE, $machineDetection = Values::NONE, $machineDetectionTimeout = Values::NONE, $recordingStatusCallbackEvent = Values::NONE, $trim = Values::NONE, $callerId = Values::NONE, $machineDetectionSpeechThreshold = Values::NONE, $machineDetectionSpeechEndThreshold = Values::NONE, $machineDetectionSilenceTimeout = Values::NONE, $byoc = Values::NONE) {
+        return new CreateCallOptions($url, $twiml, $applicationSid, $method, $fallbackUrl, $fallbackMethod, $statusCallback, $statusCallbackEvent, $statusCallbackMethod, $sendDigits, $timeout, $record, $recordingChannels, $recordingStatusCallback, $recordingStatusCallbackMethod, $sipAuthUsername, $sipAuthPassword, $machineDetection, $machineDetectionTimeout, $recordingStatusCallbackEvent, $trim, $callerId, $machineDetectionSpeechThreshold, $machineDetectionSpeechEndThreshold, $machineDetectionSilenceTimeout, $byoc);
     }
 
     /**
@@ -105,6 +106,7 @@ abstract class CallOptions {
 class CreateCallOptions extends Options {
     /**
      * @param string $url The absolute URL that returns TwiML for this call
+     * @param string $twiml TwiML instructions for the call
      * @param string $applicationSid The SID of the Application resource that will
      *                               handle the call
      * @param string $method HTTP method to use to fetch TwiML
@@ -150,10 +152,11 @@ class CreateCallOptions extends Options {
      *                                                silence after speech activity
      * @param int $machineDetectionSilenceTimeout Number of milliseconds of initial
      *                                            silence
-     * @param string $twiml TwiML instructions for the call
+     * @param string $byoc BYOC trunk SID (Beta)
      */
-    public function __construct($url = Values::NONE, $applicationSid = Values::NONE, $method = Values::NONE, $fallbackUrl = Values::NONE, $fallbackMethod = Values::NONE, $statusCallback = Values::NONE, $statusCallbackEvent = Values::NONE, $statusCallbackMethod = Values::NONE, $sendDigits = Values::NONE, $timeout = Values::NONE, $record = Values::NONE, $recordingChannels = Values::NONE, $recordingStatusCallback = Values::NONE, $recordingStatusCallbackMethod = Values::NONE, $sipAuthUsername = Values::NONE, $sipAuthPassword = Values::NONE, $machineDetection = Values::NONE, $machineDetectionTimeout = Values::NONE, $recordingStatusCallbackEvent = Values::NONE, $trim = Values::NONE, $callerId = Values::NONE, $machineDetectionSpeechThreshold = Values::NONE, $machineDetectionSpeechEndThreshold = Values::NONE, $machineDetectionSilenceTimeout = Values::NONE, $twiml = Values::NONE) {
+    public function __construct($url = Values::NONE, $twiml = Values::NONE, $applicationSid = Values::NONE, $method = Values::NONE, $fallbackUrl = Values::NONE, $fallbackMethod = Values::NONE, $statusCallback = Values::NONE, $statusCallbackEvent = Values::NONE, $statusCallbackMethod = Values::NONE, $sendDigits = Values::NONE, $timeout = Values::NONE, $record = Values::NONE, $recordingChannels = Values::NONE, $recordingStatusCallback = Values::NONE, $recordingStatusCallbackMethod = Values::NONE, $sipAuthUsername = Values::NONE, $sipAuthPassword = Values::NONE, $machineDetection = Values::NONE, $machineDetectionTimeout = Values::NONE, $recordingStatusCallbackEvent = Values::NONE, $trim = Values::NONE, $callerId = Values::NONE, $machineDetectionSpeechThreshold = Values::NONE, $machineDetectionSpeechEndThreshold = Values::NONE, $machineDetectionSilenceTimeout = Values::NONE, $byoc = Values::NONE) {
         $this->options['url'] = $url;
+        $this->options['twiml'] = $twiml;
         $this->options['applicationSid'] = $applicationSid;
         $this->options['method'] = $method;
         $this->options['fallbackUrl'] = $fallbackUrl;
@@ -177,7 +180,7 @@ class CreateCallOptions extends Options {
         $this->options['machineDetectionSpeechThreshold'] = $machineDetectionSpeechThreshold;
         $this->options['machineDetectionSpeechEndThreshold'] = $machineDetectionSpeechEndThreshold;
         $this->options['machineDetectionSilenceTimeout'] = $machineDetectionSilenceTimeout;
-        $this->options['twiml'] = $twiml;
+        $this->options['byoc'] = $byoc;
     }
 
     /**
@@ -188,6 +191,17 @@ class CreateCallOptions extends Options {
      */
     public function setUrl($url) {
         $this->options['url'] = $url;
+        return $this;
+    }
+
+    /**
+     * TwiML instructions for the call Twilio will use without fetching Twiml from url parameter. If both `twiml` and `url` are provided then `twiml` parameter will be ignored.
+     *
+     * @param string $twiml TwiML instructions for the call
+     * @return $this Fluent Builder
+     */
+    public function setTwiml($twiml) {
+        $this->options['twiml'] = $twiml;
         return $this;
     }
 
@@ -467,13 +481,13 @@ class CreateCallOptions extends Options {
     }
 
     /**
-     * TwiML instructions for the call Twilio will use without fetching Twiml from url parameter. If both `twiml` and `url` are provided then `twiml` parameter will be ignored.
+     * The SID of a BYOC (Bring Your Own Carrier) trunk to route this call with. Note that `byoc` is only meaningful when `to` is a phone number; it will otherwise be ignored. (Beta)
      *
-     * @param string $twiml TwiML instructions for the call
+     * @param string $byoc BYOC trunk SID (Beta)
      * @return $this Fluent Builder
      */
-    public function setTwiml($twiml) {
-        $this->options['twiml'] = $twiml;
+    public function setByoc($byoc) {
+        $this->options['byoc'] = $byoc;
         return $this;
     }
 

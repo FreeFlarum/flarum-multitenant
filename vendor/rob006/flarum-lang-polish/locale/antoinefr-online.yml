@@ -3,11 +3,11 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 antoinefr-online:
-  forum:
-    title: 'Kto jest online?'
-    andmore: 'i {more} więcej...'
   admin:
     settings:
-      title: Ustawienia
       displaymax: 'Liczba wyświetlanych użytkowników'
+      title: Ustawienia
       titleoflist: 'Tytuł wyświetlany ponad listą'
+  forum:
+    andmore: 'i {more} więcej...'
+    title: 'Kto jest online?'

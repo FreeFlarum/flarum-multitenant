@@ -33,7 +33,7 @@ class SteamUnlinkController implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $actor = $request->getAttribute('actor');
-        $actorLoginProviders = $actor->loginProviders()->where(compact('provider', 'steam'))->first();
+        $actorLoginProviders = $actor->loginProviders()->where('provider', 'steam')->first();
 
         if ($actorLoginProviders) {
             $actorLoginProviders->delete();

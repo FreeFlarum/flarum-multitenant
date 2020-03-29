@@ -5,6 +5,6 @@
 fancybox:
   forum:
     next: 次の写真
-    prev: 前へ
+    prev: 前の写真
     error: 画像の読み込みエラー。
 

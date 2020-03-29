@@ -1,6 +1,6 @@
 # https://github.com/FriendsOfFlarum/prevent-necrobumping/blob/master/resources/locale/en.yml
 # 18e0c98
-# Sun, 26 Jan 2020 00:08:28 +0800
+# 2020-2-19 12:53:01 +0800
 
 fof-prevent-necrobumping:
   forum:
@@ -14,10 +14,10 @@ fof-prevent-necrobumping:
   admin:
     settings:
       days_label: 天数
-      days_help: トピックの最終返信時間が制限を超えている場合、トピックは古い投稿としてマークされます。<code>0</code> は無効を意味します。
+      days_help: スレッドに x 日以上新しい返信がない場合、スレッドは古い投稿としてマークされます。 <code>0</code> は無効を意味します。
 
       message_title_label: カスタム警告タイトル
-      message_title_help: '「14 日」など、時間ではなく <code>[time]</code> を使用します。'
+      message_title_help: '[time] を使用して、「このスレッドは [time] 日間アイドル状態です」など、上記で設定した時間を示します。'
       message_description_label: カスタム警告コンテンツ
       message_agreement_label: カスタムメッセージ契約（チェックボックス）
 

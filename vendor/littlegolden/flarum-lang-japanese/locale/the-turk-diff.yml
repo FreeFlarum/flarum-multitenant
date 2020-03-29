@@ -1,0 +1,63 @@
+# https://github.com/the-turk/flarum-diff/blob/master/locale/en.yml
+# b993352 5 hours ago
+# 2020-3-29 10:08:37 +0800
+
+the-turk-diff:
+    forum:
+        revisionInfo:                "{revisionCount} 回編集、新着順|{revisionCount} 回編集、新着順"
+        revisions:                   "合計 {revisionCount} 改訂|共 {revisionCount} 改訂"  
+        emptyText:                   ノー改訂履歴
+        confirmDelete:               この編集レコードを削除してもよろしいですか？
+        confirmRollback:             このバージョンにロールバックしてもよろしいですか？ 
+        deleteSuccessMessage:        編集レコードが削除されました
+        deleteErrorMessage:          編集レコードの削除に失敗しました
+        rollbackSuccessMessage:      ロールバック成功。
+        rollbackErrorMessage:        ロールバック失敗。
+        deletedText:                 （削除済み）
+        deletedTooltip:              "{username} が {ago} でこの編集を削除しました"
+        createdTooltip:              "{username} が {ago} を作成"
+        optionsButton:               もっと
+        rollbackButton:              リビジョン {number} へのロールバック
+        rollbackToOriginalButton:    初期バージョンへのロールバック
+        revertChangesButton:         変更を元に戻す
+        noDiff:                      2 つの違いはありません
+        mostRecent:                  最新
+        sideBySide:                  二重列比較（HTML）
+        inline:                      単一列比較（HTML）
+        combined:                    複合図比較（HTML）
+
+        # {old}, {new} and {content} may refer to: (=> originalContent) key or (=> revisionWithNumber) key
+        differences:                 "あなたはバージョンの違いを見ている {old} と {new} "
+        previewMode:                 "プレビューモード（{content}）" # other languages may use: You're in preview mode ({content})
+        originalContent:             初期バージョン # may be {old}, {new} or {content}
+        currentContent:              現在バージョン # may be {old}, {new} or {content}
+        revisionWithNumber:          "改訂バージョン {number}" # may be {old}, {new} or {content}
+    admin:
+        settings:
+            title:                   改訂履歴 - 設定
+            neighborLines:           コンテキスト行の数
+            neighborLinesHelp:       変更された段落（差分ブロック）のコンテキスト行の数。 例：2 に設定すると、変更された段落の上下 2 行が比較ビューに追加されることを示します。
+            onlyUnsigned:            <strong>符号なし整数</strong>を入力してください！
+            usePoint:                浮動小数点数の小数点として <strong>.</ strong> を使用します。
+            detailLevel:             詳細レベル（推奨文字レベル）
+            noneLevel:               なし
+            lineLevel:               行レベル
+            wordLevel:               単語レベル
+            charLevel:               キャラクターレベル
+            separateBlock:           多くの行で区切られた2つの変更された段落（差分ブロック）の間に灰色の区切り記号を追加します（例：http://t.cn/A6hcIybR）。
+            mainPostOnly:            最初の投稿のみの編集履歴を保存する    
+            textFormatting:          プレビューのテキスト書式を有効にする
+            dbOptimisation:          データベースの最適化
+            archiveOlds:             古いリビジョンレコードをアーカイブする
+            archiveOldsInfo:         <strong>x ≥ A</strong> の場合、投稿の初期の <strong>y=mx+b</strong> 個の改訂レコードがマージ、圧縮、およびアーカイブされます。<strong>x</strong> は、この投稿の改訂数を示します。 <strong>y</strong> の値が浮動小数点数の場合、整数値に丸められます。
+            useCrons:                Cron スケジュールタスクを使用した古いリビジョンレコードのアーカイブ
+            useCronsHelp:            このオプションを有効にするには、Cronスケジュールタスクエントリをサーバーに追加する必要があります。スケジュールされたタスクは、毎週日曜日の午前 2 時に実行されます。上記のアーカイブ機能を有効にし、このアイテムを無効にした場合、投稿を編集するたびに、その投稿の改訂履歴がスキャンされ、アーカイブを実行する必要があるかどうかが確認されます。
+            archiveInfo:             以下の 2 つのオプションを無効にし、<code>php flarum diff:archive</code> コマンドを実行して古いリビジョンレコードを手動でアーカイブできることを忘れないでください。
+            mergeThreshold:          複合レンダラーのマージしきい値
+            mergeThresholdHelp:      コンテンツの変更率（0 と 1 の間の値）に基づいて、置換タイプのブロックをマージするかどうかを決定します。
+        permissions:
+            viewEditHistory:         編集履歴を見る
+            deleteEditHistory:       他のユーザーの編集履歴を削除する
+            selfDeleteEditHistory:   ユーザー自分の編集履歴を削除する
+            rollbackEditHistory:     他のユーザーの編集履歴をロールバックする
+            selfRollbackEditHistory: ユーザー自分の編集履歴をロールバックする

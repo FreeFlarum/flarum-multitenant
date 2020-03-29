@@ -1,5 +1,8 @@
 # https://github.com/Dem13n/nickname-changer/blob/master/resources/locale/en.yml
-# # https://github.com/Dem13n/quad-theme/blob/master/resources/locale/en.yml
+# 6307596 2 days ago
+# 2020-2-13 16:02:49 +0800
+
+# https://github.com/Dem13n/quad-theme/blob/master/resources/locale/en.yml
 # b388c26
 # Sat, 25 Jan 2020 17:25:25 +0800
 
@@ -15,6 +18,10 @@ dem13n:
       settings_modal_title: ニックネーム設定
       unlimited_nickname_change: 無制限のニックネーム変更
       allow_nickname_change: ニックネームの変更を許可
+      allow_nickname_unique: ニックネームの複製を許可します
+      regex: 検証用の正規表現
+      min_char: ニックネームの最小文字数
+      max_char: ニックネームの最大文字数
       submit_button: => core.ref.save_changes
     quad_theme:
       title: Quad テーマ設定

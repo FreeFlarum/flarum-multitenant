@@ -24,7 +24,7 @@ use FoF\Gamification\Notification\VoteBlueprint;
 use FoF\Gamification\Rank;
 use FoF\Gamification\Vote;
 use Illuminate\Contracts\Events\Dispatcher;
-use Pusher;
+use Pusher\Pusher;
 
 class SaveVotesToDatabase
 {
@@ -190,7 +190,8 @@ class SaveVotesToDatabase
         } elseif ($user->id !== $actor->id) {
             $this->notifications->sync(
                 new VoteBlueprint($post, $actor, $type),
-                [$user]);
+                [$user]
+            );
         }
 
         $this->events->fire(
@@ -212,18 +213,27 @@ class SaveVotesToDatabase
         }
     }
 
+    /**
+     * @param $type
+     * @param $post
+     * @param $clicked
+     * @param $actor
+     *
+     * @throws \Pusher\PusherException
+     */
     public function pushNewVote($type, $post, $clicked, $actor)
     {
         $type = explode('2', $type);
 
-        $pusher = $this->getPusher();
-        $pusher->trigger('public', 'newVote', [
-            'postId'  => $post->id,
-            'before'  => $type[0],
-            'after'   => $type[1],
-            'clicked' => $clicked,
-            'userId'  => $actor->id,
-        ]);
+        if ($pusher = $this->getPusher()) {
+            $pusher->trigger('public', 'newVote', [
+                'postId'  => $post->id,
+                'before'  => $type[0],
+                'after'   => $type[1],
+                'clicked' => $clicked,
+                'userId'  => $actor->id,
+            ]);
+        }
     }
 
     /**
@@ -239,20 +249,33 @@ class SaveVotesToDatabase
     }
 
     /**
-     * @return Pusher
+     * @throws \Pusher\PusherException
+     *
+     * @return bool|\Illuminate\Foundation\Application|mixed|Pusher
      */
-    protected function getPusher()
+    private function getPusher()
     {
-        $options = [];
-        if ($cluster = $this->settings->get('flarum-pusher.app_cluster')) {
-            $options['cluster'] = $cluster;
+        if (!class_exists(Pusher::class)) {
+            return false;
         }
 
-        return new Pusher(
-            $this->settings->get('flarum-pusher.app_key'),
-            $this->settings->get('flarum-pusher.app_secret'),
-            $this->settings->get('flarum-pusher.app_id'),
-            $options
-        );
+        if (app()->bound(Pusher::class)) {
+            return app(Pusher::class);
+        } else {
+            $settings = app('flarum.settings');
+
+            $options = [];
+
+            if ($cluster = $settings->get('flarum-pusher.app_cluster')) {
+                $options['cluster'] = $cluster;
+            }
+
+            return new Pusher(
+                $settings->get('flarum-pusher.app_key'),
+                $settings->get('flarum-pusher.app_secret'),
+                $settings->get('flarum-pusher.app_id'),
+                $options
+            );
+        }
     }
 }

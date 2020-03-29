@@ -1,6 +1,6 @@
 # https://github.com/AntoineFr/flarum-ext-online/blob/master/locale/en.yml
-# 4ec0460
-# Fri, 24 Jan 2020 16:14:40 +0800
+# 4ec0460 on 3 Sep 2019
+# 2020-2-21 14:26:36 +0800
 
 antoinefr-online:
   forum:
@@ -9,5 +9,5 @@ antoinefr-online:
   admin:
     settings:
       title: 設定する
-      displaymax: 数量を表示する
-      titleoflist: リストのタイトル
+      displaymax: 表示する数量
+      titleoflist: カスタムリストのタイトル

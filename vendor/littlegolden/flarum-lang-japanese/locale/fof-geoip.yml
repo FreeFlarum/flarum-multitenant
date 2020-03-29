@@ -9,6 +9,8 @@ fof-geoip:
 
       service_label: サービス
 
+      service__description: Choose a IP service.
+
       service_freegeoip_label: FreeGeoIP
       service_freegeoip_description: <b>https://freegeoip.app/</b>，1 時間ごとに 15,000 の IP 国コードを無料で入手できます。
 

@@ -1,6 +1,6 @@
 # https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-subscriptions.yml
 # c28c3a6
-# Sat, 25 Jan 2020 22:01:18 +0800
+# 2020-3-6 16:15:47 +0800
 
 flarum-subscriptions:
 
@@ -24,16 +24,16 @@ flarum-subscriptions:
 
     # These translations are used on the index page, peripheral to the discussion list.
     index:
-      following_link: => flarum-subscriptions.ref.following
+      following_link: フォロー中のスレッド
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
-      new_post_text: "{username} フォローしているディスカッションに返信しました"
+      new_post_text: "{username} フォローしているディスカッションに返信がきました"
 
     # These translations are used in the Settings page.
     settings:
       follow_after_reply_label: ディスカッションを自動的にフォローする
-      notify_new_post_label: トピックへの新しい返信
+      notify_new_post_label: 投稿への新しい返信
 
     # These translations are used in the subscription menu displayed to the right of the post stream.
     sub_controls:
@@ -41,7 +41,7 @@ flarum-subscriptions:
       following_button: => flarum-subscriptions.ref.following
       following_text: 新しい返信を通知する
       ignoring_button: => flarum-subscriptions.ref.ignoring
-      ignoring_text: 通知を受信せず、トピックのリストから非表示にします。
+      ignoring_text: 通知を受信せず、スレッドのリストから非表示にします。
       not_following_button: フォローしていません
       not_following_text: "@メンションがあったときのみ通知する"
       notify_alert_tooltip: 新しい投稿がされたときに通知する
@@ -53,6 +53,6 @@ flarum-subscriptions:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    follow: フォロー
-    following: フォロー中
-    ignoring: ブロック中
+    follow: フォローしない
+    following: フォロー
+    ignoring: ブロック

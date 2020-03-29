@@ -12,9 +12,12 @@
 namespace FoF\ShareSocial;
 
 use Flarum\Extend as Native;
+use FoF\Components\Extend\AddFofComponents;
 use FoF\Extend\Extend;
 
 return [
+    new AddFofComponents(),
+
     (new Native\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/resources/less/forum.less'),
@@ -24,5 +27,5 @@ return [
     new Native\Locales(__DIR__.'/resources/locale'),
     (new Extend\ExtensionSettings())
         ->setPrefix('fof-share-social.networks.')
-        ->addKeys(['facebook', 'twitter', 'linkedin', 'reddit', 'vkontakte', 'odnoklassniki', 'my_mail']),
+        ->addKeys(['facebook', 'twitter', 'linkedin', 'reddit', 'vkontakte', 'odnoklassniki', 'my_mail', 'qq', 'qzone']),
 ];

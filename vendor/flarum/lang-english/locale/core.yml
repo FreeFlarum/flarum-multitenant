@@ -97,6 +97,7 @@ core:
       mail_encryption_label: Encryption
       mail_host_label: Host
       mail_mailgun_domain_label: Domain
+      mail_mailgun_region_label: Region
       mail_mailgun_secret_label: Secret key
       mail_mandrill_secret_label: Secret key
       mail_password_label: => core.ref.password
@@ -107,6 +108,7 @@ core:
       mail_username_label: => core.ref.username
       mailgun_heading: Mailgun Settings
       mandrill_heading: Mandrill Settings
+      not_sending_message: Flarum currently does not send emails. This can be due to the selected driver, or errors in its configuration.
       ses_heading: SES Settings
       smtp_heading: SMTP Settings
       submit_button: => core.ref.save_changes
@@ -156,6 +158,7 @@ core:
       moderate_heading: Moderate
       new_group_button: New Group
       participate_heading: Participate
+      post_without_throttle_label: Reply multiple times without waiting
       read_heading: Read
       rename_discussions_label: Rename discussions
       reply_to_discussions_label: Reply to discussions

@@ -5,8 +5,19 @@
 migratetoflarum-fake-data:
   admin:
     generator:
-      title: 'Generowanie danych testowych'
-      user-count: 'Liczba użytkowników do utworzenia'
       discussion-count: 'Liczba dyskusji do utworzenia'
       post-count: 'Liczba postów do utworzenia'
       send: 'Wygeneruj dane'
+      title: 'Generowanie danych testowych'
+      user-count: 'Liczba użytkowników do utworzenia'
+  api:
+    no-discussions-matched: 'Nie znaleziono pasujących dyskusji'
+    no-users-matched: 'Nie znaleziono pasujących użytkowników'
+  forum:
+    generator:
+      post-count: 'Liczba postów do utworzenia'
+      send: 'Wygeneruj dane'
+      title: 'Generuj odpowiedzi'
+      user-count: 'Liczba użytkowników do utworzenia'
+    link:
+      generate-replies: 'Generuj odpowiedzi'

@@ -1,6 +1,5 @@
 import Modal from 'flarum/components/Modal';
 import Button from 'flarum/components/Button';
-import FieldSet from 'flarum/components/FieldSet';
 import Switch from 'flarum/components/Switch';
 import saveSettings from 'flarum/utils/saveSettings';
 
@@ -86,7 +85,7 @@ export default class CrawlPostModal extends Modal {
 
         this.loading = true;
 
-        let data = app.data.settings;
+        let data = {};
         data.seo_post_crawler = this.value;
 
         saveSettings(data).then(
@@ -98,7 +97,7 @@ export default class CrawlPostModal extends Modal {
     saveReviewedPostCrawler() {
         this.loading = true;
 
-        let data = app.data.settings;
+        let data = {};
         data.seo_reviewed_post_crawler = true;
 
         saveSettings(data).then(() => {

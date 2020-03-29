@@ -3,14 +3,14 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 core:
-  forum:
-    index_sort:
-      front_button: 'Strona główna'
-    badge:
-      frontpage_tooltip: 'Na Stronie głównej'
-    post_controls:
-      push_to_front_button: 'Dodaj na Stronę główną'
-      pull_from_front_button: 'Zdejmij ze Strony głównej'
   admin:
     permissions:
       can_push_to_frontpage_label: 'Dodawanie dyskusji na Stronę główną'
+  forum:
+    badge:
+      frontpage_tooltip: 'Na Stronie głównej'
+    index_sort:
+      front_button: 'Strona główna'
+    post_controls:
+      pull_from_front_button: 'Zdejmij ze Strony głównej'
+      push_to_front_button: 'Dodaj na Stronę główną'

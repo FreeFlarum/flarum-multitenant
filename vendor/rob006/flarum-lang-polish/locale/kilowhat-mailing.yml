@@ -5,30 +5,30 @@
 kilowhat-mailing:
   admin:
     permissions:
-      mail_individual: 'Wysyłanie wiadomości e-mail do indywidualnych użytkowników'
       mail_all: 'Wysyłanie wiadomości e-mail do grup lub wszystkich użytkowników'
-  forum:
-    links:
-      mail_individual: 'Wyślij e-mail do tego użytkownika'
-      mail_all: 'Wyślij e-mail do wszystkich użytkowników'
-    modal_mail:
-      title_text: 'Utwórz wiadomość'
-      recipients_label: Adresaci
-      recipients_placeholder: 'Wpisz innych adresatów...'
-      subject_label: Temat
-      default_subject: '=> kilowhat-mailing.ref.default_subject'
-      message_label: Wiadomość
-      submit_button: Wyślij
-    modal_sent:
-      title_text: 'Wiadomość została wysłana!'
-      on_its_way: 'Świetnie! Twoja wiadomość jest w drodze do {recipientsCount} adresatów!'
-    recipient_kinds:
-      user: Użytkownik
-      group: Grupa
-      email: E-mail
+      mail_individual: 'Wysyłanie wiadomości e-mail do indywidualnych użytkowników'
   api:
     no_recipients: 'Nie znaleziono pasujących adresatów'
   email:
     default_subject: '=> kilowhat-mailing.ref.default_subject'
+  forum:
+    links:
+      mail_all: 'Wyślij e-mail do wszystkich użytkowników'
+      mail_individual: 'Wyślij e-mail do tego użytkownika'
+    modal_mail:
+      default_subject: '=> kilowhat-mailing.ref.default_subject'
+      message_label: Wiadomość
+      recipients_label: Adresaci
+      recipients_placeholder: 'Wpisz innych adresatów...'
+      subject_label: Temat
+      submit_button: Wyślij
+      title_text: 'Utwórz wiadomość'
+    modal_sent:
+      on_its_way: 'Świetnie! Twoja wiadomość jest w drodze do {recipientsCount} adresatów!'
+      title_text: 'Wiadomość została wysłana!'
+    recipient_kinds:
+      email: E-mail
+      group: Grupa
+      user: Użytkownik
   ref:
     default_subject: 'Wiadomość od administratora forum'

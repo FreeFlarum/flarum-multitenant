@@ -8,6 +8,6 @@ fof-drafts:
       alert: "Черновик сохранён."
     dropdown:
       title: "Черновики"
-      button: "Удалить черовик"
+      button: "Удалить черновик"
       tooltip: => fof-drafts.forum.dropdown.title
-      alert: "Вы уверены что хотите удалить черновик?"
+      alert: "Вы уверены, что хотите удалить черновик?"

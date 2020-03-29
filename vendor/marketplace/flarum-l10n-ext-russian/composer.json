@@ -1,75 +1,82 @@
 {
-    "name": "marketplace/flarum-l10n-ext-russian",
-    "description": "Russian language pack for Flarum Extensions.",
-    "type": "flarum-extension",
-    "license": "GPL-3.0-or-later",
-    "homepage": "https://exts.dev/#flarum",
-    "keywords": [
-        "extension",
-        "flarum",
-        "russian",
-        "language",
-        "locale",
-        "localization",
-        "translation"
-    ],
-    "authors": [
-        {
-            "name": "x06174",
-            "homepage": "https://x06174.gitlab.io/",
-            "role": "Editor"
-        },
-        {
-            "name": "towuk118",
-            "homepage": "https://vk.com/towuk118",
-            "role": "Editor"
-        },
-        {
-            "name": "dexif",
-            "homepage": "https://spitsyn.net",
-            "role": "Editor"
-        }
-    ],
-    "support": {
-        "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian/issues",
-        "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian"
+  "name": "marketplace/flarum-l10n-ext-russian",
+  "description": "Flarum Extensions Russian language pack.",
+  "type": "flarum-extension",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://gitlab.com/marketplace-flarum",
+  "keywords": [
+    "extension",
+    "flarum",
+    "russian",
+    "language",
+    "locale",
+    "localization",
+    "translation"
+  ],
+  "authors": [
+    {
+      "name": "z1729 Factory",
+      "email": "z1729.factory@gmail.com",
+      "homepage": "https://z1729.com",
+      "role": "Developer"
     },
-    "require": {
-        "flarum/core": "^0.1.0-beta.9"
+    {
+      "name": "Kitsune Solar",
+      "homepage": "https://KitsuneSolar.com",
+      "role": "Editor"
     },
-    "suggest": {
-        "marketplace/flarum-l10n-core-russian": "Russian language pack for Flarum.",
-        "fof/drafts": "Drafts",
-        "fof/follow-tags": "Follow Tags",
-        "fof/masquerade": "Masquerade",
-        "fof/recaptcha": "reCAPTCHA",
-        "fof/subscribed": "Subscribed",
-        "fof/auth-discord": "Discord Login",
-        "fof/byobu": "Byōbu",
-        "fof/ignore-users": "Ignore Users",
-        "fof/polls": "Polls",
-        "fof/user-directory": "User Directory",
-        "fof/username-request": "Username Request",
-        "fof/nightmode": "Night Mode",
-        "fof/merge-discussions": "Merge Discussions",
-        "fof/prevent-necrobumping": "Prevent Necrobumping",
-        "zerosonesfun/announce": "Announce",
-        "clarkwinkelmann/flarum-ext-post-date": "Change post date",
-        "fof/ban-ips": "Ban IPs"
+    {
+      "name": "towuk118",
+      "homepage": "https://vk.com/towuk118",
+      "role": "Editor"
     },
-    "extra": {
-        "flarum-extension": {
-            "title": "Русский (EXT)",
-            "icon": {
-                "image": "icon.svg",
-                "backgroundColor": "#f3f6f9",
-                "backgroundSize": "cover",
-                "backgroundPosition": "center"
-            }
-        },
-        "flarum-locale": {
-            "code": "ru",
-            "title": "Русский"
-        }
+    {
+      "name": "dexif",
+      "homepage": "https://spitsyn.net",
+      "role": "Editor"
     }
+  ],
+  "support": {
+    "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian/issues",
+    "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian"
+  },
+  "require": {
+    "flarum/core": "^0.1.0-beta.9"
+  },
+  "suggest": {
+    "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack.",
+    "fof/drafts": "Drafts",
+    "fof/follow-tags": "Follow Tags",
+    "fof/masquerade": "Masquerade",
+    "fof/recaptcha": "reCAPTCHA",
+    "fof/subscribed": "Subscribed",
+    "fof/auth-discord": "Discord Login",
+    "fof/byobu": "Byōbu",
+    "fof/ignore-users": "Ignore Users",
+    "fof/polls": "Polls",
+    "fof/user-directory": "User Directory",
+    "fof/username-request": "Username Request",
+    "fof/nightmode": "Night Mode",
+    "fof/merge-discussions": "Merge Discussions",
+    "fof/prevent-necrobumping": "Prevent Necrobumping",
+    "zerosonesfun/announce": "Announce",
+    "clarkwinkelmann/flarum-ext-post-date": "Change post date",
+    "fof/ban-ips": "Ban IPs",
+    "fof/reactions": "Reactions"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Русский (EXT)",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#f3f6f9",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center"
+      }
+    },
+    "flarum-locale": {
+      "code": "ru",
+      "title": "Русский"
+    }
+  }
 }

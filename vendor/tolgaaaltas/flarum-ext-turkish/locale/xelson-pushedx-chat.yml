@@ -10,9 +10,25 @@ pushedx-chat:
       maximize: Büyült
     chat:
       placeholder: Mesajınızı yazın...
+      message:
+        actions:
+          hide: Gizle
+          resend: Yeniden Gönder
     errors:
       unauthenticated: Yalnızca kayıtlı kullanıcılar sohbet edebilir
+      chatdenied: Bulunduğunuz kullanıcı grubunun sohbete yazma izni bulunmuyor
   admin:
+    permissions:
+      post: Sohbete mesaj gönder
+      edit: Sohbet mesajını düzenle
+      delete: Sohbet mesajını sil
+      moderate:
+        delete: Sohbet mesajını sil
+
     settings:
       title: Sohbet Ayarları
       charlimit: Mesajda kullanılabilecek maksimum karakter sayısı
+      floodgate:
+        title: Flood Karşıtı
+        number: Arka arkaya mesaj sayısı
+        time: Süre sınırı

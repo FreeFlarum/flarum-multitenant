@@ -15,6 +15,14 @@ use Symfony\Component\HttpFoundation\Exception\ConflictingHeadersException;
 use Symfony\Component\HttpFoundation\Exception\SuspiciousOperationException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
+// Help opcache.preload discover always-needed symbols
+class_exists(AcceptHeader::class);
+class_exists(FileBag::class);
+class_exists(HeaderBag::class);
+class_exists(HeaderUtils::class);
+class_exists(ParameterBag::class);
+class_exists(ServerBag::class);
+
 /**
  * Request represents an HTTP request.
  *
@@ -725,7 +733,7 @@ class Request
 
         if (null === $session) {
             @trigger_error(sprintf('Calling "%s()" when no session has been set is deprecated since Symfony 4.1 and will throw an exception in 5.0. Use "hasSession()" instead.', __METHOD__), E_USER_DEPRECATED);
-            // throw new \BadMethodCallException('Session has not been set');
+            // throw new \BadMethodCallException('Session has not been set.');
         }
 
         return $session;
@@ -1586,20 +1594,17 @@ class Request
      */
     public function getPreferredFormat(?string $default = 'html'): ?string
     {
-        if (null !== $this->preferredFormat) {
+        if (null !== $this->preferredFormat || null !== $this->preferredFormat = $this->getRequestFormat(null)) {
             return $this->preferredFormat;
         }
 
-        $preferredFormat = null;
-        foreach ($this->getAcceptableContentTypes() as $contentType) {
-            if ($preferredFormat = $this->getFormat($contentType)) {
-                break;
+        foreach ($this->getAcceptableContentTypes() as $mimeType) {
+            if ($this->preferredFormat = $this->getFormat($mimeType)) {
+                return $this->preferredFormat;
             }
         }
 
-        $this->preferredFormat = $this->getRequestFormat($preferredFormat ?: $this->getContentType());
-
-        return $this->preferredFormat ?: $default;
+        return $default;
     }
 
     /**

@@ -1,11 +1,11 @@
 # https://github.com/clarkwinkelmann/flarum-ext-emojionearea/blob/master/locale/en.yml
 # 9360095
-# Fri, 24 Jan 2020 16:23:10 +0800
+# 2020-3-1 13:46:24 +0800
 
 clarkwinkelmann-emojionearea:
     forum:
         picker_button: 絵文字
-        search_placeholder: 検索する...
+        search_placeholder: 絵文字を検索する...
 
     admin:
         settings:

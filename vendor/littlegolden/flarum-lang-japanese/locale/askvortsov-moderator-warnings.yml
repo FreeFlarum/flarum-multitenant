@@ -1,0 +1,47 @@
+# https://github.com/askvortsov1/flarum-moderator-warnings/blob/master/resources/locale/en.yml
+# 30fdb55 6 hours ago
+# 2020-3-26 10:09:52 +0800
+
+askvortsov-moderator-warnings:
+  admin:
+    permissions:
+      manage_warnings: モデレーターの警告を作成および削除する
+      view_warnings: モデレーターの警告を表示
+      delete_warnings: モデレーターの警告を完全に削除
+  forum:
+    notifications:
+      warning_text: '{mod_username} から {strikes} の警告を受け取りました'
+      warning_no_strikes_text: '{mod_username} から警告を受け取りました'
+    post:
+      warning: '{mod_username} による {strikes} 回のストライキで警告'
+      warning_no_strikes: '{mod_username} による警告なしで警告'
+    post_controls:
+      warning_button: ユーザーに警告
+    user:
+      warnings: モデレーターの警告
+    settings:
+      warning_notification_label: モデレーターが警告する
+    warning_controls:
+      delete_button: 削除する
+      restore_button: 戻す
+      delete_forever_button: 完全に削除
+    warning_list:
+      add_button: 新しい警告
+      no-warnings: ここには警告がないようです。
+      warnings: "モデレーターの警告：{strikes} 回"
+      warnings_no_strikes: "モデレーターの警告：0 回"
+    warning_list_item:
+      list_item_heading: <strong>{mod_username}</strong> は <strong>{strikes}</strong> 回あなたに警告しました
+      list_item_heading_hidden: <strong>{mod_username}</strong> は <strong>{strikes}</strong> 回あなたに警告しました <strong>（削除された）</strong>
+      public_comment: コメント
+      private_comment: リマーク
+      linked_post: 関連投稿
+    warning_modal:
+      confirmation_message: あなたの警告は、目に見えるリフレッシュするかもしれない必要性が保存されています。
+      dismiss_button: 完全な
+      heading: 警告 <strong>{username}</strong>
+      strikes_heading: 重大度：警告はいくつですか？
+      public_comment_heading: コメント。なぜ <strong>{username}</strong>に警告するのですか？コメントは、このユーザーと他の警告開始者にのみ表示されます。
+      private_comment_heading: リマーク。なぜ <strong>{username}</strong>に警告するのですか？リマーク、あなたと他の警告開始者にのみ表示されます。
+      no_content_given: 空の警告は許可されていません。
+      submit_button: 警告を保存

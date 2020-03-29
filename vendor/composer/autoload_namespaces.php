@@ -8,7 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'UpdateHelper\\' => array($vendorDir . '/kylekatarnls/update-helper/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
-    'Less' => array($vendorDir . '/oyejorge/less.php/lib'),
-    'Behat\\Transliterator' => array($vendorDir . '/behat/transliterator/src'),
+    'Less' => array($vendorDir . '/wikimedia/less.php/lib'),
     'Authy' => array($vendorDir . '/authy/php/lib'),
 );

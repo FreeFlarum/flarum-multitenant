@@ -6,6 +6,6 @@ fof-sentry:
   admin:
     settings:
       dsn_label: 'Sentry DSN'
-      user_feedback_label: 'Feedback od użytkowników'
-      javascript_label: 'Zgłaszaj błędy JavaScriptu'
       javascript_console_label: 'Przechwytuj konsolę JavaScriptu'
+      javascript_label: 'Zgłaszaj błędy JavaScriptu'
+      user_feedback_label: 'Feedback od użytkowników'

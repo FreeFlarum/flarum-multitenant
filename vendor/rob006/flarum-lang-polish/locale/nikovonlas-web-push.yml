@@ -3,56 +3,56 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 nikovonlas-webpush:
-  forum:
-    subscribe: 'Subscribe to push notifications'
   admin:
     settings:
-      title: 'WebPush Settings'
+      api_key: 'API key'
+      app_id: 'App ID'
+      autoprompt: 'Od razu wyświetl prośbę o przydzielenie uprawnień'
+      excerpt: 'Długość podsumowania w powiadomieniu'
+      subdomain: Subdomena
+      title: 'Ustawienia powiadomień push OneSignal'
       type:
-        description: 'Onesignal type of connector'
-        standart: Standart
-        custom: Custom
-      app_id: 'Onesignal app id'
-      api_key: 'Onesignal api key'
-      user_key: 'Onesignal user key'
-      subdomain: 'Onesignal subdomain'
-      excerpt: 'Length of excerpt in notifications'
-      autoprompt: 'Show permission prompt immediately to authorize users'
+        custom: Własny
+        description: 'Typ połączenia (connector)'
+        standart: Standardowy
+      user_key: 'User key'
+  forum:
+    subscribe: 'Włącz powiadomienia push'
   notify:
+    delete:
+      message: '{from} usunął dyskusję: {title}'
+      title: 'Dyskusja została usunięta'
+    flag:
+      message: '{from} zgłosił post: {post}'
+      title: 'Nowe zgłoszenie'
     like:
-      title: 'Post was liked'
-      message: '{from} liked you post: {post}'
+      message: '{from} polubił twój post: {post}'
+      title: 'Post został polubiony'
+    lock:
+      message: '{from} zamknął dyskusję: {title}'
+      title: 'Dyskusja została zamknięta'
     mention-post:
-      title: 'New reply to post in: {title}'
-      message: '{from} replied to post: {post}'
+      message: '{from} odpowiedział na post: {post}'
+      title: 'Nowa odpowiedź w: {title}'
     mention:
-      title: 'You was mentoined in: {title}'
-      message: '{from} mentoined you post: {post}'
+      message: '{from} wspomniał cię w poście: {post}'
+      title: 'Zostałeś wspomniany w: {title}'
     post:
-      title: 'New post in subscribed discussion: {title}'
-      message: '{from} create new post: {post}'
+      message: '{from} dodał nowy post: {post}'
+      title: 'Nowy post w obserwowanej dyskusji: {title}'
+    rename:
+      message: '{from} zmienił nazwę dyskusji na: {title}'
+      title: 'Zmieniono nazwę dyskusji'
+    suspend:
+      message: '{from} zbanował twoje konto'
+      title: 'Twoje konto zostało zbanowane'
     tag:
       discussion:
-        title: 'New discussion with subscribed tag'
-        message: '{from} create new discussion: {title}'
+        message: '{from} rozpoczął nową dyskusję: {title}'
+        title: 'Nowa dyskusja w obserwowanym tagu'
       post:
-        title: 'New post in discussion: {title}'
-        message: '{from} create new post: {post}'
-    rename:
-      title: 'Discussion was renamed'
-      message: '{from} rename you discussion to: {title}'
-    lock:
-      title: 'Discussion was locked'
-      message: '{from} locked you discussion: {title}'
-    delete:
-      title: 'Discussion was deleted'
-      message: '{from} delete you discussion: {title}'
-    suspend:
-      title: 'You account was suspended'
-      message: '{from} suspend you account'
+        message: '{from} dodał nowy post: {post}'
+        title: 'Nowy post w dyskusji: {title}'
     unsuspend:
-      title: 'You account was unsuspended'
-      message: '{from} unsuspend you account'
-    flag:
-      title: 'New flagged post'
-      message: '{from} flag post: {post}'
+      message: '{from} odbanował twoje konto'
+      title: 'Twoje konto zostało odbanowane'

@@ -12,9 +12,6 @@ namespace Twilio\Rest\Verify\V2\Service;
 use Twilio\Options;
 use Twilio\Values;
 
-/**
- * PLEASE NOTE that this class contains beta products that are subject to change. Use them with caution.
- */
 abstract class VerificationOptions {
     /**
      * @param string $customMessage The text of a custom message to use for the
@@ -29,10 +26,11 @@ abstract class VerificationOptions {
      *                          Limits.
      * @param array $channelConfiguration Channel specific configuration in json
      *                                    format.
+     * @param string $appHash App Hash to be included at the end of an SMS.
      * @return CreateVerificationOptions Options builder
      */
-    public static function create($customMessage = Values::NONE, $sendDigits = Values::NONE, $locale = Values::NONE, $customCode = Values::NONE, $amount = Values::NONE, $payee = Values::NONE, $rateLimits = Values::NONE, $channelConfiguration = Values::NONE) {
-        return new CreateVerificationOptions($customMessage, $sendDigits, $locale, $customCode, $amount, $payee, $rateLimits, $channelConfiguration);
+    public static function create($customMessage = Values::NONE, $sendDigits = Values::NONE, $locale = Values::NONE, $customCode = Values::NONE, $amount = Values::NONE, $payee = Values::NONE, $rateLimits = Values::NONE, $channelConfiguration = Values::NONE, $appHash = Values::NONE) {
+        return new CreateVerificationOptions($customMessage, $sendDigits, $locale, $customCode, $amount, $payee, $rateLimits, $channelConfiguration, $appHash);
     }
 }
 
@@ -50,8 +48,9 @@ class CreateVerificationOptions extends Options {
      *                          Limits.
      * @param array $channelConfiguration Channel specific configuration in json
      *                                    format.
+     * @param string $appHash App Hash to be included at the end of an SMS.
      */
-    public function __construct($customMessage = Values::NONE, $sendDigits = Values::NONE, $locale = Values::NONE, $customCode = Values::NONE, $amount = Values::NONE, $payee = Values::NONE, $rateLimits = Values::NONE, $channelConfiguration = Values::NONE) {
+    public function __construct($customMessage = Values::NONE, $sendDigits = Values::NONE, $locale = Values::NONE, $customCode = Values::NONE, $amount = Values::NONE, $payee = Values::NONE, $rateLimits = Values::NONE, $channelConfiguration = Values::NONE, $appHash = Values::NONE) {
         $this->options['customMessage'] = $customMessage;
         $this->options['sendDigits'] = $sendDigits;
         $this->options['locale'] = $locale;
@@ -60,6 +59,7 @@ class CreateVerificationOptions extends Options {
         $this->options['payee'] = $payee;
         $this->options['rateLimits'] = $rateLimits;
         $this->options['channelConfiguration'] = $channelConfiguration;
+        $this->options['appHash'] = $appHash;
     }
 
     /**
@@ -143,7 +143,7 @@ class CreateVerificationOptions extends Options {
     }
 
     /**
-     * Channel specific configuration in json format: For email must include 'from' and 'from_name'.
+     * [`email`](https://www.twilio.com/docs/verify/email) channel configuration in json format. Must include 'from' and 'from_name'.
      *
      * @param array $channelConfiguration Channel specific configuration in json
      *                                    format.
@@ -151,6 +151,17 @@ class CreateVerificationOptions extends Options {
      */
     public function setChannelConfiguration($channelConfiguration) {
         $this->options['channelConfiguration'] = $channelConfiguration;
+        return $this;
+    }
+
+    /**
+     * Your [App Hash](https://developers.google.com/identity/sms-retriever/verify#computing_your_apps_hash_string) to be included at the end of an SMS. **Only applies for SMS.**
+     *
+     * @param string $appHash App Hash to be included at the end of an SMS.
+     * @return $this Fluent Builder
+     */
+    public function setAppHash($appHash) {
+        $this->options['appHash'] = $appHash;
         return $this;
     }
 

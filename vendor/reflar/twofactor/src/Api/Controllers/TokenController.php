@@ -74,20 +74,21 @@ class TokenController implements RequestHandlerInterface
     {
         $body = $request->getParsedBody();
 
-        $identification = array_get($body, 'identification');
         $password = array_get($body, 'password');
+        $identification = array_get($body, 'identification');
         $lifetime = array_get($body, 'lifetime', 3600);
-        $twofactor = array_get($body, 'twofactor');
-        $pageId = array_get($body, 'pageId');
-
-        if (!$twofactor) {
-            $twofactor = '0';
-        }
 
         $user = $this->users->findByIdentification($identification);
 
         if (!$user || !$user->checkPassword($password)) {
             throw new PermissionDeniedException();
+        }
+
+        $twofactor = array_get($body, 'twofactor');
+        $pageId = array_get($body, 'pageId');
+
+        if (!$twofactor) {
+            $twofactor = '0';
         }
 
         if (2 === $user->twofa_enabled) {

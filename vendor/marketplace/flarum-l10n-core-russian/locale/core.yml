@@ -97,6 +97,7 @@ core:
       mail_encryption_label: "Шифрование"
       mail_host_label: "Хост"
       mail_mailgun_domain_label: "Домен"
+      mail_mailgun_region_label: "Регион"
       mail_mailgun_secret_label: "Секретный ключ"
       mail_mandrill_secret_label: "Секретный ключ"
       mail_password_label: => core.ref.password
@@ -156,6 +157,7 @@ core:
       moderate_heading: "Модерация"
       new_group_button: "Новая группа"
       participate_heading: "Участие"
+      post_without_throttle_label: "Отвечать несколько раз без ожидания"
       read_heading: "Чтение"
       rename_discussions_label: "Переименовывать дискуссии"
       reply_to_discussions_label: "Отвечать в дискуссии"

@@ -1,0 +1,9 @@
+nomiscz-auth-wechat:
+  forum:
+    buttons:
+      login: WeChat ile Giriş Yap
+  admin:
+    settings:
+      title: WeChat Giriş Ayarları
+      api_app_id: API App ID
+      api_app_secret: API App Secret

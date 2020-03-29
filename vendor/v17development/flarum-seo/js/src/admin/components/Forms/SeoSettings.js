@@ -3,7 +3,6 @@ import FieldSet from 'flarum/components/FieldSet';
 import Button from 'flarum/components/Button';
 import saveSettings from 'flarum/utils/saveSettings';
 import Alert from 'flarum/components/Alert';
-import Select from 'flarum/components/Select';
 import Switch from 'flarum/components/Switch';
 import UploadImageButton from 'flarum/components/UploadImageButton';
 import CrawlPostModal from "../Modals/CrawlPostModal";
@@ -192,7 +191,7 @@ export default class SeoSettings extends Component {
         this.saving = true;
         this.allowBotsValue = value;
 
-        let data = app.data.settings;
+        let data = {};
         data.seo_allow_all_bots = value;
 
         saveSettings(data)
@@ -213,7 +212,7 @@ export default class SeoSettings extends Component {
 
         this.saving = true;
 
-        let data = app.data.settings;
+        let data = {};
         data[setting] = value;
 
         saveSettings(data)

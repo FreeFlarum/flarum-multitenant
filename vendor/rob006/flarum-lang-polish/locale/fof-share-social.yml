@@ -3,20 +3,22 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 fof-share-social:
+  admin:
+    settings:
+      title: 'FriendsOfFlarum Share Social'
   forum:
     discussion:
       share_button: Udostępnij
     modal:
       title: Udostępnij
-  admin:
-    settings:
-      title: 'FriendsOfFlarum Share Social'
   lib:
     networks:
       facebook: Facebook
-      twitter: Twitter
       linkedin: LinkedIn
-      reddit: Reddit
-      vkontakte: VKontakte
-      odnoklassniki: Odnoklassniki
       my_mail: 'My World'
+      odnoklassniki: Odnoklassniki
+      qq: QQ
+      qzone: QZone
+      reddit: Reddit
+      twitter: Twitter
+      vkontakte: VKontakte

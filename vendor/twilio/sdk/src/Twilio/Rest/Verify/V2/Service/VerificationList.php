@@ -16,9 +16,6 @@ use Twilio\Serialize;
 use Twilio\Values;
 use Twilio\Version;
 
-/**
- * PLEASE NOTE that this class contains beta products that are subject to change. Use them with caution.
- */
 class VerificationList extends ListResource {
     /**
      * Construct the VerificationList
@@ -60,6 +57,7 @@ class VerificationList extends ListResource {
             'Payee' => $options['payee'],
             'RateLimits' => Serialize::jsonObject($options['rateLimits']),
             'ChannelConfiguration' => Serialize::jsonObject($options['channelConfiguration']),
+            'AppHash' => $options['appHash'],
         ));
 
         $payload = $this->version->create(
