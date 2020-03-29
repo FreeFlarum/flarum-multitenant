@@ -1,0 +1,13 @@
+# https://github.com/FriendsOfFlarum/open-collective/blob/master/resources/locale/en.yml
+# 4258204
+# Sat, 25 Jan 2020 23:24:47 +0800
+
+fof-open-collective:
+  admin:
+    settings:
+      title: FoF Open Collective
+      desc: <a>https://opencollective.com/applications</a> からAPIキーを取得します。
+
+      api_key_label: API Key
+      slug_label: Collective Slug
+      group_label: 対象グループ

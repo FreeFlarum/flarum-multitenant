@@ -38,6 +38,12 @@ Dùng trình quản lý gói trong dự án của bạn và chạy dòng lệnh 
 composer require luatdolphin/lang-vietnamese
 ```
 
+### Cách update
+
+```
+composer update luatdolphin/lang-vietnamese 
+php flarum cache:clear
+```
 
 ### Cách cài đặt thông thường
 

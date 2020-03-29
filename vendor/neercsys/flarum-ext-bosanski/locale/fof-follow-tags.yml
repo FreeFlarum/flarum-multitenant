@@ -1,0 +1,41 @@
+fof-follow-tags:
+  forum:
+    settings:
+      notify_new_discussion_label: Neko je kreirao temu u oznaci (tag) koju pratim
+      notify_new_post_label: Neko objavljuje u oznaci (tag) koju pratim
+
+
+    index:
+      follow_tag_button: Prati
+      unfollow_tag_button: Prestani pratiti
+
+
+    sub_controls:
+      follow_button: => fof-follow-tags.ref.follow
+      following_button: => fof-follow-tags.ref.following
+      following_text: Obavijesti me o svim novim diskusijama.
+      hiding_button: => fof-follow-tags.ref.hiding
+      hiding_text: Sakrij rasprave sa stranice 'Teme'.
+      ignoring_button: => fof-follow-tags.ref.ignoring
+      ignoring_text: Nikad ne budi obaviješten.
+      lurking_button: => fof-follow-tags.ref.lurking
+      lurking_text: Obavijestite se o svim novim raspravama i odgovorima.
+      not_following_button: Ne slijedi
+      not_following_text: "Budi obaviješten samo kada neko @spomene."
+      notify_alert_tooltip: Primite obavijest na forumu kada postoje nove rasprave ili postovi
+      notify_email_tooltip: Primite e-poštu kada postoje nove rasprave ili postovi
+
+    notifications:
+      new_discussion_text: "{username} kreirao/la"
+      new_post_text: "{username} objavljuje"
+
+  email:
+    newDiscussionInTag: "[Tag | New Discussion] title"
+    newPostInTag: "[Tag | New Post] title"
+
+  ref:
+    follow: Prati
+    following: Pratim
+    hiding: Sakriti
+    ignoring: Ignoriši
+    lurking: Nadgledaj

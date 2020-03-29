@@ -1,0 +1,27 @@
+reflar-cookie-consent:
+  admin:
+    settings:
+      title: Reflar Cookie Consent
+
+      configuration_title: Opcije konfiguracije
+      consentText: Sadržaj poruke
+      buttonText: Tekst gumba prihvati
+      configuration_button_title: Saznaj više gumb
+      learnMoreLinkText: Text
+      learnMoreLinkUrl: Link
+
+      theme_title: Opcije teme
+      ccTheme: Teme
+      theme_popup_title: Popup Colors
+      backgroundColor: Background
+      textColor: Text
+      theme_dismiss_title: Boja prihvati gumba
+      buttonBackgroundColor: Background
+      buttonTextColor: Text
+
+      themes:
+        blocky: Blocky
+        edgeless: Edgeless
+        classic: Classic
+        custom: Custom
+        no_css: No CSS

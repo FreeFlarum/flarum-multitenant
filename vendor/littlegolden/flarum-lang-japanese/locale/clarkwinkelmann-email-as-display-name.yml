@@ -1,0 +1,16 @@
+# https://github.com/clarkwinkelmann/flarum-ext-email-as-display-name/blob/master/locale/en.yml
+# 212e9f0
+# Sun, 26 Jan 2020 13:40:34 +0800
+
+clarkwinkelmann-email-as-display-name:
+    admin:
+        permissions:
+            heading: 名前としてのメールボックス
+            view-own: プロフィールに表示
+            view-all: すべてのプロファイルで表示
+        settings:
+            title: 設定する
+            remove-username-registration: 登録フォームからユーザー名を削除
+    forum:
+        log_in:
+            username_or_email_placeholder: => core.ref.email

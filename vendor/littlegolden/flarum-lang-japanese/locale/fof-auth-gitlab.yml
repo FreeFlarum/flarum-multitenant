@@ -1,0 +1,14 @@
+# https://github.com/FriendsOfFlarum/auth-gitlab/blob/master/resources/locale/en.yml
+# cd0d97b
+# Sat, 25 Jan 2020 22:12:47 +0800
+
+fof-auth-gitlab:
+  admin:
+    gitlab_settings:
+      client_id_label: Application ID
+      client_secret_label: Secret
+      title: FoF GitLab ログイン
+
+  forum:
+    log_in:
+      with_gitlab_button: GitLab アカウントでサインインする

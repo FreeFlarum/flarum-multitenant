@@ -1,0 +1,4 @@
+v17development-flarum-seo:
+  forum:
+    profile_title: "Profil od {username}"
+    profile_description: "Profil od {username} | {discussion_count} diskusija | {comment_count} postova"

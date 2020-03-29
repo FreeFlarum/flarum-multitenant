@@ -1,0 +1,41 @@
+# https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-lock.yml
+# 8e0b3a4
+# Sat, 25 Jan 2020 21:00:30 +0800
+
+flarum-lock:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      lock_discussions_label: ロックされたスレッド
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      locked_tooltip: ロックされました
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      lock_button: ロック
+      unlock_button: ロック解除
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      discussion_locked_text: "{username} がロックしました"
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      discussion_locked_text: "{username} がスレッドをロックしました"
+      discussion_unlocked_text: "{username} がロックを解除しました"
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_discussion_locked_label: あなたのスレッドがロックされたとき

@@ -1,0 +1,23 @@
+# https://github.com/flarum/lang-english/blob/master/locale/flarum-statistics.yml
+# 05f0293
+# Sat, 25 Jan 2020 21:57:07 +0800
+
+flarum-statistics:
+   ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+   # Translations in this namespace are used by the admin interface.
+  admin:
+  
+     # These translations are used in the Statistics dashboard widget.
+    statistics:
+      active_users_text: "{count} アクティブ"
+      discussions_heading: => core.ref.discussions
+      last_12_months_label: 過去1年間
+      last_28_days_label: 過去1ヶ月
+      last_7_days_label: 過去1週間
+      posts_heading: => core.ref.posts
+      today_label: 今日
+      total_label: 合計
+      users_heading: => core.ref.users

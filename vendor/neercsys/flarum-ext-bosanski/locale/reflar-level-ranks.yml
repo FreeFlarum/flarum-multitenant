@@ -1,0 +1,11 @@
+reflar-level-ranks:
+  admin:
+    settings:
+      title: Postavke rankova
+      levelText: Unesite tekst koji će se prikazati za bodove (e.g. Rank, Level)
+  forum:
+    desc:
+      expText: EXP
+  lib:
+    defaults:
+      level: Level

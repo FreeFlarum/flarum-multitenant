@@ -1,0 +1,107 @@
+validation:
+  accepted: ":attribute mora biti prihvaćeno."
+  active_url: ":attribute nije validan URL."
+  after: ":attribute mora biti datum nakon :date."
+  after_or_equal: ":attribute mora biti datum jednak ili nakon :date."
+  alpha: ":attribute može sadržavati samo slova."
+  alpha_dash: ":attribute može sadržavati slova, brojeve, ctice and donje crtice."
+  alpha_num: ":attribute može sadržavati samo slova i brojeve."
+  array: ":attribute mora biti niz."
+  before: ":attribute mora biti datum prije :date."
+  before_or_equal: ":attribute mora biti datum jednak ili prije :date."
+  between:
+    numeric: ":attribute mora biti između :min i :max."
+    file: ":attribute mora biti između :min i :max kilobytes."
+    string: ":attribute mora biti između :min i :max karaktera."
+    array: ":attribute mora biti između :min i :max stavki."
+  boolean: ":attribute polje mora biti tačno ili netačno."
+  confirmed: ":attribute potvrda se ne podudara."
+  date: ":attribute nije validan datum."
+  date_equals: "The :attribute must be a date equal to :date."
+  date_format: ":attribute ne odgovara formatu :other."
+  different: ":attribute i :other moraju biti različiti."
+  digits: ":attribute mora biti :digits cifra."
+  digits_between: ":attribute mora biti između :min i :max ."
+  dimensions: ":attribute domenzije slike nisu validne."
+  distinct: ":attribute polje ima duplu vrijednost."
+  email: ":attribute mora biti validna email adresa."
+  ends_with: "The :attribute must end with one of the following: :values"
+  exists: "Odabrani :attribute nije validan."
+  file: ":attribute mora biti fajl."
+  filled: ":attribute mora imati vrijednost."
+  gt:
+    numeric: ":attribute mora biti veći od :value."
+    file: ":attribute mora biti veći od :value kilobytes."
+    string: ":attribute mora biti više od :value karaktera."
+    array: ":attribute mora imati više od :value stavki."
+  gte:
+    numeric: ":attribute mora biti veći ili jednak :value."
+    file: ":attribute mora biti veći ili jednak :value kilobytes."
+    string: ":attribute mora imati više ili jednako :value karaktera."
+    array: ":attribute mora imati :value stavki ili više."
+  image: ":attribute mora biti slika."
+  in: "Odabrani :attribute nije validan."
+  in_array: ":attribute polje ne postoji u :other."
+  integer: ":attribute mora biti integer."
+  ip: ":attribute mora biti validna IP adresa."
+  ipv4: ":attribute mora biti validna  IPv4 adresa."
+  ipv6: ":attribute mora biti validna IPv6 adresa."
+  json: ":attribute mora biti validan JSON."
+  lt:
+    numeric: ":attribute mora biti manji od :value."
+    file: ":attribute mora biti manji od :value kilobytes."
+    string: ":attribute mora biti manje od :value karaktera."
+    array: ":attribute mora biti manji od :value ."
+  lte:
+    numeric: ":attribute mora biti manji ili jednak :value."
+    file: ":attribute mora biti manji ili jedna :value kilobyt."
+    string: ":attribute mora biti manji ili jedna :value karaktera."
+    array: ":attribute ne smije imati više od :value stavki."
+  max:
+    numeric: ":attribute ne smije biti veći od :max."
+    file: ":attribute ne smije biti veći od :max kilobytes."
+    string: ":attribute ne smije biti veći od :max karaktera."
+    array: ":attribute ne smije imati više od :max stavki."
+  mimes: ":attribute tip fajla mora biti: :values."
+  mimetypes: ":attribute tip fajla mora biti: :values."
+  min:
+    numeric: ":attribute mora biti najmanje :min."
+    file: ":attribute mora imati najmanje :min kilobytes."
+    string: ":attribute mora imati najmanje :min karaktera."
+    array: ":attribute mora imati najmanje :min stavki."
+  not_in: "Odabrano polje :attribute nije validno."
+  not_regex: ":attribute format nije validan."
+  numeric: ":attribute mora biti broj."
+  present: ":attribute polje nije prisutno."
+  regex: ":attribute format nije validan."
+  required: ":attribute polje je obavezno."
+  required_if: ":attribute polje je obavezno kada :other je :value."
+  required_unless: ":attribute polje je obavezno osim ako je :other u :values."
+  required_with: ":attribute polje je obavezno kada je  :values prisutno."
+  required_with_all: ":attribute polje je obavezno ka su :values prisutni."
+  required_without: ":attribute polje je obavezno kada :values nije prisutno."
+  required_without_all: ":attribute polje je obavezno kada nijedan od :values nije prisutno."
+  same: ":attribute i :other moraju biti isti."
+  size:
+    numeric: ":attribute mora biti :size."
+    file: ":attribute mora biti :size kilobytes."
+    string: ":attribute mora imati :size karaktera."
+    array: ":attribute mora imati :size stavki."
+  starts_with: "The :attribute must start with one of the following: :values"
+  string: ":attribute mora biti string."
+  timezone: ":attribute mora biti validna zona."
+  unique: ":attribute je već zauzet."
+  uploaded: ":attribute upload nije uspio."
+  url: ":attribute format nije validan."
+  uuid: ":attribute mora biti validan UUID."
+
+  attributes:
+    username: korisničko ime
+    password: šifra
+    email: email
+    title: naslov
+    content: sadržaj
+    name_singular: naziv u jednini
+    name_plural: naziv u množini
+    tag_count_primary: broj primarnih tagova
+    tag_count_secondary: broj sekundarnih tagova

@@ -1,0 +1,12 @@
+flarum-best-answer:
+    admin:
+        permissions:
+            best_answer: => flarum-best-answer.ref.best_answer
+    forum:
+        this_best_answer: "أفضل إجابة"
+        remove_best_answer: "قم بإزالة المشاركة كأفضل إجابة"
+        header_best_answer: "تم تمييز هذه المشاركة كأفضل إجابة"
+        best_answer_button: => flarum-best-answer.ref.best_answer
+        best_answer: => flarum-best-answer.ref.best_answer
+    ref:
+      best_answer: 'أفضل إجابة'

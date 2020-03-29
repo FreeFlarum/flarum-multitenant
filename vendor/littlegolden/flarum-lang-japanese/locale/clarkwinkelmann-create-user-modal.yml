@@ -1,0 +1,13 @@
+# https://github.com/clarkwinkelmann/flarum-ext-create-user-modal/blob/master/resources/locale/en.yml
+# b0c4b53
+# Sun, 26 Jan 2020 13:38:30 +0800
+
+clarkwinkelmann-create-user-modal:
+    admin:
+        permissions:
+            view: ユーザーモーダルの作成ダイアログを表示する
+    forum:
+        link: 新しいユーザーを作成
+        modal:
+            title: ユーザーを作成
+            submit: ユーザーを作成

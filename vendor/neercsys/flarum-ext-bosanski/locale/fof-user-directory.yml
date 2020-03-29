@@ -1,0 +1,25 @@
+fof-user-directory:
+    forum:
+        search:
+            users_heading: 'Pretražite sve korisnike "{query}"'
+        page:
+            nav: Korisnički imenik
+            sort:
+                relevance: Relevantnost
+                default: Zadano
+                username_az: Korisničko ime (a-z)
+                username_za: Korisničko ime (z-a)
+                newest: Najnoviji
+                oldest: Najstariji
+                seen_recent: Posljednji online
+                seen_oldest: Najduže odsutan
+                most_posts: Najviše objava
+                least_posts: Zadnji objavljuje
+                most_discussions: Najviše diskusija
+                least_discussions: Posljednja diskusija
+    admin:
+        permissions:
+            view_user_directory: Pogledaj korisnički imenik
+        settings:
+            title: Postavke korisničkog imenika
+            link: Dodajte vezu na početnu stranicu za korisnike koji mogu vidjeti direktorij

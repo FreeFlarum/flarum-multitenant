@@ -1,0 +1,17 @@
+core:
+  forum:
+    index_sort:
+      popular_button: منتشر
+      unpopular_button: أقل إنتشارا
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: إعادة ضبط عدد المشاهدات
+      submit: إرسال
+      label: ضبط عدد المشاهدات
+    discussion_controls:
+      resetviews_button: تعديل
+  admin:
+      permissions:
+          reset_views_label: إعادة ضبط المشاهدات

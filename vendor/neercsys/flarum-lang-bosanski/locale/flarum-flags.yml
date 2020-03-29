@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: Prijavi postove
+      view_flags_label: Pogledaj prijavljene postove
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: Smjernice zajednice URL
+      title: Prijave postavke
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: Hvala što ste prijavi ovaj post. Naši moderatori će ga pregledati.
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: Neprikladan
+      reason_inappropriate_text: "Ovaj post je uvredljiv, zloupotrebljiv ili krši <a>pravila zajednicd</a>."
+      reason_off_topic_label: "Off-topic"
+      reason_off_topic_text: Ovaj post nije relevantan trenutnoj temi i trebao bi biti premješten negdje drugo.
+      reason_other_label: Ostalo
+      reason_spam_label: Spam
+      reason_spam_text: Ovaj post je reklamiranje.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: Nema prijava
+      item_text: "{username} u <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: Ukini prijavu
+      flagged_by_text: "Prijavljen od {username}"
+      flagged_by_with_reason_text: "Prijavjlen od {username} zbog {reason}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: Prijavi
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: Prijavi post
+    flagged_posts: Prijavljeni postovi

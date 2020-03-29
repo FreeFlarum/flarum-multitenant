@@ -1,0 +1,17 @@
+core:
+  forum:
+    index_sort:
+      popular_button: Popularno
+      unpopular_button: Nepopularno
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: Poništi broj pregleda diskusije
+      submit: Potvrdi
+      label: Postavite za broj prikaza
+    discussion_controls:
+      resetviews_button: Postavi broj prikaza
+  admin:
+      permissions:
+          reset_views_label: Postavljanje pogleda rasprave

@@ -1,0 +1,24 @@
+kilowhat-mailing:
+    admin:
+        permissions:
+            mail_individual: Enviar e-mails para usuários individuais
+            mail_all: Enviar e-mails para todos os usuários
+
+    forum:
+        links:
+            mail_individual: Enviar E-mail
+            mail_all: Enviar E-mail para Todos
+        modal_mail:
+            title_text: Mensagem para
+            title_all_text: todos os usuários
+            email_label: Para
+            subject_label: Assunto
+            default_subject: => kilowhat-mailing.ref.default_subject
+            message_label: Mensagem
+            submit_button: Enviar
+
+    email:
+        default_subject: => kilowhat-mailing.ref.default_subject
+
+    ref:
+        default_subject: Mensagem de coode.in

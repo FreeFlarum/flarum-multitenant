@@ -1,0 +1,41 @@
+# https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-suspend.yml
+# f8f58dd
+# Sat, 25 Jan 2020 22:03:11 +0800
+
+flarum-suspend:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      suspend_users_label: アカウント停止中のユーザー
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    # These translations are used in the suspension notifications
+    notifications:
+      user_suspended_text: "{username} があなたのアカウントを {timeReadable} の間停止しました"
+      user_unsuspended_text: "{username} があなたのアカウント停止を解除しました"
+
+    # These translations are used in the Suspend User modal dialog (admin function).
+    suspend_user:
+      indefinitely_label: 無期限の停止
+      limited_time_label: 期限付き停...
+      limited_time_days_text: " 日"
+      not_suspended_label: 停止を解除
+      status_heading: 停止状況
+      submit_button: => core.ref.save_changes
+      title: "{username} のアカウントを停止する"
+
+    # These translations are displayed as tooltips for user badges.
+    user_badge:
+      suspended_tooltip: 停止されました
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      suspend_button: アカウント停止

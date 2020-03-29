@@ -1,0 +1,17 @@
+core:
+  forum:
+    index_sort:
+      popular_button: Popular
+      unpopular_button: Não Popular
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: Redefinir contagem de visualizações de discussão
+      submit: Enviar
+      label: Definir para contagem de visualizações
+    discussion_controls:
+      resetviews_button: Definir contagem de visualizações
+  admin:
+      permissions:
+          reset_views_label: Definir exibições de discussão

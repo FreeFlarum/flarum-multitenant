@@ -1,0 +1,11 @@
+fof-socialprofile:
+  forum:
+    edit:
+      edit: Uredi
+      add: Dodaj
+      headtitle: Uredi gumbe
+      title: Naslov
+      url: Url
+      submit: Sačuvaj
+      delete: Izbriši
+      deletetitle: Izbriši gumb

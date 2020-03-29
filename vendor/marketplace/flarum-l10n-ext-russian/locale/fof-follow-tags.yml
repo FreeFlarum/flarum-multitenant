@@ -1,0 +1,41 @@
+fof-follow-tags:
+  forum:
+    settings:
+      notify_new_discussion_label: "Кто-то создает дискуссию в теге, на который я подписан"
+      notify_new_post_label: "Кто-то постит в теге, на который я подписан"
+
+
+    index:
+      follow_tag_button: "Подписаться"
+      unfollow_tag_button: "Отписаться"
+
+
+    sub_controls:
+      follow_button: => fof-follow-tags.ref.follow
+      following_button: => fof-follow-tags.ref.following
+      following_text: "Получать уведомления обо всех новых дискуссиях."
+      hiding_button: => fof-follow-tags.ref.hiding
+      hiding_text: 'Скрыть дискуссию со страницы "Все дискуссии".'
+      ignoring_button: => fof-follow-tags.ref.ignoring
+      ignoring_text: "Никогда не уведомлять."
+      lurking_button: => fof-follow-tags.ref.lurking
+      lurking_text: "Получать уведомления обо всех новых дискуссиях и ответах."
+      not_following_button: "Не подписан"
+      not_following_text: "Уведомить при @упоминании."
+      notify_alert_tooltip: "Получать уведомления на форуме, когда появляются новые дискуссии или сообщения"
+      notify_email_tooltip: "Получать электронное письмо, когда появляются новые дискуссии или сообщения"
+
+    notifications:
+      new_discussion_text: "{username} начал"
+      new_post_text: "{username} ответил"
+
+  email:
+    newDiscussionInTag: "[Tag | New Discussion] title"
+    newPostInTag: "[Tag | New Post] title"
+
+  ref:
+    follow: "Подписка"
+    following: "Подписка"
+    hiding: "Скрыть"
+    ignoring: "Игнорировать"
+    lurking: "Следить"

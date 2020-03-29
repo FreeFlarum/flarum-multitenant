@@ -1,0 +1,10 @@
+# https://github.com/squeevee/flarum-ext-fancybox/blob/master/locale/en.yml
+# 2fcf88a
+# Sat, 25 Jan 2020 20:39:30 +0800
+
+fancybox:
+  forum:
+    next: 次の写真
+    prev: 前へ
+    error: 画像の読み込みエラー。
+

@@ -1,0 +1,48 @@
+{
+    "name": "tiu-ram0n/brazilian-portuguese",
+    "type": "flarum-extension",
+    "description": "Pacote de idioma Português do Brasil.",
+    "homepage": "https://coode.in",	
+    "keywords": [
+			"brazilian",
+			"portuguese",
+			"language",
+			"locale",
+	    		"português",
+	    		"extensao"	
+	],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramon Guilherme",
+            "email": "ramonguilherme@outlook.com",
+            "homepage": "https://coode.in"
+        }
+           
+    ],
+    "support": {
+	    "issues": "https://github.com/tiuram0n/brazilian-portuguese/issues",
+	    "source": "https://github.com/tiuram0n/brazilian-portuguese"
+    },	
+    "require": {
+        "flarum/core": "^0.1.0-beta.11"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Brazilian Portuguese",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#55a667",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/18543"
+        },
+        "flarum-locale": {
+            "code": "pt-BR",
+            "title": "Português Brasileiro"
+        }
+    }
+}

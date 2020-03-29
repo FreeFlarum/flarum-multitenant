@@ -1,0 +1,19 @@
+flagrow-ads:
+    admin:
+        buttons:
+            save: Salvar configurações
+        positions:
+            under-header:
+                title: Anúncio no cabeçalho de navegação
+                placeholder: Insira seu código de anúncio aqui.
+            between-posts:
+                title: Anúncio entre as postagens
+                placeholder: => flagrow-ads.admin.positions.under-header.placeholder
+            under-nav-items:
+                title: Anúncio na coluna da esquerda sob as tags
+                placeholder: => flagrow-ads.admin.positions.under-header.placeholder
+        settings:
+            start-from-post: A partir de qual postagem começar a mostrar o anúncio?
+            between-n-posts: Depois de quantas postagens mostrar o anúncio?
+        tab:
+            description: Definir preferências e posições de anúncios.

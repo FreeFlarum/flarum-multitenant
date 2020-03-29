@@ -1,0 +1,21 @@
+flarum-best-answer:
+    admin:
+        permissions:
+            best_answer: Odaberite najbolji odgovor (vlastita rasprava)
+            best_answer_not_own_discussion: Odaberite najbolji odgovor (nije vlastita rasprava)
+        settings:
+            title: "Najbolji odgovor Postavke"
+            allow_select_own_post: "Dopustite korisniku da odabere vlastiti post"
+            select_best_answer_reminder_days: Podsjetite korisnika da odabere najbolji odgovor nakon X dana
+    forum:
+        this_best_answer: "Ovo je najbolji odgovor"
+        remove_best_answer: "Ukloni trenutni najbolji odgovor"
+        header_best_answer: "Autor posta je označio kao najbolji odgovor"
+        best_answer_button: Najbolji odgovor
+        best_answer_label: postavio <a>{username}</a>
+        best_answer: => flarum-best-answer.ref.best_answer
+
+        notification:
+            content: Molimo odaberite najbolji odgovor ako je na vaše pitanje odgovoreno
+    ref:
+      best_answer: 'Najbolji odgovor'

@@ -1,0 +1,26 @@
+fof-merge-discussions:
+  forum:
+    modal:
+      title: Spajanje rasprava
+
+      type_target_label: Spoji se u mene
+      type_target_help_text: Izaberite diskusiju u koju želite spojiti sa <b>{title}</b>.
+
+      type_from_label: Spojite ovu diskusiju u drugu
+      type_from_help_text: Odaberite ciljanu raspravu za spajanje <b>{title}</b> u nju.
+
+      load_preview_button: Pregled
+      submit_button: => fof-merge-discussions.ref.merge
+
+    discussion:
+      merge: => fof-merge-discussions.ref.merge
+
+    post:
+      merged: Spojeno <b>{count}</b> postova iz {titles}.|Spojeno <b>{count}</b> postova iz {titles}.
+
+  admin:
+    permissions:
+      merge_discussions_label: Spoji diskusije
+
+  ref:
+    merge: Spoji

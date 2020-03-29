@@ -1,0 +1,22 @@
+# https://github.com/AntoineFr/flarum-ext-money/blob/master/locale/en.yml
+# 389e8b0
+# Fri, 24 Jan 2020 16:10:15 +0800
+
+antoinefr-money:
+  admin:
+    settings:
+      title: 設定する
+      moneyforpost: 返信ごとに取得できます
+      moneyfordiscussion: 新しい議論のために与えられたお金
+      moneyname: 通貨名（例： [money] 日本円）
+      postminimumlength: 報酬を得るための最小ディスカッション長（0 は無制限を意味します）
+      noshowzero: 値が0の場合、表示されません
+    permissions:
+      edit_money_label: 資産を修正する
+  forum:
+    user_controls:
+      money_button: 資産を修正する
+    modal:
+      title: "{username} の資産"
+      current: 現在：
+      submit_button: => core.ref.save_changes

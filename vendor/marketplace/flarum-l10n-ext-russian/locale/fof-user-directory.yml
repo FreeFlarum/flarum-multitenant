@@ -1,0 +1,25 @@
+fof-user-directory:
+    forum:
+        search:
+            users_heading: 'Поиск всех пользователей: "{query}"'
+        page:
+            nav: "Каталог участников"
+            sort:
+                relevance: "Релевантность"
+                default: "По умолчанию"
+                username_az: "Имя пользователя (a-z)"
+                username_za: "Имя пользователя (z-a)"
+                newest: "По убыванию"
+                oldest: "По возрастанию"
+                seen_recent: "Недавно в сети"
+                seen_oldest: "Давно вне сети"
+                most_posts: "Много сообщений"
+                least_posts: "Мало сообщений"
+                most_discussions: "Много дискуссий"
+                least_discussions: "Мало дискуссий"
+    admin:
+        permissions:
+            view_user_directory: "Смотреть каталог участников"
+        settings:
+            title: "Настройки каталога участников"
+            link: "Отображать ссылку каталога участников на главной странице"

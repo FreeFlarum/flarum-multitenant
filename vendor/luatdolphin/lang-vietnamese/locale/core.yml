@@ -161,7 +161,7 @@ core:
       sign_up_label: Đăng ký
       start_discussions_label: Tham gia thảo luận
       view_discussions_label: Xem cuộc thảo luận
-      view_last_seen_at_label: Xem thời gian thành viên xem lần cuối
+      view_last_seen_at_label: Luôn xem thành viên xem lần cuối
       view_post_ips_label: Xem địa chỉ IP
       view_user_list_label: Xem danh sách thành viên
 

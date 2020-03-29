@@ -1,0 +1,19 @@
+flagrow-ads:
+    admin:
+        buttons:
+            save: Sačuvaj postavke
+        positions:
+            under-header:
+                title: Pozicija oglasa ispod zaglavlja za navigaciju
+                placeholder: Ovdje unesite oglasni kod.
+            between-posts:
+                title: Pozicija oglasa između postova
+                placeholder: => flagrow-ads.admin.positions.under-header.placeholder
+            under-nav-items:
+                title: Pozicija oglasa u lijevom stupcu pod oznakama na naslovnoj stranici
+                placeholder: => flagrow-ads.admin.positions.under-header.placeholder
+        settings:
+            start-from-post: Navedite iz kojeg posta da biste počeli prikazivati oglas
+            between-n-posts: Odredite nakon koliko postova da postavite oglas
+        tab:
+            description: Odredite postavke i položaje oglasa.

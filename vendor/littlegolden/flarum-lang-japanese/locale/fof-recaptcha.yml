@@ -1,0 +1,16 @@
+# https://github.com/FriendsOfFlarum/recaptcha/blob/master/resources/locale/en.yml
+# 0408ad6
+# Sun, 26 Jan 2020 00:20:50 +0800
+
+fof-recaptcha:
+  admin:
+    settings:
+      help_text: <a>ここで</a> Google reCAPTCHA 証明書を取得する。
+
+      type_label: reCAPTCHA 種類
+
+      site_key_label: Site Key
+      secret_key_label: Secret Key
+
+validation:
+  recaptcha: reCAPTCHA 検証に失敗しました。

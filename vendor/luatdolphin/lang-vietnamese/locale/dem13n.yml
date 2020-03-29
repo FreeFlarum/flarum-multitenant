@@ -1,0 +1,13 @@
+dem13n:
+  forum:
+    nickname:
+      head_title: Nickname
+      new_nickname: Nhập vào nickname mới
+      change: Thay đổi Nickname
+      submit_button: => core.ref.save_changes
+  admin:
+    nickname:
+      settings_modal_title: Thiết lập Nickname Changer
+      unlimited_nickname_change: Không giới hạn tahy đổi nickname
+      allow_nickname_change: Cho phép thay đổi nickname
+      submit_button: => core.ref.save_changes

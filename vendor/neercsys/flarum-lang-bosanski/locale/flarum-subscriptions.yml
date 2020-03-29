@@ -1,0 +1,54 @@
+flarum-subscriptions:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      following_tooltip: => flarum-subscriptions.ref.following
+      ignoring_tooltip: => flarum-subscriptions.ref.ignoring
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      unfollow_button: Prestani pratiti
+      unignore_button: Prestani ignorisati
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      following_link: => flarum-subscriptions.ref.following
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      new_post_text: "{username} je postao"
+
+    # These translations are used in the Settings page.
+    settings:
+      follow_after_reply_label: Automatski prati teme na koje sam odgovarao
+      notify_new_post_label: Neke postove u temi koju pratim
+
+    # These translations are used in the subscription menu displayed to the right of the post stream.
+    sub_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      following_button: => flarum-subscriptions.ref.following
+      following_text: Budi obavješten o svim odgovorima.
+      ignoring_button: => flarum-subscriptions.ref.ignoring
+      ignoring_text: Nikada ne primaj notifikacije. Sakrij sa liste tema.
+      not_following_button: Ne pratim
+      not_following_text: "Obavjest samo kada @mentioned."
+      notify_alert_tooltip: Primi forum notifikacije kada ima novih postova
+      notify_email_tooltip: Primi email kada ima novih postova
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    follow: Prati
+    following: Pratim
+    ignoring: Ignorišem

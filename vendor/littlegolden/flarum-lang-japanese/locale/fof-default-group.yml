@@ -1,0 +1,8 @@
+# https://github.com/FriendsOfFlarum/default-group/blob/master/resources/locale/en.yml
+# 0428491
+# Sat, 25 Jan 2020 22:39:30 +0800
+
+fof-default-group:
+  admin:
+    settings:
+      info: ユーザーを以下でアクティブにした後、デフォルトのユーザーグループを選択します。

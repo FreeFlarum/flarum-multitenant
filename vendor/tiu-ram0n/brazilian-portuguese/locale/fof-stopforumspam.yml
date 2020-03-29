@@ -1,0 +1,24 @@
+fof-stopforumspam:
+  admin:
+    settings:
+      title: FriendsOfFlarum Stop Forum Spam
+
+      username_label: Verificar spam por nome
+      ip_label: Verificar spam por endereço de IP
+      email_label: Verificar spam por E-mail
+
+      frequency_label: Limite
+      frequency_text: O número de relatórios de spam entre todas as verificações ativadas que acionarão o filtro de spam.
+      frequency_example_text: "Ex: se o email tiver 1 hit e o ip tiver 2 hits, haverá 3 hits no total. Se o limite for definido como 3 ou menos, impedirá o registro."
+
+      api_key_label: API Key
+      api_key_text: Você tem o fof/spamblock ativado, agora tem a opção de denunciar spammers no StopForumSpam para manter a comunidade livre de spam.
+      api_key_instructions_text: <register>Inscreva-se no StopForumSpam</register>. Então você precisará <key> obter uma chave de API</key>.
+
+  forum:
+    message:
+      spam: Suas informações foram marcadas como spam.
+
+  api:
+    error:
+      unknown: Falha ao relatar o usuário ao StopForumSpam.

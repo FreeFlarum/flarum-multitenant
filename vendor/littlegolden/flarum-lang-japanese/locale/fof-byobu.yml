@@ -1,0 +1,57 @@
+# https://github.com/FriendsOfFlarum/byobu/blob/master/resources/locale/en.yml
+# eba21cb
+# Sat, 25 Jan 2020 22:38:30 +0800
+
+fof-byobu:
+  forum:
+    badges:
+      is_private:
+        tooltip: プライベートディスカッション
+    buttons:
+      add_recipients: プライベート
+      submit: 確認する
+      edit_recipients: 参加者を編集
+      send_pd: "{username} メッセージを送信"
+    labels:
+      recipients: "{count} 人が閲覧可能"
+      user_deleted: --削除しました--
+    nav:
+      private_discussions: プライベートトピック
+    input:
+      search_recipients: 検索する ID の最初の 3 文字を入力してください
+    search:
+      headings:
+        groups: ユーザーグループ
+    modal:
+      titles:
+        update_recipients: プライベートトピック「{title}」の参加者を更新
+        add_recipients: プライベートトピックに参加者を追加する
+    post:
+      recipients_modified:
+        added_and_removed: "{username} は「{added}」を追加して削除します“{removed}”"
+        added: "{username} 添加“{added}”"
+        removed: "{username}は「{removed}」を削除します"
+    user:
+      settings:
+        block_pd: プライベートトピックを無効にする
+
+      byobu_link: プライベートトピック
+
+    notifications:
+      pd_label: 誰かが私をプライベートトピックに追加しました
+      pd_text: "{username} がプライベートトピックを作成し、招待しました"
+
+  admin:
+    permission:
+      create_private_discussions_with_users: プライベートトピックを作成して参加者を追加する
+      create_private_discussions_with_groups: プライベートトピックを作成してグループを追加する
+      create_private_discussions_with_blocking_users: プライベートトピックを無効にしているユーザーを許可する
+      edit_user_recipients: プライベートディスカッションの参加者を編集する
+      edit_group_recipients: プライベートディスカッション用のグループの編集
+      
+    settings:
+      byobu_users_page_label: ユーザーページにプライベートトピックを追加する
+
+  notifications:
+    private_discussion_created:
+      title: "[forum-name] プライベートトピックを作成する"

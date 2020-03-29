@@ -1,0 +1,106 @@
+flarum-tags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Basics page.
+    basics:
+      tags_label: => flarum-tags.ref.tags
+
+    # These translations are used in the Edit Tag modal dialog.
+    edit_tag:
+      color_label: core.ref.color
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      delete_tag_button: Smazat štítek
+      delete_tag_confirmation: "Opravdu chceš smazat tento štítek? Témata jím označená smazána NEBUDOU."
+      description_label: Popis
+      hide_label: Skrýt z přehledu témat
+      name_label: => flarum-tags.ref.name
+      name_placeholder: => flarum-tags.ref.name
+      slug_label: Adresa
+      submit_button: => core.ref.save_changes
+      title: => flarum-tags.ref.create_tag
+
+    # These translations are used in the navigation bar.
+    nav:
+      tags_button: => flarum-tags.ref.tags
+      tags_text: Spravuj seznam tagů pomocí kterých můžeš organizovat diskuze.
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_edit_tags_label: Povolit úpravu štítků
+      restrict_by_tag_heading: Omezit Tagem
+      tag_discussions_label: Otagovat diskuze
+
+    # These translations are used in the Tag Settings modal dialog.
+    tag_settings:
+      range_separator_text: " do "
+      required_primary_heading: Požadovaný Počet Hlavních Tagů
+      required_primary_text: Zvol minimální a maximální počet hlavních tagů, které mohou být přiděleny k diskuzi.
+      required_secondary_heading: Požadovaný Počet Vedlejších Tagů
+      required_secondary_text: Zvol minimální a maximální počet vedlejších tagů, které mohou být přiděleny k diskuzi.
+      title: Nastavení štítků
+
+    # These translations are used in the Tags page.
+    tags:
+      about_tags_text: "Tagy se používají ke kategorizaci diskuzí. Hlavní tagy slouží jako tradiční kategorie na fórech: mohou být uspořádány do dvouúrovňové hierarchie. Vedlejší tagy nemají hierarchii nebo řád a jsou užitečné pro mikro-kategorizaci."
+      create_tag_button: => flarum-tags.ref.create_tag
+      primary_heading: Hlavní štítky
+      secondary_heading: Vedlejší štítky
+      settings_button: Nastavení
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Choose Tags modal dialog.
+    choose_tags:
+      choose_primary_placeholder: "Zvol hlavní štítek|Zvol {count} hlavní štítky|Zvol {count} hlavních štítků"
+      choose_secondary_placeholder: "Přidej ještě jeden štítek|Přidej ještě {count} štítky|Přidej ještě {count} štítků"
+      edit_title: "Úprava štítků tématu {title}"
+      submit_button: => core.ref.okay
+      title: Volba štítků tvého tématu
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      choose_tags_link: Zvol štítky
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      edit_tags_button: Upravit štítky
+
+    header:
+      back_to_tags_tooltip: Zpět na Seznam Tagů
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      more_link: Více…
+      tags_link: => flarum-tags.ref.tags
+      untagged_link: Beze štítku
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      added_and_removed_tags_text: "{username} přidal {tagsAdded} a odebral {tagsRemoved}."
+      added_tags_text: "{username} přidal {tagsAdded}."
+      removed_tags_text: "{username} odebral {tagsRemoved}."
+      tags_text: "štítek {tags}|štítky {tags}"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # This translation is displayed in place of the name of a tag that's been deleted.
+    deleted_tag_text: Smazaný štítek
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    create_tag: Vytvořit štítek
+    name: Název
+    tags: Štítky

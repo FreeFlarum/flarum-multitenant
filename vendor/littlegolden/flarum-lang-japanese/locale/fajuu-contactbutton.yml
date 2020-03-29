@@ -1,0 +1,12 @@
+# https://github.com/fajuu/ContactButton/blob/master/locale/en.yml
+# 0016486
+# Sat, 25 Jan 2020 17:52:15 +0800
+
+fajuu-contactbutton:
+  admin:
+    settings:
+      title: 連絡ボタン
+      label: ボタン名
+      url: メールアドレスまたはウェブサイトのリンク
+      icon: ボタンアイコン
+      newtab: 新しいタブでリンクを開く

@@ -1,0 +1,64 @@
+fof-masquerade:
+    forum:
+        alerts:
+            profile-completion-required: >
+                Molimo ispunite potrebna polja profila u nastavku.
+        buttons:
+            view-profile: Pogledaj profil
+            save-profile: Sačuvaj
+        fields:
+            select:
+                none-optional: Nije odabrana opcija (neobavezno)
+                none-required: Molimo odaberite opciju (potrebno)
+            boolean:
+                yes: Da
+                no: Ne
+    admin:
+        title: Masquerade
+        general-options: Opšte postavke
+        buttons:
+            add-field: Kreiraj polje
+            edit-field: Sačuvaj postavke
+            delete-field: Izbriši polje
+        permissions:
+            have-profile: Može imati masquerade profil
+            view-profile: Može vidjeti masquerade profil
+        menu:
+            description: >
+                Konfigurirajte polja korisničkog profila.
+        fields:
+            title: Polja
+            add: Dodaj polje {field}
+            edit: Uredi polje {field}
+            name: Ime polja
+            name-help: >
+                The publicly visible (non-translatable) field label.
+            description: Field description
+            description-help: >
+                An optional description to explain the use/need of this field.
+            required: Označi polje obavezno
+            on_bio: Prikaži odgovor na ovo polje u korisničkoj biografiji
+            type: Tip
+            validation: Potvrđivanje
+            validation-help: >
+                Check the supported <a>Laravel validation rules</a>. Eg:
+                "string|min:5" or "url".
+            prefix: Field prefix
+            prefix-help: >
+                Shows your prefix in front of values entered by the user for this field.
+            icon: Icon
+            icon-help: >
+                Shows an icon in front of values entered by the user. For a reference of
+                available icons, check the <a>FontAwesome website</a>. Use icon names with
+                the "fa-" prefix, like "fas fa-info".
+            force-user-to-completion: Force user to complete profile
+            disable-user-bio: Disable user bio field
+            options: Options
+            option-new: New option
+            option-coma-warning: The label of an option cannot contain any coma (",").
+        types:
+            advanced: Napredno
+            boolean: Checkbox
+            email: Email
+            select: Dropdown
+            url: Url

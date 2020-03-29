@@ -1,0 +1,44 @@
+fof-polls:
+  admin:
+    permissions:
+      moderate: Uređivanje i uklanjanje anketa
+      self_edit: Dopustite korisnicima da uređuju vlastite ankete
+      start: Pokrenite anketu
+      vote: Glasati na anketu
+
+  forum:
+    days_remaining: Anketa završava {time}.
+    no_permission: Nemate dozvolu glasati
+    poll_ended: Ova anketa je završila.
+    public_poll: Pogledaj glasove
+
+    composer_discussion:
+      add_poll: Dodaj anketu
+      edit_poll: => fof-polls.forum.moderation.edit
+
+    modal:
+      add_title: Dodaj anketu
+      add_option_label: Dodaj opciju
+      date_placeholder: Datum završetka ankete (Optimalno)
+      edit_title: Uredi anketu
+      include_question: Morate uključiti pitanje
+      max: Možete imati maksimalno 10 odgovora
+      min: Morate imati najmanje 2 odgovora
+      no_voters: Nema glasova
+      option_placeholder: Odgovor
+      options_label: Odgovori
+      public_poll_label: Dopustite ljudima da vide tko je glasao
+      question_placeholder: Pitanje
+      submit: Potvrdi
+
+    moderation:
+      delete: Ukloni anketu
+      delete_confirm: Jeste li sigurni da želite izbrisati ovu anketu?
+      edit: Uredi anketu
+
+    tooltip:
+      badge: Anketa
+      votes: "Glasao/la sam |{count} puta"
+
+    votes_modal:
+      title: Glasači

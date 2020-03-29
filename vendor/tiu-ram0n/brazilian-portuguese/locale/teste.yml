@@ -1,0 +1,9 @@
+---
+teste:
+  forum:
+    autodiscovery:
+      forum_activity: teste
+      forum_new_discussions: teste1
+      tag_activity: Activity for the {tag} tag
+      tag_new_discussions: Discussions in the {tag} tag
+      discussion_last_posts: This discussion

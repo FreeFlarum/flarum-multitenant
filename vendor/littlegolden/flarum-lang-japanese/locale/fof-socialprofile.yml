@@ -1,0 +1,15 @@
+# https://github.com/FriendsOfFlarum/socialprofile/blob/master/resources/locale/en.yml
+# af8862b
+# Sun, 26 Jan 2020 00:24:05 +0800
+
+fof-socialprofile:
+  forum:
+    edit:
+      edit: 編集
+      add: 追加する
+      headtitle: 追加ボタン
+      title: 題名
+      url: リンク
+      submit: 保存する
+      delete: 削除
+      deletetitle: 削除ボタン

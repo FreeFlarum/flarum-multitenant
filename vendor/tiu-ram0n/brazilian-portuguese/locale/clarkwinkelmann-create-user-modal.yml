@@ -1,0 +1,10 @@
+---
+clarkwinkelmann-create-user-modal:
+  admin:
+    permissions:
+      view: Exibir janela de criação do usuário
+  forum:
+    link: Criar novo usuário
+    modal:
+      title: Criar usuário
+      submit: Criar usuário

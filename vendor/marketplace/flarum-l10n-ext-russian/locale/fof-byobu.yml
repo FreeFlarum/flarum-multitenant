@@ -1,0 +1,45 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: "Приватные дискуссии"
+        buttons:
+            add_recipients: "Участники"
+            submit: "OK"
+            edit_recipients: "Редактировать участников"
+            send_pd: "Отправить сообщение для {username}"
+        labels:
+            recipients: "{count} участник|{count} участников"
+            user_deleted: "[удалено]"
+        nav:
+            private_discussions: "Приватная дискуссия"
+        input:
+            search_recipients: "Поиск участников, указав первые три символа..."
+        search:
+            headings:
+                groups: "Доступные группы"
+        modal:
+            titles:
+                update_recipients: "Обновить участников в {title}"
+                add_recipients: "Добавить участников в свою дискуссию"
+        post:
+            recipients_modified:
+                added_and_removed: "{username} добавил участников {added} и удалил {removed}."
+                added: "{username} добавил участников {added}."
+                removed: "{username} удалил участников {removed}."
+        user:
+            settings:
+                block_pd: "Блокировать приватные дискуссии"
+
+            byobu_link: "Личные дискуссии"
+
+    admin:
+        permission:
+            create_private_discussions_with_users: "Создать приватную дискуссию с участниками"
+            create_private_discussions_with_groups: "Создать приватную дискуссию с группами"
+            create_private_discussions_with_blocking_users: "Создать приватную дискуссию с блокирующими участниками"
+            edit_user_recipients: "Править участников приватных дискуссий"
+            edit_group_recipients: "Править группы приватных дискуссий"
+
+        settings:
+            byobu_users_page_label: "Добавить приватные дискуссии в профиль пользователя"

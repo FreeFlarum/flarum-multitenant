@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label:  التنبيه على المشاركات
+      view_flags_label: التنبيه على المشاركات الغير ملائمة
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: رابط القواعد التوجيهة لمستخدمي المنتدى
+      title: إعدادت التنبيه على المشاركات الغير ملائمة
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: "شكرا لك على تنبيهنا, سنتحقق من هذه المشاركة في أقرب وقت ممكن."
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: غير ملائم
+      reason_inappropriate_text: "هذه المشاركة مسيئة أو غير ملائمة أو تنتهك <a>إرشادات المنتدى</a> الخاصة بنا."
+      reason_off_topic_label: "خارج سياق موضوع النقاش"
+      reason_off_topic_text: هذه المشاركة ليست ذات صلة بالنقاش الحالية ويجب نقلها إلى مكان آخر.
+      reason_other_label: أشياء أخرى
+      reason_spam_label: مشاركة غير ملائمة
+      reason_spam_text: هذه المشاركة عبارة عن دعاية.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: ليست هناك أية مشاركة غير ملائمة.
+      item_text: "{username} في <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: مراجعة التنبيه
+      flagged_by_text: "{username} قام بالتنبيه"
+      flagged_by_with_reason_text: "{username} نبّه على أن هذه المشاركة غير ملائمة والسبب : {reason}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: تنبيه
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: نبه الإدارة بهذه المشاركة
+    flagged_posts: المشاركات الغير ملائمة

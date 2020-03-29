@@ -419,23 +419,23 @@
     },
     {
         "name": "csineneo/lang-simplified-chinese",
-        "version": "v0.1.0-beta.10.8",
-        "version_normalized": "0.1.0.0-beta10.8",
+        "version": "v0.1.0-beta.11.3",
+        "version_normalized": "0.1.0.0-beta11.3",
         "source": {
             "type": "git",
             "url": "https://github.com/Csineneo/lang-simplified-chinese.git",
-            "reference": "50e1dd47922c9c7e77723ad6b859ab78313847bf"
+            "reference": "75b11b296cf44ee390b4e44da3c521efa636a8bc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Csineneo/lang-simplified-chinese/zipball/50e1dd47922c9c7e77723ad6b859ab78313847bf",
-            "reference": "50e1dd47922c9c7e77723ad6b859ab78313847bf",
+            "url": "https://api.github.com/repos/Csineneo/lang-simplified-chinese/zipball/75b11b296cf44ee390b4e44da3c521efa636a8bc",
+            "reference": "75b11b296cf44ee390b4e44da3c521efa636a8bc",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.10"
         },
-        "time": "2019-11-07T01:50:01+00:00",
+        "time": "2020-01-26T13:31:19+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -474,23 +474,23 @@
     },
     {
         "name": "csineneo/lang-traditional-chinese",
-        "version": "v0.1.0-beta.10.8",
-        "version_normalized": "0.1.0.0-beta10.8",
+        "version": "v0.1.0-beta.11.3",
+        "version_normalized": "0.1.0.0-beta11.3",
         "source": {
             "type": "git",
             "url": "https://github.com/Csineneo/lang-traditional-chinese.git",
-            "reference": "1fc93f23c2e16b1eec2fbc142557a7cb78a39f1e"
+            "reference": "311d168b229e5e35d3d34c029c4d967470721a8c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Csineneo/lang-traditional-chinese/zipball/1fc93f23c2e16b1eec2fbc142557a7cb78a39f1e",
-            "reference": "1fc93f23c2e16b1eec2fbc142557a7cb78a39f1e",
+            "url": "https://api.github.com/repos/Csineneo/lang-traditional-chinese/zipball/311d168b229e5e35d3d34c029c4d967470721a8c",
+            "reference": "311d168b229e5e35d3d34c029c4d967470721a8c",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.10"
         },
-        "time": "2019-11-07T01:48:19+00:00",
+        "time": "2020-01-26T13:30:46+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -1296,6 +1296,75 @@
             "library",
             "throwable",
             "whoops"
+        ]
+    },
+    {
+        "name": "flagrow/flarum-ext-analytics",
+        "version": "0.8.0",
+        "version_normalized": "0.8.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/flagrow/analytics.git",
+            "reference": "13e7a62449909a5683239d808fb5727bb88f7019"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/flagrow/analytics/zipball/13e7a62449909a5683239d808fb5727bb88f7019",
+            "reference": "13e7a62449909a5683239d808fb5727bb88f7019",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-03-14T08:40:05+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Analytics",
+                "icon": {
+                    "name": "fas fa-chart-line",
+                    "backgroundColor": "#74000E",
+                    "color": "#BE1E31"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/1983"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Flagrow\\Analytics\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniël Klabbers",
+                "email": "daniel+flarum@klabbers.email",
+                "homepage": "http://hyn.io"
+            },
+            {
+                "name": "Santiago Testa Biali",
+                "email": "santiago.t.biali@gmail.com"
+            },
+            {
+                "name": "Clark Winkelmann",
+                "email": "clark.winkelmann@gmail.com",
+                "homepage": "https://clarkwinkelmann.com/"
+            }
+        ],
+        "description": "Tracks analytics using googles and piwik metric tool analytics",
+        "keywords": [
+            "analytics",
+            "extension",
+            "flagrow",
+            "flarum",
+            "google-analytics",
+            "piwik"
         ]
     },
     {
@@ -3911,6 +3980,61 @@
         ]
     },
     {
+        "name": "fof/spamblock",
+        "version": "0.2.1",
+        "version_normalized": "0.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/spamblock.git",
+            "reference": "febc3c5d34ad6122d8030bc0217124033f4f9b17"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/spamblock/zipball/febc3c5d34ad6122d8030bc0217124033f4f9b17",
+            "reference": "febc3c5d34ad6122d8030bc0217124033f4f9b17",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta-8"
+        },
+        "time": "2018-12-04T00:19:46+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF Spamblock",
+                "icon": {
+                    "name": "fas fa-pastafarianism",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/17772-friendsofflarum-spamblock"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Spamblock\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Sevilla Martín",
+                "email": "david.s@redevs.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "Mark user as spammer, suspending them & hiding their posts and discussions",
+        "keywords": [
+            "flarum"
+        ]
+    },
+    {
         "name": "fof/split",
         "version": "0.4.3",
         "version_normalized": "0.4.3.0",
@@ -5926,24 +6050,81 @@
         ]
     },
     {
-        "name": "luatdolphin/lang-vietnamese",
-        "version": "0.1.0-beta.10",
-        "version_normalized": "0.1.0.0-beta10",
+        "name": "littlegolden/flarum-lang-japanese",
+        "version": "v0.1.7",
+        "version_normalized": "0.1.7.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/luatdolphin/lang-vietnamese.git",
-            "reference": "bbde9b2168c442ce4a85f418129b19bc7304aa70"
+            "url": "https://github.com/Littlegolden/flarum-lang-japanese.git",
+            "reference": "a8a5f611f6e652d2cdb4166414e6e71f25942858"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/bbde9b2168c442ce4a85f418129b19bc7304aa70",
-            "reference": "bbde9b2168c442ce4a85f418129b19bc7304aa70",
+            "url": "https://api.github.com/repos/Littlegolden/flarum-lang-japanese/zipball/a8a5f611f6e652d2cdb4166414e6e71f25942858",
+            "reference": "a8a5f611f6e652d2cdb4166414e6e71f25942858",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2020-01-27T06:32:36+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "日本語言語パック",
+                "icon": {
+                    "name": "fas fa-circle",
+                    "background": "#ffffff",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center",
+                    "color": "#FF0000"
+                }
+            },
+            "flarum-locale": {
+                "code": "ja",
+                "title": "日本語"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Golden & Slicky",
+                "email": "littlegoldenjin@gmail.com",
+                "homepage": "https://bbs.csur.fun/u/Golden"
+            }
+        ],
+        "description": "Flarum 日本語言語パック",
+        "keywords": [
+            "flarum",
+            "japanese",
+            "locale",
+            "translation",
+            "日本語"
+        ]
+    },
+    {
+        "name": "luatdolphin/lang-vietnamese",
+        "version": "0.1.0-beta.11.1",
+        "version_normalized": "0.1.0.0-beta11.1",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/luatdolphin/lang-vietnamese.git",
+            "reference": "73030ed707352832127486653c22dcdbadc89fb2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/73030ed707352832127486653c22dcdbadc89fb2",
+            "reference": "73030ed707352832127486653c22dcdbadc89fb2",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.10"
         },
-        "time": "2019-09-25T03:33:37+00:00",
+        "time": "2019-12-23T12:28:12+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -6029,6 +6210,55 @@
         ]
     },
     {
+        "name": "madnest/flarum-lang-czech",
+        "version": "v0.1.0-beta.11",
+        "version_normalized": "0.1.0.0-beta11",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/madnest/flarum-lang-czech.git",
+            "reference": "a6701a15888285c351bafc2829ca97610b3ea8f8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/madnest/flarum-lang-czech/zipball/a6701a15888285c351bafc2829ca97610b3ea8f8",
+            "reference": "a6701a15888285c351bafc2829ca97610b3ea8f8",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.11"
+        },
+        "time": "2020-01-26T21:19:50+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.1.x-dev"
+            },
+            "flarum-extension": {
+                "title": "Czech",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#00247d",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "cs",
+                "title": "Čeština"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Czech language pack.",
+        "keywords": [
+            "flarum",
+            "locale"
+        ]
+    },
+    {
         "name": "marketplace/flarum-l10n-core-russian",
         "version": "0.1.0-beta.11-1",
         "version_normalized": "0.1.0.0-beta11-1",
@@ -6083,6 +6313,95 @@
             }
         ],
         "description": "Russian language pack for Flarum.",
+        "homepage": "https://exts.dev/#flarum",
+        "keywords": [
+            "extension",
+            "flarum",
+            "language",
+            "locale",
+            "localization",
+            "russian",
+            "translation"
+        ]
+    },
+    {
+        "name": "marketplace/flarum-l10n-ext-russian",
+        "version": "0.1.3",
+        "version_normalized": "0.1.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian.git",
+            "reference": "bb7c4b02e6c3f2d2b75593676b3674d24d3afb42"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://gitlab.com/api/v4/projects/marketplace-flarum%2Fflarum-l10n-ext-russian/repository/archive.zip?sha=bb7c4b02e6c3f2d2b75593676b3674d24d3afb42",
+            "reference": "bb7c4b02e6c3f2d2b75593676b3674d24d3afb42",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9"
+        },
+        "suggest": {
+            "clarkwinkelmann/flarum-ext-post-date": "Change post date",
+            "fof/auth-discord": "Discord Login",
+            "fof/ban-ips": "Ban IPs",
+            "fof/byobu": "Byōbu",
+            "fof/drafts": "Drafts",
+            "fof/follow-tags": "Follow Tags",
+            "fof/ignore-users": "Ignore Users",
+            "fof/masquerade": "Masquerade",
+            "fof/merge-discussions": "Merge Discussions",
+            "fof/nightmode": "Night Mode",
+            "fof/polls": "Polls",
+            "fof/prevent-necrobumping": "Prevent Necrobumping",
+            "fof/recaptcha": "reCAPTCHA",
+            "fof/subscribed": "Subscribed",
+            "fof/user-directory": "User Directory",
+            "fof/username-request": "Username Request",
+            "marketplace/flarum-l10n-core-russian": "Russian language pack for Flarum.",
+            "zerosonesfun/announce": "Announce"
+        },
+        "time": "2019-10-14T15:57:03+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Русский (EXT)",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#f3f6f9",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "ru",
+                "title": "Русский"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "x06174",
+                "homepage": "https://x06174.gitlab.io/",
+                "role": "Editor"
+            },
+            {
+                "name": "towuk118",
+                "homepage": "https://vk.com/towuk118",
+                "role": "Editor"
+            },
+            {
+                "name": "dexif",
+                "homepage": "https://spitsyn.net",
+                "role": "Editor"
+            }
+        ],
+        "description": "Russian language pack for Flarum Extensions.",
         "homepage": "https://exts.dev/#flarum",
         "keywords": [
             "extension",
@@ -6836,6 +7155,115 @@
         ]
     },
     {
+        "name": "neercsys/flarum-ext-bosanski",
+        "version": "v0.12",
+        "version_normalized": "0.12.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/neercsys/flarum-ext-bosanski.git",
+            "reference": "5211319d9ae2be6eb7a975d68e58740768c8b4f8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/neercsys/flarum-ext-bosanski/zipball/5211319d9ae2be6eb7a975d68e58740768c8b4f8",
+            "reference": "5211319d9ae2be6eb7a975d68e58740768c8b4f8",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9"
+        },
+        "time": "2019-12-04T01:11:47+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.1.x-dev"
+            },
+            "authors": [
+                {
+                    "name": "neercsys",
+                    "role": "Developer"
+                }
+            ],
+            "flarum-extension": {
+                "title": "Bosnian Extended Pack",
+                "icon": {
+                    "name": "fas fa-language",
+                    "background": "#346eeb",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center",
+                    "color": "#e9f01d"
+                }
+            },
+            "flarum-locale": {
+                "code": "bs",
+                "title": "Bosanski"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Bosnian language pack for Flarum's third party extensions.",
+        "keywords": [
+            "bosanski",
+            "bosnian",
+            "extension",
+            "flarum",
+            "locale",
+            "translation"
+        ]
+    },
+    {
+        "name": "neercsys/flarum-lang-bosanski",
+        "version": "v0.11",
+        "version_normalized": "0.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/neercsys/flarum-lang-bosanski.git",
+            "reference": "124045af012227ee538e6346b88018ffbdc34c1c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/neercsys/flarum-lang-bosanski/zipball/124045af012227ee538e6346b88018ffbdc34c1c",
+            "reference": "124045af012227ee538e6346b88018ffbdc34c1c",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9"
+        },
+        "time": "2019-09-19T17:23:28+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Bosanski",
+                "icon": {
+                    "image": "icon.png",
+                    "backgroundColor": "#00247d",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "bs",
+                "title": "Bosanski"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Bosnian language pack.",
+        "homepage": "https://github.com/neercsys/flarum-lang-bosanski",
+        "keywords": [
+            "bosanski",
+            "bosnian",
+            "locale",
+            "translation"
+        ]
+    },
+    {
         "name": "nesbot/carbon",
         "version": "1.39.1",
         "version_normalized": "1.39.1.0",
@@ -7174,7 +7602,8 @@
             "lesscss",
             "php",
             "stylesheet"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "paragonie/constant_time_encoding",
@@ -9782,6 +10211,67 @@
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
     },
     {
+        "name": "tiu-ram0n/brazilian-portuguese",
+        "version": "1.1.19",
+        "version_normalized": "1.1.19.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tiuram0n/brazilian-portuguese.git",
+            "reference": "4ed7b43ad5ee6c82ac0b84f0d27abb8767a2d1bd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tiuram0n/brazilian-portuguese/zipball/4ed7b43ad5ee6c82ac0b84f0d27abb8767a2d1bd",
+            "reference": "4ed7b43ad5ee6c82ac0b84f0d27abb8767a2d1bd",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.11"
+        },
+        "time": "2020-01-29T19:23:43+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Brazilian Portuguese",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#55a667",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/18543"
+            },
+            "flarum-locale": {
+                "code": "pt-BR",
+                "title": "Português Brasileiro"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ramon Guilherme",
+                "email": "ramonguilherme@outlook.com",
+                "homepage": "https://coode.in"
+            }
+        ],
+        "description": "Pacote de idioma Português do Brasil.",
+        "homepage": "https://coode.in",
+        "keywords": [
+            "brazilian",
+            "extensão",
+            "language",
+            "locale",
+            "portugues",
+            "portuguese"
+        ]
+    },
+    {
         "name": "tiu-ram0n/flaneo-ext-brazilian-portuguese",
         "version": "1.1.9",
         "version_normalized": "1.1.9.0",
@@ -9894,17 +10384,17 @@
     },
     {
         "name": "tolgaaaltas/flarum-ext-turkish",
-        "version": "0.1.24",
-        "version_normalized": "0.1.24.0",
+        "version": "0.1.36",
+        "version_normalized": "0.1.36.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-            "reference": "b9c162c86b7f0f03e7b02fa2e5f210816166de5b"
+            "reference": "171c07d9dd83d90f1fa923b7d80290fcbfba5a44"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/b9c162c86b7f0f03e7b02fa2e5f210816166de5b",
-            "reference": "b9c162c86b7f0f03e7b02fa2e5f210816166de5b",
+            "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/171c07d9dd83d90f1fa923b7d80290fcbfba5a44",
+            "reference": "171c07d9dd83d90f1fa923b7d80290fcbfba5a44",
             "shasum": ""
         },
         "require": {
@@ -9913,7 +10403,7 @@
         "suggest": {
             "tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
         },
-        "time": "2019-12-02T08:19:45+00:00",
+        "time": "2020-01-27T15:53:19+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -10287,7 +10777,8 @@
             "http",
             "psr",
             "psr-7"
-        ]
+        ],
+        "abandoned": "laminas/laminas-diactoros"
     },
     {
         "name": "zendframework/zend-escaper",
@@ -10334,7 +10825,8 @@
             "ZendFramework",
             "escaper",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-escaper"
     },
     {
         "name": "zendframework/zend-httphandlerrunner",
@@ -10391,7 +10883,8 @@
             "psr-15",
             "psr-7",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-httphandlerrunner"
     },
     {
         "name": "zendframework/zend-stratigility",
@@ -10459,7 +10952,8 @@
             "psr-15",
             "psr-7",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-stratigility"
     },
     {
         "name": "zerosonesfun/bbbbcode",
@@ -10508,5 +11002,57 @@
             }
         ],
         "description": "Big Beautiful BBcode"
+    },
+    {
+        "name": "ziymed/lang-arabic",
+        "version": "0.1.2",
+        "version_normalized": "0.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ziymed/lang-arabic.git",
+            "reference": "a1cfc6774d2a8960e99b945256ee618ed191aefd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ziymed/lang-arabic/zipball/a1cfc6774d2a8960e99b945256ee618ed191aefd",
+            "reference": "a1cfc6774d2a8960e99b945256ee618ed191aefd",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9"
+        },
+        "time": "2020-01-27T20:40:24+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Arabic Language",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#006233",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "ar",
+                "title": "Arabic"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Ziymed\\LangArabic\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Arabic Language Pack.",
+        "keywords": [
+            "arabic",
+            "locale",
+            "العربية"
+        ]
     }
 ]

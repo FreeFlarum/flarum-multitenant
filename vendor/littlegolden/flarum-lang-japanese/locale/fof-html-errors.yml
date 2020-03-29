@@ -1,0 +1,17 @@
+# https://github.com/FriendsOfFlarum/html-errors/blob/master/locale/en.yml
+# 2a04f81
+# Sat, 25 Jan 2020 23:13:32 +0800
+
+fof-html-errors:
+  admin:
+    settings:
+      title: カスタム HTML エラーページ
+
+      error:
+        403: 403 アクセスが拒否されました
+        404: 404 コンテンツが存在しません
+        500: 500 内部サーバーエラー
+        503: 503 サービスが利用できない（またはオフラインメンテナンス）
+
+      placeholder:
+        empty_for_default: デフォルトの Flarum エラーページを使用するには空白のままにします

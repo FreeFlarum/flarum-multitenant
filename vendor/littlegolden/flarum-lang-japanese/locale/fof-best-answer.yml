@@ -1,0 +1,22 @@
+# https://github.com/FriendsOfFlarum/best-answer/blob/master/resources/locale/en.yml
+# 51da1ea
+# Fri, 24 Jan 2020 15:56:10 +0800
+
+fof-best-answer:
+    admin:
+        permissions:
+            best_answer: ベストアンサーを選ぶ(自分の投稿のみ)
+            best_answer_not_own_discussion: ベストアンサーを選ぶ(他人の投稿)
+        settings:
+            title: FoF 最佳答案设置
+            allow_select_own_post: ユーザーが自身の投稿をベストアンサーにすることを許可する
+            select_best_answer_reminder_days: n 日後に最適な応答を選択するようユーザーに通知します
+    forum:
+        answered_badge: 解決済み
+        this_best_answer: ベストアンサーに選ぶ
+        remove_best_answer: 現在のベストアンサーを消す
+        best_answer_button: ベストアンサー
+        best_answer_label: <a>{username}</a> によって選択
+
+        notification:
+          content: あなたの質問に回答がついている場合、ベストアンサーを選んで下さい

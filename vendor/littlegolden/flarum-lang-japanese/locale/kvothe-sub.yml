@@ -1,0 +1,13 @@
+# https://github.com/oaklinq/flarum-signup-button/blob/master/resources/locale/en.yml
+# ef2ffe3
+# Sun, 26 Jan 2020 01:00:06 +0800
+
+kvothe-sub:
+  forum:
+    signup: サインアップ
+  admin:
+    settings:
+      title: 登録ボタン設定
+      field:
+        hide-desktop: デスクトップにボタンを表示しない
+        replace-discussion-button: ホームポストテーマボタンを置き換える

@@ -1,0 +1,5 @@
+fancybox:
+  forum:
+    next: Sljedeća
+    prev: Prethodna
+    error: Došlo je do pogreške prilikom učitavanja slike.

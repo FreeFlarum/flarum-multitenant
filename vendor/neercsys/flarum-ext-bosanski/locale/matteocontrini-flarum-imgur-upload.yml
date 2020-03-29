@@ -1,0 +1,9 @@
+imgur-upload:
+  admin:
+    settings:
+        title: Imgur Upload postavke
+  forum:
+    upload: Kliknite ili zalijepite za upload
+    loading: Učitavanje...
+    done: Uspješno!
+    error: Greška

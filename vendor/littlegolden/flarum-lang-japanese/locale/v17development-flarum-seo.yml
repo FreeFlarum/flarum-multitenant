@@ -1,0 +1,8 @@
+# https://github.com/v17development/flarum-seo/blob/master/locale/en.yml
+# 7d8762f
+# Sun, 26 Jan 2020 01:50:55 +0800
+
+v17development-flarum-seo:
+  forum:
+    profile_title: "{username} のプロフィール"
+    profile_description: "{username} のプロフィール | {discussion_count} 件のディスカッション | {comment_count} 件の投稿"

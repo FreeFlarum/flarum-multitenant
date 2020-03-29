@@ -1,0 +1,43 @@
+{
+  "name": "littlegolden/flarum-lang-japanese",
+  "description": "Flarum 日本語言語パック",
+  "keywords": [
+    "flarum",
+    "locale",
+    "Japanese",
+    "日本語",
+    "translation"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Golden & Slicky",
+      "email": "littlegoldenjin@gmail.com",
+      "homepage": "https://bbs.csur.fun/u/Golden"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/Littlegolden/flarum-lang-japanese",
+    "issues": "https://bbs.csur.fun/t/chatroom"
+  },
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "日本語言語パック",
+        "icon": {
+        "name": "fas fa-circle",
+        "background": "#ffffff",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center",
+        "color": "#FF0000"
+      }
+    },
+    "flarum-locale": {
+      "code": "ja",
+      "title": "日本語"
+    }
+  }
+}

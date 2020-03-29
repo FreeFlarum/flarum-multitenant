@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: Podijeli postove iz rasprava
+    forum:
+        post:
+            was_split_to: "{count} post/ova je podijeljeno u {target}.|{count} post/ova je podijeljeno u {target}."
+            was_split_from: "{count} post/ova je podijeljeno iz {target}.|{count} post/ova je podijeljeno iz {target}."
+        split:
+            from: Podijeli ovdje
+            to: Podijeljen ovdje
+        modal:
+            title: Podijeli raspravu
+            new_discussion_label: Odredite naslov nove diskucije
+            submit_button: Podijeli

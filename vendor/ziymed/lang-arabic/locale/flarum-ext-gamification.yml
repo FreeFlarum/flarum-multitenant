@@ -1,0 +1,66 @@
+core:
+  forum:
+    index_sort:
+      hot_button: الأكثر قراءة
+
+reflar-gamification:
+  forum:
+    vote_title: إظهار من صوت
+    nav:
+      name: الترتيب
+    ranking:
+      rank: المرتبة
+      name: العضو
+      amount: النقاط
+    notification:
+      upvote: "{username} رفع تصويته على مشاركتك"
+      downvote: "{username} خفض تصوينه على مشاركتك"
+    user:
+      points: "النقاط: {points}"
+      rank: "{rank}"
+    modal:
+      title: التصويت
+      upvotes_label: رفع التصويت
+      downvotes_label: خفض التصويت
+  admin:
+    permissions:
+      vote_label: رفع أو خفض التصويت على المشاركات
+      see_votes_label: مشاهدة التصويتات المرفوعة أو المخفوضة
+      see_ranking_page: مشاهدة صفحة التصنيف
+    nav:
+      desc: تطبيق مسلي للمنتدى
+    page:
+      rankings:
+        blocked:
+          placeholder: محمد, أيمن, زينب
+          title: المستخدمون الذين تم تجاهلهم
+          help: لن يتم عرض هؤلاء المستخدمين على صفحة الترتيب. يجب فصل أسماء المستخدمين بفاصلة متبوعة بمسافة.
+        title: صفحة التصنيفات
+        enable: تمكين خاصية تخصيص الصور
+        custom_image_1: صورة المركز الأول
+        custom_image_2: صورة المركز الثاني
+        custom_image_3: صورة المركز الثالث
+      votes:
+        points_title: عرض النص كمثال للنص المدخل
+        points_placeholder: "نقاط: "
+        color_holder: '#ffffff'
+        auto_upvote: رفع التصويت ذاتيا على المشاركات بعد نشرها
+        title: تصويت
+        vote_color: لون التصويت
+        icon_name: أيقونة التصويت
+        icon_help: "أدخل أي رمز Font-Awesome يكون لاحقة مع -up و -down. أمثلة: السهم ، والإبهام ، وشيفرون"
+      save_settings: حفظ التغييرات
+      convert:
+        button: تحويل الإعجابات إلى التصويت
+        help: تحويل الاعجابات السابقة من flarum-ext-likes-like إلى upvotes ، وكذلك حساب السخونة لجميع النقاش الحالية.
+        converting: يتم الآن تحويل الإعجابات. قم بتحديث موقعك بعد بضع دقائق لرؤية انتهاء العملية. (قد يستغرق وقت التحويل بعض الوقت بناء على إبداعات الإعجاب الكاملة بالمنتدى)
+        converted: "تم بنجاح تحويل جميع إبداءات الإعجاب {number}"
+      ranks:
+        title: الترتيب
+        ranks: ترتيب مخصص
+        number_title: كم من شارات الترتيب يجب أن تظهر؟
+        help:
+          color: '#ffffff'
+          help: "أدخل العدد المطلوب من الأصوات ، واسم الرتبة ، واللون السداسي للرتبة"
+          points: نقاط
+          name: اسم

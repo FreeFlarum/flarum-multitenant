@@ -1,0 +1,15 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Kreiraj skicu rasprave
+  forum:
+    composer:
+      title: Sačuvaj skicu
+      alert: Skica sačuvana.
+      exit_alert: Odbaciti promjene na skici?
+    dropdown:
+      empty_text: Niste spremili nijednu skicu
+      title: Skice
+      button: Obriši skicu
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Jeste li sigurni da želite obrisati vašu skicu?

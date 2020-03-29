@@ -1,0 +1,16 @@
+# https://github.com/xmugenx/flarum-ext-post-blacklist/blob/master/resources/locale/en.yml
+# da438d1
+# Sun, 26 Jan 2020 14:14:16 +0800
+
+xmugenx-post-blacklist:
+  admin:
+    settings:
+      title: 機密性の高い単語の設定
+      labelText: デリケートな単語を含む投稿は非表示になります
+      help: スペースで区切る
+    permissions:
+      blacklist_discussions_label: デリケートな言葉
+  forum:
+    post_controls:
+      unblacklist_button: 再表示
+      blacklist_button: デリケートな言葉

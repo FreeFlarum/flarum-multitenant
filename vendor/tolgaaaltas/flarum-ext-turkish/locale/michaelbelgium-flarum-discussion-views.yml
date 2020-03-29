@@ -8,10 +8,15 @@ flarum_discussion_views:
   forum:
     modal_resetviews:
       title: Tartışmaların görüntülenmesini sıfırla
-      submit: Kaydet
-      label: Görüntülenme sayısını ayarla
+      submit: Evet tümünü sil
+      label: Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?|Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?
     discussion_controls:
-      resetviews_button: Görüntülenme sayısını ayarla
+      resetviews_button: Görüntülenmeyi sıfırla
   admin:
       permissions:
-          reset_views_label: Tartışma görüntülenmesini ayarla
+          reset_views_label: Tartışma görüntülenmesini sıfırla
+      settings:
+        title: Tartışma Görüntülenme Ayarları
+        track_unique: Tekil görüntülenmeleri say
+        abbr_numbers: Görüntülenme numaralarını kısalt
+        show_filter: Popüler (olmayan) filtresini etkinleştir

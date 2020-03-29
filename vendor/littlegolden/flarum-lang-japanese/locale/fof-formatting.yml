@@ -1,0 +1,13 @@
+# https://github.com/FriendsOfFlarum/formatting/blob/master/resources/locale/en.yml
+# c1e9a00
+# Sat, 25 Jan 2020 22:50:44 +0800
+
+fof-formatting:
+  admin:
+    plugins:
+      Autoimage: 画像リンクを実際の画像に変換する
+      Autovideo: ビデオリンクを再生可能なビデオに変換する
+      FancyPants: 美しいテキストレイアウトを使用する
+      HTMLEntities: HTML entities を使用する
+      MediaEmbed: サポートされているWebサイトからコンテンツを埋め込む
+      PipeTables: ASCII スタイルテーブル

@@ -1,0 +1,28 @@
+# https://github.com/FriendsOfFlarum/ignore-users/blob/master/resources/locale/en.yml
+# 764d42e
+# Sat, 25 Jan 2020 23:14:22 +0800
+
+fof-ignore-users:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      can_not_be_ignored_label: 無視できない
+
+
+  # Translations in this namespace are used by the forum interface.
+  forum:
+
+    profile_link: 無視されたユーザー
+
+    # These strings are used in the User Controls menu.
+    user_controls:
+      ignore_button: 無視する
+      ignore_confirmation: この人を無視しますか？
+      unignore_button: 取消无视
+      unignore_confirmation: この人を無視してキャンセルしますか？
+

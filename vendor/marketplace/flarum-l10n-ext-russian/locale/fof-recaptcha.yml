@@ -1,0 +1,12 @@
+fof-recaptcha:
+  admin:
+    settings:
+      help_text: "Получите данные для подключения Google reCAPTCHA <a>тут</a>."
+
+      type_label: "Тип reCAPTCHA"
+
+      site_key_label: "Ключ сайта"
+      secret_key_label: "Секретный ключ"
+
+validation:
+  recaptcha: "Проверка reCAPTCHA не пройдена."

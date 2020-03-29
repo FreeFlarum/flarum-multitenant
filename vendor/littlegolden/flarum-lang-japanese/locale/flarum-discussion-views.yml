@@ -1,0 +1,26 @@
+# https://github.com/MichaelBelgium/flarum-discussion-views/blob/master/locale/en.yml
+# 12a5f71
+# Sun, 26 Jan 2020 13:49:40 +0800
+
+core:
+  forum:
+    index_sort:
+      popular_button: 人気
+      unpopular_button: 不人気
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: ディスカッションが見られた回数をリセットする
+      submit: 保存する
+      label: 見られた回数をセットする
+    discussion_controls:
+      resetviews_button: 見られた回数をセットする
+  admin:
+      permissions:
+          reset_views_label: 見られた回数をセットする
+      settings:
+      title: 設定
+      track_unique: UV を追跡
+      abbr_numbers: 略語を見る
+      show_filter: 熱カテゴリフィールドを有効にする

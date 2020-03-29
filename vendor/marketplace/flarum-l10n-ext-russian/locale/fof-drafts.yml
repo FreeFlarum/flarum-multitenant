@@ -1,0 +1,13 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: "Создание черновиков в дискуссиях"
+  forum:
+    composer:
+      title: "Сохранить черновик"
+      alert: "Черновик сохранён."
+    dropdown:
+      title: "Черновики"
+      button: "Удалить черовик"
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: "Вы уверены что хотите удалить черновик?"

@@ -1,0 +1,14 @@
+# https://github.com/FriendsOfFlarum/spamblock/blob/master/locale/en.yml
+# 8820a39
+# Sun, 26 Jan 2020 00:25:46 +0800
+
+fof-spamblock:
+  forum:
+    user_controls:
+      spammer_button: サボター
+      spammer_confirmation: "これを実行してもよろしいですか \n• すべてのユーザーからトピックと返信を非表示にする \n• [flarum/suspend] このユーザーを禁止"
+
+  admin:
+    permissions:
+      spamblock_users_label: ユーザーを混乱させるものとしてマークする
+

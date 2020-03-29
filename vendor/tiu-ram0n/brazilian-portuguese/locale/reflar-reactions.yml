@@ -1,0 +1,44 @@
+reflar-reactions:
+  forum:
+    warning: Sua reação foi convertida
+    notification: '{username} reagiu com {reaction} à sua postagem'
+    settings:
+        notify_post_reacted_label: Alguém reage a uma das minhas postagens
+
+  admin:
+    permissions:
+        react_posts_label: Reagir às postagens
+
+    nav:
+      desc: Adicione reações personalizadas e altere as configurações.
+
+    page:
+      reactions:
+        title: Reações Personalizadas
+        reactions: Reações Atuais
+        Helptext: Insira o nome do identificador do emoji ou fonte-awesome e selecione o tipo de reação.
+        help:
+          identifier: Identificador
+
+      convert:
+        help: Se você acabou de atualizar sua extensão, suas reações terão que ser convertidas. Se você acabou de instalar essa extensão, poderá ignorar essa mensagem com segurança.
+        button: Converter reações antigas
+        converting: Suas reações estão sendo convertidas. Atualize o site após alguns minutos para ver o processo concluído. (O tempo de conversão pode demorar um pouco dependendo do número total de reações)
+        converted: "Convertido com sucesso todas as {number} curtidas"
+
+      settings:
+        save_settings: Salvar configurações
+        integrations:
+          warning: A mesma reação <strong>não</strong> pode ser convertida em curtida <strong>e</strong> voto positivo
+          legend: Integrações
+          gamification:
+            legend: Gamification
+            upvoteLabel: Converter reações em votos positivos
+            upvoteHelptext: Introduzir o identificador da reação que você gostaria de converter em voto positivo
+            downvoteLabel: Converter reações em votos negativos
+            downvoteHelptext: Introduzir o identificador da reação que você gostaria de converter em voto negativo
+
+          likes:
+            legend: Curtida
+            Label: Converta reações em curtidas
+            Helptext: Introduzir o identificador da reação que você gostaria de converter em curtida

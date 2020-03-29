@@ -1,0 +1,53 @@
+simonxeko-follow-users:
+
+  admin:
+    permissions:
+      can_not_be_followed_label: フォローできない
+
+  forum:
+    profile_link: フォローしました
+    user_controls:
+      follow_button: フォロー
+      follow_confirmation: このユーザーをフォローしてもよろしいですか？
+      unfollow_button: フォロー解除
+      unfollow_confirmation: このユーザーのフォローを解除してもよろしいですか？
+
+    settings:
+      notify_new_discussion_label: あなたがフォローしているユーザーは新しいディスカッションを投稿しました
+      notify_new_post_label: あなたは従う人々は、投稿に返信
+
+
+    index:
+      follow_tag_button: フォロー
+      unfollow_tag_button: フォロー解除
+
+
+    sub_controls:
+      follow_button: => simonxeko-follow-users.ref.follow
+      following_button: => simonxeko-follow-users.ref.following
+      following_text: すべての新しいディスカッションについて通知されます。
+      hiding_button: => simonxeko-follow-users.ref.hiding
+      hiding_text: すべてのディスカッションページから隠すの議論。
+      ignoring_button: => simonxeko-follow-users.ref.ignoring
+      ignoring_text: 私に通知しません。
+      lurking_button: => simonxeko-follow-users.ref.lurking
+      lurking_text: 新しいトピックと新しい返信を通知する。
+      not_following_button: フォローしていません
+      not_following_text: "誰かが@メンテするときにのみ通知する。"
+      notify_alert_tooltip: 新しいディスカッションまたは投稿がある場合、フォーラム通知を受け取ります
+      notify_email_tooltip: 新しいディスカッションや投稿があるときにメールを受け取る
+
+    notifications:
+      new_discussion_text: "投稿者 {username}"
+      new_post_text: "{username} 返信"
+
+  email:
+    newDiscussionInTag: "[Tag | New Discussion] 題名"
+    newPostInTag: "[Tag | New Post] 題名"
+
+  ref:
+    follow: フォロー
+    following: フォロー中
+    hiding: 隠す
+    ignoring: シールド
+    lurking: 見物

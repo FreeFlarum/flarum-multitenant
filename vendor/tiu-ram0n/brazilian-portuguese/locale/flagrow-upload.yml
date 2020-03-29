@@ -1,0 +1,99 @@
+flagrow-upload:
+    forum:
+        buttons:
+            attach: Anexar
+        states:
+            loading: Carregando
+            success: Sucesso
+            error: Erro
+    admin:
+        templates:
+            image: Modelo de download de imagem
+            image_description: >
+                Mostra uma miniatura da imagem e proxies de download através do php,
+                permitindo que as estatísticas sejam coletadas e proteção hotlink.
+            file: Modelo de download de arquivo
+            file_description: >
+                Mostra o nome do arquivo e suas informações, além de downloads de proxies
+                através do php, permitindo a coleta de estatísticas e proteção de hotlink.
+            image-preview: Modelo de visualização de imagem
+            image-preview_description: >
+                Mostra a imagem completa. Nenhuma funcionalidade de download, nenhuma
+                estatística é coletada e a proteção de hotlink é ignorada.
+        permissions:
+            upload_label: Fazer upload de arquivos
+            download_label: Baixar arquivos
+        upload_methods:
+            local: Local
+            aws-s3: Amazon S3
+            imgur: Imgur
+            ovh-svfs: OVH SVFS
+        labels:
+            preferences:
+                title: Preferências Gerais
+                max_file_size: Tamanho máximo do arquivo (em kilobyte)
+                mime_types: Configure o tipo e o mapeamento do adaptador
+            resize:
+                title: Redimensionamento de imagem
+                toggle: Redimensionar imagens
+                max_width: Largura máxima da imagem
+                max_height: Altura máxima da imagem
+            watermark:
+                title: "Marca d'água"
+                toggle: "Marca d'água"
+                position: "Posição da marca d'água"
+                file: "Envar marca d'água"
+            local:
+                title: Configurações do local de armazenamento
+                cdn_url: URL de entrega de conteúdo (arquivos de prefixos)
+            imgur:
+                title: Configurações de armazenamento de imagem do Imgur
+                client_id: Client ID do Imgur
+            aws-s3:
+                title: Configurações de armazenamento do AWS S3
+                key: Chave
+                secret: Secreto
+                bucket: Bucket
+                region: Região
+            ovh-svfs:
+                title: Configurações de armazenamento OVH SVFS
+                container: Container
+                tenantid: ID do Tenant
+                username: Usuário
+                password: Senha
+                region: Região
+            disable-hotlink-protection:
+                title: Desativar proteção hotlink
+                toggle: Desativar
+            disable-download-logging:
+                title: Desativar logs
+                toggle: Desativar
+
+        buttons:
+            save: Salvar configurações
+        help_texts:
+            description: >
+                Configure os serviços e preferências de upload.
+            mime_types: >
+                Por favor, configure seu mapeamento aqui. Cada expressão
+                será manipulada por um adaptador de upload e um modelo de
+                download específico.
+            download_templates: >
+                Modelos de download é como serão exibidos os envios em
+                seu fórum. Por exeplo, visualizações, botões, etc.
+                Disponível atualmente:
+            resize: >
+                Escolha se você deseja redimensionar suas imagens
+                antes que elas sejam enviadas. Você pode escolher a
+                largura e altura máximas em pixels. O processo de
+                redimensionamento mantém a proporção das imagens.
+            watermark: >
+                Escolha se as imagens terão uma marca d'água adicionada
+                durante o upload. Marcas d'água são adicionadas com base
+                nas suas preferências abaixo.
+            disable-hotlink-protection: >
+                A proteção do hotlink impede o download de outros sites.
+                O método atual requer um token csrf e um id de postagem.
+            disable-download-logging: >
+                Desabilite o registro de logs dos usuários de seu fórum.
+                Mantê-lo ativado permite visualizar o número de downloads.

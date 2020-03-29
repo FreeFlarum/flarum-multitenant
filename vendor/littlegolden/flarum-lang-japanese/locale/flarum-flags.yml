@@ -1,0 +1,65 @@
+# https://github.com/flarum/flarum-ext-english/blob/master/locale/flarum-flags.yml
+# 8ee305a
+# Sat, 25 Jan 2020 20:53:08 +0800
+
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: ディスカッションを報告する
+      view_flags_label: 報告されたトピックを表示
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: コミュニティのガイドラインの URL
+      title: レポート設定
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: レポートをお寄せいただきありがとうございます。管理者はこの投稿を後で確認します。
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: わいせつな
+      reason_inappropriate_text: "この投稿には攻撃的、虐待的な言葉が含まれているか、<a>フォーラムコード</a>に違反しています"
+      reason_off_topic_label: "オフトピック"
+      reason_off_topic_text: この投稿は、現在のディスカッショントピックとは無関係であり、別の場所に移動する必要があります。
+      reason_other_label: その他
+      reason_spam_label: スパム
+      reason_spam_text: この投稿は広告です。
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: フラグが付けられた投稿はありません
+      item_text: "<em>{discussion}</em> 内の {username} による投稿"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: フラグを解除
+      flagged_by_text: "{username} がフラグを付けました"
+      flagged_by_with_reason_text: "{username} が {reason} の理由でフラグを付けました"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: フラグ
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: 投稿にフラグを付ける
+    flagged_posts: フラグが付けられた投稿

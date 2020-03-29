@@ -1,0 +1,26 @@
+# https://github.com/migratetoflarum/fake-data/blob/master/resources/locale/en.yml
+# 3008dcc
+# Sun, 26 Jan 2020 01:03:35 +0800
+
+migratetoflarum-fake-data:
+    admin:
+        generator:
+            title: 偽のデータを生成する
+            user-count: 新規ユーザー
+            discussion-count: 新しいトピックの数
+            post-count: 新しい応答の数
+            send: データを生成する
+
+    forum:
+        link:
+            generate-replies: 偽の応答を生成する
+
+        generator:
+            title: 偽の応答を生成する
+            user-count: 新規ユーザー
+            post-count: 新しい応答の数
+            send: データを生成する
+
+    api:
+        no-users-matched: ユーザーが見つかりません
+        no-discussions-matched: 件名が見つかりません

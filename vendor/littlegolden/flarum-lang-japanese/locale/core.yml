@@ -1,0 +1,607 @@
+# https://github.com/flarum/lang-english/blob/master/locale/core.yml
+# 80328f1
+# Sun, 26 Jan 2020 18:37:06 +0800
+
+core:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the placeholder Add Extension modal dialog.
+    add_extension:
+      developer_text: "開発者の方へ。<a>ドキュメントを読んで</a>、オリジナルの拡張機能を作成することが可能です。"
+      install_text: "また、<a>Flarum Community site</a>で拡張機能を探し、Composerを使って手動でインストールすることも可能です。"
+      temporary_text: "近い将来、このダイアログを使って簡単にフォーラムへ拡張機能を追加できるようになります。現在システムを構築中！"
+      title: 拡張機能を追加
+
+    # These translations are used in the Appearance page.
+    appearance:
+      colored_header_label: カラーヘッダー
+      colors_heading: カラー
+      colors_text: "二つの色をあなたのフォーラムのテーマに合わせて設定できます。一つ目はハイライトされて全面的に押し出される色、二つ目はバックグラウンドとして使われる色です。"
+      custom_footer_heading: カスタムフッター
+      custom_footer_text: => core.ref.custom_footer_text
+      custom_header_heading: カスタムヘッダー
+      custom_header_text: => core.ref.custom_header_text
+      custom_styles_heading: カスタムスタイル
+      custom_styles_text: LESS/CSS コードを追加して、ユーザー定義のフォーラムの外観にします。この設定は Flarm のデフォルトスタイルをカバーします。
+      dark_mode_label: ダークモード
+      edit_css_button: カスタム CSS を編集
+      edit_footer_button: => core.ref.custom_footer_title
+      edit_header_button: => core.ref.custom_header_title
+      enter_hex_message: 16進数のカラーコードを入力します（例：#ff0000）
+      favicon_heading: ファビコン
+      favicon_text: ショートカットアイコン用の画像をアップロード。
+      logo_heading: ロゴ
+      logo_text: タイトル用の画像をアップロード。
+      submit_button: => core.ref.save_changes
+
+    # These translations are used in the Basics page.
+    basics:
+      all_discussions_label: => core.ref.all_discussions
+      default_language_heading: デフォルト言語
+      forum_description_heading: フォーラムの説明
+      forum_description_text: 短いフォーラムの説明文を入力してください。これはHTMLにメタタグとして記述され、検索エンジンの説明欄に表示される可能性があります。
+      forum_title_heading: フォーラムのタイトル
+      home_page_heading: トップページ
+      home_page_text: "ユーザーがあなたのフォーラムにアクセスしたときに最初に表示されるページを選択します。カスタム値を入力する場合は、フォーラムルートに関連するパスを使用します。"
+      saved_message: 変更が保存されました。
+      show_language_selector_label: 言語選択を表示する
+      submit_button: => core.ref.save_changes
+      welcome_banner_heading: ウェルカムバナー
+      welcome_banner_text: フォーラムにやってきたユーザーにウェルカムを表示しましょう。全てのスレッドのページにこの文が出力されます。
+
+    # These translations are used in the Dashboard page.
+    dashboard:
+      clear_cache_button: キャッシュをクリア
+      tools_button: ツール
+
+    # These translations are used in the Edit Custom CSS modal dialog.
+    edit_css:
+      customize_text: "Flarum の<a>デフォルトスタイル</a>の上に適用する独自の LESS / CSS コードを追加して、フォーラムの外観をカスタマイズします。"
+      submit_button: => core.ref.save_changes
+      title: カスタム CSS を編集
+
+    # These translations are used in the Edit Custom Footer modal dialog.
+    edit_footer:
+      customize_text: => core.ref.custom_footer_text
+      submit_button: => core.ref.save_changes
+      title: => core.ref.custom_footer_title
+
+    # These translations are used in the Edit Group modal dialog.
+    edit_group:
+      color_label: => core.ref.color
+      delete_button: グループを削除
+      delete_confirmation: "本当にこのグループを削除してもよろしいですか？<strong>グループに登録されているユーザーは削除されません。</ strong>。"
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      name_label: 名前
+      plural_placeholder: ユーザーグループ（例：管理グループ）
+      singular_placeholder: ユーザーグループのメンバー（例：管理者）
+      submit_button: => core.ref.save_changes
+      title: ユーザーグループを追加
+
+    # These translations are used in the Edit Custom Header modal dialog.
+    edit_header:
+      customize_text: => core.ref.custom_header_text
+      submit_button: => core.ref.save_changes
+      title: => core.ref.custom_header_title
+
+    # These translations are used in the email page of the admin interface.
+    email:
+      addresses_heading: メールアドレス
+      driver_heading: ドライブを選択
+      driver_label: ドライブ
+      from_label: 送信元名
+      heading: => core.ref.email
+      mail_encryption_label: 暗号化方式(SSL/TLS)
+      mail_host_label: ホスト
+      mail_mailgun_domain_label: ドメイン名
+      mail_mailgun_region_label: 領域
+      mail_mailgun_secret_label: Secret key
+      mail_mandrill_secret_label: Secret key
+      mail_password_label: => core.ref.password
+      mail_port_label: ポート番号
+      mail_ses_key_label: Key
+      mail_ses_region_label: 面積
+      mail_ses_secret_label: Secret
+      mail_username_label: => core.ref.username
+      mailgun_heading: Mailgun 設定
+      mandrill_heading: Mandrill 設定
+      ses_heading: SES 設定
+      smtp_heading: SMTP 設定
+      submit_button: => core.ref.save_changes
+      text: メール送信用のSMTP情報を設定します。
+
+    # These translations are used in the Extensions page.
+    extensions:
+      add_button: 拡張機能を追加
+      settings_button: => core.ref.settings
+      uninstall_button: アンインストール
+
+    # These translations are used in the session dropdown menu.
+    header:
+      log_out_button: => core.ref.log_out
+
+    # These translations are used in the modal dialog displayed when loading extensions.
+    loading:
+      title: しばらくお待ちください...
+
+    # These translations are used in the navigation bar.
+    nav:
+      appearance_button: 外観
+      appearance_text: "ユーザー定義のフォーラムの色調、アイコン、その他の要素"
+      basics_button: 基本設定
+      basics_text: "フォーラム名、言語、その他の全般設定を設定します。"
+      dashboard_button: ダッシュボード
+      dashboard_text: フォーラムのデータ概要
+      email_button: => core.ref.email
+      email_text: "フォーラムのメールボックス設定を構成する"
+      extensions_button: プラグイン
+      extensions_text: あなたのフォーラムのために追加の機能を追加します
+      permissions_button: 権限
+      permissions_text: ユユーザアクセスと操作権限の設定
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_post_editing_label: post内容を編集
+      allow_renaming_label: タイトルを変更します
+      create_heading: 討論
+      delete_discussions_forever_label: ディスカッションを完全に削除します
+      delete_discussions_label: ディスカッションを削除
+      delete_posts_forever_label: 返信を完全に削除
+      delete_posts_label: 返信を削除
+      edit_posts_label: 返信を編集
+      edit_users_label: ユーザーを編集
+      global_heading: グローバル
+      moderate_heading: 管理
+      new_group_button: ユーザーグループを追加
+      participate_heading: 操作
+      read_heading: 訪問
+      rename_discussions_label: ディスカッションのタイトルを変更
+      reply_to_discussions_label: 返信
+      sign_up_label: サインアップ
+      start_discussions_label: ディスカッションを投稿する
+      view_discussions_label: ディスカッションを見る
+      view_last_seen_at_label: ユーザーの最後のアクティビティ時間を表示する
+      view_post_ips_label: IP アドレスを表示
+      view_user_list_label: ユーザーを表示
+
+    # These translations are used in the dropdown menus on the Permissions page.
+    permissions_controls:
+      allow_indefinitely_button: 無制限
+      allow_some_minutes_button: "{count} 分|{count} 分"
+      allow_ten_minutes_button: 10 分以内
+      allow_until_reply_button: 返信まで
+      everyone_button: みなさん
+      members_button: => core.group.members
+      signup_closed_button: 关闭注册
+      signup_open_button: オープン登録
+
+    # These translations are used in the Settings modal dialog.
+    settings:
+      submit_button: => core.ref.save_changes
+
+    # These translations are used in image upload buttons.
+    upload_image:
+      remove_button: => core.ref.remove
+      upload_button: 写真を選択...
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used in the Change Email modal dialog.
+    change_email:
+      confirm_password_placeholder: => core.ref.confirm_password
+      confirmation_message: => core.ref.confirmation_email_sent
+      dismiss_button: => core.ref.okay
+      incorrect_password_message: 入力したパスワードが間違っています。
+      submit_button: => core.ref.save_changes
+      title: => core.ref.change_email
+
+    # These translations are used in the Change Password modal dialog.
+    change_password:
+      send_button: パスワードリセットメールを送信する
+      text: ボタンをクリックし、メッセージ内のリンクを確認してパスワードをリセットします。
+      title: => core.ref.change_password
+
+    # These translations are used by the composer controls.
+    composer:
+      close_tooltip: 閉じる
+      exit_full_screen_tooltip: 全画面表示を終了
+      full_screen_tooltip: フルスクリーン
+      minimize_tooltip: 最小化
+      preview_tooltip: プレビュー
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      body_placeholder: 内容を書く…...
+      discard_confirmation: "ポストはまだリリースされていませんが、廃棄されますか？"
+      submit_button: 発表する
+      title: => core.ref.start_a_discussion
+      title_placeholder: 題名
+
+    # These translations are used by the composer when editing a post.
+    composer_edit:
+      discard_confirmation: "未保存の変更、破棄しますか？"
+      post_link: "发布 #{number} 于 {discussion}"
+      submit_button: => core.ref.save_changes
+
+    # These translations are used by the composer when replying to a discussion.
+    composer_reply:
+      body_placeholder: => core.ref.write_a_reply
+      discard_confirmation: "返信はまだ公開されていません。破棄しますか？"
+      posted_message: ポストリリース成功
+      submit_button: 返信
+      view_button: 見る
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      cannot_reply_button: 返信できません
+      cannot_reply_text: このポストに返信する権限がありません。
+      delete_button: => core.ref.delete
+      delete_confirmation: "こdelete_confirmation"
+      delete_forever_button: => core.ref.delete_forever
+      log_in_to_reply_button: ログインして返信します
+      rename_button: => core.ref.rename
+      reply_button: => core.ref.reply
+      restore_button: => core.ref.restore
+
+    # These translations are used in the discussion list.
+    discussion_list:
+      empty_text: "ここには何もありません。"
+      load_more_button: => core.ref.load_more
+      mark_as_read_tooltip: 既読にする
+      replied_text: "{username} が {ago} に返信します "
+      started_text: "{username} が {ago} にリリースされました"
+
+    # These translations are used in the Edit User modal dialog (admin function).
+    edit_user:
+      activate_button: ユーザーをアクティベート
+      email_heading: => core.ref.email
+      email_label: => core.ref.email
+      groups_heading: ユーザーグループ
+      password_heading: => core.ref.password
+      password_label: => core.ref.password
+      set_password_label: 新しいパスワードを設定
+      submit_button: => core.ref.save_changes
+      title: ユーザーを編集
+      username_heading: => core.ref.username
+      username_label: => core.ref.username
+
+    # These translations are used in the Forgot Password modal dialog.
+    forgot_password:
+      dismiss_button: => core.ref.okay
+      email_placeholder: => core.ref.email
+      email_sent_message: パスワードをリセットするためのリンクが記載されたメールをお送りしました。2～3分以内にメールが届かない場合は、迷惑メールフォルダをご確認ください。
+      not_found_message: そのメールアドレスは登録されていません。
+      submit_button: パスワードを復旧する
+      text: 指定されたメールアドレスにパスワードリセット用のメールを送信しました。
+      title: パスワードを紛失
+
+    # These translations are used in the header and session dropdown menu.
+    header:
+      admin_button: 管理センター
+      back_to_index_tooltip: スレッドリストに戻る
+      log_in_link: => core.ref.log_in
+      log_out_button: => core.ref.log_out
+      profile_button: 個人データ
+      search_placeholder: 検索
+      settings_button: 設定する
+      sign_up_link: => core.ref.sign_up
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      all_discussions_link: => core.ref.all_discussions
+      cannot_start_discussion_button: ディスカッションを投稿できませんでした
+      mark_all_as_read_confirmation: "すべてのディスカッションを既読としてマークしてもよろしいですか？"
+      mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      refresh_tooltip: リフレッシュ
+      start_discussion_button: => core.ref.start_a_discussion
+
+    # These translations are used by the sorting control above the discussion list.
+    index_sort:
+      latest_button: 最新の返信
+      newest_button: 最新ポスト
+      oldest_button: 最初のポスト
+      relevance_button: 関連する推奨事項
+      top_button: ほとんどの返信
+
+    # These translations are used in the Log In modal dialog.
+    log_in:
+      forgot_password_link: "パスワードをお忘れですか？"
+      invalid_login_message: 入力された情報が正しくありません。
+      password_placeholder: => core.ref.password
+      remember_me_label: ログインしたままにする
+      sign_up_text: "アカウント登録がまだですか？ <a>サインアップ</a>してください。</a>"
+      submit_button: => core.ref.log_in
+      title: => core.ref.log_in
+      username_or_email_placeholder: ユーザー名またはメールアドレス
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      discussion_renamed_text: "{username} がタイトルを変更しました。"
+      empty_text: 通知はありません
+      mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: 既読にする
+      title: => core.ref.notifications
+      tooltip: => core.ref.notifications
+
+    # These translations are used by tooltips displayed for individual posts.
+    post:
+      edited_text: 已编辑
+      edited_tooltip: "{username} が  {ago} に編集しました"
+      number_tooltip: "#{number} 番目の投稿"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      delete_button: => core.ref.delete
+      delete_forever_button: => core.ref.delete_forever
+      edit_button: => core.ref.edit
+      restore_button: => core.ref.restore
+
+    # These translations are used in the scrubber to the right of the post stream.
+    post_scrubber:
+      now_link: 最新の投稿
+      original_post_link: 最初の投稿
+      unread_text: "{count} 件の未読"
+      viewing_text: "{index} / {count}|{index} / {count}"
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      discussion_renamed_old_tooltip: '元のタイトル:  “{old}”'
+      discussion_renamed_text: "{username} は “{new}” にタイトルを変更しました。"
+      load_more_button: => core.ref.load_more
+      reply_placeholder: => core.ref.write_a_reply
+      time_lapsed_text: "{period} 後"
+
+    # These translations are used by the rename discussion modal.
+    rename_discussion:
+      title: ディスカッションのタイトルを変更
+      submit_button: => core.ref.rename
+
+    # These translations are used by the search results dropdown list.
+    search:
+      all_discussions_button: '“{query}” を検索'
+      discussions_heading: => core.ref.discussions
+      users_heading: => core.ref.users
+
+    # These translations are used in the Settings page.
+    settings:
+      account_heading: アカウント
+      change_email_button: => core.ref.change_email
+      change_password_button: => core.ref.change_password
+      notifications_heading: => core.ref.notifications
+      notify_by_email_heading: => core.ref.email
+      notify_by_web_heading: Web
+      notify_discussion_renamed_label: スレッド名が変更されたとき
+      privacy_disclose_online_label: 自分のオンライン状態を他ユーザーに表示することを許可する
+      privacy_heading: プライバシー
+      title: => core.ref.settings
+
+    # These translations are used in the Sign Up modal dialog.
+    sign_up:
+      dismiss_button: => core.ref.okay
+      email_placeholder: => core.ref.email
+      log_in_text: "すでにアカウントをお持ちですか？ <a>ログイン</a>"
+      password_placeholder: => core.ref.password
+      submit_button: => core.ref.sign_up
+      title: => core.ref.sign_up
+      username_placeholder: => core.ref.username
+      welcome_text: "{username} さん、こんにちは！"
+
+    # These translations are used in the user profile page and profile popup.
+    user:
+      avatar_remove_button: => core.ref.remove
+      avatar_upload_button: アップロード
+      avatar_upload_tooltip: アバターをアップロード
+      discussions_link: => core.ref.discussions
+      in_discussion_text: "{discussion} にて"
+      joined_date_text: "{ago} に参加"
+      online_text: オンライン
+      posts_empty_text: まだ投稿されていません。
+      posts_link: => core.ref.posts
+      posts_load_more_button: => core.ref.load_more
+      settings_link: => core.ref.settings
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      button: 操作
+      delete_button: => core.ref.delete
+      delete_confirmation: "本当にこのユーザーを削除してもよろしいですか？ このユーザーが投稿した内容は全て削除されます。"
+      delete_error_message: "ユーザー <i>{username} ({email})</i> の削除に失敗しました"
+      delete_success_message: "ユーザー <i>{username} ({email})</i> が削除されました"
+      edit_button: => core.ref.edit
+
+    # These translations are used in the alert that is shown when a new user has not confirmed their email address.
+    user_email_confirmation:
+      alert_message: => core.ref.confirmation_email_sent
+      resend_button: アカウント確認メールを再送信する
+      sent_message: 送信しました
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      hidden_tooltip: 非表示
+
+    # These translations are displayed as error messages.
+    error:
+      generic_message: "おっとっと！ エラーが発生しました。ページを再読み込みし、もう一度お試しください。"
+      not_found_message: リクエストされたリソースが見つかりませんでした。
+      permission_denied_message: 実行する権限がありません。
+      rate_limit_exceeded_message: 実行する間隔が早すぎます。時間が経ってからお試しください。
+
+    # These translations are used as suffixes when abbreviating numbers.
+    number_suffix:
+      kilo_text: 千
+      ten_kilo_text: 万
+      mega_text: 百万
+
+    # These translations are used to punctuate a series of items.
+    series:
+      glue_text: ", "
+      three_text: "{first} や {second}、 {third}"
+      two_text: "{first} や {second}"
+
+    # These translations are used to modify usernames.
+    username:
+      deleted_text: "[削除済み]"
+
+  # Translations in this namespace are used in views other than Flarum's normal JS client.
+  views:
+
+    # Translations in this namespace are displayed by the basic HTML content loader.
+    content:
+      javascript_disabled_message: このサイトは、ブラウザのJavaScriptを有効にすることでより美しく見ることができます。
+      load_error_message: サイトを読み込む際に異常が発生しました。
+      loading_text: 読み込み中...
+
+    # Translations in this namespace are displayed in the basic HTML discussion view.
+    discussion:
+      next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed when Flarum encounters an error.
+    error:
+      csrf_token_mismatch: あなたはあまりにも長い間活動しています。
+      csrf_token_mismatch_return_link: 戻ってやり直してください。
+      invalid_confirmation_token: この確認リンクは既に使用されているか、無効です。
+      not_authenticated: このページにアクセスする権限がありません。 ログインしてからもう一度お試しください。
+      not_found: リクエストしたページが見つかりませんでした。
+      not_found_return_link: "{forum} に戻る"
+      permission_denied: このページにアクセスする権限がありません。
+      unknown: このページの読み込み中にエラーが発生しました。
+
+    # Translations in this namespace are displayed by the basic HTML discussion index.
+    index:
+      all_discussions_heading: => core.ref.all_discussions
+      next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed by the Log Out confirmation interface.
+    log_out:
+      log_out_button: => core.ref.log_out
+      log_out_confirmation: "{forum} からログアウトしてもよろしいですか？"
+      title: => core.ref.log_out
+
+    # Translations in this namespace are displayed by the Reset Password interface.
+    reset_password:
+      confirm_password_label: => core.ref.confirm_password
+      new_password_label: 新しいパスワード
+      submit_button: => core.ref.save_changes
+      title: => core.ref.reset_your_password
+
+  # Translations in this namespace are used in messages output by the API.
+  api:
+    invalid_username_message: "ユーザー名には、文字、数字、およびダッシュのみを使用できます(-)。"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when users register new accounts.
+    activate_account:
+      subject: アカウントを有効化する
+      body: |
+        {username} さん、こんにちは！
+
+        {forum} への登録のリクエストが送信されました。
+
+        こちらのURLにアクセスすると、作成したアカウントを有効化することができます:こちらのURLにアクセスすると、作成したアカウントを有効化することができます:
+        {url}
+
+        このメールに身に覚えがない場合は、お手数ですがメールを削除してください。
+
+    # These translations are used in emails sent when users change their email address.
+    confirm_email:
+      subject: 新しいメールアドレスの確認
+      body: |
+        {username} さん、こんにちは！
+
+        {forum} のアカウントで、メールアドレス変更のリクエストが送信されました。
+
+        こちらのURLにアクセスするとアカウントのメールアドレスを変更することができます:
+        {url}
+
+        このメールに身に覚えがない場合は、お手数ですがメールを削除してください。
+
+    # These translations are used in emails sent when users ask to reset their passwords.
+    reset_password:
+      subject: => core.ref.reset_your_password
+      body: |
+        {username} さん、こんにちは!
+
+        {forum} のアカウントで、パスワードリセットのリクエストを誰かが（おそらくあなたが）送信しました。
+
+        このURLにアクセスするとアカウントのパスワードをリセットすることができます:
+        {url}
+
+        このメールに身に覚えがない場合は、お手数ですがメールを削除してください。
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+  
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    all_discussions: すべてのポスト
+    change_email: メールアドレスの変更
+    change_password: パスワードの変更
+    color: カラー
+    confirm_password: パスワードの確認
+    confirmation_email_sent: "{email} にアカウント確認メールを送信しました。 メールが届かない場合は、迷惑メールボックスをご確認ください。"
+    custom_footer_text: ページの一番下に表示する HTML を追加します。
+    custom_footer_title: カスタムフッターを編集
+    custom_header_text: "Flarum のヘッダーの上、つまりページの一番上に表示する HTML を追加します。"
+    custom_header_title: カスタムヘッダーを編集
+    delete: 削除
+    delete_forever: 完全に削除
+    discussions: 議論
+    edit: 編集
+    email: 電子メール
+    icon_label: アイコン
+    icon_text: "接頭辞 <code>fas fa-</code> <strong>を含む</strong> <a>Font Awesome</a> アイコン名を入力します。"
+    load_more: さらに読み込む
+    log_in: ログイン
+    log_out: ログアウト
+    mark_all_as_read: すべて既読にする
+    next_page: 次のページ
+    notifications: 通知
+    okay: OK                                     # Referenced by flarum-tags.yml
+    password: パスワード
+    posts: 投稿
+    remove: 削除
+    previous_page: 前のページ
+    rename: リネーム
+    reply: 返信                                 # Referenced by flarum-mentions.yml
+    reset_your_password: パスワードリセット
+    restore: 復元
+    save_changes: 変更を保存                   # Referenced by flarum-tags.yml
+    settings: 設定
+    sign_up: サインアップ
+    some_others: "{count} 人|{count} 人"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    start_a_discussion: 新規スレッド
+    username: ユーザ名
+    users: ユーザー
+    write_a_reply: 返信する...
+    you: あなた                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+
+  ##
+  # GROUP NAMES - These keys are translated at the back end.
+  ##
+
+  # Translations in this namespace are used to translate default group names.
+  group:
+    admin: 管理者
+    admins: 管理者
+    guest: ゲスト
+    guests: ゲスト
+    member: メンバー
+    members: メンバー
+    mod: モデレーター
+    mods: モデレーター

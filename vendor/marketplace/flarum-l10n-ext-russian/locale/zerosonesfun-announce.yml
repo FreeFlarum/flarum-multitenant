@@ -1,0 +1,9 @@
+zerosonesfun-announce:
+  admin:
+    settings:
+      title: "Настройки объявления"
+
+      text: "Сообщение"
+      height: "Высота объявления"
+      css: "CSS"
+      js: "JS"

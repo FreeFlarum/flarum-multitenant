@@ -1,0 +1,20 @@
+# https://github.com/tpokorra/flarum-ext-post-notification/blob/master/resources/locale/en.yml
+# 898c11e
+# Sun, 26 Jan 2020 01:46:35 +0800
+
+tpokorra-post-notification:
+  admin:
+    settings:
+      title: 通知後の設定
+
+      recipients.post_approval.to: カンマ区切りの新しい投稿通知メーリングリストを確認する
+      recipients.new_discussion.to: 新しい件名通知メーリングリスト、カンマ区切り
+      recipients.new_discussion.bcc: 新しい件名通知CCメーリングリスト、カンマ区切り
+      recipients.new_post.to: 新しい投稿通知メーリングリスト、カンマ区切り
+      recipients.new_post.bcc: 新しい投稿通知のカンマ区切りリスト
+      recipients.revised_post.to: 投稿はコンマで区切られて通知メーリングリストに編集されます
+      recipients.revised_post.bcc: 投稿はccメーリングリストに編集され、カンマで区切られます
+      new_discussion: 新しいトピックの説明に使用されるタグ
+      new_post: 新しい投稿の説明に使用されるタグ
+      revised_post: 編集中の投稿の説明に使用されるタグ
+      post_approval: レビューする新しい投稿を説明するラベル

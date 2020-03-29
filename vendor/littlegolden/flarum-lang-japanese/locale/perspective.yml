@@ -1,0 +1,25 @@
+# https://github.com/tankerkiller125/flarum-perspective/blob/master/resources/locale/en.yml
+# 70412b4
+# Sun, 26 Jan 2020 01:16:42 +0800
+
+perspective:
+  admin:
+    settings:
+      title: Perspective 設定
+      donotstore: 保存されていません
+      usemax: 最高の評価を使用する
+      useexperimental: 実験モデルの使用
+      field:
+        api_key: API Key
+        threshold: しきい値
+        toxicity: 有毒
+        threat: 脅威
+        profanity: 言葉を誓う
+        sexually_explicit: エロチック
+        flirtation: いじめる
+
+  forum:
+    post:
+      not_toxic_button: 非毒性としてマーク
+      perspective_flagged_text: Perspective で投稿を自動的にレビューする
+

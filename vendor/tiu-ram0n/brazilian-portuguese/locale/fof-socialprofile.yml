@@ -1,0 +1,11 @@
+fof-socialprofile:
+  forum:
+    edit:
+      edit: Alterar
+      add: Adicionar
+      headtitle: Perfil Social
+      title: Título
+      url: Link
+      submit: Salvar
+      delete: Excluir
+      deletetitle: Excluir perfil

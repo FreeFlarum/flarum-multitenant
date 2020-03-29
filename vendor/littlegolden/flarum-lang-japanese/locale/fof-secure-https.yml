@@ -1,0 +1,12 @@
+# https://github.com/FriendsOfFlarum/secure-https/blob/master/resources/locale/en.yml
+# 0b92dc2
+# Sun, 26 Jan 2020 00:21:33 +0800
+
+fof-secure-https:
+  admin:
+    settings:
+      title: 設定
+      replace: HTTPS 経由のプロキシイメージ
+  forum:
+    removed: HTTPS をサポートしていないため、画像は非表示になっています。
+    show: まだ表示する

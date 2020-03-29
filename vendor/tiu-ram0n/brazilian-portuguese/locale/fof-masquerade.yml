@@ -1,0 +1,61 @@
+fof-masquerade:
+    forum:
+        alerts:
+            profile-completion-required: >
+                Por favor complete os campos necessários abaixo.
+        buttons:
+            view-profile: Ver perfil
+            save-profile: Salvar
+        fields:
+            select:
+                none-optional: Nenhuma opção selecionada (opcional)
+                none-required: Por favor, selecione uma opção (obrigatório)
+            boolean:
+                yes: Sim
+                no: Não
+    admin:
+        buttons:
+            add-field: Criar campo
+            edit-field: Salvar alterações
+            delete-field: Remover Campo
+        permissions:
+            have-profile: Have masquerade profile
+            view-profile: View masquerade profile
+        menu:
+            description: >
+                Configurar campos do perfil do usuário.
+        fields:
+            add: Adicionar campo {field}
+            edit: Editar campo {field}
+            name: Nome do campo
+            name-help: >
+                O rótulo de campo (não traduzível) visível publicamente.
+            description: Descrição do campo
+            description-help: >
+                Uma descrição opcional para explicar o uso/necessidade deste campo.
+            required: Marcar campo como obrigatório
+            on_bio: Mostra a resposta desse campo na bio do usuário
+            type: Tipo
+            validation: Validação
+            validation-help: >
+                Verifique as <a>regras de validação Laravel</a> suportadas.
+                Eg: "string|min:5" ou "url".
+            prefix: Prefixo do campo
+            prefix-help: >
+                Mostra seu prefixo na frente dos valores informacoes pelo usuário para este campo.
+            icon: Ícone
+            icon-help: >
+                Mostra um ícone na frente dos valores informados pelo usuário. Para ver os
+                ícones disponíveis, visite <a>o site FontAwesome</a>. Use os nomes de ícones
+                com o prefixo "fa-", como "fas fa-info".
+            force-user-to-completion: Força o usuário a completar o perfil
+            disable-user-bio: Desabilitar campo de bio do usuário
+            options: Opções
+            option-new: Nova Opção
+            option-coma-warning: O rótulo de uma opção não pode conter virgulas (",").
+        types:
+            advanced: Avançado
+            boolean: Checkbox
+            email: Email
+            select: Seletor
+            url: Url

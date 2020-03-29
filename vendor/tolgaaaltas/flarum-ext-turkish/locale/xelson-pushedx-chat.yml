@@ -1,0 +1,18 @@
+pushedx-chat:
+  forum:
+    toolbar:
+      title: Sohbet
+      enable_sounds: Sesleri etkinleştir
+      disable_sounds: Sesleri pasifleştir
+      enable_notifications: Bildirimleri etkinleştir
+      disable_notifications: Bildirimleri pasifleştir
+      minimize: Küçült
+      maximize: Büyült
+    chat:
+      placeholder: Mesajınızı yazın...
+    errors:
+      unauthenticated: Yalnızca kayıtlı kullanıcılar sohbet edebilir
+  admin:
+    settings:
+      title: Sohbet Ayarları
+      charlimit: Mesajda kullanılabilecek maksimum karakter sayısı

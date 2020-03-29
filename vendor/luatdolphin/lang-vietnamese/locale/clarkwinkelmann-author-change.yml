@@ -1,0 +1,17 @@
+clarkwinkelmann-author-change:
+    forum:
+        controls:
+            edit: Chỉnh sửa tác giả
+        modal:
+            title-post: Chỉnh sửa Tác giả bài viết
+            title-discussion: Chỉnh sửa Tác giả bài thảo luận
+            submit: Lưu
+            cancel: Hủy
+        search:
+            placeholder: Tìm kiếm người dùng
+            type-more: Nhập 3 ký tự để tìm kiếm dữ liệu
+            no-results: Không có kết quả
+
+    admin:
+        permissions:
+            edit: Cập nhật tác giả thảo luận và bài viết

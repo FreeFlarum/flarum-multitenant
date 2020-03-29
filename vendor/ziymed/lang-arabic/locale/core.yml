@@ -1,0 +1,580 @@
+core:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the placeholder Add Extension modal dialog.
+    add_extension:
+      developer_text: "إذا كان باستطاعتك البرمجة، <a>تفضل بقراءة صفحات الشروحات</a>، لتتمكن من بناء حزمة ملحقك البرمجية الخاص بمنتتداك ."
+      install_text: "في غضون ذلك، يمكنك البحث عن الملحقات في <a>موقع منتدى مجتمع الفلاروم</a>، ثم قم بتثبيتها يدويا باستخدام المنسق Composer."
+      temporary_text: "في يوم من الأيام المقبلة ليس بالبعيد، ستتمكن عبر هذه النافذة من إضافة الملحقات إلى منتداك بشكل سهل، فنحن الآن وأثناء قراءتك لهذه العبارات في طور بناء نظام بيئي يسهل هذه العملية."
+      title: "إضافة ملحق "
+
+    # These translations are used in the Appearance page.
+    appearance:
+      colored_header_label: تلوين منطقة رأس الصفحة
+      colors_heading: الألوان
+      colors_text: "إختر لونين لتزيين منتداك بهما، اللون الأول سيستخدم كلون تمييز للعناصر المهمة، أما اللون الآخر، سيستخدم كلون خلفية للعناصر الأخرى."
+      custom_footer_heading: تخصيص منطقة أسفل الصفحة
+      custom_footer_text: => core.ref.custom_footer_text
+      custom_header_heading: تخصيص منطقة أعلى الصفحة
+      custom_header_text: => core.ref.custom_header_text
+      custom_styles_heading: تخصيص الأنماط الإنسيابية CSS أو LESS
+      custom_styles_text: لتخصيص مظهر منتداك قم بإضافة أنماط إنسيابية CSS أو LESS، ليتم وضعها بمرتبة أعلى من شيفرة الأنماط الإنسيابية الأساسية.
+      dark_mode_label: المظهر المظلم
+      edit_css_button: تعديل تخصيص الأنماط الإنسيابية CSS
+      edit_footer_button: => core.ref.custom_footer_title
+      edit_header_button: => core.ref.custom_header_title
+      enter_hex_message: "تفضل بكتابة رمز اللون على شكل سداسي عشري "
+      favicon_heading: أيقونة المفضلة
+      favicon_text: إرفع صورة لتعرضها كأيقونة إختصار للمنتدى
+      logo_heading: شعار
+      logo_text: إرفع صورة لتعرضها في مكان نص عنوان المنتدى
+      submit_button: => core.ref.save_changes
+
+    # These translations are used in the Basics page.
+    basics:
+      all_discussions_label: => core.ref.all_discussions
+      default_language_heading: اللغة الإفترضية
+      forum_description_heading: توصيف المنتدى
+      forum_description_text: أكتب نصا قصيرا من جملة أو جملتين تصف بهما مجتمع منتداك. هذا الوصف سيعرض كعلامة تعريف وكذا في نتائج محركات البحث.
+      forum_title_heading: عنوان المنتدى
+      home_page_heading: الصفحة الرئيسية
+      home_page_text: إختيار الصفحة التي سيشاهدها الزوار أولا عندما يلجون المنتدى.
+      saved_message: تم حفظ التغييرات بنجاح.
+      show_language_selector_label: إظهار محدد اللغة
+      submit_button: => core.ref.save_changes
+      welcome_banner_heading: اللوحة الترحيبية
+      welcome_banner_text: تعيين النص الذي سيعرض في لوحة الترحيب فوق صفحة كل النقاشات. هذا النص سيعرض كعبارة للترحيب بزوار المنتدى.
+
+    # These translations are used in the Dashboard page.
+    dashboard:
+      clear_cache_button: تفريغ مجلد الإحتفاظ بنسخ للوصول السريع
+      tools_button: أدوات
+
+    # These translations are used in the Edit Custom CSS modal dialog.
+    edit_css:
+      customize_text: "تخصيص مظهر المنتدى من خلال إضافة شيفرة الأنماط الإنسيابية CSS أو LESS ليتم تطبيقها على <a>الأنماط الإنسيابية الإفتراضية</a>"
+      submit_button: => core.ref.save_changes
+      title: تعديل الأنماط الإنسيابية المخصصة
+
+    # These translations are used in the Edit Custom Footer modal dialog.
+    edit_footer:
+      customize_text: => core.ref.custom_footer_text
+      submit_button: => core.ref.save_changes
+      title: => core.ref.custom_footer_title
+
+    # These translations are used in the Edit Group modal dialog.
+    edit_group:
+      color_label: => core.ref.color
+      delete_button: حذف المجموعة
+      delete_confirmation: "هل أنت متأكد من حذف هذه المجموعة؟ أعضاء هذه المجموعة لن يتم حذفهم"
+      icon_label: أيقونة
+      icon_text: "حدد إسم فئة أي أيقونة من <a>FontAwesome</a>بإدراج <em>بداية</em> الفئة<code> fas fa-</code>"
+      name_label: الإسم
+      plural_placeholder: "الجمع ( نحو : مراقبون)"
+      singular_placeholder: "المفرد (نحو: مراقب)"
+      submit_button: => core.ref.save_changes
+      title: إنشاء مجموعة جديدة
+
+    # These translations are used in the Edit Custom Header modal dialog.
+    edit_header:
+      customize_text: => core.ref.custom_header_text
+      submit_button: => core.ref.save_changes
+      title: => core.ref.custom_header_title
+
+    # These translations are used in the email page of the admin interface.
+    email:
+      account_heading: حساب SMTP
+      addresses_heading: العناوين
+      driver_label: الملقن
+      encryption_label: التشفير
+      from_label: المرسِل
+      heading: => core.ref.email
+      host_label: المستضيف
+      password_label: => core.ref.password
+      port_label: المَنفذ
+      server_heading: خادم SMTP
+      submit_button: => core.ref.save_changes
+      text: تعيين خصائص وعناوين بروتوكول SMTP الذي سيستخدمه المنتدى لإرسال الرسائل
+      username_label: => core.ref.username
+
+    # These translations are used in the Extensions page.
+    extensions:
+      add_button: إضافة ملحق
+      settings_button: => core.ref.settings
+      uninstall_button: إزالة
+
+    # These translations are used in the session dropdown menu.
+    header:
+      log_out_button: => core.ref.log_out
+
+    # These translations are used in the modal dialog displayed when loading extensions.
+    loading:
+      title: العملية في طور الإنجاز...
+
+    # These translations are used in the navigation bar.
+    nav:
+      appearance_button: المظهر
+      appearance_text: "تعيين ألوان المنتدى، الشعارات، ومتغيرات أخرى."
+      basics_button: الأساسيات
+      basics_text: "تعيين عنوان المنتدى، اللغات، وأساسيات أخرى."
+      dashboard_button: إدارة
+      dashboard_text: توصيف المنتدى
+      email_button: => core.ref.email
+      email_text: "تعيين البريد الخاص بالمنتدى"
+      extensions_button: الملحقات
+      extensions_text: إضافة وظائف أخرى إلى المنتدى واجعلها ملكك.
+      permissions_button: الصلاحيات
+      permissions_text: "تعيين الصلاحيات "
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_post_editing_label: السماح بتعديل المشاركة
+      allow_renaming_label: السماح بإعادة التسمية
+      create_heading: إنشاء
+      delete_discussions_forever_label: حذف النقاش نهائيا
+      delete_discussions_label: حذف النقاش
+      delete_posts_forever_label: حذف المشاركات نهائيا
+      delete_posts_label: حذف المشاركات
+      edit_posts_label: تعديل المشاركات
+      global_heading:  الصلاحيات العامة
+      moderate_heading: المدراء
+      new_group_button: مجموعة جديدة
+      participate_heading: المشاركون
+      read_heading: قراءة
+      rename_discussions_label: إعادة تسمية النقاش
+      reply_to_discussions_label: المشاركة في النقاش
+      sign_up_label: التسجيل
+      start_discussions_label: بدأ النقاش
+      view_discussions_label: مشاهدة النقاش
+      view_last_seen_at_label: عرض توقيت آخر مشاهدة
+      view_post_ips_label: عرض عنوان الآي بي للمشاركة
+      view_user_list_label: عرض قائمة الأعضاء
+
+    # These translations are used in the dropdown menus on the Permissions page.
+    permissions_controls:
+      allow_indefinitely_button: دون تحديد
+      allow_some_minutes_button: "لمدة {count} دقيقة|لمدة {count} دقائق"
+      allow_ten_minutes_button: لمدة 10 دقائق
+      allow_until_reply_button: إلى حين إضافة مشاركة جديدة
+      everyone_button: للجميع
+      members_button: => core.group.members
+      signup_closed_button: مغلق
+      signup_open_button: مفتوح
+
+    # These translations are used in the Settings modal dialog.
+    settings:
+      submit_button: => core.ref.save_changes
+
+    # These translations are used in image upload buttons.
+    upload_image:
+      remove_button: => core.ref.remove
+      upload_button: رفع صورة...
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used in the Change Email modal dialog.
+    change_email:
+      confirm_password_placeholder: => core.ref.confirm_password
+      confirmation_message: => core.ref.confirmation_email_sent
+      dismiss_button: => core.ref.okay
+      incorrect_password_message: كلمة المرور المدخلة غير صحيحة
+      submit_button: => core.ref.save_changes
+      title: => core.ref.change_email
+
+    # These translations are used in the Change Password modal dialog.
+    change_password:
+      send_button: إرسال إعادة تعيين كلمة المرور عبر البريد
+      text: أنقر على الزر تحت وعاين رسائل بريدك وابحث عن رابط إعادة تغيير كلمة المرور.
+      title: => core.ref.change_password
+
+    # These translations are used by the composer controls.
+    composer:
+      close_tooltip: غلق
+      exit_full_screen_tooltip: خروج من وضع ملء الشاشة
+      full_screen_tooltip: ملء الشاشة
+      minimize_tooltip: تصغير
+      preview_tooltip: معاينة
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      body_placeholder: أكتب مشاركتك هنا
+      discard_confirmation: "لم تقم بعد بنشر نقاشك، فهل تود حذفه؟"
+      submit_button: نشر النقاش
+      title: => core.ref.start_a_discussion
+      title_placeholder: عنوان النقاش
+
+    # These translations are used by the composer when editing a post.
+    composer_edit:
+      discard_confirmation: "لم تقم بحفظ التغييرات. فهل تود حذفها؟"
+      post_link: "مشاركة رقم #{number} ضمن {discussion}"
+      submit_button: => core.ref.save_changes
+
+    # These translations are used by the composer when replying to a discussion.
+    composer_reply:
+      body_placeholder: => core.ref.write_a_reply
+      discard_confirmation: "لم تقم بنشر مشاركتك بعد، فهل تود حذفها؟"
+      posted_message: مشاركتك تم نشره
+      submit_button: نشر المشاركة
+      view_button: معاينة
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      cannot_reply_button: النقاش مغلق
+      cannot_reply_text: لا تملك الصلاحيات اللازمة لنشر المشاركة ضمن هذا النقاش
+      delete_button: => core.ref.delete
+      delete_confirmation: "هل أنت متأكد من حذف هذا النقاش؟"
+      delete_forever_button: => core.ref.delete_forever
+      log_in_to_reply_button: ولوج
+      rename_button: => core.ref.rename
+      reply_button: => core.ref.reply
+      restore_button: => core.ref.restore
+
+    # These translations are used in the discussion list.
+    discussion_list:
+      empty_text: لا توجد نقاشات هنا، قم بالعودة مرة أخرى في وقت لاحق.
+      load_more_button: => core.ref.load_more
+      mark_as_read_tooltip: عيِّنها على أنها مقروءة
+      replied_text: "قام {username} بالمشاركة منذ {ago}"
+      started_text: "نشر {username} منذ {ago}"
+
+    # These translations are used in the Edit User modal dialog (admin function).
+    edit_user:
+      activate_button: عضو نشط
+      email_heading: => core.ref.email
+      email_label: => core.ref.email
+      groups_heading: المجموعات
+      password_heading: => core.ref.password
+      password_label: => core.ref.password
+      set_password_label: تعيين كلمة مرور جديدة
+      submit_button: => core.ref.save_changes
+      title: تعديل العضو
+      username_heading: => core.ref.username
+      username_label: => core.ref.username
+
+    # These translations are used in the Forgot Password modal dialog.
+    forgot_password:
+      dismiss_button: => core.ref.okay
+      email_placeholder: => core.ref.email
+      email_sent_message: لقد أرسلنا إليك رسالة بريد إلكتروني تحتوي على رابط لإعادة تعيين كلمة المرور الخاصة بك. تحقق من مجلد الرسائل غير المرغوب فيها إذا لم تستلمها في الدقيقة أو اليومين التاليين.
+      not_found_message: لا يوجد مستخدم مسجل بهذا البريد الإلكتروني.
+      submit_button: إستعادة كلمة المرور
+      text: أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطا لإعادة تعيين كلمة المرور الخاصة بك.
+      title: نسيان كلمة المرور
+
+    # These translations are used in the header and session dropdown menu.
+    header:
+      admin_button: إدارة
+      back_to_index_tooltip: عودة إلى قائمة النقاشات
+      log_in_link: => core.ref.log_in
+      log_out_button: => core.ref.log_out
+      profile_button: ملف شخصي
+      search_placeholder: بحث
+      settings_button: => core.ref.settings
+      sign_up_link: => core.ref.sign_up
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      all_discussions_link: => core.ref.all_discussions
+      cannot_start_discussion_button: لا يسمح لك ببدإ النقاش
+      mark_all_as_read_confirmation: "هل أنت متأكد من تعيين كل النقاشات على أنها مقروءة؟"
+      mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      refresh_tooltip: تحديث
+      start_discussion_button: => core.ref.start_a_discussion
+
+    # These translations are used by the sorting control above the discussion list.
+    index_sort:
+      latest_button: الأخيرة
+      newest_button: الأحدث
+      oldest_button: الأقدم
+      relevance_button: الأهم
+      top_button: المفضلة
+
+    # These translations are used in the Log In modal dialog.
+    log_in:
+      forgot_password_link: "هل نسيت كلمة المرور؟"
+      invalid_login_message: معلومات دخولك خاطئة
+      password_placeholder: => core.ref.password
+      remember_me_label: حفظ المعلومات
+      sign_up_text: "لا تملك حسابا بعد؟ <a>قم بالتسجيل الآن</a>"
+      submit_button: => core.ref.log_in
+      title: => core.ref.log_in
+      username_or_email_placeholder: إسم العضو أو البريد
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      discussion_renamed_text: "غيَّر {username} العنوان"
+      empty_text: لا توجد تنبيهات
+      mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      title: => core.ref.notifications
+      tooltip: => core.ref.notifications
+
+    # These translations are used by tooltips displayed for individual posts.
+    post:
+      edited_text: تم التعديل
+      edited_tooltip: "عدَّل {username} منذ {ago}"
+      number_tooltip: "المشاركة رقم #{number}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      delete_button: => core.ref.delete
+      delete_forever_button: => core.ref.delete_forever
+      edit_button: => core.ref.edit
+      restore_button: => core.ref.restore
+
+    # These translations are used in the scrubber to the right of the post stream.
+    post_scrubber:
+      now_link: المشاركة الأخيرة
+      original_post_link: المشاركة الأصلية
+      unread_text: "{count} غير مقروءة"
+      viewing_text: "  المشاركة {index} من بين {count} مشاركات|مشاركة واحدة فقط"
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      discussion_renamed_old_tooltip: 'كان الأقدم : "{old}"'
+      discussion_renamed_text: "غيّر {username} العنوان إلى {new}."
+      load_more_button: => core.ref.load_more
+      reply_placeholder: => core.ref.write_a_reply
+      time_lapsed_text: "بعد {period} "
+
+    # These translations are used by the rename discussion modal.
+    rename_discussion:
+      submit_button: => core.ref.rename
+      title: إعادة تسمية النقاش
+
+    # These translations are used by the search results dropdown list.
+    search:
+      all_discussions_button: 'البحث عن "{query}"'
+      discussions_heading: => core.ref.discussions
+      users_heading: => core.ref.users
+
+    # These translations are used in the Settings page.
+    settings:
+      account_heading: حساب
+      change_email_button: => core.ref.change_email
+      change_password_button: => core.ref.change_password
+      notifications_heading: => core.ref.notifications
+      notify_by_email_heading: => core.ref.email
+      notify_by_web_heading: موقع
+      notify_discussion_renamed_label: أحدهم قام بإعادة تسمية عنوان إحدى مشاركاتي
+      privacy_disclose_online_label: السماح للآخرين برؤيتي عندما أكون متواجدا في المنتدى
+      privacy_heading: خصوصية
+      title: => core.ref.settings
+
+    # These translations are used in the Sign Up modal dialog.
+    sign_up:
+      dismiss_button: => core.ref.okay
+      email_placeholder: => core.ref.email
+      log_in_text: "ألديك حساب؟ <a>تفضل بالولوج</a>"
+      password_placeholder: => core.ref.password
+      submit_button: => core.ref.sign_up
+      title: => core.ref.sign_up
+      username_placeholder: => core.ref.username
+      welcome_text: "أهلا وسهلا، {username}!"
+
+    # These translations are used in the user profile page and profile popup.
+    user:
+      avatar_remove_button: => core.ref.remove
+      avatar_upload_button: رفع
+      avatar_upload_tooltip: رفع صورة تشخيصية جديدة
+      discussions_link: => core.ref.discussions
+      in_discussion_text: "ضمن {discussion}"
+      joined_date_text: "إنضم إلى المنتدى {ago}"
+      online_text: متواجد
+      posts_empty_text: لا توجد مشاركات هنا، قم بالزيارة في وقت لاحق
+      posts_link: => core.ref.posts
+      posts_load_more_button: => core.ref.load_more
+      settings_link: => core.ref.settings
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      button: التحكم
+      delete_button: => core.ref.delete
+      delete_confirmation: "هل أنت متأكد من حذف هذا العضو؟ ستحذف كل مشاركاته."
+      edit_button: => core.ref.edit
+
+    # These translations are used in the alert that is shown when a new user has not confirmed their email address.
+    user_email_confirmation:
+      alert_message: => core.ref.confirmation_email_sent
+      resend_button: إعادة إرسال رابط التفعيل مرة أخرى
+      sent_message: إرسال
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      hidden_tooltip: مخفي
+
+    # These translations are displayed as error messages.
+    error:
+      generic_message: "حدث خطأ ما. من فضلك أعد تحديث الصفحة."
+      not_found_message: الصفحة التي طلبت غير متاحة الآن حاول في وقت آخر.
+      permission_denied_message: لا تملك الصلاحيات لهذه العملية
+      rate_limit_exceeded_message: تتصفح المنتدى بشكل سريع، تمهل قليلا وحاول مرة أخرى
+
+    # These translations are used as suffixes when abbreviating numbers.
+    number_suffix:
+      kilo_text: ألف
+      mega_text: مليون
+
+    # These translations are used to punctuate a series of items.
+    series:
+      glue_text: ", "
+      three_text: "{first}, {second}, و {third}"
+      two_text: "{first} و{second}"
+
+    # These translations are used to modify usernames.
+    username:
+      deleted_text: "[deleted]"
+
+  # Translations in this namespace are used in views other than Flarum's normal JS client.
+  views:
+
+    # Translations in this namespace are displayed by the basic HTML content loader.
+    content:
+      javascript_disabled_message: لتجربة أفضل حاول تصفح المنتدى باستخدام متصفح حديث يدعم تشغيل الجافا سكريبت
+      load_error_message: حدث خطأ ما أثناء تحميل الصفحة، حاول مرة أخرى من فضلك.
+      loading_text: تحميل
+
+    # Translations in this namespace are displayed in the basic HTML discussion view.
+    discussion:
+      next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed when Flarum encounters an error.
+    error:
+      403_message: لا تملك الصلاحيات لمشاهدة هذه الصفحة
+      404_message: الصفحة التي قمت بطلبها غير متوفرة حاليا قم بالعودة مرة أخرى
+      404_return_link: "العودى إلى المنتدى {forum}"
+      500_message: حدث خطأ ما أثناء تحميل الصفحة، حاول مرة أخرى من فضلك.
+      503_message: "{forum} تحت الصيانة، نعمل على إعادة المنتدى للعمل في أقرب وقت، شكرا "
+
+    # Translations in this namespace are displayed by the basic HTML discussion index.
+    index:
+      all_discussions_heading: => core.ref.all_discussions
+      next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed by the Log Out confirmation interface.
+    log_out:
+      log_out_button: => core.ref.log_out
+      log_out_confirmation: "هل أنت متأكد من رغبتك في الخروج من المنتدى {forum}؟"
+      title: => core.ref.log_out
+
+    # Translations in this namespace are displayed by the Reset Password interface.
+    reset_password:
+      confirm_password_label: تأكيد كلمة المرور الجديدة
+      new_password_label: كلمة مرور جديدة
+      submit_button: => core.ref.save_changes
+      title: => core.ref.reset_your_password
+
+  # Translations in this namespace are used in messages output by the API.
+  api:
+    invalid_username_message: "لا يسمح إلا باستعمال الحروف والأرقام والعارضة"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when users register new accounts.
+    activate_account:
+      subject: تفعيل الحساب الجديد
+      body: |2-
+         اهلا {username}!
+
+         أحدهم قام بالتسجيل في {forum} باستعمال هدا البريد الإلكتروني.
+
+         اذا كان هذا أنت, اضغط على الرابط التالي للتفعيل:
+         {url}
+
+         اذا لم تقم بالتسجيل, فقط تجاهل هذا البريد.
+    # These translations are used in emails sent when users change their email address.
+    confirm_email:
+      subject: تأكيد عنوان بريدك الجديد
+      body: |2-
+         اهلا {username}!
+
+         أحدهم قام بالتسجيل في {forum} باستعمال هدا البريد الإلكتروني.
+
+         اذا كان هذا أنت, اضغط على الرابط التالي للتفعيل:
+         {url}
+
+         اذا لم تقم بالتسجيل, فقط تجاهل هذا البريد.
+    # These translations are used in emails sent when users ask to reset their passwords.
+    reset_password:
+      subject: => core.ref.reset_your_password
+      body: |2-
+         اهلا {username}!
+
+         أحدهم طلب كلمة المرور على {forum}.
+
+         اذا كان هذا أنت, اضغط على الرابط التالي للتفعيل:
+         {url}
+
+         اذا لم تقم بذلك, فقط تجاهل هذا البريد.
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    all_discussions: جميع النقاشات
+    change_email: تغيير عنوان البريد
+    change_password: تغيير كلمة المرور
+    color: لون                                 # Referenced by flarum-tags.yml
+    confirm_password: تأكيد كلمة المرور
+    confirmation_email_sent: " لقد أرسلنا رسالة تأكيد إلكترونية إلى {email}. إذا لم تصل قريبا ، فتحقق من مجلد الرسائل الغير المرغوب فيها."
+    custom_footer_text: أضف HTML ليتم عرضها في أسفل الصفحة.
+    custom_footer_title: تعديل أسفل الصفحة المخصصة
+    custom_header_text: "أضف HTML ليتم عرضها في أعلى الصفحة ، فوق رأس Flarum الخاص."
+    custom_header_title: تعديل رأس الصفحة المخصصة
+    delete: حذف
+    delete_forever: حذف نهائي
+    discussions: النقاشات                     # Referenced by flarum-statistics.yml
+    edit: تعديل
+    email: عنوان البريد
+    load_more: معاينة المزيد
+    log_in: ولوج
+    log_out: خروج
+    mark_all_as_read: مقروءة
+    next_page: التالي
+    notifications: التنبيهات
+    okay: موافق                                     # Referenced by flarum-tags.yml
+    password: كلمة المرور
+    posts: المشاركات                                 # Referenced by flarum-statistics.yml
+    previous_page: السابق
+    remove: حذف
+    rename: تسمية النقاش
+    reply: تعليق                                 # Referenced by flarum-mentions.yml
+    reset_your_password: تعيين كلمة مرور جديدة
+    restore: إستعادة
+    save_changes: حفظ التغييرات                   # Referenced by flarum-suspend.yml, flarum-tags.yml
+    settings: الإعدادات
+    sign_up: تسجيل
+    some_others: "{count} أخرى|{count} أخر"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    start_a_discussion: بدء نقاش
+    username: إسم العضو
+    users: الأعضاء                                 # Referenced by flarum-statistics.yml
+    write_a_reply: أكتب تعليقك هنا ...
+    you: أنا                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+
+  ##
+  # GROUP NAMES - These keys are translated at the back end.
+  ##
+
+  # Translations in this namespace are used to translate default group names.
+  group:
+    admin: المشرف
+    admins: المشرفون
+    guest: الزائر
+    guests: الزوار
+    member: العضو
+    members: الأعضاء
+    mod: المراقب
+    mods: المراقبون

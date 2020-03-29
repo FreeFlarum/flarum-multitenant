@@ -1,5 +1,6 @@
 fof-reactions:
   forum:
+    disabled-reaction: Bu ifadeyi şu anda kullanamazsınız, lütfen sayfayı yenileyin
     warning: İfadeniz dönüştürüldü
     notification: '{username}, gönderinize {reaction} ifadesi bıraktı'
     settings:
@@ -18,6 +19,7 @@ fof-reactions:
         reactions: Mevcut İfadeler
         Helptext: İfadeyi veya Font Awesome için uygun kodu girin ve istediğiniz türü seçin.
         help:
+          display: Görünüm
           identifier: İfade
 
       convert:

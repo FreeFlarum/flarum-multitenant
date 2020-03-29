@@ -25,10 +25,15 @@ composer remove csineneo/lang-simplified-chinese
   - antoinefr-online
   - backtowebsite
   - clarkwinkelmann-author-change
+  - clarkwinkelmann-create-user-modal
+  - clarkwinkelmann-email-as-display-name
   - clarkwinkelmann-emojionearea
+  - clarkwinkelmann-passwordless
   - clarkwinkelmann-post-date
+  - clarkwinkelmann-status
   - datitisev-dashboard
-  - dem13n
+  - dem13n-nickname-changer
+  - dem13n-quad-theme
   - extiverse-bazaar
   - fajuu-contactbutton
   - fajuu-icons
@@ -72,6 +77,7 @@ composer remove csineneo/lang-simplified-chinese
   - fof-email-checker
   - fof-follow-tags
   - fof-formatting
+  - fof-forum-statistics-widget
   - fof-frontpage
   - fof-gamification
   - fof-geoip
@@ -80,10 +86,12 @@ composer remove csineneo/lang-simplified-chinese
   - fof-links
   - fof-merge-discussions
   - fof-nightmode
+  - fof-open-collective
   - fof-pages
   - fof-polls
   - fof-pretty-mail
   - fof-prevent-necrobumping
+  - fof-pwned-passwords
   - fof-reactions
   - fof-recaptcha
   - fof-secure-https
@@ -113,7 +121,6 @@ composer remove csineneo/lang-simplified-chinese
   - reflar-cookie-consent
   - reflar-doorman
   - reflar-level-ranks
-  - reflar-pwned-passwords
   - reflar-twofactor
   - reflar-webhooks
   - saleksin-auth-google

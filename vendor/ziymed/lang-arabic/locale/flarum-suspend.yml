@@ -1,0 +1,37 @@
+flarum-suspend:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      suspend_users_label: إيقاف المستخدمين
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    # These translations are used in the suspension notifications
+    notifications:
+      user_suspended_text: "أوقفك {username} عن المشاركة لمدة {timeReadable}"
+      user_unsuspended_text: "أزال {username} وضع الإيقاف عنك"
+
+    # These translations are used in the Suspend User modal dialog (admin function).
+    suspend_user:
+      indefinitely_label: إيقاف لأجل غير مسمى
+      limited_time_days_text: "أيام"
+      limited_time_label: إيقاف لمدة محددة
+      not_suspended_label: غير موقوف
+      status_heading: وضعية الإيقاف
+      submit_button: => core.ref.save_changes
+      title: "إيقاف {username}"
+
+    # These translations are displayed as tooltips for user badges.
+    user_badge:
+      suspended_tooltip: موقوف
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      suspend_button: إيقاف

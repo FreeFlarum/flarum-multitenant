@@ -1,0 +1,9 @@
+fof-formatting:
+  admin:
+    plugins:
+      Autoimage: Pretvorite URL-ove slika u stvarne slike
+      Autovideo: Pretvorite URL-ove videozapisa u videozapise koji se mogu reproducirati
+      FancyPants: Koristite maštovitu tipografiju
+      HTMLEntities: Koristite HTML entitete
+      MediaEmbed: Ugradite sadržaj s dozvoljenih web mjesta
+      PipeTables: ASCII-stajl tabela

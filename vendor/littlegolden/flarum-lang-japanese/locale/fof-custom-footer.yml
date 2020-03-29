@@ -1,0 +1,13 @@
+# https://github.com/FriendsOfFlarum/custom-footer/blob/master/resources/locale/en.yml
+# fe18bf1
+# Sat, 25 Jan 2020 22:39:04 +0800
+
+fof-custom-footer:
+  admin:
+    settings:
+      title: カスタムフッター
+
+      text: フッターテキスト
+      height: フッターの高さ
+      css: CSS
+      js: JS
