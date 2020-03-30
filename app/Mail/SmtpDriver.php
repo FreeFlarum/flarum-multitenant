@@ -15,8 +15,8 @@ class SmtpDriver extends Native
             'mail_host' => 'required',
             'mail_port' => 'nullable|integer',
             'mail_encryption' => 'nullable|in:tls,ssl',
-            'mail_username' => 'string',
-            'mail_password' => 'string',
+            'mail_username' => 'nullable|string',
+            'mail_password' => 'nullable|string',
         ])->errors();
     }
 }
