@@ -5,6 +5,11 @@
     "keywords": ["forum", "discussion"],
     "homepage": "https://flarum.org/",
     "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "App\\": "app/"
+      }
+    },
     "authors": [
         {
             "name": "Toby Zerner",
