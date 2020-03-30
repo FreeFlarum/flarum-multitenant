@@ -157,6 +157,7 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/lib/Doctrine/Common'),
     'Dflydev\\FigCookies\\' => array($vendorDir . '/dflydev/fig-cookies/src/Dflydev/FigCookies'),
     'Behat\\Transliterator\\' => array($vendorDir . '/behat/transliterator/src/Behat/Transliterator'),
+    'App\\' => array($baseDir . '/app'),
     'AmauryCarrade\\FlarumFeeds\\' => array($vendorDir . '/amaurycarrade/flarum-ext-syndication/src'),
     '' => array($vendorDir . '/nesbot/carbon/src'),
 );
