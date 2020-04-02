@@ -32,6 +32,7 @@
         "csineneo/lang-traditional-chinese": "v0.1.0-beta.11.3",
         "customworld/flarum-lang-slovak": "^1.5",
         "darkfoxdeveloper/flarum-ext-spanish": "^1.0",
+        "dem13n/nickname-changer": "^0.2.0",
         "flagrow/flarum-ext-analytics": "^0.8.0",
         "flagrow/mason": "^0.3.1",
         "flagrow/sitemap": "^0.2.0",

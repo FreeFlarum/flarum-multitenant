@@ -1,0 +1,17 @@
+dem13n:
+  forum:
+    nickname:
+      head_title: Никнейм
+      new_nickname: Введите новый никнейм
+      change: Изменить никнейм
+      submit_button: => core.ref.save_changes
+  admin:
+    nickname:
+      settings_modal_title: Настройки Nickname Changer
+      unlimited_nickname_change: Неограниченная смена никнейма
+      allow_nickname_change: Разрешить изменять никнейм
+      allow_nickname_unique: Разрешить одинаковые никнеймы
+      regex: Регулярное выражение для валидации
+      min_char: Минимум символов в никнейме
+      max_char: Максимум символов в никнейме
+      submit_button: => core.ref.save_changes

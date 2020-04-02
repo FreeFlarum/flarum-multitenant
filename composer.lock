@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0168fe072e02d98df0dbc87537de598",
+    "content-hash": "99fb111af985a6c8376355c17f0a3b6a",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -613,6 +613,55 @@
                 "locale"
             ],
             "time": "2019-07-14T10:59:51+00:00"
+        },
+        {
+            "name": "dem13n/nickname-changer",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dem13n/nickname-changer.git",
+                "reference": "16fd5d7cd9e06925153472ddd4edcfe62f6bdf10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dem13n/nickname-changer/zipball/16fd5d7cd9e06925153472ddd4edcfe62f6bdf10",
+                "reference": "16fd5d7cd9e06925153472ddd4edcfe62f6bdf10",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.14"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "NickName Changer",
+                    "icon": {
+                        "name": "fas fa-id-badge",
+                        "backgroundColor": "#FEC007",
+                        "color": "#374046"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dem13n\\NickName\\Changer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dem13n",
+                    "email": "idem13n@gmail.com"
+                }
+            ],
+            "description": "Extension allows users to change nickname",
+            "time": "2020-03-05T13:48:42+00:00"
         },
         {
             "name": "dflydev/fig-cookies",

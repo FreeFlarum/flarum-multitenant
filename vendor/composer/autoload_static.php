@@ -261,6 +261,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\' => 16,
             'Dflydev\\FigCookies\\' => 19,
+            'Dem13n\\NickName\\Changer\\' => 24,
         ),
         'B' => 
         array (
@@ -884,6 +885,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Dflydev\\FigCookies\\' => 
         array (
             0 => __DIR__ . '/..' . '/dflydev/fig-cookies/src/Dflydev/FigCookies',
+        ),
+        'Dem13n\\NickName\\Changer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dem13n/nickname-changer/src',
         ),
         'Behat\\Transliterator\\' => 
         array (

@@ -157,6 +157,7 @@ return array(
     'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/lib/Doctrine/Common'),
     'Dflydev\\FigCookies\\' => array($vendorDir . '/dflydev/fig-cookies/src/Dflydev/FigCookies'),
+    'Dem13n\\NickName\\Changer\\' => array($vendorDir . '/dem13n/nickname-changer/src'),
     'Behat\\Transliterator\\' => array($vendorDir . '/behat/transliterator/src/Behat/Transliterator'),
     'App\\' => array($baseDir . '/app'),
     'AmauryCarrade\\FlarumFeeds\\' => array($vendorDir . '/amaurycarrade/flarum-ext-syndication/src'),
