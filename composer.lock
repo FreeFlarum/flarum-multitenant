@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fff673f0b7dccc511c06fc9d51d84a75",
+    "content-hash": "4dea302df102611c1395b98363f0f824",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -6280,6 +6280,58 @@
                 "locale"
             ],
             "time": "2020-01-26T21:19:50+00:00"
+        },
+        {
+            "name": "manaszon/flarum-ext-hungarian",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/manaszon/flarum-ext-hungarian.git",
+                "reference": "35ce4eb2132ca461776860d8ad4a6938d680f97e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/manaszon/flarum-ext-hungarian/zipball/35ce4eb2132ca461776860d8ad4a6938d680f97e",
+                "reference": "35ce4eb2132ca461776860d8ad4a6938d680f97e",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Hungarian",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#fff",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "hu",
+                    "title": "Magyar"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kiss Attila",
+                    "email": "kissattila97@gmail.com"
+                }
+            ],
+            "description": "Hungarian language pack for Flarum.",
+            "homepage": "https://github.com/manaszon/flarum-ext-hungarian",
+            "keywords": [
+                "flarum",
+                "hungarian",
+                "locale"
+            ],
+            "time": "2019-01-14T23:58:44+00:00"
         },
         {
             "name": "marketplace/flarum-l10n-core-russian",

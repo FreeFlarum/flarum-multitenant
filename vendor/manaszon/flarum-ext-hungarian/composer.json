@@ -1,0 +1,36 @@
+{
+    "name": "manaszon/flarum-ext-hungarian",
+    "type": "flarum-extension",
+    "description": "Hungarian language pack for Flarum.",
+    "homepage": "https://github.com/manaszon/flarum-ext-hungarian",
+    "keywords": ["locale", "flarum", "hungarian"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kiss Attila",
+            "email": "kissattila97@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/manaszon/flarum-ext-hungarian/issues",
+        "source": "https://github.com/manaszon/flarum-ext-hungarian"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Hungarian",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#fff",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "hu",
+            "title": "Magyar"
+        }
+    }
+}
