@@ -86,6 +86,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Twilio\\' => 7,
             'Tobscure\\JsonApi\\' => 17,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'TheTurk\\MathRen\\' => 16,
         ),
         'S' => 
         array (
@@ -332,6 +333,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
+        ),
+        'TheTurk\\MathRen\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the-turk/flarum-mathren/src',
         ),
         'Symfony\\Polyfill\\Util\\' => 
         array (
