@@ -160,7 +160,6 @@ return array(
     'Dem13n\\NickName\\Changer\\' => array($vendorDir . '/dem13n/nickname-changer/src'),
     'Behat\\Transliterator\\' => array($vendorDir . '/behat/transliterator/src/Behat/Transliterator'),
     'App\\' => array($baseDir . '/app'),
-    'AntoineFr\\Money\\' => array($vendorDir . '/antoinefr/flarum-ext-money/src'),
     'AmauryCarrade\\FlarumFeeds\\' => array($vendorDir . '/amaurycarrade/flarum-ext-syndication/src'),
     '' => array($vendorDir . '/nesbot/carbon/src'),
 );
