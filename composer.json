@@ -27,6 +27,7 @@
     },
     "require": {
         "amaurycarrade/flarum-ext-syndication": "^0.3.1",
+        "antoinefr/flarum-ext-money": "^0.8.0",
         "cbmainz/flarum-de": "^0.10.0",
         "csineneo/lang-simplified-chinese": "v0.1.0-beta.11.3",
         "csineneo/lang-traditional-chinese": "v0.1.0-beta.11.3",

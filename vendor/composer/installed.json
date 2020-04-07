@@ -57,6 +57,45 @@
         ]
     },
     {
+        "name": "antoinefr/flarum-ext-money",
+        "version": "v0.8.0",
+        "version_normalized": "0.8.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AntoineFr/flarum-ext-money.git",
+            "reference": "fd46a4a9324c5a609fecf481d9debc110d78ebb1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/AntoineFr/flarum-ext-money/zipball/fd46a4a9324c5a609fecf481d9debc110d78ebb1",
+            "reference": "fd46a4a9324c5a609fecf481d9debc110d78ebb1",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-12-12T11:56:35+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Money",
+                "icon": {
+                    "name": "fas fa-money-bill",
+                    "backgroundColor": "#FFD700",
+                    "color": "#85bb65"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "AntoineFr\\Money\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "Give money to your users for different actions."
+    },
+    {
         "name": "authy/php",
         "version": "3.0.5",
         "version_normalized": "3.0.5.0",

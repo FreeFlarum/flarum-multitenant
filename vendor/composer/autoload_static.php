@@ -270,6 +270,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'A' => 
         array (
             'App\\' => 4,
+            'AntoineFr\\Money\\' => 16,
             'AmauryCarrade\\FlarumFeeds\\' => 26,
         ),
     );
@@ -897,6 +898,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'AntoineFr\\Money\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
         ),
         'AmauryCarrade\\FlarumFeeds\\' => 
         array (
