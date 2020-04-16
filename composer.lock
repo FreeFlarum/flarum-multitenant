@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "99fb111af985a6c8376355c17f0a3b6a",
+    "content-hash": "091709109c39ac1627efd15c1543a683",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -2960,6 +2960,60 @@
             ],
             "description": "Configurable PHP components for your Flarum extension",
             "time": "2019-06-16T12:18:08+00:00"
+        },
+        {
+            "name": "fof/filter",
+            "version": "0.1.0-beta.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/filter.git",
+                "reference": "130d54f87e569730d5a2e9ec6f596f5585db5e95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/130d54f87e569730d5a2e9ec6f596f5585db5e95",
+                "reference": "130d54f87e569730d5a2e9ec6f596f5585db5e95",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/approval": "^0.1.0-beta.8",
+                "flarum/core": "^0.1.0-beta.8",
+                "flarum/flags": "^v0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Filter",
+                    "icon": {
+                        "name": "fas fa-filter",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": ""
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Filter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie K",
+                    "email": "charlie.k@redevs.org"
+                }
+            ],
+            "description": "Filter out words and phrases from forum posts",
+            "keywords": [
+                "moderation"
+            ],
+            "time": "2020-02-19T22:11:43+00:00"
         },
         {
             "name": "fof/formatting",
@@ -10894,6 +10948,7 @@
         "csineneo/lang-simplified-chinese": 10,
         "csineneo/lang-traditional-chinese": 10,
         "flarum/embed": 10,
+        "fof/filter": 10,
         "luatdolphin/lang-vietnamese": 10,
         "madnest/flarum-lang-czech": 10,
         "marketplace/flarum-l10n-core-russian": 10,
