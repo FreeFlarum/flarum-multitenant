@@ -218,6 +218,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Linguist\\' => 13,
             'FoF\\Gamification\\' => 17,
             'FoF\\Formatting\\' => 15,
+            'FoF\\Filter\\' => 11,
             'FoF\\Extend\\' => 11,
             'FoF\\Drafts\\' => 11,
             'FoF\\DefaultUserPreferences\\' => 27,
@@ -737,6 +738,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\Formatting\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/formatting/src',
+        ),
+        'FoF\\Filter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/filter/src',
         ),
         'FoF\\Extend\\' => 
         array (

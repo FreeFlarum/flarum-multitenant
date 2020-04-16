@@ -120,6 +120,7 @@ return array(
     'FoF\\Linguist\\' => array($vendorDir . '/fof/linguist/src'),
     'FoF\\Gamification\\' => array($vendorDir . '/fof/gamification/src'),
     'FoF\\Formatting\\' => array($vendorDir . '/fof/formatting/src'),
+    'FoF\\Filter\\' => array($vendorDir . '/fof/filter/src'),
     'FoF\\Extend\\' => array($vendorDir . '/fof/extend/src'),
     'FoF\\Drafts\\' => array($vendorDir . '/fof/drafts/src'),
     'FoF\\DefaultUserPreferences\\' => array($vendorDir . '/fof/default-user-preferences/src'),

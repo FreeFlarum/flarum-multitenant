@@ -3067,6 +3067,62 @@
         "description": "Configurable PHP components for your Flarum extension"
     },
     {
+        "name": "fof/filter",
+        "version": "0.1.0-beta.2",
+        "version_normalized": "0.1.0.0-beta2",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/filter.git",
+            "reference": "130d54f87e569730d5a2e9ec6f596f5585db5e95"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/130d54f87e569730d5a2e9ec6f596f5585db5e95",
+            "reference": "130d54f87e569730d5a2e9ec6f596f5585db5e95",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/approval": "^0.1.0-beta.8",
+            "flarum/core": "^0.1.0-beta.8",
+            "flarum/flags": "^v0.1.0-beta.8"
+        },
+        "time": "2020-02-19T22:11:43+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF Filter",
+                "icon": {
+                    "name": "fas fa-filter",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": ""
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Filter\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Charlie K",
+                "email": "charlie.k@redevs.org"
+            }
+        ],
+        "description": "Filter out words and phrases from forum posts",
+        "keywords": [
+            "moderation"
+        ]
+    },
+    {
         "name": "fof/formatting",
         "version": "0.1.4",
         "version_normalized": "0.1.4.0",
