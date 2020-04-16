@@ -217,6 +217,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
             'FoF\\Gamification\\' => 17,
+            'FoF\\ForumStatisticsWidget\\' => 26,
             'FoF\\Formatting\\' => 15,
             'FoF\\Filter\\' => 11,
             'FoF\\Extend\\' => 11,
@@ -734,6 +735,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\Gamification\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/gamification/src',
+        ),
+        'FoF\\ForumStatisticsWidget\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/forum-statistics-widget/src',
         ),
         'FoF\\Formatting\\' => 
         array (

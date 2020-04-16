@@ -119,6 +119,7 @@ return array(
     'FoF\\Links\\' => array($vendorDir . '/fof/links/src'),
     'FoF\\Linguist\\' => array($vendorDir . '/fof/linguist/src'),
     'FoF\\Gamification\\' => array($vendorDir . '/fof/gamification/src'),
+    'FoF\\ForumStatisticsWidget\\' => array($vendorDir . '/fof/forum-statistics-widget/src'),
     'FoF\\Formatting\\' => array($vendorDir . '/fof/formatting/src'),
     'FoF\\Filter\\' => array($vendorDir . '/fof/filter/src'),
     'FoF\\Extend\\' => array($vendorDir . '/fof/extend/src'),

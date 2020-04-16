@@ -65,6 +65,7 @@
         "fof/drafts": "^0.1.3",
         "fof/filter": "^0.1.0@beta",
         "fof/formatting": "^0.1.2",
+        "fof/forum-statistics-widget": "^0.1.1",
         "fof/gamification": "^0.1.6",
         "fof/linguist": "^0.4.1",
         "fof/links": "^0.2.1",

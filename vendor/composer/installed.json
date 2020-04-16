@@ -3179,6 +3179,61 @@
         ]
     },
     {
+        "name": "fof/forum-statistics-widget",
+        "version": "0.1.1",
+        "version_normalized": "0.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/forum-statistics-widget.git",
+            "reference": "d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/forum-statistics-widget/zipball/d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1",
+            "reference": "d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-12-28T23:07:09+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF Forum Statistics Widget",
+                "icon": {
+                    "name": "fas fa-chart-bar",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/22380"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\ForumStatisticsWidget\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christian Lopez",
+                "email": "Ralkage@live.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Add a forum statistics widget to the sidenav section of your Flarum forum.",
+        "keywords": [
+            "flarum"
+        ]
+    },
+    {
         "name": "fof/gamification",
         "version": "0.1.8",
         "version_normalized": "0.1.8.0",

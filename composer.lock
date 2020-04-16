@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "091709109c39ac1627efd15c1543a683",
+    "content-hash": "ac0a53c9ba35ef4e06846c0a18ae8eb5",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -3068,6 +3068,59 @@
                 "flarum"
             ],
             "time": "2019-12-06T20:18:19+00:00"
+        },
+        {
+            "name": "fof/forum-statistics-widget",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/forum-statistics-widget.git",
+                "reference": "d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/forum-statistics-widget/zipball/d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1",
+                "reference": "d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Forum Statistics Widget",
+                    "icon": {
+                        "name": "fas fa-chart-bar",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/22380"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ForumStatisticsWidget\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lopez",
+                    "email": "Ralkage@live.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add a forum statistics widget to the sidenav section of your Flarum forum.",
+            "keywords": [
+                "flarum"
+            ],
+            "time": "2019-12-28T23:07:09+00:00"
         },
         {
             "name": "fof/gamification",
