@@ -2738,17 +2738,17 @@
     },
     {
         "name": "fof/byobu",
-        "version": "0.4.5",
-        "version_normalized": "0.4.5.0",
+        "version": "0.5.0",
+        "version_normalized": "0.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FriendsOfFlarum/byobu.git",
-            "reference": "d8001779bedd7fa2f32f721a0d51a6b465655564"
+            "reference": "6c35f67ed54cfe53d99e25c65a11fdf8d1f3dd5d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfFlarum/byobu/zipball/d8001779bedd7fa2f32f721a0d51a6b465655564",
-            "reference": "d8001779bedd7fa2f32f721a0d51a6b465655564",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/byobu/zipball/6c35f67ed54cfe53d99e25c65a11fdf8d1f3dd5d",
+            "reference": "6c35f67ed54cfe53d99e25c65a11fdf8d1f3dd5d",
             "shasum": ""
         },
         "require": {
@@ -2758,7 +2758,7 @@
         "replace": {
             "flagrow/byobu": "*"
         },
-        "time": "2020-03-19T08:24:46+00:00",
+        "time": "2020-04-01T21:38:47+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
