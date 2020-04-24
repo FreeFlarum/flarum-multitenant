@@ -114,6 +114,7 @@ return array(
     'FoF\\Polls\\Migrations\\' => array($vendorDir . '/fof/polls/migrations'),
     'FoF\\Polls\\' => array($vendorDir . '/fof/polls/src'),
     'FoF\\Pages\\' => array($vendorDir . '/fof/pages/src'),
+    'FoF\\NightMode\\' => array($vendorDir . '/fof/nightmode/src'),
     'FoF\\MergeDiscussions\\' => array($vendorDir . '/fof/merge-discussions/src'),
     'FoF\\Masquerade\\' => array($vendorDir . '/fof/masquerade/src'),
     'FoF\\Links\\' => array($vendorDir . '/fof/links/src'),

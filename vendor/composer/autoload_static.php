@@ -212,6 +212,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
             'FoF\\Pages\\' => 10,
+            'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Masquerade\\' => 15,
             'FoF\\Links\\' => 10,
@@ -715,6 +716,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\Pages\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/pages/src',
+        ),
+        'FoF\\NightMode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/nightmode/src',
         ),
         'FoF\\MergeDiscussions\\' => 
         array (

@@ -71,6 +71,7 @@
         "fof/links": "^0.2.1",
         "fof/masquerade": "^0.3.3",
         "fof/merge-discussions": "^0.3.3",
+        "fof/nightmode": "^0.4.0",
         "fof/pages": "^0.2.6",
         "fof/polls": "^0.1.1",
         "fof/profile-image-crop": "^0.1.1",
