@@ -10,4 +10,7 @@ dem13n:
       settings_modal_title: Thiết lập Nickname Changer
       unlimited_nickname_change: Không giới hạn tahy đổi nickname
       allow_nickname_change: Cho phép thay đổi nickname
+      regex: Regular expression for validation
+      min_char: Minimum characters in a nickname
+      max_char: Maximum characters in a nickname
       submit_button: => core.ref.save_changes

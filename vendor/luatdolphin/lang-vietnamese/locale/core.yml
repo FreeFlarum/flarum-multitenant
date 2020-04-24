@@ -97,6 +97,7 @@ core:
       mail_encryption_label: Mã hóa
       mail_host_label: Máy chủ gửi đi
       mail_mailgun_domain_label: Tên miền
+      mail_mailgun_region_label: Khu vực
       mail_mailgun_secret_label: Khóa bí mật
       mail_mandrill_secret_label: Khóa bí mật
       mail_password_label: => core.ref.password
@@ -107,6 +108,7 @@ core:
       mail_username_label: => core.ref.username
       mailgun_heading: Thiết lập Mailgun
       mandrill_heading: Thiết lập Mandrill
+      not_sending_message: Forum hiện không gửi được email. Có thể là lỗi do trình điều khiển được chọn, hoặc do cấu hình.
       ses_heading: Thiết lập SES
       smtp_heading: Thiết lập SMTP
       submit_button: => core.ref.save_changes
@@ -151,10 +153,12 @@ core:
       delete_posts_forever_label: Xóa bài viết mãi mãi
       delete_posts_label: Xóa bài viết
       edit_posts_label: Chỉnh sửa bài viết
+      edit_users_label: Chỉnh sửa thành viên
       global_heading: Toàn cục
       moderate_heading: Quản trị
       new_group_button: Thêm nhóm mới
       participate_heading: Tham gia
+      post_without_throttle_label: Trả lời nhiều lần mà không cần chờ đợi
       read_heading: Đọc
       rename_discussions_label: Đổi tên cuộc thảo luận
       reply_to_discussions_label: Phản hồi
@@ -406,7 +410,7 @@ core:
     user_controls:
       button: Thiết lập
       delete_button: => core.ref.delete
-      delete_confirmation: "Bạn có chắc xoá thành viên này? Việc xoá sẽ đồng thời xoá tất cả bài viết của thành viên."
+      delete_confirmation: "Bạn có chắc xoá thành viên này? Việc xoá sẽ đồng thời xoá các bài viết của thành viên."
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.

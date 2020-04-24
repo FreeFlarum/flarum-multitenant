@@ -6516,23 +6516,23 @@
     },
     {
         "name": "luatdolphin/lang-vietnamese",
-        "version": "0.1.0-beta.11.1",
-        "version_normalized": "0.1.0.0-beta11.1",
+        "version": "0.1.0-beta.12",
+        "version_normalized": "0.1.0.0-beta12",
         "source": {
             "type": "git",
             "url": "https://github.com/luatdolphin/lang-vietnamese.git",
-            "reference": "73030ed707352832127486653c22dcdbadc89fb2"
+            "reference": "c7eb908e7c09a4ca3fde77c2724df12d5a88acf2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/73030ed707352832127486653c22dcdbadc89fb2",
-            "reference": "73030ed707352832127486653c22dcdbadc89fb2",
+            "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/c7eb908e7c09a4ca3fde77c2724df12d5a88acf2",
+            "reference": "c7eb908e7c09a4ca3fde77c2724df12d5a88acf2",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.10"
         },
-        "time": "2019-12-23T12:28:12+00:00",
+        "time": "2020-04-08T05:22:22+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {

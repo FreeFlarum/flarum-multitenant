@@ -57,6 +57,11 @@ flarum-tags:
   # Translations in this namespace are used by the forum user interface.
   forum:
 
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: Toàn bộ thẻ
+      meta_title_text: => flarum-tags.ref.tags
+      
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
       choose_primary_placeholder: "Chọn thẻ chính|Chọn {count} thẻ chính"
@@ -88,6 +93,10 @@ flarum-tags:
       added_tags_text: "{username} đã gắn thẻ {tagsAdded}."
       removed_tags_text: "{username} đã xóa thẻ {tagsRemoved}."
       tags_text: "{tags} thẻ|{tags} thẻ"
+
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "Tất cả các cuộc thảo luận với thẻ {tag}"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:

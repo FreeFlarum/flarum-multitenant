@@ -14,6 +14,7 @@ flarum-flags:
 
     # These translations are used in the Flags Settings modal dialog.
     settings:
+      flag_own_posts_label: Cho user được gắn cờ bài họ làm chủ
       guidelines_url_label: Hướng dẫn cộng đồng
       title: Thiết lập gắn cờ
 
@@ -24,8 +25,10 @@ flarum-flags:
     flag_post:
       confirmation_message: Cảm ơn bạn đã gắn cờ bài viết này. Ban quản trị sẽ xem xét.
       dismiss_button: => core.ref.okay
+      reason_details_placeholder: Bổ sung chi tiết (Tùy chọn)
       reason_inappropriate_label: Không hợp lệ
       reason_inappropriate_text: "Bài viết vi phạm <a>tiêu chí của diễn đàn</a>."
+      reason_missing_message: Vui lòng cung cấp một số chi tiết cho người điều hành của chúng tôi.
       reason_off_topic_label: "Lạc đề"
       reason_off_topic_text: Bài viết này không liên quan đến chủ đề đang thảo luận và nên được chuyển sang nơi khác.
       reason_other_label: Khác
