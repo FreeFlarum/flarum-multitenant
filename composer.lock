@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc2eb73f5af720c4b6788c2c0f8f0c38",
+    "content-hash": "7da10d000ff33827eebe7c2cb8faf3ce",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -3614,6 +3614,63 @@
                 "flarum"
             ],
             "time": "2020-03-22T23:31:27+00:00"
+        },
+        {
+            "name": "fof/pretty-mail",
+            "version": "0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/pretty-mail.git",
+                "reference": "3cbb72260e704541b2d7af0d6eaa61d1201589ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/pretty-mail/zipball/3cbb72260e704541b2d7af0d6eaa61d1201589ab",
+                "reference": "3cbb72260e704541b2d7af0d6eaa61d1201589ab",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.10"
+            },
+            "replace": {
+                "reflar/pretty-mail": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Pretty Mail",
+                    "icon": {
+                        "name": "fas fa-envelope-open",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/11178-friendsofflarum-pretty-mail"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\PrettyMail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie K",
+                    "email": "issyrocks12@reflar.email"
+                }
+            ],
+            "description": "Make emails pretty",
+            "keywords": [
+                "extension",
+                "flarum",
+                "mail"
+            ],
+            "time": "2019-11-03T20:49:44+00:00"
         },
         {
             "name": "fof/profile-image-crop",

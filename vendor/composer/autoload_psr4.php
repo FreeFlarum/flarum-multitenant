@@ -111,6 +111,7 @@ return array(
     'FoF\\Reactions\\' => array($vendorDir . '/fof/reactions/src'),
     'FoF\\ReCaptcha\\' => array($vendorDir . '/fof/recaptcha/src'),
     'FoF\\ProfileImageCrop\\' => array($vendorDir . '/fof/profile-image-crop/src'),
+    'FoF\\PrettyMail\\' => array($vendorDir . '/fof/pretty-mail/src'),
     'FoF\\Polls\\Migrations\\' => array($vendorDir . '/fof/polls/migrations'),
     'FoF\\Polls\\' => array($vendorDir . '/fof/polls/src'),
     'FoF\\Pages\\' => array($vendorDir . '/fof/pages/src'),

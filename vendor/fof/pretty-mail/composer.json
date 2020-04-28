@@ -1,0 +1,45 @@
+{
+    "name": "fof/pretty-mail",
+    "description": "Make emails pretty",
+    "keywords": [
+        "extension",
+        "flarum",
+        "mail"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Charlie K",
+            "email": "issyrocks12@reflar.email"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/pretty-mail/issues",
+        "source": "https://github.com/FriendsOfFlarum/pretty-mail"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.10"
+    },
+    "replace": {
+        "reflar/pretty-mail": "*"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Pretty Mail",
+            "icon": {
+                "name": "fas fa-envelope-open",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/11178-friendsofflarum-pretty-mail"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\PrettyMail\\": "src/"
+        }
+    }
+}

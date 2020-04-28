@@ -74,6 +74,7 @@
         "fof/nightmode": "^0.4.0",
         "fof/pages": "^0.2.6",
         "fof/polls": "^0.1.1",
+        "fof/pretty-mail": "^0.1.6",
         "fof/profile-image-crop": "^0.1.1",
         "fof/reactions": "^0.1.0",
         "fof/recaptcha": "^0.1.1",

@@ -209,6 +209,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Reactions\\' => 14,
             'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
+            'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
             'FoF\\Pages\\' => 10,
@@ -704,6 +705,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\ProfileImageCrop\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
+        ),
+        'FoF\\PrettyMail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/pretty-mail/src',
         ),
         'FoF\\Polls\\Migrations\\' => 
         array (
