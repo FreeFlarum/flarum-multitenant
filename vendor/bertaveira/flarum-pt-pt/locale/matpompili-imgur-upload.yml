@@ -1,0 +1,12 @@
+matpompili-imgur-upload:
+  admin:
+    get-id: Consiga um aqui
+    without: sem
+    leaveEmpty: Deixe os campos vazios para desabilitar o redimensionamento de imagem
+    maxImageWidth: Largura Max de imagem
+    maxImageHeight: Altura Max de imagem
+  forum:
+    attach: Anexar
+    loading: A enviar...
+    loaded: Enviado!
+    error: Erro

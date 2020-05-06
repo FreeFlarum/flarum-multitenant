@@ -1,0 +1,82 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Discussão Privada
+        buttons:
+            add_recipients: Destinatários
+            submit: OK
+            edit_recipients: Editar Destinatários
+            send_pd: "Enviar mensagem a {username}"
+            cancel: Cancelar
+            remove_from_discussion: Sair desta discussão privada
+            make_public: Tornar esta discussão pública
+        composer_private_discussion:
+            submit_button: Publicar Discussão Privada
+            title_placeholder: Título da Discussão Privada
+        labels:
+            recipients: "{count} Destinatário|{count} Destinatários"
+            user_deleted: -apagado-
+        nav:
+            start_button: Nova Discussão Privada
+        input:
+            search_recipients: Pesquisa destinatários escrevendo as primeiras três letras...
+        search:
+            headings:
+                groups: Grupos de Premissões
+        modal:
+            titles:
+                update_recipients: Atualizar destinatários de {title}
+                add_recipients: Adicionar destinatários à discussão
+            help:
+                add_recipients: Esta discussão será apenas visível aos utilizadores que escolher aqui. É necessário pelo menos 1 destinatário (além de si)
+                update_recipients: Esta discussão será apenas visível aos utilizadores que escolher aqui.
+        post:
+            recipients_modified:
+                added_and_removed: "{username} adicionou destinatários {added} e removeu {removed}."
+                added: "{username} adicionou destinatários {added}."
+                removed: "{username} removeu {removed}."
+                removed_self: "{username} saíu da discussão privada."
+        user:
+            settings:
+                block_pd: Bloquear discussão privada
+
+            byobu_link: Discussão Privada
+            dropdown_label: Discussão Privada
+
+        notifications:
+            pd_label: Alguém inclui-me numa nova Discussão privada
+            pd_reply_label: Alguém publica numa Discussão privada a que pertenço
+            pd_reply_text: "{username} publicou numa discussão privada a que pertences"
+            pd_text: "{username} começou uma nova discussão privada contigo"
+            pd_user_left_label: Um destinatário sai de uma discussão privada a que pertenço
+            pd_user_left_text: "{username} saiu da discussão privada"
+            pd_added_text: "{username} adicionou-te a uma discussão privada"
+            pd_added_label: "Alguém adiciona-me a uma discussão privada existente"
+
+        confirm:
+            make_public: Isto torna a discussão privada visível a todos. Considere se isso é a ação desejada antes de proceder.
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Criar discussão privada com o utilizador
+            create_private_discussions_with_groups: Criar discussão privada com grupos
+            create_private_discussions_with_blocking_users: Criar discussão privada com utilizadores que a bloqueiam
+            edit_user_recipients: Editar utilizadores a participar em discussões privadas
+            edit_group_recipients: Editar grupos a participar em discussões privadas
+            make_private_into_public: Transformar uma discussão privada em pública
+            view_private_discussions-when-flagged: Ver discussões privadas de outros users se tiverem uma flag
+
+        settings:
+            use_tag_slug: Specify the slug of the tag to force all private discussions into
+            use_tag_slug_help: Deixar em branco para permitir os utilizadores criarem a sua tag, aplica-se apenas a novas discussões
+
+    notifications:
+        private_discussion_created:
+            title: "[Private Discussion] utilizador começou uma discussão privada contigo"
+        private_discussion_replied:
+            title: "[Private Discussion] utilizador publicou numa discussão privada"
+        recipient_removed:
+            title: "[Private Discussion] utilizador saíu da discussão"
+        private_discussion_added:
+            title: "[Private Discussion] utilizador adicionou-te à discussão privada"

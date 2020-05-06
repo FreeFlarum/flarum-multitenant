@@ -1,0 +1,54 @@
+flarum-subscriptions:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Strings in this namespace are used by the forum user interface.
+  forum:
+
+    # These strings are displayed as tooltips for discussion badges.
+    badge:
+      following_tooltip: => flarum-subscriptions.ref.following
+      ignoring_tooltip: => flarum-subscriptions.ref.ignoring
+
+    # These strings are used by the discussion control buttons.
+    discussion_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      unfollow_button: Deixar de Seguir
+      unignore_button: Deixar de Ignorar
+
+    # These strings are used on the index page, peripheral to the discussion list.
+    index:
+      following_link: => flarum-subscriptions.ref.following
+
+    # These strings are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      new_post_text: "{username} postou"
+
+    # These strings are used in the Settings page.
+    settings:
+      follow_after_reply_label: Seguir automaticamente os tópicos que eu respondo
+      notify_new_post_label: Alguém posta num tópico que estou seguindo
+      
+    # These strings are used in the subscription menu displayed to the right of the post stream.
+    sub_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      following_button: => flarum-subscriptions.ref.following
+      following_text: Ser notificado de todas as respostas.
+      ignoring_button: => flarum-subscriptions.ref.ignoring
+      ignoring_text: Nunca ser notificado. Esconder da lista de tópicos.
+      not_following_button: Não Seguir
+      not_following_text: "Ser notificado apenas quando @mencionado."
+      notify_email_tooltip: Receber um email quando houver novos posts
+      notify_alert_tooltip: Receber uma notificação no fórum quando houver novos posts
+
+  ##
+  # REUSED STRINGS - These keys should not be used directly in code!
+  ##
+
+  # Strings in this namespace are referenced by two or more unique keys.
+  ref:
+    follow: Seguir
+    following: Seguir
+    ignoring: Ignorar

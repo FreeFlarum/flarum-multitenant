@@ -1,0 +1,9 @@
+fof-custom-footer:
+  admin:
+    settings:
+      title: Configuração de Rodapé Customizado
+
+      text: Texto do Rodapé
+      height: Altura do Rodapé
+      css: CSS
+      js: JS

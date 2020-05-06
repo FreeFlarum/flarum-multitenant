@@ -1,0 +1,63 @@
+fof-masquerade:
+    forum:
+        alerts:
+            profile-completion-required: >
+                Complete os campos do perfil necessários por favor.
+        buttons:
+            view-profile: Ver perfil
+            save-profile: Guardar
+        fields:
+            select:
+                none-optional: Nenhuma opção selecionada (opcional)
+                none-required: Por favor selecione uma opção (necessário)
+            boolean:
+                yes: Sim
+                no: Não
+    admin:
+        title: Masquerade
+        general-options: Opções gerais
+        buttons:
+            add-field: Campo Creativo
+            edit-field: Guardar alterações
+            delete-field: Apagar campo
+        permissions:
+            have-profile: Tem perfil masquerade
+            view-profile: Não tem perfil masquerade
+        menu:
+            description: >
+                Configurar campos de perfil de utilizador.
+        fields:
+            title: Campos
+            add: Adicionar campo {field}
+            edit: Editar campo {field}
+            name: Nome do campo
+            name-help: >
+                The publicly visible (non-translatable) field label.
+            description: Descrição de campo
+            description-help: >
+                Descrição opcional para explicar uso/necessidade deste campo.
+            required: Marcar campo como obrigatório
+            on_bio: Mostrar resposta a este campo na bio do utilizador
+            type: Escrever
+            validation: Validação
+            validation-help: >
+                Check the supported <a>Laravel validation rules</a>. Eg:
+                "string|min:5" or "url".
+            prefix: Field prefix
+            prefix-help: >
+                Shows your prefix in front of values entered by the user for this field.
+            icon: Icones
+            icon-help: >
+                Shows an icon in front of values entered by the user. For a reference of
+                available icons, check the <a>FontAwesome website</a>. Use icon names with
+                the "fa-" prefix, like "fas fa-info".
+            force-user-to-completion: Forçar utilizador a completar prefil
+            options: Opções
+            option-new: Novas opções
+            option-comma-warning: A label de uma opção não pode conter virgula(",").
+        types:
+            advanced: Avançado
+            boolean: Checkbox
+            email: Email
+            select: Dropdown
+            url: URL

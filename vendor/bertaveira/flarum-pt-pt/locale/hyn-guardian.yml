@@ -1,0 +1,18 @@
+hyn-guardian:
+  package_name: "Guardian"
+  package_description: "Monitorize os utilizadores e as suas relações."
+  generic:
+    never: nunca
+  admin:
+    nav:
+      guardian_button: => hyn-guardian.package_name
+      guardian_text: => hyn-guardian.package_description
+    grid:
+      user:
+        joined_at: Registou
+        last_seen_at: Última vez online
+        badges: Grupos
+        activated: Ativo
+        details: Detalhes
+        states:
+          never_visited: => hyn-guardian.generic.never

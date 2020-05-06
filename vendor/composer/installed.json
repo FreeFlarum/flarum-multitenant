@@ -336,6 +336,62 @@
         ]
     },
     {
+        "name": "bertaveira/flarum-pt-pt",
+        "version": "v1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bertaveira/flarum-pt-pt.git",
+            "reference": "e5934e844546d660a62bccfa79cee53de951fd0c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bertaveira/flarum-pt-pt/zipball/e5934e844546d660a62bccfa79cee53de951fd0c",
+            "reference": "e5934e844546d660a62bccfa79cee53de951fd0c",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.12"
+        },
+        "time": "2020-04-23T01:34:21+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Portuguese (pt-PT)",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#00247d",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "pt-PT",
+                "title": "Portuguese"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bernardo Taveira",
+                "email": "bertaveira@gmail.com"
+            },
+            {
+                "name": "Luís Cruz (original author forked)",
+                "email": "lcbcruz82@gmail.com"
+            }
+        ],
+        "description": "Portuguese language pack.",
+        "homepage": "https://github.com/bertaveira/flarum-portuguese",
+        "keywords": [
+            "locale"
+        ]
+    },
+    {
         "name": "cbmainz/flarum-de",
         "version": "0.10.0",
         "version_normalized": "0.10.0.0",

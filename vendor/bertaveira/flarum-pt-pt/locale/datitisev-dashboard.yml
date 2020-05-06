@@ -1,0 +1,27 @@
+datitisev-dashboard:
+  admin:
+    dashboard:
+      months:
+        january: Janeiro
+        february: Fevereiro
+        march: Março
+        april: Abril
+        may: Maio
+        june: Junho
+        july: Julho
+        august: Agosto
+        september: Setembro
+        october: Outubro
+        november: Novembro
+        december: Dezembro
+
+      graph:
+        users: Utilizadores
+        discussions: Discussões
+        posts: Publicações
+
+      updates:
+        check_button: Verificar Atualizações a Extensões
+        checking: "Verificar Atualizações..."
+        available: "{count} Atualização Disponível |{count} Atualizações Disponíveis"
+        none: Atualizações não encontradas

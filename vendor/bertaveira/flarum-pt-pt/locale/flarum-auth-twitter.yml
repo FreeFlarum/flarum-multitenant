@@ -1,0 +1,18 @@
+flarum-auth-twitter:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Strings in this namespace are used by the admin interface.
+  admin:
+    twitter_settings:
+      title: Configurações do Twitter
+      api_id_label: API ID
+      api_secret_label: API Secret (Secreto)
+
+
+  # Strings in this namespace are used by the forum interface.
+  forum:
+    log_in:
+      with_twitter_button: Entre com o Twitter

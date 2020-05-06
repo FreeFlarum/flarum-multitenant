@@ -1,0 +1,26 @@
+avatar4eg-users-list:
+  admin:
+    nav:
+      users_button: => avatar4eg-users-list.ref.users_title
+      users_text: Ver lista de utilizadores.
+    page:
+      about_text:  Ver lista de utilizadores registados.
+      online_text: => core.forum.user.online_text
+      load_more_button: => core.ref.load_more
+      list_title: => avatar4eg-users-list.ref.users_title
+      mail_all_button: E-mail para todos os utilizadores
+    modal_mail:
+      title_text: Mensagem para
+      title_all_text: todos os utilizadores
+      email_label: Para
+      subject_label: Assunto
+      default_subject: => avatar4eg-users-list.ref.default_subject
+      message_label: Mensagem
+      submit_button: Enviar
+
+  email:
+    default_subject: => avatar4eg-users-list.ref.default_subject
+
+  ref:
+    default_subject: Mensagem do Administrador do Fórum
+    users_title: Utilizadores

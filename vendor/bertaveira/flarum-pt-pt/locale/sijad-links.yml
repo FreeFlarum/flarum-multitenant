@@ -1,0 +1,39 @@
+sijad-links:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These strings are used in the Edit Link modal dialog.
+    edit_link:
+      delete_link_button: Apagar Link
+      delete_link_confirmation: "Tem a certeza que deseja apagar este link?"
+      internal_link: "É um link Flarum?"
+      open_newtab: "Abrir link em nova aba"
+      submit_button: => core.ref.save_changes
+      title: => sijad-links.ref.create_link
+      title_label: => sijad-links.ref.title
+      title_placeholder: => sijad-links.ref.title
+      url_label: => sijad-links.ref.url
+      url_placeholder: => sijad-links.ref.url
+
+    # These strings are used in the Links page.
+    links:
+      about_text: Gerir links do menu principal.
+      create_button: => sijad-links.ref.create_link
+      links: => sijad-links.ref.links
+
+    # These strings are used in the navigation bar.
+    nav:
+      links_button: => sijad-links.ref.links
+      links_text: Gerir os itens da lista de navegação principal.
+
+  # Strings in this namespace are referenced by two or more unique keys.
+  ref:
+    create_link: Criar Link
+    links: Links
+    title: Título
+    url: Url

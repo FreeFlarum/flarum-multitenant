@@ -1,0 +1,33 @@
+flagrow-image-upload:
+    forum:
+        buttons:
+            attach: Enviar
+        states:
+            loading: A enviar...
+            success: Enviado
+            error: Erro
+    admin:
+        upload_methods:
+            local: Local
+            imgur: Imgur
+        labels:
+            upload_method: Metodo de upload
+            resize:
+                title: Redimensionamento de imagem
+                toggle: Ativar redimensionamento
+                max_width: Largura máxima da imagem
+                max_height: Altura máxima da imagem
+            imgur:
+                title: Configurações do Imgur
+                client_id: Client ID
+        buttons:
+            save: Guardar configurações
+        help_texts:
+            description: >
+                Configure serviços de upload de imagem e suas preferencias.
+            upload_method: >
+                Selecione o metodo que você deseja usar para enviar suas imagens.
+            resize: >
+                Escolha se quer redimensionar as imagens antes que as envie.
+                Escolha a altura e largura maxima, em pixels.
+                O processo de redimensionamento mantém as proporções da imagem.

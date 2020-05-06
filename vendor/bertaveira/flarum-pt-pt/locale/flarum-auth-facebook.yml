@@ -1,0 +1,18 @@
+flarum-auth-facebook:
+    
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+  
+  # Strings in this namespace are used by the admin interface.
+  admin:
+    facebook_settings:
+      title: Configurações do Facebook
+      app_id_label: App ID
+      app_secret_label: App Secret (Secreto)
+    
+      
+  # Strings in this namespace are used by the forum interface.    
+  forum:
+    log_in:
+      with_facebook_button: Entre com o Facebook
