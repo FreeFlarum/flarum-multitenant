@@ -212,6 +212,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
+            'FoF\\Passport\\' => 13,
             'FoF\\Pages\\' => 10,
             'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
@@ -717,6 +718,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\Polls\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/polls/src',
+        ),
+        'FoF\\Passport\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/passport/src',
         ),
         'FoF\\Pages\\' => 
         array (

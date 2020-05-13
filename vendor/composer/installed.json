@@ -3733,6 +3733,74 @@
         ]
     },
     {
+        "name": "fof/passport",
+        "version": "0.3.0",
+        "version_normalized": "0.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/passport.git",
+            "reference": "e9235d315431010fe6ad679f555f664c81661afa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/passport/zipball/e9235d315431010fe6ad679f555f664c81661afa",
+            "reference": "e9235d315431010fe6ad679f555f664c81661afa",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": ">=0.1.0-beta.12 <0.1.0-beta.14",
+            "league/oauth2-client": "^2.3.0"
+        },
+        "replace": {
+            "flagrow/passport": "*"
+        },
+        "time": "2020-03-23T02:25:26+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF Passport",
+                "icon": {
+                    "name": "fas fa-key",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/5203"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Passport\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniël Klabbers",
+                "email": "daniel+flarum@klabbers.email",
+                "homepage": "https://hyn.me/"
+            },
+            {
+                "name": "Clark Winkelmann",
+                "email": "clark.winkelmann@gmail.com",
+                "homepage": "https://clarkwinkelmann.com/"
+            }
+        ],
+        "description": "The OAuth2 (and Laravel passport) compatible oauth extension",
+        "keywords": [
+            "flarum",
+            "league",
+            "oauth",
+            "oauth2",
+            "passport"
+        ]
+    },
+    {
         "name": "fof/polls",
         "version": "0.1.2",
         "version_normalized": "0.1.2.0",
