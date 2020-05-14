@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ad8f1c9ff1db38b889563fed0ab354d",
+    "content-hash": "4204856e428a6111d95bc6f92255052c",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -1543,6 +1543,7 @@
                 "flagrow",
                 "flarum"
             ],
+            "abandoned": "fof/sitemap",
             "time": "2018-12-09T20:53:04+00:00"
         },
         {
@@ -7055,6 +7056,52 @@
             "time": "2019-02-05T23:41:09+00:00"
         },
         {
+            "name": "menomenta/flarum-ext-norwegian",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Menomenta/flarum-ext-norwegian.git",
+                "reference": "86237c48e154659d29a562ffaecd9c03fa948cb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Menomenta/flarum-ext-norwegian/zipball/86237c48e154659d29a562ffaecd9c03fa948cb7",
+                "reference": "86237c48e154659d29a562ffaecd9c03fa948cb7",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Norwegian",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "no",
+                    "title": "Norwegian"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Norwegian language pack.",
+            "keywords": [
+                "locale"
+            ],
+            "time": "2019-04-23T18:17:08+00:00"
+        },
+        {
             "name": "michaelbelgium/flarum-discussion-views",
             "version": "v0.1.0-beta.8.3",
             "source": {
@@ -11182,6 +11229,7 @@
                 }
             ],
             "description": "Big Beautiful BBcode",
+            "abandoned": true,
             "time": "2019-11-28T08:09:37+00:00"
         },
         {

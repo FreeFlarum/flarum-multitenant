@@ -1592,7 +1592,8 @@
             "extension",
             "flagrow",
             "flarum"
-        ]
+        ],
+        "abandoned": "fof/sitemap"
     },
     {
         "name": "flarum/approval",
@@ -7304,6 +7305,54 @@
         ]
     },
     {
+        "name": "menomenta/flarum-ext-norwegian",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Menomenta/flarum-ext-norwegian.git",
+            "reference": "86237c48e154659d29a562ffaecd9c03fa948cb7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Menomenta/flarum-ext-norwegian/zipball/86237c48e154659d29a562ffaecd9c03fa948cb7",
+            "reference": "86237c48e154659d29a562ffaecd9c03fa948cb7",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8"
+        },
+        "time": "2019-04-23T18:17:08+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.1.x-dev"
+            },
+            "flarum-extension": {
+                "title": "Norwegian",
+                "icon": {
+                    "image": "icon.svg",
+                    "backgroundColor": "#00247d",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flarum-locale": {
+                "code": "no",
+                "title": "Norwegian"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Norwegian language pack.",
+        "keywords": [
+            "locale"
+        ]
+    },
+    {
         "name": "michaelbelgium/flarum-discussion-views",
         "version": "v0.1.0-beta.8.3",
         "version_normalized": "0.1.0.0-beta8.3",
@@ -11581,7 +11630,8 @@
                 "role": "Creator"
             }
         ],
-        "description": "Big Beautiful BBcode"
+        "description": "Big Beautiful BBcode",
+        "abandoned": true
     },
     {
         "name": "ziymed/lang-arabic",

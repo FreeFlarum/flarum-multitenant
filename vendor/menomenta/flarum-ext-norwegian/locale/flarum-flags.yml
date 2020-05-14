@@ -1,0 +1,61 @@
+flarum-flags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      flag_posts_label: Flag posts
+      view_flags_label: View flagged posts
+
+    # These translations are used in the Flags Settings modal dialog.
+    settings:
+      guidelines_url_label: Community Guidelines URL
+      title: Flags Settings
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Flag Post modal dialog.
+    flag_post:
+      confirmation_message: Takk for at du rapporterte dette innlegget. Moderatorene våre vil ta en titt.
+      dismiss_button: => core.ref.okay
+      reason_inappropriate_label: Uanstendig
+      reason_inappropriate_text: "Dette innlegget er støtende, fornærmende, eller bryter med være <a>retningslinjer</a>."
+      reason_off_topic_label: "Off-topic"
+      reason_off_topic_text: Dette innlegget er ikke relevant for diskusjonen, og bør flyttes annensteds.
+      reason_other_label: Annet
+      reason_spam_label: Spam
+      reason_spam_text: Dette innlegget er reklame.
+      submit_button: => flarum-flags.ref.flag_post
+      title: => flarum-flags.ref.flag_post
+
+    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
+    flagged_posts:
+      empty_text: Ikke rapportert
+      item_text: "{username} i <em>{discussion}</em>"
+      title: => flarum-flags.ref.flagged_posts
+      tooltip: => flarum-flags.ref.flagged_posts
+
+    # These translations are used by the frame displayed around flagged posts.
+    post:
+      dismiss_flag_button: Ignorer rapportering
+      flagged_by_text: "Rapportert av {username}"
+      flagged_by_with_reason_text: "Rapportert av {username} grunnet {reason}"
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      flag_button: Rapporter
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    flag_post: Rapporter innlegg
+    flagged_posts: Rapporterte innlegg
