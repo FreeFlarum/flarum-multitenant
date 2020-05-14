@@ -26,7 +26,6 @@ class MailServiceProvider extends AbstractServiceProvider
                 'mailgun' => MailgunDriver::class,
                 'mandrill' => MandrillDriver::class,
                 'log' => LogDriver::class,
-                'ses' => SesDriver::class,
                 'smtp' => SmtpDriver::class,
             ];
         });
@@ -36,13 +35,9 @@ class MailServiceProvider extends AbstractServiceProvider
             $settings = $this->app->make(SettingsRepositoryInterface::class);
             $validator = $this->app->make(Factory::class);
 
-            if (method_exists($configured, 'validate')) {
-                return $configured->validate($settings, $validator)->any()
-                    ? $this->app->make(NullDriver::class)
-                    : $configured;
-            } else {
-                return $configured;
-            }
+            return $configured->validate($settings, $validator)->any()
+                ? $this->app->make(NullDriver::class)
+                : $configured;
         });
 
         $this->app->alias('mail.driver', DriverInterface::class);
@@ -69,7 +64,9 @@ class MailServiceProvider extends AbstractServiceProvider
 
         $this->app->singleton('mailer', function ($app) {
             $mailer = new Mailer(
-                $app['view'], $app['swift.mailer'], $app['events']
+                $app['view'],
+                $app['swift.mailer'],
+                $app['events']
             );
 
             if ($app->bound('queue')) {

@@ -1,0 +1,28 @@
+nomiscz-auth-steam:
+  forum:
+    buttons:
+      login: Login com Steam
+      link: Vincular Conta Steam
+      unlink: Desvincular Conta Steam
+    alerts:
+      already_linked: Conta Steam já está associada!
+      already_used: Conta Steam já está associada à outro usuário!
+      link_success: Conta Steam associada com sucesso.
+      unlink_success: Conta Steam desassociada com sucesso.
+      error: Alguma coisa deu errado, tente novamente mais tarde!
+    modals:
+      link:
+        title: Vincular Conta Steam
+      unlink:
+        title: Desvincular Conta Steam
+        info:
+          confirm: Você tem certeza que deseja desvincular sua conta Steam?
+          no_providers: Você não tem outras formas de login! Você provavelmente terá que redefinir sua senha.
+        buttons:
+          confirm: Sim, desvincular conta
+          cancel: Não!
+  admin:
+    settings:
+      title: Configurações de Autenticação Steam
+      api_key_label: API Key
+      use_steam_powered_domain: Use o domínio steampowered.com invés do steamcommunity.com (bloqueado na China)

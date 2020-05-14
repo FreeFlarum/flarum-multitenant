@@ -1,6 +1,6 @@
 # https://github.com/askvortsov1/flarum-categories/blob/master/resources/locale/en.yml
-# 7f33ed0 yesterday
-# 2020-3-25 10:20:35 +0800
+# 4a40a47 5 hours ago
+# 2020-4-4 21:11:25 +0800
 
 askvortsov-categories:
   admin:
@@ -9,11 +9,17 @@ askvortsov-categories:
     labels:
       keep_tags_nav: サイドバーの「ラベル」ボタンを非表示にしないでください
       child_bare_icon: サブ板のアイコンが非表示の丸い背景
+      compact_mobile_mode: コンパクトなモバイルデバイスのレイアウト
       full_page_desktop: サイドバーは（ネイティブタブのように）水平に表示されますか？ この設定は、サードパーティのウィジェット（FoFフォーラム統計など）も非表示にします
       parent_remove_icon: メイン板のアイコンを非表示
       parent_remove_description: メイン板の説明を非表示
       parent_remove_stats: メイン板の統計を非表示
       parent_remove_last_discussion: 板の最新のスレッドを非表示
+    headings:
+      nav: ナビゲーションバー
+      layout: レイアウト
+      parent_display: メイン板表示
+      child_display: サブ板表示
     title: 掲示板一覧 - 設定
   forum:
     categories:

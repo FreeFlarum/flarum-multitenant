@@ -1,6 +1,6 @@
 # https://github.com/FriendsOfFlarum/moderator-notes/blob/master/resources/locale/en.yml
-# dc9664b 3 days ago
-# 2020-2-29 22:22:30 +0800
+# 922c098 2 hours ago
+# 2020-5-9 08:39:01 +0800
 
 fof-moderator-notes:
   admin:
@@ -13,10 +13,14 @@ fof-moderator-notes:
       confirmation_message: 伝言成功！ 表示するには、ページを更新する必要がある場合があります。
       create-heading: 伝言を投稿する
       dismiss_button: わかった
-      input_heading: あなたは <strong>{username}</strong> に伝言を残しています
+      input_heading: <strong>{username}</strong>に伝言する
       no_content_given: 空の伝言を投稿できません。
-      noNotes: まだ誰もコメントしていません。最初のものになりたいですか？
-      submit_button: 投稿
+      noNotes: 伝言は一つもないですが。最初の一人になりたいですか？
+      submit_button: 保存
 
     user:
       notes: 伝言板
+
+  api:
+    auto-note: FoF Impersonateを使って、このユーザーに乗り換えました。
+    auto-note-actor: "'ユーザー名'の代わりにFoF Impersonateを使用します。"

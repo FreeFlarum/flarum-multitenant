@@ -155,10 +155,20 @@ class PageListener
             new QADiscussion($this, $this->discussionRepository, isset($queryParams['id']) ? $queryParams['id'] : false);
         }
 
-        // Home page
-        else if($this->requestType === "") {
+        // Home page/discussion overview page
+        else if($this->requestType === "" || $this->requestType === "al") {
             $this->setDescription($this->settings->get('forum_description'));
+            $this->setKeywords($this->settings->get('forum_keywords'));
             $this->setTitle($this->settings->get('forum_title'));
+            $this->setUrl();
+            $this->setCanonicalUrl('');
+
+            // Update meta tag URL when it's the discussion overview page
+            if($this->requestType === "al" && $this->settings->get('default_route') !== '/all') {
+                $this->setUrl('/all');
+
+                $this->setCanonicalUrl('/all');
+            }
         }
     }
 
@@ -178,6 +188,7 @@ class PageListener
             // Add application name
             ->setMetaTag('application-name', $applicationName)
             ->setMetaPropertyTag('og:site_name', $applicationName)
+            ->setMetaPropertyTag('og:type', 'website')
 
             // Robots, follow please! :)
             ->setMetaTag('robots', 'index, follow')
@@ -349,7 +360,7 @@ class PageListener
      * @param $path
      * @return PageListener
      */
-    public function setUrl($path)
+    public function setUrl($path = '')
     {
         $this->setMetaTag('twitter:url', $this->applicationUrl . $path);
         $this->setMetaPropertyTag('og:url', $this->applicationUrl . $path);
@@ -429,6 +440,24 @@ class PageListener
         }
 
         return $this;
+    }
+
+    /**
+     * Set page keywords
+     * 
+     * @param $keywords
+     */
+    public function setKeywords($keywords)
+    {
+        if(!$keywords || $keywords === "") return;
+
+        // Possible array of keywords
+        if(is_array($keywords)) {
+            $keywords = implode(", ", $keywords);
+        }
+
+        // Set keywords meta tag
+        $this->setMetaTag('keywords', $keywords);
     }
 
     /**
@@ -516,6 +545,8 @@ class PageListener
     public function setPageTitle($title)
     {
         $this->flarumDocument->title = $title;
+        
+        return $this;
     }
 
     /**

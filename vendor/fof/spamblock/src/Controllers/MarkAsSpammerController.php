@@ -22,10 +22,10 @@ use Flarum\User\User;
 use FoF\Spamblock\Event\MarkedUserAsSpammer;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Contracts\Events\Dispatcher as EventsDispatcher;
+use Laminas\Diactoros\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response;
 
 class MarkAsSpammerController implements RequestHandlerInterface
 {
@@ -65,7 +65,7 @@ class MarkAsSpammerController implements RequestHandlerInterface
      *
      * @return ResponseInterface
      */
-    public function handle(ServerRequestInterface $request) : ResponseInterface
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $actor = $request->getAttribute('actor');
 

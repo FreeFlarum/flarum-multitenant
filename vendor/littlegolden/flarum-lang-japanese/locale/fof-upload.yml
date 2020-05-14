@@ -37,8 +37,8 @@ fof-upload:
         title: Imgur 画像を保存した設定
         client_id: Imgur 顧客ID
       local:
-        title: ローカルストレージ設定
-        cdn_url: CDN URL（ファイルの先頭に添付）
+        title: ローカル、OSS ストレージ設定
+        cdn_url: OSS/CDN ドメイン名（http/https プレフィックス）
       ovh-svfs:
         title: OVH SVFS ストア設定
         container: コンテナ

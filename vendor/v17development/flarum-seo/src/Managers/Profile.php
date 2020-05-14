@@ -72,6 +72,7 @@ class Profile
         $this->parent
             // Page type
             ->setMetaPropertyTag('og:type', 'profile')
+            ->setMetaPropertyTag('profile:username', $this->user->getAttribute('username'))
 
             // Add Schema.org metadata: ProfilePage https://schema.org/ProfilePage
             ->setSchemaJson('@type', 'ProfilePage')

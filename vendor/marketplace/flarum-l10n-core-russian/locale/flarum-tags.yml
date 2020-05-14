@@ -57,6 +57,11 @@ flarum-tags:
   # Translations in this namespace are used by the forum user interface.
   forum:
 
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: "Все разделы"
+      meta_title_text: => flarum-tags.ref.tags
+
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
       choose_primary_placeholder: "Укажите основной раздел|Укажите {count} основных разделов"
@@ -88,6 +93,10 @@ flarum-tags:
       added_tags_text: "{username} добавил(а) {tagsAdded}."
       removed_tags_text: "{username} удалил(а) {tagsRemoved}."
       tags_text: "раздел {tags}|разделы {tags}"
+
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "Все дискуссии с тегом {tag}"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:

@@ -65,4 +65,4 @@ flarum-flags:
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
     flag_post: 報告投稿
-    flagged_posts: フラグが付けられた投稿
+    flagged_posts: 報告された投稿

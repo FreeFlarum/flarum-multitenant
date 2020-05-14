@@ -1,0 +1,8 @@
+# https://github.com/892768447/flarum-ext-login2see/blob/master/resources/locale/en.yml
+# b913c1a on 19 Nov 2019
+# 2020-4-4 18:59:41 +0800
+
+flarum-ext-login2see:
+  forum:
+    hidden_content: 非表示のコンテンツ
+    login_to_see: "この内容は {login} してページを更新すると表示されます。"

@@ -31,6 +31,8 @@ class ExtensionManager
 
     protected $app;
 
+    protected $container;
+
     protected $migrator;
 
     /**
@@ -51,12 +53,14 @@ class ExtensionManager
     public function __construct(
         SettingsRepositoryInterface $config,
         Application $app,
+        Container $container,
         Migrator $migrator,
         Dispatcher $dispatcher,
         Filesystem $filesystem
     ) {
         $this->config = $config;
         $this->app = $app;
+        $this->container = $container;
         $this->migrator = $migrator;
         $this->dispatcher = $dispatcher;
         $this->filesystem = $filesystem;
@@ -73,12 +77,20 @@ class ExtensionManager
             // Load all packages installed by composer.
             $installed = json_decode($this->filesystem->get($this->app->vendorPath().'/composer/installed.json'), true);
 
+            // Composer 2.0 changes the structure of the installed.json manifest
+            $installed = $installed['packages'] ?? $installed;
+
             foreach ($installed as $package) {
                 if (Arr::get($package, 'type') != 'flarum-extension' || empty(Arr::get($package, 'name'))) {
                     continue;
                 }
+
+                $path = isset($package['install-path'])
+                    ? $this->getExtensionsDir().'/composer/'.$package['install-path']
+                    : $this->getExtensionsDir().'/'.Arr::get($package, 'name');
+
                 // Instantiates an Extension object using the package path and composer.json file.
-                $extension = new Extension($this->getExtensionsDir().'/'.Arr::get($package, 'name'), $package);
+                $extension = new Extension($path, $package);
 
                 // Per default all extensions are installed if they are registered in composer.
                 $extension->setInstalled(true);
@@ -130,7 +142,7 @@ class ExtensionManager
 
         $this->setEnabled($enabled);
 
-        $extension->enable($this->app);
+        $extension->enable($this->container);
 
         $this->dispatcher->dispatch(new Enabled($extension));
     }
@@ -156,7 +168,7 @@ class ExtensionManager
 
         $this->setEnabled($enabled);
 
-        $extension->disable($this->app);
+        $extension->disable($this->container);
 
         $this->dispatcher->dispatch(new Disabled($extension));
     }
@@ -227,7 +239,7 @@ class ExtensionManager
      */
     public function migrate(Extension $extension, $direction = 'up')
     {
-        $this->app->bind(Builder::class, function ($container) {
+        $this->container->bind(Builder::class, function ($container) {
             return $container->make(ConnectionInterface::class)->getSchemaBuilder();
         });
 
@@ -258,7 +270,7 @@ class ExtensionManager
     /**
      * Get only enabled extensions.
      *
-     * @return array
+     * @return array|Extension[]
      */
     public function getEnabledExtensions()
     {
@@ -316,7 +328,9 @@ class ExtensionManager
      */
     public function isEnabled($extension)
     {
-        return in_array($extension, $this->getEnabled());
+        $enabled = $this->getEnabledExtensions();
+
+        return isset($enabled[$extension]);
     }
 
     /**

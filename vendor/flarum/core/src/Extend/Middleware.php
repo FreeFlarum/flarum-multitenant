@@ -14,12 +14,12 @@ use Illuminate\Contracts\Container\Container;
 
 class Middleware implements ExtenderInterface
 {
-    protected $addMiddlewares = [];
-    protected $removeMiddlewares = [];
-    protected $replaceMiddlewares = [];
-    protected $insertBeforeMiddlewares = [];
-    protected $insertAfterMiddlewares = [];
-    protected $frontend;
+    private $addMiddlewares = [];
+    private $removeMiddlewares = [];
+    private $replaceMiddlewares = [];
+    private $insertBeforeMiddlewares = [];
+    private $insertAfterMiddlewares = [];
+    private $frontend;
 
     public function __construct(string $frontend)
     {
@@ -49,14 +49,14 @@ class Middleware implements ExtenderInterface
 
     public function insertBefore($originalMiddleware, $newMiddleware)
     {
-        $this->replaceMiddlewares[$originalMiddleware] = $newMiddleware;
+        $this->insertBeforeMiddlewares[$originalMiddleware] = $newMiddleware;
 
         return $this;
     }
 
     public function insertAfter($originalMiddleware, $newMiddleware)
     {
-        $this->replaceMiddlewares[$originalMiddleware] = $newMiddleware;
+        $this->insertAfterMiddlewares[$originalMiddleware] = $newMiddleware;
 
         return $this;
     }
@@ -69,7 +69,8 @@ class Middleware implements ExtenderInterface
             }
 
             foreach ($this->replaceMiddlewares as $originalMiddleware => $newMiddleware) {
-                $existingMiddleware = array_replace($existingMiddleware,
+                $existingMiddleware = array_replace(
+                    $existingMiddleware,
                     array_fill_keys(
                         array_keys($existingMiddleware, $originalMiddleware),
                         $newMiddleware
@@ -78,7 +79,8 @@ class Middleware implements ExtenderInterface
             }
 
             foreach ($this->insertBeforeMiddlewares as $originalMiddleware => $newMiddleware) {
-                array_splice($existingMiddleware,
+                array_splice(
+                    $existingMiddleware,
                     array_search($originalMiddleware, $existingMiddleware),
                     0,
                     $newMiddleware
@@ -86,7 +88,8 @@ class Middleware implements ExtenderInterface
             }
 
             foreach ($this->insertAfterMiddlewares as $originalMiddleware => $newMiddleware) {
-                array_splice($existingMiddleware,
+                array_splice(
+                    $existingMiddleware,
                     array_search($originalMiddleware, $existingMiddleware) + 1,
                     0,
                     $newMiddleware

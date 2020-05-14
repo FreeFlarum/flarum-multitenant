@@ -84,4 +84,11 @@ export default class TagsPage extends Page {
       </div>
     );
   }
+
+  config(...args) {
+    super.config(...args);
+
+    app.setTitle(app.translator.trans('flarum-tags.forum.all_tags.meta_title_text'));
+    app.setTitleCount(0);
+  }
 }

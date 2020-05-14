@@ -23,22 +23,33 @@ export default function() {
   extend(IndexPage.prototype, 'view', function(vdom) {
     const tag = this.currentTag();
 
+    if (tag) vdom.attrs.className += ' IndexPage--tag'+tag.id();
+  });
+
+  extend(IndexPage.prototype, 'config', function() {
+    const tag = this.currentTag();
+
     if (tag) {
-      vdom.attrs.className += ' IndexPage--tag'+tag.id();
+      app.setTitle(tag.name());
     }
   });
 
   // If currently viewing a tag, restyle the 'new discussion' button to use
-  // the tag's color.
+  // the tag's color, and disable if the user isn't allowed to edit.
   extend(IndexPage.prototype, 'sidebarItems', function(items) {
     const tag = this.currentTag();
 
     if (tag) {
       const color = tag.color();
+      const canStartDiscussion = tag.canStartDiscussion();
 
       if (color) {
         items.get('newDiscussion').props.style = {backgroundColor: color};
       }
+    
+      items.get('newDiscussion').props.disabled = !canStartDiscussion;
+      items.get('newDiscussion').props.children = app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button');
+    
     }
   });
 

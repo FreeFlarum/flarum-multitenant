@@ -12,6 +12,7 @@ flarum-markdown:
       bold_tooltip: Félkövér szöveg beszúrása
       code_tooltip: Kód beágyazása
       header_tooltip: Fejléc-szöveg beszúrása
+      image_tooltip: Kép beszúrása
       italic_tooltip: Dőlt szöveg beszúrása
       link_tooltip: "Link (hivatkozás) hozzáadása"
       ordered_list_tooltip: Számozott lista beszúrása

@@ -1,0 +1,8 @@
+# https://github.com/oaklinq/flarum-ext-reply2see/blob/master/resources/locale/en.yml
+# 5ce0bfb on 14 Feb 2019
+# 2020-4-4 22:21:21 +0800
+
+wiseclock-reply2see:
+  forum:
+    hidden_content: 非表示のコンテンツ
+    reply_to_see: "この内容は {reply} してページを更新すると表示されます。"

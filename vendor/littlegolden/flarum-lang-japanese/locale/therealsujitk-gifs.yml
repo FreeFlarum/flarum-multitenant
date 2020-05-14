@@ -1,0 +1,21 @@
+# https://github.com/therealsujitk/flarum-ext-gifs/blob/master/resources/locale/en.yml
+# 9035286 16 hours ago
+# 2020-3-15 15:41:55 +0800
+
+therealsujitk:
+  forum:
+    gifs:
+      label: 'GIF を挿入'
+      title: 'GIF を選択'
+      searchbar: 'GIFs を検索'
+      search: '検索'
+      loading: '積み込み...'
+      noresults: '写真が見つかりません'
+      loadmore: 'さらに読み込む'
+  admin:
+    gifs:
+      title: 'GIF API 設定'
+      giphyAPIkey: 'Giphy API Key'
+    about:
+      stringA: 'プラグイン作成者：'
+      stringB: '寄付する：'

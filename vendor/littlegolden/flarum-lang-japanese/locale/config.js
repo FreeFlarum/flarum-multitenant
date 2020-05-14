@@ -1,79 +1,142 @@
 moment.locale('ja', {
-    months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
-    monthsShort: '1 月_2月_3 月_4 月_5 月_6 月_7 月_8 月_9 月_10 月_11 月_12 月'.split('_'),
-    weekdays: '日曜日_月曜日_火曜日_水曜日_木曜日_金曜日_土曜日'.split('_'),
-    weekdaysShort: '日曜_月曜_火曜_水曜_木曜_金曜_土曜'.split('_'),
-    weekdaysMin: '日_月_火_水_木_金_土'.split('_'),
-    longDateFormat: {
+  eras: [
+    {
+      since: '2019-05-01',
+      offset: 1,
+      name: '令和',
+      narrow: '㋿',
+      abbr: 'R',
+    },
+    {
+      since: '1989-01-08',
+      until: '2019-04-30',
+      offset: 1,
+      name: '平成',
+      narrow: '㍻',
+      abbr: 'H',
+    },
+    {
+      since: '1926-12-25',
+      until: '1989-01-07',
+      offset: 1,
+      name: '昭和',
+      narrow: '㍼',
+      abbr: 'S',
+    },
+    {
+      since: '1912-07-30',
+      until: '1926-12-24',
+      offset: 1,
+      name: '大正',
+      narrow: '㍽',
+      abbr: 'T',
+    },
+    {
+      since: '1873-01-01',
+      until: '1912-07-29',
+      offset: 6,
+      name: '明治',
+      narrow: '㍾',
+      abbr: 'M',
+    },
+    {
+      since: '0001-01-01',
+      until: '1873-12-31',
+      offset: 1,
+      name: '西暦',
+      narrow: 'AD',
+      abbr: 'AD',
+    },
+    {
+      since: '0000-12-31',
+      until: -Infinity,
+      offset: 1,
+      name: '紀元前',
+      narrow: 'BC',
+      abbr: 'BC',
+    },
+  ],
+  eraYearOrdinalRegex: /(元|\d+)年/,
+  eraYearOrdinalParse: function (input, match) {
+      return match[1] === '元' ? 1 : parseInt(match[1] || input, 10);
+  },
+  months: '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
+  monthsShort: '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split(
+      '_'
+  ),
+  weekdays: '日曜日_月曜日_火曜日_水曜日_木曜日_金曜日_土曜日'.split('_'),
+  weekdaysShort: '日_月_火_水_木_金_土'.split('_'),
+  weekdaysMin: '日_月_火_水_木_金_土'.split('_'),
+  longDateFormat: {
       LT: 'HH:mm',
       LTS: 'HH:mm:ss',
-      L: 'M 月 D 日',
-      LL: 'YYYY 年 M 月 DD 日',
-      LLL: 'YYYY-MM-DD HH:mm',
-      LLLL: 'YYYY-MM-DD HH:mm:ss',
-      l: 'M/D',
-      ll: 'YY/M/D',
-      lll: 'YYYY-MM-DD HH:mm',
-      llll: 'YYYY-MM-DD HH:mm:ss'
-    },
-    calendar: {
-      sameDay: function () {
-        return this.minutes() === 0 ? '[今日] h [時]' : '[明日] LT';
-      },
-      nextDay: function () {
-        return this.minutes() === 0 ? '[明日] h [時]' : '[明日] LT';
-      },
-      lastDay: function () {
-        return this.minutes() === 0 ? '[昨日] h [時]' : '[昨日] LT';
-      },
-      nextWeek: function () {
-        var startOfWeek, prefix;
-        startOfWeek = moment().startOf('week');
-        prefix = this.unix() - startOfWeek.unix() >= 7 * 24 * 3600 ? '[下]' : '[本]';
-        return this.minutes() === 0 ? prefix + 'ddd h 時' : prefix + 'ddd h 时 mm';
-      },
-      lastWeek: function () {
-        var startOfWeek, prefix;
-        startOfWeek = moment().startOf('week');
-        prefix = this.unix() < startOfWeek.unix() ? '[上]' : '[本]';
-        return this.minutes() === 0 ? prefix + 'ddd h 時' : prefix + 'ddd h 时 mm';
-      },
-      sameElse: 'LL'
-    },
-    ordinalParse: /\d{1,2}(日|月|週)/,
-    ordinal: function (number, period) {
-      switch (period) {
-        case 'd':
-        case 'D':
-        case 'DDD':
-          return number + '日';
-        case 'M':
-          return number + '月';
-        case 'w':
-        case 'W':
-          return number + '週';
-        default:
-          return number;
+      L: 'YYYY/MM/DD',
+      LL: 'YYYY年M月D日',
+      LLL: 'YYYY年M月D日 HH:mm',
+      LLLL: 'YYYY年M月D日 dddd HH:mm',
+      l: 'YYYY/MM/DD',
+      ll: 'YYYY年M月D日',
+      lll: 'YYYY年M月D日 HH:mm',
+      llll: 'YYYY年M月D日(ddd) HH:mm',
+  },
+  meridiemParse: /午前|午後/i,
+  isPM: function (input) {
+      return input === '午後';
+  },
+  meridiem: function (hour, minute, isLower) {
+      if (hour < 12) {
+          return '午前';
+      } else {
+          return '午後';
       }
-    },
-    relativeTime: {
-      future: '%s以内',
+  },
+  calendar: {
+      sameDay: '[今日] LT',
+      nextDay: '[明日] LT',
+      nextWeek: function (now) {
+          if (now.week() !== this.week()) {
+              return '[来週]dddd LT';
+          } else {
+              return 'dddd LT';
+          }
+      },
+      lastDay: '[昨日] LT',
+      lastWeek: function (now) {
+          if (this.week() !== now.week()) {
+              return '[先週]dddd LT';
+          } else {
+              return 'dddd LT';
+          }
+      },
+      sameElse: 'L',
+  },
+  dayOfMonthOrdinalParse: /\d{1,2}日/,
+  ordinal: function (number, period) {
+      switch (period) {
+          case 'y':
+              return number === 1 ? '元年' : number + '年';
+          case 'd':
+          case 'D':
+          case 'DDD':
+              return number + '日';
+          default:
+              return number;
+      }
+  },
+  relativeTime: {
+      future: '%s後',
       past: '%s前',
       s: '数秒',
-      m: '1 分',
-      mm: '%d 分',
-      h: '1 時間',
-      hh: '%d 時間',
-      d: '1 日',
-      dd: '%d 日',
-      M: '1 ヶ月',
-      MM: '%d ヶ月',
-      y: '1 年',
-      yy: '%d 年'
-    },
-    week: {
-      // GB/T 7408-1994《数据元和交换格式·信息交换·日期和时间表示法》与ISO 8601:1988等效
-      dow: 0, // Sunday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    }
-  });
+      ss: '%d秒',
+      m: '1分',
+      mm: '%d分',
+      h: '1時間',
+      hh: '%d時間',
+      d: '1日',
+      dd: '%d日',
+      M: '1ヶ月',
+      MM: '%dヶ月',
+      y: '1年',
+      yy: '%d年',
+  },
+});

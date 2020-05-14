@@ -27,6 +27,7 @@ validation:
   dimensions: "A(z) :attribute felbontása nem megfelelő."
   distinct: "A(z) :attribute értékének egyedinek kell lennie!"
   email: "A(z) :attribute nem érvényes email formátum."
+  ends_with: "A(z) :attribute a következővel kell végződjön: :values"
   exists: "A(z) :attribute már létezik."
   file: "A(z) :attribute fájl kell, hogy legyen!"
   filled: "A(z) :attribute megadása kötelező!"
@@ -67,11 +68,13 @@ validation:
     file: "A(z) :attribute mérete :size kilobájt kell, hogy legyen!"
     string: "A(z) :attribute hossza :size karakter kell, hogy legyen!"
     array: "A(z) :attribute :size elemet kell tartalmazzon!"
+  starts_with: ":attribute a következővel kell kezdődjön: :values"
   string: "A(z) :attribute szövegnek kell legyen."
   timezone: "A(z) :attribute nem létező időzona."
   unique: "A(z) :attribute már foglalt."
   uploaded: "A(z) :attribute feltöltése sikertelen."
   url: "A(z) :attribute érvénytelen link."
+  uuid: ":attribute érvényes UUID-val kell rendelkezzen."
 
   attributes:
     username: "felhasználónév"

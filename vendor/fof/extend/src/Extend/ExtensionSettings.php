@@ -21,11 +21,6 @@ use Illuminate\Contracts\Container\Container;
 class ExtensionSettings implements ExtenderInterface
 {
     /**
-     * @var SettingsRepositoryInterface
-     */
-    private $settings;
-
-    /**
      * @var string
      */
     private $prefix = '';
@@ -40,22 +35,17 @@ class ExtensionSettings implements ExtenderInterface
      */
     private $defaults = [];
 
-    /**
-     * @param string $frontend
-     */
-    public function __construct()
-    {
-        $this->settings = app(SettingsRepositoryInterface::class);
-    }
-
     public function extend(Container $container, Extension $extension = null)
     {
         $container->resolving(
             'flarum.frontend.forum',
             function (Frontend $frontend, Container $container) {
-                $frontend->content(function (Document $document) {
+                /** @var SettingsRepositoryInterface settings */
+                $settings = $container->make(SettingsRepositoryInterface::class);
+
+                $frontend->content(function (Document $document) use ($settings) {
                     foreach ($this->keys as $index => $key) {
-                        $document->payload[$key] = $this->settings->get($key, $this->defaults[$index]);
+                        $document->payload[$key] = $settings->get($key, $this->defaults[$index]);
                     }
                 });
             }

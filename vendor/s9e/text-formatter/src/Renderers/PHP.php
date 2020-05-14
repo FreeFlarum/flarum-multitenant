@@ -16,7 +16,7 @@ use s9e\TextFormatter\Utils\XPath;
 abstract class PHP extends Renderer
 {
 	/**
-	* @var array[] List of dictionaries used by the Quick renderer [[attrName => attrValue]]
+	* @var array[] Stack of dictionaries used by the Quick renderer [[attrName => attrValue]]
 	*/
 	protected $attributes;
 
@@ -43,7 +43,7 @@ abstract class PHP extends Renderer
 	/**
 	* @var string Regexp that matches nodes that SHOULD NOT be rendered by the quick renderer
 	*/
-	protected $quickRenderingTest = '(<[!?])';
+	protected $quickRenderingTest = '((?<=<)[!?])';
 
 	/**
 	* @var array Dictionary of static replacements used by the Quick renderer [id => replacement]
@@ -82,7 +82,7 @@ abstract class PHP extends Renderer
 		if ($root->nodeType === XML_TEXT_NODE)
 		{
 			// Text nodes are outputted directly
-			$this->out .= htmlspecialchars($root->textContent,0);
+			$this->out .= htmlspecialchars($root->textContent, ENT_NOQUOTES);
 		}
 		else
 		{

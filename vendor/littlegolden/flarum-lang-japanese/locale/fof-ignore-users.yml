@@ -23,6 +23,6 @@ fof-ignore-users:
     user_controls:
       ignore_button: 無視する
       ignore_confirmation: この人を無視しますか？
-      unignore_button: 取消无视
+      unignore_button: 取消無視
       unignore_confirmation: この人を無視してキャンセルしますか？
 

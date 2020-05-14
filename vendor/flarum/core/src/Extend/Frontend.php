@@ -25,12 +25,12 @@ use Illuminate\Contracts\Container\Container;
 
 class Frontend implements ExtenderInterface
 {
-    protected $frontend;
+    private $frontend;
 
-    protected $css = [];
-    protected $js;
-    protected $routes = [];
-    protected $content = [];
+    private $css = [];
+    private $js;
+    private $routes = [];
+    private $content = [];
 
     public function __construct(string $frontend)
     {
@@ -152,7 +152,8 @@ class Frontend implements ExtenderInterface
 
                 foreach ($this->routes as $route) {
                     $collection->get(
-                        $route['path'], $route['name'],
+                        $route['path'],
+                        $route['name'],
                         $factory->toFrontend($this->frontend, $route['content'])
                     );
                 }

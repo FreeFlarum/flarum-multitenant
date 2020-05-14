@@ -1,3 +1,7 @@
+# https://github.com/migratetoflarum/canonical/blob/master/resources/locale/en.yml
+# 9070573 on 14 Mar 2019
+# 2020-5-12 20:38:01 +00800
+
 migratetoflarum-canonical:
     admin:
         settings:

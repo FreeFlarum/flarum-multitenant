@@ -18,6 +18,8 @@ flarum-tags:
       delete_tag_confirmation: "Biztosan törölni szeretnéd ezt a taget? A témák amelyek használták ezt a taget NEM fognak törlődni."
       description_label: Leírás
       hide_label: Elrejtés az 'Összes téma' panelről
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
       name_label: => flarum-tags.ref.name
       name_placeholder: => flarum-tags.ref.name
       slug_label: Slug
@@ -55,6 +57,11 @@ flarum-tags:
   # Translations in this namespace are used by the forum user interface.
   forum:
 
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: Az összes tag
+      meta_title_text: => flarum-tags.ref.tags
+
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
       choose_primary_placeholder: "Válassz egy elsődleges taget|Válassz {count} elsődleges taget"
@@ -86,6 +93,10 @@ flarum-tags:
       added_tags_text: "{username} hozzáadta a {tagsAdded}."
       removed_tags_text: "{username} eltávolította a {tagsRemoved}."
       tags_text: "{tags} taget|{tags} tageket"
+
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "Az összes téma a(z) {tag} taggel"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:

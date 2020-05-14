@@ -37,8 +37,8 @@ fof-follow-tags:
     newPostInTag: "[Tag | New Post] タイトル"
 
   ref:
-    follow: フォローする
-    following: フォローする
+    follow: フォロー
+    following: フォロー中
     hiding: 隠す
-    ignoring: 無視する
+    ignoring: 無視中
     lurking: ラークする

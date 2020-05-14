@@ -87,7 +87,7 @@ class Installation
     public function prerequisites(): Prerequisite\PrerequisiteInterface
     {
         return new Prerequisite\Composite(
-            new Prerequisite\PhpVersion('7.1.0'),
+            new Prerequisite\PhpVersion('7.2.0'),
             new Prerequisite\PhpExtensions([
                 'dom',
                 'gd',
@@ -120,7 +120,10 @@ class Installation
 
         $pipeline->pipe(function () {
             return new Steps\StoreConfig(
-                $this->debug, $this->dbConfig, $this->baseUrl, $this->getConfigPath()
+                $this->debug,
+                $this->dbConfig,
+                $this->baseUrl,
+                $this->getConfigPath()
             );
         });
 

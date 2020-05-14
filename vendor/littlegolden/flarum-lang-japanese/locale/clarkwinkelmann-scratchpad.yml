@@ -1,14 +1,18 @@
 # https://github.com/clarkwinkelmann/flarum-ext-scratchpad/blob/master/resources/locale/en.yml
-# 5921ddf 7 days ago
-# 2020-3-13 21:12:07 +0800
+# d997605 3 hours ago
+# 2020-5-9 09:06:43 +0800
 
 clarkwinkelmann-scratchpad:
     admin:
         settings:
-            title: 付箋 - 設定
+            title: Scratchpad - 設定
             single-column: エディターを 3 列ではなく単一列にグループ化
             theme: CodeMirror テーマ（リフレッシュ後に有効になります）
+            theme-auto: 自動（デフォルトはライトテーマ、暗いテーマは darcula）
             indent: インデント用のスペースの数
+            npm-install-command: NPM インストールコマンド
+            webpack-command: Webpack コマンド
+            empty-for-default: デフォルトのコマンドを使用するには、空白のままにします。
             compile-automatically: 保存時に JS を自動的にコンパイルします
 
         controls:

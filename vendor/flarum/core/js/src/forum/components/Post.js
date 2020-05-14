@@ -43,32 +43,40 @@ export default class Post extends Component {
 
     return (
       <article {...attrs}>
-        {this.subtree.retain() || (() => {
-          const controls = PostControls.controls(this.props.post, this).toArray();
+        {this.subtree.retain() ||
+          (() => {
+            const controls = PostControls.controls(this.props.post, this).toArray();
 
-          return (
-            <div>
-              {this.content()}
-              <aside className="Post-actions">
-                <ul>
-                  {listItems(this.actionItems().toArray())}
-                  {controls.length ? <li>
-                    <Dropdown
-                      className="Post-controls"
-                      buttonClassName="Button Button--icon Button--flat"
-                      menuClassName="Dropdown-menu--right"
-                      icon="fas fa-ellipsis-h"
-                      onshow={() => this.$('.Post-actions').addClass('open')}
-                      onhide={() => this.$('.Post-actions').removeClass('open')}>
-                      {controls}
-                    </Dropdown>
-                  </li> : ''}
-                </ul>
-              </aside>
-              <footer className="Post-footer"><ul>{listItems(this.footerItems().toArray())}</ul></footer>
-            </div>
-          );
-        })()}
+            return (
+              <div>
+                {this.content()}
+                <aside className="Post-actions">
+                  <ul>
+                    {listItems(this.actionItems().toArray())}
+                    {controls.length ? (
+                      <li>
+                        <Dropdown
+                          className="Post-controls"
+                          buttonClassName="Button Button--icon Button--flat"
+                          menuClassName="Dropdown-menu--right"
+                          icon="fas fa-ellipsis-h"
+                          onshow={() => this.$('.Post-actions').addClass('open')}
+                          onhide={() => this.$('.Post-actions').removeClass('open')}
+                        >
+                          {controls}
+                        </Dropdown>
+                      </li>
+                    ) : (
+                      ''
+                    )}
+                  </ul>
+                </aside>
+                <footer className="Post-footer">
+                  <ul>{listItems(this.footerItems().toArray())}</ul>
+                </footer>
+              </div>
+            );
+          })()}
       </article>
     );
   }
@@ -100,19 +108,25 @@ export default class Post extends Component {
 
   /**
    * Get the post's classes.
-   * 
+   *
    * @param string classes
    * @returns {string[]}
    */
   classes(existing) {
     let classes = (existing || '').split(' ').concat(['Post']);
 
+    const user = this.props.post.user();
+
     if (this.loading) {
       classes.push('Post--loading');
     }
 
-    if (this.props.post.user() === app.session.user) {
+    if (user && user === app.session.user) {
       classes.push('Post--by-actor');
+    }
+
+    if (user && app.current.discussion && app.current.discussion.attribute('startUserId') == user.id()) {
+      classes.push('Post--by-start-user');
     }
 
     return classes;

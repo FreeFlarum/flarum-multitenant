@@ -73,6 +73,7 @@ core:
       color_label: => core.ref.color
       delete_button: "Удалить группу"
       delete_confirmation: "Вы уверены, что хотите удалить группу? Пользователи, находящиеся в этой группе, не будут удалены."
+      hide_label: "Скрыть на форуме"
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: "Название"
@@ -108,6 +109,7 @@ core:
       mail_username_label: => core.ref.username
       mailgun_heading: "Настройки Mailgun"
       mandrill_heading: "Настройки Mandrill"
+      not_sending_message: "Flarum не может отправлять электронные письма. Проблема может быть связана с выбранным драйвером или ошибкой в его конфигурации."
       ses_heading: "Настройки SES"
       smtp_heading: "Настройки SMTP"
       submit_button: => core.ref.save_changes
@@ -164,6 +166,7 @@ core:
       sign_up_label: "Регистрация"
       start_discussions_label: "Создать дискуссии"
       view_discussions_label: "Читать дискуссию"
+      view_hidden_groups_label: "Смотреть скрытые группы"
       view_last_seen_at_label: "Смотреть время последнего посещения"
       view_post_ips_label: "Смотреть IP-адреса"
       view_user_list_label: "Смотреть список пользователей"
@@ -337,8 +340,10 @@ core:
     # These translations are used by the post control buttons.
     post_controls:
       delete_button: => core.ref.delete
+      delete_confirmation: "Вы уверены, что хотите удалить сообщение навсегда? Это действие невозможно отменить."
       delete_forever_button: => core.ref.delete_forever
       edit_button: => core.ref.edit
+      hide_confirmation: "Вы уверены, что хотите удалить сообщение?"
       restore_button: => core.ref.restore
 
     # These translations are used in the scrubber to the right of the post stream.

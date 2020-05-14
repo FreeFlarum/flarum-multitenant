@@ -14,7 +14,6 @@ use Flarum\Api\Serializer\AbstractSerializer;
 use Flarum\Api\Serializer\BasicDiscussionSerializer;
 use Flarum\Api\Serializer\NotificationSerializer;
 use Flarum\Event\ConfigureApiRoutes;
-use Flarum\Event\ConfigureMiddleware;
 use Flarum\Event\ConfigureNotificationTypes;
 use Flarum\Foundation\AbstractServiceProvider;
 use Flarum\Foundation\Application;
@@ -71,8 +70,6 @@ class ApiServiceProvider extends AbstractServiceProvider
                 $pipe->pipe($this->app->make($middleware));
             }
 
-            event(new ConfigureMiddleware($pipe, 'api'));
-
             $pipe->pipe(new HttpMiddleware\DispatchRoute($this->app->make('flarum.api.routes')));
 
             return $pipe;
@@ -103,7 +100,7 @@ class ApiServiceProvider extends AbstractServiceProvider
             'discussionRenamed' => BasicDiscussionSerializer::class
         ];
 
-        $this->app->make('events')->fire(
+        $this->app->make('events')->dispatch(
             new ConfigureNotificationTypes($blueprints, $serializers)
         );
 
@@ -124,7 +121,7 @@ class ApiServiceProvider extends AbstractServiceProvider
         $callback = include __DIR__.'/routes.php';
         $callback($routes, $factory);
 
-        $this->app->make('events')->fire(
+        $this->app->make('events')->dispatch(
             new ConfigureApiRoutes($routes, $factory)
         );
     }

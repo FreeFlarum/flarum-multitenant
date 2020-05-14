@@ -85,7 +85,8 @@ class TwitterAuthController implements RequestHandlerInterface
         $user = $server->getUserDetails($tokenCredentials);
 
         return $this->response->make(
-            'twitter', $user->uid,
+            'twitter',
+            $user->uid,
             function (Registration $registration) use ($user) {
                 $registration
                     ->provideTrustedEmail($user->email)

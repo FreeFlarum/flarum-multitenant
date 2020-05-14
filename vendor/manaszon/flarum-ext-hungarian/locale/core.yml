@@ -73,8 +73,8 @@ core:
       color_label: => core.ref.color
       delete_button: Csoport törlése
       delete_confirmation: "Biztosan törölni szeretnéd ezt a csoportot? A csoport tagjai NEM lesznek törölve."
-      icon_label: Ikon
-      icon_text: "Adj meg egy nevet bármely <a>FontAwesome</a> ikon-osztályból a <code>fas fa-</code> prefix <em>hozzáadásával</em>."
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
       name_label: Név
       plural_placeholder: Többesszám (pl.":" Moderátorok)
       singular_placeholder: Egyesszám (pl.":" Moderátor)
@@ -89,19 +89,30 @@ core:
 
     # These translations are used in the email page of the admin interface.
     email:
-      account_heading: SMTP felhasználó
       addresses_heading: Címek
+      driver_heading: Válassz egy driver-t
       driver_label: Driver
-      encryption_label: Titkosítás
       from_label: Küldő
       heading: => core.ref.email
-      host_label: Hoszt
-      password_label: => core.ref.password
-      port_label: Port
-      server_heading: SMTP szerver
+      mail_encryption_label: Titkosítás
+      mail_host_label: Hoszt
+      mail_mailgun_domain_label: Domain
+      mail_mailgun_region_label: Régió
+      mail_mailgun_secret_label: Titkos kulcs
+      mail_mandrill_secret_label: Titkos kulcs
+      mail_password_label: => core.ref.password
+      mail_port_label: Port
+      mail_ses_key_label: Kulcs
+      mail_ses_region_label: Régió
+      mail_ses_secret_label: Secret
+      mail_username_label: => core.ref.username
+      mailgun_heading: Mailgun beállítások
+      mandrill_heading: Mandrill beállítások
+      not_sending_message: A Flarum jelenleg nem küld ki emaileket. Ennek oka lehet a kiválasztott driver, vagy a rosszul megadott beállítások.
+      ses_heading: SES beállítások
+      smtp_heading: SMTP beállítások
       submit_button: => core.ref.save_changes
-      text:  "Állítsd be az SMTP szerver adatait, illetve a használni kívánt email-címet, amelyről a fórum az üzeneteket küldeni fogja."
-      username_label: => core.ref.username
+      text: Állítsd be a megfelelő driver-t, a beállításokat és a címeket, hogy a fórumod emaileket tudjon küldeni.
 
     # These translations are used in the Extensions page.
     extensions:
@@ -142,10 +153,12 @@ core:
       delete_posts_forever_label: Poszt végleges törlése
       delete_posts_label: Posztok törlése
       edit_posts_label: Posztok szerkesztése
+      edit_users_label: Felhasználók szerkesztése
       global_heading: Globális
       moderate_heading: Moderálás
       new_group_button: Új csoport
       participate_heading: Közreműködés
+      post_without_throttle_label: Válasz küldése több alkalommal várakozás nélkül
       read_heading: Olvasás
       rename_discussions_label: Téma átnevezése
       reply_to_discussions_label: Válaszolás egy témához
@@ -312,6 +325,7 @@ core:
       discussion_renamed_text: "{username} módosította a címet."
       empty_text: Nincs új értesítés.
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      mark_as_read_tooltip: Megjelölés olvasottként
       title: => core.ref.notifications
       tooltip: => core.ref.notifications
 
@@ -396,7 +410,9 @@ core:
     user_controls:
       button: Vezérlőpult
       delete_button: => core.ref.delete
-      delete_confirmation: "Biztosan törölni szeretnéd ezt a felhasználói fiókot? A felhasználó összes posztja törlődni fog."
+      delete_confirmation: "Biztosan törölni szeretnéd ezt a felhasználói fiókot? A felhasználó hozzászólásai NEM fognak törlődni."
+      delete_error_message: "<i>{username} ({email})</i> felhasználó törlése sikertelen volt"
+      delete_success_message: "<i>{username} ({email})</i> felhasználó törölve"
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -450,11 +466,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: Nem rendelkezel megfelelő jogokkal az oldal megtekintéséhez.
-      404_message: A keresett oldal nem található.
-      404_return_link: "Visszatérés a {forum} oldalra."
-      500_message: Egy hiba lépett fel az oldal betöltése közben.
-      503_message: "{forum} fejlesztés alatt áll. Köszönjük a türelmedet!"
+      csrf_token_mismatch: Túl sokáig voltál inaktív.
+      csrf_token_mismatch_return_link: Vissza, hogy megpróbáljam mégegyszer
+      invalid_confirmation_token: Ez a megerősítő link már fel lett használva vagy érvénytelen.
+      not_authenticated: Nem rendelkezel megfelelő jogokkal az oldal megtekintéséhez. Próbáld meg újra bejelentkezés után.
+      not_found: A keresett oldal nem található.
+      not_found_return_link: "Visszatérés a {forum} oldalra."
+      permission_denied: Nem rendelkezel megfelelő jogokkal az oldal megtekintéséhez.
+      unknown: Egy hiba lépett fel az oldal betöltése közben.
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:
@@ -542,10 +561,12 @@ core:
     discussions: Témák
     edit: Szerkesztés
     email: Email
+    icon: Ikon
+    icon_text: "Adj meg egy nevet bármely <a>FontAwesome</a> ikon-osztályból a <code>fas fa-</code> prefix <em>hozzáadásával</em>."
     load_more: Továbbiak betöltése
     log_in: Bejelentkezés
     log_out: Kijelentkezés
-    mark_all_as_read: Összes olvasottnak jelölése
+    mark_all_as_read: Összes megjelölése olvasottként
     next_page: Következő oldal
     notifications: Értesítések
     okay: OK                                     # Referenced by flarum-tags.yml

@@ -1,6 +1,6 @@
 # https://github.com/FriendsOfFlarum/byobu/blob/master/resources/locale/en.yml
-# 009c3f1 16 hours ago
-# 2020-3-2 18:52:11 +0800
+# cac53a3 3 days ago
+# 2020-4-4 19:32:40 +0800
 
 fof-byobu:
     forum:
@@ -13,6 +13,8 @@ fof-byobu:
             edit_recipients: メンバーを編集
             send_pd: "{username} と私的なチャット"
             cancel: 取り消し
+            remove_from_discussion: 雑谈を退出させる
+            make_public: 雑谈を公に表示する
         composer_private_discussion:
             submit_button: 私的な雑谈を投稿する
             title_placeholder: 私的な雑谈のタイトル
@@ -20,10 +22,10 @@ fof-byobu:
             recipients: "{count} 人のみが閲覧可能|{count} 人のみが閲覧可能"
             user_deleted: --削除済み--
         nav:
-            private_discussions: 私的な雑谈
-            start_button: 私的な雑谈を投稿する
+            start_button: 私的な雑谈を開始
+
         input:
-            search_recipients: ユーザーを検索するには、少なくとも3文字入力してください...
+            search_recipients: ユーザー名の最初の3文字を入力して検索します...
         search:
             headings:
                 groups: ユーザーグループ
@@ -39,6 +41,7 @@ fof-byobu:
                 added_and_removed: "{username} は {added} を雑谈に招待し、{removed} を雑谈から削除しました。"
                 added: "{username} が雑谈に {added} を招待しました。"
                 removed: "{username} は雑谈から {removed} を削除しました。"
+                removed_self: "{username} は雑谈に離れました。"
         user:
             settings:
                 block_pd: 私的な雑谈をブロックする
@@ -47,10 +50,17 @@ fof-byobu:
             dropdown_label: 私的な雑谈
 
         notifications:
-            pd_label: 誰かが私を私的な雑谈に招待しました
+            pd_label: 誰かが私を私的な雑谈を作成に招待しました
             pd_reply_label: 私が参加した私的な雑谈に誰かが投稿しました
             pd_reply_text: "{username} は私が参加した私的な雑谈に投稿しました"
             pd_text: "{username} ジャックは私的な雑谈を作成し、あなたが参加するよう招待します"
+            pd_user_left_label: 誰かが私が参加した私的な雑谈に離れました
+            pd_user_left_text: "{username} は私的な雑谈に離れました"
+            pd_added_text: "{username} が私を私的な雑谈を参加に招待しました"
+            pd_added_label: "誰かが私を私的な雑谈を参加に招待しました"
+
+        confirm:
+            make_public: これにより、この私的な雑谈が全員に表示されます。慎重に操作してください。
 
     admin:
         permission:
@@ -59,6 +69,7 @@ fof-byobu:
             create_private_discussions_with_blocking_users: 私的なチャットをブロックしたユーザーに私的な雑谈への参加を強制する
             edit_user_recipients: 私的な雑谈のメンバーを編集する
             edit_group_recipients: 私的なディスカッ雑谈に参加しているユーザーグループを編集する
+            make_private_into_public: 私的雑談を公にする
             view_private_discussions-when-flagged: 他のユーザーの私的な雑谈を表示する（報告されている場合）
 
         settings:
@@ -70,3 +81,7 @@ fof-byobu:
             title: "【私的な雑谈】新しい私的な雑谈が招待します"
         private_discussion_replied:
             title: "【私的な雑谈】新しい投稿"
+        recipient_removed:
+            title: "【私的な雑谈】誰か離れました"
+        private_discussion_added:
+            title: "【私的な雑谈】を参加に招待しました"
