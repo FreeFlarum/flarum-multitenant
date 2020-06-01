@@ -40,6 +40,8 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Ngôn ngữ mặc định
+      display_name_heading: Tên hiển thị
+      display_name_text: Chọn trình điều khiển sử dụng để hiện tên người dùng. Tên người dùng được hiển thị mặc định.
       forum_description_heading: Mô tả về diễn đàn
       forum_description_text: Thêm nội dung mô tả ngắn để mô tả về diễn đàn. Nội dung sẽ xuất hiện ở các thẻ meta và bộ máy tìm kiếm có thể tìm thấy.
       forum_title_heading: Tên diễn đàn
@@ -73,6 +75,7 @@ core:
       color_label: => core.ref.color
       delete_button: Xóa nhóm
       delete_confirmation: "Bạn có chắc xóa nhóm này? Các thành viên trong nhóm sẽ không bị xóa."
+      hide_label: Ẩn nhãn trong forum
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: Tên
@@ -165,6 +168,7 @@ core:
       sign_up_label: Đăng ký
       start_discussions_label: Tham gia thảo luận
       view_discussions_label: Xem cuộc thảo luận
+      view_hidden_groups_label: Xem danh hiệu nhóm ẩn
       view_last_seen_at_label: Luôn xem thành viên xem lần cuối
       view_post_ips_label: Xem địa chỉ IP
       view_user_list_label: Xem danh sách thành viên
@@ -338,8 +342,10 @@ core:
     # These translations are used by the post control buttons.
     post_controls:
       delete_button: => core.ref.delete
+      delete_confirmation: "Có phải bạn muốn xóa bài này vĩnh viễn? Hành động này không thể hoàn tác."
       delete_forever_button: => core.ref.delete_forever
       edit_button: => core.ref.edit
+      hide_confirmation: "Bạn có chắc xóa bài này?"
       restore_button: => core.ref.restore
 
     # These translations are used in the scrubber to the right of the post stream.

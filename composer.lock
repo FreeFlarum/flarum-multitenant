@@ -6547,16 +6547,16 @@
         },
         {
             "name": "luatdolphin/lang-vietnamese",
-            "version": "0.1.0-beta.12",
+            "version": "0.1.0-beta.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luatdolphin/lang-vietnamese.git",
-                "reference": "c7eb908e7c09a4ca3fde77c2724df12d5a88acf2"
+                "reference": "615494961c9f4a631c2ea26afabccf0f4df7f191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/c7eb908e7c09a4ca3fde77c2724df12d5a88acf2",
-                "reference": "c7eb908e7c09a4ca3fde77c2724df12d5a88acf2",
+                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/615494961c9f4a631c2ea26afabccf0f4df7f191",
+                "reference": "615494961c9f4a631c2ea26afabccf0f4df7f191",
                 "shasum": ""
             },
             "require": {
@@ -6591,7 +6591,7 @@
                 "vietnam",
                 "vietnamese"
             ],
-            "time": "2020-04-08T05:22:22+00:00"
+            "time": "2020-06-01T04:33:28+00:00"
         },
         {
             "name": "madchatthew/themelightshadow",
@@ -7485,12 +7485,12 @@
             "version": "v1.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/milescellar/lang-french.git",
+                "url": "https://github.com/qiaeru/lang-french.git",
                 "reference": "b8e173a20db61c1ff178adef6dcbe60ea705a312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/milescellar/lang-french/zipball/b8e173a20db61c1ff178adef6dcbe60ea705a312",
+                "url": "https://api.github.com/repos/qiaeru/lang-french/zipball/b8e173a20db61c1ff178adef6dcbe60ea705a312",
                 "reference": "b8e173a20db61c1ff178adef6dcbe60ea705a312",
                 "shasum": ""
             },
@@ -7534,6 +7534,7 @@
                 "locale",
                 "translation"
             ],
+            "abandoned": "qiaeru/lang-french",
             "time": "2020-05-04T12:36:02+00:00"
         },
         {
