@@ -111,6 +111,7 @@
         "persianfla/flarum-ext-persian": "^0.0.1",
         "realodix/flarum-ext-indonesian": "^1.7",
         "reflar/cookie-consent": "^0.2.0",
+        "reflar/doorman": "^0.1.5",
         "reflar/twofactor": "^0.1.2",
         "reflar/webhooks": "^0.1.7",
         "rikusen0335/lang-japanese-extended": "^1.6",

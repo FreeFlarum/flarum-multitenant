@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4204856e428a6111d95bc6f92255052c",
+    "content-hash": "713fe9cae2e49768876ed38eef9f7d2c",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -1443,6 +1443,7 @@
                 "google-analytics",
                 "piwik"
             ],
+            "abandoned": "fof/analytics",
             "time": "2019-03-14T08:40:05+00:00"
         },
         {
@@ -8803,6 +8804,64 @@
                 "partialdev"
             ],
             "time": "2019-04-13T15:05:55+00:00"
+        },
+        {
+            "name": "reflar/doorman",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/doorman.git",
+                "reference": "a27a810e91091a8be57eef68ec3c7602c96add72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/a27a810e91091a8be57eef68ec3c7602c96add72",
+                "reference": "a27a810e91091a8be57eef68ec3c7602c96add72",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta-8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "ReFlar Doorman",
+                    "icon": {
+                        "name": "fas fa-door-closed",
+                        "backgroundColor": "#263238",
+                        "color": "#FFF"
+                    }
+                },
+                "flagrow": {
+                    "discuss": ""
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Reflar\\Doorman\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie K",
+                    "email": "charlie.k@redevs.org",
+                    "role": "Developer"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create invite codes for users to sign up and be assigned to a group",
+            "keywords": [
+                "flarum"
+            ],
+            "time": "2020-03-20T04:01:55+00:00"
         },
         {
             "name": "reflar/twofactor",

@@ -1488,7 +1488,8 @@
             "flarum",
             "google-analytics",
             "piwik"
-        ]
+        ],
+        "abandoned": "fof/analytics"
     },
     {
         "name": "flagrow/mason",
@@ -9117,6 +9118,66 @@
             "extension",
             "flarum",
             "partialdev"
+        ]
+    },
+    {
+        "name": "reflar/doorman",
+        "version": "0.1.5",
+        "version_normalized": "0.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/doorman.git",
+            "reference": "a27a810e91091a8be57eef68ec3c7602c96add72"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/a27a810e91091a8be57eef68ec3c7602c96add72",
+            "reference": "a27a810e91091a8be57eef68ec3c7602c96add72",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta-8"
+        },
+        "time": "2020-03-20T04:01:55+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "ReFlar Doorman",
+                "icon": {
+                    "name": "fas fa-door-closed",
+                    "backgroundColor": "#263238",
+                    "color": "#FFF"
+                }
+            },
+            "flagrow": {
+                "discuss": ""
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Reflar\\Doorman\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Charlie K",
+                "email": "charlie.k@redevs.org",
+                "role": "Developer"
+            },
+            {
+                "name": "David Sevilla Martín",
+                "email": "david.s@redevs.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "Create invite codes for users to sign up and be assigned to a group",
+        "keywords": [
+            "flarum"
         ]
     },
     {
