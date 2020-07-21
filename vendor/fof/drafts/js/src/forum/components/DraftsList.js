@@ -12,27 +12,26 @@
 import Component from 'flarum/Component';
 import LoadingIndicator from 'flarum/components/LoadingIndicator';
 import DiscussionComposer from 'flarum/components/DiscussionComposer';
+import ReplyComposer from 'flarum/components/ReplyComposer';
 import avatar from 'flarum/helpers/avatar';
 import icon from 'flarum/helpers/icon';
 import humanTime from 'flarum/helpers/humanTime';
 import { truncate } from 'flarum/utils/string';
 import Button from 'flarum/components/Button';
+import ScheduleDraftModal from './ScheduleDraftModal';
+import fillRelationship from '../utils/fillRelationship';
 
 export default class DraftsList extends Component {
-    init() {
-        this.loading = false;
-    }
+    config(isInitialized) {
+        if (!isInitialized) return;
 
-    config(isIntialized) {
-        if (!isIntialized) return;
-
-        $('.draft--delete').on('click tap', function(event) {
+        $('.draft--delete').on('click tap', function (event) {
             event.stopPropagation();
         });
     }
 
     view() {
-        const drafts = app.cache.drafts || [];
+        const drafts = app.store.all('drafts');
 
         return (
             <div className="NotificationList DraftsList">
@@ -41,34 +40,62 @@ export default class DraftsList extends Component {
                 </div>
                 <div className="NotificationList-content">
                     <ul className="NotificationGroup-content">
-                        {drafts.length ? (
-                            drafts
-                                .sort((a, b) => b.updatedAt() - a.updatedAt())
-                                .map(draft => {
-                                    return (
-                                        <li>
-                                            <a onclick={this.showComposer.bind(this, draft)} className="Notification draft--item">
-                                                {avatar(draft.user())}
-                                                {icon('fas fa-edit', { className: 'Notification-icon' })}
-                                                <span className="Notification-content">{draft.title()}</span>
-                                                {humanTime(draft.updatedAt())}
-                                                {Button.component({
-                                                    icon: 'fas fa-times',
-                                                    style: 'float: right; z-index: 20;',
-                                                    className: 'Button Button--icon Button--link draft--delete',
-                                                    title: app.translator.trans('fof-drafts.forum.dropdown.button'),
-                                                    onclick: this.deleteDraft.bind(this, draft),
-                                                })}
-                                                <div className="Notification-excerpt">{truncate(draft.content(), 200)}</div>
-                                            </a>
-                                        </li>
-                                    );
-                                })
-                        ) : !this.loading ? (
-                            <div className="NotificationList-empty">{app.translator.trans('fof-drafts.forum.dropdown.empty_text')}</div>
-                        ) : (
-                            LoadingIndicator.component({ className: 'LoadingIndicator--block' })
-                        )}
+                        {drafts.length
+                            ? drafts
+                                  .sort((a, b) => b.updatedAt() - a.updatedAt())
+                                  .map((draft) => {
+                                      return (
+                                          <li>
+                                              <a onclick={this.showComposer.bind(this, draft)} className="Notification draft--item">
+                                                  {avatar(draft.user())}
+                                                  {icon(draft.icon(), { className: 'Notification-icon' })}
+                                                  <span className="Notification-content">
+                                                      {draft.type() === 'reply' ? draft.loadRelationships().discussion.title() : draft.title()}
+                                                  </span>
+                                                  {humanTime(draft.updatedAt())}
+                                                  {Button.component({
+                                                      icon: 'fas fa-times',
+                                                      style: 'float: right; z-index: 20;',
+                                                      className: 'Button Button--icon Button--link draft--delete draft--delete',
+                                                      title: app.translator.trans('fof-drafts.forum.dropdown.delete_button'),
+                                                      onclick: (e) => {
+                                                          this.deleteDraft(draft);
+                                                          e.stopPropagation();
+                                                      },
+                                                  })}
+                                                  {app.forum.attribute('canScheduleDrafts') && app.forum.attribute('drafts.enableScheduledDrafts')
+                                                      ? Button.component({
+                                                            icon: draft.scheduledValidationError()
+                                                                ? 'fas fa-calendar-times'
+                                                                : draft.scheduledFor()
+                                                                ? 'fas fa-calendar-check'
+                                                                : 'fas fa-calendar-plus',
+                                                            style: 'float: right; z-index: 20;',
+                                                            className: 'Button Button--icon Button--link draft--schedule',
+                                                            title: app.translator.trans('fof-drafts.forum.dropdown.schedule_button'),
+                                                            onclick: (e) => {
+                                                                this.scheduleDraft(draft);
+                                                                e.stopPropagation();
+                                                            },
+                                                        })
+                                                      : ''}
+                                                  <div className="Notification-excerpt">{truncate(draft.content(), 200)}</div>
+                                                  {draft.scheduledValidationError() ? (
+                                                      <p className="scheduledValidationError">{draft.scheduledValidationError()}</p>
+                                                  ) : (
+                                                      ''
+                                                  )}
+                                              </a>
+                                          </li>
+                                      );
+                                  })
+                            : ''}
+
+                        {this.loading
+                            ? LoadingIndicator.component({ className: 'LoadingIndicator--block' })
+                            : !drafts.length && (
+                                  <div className="NotificationList-empty">{app.translator.trans('fof-drafts.forum.dropdown.empty_text')}</div>
+                              )}
                     </ul>
                 </div>
             </div>
@@ -80,15 +107,20 @@ export default class DraftsList extends Component {
 
         if (!window.confirm(app.translator.trans('fof-drafts.forum.dropdown.alert'))) return;
 
-        draft.delete();
-        app.cache.drafts.some((cacheDraft, i) => {
-            if (cacheDraft.id() === draft.id()) {
-                app.cache.drafts.splice(i, 1);
+        draft.delete().then(() => {
+            if (app.composer.component && app.composer.component.draft.id() === draft.id() && !app.composer.changed()) {
+                app.composer.hide();
             }
-        });
-        app.composer.hide();
 
-        this.loading = false;
+            this.loading = false;
+            m.redraw();
+        });
+    }
+
+    scheduleDraft(draft) {
+        if (!app.forum.attribute('canScheduleDrafts') || !app.forum.attribute('drafts.enableScheduledDrafts')) return;
+
+        app.modal.show(new ScheduleDraftModal({ draft }));
     }
 
     showComposer(draft) {
@@ -96,26 +128,20 @@ export default class DraftsList extends Component {
 
         const deferred = m.deferred();
 
-        const data = {
-            originalContent: draft.content(),
-            title: draft.title(),
-            user: app.session.user,
-            confirmExit: app.translator.trans('fof-drafts.forum.composer.exit_alert'),
-            draft,
-        };
+        let componentClass;
 
-        const relationships = draft.relationships();
-
-        if (relationships) {
-            Object.keys(relationships).forEach(relationshipName => {
-                const relationship = relationships[relationshipName];
-                const relationshipData = relationship.data.map( (model, i) => app.store.getById(model.type, model.id) );
-
-                data[relationshipName] = relationshipData;
-            });
+        switch (draft.type()) {
+            case 'privateDiscussion':
+                componentClass = require('@fof-byobu').components['PrivateDiscussionComposer'];
+                break;
+            case 'reply':
+                componentClass = ReplyComposer;
+                break;
+            default:
+                componentClass = DiscussionComposer;
         }
 
-        const component = new DiscussionComposer(data);
+        const component = new componentClass(draft.compileData());
 
         app.composer.load(component);
         app.composer.show();
@@ -126,7 +152,7 @@ export default class DraftsList extends Component {
     }
 
     load() {
-        if (app.cache.drafts) {
+        if (app.cache.draftsLoaded) {
             return;
         }
 
@@ -135,11 +161,10 @@ export default class DraftsList extends Component {
 
         app.store
             .find('drafts')
-            .then(response => {
-                delete response.payload;
-                app.cache.drafts = response;
-            })
-            .catch(() => {})
+            .then(
+                () => (app.cache.draftsLoaded = true),
+                () => {}
+            )
             .then(() => {
                 this.loading = false;
                 m.redraw();

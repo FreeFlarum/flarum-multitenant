@@ -199,11 +199,7 @@ abstract class PHP extends Renderer
 		$html = preg_replace_callback(
 			$this->quickRegexp,
 			[$this, 'renderQuickCallback'],
-			preg_replace(
-				'(<[eis]>[^<]*</[eis]>)',
-				'',
-				substr($xml, 1 + strpos($xml, '>'), -4)
-			)
+			substr($xml, 1 + strpos($xml, '>'), -4)
 		);
 
 		return str_replace('<br/>', '<br>', $html);
@@ -287,11 +283,16 @@ abstract class PHP extends Renderer
 	*/
 	protected function renderRichText($xml)
 	{
+		$this->setLocale();
+
 		try
 		{
 			if ($this->canQuickRender($xml))
 			{
-				return $this->renderQuick($xml);
+				$html = $this->renderQuick($xml);
+				$this->restoreLocale();
+
+				return $html;
 			}
 		}
 		catch (RuntimeException $e)
@@ -305,6 +306,7 @@ abstract class PHP extends Renderer
 		$this->at($dom->documentElement);
 		$html        = $this->out;
 		$this->reset();
+		$this->restoreLocale();
 
 		return $html;
 	}

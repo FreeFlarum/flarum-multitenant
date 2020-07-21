@@ -1,4 +1,3 @@
----
 core:
   admin:
     add_extension:
@@ -49,6 +48,9 @@ core:
       welcome_banner_heading: Banner de boas-vindas
       welcome_banner_text: Configure o texto exibido no banner na página Todas as
         discussões. Use isso para receber convidados no seu fórum.
+      display_name_heading: Nome de exibição do usuário
+      display_name_text: Selecione o driver que deve ser usado para os nomes de exibição
+        dos usuários. Por padrão, o nome de usuário é mostrado.
     dashboard:
       clear_cache_button: Limpar cache
       tools_button: Ferramentas
@@ -66,6 +68,7 @@ core:
       delete_button: Excluir grupo
       delete_confirmation: Tem certeza de que deseja excluir este grupo? Os membros
         do grupo NÃO serão excluídos.
+      hide_label: Ocultar no fórum
       icon_label: "=> core.ref.icon"
       icon_text: "=> core.ref.icon_text"
       name_label: Nome
@@ -87,6 +90,7 @@ core:
       mailgun_heading: Configurações de Mailgun
       mail_host_label: Host
       mail_mailgun_domain_label: Dominio
+      mail_mailgun_region_label: Região
       mail_mailgun_secret_label: Secret key
       mail_mandrill_secret_label: Chave secreta
       mail_password_label: "=> core.ref.password"
@@ -96,12 +100,13 @@ core:
       mail_ses_secret_label: Secret
       mail_username_label: "=> core.ref.username"
       mandrill_heading: Configurações do Mandrill
+      not_sending_message: Flarum atualmente não envia e-mails. Isso pode ocorrer
+        devido ao driver selecionado ou a erros de configuração.
       ses_heading: Configurações do SES
       smtp_heading: Configurações SMTP
       submit_button: "=> core.ref.save_changes"
       text: Configure o driver, as configurações e os endereços que seu fórum usará
         para enviar e-mail's.
-      mail_mailgun_region_label: Região
     extensions:
       add_button: Adicionar extensão
       settings_button: "=> core.ref.settings"
@@ -137,12 +142,14 @@ core:
       moderate_heading: Moderar
       new_group_button: Novo grupo
       participate_heading: Participar
+      post_without_throttle_label: Responda várias vezes sem esperar
       read_heading: Ler
       rename_discussions_label: Renomear discussões
       reply_to_discussions_label: Responder às discussões
       sign_up_label: Inscrever-se
       start_discussions_label: Iniciar discussões
       view_discussions_label: Ver discussões
+      view_hidden_groups_label: Ver emblemas de grupo ocultos
       view_last_seen_at_label: Ver a última vez que o usuário visualizou
       view_post_ips_label: Exibir endereços IP da postagem
       view_user_list_label: Ver lista de usuários
@@ -302,8 +309,11 @@ core:
       tooltip: "=> core.ref.notifications"
     post_controls:
       delete_button: "=> core.ref.delete"
+      delete_confirmation: Tem certeza de que deseja excluir esta postagem para sempre?
+        Essa ação não pode ser desfeita.
       delete_forever_button: "=> core.ref.delete_forever"
       edit_button: "=> core.ref.edit"
+      hide_confirmation: Tem certeza de que deseja excluir esta postagem?
       restore_button: "=> core.ref.restore"
     post:
       edited_text: Editado

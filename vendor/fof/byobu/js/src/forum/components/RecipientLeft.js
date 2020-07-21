@@ -1,6 +1,6 @@
-import EventPost from "flarum/components/EventPost";
+import EventPost from 'flarum/components/EventPost';
 
-export default class RecipientsModified extends EventPost {
+export default class RecipientLeft extends EventPost {
     static initProps(props) {
         super.initProps(props);
     }
@@ -10,7 +10,6 @@ export default class RecipientsModified extends EventPost {
     }
 
     descriptionKey() {
-
         return 'fof-byobu.forum.post.recipients_modified.removed_self';
     }
 }

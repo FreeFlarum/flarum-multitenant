@@ -7,6 +7,11 @@
     "require": {
         "flarum/core": "^0.1.0-beta.10"
     },
+	"autoload": {
+    "psr-4": {
+      "luatdolphin\\lang-vietnamese\\": "src/"
+    }
+  },
     "extra": {
         "branch-alias": {
             "dev-master": "0.1.x-dev"

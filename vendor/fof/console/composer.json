@@ -1,0 +1,40 @@
+{
+    "name": "fof/console",
+    "description": "Register custom commands and task scheduling into Flarum",
+    "keywords": [
+        "extension",
+        "flarum",
+        "console",
+        "cronjob",
+        "cron"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        },
+        {
+            "name": "Daniël Klabbers",
+            "email": "daniel@klabbers.email",
+            "homepage": "http://luceos.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/friendsOfFlarum/console/issues",
+        "source": "https://github.com/friendsOfFlarum/console"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.9",
+        "illuminate/console": "5.7.*",
+        "dragonmantank/cron-expression": "^1.2.1",
+        "symfony/process": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Console\\": "src/"
+        }
+    }
+}

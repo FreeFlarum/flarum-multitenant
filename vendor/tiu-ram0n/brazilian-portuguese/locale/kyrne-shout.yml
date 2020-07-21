@@ -1,0 +1,49 @@
+---
+kyrne-shout:
+  admin:
+    permissions:
+      start_label: Iniciar conversas privadas
+  forum:
+    dropdown:
+      tooltip: Conversas
+    setup:
+      title: Configurar mensagens privadas
+      header_setup: Digite a senha de login da sua conta para configurar mensagens
+        privadas.
+      header_import: Digite a senha de login da sua conta para importar suas mensagens
+        privadas.
+      button_import: Importar
+      button_setup: Configuração
+      success: As mensagens privadas agora estão prontas, sua página será recarregada
+        ...
+    modal:
+      title: Iniciar conversa
+      help: Comece a digitar um nome de usuário para iniciar um bate-papo.
+      help_start: Digite sua primeira mensagem. Essa será a única mensagem que você
+        poderá enviar até que {username} responda. Clique no usuário para selecionar
+        um destinatário diferente.
+      search_recipients: Insira um nome de usuário...
+      submit: Enviar e iniciar conversa
+      copied: Sua mensagem foi copiada para a área de transferência.
+      more_users: Se você não encontrar o usuário que está procurando, ele não possui
+        configuração de mensagens privadas.
+      already: Você já tem uma conversa com {username}.
+    user_modal_alert: "{username} possui configuração de mensagens privadas, sua senha
+      não pode ser alterada com segurança."
+    chat:
+      chat_with: Converse com {username}
+      messages_multiple: "{count} total de mensagens"
+      messages_single: Nova conversa
+      start: Iniciar conversa
+      cant_start: Não é possível iniciar a conversa
+      text_placeholder: Digite sua mensagem
+      send: Enviar mensagem
+      recovery_message: 'Mensagem do sistema: Sincronização de criptografia perdida
+        e recuperada'
+      failed_message: 'Falha ao descriptografar a mensagem, tentando o método de recuperação
+        #{method}'
+      cant_send: Você não pode enviar uma mensagem até que {username} responda (apenas
+        na primeira mensagem)
+      cant_send_toomany: Aguarde a resposta de {username} antes de enviar mais mensagens
+      failed_to_decrypt: "[Falha ao descriptografar]"
+      start_of_conversation: Início da conversa

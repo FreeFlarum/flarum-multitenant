@@ -1,1 +1,3 @@
-module.exports = require('flarum-webpack-config')();
+module.exports = require('flarum-webpack-config')({
+    useExtensions: ['fof-byobu', 'fof-components']
+});

@@ -1,5 +1,10 @@
+- 0.3.4
+  - Flarum beta 13 compatibility #50
+  - Fix ability to sort fields #52
+  - Fix users without profile being redirected when "force completion" is enabled #2
 - 0.3.3
   - UI Improvements
+  - Fix "force profile" not working with subfolder installation
 - 0.3.2
   - Use a prefix (`answer:`) for the search gambit, this restores the ability to use normal user search
   - Check actor is allowed to see profiles before searching users by answer

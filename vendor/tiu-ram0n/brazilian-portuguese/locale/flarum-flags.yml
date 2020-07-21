@@ -1,61 +1,42 @@
+---
 flarum-flags:
-
-  ##
-  # UNIQUE KEYS - The following keys are used in only one location each.
-  ##
-
-  # Translations in this namespace are used by the admin interface.
   admin:
-
-    # These translations are used in the Permissions page of the admin interface.
     permissions:
       flag_posts_label: Sinalizar posts
       view_flags_label: Ver posts sinalizados
-
-    # These translations are used in the Flags Settings modal dialog.
     settings:
       guidelines_url_label: URL das Regras da Comunidade
       title: Configurações de Sinalização
-
-  # Translations in this namespace are used by the forum user interface.
+      flag_own_posts_label: Permitir que os usuários sinalizem suas próprias postagens
   forum:
-
-    # These translations are used by the Flag Post modal dialog.
-    flag_post:
-      confirmation_message: Obrigado por sinalizar este post. Nossos moderadores olharão ele.
-      dismiss_button: => core.ref.okay
-      reason_inappropriate_label: Inapropriado
-      reason_inappropriate_text: "Este post é ofensivo, abusivo, ou viola nossas <a>regras da comunidade</a>."
-      reason_off_topic_label: "Off-topic"
-      reason_off_topic_text: Este post não é relevante à discussão atual e deve ser movido para outro lugar.
-      reason_other_label: Outro
-      reason_spam_label: Spam
-      reason_spam_text: Este post é uma propaganda.
-      submit_button: => flarum-flags.ref.flag_post
-      title: => flarum-flags.ref.flag_post
-
-    # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
     flagged_posts:
       empty_text: Sem Sinalizações
       item_text: "{username} em <em>{discussion}</em>"
-      title: => flarum-flags.ref.flagged_posts
-      tooltip: => flarum-flags.ref.flagged_posts
-
-    # These translations are used by the frame displayed around flagged posts.
+      title: "=> flarum-flags.ref.flagged_posts"
+      tooltip: "=> flarum-flags.ref.flagged_posts"
+    flag_post:
+      confirmation_message: Obrigado por sinalizar este post. Nossos moderadores olharão
+        ele.
+      dismiss_button: "=> core.ref.okay"
+      reason_inappropriate_label: Inapropriado
+      reason_inappropriate_text: Este post é ofensivo, abusivo, ou viola nossas <a>regras
+        da comunidade</a>.
+      reason_off_topic_label: Off-topic
+      reason_off_topic_text: Este post não é relevante à discussão atual e deve ser
+        movido para outro lugar.
+      reason_other_label: Outro
+      reason_spam_label: Spam
+      reason_spam_text: Este post é uma propaganda.
+      submit_button: "=> flarum-flags.ref.flag_post"
+      title: "=> flarum-flags.ref.flag_post"
+      reason_details_placeholder: Detalhes adicionais (opcional)
+      reason_missing_message: Forneça alguns detalhes para nossos moderadores.
+    post_controls:
+      flag_button: Sinalizar
     post:
       dismiss_flag_button: Desfazer Sinalização
       flagged_by_text: "{username} sinalizou"
-      flagged_by_with_reason_text: "{username} sizalizou como {reason}"
-
-    # These translations are used by the post control buttons.
-    post_controls:
-      flag_button: Sinalizar
-
-  ##
-  # REUSED TRANSLATIONS - These keys should not be used directly in code!
-  ##
-
-  # Translations in this namespace are referenced by two or more unique keys.
+      flagged_by_with_reason_text: "{username} sinalizou como {reason}"
   ref:
-    flag_post: Sinalizar Post
     flagged_posts: Posts Sinalizados
+    flag_post: Sinalizar Post

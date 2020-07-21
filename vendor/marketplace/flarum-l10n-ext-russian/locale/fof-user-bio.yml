@@ -1,0 +1,9 @@
+fof-user-bio:
+    admin:
+        permission:
+            view: "Смотреть BIO"
+            editOwn: "Править своё BIO"
+            editAny: "Править любое BIO"
+
+    forum:
+        userbioPlaceholder: "Напиши что-нибудь о себе"

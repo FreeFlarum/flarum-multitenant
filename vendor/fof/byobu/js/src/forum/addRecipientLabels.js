@@ -1,12 +1,11 @@
-import { extend } from "flarum/extend";
-import DiscussionListItem from "flarum/components/DiscussionListItem";
-import DiscussionPage from "flarum/components/DiscussionPage";
-import DiscussionHero from "flarum/components/DiscussionHero";
-import DiscussionList from "flarum/components/DiscussionList";
-import recipientsLabel from "../common/helpers/recipientsLabel";
+import { extend } from 'flarum/extend';
+import DiscussionListItem from 'flarum/components/DiscussionListItem';
+import DiscussionPage from 'flarum/components/DiscussionPage';
+import DiscussionHero from 'flarum/components/DiscussionHero';
+import DiscussionList from 'flarum/components/DiscussionList';
+import recipientsLabel from '../common/helpers/recipientsLabel';
 
 export default function () {
-
     const addToDiscussion = function (discussion, items, long) {
         let recipients = [];
 
@@ -48,7 +47,6 @@ export default function () {
         params.include.push('recipientGroups');
     });
 
-
     /**
      * Adds User labels on the discussion Hero.
      */
@@ -74,11 +72,11 @@ export default function () {
             const recipients = 'item-recipients';
 
             const classes = [];
-            Object.keys(children).forEach(item => {
+            Object.keys(children).forEach((item) => {
                 classes.push(children[item].className);
             });
 
-            const privateDiscussion = classes.filter(i => i === recipients);
+            const privateDiscussion = classes.filter((i) => i === recipients);
 
             if (privateDiscussion.length) {
                 items[0].className = `${items[0].className} isPrivateDiscussion`;
@@ -91,12 +89,12 @@ export default function () {
      */
     extend(DiscussionListItem.prototype, 'config', (isInitialized, context) => {
         if (isInitialized || context || !app.forum.attribute('byobuTag')) {
-          return;
+            return;
         }
 
         const tagsClassName = '.item-tags';
         const recipientsClassName = '.DiscussionListItem-info > .item-recipients';
 
         $(recipientsClassName).prev(tagsClassName).css('display', 'none');
-      });
+    });
 }

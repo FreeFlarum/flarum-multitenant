@@ -28,10 +28,10 @@ fof-follow-tags:
       not_following_text: Seja notificado apenas quando @mencionado.
       notify_alert_tooltip: Receba uma notificação do fórum quando houver novas discussões
         ou postagens
-      notify_email_tooltip: Receber um email quando houver novas discussões ou postagens
+      notify_email_tooltip: Receber um e-mail quando houver novas discussões ou postagens
   ref:
     follow: Seguir
+    following: Seguindo
     hiding: Ocultar
     ignoring: Ignorar
     lurking: Tudo
-    following: Seguindo

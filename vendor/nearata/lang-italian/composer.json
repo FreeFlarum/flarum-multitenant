@@ -2,19 +2,23 @@
     "name": "nearata/lang-italian",
     "description": "Italian language pack.",
     "type": "flarum-extension",
-    "keywords": ["locale", "extension", "italian"],
+    "keywords": [
+        "locale",
+        "extension",
+        "italian"
+    ],
     "license": "MIT",
     "require": {
-        "flarum/core": "^0.1.0-beta.11"
+        "flarum/core": "^0.1.0-beta.13"
     },
     "authors": [
-	{
+        {
             "name": "William Di Cicco",
             "email": "williamdicicco@protonmail.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/Nearata/lang-italian//issues",
+        "issues": "https://github.com/Nearata/lang-italian/issues",
         "source": "https://github.com/Nearata/lang-italian"
     },
     "extra": {

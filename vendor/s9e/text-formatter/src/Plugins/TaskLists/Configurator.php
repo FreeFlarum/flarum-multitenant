@@ -40,18 +40,15 @@ class Configurator extends ConfiguratorBase
 			->addParameterByName('text')
 			->setJS(file_get_contents(__DIR__ . '/filterListItem.js'));
 
-		$tag->template = preg_replace(
-			'(<li[^>]*+>(?!<xsl:if test="TASK">)\\K)',
-			'<xsl:if test="TASK">
-				<xsl:attribute name="data-task-id">
-					<xsl:value-of select="TASK/@id"/>
-				</xsl:attribute>
-				<xsl:attribute name="data-task-state">
-					<xsl:value-of select="TASK/@state"/>
-				</xsl:attribute>
-			</xsl:if>',
-			$tag->template
-		);
+		$dom = $tag->template->asDOM();
+		foreach ($dom->query('//li[not(xsl:if[@test="TASK"])]') as $li)
+		{
+			$if = $li->prependXslIf('TASK');
+			$if->appendXslAttribute('data-s9e-livepreview-ignore-attrs', 'data-task-id');
+			$if->appendXslAttribute('data-task-id')->appendXslValueOf('TASK/@id');
+			$if->appendXslAttribute('data-task-state')->appendXslValueOf('TASK/@state');
+		}
+		$dom->saveChanges();
 	}
 
 	protected function createTaskTag(): void
@@ -59,7 +56,7 @@ class Configurator extends ConfiguratorBase
 		$tag = $this->configurator->tags->add('TASK');
 		$tag->attributes->add('id')->filterChain->append('#identifier');
 		$tag->attributes->add('state')->filterChain->append('#identifier');
-		$tag->template = '<input data-task-id="{@id}" type="checkbox">
+		$tag->template = '<input data-task-id="{@id}" data-s9e-livepreview-ignore-attrs="data-task-id" type="checkbox">
 			<xsl:if test="@state = \'checked\'"><xsl:attribute name="checked"/></xsl:if>
 			<xsl:if test="not($TASKLISTS_EDITABLE)"><xsl:attribute name="disabled"/></xsl:if>
 		</input>';

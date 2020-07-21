@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2018 FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -19,8 +19,8 @@ return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
-    new Extend\Locales(__DIR__ . '/resources/locale'),
+    new Extend\Locales(__DIR__.'/resources/locale'),
     function (Dispatcher $events) {
         $events->listen(Activated::class, Listeners\AddDefaultGroup::class);
-    }
+    },
 ];

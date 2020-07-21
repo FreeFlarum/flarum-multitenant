@@ -8,6 +8,7 @@ flarum-tags:
       delete_tag_button: Deletar Tag
       delete_tag_confirmation: Tem certeza que deseja deletar esta tag? As discussões
         da tag NÃO serão deletadas.
+      description_label: Descrição
       hide_label: Esconder de Todas as Discussões
       icon_label: Ícone
       icon_text: Ícone da Tag personalizado
@@ -16,7 +17,6 @@ flarum-tags:
       slug_label: Slug
       submit_button: "=> core.ref.save_changes"
       title: "=> flarum-tags.ref.create_tag"
-      description_label: Descrição
     nav:
       tags_button: "=> flarum-tags.ref.tags"
       tags_text: Administre a lista de tags disponíveis para organizar discussões.
@@ -64,6 +64,11 @@ flarum-tags:
       added_tags_text: "{username} adicionou {tagsAdded}."
       removed_tags_text: "{username} removeu {tagsRemoved}."
       tags_text: a tag {tags}|as tags {tags}
+    all_tags:
+      meta_description_text: Todas as Tags
+      meta_title_text: "=> flarum-tags.ref.tags"
+    tag:
+      meta_description_text: Todas as discussões com a tag {tag}
   lib:
     deleted_tag_text: Deletada
   ref:

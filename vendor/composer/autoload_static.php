@@ -8,9 +8,12 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
@@ -54,11 +57,16 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         's' => 
         array (
             's9e\\TextFormatter\\' => 18,
+            's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
         ),
         'm' => 
         array (
             'michaelbelgium\\views\\' => 21,
+        ),
+        'l' => 
+        array (
+            'luatdolphin\\lang-vietnamese\\' => 28,
         ),
         'a' => 
         array (
@@ -91,10 +99,13 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'S' => 
         array (
             'Symfony\\Polyfill\\Util\\' => 22,
+            'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
             'Symfony\\Polyfill\\Ctype\\' => 23,
@@ -228,11 +239,13 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Drafts\\' => 11,
             'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\DefaultGroup\\' => 17,
+            'FoF\\Console\\' => 12,
             'FoF\\Components\\' => 15,
             'FoF\\Byobu\\' => 10,
             'FoF\\BanIPs\\' => 11,
             'FoF\\BBCodeDetails\\' => 18,
             'FoF\\AuthDiscord\\' => 16,
+            'FoF\\Analytics\\' => 14,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -251,7 +264,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Flarum\\' => 7,
             'Flagrow\\Sitemap\\' => 16,
             'Flagrow\\Mason\\' => 14,
-            'Flagrow\\Analytics\\' => 18,
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
         ),
@@ -270,6 +282,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Dflydev\\FigCookies\\' => 19,
             'Dem13n\\NickName\\Changer\\' => 24,
         ),
+        'C' => 
+        array (
+            'Cron\\' => 5,
+        ),
         'B' => 
         array (
             'Behat\\Transliterator\\' => 21,
@@ -286,6 +302,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/s9e/text-formatter/src',
         ),
+        's9e\\SweetDOM\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/s9e/sweetdom/src',
+        ),
         's9e\\RegexpBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
@@ -293,6 +313,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'michaelbelgium\\views\\' => 
         array (
             0 => __DIR__ . '/..' . '/michaelbelgium/flarum-discussion-views/src',
+        ),
+        'luatdolphin\\lang-vietnamese\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/luatdolphin/lang-vietnamese/src',
         ),
         'axy\\sourcemap\\' => 
         array (
@@ -350,6 +374,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-util',
         ),
+        'Symfony\\Polyfill\\Php80\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php73',
@@ -358,6 +386,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
         ),
+        'Symfony\\Polyfill\\Php70\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
+        ),
         'Symfony\\Polyfill\\Php56\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
@@ -365,6 +397,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Intl\\Normalizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
         ),
         'Symfony\\Polyfill\\Intl\\Idn\\' => 
         array (
@@ -785,6 +821,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/fof/default-group/src',
         ),
+        'FoF\\Console\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/console/src',
+        ),
         'FoF\\Components\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/components/src',
@@ -804,6 +844,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\AuthDiscord\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/auth-discord/src',
+        ),
+        'FoF\\Analytics\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/analytics/src',
         ),
         'Flarum\\Tags\\' => 
         array (
@@ -877,10 +921,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/flagrow/mason/src',
         ),
-        'Flagrow\\Analytics\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flagrow/flarum-ext-analytics/src',
-        ),
         'Fig\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/fig/http-message-util/src',
@@ -891,7 +931,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         ),
         'Egulias\\EmailValidator\\' => 
         array (
-            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+            0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
         'Doctrine\\Inflector\\' => 
         array (
@@ -924,6 +964,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Dem13n\\NickName\\Changer\\' => 
         array (
             0 => __DIR__ . '/..' . '/dem13n/nickname-changer/src',
+        ),
+        'Cron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
         'Behat\\Transliterator\\' => 
         array (
@@ -975,10 +1019,21 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
     );
 
     public static $classMap = array (
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
         'Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherInstance' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
+        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'lessc' => __DIR__ . '/..' . '/wikimedia/less.php/lessc.inc.php',
     );
 

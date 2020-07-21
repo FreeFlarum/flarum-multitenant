@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "713fe9cae2e49768876ed38eef9f7d2c",
+    "content-hash": "c38a46ea9f28d407be717152217cc139",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -771,20 +771,20 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.10.0",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62"
+                "reference": "13e3381b25847283a91948d04640543941309727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/382e7f4db9a12dc6c19431743a2b096041bcdd62",
-                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/13e3381b25847283a91948d04640543941309727",
+                "reference": "13e3381b25847283a91948d04640543941309727",
                 "shasum": ""
             },
             "require": {
-                "php": "~7.1"
+                "php": "~7.1 || ^8.0"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
@@ -849,7 +849,7 @@
                 "redis",
                 "xcache"
             ],
-            "time": "2019-11-29T15:36:20+00:00"
+            "time": "2020-07-07T18:54:01+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -1023,20 +1023,20 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "1.4.1",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3"
+                "reference": "4650c8b30c753a76bf44fb2ed00117d6f367490c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3",
-                "reference": "4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/4650c8b30c753a76bf44fb2ed00117d6f367490c",
+                "reference": "4650c8b30c753a76bf44fb2ed00117d6f367490c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^7.0",
@@ -1097,24 +1097,24 @@
                 "uppercase",
                 "words"
             ],
-            "time": "2020-05-09T15:09:09+00:00"
+            "time": "2020-05-29T07:19:59+00:00"
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6"
+                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
-                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e864bbf5904cb8f5bb334f99209b48018522f042",
+                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^6.0",
@@ -1159,20 +1159,64 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-10-30T14:39:59+00:00"
+            "time": "2020-05-25T17:44:05+00:00"
         },
         {
-            "name": "egulias/email-validator",
-            "version": "2.1.17",
+            "name": "dragonmantank/cron-expression",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "ade6887fd9bd74177769645ab5c474824f8a418a"
+                "url": "https://github.com/dragonmantank/cron-expression.git",
+                "reference": "9504fa9ea681b586028adaaa0877db4aecf32bad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ade6887fd9bd74177769645ab5c474824f8a418a",
-                "reference": "ade6887fd9bd74177769645ab5c474824f8a418a",
+                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/9504fa9ea681b586028adaaa0877db4aecf32bad",
+                "reference": "9504fa9ea681b586028adaaa0877db4aecf32bad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cron\\": "src/Cron/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+            "keywords": [
+                "cron",
+                "schedule"
+            ],
+            "time": "2017-01-23T04:29:33+00:00"
+        },
+        {
+            "name": "egulias/email-validator",
+            "version": "2.1.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egulias/EmailValidator.git",
+                "reference": "cfa3d44471c7f5bfb684ac2b0da7114283d78441"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/cfa3d44471c7f5bfb684ac2b0da7114283d78441",
+                "reference": "cfa3d44471c7f5bfb684ac2b0da7114283d78441",
                 "shasum": ""
             },
             "require": {
@@ -1196,7 +1240,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Egulias\\EmailValidator\\": "EmailValidator"
+                    "Egulias\\EmailValidator\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1217,7 +1261,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-02-13T22:36:52+00:00"
+            "time": "2020-06-16T20:11:17+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -1319,16 +1363,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.7.2",
+            "version": "2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "17d0d3f266c8f925ebd035cd36f83cf802b47d4a"
+                "reference": "5d5fe9bb3d656b514d455645b3addc5f7ba7714d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/17d0d3f266c8f925ebd035cd36f83cf802b47d4a",
-                "reference": "17d0d3f266c8f925ebd035cd36f83cf802b47d4a",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/5d5fe9bb3d656b514d455645b3addc5f7ba7714d",
+                "reference": "5d5fe9bb3d656b514d455645b3addc5f7ba7714d",
                 "shasum": ""
             },
             "require": {
@@ -1376,75 +1420,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2020-05-05T12:28:07+00:00"
-        },
-        {
-            "name": "flagrow/flarum-ext-analytics",
-            "version": "0.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/flagrow/analytics.git",
-                "reference": "13e7a62449909a5683239d808fb5727bb88f7019"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/flagrow/analytics/zipball/13e7a62449909a5683239d808fb5727bb88f7019",
-                "reference": "13e7a62449909a5683239d808fb5727bb88f7019",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.8"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "Analytics",
-                    "icon": {
-                        "name": "fas fa-chart-line",
-                        "backgroundColor": "#74000E",
-                        "color": "#BE1E31"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/1983"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Flagrow\\Analytics\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel+flarum@klabbers.email",
-                    "homepage": "http://hyn.io"
-                },
-                {
-                    "name": "Santiago Testa Biali",
-                    "email": "santiago.t.biali@gmail.com"
-                },
-                {
-                    "name": "Clark Winkelmann",
-                    "email": "clark.winkelmann@gmail.com",
-                    "homepage": "https://clarkwinkelmann.com/"
-                }
-            ],
-            "description": "Tracks analytics using googles and piwik metric tool analytics",
-            "keywords": [
-                "analytics",
-                "extension",
-                "flagrow",
-                "flarum",
-                "google-analytics",
-                "piwik"
-            ],
-            "abandoned": "fof/analytics",
-            "time": "2019-03-14T08:40:05+00:00"
+            "time": "2020-06-14T09:00:00+00:00"
         },
         {
             "name": "flagrow/mason",
@@ -2544,6 +2520,80 @@
             "time": "2020-05-04T08:48:54+00:00"
         },
         {
+            "name": "fof/analytics",
+            "version": "0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/analytics.git",
+                "reference": "c1ab797037255a92e2841fede74f9dbf3a379180"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/analytics/zipball/c1ab797037255a92e2841fede74f9dbf3a379180",
+                "reference": "c1ab797037255a92e2841fede74f9dbf3a379180",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.10"
+            },
+            "replace": {
+                "flagrow/flarum-ext-analytics": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Analytics",
+                    "icon": {
+                        "name": "fas fa-chart-line",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/1983"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Analytics\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel+flarum@klabbers.email",
+                    "homepage": "http://hyn.io"
+                },
+                {
+                    "name": "Santiago Testa Biali",
+                    "email": "santiago.t.biali@gmail.com"
+                },
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                },
+                {
+                    "name": "Ian Morland",
+                    "email": "ian@flarumite.com"
+                }
+            ],
+            "description": "Tracks analytics using Google Analytics, Google Optimize/GTM and piwik",
+            "keywords": [
+                "analytics",
+                "extension",
+                "flarum",
+                "google-analytics",
+                "gtm",
+                "piwik"
+            ],
+            "time": "2020-06-21T09:47:04+00:00"
+        },
+        {
             "name": "fof/auth-discord",
             "version": "0.1.3",
             "source": {
@@ -2713,20 +2763,20 @@
         },
         {
             "name": "fof/byobu",
-            "version": "0.5.0",
+            "version": "0.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/byobu.git",
-                "reference": "6c35f67ed54cfe53d99e25c65a11fdf8d1f3dd5d"
+                "reference": "212591a0324a2561c1fe3204aff16972404b4a3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/byobu/zipball/6c35f67ed54cfe53d99e25c65a11fdf8d1f3dd5d",
-                "reference": "6c35f67ed54cfe53d99e25c65a11fdf8d1f3dd5d",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/byobu/zipball/212591a0324a2561c1fe3204aff16972404b4a3c",
+                "reference": "212591a0324a2561c1fe3204aff16972404b4a3c",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.10",
+                "flarum/core": "^0.1.0-beta.13",
                 "fof/components": ">=0.1.0"
             },
             "replace": {
@@ -2777,7 +2827,7 @@
                 "pm",
                 "private discussions"
             ],
-            "time": "2020-04-01T21:38:47+00:00"
+            "time": "2020-06-09T21:13:07+00:00"
         },
         {
             "name": "fof/components",
@@ -2821,17 +2871,69 @@
             "time": "2019-12-04T22:41:16+00:00"
         },
         {
-            "name": "fof/default-group",
-            "version": "0.1.0",
+            "name": "fof/console",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/default-group.git",
-                "reference": "10ef70494dee6d277e71b3c5a8afb6c77f998229"
+                "url": "https://github.com/FriendsOfFlarum/console.git",
+                "reference": "1573f3ebaacf384394f3be951809ee23235ff0fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/default-group/zipball/10ef70494dee6d277e71b3c5a8afb6c77f998229",
-                "reference": "10ef70494dee6d277e71b3c5a8afb6c77f998229",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/console/zipball/1573f3ebaacf384394f3be951809ee23235ff0fb",
+                "reference": "1573f3ebaacf384394f3be951809ee23235ff0fb",
+                "shasum": ""
+            },
+            "require": {
+                "dragonmantank/cron-expression": "^1.2.1",
+                "flarum/core": "^0.1.0-beta.9",
+                "illuminate/console": "5.7.*",
+                "symfony/process": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                },
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                }
+            ],
+            "description": "Register custom commands and task scheduling into Flarum",
+            "keywords": [
+                "console",
+                "cron",
+                "cronjob",
+                "extension",
+                "flarum"
+            ],
+            "time": "2020-05-10T19:55:49+00:00"
+        },
+        {
+            "name": "fof/default-group",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/default-group.git",
+                "reference": "ea48b17e3f8347c9c4922eabbb78e04e94ebd586"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/default-group/zipball/ea48b17e3f8347c9c4922eabbb78e04e94ebd586",
+                "reference": "ea48b17e3f8347c9c4922eabbb78e04e94ebd586",
                 "shasum": ""
             },
             "require": {
@@ -2868,15 +2970,15 @@
                 },
                 {
                     "name": "David Sevilla Martín",
-                    "role": "Developer",
-                    "email": "david.s@redevs.org"
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
                 }
             ],
             "description": "Assign a default group to new users automatically",
             "keywords": [
                 "flarum"
             ],
-            "time": "2018-12-22T23:13:32+00:00"
+            "time": "2020-06-20T10:21:06+00:00"
         },
         {
             "name": "fof/default-user-preferences",
@@ -2940,20 +3042,22 @@
         },
         {
             "name": "fof/drafts",
-            "version": "0.1.5",
+            "version": "0.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/drafts.git",
-                "reference": "fbb3e62e1a399641d86a9b9523701588f784df99"
+                "reference": "90bb2e8db8abeb275b0e899bc1c3f14bd145e94a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/fbb3e62e1a399641d86a9b9523701588f784df99",
-                "reference": "fbb3e62e1a399641d86a9b9523701588f784df99",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/90bb2e8db8abeb275b0e899bc1c3f14bd145e94a",
+                "reference": "90bb2e8db8abeb275b0e899bc1c3f14bd145e94a",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.13",
+                "fof/components": ">=0.1.0",
+                "fof/console": "^0.5"
             },
             "type": "flarum-extension",
             "extra": {
@@ -2991,7 +3095,7 @@
                 "Friends of Flarum",
                 "flarum"
             ],
-            "time": "2020-03-20T03:57:29+00:00"
+            "time": "2020-06-25T22:31:55+00:00"
         },
         {
             "name": "fof/extend",
@@ -3085,16 +3189,16 @@
         },
         {
             "name": "fof/formatting",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/formatting.git",
-                "reference": "19bd9b3d1ab773c442b1023daf19c1b7a1d688ea"
+                "reference": "8a59cf8149945ccedaa5692f907ec7f7113d132b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/19bd9b3d1ab773c442b1023daf19c1b7a1d688ea",
-                "reference": "19bd9b3d1ab773c442b1023daf19c1b7a1d688ea",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/8a59cf8149945ccedaa5692f907ec7f7113d132b",
+                "reference": "8a59cf8149945ccedaa5692f907ec7f7113d132b",
                 "shasum": ""
             },
             "require": {
@@ -3135,7 +3239,7 @@
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-12-06T20:18:19+00:00"
+            "time": "2020-06-20T11:29:24+00:00"
         },
         {
             "name": "fof/forum-statistics-widget",
@@ -3377,20 +3481,20 @@
         },
         {
             "name": "fof/masquerade",
-            "version": "0.3.3",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/masquerade.git",
-                "reference": "5b30a65cb7a10519db7c72afa70ea2a8f79e3a5f"
+                "reference": "34fb54c77390ac86cf4f401849919aa93004eb58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/5b30a65cb7a10519db7c72afa70ea2a8f79e3a5f",
-                "reference": "5b30a65cb7a10519db7c72afa70ea2a8f79e3a5f",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/34fb54c77390ac86cf4f401849919aa93004eb58",
+                "reference": "34fb54c77390ac86cf4f401849919aa93004eb58",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.12"
             },
             "replace": {
                 "flagrow/masquerade": "*"
@@ -3440,7 +3544,7 @@
                 "profile",
                 "user profile"
             ],
-            "time": "2019-07-28T15:44:45+00:00"
+            "time": "2020-07-10T23:53:46+00:00"
         },
         {
             "name": "fof/merge-discussions",
@@ -3808,16 +3912,16 @@
         },
         {
             "name": "fof/profile-image-crop",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/profile-image-crop.git",
-                "reference": "3f0ee6b88c76f261814c0eff295191d4fdebf696"
+                "reference": "acb41b895cfaf4dc69369c32823c19f7cfc65f23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/profile-image-crop/zipball/3f0ee6b88c76f261814c0eff295191d4fdebf696",
-                "reference": "3f0ee6b88c76f261814c0eff295191d4fdebf696",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/profile-image-crop/zipball/acb41b895cfaf4dc69369c32823c19f7cfc65f23",
+                "reference": "acb41b895cfaf4dc69369c32823c19f7cfc65f23",
                 "shasum": ""
             },
             "require": {
@@ -3851,24 +3955,24 @@
             ],
             "authors": [
                 {
-                    "name": "David Sevilla Martín",
-                    "role": "Developer",
-                    "email": "david.s@redevs.org"
-                },
-                {
                     "name": "WiseClock",
                     "role": "Developer (Original)"
                 },
                 {
                     "name": "foliotek",
                     "role": "Developer (Original)"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
                 }
             ],
             "description": "Allow cropping when uploading profile picture",
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-01-01T20:38:53+00:00"
+            "time": "2020-06-25T17:46:44+00:00"
         },
         {
             "name": "fof/reactions",
@@ -4228,16 +4332,16 @@
         },
         {
             "name": "fof/split",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/split.git",
-                "reference": "53b163f0e5043bb014a35a99dd834042148babe4"
+                "reference": "bb25be5775edaf1c121e86cd8effc3fb5a019bfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/split/zipball/53b163f0e5043bb014a35a99dd834042148babe4",
-                "reference": "53b163f0e5043bb014a35a99dd834042148babe4",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/split/zipball/bb25be5775edaf1c121e86cd8effc3fb5a019bfe",
+                "reference": "bb25be5775edaf1c121e86cd8effc3fb5a019bfe",
                 "shasum": ""
             },
             "require": {
@@ -4275,13 +4379,13 @@
                     "email": "matpompili@gmail.com"
                 },
                 {
-                    "name": "Connor Davis",
-                    "email": "davis@produes.co"
-                },
-                {
                     "name": "Daniël Klabbers",
                     "email": "daniel@klabbers.email",
                     "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Connor Davis",
+                    "email": "davis@produes.co"
                 }
             ],
             "description": "Separate posts from one discussion into its own, splits discussions.",
@@ -4289,7 +4393,7 @@
                 "flarum",
                 "split"
             ],
-            "time": "2019-07-09T17:59:06+00:00"
+            "time": "2020-06-10T13:16:37+00:00"
         },
         {
             "name": "fof/transliterator",
@@ -4553,16 +4657,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.3",
+            "version": "6.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e"
+                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
-                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
+                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
                 "shasum": ""
             },
             "require": {
@@ -4570,7 +4674,7 @@
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
                 "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.11"
+                "symfony/polyfill-intl-idn": "^1.17.0"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -4616,7 +4720,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2020-04-18T10:38:46+00:00"
+            "time": "2020-06-16T21:01:06+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -5925,16 +6029,16 @@
         },
         {
             "name": "laminas/laminas-httphandlerrunner",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-httphandlerrunner.git",
-                "reference": "296f5ff35074dd981d1570a66b95596c81808087"
+                "reference": "e1a5dad040e0043135e8095ee27d1fbf6fb640e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-httphandlerrunner/zipball/296f5ff35074dd981d1570a66b95596c81808087",
-                "reference": "296f5ff35074dd981d1570a66b95596c81808087",
+                "url": "https://api.github.com/repos/laminas/laminas-httphandlerrunner/zipball/e1a5dad040e0043135e8095ee27d1fbf6fb640e1",
+                "reference": "e1a5dad040e0043135e8095ee27d1fbf6fb640e1",
                 "shasum": ""
             },
             "require": {
@@ -5945,7 +6049,7 @@
                 "psr/http-server-handler": "^1.0"
             },
             "replace": {
-                "zendframework/zend-httphandlerrunner": "self.version"
+                "zendframework/zend-httphandlerrunner": "^1.1.0"
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
@@ -5955,8 +6059,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev",
-                    "dev-develop": "1.2.x-dev"
+                    "dev-master": "1.2.x-dev",
+                    "dev-develop": "1.3.x-dev"
                 },
                 "laminas": {
                     "config-provider": "Laminas\\HttpHandlerRunner\\ConfigProvider"
@@ -5980,7 +6084,7 @@
                 "psr-15",
                 "psr-7"
             ],
-            "time": "2019-12-31T17:06:16+00:00"
+            "time": "2020-06-03T15:52:17+00:00"
         },
         {
             "name": "laminas/laminas-stratigility",
@@ -6058,16 +6162,16 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "bfbbdb6c998d50dbf69d2187cb78a5f1fa36e1e9"
+                "reference": "fcd87520e4943d968557803919523772475e8ea3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/bfbbdb6c998d50dbf69d2187cb78a5f1fa36e1e9",
-                "reference": "bfbbdb6c998d50dbf69d2187cb78a5f1fa36e1e9",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/fcd87520e4943d968557803919523772475e8ea3",
+                "reference": "fcd87520e4943d968557803919523772475e8ea3",
                 "shasum": ""
             },
             "require": {
@@ -6106,20 +6210,20 @@
                 "laminas",
                 "zf"
             ],
-            "time": "2020-04-03T16:01:00+00:00"
+            "time": "2020-05-20T16:45:56+00:00"
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.68",
+            "version": "1.0.69",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3e4198372276ec99ac3409a21d7c9d1ced9026e4"
+                "reference": "7106f78428a344bc4f643c233a94e48795f10967"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3e4198372276ec99ac3409a21d7c9d1ced9026e4",
-                "reference": "3e4198372276ec99ac3409a21d7c9d1ced9026e4",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/7106f78428a344bc4f643c233a94e48795f10967",
+                "reference": "7106f78428a344bc4f643c233a94e48795f10967",
                 "shasum": ""
             },
             "require": {
@@ -6190,7 +6294,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-05-12T20:33:44+00:00"
+            "time": "2020-05-18T15:13:39+00:00"
         },
         {
             "name": "league/oauth1-client",
@@ -6257,20 +6361,20 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "2.4.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "cc114abc622a53af969e8664722e84ca36257530"
+                "reference": "d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/cc114abc622a53af969e8664722e84ca36257530",
-                "reference": "cc114abc622a53af969e8664722e84ca36257530",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb",
+                "reference": "d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0",
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
                 "paragonie/random_compat": "^1|^2|^9.99",
                 "php": "^5.6|^7.0"
             },
@@ -6320,7 +6424,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2018-11-22T18:33:57+00:00"
+            "time": "2020-07-18T17:54:32+00:00"
         },
         {
             "name": "league/oauth2-facebook",
@@ -6481,16 +6585,16 @@
         },
         {
             "name": "littlegolden/flarum-lang-japanese",
-            "version": "v0.1.66",
+            "version": "v0.1.67",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Littlegolden/flarum-lang-japanese.git",
-                "reference": "196bc9e4e6228cd0110799f952507f3a6c0e1ec8"
+                "reference": "cc82381c15fa7ec627c22ff1d5c6a9953d6c17b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Littlegolden/flarum-lang-japanese/zipball/196bc9e4e6228cd0110799f952507f3a6c0e1ec8",
-                "reference": "196bc9e4e6228cd0110799f952507f3a6c0e1ec8",
+                "url": "https://api.github.com/repos/Littlegolden/flarum-lang-japanese/zipball/cc82381c15fa7ec627c22ff1d5c6a9953d6c17b7",
+                "reference": "cc82381c15fa7ec627c22ff1d5c6a9953d6c17b7",
                 "shasum": ""
             },
             "require": {
@@ -6544,20 +6648,20 @@
                 "translation",
                 "日本語"
             ],
-            "time": "2020-05-12T13:55:08+00:00"
+            "time": "2020-05-17T00:30:07+00:00"
         },
         {
             "name": "luatdolphin/lang-vietnamese",
-            "version": "0.1.0-beta.13",
+            "version": "0.1.0-beta.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luatdolphin/lang-vietnamese.git",
-                "reference": "615494961c9f4a631c2ea26afabccf0f4df7f191"
+                "reference": "133fc85b6d0e422d649bbc2079f0f433d1903f8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/615494961c9f4a631c2ea26afabccf0f4df7f191",
-                "reference": "615494961c9f4a631c2ea26afabccf0f4df7f191",
+                "url": "https://api.github.com/repos/luatdolphin/lang-vietnamese/zipball/133fc85b6d0e422d649bbc2079f0f433d1903f8f",
+                "reference": "133fc85b6d0e422d649bbc2079f0f433d1903f8f",
                 "shasum": ""
             },
             "require": {
@@ -6582,6 +6686,11 @@
                     "title": "Vietnamese"
                 }
             },
+            "autoload": {
+                "psr-4": {
+                    "luatdolphin\\lang-vietnamese\\": "src/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -6592,7 +6701,7 @@
                 "vietnam",
                 "vietnamese"
             ],
-            "time": "2020-06-01T04:33:28+00:00"
+            "time": "2020-07-09T11:13:13+00:00"
         },
         {
             "name": "madchatthew/themelightshadow",
@@ -6817,16 +6926,16 @@
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "d5c40c5928c79a1aee9f879943e14461771b5d69"
+                "reference": "ba564b411a97e3940c91aa3d308f7f13ef4889fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/marketplace-flarum%2Fflarum-l10n-ext-russian/repository/archive.zip?sha=d5c40c5928c79a1aee9f879943e14461771b5d69",
-                "reference": "d5c40c5928c79a1aee9f879943e14461771b5d69",
+                "url": "https://gitlab.com/api/v4/projects/marketplace-flarum%2Fflarum-l10n-ext-russian/repository/archive.zip?sha=ba564b411a97e3940c91aa3d308f7f13ef4889fb",
+                "reference": "ba564b411a97e3940c91aa3d308f7f13ef4889fb",
                 "shasum": ""
             },
             "require": {
@@ -6882,7 +6991,8 @@
                 },
                 {
                     "name": "Kitsune Solar",
-                    "homepage": "https://KitsuneSolar.com",
+                    "email": "kitsune.solar@gmail.com",
+                    "homepage": "https://dunaev.dev",
                     "role": "Editor"
                 },
                 {
@@ -6907,7 +7017,7 @@
                 "russian",
                 "translation"
             ],
-            "time": "2020-01-26T13:24:41+00:00"
+            "time": "2020-07-01T20:19:41+00:00"
         },
         {
             "name": "matteocontrini/flarum-imgur-upload",
@@ -7482,74 +7592,17 @@
             "time": "2019-03-13T21:31:29+00:00"
         },
         {
-            "name": "milescellar/lang-french",
-            "version": "v1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/qiaeru/lang-french.git",
-                "reference": "b8e173a20db61c1ff178adef6dcbe60ea705a312"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/qiaeru/lang-french/zipball/b8e173a20db61c1ff178adef6dcbe60ea705a312",
-                "reference": "b8e173a20db61c1ff178adef6dcbe60ea705a312",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.13"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.7.x-dev"
-                },
-                "flarum-extension": {
-                    "title": "French",
-                    "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#fff",
-                        "backgroundSize": "cover",
-                        "backgroundPosition": "center"
-                    }
-                },
-                "flarum-locale": {
-                    "code": "fr",
-                    "title": "Français"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Miles Cellar",
-                    "email": "milescellar@protonmail.com"
-                }
-            ],
-            "description": "French language pack for Flarum and its bundled extensions.",
-            "keywords": [
-                "extension",
-                "flarum",
-                "french",
-                "locale",
-                "translation"
-            ],
-            "abandoned": "qiaeru/lang-french",
-            "time": "2020-05-04T12:36:02+00:00"
-        },
-        {
             "name": "monolog/monolog",
-            "version": "1.25.3",
+            "version": "1.25.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "fa82921994db851a8becaf3787a9e73c5976b6f1"
+                "reference": "3022efff205e2448b560c833c6fbbf91c3139168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fa82921994db851a8becaf3787a9e73c5976b6f1",
-                "reference": "fa82921994db851a8becaf3787a9e73c5976b6f1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/3022efff205e2448b560c833c6fbbf91c3139168",
+                "reference": "3022efff205e2448b560c833c6fbbf91c3139168",
                 "shasum": ""
             },
             "require": {
@@ -7563,11 +7616,10 @@
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
+                "php-parallel-lint/php-parallel-lint": "^1.0",
                 "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
@@ -7614,24 +7666,24 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2019-12-20T14:15:16+00:00"
+            "time": "2020-05-22T07:31:27+00:00"
         },
         {
             "name": "nearata/lang-italian",
-            "version": "v0.1.0-beta.11",
+            "version": "v0.1.0-beta.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nearata/lang-italian.git",
-                "reference": "c6d6f55a1760a527315d8deb72488defe2bd162b"
+                "reference": "1f042fd982a5fc17499a4bb24056d8e8ce65fdb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nearata/lang-italian/zipball/c6d6f55a1760a527315d8deb72488defe2bd162b",
-                "reference": "c6d6f55a1760a527315d8deb72488defe2bd162b",
+                "url": "https://api.github.com/repos/Nearata/lang-italian/zipball/1f042fd982a5fc17499a4bb24056d8e8ce65fdb9",
+                "reference": "1f042fd982a5fc17499a4bb24056d8e8ce65fdb9",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.11"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "type": "flarum-extension",
             "extra": {
@@ -7665,7 +7717,7 @@
                 "italian",
                 "locale"
             ],
-            "time": "2020-02-11T15:56:17+00:00"
+            "time": "2020-06-25T20:51:52+00:00"
         },
         {
             "name": "neercsys/flarum-ext-bosanski",
@@ -7980,16 +8032,16 @@
         },
         {
             "name": "opis/closure",
-            "version": "3.5.1",
+            "version": "3.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/closure.git",
-                "reference": "93ebc5712cdad8d5f489b500c59d122df2e53969"
+                "reference": "dec9fc5ecfca93f45cd6121f8e6f14457dff372c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/93ebc5712cdad8d5f489b500c59d122df2e53969",
-                "reference": "93ebc5712cdad8d5f489b500c59d122df2e53969",
+                "url": "https://api.github.com/repos/opis/closure/zipball/dec9fc5ecfca93f45cd6121f8e6f14457dff372c",
+                "reference": "dec9fc5ecfca93f45cd6121f8e6f14457dff372c",
                 "shasum": ""
             },
             "require": {
@@ -8037,7 +8089,7 @@
                 "serialization",
                 "serialize"
             ],
-            "time": "2019-11-29T22:36:02+00:00"
+            "time": "2020-06-17T14:59:55+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -8659,6 +8711,62 @@
             "time": "2017-06-06T16:41:17+00:00"
         },
         {
+            "name": "qiaeru/lang-french",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qiaeru/lang-french.git",
+                "reference": "b8e173a20db61c1ff178adef6dcbe60ea705a312"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qiaeru/lang-french/zipball/b8e173a20db61c1ff178adef6dcbe60ea705a312",
+                "reference": "b8e173a20db61c1ff178adef6dcbe60ea705a312",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.13"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "French",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#fff",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "fr",
+                    "title": "Français"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miles Cellar",
+                    "email": "milescellar@protonmail.com"
+                }
+            ],
+            "description": "French language pack for Flarum and its bundled extensions.",
+            "keywords": [
+                "extension",
+                "flarum",
+                "french",
+                "locale",
+                "translation"
+            ],
+            "time": "2020-05-04T12:36:02+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -8700,20 +8808,20 @@
         },
         {
             "name": "realodix/flarum-ext-indonesian",
-            "version": "1.12.7",
+            "version": "1.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realodix/flarum-ext-indonesian.git",
-                "reference": "0144938785260e7f864536ad16b8f18cc1193140"
+                "reference": "0b00796280952fc5e5f4084d36585f1ed3121af5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/0144938785260e7f864536ad16b8f18cc1193140",
-                "reference": "0144938785260e7f864536ad16b8f18cc1193140",
+                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/0b00796280952fc5e5f4084d36585f1ed3121af5",
+                "reference": "0b00796280952fc5e5f4084d36585f1ed3121af5",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.12"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "type": "flarum-extension",
             "extra": {
@@ -8749,7 +8857,7 @@
                 "indonesian-language",
                 "translation"
             ],
-            "time": "2020-05-06T13:02:16+00:00"
+            "time": "2020-06-27T19:50:34+00:00"
         },
         {
             "name": "reflar/cookie-consent",
@@ -9129,17 +9237,57 @@
             "time": "2020-01-08T02:46:22+00:00"
         },
         {
-            "name": "s9e/text-formatter",
-            "version": "2.5.0",
+            "name": "s9e/sweetdom",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "1f92145ebeba84dc3736c608d2e56cdf1c3e31fa"
+                "url": "https://github.com/s9e/SweetDOM.git",
+                "reference": "f3a58c723fbe04d92ebcef5c8c7913bb364f58cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/1f92145ebeba84dc3736c608d2e56cdf1c3e31fa",
-                "reference": "1f92145ebeba84dc3736c608d2e56cdf1c3e31fa",
+                "url": "https://api.github.com/repos/s9e/SweetDOM/zipball/f3a58c723fbe04d92ebcef5c8c7913bb364f58cd",
+                "reference": "f3a58c723fbe04d92ebcef5c8c7913bb364f58cd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "s9e\\SweetDOM\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Syntactic sugar for the DOM API with a focus on XSLT 1.0 template manipulation.",
+            "homepage": "https://github.com/s9e/SweetDOM/",
+            "keywords": [
+                "dom",
+                "xsl",
+                "xslt"
+            ],
+            "time": "2020-05-25T15:01:02+00:00"
+        },
+        {
+            "name": "s9e/text-formatter",
+            "version": "2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/s9e/TextFormatter.git",
+                "reference": "aea006fbd90bf23374c538e7c1792eda13e44c89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/aea006fbd90bf23374c538e7c1792eda13e44c89",
+                "reference": "aea006fbd90bf23374c538e7c1792eda13e44c89",
                 "shasum": ""
             },
             "require": {
@@ -9147,7 +9295,8 @@
                 "ext-filter": "*",
                 "lib-pcre": ">=8.13",
                 "php": ">=7.1",
-                "s9e/regexp-builder": "^1.4"
+                "s9e/regexp-builder": "^1.4",
+                "s9e/sweetdom": "^1.0"
             },
             "require-dev": {
                 "matthiasmullie/minify": "*",
@@ -9165,7 +9314,7 @@
             },
             "type": "library",
             "extra": {
-                "version": "2.5.0"
+                "version": "2.7.2"
             },
             "autoload": {
                 "psr-4": {
@@ -9195,7 +9344,7 @@
                 "parser",
                 "shortcodes"
             ],
-            "time": "2020-04-29T16:11:43+00:00"
+            "time": "2020-06-22T00:41:41+00:00"
         },
         {
             "name": "saleksin/flarum-auth-google",
@@ -9318,16 +9467,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.40",
+            "version": "v3.4.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "3634991bea549e73c45a964c38f30ceeae6ed877"
+                "reference": "cd61db31cbd19cbe4ba9f6968f13c9076e1372ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/3634991bea549e73c45a964c38f30ceeae6ed877",
-                "reference": "3634991bea549e73c45a964c38f30ceeae6ed877",
+                "url": "https://api.github.com/repos/symfony/config/zipball/cd61db31cbd19cbe4ba9f6968f13c9076e1372ab",
+                "reference": "cd61db31cbd19cbe4ba9f6968f13c9076e1372ab",
                 "shasum": ""
             },
             "require": {
@@ -9378,26 +9527,27 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2020-04-12T14:33:46+00:00"
+            "time": "2020-05-22T10:56:48+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "10bb3ee3c97308869d53b3e3d03f6ac23ff985f7"
+                "reference": "326b064d804043005526f5a0494cfb49edb59bb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/10bb3ee3c97308869d53b3e3d03f6ac23ff985f7",
-                "reference": "10bb3ee3c97308869d53b3e3d03f6ac23ff985f7",
+                "url": "https://api.github.com/repos/symfony/console/zipball/326b064d804043005526f5a0494cfb49edb59bb0",
+                "reference": "326b064d804043005526f5a0494cfb49edb59bb0",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": ">=7.1.3",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php73": "^1.8",
+                "symfony/polyfill-php80": "^1.15",
                 "symfony/service-contracts": "^1.1|^2"
             },
             "conflict": {
@@ -9454,29 +9604,29 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-30T11:41:10+00:00"
+            "time": "2020-05-30T20:06:45+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.0.8",
+            "version": "v5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "5f8d5271303dad260692ba73dfa21777d38e124e"
+                "reference": "e544e24472d4c97b2d11ade7caacd446727c6bf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/5f8d5271303dad260692ba73dfa21777d38e124e",
-                "reference": "5f8d5271303dad260692ba73dfa21777d38e124e",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e544e24472d4c97b2d11ade7caacd446727c6bf9",
+                "reference": "e544e24472d4c97b2d11ade7caacd446727c6bf9",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5"
+                "php": ">=7.2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -9507,25 +9657,26 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-27T16:56:45+00:00"
+            "time": "2020-05-20T17:43:50+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "346636d2cae417992ecfd761979b2ab98b339a45"
+                "reference": "28f92d08bb6d1fddf8158e02c194ad43870007e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/346636d2cae417992ecfd761979b2ab98b339a45",
-                "reference": "346636d2cae417992ecfd761979b2ab98b339a45",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/28f92d08bb6d1fddf8158e02c194ad43870007e6",
+                "reference": "28f92d08bb6d1fddf8158e02c194ad43870007e6",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
-                "psr/log": "~1.0"
+                "php": ">=7.1.3",
+                "psr/log": "~1.0",
+                "symfony/polyfill-php80": "^1.15"
             },
             "conflict": {
                 "symfony/http-kernel": "<3.4"
@@ -9563,24 +9714,24 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-27T16:54:36+00:00"
+            "time": "2020-05-24T08:33:35+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "abc8e3618bfdb55e44c8c6a00abd333f831bbfed"
+                "reference": "a5370aaa7807c7a439b21386661ffccf3dff2866"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/abc8e3618bfdb55e44c8c6a00abd333f831bbfed",
-                "reference": "abc8e3618bfdb55e44c8c6a00abd333f831bbfed",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a5370aaa7807c7a439b21386661ffccf3dff2866",
+                "reference": "a5370aaa7807c7a439b21386661ffccf3dff2866",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": ">=7.1.3",
                 "symfony/event-dispatcher-contracts": "^1.1"
             },
             "conflict": {
@@ -9633,24 +9784,24 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-27T16:54:36+00:00"
+            "time": "2020-05-20T08:37:50+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v1.1.7",
+            "version": "v1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18"
+                "reference": "84e23fdcd2517bf37aecbd16967e83f0caee25a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
-                "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/84e23fdcd2517bf37aecbd16967e83f0caee25a7",
+                "reference": "84e23fdcd2517bf37aecbd16967e83f0caee25a7",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.1.3"
             },
             "suggest": {
                 "psr/event-dispatcher": "",
@@ -9660,6 +9811,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.1-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -9691,24 +9846,24 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-09-17T09:54:03+00:00"
+            "time": "2020-07-06T13:19:58+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "a3ebf3bfd8a98a147c010a568add5a8aa4edea0f"
+                "reference": "b27f491309db5757816db672b256ea2e03677d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a3ebf3bfd8a98a147c010a568add5a8aa4edea0f",
-                "reference": "a3ebf3bfd8a98a147c010a568add5a8aa4edea0f",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b27f491309db5757816db672b256ea2e03677d30",
+                "reference": "b27f491309db5757816db672b256ea2e03677d30",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": ">=7.1.3",
                 "symfony/polyfill-ctype": "~1.8"
             },
             "type": "library",
@@ -9741,11 +9896,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2020-04-12T14:39:55+00:00"
+            "time": "2020-05-30T18:50:54+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -9794,20 +9949,20 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "ec5bd254c223786f5fa2bb49a1e705c1b8e7cee2"
+                "reference": "3adfbd7098c850b02d107330b7b9deacf2581578"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ec5bd254c223786f5fa2bb49a1e705c1b8e7cee2",
-                "reference": "ec5bd254c223786f5fa2bb49a1e705c1b8e7cee2",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3adfbd7098c850b02d107330b7b9deacf2581578",
+                "reference": "3adfbd7098c850b02d107330b7b9deacf2581578",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": ">=7.1.3",
                 "symfony/mime": "^4.3|^5.0",
                 "symfony/polyfill-mbstring": "~1.1"
             },
@@ -9845,26 +10000,27 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-04-18T20:40:08+00:00"
+            "time": "2020-05-23T09:11:46+00:00"
         },
         {
             "name": "symfony/mime",
-            "version": "v5.0.8",
+            "version": "v5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "5d6c81c39225a750f3f43bee15f03093fb9aaa0b"
+                "reference": "c0c418f05e727606e85b482a8591519c4712cf45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/5d6c81c39225a750f3f43bee15f03093fb9aaa0b",
-                "reference": "5d6c81c39225a750f3f43bee15f03093fb9aaa0b",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/c0c418f05e727606e85b482a8591519c4712cf45",
+                "reference": "c0c418f05e727606e85b482a8591519c4712cf45",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5",
+                "php": ">=7.2.5",
                 "symfony/polyfill-intl-idn": "^1.10",
-                "symfony/polyfill-mbstring": "^1.0"
+                "symfony/polyfill-mbstring": "^1.0",
+                "symfony/polyfill-php80": "^1.15"
             },
             "conflict": {
                 "symfony/mailer": "<4.4"
@@ -9876,7 +10032,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -9907,20 +10063,20 @@
                 "mime",
                 "mime-type"
             ],
-            "time": "2020-04-17T03:29:44+00:00"
+            "time": "2020-06-09T15:07:35+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9"
+                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
-                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1c302646f6efc070cd46856e600e5e0684d6b454",
+                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
                 "shasum": ""
             },
             "require": {
@@ -9932,7 +10088,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9965,20 +10125,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2020-05-12T16:14:59+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "c4de7601eefbf25f9d47190abe07f79fe0a27424"
+                "reference": "6c2f78eb8f5ab8eaea98f6d414a5915f2e0fce36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/c4de7601eefbf25f9d47190abe07f79fe0a27424",
-                "reference": "c4de7601eefbf25f9d47190abe07f79fe0a27424",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/6c2f78eb8f5ab8eaea98f6d414a5915f2e0fce36",
+                "reference": "6c2f78eb8f5ab8eaea98f6d414a5915f2e0fce36",
                 "shasum": ""
             },
             "require": {
@@ -9990,7 +10150,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10024,25 +10188,26 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a"
+                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3bff59ea7047e925be6b7f2059d60af31bb46d6a",
-                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
+                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-intl-normalizer": "^1.10",
+                "symfony/polyfill-php70": "^1.10",
                 "symfony/polyfill-php72": "^1.10"
             },
             "suggest": {
@@ -10051,7 +10216,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10072,6 +10241,10 @@
                     "email": "laurent@bassin.info"
                 },
                 {
+                    "name": "Trevor Rowbotham",
+                    "email": "trevor.rowbotham@pm.me"
+                },
+                {
                     "name": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
                 }
@@ -10086,20 +10259,87 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.17.0",
+            "name": "symfony/polyfill-intl-normalizer",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
+                "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
+                "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
-                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
+                "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's Normalizer class and related functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "intl",
+                "normalizer",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-07-14T12:35:20+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
+                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
                 "shasum": ""
             },
             "require": {
@@ -10111,7 +10351,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10145,20 +10389,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php56.git",
-                "reference": "e3c8c138280cdfe4b81488441555583aa1984e23"
+                "reference": "13df84e91cd168f247c2f2ec82cc0fa24901c011"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/e3c8c138280cdfe4b81488441555583aa1984e23",
-                "reference": "e3c8c138280cdfe4b81488441555583aa1984e23",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/13df84e91cd168f247c2f2ec82cc0fa24901c011",
+                "reference": "13df84e91cd168f247c2f2ec82cc0fa24901c011",
                 "shasum": ""
             },
             "require": {
@@ -10168,7 +10412,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10201,20 +10449,83 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
-            "name": "symfony/polyfill-php72",
-            "version": "v1.17.0",
+            "name": "symfony/polyfill-php70",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "f048e612a3905f34931127360bdd2def19a5e582"
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "0dd93f2c578bdc9c72697eaa5f1dd25644e618d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/f048e612a3905f34931127360bdd2def19a5e582",
-                "reference": "f048e612a3905f34931127360bdd2def19a5e582",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/0dd93f2c578bdc9c72697eaa5f1dd25644e618d3",
+                "reference": "0dd93f2c578bdc9c72697eaa5f1dd25644e618d3",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "~1.0|~2.0|~9.99",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-07-14T12:35:20+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "639447d008615574653fb3bc60d1986d7172eaae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/639447d008615574653fb3bc60d1986d7172eaae",
+                "reference": "639447d008615574653fb3bc60d1986d7172eaae",
                 "shasum": ""
             },
             "require": {
@@ -10223,7 +10534,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10256,20 +10571,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc"
+                "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/a760d8964ff79ab9bf057613a5808284ec852ccc",
-                "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
+                "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
                 "shasum": ""
             },
             "require": {
@@ -10278,7 +10593,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10314,20 +10633,86 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
-            "name": "symfony/polyfill-util",
-            "version": "v1.17.0",
+            "name": "symfony/polyfill-php80",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-util.git",
-                "reference": "4afb4110fc037752cf0ce9869f9ab8162c4e20d7"
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/4afb4110fc037752cf0ce9869f9ab8162c4e20d7",
-                "reference": "4afb4110fc037752cf0ce9869f9ab8162c4e20d7",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-07-14T12:35:20+00:00"
+        },
+        {
+            "name": "symfony/polyfill-util",
+            "version": "v1.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-util.git",
+                "reference": "46b910c71e9828f8ec2aa7a0314de1130d9b295a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/46b910c71e9828f8ec2aa7a0314de1130d9b295a",
+                "reference": "46b910c71e9828f8ec2aa7a0314de1130d9b295a",
                 "shasum": ""
             },
             "require": {
@@ -10336,7 +10721,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -10366,20 +10755,20 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2020-05-12T16:14:59+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.8",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "4b6a9a4013baa65d409153cbb5a895bf093dc7f4"
+                "reference": "c714958428a85c86ab97e3a0c96db4c4f381b7f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/4b6a9a4013baa65d409153cbb5a895bf093dc7f4",
-                "reference": "4b6a9a4013baa65d409153cbb5a895bf093dc7f4",
+                "url": "https://api.github.com/repos/symfony/process/zipball/c714958428a85c86ab97e3a0c96db4c4f381b7f5",
+                "reference": "c714958428a85c86ab97e3a0c96db4c4f381b7f5",
                 "shasum": ""
             },
             "require": {
@@ -10415,24 +10804,24 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2020-04-15T15:56:18+00:00"
+            "time": "2020-05-30T20:06:45+00:00"
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v2.0.1",
+            "version": "v2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "144c5e51266b281231e947b51223ba14acf1a749"
+                "reference": "58c7475e5457c5492c26cc740cc0ad7464be9442"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/144c5e51266b281231e947b51223ba14acf1a749",
-                "reference": "144c5e51266b281231e947b51223ba14acf1a749",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/58c7475e5457c5492c26cc740cc0ad7464be9442",
+                "reference": "58c7475e5457c5492c26cc740cc0ad7464be9442",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5",
+                "php": ">=7.2.5",
                 "psr/container": "^1.0"
             },
             "suggest": {
@@ -10441,7 +10830,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -10473,20 +10866,20 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-11-18T17:27:11+00:00"
+            "time": "2020-07-06T13:23:11+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v3.4.40",
+            "version": "v3.4.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "4e844362f573713e6d45949795c95a4cb6cf760d"
+                "reference": "b0cd62ef0ff7ec31b67d78d7fc818e2bda4e844f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/4e844362f573713e6d45949795c95a4cb6cf760d",
-                "reference": "4e844362f573713e6d45949795c95a4cb6cf760d",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/b0cd62ef0ff7ec31b67d78d7fc818e2bda4e844f",
+                "reference": "b0cd62ef0ff7ec31b67d78d7fc818e2bda4e844f",
                 "shasum": ""
             },
             "require": {
@@ -10543,20 +10936,20 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-04-12T16:39:58+00:00"
+            "time": "2020-05-30T18:58:05+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.40",
+            "version": "v3.4.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "8fef49ac1357f4e05c997a1f139467ccb186bffa"
+                "reference": "7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/8fef49ac1357f4e05c997a1f139467ccb186bffa",
-                "reference": "8fef49ac1357f4e05c997a1f139467ccb186bffa",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb",
+                "reference": "7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb",
                 "shasum": ""
             },
             "require": {
@@ -10602,7 +10995,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-04-24T10:16:04+00:00"
+            "time": "2020-05-11T07:51:54+00:00"
         },
         {
             "name": "the-turk/flarum-mathren",
@@ -10662,26 +11055,26 @@
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-                "reference": "dda2ee426acd6d801d5b7fd1001cde9b5f790e15"
+                "reference": "b43b05cf43c1b6d849478965062b6ef73e223bb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/dda2ee426acd6d801d5b7fd1001cde9b5f790e15",
-                "reference": "dda2ee426acd6d801d5b7fd1001cde9b5f790e15",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/b43b05cf43c1b6d849478965062b6ef73e223bb5",
+                "reference": "b43b05cf43c1b6d849478965062b6ef73e223bb5",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "php": "^5.5 || ^7.0",
+                "php": "^5.5 || ^7.0 || ^8.0",
                 "symfony/css-selector": "^2.7 || ^3.0 || ^4.0 || ^5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.5"
             },
             "type": "library",
             "extra": {
@@ -10707,20 +11100,20 @@
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
-            "time": "2019-10-24T08:53:34+00:00"
+            "time": "2020-07-13T06:12:54+00:00"
         },
         {
             "name": "tiu-ram0n/brazilian-portuguese",
-            "version": "1.1.19",
+            "version": "1.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tiuram0n/brazilian-portuguese.git",
-                "reference": "4ed7b43ad5ee6c82ac0b84f0d27abb8767a2d1bd"
+                "reference": "814ea439214544b851c114d713f243276c6ef13b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tiuram0n/brazilian-portuguese/zipball/4ed7b43ad5ee6c82ac0b84f0d27abb8767a2d1bd",
-                "reference": "4ed7b43ad5ee6c82ac0b84f0d27abb8767a2d1bd",
+                "url": "https://api.github.com/repos/tiuram0n/brazilian-portuguese/zipball/814ea439214544b851c114d713f243276c6ef13b",
+                "reference": "814ea439214544b851c114d713f243276c6ef13b",
                 "shasum": ""
             },
             "require": {
@@ -10757,7 +11150,7 @@
                 }
             ],
             "description": "Pacote de idioma Português do Brasil.",
-            "homepage": "https://coode.in",
+            "homepage": "https://ramonguilherme.com.br",
             "keywords": [
                 "brazilian",
                 "extensão",
@@ -10766,7 +11159,7 @@
                 "portugues",
                 "portuguese"
             ],
-            "time": "2020-01-29T19:23:43+00:00"
+            "time": "2020-06-11T04:59:36+00:00"
         },
         {
             "name": "tiu-ram0n/flaneo-ext-brazilian-portuguese",
@@ -11048,16 +11441,16 @@
         },
         {
             "name": "v17development/flarum-seo",
-            "version": "1.2",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/v17development/flarum-seo.git",
-                "reference": "1b499cac04a40614ee1eeb278bf4ff37bc2b50b8"
+                "reference": "d814c00d7c66cb00f8391e793597aed5947de0f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/1b499cac04a40614ee1eeb278bf4ff37bc2b50b8",
-                "reference": "1b499cac04a40614ee1eeb278bf4ff37bc2b50b8",
+                "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/d814c00d7c66cb00f8391e793597aed5947de0f9",
+                "reference": "d814c00d7c66cb00f8391e793597aed5947de0f9",
                 "shasum": ""
             },
             "require": {
@@ -11094,7 +11487,7 @@
                 }
             ],
             "description": "Adds SEO tags for your Flarum forum",
-            "time": "2020-05-10T13:40:43+00:00"
+            "time": "2020-05-26T11:06:16+00:00"
         },
         {
             "name": "veriael/flarum-polish",

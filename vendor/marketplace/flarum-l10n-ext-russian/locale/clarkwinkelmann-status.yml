@@ -1,0 +1,19 @@
+clarkwinkelmann-status:
+    admin:
+        settings:
+            title: "Настройки статуса"
+            only-countries: "Только флаги стран"
+            enable-text: "Разрешить текстовый статус"
+        permissions:
+            see: "Смотреть статус"
+            set: "Установить статус"
+            mod: "Модерировать статусы"
+
+    forum:
+        menu:
+            set-status: "Установить статус"
+        modal:
+            title: "Установить статус"
+            text-placeholder: "Что произошло?"
+            submit: "Сохранить"
+            clear: "Очистить"

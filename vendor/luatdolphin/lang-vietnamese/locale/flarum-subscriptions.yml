@@ -17,6 +17,10 @@ flarum-subscriptions:
       follow_button: => flarum-subscriptions.ref.follow
       unfollow_button: Bỏ theo dõi
       unignore_button: Ngừng bỏ qua
+      
+    # These translations are used on the page that displays all subscriptions.
+    following:
+      meta_title_text: => flarum-subscriptions.ref.following
 
     # These translations are used on the index page, peripheral to the discussion list.
     index:

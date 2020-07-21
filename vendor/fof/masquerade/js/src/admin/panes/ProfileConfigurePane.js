@@ -1,3 +1,5 @@
+import sortable from 'html5sortable/dist/html5sortable.es.js';
+
 import app from 'flarum/app';
 import icon from 'flarum/helpers/icon';
 import Component from 'flarum/Component';
@@ -20,26 +22,23 @@ export default class ProfileConfigurePane extends Component {
         this.existing = [];
         this.loadExisting();
         this.enforceProfileCompletion = m.prop(app.data.settings['masquerade.force-profile-completion'] == 1);
-        this.disableUserBio = m.prop(app.data.settings['masquerade.disable-user-bio'] == 1);
     }
 
     /**
      * Configures the component.
      */
     config() {
-        this.$('.js-sortable-fields')
-            .sortable({
-                cancel: '',
-            })
-            .on('sortupdate', (e, ui) => {
-                const sorting = this.$('.js-sortable-fields > .Field')
-                    .map(function () {
-                        return $(this).data('id');
-                    })
-                    .get();
+        sortable(this.element.querySelector('.js-sortable-fields'), {
+            handle: 'legend',
+        })[0].addEventListener('sortupdate', () => {
+            const sorting = this.$('.js-sortable-fields > .Field')
+                .map(function () {
+                    return $(this).data('id');
+                })
+                .get();
 
-                this.updateSort(sorting);
-            });
+            this.updateSort(sorting);
+        });
     }
 
     /**
@@ -56,11 +55,6 @@ export default class ProfileConfigurePane extends Component {
                     state: this.enforceProfileCompletion(),
                     onchange: this.updateSetting.bind(this, this.enforceProfileCompletion, 'masquerade.force-profile-completion'),
                     children: app.translator.trans('fof-masquerade.admin.fields.force-user-to-completion'),
-                })),
-                m('.Form-group', Switch.component({
-                    state: this.disableUserBio(),
-                    onchange: this.updateSetting.bind(this, this.disableUserBio, 'masquerade.disable-user-bio'),
-                    children: app.translator.trans('fof-masquerade.admin.fields.disable-user-bio'),
                 })),
             ]),
             m('h2', app.translator.trans('fof-masquerade.admin.fields.title')),

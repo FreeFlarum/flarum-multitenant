@@ -40,6 +40,8 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Lingua predefinita
+      display_name_heading: Nome alternativo
+      display_name_text: Seleziona il driver da utilizzare per visualizzare i nomi alternativi degli utenti. Di predefinito, viene mostrato il nome utente.
       forum_description_heading: Descrizione del Forum
       forum_description_text: Scrivi una breve descrizione della tua community. Apparirà nei meta tag e mostrato ai motori di ricerca.
       forum_title_heading: Nome del Forum
@@ -73,6 +75,7 @@ core:
       color_label: => core.ref.color
       delete_button: Cancella gruppo
       delete_confirmation: "Sei sicuro di voler cancellare questo gruppo? Gli utenti che sono in questo gruppo NON verranno cancellati."
+      hide_label: Nascondi sul forum
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: Nome
@@ -102,14 +105,10 @@ core:
       mail_mandrill_secret_label: Chiave segreta
       mail_password_label: => core.ref.password
       mail_port_label: Porta
-      mail_ses_key_label: Chiave
-      mail_ses_region_label: Regione
-      mail_ses_secret_label: Segreto
       mail_username_label: => core.ref.username
       mailgun_heading: Impostazioni Mailgun
       mandrill_heading: Impostazioni Mandrill
       not_sending_message: Flarum al momento non invia e-mail. Ciò può essere dovuto al driver selezionato oppure a errori di configurazione.
-      ses_heading: Impostazioni SES
       smtp_heading: Impostazioni SMTP
       submit_button: => core.ref.save_changes
       text: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare e-mail
@@ -164,6 +163,7 @@ core:
       reply_to_discussions_label: Rispondere alle discussioni
       sign_up_label: Registrazione
       start_discussions_label: Iniziare una discussione
+      view_hidden_groups_label: Visualizzare i badge dei gruppi nascosti
       view_discussions_label: Leggere le discussioni
       view_last_seen_at_label: Vedere l'ultimo accesso di un utente
       view_post_ips_label: Visualizzare indirizzi IP di un messaggio
@@ -338,8 +338,10 @@ core:
     # These translations are used by the post control buttons.
     post_controls:
       delete_button: => core.ref.delete
+      delete_confirmation: "Sei sicuro di volere cancellare questa discussione per sempre? Questa azione è irreversibile."
       delete_forever_button: => core.ref.delete_forever
       edit_button: => core.ref.edit
+      hide_confirmation: "Sei sicuro di volere cancellare questa discussione?"
       restore_button: => core.ref.restore
 
     # These translations are used in the scrubber to the right of the post stream.
@@ -410,7 +412,7 @@ core:
     user_controls:
       button: Controlli
       delete_button: => core.ref.delete
-      delete_confirmation: "Sei sicuro di voler eliminare questo utente? Tutti i messaggi di questo utente verrano cancellati."
+      delete_confirmation: "Sei sicuro di voler eliminare questo utente? Tutti i messaggi di questo utente NON verrano cancellati."
       delete_error_message: "Cancellazione dell'utente <i>{username} ({email})</i> fallito"
       delete_success_message: "L'utente <i>{username} ({email})</i> è stato cancellato"
       edit_button: => core.ref.edit

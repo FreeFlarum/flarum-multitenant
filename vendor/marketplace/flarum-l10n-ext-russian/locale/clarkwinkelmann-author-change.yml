@@ -1,0 +1,17 @@
+clarkwinkelmann-author-change:
+    forum:
+        controls:
+            edit: "Редактировать автора"
+        modal:
+            title-post: "Редактировать автора сообщения"
+            title-discussion: "Редактировать автора дискуссии"
+            submit: "Сохранить"
+            cancel: "Отмена"
+        search:
+            placeholder: "Поиск пользователей"
+            type-more: "Введите 3 символа для поиска по базе данных"
+            no-results: "Результаты отсутствуют"
+
+    admin:
+        permissions:
+            edit: "Править автора дискуссии и сообщения"

@@ -105,14 +105,10 @@ core:
       mail_mandrill_secret_label: Khóa bí mật
       mail_password_label: => core.ref.password
       mail_port_label: Cổng gửi đi
-      mail_ses_key_label: Khóa
-      mail_ses_region_label: Vùng
-      mail_ses_secret_label: Khóa bí mật
       mail_username_label: => core.ref.username
       mailgun_heading: Thiết lập Mailgun
       mandrill_heading: Thiết lập Mandrill
       not_sending_message: Forum hiện không gửi được email. Có thể là lỗi do trình điều khiển được chọn, hoặc do cấu hình.
-      ses_heading: Thiết lập SES
       smtp_heading: Thiết lập SMTP
       submit_button: => core.ref.save_changes
       text: Thay đổi thiết lập SMTP và địa chỉ để gửi email.
@@ -302,6 +298,7 @@ core:
       cannot_start_discussion_button: Không thể tạo thảo luận
       mark_all_as_read_confirmation: "Bạn chắc chắn muốn đánh dấu đã đọc tất cả chứ?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      meta_title_text: => core.ref.all_discussions
       refresh_tooltip: Làm mới
       start_discussion_button: => core.ref.start_a_discussion
 
@@ -417,6 +414,8 @@ core:
       button: Thiết lập
       delete_button: => core.ref.delete
       delete_confirmation: "Bạn có chắc xoá thành viên này? Việc xoá sẽ đồng thời xoá các bài viết của thành viên."
+      delete_error_message: "Xóa thành viên <i>{username} ({email})</i> thất bại"
+      delete_success_message: "Thành viên <i>{username} ({email})</i> đã bị xóa"
       edit_button: => core.ref.edit
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
@@ -470,13 +469,14 @@ core:
 
     # Translations in this namespace are displayed when Flarum encounters an error.
     error:
-      403_message: Bạn không có quyền truy cập trang này.
-      404_message: Trang này không tồn tại hoặc đã bị xóa.
-      404_return_link: "Trở về {forum}"
-      419_message: Bạn không hoạt động quá lâu.
-      419_return_link: Quay lại, để thử lần nửa.
-      500_message: Đã xảy ra lỗi khi tải trang.
-      503_message: "{forum} đang bảo trì. Cảm ơn sự kiên nhẫn của bạn!"
+      csrf_token_mismatch: Bạn không hoạt động quá lâu.
+      csrf_token_mismatch_return_link: Quay lại, để thử lần nửa.
+      invalid_confirmation_token: This confirmation link has already been used or is invalid.
+      not_authenticated: Bạn không có quyền truy cập trang này. Hãu thử đăng nhập
+      not_found: Trang này không tồn tại hoặc đã bị xóa.
+      not_found_return_link: "Trở về {forum}"
+      permission_denied: Bạn không có quyền truy cập trang này.
+      unknown: Đã xảy ra lỗi khi tải trang.
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:

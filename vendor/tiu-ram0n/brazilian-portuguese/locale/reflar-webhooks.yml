@@ -1,0 +1,78 @@
+---
+reflar-webhooks:
+  actions:
+    discussion:
+      deleted: Discussão deletada `{1}`
+      hidden: Discussão oculta `{1}`
+      renamed:
+        description: 'Novo título: {1}'
+        title: Discussão renomeada `{1}`
+      restored: Discussão restaurada `{1}`
+      started: Discussão iniciada `{1}`
+    group:
+      created: Criou um grupo chamado `{1}`
+      deleted: Deletou o grupo  `{1}`
+      renamed: Renomeou um grupo para  `{1}`
+    post:
+      deleted: Post deletado em  `{1}`
+      hidden: Post ocultado em `{1}`
+      posted: Novo post em `{1}`
+      restored: Post restaurado em `{1}`
+      revised: Post editado em `{1}`
+    user:
+      deleted: Usuário deletado `{1}`
+      registered: Novo usuário registrado
+      renamed:
+        description: 'Novo nome:  {1}'
+        title: Nome alterado para `{1}`
+  adapters:
+    errors: Webhook Não Encontrado
+  admin:
+    errors:
+      service_not_found: O serviço '{service}' não foi encontrado.
+      url_invalid: URL não é válido para o serviço selecionado.
+    nav:
+      desc: Webhooks de saída personalizáveis ​​para o seu fórum.
+    settings:
+      actions:
+        flarum:
+          discussion:
+            deleted: "=> reflar-webhooks.ref.deleted"
+            hidden: "=> reflar-webhooks.ref.hidden"
+            renamed: "=> reflar-webhooks.ref.renamed"
+            restored: "=> reflar-webhooks.ref.restored"
+            started: Iniciando
+            title: Discussão
+          group:
+            created: Criado
+            deleted: "=> reflar-webhooks.ref.deleted"
+            renamed: "=> reflar-webhooks.ref.renamed"
+            title: Grupo Flarum
+          post:
+            deleted: "=> reflar-webhooks.ref.deleted"
+            hidden: "=> reflar-webhooks.ref.hidden"
+            posted: Postado
+            restored: "=> reflar-webhooks.ref.restored"
+            revised: Editado
+            title: Post Flarum
+          user:
+            deleted: "=> reflar-webhooks.ref.deleted"
+            registered: Registrado
+            renamed: "=> reflar-webhooks.ref.renamed"
+            title: Usuário
+      help:
+        disabled: Este webhook está desativado porque não tem nenhum evento ativado.
+        general: Aqui você pode adicionar, editar e remover webhooks do seu fórum.
+        url: URL para executar o webhook
+      modal:
+        description: Aqui você modifica em quais eventos o webhook é acionado.
+        title: Configurações do Webhook
+      services:
+        discord: Discord
+        slack: Slack
+      title: Webhooks
+  ref:
+    deleted: Deletado
+    hidden: Oculto
+    renamed: Renomeado
+    restored: Restaurado

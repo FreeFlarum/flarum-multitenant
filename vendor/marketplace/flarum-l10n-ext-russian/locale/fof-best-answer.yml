@@ -1,0 +1,33 @@
+fof-best-answer:
+  admin:
+    permissions:
+      best_answer: "Выбрать лучший ответ (автор дискуссии)"
+      best_answer_not_own_discussion: "Выбрать лучший ответ (участники дискуссии)"
+    settings:
+      title: "FriendsOfFlarum Лучший ответ"
+      allow_select_own_post: "Разрешить пользователям выбирать свои собственные сообщения"
+      select_best_answer_reminder_days: "Напомнить пользователям о необходимости выбрать лучший ответ через X дней"
+      schedule_on_one_server: "Использовать директиву 'onOneServer()' для планировщика задач (требуется Redis/Memcache)"
+      schedule_stop_overnight: "Запретить запуск планировщика в нерабочее время (с 21:00 до 8:00 по времени сервера)"
+      schedule_log_output: "Добавить вывод планировщика в хранилище журналов"
+      remind_tag_ids: "Чтобы ограничить напоминания определенными тегами, введите здесь идентификаторы тегов (через запятую)"
+      use_alt_ui: "Использовать альтернативный шаблон (кнопка лучшего ответа в нижнем колонтитуле)"
+  forum:
+    answered_badge: "Ответил"
+    this_best_answer: "Выбрать лучший ответ"
+    remove_best_answer: "Снять лучший ответ"
+    best_answer_button: "Лучший ответ"
+    best_answer_label: "выбран: <a>{username}</a> {time_set}"
+    errors:
+      mismatch: "Выбранное сообщение не существует в этой дискуссии"
+
+    notification:
+      best_answer_in_discussion: "{username} выбрал лучший ответ в этой дискуссии"
+      best_answer_set_in_discussion_email: "Выбран лучший ответ"
+      content: "Пожалуйста, выберите лучший ответ, если Вы получили ответ на свой вопрос"
+      awarded: "Ваше сообщение было выбрано в качестве лучшего ответа пользователем {username}"
+      awarded_email: "Ваше сообщение было выбрано в качестве лучшего ответа пользователем"
+      select_email_title: "Вам удалось решить проблему?"
+      preferences:
+        awarded_best_answer: "Когда кто-то выбирает моё сообщение в качестве лучшего ответа"
+        best_answer_in_discussion: "Когда лучший ответ выбран в обсуждении, в котором я участвовал"

@@ -1,0 +1,27 @@
+core:
+  forum:
+    index_sort:
+      popular_button: "Популярное"
+      unpopular_button: "Непопулярное"
+
+michaelbelgium-discussion-views:
+  forum:
+    modal_resetviews:
+      title: "Сброс счётчика просмотров дискуссии"
+      submit_button: "Да, удалить всё"
+      label: "Это удалит {count} просмотр этой дискуссии. Продолжить?|Это удалит {count} просмотров этой дискуссии. Продолжить?"
+    discussion_controls:
+      resetviews_button: "Сброс просмотров"
+    viewlist:
+      title: "Недавние посетители"
+  admin:
+      permissions:
+        reset_views_label: "Сброс просмотров дискуссии"
+        view_number_label: "Смотреть счётчик просмотров"
+      settings:
+        title: "Настройки просмотров дискуссий"
+        track_unique_label: "Отслеживать уникальные просмотры"
+        abbr_numbers_label: "Сокращать числа просмотров"
+        show_filter_label: "Включить сортировку по непопулярным дискуссиям"
+        max_viewcount_label: "Максимальное число элементов в списке просмотров"
+        show_viewlist_label: "Включить список просмотров"

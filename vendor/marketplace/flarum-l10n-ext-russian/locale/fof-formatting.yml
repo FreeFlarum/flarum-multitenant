@@ -1,0 +1,10 @@
+fof-formatting:
+  admin:
+    plugins:
+      Autoimage: "Конвертировать URL изображений в реальные изображения"
+      Autovideo: "Конвертировать URL видео в воспроизводимые видео"
+      FancyPants: "Использовать современную типографику"
+      HTMLEntities: "Использовать HTML-объекты"
+      MediaEmbed: "Вставлять медиа-контент с разрешённых сайтов"
+      PipeTables: "Таблицы в стиле ASCII"
+      TaskLists: "Списки задач GitHub/GitLab"

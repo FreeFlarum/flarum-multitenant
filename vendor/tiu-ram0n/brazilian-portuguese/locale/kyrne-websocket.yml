@@ -1,0 +1,46 @@
+---
+kyrne-websocket:
+  forum:
+    discussion_list:
+      show_updates_text: Mostrar {count} discussão atualizada|Mostrar {count} discussões
+        atualizadas
+  admin:
+    pusher_settings:
+      local_cert_path: Caminho do certificado SSL local
+      local_pk_path: Caminho da chave privada SSL local
+      passphrase: "(Opcional) Senha da chave SSL"
+      cert_self_signed: Suporte para certificado autoassinado
+      app_port_label: Porta
+      app_host_label: Host
+      app_id_label: App ID
+      app_key_label: App Key
+      app_secret_label: App Secret
+      secure: Forçar wss/https para Websocket
+      title: Configurações de Websocket/Pusher
+      reverse_proxy: Suporte a proxy reverso
+    help:
+      app_id: ID do aplicativo Pusher - deixe como está se estiver usando o servidor
+        de websocket.
+      app_key: Chave do aplicativo Pusher - deixe como está usando o servidor de socket
+        de websocket.
+      secret: Segredo do aplicativo Pusher - deixe como está usando o servidor de
+        swebsocket.
+      secure: Forçar o websocket a usar protocolos seguros - ative isso se você estiver
+        usando um servidor seguro, mas não o site.
+      host: Host do seu servidor websocket - deixe como está se o servidor for o mesmo
+        host do seu fórum.
+      reverse_proxy: Os Websockets se conectarão pela porta 443 quando isso estiver
+        ativado - Use isso se você estiver usando um proxy reverso da porta 443 para
+        o servidor Websocket.
+      port: Porta do servidor websocket - deixe como está se você não alterar a compilação
+        na porta do servidor.
+      cert_path: Necessário apenas se estiver usando ssl e NÃO proxy reverso. Caminho
+        para o seu certificado SSL (https) NO SERVIDOR, no qual o servidor websocket
+        está - geralmente um arquivo .crt ou .pem.
+      pk_path: Necessário apenas se estiver usando ssl e NÃO proxy reverso. Caminho
+        para a sua chave privada SSL (https) NO SERVIDOR em que o servidor do seu
+        websocket está - geralmente um arquivo .key ou .pem.
+      passphrase: Necessário apenas se estiver usando ssl e NÃO proxy reverso. A senha
+        usada para codificar seu certificado - geralmente não é necessária.
+      self_signed: Necessário apenas se estiver usando ssl e NÃO proxy reverso. Habilite
+        isso se o seu certificado SSL (https) for autoassinado.
