@@ -1,0 +1,12 @@
+fof-discussion-language:
+  forum:
+    index_language:
+      any: Herhangi Dil
+
+  admin:
+    settings:
+      title: FriendsOfFlarum Tartışma Dili
+
+  api:
+    discussion:
+      validation_error: Tartışmanın dilini seçmelisin.

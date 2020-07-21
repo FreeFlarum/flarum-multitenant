@@ -10,9 +10,9 @@ This extensions creates redirects so that Flarum can only be accessed via the ur
 > **Second note:** if your host supports configuring redirects (via Apache Rewrites or Nginx server rules for example), I recommend using that instead of an extension for better performance.
 > If those features are not available or if you don't have the technical knowledge to use them, then this extension is for you!
 
-## Installation
+> **Third note:** this extension does not work with Flarum installs in subfolders.
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually:
+## Installation
 
 ```bash
 composer require migratetoflarum/canonical
@@ -21,7 +21,7 @@ composer require migratetoflarum/canonical
 ## Updating
 
 ```bash
-composer update migratetoflarum/canonical
+composer require migratetoflarum/canonical
 php flarum cache:clear
 ```
 
@@ -30,7 +30,7 @@ php flarum cache:clear
 To enable the redirects, first enable the extension in your Flarum dashboard.
 Then access the extension settings and select a redirect status.
 
-The extension settings will only be available when you access the forum wia the canonical url.
+The extension settings will only be available when you access the forum via the canonical url.
 This should prevent you from getting locked outside of the forum if Flarum cannot actually be reached via the url defined in `config.php`.
 
 Before continuing, you should make sure the `url` value in `config.php` is the URL you want as canonical.

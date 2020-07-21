@@ -60,10 +60,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
         ),
-        'm' => 
-        array (
-            'michaelbelgium\\views\\' => 21,
-        ),
         'l' => 
         array (
             'luatdolphin\\lang-vietnamese\\' => 28,
@@ -78,7 +74,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Z' => 
         array (
             'Ziymed\\LangArabic\\' => 18,
-            'ZerosOnesFun\\bbbbcode\\' => 22,
         ),
         'W' => 
         array (
@@ -159,6 +154,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'MigrateToFlarum\\Canonical\\' => 26,
             'Middlewares\\Utils\\' => 18,
             'Middlewares\\' => 12,
+            'Michaelbelgium\\Discussionviews\\' => 31,
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
             'Madchatthew\\ThemeLightShadow\\' => 29,
@@ -216,6 +212,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Split\\' => 10,
             'FoF\\Spamblock\\' => 14,
             'FoF\\SocialProfile\\' => 18,
+            'FoF\\Sitemap\\' => 12,
             'FoF\\ShareSocial\\' => 16,
             'FoF\\SecureHttps\\' => 16,
             'FoF\\Reactions\\' => 14,
@@ -262,7 +259,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Flarum\\Auth\\Facebook\\' => 21,
             'Flarum\\Approval\\' => 16,
             'Flarum\\' => 7,
-            'Flagrow\\Sitemap\\' => 16,
             'Flagrow\\Mason\\' => 14,
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
@@ -310,10 +306,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
         ),
-        'michaelbelgium\\views\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/michaelbelgium/flarum-discussion-views/src',
-        ),
         'luatdolphin\\lang-vietnamese\\' => 
         array (
             0 => __DIR__ . '/..' . '/luatdolphin/lang-vietnamese/src',
@@ -337,10 +329,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Ziymed\\LangArabic\\' => 
         array (
             0 => __DIR__ . '/..' . '/ziymed/lang-arabic/src',
-        ),
-        'ZerosOnesFun\\bbbbcode\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zerosonesfun/bbbbcode/src',
         ),
         'Wohali\\OAuth2\\Client\\' => 
         array (
@@ -558,6 +546,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             1 => __DIR__ . '/..' . '/middlewares/base-path-router/src',
             2 => __DIR__ . '/..' . '/middlewares/request-handler/src',
         ),
+        'Michaelbelgium\\Discussionviews\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/michaelbelgium/flarum-discussion-views/src',
+        ),
         'MatthiasMullie\\PathConverter\\' => 
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/path-converter/src',
@@ -728,6 +720,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\SocialProfile\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/socialprofile/src',
+        ),
+        'FoF\\Sitemap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flagrow/sitemap/src',
         ),
         'FoF\\ShareSocial\\' => 
         array (
@@ -912,10 +908,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'Flarum\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/core/src',
-        ),
-        'Flagrow\\Sitemap\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flagrow/sitemap/src',
         ),
         'Flagrow\\Mason\\' => 
         array (

@@ -1,0 +1,15 @@
+clarkwinkelmann-emojionearea:
+    forum:
+        picker_button: Odaberi Emoji
+        search_placeholder: Traži...
+
+    admin:
+        settings:
+            title: EmojioneArea Postavke
+            enableSearch: Uključi pretragu
+            enableRecent: Uključi posljednje
+            enableTones: Uključi tonove
+            filtersPosition: Pomaknite kategorije na dno
+            searchPosition: Pomaknite pretraživanje i tonove na dno
+            hideFlarumButton: Sakrij Flarumov gumb za odabir emojija
+            hideFlarumButtonHelp: Proširenje Emoji Picker mora biti omogućeno nakon proširenja Emojija kako bi ova postavka radila

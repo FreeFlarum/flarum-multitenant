@@ -18,14 +18,32 @@ php flarum cache:clear
 If you would like to translate this extension to your language, make a PR in the corresponding language pack. 
 
 # Features
-* Obviously tracks how much a discussion has been viewed and displays it per discussion on the discussionlist
+* Tracks how much a discussion has been viewed and displays it on the discussionlist
+* Extension settings
 * Adds 2 sorting options: popular and unpopular
-* Adds 1 event which developers can listen for: `DiscussionWasViewed`
-* Adds 1 new permission where people can (re)set the viewcount of a discussion (default to admins)
+* Adds an event which developers can listen for: `DiscussionWasViewed`
+* Adds new permissions:
+    * Reset the viewcount of a discussion (default to admins)
+    * View the viewcount of a discussion (default to admins)
 
 # Media
-![image](http://puu.sh/ymLUg.png)
 
-Set the view count:
+Normal:
 
-![image 3](http://puu.sh/AIOet.png)
+![image](https://i.imgur.com/ZrQZd1e.png)
+
+Smaller screens:
+
+![Imgur](https://i.imgur.com/es4NYHI.png)
+
+## Reset the view count
+
+![Imgur](https://i.imgur.com/iVu92yT.png)
+
+## Extension settings
+
+![Imgur](https://i.imgur.com/3jUSrUd.png)
+
+## Viewlist
+
+![Imgur](https://i.imgur.com/Nn012B0.png)

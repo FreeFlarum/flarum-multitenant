@@ -22,7 +22,7 @@ flagrow-analytics:
         statusGoogle: 'Włącz Google Analytics'
         statusPiwik: 'Włącz Piwik'
       placeholder:
-        piwikAuthToken: "Uzupełnij ten token aby włączyć statystyki Piwik w zakładce w panelu admina.\nMożesz go znaleźć w Ustawienia > Osobiste > Token autentykacji API.\n"
+        piwikAuthToken: "Uzupełnij ten token, aby włączyć statystyki Piwik w zakładce w panelu admina.\nMożesz go znaleźć w Ustawienia > Osobiste > Token autentykacji API.\n"
       section:
         googleAnalytics: 'Google Analytics'
         piwik: Piwik

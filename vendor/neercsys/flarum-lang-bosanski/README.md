@@ -3,11 +3,11 @@ Bosnian language for Forum software Flarum
 
 ### Version
 
-- v0.11
-- Released on September 18, 2019
+- v0.13
+- Released on May 07, 2020
 
 ### Compatibility:
-- Flarum (Core v0.1.0-beta.9)
+- Flarum (Core ^0.1.0-beta.13)
 
 ### License
 Released under the MIT License. Please see the LICENSE file.
@@ -26,4 +26,4 @@ via Composer: `composer require neercsys/flarum-lang-bosanski`
 via Composer: `composer update`
 
 ### Last modified
-Zadnja izmjena: 19.09.2019
+Zadnja izmjena: 07.05.2020

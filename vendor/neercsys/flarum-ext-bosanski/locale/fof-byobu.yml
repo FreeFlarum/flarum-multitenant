@@ -1,0 +1,88 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Privatna diskusija
+        buttons:
+            add_recipients: Sudionici
+            submit: OK
+            edit_recipients: Uredi sudionike
+            send_pd: "Pošalji {username} poruku"
+            cancel: Otkaži
+            remove_from_discussion: Napusti ovu privatnu diskusiju
+            make_public: Napravi ovu diskusiju javnu
+        composer_private_discussion:
+            submit_button: Objavi privatnu diskusiju
+            title_placeholder: Naslov privatne diskusije         
+        labels:
+            recipients: "{count} primatelj|{count} primatelja"
+            user_deleted: -deleted-
+        nav:
+            start_button: Nova privatna diskusija
+        input:
+            search_recipients: Pretraživanje primatelja upišite prva tri znaka...
+        search:
+            headings:
+                groups: Grupna dopuštenja
+        modal:
+            titles:
+                update_recipients: Ažurirani sudionici od {title}
+                add_recipients: Dodajte primatelje u svoju diskusiju
+            help:
+                add_recipients: Ova će diskusija biti vidljiva samo korisnicima koje odaberete ovdje. Potreban je najmanje 1 primatelj (osim sebe)
+                update_recipients: Ova će diskusija biti vidljiva samo korisnicima koje odaberete ovdje.
+        post:
+            recipients_modified:
+                added_and_removed: "{username} je dodao/la sudionika {added} i uklonio/la {removed}."
+                added: "{username} dodao sudionika {added}."
+                removed: "{username} je uklonio/la sudionika {removed}."
+                removed_self: "{username} je napustio/la privatnu diskusiju."
+        user:
+            settings:
+                block_pd: Blokirajte privatne diskusije
+
+            byobu_link: Privatne diskusije
+            dropdown_label: Privatne diskusije
+            
+        notifications:
+            pd_label: Netko me uključuje u novu privatnu diskusiju
+            pd_reply_label: Netko objavljuje u privatnoj diskusiji čiji sam primatelj
+            pd_reply_text: "{username} je objavio/la u privatnoj diskusiji čiji ste dio"
+            pd_text: "{username} je započeo/la novu privatnu diskusiju s vama"
+            pd_user_left_label: Korisnik primatelj napušta privatnu diskusiju čiji sam učesnik
+            pd_user_left_text: "{username} napusio/la privatnu diskusiju"
+            pd_added_text: "{username} dodao/la vas je u privatnu diskusiju"
+            pd_added_label: "Neko me dodaje u postojeću privatnu diskusiju"
+            pd_made_public_label: "Privatna diskusija postaje javna"
+            pd_made_public_text: "{username} pravi ovu diskusiju javnu"
+            
+        confirm:
+            make_public: Time će ova privatna diskusija postati vidljiva svima. Razmislite je li ovo ispravna radnja prije nego što nastavite.
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Stvarajte privatne diskusije s korisnicima
+            create_private_discussions_with_groups: Stvorite privatne diskusije s grupama
+            create_private_discussions_with_blocking_users: Stvorite privatne diskusije s korisnicima koji su je blokirali
+            edit_user_recipients: Uredite korisnike koji sudjeluju u privatnim diskusijama
+            edit_group_recipients: Uređivanje grupa koje sudjeluju u privatnim diskusijama
+            make_private_into_public: Pretvorite privatnu diskusiju u javnu diskusiju
+            view_private_discussions-when-flagged: Pogledajte privatne diskusije drugih korisnika ako su označene
+
+        settings:
+            use_tag_slug: Navedite slug oznake kako biste natjerali na sve privatne diskusije
+            use_tag_slug_help: Ostavite prazno kako biste korisnicima omogućili odabir vlastite oznake, odnosi se samo na novo kreirane privatne diskusije
+            byobu_index: Prikažite vezu do privatnih diskusija na početnoj stranici
+            byobu_index_help: Kada je ova opcija omogućena, bit će prikazana veza između glavnih stavki foruma do privatnih diskusija
+
+    notifications:
+        private_discussion_created:
+            title: "[Private Discussion] korisnik je započeo/la s vama novu privatnu diskusiju"
+        private_discussion_replied:
+            title: "[Private Discussion] korisnik je objavio u privatnoj diskusiji"
+        recipient_removed:
+            title: "[Private Discussion] korisnik je napustio diskusiju"
+        private_discussion_added:
+            title: "[Private Discussion] korisnik vas je dodao u privatnu diskusiju"
+        made_public:
+            title: "[Private Discussion] korisnik pravi ovu diskusiju javnu"

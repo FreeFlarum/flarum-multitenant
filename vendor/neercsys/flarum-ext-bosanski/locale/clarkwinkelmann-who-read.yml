@@ -1,0 +1,44 @@
+clarkwinkelmann-who-read:
+    forum:
+        tooltip:
+            last-read-at: "{username} čitao/la {ago}"
+            last-read-at-behind: "{username} zadnje čitao/la {ago} i nije u toku"
+            last-read-at-up-to-date: "{username} je pročitao/la zadnju objavu {ago}"
+        more:
+            show: Prikaži {count} više
+            info: Još {count} više
+        footer:
+            read-this-post: "{0} Nitko nije čitao ovu objavu|{1} Jedan je korisnik pročitao ovu objavu|]1,Inf] {count} korisnika je pročitalo ovu objavu"
+            read-no-further: "{0} Svi su proćitali dalje|{1} Jedan korisnik nije čitao dalje|]1,Inf] {count} nije čitalo dalje"
+            read-to-end: "{0} Niko nije pročitao do kraja|{1} Jedan korisnik je pročitao do kraja|]1,Inf] {count} korisnika je pročitalo do kraja"
+        controls:
+            set-unread: Označi nepročitano
+            remove-unread: Ukloni nepročitano
+        badges:
+            following: => flarum-subscriptions.forum.badge.following_tooltip
+            ignoring: => flarum-subscriptions.forum.badge.ignoring_tooltip
+            unread: Označeno kao nepročitano
+        modal:
+            title: Čitatelji
+            up-to-this-post: Korisnici koji su pročitali sve do ove objave
+            past-this-post: Korisnici koji su pročitali ovu objavu
+            to-the-end: Korisnici koji su pročitali do kraja
+            behind: Korisnici koji nisu pročitali do kraja
+
+    admin:
+        permissions:
+            heading: Ko čita
+            see-read: Pogledati stats čitatelja
+            see-subscription: Pogledati status pretplate
+            see-unread: Pogledati status nepročitano drugih korisnika
+            mark-unread: Označi rasprave kao nepročitane za vlastitog korisnika
+        settings:
+            title: Ko čita postavke
+            show-in-discussion-list: Pokažite čitatelje na popisu diskusija
+            show-in-hero: Pokažite čitatelje u diskusijama (hero)
+            show-between-posts: Prikaži status čitanja između objava
+            show-count-of-readers-who-stopped: Prikažite broj korisnika koji su prestali čitati umjesto ukupnog čitanja između objava
+            hide-when-behind: U potpunosti sakrijte korisnika ako stoji iza tolikih objava
+            max-visible: Maksimalni broj korisnika za prikazivanje prije "pročitajte više"
+            unread-icon: Ikona za nepročitanu značku
+            only-groups: Prikaži samo status čitanja korisnika koji pripadaju tim skupinama

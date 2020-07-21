@@ -16,3 +16,7 @@ fof-moderator-notes:
 
     user:
       notes: Moderatör Notları
+
+  api:
+    auto-note: Bu kullanıcıya geçiş için FoF Impersonate kullandım
+    auto-note-actor: 'username' taklit etmek için FoF Impersonate kullanıldı

@@ -6,4 +6,4 @@ flarum-auth-twitter:
             title: 'Twitter Ayarları'
     forum:
         log_in:
-            with_twitter_button: 'Twitter ile giriş yap'
+            with_twitter_button: 'Twitter ile Giriş Yap'

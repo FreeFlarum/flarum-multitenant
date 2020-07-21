@@ -1,0 +1,14 @@
+fof-forum-statistics-widget:
+  forum:
+    navbar:
+      widget_title: Forum Statistika
+      discussions_count: "Diskusija: {discussionsCount}"
+      posts_count: "Postova: {postsCount}"
+      users_count: "Korisnika: {usersCount}"
+      latest_member: "Posljednji član: "
+  admin:
+    settings:
+      title: Widget Postavke
+      widget_order_label: Widget Redosljed
+      widget_helper_text: "Uredite ovu postavku kako biste prilagodili položaj ovog widgeta u odjeljku sidenav na vašem Flarum forumu.
+      Što je veći broj, widget će biti na sidenav listi na višoj poziciji (ta vrijednost može biti bilo pozitivna ili negativna)."

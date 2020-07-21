@@ -1,28 +1,28 @@
-mybbtoflarum:
+michaelbelgium-mybb-to-flarum:
   admin:
     nav:
       title: MyBB naar Flarum
-      description: Converteer een MyBB forum naar deze Flarum installatie
-    page:
-      text: Converteer een MyBB forum naar deze Flarum installatie. Vul de vereiste gegevens in, klik nadien op "Migreren".
-      btnConvert: Migreren
+      description_text: Converteer een MyBB forum naar deze Flarum installatie
+    content:
+      description_text: Converteer een MyBB forum naar deze Flarum installatie. Vul de vereiste gegevens in, klik nadien op "Migreren".
+      convert_button: Migreren
       form:
         general:
           title: Algemene instellingen
-          migrateAvatars: Migreer profiel avatars
-          migrateSoftThreads: Migreer soft verwijderde topics
-          migrateSoftPosts: Migreer soft verwijderde berichten
+          migrate_avatars_label: Migreer profiel avatars
+          migrate_soft_threads_label: Migreer soft verwijderde topics
+          migrate_soft_posts_label: Migreer soft verwijderde berichten
         mybb:
           title: MyBB instellingen
-          host: Database host
-          user: Database gebruiker
-          password: Database wachtwoord
-          db: Database naam
-          prefix: Tabel prefix
-          mybbPath: Absoluut MyBB pad
+          host_label: Database host
+          user_label: Database gebruiker
+          password_label: Database wachtwoord
+          db_label: Database naam
+          prefix_label: Tabel prefix
+          path_label: Absoluut MyBB pad
         options:
           title: Algemene migreer opties
-          migrateUsers: Migreer gebruikers
-          migrateThreadsPosts: Migreer topics en berichten
-          migrateUserGroups: Migreer gebruikersgroepen
-          migrateCategories: Migreer categorieën
+          migrate_users_label: Migreer gebruikers
+          migrate_threadsPosts_label: Migreer topics en berichten
+          migrate_userGroups_label: Migreer gebruikersgroepen
+          migrate_categories_label: Migreer categorieën

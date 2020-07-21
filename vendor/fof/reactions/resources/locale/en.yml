@@ -1,13 +1,19 @@
 fof-reactions:
   forum:
+    disabled-reaction: You can't use this reaction right now, please refresh the page
     warning: Your reaction was converted
     notification: '{username} reacted with {reaction} to your post'
     settings:
         notify_post_reacted_label: Someone reacts to one of my posts
+    reacting-own-post: You cannot react to your own post
+    modal:
+        title: Reactions
+    mod_item: View Reactions
 
   admin:
     permissions:
         react_posts_label: React to posts
+        see_reactions_label: See who reacted on posts
 
     nav:
       desc: Add custom reactions and change settings.
@@ -18,6 +24,7 @@ fof-reactions:
         reactions: Current Reactions
         Helptext: Input the name (identifier) of the emoji or font-awesome icon and select which type you would like.
         help:
+          display: Display
           identifier: Identifier
 
       convert:

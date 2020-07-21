@@ -1,4 +1,4 @@
-# 🇹🇷 Turkish Extended Pack by tolgaaaltas
+# 🇹🇷 Turkish Extensions Experience Pack for Flarum
 
 Translates Flarum extensions to Turkish
 

@@ -1,0 +1,34 @@
+askvortsov-categories:
+  admin:
+    basics:
+      categories_label: Kategoriler
+    labels:
+      keep_tags_nav: Etiketler bağlantısını menüden kaldırma
+      child_bare_icon: İkincil etiketler bir çember içerisinde gösterilsin mi?
+      compact_mobile_mode: Kompakt Mobil Modı
+      full_page_desktop: Yan menü tek satıra indirgensin mi (etiketler sayfasındaki gibi)? Aynı zamanda menüyü genişleten uzantıları da gizler (örn. Forum Statistics by FriendsOfFlarum).
+      parent_remove_icon: Ana kategorilerde etiketlere ait ikonları gösterme
+      parent_remove_description: Ana kategorilerde tartışmaları gösterme
+      parent_remove_stats: Ana kategorilerde etiketlere ait istatistikleri gösterme
+      parent_remove_last_discussion: Ana kategoride etiketteki en güncel tartışmayı gösterme
+      small_forum_optimized: Küçük topluluklar için optimize edilsin mi? Daha doğru tartışma ve gönderi sayısı gösterir ancak büyük topluluklar için sorgu sayısını arttırır.
+    headings:
+      nav: Navigasyon
+      layout: Yerleşim
+      parent_display: Birincil Etiketlerin Görünümü
+      child_display: İkincil Etiketlerin Görünümü
+      performance: Performans
+    title: Kategoriler Ayarları
+  forum:
+    categories:
+    header:
+      back_to_categories_tooltip: Kategorilere Geri Dön
+    index:
+      categories_link: Kategoriler
+    meta:
+      categories_title: Kategoriler
+    stat-widgets:
+      discussion_label: Tartışmalar
+      post_label: Gönderiler
+    last_discussion_widget:
+      no_discussions: Hiç Tartışma Yok (Şimdilik!)

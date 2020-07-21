@@ -2,6 +2,541 @@ CHANGELOG
 =========
 
 
+0.3.12.5 (2020-07-17)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/forum-statistics-widget`](https://github.com/FriendsOfFlarum/forum-statistics-widget)
+
+
+Wszystkie zmiany: [v0.3.12.4...v0.3.12.5](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.12.4...v0.3.12.5).
+
+
+0.3.12.4 (2020-07-11)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-author-change`](https://github.com/clarkwinkelmann/flarum-ext-author-change)
+* [`fof/masquerade`](https://github.com/FriendsOfFlarum/masquerade)
+
+
+Wszystkie zmiany: [v0.3.12.3...v0.3.12.4](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.12.3...v0.3.12.4).
+
+
+0.3.12.3 (2020-07-03)
+---------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
+
+
+Wszystkie zmiany: [v0.3.12.2...v0.3.12.3](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.12.2...v0.3.12.3).
+
+
+0.3.12.2 (2020-06-26)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarumite/flarum-decontaminator`](https://github.com/flarumite/flarum-decontaminator)
+* [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio)
+
+
+Wszystkie zmiany: [v0.3.12.1...v0.3.12.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.12.1...v0.3.12.2).
+
+
+0.3.12.1 (2020-06-22)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/formatting`](https://github.com/FriendsOfFlarum/formatting)
+
+
+Wszystkie zmiany: [v0.3.12...v0.3.12.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.12...v0.3.12.1).
+
+
+0.3.12 (2020-06-18)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`fof/analytics`](https://github.com/FriendsOfFlarum/analytics)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
+
+
+Wszystkie zmiany: [v0.3.11.2...v0.3.12](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.11.2...v0.3.12).
+
+
+0.3.11.2 (2020-06-07)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/drafts`](https://github.com/FriendsOfFlarum/drafts)
+
+
+Wszystkie zmiany: [v0.3.11.1...v0.3.11.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.11.1...v0.3.11.2).
+
+
+0.3.11.1 (2020-06-03)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa)
+* [`flarum/subscriptions`](https://github.com/flarum/subscriptions)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/impersonate`](https://github.com/FriendsOfFlarum/impersonate)
+* [`fof/moderator-notes`](https://github.com/FriendsOfFlarum/moderator-notes)
+* [`michaelbelgium/flarum-profile-views`](https://github.com/MichaelBelgium/flarum-profile-views)
+
+
+Wszystkie zmiany: [v0.3.11...v0.3.11.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.11...v0.3.11.1).
+
+
+0.3.11 (2020-05-29)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`askvortsov/flarum-discussion-templates`](https://github.com/askvortsov1/flarum-discussion-templates)
+* [`flarumite/simple-discussion-views`](https://github.com/flarumite/simple-discussion-views)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/drafts`](https://github.com/FriendsOfFlarum/drafts)
+
+
+Wszystkie zmiany: [v0.3.10.2...v0.3.11](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.10.2...v0.3.11).
+
+
+0.3.10.2 (2020-05-27)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`fof/moderator-notes`](https://github.com/FriendsOfFlarum/moderator-notes)
+* [`the-turk/flarum-mathren`](https://github.com/the-turk/flarum-mathren)
+
+
+Wszystkie zmiany: [v0.3.10.1...v0.3.10.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.10.1...v0.3.10.2).
+
+
+0.3.10.1 (2020-05-26)
+---------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`fof/moderator-notes`](https://github.com/FriendsOfFlarum/moderator-notes)
+
+
+Wszystkie zmiany: [v0.3.10...v0.3.10.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.10...v0.3.10.1).
+
+
+0.3.10 (2020-05-24)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`the-turk/flarum-ext-fancybox`](https://github.com/the-turk/flarum-ext-fancybox)
+
+
+Wszystkie zmiany: [v0.3.9.2...v0.3.10](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.9.2...v0.3.10).
+
+
+0.3.9.2 (2020-05-22)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/drafts`](https://github.com/FriendsOfFlarum/drafts)
+* [`michaelbelgium/flarum-discussion-views`](https://github.com/MichaelBelgium/flarum-discussion-views)
+
+
+Wszystkie zmiany: [v0.3.9.1...v0.3.9.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.9.1...v0.3.9.2).
+
+
+0.3.9.1 (2020-05-21)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`michaelbelgium/mybb-to-flarum`](https://github.com/MichaelBelgium/mybb_to_flarum)
+* [`michaelbelgium/flarum-profile-views`](https://github.com/MichaelBelgium/flarum-profile-views)
+
+
+Wszystkie zmiany: [v0.3.9...v0.3.9.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.9...v0.3.9.1).
+
+
+0.3.9 (2020-05-21)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`askvortsov/flarum-copy-links`](https://github.com/askvortsov1/flarum-copy-links)
+* [`the-turk/flarum-extended-appearance`](https://github.com/the-turk/flarum-extended-appearance)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-categories`](https://github.com/askvortsov1/flarum-categories)
+* [`tituspijean/flarum-ext-auth-ldap`](https://github.com/tituspijean/flarum-ext-auth-ldap)
+
+
+Wszystkie zmiany: [v0.3.8.2...v0.3.9](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.8.2...v0.3.9).
+
+
+0.3.8.2 (2020-05-19)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`tituspijean/flarum-ext-auth-ldap`](https://github.com/tituspijean/flarum-ext-auth-ldap)
+
+
+Wszystkie zmiany: [v0.3.8.1...v0.3.8.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.8.1...v0.3.8.2).
+
+
+0.3.8.1 (2020-05-18)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+
+
+Wszystkie zmiany: [v0.3.8...v0.3.8.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.8...v0.3.8.1).
+
+
+0.3.8 (2020-05-17)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`flarumite/flarum-decontaminator`](https://github.com/flarumite/flarum-decontaminator)
+* [`itnt/flarum-uitab`](https://github.com/Littlegolden/flarum-uitab)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+
+
+Wszystkie zmiany: [v0.3.7.2...v0.3.8](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.7.2...v0.3.8).
+
+
+0.3.7.2 (2020-05-10)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+
+
+Wszystkie zmiany: [v0.3.7.1...v0.3.7.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.7.1...v0.3.7.2).
+
+
+0.3.7.1 (2020-05-09)
+--------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-scratchpad`](https://github.com/clarkwinkelmann/flarum-ext-scratchpad)
+* [`fof/moderator-notes`](https://github.com/FriendsOfFlarum/moderator-notes)
+
+
+Wszystkie zmiany: [v0.3.7...v0.3.7.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.7...v0.3.7.1).
+
+
+0.3.7 (2020-05-08)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-email-as-display-name`](https://github.com/clarkwinkelmann/flarum-ext-email-as-display-name)
+* [`clarkwinkelmann/flarum-ext-scratchpad`](https://github.com/clarkwinkelmann/flarum-ext-scratchpad)
+* [`clarkwinkelmann/flarum-ext-silent-mailchimp`](https://github.com/clarkwinkelmann/flarum-ext-silent-mailchimp)
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`studosi/mail-filter`](https://github.com/studosi-flarum/mail-filter)
+* [`zhujia18/chevereto`](https://github.com/zhujia18/flarum-chevereto)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+
+
+Wszystkie zmiany: [v0.3.6...v0.3.7](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.6...v0.3.7).
+
+
+0.3.6 (2020-05-06)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-colorful-borders`](https://github.com/clarkwinkelmann/flarum-ext-colorful-borders)
+* [`clarkwinkelmann/flarum-ext-passwordless`](https://github.com/clarkwinkelmann/flarum-ext-passwordless)
+* [`fof/impersonate`](https://github.com/FriendsOfFlarum/impersonate)
+
+
+Wszystkie zmiany: [v0.3.5...v0.3.6](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.5...v0.3.6).
+
+
+0.3.5 (2020-05-03)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`estevao-simoes/flarum-microsoft-auth`](https://github.com/estevao-simoes/flarum-microsoft-auth)
+
+
+Wszystkie zmiany: [v0.3.4.1...v0.3.5](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.4.1...v0.3.5).
+
+
+0.3.4.1 (2020-05-02)
+--------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-auth-sync`](https://github.com/askvortsov1/flarum-auth-sync)
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+
+
+Wszystkie zmiany: [v0.3.4...v0.3.4.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.4...v0.3.4.1).
+
+
+0.3.4 (2020-04-25)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa)
+* [`kvothe/online-users`](https://github.com/oaklinq/flarum-ext-online-users)
+* [`therealsujitk/flarum-ext-gifs`](https://github.com/therealsujitk/flarum-ext-gifs)
+* [`therealsujitk/flarum-ext-hljs`](https://github.com/therealsujitk/flarum-ext-hljs)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`the-turk/flarum-diff`](https://github.com/the-turk/flarum-diff)
+* [`tituspijean/flarum-ext-auth-ldap`](https://github.com/tituspijean/flarum-ext-auth-ldap)
+
+
+Wszystkie zmiany: [v0.3.3...v0.3.4](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.3...v0.3.4).
+
+
+0.3.3 (2020-04-14)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`askvortsov/flarum-categories`](https://github.com/askvortsov1/flarum-categories)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-auth-sync`](https://github.com/askvortsov1/flarum-auth-sync)
+* [`askvortsov/flarum-saml`](https://github.com/askvortsov1/flarum-saml)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`michaelbelgium/flarum-discussion-views`](https://github.com/MichaelBelgium/flarum-discussion-views)
+* [`the-turk/flarum-diff`](https://github.com/the-turk/flarum-diff)
+
+
+Wszystkie zmiany: [v0.3.2...v0.3.3](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.2...v0.3.3).
+
+
+0.3.2 (2020-03-23)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`fof/passport`](https://github.com/FriendsOfFlarum/passport)
+
+
+Wszystkie zmiany: [v0.3.1.3...v0.3.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.1.3...v0.3.2).
+
+
+0.3.1.3 (2020-03-21)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+
+
+Wszystkie zmiany: [v0.3.1.2...v0.3.1.3](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.1.2...v0.3.1.3).
+
+
+0.3.1.2 (2020-03-15)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`migratetoflarum/fake-data`](https://github.com/migratetoflarum/fake-data)
+
+
+Wszystkie zmiany: [v0.3.1.1...v0.3.1.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.1.1...v0.3.1.2).
+
+
+0.3.1.1 (2020-03-13)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/pwned-passwords`](https://github.com/FriendsOfFlarum/pwned-passwords)
+
+
+Wszystkie zmiany: [v0.3.1...v0.3.1.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.1...v0.3.1.1).
+
+
+0.3.1 (2020-03-12)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-create-user-modal`](https://github.com/clarkwinkelmann/flarum-ext-create-user-modal)
+* [`clarkwinkelmann/flarum-ext-see-past-first-post`](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post)
+* [`clarkwinkelmann/flarum-ext-who-read`](https://github.com/clarkwinkelmann/flarum-ext-who-read)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`amaurycarrade/flarum-ext-syndication`](https://github.com/AmauryCarrade/flarum-ext-syndication)
+* [`askvortsov/flarum-saml`](https://github.com/askvortsov1/flarum-saml)
+* [`clarkwinkelmann/flarum-ext-author-change`](https://github.com/clarkwinkelmann/flarum-ext-author-change)
+* [`clarkwinkelmann/catch-the-fish`](https://github.com/clarkwinkelmann/catch-the-fish)
+* [`flagrow/flarum-ext-analytics`](https://github.com/flagrow/analytics)
+* [`flagrow/mason`](https://github.com/flagrow/mason)
+* [`flarum/emoji`](https://github.com/flarum/emoji)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/forum-statistics-widget`](https://github.com/FriendsOfFlarum/forum-statistics-widget)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/geoip`](https://github.com/FriendsOfFlarum/geoip)
+* [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions)
+* [`fof/prevent-necrobumping`](https://github.com/FriendsOfFlarum/prevent-necrobumping)
+* [`fof/terms`](https://github.com/FriendsOfFlarum/terms)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`fof/username-request`](https://github.com/FriendsOfFlarum/username-request)
+* [`kvothe/keyboard-shortcuts`](https://github.com/oaklinq/flarum-ext-keyboard-shortcuts)
+* [`kvothe/spoiler-bbcode`](https://github.com/oaklinq/flarum-ext-spoiler-bbcode)
+* [`matteocontrini/flarum-imgur-upload`](https://github.com/matteocontrini/flarum-imgur-upload)
+* [`migratetoflarum/canonical`](https://github.com/migratetoflarum/canonical)
+* [`reflar/doorman`](https://github.com/FriendsOfFlarum/doorman)
+* [`reflar/twofactor`](https://github.com/ReFlar/twofactor)
+* [`the-turk/flarum-diff`](https://github.com/the-turk/flarum-diff)
+* [`the-turk/flarum-mathren`](https://github.com/the-turk/flarum-mathren)
+* [`xelson/flarum-ext-chat`](https://github.com/Xelson/flarum-ext-chat)
+
+
+Wszystkie zmiany: [v0.3.0.1...v0.3.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.0.1...v0.3.1).
+
+
+0.3.0.1 (2020-03-11)
+--------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`migratetoflarum/fake-data`](https://github.com/migratetoflarum/fake-data)
+
+
+Wszystkie zmiany: [v0.3.0...v0.3.0.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.0...v0.3.0.1).
+
+
+0.3.0 (2020-03-08)
+------------------
+
+**Usunięto przestarzałe tłumaczenia dla**:
+
+* Głównego silnika Flarum (wspierana jest wersja `0.1.0-beta.11` lub wyższa).
+* [`clarkwinkelmann/flarum-ext-author-change`](https://github.com/clarkwinkelmann/flarum-ext-author-change)
+* [`datitisev/flarum-ext-dashboard`](https://github.com/datitisev/flarum-ext-dashboard)
+* [`dem13n/nickname-changer`](https://github.com/Dem13n/nickname-changer)
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/masquerade`](https://github.com/FriendsOfFlarum/masquerade)
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+* [`fof/pwned-passwords`](https://github.com/FriendsOfFlarum/pwned-passwords)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`fof/username-request`](https://github.com/FriendsOfFlarum/username-request)
+* [`tank/perspective`](https://github.com/tankerkiller125/flarum-perspective)
+* [`the-turk/flarum-diff`](https://github.com/the-turk/flarum-diff)
+* [`the-turk/flarum-mathren`](https://github.com/the-turk/flarum-mathren)
+* [`tpokorra/flarum-ext-post-notification`](https://github.com/tpokorra/flarum-ext-post-notification)
+* [`ziymed/backtowebsite`](https://github.com/ziymed/BackToWebsite)
+
+
+**Usunięto wsparcie dla nierozwijanych rozszerzeń**:
+
+* [`flagrow/html-errors`](https://github.com/flagrow/html-errors)
+* [`flagrow/linguist`](https://github.com/flagrow/linguist)
+* [`flagrow/terms`](https://github.com/flagrow/terms)
+* [`flagrow/upload`](https://github.com/flagrow/upload)
+* [`flagrow/users-list`](https://github.com/flagrow/users-list)
+* [`manelizzard/flarum-ext-notify`](https://github.com/manelizzard/flarum-notify)
+* [`push-edx/flarum-ext-chat`](https://github.com/Push-EDX/flarum-ext-chat)
+* [`reflar/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+* [`reflar/pwned-passwords`](https://github.com/FriendsOfFlarum/pwned-passwords)
+* [`wuethrich44/flarum-ext-sso`](https://github.com/fabwu/flarum-ext-sso)
+* [`zerosonesfun/flarum-ext-poke`](https://github.com/zerosonesfun/flarum-ext-poke)
+
+
+Wszystkie zmiany: [v0.2.22...v0.3.0](https://github.com/rob006-software/flarum-lang-polish/compare/v0.2.22...v0.3.0).
+
+
 0.2.22 (2020-03-08)
 -------------------
 

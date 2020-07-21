@@ -32,6 +32,8 @@ core:
     basics:
       all_discussions_label: '=> core.ref.all_discussions'
       default_language_heading: 'Domyślny język'
+      display_name_heading: 'Wyświetlana nazwa użytkownika'
+      display_name_text: 'Wybierz sterownik, który powinien być używany do wyświetlania nazw użytkowników. Domyślnie wyświetlana jest nazwa użytkownika.'
       forum_description_heading: 'Opis forum'
       forum_description_text: 'Wpisz 1-2 krótkie zdania, które opisują twoją społeczność. Ten tekst pojawi się w meta tagu i będzie się pokazywał w wyszukiwarkach.'
       forum_title_heading: 'Nazwa forum'
@@ -57,6 +59,7 @@ core:
       color_label: '=> core.ref.color'
       delete_button: 'Usuń grupę'
       delete_confirmation: 'Czy jesteś pewien, że chcesz usunąć tę grupę? Członkowie tej grupy NIE zostaną usunięci.'
+      hide_label: 'Ukryj na forum'
       icon_label: '=> core.ref.icon'
       icon_text: '=> core.ref.icon_text'
       name_label: Nazwa
@@ -69,14 +72,11 @@ core:
       submit_button: '=> core.ref.save_changes'
       title: '=> core.ref.custom_header_title'
     email:
-      account_heading: 'Konto SMTP'
       addresses_heading: Adresy
       driver_heading: 'Wybierz sterownik (driver)'
       driver_label: 'Sterownik (driver)'
-      encryption_label: 'Szyfrowanie (encryption)'
       from_label: Nadawca
       heading: '=> core.ref.email'
-      host_label: Host
       mail_encryption_label: 'Szyfrowanie (encryption)'
       mail_host_label: Host
       mail_mailgun_domain_label: Domena
@@ -92,14 +92,10 @@ core:
       mailgun_heading: 'Ustawienia Mailguna'
       mandrill_heading: 'Ustawienia Mandrilla'
       not_sending_message: 'Obecnie Flarum nie wysyła żadnych wiadomości e-mail. Może to być skutek wybranego sterownika lub błędów w konfiguracji.'
-      password_label: '=> core.ref.password'
-      port_label: Port
-      server_heading: 'Serwer SMTP'
       ses_heading: 'Ustawienia SES'
       smtp_heading: 'Ustawienia SMTP'
       submit_button: '=> core.ref.save_changes'
       text: 'Skonfiguruj sterownik, ustawienia i adresy, z których twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
-      username_label: '=> core.ref.username'
     extensions:
       add_button: 'Dodaj rozszerzenie'
       settings_button: '=> core.ref.settings'
@@ -118,7 +114,7 @@ core:
       email_button: '=> core.ref.email'
       email_text: 'Skonfiguruj ustawienia wysyłki wiadomości e-mail.'
       extensions_button: Rozszerzenia
-      extensions_text: 'Dodaj dodatkowe funkcje do forum i dostosuj je do siebie.'
+      extensions_text: 'Dodaj dodatkowe funkcje do forum i dostosuj je pod siebie.'
       permissions_button: Uprawnienia
       permissions_text: 'Konfiguracja uprawnień użytkowników i grup.'
     permissions:
@@ -142,6 +138,7 @@ core:
       sign_up_label: Rejestracja
       start_discussions_label: 'Rozpoczynanie dyskusji'
       view_discussions_label: 'Przeglądanie dyskusji'
+      view_hidden_groups_label: 'Przeglądanie etykiet ukrytych grup'
       view_last_seen_at_label: 'Dostęp do daty ostatniej wizyty użytkownika'
       view_post_ips_label: 'Przeglądanie IP użytkowników'
       view_user_list_label: 'Przeglądanie listy użytkowników'
@@ -211,7 +208,7 @@ core:
       delete_button: '=> core.ref.delete'
       delete_confirmation: 'Czy jesteś pewien, że chcesz usunąć tę dyskusję?'
       delete_forever_button: '=> core.ref.delete_forever'
-      log_in_to_reply_button: 'Zaloguj się aby odpisać'
+      log_in_to_reply_button: 'Zaloguj się, aby odpisać'
       rename_button: '=> core.ref.rename'
       reply_button: '=> core.ref.reply'
       restore_button: '=> core.ref.restore'
@@ -255,6 +252,7 @@ core:
       cannot_start_discussion_button: 'Nie można rozpocząć dyskusji'
       mark_all_as_read_confirmation: 'Czy jesteś pewien, że chcesz oznaczyć wszystkie dyskusje jako przeczytane?'
       mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
+      meta_title_text: '=> core.ref.all_discussions'
       refresh_tooltip: Odśwież
       start_discussion_button: '=> core.ref.start_a_discussion'
     index_sort:
@@ -285,8 +283,10 @@ core:
       number_tooltip: 'Post #{number}'
     post_controls:
       delete_button: '=> core.ref.delete'
+      delete_confirmation: 'Czy jesteś pewien, że chcesz nieodwracalnie usunąć ten post? Ta operacje nie może zostać cofnięta.'
       delete_forever_button: '=> core.ref.delete_forever'
       edit_button: '=> core.ref.edit'
+      hide_confirmation: 'Czy jesteś pewien, że chcesz usunąć ten post?'
       restore_button: '=> core.ref.restore'
     post_scrubber:
       now_link: Teraz
@@ -341,7 +341,7 @@ core:
     user_controls:
       button: Opcje
       delete_button: '=> core.ref.delete'
-      delete_confirmation: 'Czy jesteś pewien, że chcesz usunąć tego użytkownika? Wszystkie jego posty także zostaną usunięte.'
+      delete_confirmation: 'Czy jesteś pewien, że chcesz usunąć tego użytkownika? Posty napisane przez tego użytkownika NIE zostaną usunięte.'
       delete_error_message: 'Usunięcie użytkownika <i>{username} ({email})</i> nie powiodło się'
       delete_success_message: 'Użytkownik <i>{username} ({email})</i> został usunięty'
       edit_button: '=> core.ref.edit'
@@ -362,7 +362,7 @@ core:
     badge:
       hidden_tooltip: Ukryte
     error:
-      generic_message: 'Ups! Coś poszło nie tak. Przeładuj proszę stronę i spróbuj ponownie.'
+      generic_message: 'Ups! Coś poszło nie tak. Odśwież stronę i spróbuj ponownie.'
       not_found_message: 'Żądany zasób nie został znaleziony.'
       permission_denied_message: 'Nie masz uprawnień, aby to zrobić.'
       rate_limit_exceeded_message: 'Nie bądź taki hop do przodu! Spróbuj ponownie za kilka sekund.'
@@ -407,7 +407,7 @@ core:
     rename: 'Zmień tytuł'
     reply: Odpowiedz
     reset_your_password: 'Zresetuj swoje hasło'
-    restore: Odzyskaj
+    restore: Przywróć
     save_changes: 'Zapisz zmiany'
     settings: Ustawienia
     sign_up: 'Zarejestruj się'
@@ -426,19 +426,11 @@ core:
       next_page_button: '=> core.ref.next_page'
       previous_page_button: '=> core.ref.previous_page'
     error:
-      403_message: 'Nie masz uprawnień, aby przeglądać tę stronę.'
-      404_message: 'Strona której szukasz nie istnieje.'
-      404_return_link: 'Wróć na {forum}'
-      419_message: 'Zbyt długo byłeś nieaktywny.'
-      419_return_link: 'Cofnij się, aby spróbować ponownie'
-      500_message: 'Wystąpił błąd podczas próby załadowania tej strony.'
-      503_message: '{forum} jest w trakcie modernizacji. Prosimy o cierpliwość!'
       csrf_token_mismatch: 'Zbyt długo byłeś nieaktywny.'
       csrf_token_mismatch_return_link: 'Cofnij się, aby spróbować ponownie'
-      forbidden: 'Nie masz uprawnień, aby przeglądać tę stronę.'
       invalid_confirmation_token: 'Ten link aktywacyjny został już użyty lub jest nieprawidłowy.'
       not_authenticated: 'Nie masz uprawnień, aby przeglądać tę stronę. Spróbuj ponownie po zalogowaniu.'
-      not_found: 'Strona której szukasz nie istnieje.'
+      not_found: 'Podana strona nie istnieje.'
       not_found_return_link: 'Wróć na {forum}'
       permission_denied: 'Nie masz uprawnień, aby przeglądać tę stronę.'
       unknown: 'Wystąpił błąd podczas próby załadowania tej strony.'
@@ -455,6 +447,3 @@ core:
       new_password_label: 'Nowe hasło'
       submit_button: '=> core.ref.save_changes'
       title: '=> core.ref.reset_your_password'
-rob006-flarum-translations:
-  fof-placeholder: 'This is simple placeholder to keep Weblate component with main translations repository for "Friends of Flarum" project.'
-  various-placeholder: 'This is simple placeholder to keep Weblate component with main translations repository for "Flarum extensions" project.'

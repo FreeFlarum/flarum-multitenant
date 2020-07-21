@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c38a46ea9f28d407be717152217cc139",
+    "content-hash": "0b1007529d0d9b21277043f2493fbd5b",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -384,20 +384,20 @@
         },
         {
             "name": "cbmainz/flarum-de",
-            "version": "0.10.0",
+            "version": "0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kakifrucht/flarum-de.git",
-                "reference": "a6a59cc8a8c2ea496cbc3b804548398e58263596"
+                "reference": "5e5759422dc0ee32137e2b74111b31aa11d2aa77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kakifrucht/flarum-de/zipball/a6a59cc8a8c2ea496cbc3b804548398e58263596",
-                "reference": "a6a59cc8a8c2ea496cbc3b804548398e58263596",
+                "url": "https://api.github.com/repos/Kakifrucht/flarum-de/zipball/5e5759422dc0ee32137e2b74111b31aa11d2aa77",
+                "reference": "5e5759422dc0ee32137e2b74111b31aa11d2aa77",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.10"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "type": "flarum-extension",
             "extra": {
@@ -424,7 +424,7 @@
             "keywords": [
                 "locale"
             ],
-            "time": "2019-09-16T22:18:13+00:00"
+            "time": "2020-05-08T03:48:05+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -463,16 +463,16 @@
         },
         {
             "name": "csineneo/lang-simplified-chinese",
-            "version": "v0.1.0-beta.11.3",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Csineneo/lang-simplified-chinese.git",
-                "reference": "75b11b296cf44ee390b4e44da3c521efa636a8bc"
+                "reference": "ea330cc66315849e41d59bfdd88f36edecf78ac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Csineneo/lang-simplified-chinese/zipball/75b11b296cf44ee390b4e44da3c521efa636a8bc",
-                "reference": "75b11b296cf44ee390b4e44da3c521efa636a8bc",
+                "url": "https://api.github.com/repos/Csineneo/lang-simplified-chinese/zipball/ea330cc66315849e41d59bfdd88f36edecf78ac2",
+                "reference": "ea330cc66315849e41d59bfdd88f36edecf78ac2",
                 "shasum": ""
             },
             "require": {
@@ -512,24 +512,24 @@
                 "locale",
                 "中文"
             ],
-            "time": "2020-01-26T13:31:19+00:00"
+            "time": "2020-05-08T01:23:41+00:00"
         },
         {
             "name": "csineneo/lang-traditional-chinese",
-            "version": "v0.1.0-beta.11.3",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Csineneo/lang-traditional-chinese.git",
-                "reference": "311d168b229e5e35d3d34c029c4d967470721a8c"
+                "reference": "46aaaf33419a721a38e211fb3c4f44a439061cc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Csineneo/lang-traditional-chinese/zipball/311d168b229e5e35d3d34c029c4d967470721a8c",
-                "reference": "311d168b229e5e35d3d34c029c4d967470721a8c",
+                "url": "https://api.github.com/repos/Csineneo/lang-traditional-chinese/zipball/46aaaf33419a721a38e211fb3c4f44a439061cc9",
+                "reference": "46aaaf33419a721a38e211fb3c4f44a439061cc9",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.10"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "type": "flarum-extension",
             "extra": {
@@ -565,7 +565,7 @@
                 "locale",
                 "中文"
             ],
-            "time": "2020-01-26T13:30:46+00:00"
+            "time": "2020-05-08T01:26:34+00:00"
         },
         {
             "name": "customworld/flarum-lang-slovak",
@@ -1481,29 +1481,38 @@
         },
         {
             "name": "flagrow/sitemap",
-            "version": "0.2.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/flagrow/sitemap.git",
-                "reference": "de156748aa0d4371fdbaccd6b9160fe293e518f2"
+                "url": "https://github.com/FriendsOfFlarum/sitemap.git",
+                "reference": "a3ca70708536f14b1a006142496c8f0feaacbc71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flagrow/sitemap/zipball/de156748aa0d4371fdbaccd6b9160fe293e518f2",
-                "reference": "de156748aa0d4371fdbaccd6b9160fe293e518f2",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/a3ca70708536f14b1a006142496c8f0feaacbc71",
+                "reference": "a3ca70708536f14b1a006142496c8f0feaacbc71",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": ">=0.1.0-beta.13 <0.1.0-beta.14",
+                "fof/components": "^0.1.1",
+                "fof/console": "^0.5.3"
+            },
+            "replace": {
+                "flagrow/sitemap": "*"
+            },
+            "suggest": {
+                "flarum/tags": "List tags in the sitemap",
+                "fof/pages": "List pages in the sitemap"
             },
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
-                    "title": "Flagrow Sitemap",
+                    "title": "FoF Sitemap",
                     "icon": {
                         "name": "fas fa-sitemap",
-                        "backgroundColor": "#f4f4f4",
-                        "color": "#5f4bb6"
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
                     }
                 },
                 "flagrow": {
@@ -1512,7 +1521,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Flagrow\\Sitemap\\": "src/"
+                    "FoF\\Sitemap\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1524,6 +1533,11 @@
                     "name": "Clark Winkelmann",
                     "email": "clark.winkelmann@gmail.com",
                     "homepage": "https://clarkwinkelmann.com/"
+                },
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
                 }
             ],
             "description": "Generate a sitemap",
@@ -1534,7 +1548,7 @@
                 "flarum"
             ],
             "abandoned": "fof/sitemap",
-            "time": "2018-12-09T20:53:04+00:00"
+            "time": "2020-06-08T07:27:43+00:00"
         },
         {
             "name": "flarum/approval",
@@ -2650,20 +2664,20 @@
         },
         {
             "name": "fof/ban-ips",
-            "version": "0.1.5",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/ban-ips.git",
-                "reference": "d1d43ac3c348eef4995b7242c6ec866ef487acbe"
+                "reference": "32ba15466a82a115b4f6a7d77f9a96f73667c53e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/ban-ips/zipball/d1d43ac3c348eef4995b7242c6ec866ef487acbe",
-                "reference": "d1d43ac3c348eef4995b7242c6ec866ef487acbe",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/ban-ips/zipball/32ba15466a82a115b4f6a7d77f9a96f73667c53e",
+                "reference": "32ba15466a82a115b4f6a7d77f9a96f73667c53e",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.10"
+                "flarum/core": "^0.1.0-beta.12"
             },
             "type": "flarum-extension",
             "extra": {
@@ -2691,7 +2705,7 @@
             "authors": [
                 {
                     "name": "David Sevilla Martín",
-                    "email": "david.s@redevs.org",
+                    "email": "me+fof@datitisev.me",
                     "role": "Developer"
                 }
             ],
@@ -2699,7 +2713,7 @@
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-10-16T23:25:54+00:00"
+            "time": "2020-05-02T14:47:14+00:00"
         },
         {
             "name": "fof/bbcode-details",
@@ -3243,16 +3257,16 @@
         },
         {
             "name": "fof/forum-statistics-widget",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/forum-statistics-widget.git",
-                "reference": "d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1"
+                "reference": "62f904407bb8207dd79f91c07dff158a99d5f26f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/forum-statistics-widget/zipball/d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1",
-                "reference": "d2bc4ed3a8a2fc7e2e774f82f0e32d33ffcf80f1",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/forum-statistics-widget/zipball/62f904407bb8207dd79f91c07dff158a99d5f26f",
+                "reference": "62f904407bb8207dd79f91c07dff158a99d5f26f",
                 "shasum": ""
             },
             "require": {
@@ -3292,7 +3306,7 @@
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-12-28T23:07:09+00:00"
+            "time": "2020-07-16T02:16:15+00:00"
         },
         {
             "name": "fof/gamification",
@@ -3421,20 +3435,20 @@
         },
         {
             "name": "fof/links",
-            "version": "0.2.1",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/links.git",
-                "reference": "006d920decacffd76f3f3cf25bd42e8cb7f0bcec"
+                "reference": "f88d29b14f31ac5629b88dcc1fbc61448ec56178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/006d920decacffd76f3f3cf25bd42e8cb7f0bcec",
-                "reference": "006d920decacffd76f3f3cf25bd42e8cb7f0bcec",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/f88d29b14f31ac5629b88dcc1fbc61448ec56178",
+                "reference": "f88d29b14f31ac5629b88dcc1fbc61448ec56178",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": ">=0.1.0-beta.12 <0.1.0-beta.14"
             },
             "replace": {
                 "sijad/flarum-ext-links": "*"
@@ -3469,7 +3483,7 @@
                 },
                 {
                     "name": "David Sevilla Martín",
-                    "email": "david.s@redevs.org",
+                    "email": "me+fof@datitisev.me",
                     "role": "Developer"
                 }
             ],
@@ -3477,7 +3491,7 @@
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-07-09T18:40:35+00:00"
+            "time": "2020-05-04T11:52:44+00:00"
         },
         {
             "name": "fof/masquerade",
@@ -3665,16 +3679,16 @@
         },
         {
             "name": "fof/pages",
-            "version": "0.2.7",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/pages.git",
-                "reference": "560a99d6447c6f234b588905a6ac56a5278d9d1c"
+                "reference": "1d579f0a5caeb81065fc73d0cc749d76bb60e0c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/pages/zipball/560a99d6447c6f234b588905a6ac56a5278d9d1c",
-                "reference": "560a99d6447c6f234b588905a6ac56a5278d9d1c",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/pages/zipball/1d579f0a5caeb81065fc73d0cc749d76bb60e0c9",
+                "reference": "1d579f0a5caeb81065fc73d0cc749d76bb60e0c9",
                 "shasum": ""
             },
             "require": {
@@ -3694,7 +3708,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18301-friendsofflarum-pages"
+                    "discuss": "https://discuss.flarum.org/d/18301"
                 }
             },
             "autoload": {
@@ -3721,7 +3735,7 @@
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-08-16T14:47:01+00:00"
+            "time": "2020-05-10T16:34:03+00:00"
         },
         {
             "name": "fof/passport",
@@ -3976,20 +3990,20 @@
         },
         {
             "name": "fof/reactions",
-            "version": "0.1.2",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/reactions.git",
-                "reference": "3286b88321fd4409cc4a25b7bc2829a0d4c6448c"
+                "reference": "b8d55218d7c9069c8d4b48e12625e8fccdf6f52f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/3286b88321fd4409cc4a25b7bc2829a0d4c6448c",
-                "reference": "3286b88321fd4409cc4a25b7bc2829a0d4c6448c",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/b8d55218d7c9069c8d4b48e12625e8fccdf6f52f",
+                "reference": "b8d55218d7c9069c8d4b48e12625e8fccdf6f52f",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.9"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "replace": {
                 "reflar/reactions": "*"
@@ -4020,8 +4034,8 @@
             "authors": [
                 {
                     "name": "David Sevilla Martín",
-                    "email": "david.s@redevs.org",
-                    "homepage": "https://redevs.org",
+                    "email": "me+reflar@datitisev.me",
+                    "homepage": "https://datitisev.me",
                     "role": "Developer"
                 },
                 {
@@ -4039,7 +4053,7 @@
                 "reactions",
                 "reflar"
             ],
-            "time": "2019-12-07T21:32:23+00:00"
+            "time": "2020-06-18T00:16:53+00:00"
         },
         {
             "name": "fof/recaptcha",
@@ -4459,16 +4473,16 @@
         },
         {
             "name": "fof/user-bio",
-            "version": "0.1.3",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/user-bio.git",
-                "reference": "19cb1a303afced8fb1b9c22bf19c4f43cc7da40e"
+                "reference": "58d5da04d723bcc591379673366cd864fc6ea317"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/user-bio/zipball/19cb1a303afced8fb1b9c22bf19c4f43cc7da40e",
-                "reference": "19cb1a303afced8fb1b9c22bf19c4f43cc7da40e",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/user-bio/zipball/58d5da04d723bcc591379673366cd864fc6ea317",
+                "reference": "58d5da04d723bcc591379673366cd864fc6ea317",
                 "shasum": ""
             },
             "require": {
@@ -4510,7 +4524,7 @@
                 "Friends of Flarum",
                 "flarum"
             ],
-            "time": "2019-09-08T15:22:25+00:00"
+            "time": "2020-06-25T17:09:09+00:00"
         },
         {
             "name": "fof/user-directory",
@@ -7226,20 +7240,20 @@
         },
         {
             "name": "michaelbelgium/flarum-discussion-views",
-            "version": "v0.1.0-beta.8.3",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MichaelBelgium/flarum-discussion-views.git",
-                "reference": "ad7223fb60bae470a934b8c2248dd08d05d464fe"
+                "reference": "d7343e15e37b651eb0149084add41e41533199a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MichaelBelgium/flarum-discussion-views/zipball/ad7223fb60bae470a934b8c2248dd08d05d464fe",
-                "reference": "ad7223fb60bae470a934b8c2248dd08d05d464fe",
+                "url": "https://api.github.com/repos/MichaelBelgium/flarum-discussion-views/zipball/d7343e15e37b651eb0149084add41e41533199a3",
+                "reference": "d7343e15e37b651eb0149084add41e41533199a3",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "suggest": {
                 "dynastyking/flarum-lang-ptbr": "Includes Brazilian Portuguese translation for this extension",
@@ -7263,7 +7277,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "michaelbelgium\\views\\": "src/"
+                    "Michaelbelgium\\Discussionviews\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7277,20 +7291,20 @@
                 }
             ],
             "description": "Add views to flarum discussions",
-            "time": "2019-10-27T18:16:00+00:00"
+            "time": "2020-07-14T18:24:18+00:00"
         },
         {
             "name": "michaelbelgium/flarum-dutch",
-            "version": "v4.2.3",
+            "version": "v6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MichaelBelgium/flarum-dutch.git",
-                "reference": "bd0fd895bdb8e3cfbb3f2d3913fda2abcd028226"
+                "reference": "3bd79b34b19d8d1f26b5a4507a0c49f26b70420f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MichaelBelgium/flarum-dutch/zipball/bd0fd895bdb8e3cfbb3f2d3913fda2abcd028226",
-                "reference": "bd0fd895bdb8e3cfbb3f2d3913fda2abcd028226",
+                "url": "https://api.github.com/repos/MichaelBelgium/flarum-dutch/zipball/3bd79b34b19d8d1f26b5a4507a0c49f26b70420f",
+                "reference": "3bd79b34b19d8d1f26b5a4507a0c49f26b70420f",
                 "shasum": ""
             },
             "require": {
@@ -7334,7 +7348,7 @@
                 "Dutch",
                 "locale"
             ],
-            "time": "2020-01-29T19:05:35+00:00"
+            "time": "2020-05-29T20:00:41+00:00"
         },
         {
             "name": "middlewares/base-path",
@@ -7537,20 +7551,20 @@
         },
         {
             "name": "migratetoflarum/canonical",
-            "version": "0.1.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/migratetoflarum/canonical.git",
-                "reference": "907057383e8de97d162eb77bd1c04bcc10c26e50"
+                "reference": "40fe15f6dee595c74e901bdad497d76fc48c59cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/migratetoflarum/canonical/zipball/907057383e8de97d162eb77bd1c04bcc10c26e50",
-                "reference": "907057383e8de97d162eb77bd1c04bcc10c26e50",
+                "url": "https://api.github.com/repos/migratetoflarum/canonical/zipball/40fe15f6dee595c74e901bdad497d76fc48c59cf",
+                "reference": "40fe15f6dee595c74e901bdad497d76fc48c59cf",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.12"
             },
             "type": "flarum-extension",
             "extra": {
@@ -7589,7 +7603,7 @@
                 "flarum",
                 "url"
             ],
-            "time": "2019-03-13T21:31:29+00:00"
+            "time": "2020-07-16T23:37:44+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7721,16 +7735,16 @@
         },
         {
             "name": "neercsys/flarum-ext-bosanski",
-            "version": "v0.12",
+            "version": "v0.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neercsys/flarum-ext-bosanski.git",
-                "reference": "5211319d9ae2be6eb7a975d68e58740768c8b4f8"
+                "reference": "214abfa58b8e874c4ecf0364e2e93ea365f1cb92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neercsys/flarum-ext-bosanski/zipball/5211319d9ae2be6eb7a975d68e58740768c8b4f8",
-                "reference": "5211319d9ae2be6eb7a975d68e58740768c8b4f8",
+                "url": "https://api.github.com/repos/neercsys/flarum-ext-bosanski/zipball/214abfa58b8e874c4ecf0364e2e93ea365f1cb92",
+                "reference": "214abfa58b8e874c4ecf0364e2e93ea365f1cb92",
                 "shasum": ""
             },
             "require": {
@@ -7775,27 +7789,30 @@
                 "locale",
                 "translation"
             ],
-            "time": "2019-12-04T01:11:47+00:00"
+            "time": "2020-06-05T14:00:30+00:00"
         },
         {
             "name": "neercsys/flarum-lang-bosanski",
-            "version": "v0.11",
+            "version": "v0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neercsys/flarum-lang-bosanski.git",
-                "reference": "124045af012227ee538e6346b88018ffbdc34c1c"
+                "reference": "d8a6004e86eb4aaef67658a65ad07e56c43f78d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neercsys/flarum-lang-bosanski/zipball/124045af012227ee538e6346b88018ffbdc34c1c",
-                "reference": "124045af012227ee538e6346b88018ffbdc34c1c",
+                "url": "https://api.github.com/repos/neercsys/flarum-lang-bosanski/zipball/d8a6004e86eb4aaef67658a65ad07e56c43f78d6",
+                "reference": "d8a6004e86eb4aaef67658a65ad07e56c43f78d6",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.9"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "type": "flarum-extension",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
                 "flarum-extension": {
                     "title": "Bosanski",
                     "icon": {
@@ -7822,7 +7839,7 @@
                 "locale",
                 "translation"
             ],
-            "time": "2019-09-19T17:23:28+00:00"
+            "time": "2020-05-07T16:26:55+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -8915,16 +8932,16 @@
         },
         {
             "name": "reflar/doorman",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/doorman.git",
-                "reference": "a27a810e91091a8be57eef68ec3c7602c96add72"
+                "reference": "6487296c527edab569166af6dee1e10fa98343fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/a27a810e91091a8be57eef68ec3c7602c96add72",
-                "reference": "a27a810e91091a8be57eef68ec3c7602c96add72",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/6487296c527edab569166af6dee1e10fa98343fc",
+                "reference": "6487296c527edab569166af6dee1e10fa98343fc",
                 "shasum": ""
             },
             "require": {
@@ -8969,7 +8986,7 @@
             "keywords": [
                 "flarum"
             ],
-            "time": "2020-03-20T04:01:55+00:00"
+            "time": "2020-07-21T01:45:17+00:00"
         },
         {
             "name": "reflar/twofactor",
@@ -9034,20 +9051,20 @@
         },
         {
             "name": "reflar/webhooks",
-            "version": "0.1.7",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ReFlar/webhooks.git",
-                "reference": "c872f29d205e13f5481deaf50c0d9db6f1804e25"
+                "reference": "e4b8a7041645d5b3852f97673d2e76fb148ee521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ReFlar/webhooks/zipball/c872f29d205e13f5481deaf50c0d9db6f1804e25",
-                "reference": "c872f29d205e13f5481deaf50c0d9db6f1804e25",
+                "url": "https://api.github.com/repos/ReFlar/webhooks/zipball/e4b8a7041645d5b3852f97673d2e76fb148ee521",
+                "reference": "e4b8a7041645d5b3852f97673d2e76fb148ee521",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8",
+                "flarum/core": "^0.1.0-beta.11",
                 "guzzlehttp/guzzle": "~6.0"
             },
             "type": "flarum-extension",
@@ -9076,15 +9093,15 @@
             "authors": [
                 {
                     "name": "David Sevilla Martín",
-                    "role": "Developer",
-                    "email": "david.s@redevs.org"
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
                 }
             ],
             "description": "Flarum with webhooks",
             "keywords": [
                 "flarum"
             ],
-            "time": "2019-03-04T23:35:07+00:00"
+            "time": "2020-05-21T21:08:53+00:00"
         },
         {
             "name": "rikusen0335/lang-japanese-extended",
@@ -9145,25 +9162,25 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.2.22",
+            "version": "v0.3.12.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "07a100dc4e57c025965d523eef165d367025a1f1"
+                "reference": "d1dd13228e6c6862757a47497ff247dac5f0350f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/07a100dc4e57c025965d523eef165d367025a1f1",
-                "reference": "07a100dc4e57c025965d523eef165d367025a1f1",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/d1dd13228e6c6862757a47497ff247dac5f0350f",
+                "reference": "d1dd13228e6c6862757a47497ff247dac5f0350f",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8.1"
+                "flarum/core": "^0.1.0-beta.11"
             },
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2.x-dev"
+                    "dev-master": "0.3.x-dev"
                 },
                 "flarum-extension": {
                     "title": "Polish language pack",
@@ -9176,6 +9193,9 @@
                 "flarum-locale": {
                     "code": "pl",
                     "title": "Polski"
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18134/30"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -9196,7 +9216,7 @@
                 "locale",
                 "polish-locale"
             ],
-            "time": "2020-03-08T10:57:22+00:00"
+            "time": "2020-07-17T19:28:50+00:00"
         },
         {
             "name": "s9e/regexp-builder",
@@ -10999,16 +11019,16 @@
         },
         {
             "name": "the-turk/flarum-mathren",
-            "version": "0.2.7",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-turk/flarum-mathren.git",
-                "reference": "23039253582dc374b8d60952b3f747a34b910b99"
+                "reference": "9ce79f3798f607444a150c698a8e33a80bf2700c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-turk/flarum-mathren/zipball/23039253582dc374b8d60952b3f747a34b910b99",
-                "reference": "23039253582dc374b8d60952b3f747a34b910b99",
+                "url": "https://api.github.com/repos/the-turk/flarum-mathren/zipball/9ce79f3798f607444a150c698a8e33a80bf2700c",
+                "reference": "9ce79f3798f607444a150c698a8e33a80bf2700c",
                 "shasum": ""
             },
             "require": {
@@ -11051,7 +11071,7 @@
                 "mathren",
                 "tex"
             ],
-            "time": "2020-05-06T19:37:28+00:00"
+            "time": "2020-05-26T12:46:04+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -11270,20 +11290,20 @@
         },
         {
             "name": "tolgaaaltas/flarum-ext-turkish",
-            "version": "0.1.61",
+            "version": "0.13.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-                "reference": "3296f38eae054da70096f23525b559b6b3dc7541"
+                "reference": "ff7981e8ec918615c8b8180d0615d137ba1e7234"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/3296f38eae054da70096f23525b559b6b3dc7541",
-                "reference": "3296f38eae054da70096f23525b559b6b3dc7541",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/ff7981e8ec918615c8b8180d0615d137ba1e7234",
+                "reference": "ff7981e8ec918615c8b8180d0615d137ba1e7234",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "suggest": {
                 "tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
@@ -11300,13 +11320,12 @@
                     }
                 ],
                 "flarum-extension": {
-                    "title": "Turkish Extended Pack",
+                    "title": "Turkish Extensions Experience Pack",
                     "icon": {
-                        "name": "fas fa-language",
-                        "background": "#ff3838",
+                        "image": "extension.svg",
+                        "backgroundColor": "#ffffff",
                         "backgroundSize": "cover",
-                        "backgroundPosition": "center",
-                        "color": "#f5f5f5"
+                        "backgroundPosition": "center"
                     }
                 },
                 "flagrow": {
@@ -11329,24 +11348,24 @@
                 "locale",
                 "translation"
             ],
-            "time": "2020-03-10T07:12:34+00:00"
+            "time": "2020-07-08T16:39:24+00:00"
         },
         {
             "name": "tolgaaaltas/flarum-lang-turkish",
-            "version": "0.0.0.5",
+            "version": "0.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
-                "reference": "f079faf930658ec668cdcb00f91be080db46f0bd"
+                "reference": "f973fab11551e1d029c2aacfef10821e482fb932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/f079faf930658ec668cdcb00f91be080db46f0bd",
-                "reference": "f079faf930658ec668cdcb00f91be080db46f0bd",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/f973fab11551e1d029c2aacfef10821e482fb932",
+                "reference": "f973fab11551e1d029c2aacfef10821e482fb932",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.13"
             },
             "suggest": {
                 "tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."
@@ -11363,10 +11382,10 @@
                     }
                 ],
                 "flarum-extension": {
-                    "title": "Turkish Core Pack",
+                    "title": "Turkish Core Experience Pack",
                     "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#00247d",
+                        "image": "core.svg",
+                        "backgroundColor": "#ffffff",
                         "backgroundSize": "cover",
                         "backgroundPosition": "center"
                     }
@@ -11376,7 +11395,7 @@
                 },
                 "flarum-locale": {
                     "code": "tr",
-                    "title": "Turkish Core Pack"
+                    "title": "Turkish"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -11387,7 +11406,7 @@
             "keywords": [
                 "locale"
             ],
-            "time": "2019-10-01T11:39:48+00:00"
+            "time": "2020-05-04T14:30:43+00:00"
         },
         {
             "name": "twilio/sdk",
@@ -11656,53 +11675,6 @@
             "time": "2017-10-15T23:24:28+00:00"
         },
         {
-            "name": "zerosonesfun/bbbbcode",
-            "version": "2.9.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zerosonesfun/bbbbcode.git",
-                "reference": "00c5dd717d2856179b52bd9a45f02a772e93a034"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zerosonesfun/bbbbcode/zipball/00c5dd717d2856179b52bd9a45f02a772e93a034",
-                "reference": "00c5dd717d2856179b52bd9a45f02a772e93a034",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.8"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "bbbbcode",
-                    "icon": {
-                        "name": "fas fa-heart",
-                        "backgroundColor": "#ddd",
-                        "color": "#000"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ZerosOnesFun\\bbbbcode\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Billy Wilcosky",
-                    "role": "Creator"
-                }
-            ],
-            "description": "Big Beautiful BBcode",
-            "abandoned": true,
-            "time": "2019-11-28T08:09:37+00:00"
-        },
-        {
             "name": "ziymed/lang-arabic",
             "version": "0.1.2",
             "source": {
@@ -11757,14 +11729,30 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "csineneo/lang-simplified-chinese": 10,
-        "csineneo/lang-traditional-chinese": 10,
+        "flarum/approval": 10,
+        "flarum/auth-facebook": 10,
+        "flarum/auth-github": 10,
+        "flarum/auth-twitter": 10,
+        "flarum/bbcode": 10,
+        "flarum/core": 10,
         "flarum/embed": 10,
+        "flarum/emoji": 10,
+        "flarum/flags": 10,
+        "flarum/lang-english": 10,
+        "flarum/likes": 10,
+        "flarum/lock": 10,
+        "flarum/markdown": 10,
+        "flarum/mentions": 10,
+        "flarum/pusher": 10,
+        "flarum/statistics": 10,
+        "flarum/sticky": 10,
+        "flarum/subscriptions": 10,
+        "flarum/suspend": 10,
+        "flarum/tags": 10,
         "fof/filter": 10,
         "luatdolphin/lang-vietnamese": 10,
         "madnest/flarum-lang-czech": 10,
         "marketplace/flarum-l10n-core-russian": 10,
-        "michaelbelgium/flarum-discussion-views": 10,
         "nearata/lang-italian": 10,
         "saleksin/flarum-auth-google": 10
     },

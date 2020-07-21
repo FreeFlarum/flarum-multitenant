@@ -1,10 +1,26 @@
 .Reactions {
-    .Button-emoji-parent {
-        float: right;
-        margin-top: 8px;
+    .Reactions--reactions {
+        display: inline-block;
+        vertical-align: text-bottom;
 
-        .button-emoji {
-            margin: auto !important;
+        .Button-emoji-parent {
+            padding: 8px 10px 8px 3px;
+
+            &:not(:last-of-type) {
+                margin-right: 5px;
+            }
+
+            .button-emoji {
+                margin: auto !important;
+            }
+
+            .count {
+                margin-left: 2px;
+            }
+
+            &.disabled {
+                background: transparent;
+            }
         }
     }
 
@@ -77,9 +93,79 @@
         }
     }
 
-    &:hover .CommentPost--Reactions {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 0s linear 0s, opacity 300ms;
+    .Reactions--react {
+        display: inline-block;
+
+        &:hover .CommentPost--Reactions {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s linear 0s, opacity 300ms;
+        }
     }
 }
+
+.ReactionsModal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+        color: @text-color;
+        font-size: 15px;
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+
+        .username {
+            vertical-align: bottom;
+        }
+
+        &:hover .username {
+            text-decoration: underline;
+        }
+    }
+
+    .ReactionsModal-group {
+        margin-bottom: 40px;
+
+        .ReactionsModal-reaction {
+            .emoji {
+                height: 24px;
+                vertical-align: middle;
+            }
+
+            .icon {
+                font-size: 15px;
+                vertical-align: middle;
+            }
+        }
+
+        .ReactionsModal-display {
+            display: inline-block;
+            max-width: 85%;
+            overflow-x: auto;
+
+            font-weight: bold;
+            vertical-align: bottom;
+            margin-left: 10px;
+        }
+
+        .ReactionsModal-delimiter {
+            margin-top: -5px !important;
+            margin-bottom: 15px !important;
+            border: 0;
+            clear:both;
+            display:block;
+            width: 100%;
+            background-color:#ccc;
+            height: 1px;
+        }
+    }
+
+    .Avatar {
+        .Avatar--size(24px);
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+

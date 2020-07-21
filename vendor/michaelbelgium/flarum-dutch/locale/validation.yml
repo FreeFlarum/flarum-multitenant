@@ -74,6 +74,7 @@ validation:
     string: ":attribute moet tenminste :min karakters bevatten."
     array: ":attribute moet tenminste :min items bevatten."
   not_in: ":attribute is ongeldig."
+  not_regex: :attribute formaat is ongeldig.
   numeric: ":attribute moet een nummer zijn."
   present: ":attribute moet aanwezig zijn."
   regex: ":attribute formaat is ongeldig."

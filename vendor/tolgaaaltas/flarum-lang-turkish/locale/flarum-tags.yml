@@ -36,6 +36,9 @@ flarum-tags:
             secondary_heading: 'İkincil Etiketler'
             settings_button: Ayarlar
     forum:
+        all_tags:
+            meta_description_text: Tüm Etiketler
+            meta_title_text: => flarum-tags.ref.tags
         choose_tags:
             choose_primary_placeholder: 'Bir birincil etiket seçin|{count} birincil etiket seçin'
             choose_secondary_placeholder: '1 tane daha etiket seçin|{count} tane daha etiket seçin'
@@ -57,6 +60,8 @@ flarum-tags:
             added_tags_text: '{username}, {tagsAdded} etiketlerini ekledi.'
             removed_tags_text: '{username}, {tagsRemoved} etiketlerini kaldırdı.'
             tags_text: '{tags} etiket | {tags} etiketler'
+        tag:
+            meta_description_text: "{tag} etiketindeki tüm tartışmalar"
     lib:
         deleted_tag_text: Silindi
     ref:

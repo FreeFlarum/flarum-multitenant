@@ -52,9 +52,10 @@ core:
         edit_group:
             color_label: '=> core.ref.color'
             delete_button: 'Grubu Sil'
-            delete_confirmation: 'Bu grubu silmek istediğine emin misin? Grup üyeleri silinmeyecek.'
+            delete_confirmation: 'Bu grubu silmek istediğine emin misin? Kullanıcıların gönderileri SİLİNMEYECEK.'
             delete_error_message: "<i>{username} ({email})</i> silinmesi başarısız oldu"
             delete_success_message: "<i>{username} ({email})</i> başarıyla silindi"
+            hide_label: Forumda gizle
             icon_label: '=> core.ref.icon'
             icon_text: '=> core.ref.icon_text'
             name_label: İsim
@@ -75,6 +76,7 @@ core:
             mail_encryption_label: Şifreleme
             mail_host_label: Sunucu
             mail_mailgun_domain_label: Alanadı
+            mail_mailgun_region_label: Bölge
             mail_mailgun_secret_label: 'Gizli anahtar'
             mail_mandrill_secret_label: 'Gizli anahtar'
             mail_password_label: '=> core.ref.password'
@@ -85,6 +87,7 @@ core:
             mail_username_label: '=> core.ref.username'
             mailgun_heading: 'Mailgun Ayarları'
             mandrill_heading: 'Mandrill Ayarları'
+            not_sending_message: Flarum şu anda elektronik posta gönderemiyor. Bunun sebebi seçilen sürücü veya yapılandırma hatası olabilir.
             ses_heading: 'SES Ayarları'
             smtp_heading: 'SMTP Ayarları'
             submit_button: '=> core.ref.save_changes'
@@ -96,7 +99,7 @@ core:
         header:
             log_out_button: '=> core.ref.log_out'
         loading:
-            title: 'Lütfen Bekle...'
+            title: 'Lütfen Bekleyin...'
         nav:
             appearance_button: Görünüm
             appearance_text: 'Forumunun renklerini, logolarını ve diğer değişkenlerini özelleştir.'
@@ -133,13 +136,15 @@ core:
             moderate_heading: Yönetim
             new_group_button: 'Yeni Grup'
             participate_heading: Katılma
+            post_without_throttle_label: Beklemeden birçok kez yanıtlama
             read_heading: Okuma
             rename_discussions_label: 'Tartışmaları yeniden adlandır'
             reply_to_discussions_label: 'Tartışmalara yanıt ver'
             sign_up_label: Kaydol
             start_discussions_label: 'Tartışmalar başlat'
             view_discussions_label: 'Tartışmalar görüntüle'
-            view_last_seen_at_label: 'Son görülme zamanını görüntüle'
+            view_hidden_groups_label: Gizli grup simgelerini göster
+            view_last_seen_at_label: 'Her zaman son görülme zamanını görüntüle'
             view_post_ips_label: 'Gönderilerde IP adresini görüntüle'
             view_user_list_label: 'Kullanıcı listesini görüntüle'
         settings:
@@ -151,14 +156,38 @@ core:
         invalid_username_message: 'Kullanıcı adı sadece harfler, rakamlar ve kısa çizgiler içerebilir.'
     email:
         activate_account:
-            body: 'Hey {username} !\n\nBirisi (umarım sensindir!) bu e-posta hseabı ile {forum} sitesine kaydoldu.\n\n Bu sen isen, hesabını aktifleştirmek için aşağıdaki bağlantıyı tıkla: \n {url} \n \nEğer sen kaydolmadıysan, bu e-postayı dikkate alma. \n'
             subject: 'Yeni Hesabını Etkinleştir'
+            body: |
+                Hey {username}!
+
+                Birisi (umarım sensindir!) bu e-posta hesabı ile {forum} sitesine kaydoldu.
+
+                Bu sen isen, hesabını aktifleştirmek için aşağıdaki bağlantıyı tıkla:
+                {url}
+
+                Eğer sen kaydolmadıysan, bu e-postayı dikkate alma.
         confirm_email:
-            body: 'Hey {username} !\n\nBirisi (umarım sensindir!) {forum} sitesindeki hesabının e-posta adresini değiştirdi.\n\n Bu sen isen, e-postanı doğrulamak için aşağıdaki bağlantıyı tıkla: \n {url} \n \n Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma. \n'
             subject: 'Yeni E-posta Adresini Doğrula'
+            body: |
+                Hey {username}!
+
+                Birisi (umarım sensindir!) {forum} sitesindeki hesabının e-posta adresini değiştirdi.
+
+                Bu sen isen, e-postanı doğrulamak için aşağıdaki bağlantıyı tıkla:
+                {url}
+
+                Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma.
         reset_password:
-            body: 'Hey {username} !\n\nBirisi (umarım sensindir!) {forum} sitesindeki hesabın için şifre sıfırlama talebinde bulundu.\n\n Bu sen isen, şifreni sıfırlamak için aşağıdaki bağlantıyı tıkla: \n {url} \n \n Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma; hiçbir şey olmayacak. \n'
             subject: '=> core.ref.reset_your_password'
+            body: |
+                Hey {username}!
+
+                Birisi (umarım sensindir!) {forum} sitesindeki hesabın için şifre sıfırlama talebinde bulundu.
+
+                Bu sen isen, şifreni sıfırlamak için aşağıdaki bağlantıyı tıkla:
+                {url}
+
+                Şifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma; hiçbir şey olmayacak.
     forum:
         change_email:
             confirm_password_placeholder: '=> core.ref.confirm_password'
@@ -207,8 +236,8 @@ core:
             empty_text: 'Burada hiç tartışma yok gibi görünüyor.'
             load_more_button: '=> core.ref.load_more'
             mark_as_read_tooltip: 'Okundu olarak işaretle'
-            replied_text: '{username}, {ago} önce yanıtladı'
-            started_text: '{username} {ago} önce başlattı'
+            replied_text: '{username}, {ago} yanıtladı'
+            started_text: '{username} {ago} başlattı'
         edit_user:
             activate_button: 'Kullanıcıyı Etkinleştir'
             email_heading: '=> core.ref.email'
@@ -259,7 +288,7 @@ core:
             sign_up_text: 'Hesabın yok mu? <a> Kaydol </a>'
             submit_button: '=> core.ref.log_in'
             title: '=> core.ref.log_in'
-            username_or_email_placeholder: 'Kullanıcı Adı ya da E-posta'
+            username_or_email_placeholder: 'Kullanıcı Adı ya da E-Posta'
         notifications:
             discussion_renamed_text: '{username} başlığı değiştirdi'
             empty_text: 'Bildirim Yok'
@@ -269,8 +298,10 @@ core:
             tooltip: '=> core.ref.notifications'
         post_controls:
             delete_button: '=> core.ref.delete'
+            delete_confirmation: "Bu gönderiyi sonsuza kadar silmek istediğinize emin misiniz? Bu eylem geri alınamaz."
             delete_forever_button: '=> core.ref.delete_forever'
             edit_button: '=> core.ref.edit'
+            hide_confirmation: "Bu gönderiyi silmek istediğinize emin misiniz?"
             restore_button: '=> core.ref.restore'
         post_scrubber:
             now_link: Şimdi
@@ -285,7 +316,7 @@ core:
             time_lapsed_text: '{period} sonra'
         post:
             edited_text: Düzenlendi
-            edited_tooltip: '{username}, {ago} önce düzenledi'
+            edited_tooltip: '{username}, {ago} düzenledi'
             number_tooltip: 'Gönderi #{number}'
         rename_discussion:
             submit_button: '=> core.ref.rename'
@@ -318,6 +349,7 @@ core:
             button: Seçenekler
             delete_button: '=> core.ref.delete'
             delete_confirmation: 'Bu kullanıcıyı silmek istediğinize emin misiniz? Kullanıcının tüm gönderileri silinecek.'
+            delete_success_message: '<i>{username} ({email})</i> adlı kullanıcı silindi'
             edit_button: '=> core.ref.edit'
         user_email_confirmation:
             alert_message: '=> core.ref.confirmation_email_sent'
@@ -373,12 +405,12 @@ core:
         custom_header_text: 'Sayfanın en üstünde görüntülenecek HTML kodu ekleyin, Flarum''un kendi üstbilgisinin üstünde.'
         custom_header_title: 'Özel Başlığı Düzenle'
         delete: Sil
-        delete_forever: 'Kalııcı Olarak Sil'
+        delete_forever: 'Kalıcı Olarak Sil'
         discussions: Tartışmalar
         edit: Düzenle
         email: E-posta
         icon: Simge
-        icon_text: 'Herhangi bir <a>FontAwesome</a> ikonu adını <code>fas fa-</code> <em>öneki dahil</em> olarak girin.'
+        icon_text: 'Herhangi bir <a>FontAwesome</a> simge adını <code>fas fa-</code> <em>öneki dahil</em> olarak girin.'
         load_more: 'Daha Fazla Yükle'
         log_in: 'Giriş Yap'
         log_out: 'Çıkış Yap'
@@ -397,7 +429,7 @@ core:
         save_changes: 'Değişiklikleri Kaydet'
         settings: Ayarlar
         sign_up: Kaydol
-        some_others: '{count} diğer|{count} diğer'
+        some_others: ' {count} kullanıcı daha| {count} kullanıcı daha'
         start_a_discussion: 'Bir Tartışma Başlat'
         username: 'Kullanıcı Adı'
         users: Kullanıcılar

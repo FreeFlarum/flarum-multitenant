@@ -11,7 +11,7 @@
 	"type": "flarum-extension",
 	"license": "MIT",
 	"require": {
-		"flarum/core": "^0.1.0-beta.8"
+		"flarum/core": "^0.1.0-beta.13"
 	},
 	"suggest": {
 		"tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
@@ -29,13 +29,12 @@
 			"role": "Developer"
 		}],
 		"flarum-extension": {
-			"title": "Turkish Extended Pack",
+			"title": "Turkish Extensions Experience Pack",
 			"icon": {
-				"name": "fas fa-language",
-				"background": "#ff3838",
-				"backgroundSize": "cover",
-				"backgroundPosition": "center",
-				"color": "#f5f5f5"
+			"image": "extension.svg",
+			"backgroundColor": "#ffffff",
+			"backgroundSize": "cover",
+			"backgroundPosition": "center"
 			}
 		},
 		"flagrow": {

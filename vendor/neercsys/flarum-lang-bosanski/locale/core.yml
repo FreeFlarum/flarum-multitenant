@@ -73,6 +73,7 @@ core:
       color_label: => core.ref.color
       delete_button: Izbriši grupu
       delete_confirmation: "Da li si siguran da želiš izbrisati ovu grupu? Članovi grupe NEĆE biti izbrisani."
+      hide_label: Sakrij na forumu
       icon_label: Icon
       icon_text: "Unesi naziv bilo koje <a>FontAwesome</a> icon class-e, <em>uključujući</em> i <code>fas fa-</code> prefix."
       name_label: Naziv
@@ -97,6 +98,7 @@ core:
       mail_encryption_label: Enkripcija
       mail_host_label: Host
       mail_mailgun_domain_label: Domen
+      mail_mailgun_region_label: Region
       mail_mailgun_secret_label: Secret key
       mail_mandrill_secret_label: Secret key
       mail_password_label: => core.ref.password
@@ -107,6 +109,7 @@ core:
       mail_username_label: => core.ref.username
       mailgun_heading: Mailgun Settings
       mandrill_heading: Mandrill Settings
+      not_sending_message: Flarum trenutno ne šalje e-poštu. To može biti zbog odabranog upravljačkog programa ili pogreške u njegovoj konfiguraciji.
       ses_heading: SES Postavke
       smtp_heading: SMTP Postavke
       submit_button: => core.ref.save_changes
@@ -156,12 +159,14 @@ core:
       moderate_heading: Moderacija
       new_group_button: Nova grupa
       participate_heading: Učestvovanje
+      post_without_throttle_label: Odgovorite više puta bez čekanja
       read_heading: Pregled
       rename_discussions_label: Izmjena naziva teme
       reply_to_discussions_label: Odgovaranje na temu
       sign_up_label: Registracija
       start_discussions_label: Pokretanje tema
       view_discussions_label: Pregled tema
+      view_hidden_groups_label: Pogledajte skrivene grupne značke
       view_last_seen_at_label: Pregled korisnikovog vremena zadnje aktivnosti
       view_post_ips_label: Pregled IP adresa teme
       view_user_list_label: Pregled liste korisnika
@@ -335,7 +340,9 @@ core:
     # These translations are used by the post control buttons.
     post_controls:
       delete_button: => core.ref.delete
+      delete_confirmation: "Jeste li sigurni da želite zauvijek izbrisati ovaj post? Ova se radnja ne može poništiti."
       delete_forever_button: => core.ref.delete_forever
+      hide_confirmation: "Jeste li sigurni da želite izbrisati taj post?"
       edit_button: => core.ref.edit
       restore_button: => core.ref.restore
 
@@ -407,7 +414,7 @@ core:
     user_controls:
       button: Kontrole
       delete_button: => core.ref.delete
-      delete_confirmation: "Da li siguran da želiš izbrisati ovog korisnika? Svi korisnikovi postovi biće izbrisani."
+      delete_confirmation: "Da li siguran da želiš izbrisati ovog korisnika? Postovi ovog korisnika neće biti izbrisani."
       delete_error_message: "Brisanje korisnika <i>{username} ({email})</i> je neuspješno"
       delete_success_message: "Korisnik <i>{username} ({email})</i> je uspješno obrisan"
       edit_button: => core.ref.edit

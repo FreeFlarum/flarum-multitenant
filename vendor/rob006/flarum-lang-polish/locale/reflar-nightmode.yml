@@ -1,6 +1,0 @@
-# @deprecated https://github.com/rob006-software/flarum-translations/pull/152
-
-reflar-nightmode:
-  forum:
-    night: 'Tryb nocny'
-    day: 'Tryb dzienny'

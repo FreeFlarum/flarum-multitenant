@@ -7,8 +7,7 @@ export default class ResetDiscussionViewsModal extends Modal {
         super.init();
 
         this.discussion = this.props.discussion;
-        this.currentViewsCount = this.props.discussion.views();
-        this.newViewsCount = m.prop(this.currentViewsCount);
+        this.currentViewsCount = this.discussion.viewCount();
     }
 
     content()
@@ -16,16 +15,13 @@ export default class ResetDiscussionViewsModal extends Modal {
         return (
             <div className="Modal-body">
                 <div className="Form Form--centered">
-                    <div className="Form-group">
-                        <label>{app.translator.trans('flarum_discussion_views.forum.modal_resetviews.label')}</label>
-                        <input className="FormControl" type="number" min="0" bidi={this.newViewsCount} />
-                    </div>
+                    <p>{app.translator.transChoice('michaelbelgium-discussion-views.forum.modal_resetviews.label', this.currentViewsCount, {count: this.currentViewsCount })}</p>
                     <div className="Form-group">
                         {Button.component({
                             className: 'Button Button--primary Button--block',
                             type: 'submit',
                             loading: this.loading,
-                            children: app.translator.trans('flarum_discussion_views.forum.modal_resetviews.submit')
+                            children: app.translator.trans('michaelbelgium-discussion-views.forum.modal_resetviews.submit_button')
                         })}
                     </div>
                 </div>
@@ -35,7 +31,7 @@ export default class ResetDiscussionViewsModal extends Modal {
 
     title()
     {
-        return app.translator.trans('flarum_discussion_views.forum.modal_resetviews.title');
+        return app.translator.trans('michaelbelgium-discussion-views.forum.modal_resetviews.title');
     }
 
     className()
@@ -48,19 +44,13 @@ export default class ResetDiscussionViewsModal extends Modal {
         e.preventDefault();
         this.loading = true;
 
-        const newViews = parseInt(this.newViewsCount());
-        const currentViews = this.currentViewsCount;
-
-        if (newViews >= 0 && newViews !== currentViews)
-        {
-            this.props.discussion
-                .save({ views: newViews })
-                .then(() => { m.redraw(); })
-                .catch((reason) => {
-                    this.loading = false;
-                    console.log(reason)
-                });
-        }
+        this.props.discussion
+            .save({ resetViews: true })
+            .then(() => { m.redraw(); })
+            .catch((reason) => {
+                this.loading = false;
+                console.log(reason)
+            });
 
         this.hide();
     }

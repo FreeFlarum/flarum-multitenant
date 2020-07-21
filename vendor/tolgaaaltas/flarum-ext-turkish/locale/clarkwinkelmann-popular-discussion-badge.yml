@@ -1,0 +1,12 @@
+clarkwinkelmann-popular-discussion-badge:
+    forum:
+        badge_label: Popüler
+
+    admin:
+        settings:
+            title: Popüler tartışmalar rozeti ayarları
+            add: Yeni bir koşul ekle
+            comments: Yanıtlar (İlk gönderi dahil)
+            views: Görüntülenmeler (üçüncü parti uzantılardan)
+            and: VE
+            or: VEYA

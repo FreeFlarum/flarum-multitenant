@@ -60,14 +60,30 @@
 }
 
 .ReflarWebhooksModal {
-  .Webhook-events {
-    margin-top: 7.5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .Form-group {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 
+  .Dropdown-toggle .icon {
+    margin-right: 10px;
+  }
+
+  .Webhook-events {
     > div {
-      flex: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      h2 {
+        flex-basis: 100%;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      > div {
+        flex: 50%;
+      }
     }
 
     .Checkbox {

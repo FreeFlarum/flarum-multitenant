@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/reactions.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -53,8 +53,16 @@ class EditReactionHandler
             $reaction->identifier = $data['identifier'];
         }
 
+        if (isset($data['display'])) {
+            $reaction->display = $data['display'];
+        }
+
         if (isset($data['type'])) {
             $reaction->type = $data['type'];
+        }
+
+        if (isset($data['enabled'])) {
+            $reaction->enabled = $data['enabled'];
         }
 
         $this->validator->assertValid($reaction->getDirty());

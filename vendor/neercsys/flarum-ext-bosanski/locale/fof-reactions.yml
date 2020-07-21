@@ -1,0 +1,51 @@
+fof-reactions:
+  forum:
+    disabled-reaction: Ne možete trenutno koristiti ovu reakciju. Osvježite stranicu
+    warning: Vaša reakcija je pretvorena
+    notification: '{username} je reagirao {reaction} na vaš post'
+    settings:
+        notify_post_reacted_label: Neko reagira na jedan moj post
+    reacting-own-post: You cannot react to your own post
+    modal:
+        title: Reakcije
+    mod_item: Pogledaj reakcije
+
+  admin:
+    permissions:
+        react_posts_label: Reagira na postove
+        see_reactions_label: Pogledajte ko je reagirao na postove
+
+    nav:
+      desc: Dodajte prilagođene reakcije i promijenite postavke.
+
+    page:
+      reactions:
+        title: Prilagođene reakcije
+        reactions: Trenutne reakcije
+        Helptext: Unesite ime (identifikator) emojija ili font-awesome fonta i odaberite vrstu koju želite.
+        help:
+          display: Display
+          identifier: Identifikator
+
+      convert:
+        help: Ako ste upravo ažurirali ekstenziju, vaše reakcije će se morati konvertovati. Ako ste upravo instalirali ovo proširenje, možete sigurno zanemariti ovu poruku.
+        button: Pretvori stare reakcije
+        converting: Vaše se reakcije se sada pretvaraju. Osvježite web sajt nakon nekoliko minuta da biste vidjeli da li je postupak završen. (Vrijeme pretvorbe može potrajati neko vrijeme, ovisno o ukupnom broju reakcija)
+        converted: "Uspješno konvertovano svih {number} lajkova"
+
+      settings:
+        save_settings: Sačuvaj postavke
+        integrations:
+          legend: Integracija
+          warning: The same reaction <strong>cannot</strong> be converted to a like <strong>and</strong> an upvote
+          gamification:
+            legend: Gamification
+            upvoteLabel: Convert reactions to upvotes
+            upvoteHelptext: Input the identifier of the reaction you would like to automatically convert into an upvote
+            downvoteLabel: Convert reactions to downvotes
+            downvoteHelptext: Input the identifier of the reaction you would like to automatically convert into an downvote
+
+          likes:
+            legend: Lajkovi
+            Label: Konvertuj reakcije u lajkove
+            Helptext: Unesite identifikator reakcije koji želite automatski pretvoriti u lajkove

@@ -14,6 +14,9 @@ pushedx-chat:
         actions:
           hide: Gizle
           resend: Yeniden Gönder
+        censored: Mesajı görmek için giriş yapın!
+        deleted: silen 
+        deleted_forever: sonsuza kadar silen
     errors:
       unauthenticated: Yalnızca kayıtlı kullanıcılar sohbet edebilir
       chatdenied: Bulunduğunuz kullanıcı grubunun sohbete yazma izni bulunmuyor
@@ -24,6 +27,7 @@ pushedx-chat:
       delete: Sohbet mesajını sil
       moderate:
         delete: Sohbet mesajını sil
+        vision: Silinen mesajları gör
 
     settings:
       title: Sohbet Ayarları
@@ -32,3 +36,7 @@ pushedx-chat:
         title: Flood Karşıtı
         number: Arka arkaya mesaj sayısı
         time: Süre sınırı
+      display:
+        title: Görme
+        minimize: Küçültülü olarak gözüksün
+        censor: Yetkisiz kullanıcılar mesajları göremesin

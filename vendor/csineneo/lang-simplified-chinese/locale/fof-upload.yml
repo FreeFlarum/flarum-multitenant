@@ -1,0 +1,87 @@
+# https://github.com/FriendsOfFlarum/upload/blob/master/resources/locale/en.yml
+# Wed, 06 May 2020 11:20:35 +0800
+
+fof-upload:
+  admin:
+      buttons:
+          save: 保存修改
+      help_texts:
+          description: 上传服务设置
+          disable-download-logging: 开启此设置可查看下载量及未来可能的统计数据。
+          disable-hotlink-protection: 热链保护可防止盗链，目前的方式需要 csrf 及帖子 ID
+          download_templates: 下载模板定义上传的附件如何在论坛上显示，比如预览、按钮等，目前支持：
+          mime_types: 请于此设置映射，每一个 MIME 类型的正则表达式都将由指定上传接口处理
+          resize: 您可以选择是否在上传图片前调整图片大小，您也可以设定图片最大长宽（px），图片大小调整就会保持图片长宽比例
+          watermark: 在图片上传时添加水印，仅支持非 gif 图片
+      labels:
+        aws-s3:
+          bucket: Bucket
+          key: Key
+          region: 区域
+          secret: Secret
+          title: AWS S3 存储设置
+        disable-download-logging:
+          title: 禁用下载日志
+          toggle: 禁用
+        disable-hotlink-protection:
+          title: 禁用热链保护
+          toggle: 禁用
+        imgur:
+          client_id: Imgur 客户端 ID
+          title: Imgur 图片存储设置
+        local:
+          cdn_url: CDN 链接 (在文件前)
+          title: 本地存储设置
+        ovh-svfs:
+          container: 容器
+          password: 密码
+          region: 区域
+          tenantid: Tenant ID
+          title: OVH SVFS 存储设置
+          username: 用户名
+        qiniu:
+          bucket: Bucket
+          key: Key
+          secret: Secret
+          title: 七牛存储设置
+        preferences:
+          max_file_size: 最大文件大小 (单位 KB)
+          mime_types: 设置 MIME 类型及上传接口
+          title: 偏好设置
+        resize:
+          max_width: 最大图片宽度
+          title: 图片缩放
+          toggle: 缩放图片
+        watermark:
+          file: 上传水印图片
+          position: 水印位置
+          title: 图片水印
+          toggle: 图片水印
+      permissions:
+        download_label: 下载附件
+        upload_label: 上传附件
+      templates:
+        file: 默认附件下载模板
+        file_description: 显示文件名及基本信息，经由 PHP 代理下载，支持统计和热链保护
+        image: 默认图片下载模板
+        image-preview: 完整图片预览模板
+        image-preview_description: 在行内显示完整图片，不支持下载、统计及热链保护
+        image_description: 显示图片缩略图并经由 PHP 代理下载，支持统计及热链保护
+      upload_methods:
+        aws-s3: 亚马逊 S3
+        imgur: Imgur
+        local: 本地
+        ovh-svfs: OVH SVFS
+        qiniu: 七牛
+  forum:
+    buttons:
+      attach: 上传
+    states:
+      error: 错误
+      loading: 正在上传
+      unauthorized: 您未被允许下载附件
+  api:
+    upload_errors:
+      forbidden_type: 不允许上传这个类型的文件
+      unsupported_type: '上传适配器不支持这个 MIME 类型： {mime}'
+      could_not_detect_mime: 无法检测这个文件的 MIME 类型，请重试。

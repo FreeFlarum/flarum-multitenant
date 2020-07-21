@@ -57,6 +57,11 @@ flarum-tags:
   # Translations in this namespace are used by the forum user interface.
   forum:
 
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: Sve oznake
+      meta_title_text: => flarum-tags.ref.tags
+      
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
       choose_primary_placeholder: "Izaberi primarni tag|Izaberi {count} primarnih tagova"
@@ -89,6 +94,10 @@ flarum-tags:
       removed_tags_text: "{username} je izbrisao {tagsRemoved}."
       tags_text: "{tags} tag|{tags} tagovi"
 
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "Sve diskusije sa {tag} oznakom"
+  
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
 

@@ -1,11 +1,11 @@
 # https://github.com/FriendsOfFlarum/gamification/blob/master/resources/locale/en.yml
-# Wed, 25 Sep 2019 10:09:12 +0800
+# Mon, 23 Mar 2020 10:55:41 +0800
 
 core:
   forum:
     index_sort:
-      hot_button: 最多被赞
-      
+      hot_button: 最新热贴
+
 fof-gamification:
   forum:
     votes: 点赞

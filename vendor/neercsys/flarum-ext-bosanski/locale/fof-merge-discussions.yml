@@ -22,5 +22,11 @@ fof-merge-discussions:
     permissions:
       merge_discussions_label: Spoji diskusije
 
+  api:
+    error:
+      merging_failed: Spajanje diskusija nije uspjelo.
+      updating_failed: Ažuriranje pojedinosti diskusije nije uspjelo.
+      deleting_failed: Brisanje praznih diskusija nije uspjelo.
+
   ref:
     merge: Spoji

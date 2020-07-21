@@ -1,0 +1,21 @@
+clarkWinkelmann-post-license:
+    admin:
+        settings:
+            title: Gönderi Lisansı Ayarları
+            field:
+                require-license: Kullanıcıların lisans seçmesini zorunlu tut
+                allow-custom-license: Özel lisansa izin ver
+                enabled-licenses: Etkin Lisanslar
+                filter-licenses: Lisansları filtrele
+
+    forum:
+        license-meta:
+            label: "{license} lisansı"
+            custom: Özel lisans
+            custom-explanation: Kullanıcı aşağıdaki özel lisansı kullandı
+            more: Daha fazla detay
+        license-picker:
+            label: Gönderi lisansı
+            select: Bir lisans seç
+            default: Varsayılan lisansı kullan
+            custom: Özel bir lisans kullan

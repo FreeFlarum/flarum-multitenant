@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/reactions.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -21,10 +21,18 @@ class ReactionValidator extends AbstractValidator
             'string',
             'unique:reactions',
         ],
+        'display' => [
+            'nullable',
+            'string',
+        ],
         'type' => [
             'required',
             'string',
             'regex:/icon|emoji/i',
+        ],
+        'enabled' => [
+            'nullable',
+            'bool',
         ],
     ];
 }

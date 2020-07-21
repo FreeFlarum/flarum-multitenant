@@ -1,0 +1,13 @@
+the-turk-edit-notifications:
+    forum:
+      notifications:
+        interacted_post_edited_text:          "{username} je uredio/la svoj post"
+        post_edited_text:                     "{username} je uredio/la vaš post"
+      settings:
+        notify_interacted_post_edited_label:  Neko uređuje jedan post u kome sam sudjelovao.
+        notify_post_edited_label:             Neko uređuje jedan moj post.
+
+    admin:
+      settings:
+        title:                                Uredi postavke obavijesti
+        enableInteracts:                      Omogući uređivanje obavijesti za interaktivne postove

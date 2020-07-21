@@ -30,9 +30,12 @@ class Posted extends Action
             ->setTitle(
                 $this->translate('post.posted', $event->post->discussion->title)
             )
-            ->setUrl('discussion', [
+            ->setUrl(
+                'discussion',
+                [
                     'id' => $event->post->discussion->id,
-                ], '/'.$event->post->number
+                ],
+                '/'.$event->post->number
             )
             ->setDescription($event->post->content)
             ->setAuthor($event->actor)
@@ -42,11 +45,12 @@ class Posted extends Action
 
     /**
      * @param \Flarum\Post\Event\Posted $event
+     * @param bool                      $asGuest
      *
      * @return bool
      */
-    public function ignore($event) : bool
+    public function ignore($event, bool $asGuest): bool
     {
-        return parent::ignore($event) || !isset($event->post->discussion->first_post_id) || $event->post->id == $event->post->discussion->first_post_id;
+        return parent::ignore($event, $asGuest) || !isset($event->post->discussion->first_post_id) || $event->post->id == $event->post->discussion->first_post_id;
     }
 }

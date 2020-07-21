@@ -1,69 +1,64 @@
 <?php
 
-namespace Flagrow\Sitemap;
+/*
+ * This file is part of fof/sitemap.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ *
+ *  For the full copyright and license information, please view the LICENSE.md
+ *  file that was distributed with this source code.
+ *
+ */
+
+namespace FoF\Sitemap;
 
 use Carbon\Carbon;
-use Flagrow\Sitemap\Sitemap\Frequency;
-use Flagrow\Sitemap\Sitemap\UrlSet;
-use Flarum\Discussion\Discussion;
 use Flarum\Extension\ExtensionManager;
 use Flarum\Foundation\Application;
-use Flarum\Tags\Tag;
-use Flarum\User\Guest;
-use Flarum\User\User;
-use Sijad\Pages\Page;
+use Flarum\Http\UrlGenerator;
+use Flarum\Settings\SettingsRepositoryInterface;
+use FoF\Sitemap\Sitemap\Frequency;
+use FoF\Sitemap\Sitemap\UrlSet;
 
 class SitemapGenerator
 {
     protected $app;
     protected $extensions;
+    protected $settings;
+    protected $url;
 
-    public function __construct(Application $app, ExtensionManager $extensions)
+    public function __construct(Application $app, ExtensionManager $extensions, SettingsRepositoryInterface $settings, UrlGenerator $url)
     {
         $this->app = $app;
         $this->extensions = $extensions;
+        $this->settings = $settings;
+        $this->url = $url;
     }
 
     public function getUrlSet()
     {
         $urlSet = new UrlSet();
 
-        $url = $this->app->url();
+        // Always add the homepage, whichever it is
+        $urlSet->addUrl($this->url->to('forum')->base().'/', Carbon::now(), Frequency::DAILY, 0.9);
 
-        $urlSet->addUrl($url . '/', Carbon::now(), Frequency::DAILY, 0.9);
-
-        /**
-         * @var $users User[]
-         */
-        $users = User::whereVisibleTo(new Guest())->get();
-
-        foreach ($users as $user) {
-            $urlSet->addUrl($url . '/u/' . $user->username, Carbon::now(), Frequency::DAILY, 0.5);
+        // If the homepage is different from /all, also add /all
+        if ($this->settings->get('default_route') !== '/all') {
+            $urlSet->addUrl($this->url->to('forum')->route('index'), Carbon::now(), Frequency::DAILY, 0.9);
         }
 
-        /**
-         * @var $discussions Discussion[]
-         */
-        $discussions = Discussion::whereVisibleTo(new Guest())->get();
+        $resources = $this->app->make('fof.sitemap.resources') ?? [];
 
-        foreach ($discussions as $discussion) {
-            $urlSet->addUrl($url . '/d/' . $discussion->id . '-' . $discussion->slug, $discussion->last_time, Frequency::DAILY, '0.7');
-        }
-
-        if ($this->extensions->isEnabled('flarum-tags') && class_exists(Tag::class)) {
-            $tags = Tag::whereVisibleTo(new Guest())->get();
-
-            foreach ($tags as $tag) {
-                $urlSet->addUrl($url . '/t/' . $tag->slug, Carbon::now(), Frequency::DAILY, 0.9);
-            }
-        }
-
-        if ($this->extensions->isEnabled('sijad-pages') && class_exists(Page::class)) {
-            $pages = Page::all();
-
-            foreach ($pages as $page) {
-                $urlSet->addUrl($url . '/p/' . $page->id . '-' . $page->slug, $page->edit_time, Frequency::DAILY, 0.5);
-            }
+        /** @var FoF\Sitemap\Resources\Resource $resource */
+        foreach ($resources as $resource) {
+            $resource->query()->each(function ($model) use (&$urlSet, $resource) {
+                $urlSet->addUrl(
+                    $resource->url($model),
+                    $resource->lastModifiedAt($model),
+                    $resource->frequency(),
+                    $resource->priority()
+                );
+            });
         }
 
         return $urlSet;

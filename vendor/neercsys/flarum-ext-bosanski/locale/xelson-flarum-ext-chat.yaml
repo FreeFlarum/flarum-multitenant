@@ -1,0 +1,34 @@
+pushedx-chat:
+  forum:
+    toolbar:
+      title: Čavrljanje
+      enable_sounds: Uključi zvuk
+      disable_sounds: Isključi zvuk
+      enable_notifications: Uključi obavijest
+      disable_notifications: Isključi obavijest
+      minimize: Minimize
+      maximize: Maximize
+    chat:
+      placeholder: Upišite svoju poruku...
+      message:
+        actions:
+          hide: Sakriti
+          resend: Ponovi slanje
+    errors:
+      unauthenticated: Samo registrirani korisnici mogu koristiti chat
+      chatdenied: Vašoj korisničkoj grupi nije dopušteno pisanje poruka
+  admin:
+    permissions:
+      post: Objaviti chat poruke
+      edit: Uređivanje chat poruka
+      delete: Brisanje chat poruka
+      moderate:
+        delete: Brisanje chat poruka
+        
+    settings:
+      title: Chat postavke
+      charlimit: Maksimalni broj znakova u poruci
+      floodgate:
+        title: Antiflood
+        number: Broj poruka u nizu
+        time: Tijekom određenog razdoblja

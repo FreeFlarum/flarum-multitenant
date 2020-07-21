@@ -1,0 +1,9 @@
+the-turk-quiet-edits:
+    admin:
+      settings:
+        title:                  Postavke tihih izmjena
+        gracePeriod:            Grace period (sekunde)
+        gracePeriodHelp:        Edits made within the grace period immediately after posting are not considered formal edits.
+        onlyUnsigned:           Only <strong>unsigned integers</strong> are allowed!
+        ignoreCase:             Ignore case differences
+        ignoreWhitespace:       Ignore whitespace differences

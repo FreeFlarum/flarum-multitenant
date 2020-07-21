@@ -1,5 +1,10 @@
-flarum_profile_views:
+michaelbelgium-flarum-profile-views:
   forum:
     user:
-      views_count_text: "{viewcount} keer bekeken"
-      title_last_viewers: Laatste bezoekers
+      last_viewers_heading: Laatste bezoekers
+      view_count_text: "{viewcount} keer bekeken"
+  admin:
+    settings:
+      title: Profielviews instellingen
+      track_guests_label: Gast views bijhouden
+      max_viewcount_label: Maximum items in bezoekerslijst

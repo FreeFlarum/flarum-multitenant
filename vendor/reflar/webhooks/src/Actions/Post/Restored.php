@@ -31,9 +31,12 @@ class Restored extends Action
             ->setTitle(
                 $this->translate('post.restored', $event->post->discussion->title)
             )
-            ->setUrl('discussion', [
+            ->setUrl(
+                'discussion',
+                [
                     'id' => $event->post->discussion->id,
-                ], '/'.$event->post->number
+                ],
+                '/'.$event->post->number
             )
             ->setDescription($event->post->content)
             ->setAuthor($event->actor)

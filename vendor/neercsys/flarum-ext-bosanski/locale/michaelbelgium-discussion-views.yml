@@ -1,0 +1,27 @@
+core:
+  forum:
+    index_sort:
+      popular_button: Popularno
+      unpopular_button: Nepopularno
+
+michaelbelgium-discussion-views:
+  forum:
+    modal_resetviews:
+      title: Poništi broj pregleda diskusije
+      submit_button: Da, ukloni sve
+      label: Ovo će ukloniti {count} pregleda na ovu diskusiju. Nastaviti?|Ovo će ukloniti {count} pregleda na ovoj diskusiji. Nastaviti?
+    discussion_controls:
+      resetviews_button: Resetuj preglede
+    viewlist:
+      title: Najnoviji gledatelji
+  admin:
+      permissions:
+        reset_views_label: Resetovat preglede diskusije
+        view_number_label: Pogledati broj pregleda diskusije	
+      settings:
+        title: Postavke pregleda diskusija
+        track_unique_label: Pratite jedinstvene poglede
+        abbr_numbers_label: Skraćeni brojevi prikaza
+        show_filter_label: Omogući (ne) popularno polje sortiranja
+        max_viewcount_label: Najveći broj stavki za prikaz
+        show_viewlist_label: Omogući popis gledatelja

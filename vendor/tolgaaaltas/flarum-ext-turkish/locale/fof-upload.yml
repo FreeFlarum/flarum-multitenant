@@ -79,3 +79,8 @@ fof-upload:
       error: Hata
       loading: Yükleniyor
       unauthorized: Dosyaları indirmenize izin verilmiyor
+  api:
+    upload_errors:
+      forbidden_type: Bu türdeki dosyaların yüklenmesine izin verilmiyor.
+      unsupported_type: 'Yükleyici bu tür dosya tipini desteklemiyor: {mime}.'
+      could_not_detect_mime: Bu dosyanın türü algılanamadı, lütfen tekrar deneyin.

@@ -1,0 +1,15 @@
+jasper-chevereto:
+    admin:
+        permissions:
+            upload: Chevereto Yükleme
+        setting:
+            title: Chevereto Yükleme Ayarları
+            src: Chevereto'nun açılır pencere yükleme uzantısı (pup.js) kaynak bağlantısı
+            url: Chevereto web sitesinin bağlantısı
+            auto-insert: Kodları gönderi alanına otomatik olarak ekle
+            lang: Dil
+        buttons:
+            save: Ayarları kaydet
+        AdminNav:
+            description: >
+                Chevereto resim barındırma uzantısını ayarla

@@ -1,0 +1,32 @@
+fof-best-answer:
+  admin:
+    permissions:
+      best_answer: Odaberite najbolji odgovor (vlastita rasprava)
+      best_answer_not_own_discussion: Odaberite najbolji odgovor (nije vlastita rasprava)
+    settings:
+      title: Najbolji odgovor Postavke
+      allow_select_own_post: Dopustite korisniku da odabere vlastiti post
+      select_best_answer_reminder_days: Podsjetite korisnika da odabere najbolji odgovor nakon X dana
+      schedule_on_one_server: Koristi 'onOneServer()' za planiranje zadatka (zahtjeva Redis/Memcache)
+      schedule_stop_overnight: Spriječite da se planer podsjećanja pokrene tijekom nesocijalnih sati (17h - 8h vrijeme poslužitelja)
+      schedule_log_output: Dodajte izlaz planera u pohranu zapisa
+      remind_tag_ids: Da biste ograničili podsjetnike na određene oznake, ovdje unesite ID-ove oznaka (odvojene zarezima)
+      use_alt_ui: Koristite alternativni izgled (najbolji odgovor gumb u podnožju posta)
+  forum:
+    answered_badge: Odgovoreno
+    this_best_answer: Odaberi najbolji odgovor
+    remove_best_answer: Poništi odabir najboljeg odgovora
+    best_answer_button: Najbolji odgovor
+    best_answer_label: postavljeno od <a>{username}</a>
+    errors:
+      mismatch: "Odabrani post ne postoji u ovoj diskusiji"
+
+    notification:
+      best_answer_in_discussion: "{username} je u ovoj diskusiji postavio/la najbolji odgovor"
+      content: Molimo odaberite najbolji odgovor ako je na vaše pitanje odgovoreno
+      awarded: Vaš je odgovor postavljen kao najbolji odgovor od strane {username}
+      awarded_email: Vaš je post postavljen kao najbolji odgovor od strane korisnika
+      select_email_title: Jeste li uspjeli riješiti svoj problem?
+      preferences:
+        awarded_best_answer: Kad neko postavi moj post kao najbolji odgovor
+        best_answer_in_discussion: Kada se u diskusiji u kojoj sam sudjelovao/la dobije najbolji odgovor

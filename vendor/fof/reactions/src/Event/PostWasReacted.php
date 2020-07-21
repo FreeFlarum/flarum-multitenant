@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/reactions.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -13,6 +13,7 @@ namespace FoF\Reactions\Event;
 
 use Flarum\Post\Post;
 use Flarum\User\User;
+use FoF\Reactions\Reaction;
 
 class PostWasReacted
 {
@@ -27,7 +28,7 @@ class PostWasReacted
     public $user;
 
     /**
-     * @var string
+     * @var Reaction
      */
     public $reaction;
 
@@ -44,7 +45,7 @@ class PostWasReacted
      * @param $reaction
      * @param bool $changed
      */
-    public function __construct(Post $post, User $user, $reaction, $changed = false)
+    public function __construct(Post $post, User $user, Reaction $reaction, $changed = false)
     {
         $this->post = $post;
         $this->user = $user;

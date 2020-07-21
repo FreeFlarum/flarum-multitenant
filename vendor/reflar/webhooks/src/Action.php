@@ -45,10 +45,11 @@ abstract class Action
 
     /**
      * @param $event
+     * @param bool $asGuest
      *
      * @return bool
      */
-    public function ignore($event) : bool
+    public function ignore($event, bool $asGuest): bool
     {
         return false;
     }

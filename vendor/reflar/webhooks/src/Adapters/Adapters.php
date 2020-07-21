@@ -39,16 +39,18 @@ class Adapters
      *
      * @return null|Adapter
      */
-    public static function get(string $name) : ?Adapter
+    public static function get(string $name): ?Adapter
     {
         $adapter = array_get(self::$adapters, $name);
 
         if (isset($adapter)) {
             return app()->make($adapter);
         }
+
+        return null;
     }
 
-    public static function length() : int
+    public static function length(): int
     {
         return isset($adapters) ? count(self::$adapters) : 0;
     }

@@ -21,13 +21,13 @@
 		"source": "https://github.com/rob006-software/flarum-lang-polish"
 	},
 	"require": {
-		"flarum/core": "^0.1.0-beta.8.1"
+		"flarum/core": "^0.1.0-beta.11"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"extra": {
 		"branch-alias": {
-			"dev-master": "0.2.x-dev"
+			"dev-master": "0.3.x-dev"
 		},
 		"flarum-extension": {
 			"title": "Polish language pack",
@@ -40,6 +40,9 @@
 		"flarum-locale": {
 			"code": "pl",
 			"title": "Polski"
+		},
+		"flagrow": {
+			"discuss": "https://discuss.flarum.org/d/18134/30"
 		}
 	}
 }

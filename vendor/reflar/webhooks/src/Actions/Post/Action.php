@@ -11,12 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace ReFlar\Webhooks\Actions\Post;
+namespace Reflar\Webhooks\Actions\Post;
+
+use Flarum\User\Guest;
 
 abstract class Action extends \Reflar\Webhooks\Action
 {
-    public function ignore($event) : bool
+    public function ignore($event, bool $asGuest): bool
     {
-        return $event->post->discussion->is_private;
+        return $asGuest && !$event->post->isVisibleTo(new Guest());
     }
 }

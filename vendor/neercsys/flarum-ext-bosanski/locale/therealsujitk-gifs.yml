@@ -1,0 +1,17 @@
+therealsujitk:
+  forum:
+    gifs:
+      label: 'Ubaci GIF'
+      title: 'Odaberi GIF'
+      searchbar: 'Pretraži GIF'
+      search: 'Traži'
+      loading: 'Učitavanje...'
+      noresults: 'Nema rezultata'
+      loadmore: 'Učitaj više'
+  admin:
+    gifs:
+      title: 'GIF API Settings'
+      giphyAPIkey: 'Giphy API Key'
+    about:
+      stringA: 'Extension built by '
+      stringB: 'Donate to me on '

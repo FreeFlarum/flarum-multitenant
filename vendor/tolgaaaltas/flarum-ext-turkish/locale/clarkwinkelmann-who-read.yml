@@ -18,16 +18,16 @@ clarkwinkelmann-who-read:
       unread-icon: "Okumamışlar için rozet"
   forum: 
     badges: 
+      following: => flarum-subscriptions.forum.badge.following_tooltip
+      ignoring: => flarum-subscriptions.forum.badge.ignoring_tooltip
       unread: "Okunmadı olarak işaretledi"
     controls: 
       remove-unread: "Okundu olarak işaretle"
       set-unread: "Okunmadı olarak işaretle"
     footer: 
-      to-end: "{total} kullanıcı sonuna kadar okudu"
-      to-end-nobody: "Kimse sonuna kadar okumadı"
-      to-here-nobody: "Kimse bu gönderiyi okumadı"
-      to-here-none-stopped: "{total} kullanıcı bu gönderiyi okudu. Herkes sonuna kadar okudu."
-      to-here-some-stopped: "{total} kullanıcı bu gönderiyi okudu. {stopped} kullanıcı sonuna okumadı."
+      read-this-post: "{0} Bu gönderiyi kimse okumadı|{1} Bir kullanıcı bu gönderiyi okudu|]1,Inf] {count} kullanıcı bu gönderiyi okudu"
+      read-no-further: "{0} Herkes devamını okudu|{1} Bir kullanıcı devamını okumadı|]1,Inf] {count} kullanıcı devamını okumadı"
+      read-to-end: "{0} Kimse sonuna kadar okumadı|{1} Bir kullanıcı sonuna kadar okudu|]1,Inf] {count} kullanıcı sonuna kadar okudu"
     modal: 
       behind: "Sonuna kadar okumayan kullanıcılar"
       past-this-post: "Okumuş kullanıcılar"

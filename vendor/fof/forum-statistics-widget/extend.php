@@ -23,6 +23,6 @@ return [
     new Extend\Locales(__DIR__ . '/resources/locale'),
 
     function (Dispatcher $events) {
-        $events->subscribe(Listeners\AddRelationships::class);
+        $events->subscribe(Listeners\AddForumAttributes::class);
     }
 ];

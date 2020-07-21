@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/reactions.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,16 +11,22 @@
 
 namespace FoF\Reactions\Listener;
 
-use Carbon\Carbon;
+use Flarum\Extension\ExtensionManager;
+use Flarum\Foundation\ValidationException;
 use Flarum\Likes\Event\PostWasLiked;
 use Flarum\Post\Event\Saving;
+use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\AssertPermissionTrait;
+use Flarum\User\User;
+use FoF\Gamification\Listeners\SaveVotesToDatabase;
 use FoF\Reactions\Event\PostWasReacted;
 use FoF\Reactions\Event\PostWasUnreacted;
 use FoF\Reactions\PostReaction;
 use FoF\Reactions\Reaction;
-use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Support\Arr;
+use Pusher;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class SaveReactionsToDatabase
 {
@@ -32,45 +38,74 @@ class SaveReactionsToDatabase
     protected $settings;
 
     /**
-     * @param SettingsRepositoryInterface $settings
+     * @var TranslatorInterface
      */
-    public function __construct(SettingsRepositoryInterface $settings)
-    {
-        $this->settings = $settings;
-    }
+    protected $translator;
 
     /**
-     * @param Dispatcher $events
+     * @var ExtensionManager
      */
-    public function subscribe(Dispatcher $events)
+    protected $extensions;
+
+    public function __construct(SettingsRepositoryInterface $settings, TranslatorInterface $translator, ExtensionManager $extensions)
     {
-        $events->listen(Saving::class, [$this, 'whenSaving']);
+        $this->settings = $settings;
+        $this->translator = $translator;
+        $this->extensions = $extensions;
     }
 
     /**
      * @param Saving $event
      *
      * @throws \Flarum\User\Exception\PermissionDeniedException
+     * @throws \Flarum\Foundation\ValidationException
      */
-    public function whenSaving(Saving $event)
+    public function handle(Saving $event)
     {
         $post = $event->post;
         $data = $event->data;
 
-        if ($post->exists && isset($data['attributes']['reaction'])) {
+        if ($post->exists && Arr::has($data, 'attributes.reaction')) {
             $actor = $event->actor;
-            $reactionType = $data['attributes']['reaction'];
+
+            $reactionId = Arr::get($data, 'attributes.reaction');
+            $reactionIdentifier = null;
 
             $this->assertCan($actor, 'react', $post);
 
-            if (class_exists('FoF\Gamification\Listeners\SaveVotesToDatabase') && $reactionType == $this->settings->get('fof-reactions.convertToUpvote')) {
-                app()->make('FoF\Gamification\Listeners\SaveVotesToDatabase')->vote($post, $isDownvoted = false,
-                    $isUpvoted = true, $actor, $post->user);
-            } elseif (class_exists('FoF\Gamification\Listeners\SaveVotesToDatabase') && $reactionType == $this->settings->get('fof-reactions.convertToDownvote')) {
-                app()->make('FoF\Gamification\Listeners\SaveVotesToDatabase')->vote($post, $isDownvoted = true,
-                    $isUpvoted = false, $actor, $post->user);
-            } elseif (class_exists('Flarum\Likes\Listener\SaveLikesToDatabase') && $reactionType == $this->settings->get('fof-reactions.convertToLike')) {
+            if ($actor->id === $post->user_id) {
+                throw new ValidationException([
+                    'message' => $this->translator->trans('fof-reactions.forum.reacting-own-post'),
+                ]);
+            }
+
+            $reaction = !is_null($reactionId) ? Reaction::where('id', $reactionId)->first() : null;
+
+            $gamification = $this->extensions->isEnabled('fof-gamification');
+            $likes = $this->extensions->isEnabled('flarum-likes');
+
+            $gamificationUpvote = $this->settings->get('fof-reactions.convertToUpvote');
+            $gamificationDownvote = $this->settings->get('fof-reactions.convertToDownvote');
+
+            if ($gamification && class_exists(SaveVotesToDatabase::class) && $reaction && $reaction->identifier == $gamificationUpvote) {
+                app()->make(SaveVotesToDatabase::class)->vote(
+                    $post,
+                    false,
+                    true,
+                    $actor,
+                    $post->user
+                );
+            } elseif ($gamification && class_exists(SaveVotesToDatabase::class) && $reaction && $reaction->identifier == $gamificationDownvote) {
+                app()->make(SaveVotesToDatabase::class)->vote(
+                    $post,
+                    true,
+                    false,
+                    $actor,
+                    $post->user
+                );
+            } elseif ($likes && $reaction && $reaction->identifier == $this->settings->get('fof-reactions.convertToLike')) {
                 $liked = $post->likes()->where('user_id', $actor->id)->exists();
+
                 if ($liked) {
                     return;
                 } else {
@@ -79,25 +114,104 @@ class SaveReactionsToDatabase
                     $post->raise(new PostWasLiked($post, $actor));
                 }
             } else {
-                $oldReaction = PostReaction::where([['user_id', $actor->id], ['post_id', $post->id]])->first();
-                $reaction = Reaction::where('identifier', $reactionType)->firstOrFail();
+                $postReaction = PostReaction::where([['user_id', $actor->id], ['post_id', $post->id]])->first();
+                $removeReaction = is_null($reactionId) || ($postReaction && $postReaction->reaction_id == $reactionId);
 
-                if ($oldReaction) {
-                    if ($oldReaction->reaction_id === null) {
-                        $oldReaction->reaction_id = $reaction->id;
-                        $oldReaction->save();
-                        $post->raise(new PostWasReacted($post, $actor, $reaction, true));
-                    } else {
-                        $oldReaction->reaction_id = null;
-                        $oldReaction->save();
+                if ($removeReaction) {
+                    if ($postReaction) {
+                        $this->push('removedReaction', $postReaction, $reaction ?: $postReaction->reaction, $actor, $post);
 
-                        $post->raise(new PostWasUnreacted($post, $actor));
+                        $postReaction->reaction_id = null;
+                        $postReaction->save();
                     }
+
+                    $post->raise(new PostWasUnreacted($post, $actor));
                 } else {
-                    $post->reactions()->attach($reaction, ['user_id' => $actor->id, 'reaction_id' => $reaction->id, 'created_at' => Carbon::now()]);
+                    $this->validateReaction($reactionId);
+
+                    if ($postReaction) {
+                        $postReaction->reaction_id = $reaction->id;
+                        $postReaction->save();
+                    } else {
+                        $postReaction = new PostReaction();
+
+                        $postReaction->post_id = $post->id;
+                        $postReaction->user_id = $actor->id;
+                        $postReaction->reaction_id = $reaction->id;
+
+                        $postReaction->save();
+                    }
+
+                    $this->push('newReaction', $postReaction, $reaction, $actor, $post);
+
                     $post->raise(new PostWasReacted($post, $actor, $reaction));
                 }
             }
+        }
+    }
+
+    /**
+     * @param $event
+     * @param PostReaction $postReaction
+     * @param Reaction     $reaction
+     * @param User         $actor
+     * @param Post         $post
+     */
+    public function push($event, PostReaction $postReaction, Reaction $reaction, User $actor, Post $post)
+    {
+        if ($pusher = $this->getPusher()) {
+            $pusher->trigger('public', $event, [
+                'id'         => (string) $postReaction->id,
+                'reactionId' => $reaction->id,
+                'postId'     => $post->id,
+                'userId'     => $actor->id,
+            ]);
+        }
+    }
+
+    /**
+     * @throws \Pusher\PusherException
+     *
+     * @return bool|\Illuminate\Foundation\Application|mixed|Pusher
+     */
+    private function getPusher()
+    {
+        if (!class_exists(Pusher::class)) {
+            return false;
+        }
+
+        if (app()->bound(Pusher::class)) {
+            return app(Pusher::class);
+        } else {
+            $settings = app('flarum.settings');
+
+            $options = [];
+
+            if ($cluster = $settings->get('flarum-pusher.app_cluster')) {
+                $options['cluster'] = $cluster;
+            }
+
+            return new Pusher(
+                $settings->get('flarum-pusher.app_key'),
+                $settings->get('flarum-pusher.app_secret'),
+                $settings->get('flarum-pusher.app_id'),
+                $options
+            );
+        }
+    }
+
+    protected function validateReaction($reactionId)
+    {
+        if (is_null($reactionId)) {
+            return;
+        }
+
+        $reaction = Reaction::find($reactionId);
+
+        if (!$reaction || !$reaction->enabled) {
+            throw new ValidationException([
+                'message' => $this->translator->trans('fof-reactions.forum.disabled-reaction'),
+            ]);
         }
     }
 }

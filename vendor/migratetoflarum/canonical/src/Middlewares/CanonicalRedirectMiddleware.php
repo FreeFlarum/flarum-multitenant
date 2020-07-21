@@ -4,16 +4,16 @@ namespace MigrateToFlarum\Canonical\Middlewares;
 
 use Flarum\Http\UrlGenerator;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Server\RequestHandlerInterface as Handler;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Server\MiddlewareInterface as Middleware;
-use Zend\Diactoros\Response\RedirectResponse;
-use Zend\Diactoros\Uri;
+use Laminas\Diactoros\Response\RedirectResponse;
+use Laminas\Diactoros\Uri;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class CanonicalRedirectMiddleware implements Middleware
+class CanonicalRedirectMiddleware implements MiddlewareInterface
 {
-    public function process(Request $request, Handler $handler): Response
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         /**
          * @var $settings SettingsRepositoryInterface
@@ -29,7 +29,10 @@ class CanonicalRedirectMiddleware implements Middleware
             $generator = app(UrlGenerator::class);
             $canonical = new Uri($generator->to('forum')->base());
 
-            $uri = $request->getUri();
+            /**
+             * @var $uri Uri
+             */
+            $uri = $request->getAttribute('originalUri', $request->getUri());
 
             // First we redirect the current host to the canonical scheme (hopefully HTTPS)
             // so that HSTS can be applied to that domain

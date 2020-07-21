@@ -1,0 +1,8 @@
+fof-secure-https:
+  admin:
+    settings:
+      title: Konfiguracija
+      replace: Proxy slike putem HTTPS
+  forum:
+    removed: Slika je uklonjena zbog nedostatka podrške za HTTPS.
+    show: Prikaži svejedno

@@ -1,0 +1,21 @@
+fof-prevent-necrobumping:
+  forum:
+    composer:
+      warning:
+        title: Ova diskusija je stara više od <b>{time}</b>.
+        description: Vrlo je vjerojatno da neće trebati daljnju diskusiju.
+        checkbox_label: Svjestan/a sam da je ova diskusija prilično stara, ali ipak bih htjeo/la odgovoriti.
+        error: Ova diskusija je prestara za nove odgovore.
+
+  admin:
+    settings:
+      days_label: Dana
+      days_help: A discussion will be marked as old when the amount of days specified has passed since the last post on that discussion was posted. Use <code>0</code> to disable it by default.
+
+      message_title_label: Prilagođeni naslov poruke
+      message_title_help: 'Use <code>[time]</code> for the time text, e.g. "14 days".'
+      message_description_label: Custom Message Description
+      message_agreement_label: Custom Message Agreement (Checkbox)
+
+      tags_title: Oznake
+      tags_help: Override the global days for a specific tag. Empty means use default value. If a discussion has multiple tags with different day values, it will use the smallest amount of days configured.

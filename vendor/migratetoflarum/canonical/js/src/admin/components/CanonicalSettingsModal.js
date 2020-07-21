@@ -11,6 +11,8 @@ const STEPS = [
     'enable_permanent',
 ];
 
+/* global m */
+
 export default class RedirectsSettingsModal extends SettingsModal {
     title() {
         return app.translator.trans(translationPrefix + 'title');
@@ -29,29 +31,34 @@ export default class RedirectsSettingsModal extends SettingsModal {
             step = 0;
         }
 
+        const disabled = this.setting(settingsPrefix + 'status')() < 301 && step < 0;
+
         return [
-            <h4>{app.translator.trans(translationPrefix + 'step.how_to')}</h4>,
-            <ul>
-                <li>
-                    <span className="mtf-canonical-step mtf-canonical-step--done">{step >= 0 ? '✓' : '?'}</span>
-                    {' ' + app.translator.trans(translationPrefix + 'step.check_config_url', {
+            m('h4', app.translator.trans(translationPrefix + 'step.how_to')),
+            m('ul', [
+                m('li', [
+                    m('span.mtf-canonical-step.mtf-canonical-step--done', step >= 0 ? '✓' : '?'),
+                    ' ',
+                    app.translator.trans(translationPrefix + 'step.check_config_url', {
                         url: baseUrl,
-                    }).join('')}
-                </li>
-                {STEPS.map((translation, index) => <li>
-                    {step >= index ? <span className="mtf-canonical-step mtf-canonical-step--done">✓</span> :
-                        <span className="mtf-canonical-step">×</span>}
-                    {' ' + app.translator.trans(translationPrefix + 'step.' + translation)}
-                </li>)}
-            </ul>,
-            <h4>{app.translator.trans(translationPrefix + 'step.suggestions')}</h4>,
-            <ul>
-                <li>{app.translator.trans(translationPrefix + 'step.use_https')}</li>
-                <li>{app.translator.trans(translationPrefix + 'step.use_hsts')}</li>
-            </ul>,
-            <div className="Form-group">
-                <label>{app.translator.trans(translationPrefix + 'field.status')}</label>
-                {this.setting(settingsPrefix + 'status')() < 301 && step < 0 ? app.translator.trans(translationPrefix + 'field.wrong_url') : Select.component({
+                    }),
+                ]),
+                STEPS.map((translation, index) => m('li', [
+                    m('span.mtf-canonical-step', {
+                        className: step >= index ? 'mtf-canonical-step--done' : '',
+                    }, step >= index ? '✓' : '×'),
+                    ' ',
+                    app.translator.trans(translationPrefix + 'step.' + translation),
+                ])),
+            ]),
+            m('h4', app.translator.trans(translationPrefix + 'step.suggestions')),
+            m('ul', [
+                m('li', app.translator.trans(translationPrefix + 'step.use_https')),
+                m('li', app.translator.trans(translationPrefix + 'step.use_hsts')),
+            ]),
+            m('.Form-group', [
+                m('label', app.translator.trans(translationPrefix + 'field.status')),
+                Select.component({
                     options: {
                         0: app.translator.trans(translationPrefix + 'option.disabled'),
                         302: app.translator.trans(translationPrefix + 'option.302'),
@@ -59,8 +66,10 @@ export default class RedirectsSettingsModal extends SettingsModal {
                     },
                     value: this.setting(settingsPrefix + 'status')() || 0,
                     onchange: this.setting(settingsPrefix + 'status'),
-                })}
-            </div>,
+                    disabled,
+                }),
+                disabled ? m('.helpText', app.translator.trans(translationPrefix + 'field.wrong_url')) : null,
+            ]),
         ];
     }
 }

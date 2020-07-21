@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/reactions.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -53,7 +53,7 @@ class SendNotifications
      */
     public function sync(Post $post, User $user, $reaction, array $recipients)
     {
-        if ($post->user->id != $user->id) {
+        if ($post->user && $post->user->id != $user->id) {
             app(NotificationSyncer::class)->sync(
                 new PostReactedBlueprint($post, $user, $reaction),
                 $recipients

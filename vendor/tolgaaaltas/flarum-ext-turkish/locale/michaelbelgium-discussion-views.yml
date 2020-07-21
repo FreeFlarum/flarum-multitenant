@@ -1,0 +1,27 @@
+core:
+  forum:
+    index_sort:
+      popular_button: Görüntülenen
+      unpopular_button: Görüntülenmeyen
+
+michaelbelgium-discussion-views:
+  forum:
+    modal_resetviews:
+      title: Tartışmaların görüntülenmesini sıfırla
+      submit: Evet tümünü sil
+      label: Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?|Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?
+    discussion_controls:
+      resetviews_button: Görüntülenmeyi sıfırla
+    viewlist:
+      title: Son Görüntüleyenler
+  admin:
+      permissions:
+          reset_views_label: Tartışma görüntülenmesini sıfırla
+          can_view_number: Tartışma görüntülenmesini göster
+      settings:
+        title: Tartışma Görüntülenme Ayarları
+        track_unique: Tekil görüntülenmeleri say
+        abbr_numbers: Görüntülenme numaralarını kısalt
+        show_filter: Görüntülenen (Görüntülenmeyen) filtresini etkinleştir
+        max_viewcount: Görüntüleyenlerin sayısı
+        show_viewlist: Görüntüleyenleri göster

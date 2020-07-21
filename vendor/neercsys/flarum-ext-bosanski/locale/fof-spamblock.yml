@@ -1,0 +1,9 @@
+fof-spamblock:
+  forum:
+    user_controls:
+      spammer_button: Spammer
+      spammer_confirmation: "Jeste li sigurni da želite \n• Sakrij sve rasprave i postove korisnika \n• [flarum/suspend] Suspenduj korisnika"
+
+  admin:
+    permissions:
+      spamblock_users_label: Označi korisnika kao spamera

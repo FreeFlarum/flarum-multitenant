@@ -1,0 +1,24 @@
+# https://github.com/therealsujitk/flarum-ext-gifs/blob/master/resources/locale/en.yml
+# https://github.com/therealsujitk/flarum-ext-hljs/blob/master/resources/locale/en.yml
+# Tue, 31 Mar 2020 10:50:53 +0800
+
+therealsujitk:
+  forum:
+    gifs:
+      label: '插入 GIF'
+      title: '選取 GIF'
+      searchbar: '搜尋 GIF'
+      search: '搜尋'
+      loading: '正在載入...'
+      noresults: '沒有找到'
+      loadmore: '載入更多'
+  admin:
+    gifs:
+      title: 'GIF API 設定'
+      giphyAPIkey: 'Giphy API Key'
+    about:
+      stringA: '製作： '
+      stringB: '捐助： '
+    hljs:
+      title: 'highlight.js'
+      themename: '主題名稱'

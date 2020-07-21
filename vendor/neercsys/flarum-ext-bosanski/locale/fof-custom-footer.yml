@@ -1,0 +1,9 @@
+fof-custom-footer:
+  admin:
+    settings:
+      title: Prilagođena konfiguracija podnožja
+
+      text: Tekst za podnožje |
+      height: Visina podnožja
+      css: CSS
+      js: JS

@@ -6,4 +6,4 @@ flarum-auth-github:
             title: 'GitHub Ayarları'
     forum:
         log_in:
-            with_github_button: 'GitHub ile giriş yap'
+            with_github_button: 'GitHub ile Giriş Yap'

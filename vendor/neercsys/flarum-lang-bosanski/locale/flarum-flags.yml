@@ -14,6 +14,7 @@ flarum-flags:
 
     # These translations are used in the Flags Settings modal dialog.
     settings:
+      flag_own_posts_label: Dopustite korisnicima da označe vlastite postove
       guidelines_url_label: Smjernice zajednice URL
       title: Prijave postavke
 
@@ -24,8 +25,10 @@ flarum-flags:
     flag_post:
       confirmation_message: Hvala što ste prijavi ovaj post. Naši moderatori će ga pregledati.
       dismiss_button: => core.ref.okay
+      reason_details_placeholder: Dodatni detalji (izborno)
       reason_inappropriate_label: Neprikladan
       reason_inappropriate_text: "Ovaj post je uvredljiv, zloupotrebljiv ili krši <a>pravila zajednicd</a>."
+      reason_missing_message: Molimo navedite neke detalje za naše moderatore.
       reason_off_topic_label: "Off-topic"
       reason_off_topic_text: Ovaj post nije relevantan trenutnoj temi i trebao bi biti premješten negdje drugo.
       reason_other_label: Ostalo
