@@ -14,7 +14,6 @@ return array(
     'axy\\errors\\' => array($vendorDir . '/axy/errors'),
     'axy\\codecs\\base64vlq\\' => array($vendorDir . '/axy/codecs-base64vlq'),
     'axy\\backtrace\\' => array($vendorDir . '/axy/backtrace'),
-    'Ziymed\\LangArabic\\' => array($vendorDir . '/ziymed/lang-arabic/src'),
     'Wohali\\OAuth2\\Client\\' => array($vendorDir . '/wohali/oauth2-discord-new/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'V17Development\\FlarumSeo\\' => array($vendorDir . '/v17development/flarum-seo/src'),

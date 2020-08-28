@@ -71,10 +71,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'axy\\codecs\\base64vlq\\' => 21,
             'axy\\backtrace\\' => 14,
         ),
-        'Z' => 
-        array (
-            'Ziymed\\LangArabic\\' => 18,
-        ),
         'W' => 
         array (
             'Wohali\\OAuth2\\Client\\' => 21,
@@ -325,10 +321,6 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'axy\\backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace',
-        ),
-        'Ziymed\\LangArabic\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ziymed/lang-arabic/src',
         ),
         'Wohali\\OAuth2\\Client\\' => 
         array (

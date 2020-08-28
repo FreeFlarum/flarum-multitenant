@@ -123,8 +123,7 @@
         "tolgaaaltas/flarum-ext-turkish": "^0.13.9",
         "tolgaaaltas/flarum-lang-turkish": "^0.13.0",
         "v17development/flarum-seo": "^1.2",
-        "veriael/flarum-polish": "v1.0.9.1",
-        "ziymed/lang-arabic": "^0.1.2"
+        "veriael/flarum-polish": "v1.0.9.1"
     },
     "config": {
         "preferred-install": "dist",

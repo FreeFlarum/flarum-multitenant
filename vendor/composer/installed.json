@@ -12086,57 +12086,5 @@
             "oauth",
             "oauth2"
         ]
-    },
-    {
-        "name": "ziymed/lang-arabic",
-        "version": "0.1.2",
-        "version_normalized": "0.1.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ziymed/lang-arabic.git",
-            "reference": "a1cfc6774d2a8960e99b945256ee618ed191aefd"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ziymed/lang-arabic/zipball/a1cfc6774d2a8960e99b945256ee618ed191aefd",
-            "reference": "a1cfc6774d2a8960e99b945256ee618ed191aefd",
-            "shasum": ""
-        },
-        "require": {
-            "flarum/core": "^0.1.0-beta.9"
-        },
-        "time": "2020-01-27T20:40:24+00:00",
-        "type": "flarum-extension",
-        "extra": {
-            "flarum-extension": {
-                "title": "Arabic Language",
-                "icon": {
-                    "image": "icon.svg",
-                    "backgroundColor": "#006233",
-                    "backgroundSize": "cover",
-                    "backgroundPosition": "center"
-                }
-            },
-            "flarum-locale": {
-                "code": "ar",
-                "title": "Arabic"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Ziymed\\LangArabic\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Arabic Language Pack.",
-        "keywords": [
-            "arabic",
-            "locale",
-            "العربية"
-        ]
     }
 ]
