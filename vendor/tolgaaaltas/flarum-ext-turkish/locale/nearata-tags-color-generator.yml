@@ -1,0 +1,20 @@
+nearata-tags-color-generator:
+  admin:
+    color_luminosity_label: Renk Parlaklığı
+    color_luminosity_options:
+      random: Rastgele
+      light: Açık
+      bright: Parlak
+      dark: Koyu
+    color_hue_label: Renk Tonu
+    color_hue_options:
+      random: Rastgele
+      red: Kırmızı
+      orange: Turuncu
+      yellow: Sarı
+      green: Yeşil
+      blue: Mavı
+      purple: Mor
+      pink: Pembe
+      monochrome: Tek renkli
+    generate_color_button: Rastgele Renk Oluştur

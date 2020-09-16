@@ -1,0 +1,14 @@
+flarum-calendar:
+  forum:
+    button:
+      create: "Yeni Etkinlik"
+      login: "Etkinliğini Ekle"
+    modal:
+      submit: "Gönder"
+
+  admin:
+    permissions:
+      add: Yeni bir etkinlik takvimi oluştur
+      moderate: Etkinlik takvimlerini sil veya düzenle (her kullanıcı kendisinin oluşturduğunu düzenleyebilir)
+    basics:
+      homepage: Mevcut Ayın Takvimi

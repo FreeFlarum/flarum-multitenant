@@ -1,0 +1,41 @@
+{
+  "name": "the-turk/flarum-extended-appearance",
+  "description": "Speed up your Flarum customization process.",
+  "keywords": [
+    "flarum",
+    "appearance",
+    "settings"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [{
+    "name": "Hasan Özbey",
+    "email": "hasanoozbey@gmail.com",
+    "homepage": "https://github.com/the-turk"
+  }],
+  "support": {
+    "issues": "https://github.com/the-turk/flarum-extended-appearance/issues",
+    "source": "https://github.com/the-turk/flarum-extended-appearance"
+  },
+  "require": {
+    "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.14"
+  },
+  "conflict": {
+    "the-turk/flarum-stargazing-theme": "<=0.1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheTurk\\ExtendedAppearance\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Extended Appearance",
+      "icon": {
+        "name": "fas fa-swatchbook",
+        "backgroundColor": "#b72a2a",
+        "color": "#fff"
+      }
+    }
+  }
+}

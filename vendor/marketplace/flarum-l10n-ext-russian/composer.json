@@ -17,13 +17,18 @@
     {
       "name": "z1729 Factory",
       "email": "z1729.factory@gmail.com",
-      "homepage": "https://z1729.com",
+      "homepage": "https://z1729.com/",
       "role": "Developer"
+    },
+    {
+      "name": "Yu Dunaev (dun43v)",
+      "email": "dun43v@gmail.com",
+      "homepage": "https://dunaev.dev/",
+      "role": "Editor"
     },
     {
       "name": "Kitsune Solar",
       "email": "kitsune.solar@gmail.com",
-      "homepage": "https://dunaev.dev",
       "role": "Editor"
     },
     {
@@ -33,7 +38,7 @@
     },
     {
       "name": "dexif",
-      "homepage": "https://spitsyn.net",
+      "homepage": "https://spitsyn.net/",
       "role": "Editor"
     }
   ],
@@ -42,7 +47,7 @@
     "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian"
   },
   "require": {
-    "flarum/core": "^0.1.0-beta.9"
+    "flarum/core": "^0.1.0-beta.13"
   },
   "suggest": {
     "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack.",

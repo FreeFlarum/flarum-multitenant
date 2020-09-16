@@ -1,0 +1,13 @@
+the-turk-welcome-widgets:
+    forum:
+      users:              => core.ref.users
+      discussions:        => core.ref.discussions
+      posts:              => core.ref.posts
+      sinceLastVisit:     "<span>son ziyaretinizden</span> beri"
+
+      # Greetings
+      welcome:            "Hoşgeldin, {username}."
+      goodMorning:        "Günaydın, {username}."
+      goodAfternoon:      "İyi günler, {username}."
+      goodEvening:        "İyi akşamlar, {username}."
+      goodNight:          "İyi geceler, {username}."

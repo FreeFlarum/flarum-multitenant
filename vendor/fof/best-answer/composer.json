@@ -1,0 +1,52 @@
+{
+  "name": "fof/best-answer",
+  "description": "Mark a post as the best answer in a discussion",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.13",
+    "fof/components": ">=0.1.0",
+    "fof/console": "^0.5.3"
+  },
+  "replace": {
+    "wiwatsrt/flarum-ext-best-answer": "*"
+  },
+  "authors": [
+    {
+      "name": "Wiwat Srisattha",
+      "email": "wiwat@srisattha.com",
+      "role": "Developer (Original)"
+    },
+    {
+      "name": "David Sevilla Martin",
+      "email": "me+fof@datitisev.me",
+      "role": "Developer"
+    },
+    {
+      "name": "Ian Morland",
+      "email": "ian@flarumite.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\BestAnswer\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Best Answer",
+      "icon": {
+        "name": "far fa-comment-dots",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/21894"
+    }
+  }
+}

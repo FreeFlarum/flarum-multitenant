@@ -1,0 +1,11 @@
+kyrne-sylloge:
+  forum:
+    settings:
+      label: E-Posta Özeti
+      weekly: Haftalık
+      daily: Günlük
+      none: Asla
+    email:
+      subject: "{forum} - {when} Özet"
+    signup:
+      want_digest: Haftalık E-Posta Özeti Al?

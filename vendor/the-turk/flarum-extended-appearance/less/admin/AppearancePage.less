@@ -1,0 +1,304 @@
+.AppearancePage-colors {
+  margin-bottom: 10px !important;
+}
+
+// Save and Reload button
+Button.willReload {
+  margin-left: 10px;
+}
+
+// Info text on modals
+p.extApp-infoText {
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+// CodeMirror theme selector
+div.selectCodeMirrorTheme {
+  margin-bottom: 10px;
+}
+
+.AppearancePage-extended-appearance-main-container {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 430px;
+
+  & > div {
+    margin-bottom: 10px;
+  }
+
+  & > .AppearancePage-extended-appearance-container {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+
+    & > div {
+      margin-right: 10px;
+    }
+
+    & .AppearancePage-picker-container:first-child {
+      margin-bottom: 20px;
+    }
+
+    /* Nano Flarum */
+    & > .nanoFlarum {
+      /* Container */
+      & > .nanoFlarum-container {
+        border: 2px solid @control-bg;
+        border-radius: @border-radius;
+        overflow: hidden;
+        width: 170px;
+
+        /* Header */
+        & > .nanoFlarum-header {
+          display: -ms-flexbox;
+          display: -webkit-box;
+          display: flex;
+          -ms-flex-align: center;
+          -webkit-box-align: center;
+          align-items: center;
+          -ms-flex-pack: justify;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          padding: 0 12px;
+          height: 35px;
+          background: fade(@header-bg, 98%);
+          border-bottom: 1px solid @control-bg;
+
+          // logo
+          & > .nanoFlarum-logo {
+            background-color: @link-color;
+            padding: 4px;
+            border-radius: 2px;
+            width: 40px;
+
+            & when (@config-colored-header = true) {
+              background-color: @header-color;
+            }
+          }
+
+          // notification
+          & > .nanoFlarum-notification {
+            color: @control-color;
+            background-color: darken(fadein(@control-bg, 5%), 5%);
+            border-radius: 20px;
+            text-align: center;
+
+            & when (@config-colored-header = true) {
+              color: @header-control-color;
+              background-color: @header-control-bg;
+            }
+
+            // bell icon
+            & > i {
+              margin: 0;
+              padding: 4.5px;
+            }
+          }
+        }
+
+        // hero
+        & > .nanoFlarum-hero {
+          height: 40px;
+          background-color: @hero-bg;
+          display: -ms-flexbox;
+          display: -webkit-box;
+          display: flex;
+          -ms-flex-align: center;
+          -webkit-box-align: center;
+          align-items: center;
+
+          // hero heading
+          & > .nanoFlarum-hero--text {
+            background-color: @hero-color;
+            padding: 3px;
+            border-radius: 2px;
+            width: 55px;
+            margin: auto;
+          }
+        }
+
+        /* Main Content Container */
+        & > .nanoFlarum-mainContent {
+          position: relative;
+          background-color: @body-bg;
+          height: 80px;
+          overflow: hidden;
+
+          // sidebar
+          & > .nanoFlarum-sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: auto;
+            width: 50px;
+            height: 80px;
+            background: transparent;
+            text-align: center;
+
+            & when (@config-right-sidebar = true) {
+              right: 0;
+              left: auto;
+            }
+
+            // new discussion button
+            & > .nanoFlarum-button {
+              margin: 15px auto 10px;
+              padding: 6px;
+              background-color: @primary-color;
+              width: 25px;
+              border-radius: 2px;
+            }
+
+            // tags
+            & > .nanoFlarum-tag {
+              margin-top: 5px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 1px;
+              background-color: @muted-color;
+              width: 20px;
+              border-radius: 1px;
+
+              &.selected {
+                background-color: @link-color;
+              }
+            }
+          }
+
+          // content
+          & > .nanoFlarum-content {
+            padding-left: 0;
+            padding-right: 5px;
+            margin-left: 50px;
+            margin-right: 0;
+            height: 80px;
+            background: transparent;
+
+            & when (@config-right-sidebar = true) {
+              margin-right: 50px;
+              margin-left: 0;
+              padding-right: 0;
+              padding-left: 5px;
+            }
+
+            // order and refresh buttons
+            & > .nanoFlarum-content-buttons {
+              display: -ms-flexbox;
+              display: -webkit-box;
+              display: flex;
+              -ms-flex-pack: justify;
+              -webkit-box-pack: justify;
+              justify-content: space-between;
+
+              // order button
+              & > .nanoFlarum-button-order {
+                margin-top: 15px;
+                padding: 5px;
+                background-color: @control-bg;
+                width: 25px;
+                border-radius: 2px;
+              }
+
+              // refresh button
+              & > .nanoFlarum-button-refresh {
+                margin-top: 15px;
+                padding: 5px;
+                background-color: @control-bg;
+                width: 15px;
+                border-radius: 2px;
+              }
+            }
+
+            // discussion list container
+            & > .nanoFlarum-content-discussions-container {
+              margin-top: 10px;
+
+              // discussion container
+              & .nanoFlarum-content-discussion {
+                display: -ms-flexbox;
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                padding-left: 4px;
+
+                // discussion title
+                & > .nanoFlarum-content-discussion--title {
+                  padding: 2px;
+                  background-color: mix(@heading-color, @body-bg, 55%);
+                  border-radius: 2px;
+                  width: 55px;
+                  margin-bottom: 2px;
+                }
+
+                // discussion info
+                & > .nanoFlarum-content-discussion--info {
+                  padding: 2px;
+                  background-color: @muted-more-color;
+                  border-radius: 2px;
+                  width: 35px;
+                }
+              }
+
+              // highlighted discussion
+              & > .nanoFlarum-content-discussion--highlighted {
+                display: -ms-flexbox;
+                display: -webkit-box;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-box-align: center;
+                align-items: center;
+                -ms-flex-pack: justify;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                margin-top: 5px;
+                background-color: mix(@control-bg, @body-bg, 50%);
+                color: @control-color;
+                border-radius: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .AppearancePage-switch-container {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    & > label {
+      display: block;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

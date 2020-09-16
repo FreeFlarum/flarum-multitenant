@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
+class ComposerStaticInitd9b75e2506565f04eac638637df73830
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -85,7 +85,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Twilio\\' => 7,
             'Tobscure\\JsonApi\\' => 17,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'TheTurk\\WelcomeWidgets\\' => 23,
             'TheTurk\\MathRen\\' => 16,
+            'TheTurk\\ExtendedAppearance\\' => 27,
+            'Tank\\Perspective\\' => 17,
         ),
         'S' => 
         array (
@@ -114,6 +117,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'SychO\\ProfileCover\\' => 19,
             'Saleksin\\Auth\\Google\\' => 21,
         ),
         'R' => 
@@ -133,6 +137,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Psr\\Container\\' => 14,
             'PragmaRX\\Google2FA\\Tests\\' => 25,
             'PragmaRX\\Google2FA\\' => 19,
+            'PerspectiveApi\\' => 15,
             'PersianFla\\Persian\\' => 19,
             'ParagonIE\\ConstantTime\\' => 23,
         ),
@@ -158,7 +163,8 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'L' => 
         array (
             'League\\OAuth2\\Client\\' => 21,
-            'League\\OAuth1\\' => 14,
+            'League\\OAuth1\\Client\\' => 21,
+            'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Stratigility\\' => 21,
@@ -169,6 +175,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'J' => 
         array (
             'JordanJay29\\Summaries\\' => 22,
+            'JSLirola\\Login2SeePlus\\' => 23,
         ),
         'I' => 
         array (
@@ -205,6 +212,8 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
             'FoF\\Transliterator\\' => 19,
+            'FoF\\Terms\\' => 10,
+            'FoF\\StopForumSpam\\' => 18,
             'FoF\\Split\\' => 10,
             'FoF\\Spamblock\\' => 14,
             'FoF\\SocialProfile\\' => 18,
@@ -214,6 +223,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Reactions\\' => 14,
             'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
+            'FoF\\PreventNecrobumping\\' => 24,
             'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
@@ -235,6 +245,7 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'FoF\\Console\\' => 12,
             'FoF\\Components\\' => 15,
             'FoF\\Byobu\\' => 10,
+            'FoF\\BestAnswer\\' => 15,
             'FoF\\BanIPs\\' => 11,
             'FoF\\BBCodeDetails\\' => 18,
             'FoF\\AuthDiscord\\' => 16,
@@ -273,10 +284,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             'Doctrine\\Common\\' => 16,
             'Dflydev\\FigCookies\\' => 19,
             'Dem13n\\NickName\\Changer\\' => 24,
+            'Datitisev\\Dashboard\\' => 20,
         ),
         'C' => 
         array (
             'Cron\\' => 5,
+            'ClarkWinkelmann\\EmojioneArea\\' => 29,
+            'ClarkWinkelmann\\CreateUserModal\\' => 32,
+            'ClarkWinkelmann\\AuthorChange\\' => 29,
         ),
         'B' => 
         array (
@@ -284,7 +299,11 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         ),
         'A' => 
         array (
+            'Askvortsov\\FlarumWarnings\\' => 26,
+            'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
+            'Askvortsov\\FlarumCategories\\' => 28,
             'App\\' => 4,
+            'AntoineFr\\Money\\' => 16,
             'AmauryCarrade\\FlarumFeeds\\' => 26,
         ),
     );
@@ -346,9 +365,21 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
         ),
+        'TheTurk\\WelcomeWidgets\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the-turk/flarum-welcome-widgets/src',
+        ),
         'TheTurk\\MathRen\\' => 
         array (
             0 => __DIR__ . '/..' . '/the-turk/flarum-mathren/src',
+        ),
+        'TheTurk\\ExtendedAppearance\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the-turk/flarum-extended-appearance/src',
+        ),
+        'Tank\\Perspective\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tank/perspective/src',
         ),
         'Symfony\\Polyfill\\Util\\' => 
         array (
@@ -450,6 +481,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
         ),
+        'SychO\\ProfileCover\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sycho/flarum-profile-cover/src',
+        ),
         'Saleksin\\Auth\\Google\\' => 
         array (
             0 => __DIR__ . '/..' . '/saleksin/flarum-auth-google/src',
@@ -503,6 +538,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'PragmaRX\\Google2FA\\' => 
         array (
             0 => __DIR__ . '/..' . '/pragmarx/google2fa/src',
+        ),
+        'PerspectiveApi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stajor/perspectiveapi/src',
         ),
         'PersianFla\\Persian\\' => 
         array (
@@ -561,9 +600,13 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
             2 => __DIR__ . '/..' . '/league/oauth2-github/src',
             3 => __DIR__ . '/..' . '/league/oauth2-google/src',
         ),
-        'League\\OAuth1\\' => 
+        'League\\OAuth1\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth1-client/src',
+        ),
+        'League\\MimeTypeDetection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -592,6 +635,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'JordanJay29\\Summaries\\' => 
         array (
             0 => __DIR__ . '/..' . '/jordanjay29/flarum-ext-summaries/src',
+        ),
+        'JSLirola\\Login2SeePlus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jslirola/flarum-ext-login2seeplus/src',
         ),
         'Intervention\\Image\\' => 
         array (
@@ -701,6 +748,14 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/fof/transliterator/src',
         ),
+        'FoF\\Terms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/terms/src',
+        ),
+        'FoF\\StopForumSpam\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/stopforumspam/src',
+        ),
         'FoF\\Split\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/split/src',
@@ -736,6 +791,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\ProfileImageCrop\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
+        ),
+        'FoF\\PreventNecrobumping\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/prevent-necrobumping/src',
         ),
         'FoF\\PrettyMail\\' => 
         array (
@@ -820,6 +879,10 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         'FoF\\Byobu\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/byobu/src',
+        ),
+        'FoF\\BestAnswer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/best-answer/src',
         ),
         'FoF\\BanIPs\\' => 
         array (
@@ -949,17 +1012,49 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
         array (
             0 => __DIR__ . '/..' . '/dem13n/nickname-changer/src',
         ),
+        'Datitisev\\Dashboard\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datitisev/flarum-ext-dashboard/src',
+        ),
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
+        ),
+        'ClarkWinkelmann\\EmojioneArea\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-emojionearea/src',
+        ),
+        'ClarkWinkelmann\\CreateUserModal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-create-user-modal/src',
+        ),
+        'ClarkWinkelmann\\AuthorChange\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-author-change/src',
         ),
         'Behat\\Transliterator\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/transliterator/src/Behat/Transliterator',
         ),
+        'Askvortsov\\FlarumWarnings\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-moderator-warnings/src',
+        ),
+        'Askvortsov\\FlarumDiscussionTemplates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-discussion-templates/src',
+        ),
+        'Askvortsov\\FlarumCategories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-categories/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'AntoineFr\\Money\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
         ),
         'AmauryCarrade\\FlarumFeeds\\' => 
         array (
@@ -1024,11 +1119,11 @@ class ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit8cfc704f65318aa96d6811e6e553bef4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd9b75e2506565f04eac638637df73830::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd9b75e2506565f04eac638637df73830::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitd9b75e2506565f04eac638637df73830::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd9b75e2506565f04eac638637df73830::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd9b75e2506565f04eac638637df73830::$classMap;
 
         }, null, ClassLoader::class);
     }

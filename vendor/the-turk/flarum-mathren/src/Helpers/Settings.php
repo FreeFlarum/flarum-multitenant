@@ -31,7 +31,7 @@ class Settings
        'macros' => '',
        'maxExpand' => 1000,
        'enableTextEditorButtons' => true,
-       'enableCopyTeX' => false
+       'enableCopyTeX' => true
    ];
 
     protected $prefix = 'the-turk-mathren.';
@@ -69,7 +69,7 @@ class Settings
      */
     public function get($name, $default = null)
     {
-        return $this->{$name} ? $this->{$name} : $default;
+        return isset($this->{$name}) ? $this->{$name} : $default;
     }
 
     /**

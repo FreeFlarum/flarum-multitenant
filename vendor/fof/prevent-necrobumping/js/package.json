@@ -1,0 +1,19 @@
+{
+  "name": "@fof/prevent-necrobumping",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "array.prototype.find": "^2.1.1",
+    "flarum-webpack-config": "^0.1.0-beta.10",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "format": "prettier --single-quote --trailing-comma es5 --print-width 150 --tab-width 4 --write src"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}

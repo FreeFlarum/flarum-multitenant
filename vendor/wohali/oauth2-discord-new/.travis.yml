@@ -4,28 +4,18 @@ sudo: false
 
 matrix:
   include:
-    - php: 5.6
-      env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
-    - php: 7.0
-    - php: 7.1
+    - php: 7.2
+    - php: 7.3
+    - php: 7.4
     - php: nightly
-    - php: hhvm
-      sudo: required
-      dist: trusty
-      group: edge
-    - php: hhvm-nightly
-      sudo: required
-      dist: trusty
-      group: edge
   fast_finish: true
   allow_failures:
     - php: nightly
-    - php: hhvm-nightly
 
 
 before_script:
   - travis_retry composer self-update
-  - travis_retry composer install --no-interaction --prefer-source --dev
+  - travis_retry composer install --no-interaction --prefer-source
   - travis_retry phpenv rehash
 
 script:

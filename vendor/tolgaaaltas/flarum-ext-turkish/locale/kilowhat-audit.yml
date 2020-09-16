@@ -1,0 +1,123 @@
+kilowhat-audit:
+    admin:
+        permissions:
+            view: Denetim günlüğünü görüntüle
+        menu:
+            title: Denetim Günlüğ
+            description: Son eylemleri görüntüle.
+        header:
+            title: Denetim
+            free: Ücretsiz
+            pro: Ücretli
+            upgrade: Ücretliye yükselt
+            documentation: Çevrimiçi belgeler
+            discuss: Flarum Topluluğunda Tartış
+            version: Sürüm {version}
+
+    forum:
+        link:
+            discussion-audit: Denetim günlüğü
+            user-audit: Denetim günlüğü (hesap düzenlemeleri)
+            actor-audit: Denetim günlüğü (katılımcı)
+        modal:
+            discussion-title: Tartışma Denetim Günlüğü
+            user-title: Kullanıcı Denetim Günlüğ
+            actor-title: Katılımcı Denetim Günlüğü
+    lib:
+        browser:
+            filterPlaceholder: Filtre günlükleri
+            filterApply: Uygula
+            empty: Sonuç yok
+            loadMore: Daha fazla
+            withoutActor: => core.group.guest
+            deletedResource:
+                discussion: 'Tartışma #{id}'
+                group: 'Grup #{id}'
+                post: 'Gönderi #{id}'
+                tag: 'Etiket #{id}'
+                user: 'Kullanıcı #{id}'
+            genericResource:
+                comment: Yorum
+                post: Gönderi
+            permissionGroup:
+                everyone: => core.admin.permissions_controls.everyone_button
+                members: => core.admin.permissions_controls.members_button
+            noValue: (değer yok)
+            client:
+                session: Web oturumu
+                api_key: API anahtarı
+                access_token: Erişim kodu
+                cli: Komut satırı
+                unknown: Bilinmeyen istemci
+            controls:
+                hideRaw: Hide raw log
+                showRaw: Show raw log
+                filterActor: Show logs by this actor
+                filterIp: Show logs by this IP
+                filterClient: Show logs by this client type
+                filterAction: Show logs of the same action
+                filterUser: Show logs affecting the same user
+                filterDiscussion: Show logs affecting the same discussion
+            cache_cleared: Manually cleared the cache
+            discussion:
+                created: Started discussion {discussion}
+                create_date_changed: Changed {discussion} start date from {old_date} to {new_date}
+                deleted: Deleted discussion {discussion}
+                hidden: Hid discussion {discussion}
+                locked: Locked discussion {discussion}
+                renamed: Renamed discussion from {old_title} to {new_title}
+                restored: Restored discussion {discussion}
+                split_away: Split {post_count} posts away from discussion {discussion}
+                split_into: Split {post_count} posts into new discussion {discussion}
+                stickied: Stickied discussion {discussion}
+                tagged: Updated {discussion} tags from {old_tags} to {new_tags}
+                unlocked: Unlocked discussion {discussion}
+                unstickied: Unstickied discussion {discussion}
+                user_changed: Changed {discussion} author from {old_user} to {new_user}
+            extension:
+                disabled: Disabled extension {package}
+                enabled: Enabled extension {package}
+            fof_ban_ips:
+                banned: Banned ip {ip}
+                unbanned: Unbanned ip {ip}
+            permission_changed: Edited permission {permission} from {old_groups} to {new_groups}
+            post:
+                created: Created a {post} in {discussion}
+                create_date_changed: Changed {postuser}'s {post} start date from {old_date} to {new_date}
+                deleted: Deleted {postuser}'s {post} in {discussion}
+                edit_date_changed: Changed {postuser}'s {post} edit date from {old_date} to {new_date}
+                flagged: Flagged {postuser}'s {post} in {discussion}
+                hidden: Hid {postuser}'s {post} in {discussion}
+                restored: Restored {postuser}'s {post} in {discussion}
+                revised: Revised {postuser}'s {post} in {discussion}
+                user_changed: Changed {post} author from {old_user} to {new_user}
+            setting_changed: Edited setting {key}
+            setting_changed_with_values: Edited setting {key} from {old_value} to {new_value}
+            tag:
+                created: Etiket oluşturdu {tag}
+                deleted: Etiketi kaldırdı {tag}
+                updated: Etiketi güncelledi {tag}
+            user:
+                activated: {username} kullanıcısının hesabını elle aktive edildi
+                activated_with_email: {username} kullanıcısının hesap bağlantı ile aktive edildi
+                avatar_changed: {username} kullanıcısı avatarını değiştiri
+                avatar_removed: {username} kullanıcısı avatarını sildi
+                bio_changed: {username} biyografini değiştirdi
+                created: {username} kullanıcısının hesabı oluşturuldu
+                deleted: {username} kullanıcısının hesabı silindi
+                email_changed: Changed {username}'s email from {old_email} to {new_email}
+                email_change_requested: Requested to change {username}'s email to {new_email}
+                groups_changed: Changed {username}'s groups from {old_groups} to {new_groups}
+                impersonated: Impersonated {username}
+                logged_in: Logged in {username} account
+                logged_in_with_provider: Logged in {username} account using {provider}
+                logged_out: Logged out {username} account
+                password_changed: Changed {username}'s password
+                password_change_requested: Requested to change {username}'s password
+                provider_connected: Connected provider {provider} to {username} account
+                suspended: Suspended {username} until {until}
+                unsuspended: Unsuspended {username}
+                username_changed: Changed {username}'s username from {old_username} to {new_username}
+                username_requested: Requested new username {new_username} for user {username}
+                username_request_approved: Approved {username}'s username change from {old_username} to {new_username}
+                username_request_rejected: Rejected {username}'s username change

@@ -1,0 +1,38 @@
+.FofPreventNecrobumping--Settings {
+  input + .helpText {
+    margin-top: 5px;
+  }
+
+  .necrobumping--tags {
+    max-height: 50vh;
+    overflow-y: auto;
+
+    .Form-group {
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      margin: 5px 5px 5px 0;
+
+      label {
+        flex-basis: 200px;
+        margin: 0;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      input {
+        flex-grow: 1;
+      }
+
+      &.isChild label {
+        text-indent: 20px;
+      }
+
+      &.isSecondary label {
+        color: @muted-color;
+      }
+    }
+  }
+
+}

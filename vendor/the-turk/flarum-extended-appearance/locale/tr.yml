@@ -1,0 +1,13 @@
+the-turk-extended-appearance:
+    admin:
+      rightSidebar:           Sağ Menü
+      saveAndReload:          Kaydet ve Tazele
+      reloadInfo:             Değişikliklerin yönetici paneline uygulanabilmesi için bu sayfayı tazelemeniz gerekiyor.
+      codeMirror:
+        title:                CodeMirror Teması
+        autoTheme:            "Otomatik (açık: varsayılan, koyu: darcula)"
+        helpText:             "Tarayıcı içinde kullanacağınız kod editörü için bir <a>tema seçin</a>."
+        scratchpad:           CodeMirror tema ayarları Scratchpad eklentisinden uyarlanacaktır.
+      pickr:
+        save:                 Kaydet
+        cancel:               İptal

@@ -15,7 +15,7 @@
         "source": "https://github.com/DaRkFoxDeveloper/flarum-ext-spanish"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.9"
+        "flarum/core": "^0.1.0-beta.13"
     },
     "extra": {
         "branch-alias": {

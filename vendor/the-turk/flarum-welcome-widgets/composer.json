@@ -1,0 +1,38 @@
+{
+  "name": "the-turk/flarum-welcome-widgets",
+  "description": "Lets users know what's been changed since their last visit.",
+  "keywords": [
+    "flarum",
+    "welcome",
+    "widgets"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [{
+    "name": "Hasan Özbey",
+    "email": "hasanoozbey@gmail.com",
+    "homepage": "https://github.com/the-turk"
+  }],
+  "support": {
+    "issues": "https://github.com/the-turk/flarum-welcome-widgets/issues",
+    "source": "https://github.com/the-turk/flarum-welcome-widgets"
+  },
+  "require": {
+    "flarum/core": ">=0.1.0-beta.10 <0.1.0-beta.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheTurk\\WelcomeWidgets\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Welcome Widgets",
+      "icon": {
+        "name": "fas fa-columns",
+        "backgroundColor": "#b72a2a",
+        "color": "#fff"
+      }
+    }
+  }
+}

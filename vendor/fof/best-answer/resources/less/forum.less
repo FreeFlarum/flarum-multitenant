@@ -1,0 +1,91 @@
+@best-answer-badge-color: #58a400;
+@best-answer-post-background: rgba(88, 164, 0, 0.23);
+
+.Badge--bestAnswer {
+  background-color: @best-answer-badge-color;
+}
+
+.Post-header{
+  & > ul > li.item-isBestAnswer{
+    display: inline-block;
+    margin-top: 3px;
+  }
+}
+
+.Post-footer {
+  .item-bestAnswerPost {
+    padding: 10px;
+    background-color: @best-answer-post-background;
+    margin-top: 35px;
+    border-radius: 5px;
+
+    .Post-body {
+      color: @text-color;
+    }
+
+    .PostUser-badges, .PostUser-avatar {
+      display: none;
+    }
+
+    .Post--BestAnswer {
+      margin-right: 0;
+
+      a .icon {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.Post--BestAnswer {
+  background: @best-answer-badge-color;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 2px 5px;
+
+  &, a {
+    color: white;
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .BestAnswer--User {
+    display: none;
+  }
+}
+
+@media @desktop-up{
+  .CommentPost {
+    .Post-header > ul {
+      position: relative;
+    }
+  }
+
+  .Post-header{
+    & > ul > li.item-isBestAnswer{
+      margin-top: 0;
+    }
+  }
+
+  .Post--BestAnswer {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .BestAnswer--User {
+      display: initial;
+      margin-left: 7.5px;
+      font-size: .9em;
+    }
+  }
+}
+
+.Post-actions {
+  .item-bestAnswer {
+    .Button--primary {
+      margin: 0px 10px;
+    }
+  }
+}

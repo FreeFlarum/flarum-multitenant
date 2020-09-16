@@ -17,13 +17,18 @@
     {
       "name": "z1729 Factory",
       "email": "z1729.factory@gmail.com",
-      "homepage": "https://z1729.com",
+      "homepage": "https://z1729.com/",
       "role": "Developer"
+    },
+    {
+      "name": "Yu Dunaev (dun43v)",
+      "email": "dun43v@gmail.com",
+      "homepage": "https://dunaev.dev/",
+      "role": "Editor"
     },
     {
       "name": "Kitsune Solar",
       "email": "kitsune.solar@gmail.com",
-      "homepage": "https://KitsuneSolar.com",
       "role": "Editor"
     }
   ],

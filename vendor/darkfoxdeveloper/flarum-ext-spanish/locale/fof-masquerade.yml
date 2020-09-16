@@ -1,0 +1,83 @@
+#
+# This file is part of DaRkFoxDeveloper/FlarumExtSpanish.
+# -----------------------------------------------------------------------
+# Copyright © 2015-2019 Toby Zerner and Flarum
+# Copyright © 2015-2019 DaRkFoxDeveloper
+# -----------------------------------------------------------------------
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+
+fof-masquerade:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    alerts:
+      profile-completion-required: >
+        Por favor complete los campos del perfil de usuario.
+    buttons:
+      view-profile: Ver perfil
+      save-profile: Guardar
+    fields:
+      select:
+        none-optional: Ninguna (opcional)
+        none-required: Elija una opción (requerido)
+      boolean:
+        yes: Si
+        no: No
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    title: Masquerade
+    general-options: Configuración
+    buttons:
+      add-field: Crear campo
+      edit-field: Guardar cambios
+      delete-field: Eliminar campo
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      have-profile: Tener perfil masquerade
+      view-profile: Ver perfil masquerade
+    menu:
+      description: >
+        Configurar campos de perfil de usuario.
+    fields:
+      title: Campos
+      add: Añadir campo {field}
+      edit: Editar campo {field}
+      name: Nombre
+      name-help: >
+        Nombre visible del campo.
+      description: Descripción
+      description-help: >
+        Descripción opcional para explicar el uso del campo.
+      required: Marcar como requerido
+      on_bio: Mostrar campo en la descripción de usuario
+      type: Tipo
+      validation: Validación
+      validation-help: >
+        Consulte las <a>reglas de validación de Laravel</a>. Ej:
+        "string|min:5" o "url".
+      prefix: Field prefix
+      prefix-help: >
+        Shows your prefix in front of values entered by the user for this field.
+      icon: Icono
+      icon-help: >
+        Introduzca el nombre de alguna clase de <a>FontAwesome</a>, <em>incluyendo</em> el prefijo <code>fas fa-</code>.
+      force-user-to-completion: Obligar al usuario a completar el perfil
+      options: Opciones
+      option-new: Nueva opción
+      option-comma-warning: La etiqueta de cualquier opción no puede contener comas (",").
+    types:
+      advanced: Avanzado
+      boolean: Checkbox
+      email: Email
+      select: Desplegable
+      url: URL

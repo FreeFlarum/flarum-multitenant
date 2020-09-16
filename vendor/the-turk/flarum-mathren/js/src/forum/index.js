@@ -1,12 +1,31 @@
 import { extend } from 'flarum/extend';
 import app from 'flarum/app';
 import CommentPost from 'flarum/components/CommentPost';
-import renderMathInElement from '../../dist/auto-render.min';
 import addTextEditorButton from './addTextEditorButton';
 import addPostQuoteButton from './addPostQuoteButton';
 import addCopyListener from './addCopyListener';
 
 app.initializers.add('the-turk-mathren', () => {
+  let whenLoaded = {};
+  let hasLoaded = false;
+  let isLoading = false;
+
+  const load = () => {
+    isLoading = true;
+
+    $.getScript('//cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js', () => {
+      $.getScript('//cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js', () => {
+        for (const id in whenLoaded) {
+          whenLoaded[id]();
+        }
+
+        whenLoaded = {};
+        isLoading = false;
+        hasLoaded = true;
+      });
+    });
+  };
+
   // Add Text Editor buttons
   addTextEditorButton();
 
@@ -26,16 +45,24 @@ app.initializers.add('the-turk-mathren', () => {
   // Hook into global copy handler to modify behavior on `.katex` elements
   addCopyListener();
 
-  var renderMath = function(element) {
-    return renderMathInElement(
-      element,
-      app.forum.attribute('mathRenKatexOptions')
-    );
-  }
+  var renderMath = function (element, id) {
+    const render = () => renderMathInElement(element, app.forum.attribute('mathRenKatexOptions'));
+
+    if (!hasLoaded) {
+      whenLoaded[id] = render;
+
+      if (isLoading) return;
+
+      load();
+    } else {
+      render();
+    }
+  };
 
   /* Run KaTeX renderer on every post loading */
-  extend(CommentPost.prototype, 'config', function(original, isInitialized) {
-    renderMath($('.Post-body', this.element)[0]);
+  extend(CommentPost.prototype, 'config', function (original, isInitialized) {
+    if (!isInitialized) return;
+    renderMath($('.Post-body', this.element)[0], this.props.post.id());
   });
 
   /**
@@ -45,8 +72,8 @@ app.initializers.add('the-turk-mathren', () => {
    * @see https://github.com/s9e/TextFormatter/blob/master/docs/JavaScript/Live_preview_attributes.md
    */
   if (s9e && s9e.TextFormatter) {
-    extend(s9e.TextFormatter, 'preview', function(original, preview, element) {
-      if (element.matches('.Post *')) renderMath(element);
+    extend(s9e.TextFormatter, 'preview', function (original, preview, element) {
+      if (element.matches('.Post *')) renderMath(element, 0);
     });
   }
 });

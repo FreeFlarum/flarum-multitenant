@@ -40,3 +40,9 @@
 </div>
 
 {!! array_get($forum, 'footerHtml') !!}
+
+@php if (!file_exists("/etc/hide_powered_by"))
+{ 
+    print('<div style="display: block !important; text-align: center; margin: 5px 0;"><p>A free forum powered by <a href="https://www.freeflarum.com" target="_blank">FreeFlarum</a> (<a href="https://www.freeflarum.com/docs/faq/#can-i-pay-to-remove-the-powered-by-freeflarum-footer" target="_blank">remove this footer</a>)</p><p><a href="https://www.freeflarum.com/docs/legal/terms/" target="_blank">Terms of Use</a> | <a href="https://www.freeflarum.com/docs/legal/privacy-policy/" target="_blank">Privacy Policy</a></p></div>');
+} 
+@endphp

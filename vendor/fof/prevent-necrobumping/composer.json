@@ -1,0 +1,39 @@
+{
+  "name": "fof/prevent-necrobumping",
+  "description": "Warn before necrobumping old discussions",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8",
+    "fof/components": ">=0.1.0",
+    "fof/extend": ">=0.2.0"
+  },
+  "authors": [
+    {
+      "name": "David Sevilla Martín",
+      "email": "david.s@redevs.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\PreventNecrobumping\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Prevent Necrobumping",
+      "icon": {
+        "name": "fas fa-hand-paper",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18312-friendsofflarum-prevent-necrobumping"
+    }
+  }
+}

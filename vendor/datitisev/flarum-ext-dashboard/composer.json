@@ -1,0 +1,32 @@
+{
+  "name": "datitisev/flarum-ext-dashboard",
+  "description": "A dashboard for the admin interface in Flarum",
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta-8"
+  },
+  "authors": [
+    {
+      "name": "David Sevilla Martín",
+      "email": "me@datitisev.me",
+      "homepage": "https://datitisev.me",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Datitisev\\Dashboard\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Dashboard",
+      "icon": {
+        "name": "fas fa-tachometer-alt",
+        "backgroundColor": "#3F51B5",
+        "color": "#FFEB3B"
+      }
+    }
+  }
+}

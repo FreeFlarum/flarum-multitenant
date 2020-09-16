@@ -27,6 +27,6 @@ composer update marketplace/flarum-l10n-ext-russian
 php flarum cache:clear
 ```
 
-## Donation / Пожертвование
+## Donations / Пожертвования
 
 - [Donation Form](https://donation-form.github.io/)

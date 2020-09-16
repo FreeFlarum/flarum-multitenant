@@ -1,8 +1,8 @@
 //! moment.js locale configuration
 //! locale : Russian [ru]
-//! author : Viktorminator : https://github.com/Viktorminator
-//! Author : Menelion Elensúle : https://github.com/Oire
-//! author : Коренберг Марк : https://github.com/socketpair
+//! author : Viktorminator : https://gitlab.com/Viktorminator
+//! Author : Menelion Elensúle : https://gitlab.com/Oire
+//! author : Коренберг Марк : https://gitlab.com/socketpair
 
 ;(function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined'

@@ -1,0 +1,35 @@
+#
+# This file is part of DaRkFoxDeveloper/FlarumExtSpanish.
+# -----------------------------------------------------------------------
+# Copyright © 2015-2019 Toby Zerner and Flarum
+# Copyright © 2015-2019 DaRkFoxDeveloper
+# -----------------------------------------------------------------------
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+
+fof-forum-statistics-widget:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    navbar:
+      widget_title: Estadísticas
+      discussions_count: "Discusiones: {discussionsCount}"
+      posts_count: "Mensajes: {postsCount}"
+      users_count: "Usuarios: {usersCount}"
+      latest_member: "Último usuario: "
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    settings:
+      title: Configuración del Widget
+      widget_ignore_private_discussions_label: Ignorar discusiones privadas
+      widget_order_label: Orden del Widget
+      widget_helper_text: "Edite esta configuración para ajustar la posición de este widget en la sección sidenav de su foro.
+      Cuanto mayor sea el número, mayor será este widget en la lista de elementos secundarios (este valor puede ser positivo o negativo)."

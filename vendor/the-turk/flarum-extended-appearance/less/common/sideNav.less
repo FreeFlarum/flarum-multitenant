@@ -1,0 +1,26 @@
+@media @desktop-up {
+  .sideNavContainer {
+    & when (@config-right-sidebar = true) {
+        flex-direction: row-reverse;
+    }
+  }
+  .sideNav {
+    & when (@config-right-sidebar = true) {
+      margin-right: 0px;
+      margin-left: 50px;
+
+      &.TagsPage-nav {
+        margin-left: 0;
+      }
+    }
+
+    & when (@config-right-sidebar = false) {
+      margin-right: 50px;
+    }
+  }
+  .sideNavOffset {
+    & when (@config-right-sidebar = true) {
+        margin-left: 0px;
+    }
+  }
+}

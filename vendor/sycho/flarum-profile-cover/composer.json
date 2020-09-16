@@ -1,0 +1,32 @@
+{
+    "name": "sycho/flarum-profile-cover",
+    "description": "Adds the ability to add a cover image to a profile.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sami 'SychO' Mazouz",
+            "email": "ilyasmazouz@gmail.com",
+            "homepage": "https://sycho9.github.io"
+        }
+    ],
+    "type": "flarum-extension",
+    "require": {
+        "flarum/core": "^0.1.0-beta.10",
+        "fof/extend": ">=0.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SychO\\ProfileCover\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Profile Cover",
+            "icon": {
+                "name": "fas fa-image",
+                "backgroundColor": "#004957",
+                "color": "#fff"
+            }
+        }
+    }
+}

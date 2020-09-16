@@ -706,7 +706,7 @@ EOF;
     public function testMultipleDocumentsNotSupportedException()
     {
         $this->expectException('Symfony\Component\Yaml\Exception\ParseException');
-        $this->expectExceptionMessageRegExp('/^Multiple documents are not supported.+/');
+        $this->expectExceptionMessageMatches('/^Multiple documents are not supported.+/');
         Yaml::parse(<<<'EOL'
 # Ranking of 1998 home runs
 ---
@@ -1468,7 +1468,7 @@ EOT
     public function testParseInvalidBinaryData($data, $expectedMessage)
     {
         $this->expectException('Symfony\Component\Yaml\Exception\ParseException');
-        $this->expectExceptionMessageRegExp($expectedMessage);
+        $this->expectExceptionMessageMatches($expectedMessage);
 
         $this->parser->parse($data);
     }
@@ -2025,6 +2025,34 @@ YAML;
         $this->assertSame($expected, $this->parser->parse($yaml, Yaml::PARSE_CONSTANT | Yaml::PARSE_KEYS_AS_STRINGS));
     }
 
+    public function testPhpConstantTagMappingAsScalarKey()
+    {
+        $yaml = <<<YAML
+map1:
+  - foo: 'value_0'
+    !php/const 'Symfony\Component\Yaml\Tests\B::BAR': 'value_1'
+map2:
+  - !php/const 'Symfony\Component\Yaml\Tests\B::FOO': 'value_0'
+    bar: 'value_1'
+YAML;
+        $this->assertSame([
+            'map1' => [['foo' => 'value_0', 'bar' => 'value_1']],
+            'map2' => [['foo' => 'value_0', 'bar' => 'value_1']],
+        ], $this->parser->parse($yaml, Yaml::PARSE_CONSTANT));
+    }
+
+    public function testTagMappingAsScalarKey()
+    {
+        $yaml = <<<YAML
+map1:
+  - !!str 0: 'value_0'
+    !!str 1: 'value_1'
+YAML;
+        $this->assertSame([
+            'map1' => [['0' => 'value_0', '1' => 'value_1']],
+        ], $this->parser->parse($yaml));
+    }
+
     public function testMergeKeysWhenMappingsAreParsedAsObjects()
     {
         $yaml = <<<YAML
@@ -2077,14 +2105,14 @@ YAML;
     public function testParsingNonExistentFilesThrowsException()
     {
         $this->expectException('Symfony\Component\Yaml\Exception\ParseException');
-        $this->expectExceptionMessageRegExp('#^File ".+/Fixtures/nonexistent.yml" does not exist\.$#');
+        $this->expectExceptionMessageMatches('#^File ".+/Fixtures/nonexistent.yml" does not exist\.$#');
         $this->parser->parseFile(__DIR__.'/Fixtures/nonexistent.yml');
     }
 
     public function testParsingNotReadableFilesThrowsException()
     {
         $this->expectException('Symfony\Component\Yaml\Exception\ParseException');
-        $this->expectExceptionMessageRegExp('#^File ".+/Fixtures/not_readable.yml" cannot be read\.$#');
+        $this->expectExceptionMessageMatches('#^File ".+/Fixtures/not_readable.yml" cannot be read\.$#');
         if ('\\' === \DIRECTORY_SEPARATOR) {
             $this->markTestSkipped('chmod is not supported on Windows');
         }
@@ -2287,7 +2315,7 @@ YAML;
 parameters:
     abc
 
-# Comment 
+# Comment
 YAML;
 
         $this->assertSame(['parameters' => 'abc'], $this->parser->parse($yaml));

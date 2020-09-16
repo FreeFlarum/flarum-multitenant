@@ -1,0 +1,37 @@
+flarum-likes:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      like_posts_label: 게시물에 좋아요 허용
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      others_text: => core.ref.some_others
+      post_liked_text: "{username}님이 귀하의 게시물을 좋아합니다"  # Can be pluralized to agree with the number of users!
+
+    # These translations are displayed beneath individual posts.
+    post:
+      like_link: 좋아요
+      liked_by_self_text: "{users}님이 이 게시물을 좋아합니다."  # Can be pluralized to agree with the number of users!
+      liked_by_text: "{users}님이 이 게시물을 좋아합니다.|{users}님이 이 게시물을 좋아합니다."
+      others_link: => core.ref.some_others
+      unlike_link: 좋아요 취소
+      you_text: => core.ref.you
+
+    # These translations are used by the Users Who Like This modal dialog.
+    post_likes:
+      title: 이 것을 좋아하는 사용자들
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_post_liked_label: 누군가 내 게시물 중 하나에 좋아요를 눌렀을 때

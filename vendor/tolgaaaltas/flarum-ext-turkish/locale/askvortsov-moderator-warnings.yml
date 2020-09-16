@@ -23,21 +23,20 @@ askvortsov-moderator-warnings:
       delete_forever_button: Kalıcı Olarak Sil
     warning_list:
       add_button: Yeni Uyarı
-      no-warnings: Burada hiç uyarı yok gibi görünüyor.
-      warnings: "Moderatör Uyarıları: {strikes} uyarı aldın!"
-      warnings_no_strikes: "Moderatör Uyarıları: Hiçbir uyarı yok!"
+      no_warnings: Burada hiç uyarı yok gibi görünüyor.
+      warnings: "Moderatör Uyarıları: {strikes} uyarı"
+      warnings_no_strikes: "Moderatör Uyarıları: Hiçbir Uyarı Alınmadı"
     warning_list_item:
       list_item_heading: <strong>{mod_username}</strong> adlı moderatör <strong>{strikes}</strong> kez uyardı
       list_item_heading_hidden: <strong>{mod_username}</strong> adlı moderatör <strong>{strikes}</strong> uyarıları <strong>(silindi)</strong>
-      public_comment: Tüm kullanıcılara açık.
-      private_comment: Sadece moderatörlere açık
-      linked_post: Bağlantı Ekle
+      public_comment: Uyarı
+      private_comment: Moderatörlere Görünür Yorumlar
+      linked_post: Bağlantılı Gönderi
     warning_modal:
-      confirmation_message: Uyarı verildi. Görmek için sayfayı yenile.
+      confirmation_message: Uyarı verildi. Görmek için sayfayı yenilemeniz gerekebilir.
       dismiss_button: Tamam
       heading: "Uyar: <strong>{username}</strong>"
       strikes_heading: Kaç uyarı verilsin?
-      public_comment_heading: Neden <strong>{username}</strong> bu uyarıları aldı? Bu yorum moderatörler ve diğer kullanıcılara açıktır.
-      private_comment_heading: Neden <strong>{username}</strong> bu uyarıları aldı? Bu yorumu SADECE moderatörler görebilir.
-      no_content_given: Boş uyarıda bulunamazsınız.
+      public_comment_heading: Neden <strong>{username}</strong> bu uyarıları aldı? Bu yoruları moderatörler ve diğer kullanıcılara açıktır.
+      private_comment_heading: Neden <strong>{username}</strong> bu uyarıları aldı? Bu yorumları SADECE moderatörler görebilir.
       submit_button: Uyarıyı kaydet

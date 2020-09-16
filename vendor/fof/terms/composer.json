@@ -1,0 +1,51 @@
+{
+    "name": "fof/terms",
+    "description": "Ask users to accept terms of use before using the forum",
+    "keywords": [
+        "extension",
+        "flarum",
+        "terms",
+        "tos",
+        "policy"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/linguist/issues",
+        "source": "https://github.com/FriendsOfFlarum/linguist"
+    },
+    "require": {
+        "flarum/core": ">=0.1.0-beta.12 <0.1.0-beta.14"
+    },
+    "replace": {
+        "flagrow/terms": "*"
+    },
+    "conflict": {
+        "reflar/user-management": "^0.1.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Terms",
+            "icon": {
+                "name": "fas fa-paperclip",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/11714"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Terms\\": "src/"
+        }
+    }
+}

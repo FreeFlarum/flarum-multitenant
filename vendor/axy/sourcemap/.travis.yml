@@ -12,15 +12,13 @@ language: php
 
 matrix:
   include:
-    - php: 5.4
-      env: CHECKS=yes PU4=yes
-    - php: 5.5
-      env: PU4=yes
     - php: 5.6
+      env: CHECKS=yes PU4=yes
     - php: 7.0
     - php: 7.1
     - php: 7.2
-    - php: hhvm
+    - php: 7.3
+    - php: 7.4
 
 sudo: false
 
@@ -47,7 +45,7 @@ install:
   - composer require phpunit/phpunit=$PU_VER --prefer-source
   - PU="php vendor/bin/phpunit"
   - if [ "$CHECKS" = "yes" ]; then composer require squizlabs/php_codesniffer="~2.3" --prefer-source; fi;
-  - if [ "$CHECKS" = "yes" ]; then composer require satooshi/php-coveralls --dev --prefer-source; fi;
+  - if [ "$CHECKS" = "yes" ]; then composer require php-coveralls/php-coveralls --dev --prefer-source; fi;
   # Generate the coveralls config (not to keep it in the repo)
   - >
     if [ "$CHECKS" = "yes" ]; then
@@ -64,7 +62,7 @@ script:
   - if [ "$CHECKS" = "yes" ] && [ "$XDEBUG_ENABLED" = "yes" ]; then phpenv config-add xdebug.ini; fi;
   - if [ "$CHECKS" = "yes" ]; then $PU --coverage-clover clover.xml; fi;
   # Coveralls in `script` section instead `after_succes` for build fail if when error
-  - if [ "$CHECKS" = "yes" ]; then php vendor/bin/coveralls -c .coveralls.yml; fi;
+  - if [ "$CHECKS" = "yes" ]; then php vendor/bin/php-coveralls -c .coveralls.yml; fi;
 
 notifications:
   email:
