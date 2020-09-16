@@ -70,7 +70,8 @@
             'Having tough time finding the correct HEX color code to tweak your forum Appearance settings with? Use the "Extended Appearance Settings" extension featuring a visual editor and a color picker!',
             'Are you lost? <a href="https://freeflarum.com/docs" target="_blank">Check out the documentation</a>!',
             'Want an inspiration on how to build your community? <a href="https://www.freeflarum.com/docs/how-to/basics/personalization/" target="_blank">Read this personalization guide</a>!',
-            'Have you checked our <a href="https://discuss.flarum.org/d/7585" target="_blank">official FreeFlarum thread at Discuss</a>?'
+            'Have you checked out our <a href="https://discuss.flarum.org/d/7585" target="_blank">official FreeFlarum thread at Discuss</a>?',
+            'Want to expand your forum\'s functionality? Use <a href="#/extensions">extensions</a>!'
           ];
           var r = Math.floor(Math.random() * tips.length);
             document.getElementById("tip").innerHTML = "<strong>Tip:</strong> " + tips[r];
