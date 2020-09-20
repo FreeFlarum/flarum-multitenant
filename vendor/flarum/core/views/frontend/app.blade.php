@@ -31,6 +31,9 @@
             } catch (e) {
                 var error = document.getElementById('flarum-loading-error');
                 error.innerHTML += document.getElementById('flarum-content').textContent;
+                // FreeFlarum start: Stack trace of error for easier debugging.
+                error.innerHTML += '<hr style="border: 1px solid red"/><div class="container"><pre><b>Stack strace:</b></br>' + e.stack + '</pre><h4>That\'s all that we know... Please, report this bug <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1561" target="_blank">on our Discuss thread</a> or <a href="https://github.com/gwillem/freeflarum.com/issues" target="_blank">GitHub</a></h4></div><hr style="border: 1px solid red"/>'
+                // FreeFlarum end
                 error.style.display = 'block';
                 throw e;
             }
