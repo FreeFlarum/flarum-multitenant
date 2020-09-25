@@ -38,7 +38,7 @@
 
 </div>
 <!-- FreeFlarum Start - Randomly generated tips -->
-<div id="admin-footer">
+<footer id="admin-footer">
     <!-- 
         I tried making it as responsive as possible, trust me, it can't be better. It can never be placed in the right sidebar, and it can never be
         positioned well due to the sidebar. So I played with 'right' and 'left' properties for quite some time to make something out of it. This should
@@ -57,7 +57,7 @@
     <hr/>
 
     <p id="tip" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px;"></p>
-    <p id="news" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px; border: 1px solid orange; border-radius: 10px;">What's new?<br/><a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1518" target="_blank"><strong>13/09/2020 - Bunch of extensions added</strong></a></p>
+    <p id="news" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px; border: 1px solid orange; border-radius: 10px;">What's new?<br/><a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1579" target="_blank"><strong>25/09/2020 - Flarum Categories & Discussion Templates got removed</strong></a></p>
     <br/>
     <script>
         function nextTip() {
@@ -78,5 +78,5 @@
           }
         nextTip();
     </script>
-</div>
+</footer>
 <!-- FreeFlarum End -->

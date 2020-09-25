@@ -300,8 +300,6 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
         'A' => 
         array (
             'Askvortsov\\FlarumWarnings\\' => 26,
-            'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
-            'Askvortsov\\FlarumCategories\\' => 28,
             'App\\' => 4,
             'AntoineFr\\Money\\' => 16,
             'AmauryCarrade\\FlarumFeeds\\' => 26,
@@ -1039,14 +1037,6 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
         'Askvortsov\\FlarumWarnings\\' => 
         array (
             0 => __DIR__ . '/..' . '/askvortsov/flarum-moderator-warnings/src',
-        ),
-        'Askvortsov\\FlarumDiscussionTemplates\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/askvortsov/flarum-discussion-templates/src',
-        ),
-        'Askvortsov\\FlarumCategories\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/askvortsov/flarum-categories/src',
         ),
         'App\\' => 
         array (

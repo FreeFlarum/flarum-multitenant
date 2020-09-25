@@ -187,8 +187,6 @@ return array(
     'ClarkWinkelmann\\AuthorChange\\' => array($vendorDir . '/clarkwinkelmann/flarum-ext-author-change/src'),
     'Behat\\Transliterator\\' => array($vendorDir . '/behat/transliterator/src/Behat/Transliterator'),
     'Askvortsov\\FlarumWarnings\\' => array($vendorDir . '/askvortsov/flarum-moderator-warnings/src'),
-    'Askvortsov\\FlarumDiscussionTemplates\\' => array($vendorDir . '/askvortsov/flarum-discussion-templates/src'),
-    'Askvortsov\\FlarumCategories\\' => array($vendorDir . '/askvortsov/flarum-categories/src'),
     'App\\' => array($baseDir . '/app'),
     'AntoineFr\\Money\\' => array($vendorDir . '/antoinefr/flarum-ext-money/src'),
     'AmauryCarrade\\FlarumFeeds\\' => array($vendorDir . '/amaurycarrade/flarum-ext-syndication/src'),

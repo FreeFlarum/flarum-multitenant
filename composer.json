@@ -28,8 +28,6 @@
     "require": {
         "amaurycarrade/flarum-ext-syndication": "^0.3.1",
         "antoinefr/flarum-ext-money": "^0.8.0",
-        "askvortsov/flarum-categories": "^1.0",
-        "askvortsov/flarum-discussion-templates": "^0.1.3",
         "askvortsov/flarum-moderator-warnings": "^0.2.4",
         "bertaveira/flarum-pt-pt": "^1.2",
         "cbmainz/flarum-de": "^0.12.1",
