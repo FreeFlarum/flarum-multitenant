@@ -232,6 +232,7 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
             'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Masquerade\\' => 15,
+            'FoF\\Mason\\' => 10,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
             'FoF\\Gamification\\' => 17,
@@ -266,7 +267,6 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
             'Flarum\\Auth\\Facebook\\' => 21,
             'Flarum\\Approval\\' => 16,
             'Flarum\\' => 7,
-            'Flagrow\\Mason\\' => 14,
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
         ),
@@ -828,6 +828,10 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
         array (
             0 => __DIR__ . '/..' . '/fof/masquerade/src',
         ),
+        'FoF\\Mason\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/mason/src',
+        ),
         'FoF\\Links\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/links/src',
@@ -963,10 +967,6 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
         'Flarum\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/core/src',
-        ),
-        'Flagrow\\Mason\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flagrow/mason/src',
         ),
         'Fig\\Http\\Message\\' => 
         array (

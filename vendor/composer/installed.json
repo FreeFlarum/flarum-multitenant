@@ -1940,66 +1940,6 @@
         ]
     },
     {
-        "name": "flagrow/mason",
-        "version": "0.3.1",
-        "version_normalized": "0.3.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/flagrow/mason.git",
-            "reference": "50b7050edd9f2e3d317caf70909f72d7a8c93c52"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/flagrow/mason/zipball/50b7050edd9f2e3d317caf70909f72d7a8c93c52",
-            "reference": "50b7050edd9f2e3d317caf70909f72d7a8c93c52",
-            "shasum": ""
-        },
-        "require": {
-            "flarum/core": "^0.1.0-beta.8"
-        },
-        "time": "2019-05-04T20:01:49+00:00",
-        "type": "flarum-extension",
-        "extra": {
-            "flarum-extension": {
-                "title": "Mason",
-                "icon": {
-                    "name": "fas fa-dungeon",
-                    "backgroundColor": "#f4f4f4",
-                    "color": "#5f4bb6"
-                }
-            },
-            "flagrow": {
-                "discuss": "https://discuss.flarum.org/d/7028"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Flagrow\\Mason\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Clark Winkelmann",
-                "email": "clark.winkelmann@gmail.com",
-                "homepage": "https://clarkwinkelmann.com/"
-            }
-        ],
-        "description": "Add custom fields to discussions",
-        "keywords": [
-            "custom-fields",
-            "discussion",
-            "extension",
-            "flagrow",
-            "flarum"
-        ],
-        "abandoned": "fof/mason"
-    },
-    {
         "name": "flagrow/sitemap",
         "version": "0.5.3",
         "version_normalized": "0.5.3.0",
@@ -4156,6 +4096,68 @@
         ],
         "description": "Manage Flarum primary navbar menu links",
         "keywords": [
+            "flarum"
+        ]
+    },
+    {
+        "name": "fof/mason",
+        "version": "0.4.1",
+        "version_normalized": "0.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/mason.git",
+            "reference": "e326999be698c1b251a2ca068a93dbf26b6a08d3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/mason/zipball/e326999be698c1b251a2ca068a93dbf26b6a08d3",
+            "reference": "e326999be698c1b251a2ca068a93dbf26b6a08d3",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": ">=0.1.0-beta.8 <0.1.0-beta.14"
+        },
+        "replace": {
+            "flagrow/mason": "*"
+        },
+        "time": "2020-08-04T23:36:05+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "FoF Mason",
+                "icon": {
+                    "name": "fas fa-dungeon",
+                    "backgroundColor": "#e74c3c",
+                    "color": "#fff"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/7028"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Mason\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Clark Winkelmann",
+                "email": "clark.winkelmann@gmail.com",
+                "homepage": "https://clarkwinkelmann.com/"
+            }
+        ],
+        "description": "Add custom fields to discussions",
+        "keywords": [
+            "custom-fields",
+            "discussion",
+            "extension",
+            "flagrow",
             "flarum"
         ]
     },

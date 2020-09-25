@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ec454c308a79b340e2c416a1d8ad428",
+    "content-hash": "8db2890c569e73ec493250a7845eb7fc",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -1875,64 +1875,6 @@
                 "whoops"
             ],
             "time": "2020-06-14T09:00:00+00:00"
-        },
-        {
-            "name": "flagrow/mason",
-            "version": "0.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/flagrow/mason.git",
-                "reference": "50b7050edd9f2e3d317caf70909f72d7a8c93c52"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/flagrow/mason/zipball/50b7050edd9f2e3d317caf70909f72d7a8c93c52",
-                "reference": "50b7050edd9f2e3d317caf70909f72d7a8c93c52",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.8"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "Mason",
-                    "icon": {
-                        "name": "fas fa-dungeon",
-                        "backgroundColor": "#f4f4f4",
-                        "color": "#5f4bb6"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/7028"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Flagrow\\Mason\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Clark Winkelmann",
-                    "email": "clark.winkelmann@gmail.com",
-                    "homepage": "https://clarkwinkelmann.com/"
-                }
-            ],
-            "description": "Add custom fields to discussions",
-            "keywords": [
-                "custom-fields",
-                "discussion",
-                "extension",
-                "flagrow",
-                "flarum"
-            ],
-            "abandoned": "fof/mason",
-            "time": "2019-05-04T20:01:49+00:00"
         },
         {
             "name": "flagrow/sitemap",
@@ -4015,6 +3957,66 @@
                 "flarum"
             ],
             "time": "2020-05-04T11:52:44+00:00"
+        },
+        {
+            "name": "fof/mason",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/mason.git",
+                "reference": "e326999be698c1b251a2ca068a93dbf26b6a08d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/mason/zipball/e326999be698c1b251a2ca068a93dbf26b6a08d3",
+                "reference": "e326999be698c1b251a2ca068a93dbf26b6a08d3",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.8 <0.1.0-beta.14"
+            },
+            "replace": {
+                "flagrow/mason": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Mason",
+                    "icon": {
+                        "name": "fas fa-dungeon",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/7028"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Mason\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Add custom fields to discussions",
+            "keywords": [
+                "custom-fields",
+                "discussion",
+                "extension",
+                "flagrow",
+                "flarum"
+            ],
+            "time": "2020-08-04T23:36:05+00:00"
         },
         {
             "name": "fof/masquerade",
