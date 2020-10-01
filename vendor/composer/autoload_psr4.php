@@ -119,7 +119,7 @@ return array(
     'FoF\\Split\\' => array($vendorDir . '/fof/split/src'),
     'FoF\\Spamblock\\' => array($vendorDir . '/fof/spamblock/src'),
     'FoF\\SocialProfile\\' => array($vendorDir . '/fof/socialprofile/src'),
-    'FoF\\Sitemap\\' => array($vendorDir . '/flagrow/sitemap/src'),
+    'FoF\\Sitemap\\' => array($vendorDir . '/fof/sitemap/src'),
     'FoF\\ShareSocial\\' => array($vendorDir . '/fof/share-social/src'),
     'FoF\\SecureHttps\\' => array($vendorDir . '/fof/secure-https/src'),
     'FoF\\Reactions\\' => array($vendorDir . '/fof/reactions/src'),

@@ -768,7 +768,7 @@ class ComposerStaticInitd9b75e2506565f04eac638637df73830
         ),
         'FoF\\Sitemap\\' => 
         array (
-            0 => __DIR__ . '/..' . '/flagrow/sitemap/src',
+            0 => __DIR__ . '/..' . '/fof/sitemap/src',
         ),
         'FoF\\ShareSocial\\' => 
         array (

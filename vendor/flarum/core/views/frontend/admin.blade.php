@@ -57,7 +57,14 @@
     <hr/>
 
     <p id="tip" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px;"></p>
-    <p id="news" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px; border: 1px solid orange; border-radius: 10px;">What's new?<br/><a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1579" target="_blank"><strong>25/09/2020 - Flarum Categories & Discussion Templates got removed</strong></a></p>
+    <p id="news" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px; border: 1px solid orange; border-radius: 10px;">
+        <span style="font-size: 1.1rem; font-weight: 800; text-decoration: underline;">What's new?</span>
+        <br/>
+        <br/>
+        <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1588" target="_blank"><strong>27/09/2020 - Fixed 404 favicon.ico error & migrated Flagrow Sitemap & Mason</strong></a>
+        <br/>
+        <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1579" target="_blank"><strong>25/09/2020 - Flarum Categories & Discussion Templates got removed</strong></a>
+    </p>
     <br/>
     <script>
         function nextTip() {
