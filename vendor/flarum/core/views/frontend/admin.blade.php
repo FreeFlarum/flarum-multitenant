@@ -37,7 +37,7 @@
     </main>
 
 </div>
-<!-- FreeFlarum Start - Randomly generated tips -->
+<!-- FreeFlarum Start - Randomly generated tips & news -->
 <footer id="admin-footer">
     <!-- 
         I tried making it as responsive as possible, trust me, it can't be better. It can never be placed in the right sidebar, and it can never be
@@ -56,14 +56,14 @@
 
     <hr/>
 
-    <p id="tip" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px;"></p>
+    <p id="tip" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px;">Loading tip...</p>
     <p id="news" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px; border: 1px solid orange; border-radius: 10px;">
         <span style="font-size: 1.1rem; font-weight: 800; text-decoration: underline;">What's new?</span>
         <br/>
         <br/>
-        <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1588" target="_blank"><strong>27/09/2020 - Fixed 404 favicon.ico error & migrated Flagrow Sitemap & Mason</strong></a>
+        <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1609" target="_blank"><strong style="color: red;">16/10/2020 - FreeFlarum mail service is broken</strong></a>
         <br/>
-        <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1579" target="_blank"><strong>25/09/2020 - Flarum Categories & Discussion Templates got removed</strong></a>
+        <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1608" target="_blank">11/10/2020 - Terms of Use updated</a>
     </p>
     <br/>
     <script>
@@ -78,12 +78,14 @@
             'Are you lost? <a href="https://freeflarum.com/docs" target="_blank">Check out the documentation</a>!',
             'Want an inspiration on how to build your community? <a href="https://www.freeflarum.com/docs/how-to/basics/personalization/" target="_blank">Read this personalization guide</a>!',
             'Have you checked out our <a href="https://discuss.flarum.org/d/7585" target="_blank">official FreeFlarum thread at Discuss</a>?',
-            'Want to expand your forum\'s functionality? Use <a href="#/extensions">extensions</a>!'
+            'Want to expand your forum\'s functionality? Use <a href="#/extensions">extensions</a>!',
+             'You may pick one between the two available FreeFlarum domains, or use your own at your <a href="https://freeflarum.com/settings" target="_blank">forum settings</a>!'
           ];
           var r = Math.floor(Math.random() * tips.length);
             document.getElementById("tip").innerHTML = "<strong>Tip:</strong> " + tips[r];
           }
         nextTip();
+        window.addEventListener("hashchange", nextTip(), false);
     </script>
 </footer>
 <!-- FreeFlarum End -->
