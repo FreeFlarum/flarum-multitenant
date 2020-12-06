@@ -1,0 +1,10 @@
+nearata-minecraft-avatars:
+  forum:
+    avatar_changed: Dein Avatar wurde gespeichert.
+    use_button: Minecraft Avatar verwenden
+    change_button: Minecraft Avatar ändern
+    dismiss_button: OK
+    help_text: Minecraft Nutzername oder UUID. Zum entfernen leer lassen.
+    title: Minecraft Avatar
+    submit_button: Änderungen speichern
+    username_uuid_not_valid: Ungültiger Nutzername oder UUID.

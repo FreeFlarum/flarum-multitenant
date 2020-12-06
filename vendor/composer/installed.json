@@ -7682,6 +7682,57 @@
             "install-path": "../kakifrucht/flarum-de"
         },
         {
+            "name": "kakifrucht/flarum-de-extended",
+            "version": "0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kakifrucht/flarum-de-extended.git",
+                "reference": "7641db43bd7686500b33e184bb117550f696c1e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kakifrucht/flarum-de-extended/zipball/7641db43bd7686500b33e184bb117550f696c1e4",
+                "reference": "7641db43bd7686500b33e184bb117550f696c1e4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.14"
+            },
+            "time": "2020-11-20T02:01:12+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Deutsch Extended",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "de",
+                    "title": "Deutsch"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "German language pack for third-party Flarum extensions.",
+            "homepage": "https://github.com/Kakifrucht/flarum-de-extended",
+            "keywords": [
+                "locale"
+            ],
+            "support": {
+                "issues": "https://github.com/Kakifrucht/flarum-de-extended/issues",
+                "source": "https://github.com/Kakifrucht/flarum-de-extended"
+            },
+            "install-path": "../kakifrucht/flarum-de-extended"
+        },
+        {
             "name": "laminas/laminas-diactoros",
             "version": "1.8.7p2",
             "version_normalized": "1.8.7.0-patch2",

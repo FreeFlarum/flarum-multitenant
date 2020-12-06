@@ -1,0 +1,39 @@
+fof-username-request:
+  admin:
+    permissions:
+      start: Änderung des Nutzernamens anfordern
+      moderate: Nutzernamen Änderungen bewilligen
+  forum:
+    action:
+      title: => fof-username-request.forum.results.title
+      help_text: Der Nutzername sollte dem Spieler zuordenbar sein und darf nicht die Forenregeln brechen.
+      decision_title: Entscheidung
+      approval_label: Akzeptieren
+      rejected_label: Ablehnen
+      submit_button: Absenden
+      reason_title: Grund der Ablehnung
+      success: Entscheidung abgeschickt.
+      name: '{username} hat die Änderung des Nutzernamens zu "{newUsername}" angefordert'
+    results:
+      title: Nutzernamen ändern
+      approved: 'Deine gewünschte Änderung des Nutzernamens wurde akzeptiert'
+      new_username: 'Dein Nutzername lautet nun {username}'
+      rejected: 'Die gewünschte Änderung des Nutzernamens wurde abgelehnt'
+      reason: 'Grund: <i>"{reason}"</i>.'
+      resubmit: Du kannst gerne weitere Anfragen stellen.
+    request:
+      title: => fof-username-request.forum.results.title
+      current_request: Du hast bereits eine offene Anfrage deinen Nutzernamen zu "{username}" zu ändern. Du kannst deine Anfrage entweder aktualisieren oder löschen.
+      submit_button: Anfrage absenden
+      delete_button: Anfrage löschen
+      confirmation_message: Dein Änderungswunsch wurde abgeschickt, er wird in der Regel innerhalb von 24 Stunden bearbeitet.
+      dismiss_button: => core.ref.okay
+      deleted: Deine Anfrage wurde gelöscht.
+    account_label: Nutzernamen ändern
+    profile_link: Alte Nutzernamen
+    dropdown:
+      empty_text: Aktuell gibt es keine offenen Anfragen, den Nutzernamen zu ändern.
+      tooltip: => fof-username-request.forum.dropdown.title
+      title: Nutzernamen-Änderungswünsche
+      item_text: "{username} hat die Änderung seines Nutzernamens angefordert"
+      exerpt: "Angeforderter Name: {requestedUsername}"

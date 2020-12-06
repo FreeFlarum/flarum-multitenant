@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab278c834a88599a6948c35c2f85c7c3",
+    "content-hash": "907eea6754c8ec4b6388f51ca52623ca",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -7516,6 +7516,54 @@
                 "source": "https://github.com/Kakifrucht/flarum-de"
             },
             "time": "2020-11-18T03:53:43+00:00"
+        },
+        {
+            "name": "kakifrucht/flarum-de-extended",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kakifrucht/flarum-de-extended.git",
+                "reference": "7641db43bd7686500b33e184bb117550f696c1e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kakifrucht/flarum-de-extended/zipball/7641db43bd7686500b33e184bb117550f696c1e4",
+                "reference": "7641db43bd7686500b33e184bb117550f696c1e4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.14"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Deutsch Extended",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "de",
+                    "title": "Deutsch"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "German language pack for third-party Flarum extensions.",
+            "homepage": "https://github.com/Kakifrucht/flarum-de-extended",
+            "keywords": [
+                "locale"
+            ],
+            "support": {
+                "issues": "https://github.com/Kakifrucht/flarum-de-extended/issues",
+                "source": "https://github.com/Kakifrucht/flarum-de-extended"
+            },
+            "time": "2020-11-20T02:01:12+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",

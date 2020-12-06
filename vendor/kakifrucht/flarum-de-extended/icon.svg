@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 640 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.41421;">
+    <g id="flag">
+        <path id="rect171" d="M640.014,479.479L639.623,0L-0.033,0.521L0.358,480L640.014,479.479Z" style="fill:rgb(255,0,0);stroke:black;stroke-width:0.95px;"/>
+        <path id="rect403" d="M639.753,159.825L639.623,0L-0.033,0.521L0.098,160.346L639.753,159.825Z" style="stroke:black;stroke-width:0.95px;"/>
+        <path id="rect135" d="M640.014,479.474L639.883,319.65L0.228,320.171L0.358,479.995L640.014,479.474Z" style="fill:rgb(255,204,0);stroke:black;stroke-width:0.95px;"/>
+        <g transform="matrix(1,0,0,1,203,453.938)">
+            <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:144px;">EXT+</text>
+        </g>
+    </g>
+</svg>

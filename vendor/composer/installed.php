@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'fdff495310364e6847bc1dee83e5b889a31cac0e',
+    'reference' => '385d59690cafef6a578ee1c8e5196a018f776d26',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'fdff495310364e6847bc1dee83e5b889a31cac0e',
+      'reference' => '385d59690cafef6a578ee1c8e5196a018f776d26',
     ),
     'flarum/lang-english' => 
     array (
@@ -1183,6 +1183,15 @@
       array (
       ),
       'reference' => '262f7ef12f6d439a9440dc0ee7e625d5467cf909',
+    ),
+    'kakifrucht/flarum-de-extended' => 
+    array (
+      'pretty_version' => '0.1.2',
+      'version' => '0.1.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7641db43bd7686500b33e184bb117550f696c1e4',
     ),
     'laminas/laminas-diactoros' => 
     array (
