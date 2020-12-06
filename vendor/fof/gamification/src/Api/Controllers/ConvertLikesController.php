@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/gamification.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -13,7 +13,6 @@ namespace FoF\Gamification\Api\Controllers;
 
 use Flarum\Discussion\Discussion;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Flarum\User\AssertPermissionTrait;
 use FoF\Gamification\Gamification;
 use FoF\Gamification\Likes;
 use Laminas\Diactoros\Response\JsonResponse;
@@ -23,8 +22,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class ConvertLikesController implements RequestHandlerInterface
 {
-    use AssertPermissionTrait;
-
     /**
      * @var SettingsRepositoryInterface
      */

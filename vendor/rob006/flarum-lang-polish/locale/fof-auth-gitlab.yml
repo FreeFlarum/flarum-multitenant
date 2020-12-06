@@ -8,6 +8,12 @@ fof-auth-gitlab:
       client_id_label: 'Application ID'
       client_secret_label: Secret
       title: 'FriendsOfFlarum GitLab Login'
+    settings:
+      application_domain_heading: 'Domena aplikacji'
+      application_domain_text: 'Opcjonalny bazowy URL w przypadku własnej instalacji (np. https://gitlab.example.com)'
+      client_id_heading: 'Application ID'
+      client_secret_heading: Secret
+      title: 'FriendsOfFlarum GitLab Login'
   forum:
     log_in:
       with_gitlab_button: 'Zaloguj się za pomocą GitLaba'

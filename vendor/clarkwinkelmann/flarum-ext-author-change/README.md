@@ -26,19 +26,21 @@ You will probably want to edit the data in both places.
 > Watch the video on the Clark writes code channel: [Author part](https://www.youtube.com/watch?v=v89ro_sO0nU), [Date part](https://www.youtube.com/watch?v=uc-itrO-nug).
 > Support me on [Patreon](https://www.patreon.com/clark_writes_code)!
 
-### Installation
+## Installation
 
-```sh
-composer require clarkwinkelmann/flarum-ext-author-change
-```
+    composer require clarkwinkelmann/flarum-ext-author-change
 
-### Updating
+## Support
 
-```sh
-composer update clarkwinkelmann/flarum-ext-author-change
-```
+This extension is under **active maintenance**.
 
-### Links
+Bugfixes and compatibility updates will be published for free as time allows.
+
+You can [contact me](https://clarkwinkelmann.com/flarum) to sponsor additional features.
+
+Support is offered on a "best effort" basis through the Flarum community thread.
+
+## Links
 
 - [GitHub](https://github.com/clarkwinkelmann/flarum-ext-author-change)
 - [Packagist](https://packagist.org/packages/clarkwinkelmann/flarum-ext-author-change)

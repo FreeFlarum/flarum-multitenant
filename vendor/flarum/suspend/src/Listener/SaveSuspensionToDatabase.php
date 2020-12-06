@@ -13,14 +13,12 @@ use DateTime;
 use Flarum\Suspend\Event\Suspended;
 use Flarum\Suspend\Event\Unsuspended;
 use Flarum\Suspend\SuspendValidator;
-use Flarum\User\AssertPermissionTrait;
 use Flarum\User\Event\Saving;
 use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Support\Arr;
 
 class SaveSuspensionToDatabase
 {
-    use AssertPermissionTrait;
-
     /**
      * Validator for limited suspension.
      *
@@ -45,7 +43,7 @@ class SaveSuspensionToDatabase
 
     public function handle(Saving $event)
     {
-        $attributes = array_get($event->data, 'attributes', []);
+        $attributes = Arr::get($event->data, 'attributes', []);
 
         if (array_key_exists('suspendedUntil', $attributes)) {
             $this->validator->assertValid($attributes);
@@ -53,7 +51,7 @@ class SaveSuspensionToDatabase
             $user = $event->user;
             $actor = $event->actor;
 
-            $this->assertCan($actor, 'suspend', $user);
+            $actor->assertCan('suspend', $user);
 
             $user->suspended_until = $attributes['suspendedUntil']
                 ? new DateTime($attributes['suspendedUntil'])

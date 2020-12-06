@@ -15,10 +15,11 @@
     "source": "https://github.com/tankerkiller125/flarum-perspective"
   },
   "require": {
-    "flarum/core": ">=0.1.0-beta.12 <0.1.0-beta.14",
+    "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15",
     "flarum/approval": "^0.1.0-beta.8",
     "flarum/flags": "^0.1.0-beta.9",
-    "stajor/perspectiveapi": "^1.0"
+    "stajor/perspectiveapi": "^1.0",
+    "fof/components": "^0.2.0"
   },
   "autoload": {
     "psr-4": {

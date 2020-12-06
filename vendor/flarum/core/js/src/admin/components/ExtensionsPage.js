@@ -1,13 +1,10 @@
-import Page from './Page';
-import LinkButton from '../../common/components/LinkButton';
+import Page from '../../common/components/Page';
 import Button from '../../common/components/Button';
 import Dropdown from '../../common/components/Dropdown';
-import Separator from '../../common/components/Separator';
 import AddExtensionModal from './AddExtensionModal';
 import LoadingModal from './LoadingModal';
 import ItemList from '../../common/utils/ItemList';
 import icon from '../../common/helpers/icon';
-import listItems from '../../common/helpers/listItems';
 
 export default class ExtensionsPage extends Page {
   view() {
@@ -15,12 +12,14 @@ export default class ExtensionsPage extends Page {
       <div className="ExtensionsPage">
         <div className="ExtensionsPage-header">
           <div className="container">
-            {Button.component({
-              children: app.translator.trans('core.admin.extensions.add_button'),
-              icon: 'fas fa-plus',
-              className: 'Button Button--primary',
-              onclick: () => app.modal.show(new AddExtensionModal()),
-            })}
+            {Button.component(
+              {
+                icon: 'fas fa-plus',
+                className: 'Button Button--primary',
+                onclick: () => app.modal.show(AddExtensionModal),
+              },
+              app.translator.trans('core.admin.extensions.add_button')
+            )}
           </div>
         </div>
 
@@ -75,31 +74,35 @@ export default class ExtensionsPage extends Page {
     if (app.extensionSettings[name]) {
       items.add(
         'settings',
-        Button.component({
-          icon: 'fas fa-cog',
-          children: app.translator.trans('core.admin.extensions.settings_button'),
-          onclick: app.extensionSettings[name],
-        })
+        Button.component(
+          {
+            icon: 'fas fa-cog',
+            onclick: app.extensionSettings[name],
+          },
+          app.translator.trans('core.admin.extensions.settings_button')
+        )
       );
     }
 
     if (!enabled) {
       items.add(
         'uninstall',
-        Button.component({
-          icon: 'far fa-trash-alt',
-          children: app.translator.trans('core.admin.extensions.uninstall_button'),
-          onclick: () => {
-            app
-              .request({
-                url: app.forum.attribute('apiUrl') + '/extensions/' + name,
-                method: 'DELETE',
-              })
-              .then(() => window.location.reload());
+        Button.component(
+          {
+            icon: 'far fa-trash-alt',
+            onclick: () => {
+              app
+                .request({
+                  url: app.forum.attribute('apiUrl') + '/extensions/' + name,
+                  method: 'DELETE',
+                })
+                .then(() => window.location.reload());
 
-            app.modal.show(new LoadingModal());
+              app.modal.show(LoadingModal);
+            },
           },
-        })
+          app.translator.trans('core.admin.extensions.uninstall_button')
+        )
       );
     }
 
@@ -119,13 +122,37 @@ export default class ExtensionsPage extends Page {
       .request({
         url: app.forum.attribute('apiUrl') + '/extensions/' + id,
         method: 'PATCH',
-        data: { enabled: !enabled },
+        body: { enabled: !enabled },
+        errorHandler: this.onerror.bind(this),
       })
       .then(() => {
         if (!enabled) localStorage.setItem('enabledExtension', id);
         window.location.reload();
       });
 
-    app.modal.show(new LoadingModal());
+    app.modal.show(LoadingModal);
+  }
+
+  onerror(e) {
+    // We need to give the modal animation time to start; if we close the modal too early,
+    // it breaks the bootstrap modal library.
+    // TODO: This workaround should be removed when we move away from bootstrap JS for modals.
+    setTimeout(() => {
+      app.modal.close();
+    }, 300); // Bootstrap's Modal.TRANSITION_DURATION is 300 ms.
+
+    if (e.status !== 409) {
+      throw e;
+    }
+
+    const error = e.response.errors[0];
+
+    app.alerts.show(
+      { type: 'error' },
+      app.translator.trans(`core.lib.error.${error.code}_message`, {
+        extension: error.extension,
+        extensions: error.extensions.join(', '),
+      })
+    );
   }
 }

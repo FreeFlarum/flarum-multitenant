@@ -24,7 +24,7 @@ flarum-tags:
       name_placeholder: => flarum-tags.ref.name
       slug_label: Adresa
       submit_button: => core.ref.save_changes
-      title: => flarum-tags.ref.create_tag
+      title: Vytvořit štítek
 
     # These translations are used in the navigation bar.
     nav:
@@ -49,13 +49,19 @@ flarum-tags:
     # These translations are used in the Tags page.
     tags:
       about_tags_text: "Tagy se používají ke kategorizaci diskuzí. Hlavní tagy slouží jako tradiční kategorie na fórech: mohou být uspořádány do dvouúrovňové hierarchie. Vedlejší tagy nemají hierarchii nebo řád a jsou užitečné pro mikro-kategorizaci."
-      create_tag_button: => flarum-tags.ref.create_tag
+      create_primary_tag_button: Vytvořit Hlavní Štítek
+      create_secondary_tag_button: Vytvořit Vedlejší Štítek
       primary_heading: Hlavní štítky
       secondary_heading: Vedlejší štítky
-      settings_button: Nastavení
+      settings_heading: Nastavení
 
   # Translations in this namespace are used by the forum user interface.
   forum:
+
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: Všechny Štítky
+      meta_title_text: => flarum-tags.ref.tags
 
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
@@ -89,9 +95,13 @@ flarum-tags:
       removed_tags_text: "{username} odebral {tagsRemoved}."
       tags_text: "štítek {tags}|štítky {tags}"
 
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "All discussions with the {tag} tag"
+
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
-
+  
     # This translation is displayed in place of the name of a tag that's been deleted.
     deleted_tag_text: Smazaný štítek
 
@@ -101,6 +111,5 @@ flarum-tags:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    create_tag: Vytvořit štítek
     name: Název
     tags: Štítky

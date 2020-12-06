@@ -1,0 +1,23 @@
+flarum-pusher:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện quản trị.
+  admin:
+
+    # Các bản dịch này được sử dụng trong hộp thoại phương thức Cài đặt Pizer.
+    pusher_settings:
+      app_cluster_label: Cụm
+      app_id_label: App ID
+      app_key_label: App Key
+      app_secret_label: App Secret
+      title: Cài đặt đẩy
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện quản trị.
+  forum:
+
+    # Những bản dịch này được sử dụng trong danh sách thảo luận.
+    discussion_list:
+      show_updates_text: "Hiển thị {count} cuộc thảo luận được cập nhật|Hiển thị {count} cuộc thảo luận được cập nhật"

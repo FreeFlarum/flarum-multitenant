@@ -13,10 +13,10 @@ namespace FoF\Byobu\Listeners;
 
 use Flarum\Event\ConfigurePostTypes;
 use FoF\Byobu\Events\AbstractRecipientsEvent;
-use FoF\Byobu\Events\DiscussionMadePrivate;
+use FoF\Byobu\Events\Created;
 use FoF\Byobu\Events\DiscussionMadePublic;
-use FoF\Byobu\Events\DiscussionRecipientRemovedSelf;
-use FoF\Byobu\Events\DiscussionRecipientsChanged;
+use FoF\Byobu\Events\RecipientsChanged;
+use FoF\Byobu\Events\RemovedSelf;
 use FoF\Byobu\Posts\RecipientLeft;
 use FoF\Byobu\Posts\RecipientsModified;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -29,10 +29,10 @@ class CreatePostWhenRecipientsChanged
     public function subscribe(Dispatcher $events)
     {
         $events->listen(ConfigurePostTypes::class, [$this, 'addPostType']);
-        $events->listen(DiscussionMadePrivate::class, [$this, 'whenDiscussionWasTagged']);
+        $events->listen(Created::class, [$this, 'whenDiscussionWasTagged']);
         $events->listen(DiscussionMadePublic::class, [$this, 'whenDiscussionWasTagged']);
-        $events->listen(DiscussionRecipientsChanged::class, [$this, 'whenDiscussionWasTagged']);
-        $events->listen(DiscussionRecipientRemovedSelf::class, [$this, 'whenActorRemovedSelf']);
+        $events->listen(RecipientsChanged::class, [$this, 'whenDiscussionWasTagged']);
+        $events->listen(RemovedSelf::class, [$this, 'whenActorRemovedSelf']);
     }
 
     /**
@@ -49,21 +49,13 @@ class CreatePostWhenRecipientsChanged
      */
     public function whenDiscussionWasTagged(AbstractRecipientsEvent $event)
     {
-        if ($event->oldUsers->isEmpty() && $event->oldGroups->isEmpty()) {
-            return;
-        }
-
         $post = RecipientsModified::reply($event);
 
         $event->discussion->mergePost($post);
     }
 
-    public function whenActorRemovedSelf(DiscussionRecipientRemovedSelf $event)
+    public function whenActorRemovedSelf(RemovedSelf $event)
     {
-        if ($event->oldUsers->isEmpty() && $event->oldGroups->isEmpty()) {
-            return;
-        }
-
         $post = RecipientLeft::reply($event);
 
         $event->discussion->mergePost($post);

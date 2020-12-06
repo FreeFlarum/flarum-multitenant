@@ -11,7 +11,7 @@ clarkwinkelmann-who-read:
       see-subscription: 'Wyświetlanie kto obserwuje'
       see-unread: 'Wyświetlanie kto oznaczył jako nieodczytane'
     settings:
-      hide-when-behind: 'Ukryj użytkowników całkowicie jeśli nie odczytali co najmniej tylu postów'
+      hide-when-behind: 'Ukryj użytkowników całkowicie, jeśli nie odczytali co najmniej tylu postów'
       max-visible: 'Maksymalna liczba użytkowników wyświetlanych przed "czytaj więcej"'
       only-groups: 'Pokaż status odczytania tylko dla użytkowników należących do tych grup'
       show-between-posts: 'Wyświetl pod każdym postem informację, kto go odczytał'

@@ -13,7 +13,7 @@ dotronglong-hide-me:
     modal:
       privacy_anonymous_info: 'Wyświetlaj jako użytkownik anonimowy. Wciąż będziesz mógł edytować swoje posty.'
       privacy_anonymous_label: Anonimowa
-      privacy_label: 'Jak wyświetlać twoją tożsamość?'
+      privacy_label: 'Jak wyświetlać Twoją tożsamość?'
       privacy_public_info: 'Twoja tożsamość będzie widoczna dla wszystkich.'
       privacy_public_label: Publiczna
       submit: Zapisz

@@ -27,26 +27,21 @@
                 background: #e8ecf3;
             }
         </style>
-@if ($forumStyle !== '')
         <style>
             {!! $forumStyle !!}
         </style>
-@endif
     </head>
-</html>
-<body>
+    <body>
     <div class="header">
         <div class="content">
-            <a href="{{ $baseUrl }}">{{ $settings->get('forum_title') }}</a>
+            <a href="{{ $url->to('forum')->base() }}">{{ $settings->get('forum_title') }}</a>
         </div>
     </div>
     <div class="content">
         <div class="info">
             <p>Hey {!! $user->display_name !!}!</p>
 
-            <p>{!! $blueprint->reply->user->username !!} replied to your post (#{!! $blueprint->post->number !!}) in {!! $blueprint->post->discussion->title !!}.</p>
-
-            <p>{!! app()->url() !!}/d/{!! $blueprint->reply->discussion_id !!}/{!! $blueprint->reply->number !!}</p>
+            <p><a href="{{ $url->to('forum')->route('user', ['username' => $blueprint->reply->user->username]) }}">{!! $blueprint->reply->user->username !!}</a> replied to your post (#{!! $blueprint->post->number !!}) in <a href="{{ $url->to('forum')->route('discussion', ['id' => $blueprint->post->discussion_id, 'near' => $blueprint->reply->number]) }}">{!! $blueprint->post->discussion->title !!}</a>.</p>
 
             ---
 
@@ -59,7 +54,8 @@
     </div>
     <div class="footer">
         <div class="content">
-            <p>Sent from {{ $settings->get('forum_title') }} using the Pretty Mail extension</p>
+            <p>Sent from {{ $settings->get('forum_title') }} using FoF Pretty Mail</p>
         </div>
     </div>
-</body>
+    </body>
+</html>

@@ -7,6 +7,7 @@
 
 namespace FoF\PrettyMail\Overrides;
 
+use Flarum\Http\UrlGenerator;
 use Flarum\Notification\MailableInterface;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\User;
@@ -14,7 +15,9 @@ use FoF\PrettyMail\BladeCompiler;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Contracts\View\Factory as View;
 use Illuminate\Mail\Message;
+use Illuminate\Support\Str;
 use s9e\TextFormatter\Bundles\Fatdown;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class NotificationMailer extends \Flarum\Notification\NotificationMailer
 {
@@ -28,6 +31,8 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
      */
     protected $settings;
 
+    protected $url;
+
     /**
      * Flarum assets directory, to find out where the css is.
      *
@@ -35,12 +40,13 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
      */
     protected $assets_dir = (__DIR__.'/../../../../public/assets/');
 
-    public function __construct(Mailer $mailer, View $view, SettingsRepositoryInterface $settings)
+    public function __construct(Mailer $mailer, View $view, SettingsRepositoryInterface $settings, TranslatorInterface $translator, UrlGenerator $url)
     {
-        parent::__construct($mailer);
+        parent::__construct($mailer, $translator);
 
         $this->view = $view;
         $this->settings = $settings;
+        $this->url = $url;
     }
 
     /**
@@ -57,7 +63,7 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
             return;
         }
 
-        if (starts_with($viewName, 'flarum')) {
+        if (Str::startsWith($viewName, 'flarum')) {
             $blade = [];
             preg_match("/\.(.*)$/", $viewName, $blade);
 
@@ -71,7 +77,8 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
         $data = [
             'user'       => $user,
             'blueprint'  => $blueprint,
-            'baseUrl'    => app()->url(),
+            'baseUrl'    => $this->url->to('forum')->base(), // $baseUrl property is deprecated, to be replaced soley by $url. Provided as compatability for now.
+            'url'        => $this->url,
             'forumStyle' => isset($file) ? file_get_contents($this->assets_dir.reset($file)) : '',
             'settings'   => $this->settings,
         ];
@@ -94,7 +101,7 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
             $view,
             function (Message $message) use ($blueprint, $user) {
                 $message->to($user->email, $user->username)
-                    ->subject($blueprint->getEmailSubject());
+                    ->subject($blueprint->getEmailSubject($this->translator));
             }
         );
     }

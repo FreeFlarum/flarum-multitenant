@@ -1,0 +1,64 @@
+fof-oauth:
+  admin:
+    settings:
+      title: FriendsOfFlarum OAuth
+
+      only_icons_label: Prikazuju se samo ikone gumba za prijavu (alternativni izgled)
+
+      providers:
+        callback_url_text: Ako je neophodno, postavi callback URL na {url}.
+
+        discord:
+          description: Izradite aplikaciju na {link}. Dodajte URL za preusmjeravanje na OAuth2 tab.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        facebook:
+          description: Izradite aplikaciju na {link}.
+
+          app_id_label: => fof-oauth.ref.settings.app_id
+          app_secret_label: => fof-oauth.ref.settings.app_secret
+
+        github:
+          description: Stvorite aplikaciju OAuth na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        gitlab:
+          description: Stovrite aplikaciju na {link}. Dajte aplikaciji <code>read_user</code> scope.
+
+          client_id_label: => fof-oauth.ref.settings.app_id
+          client_secret_label: => fof-oauth.ref.settings.app_secret
+          domain_label: GitLab Domain
+
+        twitter:
+          description: Izradite aplikaciju na {link}. Morat ćete postaviti URL Uslovi korištenja i URL pravila privatnosti. Obavezno dodajte dopuštenje zahtjeva email-a.
+
+          api_key_label: API Key
+          api_secret_label: API Secret
+
+  forum:
+    log_in:
+      with_button: Prijavi se putem {provider}
+
+    error:
+      bad_verification_code: Nevažeći ili istekao token potvrde. Molim te pokušaj ponovno.
+      invalid_state: Nevaljano stanje. Molim te pokušaj ponovno.
+
+  lib:
+    providers:
+      discord: Discord
+      facebook: Facebook
+      github: GitHub
+      gitlab: GitLab
+      twitter: Twitter
+
+  ref:
+    settings:
+      app_id: App ID
+      app_secret: App Secret
+
+      client_id: Client ID
+      client_secret: Client Secret

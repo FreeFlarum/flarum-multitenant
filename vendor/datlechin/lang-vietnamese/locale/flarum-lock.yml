@@ -1,0 +1,37 @@
+flarum-lock:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện quản trị.
+  admin:
+
+    # Các bản dịch này được sử dụng trong trang Quyền của giao diện quản trị viên.
+    permissions:
+      lock_discussions_label: Khóa thảo luận
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+
+    # Các bản dịch này được hiển thị dưới dạng chú giải công cụ cho phù hiệu thảo luận.
+    badge:
+      locked_tooltip: Đã khóa
+
+    # Các bản dịch này được sử dụng bởi các nút điều khiển thảo luận.
+    discussion_controls:
+      lock_button: Khóa
+      unlock_button: Mở khóa
+
+    # Các bản dịch này được sử dụng bởi danh sách Thông báo, a.k.a. "chuông".
+    notifications:
+      discussion_locked_text: "{username} đã khóa"
+
+    # Các bản dịch này được hiển thị giữa các bài viết trong luồng bài viết.
+    post_stream:
+      discussion_locked_text: "{username} đã khóa cuộc thảo luận."
+      discussion_unlocked_text: "{username} đã mở khóa cuộc thảo luận."
+
+    # Các bản dịch này được sử dụng trong trang Cài đặt.
+    settings:
+      notify_discussion_locked_label: Ai đó khóa một cuộc thảo luận tôi đã đăng

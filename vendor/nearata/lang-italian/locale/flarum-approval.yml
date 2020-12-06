@@ -1,21 +1,18 @@
 flarum-approval:
-
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
-
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      approve_posts_label: Approvare messaggi
-      reply_without_approval_label: Rispondere alle discussioni senza l'approvazione
-      start_discussions_without_approval_label: Iniziare discussioni senza l'approvazione
+      approve_posts_label: Approvare i messaggi
+      reply_without_approval_label: Rispondere alle discussioni senza previa approvazione
+      start_discussions_without_approval_label: Iniziare discussioni senza previa approvazione
 
   # Translations in this namespace are used by the forum user interface.
   forum:
-
     # These translations are displayed as tooltips for discussion badges.
     badge:
       awaiting_approval_tooltip: => flarum-approval.ref.awaiting_approval

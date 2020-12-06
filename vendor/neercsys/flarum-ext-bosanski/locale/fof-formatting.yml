@@ -7,3 +7,4 @@ fof-formatting:
       HTMLEntities: Koristite HTML entitete
       MediaEmbed: Ugradite sadržaj s dozvoljenih web mjesta
       PipeTables: ASCII-stajl tabela
+      TaskLists: GitHub/GitLab flavored task lists

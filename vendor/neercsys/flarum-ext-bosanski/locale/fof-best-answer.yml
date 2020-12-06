@@ -23,6 +23,7 @@ fof-best-answer:
 
     notification:
       best_answer_in_discussion: "{username} je u ovoj diskusiji postavio/la najbolji odgovor"
+      best_answer_set_in_discussion_email: Postavljen je najbolji odgovor
       content: Molimo odaberite najbolji odgovor ako je na vaše pitanje odgovoreno
       awarded: Vaš je odgovor postavljen kao najbolji odgovor od strane {username}
       awarded_email: Vaš je post postavljen kao najbolji odgovor od strane korisnika

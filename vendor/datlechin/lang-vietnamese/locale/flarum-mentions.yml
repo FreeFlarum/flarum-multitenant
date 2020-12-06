@@ -1,0 +1,37 @@
+flarum-mentions:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+
+    # Các bản dịch này được sử dụng bởi nhà soạn nhạc (trả lời chức năng tự động hoàn thành).
+    composer:
+      mention_tooltip: Đề cập đến người dùng hoặc bài viết
+      reply_to_post_text: "Trả lời #{number}"
+
+    # Các bản dịch này được sử dụng bởi danh sách Thông báo, a.k.a. "chuông".
+    notifications:
+      others_text: => core.ref.some_others
+      post_mentioned_text: "{username} đã trả lời bài viết của bạn"  # Có thể được số nhiều để đồng ý với số lượng người dùng!
+      user_mentioned_text: "{username} đã đề cập đến bạn"
+
+    # Các bản dịch này được hiển thị bên dưới bài viết cá nhân.
+    post:
+      mentioned_by_self_text: "{users} đã trả lời."  # Có thể được số nhiều để đồng ý với số lượng người dùng!
+      mentioned_by_text: "{users} đã trả lời"       # Có thể được số nhiều để đồng ý với số lượng người dùng!
+      others_text: => core.ref.some_others
+      quote_button: Trích dẫn
+      reply_link: => core.ref.reply
+      you_text: => core.ref.you
+
+    # Các bản dịch này được sử dụng trong trang Cài đặt.
+    settings:
+      notify_post_mentioned_label: Ai đó trả lời một trong những bài viết của tôi
+      notify_user_mentioned_label: Ai đó đề cập đến tôi trong một bài viết
+
+    # Các bản dịch này được sử dụng trong trang hồ sơ người dùng và cửa sổ bật lên hồ sơ.
+    user:
+      mentions_link: Đề cập

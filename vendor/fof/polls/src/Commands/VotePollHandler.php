@@ -11,8 +11,8 @@
 
 namespace FoF\Polls\Commands;
 
-use Flarum\User\AssertPermissionTrait;
 use Flarum\User\Exception\PermissionDeniedException;
+use Flarum\User\User;
 use FoF\Polls\Events\PollWasVoted;
 use FoF\Polls\Poll;
 use FoF\Polls\PollVote;
@@ -22,8 +22,6 @@ use Pusher\Pusher;
 
 class VotePollHandler
 {
-    use AssertPermissionTrait;
-
     /**
      * @var Dispatcher
      */
@@ -40,13 +38,15 @@ class VotePollHandler
     public function handle(VotePoll $command)
     {
         /**
-         * @var Poll
+         * @var User
          */
         $actor = $command->actor;
         $poll = Poll::findOrFail($command->pollId);
         $data = $command->data;
 
         $optionId = Arr::get($data, 'optionId');
+
+        $actor->assertCan('votePolls');
 
         if ($poll->hasEnded()) {
             throw new PermissionDeniedException();
@@ -66,7 +66,7 @@ class VotePollHandler
                 'option_id' => $optionId,
             ]);
 
-            app('events')->fire(new PollWasVoted($actor, $poll, $vote, $vote !== null));
+            app('events')->dispatch(new PollWasVoted($actor, $poll, $vote, $vote !== null));
 
             $this->pushNewVote($vote);
         }

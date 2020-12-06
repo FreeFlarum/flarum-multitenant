@@ -7,6 +7,7 @@ use Illuminate\Contracts\View\Factory;
 use SychO\ProfileCover\Controller;
 use SychO\ProfileCover\Listener\UserCoverRelationship;
 use SychO\ProfileCover\Provider\CoverServiceProvider;
+use SychO\ProfileCover\Access\UserPolicy;
 
 return [
     (new Extend\Frontend('forum'))
@@ -27,12 +28,9 @@ return [
         ->setPrefix('sycho-profile-cover.')
         ->addKeys(['max_size']),
 
-    function (Factory $view) {
-        $view->addNamespace('profile-cover', __DIR__.'/views');
-    },
-
     function(Dispatcher $event) {
         $event->subscribe(UserCoverRelationship::class);
+        $event->subscribe(UserPolicy::class);
     },
 
     function (Application $app) {

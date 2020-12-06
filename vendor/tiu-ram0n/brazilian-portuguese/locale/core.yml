@@ -1,3 +1,4 @@
+---
 core:
   admin:
     add_extension:
@@ -68,7 +69,6 @@ core:
       delete_button: Excluir grupo
       delete_confirmation: Tem certeza de que deseja excluir este grupo? Os membros
         do grupo NÃO serão excluídos.
-      hide_label: Ocultar no fórum
       icon_label: "=> core.ref.icon"
       icon_text: "=> core.ref.icon_text"
       name_label: Nome
@@ -76,6 +76,7 @@ core:
       singular_placeholder: Singular (por exemplo, Mod)
       submit_button: "=> core.ref.save_changes"
       title: Criar Grupo
+      hide_label: Ocultar no fórum
     edit_header:
       customize_text: "=> core.ref.custom_header_text"
       submit_button: "=> core.ref.save_changes"
@@ -87,26 +88,31 @@ core:
       from_label: Remetente
       heading: "=> core.ref.email"
       mail_encryption_label: Criptografia
-      mailgun_heading: Configurações de Mailgun
       mail_host_label: Host
       mail_mailgun_domain_label: Dominio
       mail_mailgun_region_label: Região
       mail_mailgun_secret_label: Secret key
-      mail_mandrill_secret_label: Chave secreta
       mail_password_label: "=> core.ref.password"
       mail_port_label: Porta
-      mail_ses_key_label: Chave
-      mail_ses_region_label: Região
-      mail_ses_secret_label: Secret
       mail_username_label: "=> core.ref.username"
-      mandrill_heading: Configurações do Mandrill
-      not_sending_message: Flarum atualmente não envia e-mails. Isso pode ocorrer
-        devido ao driver selecionado ou a erros de configuração.
-      ses_heading: Configurações do SES
+      mailgun_heading: Configurações de Mailgun
       smtp_heading: Configurações SMTP
       submit_button: "=> core.ref.save_changes"
       text: Configure o driver, as configurações e os endereços que seu fórum usará
         para enviar e-mail's.
+      not_sending_message: Flarum atualmente não envia e-mails. Isso pode ocorrer
+        devido ao driver selecionado ou a erros de configuração.
+      send_test_mail_button: Enviar
+      send_test_mail_heading: Enviar teste de e-mail
+      send_test_mail_success: Teste de e-mail enviado com sucesso!
+      send_test_mail_text: Isso enviará um e-mail usando a configuração acima para
+        o seu e-mail, {email}.
+      mail_mandrill_secret_label: Chave secreta
+      mail_ses_secret_label: Secret
+      mail_ses_region_label: Região
+      ses_heading: Configurações do SES
+      mail_ses_key_label: Chave
+      mandrill_heading: Configurações do Mandrill
     extensions:
       add_button: Adicionar extensão
       settings_button: "=> core.ref.settings"
@@ -142,17 +148,17 @@ core:
       moderate_heading: Moderar
       new_group_button: Novo grupo
       participate_heading: Participar
-      post_without_throttle_label: Responda várias vezes sem esperar
       read_heading: Ler
       rename_discussions_label: Renomear discussões
       reply_to_discussions_label: Responder às discussões
       sign_up_label: Inscrever-se
       start_discussions_label: Iniciar discussões
       view_discussions_label: Ver discussões
-      view_hidden_groups_label: Ver emblemas de grupo ocultos
       view_last_seen_at_label: Ver a última vez que o usuário visualizou
       view_post_ips_label: Exibir endereços IP da postagem
       view_user_list_label: Ver lista de usuários
+      post_without_throttle_label: Responda várias vezes sem esperar
+      view_hidden_groups_label: Ver emblemas de grupo ocultos
     permissions_controls:
       allow_indefinitely_button: Indefinidamente
       allow_some_minutes_button: Por {count} minuto | Por {count} minutos
@@ -167,38 +173,10 @@ core:
     upload_image:
       remove_button: "=> core.ref.remove"
       upload_button: Escolha uma imagem ...
-  api:
-    invalid_username_message: O nome de usuário pode conter apenas letras, números
-      e traços.
-  email:
-    activate_account:
-      body: |
-        Olá {username}!
-        Alguém (esperamos que você!) se cadastrou em {forum} com este endereço de e-mail.
-        Se foi você mesmo, basta clicar no link abaixo e sua conta será ativada:
-        {url}
-        Se você não se cadastrou, por favor ignore este e-mail.
-      subject: Ative sua nova conta
-    confirm_email:
-      body: |
-        Olá {username}!
-        Alguém (esperamos que você!) alterou o endereço de e-mail em {forum} para este aqui.
-        Se foi você mesmo, basta clicar no link abaixo e seu e-mail será confirmado:
-        {url}
-        Se você não solicitou isso, por favor ignore este e-mail.
-      subject: Confirme seu novo endereço de e-mail
-    reset_password:
-      body: |
-        Olá {username}!
-        Alguém (esperamos que você!) enviou uma solicitação de redefinição de senha para sua conta em {forum}.
-        Se foi você mesmo, clique no link abaixo para redefinir sua senha:
-        {url}
-        Se você não quiser alterar sua senha, basta ignorar este e-mail e nada irá acontecer.
-      subject: "=> core.ref.reset_your_password"
   forum:
     change_email:
-      confirmation_message: "=> core.ref.confirmation_email_sent"
       confirm_password_placeholder: "=> core.ref.confirm_password"
+      confirmation_message: "=> core.ref.confirmation_email_sent"
       dismiss_button: "=> core.ref.okay"
       incorrect_password_message: A senha que você digitou está incorreta.
       submit_button: "=> core.ref.save_changes"
@@ -215,7 +193,7 @@ core:
       minimize_tooltip: Minimizar
       preview_tooltip: Visualizar
     composer_discussion:
-      body_placeholder: Escrever um post ...
+      body_placeholder: Escrever um post...
       discard_confirmation: Você não postou sua discussão. Deseja descartá-la?
       submit_button: Iniciar Discussão
       title: "=> core.ref.start_a_discussion"
@@ -224,6 +202,8 @@ core:
       discard_confirmation: Você não salvou suas alterações. Deseja descartá-las?
       post_link: Postagem nº{number} em {discussion}
       submit_button: "=> core.ref.save_changes"
+      edited_message: Sua edição foi feita.
+      view_button: "=> core.ref.view"
     composer_reply:
       body_placeholder: "=> core.ref.write_a_reply"
       discard_confirmation: Você não postou sua resposta. Deseja descartá-la?
@@ -285,6 +265,7 @@ core:
       mark_all_as_read_tooltip: "=> core.ref.mark_all_as_read"
       refresh_tooltip: Atualizar
       start_discussion_button: "=> core.ref.start_a_discussion"
+      meta_title_text: "=> core.ref.all_discussions"
     index_sort:
       latest_button: Mais recentes
       newest_button: Mais novas
@@ -307,18 +288,18 @@ core:
       mark_as_read_tooltip: Marcar como Lido
       title: "=> core.ref.notifications"
       tooltip: "=> core.ref.notifications"
-    post_controls:
-      delete_button: "=> core.ref.delete"
-      delete_confirmation: Tem certeza de que deseja excluir esta postagem para sempre?
-        Essa ação não pode ser desfeita.
-      delete_forever_button: "=> core.ref.delete_forever"
-      edit_button: "=> core.ref.edit"
-      hide_confirmation: Tem certeza de que deseja excluir esta postagem?
-      restore_button: "=> core.ref.restore"
     post:
       edited_text: Editado
       edited_tooltip: "{username} editou {ago}"
       number_tooltip: Postagem nº{number}
+    post_controls:
+      delete_button: "=> core.ref.delete"
+      delete_forever_button: "=> core.ref.delete_forever"
+      edit_button: "=> core.ref.edit"
+      restore_button: "=> core.ref.restore"
+      delete_confirmation: Tem certeza de que deseja excluir esta postagem para sempre?
+        Essa ação não pode ser desfeita.
+      hide_confirmation: Tem certeza de que deseja excluir esta postagem?
     post_scrubber:
       now_link: agora
       original_post_link: Post Original
@@ -382,15 +363,6 @@ core:
       alert_message: "=> core.ref.confirmation_email_sent"
       resend_button: Reenviar e-mail de confirmação
       sent_message: Enviar
-  group:
-    admin: Administrador
-    admins: Administradores
-    guest: Convidado
-    guests: Convidados
-    member: Membro
-    members: Membros
-    mod: Moderador
-    mods: Moderadores
   lib:
     badge:
       hidden_tooltip: Escondido
@@ -401,6 +373,10 @@ core:
       permission_denied_message: Você não tem permissão para fazer isso.
       rate_limit_exceeded_message: Você está indo um pouco rápido demais. Tente novamente
         em alguns segundos.
+      dependent_extensions_message: 'Não é possível desativar {extension} até que
+        as seguintes extensões dependentes sejam desativadas: {extensions}'
+      missing_dependencies_message: 'Não é possível ativar {extension} até que as
+        seguintes dependências sejam ativadas: {extensions}'
     number_suffix:
       kilo_text: K
       mega_text: M
@@ -410,14 +386,85 @@ core:
       two_text: "{first} e {second}"
     username:
       deleted_text: "[excluído]"
+  views:
+    content:
+      javascript_disabled_message: Este site é melhor visualizado em um navegador
+        moderno com JavaScript ativado.
+      load_error_message: Ocorreu um erro ao tentar carregar a versão completa deste
+        site. Tente atualizar essa página para corrigir o erro.
+      loading_text: Carregando...
+    discussion:
+      next_page_button: "=> core.ref.next_page"
+      previous_page_button: "=> core.ref.previous_page"
+    error:
+      csrf_token_mismatch: Você ficou inativo por muito tempo.
+      csrf_token_mismatch_return_link: Volte, para tentar novamente
+      invalid_confirmation_token: Este link de confirmação já foi usado ou é inválido.
+      not_authenticated: Você não tem permissão para acessar esta página. Tente novamente
+        após o login.
+      not_found: A página solicitada não pôde ser encontrada.
+      not_found_return_link: Retornar para {forum}
+      permission_denied: Você não tem permissão para acessar esta página.
+      unknown: Ocorreu um erro ao tentar carregar esta página.
+    index:
+      all_discussions_heading: "=> core.ref.all_discussions"
+      next_page_button: "=> core.ref.next_page"
+      previous_page_button: "=> core.ref.previous_page"
+    log_out:
+      log_out_button: "=> core.ref.log_out"
+      log_out_confirmation: Tem certeza de que deseja sair do {forum}?
+      title: "=> core.ref.log_out"
+    reset_password:
+      confirm_password_label: confirme a nova senha
+      new_password_label: Nova senha
+      submit_button: "=> core.ref.save_changes"
+      title: "=> core.ref.reset_your_password"
+  api:
+    invalid_username_message: O nome de usuário pode conter apenas letras, números
+      e traços.
+  email:
+    activate_account:
+      subject: Ative sua nova conta
+      body: |
+        Olá {username}!
+        Alguém (esperamos que você!) se cadastrou em {forum} com este endereço de e-mail.
+        Se foi você mesmo, basta clicar no link abaixo e sua conta será ativada:
+        {url}
+        Se você não se cadastrou, por favor ignore este e-mail.
+    confirm_email:
+      subject: Confirme seu novo endereço de e-mail
+      body: |
+        Olá {username}!
+        Alguém (esperamos que você!) alterou o endereço de e-mail em {forum} para este aqui.
+        Se foi você mesmo, basta clicar no link abaixo e seu e-mail será confirmado:
+        {url}
+        Se você não solicitou isso, por favor ignore este e-mail.
+    reset_password:
+      subject: "=> core.ref.reset_your_password"
+      body: |
+        Olá {username}!
+        Alguém (esperamos que você!) enviou uma solicitação de redefinição de senha para sua conta em {forum}.
+        Se foi você mesmo, clique no link abaixo para redefinir sua senha:
+        {url}
+        Se você não quiser alterar sua senha, basta ignorar este e-mail e nada irá acontecer.
+    send_test:
+      subject: Teste de e-mail Flarum
+      body: |
+        Olá, {username}!
+
+        Este é um e-mail de teste para confirmar se a configuração de e-mail do Flarum está funcionando corretamente.
+
+        Se foi você, este e-mail significa que sua configuração funciona!
+
+        Se não foi você, ignore este e-mail.
   ref:
     all_discussions: Todas as Discussões
     change_email: Mudar E-mail
     change_password: Mudar Senha
     color: Cor
+    confirm_password: Confirme a Senha
     confirmation_email_sent: Enviámos um e-mail de confirmação para {email}. Se não
       chegar logo, verifique sua pasta de spam.
-    confirm_password: Confirme a Senha
     custom_footer_text: Adicione HTML a ser exibido na parte inferior da página.
     custom_footer_title: Editar rodapé personalizado
     custom_header_text: Adicione HTML a ser exibido na parte superior da página, acima
@@ -455,36 +502,13 @@ core:
     users: Usuários
     write_a_reply: Escreva uma resposta...
     you: Você
-  views:
-    content:
-      javascript_disabled_message: Este site é melhor visualizado em um navegador
-        moderno com JavaScript ativado.
-      load_error_message: Ocorreu um erro ao tentar carregar a versão completa deste
-        site. Tente atualizar essa página para corrigir o erro.
-      loading_text: Carregando...
-    discussion:
-      next_page_button: "=> core.ref.next_page"
-      previous_page_button: "=> core.ref.previous_page"
-    error:
-      csrf_token_mismatch: Você ficou inativo por muito tempo.
-      csrf_token_mismatch_return_link: Volte, para tentar novamente
-      invalid_confirmation_token: Este link de confirmação já foi usado ou é inválido.
-      not_authenticated: Você não tem permissão para acessar esta página. Tente novamente
-        após o login.
-      not_found: A página solicitada não pôde ser encontrada.
-      not_found_return_link: Retornar para {forum}
-      permission_denied: Você não tem permissão para acessar esta página.
-      unknown: Ocorreu um erro ao tentar carregar esta página.
-    index:
-      all_discussions_heading: "=> core.ref.all_discussions"
-      next_page_button: "=> core.ref.next_page"
-      previous_page_button: "=> core.ref.previous_page"
-    log_out:
-      log_out_button: "=> core.ref.log_out"
-      log_out_confirmation: Tem certeza de que deseja sair do {forum}?
-      title: "=> core.ref.log_out"
-    reset_password:
-      confirm_password_label: confirme a nova senha
-      new_password_label: Nova senha
-      submit_button: "=> core.ref.save_changes"
-      title: "=> core.ref.reset_your_password"
+    view: Ver
+  group:
+    admin: Administrador
+    admins: Administradores
+    guest: Convidado
+    guests: Convidados
+    member: Membro
+    members: Membros
+    mod: Moderador
+    mods: Moderadores

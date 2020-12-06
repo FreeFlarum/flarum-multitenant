@@ -11,14 +11,12 @@
 
 namespace FoF\Links\Command;
 
-use Flarum\User\AssertPermissionTrait;
 use FoF\Links\LinkRepository;
 use FoF\Links\LinkValidator;
+use Illuminate\Support\Arr;
 
 class EditLinkHandler
 {
-    use AssertPermissionTrait;
-
     /**
      * @var LinkRepository
      */
@@ -53,12 +51,16 @@ class EditLinkHandler
 
         $link = $this->links->findOrFail($command->linkId, $actor);
 
-        $this->assertAdmin($actor);
+        $actor->assertAdmin();
 
-        $attributes = array_get($data, 'attributes', []);
+        $attributes = Arr::get($data, 'attributes', []);
 
         if (isset($attributes['title'])) {
             $link->title = $attributes['title'];
+        }
+
+        if (isset($attributes['icon'])) {
+            $link->icon = $attributes['icon'];
         }
 
         if (isset($attributes['url'])) {

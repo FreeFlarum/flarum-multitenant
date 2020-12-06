@@ -40,6 +40,8 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Langue par défaut
+      display_name_heading: Nom d’affichage de l’utilisateur
+      display_name_text: Sélectionnez le pilote qui doit être utilisé pour les noms d’affichage des utilisateurs. Par défaut, le nom d’utilisateur est affiché.
       forum_description_heading: Description du forum
       forum_description_text: Affichez un résumé décrivant votre communauté. La description apparaîtra dans la balise Méta et s’affichera dans le résultat des moteurs de recherche.
       forum_title_heading: Titre du forum
@@ -100,17 +102,15 @@ core:
       mail_mailgun_domain_label: Domaine
       mail_mailgun_region_label: Région
       mail_mailgun_secret_label: Clé secrète
-      mail_mandrill_secret_label: Clé secrète
       mail_password_label: => core.ref.password
       mail_port_label: Port
-      mail_ses_key_label: Clé
-      mail_ses_region_label: Région
-      mail_ses_secret_label: Secret
       mail_username_label: => core.ref.username
       mailgun_heading: Paramètres Mailgun
-      mandrill_heading: Paramètres Mandrill
       not_sending_message: Flarum n’envoie actuellement aucun courriel. Cette erreur peut être provoquée par le driver sélectionné ou une mauvaise configuration.
-      ses_heading: Paramètres SES
+      send_test_mail_button: Envoyer
+      send_test_mail_heading: Envoyer le courriel de test
+      send_test_mail_success: "Le courriel de test a été envoyé !"
+      send_test_mail_text: "Cela enverra un courriel qui utilisera la configuration paramétrée ci-dessus à votre adresse de courriel {email}."
       smtp_heading: Paramètres SMTP
       submit_button: => core.ref.okay
       text: Configurez le driver, les paramètres et les adresses que votre forum utilisera pour envoyer les courriels.
@@ -228,8 +228,10 @@ core:
     # These translations are used by the composer when editing a post.
     composer_edit:
       discard_confirmation: "Vous n’avez pas enregistré vos modifications. Souhaitez-vous les abandonner ?"
+      edited_message: Votre modification a été appliquée.
       post_link: "Message #{number} de {discussion}"
       submit_button: => core.ref.okay
+      view_button: => core.ref.view
 
     # These translations are used by the composer when replying to a discussion.
     composer_reply:
@@ -237,7 +239,7 @@ core:
       discard_confirmation: "Vous n’avez pas publié votre réponse. Souhaitez-vous l’abandonner ?"
       posted_message: Votre réponse a été publiée.
       submit_button: Publier la réponse
-      view_button: Consulter
+      view_button: => core.ref.view
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
@@ -300,6 +302,7 @@ core:
       cannot_start_discussion_button: Impossible de démarrer une discussion
       mark_all_as_read_confirmation: "Êtes-vous sûr de vouloir marquer toutes les notifications comme lues ?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      meta_title_text: => core.ref.all_discussions
       refresh_tooltip: Actualiser
       start_discussion_button: => core.ref.start_a_discussion
 
@@ -434,7 +437,9 @@ core:
 
     # These translations are displayed as error messages.
     error:
+      dependent_extensions_message: "Impossible de désactiver {extension}. Veuillez en premier lieu désactiver les extensions dépendantes suivantes : {extensions}"
       generic_message: "Oups ! Quelque chose s’est mal passé. Veuillez actualiser la page puis réessayer."
+      missing_dependencies_message: "Impossible d’activer {extension}. Veuillez en premier lieu activer les dépendances suivantes : {extensions}"
       not_found_message: La ressource que vous souhaitez atteindre est introuvable.
       permission_denied_message: Vous n’avez pas la permission de faire cela.
       rate_limit_exceeded_message: Vous êtes un peu trop rapide. Veuillez réessayer dans quelques secondes.
@@ -544,6 +549,18 @@ core:
         Si vous ne souhaitez pas réinitialiser votre mot de passe, veuillez ignorer ce courriel.
       subject: Réinitialisation de votre mot de passe
 
+    # These translations are used when testing mailing configuration
+    send_test:
+      body: |
+        Bonjour {username} !
+
+        Ceci est un courriel de test qui confirme que la configuration des courriels de Flarum fonctionne correctement.
+
+        Si vous êtes bien à l’origine de cette action, ce courriel confirme que votre configuration est fonctionnelle !
+
+        Si vous n’êtes pas à l’origine de cette action, veuillez ignorer ce courriel.
+      subject: Courriel de test de Flarum
+
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
   ##
@@ -589,6 +606,7 @@ core:
     start_a_discussion: Nouvelle discussion
     username: Nom d’utilisateur
     users: Utilisateurs                          # Referenced by flarum-statistics.yml
+    view: Consulter
     write_a_reply: Rédigez une réponse…
     you: Vous                                    # Referenced by flarum-likes.yml, flarum-mentions.yml
 

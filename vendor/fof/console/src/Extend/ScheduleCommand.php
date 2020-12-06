@@ -4,7 +4,6 @@ namespace FoF\Console\Extend;
 
 use Flarum\Extend\ExtenderInterface;
 use Flarum\Extension\Extension;
-use FoF\Console\Providers\ConsoleProvider;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Container\Container;
 

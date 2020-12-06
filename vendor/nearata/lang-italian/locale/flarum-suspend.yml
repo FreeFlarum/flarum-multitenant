@@ -1,12 +1,10 @@
 flarum-suspend:
-
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
-
     # These translations are used in the Permissions page of the admin interface.
     permissions:
       suspend_users_label: Sospendere gli utenti

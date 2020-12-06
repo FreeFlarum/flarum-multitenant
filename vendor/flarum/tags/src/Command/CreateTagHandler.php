@@ -9,14 +9,13 @@
 
 namespace Flarum\Tags\Command;
 
+use Flarum\Tags\Event\Creating;
 use Flarum\Tags\Tag;
 use Flarum\Tags\TagValidator;
-use Flarum\User\AssertPermissionTrait;
+use Illuminate\Support\Arr;
 
 class CreateTagHandler
 {
-    use AssertPermissionTrait;
-
     /**
      * @var TagValidator
      */
@@ -39,18 +38,18 @@ class CreateTagHandler
         $actor = $command->actor;
         $data = $command->data;
 
-        $this->assertCan($actor, 'createTag');
+        $actor->assertCan('createTag');
 
         $tag = Tag::build(
-            array_get($data, 'attributes.name'),
-            array_get($data, 'attributes.slug'),
-            array_get($data, 'attributes.description'),
-            array_get($data, 'attributes.color'),
-            array_get($data, 'attributes.icon'),
-            array_get($data, 'attributes.isHidden')
+            Arr::get($data, 'attributes.name'),
+            Arr::get($data, 'attributes.slug'),
+            Arr::get($data, 'attributes.description'),
+            Arr::get($data, 'attributes.color'),
+            Arr::get($data, 'attributes.icon'),
+            Arr::get($data, 'attributes.isHidden')
         );
 
-        $parentId = array_get($data, 'relationships.parent.data.id');
+        $parentId = Arr::get($data, 'relationships.parent.data.id');
 
         if ($parentId !== null) {
             $rootTags = Tag::whereNull('parent_id')->whereNotNull('position');
@@ -64,6 +63,8 @@ class CreateTagHandler
                 $tag->position = $position === null ? 0 : $position + 1;
             }
         }
+
+        event(new Creating($tag, $actor, $data));
 
         $this->validator->assertValid($tag->getAttributes());
 

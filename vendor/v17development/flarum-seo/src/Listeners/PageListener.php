@@ -7,6 +7,7 @@ use V17Development\FlarumSeo\Managers\Page;
 use V17Development\FlarumSeo\Managers\Profile;
 use V17Development\FlarumSeo\Managers\QADiscussion;
 use V17Development\FlarumSeo\Managers\Tag;
+use V17Development\FlarumSeo\Extend;
 
 // Flarum classes
 use Flarum\Frontend\Document;
@@ -92,6 +93,9 @@ class PageListener
             $this->discussionType = 1;
         }
 
+        // Initialize SEO extender
+        Extend::init($this);
+
         // Settings debug settings: var_dump($this->settings->all());exit;
     }
 
@@ -115,7 +119,8 @@ class PageListener
         // Check out type of page
         $this->determine();
 
-        // Finish process
+        // TODO: Move finish function back to BeforePageRenders
+        // After PR and release of BETA 14
         $this->finish();
     }
 
@@ -225,7 +230,7 @@ class PageListener
     /**
      * Finish process and output language, meta property tags, canonical urls & Schema.org json
      */
-    private function finish()
+    public function finish()
     {
         // Add language attribute to html tag
         $this->flarumDocument->language = $this->serverRequest->getAttribute('locale');
@@ -363,11 +368,15 @@ class PageListener
      * @param $path
      * @return PageListener
      */
-    public function setUrl($path = '')
+    public function setUrl($path = '', $addApplicationUrl = true)
     {
-        $this->setMetaTag('twitter:url', $this->applicationUrl . $path);
-        $this->setMetaPropertyTag('og:url', $this->applicationUrl . $path);
-        $this->setSchemaJson("url", $this->applicationUrl . $path);
+        if($addApplicationUrl) {
+            $path = $this->applicationUrl . $path;
+        }
+
+        $this->setMetaTag('twitter:url', $path);
+        $this->setMetaPropertyTag('og:url', $path);
+        $this->setSchemaJson("url", $path);
 
         return $this;
     }
@@ -409,13 +418,20 @@ class PageListener
      * Set title
      *
      * @param $title
+     * @param $headline
      * @return PageListener
      */
-    public function setTitle($title)
+    public function setTitle($title, $headline = false)
     {
         $this
             ->setMetaPropertyTag('og:title', $title)
             ->setMetaTag('twitter:title', $title);
+
+        // Set headline
+        if($headline === true)
+        {
+            $this->setSchemaJson("headline", $title);
+        }
 
         return $this;
     }
@@ -436,11 +452,6 @@ class PageListener
             ->setMetaTag('description', $description)
             ->setMetaTag('twitter:description', $description)
             ->setSchemaJson("description", $description);
-
-        if($this->requestType === 'd/')
-        {
-            $this->setSchemaJson("headline", $description);
-        }
 
         return $this;
     }
@@ -474,7 +485,7 @@ class PageListener
         // Check post content is not empty
         if($content !== null) {
             // Read Post content and filter image url
-            $pattern = '/(http.*\.)(jpe?g|png|[tg]iff?|svg)/';
+            $pattern = '/(?<=src=")((http.*?\.)(jpe?g|png|[tg]iff?|svg))(?=")/';
 
             // Use image from post for social media og:image
             if (preg_match_all($pattern, $content, $matches) && count($matches) > 0) {

@@ -1,16 +1,18 @@
-import Page from './Page';
+import Page from '../../common/components/Page';
 import FieldSet from '../../common/components/FieldSet';
 import Button from '../../common/components/Button';
 import Alert from '../../common/components/Alert';
 import Select from '../../common/components/Select';
 import LoadingIndicator from '../../common/components/LoadingIndicator';
 import saveSettings from '../utils/saveSettings';
+import Stream from '../../common/utils/Stream';
 
 export default class MailPage extends Page {
-  init() {
-    super.init();
+  oninit(vnode) {
+    super.oninit(vnode);
 
     this.saving = false;
+    this.sendingTest = false;
     this.refresh();
   }
 
@@ -23,12 +25,12 @@ export default class MailPage extends Page {
     this.status = { sending: false, errors: {} };
 
     const settings = app.data.settings;
-    this.fields.forEach((key) => (this.values[key] = m.prop(settings[key])));
+    this.fields.forEach((key) => (this.values[key] = Stream(settings[key])));
 
     app
       .request({
         method: 'GET',
-        url: app.forum.attribute('apiUrl') + '/mail-settings',
+        url: app.forum.attribute('apiUrl') + '/mail/settings',
       })
       .then((response) => {
         this.driverFields = response['data']['attributes']['fields'];
@@ -38,7 +40,7 @@ export default class MailPage extends Page {
         for (const driver in this.driverFields) {
           for (const field in this.driverFields[driver]) {
             this.fields.push(field);
-            this.values[field] = m.prop(settings[field]);
+            this.values[field] = Stream(settings[field]);
           }
         }
 
@@ -68,23 +70,27 @@ export default class MailPage extends Page {
             <h2>{app.translator.trans('core.admin.email.heading')}</h2>
             <div className="helpText">{app.translator.trans('core.admin.email.text')}</div>
 
-            {FieldSet.component({
-              label: app.translator.trans('core.admin.email.addresses_heading'),
-              className: 'MailPage-MailSettings',
-              children: [
+            {FieldSet.component(
+              {
+                label: app.translator.trans('core.admin.email.addresses_heading'),
+                className: 'MailPage-MailSettings',
+              },
+              [
                 <div className="MailPage-MailSettings-input">
                   <label>
                     {app.translator.trans('core.admin.email.from_label')}
-                    <input className="FormControl" value={this.values.mail_from() || ''} oninput={m.withAttr('value', this.values.mail_from)} />
+                    <input className="FormControl" bidi={this.values.mail_from} />
                   </label>
                 </div>,
-              ],
-            })}
+              ]
+            )}
 
-            {FieldSet.component({
-              label: app.translator.trans('core.admin.email.driver_heading'),
-              className: 'MailPage-MailSettings',
-              children: [
+            {FieldSet.component(
+              {
+                label: app.translator.trans('core.admin.email.driver_heading'),
+                className: 'MailPage-MailSettings',
+              },
+              [
                 <div className="MailPage-MailSettings-input">
                   <label>
                     {app.translator.trans('core.admin.email.driver_label')}
@@ -95,20 +101,24 @@ export default class MailPage extends Page {
                     />
                   </label>
                 </div>,
-              ],
-            })}
+              ]
+            )}
 
             {this.status.sending ||
-              Alert.component({
-                children: app.translator.trans('core.admin.email.not_sending_message'),
-                dismissible: false,
-              })}
+              Alert.component(
+                {
+                  dismissible: false,
+                },
+                app.translator.trans('core.admin.email.not_sending_message')
+              )}
 
             {fieldKeys.length > 0 &&
-              FieldSet.component({
-                label: app.translator.trans(`core.admin.email.${this.values.mail_driver()}_heading`),
-                className: 'MailPage-MailSettings',
-                children: [
+              FieldSet.component(
+                {
+                  label: app.translator.trans(`core.admin.email.${this.values.mail_driver()}_heading`),
+                  className: 'MailPage-MailSettings',
+                },
+                [
                   <div className="MailPage-MailSettings-input">
                     {fieldKeys.map((field) => [
                       <label>
@@ -118,15 +128,37 @@ export default class MailPage extends Page {
                       this.status.errors[field] && <p className="ValidationError">{this.status.errors[field]}</p>,
                     ])}
                   </div>,
-                ],
-              })}
+                ]
+              )}
 
-            {Button.component({
-              type: 'submit',
-              className: 'Button Button--primary',
-              children: app.translator.trans('core.admin.email.submit_button'),
-              disabled: !this.changed(),
-            })}
+            <FieldSet>
+              {Button.component(
+                {
+                  type: 'submit',
+                  className: 'Button Button--primary',
+                  disabled: !this.changed(),
+                },
+                app.translator.trans('core.admin.email.submit_button')
+              )}
+            </FieldSet>
+
+            {FieldSet.component(
+              {
+                label: app.translator.trans('core.admin.email.send_test_mail_heading'),
+                className: 'MailPage-MailSettings',
+              },
+              [
+                <div className="helpText">{app.translator.trans('core.admin.email.send_test_mail_text', { email: app.session.user.email() })}</div>,
+                Button.component(
+                  {
+                    className: 'Button Button--primary',
+                    disabled: this.sendingTest || this.changed(),
+                    onclick: () => this.sendTestEmail(),
+                  },
+                  app.translator.trans('core.admin.email.send_test_mail_button')
+                ),
+              ]
+            )}
           </form>
         </div>
       </div>
@@ -139,7 +171,7 @@ export default class MailPage extends Page {
     const prop = this.values[name];
 
     if (typeof field === 'string') {
-      return <input className="FormControl" value={prop() || ''} oninput={m.withAttr('value', prop)} />;
+      return <input className="FormControl" bidi={prop} />;
     } else {
       return <Select value={prop()} options={field} onchange={prop} />;
     }
@@ -149,10 +181,32 @@ export default class MailPage extends Page {
     return this.fields.some((key) => this.values[key]() !== app.data.settings[key]);
   }
 
+  sendTestEmail() {
+    if (this.saving || this.sendingTest) return;
+
+    this.sendingTest = true;
+    app.alerts.dismiss(this.testEmailSuccessAlert);
+
+    app
+      .request({
+        method: 'POST',
+        url: app.forum.attribute('apiUrl') + '/mail/test',
+      })
+      .then((response) => {
+        this.sendingTest = false;
+        this.testEmailSuccessAlert = app.alerts.show({ type: 'success' }, app.translator.trans('core.admin.email.send_test_mail_success'));
+      })
+      .catch((error) => {
+        this.sendingTest = false;
+        m.redraw();
+        throw error;
+      });
+  }
+
   onsubmit(e) {
     e.preventDefault();
 
-    if (this.saving) return;
+    if (this.saving || this.sendingTest) return;
 
     this.saving = true;
     app.alerts.dismiss(this.successAlert);
@@ -163,7 +217,7 @@ export default class MailPage extends Page {
 
     saveSettings(settings)
       .then(() => {
-        app.alerts.show((this.successAlert = new Alert({ type: 'success', children: app.translator.trans('core.admin.basics.saved_message') })));
+        this.successAlert = app.alerts.show({ type: 'success' }, app.translator.trans('core.admin.basics.saved_message'));
       })
       .catch(() => {})
       .then(() => {

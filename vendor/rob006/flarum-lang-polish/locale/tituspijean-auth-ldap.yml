@@ -8,7 +8,7 @@ tituspijean-auth-ldap:
       field:
         account_prefix: 'Prefiks konta'
         account_suffix: 'Sufiks konta'
-        admin_dn: 'Nazwa wyróżniająca (DN) administratora LDAP. Zostaw puste aby użyć anonimowego uwierzytelniania (anonymous binding).'
+        admin_dn: 'Nazwa wyróżniająca (DN) administratora LDAP. Zostaw puste, aby użyć anonimowego uwierzytelniania (anonymous binding).'
         admin_password: 'Hasło administratora LDAP. Zostaw puste aby użyć anonimowego uwierzytelniania (anonymous binding).'
         base_dn: 'Bazowe nazwy wyróżniające (base DNs) (rozdzielone średnikami)'
         domain_controllers: 'Domeny LDAP (rozdzielone przecinkami)'
@@ -26,5 +26,5 @@ tituspijean-auth-ldap:
       use_ssl: 'Użyj SSL'
       use_tls: 'Użyj TLS'
   forum:
-    log_in_with: 'Zaloguj się za pomocą'
+    log_in_with: 'Zaloguj się za pomocą {server}'
     log_out: '=> core.ref.log_out'

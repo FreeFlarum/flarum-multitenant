@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/gamification.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,9 +12,9 @@
 namespace FoF\Gamification\Api\Controllers;
 
 use Flarum\Api\Controller\ShowForumController;
-use Flarum\Foundation\Application;
+use Flarum\Foundation\Paths;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Flarum\User\AssertPermissionTrait;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
 use League\Flysystem\Adapter\Local;
@@ -25,39 +25,35 @@ use Tobscure\JsonApi\Document;
 
 class UploadTopImageController extends ShowForumController
 {
-    use AssertPermissionTrait;
-
     /**
      * @var SettingsRepositoryInterface
      */
     protected $settings;
 
     /**
-     * @var Application
+     * @var Paths
      */
-    protected $app;
+    protected $paths;
 
     /**
      * @param SettingsRepositoryInterface $settings
      */
-    public function __construct(SettingsRepositoryInterface $settings, Application $app)
+    public function __construct(SettingsRepositoryInterface $settings, Paths $paths)
     {
         $this->settings = $settings;
-        $this->app = $app;
+        $this->paths = $paths;
     }
 
     public function data(ServerRequestInterface $request, Document $document)
     {
-        $this->assertAdmin($request->getAttribute('actor'));
+        $request->getAttribute('actor')->assertAdmin();
 
-        $id = array_get($request->getQueryParams(), 'id');
+        $id = Arr::get($request->getQueryParams(), 'id');
 
-        $file = array_get($request->getUploadedFiles(), 'topimage'.$id);
+        $file = Arr::first($request->getUploadedFiles());
 
-        $tmpFile = tempnam($this->app->storagePath().'/tmp', 'topimage.'.$id);
+        $tmpFile = tempnam($this->paths->storage.'/tmp', 'topimage.'.$id);
         $file->moveTo($tmpFile);
-
-        $extension = pathinfo($file->getClientFilename(), PATHINFO_EXTENSION);
 
         if ('1' == $id) {
             $size = 125;
@@ -76,10 +72,10 @@ class UploadTopImageController extends ShowForumController
 
         $mount = new MountManager([
             'source' => new Filesystem(new Local(pathinfo($tmpFile, PATHINFO_DIRNAME))),
-            'target' => new Filesystem(new Local($this->app->publicPath().'/assets')),
+            'target' => new Filesystem(new Local($this->paths->public.'/assets')),
         ]);
 
-        if (($path = $this->settings->get('topimage'.$id.'_path')) && $mount->has($file = "target://$path")) {
+        if (($path = $this->settings->get($key = "fof-gamification.topimage{$id}_path")) && $mount->has($file = "target://$path")) {
             $mount->delete($file);
         }
 
@@ -87,7 +83,7 @@ class UploadTopImageController extends ShowForumController
 
         $mount->move('source://'.pathinfo($tmpFile, PATHINFO_BASENAME), "target://$uploadName");
 
-        $this->settings->set('topimage'.$id.'_path', $uploadName);
+        $this->settings->set($key, $uploadName);
 
         return parent::data($request, $document);
     }

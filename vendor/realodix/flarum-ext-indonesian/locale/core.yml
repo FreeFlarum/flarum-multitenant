@@ -44,6 +44,8 @@ core:
       all_discussions_label: => core.ref.all_discussions
       # default_language_heading: Default Language
       default_language_heading: Bahasa Yang Digunakan
+      display_name_heading: Nama User Yang Ditampilkan
+      display_name_text: Pilih driver yang harus digunakan untuk nama user yang ditampilkan. Secara default, nama user ditampilkan.
       # forum_description_heading: Forum Description
       forum_description_heading: Deskripsi Forum
       # forum_description_text: Enter a short sentence or two that describes your community. This will appear in the meta tag and show up in search engines.
@@ -124,21 +126,17 @@ core:
       mail_mailgun_domain_label: Domain
       mail_mailgun_region_label: Region
       mail_mailgun_secret_label: Secret key
-      mail_mandrill_secret_label: Secret key
       mail_password_label: => core.ref.password
       mail_port_label: Port
-      mail_ses_key_label: Key
-      mail_ses_region_label: Region
-      mail_ses_secret_label: Secret
       mail_username_label: => core.ref.username
       # mailgun_heading: Mailgun Settings
       mailgun_heading: Pengaturan Mailgun
-      # mandrill_heading: Mandrill Settings
-      mandrill_heading: Pengaturan Mandrill
       # not_sending_message: Flarum currently does not send emails. This can be due to the selected driver, or errors in its configuration.
-      not_sending_message: Flarum saat ini tidak mengirim email. Ini dapat disebabkan oleh driver yang dipilih, atau kesalahan dalam konfigurasinya.
-      # ses_heading: SES Settings
-      ses_heading: Pengaturan SES
+      not_sending_message: Flarum saat ini tidak dapat mengirim email. Ini dapat disebabkan oleh driver yang dipilih, atau kesalahan dalam konfigurasinya.
+      send_test_mail_button: Kirim
+      send_test_mail_heading: Kirim Email percobaan
+      send_test_mail_success: "Email percobaan berhasil dikirim!"
+      send_test_mail_text: "Ini akan mengirimkan email menggunakan konfigurasi di atas ke email Anda, {email}."
       # smtp_heading: SMTP Settings
       smtp_heading: Pengaturan SMTP
       submit_button: => core.ref.save_changes
@@ -242,7 +240,7 @@ core:
       # allow_ten_minutes_button: For 10 minutes
       allow_ten_minutes_button: Untuk 10 menit
       # allow_until_reply_button: Until next reply
-      allow_until_reply_button: Hingga komentar selanjutnya
+      allow_until_reply_button: Hingga balasan selanjutnya
       # everyone_button: Everyone
       everyone_button: Siapapun
       members_button: => core.group.members
@@ -270,7 +268,7 @@ core:
       confirmation_message: => core.ref.confirmation_email_sent
       dismiss_button: => core.ref.okay
       # incorrect_password_message: The password you entered is incorrect.
-      incorrect_password_message: Password yang Anda masukan salah.
+      incorrect_password_message: Password yang Anda masukkan salah.
       submit_button: => core.ref.save_changes
       title: => core.ref.change_email
 
@@ -299,7 +297,7 @@ core:
       # body_placeholder: Write a Post...
       body_placeholder: Tulis artikel di sini..
       # discard_confirmation: "You have not posted your discussion. Do you wish to discard it?"
-      discard_confirmation: "Artikel yang Anda tulis belum Anda posting. Apakah Anda ingin membuangnya?"
+      discard_confirmation: "Anda belum memposting diskusi Anda. Apakah Anda ingin membuangnya?"
       # submit_button: Post Discussion
       submit_button: Publikasikan Diskusi
       title: => core.ref.start_a_discussion
@@ -331,7 +329,7 @@ core:
       # cannot_reply_button: Can't Reply
       cannot_reply_button: Tidak dapat membalas
       # cannot_reply_text: You don't have permission to reply to this discussion.
-      cannot_reply_text: Anda tidak diperbolehkan ikut berdiskusi.
+      cannot_reply_text: Anda tidak memiliki izin untuk membalas diskusi ini.
       delete_button: => core.ref.delete
       # delete_confirmation: "Are you sure you want to delete this discussion?"
       delete_confirmation: "Anda yakin ingin menghapus diskusi ini?"
@@ -411,6 +409,7 @@ core:
       # mark_all_as_read_confirmation: "Are you sure you want to mark all discussions as read?"
       mark_all_as_read_confirmation: "Anda yakin ingin menandai semua diskusi sudah terbaca?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      meta_title_text: => core.ref.all_discussions
       # refresh_tooltip: Refresh
       refresh_tooltip: Refresh Halaman
       start_discussion_button: => core.ref.start_a_discussion
@@ -477,7 +476,7 @@ core:
     # These translations are used in the scrubber to the right of the post stream.
     post_scrubber:
       # now_link: Now
-      now_link: Post Terakhir
+      now_link: Sekarang
       # original_post_link: Original Post
       original_post_link: Post Pertama
       # unread_text: "{count} unread"
@@ -506,7 +505,7 @@ core:
     # These translations are used by the search results dropdown list.
     search:
       # all_discussions_button: 'Search all discussions for "{query}"'
-      all_discussions_button: 'Pencarian untuk "{query}"'
+      all_discussions_button: 'Cari semua diskusi untuk "{query}"'
       discussions_heading: => core.ref.discussions
       users_heading: => core.ref.users
 
@@ -550,7 +549,7 @@ core:
       # in_discussion_text: "In {discussion}"
       in_discussion_text: "Di {discussion}"
       # joined_date_text: "Joined {ago}"
-      joined_date_text: "Bergabung: {ago}"
+      joined_date_text: "Bergabung {ago}"
       online_text: Online
       # posts_empty_text: It looks like there are no posts here.
       posts_empty_text: Sepertinya tidak ada post di sini.
@@ -577,7 +576,7 @@ core:
       # resend_button: Resend Confirmation Email
       resend_button: Kirim ulang
       # sent_message: Sent
-      sent_message: Kirim
+      sent_message: Terkirim
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
@@ -589,12 +588,14 @@ core:
 
     # These translations are displayed as error messages.
     error:
+      dependent_extensions_message: "Tidak dapat menonaktifkan {extension} hingga dependent extension berikut ini dinonaktifkan: {extensions}"
+      missing_dependencies_message: "Tidak dapat mengaktifkan {extension} hingga dependensi berikut diaktifkan: {extensions}"
       # generic_message: "Oops! Something went wrong. Please reload the page and try again."
       generic_message: "Oops! Sepertinya ada masalah. Coba refresh halaman dan coba lagi."
       # not_found_message: The requested resource was not found.
       not_found_message: Sumber yang diminta tidak ditemukan.
       # permission_denied_message: You do not have permission to do that.
-      permission_denied_message: Maaf, akun Anda tidak memiliki hak untuk melakukan ini.
+      permission_denied_message: Maaf, Anda tidak memiliki izin untuk melakukan ini.
       # rate_limit_exceeded_message: You're going a little too quickly. Please try again in a few seconds.
       rate_limit_exceeded_message: Maaf, Anda terlalu cepat. Silahkan coba lagi dalam beberapa detik.
 
@@ -613,7 +614,7 @@ core:
 
     # These translations are used to modify usernames.
     username:
-      deleted_text: "[deleted]"
+      deleted_text: "[terhapus]"
 
   # Translations in this namespace are used in views other than Flarum's normal JS client.
   views:
@@ -677,7 +678,7 @@ core:
   # Translations in this namespace are used in messages output by the API.
   api:
     # invalid_username_message: "The username may only contain letters, numbers, and dashes."
-    invalid_username_message: "Username dapat mengandung huruf, angka, dan tanda hubung (_)."
+    invalid_username_message: "Username hanya boleh berisi huruf, angka, dan tanda hubung (dashes)."
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
@@ -690,7 +691,7 @@ core:
 
         Seseorang (semoga Anda!) Telah mendaftar ke {forum} dengan alamat email ini.
 
-        Jika ini adalah Anda, cukup klik tautan berikut dan akun Anda segera diaktifkan:
+        Jika ini adalah Anda, cukup klik link berikut dan akun Anda segera diaktifkan:
         {url}
 
         Jika Anda tidak mendaftar, abaikan email ini.
@@ -703,7 +704,7 @@ core:
 
         Seseorang (semoga Anda!) Telah mengubah alamat email di {forum} menjadi email yang ini.
 
-        Jika ini adalah Anda, cukup klik tautan berikut dan email Anda akan dikonfirmasi:
+        Jika ini adalah Anda, cukup klik link berikut dan email Anda akan dikonfirmasi:
         {url}
 
         Jika ini bukan Anda, abaikan email ini.
@@ -716,10 +717,22 @@ core:
 
         Seseorang (semoga Anda!) Telah mengirimkan permintaan atur ulang password untuk akun Anda di {forum}.
 
-        Jika ini adalah Anda, klik tautan berikut untuk mereset password Anda:
+        Jika ini adalah Anda, klik link berikut untuk mereset password Anda:
         {url}
 
         Jika Anda tidak ingin mengubah password, abaikan saja email ini dan tidak akan terjadi apa-apa.
+
+    # These translations are used when testing mailing configuration
+    send_test:
+      subject: Flarum Email Test
+      body: |
+        Halo {username}!
+
+        Ini adalah email percobaan untuk mengonfirmasi bahwa konfigurasi email Flarum Anda berfungsi dengan benar.
+
+        Jika ini adalah Anda, email ini berarti konfigurasi yang Anda buat berfungsi!
+
+        Jika ini bukan Anda, abaikan email ini.
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
@@ -758,7 +771,7 @@ core:
     # icon_text: "Enter the name of any <a>FontAwesome</a> icon class, <em>including</em> the <code>fa-</code> prefix."
     icon_text: "Masukkan nama ikon dari <a>FontAwesome</a>, <em>dengan</em> awalan <code>fa-</code>."
     # load_more: Load More
-    load_more: Muat lebih
+    load_more: Muat Lebih Banyak
     # log_in: Log In
     log_in: Login
     # log_out: Log Out
@@ -771,7 +784,7 @@ core:
     notifications: Notifikasi
     okay: OK                                       # Referenced by flarum-tags.yml
     password: Password
-    posts: Posts                                   # Referenced by flarum-statistics.yml
+    posts: Postingan                                   # Referenced by flarum-statistics.yml
     # previous_page: Previous Page
     previous_page: Halaman Sebelumnya
     # remove: Remove
@@ -781,7 +794,7 @@ core:
     # reply: Reply                                 # Referenced by flarum-mentions.yml
     reply: Balas
     # reset_your_password: Reset Your Password
-    reset_your_password: Perbarui Password Anda
+    reset_your_password: Update Password Anda
     # restore: Restore
     restore: Pulihkan
     # save_changes: Save Changes                   # Referenced by flarum-suspend.yml, flarum-tags.yml

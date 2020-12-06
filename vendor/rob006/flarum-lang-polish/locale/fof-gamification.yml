@@ -9,12 +9,12 @@ core:
 fof-gamification:
   admin:
     nav:
-      desc: 'Gamification dla twojej społeczności Flarum'
+      desc: 'Grywalizacja dla Twojej społeczności Flarum'
     page:
       convert:
         button: 'Konwertuj polubienia na głosy pozytywne'
         converted: 'Pomyślnie przekonwertowano wszystkie {number} polubień'
-        converting: 'Twoje polubienia są właśnie konwertowane. Odśwież stronę po kilku minutach, aby zobaczyć czy proces się zakończył (konwersja może potrwać chwilę w zależności od liczby polubień na twoim forum).'
+        converting: 'Twoje polubienia są właśnie konwertowane. Odśwież stronę po kilku minutach, aby zobaczyć czy proces się zakończył (konwersja może potrwać chwilę w zależności od liczby polubień na Twoim forum).'
         help: 'Przekonwertuj istniejące polubienia z flarum-ext-likes na głosy pozytywne oraz przelicz popularność dla wszystkich istniejących dyskusji.'
       rankings:
         blocked:
@@ -37,6 +37,7 @@ fof-gamification:
         title: Rangi
       save_settings: 'Zapisz ustawienia'
       votes:
+        alternate_layout: 'Użyj alternatywnego układu do wyświetlania oraz dodawania głosów'
         auto_upvote: 'Automatycznie oceń pozytywnie posty po ich opublikowaniu'
         color_holder: '#ffffff'
         discussion_page: 'Wyświetl sumę głosów pierwszego posta na liście dyskusji'
@@ -60,8 +61,8 @@ fof-gamification:
     nav:
       name: Rankingi
     notification:
-      downvote: '{username} negatywnie ocenił twój post'
-      upvote: '{username} pozytywnie ocenił twój post'
+      downvote: '{username} negatywnie ocenił Twój post'
+      upvote: '{username} pozytywnie ocenił Twój post'
     ranking:
       amount: Punkty
       name: Użytkownik

@@ -33,32 +33,28 @@ export default class Login2SeePlusSettingsModal extends SettingsModal
                 m('fieldset', {className: 'JSLirolaLogin2SeePlus-image'}, [
                     m('legend', {}, app.translator.trans('jslirola-login2seeplus.admin.hide')),
                     Switch.component(
-                    {
-                        state: JSON.parse(this.setting('jslirola.login2seeplus.link', 0)()),
-                        onchange: this.setting('jslirola.login2seeplus.link', 1),
-                        children: app.translator.trans('jslirola-login2seeplus.admin.link'),
-                    }),
+                        {
+                            state: JSON.parse(this.setting('jslirola.login2seeplus.link', 0)()),
+                            onchange: this.setting('jslirola.login2seeplus.link', 1)
+                        }, app.translator.trans('jslirola-login2seeplus.admin.link')),
                     Switch.component(
-                    {
-                        state: JSON.parse(this.setting('jslirola.login2seeplus.image', 0)()),
-                        onchange: this.setting('jslirola.login2seeplus.image', 1),
-                        children: app.translator.trans('jslirola-login2seeplus.admin.image'),
-                    }),
+                        {
+                            state: JSON.parse(this.setting('jslirola.login2seeplus.image', 0)()),
+                            onchange: this.setting('jslirola.login2seeplus.image', 1)
+                        }, app.translator.trans('jslirola-login2seeplus.admin.image')),
                     Switch.component(
-                    {
-                        state: JSON.parse(this.setting('jslirola.login2seeplus.code', 0)()),
-                        onchange: this.setting('jslirola.login2seeplus.code', 1),
-                        children: app.translator.trans('jslirola-login2seeplus.admin.code'),
-                    }),
+                        {
+                            state: JSON.parse(this.setting('jslirola.login2seeplus.code', 0)()),
+                            onchange: this.setting('jslirola.login2seeplus.code', 1)
+                        }, app.translator.trans('jslirola-login2seeplus.admin.code')),
                 ]),
                 m('fieldset', {className: 'JSLirolaLogin2SeePlus-php'}, [
                     m('legend', {}, app.translator.trans('jslirola-login2seeplus.admin.php.title')),
                     Switch.component(
-                    {
-                        state: JSON.parse(this.setting('jslirola.login2seeplus.php', 0)()),
-                        onchange: this.setting('jslirola.login2seeplus.php', 1),
-                        children: app.translator.trans('jslirola-login2seeplus.admin.php.label'),
-                    }),
+                        {
+                            state: JSON.parse(this.setting('jslirola.login2seeplus.php', 0)()),
+                            onchange: this.setting('jslirola.login2seeplus.php', 1)
+                        }, app.translator.trans('jslirola-login2seeplus.admin.php.label')),
                     m('div', {className: 'helpText'}, app.translator.trans('jslirola-login2seeplus.admin.php.help')),
                 ]),
             ]),

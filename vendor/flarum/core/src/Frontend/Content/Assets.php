@@ -9,26 +9,27 @@
 
 namespace Flarum\Frontend\Content;
 
-use Flarum\Foundation\Application;
+use Flarum\Foundation\Config;
 use Flarum\Frontend\Compiler\CompilerInterface;
 use Flarum\Frontend\Document;
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Assets
 {
     protected $container;
-    protected $app;
+    protected $config;
 
     /**
      * @var \Flarum\Frontend\Assets
      */
     protected $assets;
 
-    public function __construct(Container $container, Application $app)
+    public function __construct(Container $container, Config $config)
     {
         $this->container = $container;
-        $this->app = $app;
+        $this->config = $config;
     }
 
     public function forFrontend(string $name)
@@ -47,8 +48,8 @@ class Assets
             'css' => [$this->assets->makeCss(), $this->assets->makeLocaleCss($locale)]
         ];
 
-        if ($this->app->inDebugMode()) {
-            $this->commit(array_flatten($compilers));
+        if ($this->config->inDebugMode()) {
+            $this->commit(Arr::flatten($compilers));
         }
 
         $document->js = array_merge($document->js, $this->getUrls($compilers['js']));

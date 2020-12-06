@@ -13,7 +13,7 @@
         "source": "https://github.com/jslirola/flarum-ext-login2seeplus"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.13"
+        "flarum/core": "^0.1.0-beta.14"
     },
     "extra": {
         "flarum-extension": {

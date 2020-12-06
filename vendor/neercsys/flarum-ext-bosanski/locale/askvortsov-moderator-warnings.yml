@@ -1,0 +1,44 @@
+askvortsov-moderator-warnings:
+  admin:
+    permissions:
+      manage_warnings: Stvorite i uklonite upozorenja moderatora
+      view_warnings: Vidjeti upozorenja moderatora
+      delete_warnings: Trajno izbrisati upozorenja moderatora
+  forum:
+    notifications:
+      warning_text: 'Upozoreni ste sa {strikes} strajkom od strane {mod_username}|Upozoreni ste sa {strikes} strajkova od strane {mod_username}'
+      warning_no_strikes_text: Upozorio vas je {mod_username} (no strikes)
+    post:
+      warning: '{mod_username} vas je upozorio sa {strikes} strajka|{mod_username} vas je upozorio sa {strikes} strajkova'
+      warning_no_strikes: Upozoren bez strajka od strane {mod_username}
+    post_controls:
+      warning_button: Upozori korisnika
+    user:
+      warnings: Upozorenja moderatora
+    settings:
+      warning_notification_label: Upozorava me moderator
+    validation:
+      public_comment_required: Morate dati javni komentar.
+      invalid_strike_count: Broj opomena mora biti cijeli broj između 0 i 5.
+    warning_controls:
+      delete_button: Ukloni
+      restore_button: Vratiti
+      delete_forever_button: Trajno izbriši
+    warning_list:
+      add_button: Novo upozorenje
+      no_warnings: Čini se da ovdje nema upozorenja.
+      warnings: "Upozorenja moderatora: {strikes} primljeni strajk|Upozorenja moderatora: {strikes} primljeni strajkova"
+      warnings_no_strikes: "Upozorenja moderatora: Nije primljena nijedna opomena"
+    warning_list_item:
+      list_item_heading: '<strong>{strikes}</strong> strike, {time}|<strong>{strikes}</strong> strikes, {time}'
+      list_item_heading_hidden: '<strong>{strikes}</strong> strike, {time} <strong>(removed)</strong>|<strong>{strikes}</strong> strikes, {time} <strong>(removed)</strong>'
+      public_comment: Upozorenje
+      private_comment: Komentari vidljivi od strane moderatora
+      linked_post: Povezani post
+    warning_modal:
+      confirmation_message: Upozorenje je spremljeno. Možda ćete trebati osvježiti stranicu da biste je vidjeli.
+      heading: Upozori <strong>{username}</strong>
+      strikes_heading: Koliko strajkova treba primijeniti?
+      public_comment_heading: Zašto <strong>{username}</strong> prima ova upozorenje? Ovi komentari će biti vidljivi korisniku i ostalim moderatorima.
+      private_comment_heading: Zašto <strong>{username}</strong> prima ova upozorenje? Ovi će komentari biti vidljivi SAMO ostalim moderatorima.
+      submit_button: Spremi upozorenje

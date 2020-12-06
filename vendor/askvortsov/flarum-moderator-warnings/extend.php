@@ -21,7 +21,6 @@ use Flarum\Extend;
 use Flarum\Formatter\Formatter;
 use Flarum\Post\Post;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\View\Factory;
 
 return [
     (new Extend\Frontend('forum'))
@@ -42,7 +41,9 @@ return [
     (new Extend\Model(Post::class))
         ->hasMany('warnings', Warning::class, 'post_id'),
 
-    function (Dispatcher $events, Factory $views) {
+    (new Extend\View())->namespace('askvortsov-moderator-warnings', __DIR__ . '/views'),
+
+    function (Dispatcher $events) {
         $events->subscribe(Listeners\AddPermissionsToUserSerializer::class);
         $events->subscribe(Listeners\AddPostWarningRelationship::class);
         $events->subscribe(UserPolicy::class);
@@ -50,8 +51,6 @@ return [
         $events->listen(ConfigureNotificationTypes::class, function (ConfigureNotificationTypes $event) {
             $event->add(WarningBlueprint::class, WarningSerializer::class, ['alert', 'email']);
         });
-
-        $views->addNamespace('askvortsov-moderator-warnings', __DIR__.'/views');
     },
 
     function (Formatter $formatter) {

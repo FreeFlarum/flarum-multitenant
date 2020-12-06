@@ -20,11 +20,11 @@ export default function () {
     Discussion.prototype.viewCount = Model.attribute('viewCount');
 
     extend(DiscussionListItem.prototype, 'infoItems', function(items) {
-        if(this.props.discussion.attribute('canViewNumber')) {
-            const views = this.props.discussion.viewCount();
+        if(this.attrs.discussion.attribute('canViewNumber')) {
+            const views = this.attrs.discussion.viewCount();
 
             var number = app.forum.attribute('mb-discussionviews.abbr_numbers') == 1 ? abbreviateNumber(views) : views;
-            items.add('discussion-views', number);   
+            items.add('discussion-views', <span>{number}</span>);   
         }
     });
 
@@ -43,7 +43,7 @@ export default function () {
 
             var listitem = 
                 <div className="item-lastUser-content">
-                    {avatar(view.user() === false ? null : view.user())}
+                    {avatar(view.user())}
                     <div>
                         {userName}
                         <span className="lastUser-visited" title={view.visitedAt().toLocaleString()}>{humanTime(view.visitedAt())}</span>
@@ -51,16 +51,17 @@ export default function () {
                 </div>;
 
             if(view.user() !== false) {
-                listitem = <a href={app.forum.attribute('baseUrl') + '/u/' + userName}>{listitem}</a>;
+                listitem = <a href={app.route.user(view.user())}>{listitem}</a>;
             }
 
             viewList.add('lastUser-' + key, listitem);
         });
 
-        items.add('lastDiscussionViewers', FieldSet.component({
-            label: app.translator.trans('michaelbelgium-discussion-views.forum.viewlist.title'),
-            className: 'LastDiscussionUsers',
-            children: viewList.toArray()
-        }));
+        items.add(
+            'lastDiscussionViewers', 
+            <FieldSet className='LastDiscussionUsers' label={app.translator.trans('michaelbelgium-discussion-views.forum.viewlist.title')}>
+                {viewList.toArray()}
+            </FieldSet>
+        );
     });
 }

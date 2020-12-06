@@ -1,0 +1,37 @@
+flarum-approval:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      approve_posts_label: Phê duyệt bài viết
+      reply_without_approval_label: Trả lời thảo luận mà không cần phê duyệt
+      start_discussions_without_approval_label: Đăng thảo luận mà không cần phê duyệt
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      awaiting_approval_tooltip: => flarum-approval.ref.awaiting_approval
+
+    # These translations are displayed in the post header.
+    post:
+      awaiting_approval_text: => flarum-approval.ref.awaiting_approval
+
+    # These translations are used by the post control buttons.
+    post_controls:
+      approve_button: Phê duyệt
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    awaiting_approval: Chờ phê duyệt

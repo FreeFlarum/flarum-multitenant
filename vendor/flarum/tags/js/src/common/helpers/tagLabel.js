@@ -1,4 +1,5 @@
 import extract from 'flarum/utils/extract';
+import Link from 'flarum/components/Link';
 import tagIcon from './tagIcon';
 
 export default function tagLabel(tag, attrs = {}) {
@@ -18,14 +19,13 @@ export default function tagLabel(tag, attrs = {}) {
     if (link) {
       attrs.title = tag.description() || '';
       attrs.href = app.route('tag', {tags: tag.slug()});
-      attrs.config = m.route;
     }
   } else {
     attrs.className += ' untagged';
   }
 
   return (
-    m((link ? 'a' : 'span'), attrs,
+    m((link ? Link : 'span'), attrs,
       <span className="TagLabel-text">
         {tag && tag.icon() && tagIcon(tag, {}, {useColor: false})} {tagText}
       </span>

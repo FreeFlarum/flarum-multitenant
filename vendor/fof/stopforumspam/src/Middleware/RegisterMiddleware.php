@@ -14,6 +14,7 @@ namespace FoF\StopForumSpam\Middleware;
 use Flarum\Foundation\ErrorHandling\JsonApiFormatter;
 use Flarum\Foundation\ErrorHandling\Registry;
 use Flarum\Foundation\ValidationException;
+use Flarum\Http\UrlGenerator;
 use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\StopForumSpam\StopForumSpam;
 use Laminas\Diactoros\Uri;
@@ -34,15 +35,21 @@ class RegisterMiddleware implements MiddlewareInterface
      */
     private $settings;
 
-    public function __construct(StopForumSpam $sfs, SettingsRepositoryInterface $settings)
+    /**
+     * @var UrlGenerator
+     */
+    private $url;
+
+    public function __construct(StopForumSpam $sfs, SettingsRepositoryInterface $settings, UrlGenerator $url)
     {
         $this->sfs = $sfs;
         $this->settings = $settings;
+        $this->url = $url;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        $registerUri = new Uri(app()->url('/register'));
+        $registerUri = new Uri($this->url->to('forum')->path('/register'));
         if ($request->getUri()->getPath() === $registerUri->getPath()) {
             $data = $request->getParsedBody();
             $serverParams = $request->getServerParams();

@@ -12,17 +12,14 @@
 namespace FoF\Transliterator\Controllers;
 
 use Flarum\Discussion\Discussion;
-use Flarum\User\AssertPermissionTrait;
 use FoF\Transliterator\Transliterator;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response\JsonResponse;
 
 class ParseOldDiscussionsController implements RequestHandlerInterface
 {
-    use AssertPermissionTrait;
-
     /**
      * Handle the request and return a response.
      *
@@ -30,12 +27,12 @@ class ParseOldDiscussionsController implements RequestHandlerInterface
      *
      * @return ResponseInterface
      */
-    public function handle(ServerRequestInterface $request)  : ResponseInterface
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $actor = $request->getAttribute('actor');
         $counter = 0;
 
-        $this->assertAdmin($actor);
+        $actor->assertAdmin();
 
         foreach (Discussion::cursor() as $discussion) {
             $slug = Transliterator::transliterate($discussion->title);

@@ -11,15 +11,12 @@
 
 namespace FoF\Links\Command;
 
-use Flarum\User\AssertPermissionTrait;
 use FoF\Links\Link;
 use FoF\Links\LinkValidator;
 use Illuminate\Support\Arr;
 
 class CreateLinkHandler
 {
-    use AssertPermissionTrait;
-
     /**
      * @var LinkValidator
      */
@@ -43,13 +40,14 @@ class CreateLinkHandler
         $actor = $command->actor;
         $data = $command->data;
 
-        $this->assertAdmin($actor);
+        $actor->assertAdmin();
 
         $link = Link::build(
-            array_get($data, 'attributes.title'),
-            array_get($data, 'attributes.url'),
-            array_get($data, 'attributes.isInternal'),
-            array_get($data, 'attributes.isNewtab')
+            Arr::get($data, 'attributes.title'),
+            Arr::get($data, 'attributes.icon'),
+            Arr::get($data, 'attributes.url'),
+            Arr::get($data, 'attributes.isInternal'),
+            Arr::get($data, 'attributes.isNewtab')
         );
 
         $parentId = Arr::get($data, 'relationships.parent.data.id');

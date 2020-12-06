@@ -6,8 +6,10 @@ use Flarum\Api\Controller\ListUsersController;
 use Flarum\Frontend\Document;
 use Flarum\Http\Exception\RouteNotFoundException;
 use Flarum\Api\Client;
+use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\User;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserDirectory
@@ -57,13 +59,13 @@ class UserDirectory
     {
         $queryParams = $request->getQueryParams();
 
-        $sort = array_pull($queryParams, 'sort');
-        $q = array_pull($queryParams, 'q');
-        $page = array_pull($queryParams, 'page', 1);
+        $sort = Arr::pull($queryParams, 'sort') ?: app(SettingsRepositoryInterface::class)->get('fof-user-directory.default-sort');
+        $q = Arr::pull($queryParams, 'q');
+        $page = Arr::pull($queryParams, 'page', 1);
 
         $params = [
             // ?? used to prevent null values. null would result in the whole sortMap array being sent in the params
-            'sort' => array_get($this->sortMap, $sort ?? '', ''),
+            'sort' => Arr::get($this->sortMap, $sort ?? '', ''),
             'filter' => compact('q'),
             'page' => ['offset' => ($page - 1) * 20, 'limit' => 20],
         ];

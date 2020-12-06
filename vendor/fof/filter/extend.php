@@ -12,7 +12,6 @@ namespace FoF\Filter;
 
 use Flarum\Extend;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\View\Factory;
 
 return [
     (new Extend\Frontend('admin'))
@@ -21,10 +20,10 @@ return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js'),
     new Extend\Locales(__DIR__.'/resources/locale'),
-    new Extend\Compat(function (Dispatcher $events, Factory $views) {
+    (new Extend\View())
+        ->namespace('fof-filter', __DIR__.'/views'),
+    function (Dispatcher $events) {
         $events->subscribe(Listener\FilterPosts::class);
         $events->subscribe(Listener\AddCensorChecks::class);
-
-        $views->addNameSpace('fof-filter', __DIR__.'/views');
-    }),
+    },
 ];

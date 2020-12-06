@@ -1,6 +1,16 @@
 # Changelog
 
-## [0.1.0-beta.13](https://github.com/flarum/lock/compare/v0.1.0-beta.12...v0.1.0-beta.13)
+## [0.1.0-beta.14](https://github.com/flarum/sticky/compare/v0.1.0-beta.13...v0.1.0-beta.14)
+
+### Changed
+- Updated mithril to version 2
+- Load language strings correctly on en-/disable
+- Updated JS dependencies
+
+### Fixed
+- Excerpts of unread stickied discussions triggers an error (#20)
+
+## [0.1.0-beta.13](https://github.com/flarum/sticky/compare/v0.1.0-beta.12...v0.1.0-beta.13)
 
 ### Changed
 - Updated JS dependencies

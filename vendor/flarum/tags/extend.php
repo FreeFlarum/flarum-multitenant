@@ -17,7 +17,6 @@ use Flarum\Tags\Content;
 use Flarum\Tags\Listener;
 use Flarum\Tags\Tag;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\View\Factory;
 
 return [
     (new Extend\Frontend('forum'))
@@ -40,7 +39,12 @@ return [
     (new Extend\Model(Discussion::class))
         ->belongsToMany('tags', Tag::class, 'discussion_tag'),
 
-    function (Dispatcher $events, Factory $view) {
+    new Extend\Locales(__DIR__.'/locale'),
+
+    (new Extend\View)
+        ->namespace('tags', __DIR__.'/views'),
+
+    function (Dispatcher $events) {
         $events->subscribe(Listener\AddDiscussionTagsRelationship::class);
 
         $events->subscribe(Listener\AddForumTagsRelationship::class);
@@ -56,7 +60,5 @@ return [
         $events->subscribe(Access\DiscussionPolicy::class);
         $events->subscribe(Access\TagPolicy::class);
         $events->subscribe(Access\FlagPolicy::class);
-
-        $view->addNamespace('tags', __DIR__.'/views');
     },
 ];

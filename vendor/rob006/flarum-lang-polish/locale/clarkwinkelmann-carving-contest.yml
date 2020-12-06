@@ -10,6 +10,9 @@ clarkwinkelmann-carving-contest:
       moderate: Moderacja
       participate: Uczestnictwo
       view: 'Przeglądanie prac'
+    settings:
+      maxEntriesPerUser: 'Maksymalna liczba zgłoszeń na użytkownika'
+      title: 'Ustawienia zawodów w rzeźbieniu'
   forum:
     likes_modal:
       title: 'Użytkownicy, którzy polubili tę pracę'
@@ -24,6 +27,7 @@ clarkwinkelmann-carving-contest:
       contest: 'Zawody w rzeźbieniu'
     page:
       already-liked: 'Lubię to'
+      already-participated: 'Już bierzesz udział'
       delete-confirmation: 'Czy jesteś pewien, że chcesz usunąć dynię "{name}" utworzoną przez {username}?'
       like: 'Lubię to'
       likes:

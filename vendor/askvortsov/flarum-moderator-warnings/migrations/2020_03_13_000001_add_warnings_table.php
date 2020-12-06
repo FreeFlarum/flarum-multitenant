@@ -18,7 +18,7 @@ return [
             return;
         }
 
-        $schema->create('warnings', function (Blueprint $table) use ($schema) {
+        $schema->create('warnings', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->integer('user_id')->unsigned();

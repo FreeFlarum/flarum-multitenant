@@ -16,7 +16,7 @@ studosi-mail-filter:
       invalid_regex: 'Wyrażenie regularne, które próbujesz dodać, jest nieprawidłowe.'
     import:
       button: Importuj
-      desc: 'Importuj białą oraz czarną listę adresów e-mail oraz wyrażeń regularnych.'
+      desc: 'Importuj białą oraz czarną listę adresów e-mail i wyrażeń regularnych.'
       label: 'Importuj ustawienia'
     nav:
       desc: 'Zezwalaj lub nie zezwalaj na rejestrację za pomocą określonych adresów e-mail'

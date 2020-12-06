@@ -72,6 +72,7 @@ fof-byobu:
         settings:
             use_tag_slug: Navedite slug oznake kako biste natjerali na sve privatne diskusije
             use_tag_slug_help: Ostavite prazno kako biste korisnicima omogućili odabir vlastite oznake, odnosi se samo na novo kreirane privatne diskusije
+            use_tag_slug_no_restriction: "- Bez ograničenja -"
             byobu_index: Prikažite vezu do privatnih diskusija na početnoj stranici
             byobu_index_help: Kada je ova opcija omogućena, bit će prikazana veza između glavnih stavki foruma do privatnih diskusija
 

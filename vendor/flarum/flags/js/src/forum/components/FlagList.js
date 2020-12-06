@@ -1,4 +1,5 @@
 import Component from 'flarum/Component';
+import Link from 'flarum/components/Link';
 import LoadingIndicator from 'flarum/components/LoadingIndicator';
 import avatar from 'flarum/helpers/avatar';
 import username from 'flarum/helpers/username';
@@ -6,17 +7,13 @@ import icon from 'flarum/helpers/icon';
 import humanTime from 'flarum/helpers/humanTime';
 
 export default class FlagList extends Component {
-  init() {
-    /**
-     * Whether or not the notifications are loading.
-     *
-     * @type {Boolean}
-     */
-    this.loading = false;
+  oninit(vnode) {
+    super.oninit(vnode);
+    this.state = this.attrs.state;
   }
 
   view() {
-    const flags = app.cache.flags || [];
+    const flags = this.state.cache || [];
 
     return (
       <div className="NotificationList FlagList">
@@ -31,10 +28,9 @@ export default class FlagList extends Component {
 
                 return (
                   <li>
-                    <a href={app.route.post(post)} className="Notification Flag" config={function(element, isInitialized) {
-                      m.route.apply(this, arguments);
-
-                      if (!isInitialized) $(element).on('click', () => app.cache.flagIndex = post);
+                    <Link href={app.route.post(post)} className="Notification Flag" onclick={e => {
+                      app.flags.index = post;
+                      e.redraw = false;
                     }}>
                       {avatar(post.user())}
                       {icon('fas fa-flag', {className: 'Notification-icon'})}
@@ -45,40 +41,16 @@ export default class FlagList extends Component {
                       <div className="Notification-excerpt">
                         {post.contentPlain()}
                       </div>
-                    </a>
+                    </Link>
                   </li>
                 );
               })
-              : !this.loading
+              : !this.state.loading
                 ? <div className="NotificationList-empty">{app.translator.trans('flarum-flags.forum.flagged_posts.empty_text')}</div>
                 : LoadingIndicator.component({className: 'LoadingIndicator--block'})}
           </ul>
         </div>
       </div>
     );
-  }
-
-  /**
-   * Load flags into the application's cache if they haven't already
-   * been loaded.
-   */
-  load() {
-    if (app.cache.flags && !app.session.user.attribute('newFlagCount')) {
-      return;
-    }
-
-    this.loading = true;
-    m.redraw();
-
-    app.store.find('flags')
-      .then(flags => {
-        app.session.user.pushAttributes({newFlagCount: 0});
-        app.cache.flags = flags.sort((a, b) => b.createdAt() - a.createdAt());
-      })
-      .catch(() => {})
-      .then(() => {
-        this.loading = false;
-        m.redraw();
-      });
   }
 }

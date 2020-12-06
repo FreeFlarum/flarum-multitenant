@@ -1,4 +1,3 @@
-import Alert from '../../common/components/Alert';
 import Button from '../../common/components/Button';
 import Separator from '../../common/components/Separator';
 import EditUserModal from '../components/EditUserModal';
@@ -26,7 +25,7 @@ export default {
       const controls = this[section + 'Controls'](user, context).toArray();
       if (controls.length) {
         controls.forEach((item) => items.add(item.itemName, item));
-        items.add(section + 'Separator', Separator.component());
+        items.add(section + 'Separator', <Separator />);
       }
     });
 
@@ -61,11 +60,9 @@ export default {
     if (user.canEdit()) {
       items.add(
         'edit',
-        Button.component({
-          icon: 'fas fa-pencil-alt',
-          children: app.translator.trans('core.forum.user_controls.edit_button'),
-          onclick: this.editAction.bind(this, user),
-        })
+        <Button icon="fas fa-pencil-alt" onclick={this.editAction.bind(this, user)}>
+          {app.translator.trans('core.forum.user_controls.edit_button')}
+        </Button>
       );
     }
 
@@ -87,11 +84,9 @@ export default {
     if (user.id() !== '1' && user.canDelete()) {
       items.add(
         'delete',
-        Button.component({
-          icon: 'fas fa-times',
-          children: app.translator.trans('core.forum.user_controls.delete_button'),
-          onclick: this.deleteAction.bind(this, user),
-        })
+        <Button icon="fas fa-times" onclick={this.deleteAction.bind(this, user)}>
+          {app.translator.trans('core.forum.user_controls.delete_button')}
+        </Button>
       );
     }
 
@@ -112,7 +107,7 @@ export default {
       .delete()
       .then(() => {
         this.showDeletionAlert(user, 'success');
-        if (app.current instanceof UserPage && app.current.user === user) {
+        if (app.current.matches(UserPage, { user })) {
           app.history.back();
         } else {
           window.location.reload();
@@ -134,12 +129,7 @@ export default {
       error: 'core.forum.user_controls.delete_error_message',
     }[type];
 
-    app.alerts.show(
-      new Alert({
-        type,
-        children: app.translator.trans(message, { username, email }),
-      })
-    );
+    app.alerts.show({ type }, app.translator.trans(message, { username, email }));
   },
 
   /**
@@ -148,6 +138,6 @@ export default {
    * @param {User} user
    */
   editAction(user) {
-    app.modal.show(new EditUserModal({ user }));
+    app.modal.show(EditUserModal, { user });
   },
 };

@@ -1,0 +1,43 @@
+{
+    "name": "clarkwinkelmann/flarum-ext-first-post-approval",
+    "description": "Hold posts and discussions from new users for approval",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/approval": "^0.1.0-beta.14",
+        "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ClarkWinkelmann\\FirstPostApproval\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "First Post Approval",
+            "icon": {
+                "name": "fas fa-check",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/25055"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}

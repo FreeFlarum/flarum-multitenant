@@ -47,4 +47,5 @@ clarkwinkelmann-scratchpad:
       theme: 'Motyw CodeMirror (wymaga odświeżenia strony po zmianie)'
       theme-auto: 'Automatycznie (domyślny na jasnym motywie, darcula na ciemnym)'
       title: 'Ustawienia notatnika'
+      validate-live: 'Przed zapisaniem wyślij żądanie do strony głównej, aby sprawdzić poprawność Less oraz PHP'
       webpack-command: 'Komenda dla Webpack'

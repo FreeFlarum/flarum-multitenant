@@ -7,6 +7,8 @@ maicol07-sso:
     settings:
       disable_login_btn: 'Wyłącz przycisk logowania'
       disable_signup_btn: 'Wyłącz przycisk rejestracji'
+      jwt_iss: 'Issuer Domain'
+      jwt_signer_key: 'Signer key'
       login_url: 'URL logowania'
       logout_url: 'URL wylogowania'
       signup_url: 'URL rejestracji'

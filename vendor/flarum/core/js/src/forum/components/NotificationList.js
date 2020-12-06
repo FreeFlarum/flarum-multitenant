@@ -1,6 +1,7 @@
 import Component from '../../common/Component';
 import listItems from '../../common/helpers/listItems';
 import Button from '../../common/components/Button';
+import Link from '../../common/components/Link';
 import LoadingIndicator from '../../common/components/LoadingIndicator';
 import Discussion from '../../common/models/Discussion';
 
@@ -9,24 +10,9 @@ import Discussion from '../../common/models/Discussion';
  * notifications, grouped by discussion.
  */
 export default class NotificationList extends Component {
-  init() {
-    /**
-     * Whether or not the notifications are loading.
-     *
-     * @type {Boolean}
-     */
-    this.loading = false;
-
-    /**
-     * Whether or not there are more results that can be loaded.
-     *
-     * @type {Boolean}
-     */
-    this.moreResults = false;
-  }
-
   view() {
-    const pages = app.cache.notifications || [];
+    const state = this.attrs.state;
+    const pages = state.getNotificationPages();
 
     return (
       <div className="NotificationList">
@@ -36,7 +22,7 @@ export default class NotificationList extends Component {
               className: 'Button Button--icon Button--link',
               icon: 'fas fa-check',
               title: app.translator.trans('core.forum.notifications.mark_all_as_read_tooltip'),
-              onclick: this.markAllAsRead.bind(this),
+              onclick: state.markAllAsRead.bind(state),
             })}
           </div>
 
@@ -78,10 +64,10 @@ export default class NotificationList extends Component {
                   return (
                     <div className="NotificationGroup">
                       {group.discussion ? (
-                        <a className="NotificationGroup-header" href={app.route.discussion(group.discussion)} config={m.route}>
+                        <Link className="NotificationGroup-header" href={app.route.discussion(group.discussion)}>
                           {badges && badges.length ? <ul className="NotificationGroup-badges badges">{listItems(badges)}</ul> : ''}
                           {group.discussion.title()}
-                        </a>
+                        </Link>
                       ) : (
                         <div className="NotificationGroup-header">{app.forum.attribute('title')}</div>
                       )}
@@ -97,7 +83,7 @@ export default class NotificationList extends Component {
                 });
               })
             : ''}
-          {this.loading ? (
+          {state.isLoading() ? (
             <LoadingIndicator className="LoadingIndicator--block" />
           ) : pages.length ? (
             ''
@@ -109,100 +95,31 @@ export default class NotificationList extends Component {
     );
   }
 
-  config(isInitialized, context) {
-    if (isInitialized) return;
+  oncreate(vnode) {
+    super.oncreate(vnode);
 
-    const $notifications = this.$('.NotificationList-content');
-    const $scrollParent = $notifications.css('overflow') === 'auto' ? $notifications : $(window);
+    this.$notifications = this.$('.NotificationList-content');
+    this.$scrollParent = this.$notifications.css('overflow') === 'auto' ? this.$notifications : $(window);
 
-    const scrollHandler = () => {
-      const scrollTop = $scrollParent.scrollTop();
-      const viewportHeight = $scrollParent.height();
-      const contentTop = $scrollParent === $notifications ? 0 : $notifications.offset().top;
-      const contentHeight = $notifications[0].scrollHeight;
-
-      if (this.moreResults && !this.loading && scrollTop + viewportHeight >= contentTop + contentHeight) {
-        this.loadMore();
-      }
-    };
-
-    $scrollParent.on('scroll', scrollHandler);
-
-    context.onunload = () => {
-      $scrollParent.off('scroll', scrollHandler);
-    };
+    this.boundScrollHandler = this.scrollHandler.bind(this);
+    this.$scrollParent.on('scroll', this.boundScrollHandler);
   }
 
-  /**
-   * Load notifications into the application's cache if they haven't already
-   * been loaded.
-   */
-  load() {
-    if (app.session.user.newNotificationCount()) {
-      delete app.cache.notifications;
+  onremove() {
+    this.$scrollParent.off('scroll', this.boundScrollHandler);
+  }
+
+  scrollHandler() {
+    const state = this.attrs.state;
+
+    const scrollTop = this.$scrollParent.scrollTop();
+    const viewportHeight = this.$scrollParent.height();
+
+    const contentTop = this.$scrollParent === this.$notifications ? 0 : this.$notifications.offset().top;
+    const contentHeight = this.$notifications[0].scrollHeight;
+
+    if (state.hasMoreResults() && !state.isLoading() && scrollTop + viewportHeight >= contentTop + contentHeight) {
+      state.loadMore();
     }
-
-    if (app.cache.notifications) {
-      return;
-    }
-
-    app.session.user.pushAttributes({ newNotificationCount: 0 });
-
-    this.loadMore();
-  }
-
-  /**
-   * Load the next page of notification results.
-   *
-   * @public
-   */
-  loadMore() {
-    this.loading = true;
-    m.redraw();
-
-    const params = app.cache.notifications ? { page: { offset: app.cache.notifications.length * 10 } } : null;
-
-    return app.store
-      .find('notifications', params)
-      .then(this.parseResults.bind(this))
-      .catch(() => {})
-      .then(() => {
-        this.loading = false;
-        m.redraw();
-      });
-  }
-
-  /**
-   * Parse results and append them to the notification list.
-   *
-   * @param {Notification[]} results
-   * @return {Notification[]}
-   */
-  parseResults(results) {
-    app.cache.notifications = app.cache.notifications || [];
-
-    if (results.length) app.cache.notifications.push(results);
-
-    this.moreResults = !!results.payload.links.next;
-
-    return results;
-  }
-
-  /**
-   * Mark all of the notifications as read.
-   */
-  markAllAsRead() {
-    if (!app.cache.notifications) return;
-
-    app.session.user.pushAttributes({ unreadNotificationCount: 0 });
-
-    app.cache.notifications.forEach((notifications) => {
-      notifications.forEach((notification) => notification.pushAttributes({ isRead: true }));
-    });
-
-    app.request({
-      url: app.forum.attribute('apiUrl') + '/notifications/read',
-      method: 'POST',
-    });
   }
 }

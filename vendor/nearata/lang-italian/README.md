@@ -1,5 +1,7 @@
 # Italian Language Pack for Flarum
 
+> A [Flarum](https://flarum.org) extension that translate the core, its bundled extensions and libraries.
+
 ## Installation
 
 ```shell
@@ -20,32 +22,29 @@ composer remove nearata/lang-italian
 php flarum cache:clear
 ```
 
-## Supported Extensions:
+## Translations
 
-| **Bundled extensions** |
-| --- |
-|flarum-akismet|
-|flarum-approval|
-|flarum-auth-facebook|
-|flarum-auth-github|
-|flarum-auth-twitter|
-|flarum-emoji|
-|flarum-flags|
-|flarum-likes|
-|flarum-lock|
-|flarum-markdown|
-|flarum-mentions|
-|flarum-pusher|
-|flarum-statistics|
-|flarum-sticky|
-|flarum-subscriptions|
-|flarum-suspend|
-|flarum-tags|
-
-| **Bundled libraries** |
-| --- |
-|Validation by Laravel-lang|
-|Moment|
+- Bundled extensions
+  - flarum-akismet
+  - flarum-approval
+  - flarum-auth-facebook
+  - flarum-auth-github
+  - flarum-auth-twitter
+  - flarum-emoji
+  - flarum-flags
+  - flarum-likes
+  - flarum-lock
+  - flarum-markdown
+  - flarum-mentions
+  - flarum-pusher
+  - flarum-statistics
+  - flarum-sticky
+  - flarum-subscriptions
+  - flarum-suspend
+  - flarum-tags
+- Bundled libraries
+  - Validation
+  - Day.js
 
 ## License
 

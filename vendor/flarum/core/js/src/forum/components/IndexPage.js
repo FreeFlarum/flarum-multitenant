@@ -1,8 +1,7 @@
 import { extend } from '../../common/extend';
-import Page from './Page';
+import Page from '../../common/components/Page';
 import ItemList from '../../common/utils/ItemList';
 import listItems from '../../common/helpers/listItems';
-import icon from '../../common/helpers/icon';
 import DiscussionList from './DiscussionList';
 import WelcomeHero from './WelcomeHero';
 import DiscussionComposer from './DiscussionComposer';
@@ -18,52 +17,32 @@ import SelectDropdown from '../../common/components/SelectDropdown';
  * hero, the sidebar, and the discussion list.
  */
 export default class IndexPage extends Page {
-  init() {
-    super.init();
+  static providesInitialSearch = true;
+
+  oninit(vnode) {
+    super.oninit(vnode);
 
     // If the user is returning from a discussion page, then take note of which
     // discussion they have just visited. After the view is rendered, we will
     // scroll down so that this discussion is in view.
-    if (app.previous instanceof DiscussionPage) {
-      this.lastDiscussion = app.previous.discussion;
+    if (app.previous.matches(DiscussionPage)) {
+      this.lastDiscussion = app.previous.get('discussion');
     }
 
     // If the user is coming from the discussion list, then they have either
     // just switched one of the parameters (filter, sort, search) or they
     // probably want to refresh the results. We will clear the discussion list
     // cache so that results are reloaded.
-    if (app.previous instanceof IndexPage) {
-      app.cache.discussionList = null;
+    if (app.previous.matches(IndexPage)) {
+      app.discussions.clear();
     }
 
-    const params = this.params();
-
-    if (app.cache.discussionList) {
-      // Compare the requested parameters (sort, search query) to the ones that
-      // are currently present in the cached discussion list. If they differ, we
-      // will clear the cache and set up a new discussion list component with
-      // the new parameters.
-      Object.keys(params).some((key) => {
-        if (app.cache.discussionList.props.params[key] !== params[key]) {
-          app.cache.discussionList = null;
-          return true;
-        }
-      });
-    }
-
-    if (!app.cache.discussionList) {
-      app.cache.discussionList = new DiscussionList({ params });
-    }
+    app.discussions.refreshParams(app.search.params());
 
     app.history.push('index', app.translator.trans('core.forum.header.back_to_index_tooltip'));
 
     this.bodyClass = 'App--index';
-  }
-
-  onunload() {
-    // Save the scroll position so we can restore it when we return to the
-    // discussion list.
-    app.cache.scrollTop = $(window).scrollTop();
+    this.scrollTopOnCreate = false;
   }
 
   view() {
@@ -80,7 +59,7 @@ export default class IndexPage extends Page {
                 <ul className="IndexPage-toolbar-view">{listItems(this.viewItems().toArray())}</ul>
                 <ul className="IndexPage-toolbar-action">{listItems(this.actionItems().toArray())}</ul>
               </div>
-              {app.cache.discussionList.render()}
+              <DiscussionList state={app.discussions} />
             </div>
           </div>
         </div>
@@ -88,15 +67,15 @@ export default class IndexPage extends Page {
     );
   }
 
-  config(isInitialized, context) {
-    super.config(...arguments);
-
-    if (isInitialized) return;
-
-    extend(context, 'onunload', () => $('#app').css('min-height', ''));
-
-    app.setTitle('');
+  setTitle() {
+    app.setTitle(app.translator.trans('core.forum.index.meta_title_text'));
     app.setTitleCount(0);
+  }
+
+  oncreate(vnode) {
+    super.oncreate(vnode);
+
+    this.setTitle();
 
     // Work out the difference between the height of this hero and that of the
     // previous hero. Maintain the same scroll position relative to the bottom
@@ -107,18 +86,22 @@ export default class IndexPage extends Page {
 
     $('#app').css('min-height', $(window).height() + heroHeight);
 
-    // Scroll to the remembered position. We do this after a short delay so that
-    // it happens after the browser has done its own "back button" scrolling,
-    // which isn't right. https://github.com/flarum/core/issues/835
-    const scroll = () => $(window).scrollTop(scrollTop - oldHeroHeight + heroHeight);
-    scroll();
-    setTimeout(scroll, 1);
+    // Let browser handle scrolling on page reload.
+    if (app.previous.type == null) return;
+
+    // When on mobile, only retain scroll if we're coming from a discussion page.
+    // Otherwise, we've just changed the filter, so we should go to the top of the page.
+    if (app.screen() == 'desktop' || app.screen() == 'desktop-hd' || this.lastDiscussion) {
+      $(window).scrollTop(scrollTop - oldHeroHeight + heroHeight);
+    } else {
+      $(window).scrollTop(0);
+    }
 
     // If we've just returned from a discussion page, then the constructor will
     // have set the `lastDiscussion` property. If this is the case, we want to
     // scroll down to that discussion so that it's in view.
     if (this.lastDiscussion) {
-      const $discussion = this.$(`.DiscussionListItem[data-id="${this.lastDiscussion.id()}"]`);
+      const $discussion = this.$(`li[data-id="${this.lastDiscussion.id()}"] .DiscussionListItem`);
 
       if ($discussion.length) {
         const indexTop = $('#header').outerHeight();
@@ -131,6 +114,18 @@ export default class IndexPage extends Page {
         }
       }
     }
+  }
+
+  onbeforeremove() {
+    // Save the scroll position so we can restore it when we return to the
+    // discussion list.
+    app.cache.scrollTop = $(window).scrollTop();
+  }
+
+  onremove() {
+    super.onremove();
+
+    $('#app').css('min-height', '');
   }
 
   /**
@@ -155,25 +150,31 @@ export default class IndexPage extends Page {
 
     items.add(
       'newDiscussion',
-      Button.component({
-        children: app.translator.trans(
-          canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button'
-        ),
-        icon: 'fas fa-edit',
-        className: 'Button Button--primary IndexPage-newDiscussion',
-        itemClassName: 'App-primaryControl',
-        onclick: this.newDiscussionAction.bind(this),
-        disabled: !canStartDiscussion,
-      })
+      Button.component(
+        {
+          icon: 'fas fa-edit',
+          className: 'Button Button--primary IndexPage-newDiscussion',
+          itemClassName: 'App-primaryControl',
+          onclick: () => {
+            // If the user is not logged in, the promise rejects, and a login modal shows up.
+            // Since that's already handled, we dont need to show an error message in the console.
+            return this.newDiscussionAction().catch(() => {});
+          },
+          disabled: !canStartDiscussion,
+        },
+        app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button')
+      )
     );
 
     items.add(
       'nav',
-      SelectDropdown.component({
-        children: this.navItems(this).toArray(),
-        buttonClassName: 'Button',
-        className: 'App-titleControl',
-      })
+      SelectDropdown.component(
+        {
+          buttonClassName: 'Button',
+          className: 'App-titleControl',
+        },
+        this.navItems(this).toArray()
+      )
     );
 
     return items;
@@ -187,15 +188,17 @@ export default class IndexPage extends Page {
    */
   navItems() {
     const items = new ItemList();
-    const params = this.stickyParams();
+    const params = app.search.stickyParams();
 
     items.add(
       'allDiscussions',
-      LinkButton.component({
-        href: app.route('index', params),
-        children: app.translator.trans('core.forum.index.all_discussions_link'),
-        icon: 'far fa-comments',
-      }),
+      LinkButton.component(
+        {
+          href: app.route('index', params),
+          icon: 'far fa-comments',
+        },
+        app.translator.trans('core.forum.index.all_discussions_link')
+      ),
       100
     );
 
@@ -211,7 +214,7 @@ export default class IndexPage extends Page {
    */
   viewItems() {
     const items = new ItemList();
-    const sortMap = app.cache.discussionList.sortMap();
+    const sortMap = app.discussions.sortMap();
 
     const sortOptions = {};
     for (const i in sortMap) {
@@ -220,21 +223,25 @@ export default class IndexPage extends Page {
 
     items.add(
       'sort',
-      Dropdown.component({
-        buttonClassName: 'Button',
-        label: sortOptions[this.params().sort] || Object.keys(sortMap).map((key) => sortOptions[key])[0],
-        children: Object.keys(sortOptions).map((value) => {
+      Dropdown.component(
+        {
+          buttonClassName: 'Button',
+          label: sortOptions[app.search.params().sort] || Object.keys(sortMap).map((key) => sortOptions[key])[0],
+        },
+        Object.keys(sortOptions).map((value) => {
           const label = sortOptions[value];
-          const active = (this.params().sort || Object.keys(sortMap)[0]) === value;
+          const active = (app.search.params().sort || Object.keys(sortMap)[0]) === value;
 
-          return Button.component({
-            children: label,
-            icon: active ? 'fas fa-check' : true,
-            onclick: this.changeSort.bind(this, value),
-            active: active,
-          });
-        }),
-      })
+          return Button.component(
+            {
+              icon: active ? 'fas fa-check' : true,
+              onclick: app.search.changeSort.bind(app.search, value),
+              active: active,
+            },
+            label
+          );
+        })
+      )
     );
 
     return items;
@@ -256,7 +263,7 @@ export default class IndexPage extends Page {
         icon: 'fas fa-sync',
         className: 'Button Button--icon',
         onclick: () => {
-          app.cache.discussionList.refresh();
+          app.discussions.refresh();
           if (app.session.user) {
             app.store.find('users', app.session.user.id());
             m.redraw();
@@ -281,93 +288,23 @@ export default class IndexPage extends Page {
   }
 
   /**
-   * Return the current search query, if any. This is implemented to activate
-   * the search box in the header.
-   *
-   * @see Search
-   * @return {String}
-   */
-  searching() {
-    return this.params().q;
-  }
-
-  /**
-   * Redirect to the index page without a search filter. This is called when the
-   * 'x' is clicked in the search box in the header.
-   *
-   * @see Search
-   */
-  clearSearch() {
-    const params = this.params();
-    delete params.q;
-
-    m.route(app.route(this.props.routeName, params));
-  }
-
-  /**
-   * Redirect to the index page using the given sort parameter.
-   *
-   * @param {String} sort
-   */
-  changeSort(sort) {
-    const params = this.params();
-
-    if (sort === Object.keys(app.cache.discussionList.sortMap())[0]) {
-      delete params.sort;
-    } else {
-      params.sort = sort;
-    }
-
-    m.route(app.route(this.props.routeName, params));
-  }
-
-  /**
-   * Get URL parameters that stick between filter changes.
-   *
-   * @return {Object}
-   */
-  stickyParams() {
-    return {
-      sort: m.route.param('sort'),
-      q: m.route.param('q'),
-    };
-  }
-
-  /**
-   * Get parameters to pass to the DiscussionList component.
-   *
-   * @return {Object}
-   */
-  params() {
-    const params = this.stickyParams();
-
-    params.filter = m.route.param('filter');
-
-    return params;
-  }
-
-  /**
    * Open the composer for a new discussion or prompt the user to login.
    *
    * @return {Promise}
    */
   newDiscussionAction() {
-    const deferred = m.deferred();
+    return new Promise((resolve, reject) => {
+      if (app.session.user) {
+        app.composer.load(DiscussionComposer, { user: app.session.user });
+        app.composer.show();
 
-    if (app.session.user) {
-      const component = new DiscussionComposer({ user: app.session.user });
+        return resolve(app.composer);
+      } else {
+        app.modal.show(LogInModal);
 
-      app.composer.load(component);
-      app.composer.show();
-
-      deferred.resolve(component);
-    } else {
-      deferred.reject();
-
-      app.modal.show(new LogInModal());
-    }
-
-    return deferred.promise;
+        return reject();
+      }
+    });
   }
 
   /**

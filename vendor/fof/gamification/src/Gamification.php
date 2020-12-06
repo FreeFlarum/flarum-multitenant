@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/gamification.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,10 +11,9 @@
 
 namespace FoF\Gamification;
 
-use Flarum\Post\PostRepository;
+use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\User;
-use Flarum\User\UserRepository;
 
 class Gamification
 {
@@ -24,29 +23,15 @@ class Gamification
     const MAXIMUM_USER_EXPOSED = 25;
 
     /**
-     * @var PostRepository
-     */
-    protected $posts;
-
-    /**
-     * @var UserRepository
-     */
-    protected $users;
-
-    /**
      * @var SettingsRepositoryInterface
      */
     protected $settings;
 
     /**
-     * @param PostRepository              $posts
-     * @param UserRepository              $users
      * @param SettingsRepositoryInterface $settings
      */
-    public function __construct(PostRepository $posts, UserRepository $users, SettingsRepositoryInterface $settings)
+    public function __construct(SettingsRepositoryInterface $settings)
     {
-        $this->posts = $posts;
-        $this->users = $users;
         $this->settings = $settings;
     }
 
@@ -60,6 +45,7 @@ class Gamification
         $date = strtotime($discussion->start_time);
 
         $s = $discussion->votes;
+
         $order = log10(max(abs($s), 1));
 
         if ($s > 0) {
@@ -72,7 +58,7 @@ class Gamification
 
         $seconds = $date - 1134028003;
 
-        $discussion->hotness = round($sign * $order + $seconds / 45000, 10);
+        $discussion->hotness = round($order + (($sign * $seconds) / 45000), 10);
 
         $discussion->save();
     }
@@ -107,24 +93,23 @@ class Gamification
     }
 
     /**
-     * @param $post_id
-     * @param $user_id
-     * @param User $actor
+     * @param $postId
+     * @param $userId
      */
-    public function convertLike($post_id, $user_id)
+    public function convertLike($postId, $userId)
     {
-        $user = $this->users->query()->where('id', $user_id)->first();
-        $post = $this->posts->query()->where('id', $post_id)->first();
+        $user = User::find($userId);
+        $post = Post::find($postId);
 
-        if (null !== $post && null !== $post->user && null !== $user) {
-            $post->user->increment('votes');
+        if ($post && $post->user && $user) {
+            Vote::updateUserVotes($post->user)->save();
 
             if ($post->number = 1) {
-                $post->discussion->increment('votes');
+                Vote::updateDiscussionVotes($post->discussion);
             }
 
             $vote = Vote::build($post, $user);
-            $vote->type = 'Up';
+            $vote->value = 1;
             $vote->save();
 
             $ranks = json_decode($this->settings->get('fof-gamification.ranks'), true);

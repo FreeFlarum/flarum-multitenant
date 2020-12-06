@@ -1,0 +1,54 @@
+flarum-subscriptions:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+
+    # Các bản dịch này được hiển thị dưới dạng chú giải công cụ cho phù hiệu thảo luận.
+    badge:
+      following_tooltip: => flarum-subscriptions.ref.following
+      ignoring_tooltip: => flarum-subscriptions.ref.ignoring
+
+    # Các bản dịch này được sử dụng bởi các nút điều khiển thảo luận.
+    discussion_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      unfollow_button: Hủy theo dõi
+      unignore_button: Hủy bỏ qua
+
+    # Các bản dịch này được sử dụng trên trang chỉ mục, ngoại vi vào danh sách thảo luận.
+    index:
+      following_link: => flarum-subscriptions.ref.following
+
+    # Các bản dịch này được sử dụng bởi danh sách Thông báo, a.k.a. "chuông".
+    notifications:
+      new_post_text: "{username} đã đăng"
+
+    # Các bản dịch này được sử dụng trong trang Cài đặt.
+    settings:
+      follow_after_reply_label: Tự động theo dõi các cuộc thảo luận mà tôi trả lời
+      notify_new_post_label: Ai đó đăng bài trong một cuộc thảo luận tôi đang theo dõi
+
+    # Các bản dịch này được sử dụng trong menu đăng ký được hiển thị ở bên phải của luồng bài đăng.
+    sub_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      following_button: => flarum-subscriptions.ref.following
+      following_text: Được thông báo về tất cả các câu trả lời.
+      ignoring_button: => flarum-subscriptions.ref.ignoring
+      ignoring_text: Không bao giờ được thông báo. Ẩn khỏi danh sách thảo luận.
+      not_following_button: Không theo dõi
+      not_following_text: "Chỉ được thông báo khi @mentioned."
+      notify_alert_tooltip: Nhận thông báo diễn đàn khi có bài viết mới
+      notify_email_tooltip: Nhận email khi có bài viết mới
+
+  ##
+  # REUSED TRANSLATIONS - Các khóa này không nên được sử dụng trực tiếp trong mã!
+  ##
+
+  # Các bản dịch trong không gian tên này được tham chiếu bởi hai hoặc nhiều khóa duy nhất.
+  ref:
+    follow: Theo dõi
+    following: Đang theo dõi
+    ignoring: Bỏ qua

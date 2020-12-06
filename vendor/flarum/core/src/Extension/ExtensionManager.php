@@ -15,7 +15,7 @@ use Flarum\Extension\Event\Disabling;
 use Flarum\Extension\Event\Enabled;
 use Flarum\Extension\Event\Enabling;
 use Flarum\Extension\Event\Uninstalled;
-use Flarum\Foundation\Application;
+use Flarum\Foundation\Paths;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -29,7 +29,10 @@ class ExtensionManager
 {
     protected $config;
 
-    protected $app;
+    /**
+     * @var Paths
+     */
+    protected $paths;
 
     protected $container;
 
@@ -52,14 +55,14 @@ class ExtensionManager
 
     public function __construct(
         SettingsRepositoryInterface $config,
-        Application $app,
+        Paths $paths,
         Container $container,
         Migrator $migrator,
         Dispatcher $dispatcher,
         Filesystem $filesystem
     ) {
         $this->config = $config;
-        $this->app = $app;
+        $this->paths = $paths;
         $this->container = $container;
         $this->migrator = $migrator;
         $this->dispatcher = $dispatcher;
@@ -71,23 +74,30 @@ class ExtensionManager
      */
     public function getExtensions()
     {
-        if (is_null($this->extensions) && $this->filesystem->exists($this->app->vendorPath().'/composer/installed.json')) {
+        if (is_null($this->extensions) && $this->filesystem->exists($this->paths->vendor.'/composer/installed.json')) {
             $extensions = new Collection();
 
             // Load all packages installed by composer.
-            $installed = json_decode($this->filesystem->get($this->app->vendorPath().'/composer/installed.json'), true);
+            $installed = json_decode($this->filesystem->get($this->paths->vendor.'/composer/installed.json'), true);
 
             // Composer 2.0 changes the structure of the installed.json manifest
             $installed = $installed['packages'] ?? $installed;
+
+            // We calculate and store a set of composer package names for all installed Flarum extensions,
+            // so we know what is and isn't a flarum extension in `calculateDependencies`.
+            // Using keys of an associative array allows us to do these checks in constant time.
+            $installedSet = [];
 
             foreach ($installed as $package) {
                 if (Arr::get($package, 'type') != 'flarum-extension' || empty(Arr::get($package, 'name'))) {
                     continue;
                 }
 
+                $installedSet[Arr::get($package, 'name')] = true;
+
                 $path = isset($package['install-path'])
-                    ? $this->getExtensionsDir().'/composer/'.$package['install-path']
-                    : $this->getExtensionsDir().'/'.Arr::get($package, 'name');
+                    ? $this->paths->vendor.'/composer/'.$package['install-path']
+                    : $this->paths->vendor.'/'.Arr::get($package, 'name');
 
                 // Instantiates an Extension object using the package path and composer.json file.
                 $extension = new Extension($path, $package);
@@ -98,6 +108,11 @@ class ExtensionManager
 
                 $extensions->put($extension->getId(), $extension);
             }
+
+            foreach ($extensions as $extension) {
+                $extension->calculateDependencies($installedSet);
+            }
+
             $this->extensions = $extensions->sortBy(function ($extension, $name) {
                 return $extension->composerJsonAttribute('extra.flarum-extension.title');
             });
@@ -130,17 +145,27 @@ class ExtensionManager
 
         $extension = $this->getExtension($name);
 
+        $missingDependencies = [];
+        $enabledIds = $this->getEnabled();
+        foreach ($extension->getExtensionDependencyIds() as $dependencyId) {
+            if (! in_array($dependencyId, $enabledIds)) {
+                $missingDependencies[] = $this->getExtension($dependencyId);
+            }
+        }
+
+        if (! empty($missingDependencies)) {
+            throw new Exception\MissingDependenciesException($extension, $missingDependencies);
+        }
+
         $this->dispatcher->dispatch(new Enabling($extension));
 
-        $enabled = $this->getEnabled();
-
-        $enabled[] = $name;
+        $enabledIds[] = $name;
 
         $this->migrate($extension);
 
         $this->publishAssets($extension);
 
-        $this->setEnabled($enabled);
+        $this->setEnabled($enabledIds);
 
         $extension->enable($this->container);
 
@@ -161,6 +186,18 @@ class ExtensionManager
         }
 
         $extension = $this->getExtension($name);
+
+        $dependentExtensions = [];
+
+        foreach ($this->getEnabledExtensions() as $possibleDependent) {
+            if (in_array($extension->getId(), $possibleDependent->getExtensionDependencyIds())) {
+                $dependentExtensions[] = $possibleDependent;
+            }
+        }
+
+        if (! empty($dependentExtensions)) {
+            throw new Exception\DependentExtensionsException($extension, $dependentExtensions);
+        }
 
         $this->dispatcher->dispatch(new Disabling($extension));
 
@@ -203,7 +240,7 @@ class ExtensionManager
         if ($extension->hasAssets()) {
             $this->filesystem->copyDirectory(
                 $extension->getPath().'/assets',
-                $this->app->publicPath().'/assets/extensions/'.$extension->getId()
+                $this->paths->public.'/assets/extensions/'.$extension->getId()
             );
         }
     }
@@ -215,7 +252,7 @@ class ExtensionManager
      */
     protected function unpublishAssets(Extension $extension)
     {
-        $this->filesystem->deleteDirectory($this->app->publicPath().'/assets/extensions/'.$extension->getId());
+        $this->filesystem->deleteDirectory($this->paths->public.'/assets/extensions/'.$extension->getId());
     }
 
     /**
@@ -227,7 +264,7 @@ class ExtensionManager
      */
     public function getAsset(Extension $extension, $path)
     {
-        return $this->app->publicPath().'/assets/extensions/'.$extension->getId().$path;
+        return $this->paths->public.'/assets/extensions/'.$extension->getId().$path;
     }
 
     /**
@@ -331,15 +368,5 @@ class ExtensionManager
         $enabled = $this->getEnabledExtensions();
 
         return isset($enabled[$extension]);
-    }
-
-    /**
-     * The extensions path.
-     *
-     * @return string
-     */
-    protected function getExtensionsDir()
-    {
-        return $this->app->vendorPath();
     }
 }

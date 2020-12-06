@@ -15,6 +15,10 @@ fof-upload:
         Ovdje konfigurirajte svoje mapiranje. Svaka mime vrsta će se odnositi pomoću određenog adaptera za prijenos i predloška za preuzimanje.
       resize: |
         Odaberite želite li promijeniti veličinu slika prije prijenosa. Maksimalnu širinu i visinu možete odabrati u pikselima. Postupak mijenjanja veličine zadržava omjer slike.
+      client_extension: |
+        By default Upload will choose a safe file extension based on the MIME type.
+        For some file types based around ZIP or binary data this can result in generic extensions being used instead of the expected one.
+        Here you can enter a comma-separated list of file extensions that will be kept verbatim.
       watermark: |
         Odaberite hoće li se slikama dodati vodeni žig tijekom prijenosa. Vodeni žigovi dodaju se ne gifima na temelju nižih postavki.
     labels:
@@ -49,6 +53,8 @@ fof-upload:
         max_width: Maksimalna širina slike
         title: Suživanje slika
         toggle: Promjena veličine slike
+      client_extension:
+        title: User-provided file extensions
       watermark:
         file: Prenesite svoju sliku vodenog žiga
         position: Položaj vodenog žiga
@@ -67,6 +73,9 @@ fof-upload:
         Prikazuje kompletnu sliku linijski. Nema funkcionalnosti za preuzimanje, ne prikupljaju se statistike i zanemaruje se hot link zaštita.
       image_description: |
         Prikazuje sličicu slike i prenosi se proxyjem putem php-a. Omogućuje prikupljanja statistika i hot link zaštite.
+      just-url: Just URL
+      just-url_description: |
+        Inserts just the URL. Rendering can be handled by other extensions with auto-link ability. No download functionality, no statistics are gathered and hotlink protection is ignored.
     upload_methods:
       aws-s3: Amazon S3
       imgur: Imgur

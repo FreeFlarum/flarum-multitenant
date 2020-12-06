@@ -1,0 +1,37 @@
+flarum-sticky:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện quản trị.
+  admin:
+
+    # Các bản dịch này được sử dụng trong trang Quyền của giao diện quản trị viên.
+    permissions:
+      sticky_discussions_label: Ghim bài viết
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+
+    # Các bản dịch này được hiển thị dưới dạng chú giải công cụ cho phù hiệu thảo luận.
+    badge:
+      sticky_tooltip: => flarum-sticky.ref.sticky
+
+    # Các bản dịch này được sử dụng bởi các nút điều khiển thảo luận.
+    discussion_controls:
+      sticky_button: => flarum-sticky.ref.sticky
+      unsticky_button: Bỏ ghim
+
+    # Các bản dịch này được hiển thị giữa các bài viết trong luồng bài viết.
+    post_stream:
+      discussion_stickied_text: "{username} đã ghim thảo luận"
+      discussion_unstickied_text: "{username} đã bỏ ghim thảo luận"
+
+  ##
+  # REUSED TRANSLATIONS - Các khóa này không nên được sử dụng trực tiếp trong mã!
+  ##
+
+  # Các bản dịch trong không gian tên này được tham chiếu bởi hai hoặc nhiều khóa duy nhất.
+  ref:
+    sticky: Ghim

@@ -1,40 +1,40 @@
 {
-	"name": "neercsys/flarum-ext-bosanski",
-	"description": "Bosnian language pack for Flarum's third party extensions.",
-	"keywords": [
-		"flarum",
-		"extension",
-		"bosnian",
-		"bosanski",
-		"locale",
-		"translation"
-	],
-	"type": "flarum-extension",
-	"license": "MIT",
-	"require": {
-		"flarum/core": "^0.1.0-beta.9"
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "0.1.x-dev"
-		},
-		"authors": [{
-			"name": "neercsys",
-			"role": "Developer"
-		}],
-		"flarum-extension": {
-			"title": "Bosnian Extended Pack",
-			"icon": {
-				"name": "fas fa-language",
-				"background": "#346eeb",
-				"backgroundSize": "cover",
-				"backgroundPosition": "center",
-				"color": "#e9f01d"
-			}
-		},
-		"flarum-locale": {
-			"code": "bs",
-			"title": "Bosanski"
-		}
-	}
+    "name": "neercsys/flarum-ext-bosanski",
+    "description": "Bosnian language pack for Flarum's third party extensions.",
+    "type": "flarum-extension",
+    "keywords": ["extension", "flarum", "bosanski", "locale", "translation"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "neercsys",
+            "email": "neercsys@gmail.com",
+            "homepage": "https://www.balkanbuzz.net"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/neercsys/flarum-ext-bosanski/issues",
+        "source": "https://github.com/neercsys/flarum-ext-bosanski"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.14"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Bosanski",
+            "icon": {
+                "name": "fas fa-language",
+		"background": "#346eeb",
+		"backgroundSize": "cover",
+		"backgroundPosition": "center",
+		"color": "#e9f01d"
+            }
+        },
+        "flarum-locale": {
+            "code": "bs",
+            "title": "Bosanski"
+        }
+    }
 }

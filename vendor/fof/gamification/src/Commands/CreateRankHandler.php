@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/gamification.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,15 +11,13 @@
 
 namespace FoF\Gamification\Commands;
 
-use Flarum\User\AssertPermissionTrait;
 use Flarum\User\Exception\PermissionDeniedException;
 use FoF\Gamification\Rank;
 use FoF\Gamification\Validator\RankValidator;
+use Illuminate\Support\Arr;
 
 class CreateRankHandler
 {
-    use AssertPermissionTrait;
-
     /**
      * @var RankValidator
      */
@@ -42,15 +40,13 @@ class CreateRankHandler
      */
     public function handle(CreateRank $command)
     {
-        $actor = $command->actor;
+        $command->actor->assertAdmin();
         $data = $command->data;
 
-        $this->assertAdmin($actor);
-
         $rank = Rank::build(
-            array_get($data, 'attributes.name'),
-            array_get($data, 'attributes.color'),
-            array_get($data, 'attributes.points')
+            Arr::get($data, 'attributes.name'),
+            Arr::get($data, 'attributes.color'),
+            Arr::get($data, 'attributes.points')
         );
 
         $this->validator->assertValid($rank->getAttributes());

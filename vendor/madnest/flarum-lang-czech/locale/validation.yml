@@ -72,6 +72,7 @@ validation:
   not_in: "Vybraný prvek :attribute není platný."
   not_regex: "Formát prvku :attribute není platný."
   numeric: "Pole :attribute musí být číslo."
+  password: "Heslo je nesprávné."
   present: "Pole :attribute musí být přítomno."
   regex: "Formát pole :attribute není platný."
   required: "Pole :attribute je vyžadováno."

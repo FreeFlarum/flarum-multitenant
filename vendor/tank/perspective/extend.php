@@ -9,11 +9,13 @@
 
 use Flarum\Extend;
 use Flarum\Post\Event\Saving;
+use FoF\Components\Extend\AddFofComponents;
 use Illuminate\Contracts\Events\Dispatcher;
 use Tank\Perspective\Listener\ValidatePost;
 use Tank\Perspective\Perspective;
 
 return [
+    new AddFofComponents(),
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js'),
     (new Extend\Frontend('admin'))

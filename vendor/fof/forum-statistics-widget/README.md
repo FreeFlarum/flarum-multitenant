@@ -6,13 +6,14 @@ A [Flarum](http://flarum.org) extension. Add a forum statistics widget to the si
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Using composer:
 
 ```sh
 composer require fof/forum-statistics-widget
 ```
 
 ### Updating
+Using composer:
 
 ```sh
 composer update fof/forum-statistics-widget

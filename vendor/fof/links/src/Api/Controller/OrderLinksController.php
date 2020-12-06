@@ -11,7 +11,6 @@
 
 namespace FoF\Links\Api\Controller;
 
-use Flarum\User\AssertPermissionTrait;
 use FoF\Links\Link;
 use Illuminate\Support\Arr;
 use Laminas\Diactoros\Response\EmptyResponse;
@@ -21,22 +20,19 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class OrderLinksController implements RequestHandlerInterface
 {
-    use AssertPermissionTrait;
-
     /**
      * {@inheritdoc}
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $this->assertAdmin($request->getAttribute('actor'));
-
+        $request->getAttribute('actor')->assertAdmin();
         $order = Arr::get($request->getParsedBody(), 'order');
 
         if ($order === null) {
             return new EmptyResponse(422);
         }
 
-        app('db.connection')->transaction(function () use ($request, $order) {
+        app('db.connection')->transaction(function () use ($order) {
             // code adapted from flarum/tags
             // https://github.com/flarum/tags/blob/a0744cf9d91819f7628bef1ac27ecb96c6ee97f1/src/Api/Controller/OrderTagsController.php
 

@@ -1,0 +1,52 @@
+{
+  "name": "lang-vietnamese",
+  "version": "2.0.0",
+  "description": "Vietnamese language pack (datlechin)",
+  "type": "flarum-extension",
+  "license": "MIT",
+  "keywords": [
+    "extention",
+    "locale",
+    "flarum",
+    "Vietnamese",
+    "Tieng",
+    "Viet",
+    "translation"
+  ],
+  "authors": [
+    {
+      "name": "Ngo Quoc Dat (datlechin)",
+      "email": "datlechin@gmail.com",
+      "homepage": "https://vieit.net"
+    }
+  ],
+  "require": {
+    "flarum/core": "^0.1.0-beta.13"
+  },
+  "suggest": {
+    "flarum/flarum": "Flarum",
+    "datlechin/datlechin": "Flarum Extensions Vietnamese language pack."
+  },
+  "extra": {
+    "branch-alias": {
+        "dev-master": "0.1.x-dev"
+    },
+    "flarum-extension": {
+        "title": "Vietnamese",
+        "icon": {
+            "image": "icon.svg",
+            "backgroundColor": "#00247d",
+            "backgroundSize": "cover",
+            "backgroundPosition": "center"
+        }
+    },
+    "flarum-locale": {
+        "code": "vi",
+        "title": "Vietnamese"
+    }
+  },
+  "support": {
+    "url": "https://github.com/datlechin/lang-vietnamese/issues"
+  },
+  "homepage": "https://github.com/datlechin/lang-vietnamese#readme"
+}

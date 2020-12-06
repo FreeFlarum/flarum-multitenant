@@ -40,6 +40,8 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: 기본 언어
+      display_name_heading: 사용자 표시 이름
+      display_name_text: 사용자 표시 이름에 사용되는 드라이버를 선택하십시오. 기본적으로 사용자 이름이 표시됩니다.
       forum_description_heading: 포럼 설명
       forum_description_text: 커뮤니티를 설명하는 두개의 짧은 문장을 입력합니다. 이 문장은 메타 태그에 나타나고 검색 엔진에 표시됩니다.
       forum_title_heading: 포럼 타이틀
@@ -543,6 +545,18 @@ core:
         {url}
 
         암호를 변경하지 않으려면 이 이메일을 무시하십시오. 아무 것도 변경되지 않습니다.
+        
+    # These translations are used when testing mailing configuration
+    send_test:
+      subject: Flarum 이메일 테스트
+      body: |
+        안녕하세요 {username}님!
+
+        Flarum 이메일 구성이 제대로 작동하는지 확인하기 위하여 이 이메일을 전송하였습니다.
+
+        귀하인 경우 설정된 이메일 구성이 제대로 작동한다는 것을 의미합니다!
+
+        귀하가 아닌 경우 이 이메일을 무시해주세요.
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!

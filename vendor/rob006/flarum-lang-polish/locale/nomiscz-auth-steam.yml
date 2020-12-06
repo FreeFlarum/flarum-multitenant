@@ -27,6 +27,6 @@ nomiscz-auth-steam:
           cancel: Nie!
           confirm: 'Tak, odłącz konto'
         info:
-          confirm: 'Czy jesteś pewien, że chcesz odłączyć twoje konto Steam?'
+          confirm: 'Czy jesteś pewien, że chcesz odłączyć swoje konto Steam?'
           no_providers: 'Nie masz żadnych innych dostawców logowania! Prawdopodobnie musisz zresetować swoje hasło.'
         title: 'Odłącz konto Steam'

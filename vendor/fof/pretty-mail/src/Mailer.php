@@ -11,6 +11,8 @@
 
 namespace FoF\PrettyMail;
 
+use Flarum\Http\UrlGenerator;
+use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Mail\Mailer as LaravelMailer;
 use s9e\TextFormatter\Bundles\Fatdown;
 
@@ -38,7 +40,15 @@ class Mailer extends LaravelMailer
             $body = $text;
         }
 
-        $settings = app()->make('flarum.settings');
+        /**
+         * @var SettingsRepositoryInterface
+         */
+        $settings = app(SettingsRepositoryInterface::class);
+
+        /**
+         * @var UrlGenerator
+         */
+        $url = app(UrlGenerator::class);
 
         if ((bool) (int) $settings->get('fof-pretty-mail.includeCSS')) {
             $file = preg_grep('~^forum-.*\.css$~', scandir($this->assets_dir));
@@ -47,7 +57,8 @@ class Mailer extends LaravelMailer
         $view = BladeCompiler::render($settings->get('fof-pretty-mail.mailhtml'), [
             'body'       => $body,
             'settings'   => $settings,
-            'baseUrl'    => app()->url(),
+            'baseUrl'    => $url->to('forum')->base(), // $baseUrl property is deprecated, to be replaced soley by $url. Provided as compatability for now.
+            'url'        => $url,
             'forumStyle' => isset($file) ? file_get_contents($this->assets_dir.reset($file)) : '',
             'link'       => empty($matches) ? null : $matches[0],
         ]);

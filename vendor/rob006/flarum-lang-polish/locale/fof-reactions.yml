@@ -10,8 +10,8 @@ fof-reactions:
       convert:
         button: 'Przekonwertuj stare reakcje'
         converted: 'Pomyślnie przekonwertowano wszystkie {number} polubień'
-        converting: 'Twoje reakcje są właśnie konwertowane. Odśwież stronę po kilku minutach aby zobaczyć czy proces się zakończył. (Konwersja może potrwać chwilę w zależności od liczby reakcji na twoim forum)'
-        help: 'Jeśli jedynie zaktualizowałeś rozszerzenie, twoje reakcje muszą być przekonwertowane. Jeśli właśnie zainstalowałeś rozszerzenie, możesz bezpiecznie zignorować tę wiadomość.'
+        converting: 'Twoje reakcje są właśnie konwertowane. Odśwież stronę po kilku minutach, aby zobaczyć czy proces się zakończył (konwersja może potrwać chwilę w zależności od liczby reakcji na Twoim forum).'
+        help: 'Jeśli jedynie zaktualizowałeś rozszerzenie, Twoje reakcje muszą być przekonwertowane. Jeśli właśnie zainstalowałeś rozszerzenie, możesz bezpiecznie zignorować tę wiadomość.'
       reactions:
         Helptext: 'Podaj nazwę (identyfikator) emoji lub ikony Font Awesome i wybierz typ, z którego chcesz korzystać.'
         help:
@@ -42,7 +42,7 @@ fof-reactions:
     mod_item: 'Zobacz reakcje'
     modal:
       title: Reakcje
-    notification: '{username} zareagował {reaction} na twój post'
+    notification: '{username} zareagował {reaction} na Twój post'
     reacting-own-post: 'Nie możesz zareagować na swój własny post'
     settings:
       notify_post_reacted_label: 'Ktoś zareagował na mój post'

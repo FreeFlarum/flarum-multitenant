@@ -1,3 +1,9 @@
-fof-userbio:
-  forum:
-    userbioPlaceholder: Napišite nešto o sebi...
+fof-user-bio:
+    admin:
+        permission:
+            view: Pregledati bio
+            editOwn: Urediti vlastiti bio
+            editAny: Urediti bilo čiji bio
+
+    forum:
+        userbioPlaceholder: Napišite nešto o sebi...

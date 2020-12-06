@@ -3,8 +3,9 @@
 namespace FoF\Console\Providers;
 
 use FoF\Console\Cache\Factory;
-use FoF\Console\Listeners\ConfigureConsole;
+use Illuminate\Console\Scheduling\ScheduleRunCommand;
 use Flarum\Foundation\AbstractServiceProvider;
+use FoF\Console\Overrides\CustomSchedule;
 use Illuminate\Console\Scheduling\CacheEventMutex;
 use Illuminate\Console\Scheduling\CacheSchedulingMutex;
 use Illuminate\Console\Scheduling\EventMutex;
@@ -26,11 +27,12 @@ class ConsoleProvider extends AbstractServiceProvider
             return new CacheSchedulingMutex($app->make(Factory::class));
         });
 
-        $this->app->make('events')->subscribe(ConfigureConsole::class);
-    }
+        $this->app->singleton(Schedule::class, function($current) {
+            return $this->app->make(CustomSchedule::class);
+        });
 
-    public function provides()
-    {
-        return [Schedule::class];
+        $this->app->extend('flarum.console.commands', function ($existingCommands) {
+            return array_merge($existingCommands, [ScheduleRunCommand::class]);
+        });
     }
 }

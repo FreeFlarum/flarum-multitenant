@@ -144,7 +144,7 @@ class Factory implements ArrayAccess
      *
      * @param  string  $class
      * @param  callable  $callback
-     * @param  string $name
+     * @param  string  $name
      * @return $this
      */
     public function afterCreating($class, callable $callback, $name = 'default')
@@ -310,7 +310,7 @@ class Factory implements ArrayAccess
      */
     public function offsetSet($offset, $value)
     {
-        return $this->define($offset, $value);
+        $this->define($offset, $value);
     }
 
     /**

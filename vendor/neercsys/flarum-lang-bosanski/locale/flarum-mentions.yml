@@ -35,3 +35,25 @@ flarum-mentions:
     # These translations are used in the user profile page and profile popup.
     user:
       mentions_link: Spominjanja
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a post is replied to
+    post_mentioned:
+      subject: "{replier_display_name} odgovorio na vaš post u {title}"
+      body: |
+        Pozdrav {recipient_display_name}!
+        {replier_display_name} odgovorio na vaš post (#{post_number}) u {title}.
+        {url}
+        ---
+        {content}
+    # These translations are used in emails sent when a user is mentioned
+    user_mentioned:
+      subject: "{mentioner_display_name} vas je spomenuo/la u {title}"
+      body: |
+        Pozdrav {recipient_display_name}!
+        {mentioner_display_name} vas je spomenuo/la u postu u {title}.
+        {url}
+        ---
+        {content}

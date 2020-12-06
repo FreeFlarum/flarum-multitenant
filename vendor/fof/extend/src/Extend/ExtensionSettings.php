@@ -59,7 +59,7 @@ class ExtensionSettings implements ExtenderInterface
      *
      * @return self
      */
-    public function setPrefix($prefix) : self
+    public function setPrefix($prefix): self
     {
         $this->prefix = $prefix;
 
@@ -74,7 +74,7 @@ class ExtensionSettings implements ExtenderInterface
      *
      * @return self
      */
-    public function addKey($key, $default = null) : self
+    public function addKey($key, $default = null): self
     {
         $this->addKeys([$key => $default]);
 
@@ -88,7 +88,7 @@ class ExtensionSettings implements ExtenderInterface
      *
      * @return self
      */
-    public function addKeys($input) : self
+    public function addKeys($input): self
     {
         if (is_callable($input)) {
             $input = (array) app()->call($input);

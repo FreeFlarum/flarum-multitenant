@@ -22,6 +22,16 @@ A permission allows you to customize who sees the "Create new user" button.
 
     composer require clarkwinkelmann/flarum-ext-create-user-modal
 
+## Support
+
+This extension is under **active maintenance**.
+
+Bugfixes and compatibility updates will be published for free as time allows.
+
+You can [contact me](https://clarkwinkelmann.com/flarum) to sponsor additional features.
+
+Support is offered on a "best effort" basis through the Flarum community thread.
+
 ## Links
 
 - [GitHub](https://github.com/clarkwinkelmann/flarum-ext-create-user-modal)

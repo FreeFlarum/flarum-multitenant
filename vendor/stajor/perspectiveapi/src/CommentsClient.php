@@ -2,6 +2,7 @@
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\GuzzleException;
 
 class CommentsClient {
     const API_URL = 'https://commentanalyzer.googleapis.com/v1alpha1';
@@ -162,9 +163,12 @@ class CommentsClient {
      */
     protected function request(string $method, array $fields): CommentsResponse {
         $data   = [];
-        $client = new Client(['defaults' => [
-            'headers'  => ['content-type' => 'application/json', 'Accept' => 'application/json'],
-        ]]);
+        $client = new Client([
+            'verify' => false,
+            'defaults' => [
+                'headers'  => ['content-type' => 'application/json', 'Accept' => 'application/json']
+            ]
+        ]);
 
         foreach ($fields AS $field) {
             if (isset($this->{$field})) {
@@ -174,7 +178,7 @@ class CommentsClient {
 
         try {
             $response = $client->post(self::API_URL."/comments:{$method}?key={$this->token}", ['json' => $data]);
-        } catch (ClientException $e) {
+        } catch (ClientException | GuzzleException $e) {
             $error = json_decode($e->getResponse()->getBody(), true);
 
             if (isset($error['error'])) {

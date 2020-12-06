@@ -9,24 +9,46 @@ import Button from './Button';
  * @abstract
  */
 export default class Modal extends Component {
-  init() {
-    /**
-     * An alert component to show below the header.
-     *
-     * @type {Alert}
-     */
-    this.alert = null;
+  /**
+   * Determine whether or not the modal should be dismissible via an 'x' button.
+   */
+  static isDismissible = true;
+
+  /**
+   * Attributes for an alert component to show below the header.
+   *
+   * @type {object}
+   */
+  alertAttrs = null;
+
+  oncreate(vnode) {
+    super.oncreate(vnode);
+
+    this.attrs.animateShow(() => this.onready());
+  }
+
+  onbeforeremove() {
+    // If the global modal state currently contains a modal,
+    // we've just opened up a new one, and accordingly,
+    // we don't need to show a hide animation.
+    if (!this.attrs.state.modal) {
+      this.attrs.animateHide();
+      // Here, we ensure that the animation has time to complete.
+      // See https://mithril.js.org/lifecycle-methods.html#onbeforeremove
+      // Bootstrap's Modal.TRANSITION_DURATION is 300 ms.
+      return new Promise((resolve) => setTimeout(resolve, 300));
+    }
   }
 
   view() {
-    if (this.alert) {
-      this.alert.props.dismissible = false;
+    if (this.alertAttrs) {
+      this.alertAttrs.dismissible = false;
     }
 
     return (
       <div className={'Modal modal-dialog ' + this.className()}>
         <div className="Modal-content">
-          {this.isDismissible() ? (
+          {this.constructor.isDismissible ? (
             <div className="Modal-close App-backControl">
               {Button.component({
                 icon: 'fas fa-times',
@@ -43,22 +65,13 @@ export default class Modal extends Component {
               <h3 className="App-titleControl App-titleControl--text">{this.title()}</h3>
             </div>
 
-            {alert ? <div className="Modal-alert">{this.alert}</div> : ''}
+            {this.alertAttrs ? <div className="Modal-alert">{Alert.component(this.alertAttrs)}</div> : ''}
 
             {this.content()}
           </form>
         </div>
       </div>
     );
-  }
-
-  /**
-   * Determine whether or not the modal should be dismissible via an 'x' button.
-   *
-   * @return {Boolean}
-   */
-  isDismissible() {
-    return true;
   }
 
   /**
@@ -99,13 +112,11 @@ export default class Modal extends Component {
     this.$('form').find('input, select, textarea').first().focus().select();
   }
 
-  onhide() {}
-
   /**
    * Hide the modal.
    */
   hide() {
-    app.modal.close();
+    this.attrs.state.close();
   }
 
   /**
@@ -123,7 +134,7 @@ export default class Modal extends Component {
    * @param {RequestError} error
    */
   onerror(error) {
-    this.alert = error.alert;
+    this.alertAttrs = error.alert;
 
     m.redraw();
 

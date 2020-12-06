@@ -1,0 +1,69 @@
+{
+    "name": "maicol07/flarum-ext-sso",
+    "description": "SSO for Flarum",
+    "type": "flarum-extension",
+    "keywords": [
+        "flarum",
+        "sso",
+        "auth",
+        "authentication",
+        "jwt",
+        "php",
+        "wp",
+        "wordpress"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maicol Battistini",
+            "email": "maicolbattistini@live.it"
+        },
+        {
+            "name": "Fabian Wüthrich",
+            "email": "fabian.wuethrich@outlook.com"
+        }
+    ],
+    "support": {
+        "issues": "https://tracker.maicol07.it/projects/0b8fae6e-4c8e-4b34-8fff-9bac316e4edc",
+        "source": "https://github.com/maicol07/flarum-ext-sso",
+        "docs": "https://docs.maicol07.it/en/flarum-sso/ext"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/maicol07"
+        },
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/maicol072001/10eur"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15",
+        "fof/components": ">=0.1.0",
+        "lcobucci/jwt": "^3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maicol07\\SSO\\": "src/",
+            "Maicol07\\SSO\\Listener\\": "src/Listener",
+            "Maicol07\\SSO\\Middleware\\": "src/Middleware"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "SSO",
+            "icon": {
+                "name": "fas fa-sign-in-alt"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/21666-php-and-wordpress-single-sign-on-sso"
+        }
+    }
+}

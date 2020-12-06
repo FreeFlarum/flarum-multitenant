@@ -17,7 +17,6 @@ use Flarum\Likes\Event\PostWasLiked;
 use Flarum\Post\Event\Saving;
 use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Flarum\User\AssertPermissionTrait;
 use Flarum\User\User;
 use FoF\Gamification\Listeners\SaveVotesToDatabase;
 use FoF\Reactions\Event\PostWasReacted;
@@ -30,8 +29,6 @@ use Symfony\Component\Translation\TranslatorInterface;
 
 class SaveReactionsToDatabase
 {
-    use AssertPermissionTrait;
-
     /**
      * @var SettingsRepositoryInterface
      */
@@ -71,7 +68,7 @@ class SaveReactionsToDatabase
             $reactionId = Arr::get($data, 'attributes.reaction');
             $reactionIdentifier = null;
 
-            $this->assertCan($actor, 'react', $post);
+            $actor->assertCan('react', $post);
 
             if ($actor->id === $post->user_id) {
                 throw new ValidationException([

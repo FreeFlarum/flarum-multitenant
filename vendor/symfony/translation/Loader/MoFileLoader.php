@@ -90,7 +90,7 @@ class MoFileLoader extends FileLoader
             $singularId = fread($stream, $length);
 
             if (false !== strpos($singularId, "\000")) {
-                list($singularId, $pluralId) = explode("\000", $singularId);
+                [$singularId, $pluralId] = explode("\000", $singularId);
             }
 
             fseek($stream, $offsetTranslated + $i * 8);
@@ -129,11 +129,8 @@ class MoFileLoader extends FileLoader
      * Reads an unsigned long from stream respecting endianness.
      *
      * @param resource $stream
-     * @param bool     $isBigEndian
-     *
-     * @return int
      */
-    private function readLong($stream, $isBigEndian)
+    private function readLong($stream, bool $isBigEndian): int
     {
         $result = unpack($isBigEndian ? 'N1' : 'V1', fread($stream, 4));
         $result = current($result);

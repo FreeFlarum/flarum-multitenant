@@ -1,0 +1,12 @@
+---
+the-turk-welcome-widgets:
+  forum:
+    users: "=> core.ref.users"
+    discussions: "=> core.ref.discussions"
+    posts: "=> core.ref.posts"
+    sinceLastVisit: desde o seu <span>último login</span>
+    welcome: Bem-vindo, {nome de usuário}.
+    goodMorning: Bom dia, {username}.
+    goodAfternoon: Boa tarde, {username}.
+    goodEvening: Boa noite, {username}.
+    goodNight: Boa noite, {username}.

@@ -16,13 +16,6 @@ Managing Cookies for PSR-7 Requests and Responses.
 [![Join the chat at https://gitter.im/dflydev/dflydev-fig-cookies](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dflydev/dflydev-fig-cookies?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-Requirements
-------------
-
- * PHP 5.4+
- * [psr/http-message](https://packagist.org/packages/psr/http-message)
-
-
 Installation
 ------------
 
@@ -165,22 +158,28 @@ use Dflydev\FigCookies\FigRequestCookies;
 $request = FigRequestCookies::remove($request, 'theme');
 ```
 
+Note that this does not cause the client to remove the cookie. Take a look at
+`FigResponseCookies::expire` to do that.
+
 ### Response Cookies
 
 Responses include cookie information in the **Set-Cookie** response header. The
 cookies in these headers are represented by the `SetCookie` class.
 
 ```php
+use Dflydev\FigCookies\Modifier\SameSite;
 use Dflydev\FigCookies\SetCookie;
 
 $setCookie = SetCookie::create('lu')
     ->withValue('Rg3vHJZnehYLjVg7qi3bZjzg')
     ->withExpires('Tue, 15-Jan-2013 21:47:38 GMT')
     ->withMaxAge(500)
+    ->rememberForever()
     ->withPath('/')
     ->withDomain('.example.com')
     ->withSecure(true)
     ->withHttpOnly(true)
+    ->withSameSite(SameSite::lax())
 ;
 ```
 
@@ -257,6 +256,17 @@ use Dflydev\FigCookies\FigResponseCookies;
 $response = FigResponseCookies::remove($response, 'theme');
 ```
 
+#### Expire a Response Cookie
+
+The `expire` method sets a cookie with an expiry date in the far past. This
+causes the client to remove the cookie.
+
+```php
+use Dflydev\FigCookies\FigResponseCookies;
+
+$response = FigResponseCookies::expire($response, 'session_cookie');
+```
+
 
 FAQ
 ---
@@ -281,7 +291,8 @@ Cookies but it is out of scope for this package.
 
 No.
 
-FIG Cookies only pays attention to the `Cookie` headers on PSR-7 Request
+FIG Cookies only pays attention to the `Cookie` headers on
+[PSR-7](https://packagist.org/packages/psr/http-message) Request
 instances. In the case of `ServerRequestInterface` instances, PSR-7
 implementations should be including `$_COOKIES` values in the headers
 so in that case FIG Cookies may be interacting with `$_COOKIES`

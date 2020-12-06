@@ -11,9 +11,10 @@
 
 namespace FoF\Byobu\Gambits\User;
 
+use Flarum\Extension\ExtensionManager;
 use Flarum\Search\AbstractRegexGambit;
 use Flarum\Search\AbstractSearch;
-use FoF\Byobu\Events\SearchingForRecipients;
+use FoF\Byobu\Events\SearchingRecipient;
 use Illuminate\Contracts\Events\Dispatcher;
 
 class AllowsPdGambit extends AbstractRegexGambit
@@ -44,15 +45,27 @@ class AllowsPdGambit extends AbstractRegexGambit
     {
         $actor = $search->getActor();
 
-        $this->dispatcher->dispatch(new SearchingForRecipients($search, $matches, $negate));
+        $this->dispatcher->dispatch(new SearchingRecipient($search, $matches, $negate));
 
         if ($actor->cannot('startPrivateDiscussionWithBlockers')) {
             $search
                 ->getQuery()
+                ->when(
+                    $this->extensionEnabled('flarum-suspend') && !$negate,
+                    function ($query) {$query->whereNull('suspended_until'); }
+                )
                 ->where(function ($query) use ($negate) {
-                    $query->where('blocks_byobu_pd', $negate);
+                    $query->where('blocks_byobu_pd', !$negate);
                 })
                 ->orderBy('username', 'asc');
         }
+    }
+
+    protected function extensionEnabled(string $extension)
+    {
+        /** @var ExtensionManager $manager */
+        $manager = app(ExtensionManager::class);
+
+        return $manager->isEnabled($extension);
     }
 }

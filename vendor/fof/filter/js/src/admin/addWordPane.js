@@ -17,16 +17,15 @@ import AdminLinkButton from 'flarum/components/AdminLinkButton';
 import WordConfigPage from './components/WordConfigPage';
 
 export default function () {
-    app.routes['fof-filter'] = {path: '/filter', component: WordConfigPage.component()};
+    app.routes['fof-filter'] = {path: '/filter', component: WordConfigPage};
 
-    app.extensionSettings['fof-filter'] = () => m.route(app.route('fof-filter'));
+    app.extensionSettings['fof-filter'] = () => m.route.set(app.route('fof-filter'));
 
     extend(AdminNav.prototype, 'items', items => {
         items.add('fof-filter', AdminLinkButton.component({
             href: app.route('fof-filter'),
             icon: 'fas fa-filter',
-            children: app.translator.trans('fof-filter.admin.nav.text'),
             description: app.translator.trans('fof-filter.admin.nav.desc')
-        }));
+        }, app.translator.trans('fof-filter.admin.nav.text')));
     });
 }

@@ -26,7 +26,9 @@
         "source": "https://github.com/FriendsOfFlarum/nightmode"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.8"
+        "flarum/core": "^0.1.0-beta.14",
+        "fof/components": ">=0.2.0",
+        "fof/extend": ">=0.2.0"
     },
     "replace": {
         "reflar/nightmode": "*"
@@ -41,12 +43,17 @@
             }
         },
         "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/11134"
+            "discuss": "https://discuss.flarum.org/d/21492"
         }
     },
     "autoload": {
         "psr-4": {
             "FoF\\NightMode\\": "src/"
-        }
+        },
+        "files": [
+            "src/Overrides/Forum/ValidateCustomLess.php",
+            "src/Overrides/Frontend/Assets.php",
+            "src/Overrides/Frontend/RecompileFrontendAssets.php"
+        ]
     }
 }

@@ -3,12 +3,20 @@ fof-follow-tags:
     settings:
       notify_new_discussion_label: Neko je kreirao temu u oznaci (tag) koju pratim
       notify_new_post_label: Neko objavljuje u oznaci (tag) koju pratim
-
+      notify_new_discussion_tag_label: Neko je obnovio oznaku u diskusiji, u oznaci(tagu) kojeg pratite
 
     index:
       follow_tag_button: Prati
       unfollow_tag_button: Prestani pratiti
-
+      
+      following:
+        following_none_label: => fof-follow-tags.ref.filtering_options.none
+        following_all_label: => fof-follow-tags.ref.filtering_options.all
+        following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+    
+    badge:
+      following_tag_tooltip: Pratim
+      lurking_tag_tooltip: Lurking
 
     sub_controls:
       follow_button: => fof-follow-tags.ref.follow
@@ -28,10 +36,30 @@ fof-follow-tags:
     notifications:
       new_discussion_text: "{username} kreirao/la"
       new_post_text: "{username} objavljuje"
+      new_discussion_tag_text: "{username} je promjenio/la oznaku(tag)"
+    
+    
+    user:
+      settings:
+        heading: Zaprati oznaku
+
+        filter_label: Što prikazati prema zadanom na sljedećoj stranici
+        
+  admin:
+    settings:
+      title: FriendsOfFlarum Follow Tags
+
+      following_page_default_label: Default Following Page Filtering
+
+      following_none_label: => fof-follow-tags.ref.filtering_options.none
+      following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+      following_all_label: => fof-follow-tags.ref.filtering_options.all
+
 
   email:
     newDiscussionInTag: "[Tag | New Discussion] title"
     newPostInTag: "[Tag | New Post] title"
+    newDiscussionTag: "[Tag | Changed Tag] title"
 
   ref:
     follow: Prati
@@ -39,3 +67,8 @@ fof-follow-tags:
     hiding: Sakriti
     ignoring: Ignoriši
     lurking: Nadgledaj
+    
+    filtering_options:
+      none: Praćene diskusije
+      all: Sve što pratite
+      tags: Praćene oznake

@@ -6,6 +6,8 @@ sycho-profile-cover:
   admin:
     cover_size: 'Wielkość obrazków'
     max_size: 'Maksymalna wielkość tła profilu (w KB)'
+    permission:
+      set_cover: 'Ustawianie tła profilu'
     settings: 'Ustawienia tła profilu'
     size_of_images: '{size} w {count} obrazku|{size} w {count} obrazkach'
     size_of_thumbs: '{size} w {count} miniaturce|{size} w {count} miniaturkach'

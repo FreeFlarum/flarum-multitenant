@@ -1,0 +1,37 @@
+flarum-suspend:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện quản trị.
+  admin:
+
+    # Các bản dịch này được sử dụng trong trang Quyền của giao diện quản trị viên.
+    permissions:
+      suspend_users_label: Đình chỉ người dùng
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+    # Các bản dịch này được sử dụng trong các thông báo đình chỉ
+    notifications:
+      user_suspended_text: "{username} đã đình chỉ bạn trong {timeReadable}"
+      user_unsuspended_text: "{username} đã mở đình chỉ cho bạn"
+
+    # Các bản dịch này được sử dụng trong hộp thoại tạm dừng người dùng (chức năng quản trị viên).
+    suspend_user:
+      indefinitely_label: Đình chỉ vô thời hạn
+      limited_time_days_text: " ngày"
+      limited_time_label: Đình chỉ trong thời gian giới hạn...
+      not_suspended_label: Không bị đình chỉ
+      status_heading: Tình trạng đình chỉ
+      submit_button: => core.ref.save_changes
+      title: "Đình chỉ {username}"
+
+    # Các bản dịch này được hiển thị dưới dạng chú giải công cụ cho phù hiệu người dùng.
+    user_badge:
+      suspended_tooltip: Đình chỉ
+
+    # Các bản dịch này được tìm thấy trên trang hồ sơ người dùng (chức năng quản trị).
+    user_controls:
+      suspend_button: Đình chỉ

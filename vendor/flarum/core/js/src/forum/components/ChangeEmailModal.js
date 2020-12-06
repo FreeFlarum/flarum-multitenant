@@ -1,13 +1,14 @@
 import Modal from '../../common/components/Modal';
 import Button from '../../common/components/Button';
+import Stream from '../../common/utils/Stream';
 
 /**
  * The `ChangeEmailModal` component shows a modal dialog which allows the user
  * to change their email address.
  */
 export default class ChangeEmailModal extends Modal {
-  init() {
-    super.init();
+  oninit(vnode) {
+    super.oninit(vnode);
 
     /**
      * Whether or not the email has been changed successfully.
@@ -21,14 +22,14 @@ export default class ChangeEmailModal extends Modal {
      *
      * @type {function}
      */
-    this.email = m.prop(app.session.user.email());
+    this.email = Stream(app.session.user.email());
 
     /**
      * The value of the password input.
      *
      * @type {function}
      */
-    this.password = m.prop('');
+    this.password = Stream('');
   }
 
   className() {
@@ -81,12 +82,14 @@ export default class ChangeEmailModal extends Modal {
             />
           </div>
           <div className="Form-group">
-            {Button.component({
-              className: 'Button Button--primary Button--block',
-              type: 'submit',
-              loading: this.loading,
-              children: app.translator.trans('core.forum.change_email.submit_button'),
-            })}
+            {Button.component(
+              {
+                className: 'Button Button--primary Button--block',
+                type: 'submit',
+                loading: this.loading,
+              },
+              app.translator.trans('core.forum.change_email.submit_button')
+            )}
           </div>
         </div>
       </div>
@@ -122,7 +125,7 @@ export default class ChangeEmailModal extends Modal {
 
   onerror(error) {
     if (error.status === 401) {
-      error.alert.props.children = app.translator.trans('core.forum.change_email.incorrect_password_message');
+      error.alert.content = app.translator.trans('core.forum.change_email.incorrect_password_message');
     }
 
     super.onerror(error);

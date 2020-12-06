@@ -7,13 +7,6 @@ core:
   # Translations in this namespace are used by the admin interface.
   admin:
 
-    # These translations are used in the placeholder Add Extension modal dialog.
-    add_extension:
-      developer_text: "Pokud jsi vývojář, můžeš si <a>přečíst dokumentaci</a> a zkusit si vytvořit vlastní rozšíření."
-      install_text: "V mezičase se můžeš podívat na existující rozšíření na <a>webu Flarum komunity</a> a nainstalovat je manuálně pomocí Composeru."
-      temporary_text: "Jednoho dne v ne tak daleké budoucnosti, ti tento dialog dovolí jednoduše přidat rozšíření do tvého fóra. Ekosystém tvoříme právě teď!"
-      title: Přidat rozšíření
-
     # These translations are used in the Appearance page.
     appearance:
       colored_header_label: Barevné záhlaví
@@ -26,6 +19,7 @@ core:
       custom_styles_heading: Vlastní styly
       custom_styles_text: Uprav si vzhled svého fóra přidáním vlastního LESS/CSS kódu, který bude použit nad defaultními Flarum styly.
       dark_mode_label: Dark Mode
+      description: "Uprav si barvy, loga a další proměnné svého fóra."
       edit_css_button: Upravit vlastní CSS
       edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: => core.ref.custom_header_title
@@ -35,11 +29,15 @@ core:
       logo_heading: Logo
       logo_text: Nahraj obrázek, který se zobrazí na místě názvu tvého fóra.
       submit_button: => core.ref.save_changes
+      title: Vzhled
 
     # These translations are used in the Basics page.
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Výchozí jazyk
+      description: "Nastav si název svého fóra, jazyk a další základní nastavení."
+      display_name_heading: Uživatelské jméno k zobrazení
+      display_name_text: Vyber driver, který by měl být použit pro uživatelská jména k zobrazení. Ve výchozím stavu jsou už. jména zobrazena.
       forum_description_heading: Popis fóra
       forum_description_text: Vlož krátkou větičku, nebo dvě, které popisují tvou komunitu. Tento popis se ukáže v meta tagu a ve výsledcích vyhledávání.
       forum_title_heading: Název fóra
@@ -48,12 +46,15 @@ core:
       saved_message: Tvé změny byly uloženy.
       show_language_selector_label: Zobrazit výběr jazyků
       submit_button: => core.ref.save_changes
+      title: Základní nastavení
       welcome_banner_heading: Uvítací banner
       welcome_banner_text: Nastav si text uvítacího banneru, který se zobrazí na všech diskuzních stránkách. Využij ho pro přivítání hostů na fóru.
 
     # These translations are used in the Dashboard page.
     dashboard:
       clear_cache_button: Smazat Cache
+      description: Přehled vašeho fóra.
+      title: Nástěnka
       tools_button: Nástroje
 
     # These translations are used in the Edit Custom CSS modal dialog.
@@ -73,6 +74,7 @@ core:
       color_label: core.ref.color
       delete_button: Smazat skupinu
       delete_confirmation: "Opravdu chceš smazat tuto skupinu? Její členové odstraněni nebudou."
+      hide_label: Skrýt na fóru
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: Název
@@ -91,36 +93,50 @@ core:
     email:
       addresses_heading: Adresy
       driver_heading: Vyber způsob odesílání (Driver)
+      description: "Nastav si způsob odesílání (Driver), další nastavení a adresu, kterou tvé fórum bude využívat pro odesílání emailů."
       driver_label: Driver
       from_label: Odesilatel
-      heading: => core.ref.email
       mail_encryption_label: Šifrování
       mail_host_label: Hostitel
       mail_mailgun_domain_label: Doména
       mail_mailgun_region_label: Region
       mail_mailgun_secret_label: Tajný klíč (Secret key)
-      mail_mandrill_secret_label: Tajný klíč (Secret key)
       mail_password_label: => core.ref.password
       mail_port_label: Port
-      mail_ses_key_label: Klíč
-      mail_ses_region_label: Region
-      mail_ses_secret_label: Tajemství (Secret)
       mail_username_label: => core.ref.username
       mailgun_heading: Mailgun Nastavení
-      mandrill_heading: Mandrill Nastavení
-      ses_heading: SES Nastavení
+      not_sending_message: Flarum momentálně neposílá emaily. To může být způsobeno vybraným driverem, nebo chybami v jeho nastavení.
+      send_test_mail_button: Odeslat
+      send_test_mail_heading: Odeslat testovací email
+      send_test_mail_success: "Testovací email úspěšně odeslán!"
+      send_test_mail_text: "Pošle email za použití nastavení výše na tvou emailovou adresu, {email}."
       smtp_heading: SMTP Nastavení
       submit_button: => core.ref.save_changes
-      text: Nastav si způsob odesílání (Driver), další nastavení a adresu, kterou tvé fórum bude využívat pro odesílání emailů.
+      title: => core.ref.email
 
-    # These translations are used in the Extensions page.
-    extensions:
-      add_button: Přidat rozšíření
-      settings_button: => core.ref.settings
+    # These translations are used on default extension pages.
+    extension:
+      confirm_uninstall: Odinstalováním se smažou všechny záznamy v databázi a soubory související s rozšířením. Opravdu chceš pokračovat?
+      disabled: Deaktivovat
+      enabled: Povolit
+      enable_to_see: Povolit rozšíření zobrazovat a měnit nastavení.
+      info_links:
+        discuss: Discuss
+        documentation: Dokumentace
+        donate: Darovat
+        source: Zdroj
+        support: Podpora
+        website: Web
+      no_permissions: Žádné oprávnění
+      no_settings: Žádná nastavení
+      open_modal: Otevřít nastavení
+      permissions_title: Oprávnění
+      saved_message: Změny byly uloženy.
       uninstall_button: Odinstalovat
 
-    # These translations are used in the session dropdown menu.
+    # These translations are used in the secondary header.
     header:
+      get_help: Získat pomoc
       log_out_button: => core.ref.log_out
 
     # These translations are used in the modal dialog displayed when loading extensions.
@@ -129,18 +145,26 @@ core:
 
     # These translations are used in the navigation bar.
     nav:
-      appearance_button: Vzhled
-      appearance_text: "Uprav si barvy, loga a další proměnné tvého fóra."
-      basics_button: Základní nastavení
-      basics_text: "Nastav si název, jazyk a další základní nastavení tvého fóra."
-      dashboard_button: Nástěnka
-      dashboard_text: Tvoje fórum v přehledech.
+      appearance_button: => core.admin.appearance.title
+      appearance_title: => core.admin.appearence.description
+      basics_button: => core.admin.basics.title
+      basics_title: => core.admin.basics.description
+      categories:
+        authentication: Autentizace
+        discussion: Diskuze
+        feature: Funkce
+        formatting: Formátování
+        language: Jazyky
+        moderation: Moderace
+        other: Další rozšíření
+        theme: Motivy
+      dashboard_button: => core.admin.dashboard.title
+      dashboard_title: => core.admin.dashboard.description
       email_button: => core.ref.email
-      email_text: "Nastav si emailová nastavení tvého fóra."
-      extensions_button: Rozšíření
-      extensions_text: Přidej svému fóru další funkcionalitu a přizpůsob si ho jak chceš.
-      permissions_button: Oprávnění
-      permissions_text: Nastav si, kdo může co na fóru provádět.
+      email_title: => core.admin.email.description
+      permissions_button: => core.admin.permissions.title
+      permissions_title: => core.admin.permissions.description
+      search_placeholder: Vyhledat rozšíření
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
@@ -151,19 +175,23 @@ core:
       delete_discussions_label: Smazat diskuze
       delete_posts_forever_label: Smazat příspěvky navždy
       delete_posts_label: Smazat příspěvky
+      description: Nastav si, kdo může co vidět a provádět na fóru.
       edit_posts_label: Upravit přízpěvky
       edit_users_label: Upravit uživatele
       global_heading: Globální
       moderate_heading: Moderovat
       new_group_button: Nová skupina
       participate_heading: Zúčastnit se
+      post_without_throttle_label: Odpovědět vícekrát bez čekání
       read_heading: Číst
       rename_discussions_label: Přejmenovat diskuzi
       reply_to_discussions_label: Odpovědět v diskuzi
       sign_up_label: Registrace
       start_discussions_label: Začít diskuzi
+      title: Oprávnění
       view_discussions_label: Zobrazit diskuzi
-      view_last_seen_at_label: Zobrazit poslední čas zobrazení
+      view_hidden_groups_label: Zobrazit schované odznáčky skupiny
+      view_last_seen_at_label: Vždy zobrazit poslední čas zobrazení
       view_post_ips_label: Zobrazit IP adresu příspěvku
       view_user_list_label: Zobrazit seznam uživatelů
 
@@ -224,8 +252,10 @@ core:
     # These translations are used by the composer when editing a post.
     composer_edit:
       discard_confirmation: "Neuložil jsi své změny. Chceš je zahodit?"
+      edited_message: Tvá úprava byla provedena.
       post_link: "Příspěvek č. {number} ve vlákně {discussion}"
       submit_button: => core.ref.save_changes
+      view_button: => core.ref.view
 
     # These translations are used by the composer when replying to a discussion.
     composer_reply:
@@ -296,6 +326,7 @@ core:
       cannot_start_discussion_button: "Nemůžeš založit vlákno"
       mark_all_as_read_confirmation: "Opravdu chceš všechna vlákna označit jako přečtená?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      meta_title_text: => core.ref.all_discussions
       refresh_tooltip: Obnovit
       start_discussion_button: => core.ref.start_a_discussion
 
@@ -336,8 +367,10 @@ core:
     # These translations are used by the post control buttons.
     post_controls:
       delete_button: => core.ref.delete
+      delete_confirmation: "Opravdu chceš navždy smazat tento příspěvek? Tato akce je nezvratná."
       delete_forever_button: => core.ref.delete_forever
       edit_button: => core.ref.edit
+      hide_confirmation: "Opravdu chceš smazat tento příspěvek?"
       restore_button: => core.ref.restore
 
     # These translations are used in the scrubber to the right of the post stream.
@@ -349,7 +382,7 @@ core:
 
     # These translations are displayed between posts in the post stream.
     post_stream:
-      discussion_renamed_old_tooltip: 'Původní nadpis byl: „{old}“'
+      discussion_renamed_old_tooltip: "Původní nadpis byl: „{old}“"
       discussion_renamed_text: "{username} změnil nadpis na {new}."
       load_more_button: => core.ref.load_more
       reply_placeholder: => core.ref.write_a_reply
@@ -362,7 +395,7 @@ core:
 
     # These translations are used by the search results dropdown list.
     search:
-      all_discussions_button: 'Hledat „{query}“ ve všech vláknech'
+      all_discussions_button: "Hledat „{query}“ ve všech vláknech"
       discussions_heading: => core.ref.discussions
       users_heading: => core.ref.users
 
@@ -408,7 +441,7 @@ core:
     user_controls:
       button: Upravit
       delete_button: => core.ref.delete
-      delete_confirmation: "Opravdu chceš uživatele smazat? Budou odstraněny všechny jeho příspěvky."
+      delete_confirmation: "Opravdu chceš uživatele smazat? Příspěvky tohoto uživatele NEBUDOU smazány."
       delete_error_message: "<i>{username} ({email})</i> se nepodařilo smazat"
       delete_success_message: "Uživatel <i>{username} ({email})</i> byl smazán"
       edit_button: => core.ref.edit
@@ -428,6 +461,8 @@ core:
 
     # These translations are displayed as error messages.
     error:
+      dependent_extensions_message: "Není možné deaktivovat {extension} dokud nejsou deaktivována tato závislá rozšíření: {extensions}"
+      missing_dependencies_message: "Není možné povolit {extension} dokud nejsou povolena tato rozšíření: {extensions}"
       generic_message: "Jejda, něco se pokazilo. Obnov prosím stránku a zkus to znovu."
       not_found_message: Požadovaný zdroj nebyl nalezen.
       permission_denied_message: Na tuto operaci nemáte dostatečná práva.
@@ -498,36 +533,58 @@ core:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
-
+  
     # These translations are used in emails sent when users register new accounts.
     activate_account:
       subject: Aktivace nového účtu
       body: |
         Ahoj, {username}.
-        Někdo se na {forum} registroval touto email adresou.
-        Pokud jsi to byl/a ty, klikni na tento odkaz:
+
+        Někdo (snad ty!) se na {forum} registroval s touto email adresou.
+
+        Pokud jsi to byl/a ty, klikni na tento odkaz a tvůj účet bude aktivován:
         {url}
+
         Pokud o ničem takovém nevíš, tento email ignoruj.
-        Doufáme, že se ti u nás bude líbit!
+
     # These translations are used in emails sent when users change their email address.
     confirm_email:
       subject: Potvrzení nového emailu
       body: |
         Ahoj, {username}!
-        Někdo na {forum} změnil svou emailovou adresu na tu tvoji.
+
+        Někdo (snad ty!) na {forum} změnil svou emailovou adresu na tu tvoji.
+
         Pokud jsi to byl/a ty, tak klikni na odkaz níže a potvrď to:
         {url}
+
         Pokud to udělal někdo jiný, tento email ignotuj.
+
     # These translations are used in emails sent when users ask to reset their passwords.
     reset_password:
       subject: => core.ref.reset_your_password
       body: |
         Ahoj, {username}.
-        Někdo na {forum} zažádal o reset hesla.
+
+        Někdo (snad ty!) na {forum} zažádal o reset hesla.
+
         Pokud jsi to byl/a ty, klikni na odkaz níže a resetuj si ho:
         {url}
-        Pokud si ho nechceš změnit, tento email ignoruj.
-        Dobře si nové heslo zapamatuj
+
+        Pokud si ho změnit nechceš, tento email ignoruj a nic se nestane.
+        
+    # These translations are used when testing mailing configuration
+    send_test:
+      subject: Flarum Email Test
+      body: |
+        Ahoj {username}!
+
+        Toto je testovací email k potvrzení správnosti nastavení emailu ve Flarum.
+
+        Pokud jsi to byl ty, tak to znamená, že tvé Flarum nastavení emailu funguje!
+
+        Pokud jsi to nebyl ty, prosím ignoruj tento email.
+
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
   ##
@@ -537,7 +594,7 @@ core:
     all_discussions: Všechny diskuze
     change_email: Změnit e-mail
     change_password: Změnit heslo
-    color: Barva                                 # Referenced by flarum-tags.yml
+    color: Barva # Referenced by flarum-tags.yml
     confirm_password: Potvrdit heslo
     confirmation_email_sent: "Poslali jsme potvrzovací zprávu na adresu {email}. Pokud brzy nedorazí, zkus se kouknout do složky s nevyžádanou poštou."
     custom_footer_text: Přidej HTML, která se zobrazí na samém konci stránky.
@@ -546,7 +603,7 @@ core:
     custom_header_title: Upravit vlastní záhlaví
     delete: Smazat
     delete_forever: Smazat navždy
-    discussions: Diskuze                         # Referenced by flarum-statistics.yml
+    discussions: Diskuze # Referenced by flarum-statistics.yml
     edit: Upravit
     email: E-Mail
     icon: Ikona
@@ -557,24 +614,25 @@ core:
     mark_all_as_read: Označit vše jako přečtené
     next_page: Další stránka
     notifications: Oznámení
-    okay: OK                                     # Referenced by flarum-tags.yml
+    okay: OK # Referenced by flarum-tags.yml
     password: Heslo
-    posts: Příspěvky                             # Referenced by flarum-statistics.yml
+    posts: Příspěvky # Referenced by flarum-statistics.yml
     previous_page: Předchozí stránka
     remove: Odstranit
     rename: Přejmenovat
-    reply: Odpovědět                             # Referenced by flarum-mentions.yml
+    reply: Odpovědět # Referenced by flarum-mentions.yml
     reset_your_password: Obnovit heslo
     restore: Obnovit
-    save_changes: Uložit změny                   # Referenced by flarum-suspend.yml, flarum-tags.yml
+    save_changes: Uložit změny # Referenced by flarum-suspend.yml, flarum-tags.yml
     settings: Nastavení
     sign_up: Registrovat se
-    some_others: "{count} další|{count} další|{count} dalších"   # Referenced by flarum-likes.yml, flarum-mentions.yml
+    some_others: "{count} další|{count} další|{count} dalších" # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: Začít diskuzi
-    users: Uživatelé                             # Referenced by flarum-statistics.yml
     username: Přezdívka
+    users: Uživatelé # Referenced by flarum-statistics.yml
+    view: Zobrazit
     write_a_reply: Odpovědět…
-    you: Ty                                      # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: Ty # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.

@@ -1,40 +1,44 @@
 <?php
 
-/**
- *  This file is part of fof/secure-https.
+/*
+ * This file is part of fof/secure-https.
  *
- *  Copyright (c) 2018 FriendsOfFlarum
+ * Copyright (c) 2018 FriendsOfFlarum.
  *
- *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace FoF\SecureHttps;
 
-use Flarum\Event\ConfigureMiddleware;
 use Flarum\Extend;
+use FoF\Components\Extend\AddFofComponents;
 use Illuminate\Events\Dispatcher;
 use s9e\TextFormatter\Configurator;
 
 return [
+    new AddFofComponents(),
+
     (new Extend\Frontend('admin'))
-        ->js(__DIR__.'/js/dist/admin.js')
-        ->css(__DIR__.'/resources/less/admin.less'),
-    new Extend\Locales(__DIR__ . '/resources/locale'),
+        ->js(__DIR__.'/js/dist/admin.js'),
+
+    new Extend\Locales(__DIR__.'/resources/locale'),
+
     (new Extend\Routes('api'))
         ->get(
             '/fof/secure-https/{imgurl}',
             'fof.secure-https.imgurl',
             Api\Controllers\GetImageUrlController::class
         ),
+
     (new Extend\Formatter())
-        ->configure(function (Configurator $configurator) { }),
+        ->configure(function (Configurator $configurator) {
+        }),
+
+    (new Extend\Middleware('forum'))
+        ->add(Middlewares\ContentSecurityPolicyMiddleware::class),
+
     function (Dispatcher $dispatcher) {
         $dispatcher->subscribe(Listeners\ModifyContentHtml::class);
-
-        $dispatcher->listen(ConfigureMiddleware::class, function (ConfigureMiddleware $event) {
-            $event->pipe(app(Middlewares\ContentSecurityPolicyMiddleware::class));
-        });
-    }
+    },
 ];

@@ -1,16 +1,14 @@
 flarum-flags:
-
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
-
     # These translations are used in the Permissions page of the admin interface.
     permissions:
       flag_posts_label: Segnalare un messaggio
-      view_flags_label: Vedere le segnalazioni
+      view_flags_label: Visualizzare le segnalazioni
 
     # These translations are used in the Flags Settings modal dialog.
     settings:
@@ -20,10 +18,9 @@ flarum-flags:
 
   # Translations in this namespace are used by the forum user interface.
   forum:
-
     # These translations are used by the Flag Post modal dialog.
     flag_post:
-      confirmation_message: Grazie per la segnalazione. Un nostro moderatore darà un'occhiata.
+      confirmation_message: Grazie per la segnalazione.
       dismiss_button: => core.ref.okay
       reason_details_placeholder: Dettagli aggiuntivi (opzionale)
       reason_inappropriate_label: Non appropriato
@@ -48,7 +45,7 @@ flarum-flags:
     post:
       dismiss_flag_button: Elimina Segnalazione
       flagged_by_text: "Segnalato da {username}"
-      flagged_by_with_reason_text: "{username} è stato segnalato per {reason}"
+      flagged_by_with_reason_text: "Segnalato da {username} per {reason}"
 
     # These translations are used by the post control buttons.
     post_controls:

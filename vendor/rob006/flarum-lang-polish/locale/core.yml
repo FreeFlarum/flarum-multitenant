@@ -7,12 +7,12 @@ core:
     add_extension:
       developer_text: 'Jeśli jesteś deweloperem, możesz <a>zapoznać się z dokumentacją</a> i rozpocząć pracę nad własnymi rozszerzeniami.'
       install_text: 'W międzyczasie możesz poszukać rozszerzeń na <a>stronie Flarum Community</a> i zainstalować je ręcznie przy użyciu Composera.'
-      temporary_text: 'Pewnego dnia, w niedalekiej przyszłości, to okienko pozwoli ci na łatwe i szybkie dodanie rozszerzenia do twojego forum. Budujemy ekosystem!'
+      temporary_text: 'Pewnego dnia, w niedalekiej przyszłości, to okienko pozwoli Ci na łatwe i szybkie dodanie rozszerzenia do Twojego forum. Budujemy ekosystem!'
       title: 'Dodaj rozszerzenie'
     appearance:
       colored_header_label: 'Kolorowy nagłówek'
       colors_heading: Kolory
-      colors_text: 'Wybierz dwa kolory dla twojego motywu forum. Pierwszy będzie używany jako kolor wiodący, kiedy drugi zapełni elementy tła.'
+      colors_text: 'Wybierz dwa kolory dla Twojego motywu forum. Pierwszy będzie używany jako kolor wiodący, podczas gdy drugi zapełni elementy tła.'
       custom_footer_heading: 'Niestandardowa stopka'
       custom_footer_text: '=> core.ref.custom_footer_text'
       custom_header_heading: 'Niestandardowy nagłówek'
@@ -20,32 +20,38 @@ core:
       custom_styles_heading: 'Niestandardowe style'
       custom_styles_text: 'Edytuj wygląd swojego forum poprzez dodawanie swojego własnego kodu LESS/CSS, który będzie dodany nad domyślnymi stylami Flarum.'
       dark_mode_label: 'Ciemny motyw'
+      description: 'Dostosuj kolory, logo oraz inne ustawienia swojego forum.'
       edit_css_button: 'Edytuj niestandardowy CSS'
       edit_footer_button: '=> core.ref.custom_footer_title'
       edit_header_button: '=> core.ref.custom_header_title'
-      enter_hex_message: 'Wpisz proszę kod HEX koloru.'
+      enter_hex_message: 'Wpisz kod HEX koloru.'
       favicon_heading: 'Ikona (favicon)'
       favicon_text: 'Wyślij obrazek, który będzie wyświetlany jako ikona forum.'
       logo_heading: Logo
       logo_text: 'Wyślij obrazek, który będzie wyświetlany jako logo w miejscu nazwy forum.'
       submit_button: '=> core.ref.save_changes'
+      title: 'Wygląd forum'
     basics:
       all_discussions_label: '=> core.ref.all_discussions'
       default_language_heading: 'Domyślny język'
+      description: 'Ustaw tytuł, język oraz inne podstawowe ustawienia swojego forum.'
       display_name_heading: 'Wyświetlana nazwa użytkownika'
       display_name_text: 'Wybierz sterownik, który powinien być używany do wyświetlania nazw użytkowników. Domyślnie wyświetlana jest nazwa użytkownika.'
       forum_description_heading: 'Opis forum'
-      forum_description_text: 'Wpisz 1-2 krótkie zdania, które opisują twoją społeczność. Ten tekst pojawi się w meta tagu i będzie się pokazywał w wyszukiwarkach.'
+      forum_description_text: 'Wpisz 1-2 krótkie zdania, które opisują Twoją społeczność. Ten tekst pojawi się w meta tagu i będzie się pokazywał w wyszukiwarkach.'
       forum_title_heading: 'Nazwa forum'
       home_page_heading: 'Strona domowa'
-      home_page_text: 'Wybierz stronę, którą użytkownicy zobaczą jako pierwszą, gdy odwiedzą twoje forum.'
+      home_page_text: 'Wybierz stronę, którą użytkownicy zobaczą jako pierwszą, gdy odwiedzą Twoje forum.'
       saved_message: 'Twoje zmiany zostały zapisane.'
       show_language_selector_label: 'Pokazuj menu wyboru języka'
       submit_button: '=> core.ref.save_changes'
+      title: Podstawowe
       welcome_banner_heading: 'Baner powitalny'
       welcome_banner_text: 'Skonfiguruj tekst, który wyświetla się w banerze na stronie "Wszystkie dyskusje". Użyj go, aby powitać gości na swoim forum.'
     dashboard:
       clear_cache_button: 'Wyczyść cache'
+      description: 'Podstawowe informacje dotyczące forum.'
+      title: Kokpit
       tools_button: Narzędzia
     edit_css:
       customize_text: 'Edytuj wygląd swojego forum poprzez dodawanie swojego własnego kodu LESS/CSS, który będzie dodany nad <a>domyślnymi stylami Flarum</a>.'
@@ -73,6 +79,7 @@ core:
       title: '=> core.ref.custom_header_title'
     email:
       addresses_heading: Adresy
+      description: 'Skonfiguruj sterownik, ustawienia i adresy, z których Twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
       driver_heading: 'Wybierz sterownik (driver)'
       driver_label: 'Sterownik (driver)'
       from_label: Nadawca
@@ -92,31 +99,70 @@ core:
       mailgun_heading: 'Ustawienia Mailguna'
       mandrill_heading: 'Ustawienia Mandrilla'
       not_sending_message: 'Obecnie Flarum nie wysyła żadnych wiadomości e-mail. Może to być skutek wybranego sterownika lub błędów w konfiguracji.'
+      send_test_mail_button: Wyślij
+      send_test_mail_heading: 'Wyślij testowy e-mail'
+      send_test_mail_success: 'Testowa wiadomość e-mail została pomyślnie wysłana!'
+      send_test_mail_text: 'Wiadomość zostanie wysłana przy użyciu powyższej konfiguracji na Twój adres e-mail, {email}.'
       ses_heading: 'Ustawienia SES'
       smtp_heading: 'Ustawienia SMTP'
       submit_button: '=> core.ref.save_changes'
-      text: 'Skonfiguruj sterownik, ustawienia i adresy, z których twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
+      text: 'Skonfiguruj sterownik, ustawienia i adresy, z których Twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
+      title: '=> core.ref.email'
+    extension:
+      confirm_uninstall: 'Odinstalowanie usunie wszystkie wpisy w bazie i zasoby powiązane z tym rozszerzeniem. Czy jesteś pewien, że chcesz kontynuować?'
+      disabled: Wyłączone
+      enable_to_see: 'Włącz to rozszerzenie aby uzyskać dostęp do jego ustawień.'
+      enabled: Włączone
+      info_links:
+        discuss: Dyskusja
+        documentation: Dokumentacja
+        donate: Wesprzyj
+        source: Źródła
+        support: Wsparcie
+        website: 'Strona internetowa'
+      no_permissions: 'Brak uprawnień'
+      no_settings: 'Brak ustawień'
+      open_modal: 'Otwórz ustawienia'
+      permissions_title: Uprawnienia
+      saved_message: 'Twoje zmiany zostały zapisane.'
+      uninstall_button: Odinstaluj
     extensions:
       add_button: 'Dodaj rozszerzenie'
       settings_button: '=> core.ref.settings'
       uninstall_button: Odinstaluj
     header:
+      get_help: 'Uzyskaj pomoc'
       log_out_button: '=> core.ref.log_out'
     loading:
       title: 'Proszę czekać...'
     nav:
       appearance_button: 'Wygląd forum'
       appearance_text: 'Dostosuj kolory, logo oraz inne ustawienia swojego forum.'
+      appearance_title: '=> core.admin.appearence.description'
       basics_button: Podstawowe
       basics_text: 'Ustaw tytuł, język oraz inne podstawowe ustawienia swojego forum.'
+      basics_title: '=> core.admin.basics.description'
+      categories:
+        authentication: Uwierzytelnianie
+        discussion: Dyskusja
+        feature: Funkcje
+        formatting: Formatowanie
+        language: Języki
+        moderation: Moderacja
+        other: 'Inne rozszerzenia'
+        theme: Motywy
       dashboard_button: Kokpit
       dashboard_text: 'Podstawowe informacje dotyczące forum.'
+      dashboard_title: '=> core.admin.dashboard.description'
       email_button: '=> core.ref.email'
       email_text: 'Skonfiguruj ustawienia wysyłki wiadomości e-mail.'
+      email_title: '=> core.admin.email.description'
       extensions_button: Rozszerzenia
       extensions_text: 'Dodaj dodatkowe funkcje do forum i dostosuj je pod siebie.'
       permissions_button: Uprawnienia
-      permissions_text: 'Konfiguracja uprawnień użytkowników i grup.'
+      permissions_text: 'Skonfiguruj uprawnienia użytkowników i grup.'
+      permissions_title: '=> core.admin.permissions.description'
+      search_placeholder: 'Wyszukaj rozszerzenia'
     permissions:
       allow_post_editing_label: 'Pozwól na edycję posta'
       allow_renaming_label: 'Pozwól na zmianę tytułu dyskusji'
@@ -125,6 +171,7 @@ core:
       delete_discussions_label: 'Usuwanie dyskusji'
       delete_posts_forever_label: 'Usuwanie postów na zawsze'
       delete_posts_label: 'Usuwanie postów'
+      description: 'Skonfiguruj uprawnienia użytkowników i grup.'
       edit_posts_label: 'Edytowanie postów'
       edit_users_label: 'Edytowanie użytkowników'
       global_heading: Globalne
@@ -137,6 +184,7 @@ core:
       reply_to_discussions_label: 'Odpowiadanie w dyskusji'
       sign_up_label: Rejestracja
       start_discussions_label: 'Rozpoczynanie dyskusji'
+      title: Uprawnienia
       view_discussions_label: 'Przeglądanie dyskusji'
       view_hidden_groups_label: 'Przeglądanie etykiet ukrytych grup'
       view_last_seen_at_label: 'Dostęp do daty ostatniej wizyty użytkownika'
@@ -160,14 +208,17 @@ core:
     invalid_username_message: 'Nazwa użytkownika może zawierać jedynie litery, cyfry i myślniki.'
   email:
     activate_account:
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) zarejestrował się na {forum} używając tego adresu e-mail.\n\nJeśli byłeś to ty, po prostu kliknij ten link i twoje konto zostanie aktywowane:\n{url}\n\nJeśli się nie rejestrowałeś, zignoruj proszę ten e-mail.\n"
+      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że Ty!) zarejestrował się na {forum} używając tego adresu e-mail.\n\nJeśli byłeś to Ty, po prostu kliknij link poniżej i Twoje konto zostanie aktywowane:\n{url}\n\nJeśli się nie rejestrowałeś, zignoruj tę wiadomość.\n"
       subject: 'Aktywuj swoje nowe konto'
     confirm_email:
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) zmienił swój adres e-mail na {forum} na ten.\n\nJeśli byłeś to ty, po prostu kliknij ten link, a twój e-mail zostanie zatwierdzony:\n{url}\n\nJeśli to nie ty, zignoruj proszę ten e-mail.\n"
+      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że Ty!) zmienił swój adres e-mail na {forum} na ten.\n\nJeśli byłeś to Ty, po prostu kliknij link poniżej, a Twój e-mail zostanie zatwierdzony:\n{url}\n\nJeśli to nie Ty, zignoruj tę wiadomość.\n"
       subject: 'Potwierdź swój adres e-mail'
     reset_password:
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że ty!) poprosił o zresetowanie hasła do swojego konta na {forum}.\n\nJeśli byłeś to ty, kliknij ten link, aby zresetować swoje hasło:\n{url}\n\nJeśli nie chcesz zmieniać hasła, po prostu zignoruj ten e-mail, a nic się nie stanie.\n"
+      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że Ty!) poprosił o zresetowanie hasła do swojego konta na {forum}.\n\nJeśli byłeś to Ty, kliknij link poniżej, aby zresetować swoje hasło:\n{url}\n\nJeśli nie chcesz zmieniać hasła, po prostu zignoruj tę wiadomość, a nic się nie stanie.\n"
       subject: '=> core.ref.reset_your_password'
+    send_test:
+      body: "Witaj {username}!\n\nTo jest testowa wiadomość wysłana przez Flarum, aby potwierdzić, że konfiguracja wysyłki e-mail na Twoim forum działa prawidłowo.\n\nJeśli to Ty poprosiłeś o wysłanie tej wiadomości, wszystko działa w porządku!\n\nJeśli to nie Ty, zignoruj tę wiadomość.\n"
+      subject: 'Testowa wiadomość z Flarum'
   forum:
     change_email:
       confirm_password_placeholder: '=> core.ref.confirm_password'
@@ -194,14 +245,16 @@ core:
       title_placeholder: 'Tytuł dyskusji'
     composer_edit:
       discard_confirmation: 'Nie zapisałeś dokonanych zmian. Czy chcesz je porzucić?'
+      edited_message: 'Twoje zmiany zostały zapisane.'
       post_link: 'Post #{number} w {discussion}'
       submit_button: '=> core.ref.save_changes'
+      view_button: '=> core.ref.view'
     composer_reply:
       body_placeholder: '=> core.ref.write_a_reply'
       discard_confirmation: 'Nie opublikowałeś swojej odpowiedzi. Czy chcesz ją porzucić?'
       posted_message: 'Twoja odpowiedź została opublikowana.'
       submit_button: Odpowiedz
-      view_button: Zobacz
+      view_button: '=> core.ref.view'
     discussion_controls:
       cannot_reply_button: Zamknięta
       cannot_reply_text: 'Nie masz uprawnień, aby odpowiadać w tej dyskusji.'
@@ -233,10 +286,10 @@ core:
     forgot_password:
       dismiss_button: '=> core.ref.okay'
       email_placeholder: '=> core.ref.email'
-      email_sent_message: 'Wysłaliśmy do ciebie e-mail zawierający link do zresetowania hasła. Sprawdź folder ze spamem, jeśli nie otrzymasz go w ciągu minuty lub dwóch.'
+      email_sent_message: 'Wysłaliśmy do Ciebie e-mail zawierający link do zresetowania hasła. Sprawdź folder ze spamem, jeśli nie otrzymasz go w ciągu minuty lub dwóch.'
       not_found_message: 'Nie ma zarejestrowanego użytkownika z tym adresem e-mail.'
       submit_button: 'Odzyskaj hasło'
-      text: 'Wpisz swój adres e-mail, a my wyślemy ci link do zresetowania hasła.'
+      text: 'Wpisz swój adres e-mail, a my wyślemy Ci link do zresetowania hasła.'
       title: 'Zapomniane hasło'
     header:
       admin_button: Administracja
@@ -362,7 +415,9 @@ core:
     badge:
       hidden_tooltip: Ukryte
     error:
+      dependent_extensions_message: 'Nie można wyłączyć {extension}, jeśli następujące zależne rozszerzenia są włączone: {extensions}'
       generic_message: 'Ups! Coś poszło nie tak. Odśwież stronę i spróbuj ponownie.'
+      missing_dependencies_message: 'Nie można włączyć {extension}, jeśli następujące zależności są wyłączone: {extensions}'
       not_found_message: 'Żądany zasób nie został znaleziony.'
       permission_denied_message: 'Nie masz uprawnień, aby to zrobić.'
       rate_limit_exceeded_message: 'Nie bądź taki hop do przodu! Spróbuj ponownie za kilka sekund.'
@@ -415,6 +470,7 @@ core:
     start_a_discussion: 'Rozpocznij dyskusję'
     username: 'Nazwa użytkownika'
     users: Użytkownicy
+    view: Zobacz
     write_a_reply: 'Napisz odpowiedź...'
     you: Ty
   views:

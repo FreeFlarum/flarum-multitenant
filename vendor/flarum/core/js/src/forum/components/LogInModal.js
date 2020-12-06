@@ -5,39 +5,40 @@ import Button from '../../common/components/Button';
 import LogInButtons from './LogInButtons';
 import extractText from '../../common/utils/extractText';
 import ItemList from '../../common/utils/ItemList';
+import Stream from '../../common/utils/Stream';
 
 /**
  * The `LogInModal` component displays a modal dialog with a login form.
  *
- * ### Props
+ * ### Attrs
  *
  * - `identification`
  * - `password`
  */
 export default class LogInModal extends Modal {
-  init() {
-    super.init();
+  oninit(vnode) {
+    super.oninit(vnode);
 
     /**
      * The value of the identification input.
      *
      * @type {Function}
      */
-    this.identification = m.prop(this.props.identification || '');
+    this.identification = Stream(this.attrs.identification || '');
 
     /**
      * The value of the password input.
      *
      * @type {Function}
      */
-    this.password = m.prop(this.props.password || '');
+    this.password = Stream(this.attrs.password || '');
 
     /**
      * The value of the remember me input.
      *
      * @type {Function}
      */
-    this.remember = m.prop(!!this.props.remember);
+    this.remember = Stream(!!this.attrs.remember);
   }
 
   className() {
@@ -105,12 +106,14 @@ export default class LogInModal extends Modal {
     items.add(
       'submit',
       <div className="Form-group">
-        {Button.component({
-          className: 'Button Button--primary Button--block',
-          type: 'submit',
-          loading: this.loading,
-          children: app.translator.trans('core.forum.log_in.submit_button'),
-        })}
+        {Button.component(
+          {
+            className: 'Button Button--primary Button--block',
+            type: 'submit',
+            loading: this.loading,
+          },
+          app.translator.trans('core.forum.log_in.submit_button')
+        )}
       </div>,
       -10
     );
@@ -140,9 +143,9 @@ export default class LogInModal extends Modal {
    */
   forgotPassword() {
     const email = this.identification();
-    const props = email.indexOf('@') !== -1 ? { email } : undefined;
+    const attrs = email.indexOf('@') !== -1 ? { email } : undefined;
 
-    app.modal.show(new ForgotPasswordModal(props));
+    app.modal.show(ForgotPasswordModal, attrs);
   }
 
   /**
@@ -152,11 +155,11 @@ export default class LogInModal extends Modal {
    * @public
    */
   signUp() {
-    const props = { password: this.password() };
+    const attrs = { password: this.password() };
     const identification = this.identification();
-    props[identification.indexOf('@') !== -1 ? 'email' : 'username'] = identification;
+    attrs[identification.indexOf('@') !== -1 ? 'email' : 'username'] = identification;
 
-    app.modal.show(new SignUpModal(props));
+    app.modal.show(SignUpModal, attrs);
   }
 
   onready() {
@@ -179,7 +182,7 @@ export default class LogInModal extends Modal {
 
   onerror(error) {
     if (error.status === 401) {
-      error.alert.props.children = app.translator.trans('core.forum.log_in.invalid_login_message');
+      error.alert.content = app.translator.trans('core.forum.log_in.invalid_login_message');
     }
 
     super.onerror(error);

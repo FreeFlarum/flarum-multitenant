@@ -14,7 +14,7 @@ migratetoflarum-canonical:
         disabled: 'Wyłączone (rozszerzenie nic nie będzie robić)'
       step:
         admin_on_canonical: 'Uzyskaj dostęp do panelu admina przez ustawiony adres kanoniczny'
-        check_config_url: 'Sprawdź czy adres URL ustawiony w <code>config.php</code> jest preferowanym przez ciebie adresem kanonicznym (obecnie: {url})'
+        check_config_url: 'Sprawdź czy adres URL ustawiony w <code>config.php</code> jest preferowanym przez Ciebie adresem kanonicznym (obecnie: {url})'
         enable_permanent: 'Włącz trwałe przekierowanie'
         enable_temporary: 'Włącz tymczasowe przekierowanie i sprawdź czy wszystko działa'
         how_to: 'Jak włączyć przekierowania na adres kanoniczy'

@@ -12,3 +12,4 @@ fof-formatting:
       MediaEmbed: 'Osadź treści z dozwolonych witryn'
       PipeTables: 'Obsługuj tabele ASCII'
       TaskLists: 'Listy zadań w stylu GitHuba/GitLaba'
+    title: 'FriendsOfFlarum Formatting'

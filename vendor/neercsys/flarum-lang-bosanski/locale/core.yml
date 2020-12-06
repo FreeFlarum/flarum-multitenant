@@ -40,6 +40,8 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Zadani jezik
+      display_name_heading: Korisničko ime za prikaz
+      display_name_text: Odaberite upravljački program koji će se koristiti za korisnička imena za prikaz. Prema zadanim postavkama prikazuje se korisničko ime.
       forum_description_heading: Opis foruma
       forum_description_text: Unesi kratki opis koji opisuje tvoj zajednicu. Ovo će se prikazivati u meta tagovima i u search engineu.
       forum_title_heading: Naslov foruma
@@ -100,17 +102,15 @@ core:
       mail_mailgun_domain_label: Domen
       mail_mailgun_region_label: Region
       mail_mailgun_secret_label: Secret key
-      mail_mandrill_secret_label: Secret key
       mail_password_label: => core.ref.password
       mail_port_label: Port
-      mail_ses_key_label: Key
-      mail_ses_region_label: Region
-      mail_ses_secret_label: Secret
       mail_username_label: => core.ref.username
       mailgun_heading: Mailgun Settings
-      mandrill_heading: Mandrill Settings
       not_sending_message: Flarum trenutno ne šalje e-poštu. To može biti zbog odabranog upravljačkog programa ili pogreške u njegovoj konfiguraciji.
-      ses_heading: SES Postavke
+      send_test_mail_button: Pošalji
+      send_test_mail_heading: Pošalji testni email
+      send_test_mail_success: "Probni email uspješno poslana!"
+      send_test_mail_text: "Ovo će poslati email pomoću gornje konfiguracije na vašu e-poštu, {email}."
       smtp_heading: SMTP Postavke
       submit_button: => core.ref.save_changes
       text: Konfigurirajte upravljački program, postavke i adrese koje će vaš forum koristiti za slanje e-pošte.
@@ -228,8 +228,10 @@ core:
     # These translations are used by the composer when editing a post.
     composer_edit:
       discard_confirmation: "Niste snimili izmjene. Da li želite da ih poništite?"
+      edited_message: Vaše uređivanje je izvršeno.
       post_link: "Post #{number} u {discussion}"
       submit_button: => core.ref.save_changes
+      view_button: => core.ref.view
 
     # These translations are used by the composer when replying to a discussion.
     composer_reply:
@@ -237,7 +239,7 @@ core:
       discard_confirmation: "Niste postaviti odgovor. Da li želite da ga poništite?"
       posted_message: Vaš odgovor je snimljen.
       submit_button: Snimi odgovor
-      view_button: Pogledaj
+      view_button: => core.ref.view
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
@@ -300,6 +302,7 @@ core:
       cannot_start_discussion_button: Ne možete započeti temu.
       mark_all_as_read_confirmation: "Jesi siguran da želiš označiti sve teme kao pročitane?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      meta_title_text: => core.ref.all_discussions
       refresh_tooltip: Osvježi
       start_discussion_button: => core.ref.start_a_discussion
 
@@ -342,8 +345,8 @@ core:
       delete_button: => core.ref.delete
       delete_confirmation: "Jeste li sigurni da želite zauvijek izbrisati ovaj post? Ova se radnja ne može poništiti."
       delete_forever_button: => core.ref.delete_forever
-      hide_confirmation: "Jeste li sigurni da želite izbrisati taj post?"
       edit_button: => core.ref.edit
+      hide_confirmation: "Jeste li sigurni da želite izbrisati taj post?"
       restore_button: => core.ref.restore
 
     # These translations are used in the scrubber to the right of the post stream.
@@ -414,7 +417,7 @@ core:
     user_controls:
       button: Kontrole
       delete_button: => core.ref.delete
-      delete_confirmation: "Da li siguran da želiš izbrisati ovog korisnika? Postovi ovog korisnika neće biti izbrisani."
+      delete_confirmation: "Jeste li sigurni da želite izbrisati ovog korisnika? Korisnički postovi NEĆE se brisati."
       delete_error_message: "Brisanje korisnika <i>{username} ({email})</i> je neuspješno"
       delete_success_message: "Korisnik <i>{username} ({email})</i> je uspješno obrisan"
       edit_button: => core.ref.edit
@@ -434,7 +437,9 @@ core:
 
     # These translations are displayed as error messages.
     error:
+      dependent_extensions_message: "Nije moguće onemogućiti {extension} dok se ne onemoguće sljedeća ovisna proširenja: {extensions}"
       generic_message: "Oops! Nešto je pošlo po zlu. Probajte učitati stranicu ponovo."
+      missing_dependencies_message: "Ne može se omogućiti {extension} dok se ne omoguće sljedeće ovisnosti: {extensions}"
       not_found_message: Zahtjev nije pronađen.
       permission_denied_message: Nemate permisije!
       rate_limit_exceeded_message: Dostigli ste limit. Pokušajte za par sekundi.
@@ -543,7 +548,19 @@ core:
         {url}
 
         Ako ne želiš da mjenjaš šifru, ignoriši ovaj email i ništa se neće desiti.
-
+        
+    # These translations are used when testing mailing configuration
+    send_test:
+      subject: Flarum Email Test
+      body: |
+        Hey {username}!
+        
+        Ovo je testi email da biste potvrdili da vaša konfiguracija email-a Flarum-a radi ispravno.
+        
+        Ako ste to bili vi, ovaj email znači da vaša konfiguracija funkcionira!
+        
+        Ako to niste bili vi, zanemarite ovu e-poštu.
+        
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
   ##
@@ -562,7 +579,7 @@ core:
     custom_header_title: Izmjeni Custom Header
     delete: Izbriši
     delete_forever: Izbriši trajno
-    discussions: Teme                     # Referenced by flarum-statistics.yml
+    discussions: Teme                            # Referenced by flarum-statistics.yml
     edit: Izmjeni
     email: Email
     icon: Ikona
@@ -575,22 +592,23 @@ core:
     notifications: Notifikacije
     okay: OK                                     # Referenced by flarum-tags.yml
     password: Šifra
-    posts: Postovi                                 # Referenced by flarum-statistics.yml
+    posts: Postovi                               # Referenced by flarum-statistics.yml
     previous_page: Prethodna stranica
     remove: Izbriši
     rename: Preimenuj
-    reply: Odgovori                                 # Referenced by flarum-mentions.yml
+    reply: Odgovori                              # Referenced by flarum-mentions.yml
     reset_your_password: Resetujte šifru
     restore: Povrati
-    save_changes: Snimi izmjene                   # Referenced by flarum-suspend.yml, flarum-tags.yml
+    save_changes: Snimi izmjene                  # Referenced by flarum-suspend.yml, flarum-tags.yml
     settings: Postavke
     sign_up: Registracija
     some_others: "{count} drugi|{count} drugih"  # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: Nova tema
     username: Korisničko ime
-    users: Korisnici                                 # Referenced by flarum-statistics.yml
+    users: Korisnici                             # Referenced by flarum-statistics.yml
+    view: View
     write_a_reply: Napiši odgovor...
-    you: Tebi                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: Tebi                                    # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.
@@ -599,10 +617,10 @@ core:
   # Translations in this namespace are used to translate default group names.
   group:
     admin: Admin
-    admins: Admins
+    admins: Administratori
     guest: Gost
     guests: Gosti
     member: Član
     members: Članovi
-    mod: Mod
-    mods: Mods
+    mod: Moderator
+    mods: Moderatori

@@ -12,10 +12,9 @@
 namespace FoF\Byobu\Listeners;
 
 use Flarum\Post\Event\Saving;
-use FoF\Byobu\Events\DiscussionMadePrivate;
-use FoF\Byobu\Events\DiscussionMadePublic;
-use FoF\Byobu\Events\DiscussionRecipientRemovedSelf;
-use FoF\Byobu\Events\DiscussionRecipientsChanged;
+use FoF\Byobu\Events\Created;
+use FoF\Byobu\Events\RecipientsChanged;
+use FoF\Byobu\Events\RemovedSelf;
 use FoF\Byobu\Jobs;
 use Illuminate\Events\Dispatcher;
 use s9e\TextFormatter\Utils;
@@ -24,17 +23,20 @@ class QueueNotificationJobs
 {
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(DiscussionMadePrivate::class, [$this, 'discussionMadePrivate']);
+        $events->listen(Created::class, [$this, 'discussionMadePrivate']);
         $events->listen(Saving::class, [$this, 'postMadeInPrivateDiscussion']);
-        $events->listen(DiscussionRecipientRemovedSelf::class, [$this, 'discussionRecipientRemovedSelf']);
-        $events->listen(DiscussionRecipientsChanged::class, [$this, 'discussionRecipientsChanged']);
-        $events->listen(DiscussionMadePublic::class, [$this, 'discussionMadePublic']);
+        $events->listen(RemovedSelf::class, [$this, 'discussionRecipientRemovedSelf']);
+        $events->listen(RecipientsChanged::class, [$this, 'discussionRecipientsChanged']);
     }
 
-    public function discussionMadePrivate(DiscussionMadePrivate $event)
+    public function discussionMadePrivate(Created $event)
     {
         app('flarum.queue.connection')->push(
-            new Jobs\SendNotificationWhenPrivateDiscussionStarted($event->discussion, $event->newUsers, $event->newGroups)
+            new Jobs\SendNotificationWhenPrivateDiscussionStarted(
+                $event->discussion,
+                $event->screener->users,
+                $event->screener->groups
+            )
         );
     }
 
@@ -62,24 +64,26 @@ class QueueNotificationJobs
         });
     }
 
-    public function discussionRecipientRemovedSelf(DiscussionRecipientRemovedSelf $event)
+    public function discussionRecipientRemovedSelf(RemovedSelf $event)
     {
         app('flarum.queue.connection')->push(
-            new Jobs\SendNotificationWhenRecipientRemoved($event->actor, $event->discussion, $event->newUsers)
+            new Jobs\SendNotificationWhenRecipientRemoved(
+                $event->screener->actor(),
+                $event->discussion,
+                $event->screener->users
+            )
         );
     }
 
-    public function discussionRecipientsChanged(DiscussionRecipientsChanged $event)
+    public function discussionRecipientsChanged(RecipientsChanged $event)
     {
         app('flarum.queue.connection')->push(
-            new Jobs\SendNotificationWhenRecipientAdded($event->actor, $event->discussion, $event->newUsers, $event->oldUsers)
-        );
-    }
-
-    public function discussionMadePublic(DiscussionMadePublic $event)
-    {
-        app('flarum.queue.connection')->push(
-            new Jobs\SendNotificationWhenDiscussionMadePublic($event->actor, $event->discussion, $event->oldUsers)
+            new Jobs\SendNotificationWhenRecipientAdded(
+                $event->screener->actor(),
+                $event->discussion,
+                $event->screener->users,
+                $event->screener->currentUsers
+            )
         );
     }
 }

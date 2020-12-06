@@ -9,6 +9,7 @@ fof-forum-statistics-widget:
   admin:
     settings:
       title: Widget Postavke
+      widget_ignore_private_discussions_label: Zanemarite privatne diskusije
       widget_order_label: Widget Redosljed
       widget_helper_text: "Uredite ovu postavku kako biste prilagodili položaj ovog widgeta u odjeljku sidenav na vašem Flarum forumu.
       Što je veći broj, widget će biti na sidenav listi na višoj poziciji (ta vrijednost može biti bilo pozitivna ili negativna)."

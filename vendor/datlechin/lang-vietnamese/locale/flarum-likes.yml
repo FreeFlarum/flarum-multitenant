@@ -1,0 +1,37 @@
+flarum-likes:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện quản trị.
+  admin:
+
+    # Các bản dịch này được sử dụng trong trang Quyền của giao diện quản trị viên.
+    permissions:
+      like_posts_label: Thích bài viết
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+
+    # Các bản dịch này được sử dụng bởi danh sách Thông báo, a.k.a. "chuông".
+    notifications:
+      others_text: => core.ref.some_others
+      post_liked_text: "{username} thích bài viết của bạn"  # Có thể được số nhiều để đồng ý với số lượng người dùng!
+
+    # Các bản dịch này được hiển thị bên dưới bài viết cá nhân.
+    post:
+      like_link: Thích
+      liked_by_self_text: "{users} thích điều này."  # Có thể được số nhiều để đồng ý với số lượng người dùng!
+      liked_by_text: "{users} thích điều này.|{users} thích điều này."
+      others_link: => core.ref.some_others
+      unlike_link: Bỏ thích
+      you_text: => core.ref.you
+
+    # Các bản dịch này được sử dụng bởi hộp thoại Người dùng thích Phương thức này.
+    post_likes:
+      title: Người dùng thích điều này
+
+    # Các bản dịch này được sử dụng trong trang Cài đặt.
+    settings:
+      notify_post_liked_label: Ai đó thích một trong những bài viết của tôi

@@ -3,7 +3,6 @@
 namespace SychO\ProfileCover\Command;
 
 use Flarum\Foundation\DispatchEventsTrait;
-use Flarum\User\AssertPermissionTrait;
 use Flarum\User\UserRepository;
 use Illuminate\Contracts\Events\Dispatcher;
 use SychO\ProfileCover\CoverUploader;
@@ -11,7 +10,6 @@ use SychO\ProfileCover\CoverUploader;
 class DeleteCoverHandler
 {
     use DispatchEventsTrait;
-    use AssertPermissionTrait;
 
     /**
      * @var UserRepository
@@ -46,9 +44,7 @@ class DeleteCoverHandler
 
         $user = $this->users->findOrFail($command->userId);
 
-        if ($actor->id !== $user->id) {
-            $this->assertCan($actor, 'edit', $user);
-        }
+        $actor->assertCan('setProfileCover', $user);
 
         $this->uploader->remove($user);
 

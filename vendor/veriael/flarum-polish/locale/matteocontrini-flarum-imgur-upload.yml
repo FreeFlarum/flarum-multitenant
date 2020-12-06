@@ -1,9 +1,0 @@
-imgur-upload:
-  admin:
-    settings:
-        title: Ustawienia udostępniania zdjęć poprzez Imgur
-  forum:
-    upload: Kliknij lub upuść, by wysłać zdjęcie
-    loading: Wysyłanie...
-    done: Gotowe!
-    error: Błąd

@@ -3,3 +3,41 @@ fof-nightmode:
   forum:
     night: Modo Escuro
     day: Modo Claro
+    user:
+      settings:
+        heading: Tema
+        description: Escolha qual modo você deseja usar no fórum.
+        description2: Este tema será vinculado à sua conta e se aplicará a todos os
+          seus dispositivos, a menos que você alterne a chave abaixo para as configurações
+          por dispositivo.
+        device_specific_setting_checkbox: Use as configurações do dispositivo
+        device_specific_setting_checkbox_tooltip: Sua escolha de tema será salva individualmente
+          para cada um dos seus dispositivos.
+        options:
+          auto: "=> fof-nightmode.ref.auto"
+          day: "=> fof-nightmode.ref.light"
+          night: "=> fof-nightmode.ref.dark"
+        option_descriptions:
+          auto: Seu tema será selecionado automaticamente com base nas configurações
+            do seu navegador ou dispositivo. Por exemplo, se você tiver o modo escuro
+            habilitado no iOS, os fóruns também estarão escuros.
+          day: A experiência clássica a que está habituado. Amado e testado.
+          night: Você é um pouco noctívago. Você vigia o fórum à noite, enquanto os
+            pássaros dormem e as raposas caçam. Ou você apenas prefere as cores mais
+            escuras!
+  ref:
+    auto: Automático (com base nas opções do navegador ou do dispositivo)
+    light: Modo Claro
+    dark: Modo Escuro
+  admin:
+    settings:
+      modal:
+        title: FoF Night Mode
+        default_theme: Tema padrão do fórum
+        default_theme_helper: O tema padrão é definido automaticamente para novos
+          usuários e convidados.
+        default_theme_important: Isso também afetará os usuários existentes que não
+          selecionaram manualmente um tema!
+        theme_auto: "=> fof-nightmode.ref.auto"
+        theme_light: "=> fof-nightmode.ref.light"
+        theme_dark: "=> fof-nightmode.ref.dark"

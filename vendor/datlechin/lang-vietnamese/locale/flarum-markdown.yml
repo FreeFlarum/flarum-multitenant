@@ -1,0 +1,20 @@
+flarum-markdown:
+
+  ##
+  # UNIQUE KEYS - Các phím sau chỉ được sử dụng ở một vị trí.
+  ##
+
+  # Các bản dịch trong không gian tên này được sử dụng bởi giao diện người dùng diễn đàn.
+  forum:
+
+    # Các bản dịch này được sử dụng bởi nhà soạn thảo (chức năng tự động hoàn thành biểu tượng cảm xúc).
+    composer:
+      bold_tooltip: Thêm văn bản in đậm
+      code_tooltip: Nhập mã
+      header_tooltip: Thêm văn bản tiêu đề
+      image_tooltip: Thêm hình ảnh
+      italic_tooltip: Thêm văn bản in nghiêng
+      link_tooltip: Thêm liên kết
+      ordered_list_tooltip: Thêm danh sách đánh số
+      quote_tooltip: Chèn trích dẫn
+      unordered_list_tooltip: Thêm danh sách gạch đầu dòng

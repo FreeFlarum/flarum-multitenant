@@ -1,0 +1,30 @@
+{
+    "name": "cbmainz/flarum-de",
+    "type": "flarum-extension",
+    "description": "German language pack for Flarum and its bundled extensions.",
+    "homepage": "https://github.com/Kakifrucht/flarum-de",
+    "keywords": ["locale"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/Kakifrucht/flarum-de/issues",
+        "source": "https://github.com/Kakifrucht/flarum-de"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.14"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Deutsch",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#00247d",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "de",
+            "title": "Deutsch"
+        }
+    }
+}

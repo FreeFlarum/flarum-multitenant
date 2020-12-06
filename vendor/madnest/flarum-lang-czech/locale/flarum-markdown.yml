@@ -12,6 +12,7 @@ flarum-markdown:
       bold_tooltip: Přidej tučný text
       code_tooltip: Vlož kód
       header_tooltip: Přidej nadpis
+      image_tooltip: Přidej obrázek
       italic_tooltip: Přidej kurzívu
       link_tooltip: Přidej odkaz
       ordered_list_tooltip: Přidej číslovaný seznam

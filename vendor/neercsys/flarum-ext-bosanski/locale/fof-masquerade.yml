@@ -52,10 +52,9 @@ fof-masquerade:
                 available icons, check the <a>FontAwesome website</a>. Use icon names with
                 the "fa-" prefix, like "fas fa-info".
             force-user-to-completion: Prisilite korisnika da dovrši profil
-            disable-user-bio: Onemogući korisničko bio polje
             options: Opcije
             option-new: Nova opcija
-            option-coma-warning: Oznaka opcije ne može sadržavati zarez (",").
+            option-comma-warning: Oznaka opcije ne može sadržavati zarez (",").
         types:
             advanced: Napredno
             boolean: Checkbox

@@ -72,7 +72,7 @@ app.initializers.add('jslirola-login2seeplus', function()
         return newlink.outerHTML;
     }
 
-    extend(HeaderPrimary.prototype, 'init', function ()
+    extend(HeaderPrimary.prototype, 'oninit', function ()
     {
         jslirolaLogin2seeplusPostsLength = parseInt(app.forum.attribute('jslirola.login2seeplus.post') || 100);
         if (isNaN(jslirolaLogin2seeplusPostsLength))
@@ -91,7 +91,7 @@ app.initializers.add('jslirola-login2seeplus', function()
         if (jslirolaLogin2seeplusUsePHP)
             return;
 
-        let oldContent = list[1].children[0].toString();
+        let oldContent = list[1].children[0].children;
         let newContent = oldContent;
         let subbedContent = false;
 
@@ -161,11 +161,11 @@ app.initializers.add('jslirola-login2seeplus', function()
 
     });
 
-    extend(CommentPost.prototype, 'config', function()
+    extend(CommentPost.prototype, 'oncreate', function()
     {
-        $('.Post-body a.l2sp').off('click').on('click', () => app.modal.show(new LogInModal()));
-        $('.jslirolaLogin2seeplusLogin').off('click').on('click', () => app.modal.show(new LogInModal()));
-        $('.jslirolaLogin2seeplusRegister').off('click').on('click', () => app.modal.show(new SignUpModal()));
+        $('.Post-body a.l2sp').off('click').on('click', () => app.modal.show(LogInModal));
+        $('.jslirolaLogin2seeplusLogin').off('click').on('click', () => app.modal.show(LogInModal));
+        $('.jslirolaLogin2seeplusRegister').off('click').on('click', () => app.modal.show(SignUpModal));
     });
 
 });

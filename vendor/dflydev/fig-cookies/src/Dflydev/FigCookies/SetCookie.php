@@ -1,68 +1,98 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dflydev\FigCookies;
 
 use DateTime;
 use DateTimeInterface;
+use Dflydev\FigCookies\Modifier\SameSite;
+use function array_shift;
+use function count;
+use function explode;
+use function gmdate;
+use function implode;
+use function is_int;
+use function is_numeric;
+use function is_string;
+use function sprintf;
+use function strtolower;
+use function strtotime;
+use function urlencode;
 
 class SetCookie
 {
+    /** @var string */
     private $name;
+    /** @var string|null */
     private $value;
+    /** @var int */
     private $expires = 0;
+    /** @var int */
     private $maxAge = 0;
+    /** @var string|null */
     private $path;
+    /** @var string|null */
     private $domain;
+    /** @var bool */
     private $secure = false;
+    /** @var bool */
     private $httpOnly = false;
+    /** @var SameSite|null */
+    private $sameSite;
 
-    private function __construct($name, $value = null)
+    private function __construct(string $name, ?string $value = null)
     {
-        $this->name = $name;
+        $this->name  = $name;
         $this->value = $value;
     }
 
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
-    public function getValue()
+    public function getValue() : ?string
     {
         return $this->value;
     }
 
-    public function getExpires()
+    public function getExpires() : int
     {
         return $this->expires;
     }
 
-    public function getMaxAge()
+    public function getMaxAge() : int
     {
         return $this->maxAge;
     }
 
-    public function getPath()
+    public function getPath() : ?string
     {
         return $this->path;
     }
 
-    public function getDomain()
+    public function getDomain() : ?string
     {
         return $this->domain;
     }
 
-    public function getSecure()
+    public function getSecure() : bool
     {
         return $this->secure;
     }
 
-    public function getHttpOnly()
+    public function getHttpOnly() : bool
     {
         return $this->httpOnly;
     }
 
-    public function withValue($value = null)
+    public function getSameSite() : ?SameSite
+    {
+        return $this->sameSite;
+    }
+
+    public function withValue(?string $value = null) : self
     {
         $clone = clone($this);
 
@@ -71,24 +101,32 @@ class SetCookie
         return $clone;
     }
 
-    private function resolveExpires($expires = null)
+    /** @param int|\DateTimeInterface|string|null $expires */
+    private function resolveExpires($expires = null) : int
     {
-        if (is_null($expires)) {
-            return null;
+        if ($expires === null) {
+            return 0;
         }
 
-        if ($expires instanceof DateTime || $expires instanceof DateTimeInterface) {
+        if ($expires instanceof DateTimeInterface) {
             return $expires->getTimestamp();
         }
 
         if (is_numeric($expires)) {
-            return $expires;
+            return (int) $expires;
         }
 
-        return strtotime($expires);
+        $time = strtotime($expires);
+
+        if (! is_int($time)) {
+            throw new \InvalidArgumentException(sprintf('Invalid expires "%s" provided', $expires));
+        }
+
+        return $time;
     }
 
-    public function withExpires($expires = null)
+    /** @param int|string|\DateTimeInterface|null $expires */
+    public function withExpires($expires = null) : self
     {
         $expires = $this->resolveExpires($expires);
 
@@ -99,26 +137,26 @@ class SetCookie
         return $clone;
     }
 
-    public function rememberForever()
+    public function rememberForever() : self
     {
         return $this->withExpires(new DateTime('+5 years'));
     }
 
-    public function expire()
+    public function expire() : self
     {
         return $this->withExpires(new DateTime('-5 years'));
     }
 
-    public function withMaxAge($maxAge = null)
+    public function withMaxAge(?int $maxAge = null) : self
     {
         $clone = clone($this);
 
-        $clone->maxAge = $maxAge;
+        $clone->maxAge = (int) $maxAge;
 
         return $clone;
     }
 
-    public function withPath($path = null)
+    public function withPath(?string $path = null) : self
     {
         $clone = clone($this);
 
@@ -127,7 +165,7 @@ class SetCookie
         return $clone;
     }
 
-    public function withDomain($domain = null)
+    public function withDomain(?string $domain = null) : self
     {
         $clone = clone($this);
 
@@ -136,7 +174,7 @@ class SetCookie
         return $clone;
     }
 
-    public function withSecure($secure = null)
+    public function withSecure(bool $secure = true) : self
     {
         $clone = clone($this);
 
@@ -145,7 +183,7 @@ class SetCookie
         return $clone;
     }
 
-    public function withHttpOnly($httpOnly = null)
+    public function withHttpOnly(bool $httpOnly = true) : self
     {
         $clone = clone($this);
 
@@ -154,10 +192,28 @@ class SetCookie
         return $clone;
     }
 
-    public function __toString()
+    public function withSameSite(SameSite $sameSite) : self
+    {
+        $clone = clone($this);
+
+        $clone->sameSite = $sameSite;
+
+        return $clone;
+    }
+
+    public function withoutSameSite() : self
+    {
+        $clone = clone($this);
+
+        $clone->sameSite = null;
+
+        return $clone;
+    }
+
+    public function __toString() : string
     {
         $cookieStringParts = [
-            urlencode($this->name).'='.urlencode($this->value),
+            urlencode($this->name) . '=' . urlencode((string) $this->value),
         ];
 
         $cookieStringParts = $this->appendFormattedDomainPartIfSet($cookieStringParts);
@@ -166,42 +222,52 @@ class SetCookie
         $cookieStringParts = $this->appendFormattedMaxAgePartIfSet($cookieStringParts);
         $cookieStringParts = $this->appendFormattedSecurePartIfSet($cookieStringParts);
         $cookieStringParts = $this->appendFormattedHttpOnlyPartIfSet($cookieStringParts);
+        $cookieStringParts = $this->appendFormattedSameSitePartIfSet($cookieStringParts);
 
         return implode('; ', $cookieStringParts);
     }
 
-    public static function create($name, $value = null)
+    public static function create(string $name, ?string $value = null) : self
     {
         return new static($name, $value);
     }
 
-    public static function createRememberedForever($name, $value = null)
+    public static function createRememberedForever(string $name, ?string $value = null) : self
     {
         return static::create($name, $value)->rememberForever();
     }
 
-    public static function createExpired($name)
+    public static function createExpired(string $name) : self
     {
         return static::create($name)->expire();
     }
 
-    public static function fromSetCookieString($string)
+    public static function fromSetCookieString(string $string) : self
     {
         $rawAttributes = StringUtil::splitOnAttributeDelimiter($string);
 
-        list ($cookieName, $cookieValue) = StringUtil::splitCookiePair(array_shift($rawAttributes));
+        $rawAttribute = array_shift($rawAttributes);
+
+        if (! is_string($rawAttribute)) {
+            throw new \InvalidArgumentException(sprintf(
+                'The provided cookie string "%s" must have at least one attribute',
+                $string
+            ));
+        }
+
+        list ($cookieName, $cookieValue) = StringUtil::splitCookiePair($rawAttribute);
 
         /** @var SetCookie $setCookie */
         $setCookie = new static($cookieName);
 
-        if (! is_null($cookieValue)) {
+        if ($cookieValue !== null) {
             $setCookie = $setCookie->withValue($cookieValue);
         }
 
         while ($rawAttribute = array_shift($rawAttributes)) {
             $rawAttributePair = explode('=', $rawAttribute, 2);
 
-            $attributeKey = $rawAttributePair[0];
+            $attributeKey   = $rawAttributePair[0];
             $attributeValue = count($rawAttributePair) > 1 ? $rawAttributePair[1] : null;
 
             $attributeKey = strtolower($attributeKey);
@@ -211,7 +277,7 @@ class SetCookie
                     $setCookie = $setCookie->withExpires($attributeValue);
                     break;
                 case 'max-age':
-                    $setCookie = $setCookie->withMaxAge($attributeValue);
+                    $setCookie = $setCookie->withMaxAge((int) $attributeValue);
                     break;
                 case 'domain':
                     $setCookie = $setCookie->withDomain($attributeValue);
@@ -225,49 +291,77 @@ class SetCookie
                 case 'httponly':
                     $setCookie = $setCookie->withHttpOnly(true);
                     break;
+                case 'samesite':
+                    $setCookie = $setCookie->withSameSite(SameSite::fromString((string) $attributeValue));
+                    break;
             }
-
         }
 
         return $setCookie;
     }
-    private function appendFormattedDomainPartIfSet(array $cookieStringParts)
+
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedDomainPartIfSet(array $cookieStringParts) : array
     {
         if ($this->domain) {
-            $cookieStringParts[] = sprintf("Domain=%s", $this->domain);
+            $cookieStringParts[] = sprintf('Domain=%s', $this->domain);
         }
 
         return $cookieStringParts;
     }
 
-    private function appendFormattedPathPartIfSet(array $cookieStringParts)
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedPathPartIfSet(array $cookieStringParts) : array
     {
         if ($this->path) {
-            $cookieStringParts[] = sprintf("Path=%s", $this->path);
+            $cookieStringParts[] = sprintf('Path=%s', $this->path);
         }
 
         return $cookieStringParts;
     }
 
-    private function appendFormattedExpiresPartIfSet(array $cookieStringParts)
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedExpiresPartIfSet(array $cookieStringParts) : array
     {
         if ($this->expires) {
-            $cookieStringParts[] = sprintf("Expires=%s", gmdate('D, d M Y H:i:s T', $this->expires));
+            $cookieStringParts[] = sprintf('Expires=%s', gmdate('D, d M Y H:i:s T', $this->expires));
         }
 
         return $cookieStringParts;
     }
 
-    private function appendFormattedMaxAgePartIfSet(array $cookieStringParts)
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedMaxAgePartIfSet(array $cookieStringParts) : array
     {
         if ($this->maxAge) {
-            $cookieStringParts[] = sprintf("Max-Age=%s", $this->maxAge);
+            $cookieStringParts[] = sprintf('Max-Age=%s', $this->maxAge);
         }
 
         return $cookieStringParts;
     }
 
-    private function appendFormattedSecurePartIfSet(array $cookieStringParts)
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedSecurePartIfSet(array $cookieStringParts) : array
     {
         if ($this->secure) {
             $cookieStringParts[] = 'Secure';
@@ -276,11 +370,32 @@ class SetCookie
         return $cookieStringParts;
     }
 
-    private function appendFormattedHttpOnlyPartIfSet(array $cookieStringParts)
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedHttpOnlyPartIfSet(array $cookieStringParts) : array
     {
         if ($this->httpOnly) {
             $cookieStringParts[] = 'HttpOnly';
         }
+
+        return $cookieStringParts;
+    }
+
+    /**
+     * @param string[] $cookieStringParts
+     *
+     * @return string[]
+     */
+    private function appendFormattedSameSitePartIfSet(array $cookieStringParts) : array
+    {
+        if ($this->sameSite === null) {
+            return $cookieStringParts;
+        }
+
+        $cookieStringParts[] = $this->sameSite->asString();
 
         return $cookieStringParts;
     }

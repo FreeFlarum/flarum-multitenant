@@ -35,7 +35,7 @@
     }
   }
 
-  var pl = moment.defineLocale('pl', {
+  var pl = moment.locale('pl', {
     months : function (momentToFormat, format) {
       if (!momentToFormat) {
         return monthsNominative;
@@ -55,6 +55,15 @@
     weekdaysShort : 'ndz_pon_wt_śr_czw_pt_sob'.split('_'),
     weekdaysMin : 'Nd_Pn_Wt_Śr_Cz_Pt_So'.split('_'),
     longDateFormat : {
+      LT : 'HH:mm',
+      LTS : 'HH:mm:ss',
+      L : 'DD.MM.YYYY',
+      LL : 'D MMMM YYYY',
+      LLL : 'D MMMM YYYY HH:mm',
+      LLLL : 'dddd, D MMMM YYYY HH:mm'
+    },
+    // dayjs BC layer 
+    formats : {
       LT : 'HH:mm',
       LTS : 'HH:mm:ss',
       L : 'DD.MM.YYYY',

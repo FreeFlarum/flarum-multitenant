@@ -5,5 +5,5 @@ import Login2SeePlusSettingsModal from './components/Login2SeePlusSettingsModal'
 
 app.initializers.add('jslirola-login2seeplus', () =>
 {
-    app.extensionSettings['jslirola-login2seeplus'] = () => app.modal.show(new Login2SeePlusSettingsModal());
+    app.extensionSettings['jslirola-login2seeplus'] = () => app.modal.show(Login2SeePlusSettingsModal);
 });

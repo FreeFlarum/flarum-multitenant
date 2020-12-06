@@ -1,0 +1,123 @@
+---
+v17development-flarum-support:
+  forum:
+    knowledge_base: Base de Conhecimento
+    ask_a_question_on_forums: Faça uma pergunta nos fóruns
+    return_to_home: Voltar para a página inicial da base de conhecimento
+    ask_your_question_on_forum: Faça sua pergunta nos fóruns
+    or: ou
+    settings: "=> core.ref.settings"
+    send: Enviar
+    create: Criar
+    discard: Descartar
+    hero:
+      help_question: Em que podemos ajudá-lo?
+      check_forum: Se você não consegue encontrar oque está procurando, <a>confira
+        nosso fórum </a>
+    overview:
+      knowledge_base_overview: Visão geral da base de conhecimento
+      back_to: Voltar para  {category}
+      back_to_overview: Voltar para a visão geral da base de conhecimento
+      back_to_main_categories: Voltar às categorias principais
+      loading_articles: Carregando artigos
+      no_categories_found: Desculpe, nenhuma categoria foi encontrada aqui...
+      category_not_found: Categoria não encontrada
+      no_articles_found: Nenhum artigo foi encontrado nesta categoria
+      tools:
+        new_article: Novo artigo
+        rename_category: Renomear categoria
+        edit_description: Editar descrição
+        change_icon: Definir ícone
+    article_events:
+      article_hidden: O artigo foi oculto por {username}
+      article_public: O artigo foi tornado público por {username}
+      article_modified: "{username} editou este artigo."
+    search:
+      title: Pesquisar
+      back_to_search_results: Voltar para os resultados da pesquisa
+      search_knowledge_base: Pesquise em nossa base de conhecimento
+      searching: Pesquisando
+      searching_for: Pesquisando por {searchterm}
+      searched_for: Você pesquisou por {searchterm}, houve {results} resultados.
+      use_searchbox_below: Use a caixa de pesquisa abaixo para pesquisar em nossa
+        base de conhecimento.
+      no_results: Não foi possível encontrar nada para {searchterm}.
+    not_found:
+      title: Item não encontrado
+      description: Desculpe, este artigo ou categoria não existe mais neste lugar.
+      solution: Você pode usar a caixa de pesquisa acima para encontrar oque estava
+        procurando.
+    article:
+      article: Artigo
+      articles: Artigos
+      hidden: Oculto
+      created_at: Criado em {date}
+      author: Autor
+      authors: Autores
+      last_modified: Última modificação em {date}
+      not_found: Artigo não encontrado
+      share_article:
+        title: Compartilhe o artigo
+        perma_link: 'Link permanente para este artigo:'
+      tools:
+        rename_article: Renomear artigo
+        edit_article: Editar artigo
+        edit_tags: Editar tags deste artigo
+        audit_log: Ver log de auditoria
+        hide_article: Ocultar artigo
+        recover_article: Recuperar artigo
+        delete_forever: Apagar para sempre
+        view_ratings: Ver avaliações
+    support_ratings:
+      helful_article: Esse artigo foi útil?
+      helful_support: Você está satisfeito com a forma como lidamos com seu ticket
+        de suporte?
+      feedback: Obrigado por sua avaliação, você tem algum feedback?
+      feedback_not_helpful: Desculpe, este artigo não foi útil, o que você estava
+        procurando?
+      enter_feedback: Insira seu feedback aqui
+      finished: Obrigado! Seu feedback foi salvo.
+      validation:
+        invalid_discussion: Ops, algo deu errado. Você não pode avaliar este artigo/ticket
+          de suporte.
+        guest: Por favor, faça o login antes de avaliar este artigo.
+        invalid_points: Avaliação inválida. Por favor, tente novamente.
+        cannot_rate_article: Você não pode avaliar este artigo.
+        neutral_emoji_disabled: O emoji neutro foi desativado.
+        missing_article_id: ID de artigo ausente ou inválido
+    modals:
+      audit_log:
+        title: Registro de auditoria de artigo
+        article_created: Artigo foi criado
+        no_more_events: Não foram encontrados mais eventos
+        loading_auditlog: Carregando log de auditoria
+      article_ratings:
+        title: Avaliações de artigos
+        loading_ratings: Carregando avaliações
+        no_ratings_found: Nenhuma avaliação encontrada que corresponda aos seus critérios
+          de pesquisa
+        article_not_rated: Este artigo ainda não foi avaliado.
+        confirm_delete_rating: Tem certeza de que deseja excluir esta avaliação?
+        feedback: Feedback
+        rating: Avaliação
+        username: "=> core.ref.username"
+        rated_on: Avaliado em
+    utils:
+      redirect:
+        title: Redirecionando você para o nosso artigo na Base de Conhecimento...
+        link: "<a>Clique aqui</a> se a página não redireciona você"
+    composer:
+      compose_article: Escrever artigo
+      new_article_title: Novo título do artigo
+      enter_message_here: Digite sua mensagem aqui
+      publish_article: Publicar artigo
+      publish_article_hint: Publique o artigo após a postagem.
+      manage_tags: Gerenciar tags
+      write: Escrever
+      view: Ver
+      nothing_to_preview: Nada para visualizar
+      warning_save_changes: |
+        AVISO: Você está prestes a sair desta página e não salvou suas alterações. Você deseja salvar suas alterações antes de sair?
+
+        [OK] = Sim, salve. [CANCEL] = Não, não salve
+      article_saved: Artigo foi salvo

@@ -18,6 +18,10 @@ flarum-subscriptions:
       unfollow_button: Přestat sledovat
       unignore_button: Přestat ignorovat
 
+    # These translations are used on the page that displays all subscriptions.
+    following:
+      meta_title_text: => flarum-subscriptions.ref.following
+
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       following_link: => flarum-subscriptions.ref.following
@@ -42,6 +46,28 @@ flarum-subscriptions:
       not_following_text: "Být upozorněn jen když jsem @zmíněn."
       notify_alert_tooltip: Obdržet oznámení na fóru, když se objeví nový příspěvek
       notify_email_tooltip: Obdržet e-mail, když se objeví nový příspěvek
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+  
+    # These translations are used in emails sent when a post is made in a subscribed discussion
+    new_post:
+      subject: "[Nový příspěvek] {title}"
+      body: |
+        Ahoj {recipient_display_name}!
+
+        {poster_display_name} vytvořil příspěvek v diskuzi, kterou sleduješ: {title}.
+
+        Pro zobrazení nové aktivity se podívej na následující odkaz:
+        {url}
+
+        ---
+
+        {content}
+
+        ---
+
+        Nebudeš dostávat žádné další notifikace k této diskuzi, dokud nebudeš v obraze.
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!

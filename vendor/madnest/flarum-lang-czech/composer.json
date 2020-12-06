@@ -5,7 +5,7 @@
     "keywords": ["locale", "flarum"],
     "license": "MIT",
     "require": {
-        "flarum/core": "^0.1.0-beta.11"
+        "flarum/core": "^0.1.0-beta.14"
     },
     "extra": {
         "branch-alias": {
@@ -13,6 +13,12 @@
         },
         "flarum-extension": {
             "title": "Czech",
+            "category": "language",
+            "info": {
+                "donate": "https://flarum.org/donate/",
+                "website": "https://flarum.org",
+                "support": "https://discuss.flarum.org"
+            },
             "icon": {
                 "image": "icon.svg",
                 "backgroundColor": "#00247d",

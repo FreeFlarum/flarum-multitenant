@@ -1,6 +1,7 @@
 import highlight from '../../common/helpers/highlight';
 import avatar from '../../common/helpers/avatar';
 import username from '../../common/helpers/username';
+import Link from '../../common/components/Link';
 
 /**
  * The `UsersSearchSource` finds and displays user search results in the search
@@ -43,14 +44,15 @@ export default class UsersSearchResults {
       <li className="Dropdown-header">{app.translator.trans('core.forum.search.users_heading')}</li>,
       results.map((user) => {
         const name = username(user);
-        name.children[0] = highlight(name.children[0], query);
+
+        const children = [highlight(name.text, query)];
 
         return (
           <li className="UserSearchResult" data-index={'users' + user.id()}>
-            <a href={app.route.user(user)} config={m.route}>
+            <Link href={app.route.user(user)}>
               {avatar(user)}
-              {name}
-            </a>
+              {{ ...name, text: undefined, children }}
+            </Link>
           </li>
         );
       }),

@@ -1,6 +1,0 @@
-.idea
-node_modules
-vendor
-composer.lock
-*.sublime-workspace
-.jshintrc

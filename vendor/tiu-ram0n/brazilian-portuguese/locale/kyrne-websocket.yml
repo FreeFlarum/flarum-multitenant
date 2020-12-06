@@ -8,7 +8,7 @@ kyrne-websocket:
     pusher_settings:
       local_cert_path: Caminho do certificado SSL local
       local_pk_path: Caminho da chave privada SSL local
-      passphrase: "(Opcional) Senha da chave SSL"
+      passphrase: "(Opcional) Chave SSL"
       cert_self_signed: Suporte para certificado autoassinado
       app_port_label: Porta
       app_host_label: Host
@@ -36,10 +36,10 @@ kyrne-websocket:
         na porta do servidor.
       cert_path: Necessário apenas se estiver usando ssl e NÃO proxy reverso. Caminho
         para o seu certificado SSL (https) NO SERVIDOR, no qual o servidor websocket
-        está - geralmente um arquivo .crt ou .pem.
+        está - geralmente é um arquivo .crt ou .pem.
       pk_path: Necessário apenas se estiver usando ssl e NÃO proxy reverso. Caminho
         para a sua chave privada SSL (https) NO SERVIDOR em que o servidor do seu
-        websocket está - geralmente um arquivo .key ou .pem.
+        websocket está - geralmente é um arquivo .key ou .pem.
       passphrase: Necessário apenas se estiver usando ssl e NÃO proxy reverso. A senha
         usada para codificar seu certificado - geralmente não é necessária.
       self_signed: Necessário apenas se estiver usando ssl e NÃO proxy reverso. Habilite

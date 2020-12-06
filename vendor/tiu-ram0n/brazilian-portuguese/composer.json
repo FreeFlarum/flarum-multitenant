@@ -16,16 +16,16 @@
         {
             "name": "Ramon Guilherme",
             "email": "ramonguilherme@outlook.com",
-            "homepage": "https://coode.in"
+            "homepage": "https://ramonguilherme.com.br"
         }
            
     ],
     "support": {
-	    "issues": "https://github.com/tiuram0n/brazilian-portuguese/issues",
-	    "source": "https://github.com/tiuram0n/brazilian-portuguese"
+	    "issues": "https://github.com/ram0ng1/brazilian-portuguese/issues",
+	    "source": "https://github.com/ram0ng1/brazilian-portuguese"
     },	
     "require": {
-        "flarum/core": "^0.1.0-beta.11"
+        "flarum/core": "^0.1.0-beta.14"
     },
     "extra": {
         "flarum-extension": {

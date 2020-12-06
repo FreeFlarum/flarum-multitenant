@@ -3,21 +3,28 @@ import icon from 'flarum/helpers/icon';
 import LoadingIndicator from 'flarum/components/LoadingIndicator';
 
 export default class UploadButton extends Component {
-    init() {
+    oncreate(vnode) {
+        super.oncreate(vnode);
+
         this.isLoading = false;
         this.isSuccess = false;
         this.isError = false;
-        
-        document.addEventListener('paste', this.paste.bind(this));
+        this.isPasteListenerAttached = false;
+    }
+
+    onupdate(vnode) {
+        if (!this.isPasteListenerAttached) {
+            this.isPasteListenerAttached = true;
+            this.attrs.textArea.el.addEventListener('paste', this.paste.bind(this));
+        }
     }
     
     view() {
         let attrs = {
             className: 'Button hasIcon imgur-upload-button',
             title: app.translator.trans('imgur-upload.forum.upload'),
-            config: (el) => {
-                this.domElement = el;
-                $(el).tooltip();
+            oncreate: (el) => {
+                $(el.dom).tooltip();
             }
         };
         
@@ -74,7 +81,7 @@ export default class UploadButton extends Component {
     }
     
     upload(file) {
-        $(this.domElement).tooltip('hide'); // force removal of the tooltip
+        $(this.element).tooltip('hide'); // force removal of the tooltip
         this.isLoading = true;
         m.redraw();
 
@@ -113,7 +120,7 @@ export default class UploadButton extends Component {
         }
 
         let stringToInject = `[URL=${imageLink}][IMG]${previewLink}[/IMG][/URL]\n`;
-        this.props.textArea.insertAtCursor(stringToInject);
+        this.attrs.textArea.insertAtCursor(stringToInject);
 
         // After a bit, re-enable upload
         setTimeout(() => {

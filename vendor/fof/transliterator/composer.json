@@ -7,8 +7,9 @@
   "type": "flarum-extension",
   "license": "MIT",
   "require": {
-    "flarum/core": "^0.1.0-beta.8",
-    "behat/transliterator": "^1.2"
+    "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15",
+    "behat/transliterator": "^1.3",
+    "fof/components": "^0.2.0"
   },
   "suggest": {
     "ext-intl": "Needed for vanilla transliteration"

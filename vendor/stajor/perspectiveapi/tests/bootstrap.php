@@ -22,7 +22,7 @@ if (!file_exists($autoloader)) {
 // Include the Composer autoloader.
 require_once $autoloader;
 
-$dotenv = Dotenv::create(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 /*

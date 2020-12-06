@@ -39,7 +39,7 @@ clarkwinkelmann-catch-the-fish:
     round-not-started: 'Ta runda jeszcze się nie rozpoczęła'
     too-many-placement-models: 'Rybę można umieścić tylko w jednym miejscu'
     user-suspended: 'Nie można umieścić ryby na zbanowanym użytkowniku'
-    wrong-catch-placement: 'Tu nie ma żadnych ryb. Może nie byłeś wystarczająco szybki i ktoś inny złowił ją przed tobą'
+    wrong-catch-placement: 'Tu nie ma żadnych ryb. Może nie byłeś wystarczająco szybki i ktoś inny złowił ją przed Tobą?'
   forum:
     basket:
       drag-help: 'Przeciągnij i upuść rybę na dyskusji, poście lub profilu użytkownika'
@@ -82,7 +82,7 @@ clarkwinkelmann-catch-the-fish:
       name-help: 'Publiczna nazwa tej rundy zostanie pokazana w banerze oraz w rankingu'
       save: 'Zapisz rundę'
       starting-pack: 'Pakiet startowy'
-      starting-pack-help: 'Będzie zawierać kilka ryb, które pozwolą ci od razu zacząć zabawę'
+      starting-pack-help: 'Będzie zawierać kilka ryb, które pozwolą Ci od razu zacząć zabawę'
       starts-at: 'Czas rozpoczęcia'
     fish-image:
       alt: 'Obrazek ryby "{name}"'

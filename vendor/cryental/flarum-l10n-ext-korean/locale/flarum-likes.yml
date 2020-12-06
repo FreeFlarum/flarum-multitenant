@@ -30,7 +30,7 @@ flarum-likes:
 
     # These translations are used by the Users Who Like This modal dialog.
     post_likes:
-      title: 이 것을 좋아하는 사용자들
+      title: 이 게시물에 좋아요를 누른 사용자들
 
     # These translations are used in the Settings page.
     settings:

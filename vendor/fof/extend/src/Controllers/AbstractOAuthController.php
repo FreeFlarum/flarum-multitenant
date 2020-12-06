@@ -16,12 +16,13 @@ use Flarum\Forum\Auth\Registration;
 use Flarum\Forum\Auth\ResponseFactory;
 use Flarum\Http\UrlGenerator;
 use Flarum\Settings\SettingsRepositoryInterface;
+use Illuminate\Support\Arr;
+use Laminas\Diactoros\Response\RedirectResponse;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Laminas\Diactoros\Response\RedirectResponse;
 
 abstract class AbstractOAuthController implements RequestHandlerInterface
 {
@@ -66,8 +67,8 @@ abstract class AbstractOAuthController implements RequestHandlerInterface
 
         $session = $request->getAttribute('session');
         $queryParams = $request->getQueryParams();
-        $code = array_get($queryParams, 'code');
-        $state = array_get($queryParams, 'state');
+        $code = Arr::get($queryParams, 'code');
+        $state = Arr::get($queryParams, 'state');
 
         if (!$code) {
             $authUrl = $provider->getAuthorizationUrl($this->getAuthorizationUrlOptions());
@@ -84,12 +85,12 @@ abstract class AbstractOAuthController implements RequestHandlerInterface
         $user = $provider->getResourceOwner($token);
 
         return $this->response->make(
-      $this->getProviderName(),
-      $this->getIdentifier($user),
-      function (Registration $registration) use ($user, $token) {
-          $this->setSuggestions($registration, $user, $token);
-      }
-    );
+            $this->getProviderName(),
+            $this->getIdentifier($user),
+            function (Registration $registration) use ($user, $token) {
+                $this->setSuggestions($registration, $user, $token);
+            }
+        );
     }
 
     /**
@@ -98,7 +99,7 @@ abstract class AbstractOAuthController implements RequestHandlerInterface
      *
      * @return string
      */
-    abstract protected function getRouteName() : string;
+    abstract protected function getRouteName(): string;
 
     /**
      * Get League OAuth 2.0 provider.
@@ -107,21 +108,21 @@ abstract class AbstractOAuthController implements RequestHandlerInterface
      *
      * @return AbstractProvider
      */
-    abstract protected function getProvider(string $redirectUri) : AbstractProvider;
+    abstract protected function getProvider(string $redirectUri): AbstractProvider;
 
     /**
      * Get League OAuth 2.0 provider name.
      *
      * @return string
      */
-    abstract protected function getProviderName() : string;
+    abstract protected function getProviderName(): string;
 
     /**
      * Get authorization URL options.
      *
      * @return array
      */
-    abstract protected function getAuthorizationUrlOptions() : array;
+    abstract protected function getAuthorizationUrlOptions(): array;
 
     /**
      * Get user identifier.
@@ -130,7 +131,7 @@ abstract class AbstractOAuthController implements RequestHandlerInterface
      *
      * @return string
      */
-    abstract protected function getIdentifier($user) : string;
+    abstract protected function getIdentifier($user): string;
 
     /**
      * Set form suggestions.

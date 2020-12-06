@@ -13,11 +13,11 @@ namespace FoF\Byobu\Gambits\Discussion;
 
 use Flarum\Search\AbstractRegexGambit;
 use Flarum\Search\AbstractSearch;
-use Illuminate\Database\Query\Builder;
-use Illuminate\Database\Query\Expression;
+use FoF\Byobu\Database\RecipientsConstraint;
 
 class PrivacyGambit extends AbstractRegexGambit
 {
+    use RecipientsConstraint;
     /**
      * {@inheritdoc}
      */
@@ -37,37 +37,10 @@ class PrivacyGambit extends AbstractRegexGambit
     {
         $actor = $search->getActor();
 
-        // Flag to indicate whether public discussions should be shown.
-        $showPublic = empty($matches) || $negate;
-
-        // Flag to indicate whether to show private discussions.
-        $showPrivate = ($showPublic && empty($matches)) || (count($matches) && !$negate);
-
-        $search->getQuery()->where(function (Builder $query) use ($showPublic, $showPrivate, $actor) {
-            if ($showPublic) {
-                $query->whereNotExists(function (Builder $query) {
-                    $query->select(app('flarum.db')->raw(1))
-                        ->from('recipients')
-                        ->where('discussions.id', new Expression('discussion_id'))
-                        ->whereNull('removed_at');
-                });
-            }
-            if ($showPrivate && $actor->exists) {
-                $method = $showPublic ? 'orW' : 'w';
-                $method .= 'hereExists';
-
-                $query->{$method}(function (Builder $query) use ($actor) {
-                    $query->select(app('flarum.db')->raw(1))
-                        ->from('recipients')
-                        ->where('discussions.id', new Expression('discussion_id'))
-                        ->whereNull('removed_at')
-                        ->where(function (Builder $query) use ($actor) {
-                            $query
-                                ->where('user_id', $actor->id)
-                                ->orWhereIn('group_id', $actor->groups->pluck('id')->all());
-                        });
-                });
-            }
+        $search->getQuery()->where(function ($query) use ($actor) {
+            $this->constraint($query, $actor, false);
         });
+
+//        dd($search->getQuery()->toSql(), $search->getQuery()->getBindings());
     }
 }

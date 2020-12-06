@@ -1,9 +1,0 @@
-imgur-upload:
-  admin:
-    settings:
-        title: Cài đặt Imgur Upload
-  forum:
-    upload: Tải ảnh lên
-    loading: Đang tải lên...
-    done: Xong!
-    error: Lỗi

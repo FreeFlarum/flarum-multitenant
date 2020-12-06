@@ -3,12 +3,13 @@ import avatar from '../../common/helpers/avatar';
 import icon from '../../common/helpers/icon';
 import humanTime from '../../common/helpers/humanTime';
 import Button from '../../common/components/Button';
+import Link from '../../common/components/Link';
 
 /**
  * The `Notification` component abstract displays a single notification.
  * Subclasses should implement the `icon`, `href`, and `content` methods.
  *
- * ### Props
+ * ### Attrs
  *
  * - `notification`
  *
@@ -16,18 +17,15 @@ import Button from '../../common/components/Button';
  */
 export default class Notification extends Component {
   view() {
-    const notification = this.props.notification;
+    const notification = this.attrs.notification;
     const href = this.href();
 
     return (
-      <a
+      <Link
         className={'Notification Notification--' + notification.contentType() + ' ' + (!notification.isRead() ? 'unread' : '')}
         href={href}
-        config={function (element, isInitialized) {
-          if (href.indexOf('://') === -1) m.route.apply(this, arguments);
-
-          if (!isInitialized) $(element).click(this.markAsRead.bind(this));
-        }}
+        external={href.includes('://')}
+        onclick={this.markAsRead.bind(this)}
       >
         {!notification.isRead() &&
           Button.component({
@@ -46,7 +44,7 @@ export default class Notification extends Component {
         <span className="Notification-content">{this.content()}</span>
         {humanTime(notification.createdAt())}
         <div className="Notification-excerpt">{this.excerpt()}</div>
-      </a>
+      </Link>
     );
   }
 
@@ -86,10 +84,10 @@ export default class Notification extends Component {
    * Mark the notification as read.
    */
   markAsRead() {
-    if (this.props.notification.isRead()) return;
+    if (this.attrs.notification.isRead()) return;
 
     app.session.user.pushAttributes({ unreadNotificationCount: app.session.user.unreadNotificationCount() - 1 });
 
-    this.props.notification.save({ isRead: true });
+    this.attrs.notification.save({ isRead: true });
   }
 }

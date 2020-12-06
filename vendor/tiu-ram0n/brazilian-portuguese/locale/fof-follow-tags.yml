@@ -1,19 +1,19 @@
 ---
 fof-follow-tags:
-  email:
-    newDiscussionInTag: "[Tag | Nova Discussão] title"
-    newPostInTag: "[Tag | Novo Post] title"
   forum:
-    index:
-      follow_tag_button: Seguir
-      unfollow_tag_button: Parar de Seguir
-    notifications:
-      new_discussion_text: "{username} iniciou"
-      new_post_text: "{username} postou"
     settings:
       notify_new_discussion_label: Alguém cria uma discussão em uma tag que estou
         seguindo
       notify_new_post_label: Alguém posta em uma tag que eu estou seguindo
+      notify_new_discussion_tag_label: Alguém remove/adiciona tags em uma discussão
+        que eu estou seguindo
+    index:
+      follow_tag_button: Seguir
+      unfollow_tag_button: Parar de Seguir
+      following:
+        following_none_label: "=> fof-follow-tags.ref.filtering_options.none"
+        following_all_label: "=> fof-follow-tags.ref.filtering_options.all"
+        following_tags_label: "=> fof-follow-tags.ref.filtering_options.tags"
     sub_controls:
       follow_button: "=> fof-follow-tags.ref.follow"
       following_button: "=> fof-follow-tags.ref.following"
@@ -29,9 +29,35 @@ fof-follow-tags:
       notify_alert_tooltip: Receba uma notificação do fórum quando houver novas discussões
         ou postagens
       notify_email_tooltip: Receber um e-mail quando houver novas discussões ou postagens
+    notifications:
+      new_discussion_text: "{username} iniciou"
+      new_post_text: "{username} postou"
+      new_discussion_tag_text: "{username} mudou a tag"
+    badge:
+      following_tag_tooltip: Seguindo
+      lurking_tag_tooltip: Tudo
+    user:
+      settings:
+        heading: Seguir Tags
+        filter_label: Oque mostrar como padrão na página "Seguindo"
+  email:
+    newDiscussionInTag: "[Tag | Nova Discussão] title"
+    newPostInTag: "[Tag | Novo Post] title"
+    newDiscussionTag: "[Tag | Tag Alterada] título"
   ref:
     follow: Seguir
     following: Seguindo
     hiding: Ocultar
     ignoring: Ignorar
     lurking: Tudo
+    filtering_options:
+      none: Discussões
+      all: Tudo
+      tags: Tags
+  admin:
+    settings:
+      title: FriendsOfFlarum Follow Tags
+      following_page_default_label: Filtro de página "Seguindo" padrão
+      following_none_label: "=> fof-follow-tags.ref.filtering_options.none"
+      following_tags_label: "=> fof-follow-tags.ref.filtering_options.tags"
+      following_all_label: "=> fof-follow-tags.ref.filtering_options.all"

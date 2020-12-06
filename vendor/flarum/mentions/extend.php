@@ -25,7 +25,6 @@ use Flarum\Post\Event\Revised;
 use Flarum\Post\Post;
 use Flarum\User\User;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\View\Factory;
 
 return [
     (new Extend\Frontend('forum'))
@@ -40,7 +39,12 @@ return [
         ->belongsToMany('mentionsPosts', Post::class, 'post_mentions_post', 'post_id', 'mentions_post_id')
         ->belongsToMany('mentionsUsers', User::class, 'post_mentions_user', 'post_id', 'mentions_user_id'),
 
-    function (Dispatcher $events, Factory $views) {
+    new Extend\Locales(__DIR__.'/locale'),
+
+    (new Extend\View)
+        ->namespace('flarum-mentions', __DIR__.'/views'),
+
+    function (Dispatcher $events) {
         $events->listen(WillSerializeData::class, Listener\FilterVisiblePosts::class);
         $events->subscribe(Listener\AddPostMentionedByRelationship::class);
 
@@ -61,7 +65,5 @@ return [
 
         $events->listen(Rendering::class, Listener\FormatPostMentions::class);
         $events->listen(Rendering::class, Listener\FormatUserMentions::class);
-
-        $views->addNamespace('flarum-mentions', __DIR__.'/views');
     },
 ];

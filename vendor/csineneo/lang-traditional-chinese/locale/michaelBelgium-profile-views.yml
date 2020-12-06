@@ -1,8 +1,0 @@
-# https://github.com/MichaelBelgium/flarum-profile-views/blob/master/locale/en.yml
-# Sat, 25 Jan 2020 21:04:02 +0800
-
-flarum_profile_views:
-  forum:
-    user:
-      title_last_viewers: 最後造訪者
-      views_count_text: 被瀏覽 {viewcount} 次 

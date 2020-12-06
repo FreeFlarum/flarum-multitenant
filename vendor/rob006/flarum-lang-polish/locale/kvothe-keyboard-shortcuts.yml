@@ -38,7 +38,7 @@ kvothe-keyboard-shortcuts:
       user-menu: 'Otwórz menu użytkownika'
     settings:
       modifiers: 'Jako klawisz modyfikujący możesz użyć "shift", "ctrl", "alt" lub "meta".'
-      other: 'Każdy inny klawisz można podać wpisując bezpośrednio jego nazwę, np. "a", "/", "$", "*" lub "=".'
+      other: 'Każdy inny klawisz można podać, wpisując bezpośrednio jego nazwę, np. "a", "/", "$", "*" lub "=".'
       special: 'Inne specjalne klawisze to "backspace", "tab", "enter", "return", "capslock", "esc", "escape", "space", "pageup", "pagedown", "end", "home", "left", "up", "right", "down", "ins", "del" oraz "plus".'
       substitute: 'Możesz użyć "option" zamiast "alt" i "command" zamiast "meta".'
       title: 'Ustawienia skrótów klawiaturowych'

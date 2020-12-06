@@ -1,12 +1,10 @@
 core:
-
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
-
     # These translations are used in the placeholder Add Extension modal dialog.
     add_extension:
       developer_text: "Se sei uno sviluppatore, puoi leggere la <a>documentazione</a> e provare a scrivere una tua estensione."
@@ -31,9 +29,9 @@ core:
       edit_header_button: => core.ref.custom_header_title
       enter_hex_message: Inserisci un codice colore esadecimale
       favicon_heading: Favicon
-      favicon_text: Carica un'immagine da visualizzare come favicon
+      favicon_text: Carica un'immagine da utilizzare come favicon del sito
       logo_heading: Logo
-      logo_text: Carica un'immagine da visualizzare al posto del nome del forum
+      logo_text: Carica un'immagine da utilizzare al posto del nome del forum
       submit_button: => core.ref.save_changes
 
     # These translations are used in the Basics page.
@@ -46,12 +44,12 @@ core:
       forum_description_text: Scrivi una breve descrizione della tua community. Apparirà nei meta tag e mostrato ai motori di ricerca.
       forum_title_heading: Nome del Forum
       home_page_heading: Homepage
-      home_page_text: "Scegli la pagina che deve essere mostrata agli utenti prima di mostrare il forum."
+      home_page_text: "Scegli la pagina che vuoi venga mostrata agli utenti prima di mostrare il forum."
       saved_message: Le modifiche sono state salvate
-      show_language_selector_label: Mostra il selettore lingua
+      show_language_selector_label: Mostra il selettore di lingua
       submit_button: => core.ref.save_changes
-      welcome_banner_heading: Banner di Benvenuto
-      welcome_banner_text: Configura il testo da visualizzare sul banner che apparirà su tutte le pagine. Usalo per accogliere gli ospiti sul tuo forum.
+      welcome_banner_heading: Banner di benvenuto
+      welcome_banner_text: Configura il testo da visualizzare sul banner. Apparirà nella pagina <b>Tutte le discussioni</b>.
 
     # These translations are used in the Dashboard page.
     dashboard:
@@ -86,7 +84,7 @@ core:
 
     # These translations are used in the Edit Custom Header modal dialog.
     edit_header:
-      customize_text: "Aggiungi codice HTML da visualizzare in cima della pagina, sopra l'header di Flarum."
+      customize_text: "Aggiungi codice HTML da visualizzare in cima la pagina, sopra l'header di Flarum."
       submit_button: => core.ref.save_changes
       title: Modifica Header
 
@@ -102,13 +100,15 @@ core:
       mail_mailgun_domain_label: Dominio
       mail_mailgun_region_label: Regione
       mail_mailgun_secret_label: Chiave segreta
-      mail_mandrill_secret_label: Chiave segreta
       mail_password_label: => core.ref.password
       mail_port_label: Porta
       mail_username_label: => core.ref.username
       mailgun_heading: Impostazioni Mailgun
-      mandrill_heading: Impostazioni Mandrill
-      not_sending_message: Flarum al momento non invia e-mail. Ciò può essere dovuto al driver selezionato oppure a errori di configurazione.
+      not_sending_message: Flarum al momento non invia email. Ciò può essere dovuto al driver selezionato oppure a errori di configurazione.
+      send_test_mail_button: Invia
+      send_test_mail_heading: Invia email di prova
+      send_test_mail_success: Email di prova inviata con successo!
+      send_test_mail_text: This will send an email using the above configuration to your email, {email}.
       smtp_heading: Impostazioni SMTP
       submit_button: => core.ref.save_changes
       text: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare e-mail
@@ -191,7 +191,6 @@ core:
 
   # Translations in this namespace are used by the forum user interface.
   forum:
-
     # These translations are used in the Change Email modal dialog.
     change_email:
       confirmation_message: => core.ref.confirmation_email_sent
@@ -226,8 +225,10 @@ core:
     # These translations are used by the composer when editing a post.
     composer_edit:
       discard_confirmation: "Non hai salvato le tue modifiche. Desideri disfartene?"
+      edited_message: Modifica effettuata.
       post_link: "Messaggio #{number} in {discussion}"
       submit_button: => core.ref.save_changes
+      view_button: => core.ref.view
 
     # These translations are used by the composer when replying to a discussion.
     composer_reply:
@@ -235,7 +236,7 @@ core:
       discard_confirmation: "Sei sicuro di voler cancellare il messaggio?"
       posted_message: La tua risposta è stata pubblicata.
       submit_button: Rispondi
-      view_button: Mostra
+      view_button: => core.ref.view
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
@@ -298,6 +299,7 @@ core:
       cannot_start_discussion_button: Impossibile iniziare una discussione
       mark_all_as_read_confirmation: "Sei sicuro di voler contrassegnare tutte le discussioni come lette?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
+      meta_title_text: => core.ref.all_discussions
       refresh_tooltip: Aggiorna
       start_discussion_button: => core.ref.start_a_discussion
 
@@ -306,7 +308,7 @@ core:
       latest_button: Recenti
       newest_button: Nuove
       oldest_button: Vecchie
-      relevance_button: Rilevanza
+      relevance_button: Rilevanti
       top_button: Top
 
     # These translations are used in the Log In modal dialog.
@@ -412,7 +414,7 @@ core:
     user_controls:
       button: Controlli
       delete_button: => core.ref.delete
-      delete_confirmation: "Sei sicuro di voler eliminare questo utente? Tutti i messaggi di questo utente NON verrano cancellati."
+      delete_confirmation: "Sei sicuro di voler eliminare questo utente? I messaggi inviati da questo utente NON verrano cancellati."
       delete_error_message: "Cancellazione dell'utente <i>{username} ({email})</i> fallito"
       delete_success_message: "L'utente <i>{username} ({email})</i> è stato cancellato"
       edit_button: => core.ref.edit
@@ -425,14 +427,15 @@ core:
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
-
     # These translations are displayed as tooltips for discussion badges.
     badge:
       hidden_tooltip: Nascosto
 
     # These translations are displayed as error messages.
     error:
-      generic_message: "Oops! Qualcosa è andato storto. Ricarica la pagina e riprova."
+      dependent_extensions_message: "Non puoi disattivare l'estensione {extension} finché non disattiverai le seguenti estensioni: {extensions}"
+      generic_message: "Oops! Qualcosa è andato storto. Aggiorna la pagina e riprova."
+      missing_dependencies_message: "Non puoi attivare l'estensione {extension} finché non attiverai le seguenti estensioni: {extensions}"
       not_found_message: La risorsa richiesta non è stata trovata.
       permission_denied_message: Non hai il permesso di farlo.
       rate_limit_exceeded_message: Stai scrivendo un po' troppo in fretta. Riprova tra qualche secondo.
@@ -454,7 +457,6 @@ core:
 
   # Translations in this namespace are used in views other than Flarum's normal JS client.
   views:
-
     # Translations in this namespace are displayed by the basic HTML content loader.
     content:
       javascript_disabled_message: Questo sito è ottimizzato per un browser moderno con JavaScript abilitato.
@@ -471,10 +473,10 @@ core:
       csrf_token_mismatch: Sei stato inattivo per troppo tempo.
       csrf_token_mismatch_return_link: Torna indietro e riprova
       invalid_confirmation_token: Questo link di conferma è già stato usato oppure non è valido.
-      not_authenticated: Non hai i permessi necessarie per accedere a questa pagina. Riprova dopo aver effettuato l'accesso.
+      not_authenticated: Non hai i permessi necessari per accedere a questa pagina. Riprova dopo aver effettuato l'accesso.
       not_found: La pagina che hai richiesto non è stata trovata.
       not_found_return_link: "Ritorna su {forum}"
-      permission_denied: Non hai i permessi necessarie per accedere a questa pagina.
+      permission_denied: Non hai i permessi necessari per accedere a questa pagina.
       unknown: Si è verificato un errore durante il caricamento di questa pagina.
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
@@ -486,7 +488,7 @@ core:
     # Translations in this namespace are displayed by the Log Out confirmation interface.
     log_out:
       log_out_button: => core.ref.log_out
-      log_out_confirmation: "Sei sicuro di voler eseguire il log out su {forum}?"
+      log_out_confirmation: "Sei sicuro di volerti disconnettere da {forum}?"
       title: => core.ref.log_out
 
     # Translations in this namespace are displayed by the Reset Password interface.
@@ -502,7 +504,6 @@ core:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
-
     # These translations are used in emails sent when users register new accounts.
     activate_account:
       subject: Attiva il tuo account
@@ -522,12 +523,12 @@ core:
       body: |
         Ciao {username}!
 
-        Qualcuno ha cambiato la sua e-mail in questa su {forum}.
+        Qualcuno ha inserito questa e-mail sul forum {forum}.
 
         Se sei stato tu, clicca sul seguente link e il tuo nuovo indirizzo verrà confermato:
         {url}
 
-        Se non hai richiesto tu di cambiare l'e-mail, per favore ignora questa e-mail.
+        Se non sei stato tu a richiedere il cambio e-mail, per favore ignora questa e-mail.
 
     # These translations are used in emails sent when users ask to reset their passwords.
     reset_password:
@@ -542,6 +543,14 @@ core:
 
         Se non desideri cambiare la password, semplicemente ignora questa e-mail e non accadrà nulla.
 
+    # These translations are used when testing mailing configuration
+    send_test:
+      subject: "[Flarum] Email di prova"
+      body: |
+        Ciao {username}!
+
+        Se ricevi questa email, significa che l'attuale configurazione sta funzionando correttamente.
+
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
   ##
@@ -551,7 +560,7 @@ core:
     all_discussions: Tutte le discussioni
     change_email: Cambia e-mail
     change_password: Cambia password
-    color: Colore                                 # Referenced by flarum-tags.yml
+    color: Colore # Referenced by flarum-tags.yml
     confirm_password: Conferma password
     confirmation_email_sent: "Abbiamo inviato una e-mail di conferma a {email}. Ricordati di controllare la cartella spam."
     custom_footer_text: Aggiungi codice HTML nella parte inferiore della pagina
@@ -560,7 +569,7 @@ core:
     custom_header_title: Modifica header
     delete: Cancella
     delete_forever: Cancella per sempre
-    discussions: Discussioni                     # Referenced by flarum-statistics.yml
+    discussions: Discussioni # Referenced by flarum-statistics.yml
     edit: Modifica
     email: E-mail
     icon: Icona
@@ -571,24 +580,25 @@ core:
     mark_all_as_read: Segna tutto come letto
     next_page: Pagina successiva
     notifications: Notificami se...
-    okay: OK                                     # Referenced by flarum-tags.yml
+    okay: OK # Referenced by flarum-tags.yml
     password: Password
-    posts: Messaggi                                 # Referenced by flarum-statistics.yml
+    posts: Messaggi # Referenced by flarum-statistics.yml
     previous_page: Pagina precedente
     remove: Rimuovi
     rename: Rinomina
-    reply: Rispondi                                 # Referenced by flarum-mentions.yml
+    reply: Rispondi # Referenced by flarum-mentions.yml
     reset_your_password: Ripristina la password
     restore: Ripristina
-    save_changes: Salva cambiamenti                   # Referenced by flarum-suspend.yml, flarum-tags.yml
+    save_changes: Salva cambiamenti # Referenced by flarum-suspend.yml, flarum-tags.yml
     settings: Impostazioni
     sign_up: Registrati
-    some_others: "{count} altro|{count} altri"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    some_others: "{count} altro|{count} altri" # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: Inizia una discussione
     username: Nome utente
-    users: Utenti                                 # Referenced by flarum-statistics.yml
+    users: Utenti # Referenced by flarum-statistics.yml
+    view: Mostra
     write_a_reply: Rispondi alla discussione...
-    you: Tu                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: Tu # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.

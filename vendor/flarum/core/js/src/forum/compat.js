@@ -3,12 +3,18 @@ import compat from '../common/compat';
 import PostControls from './utils/PostControls';
 import KeyboardNavigatable from './utils/KeyboardNavigatable';
 import slidable from './utils/slidable';
-import affixSidebar from './utils/affixSidebar';
 import History from './utils/History';
 import DiscussionControls from './utils/DiscussionControls';
 import alertEmailConfirmation from './utils/alertEmailConfirmation';
 import UserControls from './utils/UserControls';
 import Pane from './utils/Pane';
+import ComposerState from './states/ComposerState';
+import DiscussionListState from './states/DiscussionListState';
+import GlobalSearchState from './states/GlobalSearchState';
+import NotificationListState from './states/NotificationListState';
+import PostStreamState from './states/PostStreamState';
+import SearchState from './states/SearchState';
+import AffixedSidebar from './components/AffixedSidebar';
 import DiscussionPage from './components/DiscussionPage';
 import LogInModal from './components/LogInModal';
 import ComposerBody from './components/ComposerBody';
@@ -23,7 +29,6 @@ import PostEdited from './components/PostEdited';
 import PostStream from './components/PostStream';
 import ChangePasswordModal from './components/ChangePasswordModal';
 import IndexPage from './components/IndexPage';
-import Page from './components/Page';
 import DiscussionRenamedNotification from './components/DiscussionRenamedNotification';
 import DiscussionsSearchSource from './components/DiscussionsSearchSource';
 import HeaderSecondary from './components/HeaderSecondary';
@@ -56,6 +61,7 @@ import NotificationList from './components/NotificationList';
 import WelcomeHero from './components/WelcomeHero';
 import SignUpModal from './components/SignUpModal';
 import CommentPost from './components/CommentPost';
+import ComposerPostPreview from './components/ComposerPostPreview';
 import ReplyComposer from './components/ReplyComposer';
 import NotificationsPage from './components/NotificationsPage';
 import PostStreamScrubber from './components/PostStreamScrubber';
@@ -65,6 +71,7 @@ import Search from './components/Search';
 import DiscussionListItem from './components/DiscussionListItem';
 import LoadingPost from './components/LoadingPost';
 import PostsUserPage from './components/PostsUserPage';
+import DiscussionPageResolver from './resolvers/DiscussionPageResolver';
 import routes from './routes';
 import ForumApplication from './ForumApplication';
 
@@ -72,12 +79,18 @@ export default Object.assign(compat, {
   'utils/PostControls': PostControls,
   'utils/KeyboardNavigatable': KeyboardNavigatable,
   'utils/slidable': slidable,
-  'utils/affixSidebar': affixSidebar,
   'utils/History': History,
   'utils/DiscussionControls': DiscussionControls,
   'utils/alertEmailConfirmation': alertEmailConfirmation,
   'utils/UserControls': UserControls,
   'utils/Pane': Pane,
+  'states/ComposerState': ComposerState,
+  'states/DiscussionListState': DiscussionListState,
+  'states/GlobalSearchState': GlobalSearchState,
+  'states/NotificationListState': NotificationListState,
+  'states/PostStreamState': PostStreamState,
+  'states/SearchState': SearchState,
+  'components/AffixedSidebar': AffixedSidebar,
   'components/DiscussionPage': DiscussionPage,
   'components/LogInModal': LogInModal,
   'components/ComposerBody': ComposerBody,
@@ -92,7 +105,6 @@ export default Object.assign(compat, {
   'components/PostStream': PostStream,
   'components/ChangePasswordModal': ChangePasswordModal,
   'components/IndexPage': IndexPage,
-  'components/Page': Page,
   'components/DiscussionRenamedNotification': DiscussionRenamedNotification,
   'components/DiscussionsSearchSource': DiscussionsSearchSource,
   'components/HeaderSecondary': HeaderSecondary,
@@ -125,6 +137,7 @@ export default Object.assign(compat, {
   'components/WelcomeHero': WelcomeHero,
   'components/SignUpModal': SignUpModal,
   'components/CommentPost': CommentPost,
+  'components/ComposerPostPreview': ComposerPostPreview,
   'components/ReplyComposer': ReplyComposer,
   'components/NotificationsPage': NotificationsPage,
   'components/PostStreamScrubber': PostStreamScrubber,
@@ -134,6 +147,7 @@ export default Object.assign(compat, {
   'components/DiscussionListItem': DiscussionListItem,
   'components/LoadingPost': LoadingPost,
   'components/PostsUserPage': PostsUserPage,
+  'resolvers/DiscussionPageResolver': DiscussionPageResolver,
   routes: routes,
   ForumApplication: ForumApplication,
 });

@@ -6,6 +6,15 @@ reflar-doorman:
   admin:
     doorkey_required: 'Musisz podać kod zaproszenia'
     invalid_doorkey: 'Podany kod zaproszenia jest nieprawidłowy.'
+    modal:
+      group: 'Wysyłanie zaproszeń dla grupy {group}'
+      help: 'Przyjmuje listę rozdzieloną przenikami, spacjami, lub spacjami poprzedzonymi przecinkami. Wpisz pojedynczy adres e-mail lub wklej listę, a następnie wciśnij spację, aby je dodać.'
+      invalid_emails: 'Podane adresy e-mail są nieprawidłowe: {emails}'
+      max_use_conflict: 'Liczba adresów e-mail przekracza maksymalną liczbę użyć dla tego kodu.'
+      placeholder: 'Podaj adresy e-mail'
+      send: 'Wyślij wiadomości e-mail'
+      success: 'Wiadomości e-mail zostały pomyślnie wysłane'
+      title: 'Wyślij kody zaproszeń'
     nav:
       desc: 'Twórz kody zaproszeń dla użytkowników, aby mogli się zarejestrować i zostać przypisani do grupy'
     page:
@@ -30,6 +39,9 @@ reflar-doorman:
         warning: 'Ten kod zaproszenia został już wykorzystany maksymalną liczbę razy.'
       title: Doorman
   forum:
+    email:
+      body: "Witaj,\n\nZostałeś zaproszony do rejestracji na {forum}.\n\nGdy będziesz gotowy do utworzenia konta, kliknij poniższy link i wpisz kod zaproszenia podczas rejestracji:\n\nURL: {url}\nKod zaproszenia: {code}\n\nJeśli nie chcesz rejestrować się na forum, po prostu zignoruj tę wiadomość.\n"
+      subject: 'Zaproszenie do rejestracji'
     sign_up:
       doorkey_required: 'Wpisz kod zaproszenia.'
       doorman_placeholder: 'Kod zaproszenia'

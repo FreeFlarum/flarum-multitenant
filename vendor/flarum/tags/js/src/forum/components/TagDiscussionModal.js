@@ -5,19 +5,20 @@ import highlight from 'flarum/helpers/highlight';
 import classList from 'flarum/utils/classList';
 import extractText from 'flarum/utils/extractText';
 import KeyboardNavigatable from 'flarum/utils/KeyboardNavigatable';
+import Stream from 'flarum/utils/Stream';
 
 import tagLabel from '../../common/helpers/tagLabel';
 import tagIcon from '../../common/helpers/tagIcon';
 import sortTags from '../../common/utils/sortTags';
 
 export default class TagDiscussionModal extends Modal {
-  init() {
-    super.init();
+  oninit(vnode) {
+    super.oninit(vnode);
 
     this.tags = app.store.all('tags');
 
-    if (this.props.discussion) {
-      this.tags = this.tags.filter(tag => tag.canAddToDiscussion() || this.props.discussion.tags().indexOf(tag) !== -1);
+    if (this.attrs.discussion) {
+      this.tags = this.tags.filter(tag => tag.canAddToDiscussion() || this.attrs.discussion.tags().indexOf(tag) !== -1);
     } else {
       this.tags = this.tags.filter(tag => tag.canStartDiscussion());
     }
@@ -25,14 +26,14 @@ export default class TagDiscussionModal extends Modal {
     this.tags = sortTags(this.tags);
 
     this.selected = [];
-    this.filter = m.prop('');
+    this.filter = Stream('');
     this.index = this.tags[0].id();
     this.focused = false;
 
-    if (this.props.selectedTags) {
-      this.props.selectedTags.map(this.addTag.bind(this));
-    } else if (this.props.discussion) {
-      this.props.discussion.tags().map(this.addTag.bind(this));
+    if (this.attrs.selectedTags) {
+      this.attrs.selectedTags.map(this.addTag.bind(this));
+    } else if (this.attrs.discussion) {
+      this.attrs.discussion.tags().map(this.addTag.bind(this));
     }
 
     this.minPrimary = app.forum.attribute('minPrimaryTags');
@@ -67,14 +68,13 @@ export default class TagDiscussionModal extends Modal {
     // If this tag has a parent, we'll also need to add the parent tag to the
     // selected list if it's not already in there.
     const parent = tag.parent();
-    if (parent) {
-      const index = this.selected.indexOf(parent);
-      if (index === -1) {
-        this.selected.push(parent);
-      }
+    if (parent && this.selected.indexOf(parent) === -1) {
+      this.selected.push(parent);
     }
 
-    this.selected.push(tag);
+    if (this.selected.indexOf(tag) === -1) {
+      this.selected.push(tag);
+    }
   }
 
   /**
@@ -100,8 +100,8 @@ export default class TagDiscussionModal extends Modal {
   }
 
   title() {
-    return this.props.discussion
-      ? app.translator.trans('flarum-tags.forum.choose_tags.edit_title', {title: <em>{this.props.discussion.title()}</em>})
+    return this.attrs.discussion
+      ? app.translator.trans('flarum-tags.forum.choose_tags.edit_title', {title: <em>{this.attrs.discussion.title()}</em>})
       : app.translator.trans('flarum-tags.forum.choose_tags.title');
   }
 
@@ -148,11 +148,15 @@ export default class TagDiscussionModal extends Modal {
 
     if (tags.indexOf(this.index) === -1) this.index = tags[0];
 
+    const inputWidth = Math.max(extractText(this.getInstruction(primaryCount, secondaryCount)).length, this.filter().length);
+
     return [
       <div className="Modal-body">
         <div className="TagDiscussionModal-form">
           <div className="TagDiscussionModal-form-input">
-            <div className={'TagsInput FormControl ' + (this.focused ? 'focus' : '')}>
+            <div className={'TagsInput FormControl ' + (this.focused ? 'focus' : '')}
+              onclick={() => this.$('.TagsInput input').focus()}
+            >
               <span className="TagsInput-selected">
                 {this.selected.map(tag =>
                   <span className="TagsInput-tag" onclick={() => {
@@ -165,21 +169,17 @@ export default class TagDiscussionModal extends Modal {
               </span>
               <input className="FormControl"
                 placeholder={extractText(this.getInstruction(primaryCount, secondaryCount))}
-                value={this.filter()}
-                oninput={m.withAttr('value', this.filter)}
+                bidi={this.filter}
+                style={{ width: inputWidth + 'ch' }}
                 onkeydown={this.navigator.navigate.bind(this.navigator)}
                 onfocus={() => this.focused = true}
                 onblur={() => this.focused = false}/>
             </div>
           </div>
           <div className="TagDiscussionModal-form-submit App-primaryControl">
-            {Button.component({
-              type: 'submit',
-              className: 'Button Button--primary',
-              disabled: primaryCount < this.minPrimary || secondaryCount < this.minSecondary,
-              icon: 'fas fa-check',
-              children: app.translator.trans('flarum-tags.forum.choose_tags.submit_button')
-            })}
+            <Button type="submit" className="Button Button--primary" disabled={primaryCount < this.minPrimary || secondaryCount < this.minSecondary} icon="fas fa-check">
+              {app.translator.trans('flarum-tags.forum.choose_tags.submit_button')}
+            </Button>
           </div>
         </div>
       </div>,
@@ -299,23 +299,21 @@ export default class TagDiscussionModal extends Modal {
   onsubmit(e) {
     e.preventDefault();
 
-    const discussion = this.props.discussion;
+    const discussion = this.attrs.discussion;
     const tags = this.selected;
 
     if (discussion) {
       discussion.save({relationships: {tags}})
         .then(() => {
-          if (app.current instanceof DiscussionPage) {
-            app.current.stream.update();
+          if (app.current.matches(DiscussionPage)) {
+            app.current.get('stream').update();
           }
           m.redraw();
         });
     }
 
-    if (this.props.onsubmit) this.props.onsubmit(tags);
+    if (this.attrs.onsubmit) this.attrs.onsubmit(tags);
 
-    app.modal.close();
-
-    m.redraw.strategy('none');
+    this.hide();
   }
 }

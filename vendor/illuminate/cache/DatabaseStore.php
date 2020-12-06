@@ -4,11 +4,11 @@ namespace Illuminate\Cache;
 
 use Closure;
 use Exception;
-use Illuminate\Support\Str;
 use Illuminate\Contracts\Cache\Store;
-use Illuminate\Support\InteractsWithTime;
-use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\ConnectionInterface;
+use Illuminate\Database\PostgresConnection;
+use Illuminate\Support\InteractsWithTime;
+use Illuminate\Support\Str;
 
 class DatabaseStore implements Store
 {
@@ -84,25 +84,27 @@ class DatabaseStore implements Store
     }
 
     /**
-     * Store an item in the cache for a given number of minutes.
+     * Store an item in the cache for a given number of seconds.
      *
      * @param  string  $key
-     * @param  mixed   $value
-     * @param  float|int  $minutes
-     * @return void
+     * @param  mixed  $value
+     * @param  int  $seconds
+     * @return bool
      */
-    public function put($key, $value, $minutes)
+    public function put($key, $value, $seconds)
     {
         $key = $this->prefix.$key;
 
         $value = $this->serialize($value);
 
-        $expiration = $this->getTime() + (int) ($minutes * 60);
+        $expiration = $this->getTime() + $seconds;
 
         try {
-            $this->table()->insert(compact('key', 'value', 'expiration'));
+            return $this->table()->insert(compact('key', 'value', 'expiration'));
         } catch (Exception $e) {
-            $this->table()->where('key', $key)->update(compact('value', 'expiration'));
+            $result = $this->table()->where('key', $key)->update(compact('value', 'expiration'));
+
+            return $result > 0;
         }
     }
 
@@ -110,7 +112,7 @@ class DatabaseStore implements Store
      * Increment the value of an item in the cache.
      *
      * @param  string  $key
-     * @param  mixed   $value
+     * @param  mixed  $value
      * @return int|bool
      */
     public function increment($key, $value = 1)
@@ -124,7 +126,7 @@ class DatabaseStore implements Store
      * Decrement the value of an item in the cache.
      *
      * @param  string  $key
-     * @param  mixed   $value
+     * @param  mixed  $value
      * @return int|bool
      */
     public function decrement($key, $value = 1)
@@ -195,12 +197,12 @@ class DatabaseStore implements Store
      * Store an item in the cache indefinitely.
      *
      * @param  string  $key
-     * @param  mixed   $value
-     * @return void
+     * @param  mixed  $value
+     * @return bool
      */
     public function forever($key, $value)
     {
-        $this->put($key, $value, 5256000);
+        return $this->put($key, $value, 315360000);
     }
 
     /**

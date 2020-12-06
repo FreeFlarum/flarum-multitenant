@@ -7,12 +7,12 @@
   "type": "flarum-extension",
   "license": "MIT",
   "require": {
-    "flarum/core": "^0.1.0-beta.8"
+      "flarum/core": "^0.1.0-beta.14"
   },
   "authors": [
     {
       "name": "Christian Lopez",
-      "email": "Ralkage@live.com",
+      "email": "me@ralkage.com",
       "role": "Developer"
     }
   ],

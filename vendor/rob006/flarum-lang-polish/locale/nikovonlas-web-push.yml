@@ -26,7 +26,7 @@ nikovonlas-webpush:
       message: '{from} zgłosił post: {post}'
       title: 'Nowe zgłoszenie'
     like:
-      message: '{from} polubił twój post: {post}'
+      message: '{from} polubił Twój post: {post}'
       title: 'Post został polubiony'
     lock:
       message: '{from} zamknął dyskusję: {title}'
@@ -35,7 +35,7 @@ nikovonlas-webpush:
       message: '{from} odpowiedział na post: {post}'
       title: 'Nowa odpowiedź w: {title}'
     mention:
-      message: '{from} wspomniał cię w poście: {post}'
+      message: '{from} wspomniał Cię w poście: {post}'
       title: 'Zostałeś wspomniany w: {title}'
     post:
       message: '{from} dodał nowy post: {post}'
@@ -44,7 +44,7 @@ nikovonlas-webpush:
       message: '{from} zmienił nazwę dyskusji na: {title}'
       title: 'Zmieniono nazwę dyskusji'
     suspend:
-      message: '{from} zbanował twoje konto'
+      message: '{from} zbanował Twoje konto'
       title: 'Twoje konto zostało zbanowane'
     tag:
       discussion:
@@ -54,5 +54,5 @@ nikovonlas-webpush:
         message: '{from} dodał nowy post: {post}'
         title: 'Nowy post w dyskusji: {title}'
     unsuspend:
-      message: '{from} odbanował twoje konto'
+      message: '{from} odbanował Twoje konto'
       title: 'Twoje konto zostało odbanowane'

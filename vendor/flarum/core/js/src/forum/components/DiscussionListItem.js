@@ -1,4 +1,5 @@
 import Component from '../../common/Component';
+import Link from '../../common/components/Link';
 import avatar from '../../common/helpers/avatar';
 import listItems from '../../common/helpers/listItems';
 import highlight from '../../common/helpers/highlight';
@@ -8,24 +9,26 @@ import ItemList from '../../common/utils/ItemList';
 import abbreviateNumber from '../../common/utils/abbreviateNumber';
 import Dropdown from '../../common/components/Dropdown';
 import TerminalPost from './TerminalPost';
-import PostPreview from './PostPreview';
 import SubtreeRetainer from '../../common/utils/SubtreeRetainer';
 import DiscussionControls from '../utils/DiscussionControls';
 import slidable from '../utils/slidable';
 import extractText from '../../common/utils/extractText';
 import classList from '../../common/utils/classList';
 
+import { escapeRegExp } from 'lodash-es';
 /**
  * The `DiscussionListItem` component shows a single discussion in the
  * discussion list.
  *
- * ### Props
+ * ### Attrs
  *
  * - `discussion`
  * - `params`
  */
 export default class DiscussionListItem extends Component {
-  init() {
+  oninit(vnode) {
+    super.oninit(vnode);
+
     /**
      * Set up a subtree retainer so that the discussion will not be redrawn
      * unless new data comes in.
@@ -33,7 +36,7 @@ export default class DiscussionListItem extends Component {
      * @type {SubtreeRetainer}
      */
     this.subtree = new SubtreeRetainer(
-      () => this.props.discussion.freshness,
+      () => this.attrs.discussion.freshness,
       () => {
         const time = app.session.user && app.session.user.markedAllAsReadAt();
         return time && time.getTime();
@@ -42,37 +45,34 @@ export default class DiscussionListItem extends Component {
     );
   }
 
-  attrs() {
+  elementAttrs() {
     return {
       className: classList([
         'DiscussionListItem',
         this.active() ? 'active' : '',
-        this.props.discussion.isHidden() ? 'DiscussionListItem--hidden' : '',
+        this.attrs.discussion.isHidden() ? 'DiscussionListItem--hidden' : '',
+        'ontouchstart' in window ? 'Slidable' : '',
       ]),
     };
   }
 
   view() {
-    const retain = this.subtree.retain();
-
-    if (retain) return retain;
-
-    const discussion = this.props.discussion;
+    const discussion = this.attrs.discussion;
     const user = discussion.user();
     const isUnread = discussion.isUnread();
     const isRead = discussion.isRead();
     const showUnread = !this.showRepliesCount() && isUnread;
     let jumpTo = 0;
     const controls = DiscussionControls.controls(discussion, this).toArray();
-    const attrs = this.attrs();
+    const attrs = this.elementAttrs();
 
-    if (this.props.params.q) {
+    if (this.attrs.params.q) {
       const post = discussion.mostRelevantPost();
       if (post) {
         jumpTo = post.number();
       }
 
-      const phrase = this.props.params.q;
+      const phrase = escapeRegExp(this.attrs.params.q);
       this.highlightRegExp = new RegExp(phrase + '|' + phrase.trim().replace(/\s+/g, '|'), 'gi');
     } else {
       jumpTo = Math.min(discussion.lastPostNumber(), (discussion.lastReadPostNumber() || 0) + 1);
@@ -81,42 +81,43 @@ export default class DiscussionListItem extends Component {
     return (
       <div {...attrs}>
         {controls.length
-          ? Dropdown.component({
-              icon: 'fas fa-ellipsis-v',
-              children: controls,
-              className: 'DiscussionListItem-controls',
-              buttonClassName: 'Button Button--icon Button--flat Slidable-underneath Slidable-underneath--right',
-            })
+          ? Dropdown.component(
+              {
+                icon: 'fas fa-ellipsis-v',
+                className: 'DiscussionListItem-controls',
+                buttonClassName: 'Button Button--icon Button--flat Slidable-underneath Slidable-underneath--right',
+              },
+              controls
+            )
           : ''}
 
-        <a
+        <span
           className={'Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic' + (isUnread ? '' : ' disabled')}
           onclick={this.markAsRead.bind(this)}
         >
           {icon('fas fa-check')}
-        </a>
+        </span>
 
         <div className={'DiscussionListItem-content Slidable-content' + (isUnread ? ' unread' : '') + (isRead ? ' read' : '')}>
-          <a
+          <Link
             href={user ? app.route.user(user) : '#'}
             className="DiscussionListItem-author"
             title={extractText(
               app.translator.trans('core.forum.discussion_list.started_text', { user: user, ago: humanTime(discussion.createdAt()) })
             )}
-            config={function (element) {
-              $(element).tooltip({ placement: 'right' });
-              m.route.apply(this, arguments);
+            oncreate={function (vnode) {
+              $(vnode.dom).tooltip({ placement: 'right' });
             }}
           >
             {avatar(user, { title: '' })}
-          </a>
+          </Link>
 
           <ul className="DiscussionListItem-badges badges">{listItems(discussion.badges().toArray())}</ul>
 
-          <a href={app.route.discussion(discussion, jumpTo)} config={m.route} className="DiscussionListItem-main">
+          <Link href={app.route.discussion(discussion, jumpTo)} className="DiscussionListItem-main">
             <h3 className="DiscussionListItem-title">{highlight(discussion.title(), this.highlightRegExp)}</h3>
             <ul className="DiscussionListItem-info">{listItems(this.infoItems().toArray())}</ul>
-          </a>
+          </Link>
 
           <span
             className="DiscussionListItem-count"
@@ -130,17 +131,23 @@ export default class DiscussionListItem extends Component {
     );
   }
 
-  config(isInitialized) {
-    if (isInitialized) return;
+  oncreate(vnode) {
+    super.oncreate(vnode);
 
     // If we're on a touch device, set up the discussion row to be slidable.
     // This allows the user to drag the row to either side of the screen to
     // reveal controls.
     if ('ontouchstart' in window) {
-      const slidableInstance = slidable(this.$().addClass('Slidable'));
+      const slidableInstance = slidable(this.$());
 
       this.$('.DiscussionListItem-controls').on('hidden.bs.dropdown', () => slidableInstance.reset());
     }
+  }
+
+  onbeforeupdate(vnode, old) {
+    super.onbeforeupdate(vnode, old);
+
+    return this.subtree.needsRebuild();
   }
 
   /**
@@ -151,7 +158,7 @@ export default class DiscussionListItem extends Component {
   active() {
     const idParam = m.route.param('id');
 
-    return idParam && idParam.split('-')[0] === this.props.discussion.id();
+    return idParam && idParam.split('-')[0] === this.attrs.discussion.id();
   }
 
   /**
@@ -162,7 +169,7 @@ export default class DiscussionListItem extends Component {
    * @return {Boolean}
    */
   showFirstPost() {
-    return ['newest', 'oldest'].indexOf(this.props.params.sort) !== -1;
+    return ['newest', 'oldest'].indexOf(this.attrs.params.sort) !== -1;
   }
 
   /**
@@ -172,14 +179,14 @@ export default class DiscussionListItem extends Component {
    * @return {Boolean}
    */
   showRepliesCount() {
-    return this.props.params.sort === 'replies';
+    return this.attrs.params.sort === 'replies';
   }
 
   /**
    * Mark the discussion as read.
    */
   markAsRead() {
-    const discussion = this.props.discussion;
+    const discussion = this.attrs.discussion;
 
     if (discussion.isUnread()) {
       discussion.save({ lastReadPostNumber: discussion.lastPostNumber() });
@@ -196,8 +203,8 @@ export default class DiscussionListItem extends Component {
   infoItems() {
     const items = new ItemList();
 
-    if (this.props.params.q) {
-      const post = this.props.discussion.mostRelevantPost() || this.props.discussion.firstPost();
+    if (this.attrs.params.q) {
+      const post = this.attrs.discussion.mostRelevantPost() || this.attrs.discussion.firstPost();
 
       if (post && post.contentType() === 'comment') {
         const excerpt = highlight(post.contentPlain(), this.highlightRegExp, 175);
@@ -207,7 +214,7 @@ export default class DiscussionListItem extends Component {
       items.add(
         'terminalPost',
         TerminalPost.component({
-          discussion: this.props.discussion,
+          discussion: this.attrs.discussion,
           lastPost: !this.showFirstPost(),
         })
       );

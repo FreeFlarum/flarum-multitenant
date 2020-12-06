@@ -1,5 +1,6 @@
 import Component from '../../common/Component';
 import ItemList from '../../common/utils/ItemList';
+import SuperTextarea from '../../common/utils/SuperTextarea';
 import listItems from '../../common/helpers/listItems';
 import Button from '../../common/components/Button';
 
@@ -7,21 +8,25 @@ import Button from '../../common/components/Button';
  * The `TextEditor` component displays a textarea with controls, including a
  * submit button.
  *
- * ### Props
+ * ### Attrs
  *
+ * - `composer`
  * - `submitLabel`
  * - `value`
  * - `placeholder`
  * - `disabled`
+ * - `preview`
  */
 export default class TextEditor extends Component {
-  init() {
+  oninit(vnode) {
+    super.oninit(vnode);
+
     /**
      * The value of the textarea.
      *
      * @type {String}
      */
-    this.value = m.prop(this.props.value || '');
+    this.value = this.attrs.value || '';
   }
 
   view() {
@@ -29,11 +34,12 @@ export default class TextEditor extends Component {
       <div className="TextEditor">
         <textarea
           className="FormControl Composer-flexible"
-          config={this.configTextarea.bind(this)}
-          oninput={m.withAttr('value', this.oninput.bind(this))}
-          placeholder={this.props.placeholder || ''}
-          disabled={!!this.props.disabled}
-          value={this.value()}
+          oninput={(e) => {
+            this.oninput(e.target.value, e);
+          }}
+          placeholder={this.attrs.placeholder || ''}
+          disabled={!!this.attrs.disabled}
+          value={this.value}
         />
 
         <ul className="TextEditor-controls Composer-footer">
@@ -44,22 +50,18 @@ export default class TextEditor extends Component {
     );
   }
 
-  /**
-   * Configure the textarea element.
-   *
-   * @param {DOMElement} element
-   * @param {Boolean} isInitialized
-   */
-  configTextarea(element, isInitialized) {
-    if (isInitialized) return;
+  oncreate(vnode) {
+    super.oncreate(vnode);
 
     const handler = () => {
       this.onsubmit();
       m.redraw();
     };
 
-    $(element).bind('keydown', 'meta+return', handler);
-    $(element).bind('keydown', 'ctrl+return', handler);
+    this.$('textarea').bind('keydown', 'meta+return', handler);
+    this.$('textarea').bind('keydown', 'ctrl+return', handler);
+
+    this.attrs.composer.editor = new SuperTextarea(this.$('textarea')[0]);
   }
 
   /**
@@ -72,24 +74,26 @@ export default class TextEditor extends Component {
 
     items.add(
       'submit',
-      Button.component({
-        children: this.props.submitLabel,
-        icon: 'fas fa-paper-plane',
-        className: 'Button Button--primary',
-        itemClassName: 'App-primaryControl',
-        onclick: this.onsubmit.bind(this),
-      })
+      Button.component(
+        {
+          icon: 'fas fa-paper-plane',
+          className: 'Button Button--primary',
+          itemClassName: 'App-primaryControl',
+          onclick: this.onsubmit.bind(this),
+        },
+        this.attrs.submitLabel
+      )
     );
 
-    if (this.props.preview) {
+    if (this.attrs.preview) {
       items.add(
         'preview',
         Button.component({
           icon: 'far fa-eye',
           className: 'Button Button--icon',
-          onclick: this.props.preview,
+          onclick: this.attrs.preview,
           title: app.translator.trans('core.forum.composer.preview_tooltip'),
-          config: (elm) => $(elm).tooltip(),
+          oncreate: (vnode) => $(vnode.dom).tooltip(),
         })
       );
     }
@@ -107,80 +111,22 @@ export default class TextEditor extends Component {
   }
 
   /**
-   * Set the value of the text editor.
-   *
-   * @param {String} value
-   */
-  setValue(value) {
-    this.$('textarea').val(value).trigger('input');
-  }
-
-  /**
-   * Set the selected range of the textarea.
-   *
-   * @param {Integer} start
-   * @param {Integer} end
-   */
-  setSelectionRange(start, end) {
-    const $textarea = this.$('textarea');
-
-    if (!$textarea.length) return;
-
-    $textarea[0].setSelectionRange(start, end);
-    $textarea.focus();
-  }
-
-  /**
-   * Get the selected range of the textarea.
-   *
-   * @return {Array}
-   */
-  getSelectionRange() {
-    const $textarea = this.$('textarea');
-
-    if (!$textarea.length) return [0, 0];
-
-    return [$textarea[0].selectionStart, $textarea[0].selectionEnd];
-  }
-
-  /**
-   * Insert content into the textarea at the position of the cursor.
-   *
-   * @param {String} insert
-   */
-  insertAtCursor(insert) {
-    const textarea = this.$('textarea')[0];
-    const value = this.value();
-    const index = textarea ? textarea.selectionStart : value.length;
-
-    this.setValue(value.slice(0, index) + insert + value.slice(index));
-
-    // Move the textarea cursor to the end of the content we just inserted.
-    if (textarea) {
-      const pos = index + insert.length;
-      this.setSelectionRange(pos, pos);
-    }
-
-    textarea.dispatchEvent(new CustomEvent('input', { bubbles: true, cancelable: true }));
-  }
-
-  /**
    * Handle input into the textarea.
    *
    * @param {String} value
    */
-  oninput(value) {
-    this.value(value);
+  oninput(value, e) {
+    this.value = value;
 
-    this.props.onchange(this.value());
+    this.attrs.onchange(this.value);
 
-    m.redraw.strategy('none');
+    e.redraw = false;
   }
 
   /**
    * Handle the submit button being clicked.
    */
   onsubmit() {
-    this.props.onsubmit(this.value());
+    this.attrs.onsubmit(this.value);
   }
 }

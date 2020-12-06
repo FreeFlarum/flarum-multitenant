@@ -1,4 +1,5 @@
 import Component from '../../common/Component';
+import Link from '../../common/components/Link';
 import UserCard from './UserCard';
 import avatar from '../../common/helpers/avatar';
 import username from '../../common/helpers/username';
@@ -8,22 +9,13 @@ import listItems from '../../common/helpers/listItems';
 /**
  * The `PostUser` component shows the avatar and username of a post's author.
  *
- * ### Props
+ * ### Attrs
  *
  * - `post`
  */
 export default class PostUser extends Component {
-  init() {
-    /**
-     * Whether or not the user hover card is visible.
-     *
-     * @type {Boolean}
-     */
-    this.cardVisible = false;
-  }
-
   view() {
-    const post = this.props.post;
+    const post = this.attrs.post;
     const user = post.user();
 
     if (!user) {
@@ -38,7 +30,7 @@ export default class PostUser extends Component {
 
     let card = '';
 
-    if (!post.isHidden() && this.cardVisible) {
+    if (!post.isHidden() && this.attrs.cardVisible) {
       card = UserCard.component({
         user,
         className: 'UserCard--popover',
@@ -49,11 +41,11 @@ export default class PostUser extends Component {
     return (
       <div className="PostUser">
         <h3>
-          <a href={app.route.user(user)} config={m.route}>
+          <Link href={app.route.user(user)}>
             {avatar(user, { className: 'PostUser-avatar' })}
             {userOnline(user)}
             {username(user)}
-          </a>
+          </Link>
         </h3>
         <ul className="PostUser-badges badges">{listItems(user.badges().toArray())}</ul>
         {card}
@@ -61,8 +53,8 @@ export default class PostUser extends Component {
     );
   }
 
-  config(isInitialized) {
-    if (isInitialized) return;
+  oncreate(vnode) {
+    super.oncreate(vnode);
 
     let timeout;
 
@@ -81,9 +73,7 @@ export default class PostUser extends Component {
    * Show the user card.
    */
   showCard() {
-    this.cardVisible = true;
-
-    m.redraw();
+    this.attrs.oncardshow();
 
     setTimeout(() => this.$('.UserCard').addClass('in'));
   }
@@ -95,8 +85,7 @@ export default class PostUser extends Component {
     this.$('.UserCard')
       .removeClass('in')
       .one('transitionend webkitTransitionEnd oTransitionEnd', () => {
-        this.cardVisible = false;
-        m.redraw();
+        this.attrs.oncardhide();
       });
   }
 }

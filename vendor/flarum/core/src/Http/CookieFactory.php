@@ -9,9 +9,9 @@
 
 namespace Flarum\Http;
 
+use Dflydev\FigCookies\Modifier\SameSite;
 use Dflydev\FigCookies\SetCookie;
-use Flarum\Foundation\Application;
-use Illuminate\Support\Arr;
+use Flarum\Foundation\Config;
 
 class CookieFactory
 {
@@ -44,18 +44,26 @@ class CookieFactory
     protected $secure;
 
     /**
-     * @param Application $app
+     * Same Site cookie value.
+     *
+     * @var string
      */
-    public function __construct(Application $app)
+    protected $samesite;
+
+    /**
+     * @param Config $config
+     */
+    public function __construct(Config $config)
     {
-        // Parse the forum's base URL so that we can determine the optimal cookie settings
-        $url = parse_url(rtrim($app->url(), '/'));
+        // If necessary, we will use the forum's base URL to determine smart defaults for cookie settings
+        $url = $config->url();
 
         // Get the cookie settings from the config or use the default values
-        $this->prefix = $app->config('cookie.name', 'flarum');
-        $this->path = $app->config('cookie.path', Arr::get($url, 'path') ?: '/');
-        $this->domain = $app->config('cookie.domain');
-        $this->secure = $app->config('cookie.secure', Arr::get($url, 'scheme') === 'https');
+        $this->prefix = $config['cookie.name'] ?? 'flarum';
+        $this->path = $config['cookie.path'] ?? $url->getPath() ?: '/';
+        $this->domain = $config['cookie.domain'];
+        $this->secure = $config['cookie.secure'] ?? $url->getScheme() === 'https';
+        $this->samesite = $config['cookie.samesite'];
     }
 
     /**
@@ -84,6 +92,9 @@ class CookieFactory
         if ($this->domain != null) {
             $cookie = $cookie->withDomain($this->domain);
         }
+
+        // Explicitly set SameSite value, use sensible default if no value provided
+        $cookie = $cookie->withSameSite(SameSite::{$this->samesite ?? 'lax'}());
 
         return $cookie
             ->withPath($this->path)

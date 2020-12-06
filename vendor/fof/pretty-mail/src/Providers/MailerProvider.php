@@ -12,28 +12,27 @@
 namespace FoF\PrettyMail\Providers;
 
 use Flarum\Foundation\AbstractServiceProvider;
-use Flarum\Foundation\Application;
 use Flarum\Notification\NotificationMailer;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Flarum\User\EmailConfirmationMailer;
 use FoF\PrettyMail\Mailer;
 use FoF\PrettyMail\Overrides;
+use Illuminate\Contracts\Container\Container;
 
 class MailerProvider extends AbstractServiceProvider
 {
     public function boot()
     {
         // Mostly copy-pasted from https://github.com/illuminate/mail/blob/v5.1.41/MailServiceProvider.php
-        $this->app->singleton('mailer', function (Application $app) {
-            $view = $app['view'];
+        $this->app->singleton('mailer', function (Container $container) {
+            $view = $container['view'];
 
-            $mailer = new Mailer($view, $app['swift.mailer'], $app['events']);
+            $mailer = new Mailer($view, $container['swift.mailer'], $container['events']);
 
-            if ($app->bound('queue')) {
-                $mailer->setQueue($app['queue']);
+            if ($container->bound('queue')) {
+                $mailer->setQueue($container['queue']);
             }
 
-            $settings = $app->make(SettingsRepositoryInterface::class);
+            $settings = app(SettingsRepositoryInterface::class);
             $mailer->alwaysFrom($settings->get('mail_from'), $settings->get('forum_title'));
 
             return $mailer;
@@ -41,10 +40,6 @@ class MailerProvider extends AbstractServiceProvider
 
         $this->app->extend(NotificationMailer::class, function (NotificationMailer $mailer) {
             return app(Overrides\NotificationMailer::class);
-        });
-
-        $this->app->extend(EmailConfirmationMailer::class, function (EmailConfirmationMailer $mailer) {
-            return app(Overrides\EmailConfirmationMailer::class);
         });
     }
 }

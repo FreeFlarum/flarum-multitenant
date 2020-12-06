@@ -10,7 +10,7 @@ class CommentsClientSuggestScoreTest extends TestCase {
     protected static $response;
 
     public static function setUpBeforeClass(): void {
-        $commentsClient = new CommentsClient(getenv('PERSPECTIVE_API_TOKEN'));
+        $commentsClient = new CommentsClient($_ENV['PERSPECTIVE_API_TOKEN']);
         $commentsClient->comment(['text' => 'What kind of idiot name is foo? Sorry, I like your name.']);
         $commentsClient->languages(['en']);
         $commentsClient->context(['entries' => ['text' => 'off-topic', 'type' => 'PLAIN_TEXT']]);
