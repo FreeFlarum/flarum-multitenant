@@ -1,4 +1,4 @@
-## Vietnamese extention for Flarum v2.0.0
+## Vietnamese extention for Flarum v1.0.0
 Gói ngôn ngữ tiếng Việt cho Flarum và một số tiện ích mở rộng được hỗ trợ
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -7,7 +7,7 @@ Gói ngôn ngữ tiếng Việt cho Flarum và một số tiện ích mở rộn
 
 ![](https://img.shields.io/packagist/dt/datlechin/lang-vietnamese.svg)
 
-## Thông tin/Infomation
+## Thông tin (Infomation)
 ### Cài đặt, Cập nhật (Installation, Update)
 `composer require datlechin/lang-vietnamese`
 
@@ -18,7 +18,7 @@ Gói ngôn ngữ tiếng Việt cho Flarum và một số tiện ích mở rộn
 `php flarum cache:clear`
 
 ### Yêu cầu phiên bản (Required version)
-- 0.1.0-beta.9 hoặc cao hơn (0.1.0-beta.9 or later)
+- 0.1.0-beta.14 hoặc cao hơn (0.1.0-beta.14 or later)
 
 ### Tiện ích được hỗ trợ (Extentions supported)
 <details>
@@ -45,34 +45,53 @@ Gói ngôn ngữ tiếng Việt cho Flarum và một số tiện ích mở rộn
 </details>
     
 <details>
-  <summary>FoF</summary>
+  <summary>FriendsOfFlarum</summary>
   <ul>
-    <li>Best Answe</li>
-    <li>Byobu</li>
-    <li>Drafts</li>
-    <li>Links</li>
-    <li>Merge Discussions</li>
-    <li>Polls</li>
-    <li>Share Social</li>
-    <li>Social Profile</li>
-    <li>Spam block</li>
-    <li>Transliterator</li>
-    <li>Upload</li>
-    <li>User Bio</li>
-    <li>User Directory</li>
+    <li><a href="https://extiverse.com/extension/fof/formatting">Formatting</a></li>
+    <li><a href="https://extiverse.com/extension/fof/user-bio">User Bio</a></li>
+    <li><a href="https://extiverse.com/extension/fof/links">Links</a></li>
+    <li><a href="https://extiverse.com/extension/fof/pages">Pages</a></li>
+    <li><a href="https://extiverse.com/extension/fof/polls">Polls</a></li>
+    <li><a href="https://extiverse.com/extension/fof/byobu">Byōbu</a></li>
+    <li><a href="https://extiverse.com/extension/fof/merge-discussions">Merge Discussions</a></li>
+    <li><a href="https://extiverse.com/extension/fof/reactions">Reactions</a></li>
+    <li><a href="https://extiverse.com/extension/fof/follow-tags">Follow Tags</a></li>
+    <li><a href="https://extiverse.com/extension/fof/user-directory">User Directory</a></li>
+    <li><a href="https://extiverse.com/extension/fof/upload">Upload</a></li>
+    <li><a href="https://extiverse.com/extension/fof/spamblock">Spamblock</a></li>
+    <li><a href="https://extiverse.com/extension/fof/drafts">Drafts</a></li>
+    <li><a href="https://extiverse.com/extension/fof/recaptcha">reCAPTCHA</a></li>
+    <li><a href="https://extiverse.com/extension/fof/socialprofile">Social Profile</a></li>
+    <li><a href="https://extiverse.com/extension/fof/best-answer">Best Answer</a></li>
+    <li><a href="https://extiverse.com/extension/fof/nightmode">Night Mode</a></li>
+    <li><a href="https://extiverse.com/extension/fof/share-social">Share Social</a></li>
+    <li><a href="https://extiverse.com/extension/fof/secure-https">Secure HTTPS</a></li>
+    <li><a href="https://extiverse.com/extension/fof/username-request">Username Request</a></li>
+    <li><a href="https://extiverse.com/extension/fof/transliterator">URL Transliterator</a></li>
+    <li><a href="https://extiverse.com/extension/fof/moderator-notes">Moderator Notes</a></li>
+    <li><a href="https://extiverse.com/extension/fof/ban-ips">Ban IPs</a></li>
+    <li><a href="https://extiverse.com/extension/fof/oauth">FoF OAuth</a></li>
+  </ul> 
+</details>
+
+<details>
+  <summary>MichaelBelgium</summary>
+  <ul>
+    <li><a href="https://extiverse.com/extension/michaelbelgium/flarum-discussion-views">Discussion views</a></li>
+    <li><a href="https://extiverse.com/extension/michaelbelgium/flarum-profile-views">Profile views</a></li>
   </ul> 
 </details>
 
 <details>
   <summary>Others</summary>
   <ul>
-    <li><a href="https://flagrow.io/extensions/askvortsov/flarum-categories">Flarum Categories</a></li>
-    <li><a href="https://flagrow.io/extensions/irony/flarum-ext-login2see">Login to See</a></li>
-    <li><a href="https://flagrow.io/extensions/kvothe/reply-to-see">Reply2See</a></li>
-    <li><a href="https://flagrow.io/extensions/michaelbelgium/flarum-discussion-views">Discussion views</a></li>
-    <li><a href="https://flagrow.io/extensions/reflar/level-ranks">Level Ranks</a></li>
-    <li><a href="https://flagrow.io/extensions/therealsujitk/flarum-ext-gifs">GIFs</a></li>
-    <li><a href="https://flagrow.io/extensions/xelson/flarum-ext-chat">Neon Chat</a></li>
+    <li><a href="https://extiverse.com/extension/clarkwinkelmann/flarum-ext-emojionearea">Emoji Picker</a></li>
+    <li><a href="https://extiverse.com/extension/the-turk/flarum-welcome-widgets">Welcome Widgets</a></li>
+    <li><a href="https://extiverse.com/extension/flagrow/ads">Flagrow Ads</a></li>
+    <li><a href="https://extiverse.com/extension/reflar/level-ranks">ReFlar Level Ranks</a></li>
+    <li><a href="https://extiverse.com/extension/askvortsov/flarum-categories">Flarum Categories</a></li>
+    <li><a href="https://extiverse.com/extension/xelson/flarum-ext-chat">Neon Chat</a></li>
+    <li><a href="https://extiverse.com/extension/jslirola/flarum-ext-login2seeplus">Login2SeePlus</a></li>
   </ul> 
 </details>
 

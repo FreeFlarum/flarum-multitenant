@@ -1,0 +1,11 @@
+fof-transliterator:
+  admin:
+    settings:
+      title: Cài đặt chuyển ngữ
+      parse_button: Phân tích các cuộc thảo luận hiện có
+      result: "Phân tích 1 thảo luận|Phân tích {count} thảo luận"
+
+      package_label: Gói phiên dịch
+      package_behat_label: Behat (mặc định)
+      package_php_label: PHP (yêu cầu ext-intl)
+      package_php2_label: "PHP #2 (yêu cầu ext-intl)"

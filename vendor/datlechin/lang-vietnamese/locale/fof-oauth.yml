@@ -1,0 +1,64 @@
+fof-oauth:
+  admin:
+    settings:
+      title: FriendsOfFlarum OAuth
+
+      only_icons_label: Chỉ hiển thị icon Nút đăng nhập (bố cục thay thế)
+
+      providers:
+        callback_url_text: Nếu cần, hãy đặt URL callback thành {url}.
+
+        discord:
+          description: Tạo ứng dụng tại {link}. Thêm URL chuyển hướng trong tab OAuth2.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        facebook:
+          description: Tạo ứng dụng tại {link}.
+
+          app_id_label: => fof-oauth.ref.settings.app_id
+          app_secret_label: => fof-oauth.ref.settings.app_secret
+
+        github:
+          description: Tạo ứng dụng OAuth tại {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        gitlab:
+          description: Tạo ứng dụng tại {link}. Cung cấp cho ứng dụng khóa <code>read_user</code>.
+
+          client_id_label: => fof-oauth.ref.settings.app_id
+          client_secret_label: => fof-oauth.ref.settings.app_secret
+          domain_label: Miền GitLab
+
+        twitter:
+          description: Tạo ứng dụng tại {link}. Bạn sẽ cần đặt URL Điều khoản Dịch vụ và URL Chính sách Bảo mật. Đảm bảo sau đó thêm quyền yêu cầu email.
+
+          api_key_label: API Key
+          api_secret_label: API Secret
+
+  forum:
+    log_in:
+      with_button: Đăng nhập với {provider}
+
+    error:
+      bad_verification_code: Mã thông báo xác minh không hợp lệ hoặc đã hết hạn. Vui lòng thử lại.
+      invalid_state: Đơn vị không hợp lệ. Vui lòng thử lại.
+
+  lib:
+    providers:
+      discord: Discord
+      facebook: Facebook
+      github: GitHub
+      gitlab: GitLab
+      twitter: Twitter
+
+  ref:
+    settings:
+      app_id: App ID
+      app_secret: App Secret
+
+      client_id: Client ID
+      client_secret: Client Secret

@@ -1,0 +1,33 @@
+fof-best-answer:
+  admin:
+    permissions:
+      best_answer: Chọn câu trả lời hay nhất (Thảo luận riêng)
+      best_answer_not_own_discussion: Chọn câu trả lời hay nhất (không phải thảo luận riêng)
+    settings:
+      title: Câu trả lời hay nhất
+      allow_select_own_post: Cho phép người dùng chọn bài viết của riêng họ
+      select_best_answer_reminder_days: Nhắc người dùng chọn câu trả lời hay nhất sau X ngày
+      schedule_on_one_server: Sử dụng chỉ thị 'onOneServer()' cho trình lập lịch tác vụ (yêu cầu Redis/Memcache)
+      schedule_stop_overnight: Ngăn lịch trình nhắc nhở chạy trong giờ không xã hội (9 giờ tối - 8 giờ sáng máy chủ)
+      schedule_log_output: Nối đầu ra lịch trình vào lưu trữ nhật ký
+      remind_tag_ids: Để hạn chế lời nhắc đối với các thẻ cụ thể, hãy nhập ID của thẻ tại đây (được phân tách bằng dấu phẩy)
+      use_alt_ui: Sử dụng bố cục thay thế (nút trả lời tốt nhất trong phần chân trang)
+  forum:
+    answered_badge: Đã trả lời
+    this_best_answer: Chọn câu trả lời hay nhất
+    remove_best_answer: Bỏ chọn câu trả lời hay nhất
+    best_answer_button: Câu trả lời hay nhất
+    best_answer_label: chọn bởi <a>{username}</a> {time_set}
+    errors:
+      mismatch: "Bài đăng được chọn không tồn tại trong cuộc thảo luận này"
+
+    notification:
+      best_answer_in_discussion: "{username} đã chọn câu trả lời tốt nhất trong cuộc thảo luận này"
+      best_answer_set_in_discussion_email: Một câu trả lời hay nhất đã được chọn
+      content: Vui lòng chọn một câu trả lời hay nhất nếu câu hỏi của bạn đã được trả lời
+      awarded: Bài đăng của bạn được chọn là câu trả lời hay nhất bởi {username}
+      awarded_email: Bài đăng của bạn được đặt là câu trả lời hay nhất của người dùng
+      select_email_title: Bạn đã quản lý để sắp xếp vấn đề của bạn?
+      preferences:
+        awarded_best_answer: Khi ai đó chọn bài viết của tôi là một câu trả lời hay nhất
+        best_answer_in_discussion: Khi một câu trả lời hay nhất được đặt trong một cuộc thảo luận tôi đã tham gia

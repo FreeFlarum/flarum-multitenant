@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ba41a237372628c3aa1ca6b75468dd0e86c49019',
+    'reference' => '75d1353620b1a4d30ba4f501e4aed7943fa6a690',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -208,12 +208,12 @@
     ),
     'datlechin/lang-vietnamese' => 
     array (
-      'pretty_version' => '2.0.0',
-      'version' => '2.0.0.0',
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a505dae00f0c31040384b2f85d0f6cd42f01116b',
+      'reference' => '60063e841440f4a5c1ee463d73c62633e78370fe',
     ),
     'davis/flarum-ext-socialprofile' => 
     array (
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ba41a237372628c3aa1ca6b75468dd0e86c49019',
+      'reference' => '75d1353620b1a4d30ba4f501e4aed7943fa6a690',
     ),
     'flarum/lang-english' => 
     array (

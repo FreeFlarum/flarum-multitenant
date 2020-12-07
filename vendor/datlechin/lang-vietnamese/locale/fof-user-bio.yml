@@ -1,0 +1,9 @@
+fof-user-bio:
+    admin:
+        permission:
+            view: Xem tiểu sử
+            editOwn: Chỉnh sửa tiểu sử của chính mình
+            editAny: Chỉnh sửa bất kỳ tiểu sử nào
+
+    forum:
+        userbioPlaceholder: Viết vài điều về bản thân

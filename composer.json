@@ -39,7 +39,7 @@
         "customworld/flarum-lang-slovak": "*",
         "darkfoxdeveloper/lang-spanish": "*",
         "datitisev/flarum-ext-dashboard": "v0.1.0-beta.9.2",
-        "datlechin/lang-vietnamese": "^2.0",
+        "datlechin/lang-vietnamese": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/core": "v0.1.0-beta.14.1",

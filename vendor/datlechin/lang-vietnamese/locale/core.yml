@@ -368,7 +368,7 @@ core:
 
     # These translations are used by the search results dropdown list.
     search:
-      all_discussions_button: 'Tìm kiếm tất cả các cuộc thảo luận cho "{query}"'
+      all_discussions_button: 'Tìm kiếm tất cả các cuộc thảo luận của "{query}"'
       discussions_heading: => core.ref.discussions
       users_heading: => core.ref.users
 
@@ -475,7 +475,7 @@ core:
       invalid_confirmation_token: Liên kết xác nhận này đã được sử dụng hoặc không hợp lệ.
       not_authenticated: Bạn không có quyền truy cập trang này. Hãy thử lại sau khi đăng nhập.
       not_found: Trang bạn yêu cầu không thể được tìm thấy.
-      not_found_return_link: "Trở lại {forum}"
+      not_found_return_link: "Quay lại {forum}"
       permission_denied: Bạn không có quyền truy cập trang này.
       unknown: Đã xảy ra lỗi trong khi cố gắng tải trang này.
 
@@ -566,7 +566,7 @@ core:
     edit: Chỉnh sửa
     email: Email
     icon: Icon
-    icon_text: "Nhập tên của bất kỳ lớp biểu tượng <a>FontAwesome</a> nào, <em>bao gồm</em> tiền tố <code>fas fa-</ code>."
+    icon_text: "Nhập tên của bất biểu tượng <a>FontAwesome</a> nào, <em>bao gồm</em> tiền tố <code>fas fa-</code>."
     load_more: Tải thêm
     log_in: Đăng nhập
     log_out: Đăng xuất
@@ -604,5 +604,5 @@ core:
     guests: Khách
     member: Thành viên
     members: Thành viên
-    mod: Người điều hành
-    mods: Người điều hành
+    mod: Người kiểm duyệt
+    mods: Người kiểm duyệt

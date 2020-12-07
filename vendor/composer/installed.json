@@ -1127,27 +1127,23 @@
         },
         {
             "name": "datlechin/lang-vietnamese",
-            "version": "2.0.0",
-            "version_normalized": "2.0.0.0",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/datlechin/lang-vietnamese.git",
-                "reference": "a505dae00f0c31040384b2f85d0f6cd42f01116b"
+                "reference": "60063e841440f4a5c1ee463d73c62633e78370fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/datlechin/lang-vietnamese/zipball/a505dae00f0c31040384b2f85d0f6cd42f01116b",
-                "reference": "a505dae00f0c31040384b2f85d0f6cd42f01116b",
+                "url": "https://api.github.com/repos/datlechin/lang-vietnamese/zipball/60063e841440f4a5c1ee463d73c62633e78370fe",
+                "reference": "60063e841440f4a5c1ee463d73c62633e78370fe",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.13"
+                "flarum/core": "^0.1.0-beta.14"
             },
-            "suggest": {
-                "datlechin/datlechin": "Flarum Extensions Vietnamese language pack.",
-                "flarum/flarum": "Flarum"
-            },
-            "time": "2020-07-21T04:20:34+00:00",
+            "time": "2020-12-07T10:26:16+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -1165,6 +1161,9 @@
                 "flarum-locale": {
                     "code": "vi",
                     "title": "Vietnamese"
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/22902-vietnamese-extention-for-flarum"
                 }
             },
             "installation-source": "dist",
@@ -1180,10 +1179,8 @@
                 }
             ],
             "description": "Vietnamese language pack (datlechin)",
-            "homepage": "https://github.com/datlechin/lang-vietnamese#readme",
             "keywords": [
-                "Tieng",
-                "Viet",
+                "Tiếng Việt",
                 "extention",
                 "flarum",
                 "locale",
@@ -1192,8 +1189,7 @@
             ],
             "support": {
                 "issues": "https://github.com/datlechin/lang-vietnamese/issues",
-                "source": "https://github.com/datlechin/lang-vietnamese/tree/v2.0.0",
-                "url": "https://github.com/datlechin/lang-vietnamese/issues"
+                "source": "https://github.com/datlechin/lang-vietnamese/tree/v1.0.0"
             },
             "install-path": "../datlechin/lang-vietnamese"
         },

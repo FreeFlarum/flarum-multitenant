@@ -1,0 +1,89 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Thảo luận riêng tư
+        buttons:
+            add_recipients: Người nhận
+            submit: OK
+            edit_recipients: Chỉnh sửa người nhận
+            send_pd: "Gửi tin nhắn cho {username}"
+            cancel: Hủy
+            remove_from_discussion: Thoát thảo luận riêng tư
+            make_public: Đặt cuộc thảo luận này ở chế độ công khai
+        composer_private_discussion:
+            submit_button: Đăng cuộc thảo luận riêng tư
+            title_placeholder: Tiêu đề cuộc thảo luận riêng tư
+        labels:
+            recipients: "{count} Người nhận|{count} Người nhận"
+            user_deleted: -đã xóa-
+        nav:
+            start_button: Thảo luận riêng tư mới
+        input:
+            search_recipients: Tìm kiếm người nhận bằng cách nhập ba ký tự đầu tiên...
+        search:
+            headings:
+                groups: Nhóm quyền
+        modal:
+            titles:
+                update_recipients: Cập nhật người nhận của {title}
+                add_recipients: Thêm người nhận vào cuộc thảo luận của bạn
+            help:
+                add_recipients: Cuộc thảo luận này sẽ chỉ hiển thị với những người dùng bạn chọn ở đây. Cần có ít nhất 1 người nhận (ngoài chính bạn).
+                update_recipients: Cuộc thảo luận này sẽ chỉ hiển thị với những người dùng bạn chọn ở đây.
+        post:
+            recipients_modified:
+                added_and_removed: "{username} đã thêm {added} và xóa {removed}."
+                added: "{username} đã thêm người nhận {added}."
+                removed: "{username} đã xóa người nhận {removed}."
+                removed_self: "{username} đã thoát khỏi cuộc thảo luận riêng tư."
+        user:
+            settings:
+                block_pd: Chặn cuộc thảo luận riêng tư
+
+            byobu_link: Thảo luận riêng tư
+            dropdown_label: Thảo luận riêng tư
+
+        notifications:
+            pd_label: Ai đó bao gồm tôi trong một cuộc thảo luận riêng tư mới
+            pd_reply_label: Ai đó đăng bài trong cuộc thảo luận riêng tư mà tôi là người nhận
+            pd_reply_text: "{username} đăng trong một cuộc thảo luận riêng tư mà bạn là thành viên"
+            pd_text: "{username} bắt đầu một cuộc thảo luận riêng tư mới với bạn"
+            pd_user_left_label: Người dùng người nhận rời khỏi cuộc thảo luận riêng tư mà tôi là thành viên
+            pd_user_left_text: "{username} rời khỏi cuộc thảo luận riêng tư"
+            pd_added_text: "{username} thêm bạn vào một cuộc thảo luận riêng tư"
+            pd_added_label: "Ai đó thêm tôi vào một cuộc thảo luận riêng tư hiện có"
+            pd_made_public_label: "Cuộc thảo luận riêng tư được công khai"
+            pd_made_public_text: "{username} làm công khai cuộc thảo luận"
+
+        confirm:
+            make_public: Điều này sẽ làm cho cuộc thảo luận riêng tư này hiển thị với mọi người. Hãy cân nhắc xem đây có phải là hành động chính xác hay không trước khi tiếp tục.
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Tạo cuộc thảo luận riêng tư với người dùng
+            create_private_discussions_with_groups: Tạo cuộc thảo luận riêng tư với nhóm
+            create_private_discussions_with_blocking_users: Tạo cuộc thảo luận riêng tư với người dùng chặn nó
+            edit_user_recipients: Chỉnh sửa người dùng tham gia vào các cuộc thảo luận riêng tư
+            edit_group_recipients: Chỉnh sửa nhóm tham gia vào các cuộc thảo luận riêng tư
+            make_private_into_public: Chuyển thảo luận riêng tư thành thảo luận công khai
+            view_private_discussions-when-flagged: Xem các cuộc thảo luận riêng tư của những người dùng khác nếu bị gắn cờ
+
+        settings:
+            use_tag_slug: Chỉ định thẻ mà tất cả các cuộc thảo luận riêng tư phải sử dụng
+            use_tag_slug_help: 'Chọn "{no_restriction}" để cho phép người dùng chọn thẻ của riêng họ. Điều này chỉ áp dụng cho các cuộc thảo luận riêng tư mới được tạo.'
+            use_tag_slug_no_restriction: "- Không giới hạn -"
+            byobu_index: Hiển thị liên kết đến Thảo luận riêng tư trên trang chỉ mục
+            byobu_index_help: Khi tùy chọn này được bật, một liên kết từ các mục điều hướng chính của diễn đàn đến Thảo luận riêng tư sẽ được hiển thị
+
+    notifications:
+        private_discussion_created:
+            title: "[Thảo luận riêng tư] người dùng đã bắt đầu một cuộc thảo luận riêng tư mới với bạn"
+        private_discussion_replied:
+            title: "[Thảo luận riêng tư] người dùng đã đăng trong một cuộc thảo luận riêng tư"
+        recipient_removed:
+            title: "[Thảo luận riêng tư] người dùng đã rời khỏi cuộc thảo luận"
+        private_discussion_added:
+            title: "[Thảo luận riêng tư] người dùng đã thêm bạn vào một cuộc thảo luận riêng tư"
+        made_public:
+            title: "[Thảo luận riêng tư] người dùng đã công khai cuộc thảo luận"

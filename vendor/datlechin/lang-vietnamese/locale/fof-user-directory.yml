@@ -1,0 +1,25 @@
+fof-user-directory:
+    forum:
+        search:
+            users_heading: 'Tìm kiếm tất cả người dùng cho "{query}"'
+        page:
+            nav: Thư mục người dùng
+            sort:
+                relevance: Liên quan
+                default: Mặc định
+                username_az: Tên người dùng (a-z)
+                username_za: Tên người dùng (z-a)
+                newest: Mới nhất
+                oldest: Cũ nhất
+                seen_recent: Trực tuyến gần đây
+                seen_oldest: Ngoại tuyến lâu nhất
+                most_posts: Bài viết nhiều nhất
+                least_posts: Bài viết ít nhất
+                most_discussions: Thảo luận nhiều nhất
+                least_discussions: Thảo luận ít nhất
+    admin:
+        permissions:
+            view_user_directory: Xem thư mục người dùng
+        settings:
+            title: Cài đặt thư mục người dùng
+            link: Thêm liên kết trên trang chủ để người dùng có thể xem thư mục

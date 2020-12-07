@@ -1,0 +1,39 @@
+fof-links:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These strings are used in the Edit Link modal dialog.
+    edit_link:
+      delete_link_button: Xóa liên kết
+      delete_link_confirmation: "Bạn có chắc chắn muốn xóa liên kết này?"
+      internal_link: "Có phải là một liên kết Flarum?"
+      open_newtab: "Mở liên kết trong tab mới"
+      submit_button: => core.ref.save_changes
+      title: => fof-links.ref.create_link
+      title_label: => fof-links.ref.title
+      title_placeholder: => fof-links.ref.title
+      url_label: => fof-links.ref.url
+      url_placeholder: => fof-links.ref.url
+
+    # These strings are used in the Links page.
+    links:
+      about_text: Quản lý các liên kết menu chính.
+      create_button: => fof-links.ref.create_link
+      links: => fof-links.ref.links
+
+    # These strings are used in the navigation bar.
+    nav:
+      links_button: => fof-links.ref.links
+      links_text: Quản lý các mục danh sách điều hướng chính.
+
+  # Strings in this namespace are referenced by two or more unique keys.
+  ref:
+    create_link: Tạo liên kết
+    links: Liên kết
+    title: Tiêu đề
+    url: Url

@@ -1,0 +1,41 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Tạo bản nháp
+      schedule: Lên lịch bản nháp
+    settings:
+      title: FoF Bản nháp
+      enable_scheduled_drafts: Bật lên lịch bản nháp
+      schedule_on_one_server: Sử dụng 'onOneServer()' cho bộ lập lịch tác vụ (yêu cầu Redis/Memcache)
+      schedule_log_output: Nối đầu ra của bộ lập lịch vào bộ nhớ nhật ký
+  console:
+    scheduled_drafts_disabled: Lên lịch bản nháp hiện bị vô hiệu hóa trong cài đặt.
+  forum:
+    composer:
+      title: Lưu bản nháp
+      saving: Đang lưu...
+      saved: Đã lưu!
+      exit_alert: Hủy thay đổi bản nháp?
+      discard_empty_draft_alert: Hủy bản nháp trống?
+    dropdown:
+      empty_text: Bạn chưa lưu bất kỳ bản nháp nào
+      title: Bản nháp
+      delete_button: Xóa bản nháp
+      schedule_button: Lên lịch bản nháp
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Bạn có chắc chắn muốn xóa bản nháp của mình không?
+    schedule_draft_modal:
+      title: Lên lịch bản nháp
+      text: Lên lịch cho bản nháp của bạn để tự động đăng sau đó!
+      scheduled_text: Đã lên lịch để đăng lúc {datetime}.
+      scheduled_error: "Không thể đăng vì: {error}."
+      unschedule_button: Không lên lịch
+      reschedule_button: Lên lịch lại
+      schedule_button: Lên lịch
+    user:
+      settings:
+        drafts_heading: Bản nháp
+        draft_autosave_enable: Bật tự động lưu bản nháp?
+        draft_autosave_interval_label: Khoảng thời gian tự động lưu (giây)
+        draft_autosave_interval_button: Cập nhật khoảng thời gian
+        draft_autosave_interval_invalid: Khoảng phải là một số nguyên lớn hơn 4.

@@ -1,0 +1,87 @@
+fof-upload:
+  admin:
+    buttons:
+      save: Lưu cài đặt
+    help_texts:
+      description: |
+        Thiết lập các dịch vụ và tùy chọn tải lên.
+      disable-download-logging: |
+        Vô hiệu hóa đăng nhập mỗi lần tải xuống được thực hiện bởi người dùng của diễn đàn của bạn. Giữ cho phép nó cho phép bạn xem số lượng tải xuống và các số liệu khác trong tương lai gần.
+      disable-hotlink-protection: |
+        Hotlink bảo vệ ngăn tải mở từ các trang web khác. Phương pháp hiện tại yêu cầu mã thông báo csrf và id bài đăng.
+      download_templates: |
+        Các mẫu tải xuống là cách tải lên được hiển thị trên diễn đàn của bạn, ví dụ như xem trước, các nút. Hiện đang có sẵn:
+      mime_types: |
+        Vui lòng cấu hình bản đồ của bạn ở đây. Mỗi biểu thức chính quy loại mime sẽ được xử lý bởi một bộ điều hợp tải lên cụ thể và mẫu tải xuống.
+      resize: |
+        Chọn xem bạn có muốn thay đổi kích thước hình ảnh của mình trước khi chúng được tải lên. Bạn có thể chọn chiều rộng và chiều cao tối đa, tính bằng pixel. Quá trình thay đổi kích thước giữ tỷ lệ khung hình của hình ảnh.
+      watermark: |
+        Chọn xem hình ảnh sẽ có hình mờ được thêm vào trong quá trình tải lên. Hình mờ được thêm vào không phải gifs dựa trên sở thích của bạn dưới đây.
+    labels:
+      aws-s3:
+        bucket: Bucket
+        key: Key
+        region: Region
+        secret: Secret
+        title: Cài đặt lưu trữ AWS S3
+      disable-download-logging:
+        titl: Vô hiệu hóa đăng nhập tải về
+        toggl: Vô hiệu hóa
+      disable-hotlink-protection:
+        titl: Vô hiệu hóa bảo vệ hotlink
+        toggl: Vô hiệu hóa
+      imgur:
+        client_id: Imgur client ID
+        title: Cài đặt lưu trữ Imgur
+      local:
+        cdn_url: Content Delivery URL (prefixes files)
+        title: Cài đặt lưu trữ Local
+      qiniu:
+        title: Cài đặt lưu trữ Qiniu
+        key: Key
+        secret: Secret
+        bucket: Bucket
+      preferences:
+        max_file_size: Kích thước tệp tối đa (tính bằng kilobyte)
+        mime_types: 'Định cấu hình loại mime của bạn, tải lên ánh xạ bộ điều hợp'
+        title: Sở thích chung
+      resize:
+        max_width: Chiều rộng hình ảnh tối đa
+        title: Thay đổi kích thước hình ảnh
+        toggle: Thay đổi kích thước hình ảnh
+      watermark:
+        file: Tải lên watermark của bạn
+        position: Vị trí watermark
+        title: Hình ảnh watermark
+        toggle: Hình ảnh watermark
+    permissions:
+      download_label: Tải xuống tập tin
+      upload_label: Tải lên tập tin
+    templates:
+      file: Mẫu tải xuống tập tin mặc định
+      file_description: |
+        Hiển thị tên tập tin và một số thông tin chung. Proxy tải xuống thông qua php, cho phép thu thập số liệu thống kê và bảo vệ hotlink.
+      image: Mẫu tải xuống hình ảnh mặc định
+      image-preview: Mẫu xem trước hoàn chỉnh
+      image-preview_description: |
+        Hiển thị hình ảnh hoàn chỉnh trong dòng. Không có chức năng tải xuống, không có số liệu thống kê được thu thập và bảo vệ hotlink bị bỏ qua.
+      image_description: |
+        Hiển thị hình thu nhỏ của hình ảnh và proxy tải xuống thông qua php. Cho phép thống kê được thu thập và bảo vệ hotlink.
+    upload_methods:
+      aws-s3: Amazon S3
+      imgur: Imgur
+      local: Local
+      ovh-svfs: OVH SVFS
+      qiniu: QiNiu
+  forum:
+    buttons:
+      attach: Đính kèm
+    states:
+      error: Lỗi
+      loading: Đang tải lên
+      unauthorized: Bạn không được phép tải tập tin
+  api:
+    upload_errors:
+      forbidden_type: Tải lên các tập tin loại này không được phép.
+      unsupported_type: 'Bộ điều hợp tải lên không hỗ trợ loại mime được cung cấp: {mime}.'
+      could_not_detect_mime: Không thể phát hiện loại MIME của tệp này, vui lòng thử lại.
