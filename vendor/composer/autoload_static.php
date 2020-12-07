@@ -120,7 +120,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'R' => 
         array (
-            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -219,7 +218,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\ShareSocial\\' => 16,
             'FoF\\SecureHttps\\' => 16,
             'FoF\\Reactions\\' => 14,
-            'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\PreventNecrobumping\\' => 24,
             'FoF\\PrettyMail\\' => 15,
@@ -455,10 +453,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'SoftCreatR\\MimeDetector\\' => 
         array (
             0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
-        ),
-        'ReCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -763,10 +757,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'FoF\\Reactions\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/reactions/src',
-        ),
-        'FoF\\ReCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/recaptcha/src',
         ),
         'FoF\\ProfileImageCrop\\' => 
         array (

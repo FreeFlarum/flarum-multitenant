@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "907eea6754c8ec4b6388f51ca52623ca",
+    "content-hash": "14dce4fcd3b2c0983fab101dc1f68f8f",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -5109,78 +5109,6 @@
             "time": "2020-11-06T09:22:52+00:00"
         },
         {
-            "name": "fof/recaptcha",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/recaptcha.git",
-                "reference": "361537685c47268f4e86c9d0c8806424a02fc4e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/recaptcha/zipball/361537685c47268f4e86c9d0c8806424a02fc4e4",
-                "reference": "361537685c47268f4e86c9d0c8806424a02fc4e4",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.14",
-                "fof/components": "^0.2.0",
-                "google/recaptcha": "^1.2"
-            },
-            "replace": {
-                "sijad/flarum-ext-recaptcha": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF reCAPTCHA",
-                    "icon": {
-                        "name": "fas fa-robot",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18399-friendsofflarum-recaptcha"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\ReCaptcha\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sajjad Hashemian",
-                    "email": "wolaws@gmail.com"
-                },
-                {
-                    "name": "David Sevilla Martín",
-                    "email": "david.s@redevs.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Increase your forum's security with Google reCAPTCHA",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "issues": "https://github.com/FriendsOfFlarum/recaptcha/issues",
-                "source": "https://github.com/FriendsOfFlarum/recaptcha/tree/0.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2020-11-07T00:30:08+00:00"
-        },
-        {
             "name": "fof/secure-https",
             "version": "0.2.1",
             "source": {
@@ -5830,16 +5758,16 @@
         },
         {
             "name": "fof/upload",
-            "version": "0.11.2",
+            "version": "0.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/upload.git",
-                "reference": "9bcc431dc129f4b0721ff0d081d1c38a9f2617d9"
+                "reference": "d9fc9db13e1ece28a75fd79dfcdbba76a78341aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/9bcc431dc129f4b0721ff0d081d1c38a9f2617d9",
-                "reference": "9bcc431dc129f4b0721ff0d081d1c38a9f2617d9",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/d9fc9db13e1ece28a75fd79dfcdbba76a78341aa",
+                "reference": "d9fc9db13e1ece28a75fd79dfcdbba76a78341aa",
                 "shasum": ""
             },
             "require": {
@@ -5908,7 +5836,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-28T18:24:15+00:00"
+            "time": "2020-12-06T19:38:11+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -6085,58 +6013,6 @@
                 "source": "https://github.com/franzliedke/whoops-middleware/tree/master"
             },
             "time": "2016-04-27T14:08:29+00:00"
-        },
-        {
-            "name": "google/recaptcha",
-            "version": "1.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/google/recaptcha.git",
-                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/google/recaptcha/zipball/614f25a9038be4f3f2da7cbfd778dc5b357d2419",
-                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.2.20|^2.15",
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7.5.11"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ReCaptcha\\": "src/ReCaptcha"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
-            "homepage": "https://www.google.com/recaptcha/",
-            "keywords": [
-                "Abuse",
-                "captcha",
-                "recaptcha",
-                "spam"
-            ],
-            "support": {
-                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
-                "issues": "https://github.com/google/recaptcha/issues",
-                "source": "https://github.com/google/recaptcha"
-            },
-            "time": "2020-03-31T17:50:54+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

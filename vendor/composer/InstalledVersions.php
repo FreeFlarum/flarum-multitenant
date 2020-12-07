@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '385d59690cafef6a578ee1c8e5196a018f776d26',
+    'reference' => 'ba41a237372628c3aa1ca6b75468dd0e86c49019',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -480,7 +480,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '385d59690cafef6a578ee1c8e5196a018f776d26',
+      'reference' => 'ba41a237372628c3aa1ca6b75468dd0e86c49019',
     ),
     'flarum/lang-english' => 
     array (
@@ -856,15 +856,6 @@ private static $installed = array (
       ),
       'reference' => '1fd2a2d80378028638b1c77647e89011d5ce0fcb',
     ),
-    'fof/recaptcha' => 
-    array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '361537685c47268f4e86c9d0c8806424a02fc4e4',
-    ),
     'fof/secure-https' => 
     array (
       'pretty_version' => '0.2.1',
@@ -948,12 +939,12 @@ private static $installed = array (
     ),
     'fof/upload' => 
     array (
-      'pretty_version' => '0.11.2',
-      'version' => '0.11.2.0',
+      'pretty_version' => '0.11.3',
+      'version' => '0.11.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9bcc431dc129f4b0721ff0d081d1c38a9f2617d9',
+      'reference' => 'd9fc9db13e1ece28a75fd79dfcdbba76a78341aa',
     ),
     'fof/user-bio' => 
     array (
@@ -981,15 +972,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '625a80d90b22c38d8a9372187e76ae5f844e4412',
-    ),
-    'google/recaptcha' => 
-    array (
-      'pretty_version' => '1.2.4',
-      'version' => '1.2.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '614f25a9038be4f3f2da7cbfd778dc5b357d2419',
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -1890,13 +1872,6 @@ private static $installed = array (
       ),
     ),
     'sijad/flarum-ext-pages' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '*',
-      ),
-    ),
-    'sijad/flarum-ext-recaptcha' => 
     array (
       'replaced' => 
       array (
