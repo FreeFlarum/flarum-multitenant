@@ -230,17 +230,17 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.167.0",
-            "version_normalized": "3.167.0.0",
+            "version": "3.168.0",
+            "version_normalized": "3.168.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c0206fba76e374b04ad4418e1122d57547e8ea28"
+                "reference": "842621099b1de31ec6efd7535b8b343397c6e0ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c0206fba76e374b04ad4418e1122d57547e8ea28",
-                "reference": "c0206fba76e374b04ad4418e1122d57547e8ea28",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/842621099b1de31ec6efd7535b8b343397c6e0ec",
+                "reference": "842621099b1de31ec6efd7535b8b343397c6e0ec",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2020-12-07T22:12:19+00:00",
+            "time": "2020-12-08T19:17:21+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -317,7 +317,7 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.167.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.168.0"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -3746,26 +3746,26 @@
         },
         {
             "name": "fof/doorman",
-            "version": "0.2.0",
-            "version_normalized": "0.2.0.0",
+            "version": "0.2.1",
+            "version_normalized": "0.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/doorman.git",
-                "reference": "7f3192fc008dfb62d5c0ada28a19d9198208594d"
+                "reference": "595ca7bffa812654ad27401b854aa6537e998910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/7f3192fc008dfb62d5c0ada28a19d9198208594d",
-                "reference": "7f3192fc008dfb62d5c0ada28a19d9198208594d",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/595ca7bffa812654ad27401b854aa6537e998910",
+                "reference": "595ca7bffa812654ad27401b854aa6537e998910",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta-14"
+                "flarum/core": ">=0.1.0-beta-14 <0.1.0-beta.15"
             },
             "replace": {
                 "reflar/doorman": "*"
             },
-            "time": "2020-12-04T13:40:30+00:00",
+            "time": "2020-12-08T19:38:08+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -3808,7 +3808,7 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfFlarum/doorman/issues",
-                "source": "https://github.com/FriendsOfFlarum/doorman/tree/0.2.0"
+                "source": "https://github.com/FriendsOfFlarum/doorman/tree/0.2.1"
             },
             "funding": [
                 {
@@ -5114,17 +5114,17 @@
         },
         {
             "name": "fof/reactions",
-            "version": "0.4.3",
-            "version_normalized": "0.4.3.0",
+            "version": "0.4.4",
+            "version_normalized": "0.4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/reactions.git",
-                "reference": "d1dae6a07ea14b7df016cf43bb8c3ea41b55be83"
+                "reference": "a5093c94f4ff6df5d1d612aff656b56b2f3dc928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/d1dae6a07ea14b7df016cf43bb8c3ea41b55be83",
-                "reference": "d1dae6a07ea14b7df016cf43bb8c3ea41b55be83",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/a5093c94f4ff6df5d1d612aff656b56b2f3dc928",
+                "reference": "a5093c94f4ff6df5d1d612aff656b56b2f3dc928",
                 "shasum": ""
             },
             "require": {
@@ -5133,7 +5133,7 @@
             "replace": {
                 "reflar/reactions": "*"
             },
-            "time": "2020-12-08T18:53:01+00:00",
+            "time": "2020-12-08T19:25:02+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {

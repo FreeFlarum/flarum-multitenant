@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'afa82568b614fe125549687f341dc7b050c541a6',
+    'reference' => 'c5971fd664a672f825d5bfde483339cb343d3f3b',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -57,12 +57,12 @@
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.167.0',
-      'version' => '3.167.0.0',
+      'pretty_version' => '3.168.0',
+      'version' => '3.168.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c0206fba76e374b04ad4418e1122d57547e8ea28',
+      'reference' => '842621099b1de31ec6efd7535b8b343397c6e0ec',
     ),
     'axy/backtrace' => 
     array (
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'afa82568b614fe125549687f341dc7b050c541a6',
+      'reference' => 'c5971fd664a672f825d5bfde483339cb343d3f3b',
     ),
     'flarum/lang-english' => 
     array (
@@ -655,12 +655,12 @@
     ),
     'fof/doorman' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
+      'pretty_version' => '0.2.1',
+      'version' => '0.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7f3192fc008dfb62d5c0ada28a19d9198208594d',
+      'reference' => '595ca7bffa812654ad27401b854aa6537e998910',
     ),
     'fof/drafts' => 
     array (
@@ -826,12 +826,12 @@
     ),
     'fof/reactions' => 
     array (
-      'pretty_version' => '0.4.3',
-      'version' => '0.4.3.0',
+      'pretty_version' => '0.4.4',
+      'version' => '0.4.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd1dae6a07ea14b7df016cf43bb8c3ea41b55be83',
+      'reference' => 'a5093c94f4ff6df5d1d612aff656b56b2f3dc928',
     ),
     'fof/secure-https' => 
     array (
