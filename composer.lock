@@ -5041,20 +5041,20 @@
         },
         {
             "name": "fof/reactions",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/reactions.git",
-                "reference": "1fd2a2d80378028638b1c77647e89011d5ce0fcb"
+                "reference": "d1dae6a07ea14b7df016cf43bb8c3ea41b55be83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/1fd2a2d80378028638b1c77647e89011d5ce0fcb",
-                "reference": "1fd2a2d80378028638b1c77647e89011d5ce0fcb",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/d1dae6a07ea14b7df016cf43bb8c3ea41b55be83",
+                "reference": "d1dae6a07ea14b7df016cf43bb8c3ea41b55be83",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.14"
+                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
             },
             "replace": {
                 "reflar/reactions": "*"
@@ -5070,7 +5070,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20655-friendsofflarum-reactions"
+                    "discuss": "https://discuss.flarum.org/d/20655"
                 }
             },
             "autoload": {
@@ -5105,8 +5105,8 @@
                 "reflar"
             ],
             "support": {
-                "issues": "https://github.com/FriendsOfFlarum/reactions/issues",
-                "source": "https://github.com/FriendsOfFlarum/reactions/tree/0.4.2"
+                "issues": "https://github.com/friendsofflarum/reactions/issues",
+                "source": "https://github.com/friendsofflarum/reactions"
             },
             "funding": [
                 {
@@ -5114,7 +5114,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-06T09:22:52+00:00"
+            "time": "2020-12-08T18:53:01+00:00"
         },
         {
             "name": "fof/secure-https",

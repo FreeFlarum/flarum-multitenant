@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'dd992217e9123eda9ed58b5d88490ab51bba1aa0',
+    'reference' => 'afa82568b614fe125549687f341dc7b050c541a6',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'dd992217e9123eda9ed58b5d88490ab51bba1aa0',
+      'reference' => 'afa82568b614fe125549687f341dc7b050c541a6',
     ),
     'flarum/lang-english' => 
     array (
@@ -826,12 +826,12 @@
     ),
     'fof/reactions' => 
     array (
-      'pretty_version' => '0.4.2',
-      'version' => '0.4.2.0',
+      'pretty_version' => '0.4.3',
+      'version' => '0.4.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1fd2a2d80378028638b1c77647e89011d5ce0fcb',
+      'reference' => 'd1dae6a07ea14b7df016cf43bb8c3ea41b55be83',
     ),
     'fof/secure-https' => 
     array (
