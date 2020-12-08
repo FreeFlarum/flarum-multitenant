@@ -224,16 +224,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.166.2",
+            "version": "3.167.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fe0ec9235d07b0f51ec4396dce0dd639020ae1a7"
+                "reference": "c0206fba76e374b04ad4418e1122d57547e8ea28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fe0ec9235d07b0f51ec4396dce0dd639020ae1a7",
-                "reference": "fe0ec9235d07b0f51ec4396dce0dd639020ae1a7",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c0206fba76e374b04ad4418e1122d57547e8ea28",
+                "reference": "c0206fba76e374b04ad4418e1122d57547e8ea28",
                 "shasum": ""
             },
             "require": {
@@ -308,9 +308,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.166.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.167.0"
             },
-            "time": "2020-12-04T19:12:30+00:00"
+            "time": "2020-12-07T22:12:19+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -1166,16 +1166,16 @@
         },
         {
             "name": "dflydev/fig-cookies",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dflydev/dflydev-fig-cookies.git",
-                "reference": "ba0b1a3d7982946ed98c9544f460ffb67a69e359"
+                "reference": "aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-fig-cookies/zipball/ba0b1a3d7982946ed98c9544f460ffb67a69e359",
-                "reference": "ba0b1a3d7982946ed98c9544f460ffb67a69e359",
+                "url": "https://api.github.com/repos/dflydev/dflydev-fig-cookies/zipball/aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b",
+                "reference": "aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b",
                 "shasum": ""
             },
             "require": {
@@ -1218,9 +1218,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dflydev/dflydev-fig-cookies/issues",
-                "source": "https://github.com/dflydev/dflydev-fig-cookies/tree/v2.0.2"
+                "source": "https://github.com/dflydev/dflydev-fig-cookies/tree/v2.0.3"
             },
-            "time": "2020-12-04T16:41:16+00:00"
+            "time": "2020-12-07T16:40:59+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -3243,20 +3243,20 @@
         },
         {
             "name": "fof/bbcode-details",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/bbcode-details.git",
-                "reference": "d9e5ef7d9b893cf9357b14c386a324c2e07f92af"
+                "reference": "10bd9411b392a79b6e842fec6517de0992f8cd69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/bbcode-details/zipball/d9e5ef7d9b893cf9357b14c386a324c2e07f92af",
-                "reference": "d9e5ef7d9b893cf9357b14c386a324c2e07f92af",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/bbcode-details/zipball/10bd9411b392a79b6e842fec6517de0992f8cd69",
+                "reference": "10bd9411b392a79b6e842fec6517de0992f8cd69",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": "^0.1.0-beta.14"
             },
             "replace": {
                 "sijad/flarum-ext-details": "*"
@@ -3272,7 +3272,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18796-friendsofflarum-bbcode-details"
+                    "discuss": "https://discuss.flarum.org/d/18796"
                 }
             },
             "autoload": {
@@ -3301,9 +3301,15 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfFlarum/bbcode-details/issues",
-                "source": "https://github.com/FriendsOfFlarum/bbcode-details/tree/0.1.0"
+                "source": "https://github.com/FriendsOfFlarum/bbcode-details"
             },
-            "time": "2019-02-07T00:55:15+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-12-08T16:43:20+00:00"
         },
         {
             "name": "fof/best-answer",
@@ -3644,20 +3650,20 @@
         },
         {
             "name": "fof/default-user-preferences",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/default-user-preferences.git",
-                "reference": "889f349e9e7be6099df6fa8e2604496307ffd9fd"
+                "reference": "f3f361e9a0fb562ed8d21415893966b6d84df99a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/default-user-preferences/zipball/889f349e9e7be6099df6fa8e2604496307ffd9fd",
-                "reference": "889f349e9e7be6099df6fa8e2604496307ffd9fd",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/default-user-preferences/zipball/f3f361e9a0fb562ed8d21415893966b6d84df99a",
+                "reference": "f3f361e9a0fb562ed8d21415893966b6d84df99a",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
             },
             "replace": {
                 "piotr-tokarczyk/flarum-user-default-preferences": "*"
@@ -3673,7 +3679,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18607-friendsofflarum-default-user-preferences"
+                    "discuss": "https://discuss.flarum.org/d/18607"
                 }
             },
             "autoload": {
@@ -3687,13 +3693,13 @@
             ],
             "authors": [
                 {
+                    "name": "Piotr Tokarczyk",
+                    "role": "Developer (Original)"
+                },
+                {
                     "name": "David Sevilla Martín",
                     "email": "david.s@redevs.org",
                     "role": "Developer"
-                },
-                {
-                    "name": "Piotr Tokarczyk",
-                    "role": "Developer (Original)"
                 }
             ],
             "description": "Enable emails for replies and mentions by default in user preferences",
@@ -3702,9 +3708,15 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfFlarum/default-user-preferences/issues",
-                "source": "https://github.com/FriendsOfFlarum/default-user-preferences/tree/0.2.0"
+                "source": "https://github.com/FriendsOfFlarum/default-user-preferences"
             },
-            "time": "2019-07-04T14:38:05+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-12-08T12:18:13+00:00"
         },
         {
             "name": "fof/doorman",
@@ -4374,16 +4386,16 @@
         },
         {
             "name": "fof/masquerade",
-            "version": "0.3.5",
+            "version": "0.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/masquerade.git",
-                "reference": "23779ff5686655f1db61dfbb3d5cbe209adbeb43"
+                "reference": "3c9db4cf98ace45276e418582e7e4fd701e9d4d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/23779ff5686655f1db61dfbb3d5cbe209adbeb43",
-                "reference": "23779ff5686655f1db61dfbb3d5cbe209adbeb43",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/3c9db4cf98ace45276e418582e7e4fd701e9d4d7",
+                "reference": "3c9db4cf98ace45276e418582e7e4fd701e9d4d7",
                 "shasum": ""
             },
             "require": {
@@ -4439,7 +4451,7 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfFlarum/masquerade/issues",
-                "source": "https://github.com/FriendsOfFlarum/masquerade/tree/0.3.5"
+                "source": "https://github.com/FriendsOfFlarum/masquerade/tree/0.3.6"
             },
             "funding": [
                 {
@@ -4447,7 +4459,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-14T20:20:57+00:00"
+            "time": "2020-12-07T20:50:29+00:00"
         },
         {
             "name": "fof/merge-discussions",
@@ -6244,7 +6256,7 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -6293,7 +6305,7 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -6348,7 +6360,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -6396,7 +6408,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -6454,7 +6466,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -6502,7 +6514,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -6550,16 +6562,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "8f318e4c636a777682bbb7c91aeed9a105a6683b"
+                "reference": "c3e7c3d2369063d4124fd870356f887c1143d7c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/8f318e4c636a777682bbb7c91aeed9a105a6683b",
-                "reference": "8f318e4c636a777682bbb7c91aeed9a105a6683b",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/c3e7c3d2369063d4124fd870356f887c1143d7c8",
+                "reference": "c3e7c3d2369063d4124fd870356f887c1143d7c8",
                 "shasum": ""
             },
             "require": {
@@ -6611,11 +6623,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2020-11-23T01:17:39+00:00"
+            "time": "2020-12-04T14:27:18+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -6664,7 +6676,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -6721,7 +6733,7 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -6769,7 +6781,7 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
@@ -6828,7 +6840,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -6877,7 +6889,7 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -6941,7 +6953,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -6996,7 +7008,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -7061,7 +7073,7 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -7111,16 +7123,16 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "b13a8f00637b64e0df591b721c854bfd9c1b0643"
+                "reference": "4256ad88d388275343199ace3c868e786f70fdca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/b13a8f00637b64e0df591b721c854bfd9c1b0643",
-                "reference": "b13a8f00637b64e0df591b721c854bfd9c1b0643",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/4256ad88d388275343199ace3c868e786f70fdca",
+                "reference": "4256ad88d388275343199ace3c868e786f70fdca",
                 "shasum": ""
             },
             "require": {
@@ -7163,11 +7175,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2020-11-30T14:14:20+00:00"
+            "time": "2020-12-07T14:24:29+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v6.20.6",
+            "version": "v6.20.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -8681,16 +8693,16 @@
         },
         {
             "name": "luuhai48/oauth-google",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luuhai48/oauth-google.git",
-                "reference": "8e60dd675eb320b58f4bbcd67d0caa5732228dd9"
+                "reference": "8e98ad5278f2295ad5ac1432a731e75a20665ecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luuhai48/oauth-google/zipball/8e60dd675eb320b58f4bbcd67d0caa5732228dd9",
-                "reference": "8e60dd675eb320b58f4bbcd67d0caa5732228dd9",
+                "url": "https://api.github.com/repos/luuhai48/oauth-google/zipball/8e98ad5278f2295ad5ac1432a731e75a20665ecb",
+                "reference": "8e98ad5278f2295ad5ac1432a731e75a20665ecb",
                 "shasum": ""
             },
             "require": {
@@ -8736,9 +8748,9 @@
             ],
             "support": {
                 "issues": "https://github.com/luuhai48/oauth-google/issues",
-                "source": "https://github.com/luuhai48/oauth-google/tree/v1.0.0"
+                "source": "https://github.com/luuhai48/oauth-google/tree/v1.1.0"
             },
-            "time": "2020-11-15T15:57:43+00:00"
+            "time": "2020-12-08T14:58:39+00:00"
         },
         {
             "name": "luuhai48/oauth-linkedin",
@@ -11519,32 +11531,31 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.2.3",
+            "version": "v6.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9"
+                "reference": "56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
-                "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e",
+                "reference": "56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e",
                 "shasum": ""
             },
             "require": {
-                "egulias/email-validator": "~2.0",
+                "egulias/email-validator": "^2.0",
                 "php": ">=7.0.0",
                 "symfony/polyfill-iconv": "^1.0",
                 "symfony/polyfill-intl-idn": "^1.10",
                 "symfony/polyfill-mbstring": "^1.0"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1",
-                "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
+                "mockery/mockery": "^1.0",
+                "symfony/phpunit-bridge": "^4.4|^5.0"
             },
             "suggest": {
-                "ext-intl": "Needed to support internationalized email addresses",
-                "true/punycode": "Needed to support internationalized email addresses, if ext-intl is not installed"
+                "ext-intl": "Needed to support internationalized email addresses"
             },
             "type": "library",
             "extra": {
@@ -11579,9 +11590,19 @@
             ],
             "support": {
                 "issues": "https://github.com/swiftmailer/swiftmailer/issues",
-                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.3"
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.4"
             },
-            "time": "2019-11-12T09:31:26+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/swiftmailer/swiftmailer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-08T18:02:06+00:00"
         },
         {
             "name": "sycho/flarum-profile-cover",

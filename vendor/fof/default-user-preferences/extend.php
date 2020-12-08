@@ -11,13 +11,13 @@
 
 namespace FoF\DefaultUserPreferences;
 
+use Flarum\Extend;
 use Flarum\User\Event\Registered;
 use Flarum\User\User;
-use Illuminate\Events\Dispatcher;
 
 return [
-    function (Dispatcher $events) {
-        $events->listen(Registered::class, function (Registered $event) {
+    (new Extend\Event())
+        ->listen(Registered::class, function (Registered $event) {
             foreach (['post', 'user'] as $key) {
                 $event->user->setPreference(
                     User::getNotificationPreferenceKey("{$key}Mentioned", 'email'),
@@ -28,6 +28,5 @@ return [
             $event->user->setPreference('followAfterReply', true);
 
             $event->user->save();
-        });
-    },
+        }),
 ];

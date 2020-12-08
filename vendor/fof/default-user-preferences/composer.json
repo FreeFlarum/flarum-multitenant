@@ -6,8 +6,12 @@
   ],
   "type": "flarum-extension",
   "license": "MIT",
+  "support": {
+    "issues": "https://github.com/FriendsOfFlarum/default-user-preferences/issues",
+    "source": "https://github.com/FriendsOfFlarum/default-user-preferences"
+  },
   "require": {
-    "flarum/core": "^0.1.0-beta.8"
+    "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
   },
   "replace": {
     "piotr-tokarczyk/flarum-user-default-preferences": "*"
@@ -38,7 +42,7 @@
       }
     },
     "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/18607-friendsofflarum-default-user-preferences"
+      "discuss": "https://discuss.flarum.org/d/18607"
     }
   }
 }
