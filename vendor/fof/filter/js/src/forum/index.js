@@ -15,12 +15,15 @@ import app from 'flarum/app';
 import PostControls from 'flarum/utils/PostControls';
 import CommentPost from 'flarum/components/CommentPost';
 
-app.initializers.add('fof-filter', () => {
-
-  override(CommentPost.prototype, 'flagReason', function(original, flag) {
-    if (flag.type() === app.translator.trans('fof-filter.forum.flagger_name')[0]) {
-      return app.translator.trans('fof-filter.forum.flagger_name');
-    }
-    return original(flag);
-  });
-}, -20);
+app.initializers.add(
+    'fof-filter',
+    () => {
+        override(CommentPost.prototype, 'flagReason', function (original, flag) {
+            if (flag.type() === app.translator.trans('fof-filter.forum.flagger_name')[0]) {
+                return app.translator.trans('fof-filter.forum.flagger_name');
+            }
+            return original(flag);
+        });
+    },
+    -20
+);

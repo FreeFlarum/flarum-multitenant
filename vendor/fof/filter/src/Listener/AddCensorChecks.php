@@ -1,26 +1,21 @@
 <?php
-/**
- *  This file is part of fof/filter.
+
+/*
+ * This file is part of fof/filter.
  *
- *  Copyright (c) 2020 FriendsOfFlarum..
+ * Copyright (c) 2020 FriendsOfFlarum.
  *
- *  For the full copyright and license information, please view the license.md
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the license.md
+ * file that was distributed with this source code.
  */
 
 namespace FoF\Filter\Listener;
 
 use Flarum\Settings\Event\Saving;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class AddCensorChecks
 {
-    public function subscribe(Dispatcher $events)
-    {
-        $events->listen(Saving::class, [$this, 'addCensors']);
-    }
-
-    public function addCensors(Saving $event)
+    public function handle(Saving $event)
     {
         if (isset($event->settings['fof-filter.words']) && $badwords = explode(', ', $event->settings['fof-filter.words'])) {
             $leet_replace = [];

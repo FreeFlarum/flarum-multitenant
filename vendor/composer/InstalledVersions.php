@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c5971fd664a672f825d5bfde483339cb343d3f3b',
+    'reference' => '8bbffc454d7f8fe8d377011e93fc3532b9018634',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -480,7 +480,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c5971fd664a672f825d5bfde483339cb343d3f3b',
+      'reference' => '8bbffc454d7f8fe8d377011e93fc3532b9018634',
     ),
     'flarum/lang-english' => 
     array (
@@ -705,12 +705,12 @@ private static $installed = array (
     ),
     'fof/filter' => 
     array (
-      'pretty_version' => '0.1.0-beta.3',
-      'version' => '0.1.0.0-beta3',
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '54f6ed834a7645260f4746e9cdcc2c00cd0a2697',
+      'reference' => 'db557e244f3a67ab948393d41a1235fa406e4134',
     ),
     'fof/formatting' => 
     array (

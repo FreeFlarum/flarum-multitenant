@@ -15,9 +15,9 @@
         "source": "https://github.com/friendsofflarum/filter"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.14",
-        "flarum/approval": "^0.1.0-beta.14",
-        "flarum/flags": "^v0.1.0-beta.14"
+        "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15",
+        "flarum/approval": "*",
+        "flarum/flags": "*"
     },
     "autoload": {
         "psr-4": {
@@ -34,7 +34,7 @@
             }
         },
         "flagrow": {
-            "discuss": ""
+            "discuss": "https://discuss.flarum.org/d/5131"
         }
     }
 }

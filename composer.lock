@@ -3904,22 +3904,22 @@
         },
         {
             "name": "fof/filter",
-            "version": "0.1.0-beta.3",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/filter.git",
-                "reference": "54f6ed834a7645260f4746e9cdcc2c00cd0a2697"
+                "reference": "db557e244f3a67ab948393d41a1235fa406e4134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/54f6ed834a7645260f4746e9cdcc2c00cd0a2697",
-                "reference": "54f6ed834a7645260f4746e9cdcc2c00cd0a2697",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/db557e244f3a67ab948393d41a1235fa406e4134",
+                "reference": "db557e244f3a67ab948393d41a1235fa406e4134",
                 "shasum": ""
             },
             "require": {
-                "flarum/approval": "^0.1.0-beta.14",
-                "flarum/core": "^0.1.0-beta.14",
-                "flarum/flags": "^v0.1.0-beta.14"
+                "flarum/approval": "*",
+                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15",
+                "flarum/flags": "*"
             },
             "type": "flarum-extension",
             "extra": {
@@ -3932,7 +3932,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": ""
+                    "discuss": "https://discuss.flarum.org/d/5131"
                 }
             },
             "autoload": {
@@ -3964,7 +3964,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-06T21:36:41+00:00"
+            "time": "2020-12-08T20:54:30+00:00"
         },
         {
             "name": "fof/formatting",
