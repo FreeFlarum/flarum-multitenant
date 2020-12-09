@@ -4095,20 +4095,20 @@
         },
         {
             "name": "fof/gamification",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/gamification.git",
-                "reference": "ade88174f5cebac5f70c8eb239e08e34f8a5cc95"
+                "reference": "e006bcb65ab8d2af7bd8d53addf40e8d4bc01405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/ade88174f5cebac5f70c8eb239e08e34f8a5cc95",
-                "reference": "ade88174f5cebac5f70c8eb239e08e34f8a5cc95",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/e006bcb65ab8d2af7bd8d53addf40e8d4bc01405",
+                "reference": "e006bcb65ab8d2af7bd8d53addf40e8d4bc01405",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "~0.1.0-beta.14",
+                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15",
                 "fof/extend": ">=0.3.0"
             },
             "replace": {
@@ -4118,6 +4118,7 @@
             "extra": {
                 "flarum-extension": {
                     "title": "FoF Gamification",
+                    "category": "discussion",
                     "icon": {
                         "name": "fas fa-thumbs-up",
                         "backgroundColor": "#e74c3c",
@@ -4155,6 +4156,7 @@
                 }
             ],
             "description": "Upvotes and downvotes for your Flarum community",
+            "homepage": "https://friendsofflarum.org",
             "keywords": [
                 "Gamification",
                 "Settings",
@@ -4164,16 +4166,17 @@
                 "points"
             ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/20671",
                 "issues": "https://github.com/FriendsOfFlarum/gamification/issues",
                 "source": "https://github.com/FriendsOfFlarum/gamification"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/fof",
-                    "type": "open_collective"
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
                 }
             ],
-            "time": "2020-12-05T13:29:54+00:00"
+            "time": "2020-12-09T13:27:22+00:00"
         },
         {
             "name": "fof/linguist",
@@ -11310,16 +11313,16 @@
         },
         {
             "name": "s9e/sweetdom",
-            "version": "1.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/SweetDOM.git",
-                "reference": "f3a58c723fbe04d92ebcef5c8c7913bb364f58cd"
+                "reference": "5fc62bc1f4756650924e5cd1b429afcf34542722"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/SweetDOM/zipball/f3a58c723fbe04d92ebcef5c8c7913bb364f58cd",
-                "reference": "f3a58c723fbe04d92ebcef5c8c7913bb364f58cd",
+                "url": "https://api.github.com/repos/s9e/SweetDOM/zipball/5fc62bc1f4756650924e5cd1b429afcf34542722",
+                "reference": "5fc62bc1f4756650924e5cd1b429afcf34542722",
                 "shasum": ""
             },
             "require": {
@@ -11348,22 +11351,22 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/SweetDOM/issues",
-                "source": "https://github.com/s9e/SweetDOM/tree/1.0.1"
+                "source": "https://github.com/s9e/SweetDOM/tree/2.0.0"
             },
-            "time": "2020-05-25T15:01:02+00:00"
+            "time": "2020-12-08T16:34:58+00:00"
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.7.6",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "dfb9d4efa61578d89ca250243e2871887e23ba5d"
+                "reference": "52e1d46415f93ea1c8fed9846d8240fb5396b238"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/dfb9d4efa61578d89ca250243e2871887e23ba5d",
-                "reference": "dfb9d4efa61578d89ca250243e2871887e23ba5d",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/52e1d46415f93ea1c8fed9846d8240fb5396b238",
+                "reference": "52e1d46415f93ea1c8fed9846d8240fb5396b238",
                 "shasum": ""
             },
             "require": {
@@ -11372,7 +11375,7 @@
                 "lib-pcre": ">=8.13",
                 "php": ">=7.1",
                 "s9e/regexp-builder": "^1.4",
-                "s9e/sweetdom": "^1.0"
+                "s9e/sweetdom": "^2.0"
             },
             "require-dev": {
                 "code-lts/doctum": "*",
@@ -11390,7 +11393,7 @@
             },
             "type": "library",
             "extra": {
-                "version": "2.7.6"
+                "version": "2.8.0"
             },
             "autoload": {
                 "psr-4": {
@@ -11422,9 +11425,9 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/TextFormatter/issues",
-                "source": "https://github.com/s9e/TextFormatter/tree/2.7.6"
+                "source": "https://github.com/s9e/TextFormatter/tree/2.8.0"
             },
-            "time": "2020-11-15T16:21:05+00:00"
+            "time": "2020-12-09T14:01:49+00:00"
         },
         {
             "name": "softcreatr/php-mime-detector",

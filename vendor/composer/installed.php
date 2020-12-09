@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a8ac54cacfc714aece9d0e3489ce9f11f026f627',
+    'reference' => 'e3cefa18eb260aa14f29827edc059aaf6a46f08b',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a8ac54cacfc714aece9d0e3489ce9f11f026f627',
+      'reference' => 'e3cefa18eb260aa14f29827edc059aaf6a46f08b',
     ),
     'flarum/lang-english' => 
     array (
@@ -709,12 +709,12 @@
     ),
     'fof/gamification' => 
     array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => '0.3.3',
+      'version' => '0.3.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ade88174f5cebac5f70c8eb239e08e34f8a5cc95',
+      'reference' => 'e006bcb65ab8d2af7bd8d53addf40e8d4bc01405',
     ),
     'fof/linguist' => 
     array (
@@ -1818,21 +1818,21 @@
     ),
     's9e/sweetdom' => 
     array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f3a58c723fbe04d92ebcef5c8c7913bb364f58cd',
+      'reference' => '5fc62bc1f4756650924e5cd1b429afcf34542722',
     ),
     's9e/text-formatter' => 
     array (
-      'pretty_version' => '2.7.6',
-      'version' => '2.7.6.0',
+      'pretty_version' => '2.8.0',
+      'version' => '2.8.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dfb9d4efa61578d89ca250243e2871887e23ba5d',
+      'reference' => '52e1d46415f93ea1c8fed9846d8240fb5396b238',
     ),
     'sijad/flarum-ext-details' => 
     array (
