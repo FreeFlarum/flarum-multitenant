@@ -26,13 +26,12 @@ return [
     // Adds news box to the bottom of the admin panel:
     (new Extend\Frontend('admin'))->content(function (Document $document) {
         $document->foot[] = '
-            <style>@media only screen and (max-width: 991px) { #tip, #news { width: 95% !important; left: 2.5% !important; }; }
+            <style>#content > div > div > form > fieldset:nth-child(7) { display: none; }@media only screen and (max-width: 991px) { #tip, #news { width: 95% !important; left: 2.5% !important; }; }
             </style>
-            <p id="news" align="center" style="position: relative; width: 50%; left: 32.5vw; padding: 15px; bottom: -10px; border: 1px solid orange; border-radius: 10px;">
-                <span style="font-size: 1.1rem; font-weight: 800; text-decoration: underline;">What\'s new?</span>
-                <br/>
-                <br/>
-                <a href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1689" target="_blank">06/12/2020 - Flarum beta.14.1 upgrade</a>
+            <hr/>
+            <div id="news" align="center" style="width: 100%; bottom: -10px;">
+                <p style="font-size: 1.1rem; font-weight: 800; text-decoration: underline; margin-bottom: 5px;">What\'s new?</p>
+                <a style="margin-top: 5px;" href="https://discuss.flarum.org/d/7585-free-flarum-hosting-on-an-expert-platform-by-freeflarum-com/1689" target="_blank">06/12/2020 - Flarum beta.14.1 upgrade</a>
             </p>
             <br/>
         ';

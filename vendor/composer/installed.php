@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8bbffc454d7f8fe8d377011e93fc3532b9018634',
+    'reference' => 'a8ac54cacfc714aece9d0e3489ce9f11f026f627',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8bbffc454d7f8fe8d377011e93fc3532b9018634',
+      'reference' => 'a8ac54cacfc714aece9d0e3489ce9f11f026f627',
     ),
     'flarum/lang-english' => 
     array (
@@ -826,12 +826,12 @@
     ),
     'fof/reactions' => 
     array (
-      'pretty_version' => '0.4.4',
-      'version' => '0.4.4.0',
+      'pretty_version' => '0.4.5',
+      'version' => '0.4.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a5093c94f4ff6df5d1d612aff656b56b2f3dc928',
+      'reference' => '25d2267fea3d848b3694f25ca160bb54ab5fe1f3',
     ),
     'fof/secure-https' => 
     array (
@@ -1222,12 +1222,12 @@
     ),
     'lcobucci/jwt' => 
     array (
-      'pretty_version' => '3.4.1',
-      'version' => '3.4.1.0',
+      'pretty_version' => '3.4.2',
+      'version' => '3.4.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '958a9873a63b0244a72f6e354ccc86019ee674a5',
+      'reference' => '17cb82dd625ccb17c74bf8f38563d3b260306483',
     ),
     'league/commonmark' => 
     array (

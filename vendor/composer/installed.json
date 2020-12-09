@@ -5114,17 +5114,17 @@
         },
         {
             "name": "fof/reactions",
-            "version": "0.4.4",
-            "version_normalized": "0.4.4.0",
+            "version": "0.4.5",
+            "version_normalized": "0.4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/reactions.git",
-                "reference": "a5093c94f4ff6df5d1d612aff656b56b2f3dc928"
+                "reference": "25d2267fea3d848b3694f25ca160bb54ab5fe1f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/a5093c94f4ff6df5d1d612aff656b56b2f3dc928",
-                "reference": "a5093c94f4ff6df5d1d612aff656b56b2f3dc928",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/25d2267fea3d848b3694f25ca160bb54ab5fe1f3",
+                "reference": "25d2267fea3d848b3694f25ca160bb54ab5fe1f3",
                 "shasum": ""
             },
             "require": {
@@ -5133,11 +5133,12 @@
             "replace": {
                 "reflar/reactions": "*"
             },
-            "time": "2020-12-08T19:25:02+00:00",
+            "time": "2020-12-09T11:12:08+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "FoF Reactions",
+                    "category": "discussion",
                     "icon": {
                         "name": "far fa-smile",
                         "backgroundColor": "#e74c3c",
@@ -5173,6 +5174,7 @@
                 }
             ],
             "description": "Reactions for Flarum",
+            "homepage": "https://friendsofflarum.org",
             "keywords": [
                 "Settings",
                 "flarum",
@@ -5181,13 +5183,14 @@
                 "reflar"
             ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/20655",
                 "issues": "https://github.com/friendsofflarum/reactions/issues",
                 "source": "https://github.com/friendsofflarum/reactions"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/fof",
-                    "type": "open_collective"
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
                 }
             ],
             "install-path": "../fof/reactions"
@@ -7945,17 +7948,17 @@
         },
         {
             "name": "lcobucci/jwt",
-            "version": "3.4.1",
-            "version_normalized": "3.4.1.0",
+            "version": "3.4.2",
+            "version_normalized": "3.4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "958a9873a63b0244a72f6e354ccc86019ee674a5"
+                "reference": "17cb82dd625ccb17c74bf8f38563d3b260306483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/958a9873a63b0244a72f6e354ccc86019ee674a5",
-                "reference": "958a9873a63b0244a72f6e354ccc86019ee674a5",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/17cb82dd625ccb17c74bf8f38563d3b260306483",
+                "reference": "17cb82dd625ccb17c74bf8f38563d3b260306483",
                 "shasum": ""
             },
             "require": {
@@ -7973,7 +7976,7 @@
             "suggest": {
                 "lcobucci/clock": "*"
             },
-            "time": "2020-11-27T01:17:14+00:00",
+            "time": "2020-12-03T13:43:45+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8009,7 +8012,7 @@
             ],
             "support": {
                 "issues": "https://github.com/lcobucci/jwt/issues",
-                "source": "https://github.com/lcobucci/jwt/tree/3.4.1"
+                "source": "https://github.com/lcobucci/jwt/tree/3.4.2"
             },
             "funding": [
                 {
