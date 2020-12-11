@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e3cefa18eb260aa14f29827edc059aaf6a46f08b',
+    'reference' => '99d114cea38d552d4676dd60dbedae6733e4bea5',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -80,12 +80,12 @@ private static $installed = array (
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.168.0',
-      'version' => '3.168.0.0',
+      'pretty_version' => '3.168.2',
+      'version' => '3.168.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '842621099b1de31ec6efd7535b8b343397c6e0ec',
+      'reference' => '1d6a976da857d13b156bd63613ee086c13f6dc29',
     ),
     'axy/backtrace' => 
     array (
@@ -480,7 +480,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e3cefa18eb260aa14f29827edc059aaf6a46f08b',
+      'reference' => '99d114cea38d552d4676dd60dbedae6733e4bea5',
     ),
     'flarum/lang-english' => 
     array (
@@ -624,12 +624,12 @@ private static $installed = array (
     ),
     'fof/best-answer' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
+      'pretty_version' => '0.2.1',
+      'version' => '0.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e592522e50c67dde4548fb1c859e9e970e9fe375',
+      'reference' => 'd36ef82a7735ccb29ff1f302070b7537878e2f43',
     ),
     'fof/byobu' => 
     array (
@@ -741,12 +741,12 @@ private static $installed = array (
     ),
     'fof/linguist' => 
     array (
-      'pretty_version' => '0.4.4',
-      'version' => '0.4.4.0',
+      'pretty_version' => '0.4.5',
+      'version' => '0.4.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f998aa0072076749b71c12423f18ea4774787288',
+      'reference' => 'd75f30a3c8ca585d66efd931b0cc79587dcff0f1',
     ),
     'fof/links' => 
     array (

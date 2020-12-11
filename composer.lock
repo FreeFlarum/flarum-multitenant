@@ -224,16 +224,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.168.0",
+            "version": "3.168.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "842621099b1de31ec6efd7535b8b343397c6e0ec"
+                "reference": "1d6a976da857d13b156bd63613ee086c13f6dc29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/842621099b1de31ec6efd7535b8b343397c6e0ec",
-                "reference": "842621099b1de31ec6efd7535b8b343397c6e0ec",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1d6a976da857d13b156bd63613ee086c13f6dc29",
+                "reference": "1d6a976da857d13b156bd63613ee086c13f6dc29",
                 "shasum": ""
             },
             "require": {
@@ -308,9 +308,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.168.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.168.2"
             },
-            "time": "2020-12-08T19:17:21+00:00"
+            "time": "2020-12-10T19:35:18+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -3313,16 +3313,16 @@
         },
         {
             "name": "fof/best-answer",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/best-answer.git",
-                "reference": "e592522e50c67dde4548fb1c859e9e970e9fe375"
+                "reference": "d36ef82a7735ccb29ff1f302070b7537878e2f43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/best-answer/zipball/e592522e50c67dde4548fb1c859e9e970e9fe375",
-                "reference": "e592522e50c67dde4548fb1c859e9e970e9fe375",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/best-answer/zipball/d36ef82a7735ccb29ff1f302070b7537878e2f43",
+                "reference": "d36ef82a7735ccb29ff1f302070b7537878e2f43",
                 "shasum": ""
             },
             "require": {
@@ -3379,7 +3379,7 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfFlarum/best-answer/issues",
-                "source": "https://github.com/FriendsOfFlarum/best-answer/tree/0.2.0"
+                "source": "https://github.com/FriendsOfFlarum/best-answer/tree/0.2.1"
             },
             "funding": [
                 {
@@ -3387,7 +3387,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-03T21:31:05+00:00"
+            "time": "2020-12-10T16:03:49+00:00"
         },
         {
             "name": "fof/byobu",
@@ -4180,16 +4180,16 @@
         },
         {
             "name": "fof/linguist",
-            "version": "0.4.4",
+            "version": "0.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/linguist.git",
-                "reference": "f998aa0072076749b71c12423f18ea4774787288"
+                "reference": "d75f30a3c8ca585d66efd931b0cc79587dcff0f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/linguist/zipball/f998aa0072076749b71c12423f18ea4774787288",
-                "reference": "f998aa0072076749b71c12423f18ea4774787288",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/linguist/zipball/d75f30a3c8ca585d66efd931b0cc79587dcff0f1",
+                "reference": "d75f30a3c8ca585d66efd931b0cc79587dcff0f1",
                 "shasum": ""
             },
             "require": {
@@ -4245,7 +4245,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-03T22:31:23+00:00"
+            "time": "2020-12-11T00:15:09+00:00"
         },
         {
             "name": "fof/links",
