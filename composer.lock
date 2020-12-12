@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67fee4244cfb29942aca3228bbe654e2",
+    "content-hash": "7b5752a8506a99caec2a0f2372df492a",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -224,16 +224,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.168.2",
+            "version": "3.168.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "1d6a976da857d13b156bd63613ee086c13f6dc29"
+                "reference": "49ef1f905388c8185012c9651b80941b8f2a218d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1d6a976da857d13b156bd63613ee086c13f6dc29",
-                "reference": "1d6a976da857d13b156bd63613ee086c13f6dc29",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/49ef1f905388c8185012c9651b80941b8f2a218d",
+                "reference": "49ef1f905388c8185012c9651b80941b8f2a218d",
                 "shasum": ""
             },
             "require": {
@@ -308,9 +308,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.168.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.168.3"
             },
-            "time": "2020-12-10T19:35:18+00:00"
+            "time": "2020-12-11T19:12:18+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -4529,22 +4529,22 @@
         },
         {
             "name": "fof/nightmode",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/nightmode.git",
-                "reference": "8a455b8f4c628e48182ac85d7c21f9c28cc54849"
+                "reference": "5341c02469319b3ee5e022249f4cadb7bb0b2eef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/nightmode/zipball/8a455b8f4c628e48182ac85d7c21f9c28cc54849",
-                "reference": "8a455b8f4c628e48182ac85d7c21f9c28cc54849",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/nightmode/zipball/5341c02469319b3ee5e022249f4cadb7bb0b2eef",
+                "reference": "5341c02469319b3ee5e022249f4cadb7bb0b2eef",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.14",
                 "fof/components": ">=0.2.0",
-                "fof/extend": ">=0.2.0"
+                "fof/extend": ">=0.3.0"
             },
             "replace": {
                 "reflar/nightmode": "*"
@@ -4606,7 +4606,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-07T21:16:24+00:00"
+            "time": "2020-12-12T16:39:11+00:00"
         },
         {
             "name": "fof/oauth",
@@ -11209,16 +11209,16 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.3.21",
+            "version": "v0.3.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "28d225c7135d671623035225fe6962b90e1979bc"
+                "reference": "c218d328a0bfc453beaa34ec333ebed22a6fe429"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/28d225c7135d671623035225fe6962b90e1979bc",
-                "reference": "28d225c7135d671623035225fe6962b90e1979bc",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/c218d328a0bfc453beaa34ec333ebed22a6fe429",
+                "reference": "c218d328a0bfc453beaa34ec333ebed22a6fe429",
                 "shasum": ""
             },
             "require": {
@@ -11267,7 +11267,7 @@
                 "issues": "https://github.com/rob006-software/flarum-lang-polish/issues",
                 "source": "https://github.com/rob006-software/flarum-lang-polish"
             },
-            "time": "2020-12-05T17:30:42+00:00"
+            "time": "2020-12-12T19:26:41+00:00"
         },
         {
             "name": "s9e/regexp-builder",
@@ -13909,24 +13909,26 @@
         },
         {
             "name": "wikimedia/less.php",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikimedia/less.php.git",
-                "reference": "5e2a4fba9304915c4cbf98cc9cb665a5c365c351"
+                "reference": "a486d78b9bd16b72f237fc6093aa56d69ce8bd13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikimedia/less.php/zipball/5e2a4fba9304915c4cbf98cc9cb665a5c365c351",
-                "reference": "5e2a4fba9304915c4cbf98cc9cb665a5c365c351",
+                "url": "https://api.github.com/repos/wikimedia/less.php/zipball/a486d78b9bd16b72f237fc6093aa56d69ce8bd13",
+                "reference": "a486d78b9bd16b72f237fc6093aa56d69ce8bd13",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.9"
             },
             "require-dev": {
-                "jakub-onderka/php-parallel-lint": "1.0.0",
+                "mediawiki/mediawiki-codesniffer": "34.0.0",
                 "mediawiki/minus-x": "1.0.0",
+                "php-parallel-lint/php-console-highlighter": "0.5.0",
+                "php-parallel-lint/php-parallel-lint": "1.2.0",
                 "phpunit/phpunit": "^8.5"
             },
             "bin": [
@@ -13970,9 +13972,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wikimedia/less.php/issues",
-                "source": "https://github.com/wikimedia/less.php/tree/v3.0.0"
+                "source": "https://github.com/wikimedia/less.php/tree/v3.1.0"
             },
-            "time": "2020-03-11T23:01:29+00:00"
+            "time": "2020-12-11T19:33:31+00:00"
         },
         {
             "name": "wohali/oauth2-discord-new",

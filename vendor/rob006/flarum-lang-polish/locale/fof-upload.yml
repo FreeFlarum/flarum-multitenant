@@ -14,14 +14,20 @@ fof-upload:
       download_templates: "Szablony pobierania decydują o tym jak przesłane pliki są wyświetlane na Twoim forum, np. podgląd miniatury, przyciski. Obecnie dostępne:\n"
       mime_types: "Skonfiguruj poniżej mapowanie. Każde wyrażenie regularne dla typu MIME będzie obsłużone przez odpowiedni adapter przesyłania i szablon pobierania.\n"
       resize: "Wybierz czy chcesz przeskalować obrazki zanim zostaną przesłane. Możesz wybrać maksymalną szerokość i wysokość w pikselach. Proces zmiany rozmiaru zachowa proporcje obrazka.\n"
+      s3_acl: "ACL, które powinno być zastosowane do wysłanego obiektu (domyślnie: private). Obsługiwane wartości można znaleźć na https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl\n"
+      s3_compatible_storage: "Poniższe ustawienia są wymagane jedynie gdy korzystasz z usługi kompatybilnej z S3. Jeśli korzystasz z AWS, możesz pozostawić je puste.\n"
       watermark: "Wybierz, czy obrazki będą miały dodany znak wodny podczas przesyłania. Znaki wodne są dodawane do nie-gifów bazując na Twoich preferencjach poniżej.\n"
     labels:
       aws-s3:
+        acl: 'Access Control List (ACL)'
+        advanced_title: 'Zaawansowane ustawienia S3'
         bucket: Bucket
+        endpoint: Endpoint
         key: Key
         region: Region
         secret: Secret
         title: 'Ustawienia AWS S3'
+        use_path_style_endpoint: 'Use path style endpoint'
       client_extension:
         title: 'Rozszerzenia pików podane przez użytkownika'
       disable-download-logging:
@@ -70,7 +76,7 @@ fof-upload:
       just-url: 'Jedynie URL'
       just-url_description: "Wstawia jedynie URL. Renderowanie może być obsłużone przez inne rozszerzenie umożliwiające automatycznie formatowanie. Brak obsługi pobierania, zliczania statystyk oraz ochrony przed hotlinkowaniem.\n"
     upload_methods:
-      aws-s3: 'Amazon S3'
+      aws-s3: 'Kompatybilne z S3'
       imgur: Imgur
       local: Lokalnie
       ovh-svfs: 'OVH SVFS'

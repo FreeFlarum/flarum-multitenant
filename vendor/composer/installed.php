@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '99d114cea38d552d4676dd60dbedae6733e4bea5',
+    'reference' => '73f2c5b30230a7f30b4a58a8d33b34862fa6dcdd',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -57,12 +57,12 @@
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.168.2',
-      'version' => '3.168.2.0',
+      'pretty_version' => '3.168.3',
+      'version' => '3.168.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1d6a976da857d13b156bd63613ee086c13f6dc29',
+      'reference' => '49ef1f905388c8185012c9651b80941b8f2a218d',
     ),
     'axy/backtrace' => 
     array (
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '99d114cea38d552d4676dd60dbedae6733e4bea5',
+      'reference' => '73f2c5b30230a7f30b4a58a8d33b34862fa6dcdd',
     ),
     'flarum/lang-english' => 
     array (
@@ -763,12 +763,12 @@
     ),
     'fof/nightmode' => 
     array (
-      'pretty_version' => '0.6.0',
-      'version' => '0.6.0.0',
+      'pretty_version' => '0.6.1',
+      'version' => '0.6.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8a455b8f4c628e48182ac85d7c21f9c28cc54849',
+      'reference' => '5341c02469319b3ee5e022249f4cadb7bb0b2eef',
     ),
     'fof/oauth' => 
     array (
@@ -1800,12 +1800,12 @@
     ),
     'rob006/flarum-lang-polish' => 
     array (
-      'pretty_version' => 'v0.3.21',
-      'version' => '0.3.21.0',
+      'pretty_version' => 'v0.3.22',
+      'version' => '0.3.22.0',
       'aliases' => 
       array (
       ),
-      'reference' => '28d225c7135d671623035225fe6962b90e1979bc',
+      'reference' => 'c218d328a0bfc453beaa34ec333ebed22a6fe429',
     ),
     's9e/regexp-builder' => 
     array (
@@ -2186,12 +2186,12 @@
     ),
     'wikimedia/less.php' => 
     array (
-      'pretty_version' => 'v3.0.0',
-      'version' => '3.0.0.0',
+      'pretty_version' => 'v3.1.0',
+      'version' => '3.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5e2a4fba9304915c4cbf98cc9cb665a5c365c351',
+      'reference' => 'a486d78b9bd16b72f237fc6093aa56d69ce8bd13',
     ),
     'wiseclock/flarum-ext-profile-image-crop' => 
     array (

@@ -44,6 +44,8 @@ core:
       home_page_text: 'Wybierz stronę, którą użytkownicy zobaczą jako pierwszą, gdy odwiedzą Twoje forum.'
       saved_message: 'Twoje zmiany zostały zapisane.'
       show_language_selector_label: 'Pokazuj menu wyboru języka'
+      slug_driver_heading: 'Generator slugów: {model}'
+      slug_driver_text: 'Wymierz generator slugów dla tego modelu.'
       submit_button: '=> core.ref.save_changes'
       title: Podstawowe
       welcome_banner_heading: 'Baner powitalny'
@@ -120,8 +122,8 @@ core:
         source: Źródła
         support: Wsparcie
         website: 'Strona internetowa'
-      no_permissions: 'Brak uprawnień'
-      no_settings: 'Brak ustawień'
+      no_permissions: 'To rozszerzenie nie posiada żadnych uprawnień.'
+      no_settings: 'To rozszerzenie nie posiada żadnych ustawień.'
       open_modal: 'Otwórz ustawienia'
       permissions_title: Uprawnienia
       saved_message: 'Twoje zmiany zostały zapisane.'
@@ -144,6 +146,7 @@ core:
       basics_title: '=> core.admin.basics.description'
       categories:
         authentication: Uwierzytelnianie
+        core: 'Główne ustawienia'
         discussion: Dyskusja
         feature: Funkcje
         formatting: Formatowanie
@@ -208,16 +211,16 @@ core:
     invalid_username_message: 'Nazwa użytkownika może zawierać jedynie litery, cyfry i myślniki.'
   email:
     activate_account:
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że Ty!) zarejestrował się na {forum} używając tego adresu e-mail.\n\nJeśli byłeś to Ty, po prostu kliknij link poniżej i Twoje konto zostanie aktywowane:\n{url}\n\nJeśli się nie rejestrowałeś, zignoruj tę wiadomość.\n"
+      body: "Witaj {username},\n\nKtoś (mamy nadzieję, że Ty!) zarejestrował się na {forum} używając tego adresu e-mail.\n\nJeśli byłeś to Ty, po prostu kliknij link poniżej i Twoje konto zostanie aktywowane:\n{url}\n\nJeśli się nie rejestrowałeś, zignoruj tę wiadomość.\n"
       subject: 'Aktywuj swoje nowe konto'
     confirm_email:
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że Ty!) zmienił swój adres e-mail na {forum} na ten.\n\nJeśli byłeś to Ty, po prostu kliknij link poniżej, a Twój e-mail zostanie zatwierdzony:\n{url}\n\nJeśli to nie Ty, zignoruj tę wiadomość.\n"
+      body: "Witaj {username},\n\nKtoś (mamy nadzieję, że Ty!) zmienił swój adres e-mail na {forum} na ten.\n\nJeśli byłeś to Ty, po prostu kliknij link poniżej, a Twój e-mail zostanie zatwierdzony:\n{url}\n\nJeśli to nie Ty, zignoruj tę wiadomość.\n"
       subject: 'Potwierdź swój adres e-mail'
     reset_password:
-      body: "Witaj, {username}!\n\nKtoś (mamy nadzieję, że Ty!) poprosił o zresetowanie hasła do swojego konta na {forum}.\n\nJeśli byłeś to Ty, kliknij link poniżej, aby zresetować swoje hasło:\n{url}\n\nJeśli nie chcesz zmieniać hasła, po prostu zignoruj tę wiadomość, a nic się nie stanie.\n"
+      body: "Witaj {username},\n\nKtoś (mamy nadzieję, że Ty!) poprosił o zresetowanie hasła do swojego konta na {forum}.\n\nJeśli byłeś to Ty, kliknij link poniżej, aby zresetować swoje hasło:\n{url}\n\nJeśli nie chcesz zmieniać hasła, po prostu zignoruj tę wiadomość, a nic się nie stanie.\n"
       subject: '=> core.ref.reset_your_password'
     send_test:
-      body: "Witaj {username}!\n\nTo jest testowa wiadomość wysłana przez Flarum, aby potwierdzić, że konfiguracja wysyłki e-mail na Twoim forum działa prawidłowo.\n\nJeśli to Ty poprosiłeś o wysłanie tej wiadomości, wszystko działa w porządku!\n\nJeśli to nie Ty, zignoruj tę wiadomość.\n"
+      body: "Witaj {username},\n\nTo jest testowa wiadomość wysłana przez Flarum, aby potwierdzić, że konfiguracja wysyłki e-mail na Twoim forum działa prawidłowo.\n\nJeśli to Ty poprosiłeś o wysłanie tej wiadomości, wszystko działa w porządku!\n\nJeśli to nie Ty, zignoruj tę wiadomość.\n"
       subject: 'Testowa wiadomość z Flarum'
   forum:
     change_email:

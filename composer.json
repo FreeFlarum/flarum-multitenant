@@ -111,7 +111,7 @@
         "maicol07/flarum-ext-sso": "^1.7",
         "marketplace/flarum-l10n-core-russian": "*",
         "marketplace/flarum-l10n-ext-russian": "*",
-        "matteocontrini/flarum-imgur-upload": "*",
+        "matteocontrini/flarum-imgur-upload": "^3.4",
         "menomenta/flarum-ext-norwegian": "*",
         "michaelbelgium/flarum-discussion-views": "*",
         "migratetoflarum/canonical": "*",
