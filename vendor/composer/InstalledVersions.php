@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '73f2c5b30230a7f30b4a58a8d33b34862fa6dcdd',
+    'reference' => 'd8e65d5743025c390443dc87cebc0746fab33598',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -480,7 +480,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '73f2c5b30230a7f30b4a58a8d33b34862fa6dcdd',
+      'reference' => 'd8e65d5743025c390443dc87cebc0746fab33598',
     ),
     'flarum/lang-english' => 
     array (
@@ -1749,12 +1749,12 @@ private static $installed = array (
     ),
     'realodix/flarum-ext-indonesian' => 
     array (
-      'pretty_version' => '1.14.3',
-      'version' => '1.14.3.0',
+      'pretty_version' => '1.14.4',
+      'version' => '1.14.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e683e9fc9c5750ff293e9deceaa771c3ced2ffc2',
+      'reference' => '80215ef669cc0961698e97f58333165c8a4edc48',
     ),
     'reflar/doorman' => 
     array (

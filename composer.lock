@@ -11086,16 +11086,16 @@
         },
         {
             "name": "realodix/flarum-ext-indonesian",
-            "version": "1.14.3",
+            "version": "1.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realodix/flarum-ext-indonesian.git",
-                "reference": "e683e9fc9c5750ff293e9deceaa771c3ced2ffc2"
+                "reference": "80215ef669cc0961698e97f58333165c8a4edc48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/e683e9fc9c5750ff293e9deceaa771c3ced2ffc2",
-                "reference": "e683e9fc9c5750ff293e9deceaa771c3ced2ffc2",
+                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/80215ef669cc0961698e97f58333165c8a4edc48",
+                "reference": "80215ef669cc0961698e97f58333165c8a4edc48",
                 "shasum": ""
             },
             "require": {
@@ -11144,7 +11144,7 @@
                 "issues": "https://github.com/realodix/flarum-ext-indonesian/issues",
                 "source": "https://github.com/realodix/flarum-ext-indonesian"
             },
-            "time": "2020-12-05T10:04:36+00:00"
+            "time": "2020-12-13T20:00:24+00:00"
         },
         {
             "name": "rikusen0335/lang-japanese-extended",
