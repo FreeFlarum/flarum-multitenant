@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd8e65d5743025c390443dc87cebc0746fab33598',
+    'reference' => '069c0f9a0e256b2ec3a293bfc6e0d626810dc1f4',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd8e65d5743025c390443dc87cebc0746fab33598',
+      'reference' => '069c0f9a0e256b2ec3a293bfc6e0d626810dc1f4',
     ),
     'flarum/lang-english' => 
     array (
@@ -817,12 +817,12 @@
     ),
     'fof/profile-image-crop' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
+      'pretty_version' => '0.2.1',
+      'version' => '0.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '20d9d7e24e93bfdf08cce6e3d681d0c878cef437',
+      'reference' => 'b0b7c724a15172d69054b3331dd402e8213cecf8',
     ),
     'fof/reactions' => 
     array (
@@ -1483,12 +1483,12 @@
     ),
     'monolog/monolog' => 
     array (
-      'pretty_version' => '1.25.5',
-      'version' => '1.25.5.0',
+      'pretty_version' => '1.26.0',
+      'version' => '1.26.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1817faadd1846cd08be9a49e905dc68823bc38c0',
+      'reference' => '2209ddd84e7ef1256b7af205d0717fb62cfc9c33',
     ),
     'mtdowling/jmespath.php' => 
     array (
@@ -1675,8 +1675,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0.0',
-        1 => '1.0',
+        0 => '1.0',
+        1 => '1.0.0',
       ),
     ),
     'psr/simple-cache' => 
