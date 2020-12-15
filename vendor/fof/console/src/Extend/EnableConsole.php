@@ -10,8 +10,16 @@ use Illuminate\Contracts\Container\Container;
 
 class EnableConsole implements ExtenderInterface
 {
+    static $instantiated = false;
+
     public function extend(Container $container, Extension $extension = null)
     {
-        $container->make(Application::class)->register(ConsoleProvider::class);
+        if (! static::$instantiated) {
+            require_once __DIR__ . '/../helpers.php';
+
+            $container->make(Application::class)->register(ConsoleProvider::class);
+
+            static::$instantiated = true;
+        }
     }
 }

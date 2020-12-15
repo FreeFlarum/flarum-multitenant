@@ -16,6 +16,10 @@ class ConsoleProvider extends AbstractServiceProvider
 {
     public function register()
     {
+        // Used by Laravel to proxy artisan commands to its binary.
+        // Flarum uses a similar binary, but it's called flarum.
+        if (! defined('ARTISAN_BINARY')) define('ARTISAN_BINARY', 'flarum');
+
         $this->app->singleton(Schedule::class);
         $this->app->singleton(Factory::class);
 

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '069c0f9a0e256b2ec3a293bfc6e0d626810dc1f4',
+    'reference' => '8d113b2370ee425388d11c431bb5de7470a525ea',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -57,12 +57,12 @@
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.168.3',
-      'version' => '3.168.3.0',
+      'pretty_version' => '3.169.0',
+      'version' => '3.169.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '49ef1f905388c8185012c9651b80941b8f2a218d',
+      'reference' => 'd15a231355e4435fc33bab83df075ec31edd0a9b',
     ),
     'axy/backtrace' => 
     array (
@@ -457,7 +457,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '069c0f9a0e256b2ec3a293bfc6e0d626810dc1f4',
+      'reference' => '8d113b2370ee425388d11c431bb5de7470a525ea',
     ),
     'flarum/lang-english' => 
     array (
@@ -592,12 +592,12 @@
     ),
     'fof/bbcode-details' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
+      'pretty_version' => '0.2.1',
+      'version' => '0.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '10bd9411b392a79b6e842fec6517de0992f8cd69',
+      'reference' => '2f72f8a2ab5f118291e9b3d48824578a161530bb',
     ),
     'fof/best-answer' => 
     array (
@@ -628,12 +628,12 @@
     ),
     'fof/console' => 
     array (
-      'pretty_version' => '0.6.0',
-      'version' => '0.6.0.0',
+      'pretty_version' => '0.6.1',
+      'version' => '0.6.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4e34f44bb559b0193c5a280e68449cfb00ac7e9f',
+      'reference' => '4ae0d161f79abac21cca19125e42a4bfe020586a',
     ),
     'fof/default-group' => 
     array (
@@ -646,12 +646,12 @@
     ),
     'fof/default-user-preferences' => 
     array (
-      'pretty_version' => '0.3.0',
-      'version' => '0.3.0.0',
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f3f361e9a0fb562ed8d21415893966b6d84df99a',
+      'reference' => 'c42c05fb7bb6c433d23364d1371b03885dfca603',
     ),
     'fof/doorman' => 
     array (
@@ -1675,8 +1675,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 

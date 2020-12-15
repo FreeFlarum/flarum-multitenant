@@ -8,8 +8,16 @@
   "license": "MIT",
   "support": {
     "issues": "https://github.com/FriendsOfFlarum/bbcode-details/issues",
-    "source": "https://github.com/FriendsOfFlarum/bbcode-details"
+    "source": "https://github.com/FriendsOfFlarum/bbcode-details",
+    "forum": "https://discuss.flarum.org/d/18796"
   },
+  "homepage": "https://friendsofflarum.org",
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://opencollective.com/fof/donate"
+    }
+  ],
   "require": {
     "flarum/core": "^0.1.0-beta.14"
   },
@@ -35,6 +43,7 @@
   "extra": {
     "flarum-extension": {
       "title": "FoF BBCode Details",
+      "category": "formatting",
       "icon": {
         "name": "fas fa-minus-square",
         "backgroundColor": "#e74c3c",

@@ -224,16 +224,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.168.3",
+            "version": "3.169.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "49ef1f905388c8185012c9651b80941b8f2a218d"
+                "reference": "d15a231355e4435fc33bab83df075ec31edd0a9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/49ef1f905388c8185012c9651b80941b8f2a218d",
-                "reference": "49ef1f905388c8185012c9651b80941b8f2a218d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d15a231355e4435fc33bab83df075ec31edd0a9b",
+                "reference": "d15a231355e4435fc33bab83df075ec31edd0a9b",
                 "shasum": ""
             },
             "require": {
@@ -308,9 +308,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.168.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.169.0"
             },
-            "time": "2020-12-11T19:12:18+00:00"
+            "time": "2020-12-14T19:12:33+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -3243,16 +3243,16 @@
         },
         {
             "name": "fof/bbcode-details",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/bbcode-details.git",
-                "reference": "10bd9411b392a79b6e842fec6517de0992f8cd69"
+                "reference": "2f72f8a2ab5f118291e9b3d48824578a161530bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/bbcode-details/zipball/10bd9411b392a79b6e842fec6517de0992f8cd69",
-                "reference": "10bd9411b392a79b6e842fec6517de0992f8cd69",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/bbcode-details/zipball/2f72f8a2ab5f118291e9b3d48824578a161530bb",
+                "reference": "2f72f8a2ab5f118291e9b3d48824578a161530bb",
                 "shasum": ""
             },
             "require": {
@@ -3265,6 +3265,7 @@
             "extra": {
                 "flarum-extension": {
                     "title": "FoF BBCode Details",
+                    "category": "formatting",
                     "icon": {
                         "name": "fas fa-minus-square",
                         "backgroundColor": "#e74c3c",
@@ -3296,20 +3297,22 @@
                 }
             ],
             "description": "Details BBCode for Flarum",
+            "homepage": "https://friendsofflarum.org",
             "keywords": [
                 "flarum"
             ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/18796",
                 "issues": "https://github.com/FriendsOfFlarum/bbcode-details/issues",
                 "source": "https://github.com/FriendsOfFlarum/bbcode-details"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/fof",
-                    "type": "open_collective"
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
                 }
             ],
-            "time": "2020-12-08T16:43:20+00:00"
+            "time": "2020-12-15T09:40:21+00:00"
         },
         {
             "name": "fof/best-answer",
@@ -3520,16 +3523,16 @@
         },
         {
             "name": "fof/console",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/console.git",
-                "reference": "4e34f44bb559b0193c5a280e68449cfb00ac7e9f"
+                "reference": "4ae0d161f79abac21cca19125e42a4bfe020586a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/console/zipball/4e34f44bb559b0193c5a280e68449cfb00ac7e9f",
-                "reference": "4e34f44bb559b0193c5a280e68449cfb00ac7e9f",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/console/zipball/4ae0d161f79abac21cca19125e42a4bfe020586a",
+                "reference": "4ae0d161f79abac21cca19125e42a4bfe020586a",
                 "shasum": ""
             },
             "require": {
@@ -3578,7 +3581,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-10-20T22:06:38+00:00"
+            "time": "2020-12-14T08:43:14+00:00"
         },
         {
             "name": "fof/default-group",
@@ -3650,20 +3653,20 @@
         },
         {
             "name": "fof/default-user-preferences",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/default-user-preferences.git",
-                "reference": "f3f361e9a0fb562ed8d21415893966b6d84df99a"
+                "reference": "c42c05fb7bb6c433d23364d1371b03885dfca603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/default-user-preferences/zipball/f3f361e9a0fb562ed8d21415893966b6d84df99a",
-                "reference": "f3f361e9a0fb562ed8d21415893966b6d84df99a",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/default-user-preferences/zipball/c42c05fb7bb6c433d23364d1371b03885dfca603",
+                "reference": "c42c05fb7bb6c433d23364d1371b03885dfca603",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
+                "flarum/core": "^0.1.0-beta.14"
             },
             "replace": {
                 "piotr-tokarczyk/flarum-user-default-preferences": "*"
@@ -3672,6 +3675,7 @@
             "extra": {
                 "flarum-extension": {
                     "title": "FoF Default User Preferences",
+                    "category": "feature",
                     "icon": {
                         "name": "fas fa-reply-all",
                         "backgroundColor": "#e74c3c",
@@ -3693,30 +3697,28 @@
             ],
             "authors": [
                 {
-                    "name": "Piotr Tokarczyk",
-                    "role": "Developer (Original)"
-                },
-                {
                     "name": "David Sevilla Martín",
                     "email": "david.s@redevs.org",
                     "role": "Developer"
                 }
             ],
             "description": "Enable emails for replies and mentions by default in user preferences",
+            "homepage": "https://friendsofflarum.org",
             "keywords": [
                 "flarum"
             ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/18607",
                 "issues": "https://github.com/FriendsOfFlarum/default-user-preferences/issues",
                 "source": "https://github.com/FriendsOfFlarum/default-user-preferences"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/fof",
-                    "type": "open_collective"
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
                 }
             ],
-            "time": "2020-12-08T12:18:13+00:00"
+            "time": "2020-12-14T22:28:45+00:00"
         },
         {
             "name": "fof/doorman",
