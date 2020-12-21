@@ -2,6 +2,110 @@ CHANGELOG
 =========
 
 
+0.4.0 (2020-12-20)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń dayjs.
+* Usunięto przestarzałe frazy dla głównego silnika Flarum (wspierana jest wersja `0.1.0-beta.14` lub wyższa).
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`flarum/nicknames`](https://github.com/flarum/nicknames)
+
+
+**Usunięto przestarzałe frazy dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`clarkwinkelmann/flarum-ext-author-change`](https://github.com/clarkwinkelmann/flarum-ext-author-change)
+* [`clarkwinkelmann/flarum-ext-who-read`](https://github.com/clarkwinkelmann/flarum-ext-who-read)
+* [`flarum/tags`](https://github.com/flarum/tags)
+* [`fof/analytics`](https://github.com/FriendsOfFlarum/analytics)
+* [`fof/auth-gitlab`](https://github.com/FriendsOfFlarum/auth-gitlab)
+* [`fof/ban-ips`](https://github.com/FriendsOfFlarum/ban-ips)
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/cookie-consent`](https://github.com/FriendsOfFlarum/cookie-consent)
+* [`fof/custom-footer`](https://github.com/FriendsOfFlarum/custom-footer)
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`fof/drafts`](https://github.com/FriendsOfFlarum/drafts)
+* [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
+* [`fof/formatting`](https://github.com/FriendsOfFlarum/formatting)
+* [`fof/forum-statistics-widget`](https://github.com/FriendsOfFlarum/forum-statistics-widget)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/github-sponsors`](https://github.com/FriendsOfFlarum/github-sponsors)
+* [`fof/linguist`](https://github.com/FriendsOfFlarum/linguist)
+* [`fof/links`](https://github.com/FriendsOfFlarum/links)
+* [`fof/mason`](https://github.com/FriendsOfFlarum/mason)
+* [`fof/masquerade`](https://github.com/FriendsOfFlarum/masquerade)
+* [`fof/moderator-notes`](https://github.com/FriendsOfFlarum/moderator-notes)
+* [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+* [`fof/oauth`](https://github.com/FriendsOfFlarum/oauth)
+* [`fof/pages`](https://github.com/FriendsOfFlarum/pages)
+* [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+* [`fof/secure-https`](https://github.com/FriendsOfFlarum/secure-https)
+* [`fof/share-social`](https://github.com/FriendsOfFlarum/share-social)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio)
+* [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory)
+* [`michaelbelgium/flarum-discussion-views`](https://github.com/MichaelBelgium/flarum-discussion-views)
+* [`michaelbelgium/mybb-to-flarum`](https://github.com/MichaelBelgium/mybb_to_flarum)
+* [`michaelbelgium/flarum-profile-views`](https://github.com/MichaelBelgium/flarum-profile-views)
+* [`sycho/flarum-profile-cover`](https://github.com/SychO9/flarum-profile-cover)
+* [`the-turk/flarum-diff`](https://github.com/the-turk/flarum-diff)
+* [`the-turk/flarum-mathren`](https://github.com/the-turk/flarum-mathren)
+* [`the-turk/flarum-password-strength`](https://github.com/the-turk/flarum-password-strength)
+* [`tituspijean/flarum-ext-auth-ldap`](https://github.com/tituspijean/flarum-ext-auth-ldap)
+
+
+**Usunięto wsparcie dla przestarzałych rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-post-date`](https://github.com/clarkwinkelmann/flarum-ext-post-date)
+* [`flagrow/flarum-ext-analytics`](https://github.com/flagrow/analytics)
+* [`flagrow/impersonate`](https://github.com/FriendsOfFlarum/impersonate)
+* [`flagrow/mason`](https://github.com/FriendsOfFlarum/mason)
+* [`flagrow/passport`](https://github.com/flagrow/passport)
+* [`flarumite/flarum-decontaminator`](https://github.com/flarumite/flarum-decontaminator)
+* [`kilowhat/flarum-ext-mailing`](https://github.com/kilowhat/flarum-ext-mailing)
+* [`reflar/cookie-consent`](https://github.com/FriendsOfFlarum/cookie-consent)
+* [`reflar/doorman`](https://github.com/FriendsOfFlarum/doorman)
+* [`zerosonesfun/announce`](https://github.com/zerosonesfun/announce)
+
+
+Wszystkie zmiany: [v0.3.23...v0.4.0](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.23...v0.4.0).
+
+
+0.3.23 (2020-12-20)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`fof/cookie-consent`](https://github.com/FriendsOfFlarum/cookie-consent)
+* [`luuhai48/oauth-google`](https://github.com/luuhai48/oauth-google)
+* [`luuhai48/oauth-linkedin`](https://github.com/luuhai48/oauth-linkedin)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/custom-footer`](https://github.com/FriendsOfFlarum/custom-footer)
+* [`fof/ignore-users`](https://github.com/FriendsOfFlarum/ignore-users)
+* [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+* [`fof/oauth`](https://github.com/FriendsOfFlarum/oauth)
+
+
+Wszystkie zmiany: [v0.3.22...v0.3.23](https://github.com/rob006-software/flarum-lang-polish/compare/v0.3.22...v0.3.23).
+
+
 0.3.22 (2020-12-12)
 -------------------
 

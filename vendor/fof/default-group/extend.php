@@ -13,14 +13,14 @@ namespace FoF\DefaultGroup;
 
 use Flarum\Extend;
 use Flarum\User\Event\Activated;
-use Illuminate\Events\Dispatcher;
 
 return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
+
     new Extend\Locales(__DIR__.'/resources/locale'),
-    function (Dispatcher $events) {
-        $events->listen(Activated::class, Listeners\AddDefaultGroup::class);
-    },
+
+    (new Extend\Event())
+        ->listen(Activated::class, Listeners\AddDefaultGroup::class),
 ];

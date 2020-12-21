@@ -1,5 +1,5 @@
 {
-    "name": "@clarkwinkelmann/flarum-ext-first-post-approval",
+    "name": "@clarkwinkelmann/first-post-approval",
     "private": true,
     "dependencies": {
         "flarum-webpack-config": "^0.1.0-beta.10",

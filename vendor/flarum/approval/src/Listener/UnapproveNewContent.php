@@ -14,23 +14,13 @@ use Flarum\Event\GetModelIsPrivate;
 use Flarum\Flags\Flag;
 use Flarum\Post\Event\Saving;
 use Flarum\Post\Post;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class UnapproveNewContent
 {
     /**
-     * @param Dispatcher $events
-     */
-    public function subscribe(Dispatcher $events)
-    {
-        $events->listen(Saving::class, [$this, 'unapproveNewPosts']);
-        $events->listen(GetModelIsPrivate::class, [$this, 'markUnapprovedContentAsPrivate']);
-    }
-
-    /**
      * @param Saving $event
      */
-    public function unapproveNewPosts(Saving $event)
+    public static function unapproveNewPosts(Saving $event)
     {
         $post = $event->post;
 
@@ -68,7 +58,7 @@ class UnapproveNewContent
      * @param GetModelIsPrivate $event
      * @return bool|null
      */
-    public function markUnapprovedContentAsPrivate(GetModelIsPrivate $event)
+    public static function markUnapprovedContentAsPrivate(GetModelIsPrivate $event)
     {
         if ($event->model instanceof Post || $event->model instanceof Discussion) {
             if (! $event->model->is_approved) {

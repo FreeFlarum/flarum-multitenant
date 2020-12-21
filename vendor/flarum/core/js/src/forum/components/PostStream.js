@@ -149,6 +149,11 @@ export default class PostStream extends Component {
    */
   onscroll(top = window.pageYOffset) {
     if (this.stream.paused) return;
+
+    this.updateScrubber(top);
+
+    if (this.stream.pagesLoading) return;
+
     const marginTop = this.getMarginTop();
     const viewportHeight = $(window).height() - marginTop;
     const viewportTop = top + marginTop;
@@ -174,8 +179,6 @@ export default class PostStream extends Component {
     // viewport) to 100ms.
     clearTimeout(this.calculatePositionTimeout);
     this.calculatePositionTimeout = setTimeout(this.calculatePosition.bind(this, top), 100);
-
-    this.updateScrubber(top);
   }
 
   updateScrubber(top = window.pageYOffset) {
@@ -287,7 +290,9 @@ export default class PostStream extends Component {
    * @return {Integer}
    */
   getMarginTop() {
-    return this.$() && $('#header').outerHeight() + parseInt(this.$().css('margin-top'), 10);
+    const headerId = app.screen() === 'phone' ? '#app-navigation' : '#header';
+
+    return this.$() && $(headerId).outerHeight() + parseInt(this.$().css('margin-top'), 10);
   }
 
   /**

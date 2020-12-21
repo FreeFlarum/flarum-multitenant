@@ -5,19 +5,14 @@
 fof-follow-tags:
   admin:
     settings:
-      following_all_label: '=> fof-follow-tags.ref.filtering_options.all'
       following_none_label: '=> fof-follow-tags.ref.filtering_options.none'
       following_page_default_label: 'Domyślny filtr na stronie "Obserwowane"'
       following_tags_label: '=> fof-follow-tags.ref.filtering_options.tags'
-      title: 'FriendsOfFlarum Follow Tags'
   email:
     body:
       newDiscussionInTag: "Witaj {recipient_display_name},\n\n{actor_display_name} utworzył dyskusję w tagu, który obserwujesz: {discussion_title}.\n\nAby zobaczyć nową dyskusję, kliknij poniższy link:\n{discussion_url}\n\n---\n\n{post_content}\n"
       newDiscussionTag: "Witaj {recipient_display_name},\n\n{actor_display_name} właśnie zmienił tagi przypisane do dyskusji utworzonej przez {author_display_name}, na jeden z tagów, które obserwujesz: {discussion_title}.\n\nAby zobaczyć dyskusję, kliknij poniższy link:\n{discussion_url}\n"
       newPostInTag: "Witaj {recipient_display_name},\n\n{actor_display_name} odpowiedział w dyskusji w tagu, który obserwujesz: {discussion_title}.\n\nAby zobaczyć nową aktywność, kliknij poniższy link:\n{post_url}\n\n---\n\n{post_content}\n\n---\n\nNie dostaniesz nowych powiadomień dotyczących tej dyskusji do czasu, aż zobaczysz nową zawartość.\n"
-    newDiscussionInTag: '[Nowa dyskusja w obserwowanym tagu] title'
-    newDiscussionTag: '[Zmieniono tagi dyskusji] title'
-    newPostInTag: '[Nowy post w obserwowanym tagu] title'
     subject:
       newDiscussionInTag: '[Nowa dyskusja w obserwowanym tagu] {title}'
       newDiscussionTag: '[Zmieniono tagi dyskusji] {title}'
@@ -29,7 +24,6 @@ fof-follow-tags:
     index:
       follow_tag_button: Obserwuj
       following:
-        following_all_label: '=> fof-follow-tags.ref.filtering_options.all'
         following_none_label: '=> fof-follow-tags.ref.filtering_options.none'
         following_tags_label: '=> fof-follow-tags.ref.filtering_options.tags'
       unfollow_tag_button: 'Przestań obserwować'
@@ -61,7 +55,6 @@ fof-follow-tags:
         heading: 'Obserwowanie tagów'
   ref:
     filtering_options:
-      all: 'Wszystko co obserwujesz'
       none: 'Obserwowane dyskusje'
       tags: 'Obserwowane tagi'
     follow: Obserwuj

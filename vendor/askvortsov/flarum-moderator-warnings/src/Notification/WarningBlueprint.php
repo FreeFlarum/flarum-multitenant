@@ -14,6 +14,7 @@ namespace Askvortsov\FlarumWarnings\Notification;
 use Askvortsov\FlarumWarnings\Model\Warning;
 use Flarum\Notification\Blueprint\BlueprintInterface;
 use Flarum\Notification\MailableInterface;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class WarningBlueprint implements BlueprintInterface, MailableInterface
 {
@@ -64,14 +65,23 @@ class WarningBlueprint implements BlueprintInterface, MailableInterface
     /**
      * {@inheritdoc}
      */
-    public function getEmailSubject()
+    public function getEmailSubject(TranslatorInterface $translator)
     {
-        $result = "{$this->warning->addedByUser->display_name} warned you with {$this->warning->strikes} strikes";
-        if ($this->warning->post_id != null) {
-            $result .= " in {$this->warning->post->discussion->title}";
-        }
+        return $translator->trans($this->getTranslation().'.subject', [
+            '{warner_display_name}' => $this->warning->addedByUser->display_name,
+            '{strikes}'             => $this->warning->strikes,
+            '{discussion_title}'    => $this->warning->post ? $this->warning->post->discussion->title : '',
+        ]);
+    }
 
-        return $result;
+    public function getTranslation()
+    {
+        return 'askvortsov-moderator-warnings.emails.'.($this->warning->post_id ? 'post_warned' : 'user_warned');
+    }
+
+    public function getUnparsedComment()
+    {
+        return Warning::getFormatter()->unparse($this->warning->public_comment);
     }
 
     /**

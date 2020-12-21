@@ -16,15 +16,12 @@ use Askvortsov\FlarumWarnings\Model\Warning;
 use Askvortsov\FlarumWarnings\Notification\WarningBlueprint;
 use Flarum\Api\Controller\AbstractCreateController;
 use Flarum\Notification\NotificationSyncer;
-use Flarum\User\AssertPermissionTrait;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
 class DeleteWarningController extends AbstractCreateController
 {
-    use AssertPermissionTrait;
-
     public $serializer = WarningSerializer::class;
 
     /**
@@ -46,7 +43,7 @@ class DeleteWarningController extends AbstractCreateController
     protected function data(ServerRequestInterface $request, Document $document)
     {
         $actor = $request->getAttribute('actor');
-        $this->assertCan($actor, 'user.deleteWarnings');
+        $actor->assertCan('user.deleteWarnings');
 
         $warning = Warning::find(Arr::get($request->getQueryParams(), 'warning_id'));
 

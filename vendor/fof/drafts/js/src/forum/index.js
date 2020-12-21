@@ -25,6 +25,10 @@ import ComposerState from 'flarum/states/ComposerState';
 import fillRelationship from './utils/fillRelationship';
 import DraftsListState from './states/DraftsListState';
 
+export * from './components';
+export * from './models';
+export * from './utils';
+
 app.initializers.add('fof-drafts', () => {
     app.store.models.drafts = Draft;
     User.prototype.drafts = Model.hasMany('drafts');
@@ -113,7 +117,9 @@ app.initializers.add('fof-drafts', () => {
         if (app.composer.body.attrs.draft) {
             delete app.composer.body.attrs.draft.data.attributes.relationships;
 
-            app.composer.body.attrs.draft.save(Object.assign(app.composer.body.attrs.draft.data.attributes, app.composer.data())).then(() => afterSave());
+            app.composer.body.attrs.draft
+                .save(Object.assign(app.composer.body.attrs.draft.data.attributes, app.composer.data()))
+                .then(() => afterSave());
         } else {
             app.store
                 .createRecord('drafts')

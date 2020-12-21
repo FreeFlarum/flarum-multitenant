@@ -33,7 +33,7 @@ flarum-flags:
       tooltip: '=> flarum-flags.ref.flagged_posts'
     post:
       dismiss_flag_button: 'Bildirmeyi Yoksay'
-      flagged_by_text: '{username] tarafından bildirildi'
+      flagged_by_text: '{username} tarafından bildirildi'
       flagged_by_with_reason_text: '{username} tarafından {reason} gerekçesiyle bildirildi'
     post_controls:
       flag_button: Bildir

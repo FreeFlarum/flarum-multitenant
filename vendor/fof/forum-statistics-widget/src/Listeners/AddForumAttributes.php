@@ -17,7 +17,6 @@ use Flarum\Discussion\Discussion;
 use Flarum\Post\Post;
 use Flarum\User\User;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class AddForumAttributes
 {
@@ -36,27 +35,18 @@ class AddForumAttributes
     }
 
     /**
-     * @param Dispatcher $events
+     * @param Serializing $serializer
      */
-    public function subscribe(Dispatcher $events)
+    public function __invoke(ForumSerializer $serializer)
     {
-        $events->listen(Serializing::class, [$this, 'prepareApiAttributes']);
-    }
+        $lastUser = User::orderBy('joined_at', 'DESC')->limit(1)->first();
+        $attributes['discussionsCount'] = $this->settings->get('fof-forum-statistics-widget.ignore_private_discussions') ? Discussion::where('is_private', 0)->count() : Discussion::count();
+        $attributes['postsCount'] = Post::where('type', 'comment')->count();
+        $attributes['usersCount'] = User::count();
+        $attributes['lastUser'] = $lastUser != null ? $lastUser->display_name : null;
+        $attributes['fof-forum-statistics-widget.widget_order'] = (int) $this->settings->get('fof-forum-statistics-widget.widget_order', 0);
+        $attributes['fof-forum-statistics-widget.ignore_private_discussions'] = (bool) $this->settings->get('fof-forum-statistics-widget.ignore_private_discussions', true);
 
-    /**
-     * @param Serializing $event
-     */
-    public function prepareApiAttributes(Serializing $event)
-    {
-        if ($event->isSerializer(ForumSerializer::class)) {
-            $lastUser = User::orderBy('joined_at', 'DESC')->limit(1)->first();
-            $event->attributes['discussionsCount'] = $this->settings->get('fof-forum-statistics-widget.ignore_private_discussions') ? Discussion::where('is_private', 0)->count() : Discussion::count();
-            $event->attributes['postsCount'] = Post::where('type', 'comment')->count();
-            $event->attributes['usersCount'] = User::count();
-            $event->attributes['lastUser'] = $lastUser != null ? $lastUser->username : null;
-            $event->attributes['fof-forum-statistics-widget.widget_order'] = (int) $this->settings->get('fof-forum-statistics-widget.widget_order', 0);
-            $event->attributes['fof-forum-statistics-widget.ignore_private_discussions'] = (bool) $this->settings->get('fof-forum-statistics-widget.ignore_private_discussions', true);
-        }
+        return $attributes;
     }
 }
-

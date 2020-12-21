@@ -5,15 +5,9 @@
 the-turk-mathren:
   admin:
     settings:
-      aliasBlockDelimiters: 'Aliasy separatorów dla wyrażeń blokowych'
-      aliasDelimitersHelp: 'To są <strong>aliasy</strong> dla <em>głównego separatora BBCode</em>. Jeśli masz specjalny separator (np. <code>$$</code>) na liście aliasów, MathRen przeskanuje cały post w poszukiwaniu tych specjalnych separatorów podczas zapisywania posta, i spróbuje zamienić je na główny separator BBCode. To może skutkować dłuższym czasem oczekiwania podczas zapisywania posta. Aby tego uniknąć możesz użyć dodatkowych separatorów BBCode zamiast separatorów specjalnych.'
-      aliasInlineDelimiters: 'Aliasy separatorów dla wyrażeń liniowych'
       blockDelimiters: 'Tagi <strong>BBCode</strong> dla wyrażeń blokowych'
-      blockMathClass: 'Tag <code>span</code> dla wyrażeń blokowych'
       decisiveKeywords: 'Lista słów kluczowych do ignorowania wyrażeń'
       decisiveKeywordsHelp: 'Możesz dodać jedno ze słów kluczowych wewnątrz tagu BBCode (np. <code>[math=<strong>keyword</strong>]%e%[/math]</code>), aby zapobiec renderowaniu wyrażenia.'
-      decisiveKeywordsInfo: 'Pierwsze słowo kluczowe z tej listy będzie używane jako domyślne w edytorze tekstowym.'
-      decisiveKeywordsWarning: 'Nie używaj znaków specjalnych! W przeciwnym razie zostanie wyrzucony wyjątek.'
       delimiters: Separatory
       delimitersHelp: 'Rozdziel je przecinkami. W miejsce <strong>%e%</strong> zostanie wstawione wyrażenie matematyczne.'
       description: 'Konfiguruj renderowanie wyrażeń TeX.'
@@ -31,16 +25,11 @@ the-turk-mathren:
       ignoringExpressions: 'Ignorowanie wyrażeń'
       ignoringExpressionsHelp: 'Rozdziel je przecinkami.'
       inlineDelimiters: 'Tagi <strong>BBCode</strong> dla wyrażeń liniowych'
-      inlineMathClass: 'Tag <code>span</code> dla wyrażeń liniowych'
       katexOptionsHeading: 'Opcje KaTeX'
       katexOptionsInfo: 'Więcej informacji na temat opcji KaTeX możesz znaleźć <a>tutaj</a>.'
       macros: Makra
       macrosHelp: 'Zestaw własnych makr.'
-      mainBlockDelimiter: 'Główny separator <strong>BBCode</strong> dla wyrażeń blokowych'
       mainDelimitersInfo: 'Pierwszy tag z tej listy będzie używany jako domyślny w edytorze tekstowym.'
-      mainInlineDelimiter: 'Główny separator <strong>BBCode</strong> dla wyrażeń liniowych'
-      mathClasses: 'Nazwy klas dla tagu <code>span</code>'
-      mathClassesHelp: 'Możesz łatwo ostylować tagi <code>span</code> wykorzystując własne klasy.'
       maxExpand: 'Limit dla rozwinięć makr'
       maxSize: 'Maksymalna wielkość (em)'
       mentions: 'Musisz włączyć rozszerzenie <code>flarum/mentions</code>, aby aktywować przycisk do cytowania.'
@@ -55,8 +44,6 @@ the-turk-mathren:
       syntaxInfo: 'Musisz je zapisać, korzystając ze składni JavaScript.'
       title: 'Ustawienia MathRen'
       validation: 'Walidacja pola "{field_key}" nie powiodła się.'
-      wrapperOptionsHeading: 'Opcje tagów HTML'
-      wrapperStyle: 'Ostyluj tagi <code>span</code>'
   forum:
     textEditor:
       blockExpression: 'Wyrażenia blokowe'

@@ -6,10 +6,18 @@
     "license": "MIT",
     "support": {
         "issues": "https://github.com/flarum/core/issues",
-        "source": "https://github.com/flarum/markdown"
+        "source": "https://github.com/flarum/markdown",
+        "forum": "https://discuss.flarum.org"
     },
+    "homepage": "https://flarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://flarum.org/donate/"
+        }
+    ],
     "require": {
-        "flarum/core": "^0.1.0-beta.14"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "extra": {
         "branch-alias": {
@@ -17,6 +25,7 @@
         },
         "flarum-extension": {
             "title": "Markdown",
+            "category": "formatting",
             "icon": {
                 "image": "icon.svg",
                 "backgroundColor": "#000",

@@ -7,13 +7,6 @@ core:
   # Translations in this namespace are used by the admin interface.
   admin:
 
-    # These translations are used in the placeholder Add Extension modal dialog.
-    add_extension:
-      developer_text: "Ako si developer, možeš <a>pročitati dokumentaciju</a> i napraviti vlastiti extension."
-      install_text: "U međuvremenu, možeš pogledati extensions na <a>Flarum Community tranici</a> i instalirati ih ručno preko Composer-a."
-      temporary_text: "Ecosystem za lahko dodavanje dodataka je u razvoju"
-      title: Dodaj Extension
-
     # These translations are used in the Appearance page.
     appearance:
       colored_header_label: Naslov u boji
@@ -26,6 +19,7 @@ core:
       custom_styles_heading: Custom Styles
       custom_styles_text: Prilagodite izgled Vašeg foruma dodavanjem vlastitog LESS/CSS koda.
       dark_mode_label: Dark Mode
+      description: "Prilagodite boje, logotipe i druge varijable na forumu."
       edit_css_button: Izmjeni Custom CSS
       edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: => core.ref.custom_header_title
@@ -35,11 +29,13 @@ core:
       logo_heading: Logo
       logo_text: Upload slike za prikaz na mjestu naslova foruma.
       submit_button: => core.ref.save_changes
+      title: Izgled
 
     # These translations are used in the Basics page.
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Zadani jezik
+      description: "Set your forum title, language, and other basic settings."
       display_name_heading: Korisničko ime za prikaz
       display_name_text: Odaberite upravljački program koji će se koristiti za korisnička imena za prikaz. Prema zadanim postavkama prikazuje se korisničko ime.
       forum_description_heading: Opis foruma
@@ -49,13 +45,18 @@ core:
       home_page_text: Podesi početnu stranicu koju će korisnik vidjeti kada posjeti forum.
       saved_message: Vaše izmjene su snimljene.
       show_language_selector_label: Prikaži opciju biranja jezika
+      slug_driver_heading: "Slug Driver: {model}"
+      slug_driver_text: Odaberite upravljački program koji će se koristiti za punjenje ovog modela.
       submit_button: => core.ref.save_changes
+      title: Osnove
       welcome_banner_heading: Baner dobrodošlice
       welcome_banner_text: Podesi text koji će se prikazivati na baneru na stranici Sve teme. Iskoristi ovo da poželiš dobrodošlicu novim korisnicima.
 
     # These translations are used in the Dashboard page.
     dashboard:
       clear_cache_button: Očisti Cache
+      description: Kratki pregled vašeg foruma.
+      title: Kontrolna ploča
       tools_button: Alati
 
     # These translations are used in the Edit Custom CSS modal dialog.
@@ -93,10 +94,10 @@ core:
     # These translations are used in the email page of the admin interface.
     email:
       addresses_heading: Adrese
+      description: "Configure the driver, settings and addresses your forum will use to send email."
       driver_heading: Izaberi drive
       driver_label: Driver
       from_label: Pošaljilac
-      heading: => core.ref.email
       mail_encryption_label: Enkripcija
       mail_host_label: Host
       mail_mailgun_domain_label: Domen
@@ -113,16 +114,31 @@ core:
       send_test_mail_text: "Ovo će poslati email pomoću gornje konfiguracije na vašu e-poštu, {email}."
       smtp_heading: SMTP Postavke
       submit_button: => core.ref.save_changes
-      text: Konfigurirajte upravljački program, postavke i adrese koje će vaš forum koristiti za slanje e-pošte.
+      title: => core.ref.email
 
-    # These translations are used in the Extensions page.
-    extensions:
-      add_button: Dodaj Extension
-      settings_button: => core.ref.settings
-      uninstall_button: Uninstall
+    # These translations are used on default extension pages.
+    extension:
+      confirm_uninstall: Deinstaliranjem će se ukloniti svi unosi u bazu podataka i sredstva povezana s proširenjem. Jeste li sigurni da želite nastaviti?
+      disabled: Isključi
+      enabled: Uključi
+      enable_to_see: Omogućite proširenje za prikaz i promjenu postavki.
+      info_links:
+        discuss: Discuss
+        documentation: Dokumentacija
+        donate: Doniraj
+        source: Source
+        support: Podrška
+        website: Website
+      no_permissions: Ovo proširenje nema dozvole.
+      no_settings: Ovo proširenje nema postavke.
+      open_modal: Otvori postavke
+      permissions_title: Dozvole
+      saved_message: Vaše promjene su sačuvane.
+      uninstall_button: Deinstalirati
 
     # These translations are used in the session dropdown menu.
     header:
+      get_help: Get Help
       log_out_button: => core.ref.log_out
 
     # These translations are used in the modal dialog displayed when loading extensions.
@@ -131,18 +147,27 @@ core:
 
     # These translations are used in the navigation bar.
     nav:
-      appearance_button: Izgled
-      appearance_text: "Prilagodi boje foruma, logo i ostale parametre."
-      basics_button: Osnovne postavke
-      basics_text: "Podesi naslov foruma, jezik i ostale osnovne postavke."
-      dashboard_button: Dashboard
-      dashboard_text: Pregled vašeg foruma.
+      appearance_button: => core.admin.appearance.title
+      appearance_title: => core.admin.appearance.description
+      basics_button: => core.admin.basics.title
+      basics_title: => core.admin.basics.description
+      categories:
+        authentication: Autentifikacija
+        core: Konfiguracija jezgre
+        discussion: Rasprava
+        feature: Karakteristike
+        formatting: Formatiranje
+        language: Jezici
+        moderation: Moderiranje
+        other: Ostala proširenja
+        theme: Teme
+      dashboard_button: => core.admin.dashboard.title
+      dashboard_title: => core.admin.dashboard.description
       email_button: => core.ref.email
-      email_text: "Konfiguracija email postavki za forum."
-      extensions_button: Extensions
-      extensions_text: Dodaj nove funkcionalnosti i prilagodi forum sebi.
-      permissions_button: Permisije
-      permissions_text: Podesi ko šta može vidjeti i uraditi.
+      email_title: => core.admin.email.description
+      permissions_button: => core.admin.permissions.title
+      permissions_title: => core.admin.permissions.description
+      search_placeholder: Pretraga proširenja
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
@@ -153,6 +178,7 @@ core:
       delete_discussions_label: Brisanje teme
       delete_posts_forever_label: Brisanje postova trajno
       delete_posts_label: Brisanje postova
+      description: Konfigurišite ko može šta da vidi i radi.
       edit_posts_label: Izmjena postova
       edit_users_label: Uredi korisnika
       global_heading: Globalno
@@ -165,6 +191,7 @@ core:
       reply_to_discussions_label: Odgovaranje na temu
       sign_up_label: Registracija
       start_discussions_label: Pokretanje tema
+      title: Dozvole
       view_discussions_label: Pregled tema
       view_hidden_groups_label: Pogledajte skrivene grupne značke
       view_last_seen_at_label: Pregled korisnikovog vremena zadnje aktivnosti
@@ -515,45 +542,45 @@ core:
       subject: Aktivirajte račun
       body: |
         Hej {username}!
-
+        
         Neko (nadamo se ti!) se registrovao na {forum} sa ovom email adresom.
-
-        Ako si to ti, klikni na sljedeći link i tvoj račun će biti aktiviran:
+        
+        Ako si to ti, jednostavno klikni na sljedeći link i vaš nalog će biti aktiviran:
         {url}
-
-        Ako se nisi ti prijavio, molimo da ignorišete ovaj email.
-
+        
+        Ako se niste vi prijavili, molimo da ignorišete ovaj email.
+        
     # These translations are used in emails sent when users change their email address.
     confirm_email:
       subject: Potvrdi novu email adresu
       body: |
         Hej {username}!
-
+        
         Neko (nadamo se ti!) je promjenio email adresu na {forum} u ovu.
-
+        
         Ako si to ti, klikni na sljedeći link i tvoj račun će biti aktiviran:
         {url}
-
+        
         Ako se nisi ti prijavio, molimo da ignorišete ovaj email.
-
+        
     # These translations are used in emails sent when users ask to reset their passwords.
     reset_password:
       subject: => core.ref.reset_your_password
       body: |
         Hej {username}!
-
+        
         Neko (nadamo se ti!) je poslao zahtjev za zaboravljenu šifru za tvoj račun na {forum}.
-
+        
         Ako si to ti, klikni na sljedeći link i resetuj šifru:
         {url}
-
+        
         Ako ne želiš da mjenjaš šifru, ignoriši ovaj email i ništa se neće desiti.
         
     # These translations are used when testing mailing configuration
     send_test:
       subject: Flarum Email Test
       body: |
-        Hey {username}!
+        Hej {username}!
         
         Ovo je testi email da biste potvrdili da vaša konfiguracija email-a Flarum-a radi ispravno.
         

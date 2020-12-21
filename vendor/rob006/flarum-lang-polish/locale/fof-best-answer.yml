@@ -9,12 +9,16 @@ fof-best-answer:
       best_answer_not_own_discussion: 'Wybieranie najlepszej odpowiedzi (cudza dyskusja)'
     settings:
       allow_select_own_post: 'Pozwól użytkownikowi wybrać swój własny post'
+      label:
+        advanced: Zaawansowane
+        general: Ogólne
+        reminders: Przypomnienia
+        reminders_notice: 'Aby przypomnienia działały, harmonogram zadań Flarum musi być prawidłowo skonfigurowany.'
       remind_tag_ids: 'Aby wysyłać przypomnienia tylko dla dyskusji w konkretnych tagach, wpisz tutaj ich ID (ID tagów rozdzielone przecinkami)'
       schedule_log_output: 'Zapisz logi harmonogramu zadań'
       schedule_on_one_server: 'Użyj dyrektywy "onOneServer()" dla harmonogramu zadań (task scheduler) (wymaga Redis/Memcache)'
       schedule_stop_overnight: 'Wyłącz przypomnienia w godzinach nocnych (21.00 - 8.00 według czasu serwera)'
       select_best_answer_reminder_days: 'Przypomnij użytkownikowi o wybraniu najlepszej odpowiedzi po X dniach'
-      title: 'Najlepsza odpowiedź'
       use_alt_ui: 'Użyj alternatywnego układu (przycisk najlepszej odpowiedzi w stopce posta)'
   email:
     body:
@@ -33,13 +37,10 @@ fof-best-answer:
       mismatch: 'Wybrany post nie istnieje w tej dyskusji'
     notification:
       awarded: 'Twój post został wybrany jako najlepsza odpowiedź przez {username}'
-      awarded_email: 'Twój post został wybrany jako najlepsza odpowiedź'
       best_answer_in_discussion: '{username} wybrał najlepszą odpowiedź w tej dyskusji'
-      best_answer_set_in_discussion_email: 'Wybrano najlepszą odpowiedź'
       content: 'Wybierz najlepszą odpowiedź, jeśli Twój problem został rozwiązany'
       preferences:
         awarded_best_answer: 'Ktoś oznaczył mój post jako najlepsza odpowiedź'
         best_answer_in_discussion: 'Ktoś wybrał najlepszą odpowiedź w dyskusji, w której uczestniczyłem'
-      select_email_title: 'Czy udało Ci się rozwiązać Twój problem?'
     remove_best_answer: 'To nie jest najlepsza odpowiedź'
     this_best_answer: 'Oznacz jako najlepsza odpowiedź'

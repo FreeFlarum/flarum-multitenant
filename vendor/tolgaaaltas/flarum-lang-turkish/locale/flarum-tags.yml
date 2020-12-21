@@ -18,7 +18,7 @@ flarum-tags:
       name_placeholder: '=> flarum-tags.ref.name'
       slug_label: URL
       submit_button: '=> core.ref.save_changes'
-      title: '=> flarum-tags.ref.create_tag'
+      title: 'Etiket Oluştur'
     nav:
       tags_button: '=> flarum-tags.ref.tags'
       tags_text: 'Tartışma düzenlemek için mevcut etiketlerin listesini yönetin.'
@@ -35,10 +35,13 @@ flarum-tags:
       title: 'Etiket Ayarları'
     tags:
       about_tags_text: 'Etiketler tartışmaları kategorilere ayırmak için kullanılır. Birincil etiketler geleneksel forum kategorileri gibidir: iki seviyeli bir hiyerarşide düzenlenebilirler. İkincil etiketler hiyerarşi veya sıraya sahip değildir ve mikro kategorilere ayırmak için kullanışlıdır.'
+      create_primary_tag_button: 'Birincil Etiket Oluşturun'
+      create_secondary_tag_button: 'İkincil Etiket Oluşturun'
       create_tag_button: '=> flarum-tags.ref.create_tag'
       primary_heading: 'Birincil Etiketler'
       secondary_heading: 'İkincil Etiketler'
       settings_button: Ayarlar
+      settings_heading: Ayarlar
   forum:
     all_tags:
       meta_description_text: 'Tüm Etiketler'

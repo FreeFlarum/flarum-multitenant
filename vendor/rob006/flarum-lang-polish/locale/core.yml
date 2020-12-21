@@ -91,21 +91,15 @@ core:
       mail_mailgun_domain_label: Domena
       mail_mailgun_region_label: Region
       mail_mailgun_secret_label: 'Secret key'
-      mail_mandrill_secret_label: 'Secret key'
       mail_password_label: '=> core.ref.password'
       mail_port_label: Port
-      mail_ses_key_label: Key
-      mail_ses_region_label: Region
-      mail_ses_secret_label: Secret
       mail_username_label: '=> core.ref.username'
       mailgun_heading: 'Ustawienia Mailguna'
-      mandrill_heading: 'Ustawienia Mandrilla'
       not_sending_message: 'Obecnie Flarum nie wysyła żadnych wiadomości e-mail. Może to być skutek wybranego sterownika lub błędów w konfiguracji.'
       send_test_mail_button: Wyślij
       send_test_mail_heading: 'Wyślij testowy e-mail'
       send_test_mail_success: 'Testowa wiadomość e-mail została pomyślnie wysłana!'
       send_test_mail_text: 'Wiadomość zostanie wysłana przy użyciu powyższej konfiguracji na Twój adres e-mail, {email}.'
-      ses_heading: 'Ustawienia SES'
       smtp_heading: 'Ustawienia SMTP'
       submit_button: '=> core.ref.save_changes'
       text: 'Skonfiguruj sterownik, ustawienia i adresy, z których Twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
@@ -138,10 +132,10 @@ core:
     loading:
       title: 'Proszę czekać...'
     nav:
-      appearance_button: 'Wygląd forum'
+      appearance_button: '=> core.admin.appearance.title'
       appearance_text: 'Dostosuj kolory, logo oraz inne ustawienia swojego forum.'
-      appearance_title: '=> core.admin.appearence.description'
-      basics_button: Podstawowe
+      appearance_title: '=> core.admin.appearance.description'
+      basics_button: '=> core.admin.basics.title'
       basics_text: 'Ustaw tytuł, język oraz inne podstawowe ustawienia swojego forum.'
       basics_title: '=> core.admin.basics.description'
       categories:
@@ -154,7 +148,7 @@ core:
         moderation: Moderacja
         other: 'Inne rozszerzenia'
         theme: Motywy
-      dashboard_button: Kokpit
+      dashboard_button: '=> core.admin.dashboard.title'
       dashboard_text: 'Podstawowe informacje dotyczące forum.'
       dashboard_title: '=> core.admin.dashboard.description'
       email_button: '=> core.ref.email'
@@ -162,7 +156,7 @@ core:
       email_title: '=> core.admin.email.description'
       extensions_button: Rozszerzenia
       extensions_text: 'Dodaj dodatkowe funkcje do forum i dostosuj je pod siebie.'
-      permissions_button: Uprawnienia
+      permissions_button: '=> core.admin.permissions.title'
       permissions_text: 'Skonfiguruj uprawnienia użytkowników i grup.'
       permissions_title: '=> core.admin.permissions.description'
       search_placeholder: 'Wyszukaj rozszerzenia'

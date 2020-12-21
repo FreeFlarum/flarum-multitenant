@@ -1,0 +1,27 @@
+reflar-cookie-consent:
+  admin:
+    settings:
+      title: Reflar Cookie Consent
+
+      configuration_title: Tùy chọn cấu hình
+      consentText: Nội dung tin nhắn
+      buttonText: Loại bỏ nút bấm văn bản
+      configuration_button_title: Tìm hiểu thêm nút bấm
+      learnMoreLinkText: Văn bản
+      learnMoreLinkUrl: Liên kết
+
+      theme_title: Tùy chọn Theme
+      ccTheme: Theme
+      theme_popup_title: Màu sắc Popup
+      backgroundColor: Background
+      textColor: Văn bản
+      theme_dismiss_title: Loại bỏ màu nút bấm
+      buttonBackgroundColor: Background
+      buttonTextColor: Văn bản
+
+      themes:
+        blocky: Blocky
+        edgeless: Edgeless
+        classic: Classic
+        custom: Tùy chỉnh
+        no_css: No CSS

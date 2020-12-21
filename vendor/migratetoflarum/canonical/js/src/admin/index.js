@@ -1,6 +1,8 @@
 import app from 'flarum/app';
-import CanonicalSettingsModal from './components/CanonicalSettingsModal';
+import ExtensionPage from './components/ExtensionPage';
 
 app.initializers.add('migratetoflarum-canonical', app => {
-    app.extensionSettings['migratetoflarum-canonical'] = () => app.modal.show(CanonicalSettingsModal);
+    app.extensionData
+        .for('migratetoflarum-canonical')
+        .registerPage(ExtensionPage);
 });

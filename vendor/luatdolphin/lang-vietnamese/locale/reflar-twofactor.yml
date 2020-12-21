@@ -1,0 +1,54 @@
+reflar-twofactor:
+  forum:
+    text: "Mã xác minh {forum} của bạn là: {code}"
+    onetouch:  "Yêu cầu đăng nhập vào {forum}"
+    accountlabel: Two Factor
+    incorrect_2fa: Mã xác minh không hợp lệ
+    2fa_disabled: Xác thực hai yếu tố đã bị vô hiệu hóa.
+    2fa_enabled: Xác thực hai yếu tố đã được kích hoạt
+    email:
+      body: Lưu ý Xác thực hai yếu tố đã được bật trên tài khoản của bạn. Điều này có nghĩa là khi đăng nhập, bạn sẽ cần nhập mã được tạo bởi ứng dụng TOTP, Authy hoặc qua tin nhắn văn bản trên điện thoại của bạn ngoài việc nhập tên người dùng và mật khẩu thông thường. Hãy nhớ giữ mã khôi phục của bạn ở một nơi an toàn. Bạn sẽ cần nó để đăng nhập vào tài khoản của mình nếu bạn mất quyền truy cập vào thiết bị di động.
+      subject: Xác thực hai yếu tố đã được kích hoạt trên tài khoản của bạn
+    modal:
+      useACode: Sử dụng mã
+      twofactor_title: Cài đặt Two Factor
+      oneTouchTitle: Yêu cầu Authy phê duyệt
+      oneTouchHeader: Đang đợi OneTouch phê duyệt
+      oneTouchCodeHeader: Nhập vào code từ ứng dụng Authy của bạn
+      oneTouchHeaderVerified: Đã phê duyệt!
+      heading: Cài đặt Two Factor
+      switch: Two Factor
+      2fa_heading: Two Factor Code
+      authy_heading: Cài đặt Authy
+      phone_heading: Xác minh bằng SMS
+      helpQR: Quét mã QR hoặc thêm mã thủ công từ Google Authenticator hoặc ứng dụng TOTP khác.
+      helpPhone: 'Chọn quốc gia của bạn, nhập số điện thoại của bạn, sau đó nhấp vào "Lưu SĐT"'
+      helpPhone2: 'Bây giờ bạn sẽ nhận được một văn bản có mã, nhập nó bên dưới và nhấp vào "Gửi"'
+      helpAuthy: 'Chọn quốc gia của bạn, nhập số điện thoại của bạn, sau đó nhấp vào "Cài đặt"'
+      helpAuthy2: 'Bây giờ bạn sẽ nhận được một văn bản có hướng dẫn để thiết lập Authy hoặc thông báo từ ứng dụng Authy của bạn. Sau khi thiết lập, nhập mã của bạn bên dưới và nhấp vào "Gửi"'
+      submitPhone: Lưu SĐT
+      otSetup: Cài đặt
+      placeholder: Mã xác minh một lần
+      button: Gửi
+      2fa_help: Nhập mã SMS hoặc TOTP xác minh một lần của bạn.
+      close: Tôi đã lưu mã của mình
+      recov: Mã phục hồi
+      login_title: Xác thực hai yếu tố
+      recov_header: Mã phục hồi
+      recov_help1: Vui lòng lưu các mã này, chúng sẽ không được hiển thị lại!
+      recov_help2: Đây là cách duy nhất để bạn quay lại tài khoản nếu bạn mất quyền truy cập vào điện thoại hoặc ứng dụng TOTP.
+      stPhone: Chuyển sang thiết lập SĐT
+      stAuthy: Chuyển sang thiết lập Authy
+      stTOTP: Chuyển sang thiết lập TOTP
+      back: Quay lại
+  admin:
+      settings:
+        title: Cài đặt TwoFactor
+        help: "Nhận tài khoản SID và mã Auth Token của bạn từ <a>https://twilio.com/console</a>, cũng như số điện thoại của bạn từ <a2>https://twilio.com/console/phone-numbers/incoming</a2>"
+        enable: Kích hoạt Twillio
+        authyHelp: "Nhận khóa API của bạn và tùy chỉnh giao diện trong ứng dụng Authy tại đây: <a>https://www.twilio.com/console/authy</a>"
+        enableAuthy: Kích hoạt Authy OneTouch
+        authyApi: Authy API Key
+        sid: Twillio Account SID
+        token: Twillio Auth Token
+        number: Twillio Phone Number

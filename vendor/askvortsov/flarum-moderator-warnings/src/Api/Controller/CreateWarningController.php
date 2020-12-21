@@ -19,15 +19,12 @@ use Flarum\Foundation\ValidationException;
 use Flarum\Locale\Translator;
 use Flarum\Notification\NotificationSyncer;
 use Flarum\Post\Post;
-use Flarum\User\AssertPermissionTrait;
 use Illuminate\Support\Carbon;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
 class CreateWarningController extends AbstractCreateController
 {
-    use AssertPermissionTrait;
-
     public $serializer = WarningSerializer::class;
     /**
      * @var NotificationSyncer
@@ -54,7 +51,7 @@ class CreateWarningController extends AbstractCreateController
     protected function data(ServerRequestInterface $request, Document $document)
     {
         $actor = $request->getAttribute('actor');
-        $this->assertCan($actor, 'user.manageWarnings');
+        $actor->assertCan('user.manageWarnings');
 
         $requestData = $request->getParsedBody()['data']['attributes'];
 

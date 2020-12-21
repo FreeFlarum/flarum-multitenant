@@ -11,18 +11,12 @@ the-turk-diff:
       selfRollbackEditHistory: 'Przywracanie wersji z historii edycji własnych postów'
       viewEditHistory: 'Przeglądanie historii edycji'
     settings:
-      allowSwitch: 'Pozwól użytkownikom przełączać tryb renderowania'
       archiveInfo: 'Zauważ, że możesz wyłączyć obie opcje i ręcznie uruchomić komendę <code>php flarum diff:archive</code>, aby zarchiwizować stare rewizje.'
       archiveOlds: 'Archiwizuj stare rewizje'
       archiveOldsInfo: 'Jeśli <strong>x ≥ A</strong>, pierwszych <strong>y=mx+b</strong> rewizji danego posta zostanie scalonych oraz skompresowanych. <strong>x</strong> to liczba rewizji danego posta. <strong>y</strong> zostanie zaokrąglone w dół do liczby całkowitej.'
       charLevel: 'Na poziomie znaków'
-      combined: 'Kombinacja (HTML)'
-      customHTML: 'Niestandardowy widok'
       dbOptimisation: 'Optymalizacje bazy danych'
       detailLevel: 'Stopień szczegółowości'
-      displayMode: 'Tryb wyświetlania (HTML)'
-      enableSyncScroll: 'Włącz synchronizację przewijania dla widoku wyświetlania różnic obok siebie'
-      inline: 'W linii (HTML)'
       lineLevel: 'Na poziomie linii'
       mainPostOnly: 'Przechowuj rewizje tylko pierwszego posta w dyskusji'
       mergeThreshold: 'Próg scalania różnic dla trybu wyświetlania "kombinacja"'
@@ -31,10 +25,7 @@ the-turk-diff:
       neighborLinesHelp: 'Podaj liczbę sąsiednich linii, które powinny być wyświetlane.'
       noneLevel: Brak
       onlyUnsigned: 'Dozwolone są jedynie <strong>nieujemne liczby całkowite</strong>!'
-      renderMode: 'Tryb renderowania'
       separateBlock: 'Wyświetl separator pomiędzy osobnymi partiami różnic w wyrenderowanym HTMLu'
-      sideBySide: 'Obok siebie (HTML)'
-      tabularHTML: 'Widok tabelaryczny'
       textFormatting: 'Włącz formatowanie tekstu dla podglądów'
       title: 'Ustawienia historii edycji'
       useCrons: 'Użyj crona do archiwizowania starych rewizji'
@@ -42,18 +33,14 @@ the-turk-diff:
       usePoint: 'Użyj <strong>kropki</strong> jako separator dziesiętny dla liczb niecałkowitych.'
       wordLevel: 'Na poziomie słów'
   forum:
-    combined: Kombinacja
     confirmDelete: 'Czy jesteś pewien, że chcesz usunąć treść tej rewizji z historii?'
     confirmRollback: 'Czy jesteś pewien, że chcesz zmienić swój post?'
     createdInfo: '{username} utworzył {ago}'
-    createdTooltip: '{username} utworzył {ago}'
-    currentContent: 'obecna treść'
     deleteButton: '=> core.forum.post_controls.delete_button'
     deleteErrorMessage: 'Usuwanie treści rewizji nie powiodło się.'
     deleteSuccessMessage: 'Treść rewizji została usunięta.'
     deletedInfo: '{username} usunął tę treść {ago}'
     deletedText: (usunięto)
-    deletedTooltip: '{username} usunął treść tej rewizji {ago}'
     differences:
       currentContent: 'obecną treścią'
       originalContent: 'oryginalną treścią'
@@ -62,11 +49,8 @@ the-turk-diff:
     editedInfo: '=> core.forum.post.edited_tooltip'
     editedText: '=> core.forum.post.edited_text'
     emptyText: 'Brak rewizji'
-    inline: 'W linii'
-    mostRecent: najnowsze
     noDiff: 'Te dwie wersje niczym się nie różnią.'
     optionsButton: Opcje
-    originalContent: 'oryginalna treść'
     previewMode:
       currentContent: 'obecną treść'
       originalContent: 'oryginalną treść'
@@ -74,13 +58,11 @@ the-turk-diff:
       sentence: 'Przeglądasz {content}'
     revertChangesButton: 'Cofnij zmiany'
     revisionInfo: 'Edytowano {revisionCount} raz, najnowsze na górze|Edytowano {revisionCount} razy, najnowsze na górze'
-    revisionWithNumber: 'rewizja nr {number}'
     revisions: '{revisionCount} rewizja | {revisionCount} rewizje | {revisionCount} rewizji'
     rollbackButton: 'Przywróć do wersji {number}'
     rollbackErrorMessage: 'Nie udało się przywrócić poprzedniej wersji posta.'
     rollbackSuccessMessage: 'Poprzednia wersja posta została przywrócona.'
     rollbackToOriginalButton: 'Przywróć oryginalną wersję'
-    sideBySide: 'Obok siebie'
     tooltips:
       combined: Kombinacja
       inline: 'W linii'

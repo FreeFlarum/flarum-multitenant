@@ -16,10 +16,18 @@
     ],
     "support": {
         "issues": "https://github.com/FriendsOfFlarum/pretty-mail/issues",
-        "source": "https://github.com/FriendsOfFlarum/pretty-mail"
+        "source": "https://github.com/FriendsOfFlarum/pretty-mail",
+        "forum": "https://discuss.flarum.org/d/11178"
     },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
     "require": {
-        "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "replace": {
         "reflar/pretty-mail": "*"
@@ -27,6 +35,7 @@
     "extra": {
         "flarum-extension": {
             "title": "FoF Pretty Mail",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-envelope-open",
                 "backgroundColor": "#e74c3c",
@@ -34,7 +43,7 @@
             }
         },
         "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/11178-friendsofflarum-pretty-mail"
+            "discuss": "https://discuss.flarum.org/d/11178"
         }
     },
     "autoload": {

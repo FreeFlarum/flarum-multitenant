@@ -15,7 +15,6 @@ use Flarum\Database\AbstractModel;
 use Flarum\Database\ScopeVisibilityTrait;
 use Flarum\Discussion\Discussion;
 use Flarum\Event\ConfigureUserPreferences;
-use Flarum\Event\PrepareUserGroups;
 use Flarum\Foundation\EventGeneratorTrait;
 use Flarum\Group\Group;
 use Flarum\Group\Permission;
@@ -30,7 +29,6 @@ use Flarum\User\Event\CheckingPassword;
 use Flarum\User\Event\Deleted;
 use Flarum\User\Event\EmailChanged;
 use Flarum\User\Event\EmailChangeRequested;
-use Flarum\User\Event\GetDisplayName;
 use Flarum\User\Event\PasswordChanged;
 use Flarum\User\Event\Registered;
 use Flarum\User\Event\Renamed;
@@ -145,6 +143,9 @@ class User extends AbstractModel
             Notification::whereSubject($user)->delete();
         });
 
+        /**
+         * @deprecated beta 15, remove beta 16
+         */
         static::$dispatcher->dispatch(
             new ConfigureUserPreferences
         );
@@ -327,8 +328,7 @@ class User extends AbstractModel
      */
     public function getDisplayNameAttribute()
     {
-        // Event is deprecated in beta 14, remove in beta 15.
-        return static::$dispatcher->until(new GetDisplayName($this)) ?: static::$displayNameDriver->displayName($this);
+        return static::$displayNameDriver->displayName($this);
     }
 
     /**
@@ -624,7 +624,7 @@ class User extends AbstractModel
      * @param mixed $arguments
      * @throws PermissionDeniedException
      */
-    public function assertCan($ability, $arguments = [])
+    public function assertCan($ability, $arguments = null)
     {
         $this->assertPermission(
             $this->can($ability, $arguments)
@@ -722,9 +722,6 @@ class User extends AbstractModel
             $groupIds = array_merge($groupIds, [Group::MEMBER_ID], $this->groups->pluck('id')->all());
         }
 
-        /** @deprecated in beta 14, remove in beta 15 */
-        event(new PrepareUserGroups($this, $groupIds));
-
         foreach (static::$groupProcessors as $processor) {
             $groupIds = $processor($this, $groupIds);
         }
@@ -765,7 +762,7 @@ class User extends AbstractModel
      * @param array|mixed $arguments
      * @return bool
      */
-    public function can($ability, $arguments = [])
+    public function can($ability, $arguments = null)
     {
         return static::$gate->allows($this, $ability, $arguments);
     }
@@ -775,7 +772,7 @@ class User extends AbstractModel
      * @param array|mixed $arguments
      * @return bool
      */
-    public function cannot($ability, $arguments = [])
+    public function cannot($ability, $arguments = null)
     {
         return ! $this->can($ability, $arguments);
     }
@@ -807,6 +804,8 @@ class User extends AbstractModel
     }
 
     /**
+     * @deprecated beta 15, remove beta 16. Use `registerPreference` instead.
+     *
      * Register a preference with a transformer and a default value.
      *
      * @param string $key
@@ -814,6 +813,18 @@ class User extends AbstractModel
      * @param mixed $default
      */
     public static function addPreference($key, callable $transformer = null, $default = null)
+    {
+        return static::registerPreference($key, $transformer, $default);
+    }
+
+    /**
+     * Register a preference with a transformer and a default value.
+     *
+     * @param string $key
+     * @param callable $transformer
+     * @param mixed $default
+     */
+    public static function registerPreference($key, callable $transformer = null, $default = null)
     {
         static::$preferences[$key] = compact('transformer', 'default');
     }

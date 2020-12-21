@@ -6,47 +6,37 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8d113b2370ee425388d11c431bb5de7470a525ea',
+    'reference' => '2f5c96e3b05b47014b9fbca842337199ebbe739c',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
   array (
-    'antoinefr/flarum-ext-money' => 
-    array (
-      'pretty_version' => 'v0.9.1',
-      'version' => '0.9.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '019e581154f09f735657d3f6c186b71f720c2e45',
-    ),
     'askvortsov/flarum-categories' => 
     array (
-      'pretty_version' => 'v1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bbad2a90a3605af4bcbbc7c3e7c327dd1ca3edfc',
+      'reference' => '96f9426f7016d9690674bae8dea8863ba84d42d2',
     ),
     'askvortsov/flarum-discussion-templates' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'v0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
-        0 => '9999999-dev',
       ),
-      'reference' => '996dc91d052acde94741c29bd9f3f1dfc19ed0bb',
+      'reference' => 'fd0e45a32165a50d6d0e8fad067ee14bbcd8ad29',
     ),
     'askvortsov/flarum-moderator-warnings' => 
     array (
-      'pretty_version' => 'v0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => 'v0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f9c661e954b2839c249d700104a9f4f4d67280bc',
+      'reference' => '47554debdd7d4a2b2dcf30b5a9db56088c3b8a58',
     ),
     'avatar4eg/flarum-ext-share-social' => 
     array (
@@ -57,12 +47,12 @@
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.169.0',
-      'version' => '3.169.0.0',
+      'pretty_version' => '3.171.2',
+      'version' => '3.171.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd15a231355e4435fc33bab83df075ec31edd0a9b',
+      'reference' => '742663a85ec84647f74dea454d2dc45bba180f9d',
     ),
     'axy/backtrace' => 
     array (
@@ -118,23 +108,14 @@
       ),
       'reference' => 'e5934e844546d660a62bccfa79cee53de951fd0c',
     ),
-    'clarkwinkelmann/flarum-ext-author-change' => 
-    array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '7339be13b0023e29c1bb00d7a2df6795d5ef9c64',
-    ),
     'clarkwinkelmann/flarum-ext-create-user-modal' => 
     array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '821c2482ae1c6a83136204f1f58b8b3559af9880',
+      'reference' => 'c648268bafe46a1d8a4fcf09164b2f9bb6a4a31d',
     ),
     'clarkwinkelmann/flarum-ext-emojionearea' => 
     array (
@@ -147,19 +128,12 @@
     ),
     'clarkwinkelmann/flarum-ext-first-post-approval' => 
     array (
-      'pretty_version' => '0.1.2',
-      'version' => '0.1.2.0',
+      'pretty_version' => '0.1.3',
+      'version' => '0.1.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'abe9a983203444c6802f29ab990aeb330602940d',
-    ),
-    'clarkwinkelmann/flarum-ext-post-date' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '*',
-      ),
+      'reference' => '066f3b94d86cfb01838953c8d2688f9c08e8b536',
     ),
     'components/font-awesome' => 
     array (
@@ -196,24 +170,6 @@
       array (
       ),
       'reference' => '7185454ca1282374b7485e248053f09efc61607c',
-    ),
-    'datitisev/flarum-ext-dashboard' => 
-    array (
-      'pretty_version' => 'v0.1.0-beta.9.2',
-      'version' => '0.1.0.0-beta9.2',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e6f7653544aaf5cddfe7424d63f5fb772ff17653',
-    ),
-    'datlechin/lang-vietnamese' => 
-    array (
-      'pretty_version' => '1.0.0',
-      'version' => '1.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '60063e841440f4a5c1ee463d73c62633e78370fe',
     ),
     'davis/flarum-ext-socialprofile' => 
     array (
@@ -333,13 +289,6 @@
         0 => '*',
       ),
     ),
-    'flagrow/mason' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '*',
-      ),
-    ),
     'flagrow/masquerade' => 
     array (
       'replaced' => 
@@ -377,12 +326,12 @@
     ),
     'flarum/approval' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '28960560bd28b8a4dc5f33e6b8b651720cc32b74',
+      'reference' => '6d73226a3dbe8867f48a53e98a2a7e55b33bbf32',
     ),
     'flarum/auth-facebook' => 
     array (
@@ -407,48 +356,48 @@
     ),
     'flarum/bbcode' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.12',
-      'version' => '0.1.0.0-beta12',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '165c47059e1f44cae56cc5462366c92ca96dcc33',
+      'reference' => 'f870df04a68175004d1e67be0a0c0ce1407b5fb9',
     ),
     'flarum/core' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14.1',
-      'version' => '0.1.0.0-beta14.1',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '967cd0e3ca793be8d83f8ba569fb0beb85452e85',
+      'reference' => 'f8edc2d827fee47dc78fbb75ee1d3b28580ed11d',
     ),
     'flarum/embed' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '9e4e84b7cd9d07df7b4991d5808f62b6d1981962',
+      'reference' => '3d3f72b6c8db74d6b92f74992eef8871a0088957',
     ),
     'flarum/emoji' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '4ed5eb7f44e43dd7f0fa636977bdc2f209da56bc',
+      'reference' => 'e51c59f0128e9c877ff61e2ce9efd63e861209b8',
     ),
     'flarum/flags' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14.1',
-      'version' => '0.1.0.0-beta14.1',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '614fad870f0189172830e3e86362de30afc8a466',
+      'reference' => '4a6d7657d1259c217b43f814ca3e4918ab55ef6b',
     ),
     'flarum/flarum' => 
     array (
@@ -457,115 +406,124 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8d113b2370ee425388d11c431bb5de7470a525ea',
+      'reference' => '2f5c96e3b05b47014b9fbca842337199ebbe739c',
     ),
     'flarum/lang-english' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14.1',
-      'version' => '0.1.0.0-beta14.1',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '121cbabefcd03b0b7d33808b7e06c6dc0392cf15',
+      'reference' => 'db94e7e178be298f266558953555cb6f5373a94e',
     ),
     'flarum/likes' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '5c5faa0d368c7c8ef8a6627676533ee88ab09197',
+      'reference' => '985ca7a2022148f64ac291c2e18c3300a0b1423c',
     ),
     'flarum/lock' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '133b77a5189f5dd89226fb8206616a855bb21d6d',
+      'reference' => '3dcbfc67af206e34095e32af5f96a603145db752',
     ),
     'flarum/markdown' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '07a005fcf3a1bcabbf897d82f0cd7029f9659f58',
+      'reference' => 'd27e1087b37ac9ae5375252d6b9bff31ff6ca71d',
     ),
     'flarum/mentions' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '8bcb66f7d728fc92c92c69333c40175c759eba9e',
+      'reference' => 'e785d89b43e483d9b6f5d070b9828c87b7bcb4b6',
+    ),
+    'flarum/nicknames' => 
+    array (
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ef05f8a8c6801a6336c0ba1338ce3d7d6abba605',
     ),
     'flarum/pusher' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14.1',
-      'version' => '0.1.0.0-beta14.1',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '7bdddae6db66c27a1daf76023039941ba2a43839',
+      'reference' => '1d7a94a26deed07a1b38eb3ef6ef2014043a10f4',
     ),
     'flarum/statistics' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => 'd3b559ffa892a6b15ad8d43aeccd55ebd2c7dc1e',
+      'reference' => '8764dc652d29ba68bc5dd69b7892b7e5c88c23ef',
     ),
     'flarum/sticky' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '6b12c19b0e1af91cd17c60ba975e36d46b13c4de',
+      'reference' => '57cf21950bc651f085e6c9427e7408df487ea4b4',
     ),
     'flarum/subscriptions' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => 'c92d14e93b0bf04eb098a2bb2396c316a4d11f19',
+      'reference' => 'f1ab545679f4fd14633ebdf66742d804314749f4',
     ),
     'flarum/suspend' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => 'd2afd730d40b5f64d3d0305abddf599b599f27a6',
+      'reference' => 'c00094d89baf32d9fae2e56fd82b54877eae4a06',
     ),
     'flarum/tags' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.14',
-      'version' => '0.1.0.0-beta14',
+      'pretty_version' => 'v0.1.0-beta.15',
+      'version' => '0.1.0.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '2a0766c81682f097c2168f42e12765cd2382c88a',
+      'reference' => '9f3a12376998b3d43bb996dd5ab1b4d822e677c2',
     ),
     'fof/analytics' => 
     array (
-      'pretty_version' => '0.10.1',
-      'version' => '0.10.1.0',
+      'pretty_version' => '0.11.0',
+      'version' => '0.11.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dc901932b4454b4bd0fc6d1e46b7e72f31af3a1c',
+      'reference' => 'a154e222688409662553597b6eb2ddfdd0b648de',
     ),
     'fof/auth-discord' => 
     array (
@@ -583,12 +541,12 @@
     ),
     'fof/ban-ips' => 
     array (
-      'pretty_version' => '0.3.0',
-      'version' => '0.3.0.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cf3d98f82408091adce033d34f19b47a0b02b610',
+      'reference' => '41d64ec897495d39c17038c9abaae2c44e579fb4',
     ),
     'fof/bbcode-details' => 
     array (
@@ -601,21 +559,21 @@
     ),
     'fof/best-answer' => 
     array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd36ef82a7735ccb29ff1f302070b7537878e2f43',
+      'reference' => 'd420028e11cdda98c2a81f1de799f3529be89d62',
     ),
     'fof/byobu' => 
     array (
-      'pretty_version' => '0.6.0-beta.2',
-      'version' => '0.6.0.0-beta2',
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0b05d1d65b8c7016e6943de68f56b4704b81d13f',
+      'reference' => 'a24237d97d380e565d7bf856f21158d0c0f343dc',
     ),
     'fof/components' => 
     array (
@@ -635,14 +593,23 @@
       ),
       'reference' => '4ae0d161f79abac21cca19125e42a4bfe020586a',
     ),
-    'fof/default-group' => 
+    'fof/cookie-consent' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b5d74a3a94ae7f34da851185eb8d60883f6d475d',
+      'reference' => 'ea01045106fe26ebbf98c6df4e994a44a6f0e823',
+    ),
+    'fof/default-group' => 
+    array (
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9d4c9a30c87466de0c1c6f3535b16818ef57c2ea',
     ),
     'fof/default-user-preferences' => 
     array (
@@ -655,21 +622,21 @@
     ),
     'fof/doorman' => 
     array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '595ca7bffa812654ad27401b854aa6537e998910',
+      'reference' => '7f93ada46dec12227243d8627f7344bcf7357086',
     ),
     'fof/drafts' => 
     array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e5a73b562b5da4a85fc9653fbd9dadaafc417652',
+      'reference' => 'cc77ec510c1c7f31c66a45b30a36b1c76798c32e',
     ),
     'fof/extend' => 
     array (
@@ -682,66 +649,57 @@
     ),
     'fof/filter' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'db557e244f3a67ab948393d41a1235fa406e4134',
-    ),
-    'fof/formatting' => 
-    array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6c9f557823a5b9998d7ff18a033692a5ca27afd2',
-    ),
-    'fof/forum-statistics-widget' => 
-    array (
       'pretty_version' => '0.3.0',
       'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cabbcaeced789df9f5cbddb1a5d28aa83a12a211',
+      'reference' => 'f50365c1d1024e4f3a6318d93b1216f914819762',
+    ),
+    'fof/formatting' => 
+    array (
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '31c6da0645a1f2cd6e50260835b4c66b95e70510',
+    ),
+    'fof/forum-statistics-widget' => 
+    array (
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bfd2009753025d750fb9990b1ba3bc80f68a9871',
     ),
     'fof/gamification' => 
     array (
-      'pretty_version' => '0.3.3',
-      'version' => '0.3.3.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e006bcb65ab8d2af7bd8d53addf40e8d4bc01405',
+      'reference' => '9942f467a776f8a469cb48673b878dc264a1c081',
     ),
     'fof/linguist' => 
     array (
-      'pretty_version' => '0.4.5',
-      'version' => '0.4.5.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd75f30a3c8ca585d66efd931b0cc79587dcff0f1',
+      'reference' => '1f1ceca2cd165a94bfb6dba3650d01ece08f468e',
     ),
     'fof/links' => 
     array (
-      'pretty_version' => '0.4.2',
-      'version' => '0.4.2.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '50aed2e516cbc09f9962d4b7adaf3a8019cc9408',
-    ),
-    'fof/mason' => 
-    array (
-      'pretty_version' => '0.4.2',
-      'version' => '0.4.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '286e964243f4f47bb90006b46099e7cd99245bf7',
+      'reference' => '7f4ed4b56bb14abe32910920fa846fa35a322898',
     ),
     'fof/masquerade' => 
     array (
@@ -754,66 +712,66 @@
     ),
     'fof/merge-discussions' => 
     array (
-      'pretty_version' => '0.4.0',
-      'version' => '0.4.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e5d4c6791d73667b16da461e1dac3b52791f7ad5',
-    ),
-    'fof/nightmode' => 
-    array (
-      'pretty_version' => '0.6.1',
-      'version' => '0.6.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5341c02469319b3ee5e022249f4cadb7bb0b2eef',
-    ),
-    'fof/oauth' => 
-    array (
-      'pretty_version' => '0.1.0',
-      'version' => '0.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd5eca0f3b58fcb7962c6a9b5ad3f0b460460fbf4',
-    ),
-    'fof/pages' => 
-    array (
       'pretty_version' => '0.5.1',
       'version' => '0.5.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bf6c062b0b5fcac74030f0cc9df0d6d186b1e72f',
+      'reference' => 'fa19cdf16b439d43f28a34fb9c586e8550ca09f0',
+    ),
+    'fof/nightmode' => 
+    array (
+      'pretty_version' => '0.7.1',
+      'version' => '0.7.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e885e50521e7b0a4d2a3f2e7591c3551f3db64e5',
+    ),
+    'fof/oauth' => 
+    array (
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '030df027f8243e6d25b286464768c24497b5b2d4',
+    ),
+    'fof/pages' => 
+    array (
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '08154f2d6bbf8b91d660e9168b7233e123dddfc4',
     ),
     'fof/polls' => 
     array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '02cb46b3be4a45bd9c1b652794d3decb065d3a38',
+      'reference' => 'b6f01e59cdf53b1a26093714322a2cec68660aa7',
     ),
     'fof/pretty-mail' => 
-    array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8f710e5feb5addb62d96f49bb69951d7ab4d0237',
-    ),
-    'fof/prevent-necrobumping' => 
     array (
       'pretty_version' => '0.3.0',
       'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '844cf7a65d50b07f27a624d2e2341bac6822fc85',
+      'reference' => '7081df0f08a98aad783b5aa16f5ac5cfb8f7be42',
+    ),
+    'fof/prevent-necrobumping' => 
+    array (
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b7df1805e4a4f8ca754a495e16baa4a00e88b320',
     ),
     'fof/profile-image-crop' => 
     array (
@@ -826,120 +784,120 @@
     ),
     'fof/reactions' => 
     array (
-      'pretty_version' => '0.4.5',
-      'version' => '0.4.5.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '25d2267fea3d848b3694f25ca160bb54ab5fe1f3',
+      'reference' => '562a5e60bf92af9d2ab8ca315c9c815e232e1937',
     ),
     'fof/secure-https' => 
-    array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8392f5c63c233b1ebf4beb337119c91a70cae1c0',
-    ),
-    'fof/share-social' => 
-    array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5667c1cd4fe1465ad3c7f9306b1ee1b7641f7328',
-    ),
-    'fof/sitemap' => 
-    array (
-      'pretty_version' => '0.5.4',
-      'version' => '0.5.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '9b052d3e8e477f09dc854c24497480835e4a45d0',
-    ),
-    'fof/socialprofile' => 
-    array (
-      'pretty_version' => '0.1.3',
-      'version' => '0.1.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '704500eb7a968b1d5a64bb7cc500e5bf12ea10c8',
-    ),
-    'fof/spamblock' => 
     array (
       'pretty_version' => '0.3.0',
       'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fc3a2a18efa7b521dfae176d8ba76bf18c0d0c7f',
+      'reference' => '8749a8a2d7c9773dcabc6b797e51cfe282ac746a',
     ),
-    'fof/split' => 
+    'fof/share-social' => 
     array (
-      'pretty_version' => '0.5.1',
-      'version' => '0.5.1.0',
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4f334dcb359d00b5879a4abec3c53589b480bdf4',
+      'reference' => '34ad3ade60bca15c34d485e5764157528f0a618d',
     ),
-    'fof/stopforumspam' => 
+    'fof/sitemap' => 
     array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd055731299bbd889c416573d1536309c31bd067a',
+      'reference' => 'e81b4a9ddab7e492be2494a23edfbe249f131628',
     ),
-    'fof/terms' => 
+    'fof/socialprofile' => 
     array (
-      'pretty_version' => '0.5.0',
-      'version' => '0.5.0.0',
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2f34dc195d713c38eba747e99c596686b09ad12d',
+      'reference' => 'cb33d9b0ac055428d2cc29975525302450469ca9',
     ),
-    'fof/transliterator' => 
-    array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ebdb4f540e3e0c2c283a17332fa064d7c66353f9',
-    ),
-    'fof/upload' => 
-    array (
-      'pretty_version' => '0.11.3',
-      'version' => '0.11.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd9fc9db13e1ece28a75fd79dfcdbba76a78341aa',
-    ),
-    'fof/user-bio' => 
-    array (
-      'pretty_version' => '0.3.1',
-      'version' => '0.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5e483404b3378960f6d41d4872335776486be3fe',
-    ),
-    'fof/user-directory' => 
+    'fof/spamblock' => 
     array (
       'pretty_version' => '0.4.0',
       'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3dcc37139da7a0ee716510f5d84e7a364394b317',
+      'reference' => '565cfa41d10f2eaea5a3e9c503e7db19e634e507',
+    ),
+    'fof/split' => 
+    array (
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4907653db8af083b4290e4091c89bc83c3082950',
+    ),
+    'fof/stopforumspam' => 
+    array (
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '517b99e5d901fcca399bf309ec764c0f99315d95',
+    ),
+    'fof/terms' => 
+    array (
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '126b9d3021293dc4b70796cfbbdca8a9e3c9aeb9',
+    ),
+    'fof/transliterator' => 
+    array (
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '95e49e261fd900af5c0f5dbeddfc02e6aefd3fdb',
+    ),
+    'fof/upload' => 
+    array (
+      'pretty_version' => '0.12.0',
+      'version' => '0.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ad7046dcad6034017015748fe114365a627f453c',
+    ),
+    'fof/user-bio' => 
+    array (
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5bd41a20fcc077ca6e4aeda4d05923616c4470be',
+    ),
+    'fof/user-directory' => 
+    array (
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b3dd04fb14ca9b7b3c35f6fa661b6bcd46be0d4e',
     ),
     'franzl/whoops-middleware' => 
     array (
@@ -1168,12 +1126,12 @@
     ),
     'kakifrucht/flarum-de-extended' => 
     array (
-      'pretty_version' => '0.1.2',
-      'version' => '0.1.2.0',
+      'pretty_version' => '0.1.3',
+      'version' => '0.1.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7641db43bd7686500b33e184bb117550f696c1e4',
+      'reference' => 'bb6391fc808e7aee7f1871ca712b558454069c9d',
     ),
     'laminas/laminas-diactoros' => 
     array (
@@ -1219,15 +1177,6 @@
       array (
       ),
       'reference' => '6ede70583e101030bcace4dcddd648f760ddf642',
-    ),
-    'lcobucci/jwt' => 
-    array (
-      'pretty_version' => '3.4.2',
-      'version' => '3.4.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '17cb82dd625ccb17c74bf8f38563d3b260306483',
     ),
     'league/commonmark' => 
     array (
@@ -1310,15 +1259,6 @@
       ),
       'reference' => '18d1889897a8b18d85ecadacf74c9274d678d943',
     ),
-    'league/oauth2-linkedin' => 
-    array (
-      'pretty_version' => '5.1.2',
-      'version' => '5.1.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f9ab661ca37884067ca286412b6c17304d3c2fac',
-    ),
     'littlegolden/flarum-lang-japanese' => 
     array (
       'pretty_version' => 'v0.1.67.1',
@@ -1330,30 +1270,21 @@
     ),
     'littlegolden/flarum-lang-simplified-chinese' => 
     array (
-      'pretty_version' => 'v0.1.70-beta.14.1.2',
-      'version' => '0.1.70.0-beta14.1.2',
+      'pretty_version' => 'v0.1.70-beta.15',
+      'version' => '0.1.70.0-beta15',
       'aliases' => 
       array (
       ),
-      'reference' => '2d18c68048b30e686fa5fb9c5093bedbca302fca',
+      'reference' => 'd2c6d13a616a2c0db0f9a35484e5d62577b8d88a',
     ),
-    'luuhai48/oauth-google' => 
+    'luatdolphin/lang-vietnamese' => 
     array (
-      'pretty_version' => 'v1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => '0.1.0-beta.14',
+      'version' => '0.1.0.0-beta14',
       'aliases' => 
       array (
       ),
-      'reference' => '8e98ad5278f2295ad5ac1432a731e75a20665ecb',
-    ),
-    'luuhai48/oauth-linkedin' => 
-    array (
-      'pretty_version' => 'v1.0.0',
-      'version' => '1.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c93cd6b63e6a83f4cd588f732ad953921a7b45a2',
+      'reference' => 'a1e1d6473d036e0a0f404ad4a759bcde59a6a2b4',
     ),
     'madnest/flarum-lang-czech' => 
     array (
@@ -1363,15 +1294,6 @@
       array (
       ),
       'reference' => '462fbe672444ffcdeabe624bf3302443d6902291',
-    ),
-    'maicol07/flarum-ext-sso' => 
-    array (
-      'pretty_version' => '1.7',
-      'version' => '1.7.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '214cbb980163e8fe14e19995647d93a0be0a9cde',
     ),
     'marketplace/flarum-l10n-core-russian' => 
     array (
@@ -1393,12 +1315,12 @@
     ),
     'matteocontrini/flarum-imgur-upload' => 
     array (
-      'pretty_version' => 'v3.4.1',
-      'version' => '3.4.1.0',
+      'pretty_version' => 'v3.3.1',
+      'version' => '3.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9acbaf55d586decaaf5698633771a140547d8fda',
+      'reference' => '02fa2adcdaa226c934b99e1840ff362100cca8c9',
     ),
     'matthiasmullie/minify' => 
     array (
@@ -1474,12 +1396,12 @@
     ),
     'migratetoflarum/canonical' => 
     array (
-      'pretty_version' => '0.2.2',
-      'version' => '0.2.2.0',
+      'pretty_version' => '0.2.3',
+      'version' => '0.2.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '30a29e3681ec5f9d203306bcca75b3c669c27920',
+      'reference' => 'ddc64d478314094409ce06595ad5cf6d9aa0c81e',
     ),
     'monolog/monolog' => 
     array (
@@ -1519,21 +1441,21 @@
     ),
     'neercsys/flarum-lang-bosanski' => 
     array (
-      'pretty_version' => 'v0.14',
-      'version' => '0.14.0.0',
+      'pretty_version' => 'v0.15',
+      'version' => '0.15.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6b3a697bcb9ddbb78b091aa5544be571205cfa59',
+      'reference' => '4206f0fdae442c7df28e07f14d4f1d29abc4bff0',
     ),
     'nesbot/carbon' => 
     array (
-      'pretty_version' => '2.42.0',
-      'version' => '2.42.0.0',
+      'pretty_version' => '2.43.0',
+      'version' => '2.43.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd0463779663437392fe42ff339ebc0213bd55498',
+      'reference' => 'd32c57d8389113742f4a88725a170236470012e2',
     ),
     'nikic/fast-route' => 
     array (
@@ -1733,6 +1655,13 @@
       ),
       'reference' => '80215ef669cc0961698e97f58333165c8a4edc48',
     ),
+    'reflar/cookie-consent' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
     'reflar/doorman' => 
     array (
       'replaced' => 
@@ -1800,12 +1729,12 @@
     ),
     'rob006/flarum-lang-polish' => 
     array (
-      'pretty_version' => 'v0.3.22',
-      'version' => '0.3.22.0',
+      'pretty_version' => 'v0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c218d328a0bfc453beaa34ec333ebed22a6fe429',
+      'reference' => '16d1715c5df8616d712de8a764721ae60ea97642',
     ),
     's9e/regexp-builder' => 
     array (
@@ -1864,15 +1793,6 @@
       ),
       'reference' => '61b5fc1454e248a28a545465fc02d695044ba8c3',
     ),
-    'stajor/perspectiveapi' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6dcd0a061f01aa29e92ec52a0e580350471c145b',
-    ),
     'swiftmailer/swiftmailer' => 
     array (
       'pretty_version' => 'v6.2.4',
@@ -1884,48 +1804,48 @@
     ),
     'sycho/flarum-profile-cover' => 
     array (
-      'pretty_version' => 'v1.2.0',
-      'version' => '1.2.0.0',
+      'pretty_version' => 'v1.2.1',
+      'version' => '1.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8e9d7198a6f291688e2f868d09000aaf44ac3f3b',
+      'reference' => 'a05da29b9184ae20014140f663b3cb21bf64f29c',
     ),
     'symfony/config' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4da4a6b07cc7d8d7d3e29842bc9c20401d555065',
+      'reference' => 'e501c56d2fa70798075b9811d0eb4c27de491459',
     ),
     'symfony/console' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c8e37f6928c19816437a4dd7bf16e3bd79941470',
+      'reference' => '12e071278e396cc3e1c149857337e9e192deca0b',
     ),
     'symfony/css-selector' => 
     array (
-      'pretty_version' => 'v5.2.0',
-      'version' => '5.2.0.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b8d8eb06b0942e84a69e7acebc3e9c1e6e6e7256',
+      'reference' => 'f789e7ead4c79e04ca9a6d6162fc629c89bd8054',
     ),
     'symfony/debug' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => '65fe7b49868378319b82da3035fb30801b931c47',
+      'reference' => '5dfc7825f3bfe9bb74b23d8b8ce0e0894e32b544',
     ),
     'symfony/deprecation-contracts' => 
     array (
@@ -1938,12 +1858,12 @@
     ),
     'symfony/event-dispatcher' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f029d6f21eac61ab23198e7aca40e7638e8c8924',
+      'reference' => '5d4c874b0eb1c32d40328a09dbc37307a5a910b0',
     ),
     'symfony/event-dispatcher-contracts' => 
     array (
@@ -1963,39 +1883,39 @@
     ),
     'symfony/filesystem' => 
     array (
-      'pretty_version' => 'v5.2.0',
-      'version' => '5.2.0.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bb92ba7f38b037e531908590a858a04d85c0e238',
+      'reference' => 'fa8f8cab6b65e2d99a118e082935344c5ba8c60d',
     ),
     'symfony/finder' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9f1d1d883b79a91ef320c0c6e803494e042ef36e',
+      'reference' => 'ebd0965f2dc2d4e0f11487c16fbb041e50b5c09b',
     ),
     'symfony/http-foundation' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9eeb37ec0ff3049c782ca67041648e28ddd75a94',
+      'reference' => '5ebda66b51612516bf338d5f87da2f37ff74cf34',
     ),
     'symfony/mime' => 
     array (
-      'pretty_version' => 'v5.2.0',
-      'version' => '5.2.0.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '05f667e8fa029568964fd3bec6bc17765b853cc5',
+      'reference' => 'de97005aef7426ba008c46ba840fc301df577ada',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -2071,12 +1991,12 @@
     ),
     'symfony/process' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ec1482f13d53911a8a32e54ba6f9a3b43a57d943',
+      'reference' => '075316ff72233ce3d04a9743414292e834f2cb4a',
     ),
     'symfony/service-contracts' => 
     array (
@@ -2089,12 +2009,12 @@
     ),
     'symfony/translation' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => '84821e6a14a637e817f25d11147388695b6f790a',
+      'reference' => 'c1001b7d75b3136648f94b245588209d881c6939',
     ),
     'symfony/translation-contracts' => 
     array (
@@ -2114,21 +2034,12 @@
     ),
     'symfony/yaml' => 
     array (
-      'pretty_version' => 'v4.4.17',
-      'version' => '4.4.17.0',
+      'pretty_version' => 'v4.4.18',
+      'version' => '4.4.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7531361cf38e4816821b4a12a42542b3c6143ad1',
-    ),
-    'tank/perspective' => 
-    array (
-      'pretty_version' => '0.1.11',
-      'version' => '0.1.11.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '02e5e14327f342f4e305c4c361d6e4338737cb08',
+      'reference' => 'bbce94f14d73732340740366fcbe63363663a403',
     ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (
@@ -2138,15 +2049,6 @@
       array (
       ),
       'reference' => 'b43b05cf43c1b6d849478965062b6ef73e223bb5',
-    ),
-    'tiu-ram0n/brazilian-portuguese' => 
-    array (
-      'pretty_version' => '1.1.22',
-      'version' => '1.1.22.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'edad9ea2bb7710f63d025a151478f2f8c081d1be',
     ),
     'tobscure/json-api' => 
     array (
@@ -2159,30 +2061,30 @@
     ),
     'tolgaaaltas/flarum-ext-turkish' => 
     array (
-      'pretty_version' => '0.14.1',
-      'version' => '0.14.1.0',
+      'pretty_version' => '0.15',
+      'version' => '0.15.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dda0af3d8b3ff2f1a21ae867e582998152fcdb45',
+      'reference' => '843c14ee053e518dcc116dc2cfb92a5419502394',
     ),
     'tolgaaaltas/flarum-lang-turkish' => 
     array (
-      'pretty_version' => '0.14.1',
-      'version' => '0.14.1.0',
+      'pretty_version' => '0.15',
+      'version' => '0.15.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '64f24e24bfda13d0a878a375289c5ee8e206bd8a',
+      'reference' => '06e8b4f7ae4bc417fd69284c5cfce2bf36e847ca',
     ),
     'v17development/flarum-seo' => 
     array (
-      'pretty_version' => '1.4',
-      'version' => '1.4.0.0',
+      'pretty_version' => '1.5.1',
+      'version' => '1.5.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b2aed41d3b2a1bc0e4f0a6cd6dd76e618660dd08',
+      'reference' => '68cd1d662795880f6604c1fdeba9629299d864d4',
     ),
     'wikimedia/less.php' => 
     array (

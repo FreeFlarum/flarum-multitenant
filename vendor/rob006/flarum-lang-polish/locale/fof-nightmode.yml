@@ -7,12 +7,10 @@ fof-nightmode:
     settings:
       modal:
         default_theme: 'Domyślny motyw forum'
-        default_theme_helper: 'Domyślny motyw jest automatycznie ustawiany nowym użytkownikom oraz gościom.'
-        default_theme_important: 'To także wpłynie na istniejących użytkowników, którzy nie ustawili ręcznie motywu!'
+        default_theme_helper: 'Domyślny motyw jest automatycznie ustawiany nowym użytkownikom, gościom oraz wszystkim, którzy nie ustawili jeszcze motywu.'
         theme_auto: '=> fof-nightmode.ref.auto'
         theme_dark: '=> fof-nightmode.ref.dark'
         theme_light: '=> fof-nightmode.ref.light'
-        title: 'FoF Night Mode'
   forum:
     day: '=> fof-nightmode.ref.light'
     night: '=> fof-nightmode.ref.dark'

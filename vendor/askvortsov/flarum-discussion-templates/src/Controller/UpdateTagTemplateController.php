@@ -15,15 +15,12 @@ use Flarum\Api\Controller\AbstractShowController;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\Tags\Api\Serializer\TagSerializer;
 use Flarum\Tags\Tag;
-use Flarum\User\AssertPermissionTrait;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
 class UpdateTagTemplateController extends AbstractShowController
 {
-    use AssertPermissionTrait;
-
     /**
      * {@inheritdoc}
      */
@@ -47,7 +44,7 @@ class UpdateTagTemplateController extends AbstractShowController
      */
     public function data(ServerRequestInterface $request, Document $document)
     {
-        $this->assertAdmin($request->getAttribute('actor'));
+        $request->getAttribute('actor')->assertAdmin();
         $id = Arr::get($request->getQueryParams(), 'id');
         $data = Arr::get($request->getParsedBody(), 'data', []);
 

@@ -26,14 +26,9 @@ fof-linguist:
         any: 'oryginalne lub własne'
         original: oryginalne
         own: własne
-      with-original-translations-in-locales: 'Z oryginalnym tłumaczeniem'
       with-own-translations: 'Moje tłumaczenia'
-      without-original-translations-in-locales: 'Bez oryginalnego tłumaczenia'
     locales:
       all: Wszystkie
-    menu:
-      description: 'Dostosuj tłumaczenia do swoich potrzeb.'
-      title: Linguist
     placeholder:
       all-locales: 'Tekst, który tutaj wpiszesz, zostanie pokazany dla wszystkich języków'
       hint: 'Oryginalny tekst:'

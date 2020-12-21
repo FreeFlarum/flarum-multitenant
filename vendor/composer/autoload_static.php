@@ -8,10 +8,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
@@ -52,9 +52,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'dd89a2771fc24829c6aade9a7786bd8f' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/path.legacy.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
-        '256c1545158fc915c75e51a931bdba60' => __DIR__ . '/..' . '/lcobucci/jwt/compat/class-aliases.php',
-        '0d273777b2b0d96e49fb3d800c6b0e81' => __DIR__ . '/..' . '/lcobucci/jwt/compat/json-exception-polyfill.php',
-        'd6b246ac924292702635bb2349f4a64b' => __DIR__ . '/..' . '/lcobucci/jwt/compat/lcobucci-clock-polyfill.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
@@ -67,6 +64,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             's9e\\TextFormatter\\' => 18,
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
+        ),
+        'l' => 
+        array (
+            'luatdolphin\\lang-vietnamese\\' => 28,
         ),
         'a' => 
         array (
@@ -88,7 +89,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             'Tobscure\\JsonApi\\' => 17,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
-            'Tank\\Perspective\\' => 17,
         ),
         'S' => 
         array (
@@ -130,7 +130,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
-            'PerspectiveApi\\' => 15,
             'PersianFla\\Persian\\' => 19,
         ),
         'O' => 
@@ -147,21 +146,15 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Michaelbelgium\\Discussionviews\\' => 31,
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
-            'Maicol07\\SSO\\Middleware\\' => 24,
-            'Maicol07\\SSO\\Listener\\' => 22,
-            'Maicol07\\SSO\\' => 13,
         ),
         'L' => 
         array (
-            'Luuhai48\\OauthLinkedIn\\' => 23,
-            'Luuhai48\\OauthGoogle\\' => 21,
             'League\\OAuth2\\Client\\' => 21,
             'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\AwsS3v3\\' => 25,
             'League\\Flysystem\\' => 17,
             'League\\CommonMark\\' => 18,
-            'Lcobucci\\JWT\\' => 13,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Stratigility\\' => 21,
             'Laminas\\HttpHandlerRunner\\' => 26,
@@ -228,7 +221,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Masquerade\\' => 15,
-            'FoF\\Mason\\' => 10,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
             'FoF\\Gamification\\' => 17,
@@ -240,6 +232,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\Doorman\\' => 12,
             'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\DefaultGroup\\' => 17,
+            'FoF\\CookieConsent\\' => 18,
             'FoF\\Console\\' => 12,
             'FoF\\Components\\' => 15,
             'FoF\\Byobu\\' => 10,
@@ -253,6 +246,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Flarum\\Sticky\\' => 14,
             'Flarum\\Statistics\\' => 18,
             'Flarum\\Pusher\\' => 14,
+            'Flarum\\Nicknames\\' => 17,
             'Flarum\\Mentions\\' => 16,
             'Flarum\\Lock\\' => 12,
             'Flarum\\Likes\\' => 13,
@@ -275,15 +269,12 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\' => 16,
             'Dflydev\\FigCookies\\' => 19,
-            'Datitisev\\Dashboard\\' => 20,
         ),
         'C' => 
         array (
             'Cron\\' => 5,
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
             'ClarkWinkelmann\\EmojioneArea\\' => 29,
-            'ClarkWinkelmann\\CreateUserModal\\' => 32,
-            'ClarkWinkelmann\\AuthorChange\\' => 29,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -297,7 +288,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
             'Askvortsov\\FlarumCategories\\' => 28,
             'App\\' => 4,
-            'AntoineFr\\Money\\' => 16,
         ),
     );
 
@@ -313,6 +303,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         's9e\\RegexpBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
+        ),
+        'luatdolphin\\lang-vietnamese\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/luatdolphin/lang-vietnamese/src',
         ),
         'axy\\sourcemap\\' => 
         array (
@@ -349,10 +343,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
-        ),
-        'Tank\\Perspective\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tank/perspective/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -484,10 +474,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'PerspectiveApi\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/stajor/perspectiveapi/src',
-        ),
         'PersianFla\\Persian\\' => 
         array (
             0 => __DIR__ . '/..' . '/persianfla/flarum-ext-persian/src',
@@ -530,33 +516,12 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
-        'Maicol07\\SSO\\Middleware\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maicol07/flarum-ext-sso/src/Middleware',
-        ),
-        'Maicol07\\SSO\\Listener\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maicol07/flarum-ext-sso/src/Listener',
-        ),
-        'Maicol07\\SSO\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maicol07/flarum-ext-sso/src',
-        ),
-        'Luuhai48\\OauthLinkedIn\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/luuhai48/oauth-linkedin/src',
-        ),
-        'Luuhai48\\OauthGoogle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/luuhai48/oauth-google/src',
-        ),
         'League\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth2-client/src',
             1 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
             2 => __DIR__ . '/..' . '/league/oauth2-github/src',
             3 => __DIR__ . '/..' . '/league/oauth2-google/src',
-            4 => __DIR__ . '/..' . '/league/oauth2-linkedin/src',
         ),
         'League\\OAuth1\\Client\\' => 
         array (
@@ -577,10 +542,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'League\\CommonMark\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
-        ),
-        'Lcobucci\\JWT\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
         ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
@@ -798,10 +759,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/fof/masquerade/src',
         ),
-        'FoF\\Mason\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/mason/src',
-        ),
         'FoF\\Links\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/links/src',
@@ -845,6 +802,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'FoF\\DefaultGroup\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/default-group/src',
+        ),
+        'FoF\\CookieConsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/cookie-consent/src',
         ),
         'FoF\\Console\\' => 
         array (
@@ -897,6 +858,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Flarum\\Pusher\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/pusher/src',
+        ),
+        'Flarum\\Nicknames\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flarum/nicknames/src',
         ),
         'Flarum\\Mentions\\' => 
         array (
@@ -962,10 +927,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/dflydev/fig-cookies/src/Dflydev/FigCookies',
         ),
-        'Datitisev\\Dashboard\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/datitisev/flarum-ext-dashboard/src',
-        ),
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
@@ -977,14 +938,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'ClarkWinkelmann\\EmojioneArea\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-emojionearea/src',
-        ),
-        'ClarkWinkelmann\\CreateUserModal\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-create-user-modal/src',
-        ),
-        'ClarkWinkelmann\\AuthorChange\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-author-change/src',
         ),
         'Carbon\\' => 
         array (
@@ -1013,10 +966,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
-        ),
-        'AntoineFr\\Money\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
         ),
     );
 

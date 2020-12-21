@@ -8,6 +8,13 @@ askvortsov-moderator-warnings:
       delete_warnings: 'Nieodwracalne usuwanie ostrzeżeń'
       manage_warnings: 'Tworzenie oraz usuwanie ostrzeżeń'
       view_warnings: 'Przeglądanie ostrzeżeń'
+  emails:
+    post_warned:
+      body: "Witaj {warnee_display_name},\n\nDostałeś ostrzeżenie i {strikes} punktów karnych od {warner_display_name} w {discussion_title} z następującego powodu:\n\n---\n\n{public_comment}\n"
+      subject: 'Dostałeś ostrzeżenie i {strikes} punktów karnych od {warner_display_name} w {discussion_title}'
+    user_warned:
+      body: "Witaj {warnee_display_name},\n\nDostałeś ostrzeżenie i {strikes} punktów karnych od {warner_display_name} z następującego powodu:\n\n---\n\n{public_comment}\n"
+      subject: 'Dostałeś ostrzeżenie i {strikes} punktów karnych od {warner_display_name}'
   forum:
     notifications:
       warning_no_strikes_text: 'Dostałeś ostrzeżenie bez punktów karnych od {mod_username}'
@@ -30,7 +37,6 @@ askvortsov-moderator-warnings:
       restore_button: Przywróć
     warning_list:
       add_button: 'Nowe ostrzeżenie'
-      no-warnings: 'Wygląda na to, że nie ma tutaj żadnych ostrzeżeń.'
       no_warnings: 'Wygląda na to, że nie ma tutaj żadnych ostrzeżeń.'
       warnings: 'Ostrzeżenia: {strikes} punkt karny|Ostrzeżenia: {strikes} punkty karne|Ostrzeżenia: {strikes} punktów karnych'
       warnings_no_strikes: 'Ostrzeżenia: bez punktów karnych'
@@ -42,9 +48,7 @@ askvortsov-moderator-warnings:
       public_comment: Ostrzeżenie
     warning_modal:
       confirmation_message: 'Twoje ostrzeżenie zostało zapisane. Musisz odświeżyć stronę, aby je zobaczyć.'
-      dismiss_button: Gotowe
       heading: 'Ostrzeż <strong>{username}</strong>'
-      no_content_given: 'Puste ostrzeżenia nie są dozwolone.'
       private_comment_heading: 'Czemu <strong>{username}</strong> otrzymuje to ostrzeżenie? Ten komentarz będzie widoczny tylko dla innych moderatorów.'
       public_comment_heading: 'Czemu <strong>{username}</strong> otrzymuje to ostrzeżenie? Ten komentarz będzie widoczny dla użytkownika oraz innych moderatorów.'
       strikes_heading: 'Ile punktów karnych przydzielić?'

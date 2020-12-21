@@ -49,10 +49,11 @@ flarum-tags:
     # These translations are used in the Tags page.
     tags:
       about_tags_text: "Tagovi se koriste za kategorizaciju tema. Primarni tagovi su kao traidicionalne teme kod foruma: mogu biti organizovane u da nivoa hijerarhije. Sekundarni tagovi nemaju hijerarhiju ili red i korisni su za mirko-kategorizaciju."
-      create_tag_button: => flarum-tags.ref.create_tag
+      create_primary_tag_button: Kreiraj primarnu oznaku
+      create_secondary_tag_button: Kreiraj sekundarnu oznaku
       primary_heading: Primarni tagovi
       secondary_heading: Sekundarni tagovi
-      settings_button: Postavke
+      settings_heading: Postavke
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -110,6 +111,5 @@ flarum-tags:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    create_tag: Kreiraj Tag
     name: Naziv
     tags: Tagovi

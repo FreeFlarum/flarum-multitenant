@@ -11,24 +11,31 @@
 
 namespace FoF\PreventNecrobumping;
 
+use Flarum\Api\Serializer\DiscussionSerializer;
 use Flarum\Extend as Vanilla;
+use Flarum\Post\Event\Saving;
 use FoF\Components\Extend\AddFofComponents;
 use FoF\Extend\Extend;
-use Illuminate\Events\Dispatcher;
 
 return [
     new AddFofComponents(),
     (new Vanilla\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/resources/less/forum.less'),
+
     (new Vanilla\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
+
     new Vanilla\Locales(__DIR__.'/resources/locale'),
+
     (new Extend\ExtensionSettings())
         ->setPrefix('fof-prevent-necrobumping.')
         ->addKeys(['message.title', 'message.description', 'message.agreement']),
-    function (Dispatcher $events) {
-        $events->subscribe(Listeners\ValidateNecrobumping::class);
-    },
+
+    (new Vanilla\Event())
+        ->listen(Saving::class, Listeners\ValidateNecrobumping::class),
+
+    (new Vanilla\ApiSerializer(DiscussionSerializer::class))
+        ->mutate(Listeners\AddForumAttributes::class),
 ];

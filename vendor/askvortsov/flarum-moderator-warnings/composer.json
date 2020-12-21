@@ -6,13 +6,18 @@
   ],
   "type": "flarum-extension",
   "license": "MIT",
+  "support": {
+    "issues": "https://github.com/askvortsov1/flarum-moderator-warnings/issues",
+    "source": "https://github.com/askvortsov1/flarum-moderator-warnings",
+    "forum": "https://discuss.flarum.org/d/23228-moderator-warnings-extension"
+  },
   "require": {
-    "flarum/core": "^0.1.0-beta.14"
+    "flarum/core": "^0.1.0-beta.15"
   },
   "authors": [
     {
       "name": "Alexander Skvortsov",
-      "email": "askvortsov@youthneuro.org",
+      "email": "askvortsov@flarum.org",
       "role": "Developer"
     }
   ],
@@ -23,15 +28,13 @@
   },
   "extra": {
     "flarum-extension": {
-      "title": "Flarum Moderator Warnings",
+      "title": "Moderator Warnings",
+      "category": "feature",
       "icon": {
         "name": "fas fa-exclamation-circle",
         "backgroundColor": "#6932D1",
         "color": "#fff"
       }
-    },
-    "flagrow": {
-      "discuss": ""
     }
   }
 }

@@ -1,0 +1,32 @@
+fof-linguist:
+    admin:
+        menu:
+            title: Linguist
+            description: Tùy chỉnh phiên dịch.
+        buttons:
+            apply: Áp dụng
+            reset: Khôi phục bản gốc
+            copy-original: Sao chép văn bản gốc
+            load-more: Tải thêm
+        locales:
+            all: Toàn bộ
+        placeholder:
+            not-translated: Chưa được dịch
+            all-locales: Một văn bản được xác định ở đây sẽ được hiển thị trong tất cả các ngôn ngữ
+            hint: Giá trị gốc:
+        filters:
+            search: Tìm kiếm chuỗi phiên dịch...
+            with-own-translations: Bản dịch của tôi
+            with-original-translations-in-locales: Với bản dịch gốc ở
+            without-original-translations-in-locales: Không có bản dịch gốc ở
+            for-extension: Dành cho tiện ích mở rộng
+            for-extension-unavailable: >
+                Không có bản dịch được tìm thấy trong namespace "{namespace}".
+                Có thể tiện ích mở rộng này không có bất kỳ văn bản nào để dịch hoặc đang sử dụng một namespace khác.
+                Hãy thử sử dụng trường tìm kiếm để định vị bản dịch của nó.
+            results: Hiển thị {shown} trong {total} bản dịch phù hợp
+        clear-cache:
+            text: >
+                Bản dịch mới chưa được áp dụng.
+                Lưu ý: xóa bộ nhớ cache có thể làm chậm diễn đàn của bạn trong giây lát.
+            button: Xóa cache ngay

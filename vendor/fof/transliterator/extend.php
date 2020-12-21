@@ -14,11 +14,8 @@ namespace FoF\Transliterator;
 use Flarum\Discussion\Event\Saving;
 use Flarum\Extend;
 use Flarum\Frontend\Document;
-use FoF\Components\Extend\AddFofComponents;
 
 return [
-    (new AddFofComponents()),
-
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->content(function (Document $document) {

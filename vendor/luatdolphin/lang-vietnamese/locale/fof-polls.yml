@@ -1,0 +1,44 @@
+fof-polls:
+  admin:
+    permissions:
+      moderate: Chỉnh sửa và xóa các khảo sát
+      self_edit: Cho phép người dùng tự chỉnh sửa khảo sát của họ
+      start: Bắt đầu một khảo sát
+      vote: Vote trong các cuộc khảo sát
+
+  forum:
+    days_remaining: Thời gian kết thúc khảo sát {time}.
+    no_permission: Bạn không được phép vote
+    poll_ended: Khảo sát này đã kết thúc.
+    public_poll: Xem thành viên đã vote
+
+    composer_discussion:
+      add_poll: Thêm khảo sát
+      edit_poll: => fof-polls.forum.moderation.edit
+
+    modal:
+      add_title: Thêm 1 khảo sát
+      add_option_label: Thêm một tùy chọn
+      date_placeholder: Thời gian kết thúc khảo sát (Optional)
+      edit_title: Chỉnh sửa khảo sát
+      include_question: Bạn phải có ít nhất một câu hỏi
+      max: Bạn có thể có tối đa 10 câu trả lời
+      min: Bạn phải có ít nhất 2 câu trả lời
+      no_voters: Không có Vote
+      option_placeholder: Trả lời
+      options_label: Các câu trả lời
+      public_poll_label: Cho phép mọi người nhìn thấy ai đã Vote
+      question_placeholder: Câu hỏi
+      submit: Gửi đi
+
+    moderation:
+      delete: Xóa khảo sát
+      delete_confirm: Bạn có chắc chắn muốn xóa khảo sát này?
+      edit: Chỉnh sửa khảo sát
+
+    tooltip:
+      badge: Khảo sát
+      votes: "1 vote|{count} votes"
+
+    votes_modal:
+      title: Người Vote

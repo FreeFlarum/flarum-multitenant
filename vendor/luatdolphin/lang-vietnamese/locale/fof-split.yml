@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: Tách bài viết từ các cuộc thảo luận
+    forum:
+        post:
+            was_split_to: "{count} bài viết đã được chia thành {target}.|{count} bài viết đã được chia thành {target}."
+            was_split_from: "{count} bài viết đã được chia từ {target}.|{count} bài viết được chia từ {target}."
+        split:
+            from: Tách từ đây
+            to: Chia ra đây
+        modal:
+            title: Chia tách thảo luận
+            new_discussion_label: Chỉ định tiêu đề cho cuộc thảo luận mới
+            submit_button: Chia

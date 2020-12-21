@@ -10,6 +10,3 @@ fof-user-bio:
       view: 'Przeglądanie opisu w profilu'
   forum:
     userbioPlaceholder: 'Napisz coś o sobie'
-fof-userbio:
-  forum:
-    userbioPlaceholder: 'Napisz coś o sobie'

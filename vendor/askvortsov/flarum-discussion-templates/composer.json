@@ -6,14 +6,19 @@
   ],
   "type": "flarum-extension",
   "license": "MIT",
+  "support": {
+    "issues": "https://github.com/askvortsov1/flarum-discussion-templates/issues",
+    "source": "https://github.com/askvortsov1/flarum-discussion-templates",
+    "forum": "https://discuss.flarum.org/d/23950-discussion-templates-per-tag"
+  },
   "require": {
-    "flarum/core": "^0.1.0-beta.14",
-    "flarum/tags": "^0.1.0-beta.14"
+    "flarum/core": "^0.1.0-beta.15",
+    "flarum/tags": "^0.1.0-beta.15"
   },
   "authors": [
     {
       "name": "Alexander Skvortsov",
-      "email": "sasha.skvortsov109@gmail.com",
+      "email": "askvortsov@flarum.org",
       "role": "Developer"
     }
   ],
@@ -24,15 +29,13 @@
   },
   "extra": {
     "flarum-extension": {
-      "title": "Flarum Discussion Templates",
+      "title": "Discussion Templates",
+      "category": "discussion",
       "icon": {
         "name": "fas fa-plus-square",
         "backgroundColor": "#6932D1",
         "color": "#fff"
       }
-    },
-    "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/23950-discussion-templates-per-tag"
     }
   }
 }

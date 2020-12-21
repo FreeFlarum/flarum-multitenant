@@ -16,7 +16,6 @@ use Askvortsov\FlarumWarnings\Model\Warning;
 use Askvortsov\FlarumWarnings\Notification\WarningBlueprint;
 use Flarum\Api\Controller\AbstractCreateController;
 use Flarum\Notification\NotificationSyncer;
-use Flarum\User\AssertPermissionTrait;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Psr\Http\Message\ServerRequestInterface;
@@ -24,8 +23,6 @@ use Tobscure\JsonApi\Document;
 
 class UpdateWarningController extends AbstractCreateController
 {
-    use AssertPermissionTrait;
-
     public $serializer = WarningSerializer::class;
 
     /**
@@ -47,7 +44,7 @@ class UpdateWarningController extends AbstractCreateController
     protected function data(ServerRequestInterface $request, Document $document)
     {
         $actor = $request->getAttribute('actor');
-        $this->assertCan($actor, 'user.manageWarnings');
+        $actor->assertCan('user.manageWarnings');
 
         $requestBody = $request->getParsedBody();
         $requestData = $requestBody['data']['attributes'];

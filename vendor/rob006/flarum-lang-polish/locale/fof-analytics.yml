@@ -4,10 +4,6 @@
 
 fof-analytics:
   admin:
-    page:
-      nav:
-        description: 'Zerknij na statystyki'
-        title: Analytics
     popup:
       field:
         googleGTMCode: 'Identyfikator śledzenia GTM (opcjonalne)'
@@ -28,7 +24,6 @@ fof-analytics:
       section:
         googleAnalytics: 'Google Analytics'
         piwik: Piwik
-      title: 'FoF Analytics'
       trackAccounts:
         email: 'Śledź na podstawie adresu e-mail'
         none: 'Nie śledź'

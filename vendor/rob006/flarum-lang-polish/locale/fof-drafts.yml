@@ -16,7 +16,6 @@ fof-drafts:
     scheduled_drafts_disabled: 'Planowanie publikacji szkiców jest obecnie wyłączone.'
   forum:
     composer:
-      alert: 'Szkic został zapisany.'
       discard_empty_draft_alert: 'Porzucić pusty szkic?'
       exit_alert: 'Porzucić zmiany w tym szkicu?'
       saved: Zapisano!
@@ -24,7 +23,6 @@ fof-drafts:
       title: 'Zapisz szkic'
     dropdown:
       alert: 'Czy jesteś pewien, że chcesz usunąć ten szkic?'
-      button: 'Usuń szkic'
       delete_button: 'Usuń szkic'
       empty_text: 'Nie zapisałeś żadnych szkiców'
       schedule_button: 'Zaplanuj publikację'

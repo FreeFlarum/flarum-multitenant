@@ -6,10 +6,18 @@
     "license": "MIT",
     "support": {
         "issues": "https://github.com/flarum/core/issues",
-        "source": "https://github.com/flarum/bbcode"
+        "source": "https://github.com/flarum/bbcode",
+        "forum": "https://discuss.flarum.org"
     },
+    "homepage": "https://flarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://flarum.org/donate/"
+        }
+    ],
     "require": {
-        "flarum/core": "^0.1.0-beta.12"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "extra": {
         "branch-alias": {
@@ -17,6 +25,7 @@
         },
         "flarum-extension": {
             "title": "BBCode",
+            "category": "formatting",
             "icon": {
                 "name": "fas fa-bold",
                 "backgroundColor": "#238C59",

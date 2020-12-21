@@ -7,28 +7,6 @@ core:
     index_sort:
       popular_button: 'Najczęściej wyświetlane'
       unpopular_button: 'Najrzadziej wyświetlane'
-flarum_discussion_views:
-  admin:
-    permissions:
-      can_reset_views: 'Resetowanie liczby wyświetleń'
-      can_view_number: 'Dostęp do liczby wyświetleń'
-      reset_views_label: 'Ustawianie liczby wyświetleń dyskusji'
-    settings:
-      abbr_numbers: 'Skróć liczbę wyświetleń ("1k" zamiast "1000")'
-      max_viewcount: 'Liczba ostatnio oglądających wyświetlanych na liście'
-      show_filter: 'Włącz sortowanie dyskusji na podstawie liczby wyświetleń'
-      show_viewlist: 'Włącz listę ostatnio oglądających'
-      title: 'Ustawienia liczby wyświetleń dyskusji'
-      track_unique: 'Zliczaj unikalne wyświetlania'
-  forum:
-    discussion_controls:
-      resetviews_button: 'Zresetuj wyświetlenia'
-    modal_resetviews:
-      label: 'Czy jesteś pewien, że chcesz usunąć {count} wyświetlenie tej dyskusji?|Czy jesteś pewien, że chcesz usunąć {count} wyświetlenia tej dyskusji?|Czy jesteś pewien, że chcesz usunąć {count} wyświetleń tej dyskusji?'
-      submit: 'Tak, usuń wszystkie'
-      title: 'Zresetuj liczbę wyświetleń dyskusji'
-    viewlist:
-      title: 'Ostatnio oglądający'
 michaelbelgium-discussion-views:
   admin:
     permissions:

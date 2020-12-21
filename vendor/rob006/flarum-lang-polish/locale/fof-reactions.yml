@@ -4,8 +4,6 @@
 
 fof-reactions:
   admin:
-    nav:
-      desc: 'Dodaj niestandardowe reakcje i zmień ich ustawienia.'
     page:
       convert:
         button: 'Przekonwertuj stare reakcje'

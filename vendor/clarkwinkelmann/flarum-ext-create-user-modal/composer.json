@@ -7,7 +7,7 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
+        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
     },
     "authors": [
         {
@@ -16,14 +16,15 @@
             "role": "Developer"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "ClarkWinkelmann\\CreateUserModal\\": "src/"
-        }
+    "support": {
+        "issues": "https://github.com/clarkwinkelmann/flarum-ext-create-user-modal/issues",
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-create-user-modal",
+        "forum": "https://discuss.flarum.org/d/22608"
     },
     "extra": {
         "flarum-extension": {
             "title": "Create User Modal",
+            "category": "moderation",
             "icon": {
                 "name": "fas fa-user-plus",
                 "backgroundColor": "#684ba6",

@@ -1,0 +1,44 @@
+fof-reactions:
+  forum:
+    warning: Biểu tượng cảm xúc mà bạn bày tỏ đã được chuyển đổi
+    notification: '{username} đã bày tỏ cảm xúc {reaction} với bài viết của bạn'
+    settings:
+        notify_post_reacted_label: Ai đó bày tỏ cảm xúc với một trong các bài viết của tôi
+
+  admin:
+    permissions:
+        react_posts_label: Bày tỏ cảm xúc tới bài viết
+
+    nav:
+      desc: Thêm/đổi biểu tượng cảm xúc và thay đổi thiết lập.
+
+    page:
+      reactions:
+        title: Thay đổi biểu tượng cảm xúc
+        reactions: Biểu tượng hiện tại
+        Helptext: Nhập vào tên (identifier) của emoji hoặc font-awesome icon và lựa chọn loại mà bạn muốn.
+        help:
+          identifier: Identifier
+
+      convert:
+        help: Nếu bạn vừa cập nhật tiện ích mở rộng, những biểu tượng cảm xúc bạn đã bày tỏ cần được chuyển đổi. Nếu bạn vừa cài đặt tiện ích mở rộng này, bạn hoàn toàn có thể bỏ qua thông báo này.
+        button: Chuyển đổi từ những bày tỏ cảm xúc cũ
+        converting: Những bày tỏ cảm xúc của bạn hiện đang chuyển đổi. Làm mới trang web của bạn sau một vài phút để xác nhận quá trình hoàn tất. (Thời gian chuyển đổi có thể mất một lúc tùy thuộc vào tổng số biểu tượng của bạn)
+        converted: "Thành công chuyển đổi {number} lượt thích"
+
+      settings:
+        save_settings: Lưu lại thiết lập
+        integrations:
+          legend: Tích hợp
+          warning: Bày tỏ cảm xúc tương tự <strong>không thể</strong> được chuyển đổi thành Thích <strong>và</strong> một upvote
+          gamification:
+            legend: Gamification
+            upvoteLabel: Chuyển đổi lượt bày tỏ cảm xúc thành upvote
+            upvoteHelptext: Nhập identifier của biểu tượng cảm xúc bạn muốn tự động chuyển đổi thành upvote
+            downvoteLabel: Chuyển đổi lượt bày tỏ cảm xúc thành downvote
+            downvoteHelptext: Nhập identifier của biểu tượng cảm xúc bạn muốn tự động chuyển đổi thành downvote
+
+          likes:
+            legend: Thích
+            Label: Chuyển đổi biểu tượng cảm xúc thành Thích
+            Helptext: INhập identifier của biểu tượng cảm xúc bạn muốn tự động chuyển đổi thành Thích

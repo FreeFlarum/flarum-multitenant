@@ -12,7 +12,7 @@
 namespace Askvortsov\FlarumDiscussionTemplates;
 
 use Flarum\Extend;
-use Illuminate\Contracts\Events\Dispatcher;
+use Flarum\Tags\Api\Serializer\TagSerializer;
 
 return [
     (new Extend\Frontend('forum'))
@@ -28,7 +28,8 @@ return [
     (new Extend\Routes('api'))
         ->patch('/tags/{id}/template', 'tags.updateTemplate', Controller\UpdateTagTemplateController::class),
 
-    function (Dispatcher $events) {
-        $events->subscribe(Listener\AddTemplateToTagSerializer::class);
-    },
+    (new Extend\ApiSerializer(TagSerializer::class))
+        ->attribute('template', function ($serializer, $model) {
+            return $model->template;
+        }),
 ];

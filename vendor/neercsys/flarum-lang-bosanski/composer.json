@@ -6,7 +6,7 @@
     "keywords": ["locale","translation","bosanski","bosnian"],
     "license": "MIT",
     "require": {
-        "flarum/core": "^0.1.0-beta.14"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "extra": {
         "branch-alias": {
@@ -14,6 +14,11 @@
         },
         "flarum-extension": {
             "title": "Bosanski",
+            "category": "language",
+            "info": {
+                "website": "https://diskusije.balkanbuzz.net",
+                "support": "https://diskusije.balkanbuzz.net"
+            },
             "icon": {
                 "image": "icon.png",
                 "backgroundColor": "#00247d",

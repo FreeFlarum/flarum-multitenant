@@ -30,31 +30,3 @@ michaelbelgium-mybb-to-flarum:
     nav:
       description_text: 'Konwertuj forum MyBB do tej instalacji Flarum'
       title: 'Migracja MyBB do Flarum'
-mybbtoflarum:
-  admin:
-    nav:
-      description: 'Konwertuj forum MyBB do tej instalacji Flarum'
-      title: 'Migracja MyBB do Flarum'
-    page:
-      btnConvert: Migruj
-      form:
-        general:
-          migrateAvatars: 'Migruj awatary'
-          migrateSoftPosts: 'Migruj ukryte (soft deleted) posty'
-          migrateSoftThreads: 'Migruj ukryte (soft deleted) wątki'
-          title: 'Ustawienia ogólne'
-        mybb:
-          db: 'Nazwa bazy danych'
-          host: 'Host bazy danych'
-          mybbPath: 'Absolutna ścieżka do MyBB'
-          password: 'Hasło do bazy danych'
-          prefix: 'Prefiks tabeli'
-          title: 'Ustawienia MyBB'
-          user: 'Użytkownik bazy danych'
-        options:
-          migrateCategories: 'Migruj kategorie'
-          migrateThreadsPosts: 'Migruj wątki i posty'
-          migrateUserGroups: 'Migruj grupy użytkowników'
-          migrateUsers: 'Migruj użytkowników'
-          title: 'Ogólne opcje migracji'
-      text: 'Konwertuj forum MyBB do tej instalacji Flarum. Wypełnij wymagane dane, po czym kliknij "Migruj".'

@@ -16,11 +16,12 @@ use Askvortsov\FlarumWarnings\Api\Controller;
 use Askvortsov\FlarumWarnings\Api\Serializer\WarningSerializer;
 use Askvortsov\FlarumWarnings\Model\Warning;
 use Askvortsov\FlarumWarnings\Notification\WarningBlueprint;
-use Flarum\Event\ConfigureNotificationTypes;
+use Askvortsov\FlarumWarnings\Provider\WarningProvider;
+use Flarum\Api\Controller as FlarumController;
+use Flarum\Api\Serializer as FlarumSerializer;
 use Flarum\Extend;
-use Flarum\Formatter\Formatter;
 use Flarum\Post\Post;
-use Illuminate\Contracts\Events\Dispatcher;
+use Flarum\User\User;
 
 return [
     (new Extend\Frontend('forum'))
@@ -41,19 +42,52 @@ return [
     (new Extend\Model(Post::class))
         ->hasMany('warnings', Warning::class, 'post_id'),
 
-    (new Extend\View())->namespace('askvortsov-moderator-warnings', __DIR__ . '/views'),
+    (new Extend\View())
+        ->namespace('askvortsov-moderator-warnings', __DIR__.'/views'),
 
-    function (Dispatcher $events) {
-        $events->subscribe(Listeners\AddPermissionsToUserSerializer::class);
-        $events->subscribe(Listeners\AddPostWarningRelationship::class);
-        $events->subscribe(UserPolicy::class);
+    (new Extend\Notification())
+        ->type(WarningBlueprint::class, WarningSerializer::class, ['alert', 'email']),
 
-        $events->listen(ConfigureNotificationTypes::class, function (ConfigureNotificationTypes $event) {
-            $event->add(WarningBlueprint::class, WarningSerializer::class, ['alert', 'email']);
-        });
-    },
+    (new Extend\ApiSerializer(FlarumSerializer\UserSerializer::class))
+        ->attribute('canViewWarnings', function ($serializer, $model) {
+            return $model->can('user.viewWarnings');
+        })
+        ->attribute('canManageWarnings', function ($serializer, $model) {
+            return $model->can('user.manageWarnings');
+        })
+        ->attribute('canDeleteWarnings', function ($serializer, $model) {
+            return $model->can('user.deleteWarnings');
+        })
+        ->attribute('visibleWarningCount', function ($serializer, $model) {
+            return $serializer->getActor()->can('user.viewWarnings') ? Warning::where('user_id', $model->id)->where('hidden_at', null)->count() : null;
+        }),
 
-    function (Formatter $formatter) {
-        Warning::setFormatter($formatter);
-    },
+    (new Extend\ApiSerializer(FlarumSerializer\BasicPostSerializer::class))
+        ->relationship('warnings', function ($serializer, $model) {
+            $actor = $serializer->getActor();
+            $author = $model->user;
+            if ($author && $actor->id === $author->id || $actor->can('user.viewWarnings', $author)) {
+                return $serializer->hasMany($model, WarningSerializer::class, 'warnings');
+            }
+        }),
+
+    (new Extend\ApiController(FlarumController\ShowDiscussionController::class))
+        ->addInclude([
+            'posts.warnings',
+            'posts.warnings.warnedUser',
+            'posts.warnings.addedByUser',
+        ]),
+
+    (new Extend\ApiController(FlarumController\ListPostsController::class))
+        ->addInclude([
+            'warnings',
+            'warnings.warnedUser',
+            'warnings.addedByUser',
+        ]),
+
+    (new Extend\Policy())
+        ->modelPolicy(User::class, UserPolicy::class),
+
+    (new Extend\ServiceProvider())
+        ->register(WarningProvider::class),
 ];

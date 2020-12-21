@@ -13,4 +13,3 @@ fof-github-sponsors:
       desc: 'Uzyskaj token API na <a>https://github.com/settings/tokens/new</a>. To rozszerzenie wymaga uprawnień z zakresów (scopes): <code>user</code> oraz <code>read:org</code>.'
       group_label: 'Grupa do przypisania'
       login_label: Login
-      title: 'FriendsOfFlarum GitHub Sponsors'

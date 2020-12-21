@@ -26,8 +26,6 @@ fof-mason:
       icon-help: "Pokazuje ikonę przed wartością podaną przez użytkownika. Aby zobaczyć jakie ikony są dostępne, sprawdź <a>stronę FontAwesome</a>. Użyj pełnej klasy ikony zawierającej prefiks, na przykład \"fas fa-bolt\".\n"
       icon-preview: 'podgląd: {preview}'
       is_suggested: 'Sugeruj odpowiedź użytkownikom'
-      max_answers_count: 'Maksymalna liczba odpowiedzi'
-      min_answers_count: 'Minimalna liczba odpowiedzi'
       name: 'Nazwa pola'
       name-help: "Publicznie widoczna (nieprzetłumaczalna) etykieta pola.\n"
       new-answer: 'Nowa odpowiedź'

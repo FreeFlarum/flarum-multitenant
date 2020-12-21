@@ -8,8 +8,6 @@ core:
       hot_button: Popularne
 fof-gamification:
   admin:
-    nav:
-      desc: 'Grywalizacja dla Twojej społeczności Flarum'
     page:
       convert:
         button: 'Konwertuj polubienia na głosy pozytywne'
@@ -55,7 +53,6 @@ fof-gamification:
   forum:
     mod_item: 'Zobacz głosujących'
     modal:
-      downvotes_label: 'Głosujący negatywnie:'
       title: Głosujący
       upvotes_label: 'Głosujący pozytywnie:'
     nav:

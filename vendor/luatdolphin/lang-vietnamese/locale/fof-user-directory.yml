@@ -1,0 +1,25 @@
+fof-user-directory:
+    forum:
+        search:
+            users_heading: 'Tìm tất cả user có từ khóa "{query}"'
+        page:
+            nav: Thành viên
+            sort:
+                relevance: Phù hợp
+                default: Mặc định
+                username_az: Username (a-z)
+                username_za: Username (z-a)
+                newest: Mới nhất
+                oldest: Cũ nhất
+                seen_recent: Online gần đây
+                seen_oldest: Offline dài nhất
+                most_posts: Nhiều bài đăng nhất
+                least_posts: Ít bài đăng nhất
+                most_discussions: Nhiều thảo luận nhất
+                least_discussions: Ít thảo luận nhất
+    admin:
+        permissions:
+            view_user_directory: Xem danh sách thành viên
+        settings:
+            title: Cài đặt User Directory
+            link: Thêm liên kết trên trang chủ để người dùng có thể xem thư mục

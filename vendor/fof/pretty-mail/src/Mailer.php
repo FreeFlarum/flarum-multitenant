@@ -57,7 +57,6 @@ class Mailer extends LaravelMailer
         $view = BladeCompiler::render($settings->get('fof-pretty-mail.mailhtml'), [
             'body'       => $body,
             'settings'   => $settings,
-            'baseUrl'    => $url->to('forum')->base(), // $baseUrl property is deprecated, to be replaced soley by $url. Provided as compatability for now.
             'url'        => $url,
             'forumStyle' => isset($file) ? file_get_contents($this->assets_dir.reset($file)) : '',
             'link'       => empty($matches) ? null : $matches[0],

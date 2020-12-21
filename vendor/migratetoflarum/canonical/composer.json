@@ -18,14 +18,16 @@
     ],
     "support": {
         "issues": "https://github.com/migratetoflarum/canonical/issues",
-        "source": "https://github.com/migratetoflarum/canonical"
+        "source": "https://github.com/migratetoflarum/canonical",
+        "forum": "https://discuss.flarum.org/d/19307"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.14"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "extra": {
         "flarum-extension": {
             "title": "Canonical Url",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-directions",
                 "backgroundColor": "#e7672e",

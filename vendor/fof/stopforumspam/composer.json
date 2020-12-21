@@ -1,51 +1,63 @@
 {
-  "name": "fof/stopforumspam",
-  "description": "Stop Forum Spam",
-  "keywords": [
-    "flarum",
-    "friendsofflarum"
-  ],
-  "type": "flarum-extension",
-  "license": "MIT",
-  "require": {
-    "flarum/core": ">=0.1.0-beta.14",
-    "fof/components": ">=0.2.0",
-    "guzzlehttp/guzzle": "6.* || 7.*"
-  },
-  "replace": {
-    "reflar/stopforumspam": "*"
-  },
-  "authors": [
-    {
-      "name": "Charlie K",
-      "email": "charlie.k@redevs.org",
-      "role": "Developer"
+    "name": "fof/stopforumspam",
+    "description": "Stop Forum Spam",
+    "keywords": [
+        "flarum",
+        "friendsofflarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/stopforumspam/issues",
+        "source": "https://github.com/FriendsOfFlarum/stopforumspam",
+        "forum": "https://discuss.flarum.org/d/17846"
     },
-    {
-      "name": "David Sevilla Martin",
-      "email": "me@datitisev.me",
-      "role": "Developer"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "FoF\\StopForumSpam\\": "src/"
-    }
-  },
-  "extra": {
-    "flarum-extension": {
-      "title": "FoF Stop Forum Spam",
-      "icon": {
-        "name": "fas fa-stop",
-        "backgroundColor": "#e74c3c",
-        "color": "#fff"
-      }
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": ">=0.1.0-beta.15",
+        "guzzlehttp/guzzle": "6.* || 7.*"
     },
-    "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/17846-friendsofflarum-stopforumspam"
+    "replace": {
+        "reflar/stopforumspam": "*"
+    },
+    "authors": [
+        {
+            "name": "Charlie K",
+            "email": "charlie.k@redevs.org",
+            "role": "Developer"
+        },
+        {
+            "name": "David Sevilla Martin",
+            "email": "me@datitisev.me",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FoF\\StopForumSpam\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Stop Forum Spam",
+            "category": "moderation",
+            "icon": {
+                "name": "fas fa-stop",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/17846"
+        }
+    },
+    "suggest": {
+        "fof/spamblock": "Allows the option to report spammers to StopForumSpam in order to keep the greater forum community spam free."
     }
-  },
-  "suggest": {
-    "fof/spamblock": "Allows the option to report spammers to StopForumSpam in order to keep the greater forum community spam free."
-}
 }

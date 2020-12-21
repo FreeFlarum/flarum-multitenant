@@ -1,5 +1,3 @@
 const config = require('flarum-webpack-config');
 
-module.exports = config({
-  useExtensions: ['fof-components']
-});
+module.exports = config();

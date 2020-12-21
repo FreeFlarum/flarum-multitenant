@@ -1,0 +1,54 @@
+nikovonlas-webpush:
+  forum:
+    subscribe: Nhận thông báo
+  admin:
+    settings:
+      title: Thiết lập WebPush
+      type:
+        description: Onesignal type of connector
+        standart: Tiêu chuẩn
+        custom: Tùy chỉnh
+      app_id: Onesignal app id
+      api_key: Onesignal api key
+      user_key: Onesignal user key
+      subdomain: Onesignal subdomain
+      excerpt: Length of excerpt in notifications
+      autoprompt: Show permission prompt immediately to authorize users
+  notify:
+    like:
+      title: Bài viết đã được thích
+      message: '{from} thích bài viết: {post}'
+    mention-post:
+      title: 'Phản hồi mới tới bài viết: {title}'
+      message: '{from} đã phản hồi bài viết: {post}'
+    mention:
+      title: 'Bạn đã được đề cập đến trong bài: {title}'
+      message: '{from} đã đề cập đến bạn trong bài: {post}'
+    post:
+      title: 'Bài đăng mới trong cuộc thảo luận đã đăng ký: {title}'
+      message: '{from} đã tạo bài đăng mới: {post}'
+    tag:
+      discussion:
+        title: Thảo luận mới với thẻ đã đăng ký
+        message: '{from} đã tạo thảo luận mới: {title}'
+      post:
+        title: 'Bài mới trong cuộc thảo luận: {title}'
+        message: '{from} tạo bài mới: {post}'
+    rename:
+      title: Cuộc thảo luận đã được đổi tên
+      message: '{from} đổi tên thảo luận thành: {title}'
+    lock:
+      title: Thảo luận đã bị khóa
+      message: '{from} đã khóa thảo luận: {title}'
+    delete:
+      title: Thảo luận đã bị xóa
+      message: '{from} xóa thảo luận: {title}'
+    suspend:
+      title: Tài khoản của bạn đã bị đình chỉ
+      message: '{from} đình chỉ tài khoản của bạn'
+    unsuspend:
+      title: Tài khoản của bạn đã được hủy đình chỉ
+      message: '{from} hủy đình chỉ tài khoản của bạn'
+    flag:
+      title: Bài mới được gắn cờ
+      message: '{from} gắn cờ bài đăng: {post}'

@@ -21,16 +21,16 @@
 		"source": "https://github.com/rob006-software/flarum-lang-polish"
 	},
 	"require": {
-		"flarum/core": "^0.1.0-beta.11"
+		"flarum/core": "^0.1.0-beta.14"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"extra": {
 		"branch-alias": {
-			"dev-master": "0.3.x-dev"
+			"dev-master": "0.4.x-dev"
 		},
 		"flarum-extension": {
-			"title": "Polish language pack",
+			"title": "Polish",
 			"icon": {
 				"image": "icon.svg",
 				"backgroundSize": "cover",

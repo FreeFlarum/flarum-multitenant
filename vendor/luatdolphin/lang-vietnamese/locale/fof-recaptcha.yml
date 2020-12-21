@@ -1,0 +1,12 @@
+fof-recaptcha:
+  admin:
+    settings:
+      help_text: Lấy giấy phép Google reCAPTCHA của bạn <a>ở đây</a>.
+
+      type_label: Loại reCAPTCHA
+
+      site_key_label: Site Key
+      secret_key_label: Secret Key
+
+validation:
+  recaptcha: Xác thực reCAPTCHA không thành công.

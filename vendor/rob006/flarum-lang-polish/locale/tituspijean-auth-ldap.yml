@@ -11,7 +11,6 @@ tituspijean-auth-ldap:
         admin_dn: 'Nazwa wyróżniająca (DN) administratora LDAP. Zostaw puste, aby użyć anonimowego uwierzytelniania (anonymous binding).'
         admin_password: 'Hasło administratora LDAP. Zostaw puste aby użyć anonimowego uwierzytelniania (anonymous binding).'
         base_dn: 'Bazowe nazwy wyróżniające (base DNs) (rozdzielone średnikami)'
-        domain_controllers: 'Domeny LDAP (rozdzielone przecinkami)'
         filter: 'Filtr do zastosowania (opcjonalne)'
         hosts: 'Domeny lub adresy IP serwerów LDAP (rozdzielone przecinkami)'
         method_name: 'Nazwa serwera LDAP (pojawi się po "Zaloguj się za pomocą")'
@@ -22,7 +21,6 @@ tituspijean-auth-ldap:
       follow_referrals: 'Podążaj za odwołaniami podczas uwierzytelniania przez serwer LDAP'
       onlyUse: 'Ukryj standardowe logowanie Flarum i używaj jedynie uwierzytelniania za pomocą LDAP'
       title: 'Ustawienia LDAP'
-      use_admin: 'Połącz z kontem administratora LDAP'
       use_ssl: 'Użyj SSL'
       use_tls: 'Użyj TLS'
   forum:

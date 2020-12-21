@@ -7,16 +7,18 @@
  * LICENSE file that was distributed with this source code.
  */
 
+use Flarum\Api\Controller;
+use Flarum\Api\Serializer\BasicUserSerializer;
 use Flarum\Api\Serializer\PostSerializer;
-use Flarum\Event\ConfigureNotificationTypes;
 use Flarum\Extend;
 use Flarum\Likes\Event\PostWasLiked;
 use Flarum\Likes\Event\PostWasUnliked;
 use Flarum\Likes\Listener;
 use Flarum\Likes\Notification\PostLikedBlueprint;
+use Flarum\Post\Event\Deleted;
+use Flarum\Post\Event\Saving;
 use Flarum\Post\Post;
 use Flarum\User\User;
-use Illuminate\Contracts\Events\Dispatcher;
 
 return [
     (new Extend\Frontend('forum'))
@@ -31,14 +33,30 @@ return [
 
     new Extend\Locales(__DIR__.'/locale'),
 
-    function (Dispatcher $events) {
-        $events->subscribe(Listener\AddPostLikesRelationship::class);
-        $events->subscribe(Listener\SaveLikesToDatabase::class);
+    (new Extend\Notification())
+        ->type(PostLikedBlueprint::class, PostSerializer::class, ['alert']),
 
-        $events->listen(ConfigureNotificationTypes::class, function (ConfigureNotificationTypes $event) {
-            $event->add(PostLikedBlueprint::class, PostSerializer::class, ['alert']);
-        });
-        $events->listen(PostWasLiked::class, Listener\SendNotificationWhenPostIsLiked::class);
-        $events->listen(PostWasUnliked::class, Listener\SendNotificationWhenPostIsUnliked::class);
-    },
+    (new Extend\ApiSerializer(PostSerializer::class))
+        ->hasMany('likes', BasicUserSerializer::class)
+        ->attribute('canLike', function (PostSerializer $serializer, $model) {
+            return (bool) $serializer->getActor()->can('like', $model);
+        }),
+
+    (new Extend\ApiController(Controller\ShowDiscussionController::class))
+        ->addInclude('posts.likes'),
+
+    (new Extend\ApiController(Controller\ListPostsController::class))
+        ->addInclude('likes'),
+    (new Extend\ApiController(Controller\ShowPostController::class))
+        ->addInclude('likes'),
+    (new Extend\ApiController(Controller\CreatePostController::class))
+        ->addInclude('likes'),
+    (new Extend\ApiController(Controller\UpdatePostController::class))
+        ->addInclude('likes'),
+
+    (new Extend\Event())
+        ->listen(PostWasLiked::class, Listener\SendNotificationWhenPostIsLiked::class)
+        ->listen(PostWasUnliked::class, Listener\SendNotificationWhenPostIsUnliked::class)
+        ->listen(Deleted::class, [Listener\SaveLikesToDatabase::class, 'whenPostIsDeleted'])
+        ->listen(Saving::class, [Listener\SaveLikesToDatabase::class, 'whenPostIsSaving']),
 ];

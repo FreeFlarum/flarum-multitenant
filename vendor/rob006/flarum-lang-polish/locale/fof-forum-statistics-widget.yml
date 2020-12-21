@@ -5,7 +5,6 @@
 fof-forum-statistics-widget:
   admin:
     settings:
-      title: 'Ustawienia widgetu'
       widget_helper_text: 'Zmień tę wartość, aby dostosować pozycję widgetu w nawigacji w sidebarze forum. Im wyższa liczba, tym wyżej widget będzie na liście elementów nawigacji w sidebarze (wartość może być dodatnia lub ujemna).'
       widget_ignore_private_discussions_label: 'Ignoruj prywatne dyskusje'
       widget_order_label: 'Pozycja widgetu'

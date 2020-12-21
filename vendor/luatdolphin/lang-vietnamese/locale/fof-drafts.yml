@@ -1,0 +1,13 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Tạo thảo luận nháp
+  forum:
+    composer:
+      title: Lưu bản nháp
+      alert: Bản nháp đã lưu.
+    dropdown:
+      title: Bản nháp
+      button: Xóa bản nháp
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Bạn có chắc bạn muốn xóa bản nháp?

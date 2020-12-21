@@ -9,7 +9,7 @@
  *
  */
 
-import Component from 'flarum/Component';
+import ExtensionPage from 'flarum/components/ExtensionPage';
 import Button from 'flarum/components/Button';
 import saveSettings from 'flarum/utils/saveSettings';
 import Switch from 'flarum/components/Switch';
@@ -18,7 +18,7 @@ import FieldSet from 'flarum/components/FieldSet';
 import Stream from 'flarum/utils/Stream';
 import withAttr from 'flarum/utils/withAttr';
 
-export default class WordConfigPage extends Component {
+export default class WordConfigPage extends ExtensionPage {
     oninit(vnode) {
         super.oninit(vnode);
         const settings = app.data.settings;
@@ -38,7 +38,7 @@ export default class WordConfigPage extends Component {
         this.values.cooldown = Stream(this.values.cooldown() || 20);
     }
 
-    view() {
+    content() {
         return (
             <div className="WordConfigPage">
                 <div className="container">

@@ -12,13 +12,10 @@
 namespace FoF\SecureHttps;
 
 use Flarum\Extend;
-use FoF\Components\Extend\AddFofComponents;
 use Illuminate\Events\Dispatcher;
 use s9e\TextFormatter\Configurator;
 
 return [
-    new AddFofComponents(),
-
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js'),
 

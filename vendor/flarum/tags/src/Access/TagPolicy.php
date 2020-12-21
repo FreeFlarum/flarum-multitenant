@@ -10,26 +10,11 @@
 namespace Flarum\Tags\Access;
 
 use Flarum\Tags\Tag;
-use Flarum\User\AbstractPolicy;
+use Flarum\User\Access\AbstractPolicy;
 use Flarum\User\User;
-use Illuminate\Database\Eloquent\Builder;
 
 class TagPolicy extends AbstractPolicy
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected $model = Tag::class;
-
-    /**
-     * @param User $actor
-     * @param Builder $query
-     */
-    public function find(User $actor, Builder $query)
-    {
-        $query->whereNotIn('id', Tag::getIdsWhereCannot($actor, 'viewDiscussions'));
-    }
-
     /**
      * @param User $actor
      * @param Tag $tag
@@ -37,9 +22,8 @@ class TagPolicy extends AbstractPolicy
      */
     public function startDiscussion(User $actor, Tag $tag)
     {
-        if ((! $tag->is_restricted && $actor->hasPermission('startDiscussion'))
-            || ($tag->is_restricted && $actor->hasPermission('tag'.$tag->id.'.startDiscussion'))) {
-            return true;
+        if ($tag->is_restricted) {
+            return $actor->hasPermission('tag'.$tag->id.'.startDiscussion') ? $this->allow() : $this->deny();
         }
     }
 
@@ -50,6 +34,6 @@ class TagPolicy extends AbstractPolicy
      */
     public function addToDiscussion(User $actor, Tag $tag)
     {
-        return $this->startDiscussion($actor, $tag);
+        return $actor->can('startDiscussion', $tag) ? $this->allow() : $this->deny();
     }
 }

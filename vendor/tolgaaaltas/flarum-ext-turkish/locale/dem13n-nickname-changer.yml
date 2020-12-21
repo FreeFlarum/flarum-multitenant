@@ -7,7 +7,11 @@ dem13n:
     nickname:
       allow_nickname_change: 'Kullanıcı adı değiştirmeye izin ver'
       allow_nickname_unique: 'Aynı kullanıcı adlarına izin ver'
+      max_char: 'Kullanıcı adı maksimum karakteri'
+      min_char: 'Kullanıcı adı minimum karakteri'
+      regex: 'Doğrulama için sıradan ifade'
       settings_modal_title: 'Kullanıcı Adı Değiştiricisi Ayarları'
+      submit_button: '=> core.ref.save_changes'
       unlimited_nickname_change: 'Sınırsız kullanıcı adı değiştirme'
   forum:
     nickname:

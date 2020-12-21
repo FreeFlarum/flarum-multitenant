@@ -7,6 +7,9 @@ fof-ignore-users:
     permissions:
       can_not_be_ignored_label: 'Nie może być ignorowany'
   forum:
+    badge:
+      discussion_label: 'Rozpoczęte przez ignorowanego użytkownika'
+      user_label: 'Ignorowany użytkownik'
     profile_link: 'Ignorowani użytkownicy'
     user_controls:
       ignore_button: Ignoruj

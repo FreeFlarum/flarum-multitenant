@@ -2,11 +2,6 @@
 # Use https://weblate.rob006.net/projects/flarum/michaelbelgium-profile-views/pl/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
-flarum_profile_views:
-  forum:
-    user:
-      title_last_viewers: 'Ostatnio oglądający'
-      views_count_text: 'wyświetlono {viewcount} raz|wyświetlono {viewcount} razy'
 michaelbelgium-flarum-profile-views:
   admin:
     settings:

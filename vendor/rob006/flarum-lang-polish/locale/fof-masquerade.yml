@@ -12,7 +12,6 @@ fof-masquerade:
       add: 'Dodaj pole {field}'
       description: 'Opis pola'
       description-help: "Opcjonalny opis wyjaśniający przeznaczenie tego pola.\n"
-      disable-user-bio: 'Wyłącz pole profilu użytkownika'
       edit: 'Edytuj pole {field}'
       force-user-to-completion: 'Wymuś uzupełnienie tego pola przez użytkownika'
       icon: Ikona
@@ -20,7 +19,6 @@ fof-masquerade:
       name: 'Nazwa pola'
       name-help: "Publicznie widoczna (nieprzetłumaczalna) etykieta pola.\n"
       on_bio: 'Pokaż wartość tego pola w profilu użytkownika'
-      option-coma-warning: 'Etykieta opcji nie może zawierać przecinka (",").'
       option-comma-warning: 'Etykieta opcji nie może zawierać przecinka (",").'
       option-new: 'Nowa opcja'
       options: Opcje

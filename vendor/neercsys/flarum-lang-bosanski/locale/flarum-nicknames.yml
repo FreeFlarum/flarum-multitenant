@@ -1,0 +1,24 @@
+flarum-nicknames:
+  admin:
+    permissions:
+      edit_own_nickname_label: Uredite vlastiti nadimak
+    settings:
+      max_label: Maksimalna dužina nadimka
+      min_label: Minimalna dužina nadimka
+      regex_label: Regularni izraz za validaciju
+      unique_label: Zahtijevati jedinstvene nadimke?
+    wrong_driver: You must select "nickname" as the display name driver on the <a><strong>Basics Page</strong></a> for this extension to take effect.
+  api:
+    invalid_nickname_message: Ovaj nadimak nije važeći. Molimo kontaktirajte svog administratora foruma za više informacija o pravilima nadimaka.
+  forum:
+    change_nickname:
+      submit_button: => core.ref.save_changes
+      title:  => flarum-nicknames.ref.change_nickname
+    edit_user:
+      nicknames_heading: => flarum-nicknames.ref.change_nickname
+      nicknames_text: Nadimak
+    settings:
+      change_nickname_button: => flarum-nicknames.ref.change_nickname
+
+  ref:
+    change_nickname: Promijenite nadimak

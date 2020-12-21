@@ -2,7 +2,9 @@
 
 namespace ClarkWinkelmann\FirstPostApproval;
 
+use Flarum\Approval\Event\PostWasApproved;
 use Flarum\Extend;
+use Flarum\Post\Event\Saving;
 
 return [
     (new Extend\Frontend('admin'))
@@ -10,6 +12,7 @@ return [
 
     new Extend\Locales(__DIR__ . '/resources/locale'),
 
-    new Extenders\CountPostApprovals(),
-    new Extenders\UnapproveNewPosts(),
+    (new Extend\Event())
+        ->listen(PostWasApproved::class, Listeners\CountPostApprovals::class)
+        ->listen(Saving::class, Listeners\UnapproveNewPosts::class),
 ];

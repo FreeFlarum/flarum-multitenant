@@ -6,14 +6,19 @@ clarkwinkelmann-author-change:
   admin:
     permissions:
       edit: 'Tartışma ve gönderi yazarını değiştirme'
+      edit-date: 'Tartışmayı ve gönderi tarihini güncelle'
+      edit-user: 'Tartışmayı ve gönderi yazarını güncelle'
   forum:
     controls:
       edit: 'Yazarı Düzenle'
     modal:
       cancel: İptal
+      created_at: 'Oluşturma zamanı'
+      edited_at: 'Düzenleme zamanı'
       submit: Kaydet
       title-discussion: 'Tartışma Yazarını Düzenle'
       title-post: 'Gönderi Yazarını Düzenle'
+      user: Yazar
     search:
       no-results: 'Sonuç yok'
       placeholder: 'Kullanıcılarda ara'

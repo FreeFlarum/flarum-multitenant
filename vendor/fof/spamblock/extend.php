@@ -11,12 +11,14 @@
 
 namespace FoF\Spamblock;
 
+use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Extend;
-use Illuminate\Events\Dispatcher;
+use Flarum\User\User;
 
 return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js'),
+
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js'),
 
@@ -25,9 +27,9 @@ return [
     (new Extend\Routes('api'))
         ->post('/users/{id}/spamblock', 'users.spamblock', Controllers\MarkAsSpammerController::class),
 
-    function (Dispatcher $events) {
-        $events->subscribe(Listeners\AddPermissions::class);
+    (new Extend\ApiSerializer(UserSerializer::class))
+        ->mutate(AddPermissions::class),
 
-        $events->subscribe(Access\UserPolicy::class);
-    },
+    (new Extend\Policy())
+        ->modelPolicy(User::class, Access\UserPolicy::class),
 ];

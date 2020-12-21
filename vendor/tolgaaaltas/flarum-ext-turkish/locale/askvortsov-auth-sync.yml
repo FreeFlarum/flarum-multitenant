@@ -5,6 +5,9 @@
 askvortsov-auth-sync:
   admin:
     labels:
+      ignored_avatar: 'Döndürülen bir avatar buna eşitse, kimlik doğrulamasından ayarlanmayacaktır. Bu, varsayılan avatar değerlerini göz ardı etmek için kullanılabilir.'
+      stop_avatar_change: 'Kullanıcıların avatarlarını Flarum''dan değiştirmeleri engellensin mi?'
+      stop_bio_change: 'Kullanıcıların biyografilerini Flarum''dan değiştirmeleri engellensin mi? (Friends of Flarum User Bio uzantısını gerektirir)'
       sync_avatar: 'Avatarı Eşitle?'
       sync_bio: 'Biyografiyi Eşitle? (Friends of Flarum User Bio uzantısı gerektirir)'
       sync_groups: 'Grupları Eşitle?'

@@ -13,14 +13,14 @@ clarkwinkelmann-mailing:
     default_subject: '=> clarkwinkelmann-mailing.ref.default_subject'
   forum:
     links:
-      mail_all: 'Kullanıcılara e-posta gönder'
-      mail_individual: 'Kullanıcıya elektronik posta gönder'
+      mail_all: 'E-posta gönder'
+      mail_individual: 'Bu Kullanıcıya E-Posta Gönder'
     modal_mail:
       default_subject: '=> clarkwinkelmann-mailing.ref.default_subject'
       email_label: Alıcı
       message_label: Mesaj
       recipients_label: Alıcılar
-      recipients_placeholder: 'Diğer alıcıları yazın...'
+      recipients_placeholder: 'Daha fazla alıcı ekleyin..'
       subject_label: Konu
       submit_button: Gönder
       title_text: Mesaj

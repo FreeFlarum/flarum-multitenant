@@ -10,8 +10,8 @@
  */
 
 import app from 'flarum/app';
-import addWordPane from './addWordPane';
+import WordConfigPage from './components/WordConfigPage';
 
 app.initializers.add('fof-filter', (app) => {
-    addWordPane();
+    app.extensionData.for('fof-filter').registerPage(WordConfigPage);
 });

@@ -12,13 +12,10 @@
 namespace FoF\PreventNecrobumping\Listeners;
 
 use Carbon\Carbon;
-use Flarum\Api\Event\Serializing;
-use Flarum\Api\Serializer\DiscussionSerializer;
 use Flarum\Discussion\Discussion;
 use Flarum\Post\Event\Saving;
 use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\PreventNecrobumping\Validators\NecrobumpingPostValidator;
-use Illuminate\Events\Dispatcher;
 use Illuminate\Support\Arr;
 
 class ValidateNecrobumping
@@ -35,13 +32,7 @@ class ValidateNecrobumping
         $this->settings = $settings;
     }
 
-    public function subscribe(Dispatcher $events)
-    {
-        $events->listen(Saving::class, [$this, 'saving']);
-        $events->listen(Serializing::class, [$this, 'serializing']);
-    }
-
-    public function saving(Saving $event)
+    public function handle(Saving $event)
     {
         if ($event->post->exists || $event->post->number == 1) {
             return;
@@ -54,13 +45,6 @@ class ValidateNecrobumping
             $this->validator->assertValid([
                 'fof-necrobumping' => Arr::get($event->data, 'attributes.fof-necrobumping'),
             ]);
-        }
-    }
-
-    public function serializing(Serializing $event)
-    {
-        if ($event->isSerializer(DiscussionSerializer::class)) {
-            $event->attributes['fof-prevent-necrobumping'] = $this->getDays($event->model);
         }
     }
 

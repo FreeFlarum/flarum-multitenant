@@ -1,0 +1,70 @@
+core:
+  forum:
+    index_sort:
+      hot_button: Trending
+      
+fof-gamification:
+  forum:
+    votes: Votes
+    vote_title: Xem ai đã Vote
+    nav:
+      name: Xếp hạng
+    ranking:
+      rank: Thứ hạng
+      name: User
+      amount: Điểm số
+    notification:
+      upvote: "{username} upvoted bài viết của bạn"
+      downvote: "{username} downvoted bài viết của bạn"
+    user:
+      points: "Điểm số: {points}"
+      rank: "{rank}"
+    modal:
+      title: Người Vote
+      upvotes_label: 'Người Upvote:'
+      downvotes_label: 'Người Downvote:'
+    mod_item: Xem người Vote
+  admin:
+    permissions:
+      vote_label: Upvote/Downvote bài đăng
+      see_votes_label: Xem bài đăng upvotes/downvotes
+      see_ranking_page: Xem thứ hạng trang
+    nav:
+      desc: Gamification cho diễn đàn của bạn
+    page:
+      rankings:
+        blocked:
+          placeholder: CDK2020, Ralkage, AngelAvila
+          title: Người dùng bị bỏ qua
+          help: Những người dùng này sẽ không được hiển thị trên trang xếp hạng. Tên người dùng nên được phân tách bằng dấu phẩy theo sau là khoảng trắng.
+        title: Xếp hạng trang
+        enable: Cho phép tùy chỉnh hình ảnh
+        custom_image_1: Vị trí ảnh thứ 1
+        custom_image_2: Vị trí ảnh thứ 2
+        custom_image_3: Vị trí ảnh thứ 3
+      votes:
+        points_title: Điểm giữ chỗ
+        points_placeholder: "Điểm số: "
+        color_holder: '#ffffff'
+        auto_upvote: Tự động upvote bài viết khi được đăng
+        rate_limit: Thực thi giới hạn tỷ lệ vote (10 giây)
+        discussion_page: Hiển thị tổng số vote của bài gốc trên danh sách thảo luận
+        title: Votes
+        vote_color: Màu hiển thị đã vote
+        icon_name: Upvote/downvote icon
+        icon_help: "Nhập bất kỳ biểu tượng Font-Awesome nào có hậu tố -up và -down. Ví dụ: arrow, thumbs, chevron"
+      save_settings: Lưu cài đặt
+      convert:
+        button: Chuyển đổi lượt thích cho upvote
+        help: Chuyển đổi lượt thích trước đó của bạn từ Plugin ext-likes cho upvotes, cũng như tính độ nóng cho tất cả các cuộc thảo luận hiện tại.
+        converting: Lượt thích của bạn hiện đang được chuyển đổi. Làm mới trang web của bạn sau một vài phút để xem quá trình hoàn tất. (Thời gian chuyển đổi có thể mất một lúc tùy thuộc vào tổng số lượt thích trên diễn đàn của bạn)
+        converted: "Chuyển đổi thành công tất cả {number} lượt thích"
+      ranks:
+        title: Thứ hạng
+        ranks: Tùy chỉnh thứ hạng
+        number_title: Có bao nhiêu huy hiệu xếp hạng nên được hiển thị?
+        help:
+          color: '#ffffff'
+          help: "Nhập số lượng upvote cần thiết, tên của thứ hạng và mã màu hex của thứ hạng"
+          points: Điểm số
+          name: Tên

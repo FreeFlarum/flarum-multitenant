@@ -9,26 +9,12 @@ fof-user-directory:
     settings:
       default-sort: 'Domyślne sortowanie'
       link: 'Dodaj link do katalogu użytkowników na stronie głównej'
-      title: 'Ustawienia katalogu użytkowników'
   forum:
     page:
       empty_text: 'Nie udało się znaleźć żadnego użytkownika pasującego do kryteriów wyszukiwania.'
       load_more_button: '=> core.ref.load_more'
       nav: 'Katalog użytkowników'
       refresh_tooltip: '=> core.forum.index.refresh_tooltip'
-      sort:
-        default: Domyślne
-        least_discussions: 'Najmniej dyskusji'
-        least_posts: 'Najmniej postów'
-        most_discussions: 'Najwięcej dyskusji'
-        most_posts: 'Najwięcej postów'
-        newest: 'Najnowsi użytkownicy'
-        oldest: 'Najstarsi użytkownicy'
-        relevance: 'Najtrafniejsze wyniki'
-        seen_oldest: 'Najdłużej offline'
-        seen_recent: 'Ostatnio online'
-        username_az: 'Nazwa użytkownika (a-z)'
-        username_za: 'Nazwa użytkownika (z-a)'
     search:
       users_heading: 'Przeszukaj wszystkich użytkowników dla "{query}"'
   lib:

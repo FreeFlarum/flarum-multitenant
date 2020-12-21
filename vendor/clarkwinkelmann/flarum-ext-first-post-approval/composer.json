@@ -8,7 +8,7 @@
     "license": "MIT",
     "require": {
         "flarum/approval": "^0.1.0-beta.14",
-        "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.15"
+        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
     },
     "authors": [
         {
@@ -17,6 +17,11 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/clarkwinkelmann/flarum-ext-first-post-approval/issues",
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-first-post-approval",
+        "forum": "https://discuss.flarum.org/d/25055"
+    },
     "autoload": {
         "psr-4": {
             "ClarkWinkelmann\\FirstPostApproval\\": "src/"
@@ -25,6 +30,7 @@
     "extra": {
         "flarum-extension": {
             "title": "First Post Approval",
+            "category": "moderation",
             "icon": {
                 "name": "fas fa-check",
                 "backgroundColor": "#684ba6",

@@ -12,6 +12,7 @@
 namespace Askvortsov\FlarumWarnings\Model;
 
 use Flarum\Database\AbstractModel;
+use Flarum\Database\ScopeVisibilityTrait;
 use Flarum\Formatter\Formatter;
 use Flarum\Post\Post;
 use Flarum\User\User;
@@ -22,6 +23,8 @@ use Flarum\User\User;
  */
 class Warning extends AbstractModel
 {
+    use ScopeVisibilityTrait;
+
     protected $table = 'warnings';
 
     protected $dates = ['created_at', 'hidden_at'];
