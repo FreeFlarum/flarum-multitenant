@@ -7,7 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-[Changes](https://github.com/Nearata/lang-italian/compare/v0.1.0-beta.14.3...master)
+[Changes](https://github.com/Nearata/lang-italian/compare/v0.1.0-beta.15...master)
+
+## [0.1.0-beta.15] - 2020-12-23
+
+[Changes](https://github.com/Nearata/lang-italian/compare/v0.1.0-beta.14.3...v0.1.0-beta.15)
+
+Updated to beta 15
+
+### Added
+
+- Keys for new admin interface
+- Keys for slug driver
+- Keys for flarum/nicknames
+
+### Fixes
+
+- Appearance title key references incorrect key
 
 ## [0.1.0-beta.14.3] - 2020-11-04
 

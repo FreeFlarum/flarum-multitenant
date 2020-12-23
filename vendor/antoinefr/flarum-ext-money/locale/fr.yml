@@ -1,0 +1,18 @@
+antoinefr-money:
+  admin:
+    settings:
+      title: Paramètres
+      moneyforpost: Monnaie donnée pour un nouveau post
+      moneyfordiscussion: Monnaie donnée pour une nouvelle discussion
+      moneyname: "Nom de la monnaie (ex: [money] points)"
+      postminimumlength: Taille minimale du post pour gagner la monnaie (0 pour désactiver)
+      noshowzero: Ne pas afficher si la valeur est 0
+    permissions:
+      edit_money_label: Modifier la monnaie
+  forum:
+    user_controls:
+      money_button: Modifier la monnaie
+    modal:
+      title: "Monnaie de {username}"
+      current: Actuellement :
+      submit_button: => core.ref.save_changes

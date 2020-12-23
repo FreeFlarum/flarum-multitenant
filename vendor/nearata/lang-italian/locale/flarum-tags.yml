@@ -22,7 +22,7 @@ flarum-tags:
       name_placeholder: => flarum-tags.ref.name
       slug_label: Slug
       submit_button: => core.ref.save_changes
-      title: => flarum-tags.ref.create_tag
+      title: Crea etichetta
 
     # These translations are used in the navigation bar.
     nav:
@@ -47,10 +47,11 @@ flarum-tags:
     # These translations are used in the Tags page.
     tags:
       about_tags_text: "Le etichette vengono usate per categorizzare le discussioni. Le etichette primarie sono come le categorie tradizionali dei forum: possono essere disposte in una gerarchia a due livelli. Le etichette secondarie non hanno gerarchia o ordine, e sono utili per micro-categorizzare."
-      create_tag_button: => flarum-tags.ref.create_tag
+      create_primary_tag_button: Crea etichetta primaria
+      create_secondary_tag_button: Crea etichetta secondaria
       primary_heading: Etichette Primarie
       secondary_heading: Etichette Secondarie
-      settings_button: Impostazioni
+      settings_heading: Impostazioni
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -103,6 +104,5 @@ flarum-tags:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    create_tag: Crea Etichetta
     name: Nome
     tags: Etichette

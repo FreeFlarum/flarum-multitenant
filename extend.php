@@ -25,7 +25,7 @@ return [
             };
 
             // Cookie Consent (not needed as long as fof/cookie-consent exists?):
-            //$document->foot[] = '<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?always=1&hideDetailsBtn=1"></script>';
+            // $document->foot[] = '<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?always=1&hideDetailsBtn=1"></script>';
 
             // Signature:
             $document->foot[] = '<!-- FreeFlarum.com -->';

@@ -5,13 +5,6 @@ core:
 
   # Translations in this namespace are used by the admin interface.
   admin:
-    # These translations are used in the placeholder Add Extension modal dialog.
-    add_extension:
-      developer_text: "Se sei uno sviluppatore, puoi leggere la <a>documentazione</a> e provare a scrivere una tua estensione."
-      install_text: "Nel frattempo, puoi cercare estensioni sul sito della <a>Community di Flarum</a> e installarli manualmente usando Composer."
-      temporary_text: "Un giorno, in un futuro non troppo lontano, questa finestra di dialogo ti permetterà di aggiungere un'estensione al tuo forum con facilità. Stiamo costruendo un ecosistema mentre parliamo!"
-      title: Aggiungi estensione
-
     # These translations are used in the Appearance page.
     appearance:
       colored_header_label: Header colorato
@@ -24,6 +17,7 @@ core:
       custom_styles_heading: Stili personalizzati
       custom_styles_text: Personalizza l'aspetto del tuo forum aggiungendo codice LESS/CSS da applicare sulla parte superiore degli <a>stili predefiniti</a> di Flarum.
       dark_mode_label: Modalità scura
+      description: "Personalizza i colori, logo e altre variabili del forum."
       edit_css_button: Modifica CSS
       edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: => core.ref.custom_header_title
@@ -33,11 +27,13 @@ core:
       logo_heading: Logo
       logo_text: Carica un'immagine da utilizzare al posto del nome del forum
       submit_button: => core.ref.save_changes
+      title: Aspetto
 
     # These translations are used in the Basics page.
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Lingua predefinita
+      description: "Imposta il titolo del forum, la lingua e altre impostazioni di base."
       display_name_heading: Nome alternativo
       display_name_text: Seleziona il driver da utilizzare per visualizzare i nomi alternativi degli utenti. Di predefinito, viene mostrato il nome utente.
       forum_description_heading: Descrizione del Forum
@@ -47,13 +43,18 @@ core:
       home_page_text: "Scegli la pagina che vuoi venga mostrata agli utenti prima di mostrare il forum."
       saved_message: Le modifiche sono state salvate
       show_language_selector_label: Mostra il selettore di lingua
+      slug_driver_heading: "Driver Slug: {model}"
+      slug_driver_text: Seleziona il driver che verrà utilizzato per creare uno slug di questo modello. # TODO: maybe a better translation
       submit_button: => core.ref.save_changes
+      title: Impostazioni di base
       welcome_banner_heading: Banner di benvenuto
       welcome_banner_text: Configura il testo da visualizzare sul banner. Apparirà nella pagina <b>Tutte le discussioni</b>.
 
     # These translations are used in the Dashboard page.
     dashboard:
       clear_cache_button: Pulisci cache
+      description: Il tuo forum a colpo d'occhio
+      title: Dashboard
       tools_button: Strumenti
 
     # These translations are used in the Edit Custom CSS modal dialog.
@@ -91,6 +92,7 @@ core:
     # These translations are used in the email page of the admin interface.
     email:
       addresses_heading: Indirizzi
+      description: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare e-mail
       driver_heading: Seleziona Driver
       driver_label: Driver
       from_label: Mittente
@@ -111,16 +113,31 @@ core:
       send_test_mail_text: This will send an email using the above configuration to your email, {email}.
       smtp_heading: Impostazioni SMTP
       submit_button: => core.ref.save_changes
-      text: Configura le impostazioni SMTP e gli indirizzi che il tuo forum utilizzerà per inviare e-mail
+      title: => core.ref.email
 
-    # These translations are used in the Extensions page.
-    extensions:
-      add_button: Aggiungi Estensione
-      settings_button: => core.ref.settings
+    # These translations are used on default extension pages.
+    extension:
+      confirm_uninstall: Se decidi di proseguire, tutti i dati presenti nel database e i file prensenti nella cartella assets, correlati all'estensione, verranno eliminati. Sei sicuro?
+      disabled: Disabilitata
+      enabled: Abilitata
+      enable_to_see: Abilita l'estensione per vedere e modificare le impostazioni.
+      info_links:
+        discuss: Discuss
+        documentation: Documentazione
+        donate: Supporta
+        source: Sorgente
+        support: Assistenza
+        website: Sito web
+      no_permissions: Non ci sono permessi
+      no_settings: Non ci sono impostazioni.
+      open_modal: Mostra impostazioni
+      permissions_title: Permessi
+      saved_message: Le tue modifiche sono state salvate
       uninstall_button: Disinstalla
 
-    # These translations are used in the session dropdown menu.
+    # These translations are used in the secondary header.
     header:
+      get_help: Chiedi aiuto
       log_out_button: => core.ref.log_out
 
     # These translations are used in the modal dialog displayed when loading extensions.
@@ -129,18 +146,26 @@ core:
 
     # These translations are used in the navigation bar.
     nav:
-      appearance_button: Aspetto
-      appearance_text: "Personalizza i colori, logo e altre variabili del forum."
-      basics_button: Impostazioni di base
-      basics_text: "Imposta il titolo del forum, la lingua e altre impostazioni di base."
-      dashboard_button: Dashboard
-      dashboard_text: Il tuo forum a colpo d'occhio
+      appearance_button: => core.admin.appearance.title
+      appearance_title: => core.admin.appearance.description
+      basics_button: => core.admin.basics.title
+      basics_title: => core.admin.basics.description
+      categories:
+        authentication: Autenticazione
+        discussion: Discussione
+        feature: Funzionalità
+        formatting: Formattazione
+        language: Pacchetti di lingue
+        moderation: Moderazione
+        other: Altre estensioni
+        theme: Temi
+      dashboard_button: => core.admin.dashboard.title
+      dashboard_title: => core.admin.dashboard.description
       email_button: => core.ref.email
-      email_text: "Configura le impostazioni e-mail del tuo forum"
-      extensions_button: Estensioni
-      extensions_text: Aggiungi funzionalità extra al tuo forum e rendilo tuo
-      permissions_button: Permessi
-      permissions_text: Configura chi può vedere e fare cosa
+      email_title: => core.admin.email.description
+      permissions_button: => core.admin.permissions.title
+      permissions_text: => core.admin.permissions.description
+      search_placeholder: Cerca estensioni
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
@@ -151,6 +176,7 @@ core:
       delete_discussions_label: Eliminare le discussioni
       delete_posts_forever_label: Eliminare messaggi per sempre
       delete_posts_label: Cancellare messaggi
+      description: Configura chi può vedere o fare cosa.
       edit_posts_label: Modificare messaggi
       edit_users_label: Modificare utenti
       global_heading: Globale
@@ -163,6 +189,7 @@ core:
       reply_to_discussions_label: Rispondere alle discussioni
       sign_up_label: Registrazione
       start_discussions_label: Iniziare una discussione
+      title: Permessi
       view_hidden_groups_label: Visualizzare i badge dei gruppi nascosti
       view_discussions_label: Leggere le discussioni
       view_last_seen_at_label: Vedere l'ultimo accesso di un utente

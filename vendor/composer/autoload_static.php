@@ -198,6 +198,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\UserRequest\\' => 16,
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
             'FoF\\Upload\\' => 11,
@@ -209,7 +210,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\SocialProfile\\' => 18,
             'FoF\\Sitemap\\' => 12,
             'FoF\\ShareSocial\\' => 16,
-            'FoF\\SecureHttps\\' => 16,
             'FoF\\Reactions\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\PreventNecrobumping\\' => 24,
@@ -223,6 +223,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\Masquerade\\' => 15,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
+            'FoF\\HtmlErrors\\' => 15,
             'FoF\\Gamification\\' => 17,
             'FoF\\ForumStatisticsWidget\\' => 26,
             'FoF\\Formatting\\' => 15,
@@ -288,6 +289,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
             'Askvortsov\\FlarumCategories\\' => 28,
             'App\\' => 4,
+            'AntoineFr\\Money\\' => 16,
         ),
     );
 
@@ -667,6 +669,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
         ),
+        'FoF\\UserRequest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/username-request/src',
+        ),
         'FoF\\UserDirectory\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/user-directory/src',
@@ -710,10 +716,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'FoF\\ShareSocial\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/share-social/src',
-        ),
-        'FoF\\SecureHttps\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/secure-https/src',
         ),
         'FoF\\Reactions\\' => 
         array (
@@ -766,6 +768,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'FoF\\Linguist\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/linguist/src',
+        ),
+        'FoF\\HtmlErrors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/html-errors/src',
         ),
         'FoF\\Gamification\\' => 
         array (
@@ -966,6 +972,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'AntoineFr\\Money\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
         ),
     );
 

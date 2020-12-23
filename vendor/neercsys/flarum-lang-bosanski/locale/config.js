@@ -9,8 +9,8 @@ const translator = {
     hh: ['%d sat', '%d sata', '%d sati'],
     d: ['jedan dan', 'jednog dana'],
     dd: ['%d dan', '%d dana', '%d dana'],
-    M: ['jedan mijesec', 'jednog mijeseca'],
-    MM: ['%d mijeesec', '%d mijeseca', '%d mijeseci'],
+    M: ['jedan mjesec', 'jednog mjeseca'],
+    MM: ['%d mjesec', '%d mjeseca', '%d mjeseci'],
     y: ['jednu godinu', 'jedne godine'],
     yy: ['%d godinu', '%d godine', '%d godina']
   },

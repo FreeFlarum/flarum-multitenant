@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "flarum/core": "^0.1.0-beta.14"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "authors": [
         {
@@ -23,7 +23,12 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Italian",
+			"title": "Italian",
+			"category": "language",
+			"info": {
+                "website": "https://discuss.flarum.org/d/5160",
+                "support": "https://github.com/Nearata/lang-italian/issues"
+            },
             "icon": {
                 "image": "icon.svg",
                 "backgroundColor": "#00247d",

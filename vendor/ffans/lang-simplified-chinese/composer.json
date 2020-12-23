@@ -1,0 +1,55 @@
+{
+  "name": "ffans/lang-simplified-chinese",
+  "description": "Flarum 简体中文语言包 2020",
+  "keywords": [
+    "flarum",
+    "locale",
+    "extension",
+    "Chinsese",
+    "中文",
+    "简体中文"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Flarum Fans",
+      "email": "littlegolden@vip.qq.com",
+      "homepage": "https://github.com/FFans"
+    }
+  ],
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://pay.csur.fun/"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/FFans/lang-simplified-chinese",
+    "issues": "https://github.com/FFans/lang-simplified-chinese/issues"
+  },
+  "require": {
+    "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.16"
+  },
+  "replace": {
+    "littlegolden/flarum-lang-simplified-chinese": "*"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "简体中文语言包",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#fff",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/22690"
+    },
+    "flarum-locale": {
+      "code": "zh-Hans",
+      "title": "简体中文"
+    }
+  }
+}
