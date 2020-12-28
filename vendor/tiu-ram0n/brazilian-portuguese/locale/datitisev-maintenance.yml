@@ -1,0 +1,51 @@
+---
+datitisev-maintenance:
+  admin:
+    dashboard:
+      enable_maintenance_mode_button: Habilitar manutenção
+      disable_maintenance_mode_button: Desativar manutenção
+    settings:
+      title: Modo Manutenção
+      settings_notice: Essas configurações podem não ser as atuais. Certifique-se
+        de que eles não sejam substituídos por <code> config.php </code>.
+      allow_bypass_label: Permitir ignorar o fórum e a manutenção da API usando permissão
+      allow_bypass_hint: Não será ignorado se o DB não estiver acessível. Aplica-se
+        ao fórum e API (a menos que a API esteja completamente desabilitada por meio
+        de <code> config.php </code>). Se desativado, os administradores ainda poderão
+        acessar a API (a menos que a API esteja completamente desativada) para evitar
+        o bloqueio.
+      prefer_db_label: Prefira configurações de banco de dados em vez de configurações
+        de <code> config.php </code>
+      prefer_db_hint: Normalmente, os valores em <code> config.php </code> substituem
+        os vistos aqui. Habilite esta opção para fazer com que essas opções substituam
+        as encontradas no arquivo de configuração - de forma que elas sejam usadas
+        apenas no caso de o banco de dados não estar acessível.
+      active_label: Estado do modo de manutenção
+      disable_admin_label: Desative o acesso de administrador
+      disable_api_label: Desative todo o acesso à API
+      title_label: Título da página de erro
+      message_label: Mensagem de página de erro
+      error_page_file_label: Caminho do arquivo da página de erro
+      error_page_file_hint: Caminho da raiz do Flarum - onde <code> vendor </code>
+        e <code> storage </code> estão localizados.
+      error_page_label: Página de erro HTML/Blade
+      error_page_hint: Você pode usar $app, $translator, $settings, $title e $message
+        com blade.
+    permissions:
+      allow_bypass_maintenance_label: Modo de manutenção de desvio (configuração deve
+        ser habilitada)
+  lib:
+    maintenance_active_message: Este fórum está em manutenção.
+    maintenance_active_not_db_message: O modo de manutenção é habilitado por meio
+      de <code> config.php </code>.
+    maintenance_active_disabled_api_message: A API está atualmente desativada para
+      todos.
+  views:
+    error:
+      title: Manutenção
+      message: No momento, estamos realizando alguma manutenção. Estaremos online
+        em breve!
+core:
+  lib:
+    error:
+      maintenance_message: O fórum está atualmente em manutenção.

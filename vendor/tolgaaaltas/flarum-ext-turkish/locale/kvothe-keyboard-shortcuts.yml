@@ -51,6 +51,7 @@ kvothe-keyboard-shortcuts:
       logged-out: 'Çıkış Yapıldığında'
     key-descriptions:
       back: 'Geri Dön'
+      clear: 'Bildirimleri temizle'
       first-post: 'İlk Gönderi'
       follow: 'Takip Et/Etme'
       help: 'Klavye Kısayolları Yardım'

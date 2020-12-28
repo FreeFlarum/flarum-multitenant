@@ -5,7 +5,16 @@
 maicol07-sso:
   admin:
     settings:
+      jwt_iss: 'Sertifikayı Veren Etki Alanı'
+      jwt_section_subtitle: 'JWT Eklenti ayarları'
+      jwt_signer_key: 'İmzalayan anahtarı'
       login_url: 'Giriş Bağlantısı'
       logout_url: 'Çıkış Bağlantısı'
+      manage_account_btn_open_in_new_tab: 'Hesap yönetimini yeni bir sekmede açın'
+      manage_account_url: 'Hesap URL''sini yönetin'
+      remove_login_btn: 'Giriş düğmesini kaldır'
+      remove_signup_btn: 'Kayıt düğmesini kaldır'
       signup_url: 'Kayıt Bağlantısı'
       title: 'SSO Ayarları'
+  forum:
+    manage_account_btn: 'Hesabı yönet'

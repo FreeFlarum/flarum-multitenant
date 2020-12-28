@@ -1,7 +1,20 @@
 import app from 'flarum/app';
-import ImgurUploadSettingsModal from './components/ImgurUploadSettingsModal';
 
 app.initializers.add('imgur-upload', () => {
-	// https://discuss.flarum.org/d/5083-getting-settingsmodal-to-appear
-	app.extensionSettings['matteocontrini-imgur-upload'] = () => app.modal.show(new ImgurUploadSettingsModal());
+  app.extensionData
+    .for('matteocontrini-imgur-upload')
+    .registerSetting(
+      {
+        setting: 'imgur-upload.client-id',
+        label: 'Imgur Client ID',
+        type: 'text'
+      }
+    )
+    .registerSetting(
+      {
+        setting: 'imgur-upload.hide-markdown-image',
+        label: app.translator.trans('imgur-upload.admin.settings.hide-markdown-image'),
+        type: 'boolean'
+      }
+    )
 });

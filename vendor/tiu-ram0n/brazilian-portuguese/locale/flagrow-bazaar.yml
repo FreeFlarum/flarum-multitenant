@@ -1,0 +1,129 @@
+flagrow-bazaar:
+  admin:
+    loader:
+      is_loading: Processando..
+      error: Ocorreu um erro. Verifique a aba histórico e o log do Flarum para mais detalhes. Não tenha receio de nos reportar.
+      refresh: Atualizar Página
+      close: Fechar
+      report_issue: Reportar problema
+    nav:
+      title: Bazaar
+      description: O Mercado de Extensões
+    header:
+      extensions: Procurar Extensões
+      tasks: Histórico de Tarefas
+    modal:
+      dashboard:
+        title: Dashboard
+        visit-remote-dashboard: Visitar dashboard
+        sync:
+          switch: Sync
+          description: >
+            Sincronize as informações de suas extensões com {host}, para receber notificações sobre novas versões
+            de extensões instaladas. Além disso, iremos enviar notificações regulares sobre extensões desatualizadas
+            em todas as suas instalações do Flarum com sincronismo ativado.
+      settings:
+        title: Flagrow Bazaar
+        field:
+          token:
+            label: API token
+            description: Esse api token é requerido para acessar a api de extensões do Flagrow. Se já definido, você está pronto para ir.
+          use_cron_for_tasks:
+            label: Cronjobs
+            description: >
+              Permitindo cronjobs processar tarefas do Bazaar, esses processos
+              são menos suscetível a timeout. Por favor, note que você deve ser capaz de
+              configurar o cronjob, consulte <a>a wiki</a>.
+            toggle: Use crons para processamento de tarefas
+      connect-bazaar:
+        title: Conectar
+        description: >
+          Conecte seu fórum flarum a sua conta pessoal em {host} para desbloquear recursos avançados; incluindo
+          um dashboard que lhe dá uma visão global de todas as sus instalações Flarum. Adicionaremos mais
+          funcionalidades como: notificações de quando existem extensões desatualizadas ou a capacidade de
+          atualizar suas instalações Flarum de forma centralizada.
+      requirements:
+        file-permissions:
+          title: Permissões de Arquivo
+          description: >
+            Parece que o Bazaar não tem permissões suficientes para escrever arquivos
+            e/ou diretórios, por favor, reveja a lista abaixo. Para mais informações,
+            consulte <a>a wiki</a>.
+        php-memory_limit:
+          title: Limite de Memória
+          description: >
+            Recomendamos permitir o PHP usar pelo menos {required} de memória, seu php.ini atualmente permite {limit}.
+            Apesar de nós tentarmos aumentar o limite durante execução, o sucesso depende do seu ambiente de hospedagem.
+            Para mais informações, consulte <a>a wiki</a>.
+    page:
+      state:
+        no_results_available: >
+          Parece que não há resultados disponíveis no momento
+        not_authorized: >
+          Sua autorização com a api flagrow.io falhou. Possivelmente, uma conexão de internet instável está causando isso.
+          Por favor atualize a página uma vez que sua conexão esteja estabilizada. Se o problema persistir, entre em contato conosco.
+      button:
+        more: "Mais, carregar página {current} de {total}"
+        install: Instalar
+        uninstall: Desinstalar
+        enable: Ativar
+        disable: Desativar
+        update: Atualizar
+        connect: Conectar
+        favorite_button: "Extensão favorita"
+        remove_favorite_button: "Remova extensão dos favoritos"
+        subscribe: Comprar inscrição
+        unsubscribe: Cancelar inscrição
+        connect_to_subscribe: Conectar seu bazaar para se inscrever em extenões
+      extension:
+        installed: Extensão instalada
+        enabled: Extensão ativada
+        vendor: Por {vendor}
+        downloads: Downloads
+        installed_version: Versão instalada
+        highest_version: Última versão
+        favorites: Favoritado
+        favorited: Um de seus favoritos
+        pending: Extensão aguardando tarefa em segundo plano
+        outdated: "Extensão desatualizada, por favor, atualize para versão {new}"
+        premium: Premium
+        subscribed: Inscrito
+        subscribe_check_failed: Parece que você cancelou o processo de checkout.
+        incompatible: Incompatível com sua versão atual do Flarum
+        next_incompatible: Incompatível com próxima versão do Flarum
+        latest_incompatible: Incompatível com última versão do Flarum
+      task:
+        header:
+          status: Status
+          command: Comando
+          output: Saída
+          time: Tempo
+          details: Detalhes
+        attribute:
+          created_at: Criado em
+          started_at: Começado em
+          finished_at: Terminado em
+        status:
+          success: Sucesso
+          exception: Uma exceção ocorreu
+          working: Trabalho em andamento
+          unknown: Desconhecido
+        command:
+          sync-lock: Sync arquivo composer.lock
+          sync-version: Sync versão de {extension}
+          install: Instalar {extension}
+          update: Atualizar {extension}
+          uninstall: Desinstalar {extension}
+        group:
+          today: Hoje
+          lastmonth: Último mês
+          older: Mais velho
+    search:
+      placeholder: Procurar extensão
+      filter_installed: Instalado
+      filter_update: Atualização disponível
+      filter_favorited: Favoritado
+      filter_subscribed: Inscrito
+      filter_premium: Premium
+      filter_pending: Pendente
+      filter_languages: Línguas

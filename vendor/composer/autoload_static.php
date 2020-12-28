@@ -53,6 +53,9 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
+        '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
+        '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
@@ -117,9 +120,11 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Symfony\\Component\\Config\\' => 25,
             'SychO\\ProfileCover\\' => 19,
             'SoftCreatR\\MimeDetector\\' => 24,
+            'SSNepenthe\\ColorUtils\\' => 22,
         ),
         'R' => 
         array (
+            'Reflar\\Webhooks\\' => 16,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -163,6 +168,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'J' => 
         array (
+            'JordanJay29\\Summaries\\' => 22,
             'JmesPath\\' => 9,
             'JSLirola\\Login2SeePlus\\' => 23,
         ),
@@ -198,6 +204,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\Webhooks\\' => 13,
             'FoF\\UserRequest\\' => 16,
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
@@ -446,6 +453,14 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
         ),
+        'SSNepenthe\\ColorUtils\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ssnepenthe/color-utils/src',
+        ),
+        'Reflar\\Webhooks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/webhooks/src/Legacy',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -565,6 +580,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
         ),
+        'JordanJay29\\Summaries\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jordanjay29/flarum-ext-summaries/src',
+        ),
         'JmesPath\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
@@ -668,6 +687,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Franzl\\Middleware\\Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
+        ),
+        'FoF\\Webhooks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/webhooks/src',
         ),
         'FoF\\UserRequest\\' => 
         array (

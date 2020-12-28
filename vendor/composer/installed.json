@@ -6129,6 +6129,85 @@
             "install-path": "../fof/username-request"
         },
         {
+            "name": "fof/webhooks",
+            "version": "0.3.2",
+            "version_normalized": "0.3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/webhooks.git",
+                "reference": "a85bc417d4dcb4186354cfc8b19e3b21141ba065"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/webhooks/zipball/a85bc417d4dcb4186354cfc8b19e3b21141ba065",
+                "reference": "a85bc417d4dcb4186354cfc8b19e3b21141ba065",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15",
+                "guzzlehttp/guzzle": "6.* || 7.*",
+                "ssnepenthe/color-utils": "^0.4.2"
+            },
+            "replace": {
+                "reflar/webhooks": "*"
+            },
+            "time": "2020-12-26T20:34:06+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Webhooks",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-external-link-alt",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/17812"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Webhooks\\": "src/",
+                    "Reflar\\Webhooks\\": "src/Legacy"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Flarum with webhooks",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/17812",
+                "issues": "https://github.com/FriendsOfFlarum/webhooks/issues",
+                "source": "https://github.com/FriendsOfFlarum/webhooks"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/datitisev",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "opencollective"
+                }
+            ],
+            "install-path": "../fof/webhooks"
+        },
+        {
             "name": "franzl/whoops-middleware",
             "version": "0.4.1",
             "version_normalized": "0.4.1.0",
@@ -7496,6 +7575,75 @@
                 "watermark"
             ],
             "install-path": "../intervention/image"
+        },
+        {
+            "name": "jordanjay29/flarum-ext-summaries",
+            "version": "0.3.2",
+            "version_normalized": "0.3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jordanjay29/flarum-ext-summaries.git",
+                "reference": "f3a360582252d85cee3cf90c6bdeeb943c8eec22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jordanjay29/flarum-ext-summaries/zipball/f3a360582252d85cee3cf90c6bdeeb943c8eec22",
+                "reference": "f3a360582252d85cee3cf90c6bdeeb943c8eec22",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.16"
+            },
+            "time": "2020-12-25T19:25:57+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/2151-summaries-showing-excerpts-on-discussions-page"
+                },
+                "flarum-extension": {
+                    "title": "Summaries",
+                    "category": "discussion",
+                    "icon": {
+                        "name": "fas fa-sticky-note",
+                        "backgroundColor": "#00bac9",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "JordanJay29\\Summaries\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordan Schnaidt (jordanjay29)",
+                    "email": "jordanschnaidt@gmail.com"
+                }
+            ],
+            "description": "Show summaries on all discussions.",
+            "keywords": [
+                "discussion",
+                "excerpt",
+                "excerpts",
+                "flarum",
+                "summaries",
+                "summary"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/2151",
+                "issues": "https://github.com/jordanjay29/flarum-ext-summaries/issues",
+                "source": "https://github.com/jordanjay29/flarum-ext-summaries"
+            },
+            "install-path": "../jordanjay29/flarum-ext-summaries"
         },
         {
             "name": "jslirola/flarum-ext-login2seeplus",
@@ -8958,27 +9106,28 @@
         },
         {
             "name": "matteocontrini/flarum-imgur-upload",
-            "version": "v3.3.1",
-            "version_normalized": "3.3.1.0",
+            "version": "v3.5.0",
+            "version_normalized": "3.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matteocontrini/flarum-imgur-upload.git",
-                "reference": "02fa2adcdaa226c934b99e1840ff362100cca8c9"
+                "reference": "5d8e535d4b9f98e3879956f27790ec7e61206cf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matteocontrini/flarum-imgur-upload/zipball/02fa2adcdaa226c934b99e1840ff362100cca8c9",
-                "reference": "02fa2adcdaa226c934b99e1840ff362100cca8c9",
+                "url": "https://api.github.com/repos/matteocontrini/flarum-imgur-upload/zipball/5d8e535d4b9f98e3879956f27790ec7e61206cf4",
+                "reference": "5d8e535d4b9f98e3879956f27790ec7e61206cf4",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.8"
+                "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
             },
-            "time": "2020-04-26T08:41:43+00:00",
+            "time": "2020-12-26T20:41:17+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "Imgur Upload",
+                    "category": "feature",
                     "icon": {
                         "name": "fas fa-circle",
                         "backgroundColor": "#272727",
@@ -9000,32 +9149,29 @@
                 {
                     "name": "Matteo Contrini",
                     "email": "matteo@contrini.it"
-                },
-                {
-                    "name": "Matteo Pompili",
-                    "email": "matpompili@gmail.com"
                 }
             ],
             "description": "Simple image upload from the Flarum editor",
             "support": {
+                "forum": "https://discuss.flarum.org/d/18491",
                 "issues": "https://github.com/matteocontrini/flarum-imgur-upload/issues",
-                "source": "https://github.com/matteocontrini/flarum-imgur-upload/tree/master"
+                "source": "https://github.com/matteocontrini/flarum-imgur-upload"
             },
             "install-path": "../matteocontrini/flarum-imgur-upload"
         },
         {
             "name": "matthiasmullie/minify",
-            "version": "1.3.64",
-            "version_normalized": "1.3.64.0",
+            "version": "1.3.65",
+            "version_normalized": "1.3.65.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthiasmullie/minify.git",
-                "reference": "38f9d58c739687e269f46c6dff4647de9e2eb855"
+                "reference": "227f19062451c55a797e0cc667ef983834e6580c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/38f9d58c739687e269f46c6dff4647de9e2eb855",
-                "reference": "38f9d58c739687e269f46c6dff4647de9e2eb855",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/227f19062451c55a797e0cc667ef983834e6580c",
+                "reference": "227f19062451c55a797e0cc667ef983834e6580c",
                 "shasum": ""
             },
             "require": {
@@ -9041,7 +9187,7 @@
             "suggest": {
                 "psr/cache-implementation": "Cache implementation to use with Minify::cache"
             },
-            "time": "2020-12-23T13:37:53+00:00",
+            "time": "2020-12-27T21:43:29+00:00",
             "bin": [
                 "bin/minifycss",
                 "bin/minifyjs"
@@ -9076,8 +9222,22 @@
             ],
             "support": {
                 "issues": "https://github.com/matthiasmullie/minify/issues",
-                "source": "https://github.com/matthiasmullie/minify/tree/1.3.64"
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.65"
             },
+            "funding": [
+                {
+                    "url": "https://github.com/[user1",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/matthiasmullie] # Replace with up to 4 GitHub Sponsors-enabled usernames e.g.",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/user2",
+                    "type": "github"
+                }
+            ],
             "install-path": "../matthiasmullie/minify"
         },
         {
@@ -10732,23 +10892,23 @@
         },
         {
             "name": "qiaeru/lang-french",
-            "version": "v1.9.0",
-            "version_normalized": "1.9.0.0",
+            "version": "v1.9.1",
+            "version_normalized": "1.9.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qiaeru/lang-french.git",
-                "reference": "92cf639a54a9ffb3533ade5cd3a740d9da423207"
+                "reference": "a33de570f255b3dbdf05db8069cc31fb4247a631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qiaeru/lang-french/zipball/92cf639a54a9ffb3533ade5cd3a740d9da423207",
-                "reference": "92cf639a54a9ffb3533ade5cd3a740d9da423207",
+                "url": "https://api.github.com/repos/qiaeru/lang-french/zipball/a33de570f255b3dbdf05db8069cc31fb4247a631",
+                "reference": "a33de570f255b3dbdf05db8069cc31fb4247a631",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2020-12-22T19:35:31+00:00",
+            "time": "2020-12-25T13:53:29+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -11218,17 +11378,17 @@
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.8.0",
-            "version_normalized": "2.8.0.0",
+            "version": "2.8.1",
+            "version_normalized": "2.8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "52e1d46415f93ea1c8fed9846d8240fb5396b238"
+                "reference": "2ac2ab8c28849311424a78ea21a8368423053ce3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/52e1d46415f93ea1c8fed9846d8240fb5396b238",
-                "reference": "52e1d46415f93ea1c8fed9846d8240fb5396b238",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/2ac2ab8c28849311424a78ea21a8368423053ce3",
+                "reference": "2ac2ab8c28849311424a78ea21a8368423053ce3",
                 "shasum": ""
             },
             "require": {
@@ -11253,10 +11413,10 @@
                 "ext-xsl": "Enables the XSLT renderer",
                 "ext-zlib": "Enables gzip compression when scraping content via the MediaEmbed plugin"
             },
-            "time": "2020-12-09T14:01:49+00:00",
+            "time": "2020-12-27T17:14:06+00:00",
             "type": "library",
             "extra": {
-                "version": "2.8.0"
+                "version": "2.8.1"
             },
             "installation-source": "dist",
             "autoload": {
@@ -11289,7 +11449,7 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/TextFormatter/issues",
-                "source": "https://github.com/s9e/TextFormatter/tree/2.8.0"
+                "source": "https://github.com/s9e/TextFormatter/tree/2.8.1"
             },
             "install-path": "../s9e/text-formatter"
         },
@@ -11361,6 +11521,81 @@
                 }
             ],
             "install-path": "../softcreatr/php-mime-detector"
+        },
+        {
+            "name": "ssnepenthe/color-utils",
+            "version": "0.4.2",
+            "version_normalized": "0.4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ssnepenthe/color-utils.git",
+                "reference": "a68562f81fd603be0c45d102b4e8064c76ddf863"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ssnepenthe/color-utils/zipball/a68562f81fd603be0c45d102b4e8064c76ddf863",
+                "reference": "a68562f81fd603be0c45d102b4e8064c76ddf863",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phploc/phploc": "^3.0",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^6.0",
+                "psy/psysh": "^0.8",
+                "squizlabs/php_codesniffer": "^2.8",
+                "vimeo/psalm": "^0.3"
+            },
+            "time": "2017-06-19T16:48:17+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "inc/colors.php",
+                    "inc/helpers.php",
+                    "inc/transformations.php"
+                ],
+                "psr-4": {
+                    "SSNepenthe\\ColorUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "A PHP library for performing SASS-like color manipulations.",
+            "homepage": "https://github.com/ssnepenthe/color-utils",
+            "keywords": [
+                "Brightness",
+                "alpha",
+                "blue",
+                "color",
+                "conversion",
+                "convert",
+                "green",
+                "hex",
+                "hexadecimal",
+                "hsl",
+                "hsla",
+                "hue",
+                "lightness",
+                "luminance",
+                "manipulation",
+                "red",
+                "rgb",
+                "rgba",
+                "sass",
+                "saturation",
+                "scss",
+                "transformation"
+            ],
+            "support": {
+                "issues": "https://github.com/ssnepenthe/color-utils/issues",
+                "source": "https://github.com/ssnepenthe/color-utils/tree/master"
+            },
+            "install-path": "../ssnepenthe/color-utils"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -11442,23 +11677,23 @@
         },
         {
             "name": "sycho/flarum-profile-cover",
-            "version": "v1.2.1",
-            "version_normalized": "1.2.1.0",
+            "version": "v1.2.2",
+            "version_normalized": "1.2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SychO9/flarum-profile-cover.git",
-                "reference": "a05da29b9184ae20014140f663b3cb21bf64f29c"
+                "reference": "1c72a601c2fc563ecfc2fea39e3801d053eb5011"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SychO9/flarum-profile-cover/zipball/a05da29b9184ae20014140f663b3cb21bf64f29c",
-                "reference": "a05da29b9184ae20014140f663b3cb21bf64f29c",
+                "url": "https://api.github.com/repos/SychO9/flarum-profile-cover/zipball/1c72a601c2fc563ecfc2fea39e3801d053eb5011",
+                "reference": "1c72a601c2fc563ecfc2fea39e3801d053eb5011",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2020-12-11T16:21:17+00:00",
+            "time": "2020-12-23T18:37:13+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -13268,6 +13503,72 @@
             "install-path": "../tijsverkoyen/css-to-inline-styles"
         },
         {
+            "name": "tiu-ram0n/brazilian-portuguese",
+            "version": "1.1.22",
+            "version_normalized": "1.1.22.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ram0ng1/brazilian-portuguese.git",
+                "reference": "edad9ea2bb7710f63d025a151478f2f8c081d1be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ram0ng1/brazilian-portuguese/zipball/edad9ea2bb7710f63d025a151478f2f8c081d1be",
+                "reference": "edad9ea2bb7710f63d025a151478f2f8c081d1be",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.14"
+            },
+            "time": "2020-11-17T13:38:42+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Brazilian Portuguese",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#55a667",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18543"
+                },
+                "flarum-locale": {
+                    "code": "pt-BR",
+                    "title": "Português Brasileiro"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ramon Guilherme",
+                    "email": "ramonguilherme@outlook.com",
+                    "homepage": "https://ramonguilherme.com.br"
+                }
+            ],
+            "description": "Pacote de idioma Português do Brasil.",
+            "homepage": "https://ramonguilherme.com.br",
+            "keywords": [
+                "brazilian",
+                "extensão",
+                "language",
+                "locale",
+                "portugues",
+                "portuguese"
+            ],
+            "support": {
+                "issues": "https://github.com/ram0ng1/brazilian-portuguese/issues",
+                "source": "https://github.com/ram0ng1/brazilian-portuguese"
+            },
+            "install-path": "../tiu-ram0n/brazilian-portuguese"
+        },
+        {
             "name": "tobscure/json-api",
             "version": "v0.3.0",
             "version_normalized": "0.3.0.0",
@@ -13322,17 +13623,17 @@
         },
         {
             "name": "tolgaaaltas/flarum-ext-turkish",
-            "version": "0.15",
-            "version_normalized": "0.15.0.0",
+            "version": "0.15.0.2",
+            "version_normalized": "0.15.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-                "reference": "843c14ee053e518dcc116dc2cfb92a5419502394"
+                "reference": "923a10d51d181064f7cbc9d897e6d1bc567414ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/843c14ee053e518dcc116dc2cfb92a5419502394",
-                "reference": "843c14ee053e518dcc116dc2cfb92a5419502394",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/923a10d51d181064f7cbc9d897e6d1bc567414ba",
+                "reference": "923a10d51d181064f7cbc9d897e6d1bc567414ba",
                 "shasum": ""
             },
             "require": {
@@ -13341,7 +13642,7 @@
             "suggest": {
                 "tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
             },
-            "time": "2020-12-21T08:10:23+00:00",
+            "time": "2020-12-27T23:50:23+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -13375,7 +13676,14 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "tolgaaaltas",
+                    "homepage": "https://discuss.flarum.org/u/tolgaaaltas"
+                }
+            ],
             "description": "Turkish language pack for Flarum's third party extensions.",
+            "homepage": "https://tolgaaltas.com",
             "keywords": [
                 "Turkish",
                 "extension",
@@ -13387,21 +13695,27 @@
                 "issues": "https://github.com/tolgaaaltas/flarum-ext-turkish/issues",
                 "source": "https://github.com/tolgaaaltas/flarum-ext-turkish/"
             },
+            "funding": [
+                {
+                    "url": "https://tolgaaltas.com/contact/",
+                    "type": "website"
+                }
+            ],
             "install-path": "../tolgaaaltas/flarum-ext-turkish"
         },
         {
             "name": "tolgaaaltas/flarum-lang-turkish",
-            "version": "0.15",
-            "version_normalized": "0.15.0.0",
+            "version": "0.15.0.2",
+            "version_normalized": "0.15.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
-                "reference": "06e8b4f7ae4bc417fd69284c5cfce2bf36e847ca"
+                "reference": "28fd369d91243a7851df04505390f275ed4aa334"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/06e8b4f7ae4bc417fd69284c5cfce2bf36e847ca",
-                "reference": "06e8b4f7ae4bc417fd69284c5cfce2bf36e847ca",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/28fd369d91243a7851df04505390f275ed4aa334",
+                "reference": "28fd369d91243a7851df04505390f275ed4aa334",
                 "shasum": ""
             },
             "require": {
@@ -13410,7 +13724,7 @@
             "suggest": {
                 "tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."
             },
-            "time": "2020-12-21T08:10:17+00:00",
+            "time": "2020-12-27T10:03:00+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -13444,7 +13758,14 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "tolgaaaltas",
+                    "homepage": "https://discuss.flarum.org/u/tolgaaaltas"
+                }
+            ],
             "description": "Turkish language pack for Flarum's core.",
+            "homepage": "https://tolgaaltas.com",
             "keywords": [
                 "locale"
             ],
@@ -13452,6 +13773,12 @@
                 "issues": "https://github.com/tolgaaaltas/flarum-lang-turkish/issues",
                 "source": "https://github.com/tolgaaaltas/flarum-lang-turkish/"
             },
+            "funding": [
+                {
+                    "url": "https://tolgaaltas.com/contact/",
+                    "type": "website"
+                }
+            ],
             "install-path": "../tolgaaaltas/flarum-lang-turkish"
         },
         {

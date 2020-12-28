@@ -1,0 +1,52 @@
+---
+kilowhat-audit:
+  admin:
+    menu:
+      title: Registro de auditoria
+      description: Rever ações recentes.
+    header:
+      title: Registro de Auditoria
+      free: Plano Free
+      pro: Plano Pro
+      upgrade: Atualizar para Plano Pro
+      documentation: Ver documentação completa
+      version: Versão {version}
+  forum:
+    link:
+      discussion-audit: Registro de auditoria
+    modal:
+      user-title: Registro de auditoria do usuário
+  lib:
+    browser:
+      filterApply: Aplicar
+      empty: Sem resultados
+      loadMore: Mais
+      withoutActor: "=> core.group.guest"
+      deletedResource:
+        discussion: 'Discussão #{id}'
+        group: 'Grupo #{id}'
+        post: 'Post #{id}'
+        tag: 'Tag #{id}'
+        user: 'Usuário #{id}'
+      genericResource:
+        comment: Comentário
+        post: Post
+      permissionGroup:
+        everyone: "=> core.admin.permissions_controls.everyone_button"
+        members: "=> core.admin.permissions_controls.members_button"
+      noValue: "(sem valor)"
+      client:
+        session: Sessão Web
+        api_key: API key
+        access_token: Token de acesso
+        cli: Linha de comando
+        unknown: Cliente desconhecido
+      controls:
+        filterIp: Mostrar logs por este IP
+      extension:
+        enabled: 'Extensão ativada: {package}'
+      fof_ban_ips:
+        banned: IP banido {ip}
+        unbanned: IP não banido {ip}
+      user:
+        username_request_rejected: Mudança de nome de usuário de {username} rejeitada

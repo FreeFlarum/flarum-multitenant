@@ -1,0 +1,22 @@
+---
+fof-moderator-notes:
+  admin:
+    permissions:
+      createnotes: Criar notas do moderador
+      viewnotes: Ver notas do moderador
+  forum:
+    moderatorNotes:
+      add_button: Nova nota
+      confirmation_message: Sua anotação foi salva. Pode ser necessário atualizar
+        a página para vê-la.
+      create-heading: Crie uma nova nota de moderador
+      dismiss_button: Feito
+      input_heading: Insira suas notas para  <strong>{username}</strong>
+      no_content_given: Uma nota vazia não é permitida.
+      noNotes: Parece que não há notas aqui.
+      submit_button: Salvar nota
+    user:
+      notes: Notas do moderador
+  api:
+    auto-note: Eu usei FoF Impersonate para mudar para este usuário
+    auto-note-actor: Used FoF Impersonate to impersonate 'username'

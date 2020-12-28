@@ -9,6 +9,11 @@ fof-best-answer:
       best_answer_not_own_discussion: 'En iyi yanıtı seç (başkasının tartışmasında)'
     settings:
       allow_select_own_post: 'Kullanıcının kendi gönderisini seçmesine izin ver'
+      label:
+        advanced: Gelişmiş
+        general: Genel
+        reminders: Hatırlatıcılar
+        reminders_notice: 'Hatırlatıcıların doğru şekilde çalışması için Flarum planlayıcısını doğru şekilde ayarlamış olmanız gerekir.'
       remind_tag_ids: 'Hatırlatıcıyı belirli etiketlerde etkinleştirmek için etiketleri belirleyin (virgülle ayırarak)'
       schedule_log_output: 'Zamanlayıcı çıktısını kayıt dosyasına ekle'
       schedule_on_one_server: 'Zamanlayıcı için ''onOneServer()'' kullanın (Redis/Memcache gerektirir)'
@@ -16,12 +21,21 @@ fof-best-answer:
       select_best_answer_reminder_days: 'Kullanıcıya X günden sonra en iyi yanıtı seçmesini hatırlat'
       title: 'En İyi Yanıt Ayarları'
       use_alt_ui: 'Alternatif şablonu kullanın (En İyi Yanıt butonları gönderinin sonunda yer alır)'
+  email:
+    body:
+      awarded: "Hey {recipient_display_name},\n\nHarika, {actor_display_name} senin '{discussion_title}' başlıklı tartışmadaki yanıtını en iyi yanıt olarak seçti. Yardımcı olduğun için teşekkürler.\n\nBuradan görüntüle: {discussion_url}\n"
+      ba-set: "Hey {recipient_display_name},\n\n{actor_display_name} senin de yanıtladığın '{discussion_title}' tartışması için en iyi yanıtı belirledi.\n\nBuradan görüntüle: {discussion_url}\n"
+      select: "Hey {recipient_display_name},\n\nSadece kontrol ediyorduk ve '{discussion_title}' başlıklı tartışmanızın çok sayıda yanıt aldığını gördük. Umarız bu yanıtlardan birisi sorunu çözmene yardımcı olmuştur.\n\nEğer öyleyse sorunuz için en iyi yanıtı belirlemeniz mevcut ve yeni ziyaretçiler için yol gösterici olacaktır. Aynı sorunu yaşayan kullanıcılar için yardımcı olun ve size en iyi yanıtı verene bir teşekkürü çok görmeyin. Kullanıcılarımız zamanlarını gönüllü olarak ayırıyorlar, bu yüzden takdir edildiklerini bilmelerini sağlamak iyi olurdu.\n\nTartışmayı buradan görüntüle: {discussion_url}, ve bir en iyi yanıt belirle.\n\nTeşekkürler!\n"
+    subject:
+      awarded: 'Gönderiniz {display_name} tarafından en iyi yanıt olarak seçildi'
+      ba-set: 'En iyi yanıt {display_name} tarafından seçildi'
+      select: 'Sorunuz yanıtlandı mı?'
   forum:
     answered_badge: Yanıtlandı
     best_answer_button: 'En İyi Yanıt'
     best_answer_label: '<a>{username}</a> tarafından {time_set}'
     errors:
-      mismatch: 'Seçilen gönderi bu tartışmada mevcut değil'
+      mismatch: 'Seçilen gönderi bu tartışmada mevcut değil.'
     notification:
       awarded: 'Gönderiniz {username} tarafından en iyi yanıt olarak seçti'
       awarded_email: 'Gönderiniz kullanıcı tarafından en iyi yanıt olarak seçti'

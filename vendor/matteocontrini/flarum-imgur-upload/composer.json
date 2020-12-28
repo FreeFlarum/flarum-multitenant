@@ -7,24 +7,26 @@
       {
         "name": "Matteo Contrini",
         "email": "matteo@contrini.it"
-      },
-      {
-        "name": "Matteo Pompili",
-        "email": "matpompili@gmail.com"
       }
     ],
     "require": {
-        "flarum/core": "^0.1.0-beta.8"
+        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
     },
     "extra": {
         "flarum-extension": {
             "title": "Imgur Upload",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-circle",
                 "backgroundColor": "#272727",
                 "color": "#85BF25"
             }
         }
+    },
+    "support": {
+        "issues": "https://github.com/matteocontrini/flarum-imgur-upload/issues",
+        "source": "https://github.com/matteocontrini/flarum-imgur-upload",
+        "forum": "https://discuss.flarum.org/d/18491"
     },
     "autoload": {
         "psr-4": {

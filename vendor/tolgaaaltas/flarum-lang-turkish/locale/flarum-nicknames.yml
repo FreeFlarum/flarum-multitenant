@@ -24,4 +24,4 @@ flarum-nicknames:
     settings:
       change_nickname_button: '=> flarum-nicknames.ref.change_nickname'
   ref:
-    change_nickname: 'Kullanıcı Adını Değiştir'
+    change_nickname: 'Görünür Adı Değiştir'

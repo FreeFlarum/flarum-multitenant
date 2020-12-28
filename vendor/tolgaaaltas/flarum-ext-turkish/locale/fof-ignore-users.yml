@@ -7,6 +7,9 @@ fof-ignore-users:
     permissions:
       can_not_be_ignored_label: Engellenemez
   forum:
+    badge:
+      discussion_label: 'Engellenen kullanıcı tarafından başlatıldı'
+      user_label: 'Engellenen kullanıcı'
     profile_link: 'Engellenmiş Kullanıcılar'
     user_controls:
       ignore_button: Engelle

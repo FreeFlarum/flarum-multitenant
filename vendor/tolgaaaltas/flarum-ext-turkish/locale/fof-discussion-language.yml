@@ -8,6 +8,7 @@ fof-discussion-language:
       allow_change_language_label: 'Dil düzenlemesine izin ver'
     settings:
       native_label: 'Ana dil adlarını kullanın'
+      show_flag_label: 'Ülke bayraklarını dil adlarıyla göster'
       title: 'FriendsOfFlarum Tartışma Dili'
   api:
     discussion:

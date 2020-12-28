@@ -6,9 +6,11 @@ fof-drafts:
   admin:
     permissions:
       schedule: 'Taslağı zamanla'
-      start: 'Tartışma için taslak oluştur'
+      start: 'Taslak oluştur'
     settings:
       enable_scheduled_drafts: 'Zamanlanmış taslakları aç'
+      schedule_log_output: 'Depolamayı günlüğe kaydetmek için zamanlayıcı çıktısını ekleyin'
+      schedule_on_one_server: 'Görev zamanlayıcı için ''onOneServer()'' direktifini kullanın (Redis/Memcache gerektirir)'
       title: 'Taslak Ayarları'
   console:
     scheduled_drafts_disabled: 'Zamanlanmış taslıklar ayarlardan kapalıdır.'

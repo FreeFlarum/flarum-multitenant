@@ -1,0 +1,50 @@
+---
+fof-reactions:
+  admin:
+    nav:
+      desc: Adicione reações personalizadas e altere as configurações.
+    page:
+      convert:
+        button: Converter reações antigas
+        converted: Convertido com sucesso todas as {number} curtidas
+        converting: Suas reações estão sendo convertidas. Atualize o site após alguns
+          minutos para ver o processo concluído. (O tempo de conversão pode demorar
+          um pouco dependendo do número total de reações)
+        help: Se você acabou de atualizar sua extensão, suas reações terão que ser
+          convertidas. Se você acabou de instalar essa extensão, poderá ignorar essa
+          mensagem com segurança.
+      reactions:
+        help:
+          identifier: Identificador
+          display: Exibição
+        Helptext: Insira o nome do identificador do emoji ou fonte-awesome e selecione
+          o tipo de reação.
+        reactions: Reações Atuais
+        title: Reações Personalizadas
+      settings:
+        integrations:
+          gamification:
+            downvoteHelptext: Introduzir o identificador da reação que você gostaria
+              de converter em voto negativo
+            downvoteLabel: Converter reações em votos negativos
+            legend: Gamification
+            upvoteHelptext: Introduzir o identificador da reação que você gostaria
+              de converter em voto positivo
+            upvoteLabel: Converter reações em votos positivos
+          legend: Integrações
+          likes:
+            Helptext: Introduzir o identificador da reação que você gostaria de converter
+              em curtida
+            Label: Converta reações em curtidas
+            legend: Curtida
+          warning: A mesma reação <strong>não</strong> pode ser convertida em curtida
+            <strong>e</strong> voto positivo
+        save_settings: Salvar configurações
+    permissions:
+      react_posts_label: Reagir às postagens
+  forum:
+    notification: "{username} reagiu com {reaction} à sua postagem"
+    settings:
+      notify_post_reacted_label: Alguém reage a uma das minhas postagens
+    warning: Sua reação foi convertida
+    disabled-reaction: Você não pode usar esta reação agora, atualize a página.

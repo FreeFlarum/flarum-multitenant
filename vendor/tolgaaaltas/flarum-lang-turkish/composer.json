@@ -4,6 +4,24 @@
     "description": "Turkish language pack for Flarum's core.",
     "keywords": ["locale"],
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/tolgaaaltas/flarum-lang-turkish/issues",
+        "source": "https://github.com/tolgaaaltas/flarum-lang-turkish",
+        "forum": "https://discuss.flarum.org/d/21356-flarum-core-turkish-language-pack/"
+    },
+    "homepage": "https://tolgaaltas.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://tolgaaltas.com/contact/"
+        }
+    ],
+    "authors": [
+        {
+            "name": "tolgaaaltas",
+            "homepage": "https://discuss.flarum.org/u/tolgaaaltas"
+        }
+    ],
     "require": {
         "flarum/core": "^0.1.0-beta.15"
     },

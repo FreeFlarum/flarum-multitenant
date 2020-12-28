@@ -21,6 +21,7 @@ fof-masquerade:
       name-help: "Herkes tarafından görülebilen (çevrilmeyen) alan.\n"
       on_bio: 'Kullanıcı biyografisinde bu alana cevabı göster'
       option-coma-warning: 'Seçeneğin etiketi (",") işareti içeremez.'
+      option-comma-warning: 'Bir seçeneğin etiketi herhangi bir virgül (",") içeremez.'
       option-new: 'Yeni seçenek'
       options: Seçenekler
       prefix: 'Alan ön eki'

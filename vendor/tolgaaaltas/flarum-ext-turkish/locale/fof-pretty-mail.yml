@@ -7,13 +7,13 @@ fof-pretty-mail:
     css_settings:
       help: 'Forumun CSS''ini elektronik postaya eklemeyi tercih edebilirsiniz. Bunu etkinleştirirseniz, belirli e-posta hizmetleri ile sorun yaşayabilirsiniz.'
       label: 'CSS ayarları'
-      switch_label: 'forum css kodlarını ekle'
+      switch_label: 'Forum CSS kodlarını ekle'
     nav:
       desc: 'HTML ile elektronik posta şablonlarınızı özelleştirin.'
     settings:
       confirm: 'Varsayılan elektronik posta şablonuna dönmek istediğinize emin misiniz?'
       default: 'Varsayılan Şablon'
-      help: '"$body" elektronik postanın içeriğini gösterir, "$forumStyle" <strong>forumun tüm CSS kodunu</strong> ekler, "$baseUrl" forumunuzun bağlantısıdır, "$settings" SettingsRepositoryInterface kısmı ile etkileşime girmenize izin verir, ve "$link" e-posta içersindeki bağlantıyı sağlar. Her değişkenin nasıl kullanıldığını incelemek için aşağıdaki şablonlara göz atın.'
+      help: '"$body" elektronik postanın içeriğini gösterir, "$forumStyle" <strong>forumun tüm CSS kodunu</strong> ekler, "$url" forumunuzun bağlantısıdır, "$settings" SettingsRepositoryInterface kısmı ile etkileşime girmenize izin verir, ve "$link" e-posta içersindeki bağlantıyı sağlar. Her değişkenin nasıl kullanıldığını incelemek için aşağıdaki şablonlara göz atın.'
       label: 'E-Posta Şablonları'
       newPost: 'Flarum/Abonelikler Yeni Gönderi E-Postası'
       notificationHelp: 'Elektronik postaların BBCode içermeleri muhtemel olduğu için "$forumStyle" kullanımı önerilir. Bu elektronik postalarda alıcı için "$user" kullanılır.'

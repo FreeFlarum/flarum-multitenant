@@ -7,3 +7,13 @@ flarum_profile_views:
     user:
       title_last_viewers: 'Profili son görüntüleyenler'
       views_count_text: '{viewcount} defa görüntülendi'
+michaelbelgium-flarum-profile-views:
+  admin:
+    settings:
+      max_viewcount_label: 'Maksimum ziyaretçi listesi sayısı'
+      title: 'Profil Görünümleri ayarları'
+      track_guests_label: 'Ziyaretçileri takip et'
+  forum:
+    user:
+      last_viewers_heading: 'Son ziyaretçiler'
+      view_count_text: '{viewcount} kez görüntülendi | {viewcount} kez görüntülendi'

@@ -37,6 +37,7 @@ fof-gamification:
         title: Rütbeler
       save_settings: 'Ayarları Kaydet'
       votes:
+        alternate_layout: 'Olumlu/olumsuz oylar yapmak için alternatif düzen kullanın'
         auto_upvote: 'Paylaşıldığında otomatik yukarı oyla'
         color_holder: '#ffffff'
         discussion_page: 'Orijinal gönderilerin toplam oylarını tartışma listesinde göster'

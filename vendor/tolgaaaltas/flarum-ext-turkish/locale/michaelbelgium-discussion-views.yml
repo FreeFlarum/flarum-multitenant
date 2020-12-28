@@ -23,19 +23,26 @@ michaelbelgium-discussion-views:
     permissions:
       can_view_number: 'Tartışma görüntülenmesini göster'
       reset_views_label: 'Tartışma görüntülenmesini sıfırla'
+      view_number_label: 'Tartışma görüntüleme sayısını görüntüle'
     settings:
       abbr_numbers: 'Görüntülenme numaralarını kısalt'
+      abbr_numbers_label: 'Görünüm numaralarını kısaltın'
       max_viewcount: 'Görüntüleyenlerin sayısı'
+      max_viewcount_label: 'Maksimum görüntüleme listesi öğesi'
       show_filter: 'Görüntülenen (Görüntülenmeyen) filtresini etkinleştir'
+      show_filter_label: 'Popüler sıralama alanını etkinleştir'
       show_viewlist: 'Görüntüleyenleri göster'
+      show_viewlist_label: 'Görüntüleme listesini etkinleştir'
       title: 'Tartışma Görüntülenme Ayarları'
       track_unique: 'Tekil görüntülenmeleri say'
+      track_unique_label: 'Benzersiz görünümleri izleyin (aynı IP 1 defa sayılır)'
   forum:
     discussion_controls:
       resetviews_button: 'Görüntülenmeyi sıfırla'
     modal_resetviews:
       label: 'Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?|Bu tartışmaya ait {count} görüntülenme temizlenecektir. Devam ediyor musunuz?'
       submit: 'Evet tümünü sil'
+      submit_button: 'Evet, hepsini kaldır'
       title: 'Tartışmaların görüntülenmesini sıfırla'
     viewlist:
       title: 'Son Görüntüleyenler'

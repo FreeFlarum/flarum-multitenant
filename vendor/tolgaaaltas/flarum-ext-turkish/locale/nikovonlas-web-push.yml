@@ -3,6 +3,19 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 nikovonlas-webpush:
+  admin:
+    settings:
+      api_key: 'Onesignal api anahtarı'
+      app_id: 'Onesignal uygulama kimliği'
+      autoprompt: 'Kullanıcıları yetkilendirmek için hemen izin istemi göster'
+      excerpt: 'Bildirimlerdeki alıntı uzunluğu'
+      subdomain: 'Onesignal alt alan adı'
+      title: 'WebPush Ayarları'
+      type:
+        custom: Özel
+        description: 'Tek tasarım tipi bağlayıcı'
+        standart: Standart
+      user_key: 'Onesignal kullanıcı anahtarı'
   forum:
     subscribe: 'Tarayıcı bildirimlerine abone olun'
   notify:
@@ -10,8 +23,8 @@ nikovonlas-webpush:
       message: '{from} tartışmanı sildi "{title}"'
       title: 'Tartışma silindi'
     flag:
-      message: '{from} flag post "{post}"'
-      title: 'New flagged post'
+      message: '{from} işaretli gönderisi: {post}'
+      title: 'Yeni işaretli gönderi'
     like:
       message: '{from} senin gönderini beğendi "{post}"'
       title: 'Gönderin beğenildi'
@@ -20,13 +33,13 @@ nikovonlas-webpush:
       title: 'Tartışma kilitlendi'
     mention-post:
       message: '{from} senden gönderide bahsetti "{post}"'
-      title: 'Bir gönderide bahsedildin'
+      title: 'Şuradaki gönderiye yeni yanıt: {title}'
     mention:
       message: '{from} senden bir gönderide bahsetti "{post}"'
-      title: 'Bir gönderide bahsedildin'
+      title: 'Sizden bahsedildi: {title}'
     post:
       message: '{from} yeni bir gönderi oluşturdu "{post}"'
-      title: 'Abone olduğun bölümde yeni gönderi'
+      title: 'Abone olunan tartışmada yeni gönderi: {title}'
     rename:
       message: '{from} tartışmanın adını değiştirdi "{title}"'
       title: 'Tartışmanın adı değiştirildi'
@@ -39,4 +52,7 @@ nikovonlas-webpush:
         title: 'Takip edilen etikette yeni bir tartışma'
       post:
         message: '{from} yeni bir gönderi oluşturdu "{post}"'
-        title: 'Takip edilen etikette yeni bir gönderi'
+        title: 'Tartışmada yeni gönderi: {title}'
+    unsuspend:
+      message: '{from} hesabınızın askıya alınmasını kaldırın'
+      title: 'Hesabınız askıya alınmadı'

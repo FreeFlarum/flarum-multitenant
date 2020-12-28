@@ -1,0 +1,20 @@
+fof-merge-discussions:
+  forum:
+    modal:
+      title: Mesclar discussões
+      help_text: Escolha as discussões para mesclar à <b>{title}</b>.
+      load_preview_button: Visualizar
+      submit_button: => fof-merge-discussions.ref.merge
+
+    discussion:
+      merge: => fof-merge-discussions.ref.merge
+
+    post:
+      merged: Mesclou <b>{count}</b> postagem de {titles}.|Mesclou <b>{count}</b> postagens de {titles}.
+
+  admin:
+    permissions:
+      merge_discussions_label: Mesclar discussões
+
+  ref:
+    merge: Mesclar

@@ -10,6 +10,15 @@ fof-subscribed:
       subscribe_to_discussion_created: 'Yeni tartışma başlatıldığında bildirime izin ver'
       subscribe_to_post_unapproved: 'Onaylanmamış bir tartışma başlatıldığında bildirime izin ver'
       subscribe_to_user_created: 'Yeni kullanıcı kayıt olduğunda bildirime izin ver'
+  email:
+    body:
+      newDiscussion: "Merhaba {recipient_display_name},\n\n{actor_display_name} yeni bir tartışma başlattı: {discussion_title}\n\nBu yeni tartışmayı görüntülemek için aşağıdaki bağlantıya bakın:\n{discussion_url}\n\n---\n\n{post_content}\n"
+      newUser: "Merhaba {recipient_display_name},\n\n{actor_display_name}, {forum_url} forumuna yeni katıldı.\n\nBu yeni kullanıcının profilini görüntülemek için aşağıdaki bağlantıya bakın:\n{user_url}\n"
+      postUnapproved: "Merhaba {recipient_display_name},\n\n{actor_display_name}, {discussion_title} içinde otomatik olarak onaylanmayan bir yayın oluşturdu\n\nBu yeni gönderiyi görüntülemek için aşağıdaki bağlantıya bakın:\n{post_url}\n\n---\n\n{post_content}\n"
+    subject:
+      newDiscussion: '[Abone Olundu | Yeni Tartışma] {title}'
+      newUser: '[Abone Olundu | Yeni Kullanıcı] {username}'
+      postUnapproved: '[Abone Olundu | Onaylanmadı] {username}, {title} tartışmasına gönderi yaptı'
   forum:
     notifications:
       discussion_created_text: '{username}, yeni bir tartışma oluşturdu'

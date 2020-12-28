@@ -1,0 +1,19 @@
+---
+pushedx-chat:
+  forum:
+    toolbar:
+      title: Chat
+      enable_sounds: Habilitar sons
+      disable_sounds: Desabilitar sons
+      enable_notifications: Habilitar notificações
+      disable_notifications: Desabilitar notificações
+      minimize: Minimizar
+      maximize: Maximizar
+    chat:
+      placeholder: Digite sua mensagem...
+    errors:
+      unauthenticated: Somente usuários registrados podem usar o chat
+  admin:
+    settings:
+      title: Configurações do chat
+      charlimit: Máximo de caracteres na mensagem

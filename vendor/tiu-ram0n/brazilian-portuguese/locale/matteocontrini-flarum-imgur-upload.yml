@@ -1,0 +1,9 @@
+imgur-upload:
+  admin:
+    settings:
+        title: Configurações do Imgur
+  forum:
+    upload: Anexar imagem
+    loading: Carregando...
+    done: Pronto!
+    error: Erro
