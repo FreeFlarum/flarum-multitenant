@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '014c30458102f752ee71978f69d8fd10e09c3703',
+    'reference' => '783d47fa5d6dfd7b9ad866186bd60ca9ef346f95',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -440,7 +440,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '014c30458102f752ee71978f69d8fd10e09c3703',
+      'reference' => '783d47fa5d6dfd7b9ad866186bd60ca9ef346f95',
     ),
     'flarum/lang-english' => 
     array (
@@ -944,12 +944,12 @@
     ),
     'fof/webhooks' => 
     array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a85bc417d4dcb4186354cfc8b19e3b21141ba065',
+      'reference' => 'b095cf366e59cc809de2e7be2afaf9f007caa839',
     ),
     'franzl/whoops-middleware' => 
     array (

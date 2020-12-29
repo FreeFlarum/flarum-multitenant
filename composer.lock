@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4626821f7b087cb05e00cec5c980f5e3",
+    "content-hash": "64f8dee2df6b9643566b26fedfe1914f",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -6057,16 +6057,16 @@
         },
         {
             "name": "fof/webhooks",
-            "version": "0.3.2",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/webhooks.git",
-                "reference": "a85bc417d4dcb4186354cfc8b19e3b21141ba065"
+                "reference": "b095cf366e59cc809de2e7be2afaf9f007caa839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/webhooks/zipball/a85bc417d4dcb4186354cfc8b19e3b21141ba065",
-                "reference": "a85bc417d4dcb4186354cfc8b19e3b21141ba065",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/webhooks/zipball/b095cf366e59cc809de2e7be2afaf9f007caa839",
+                "reference": "b095cf366e59cc809de2e7be2afaf9f007caa839",
                 "shasum": ""
             },
             "require": {
@@ -6129,7 +6129,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2020-12-26T20:34:06+00:00"
+            "time": "2020-12-27T17:08:09+00:00"
         },
         {
             "name": "franzl/whoops-middleware",

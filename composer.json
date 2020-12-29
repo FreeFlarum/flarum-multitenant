@@ -98,7 +98,7 @@
         "fof/user-bio": "*",
         "fof/user-directory": "*",
         "fof/username-request": "^0.4.0",
-        "fof/webhooks": "^0.3.0",
+        "fof/webhooks": "*",
         "ianm/synopsis": "^0.1.0",
         "illuminate/container": "*",
         "jslirola/flarum-ext-login2seeplus": "*",

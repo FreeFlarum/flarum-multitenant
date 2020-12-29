@@ -48,9 +48,9 @@ return [
             <style>@media only screen and (max-width: 991px) { #tip, #news { width: 95% !important; left: 2.5% !important; }; }
             </style>
             <hr/>
-            <div id="news" align="center" style="width: 100%; bottom: -10px;">
-                <p style="font-size: 1.1rem; font-weight: 800; text-decoration: underline; margin-bottom: 5px;">What\'s new?</p>
-                <a style="margin-top: 5px;" href="https://discuss.flarum.org/d/7585/1795" target="_blank">21/12/2020 - Flarum beta.15 upgrade</a>
+            <div id="news" align="center" style="width: 100%; font-size: 1rem;">
+                <p style="font-size: 1.25rem; font-weight: 800; text-decoration: underline; margin-bottom: 5px;">What\'s new?</p>
+                <a style="margin-top: 5px;" href="https://discuss.flarum.org/d/7585/1856" target="_blank">29/12/2020 - <span style="color:#FF0000;">N</span><span style="color:#EF070F;">e</span><span style="color:#E00F1F;">w</span> <span style="color:#C21F3F;">Y</span><span style="color:#B3274F;">e</span><span style="color:#A42F5F;">a</span><span style="color:#95376F;">r</span> <span style="color:#76468F;">U</span><span style="color:#674E9F;">p</span><span style="color:#5856AF;">d</span><span style="color:#495EBF;">a</span><span style="color:#3A66CF;">t</span><span style="color:#2B6EDF;">e</span><span style="color:#1C76EF;">!</span></a>
             </p>
             <br/>
         ';
