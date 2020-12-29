@@ -1,26 +1,80 @@
 <?php
 
-namespace FoF\Upload\Helpers;
+/*
+ * This file is part of flagrow/upload.
+ *
+ * Copyright (c) Flagrow.
+ *
+ * http://flagrow.github.io
+ *
+ * For the full copyright and license information, please view the license.md
+ * file that was distributed with this source code.
+ */
 
-use FoF\Upload\Adapters\Manager;
-use FoF\Upload\Contracts\Template;
+namespace Flagrow\Upload\Helpers;
+
+use Aws\AwsClient;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Techyah\Flysystem\OVH\OVHClient;
 
+/**
+ * @property int $maxFileSize
+ */
 class Settings
 {
     const DEFAULT_MAX_FILE_SIZE = 2048;
     const DEFAULT_MAX_IMAGE_WIDTH = 100;
 
     /**
-     * The templates used to render files.
+     * The settings shared with the frontend.
      *
      * @var array
      */
-    protected $renderTemplates = [];
+    protected $frontend = [
+    ];
 
-    protected $prefix = 'fof-upload.';
+    /**
+     * All setting options of this extension.
+     *
+     * @var array
+     */
+    protected $definition = [
+        'mimeTypes',
+
+        // Images
+        'mustResize',
+        'resizeMaxWidth',
+        'cdnUrl',
+
+        // Watermarks
+        'addsWatermarks',
+        'watermarkPosition',
+        'watermark',
+
+        // Override avatar upload
+        'overrideAvatarUpload',
+
+        // Imgur
+        'imgurClientId',
+
+        // AWS
+        'awsS3Key',
+        'awsS3Secret',
+        'awsS3Bucket',
+        'awsS3Region',
+
+        // OVH
+        'ovhUsername',
+        'ovhPassword',
+        'ovhTenantId',
+        'ovhContainer',
+        'ovhRegion',
+
+    ];
+
+    protected $prefix = 'flagrow.upload.';
 
     /**
      * @var SettingsRepositoryInterface
@@ -48,14 +102,69 @@ class Settings
     }
 
     /**
+     * @param bool $prefixed
+     * @param array|null $only
+     * @return array
+     */
+    public function toArray($prefixed = true, array $only = null)
+    {
+        $definition = $this->definition;
+
+        if ($only) {
+            $definition = Arr::only($definition, $only);
+        }
+
+        $result = [];
+
+        foreach ($definition as $property) {
+            if ($prefixed) {
+                $result[$this->prefix . $property] = $this->get($property);
+            } else {
+                $result[$property] = $this->get($property);
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * Loads only settings used in the frontend.
+     *
+     * @param bool $prefixed
+     * @param array|null $only
+     * @return array
+     */
+    public function toArrayFrontend($prefixed = true, array $only = [])
+    {
+        $only = array_merge($only, $this->frontend);
+
+        return $this->toArray($prefixed, $only);
+    }
+
+    /**
      * @param $name
      * @param null $default
-     *
      * @return null
      */
     public function get($name, $default = null)
     {
-        return $this->{$name} ?: $default;
+        return $this->{$name} ? $this->{$name} : $default;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDefinition()
+    {
+        return $this->definition;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrefix()
+    {
+        return $this->prefix;
     }
 
     /**
@@ -63,15 +172,27 @@ class Settings
      */
     public function getAvailableUploadMethods()
     {
-        /** @var Manager $manager */
-        $manager = app(Manager::class);
+        /** @var Collection $methods */
+        $methods = [
+            'local',
+        ];
 
-        return $manager->adapters()
-            ->filter(function ($available) {
-                return $available;
+        if (class_exists(AwsClient::class)) {
+            $methods[] = 'aws-s3';
+        }
+
+        if (class_exists(OVHClient::class)) {
+            $methods[] = 'ovh-svfs';
+        }
+
+        $methods[] = 'imgur';
+
+        return collect($methods)
+            ->keyBy(function ($item) {
+                return $item;
             })
-            ->map(function ($available, $item) {
-                return app('translator')->trans('fof-upload.admin.upload_methods.' . $item);
+            ->map(function ($item) {
+                return app('translator')->trans('flagrow-upload.admin.upload_methods.' . $item);
             });
     }
 
@@ -79,7 +200,6 @@ class Settings
      * @param $field
      * @param null $default
      * @param null $attribute
-     *
      * @return Collection|mixed|null
      */
     public function getJsonValue($field, $default = null, $attribute = null)
@@ -104,66 +224,9 @@ class Settings
      */
     public function getMimeTypesConfiguration()
     {
-        $adapters = $this->getAvailableUploadMethods();
-
         return $this->getJsonValue(
             'mimeTypes',
-            collect(['^image\/.*' => ['adapter' => $adapters->flip()->last(), 'template' => 'image-preview']])
-        )->filter();
-    }
-
-    /**
-     * @param Template $template
-     */
-    public function addRenderTemplate(Template $template)
-    {
-        $this->renderTemplates[$template->tag()] = $template;
-    }
-
-    /**
-     * @return Template[]
-     */
-    public function getRenderTemplates()
-    {
-        return $this->renderTemplates;
-    }
-
-    /**
-     * @param Template[] $templates
-     */
-    public function setRenderTemplates(array $templates)
-    {
-        $this->renderTemplates = $templates;
-    }
-
-    /**
-     * @return Collection|Template[]
-     */
-    public function getAvailableTemplates()
-    {
-        $collect = [];
-
-        /**
-         * @var string
-         * @var Template $template
-         */
-        foreach ($this->renderTemplates as $tag => $template) {
-            $collect[$tag] = [
-                'name' => $template->name(),
-                'description' => $template->description(),
-            ];
-        }
-
-        return collect($collect);
-    }
-
-    /**
-     * @param string $template
-     *
-     * @return Template|null
-     */
-    public function getTemplate($template)
-    {
-        return Arr::get($this->renderTemplates, $template);
+            collect(['^image\/.*' => 'local'])
+        );
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64f8dee2df6b9643566b26fedfe1914f",
+    "content-hash": "d4688d269dc5db979c4dbb10ac320558",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -605,6 +605,62 @@
                 "source": "https://github.com/bertaveira/flarum-pt-pt/tree/master"
             },
             "time": "2020-04-23T01:34:21+00:00"
+        },
+        {
+            "name": "brick/math",
+            "version": "0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/math.git",
+                "reference": "283a40c901101e66de7061bd359252c013dcc43c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brick/math/zipball/283a40c901101e66de7061bd359252c013dcc43c",
+                "reference": "283a40c901101e66de7061bd359252c013dcc43c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^7.5.15|^8.5",
+                "vimeo/psalm": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brick\\Math\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Arbitrary-precision arithmetic library",
+            "keywords": [
+                "Arbitrary-precision",
+                "BigInteger",
+                "BigRational",
+                "arithmetic",
+                "bigdecimal",
+                "bignum",
+                "brick",
+                "math"
+            ],
+            "support": {
+                "issues": "https://github.com/brick/math/issues",
+                "source": "https://github.com/brick/math/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/brick/math",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-18T23:57:15+00:00"
         },
         {
             "name": "clarkwinkelmann/flarum-ext-create-user-modal",
@@ -2302,6 +2358,61 @@
                 }
             ],
             "time": "2020-12-14T21:36:54+00:00"
+        },
+        {
+            "name": "flarum/flarum-ext-markdown",
+            "version": "v0.1.0-beta.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum/markdown.git",
+                "reference": "fd67301b9eb18009bf548ffa601d0d61b8d71e8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum/markdown/zipball/fd67301b9eb18009bf548ffa601d0d61b8d71e8b",
+                "reference": "fd67301b9eb18009bf548ffa601d0d61b8d71e8b",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Markdown",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#000",
+                        "backgroundSize": "100%",
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundPosition": "center",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toby Zerner",
+                    "email": "toby.zerner@gmail.com"
+                }
+            ],
+            "description": "Allow posts to be formatted with Markdown.",
+            "keywords": [
+                "formatting"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum/core/issues",
+                "source": "https://github.com/flarum/markdown"
+            },
+            "abandoned": "flarum/markdown",
+            "time": "2018-11-21T08:27:14+00:00"
         },
         {
             "name": "flarum/lang-english",
@@ -5757,56 +5868,45 @@
         },
         {
             "name": "fof/upload",
-            "version": "0.12.0",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/upload.git",
-                "reference": "ad7046dcad6034017015748fe114365a627f453c"
+                "reference": "f9e79287294ce3a1823fb12ae7d4d93e2d5afaa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/ad7046dcad6034017015748fe114365a627f453c",
-                "reference": "ad7046dcad6034017015748fe114365a627f453c",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/f9e79287294ce3a1823fb12ae7d4d93e2d5afaa4",
+                "reference": "f9e79287294ce3a1823fb12ae7d4d93e2d5afaa4",
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*",
-                "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.17",
-                "guzzlehttp/guzzle": "^6.0 || ^7.0",
-                "ramsey/uuid": "^3.5.2",
-                "softcreatr/php-mime-detector": "^3.0"
-            },
-            "replace": {
-                "flagrow/upload": "*"
+                "flarum/core": "^0.1.0-beta.6",
+                "flarum/flarum-ext-markdown": "^0.1.0-beta.5"
             },
             "require-dev": {
+                "league/flysystem": "^1.0.32",
                 "league/flysystem-aws-s3-v3": "^1.0",
-                "overtrue/flysystem-qiniu": "1.0.4"
+                "techyah/flysystem-ovh": "^1.0"
             },
             "suggest": {
                 "league/flysystem-aws-s3-v3": "Uploads to AWS S3 using API version 3.",
-                "overtrue/flysystem-qiniu": "Uploads to QiNiu using API."
+                "techyah/flysystem-ovh": "Uploads to OVH Swift vfs using API."
             },
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
-                    "title": "FoF Upload",
-                    "category": "feature",
+                    "title": "Flagrow Upload",
                     "icon": {
-                        "image": "resources/logo.svg",
-                        "backgroundColor": "#e74c3c",
-                        "backgroundSize": "90%",
-                        "backgroundRepeat": "no-repeat",
-                        "backgroundPosition": "center"
+                        "name": "files-o",
+                        "backgroundColor": "#000",
+                        "color": "#87d37c"
                     }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/4154"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "FoF\\Upload\\": "src/"
+                    "Flagrow\\Upload\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5816,29 +5916,22 @@
             "authors": [
                 {
                     "name": "Daniël Klabbers",
-                    "email": "daniel@klabbers.email",
-                    "homepage": "https://luceos.com/"
+                    "email": "daniel+flarum@klabbers.email",
+                    "homepage": "http://hyn.me"
                 }
             ],
             "description": "The file upload extension for the Flarum forum with insane intelligence.",
-            "homepage": "https://friendsofflarum.org",
             "keywords": [
                 "file",
+                "flagrow",
                 "flarum",
                 "upload"
             ],
             "support": {
-                "forum": "https://discuss.flarum.org/d/4154",
-                "issues": "https://github.com/FriendsOfFlarum/upload/issues",
-                "source": "https://github.com/FriendsOfFlarum/upload"
+                "issues": "https://github.com/flagrow/upload/issues",
+                "source": "https://github.com/flagrow/upload"
             },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2020-12-13T23:34:06+00:00"
+            "time": "2017-01-27T20:19:55+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -10191,20 +10284,20 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v9.99.99",
+            "version": "v9.99.100",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7"
+                "php": ">= 7"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*|5.*",
@@ -10237,7 +10330,7 @@
                 "issues": "https://github.com/paragonie/random_compat/issues",
                 "source": "https://github.com/paragonie/random_compat"
             },
-            "time": "2018-07-02T15:55:56+00:00"
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "persianfla/flarum-ext-persian",
@@ -10885,54 +10978,136 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-            "name": "ramsey/uuid",
-            "version": "3.9.3",
+            "name": "ramsey/collection",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ramsey/uuid.git",
-                "reference": "7e1633a6964b48589b142d60542f9ed31bd37a92"
+                "url": "https://github.com/ramsey/collection.git",
+                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/7e1633a6964b48589b142d60542f9ed31bd37a92",
-                "reference": "7e1633a6964b48589b142d60542f9ed31bd37a92",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
+                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
                 "shasum": ""
             },
             "require": {
+                "php": "^7.2 || ^8"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "ergebnis/composer-normalize": "^2.6",
+                "fzaninotto/faker": "^1.5",
+                "hamcrest/hamcrest-php": "^2",
+                "jangregor/phpstan-prophecy": "^0.6",
+                "mockery/mockery": "^1.3",
+                "phpstan/extension-installer": "^1",
+                "phpstan/phpstan": "^0.12.32",
+                "phpstan/phpstan-mockery": "^0.12.5",
+                "phpstan/phpstan-phpunit": "^0.12.11",
+                "phpunit/phpunit": "^8.5",
+                "psy/psysh": "^0.10.4",
+                "slevomat/coding-standard": "^6.3",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "^3.12.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ramsey\\Collection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                }
+            ],
+            "description": "A PHP 7.2+ library for representing and manipulating collections.",
+            "keywords": [
+                "array",
+                "collection",
+                "hash",
+                "map",
+                "queue",
+                "set"
+            ],
+            "support": {
+                "issues": "https://github.com/ramsey/collection/issues",
+                "source": "https://github.com/ramsey/collection/tree/1.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-09-10T20:58:17+00:00"
+        },
+        {
+            "name": "ramsey/uuid",
+            "version": "4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/uuid.git",
+                "reference": "cd4032040a750077205918c86049aa0f43d22947"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/cd4032040a750077205918c86049aa0f43d22947",
+                "reference": "cd4032040a750077205918c86049aa0f43d22947",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.8 || ^0.9",
                 "ext-json": "*",
-                "paragonie/random_compat": "^1 | ^2 | 9.99.99",
-                "php": "^5.4 | ^7 | ^8",
+                "php": "^7.2 || ^8",
+                "ramsey/collection": "^1.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
             },
             "require-dev": {
-                "codeception/aspect-mock": "^1 | ^2",
-                "doctrine/annotations": "^1.2",
-                "goaop/framework": "1.0.0-alpha.2 | ^1 | ^2.1",
-                "jakub-onderka/php-parallel-lint": "^1",
-                "mockery/mockery": "^0.9.11 | ^1",
+                "codeception/aspect-mock": "^3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7.0",
+                "doctrine/annotations": "^1.8",
+                "goaop/framework": "^2",
+                "mockery/mockery": "^1.3",
                 "moontoast/math": "^1.1",
                 "paragonie/random-lib": "^2",
-                "php-mock/php-mock-phpunit": "^0.3 | ^1.1",
-                "phpunit/phpunit": "^4.8 | ^5.4 | ^6.5",
-                "squizlabs/php_codesniffer": "^3.5"
+                "php-mock/php-mock-mockery": "^1.3",
+                "php-mock/php-mock-phpunit": "^2.5",
+                "php-parallel-lint/php-parallel-lint": "^1.1",
+                "phpbench/phpbench": "^0.17.1",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-mockery": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "psy/psysh": "^0.10.0",
+                "slevomat/coding-standard": "^6.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "3.9.4"
             },
             "suggest": {
-                "ext-ctype": "Provides support for PHP Ctype functions",
-                "ext-libsodium": "Provides the PECL libsodium extension for use with the SodiumRandomGenerator",
-                "ext-openssl": "Provides the OpenSSL extension for use with the OpenSslGenerator",
-                "ext-uuid": "Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator",
-                "moontoast/math": "Provides support for converting UUID to 128-bit integer (in string form).",
+                "ext-bcmath": "Enables faster math with arbitrary-precision integers using BCMath.",
+                "ext-ctype": "Enables faster processing of character classification using ctype functions.",
+                "ext-gmp": "Enables faster math with arbitrary-precision integers using GMP.",
+                "ext-uuid": "Enables the use of PeclUuidTimeGenerator and PeclUuidRandomGenerator.",
                 "paragonie/random-lib": "Provides RandomLib for use with the RandomLibAdapter",
-                "ramsey/uuid-console": "A console application for generating UUIDs with ramsey/uuid",
                 "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid as Doctrine field type."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.x-dev"
+                    "dev-master": "4.x-dev"
                 }
             },
             "autoload": {
@@ -10947,22 +11122,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
-                },
-                {
-                    "name": "Marijn Huizendveld",
-                    "email": "marijn.huizendveld@gmail.com"
-                },
-                {
-                    "name": "Thibaud Fabre",
-                    "email": "thibaud@aztech.io"
-                }
-            ],
-            "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
+            "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
             "homepage": "https://github.com/ramsey/uuid",
             "keywords": [
                 "guid",
@@ -10972,31 +11132,32 @@
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
                 "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid",
-                "wiki": "https://github.com/ramsey/uuid/wiki"
+                "source": "https://github.com/ramsey/uuid"
             },
-            "time": "2020-02-21T04:36:14+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-08-18T17:17:46+00:00"
         },
         {
             "name": "realodix/flarum-ext-indonesian",
-            "version": "1.14.4",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realodix/flarum-ext-indonesian.git",
-                "reference": "80215ef669cc0961698e97f58333165c8a4edc48"
+                "reference": "b7c2a7d314f71e0ec69157be51d1c8923794c6c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/80215ef669cc0961698e97f58333165c8a4edc48",
-                "reference": "80215ef669cc0961698e97f58333165c8a4edc48",
+                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/b7c2a7d314f71e0ec69157be51d1c8923794c6c3",
+                "reference": "b7c2a7d314f71e0ec69157be51d1c8923794c6c3",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.14"
-            },
-            "conflict": {
-                "fof/doorman": "<0.2.0",
-                "fof/upload": "<0.11"
             },
             "type": "flarum-extension",
             "extra": {
@@ -11037,7 +11198,7 @@
                 "issues": "https://github.com/realodix/flarum-ext-indonesian/issues",
                 "source": "https://github.com/realodix/flarum-ext-indonesian"
             },
-            "time": "2020-12-13T20:00:24+00:00"
+            "time": "2020-10-22T19:39:04+00:00"
         },
         {
             "name": "rikusen0335/lang-japanese-extended",
@@ -11321,72 +11482,6 @@
                 "source": "https://github.com/s9e/TextFormatter/tree/2.8.1"
             },
             "time": "2020-12-27T17:14:06+00:00"
-        },
-        {
-            "name": "softcreatr/php-mime-detector",
-            "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SoftCreatR/php-mime-detector.git",
-                "reference": "61b5fc1454e248a28a545465fc02d695044ba8c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SoftCreatR/php-mime-detector/zipball/61b5fc1454e248a28a545465fc02d695044ba8c3",
-                "reference": "61b5fc1454e248a28a545465fc02d695044ba8c3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.0"
-            },
-            "conflict": {
-                "phpunit/phpunit": "<8.0 || >= 10.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=7.0",
-                "roave/security-advisories": "dev-master",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SoftCreatR\\MimeDetector\\": "src/SoftCreatR/MimeDetector"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "ISC"
-            ],
-            "authors": [
-                {
-                    "name": "Sascha Greuel",
-                    "email": "hello@1-2.dev"
-                },
-                {
-                    "name": "Sebastian Zimmer",
-                    "email": "morik@softcreatr.de"
-                }
-            ],
-            "description": "Mime Detector Decoder",
-            "homepage": "https://1-2.dev",
-            "keywords": [
-                "Magic Number",
-                "file type",
-                "mime",
-                "mime type"
-            ],
-            "support": {
-                "email": "hello@1-2.dev",
-                "issues": "https://github.com/SoftCreatR/php-mime-detector/issues",
-                "source": "https://github.com/SoftCreatR/php-mime-detector"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/softcreatr",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-12-02T15:18:38+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -13944,8 +14039,8 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "ffans/lang-simplified-chinese": 10,
-        "flarum/core": 10
+        "flarum/core": 10,
+        "flarum/markdown": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

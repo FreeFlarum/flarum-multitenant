@@ -1,42 +1,34 @@
 <?php
 
-namespace FoF\Upload\Adapters;
+/*
+ * This file is part of flagrow/upload.
+ *
+ * Copyright (c) Flagrow.
+ *
+ * http://flagrow.github.io
+ *
+ * For the full copyright and license information, please view the license.md
+ * file that was distributed with this source code.
+ */
 
-use FoF\Upload\Contracts\UploadAdapter;
-use FoF\Upload\File;
-use FoF\Upload\Helpers\Settings;
-use Illuminate\Support\Arr;
-use League\Flysystem\Config;
+namespace Flagrow\Upload\Adapters;
+
+use Flagrow\Upload\Contracts\UploadAdapter;
+use Flagrow\Upload\File;
 
 class AwsS3 extends Flysystem implements UploadAdapter
 {
-    protected function getConfig()
-    {
-        /** @var Settings $settings */
-        $settings = app()->make(Settings::class);
-
-        $config = new Config();
-        if ($acl = $settings->get('awsS3ACL')) {
-            $config->set('ACL', $acl);
-        }
-
-        return $config;
-    }
-
     protected function generateUrl(File $file)
     {
-        /** @var Settings $settings */
-        $settings = app()->make(Settings::class);
+        $baseUrl =
+            in_array($this->filesystem->getAdapter()->getClient()->getRegion(), [null, 'us-east-1']) ?
+                'https://s3.amazonaws.com/' :
+                sprintf('https://s3.%s.amazonaws.com/', $this->filesystem->getAdapter()->getClient()->getRegion());
 
-        $cdnUrl = $settings->get('cdnUrl');
-
-        if (!$cdnUrl) {
-            $region = $this->adapter->getClient()->getRegion();
-            $bucket = $this->adapter->getBucket();
-
-            $cdnUrl = sprintf('https://%s.s3.%s.amazonaws.com', $bucket, $region ?: 'us-east-1');
-        }
-
-        $file->url = sprintf('%s/%s', $cdnUrl, Arr::get($this->meta, 'path', $file->path));
+        $file->url = sprintf(
+            $baseUrl . '%s/%s',
+            $this->filesystem->getAdapter()->getBucket(),
+            $file->path
+        );
     }
 }

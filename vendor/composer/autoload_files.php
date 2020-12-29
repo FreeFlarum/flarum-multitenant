@@ -51,11 +51,11 @@ return array(
     'dd89a2771fc24829c6aade9a7786bd8f' => $vendorDir . '/laminas/laminas-stratigility/src/functions/path.legacy.php',
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
     '84245cb95409c51c4ae97f8e59da883a' => $vendorDir . '/flarum/core/src/helpers.php',
-    'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
     '41726e7bf2a6c8c479b4598afabcba5a' => $vendorDir . '/ssnepenthe/color-utils/inc/colors.php',
     '958eb7d15725dcb21015002795ed092f' => $vendorDir . '/ssnepenthe/color-utils/inc/helpers.php',
     '4ea368213928f2a61682e096b10ce358' => $vendorDir . '/ssnepenthe/color-utils/inc/transformations.php',
     '2a1113d34562ecc8c338eb5d2958a97a' => $vendorDir . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
     'd7a2467b87902a3ab793df7784bc6b7f' => $vendorDir . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
     '1cf00d7bbe38b83167217839a255780f' => $vendorDir . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
+    'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
 );

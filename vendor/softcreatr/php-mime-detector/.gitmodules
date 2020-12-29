@@ -1,3 +1,0 @@
-[submodule "tests/SoftCreatR/MimeDetector/fixtures"]
-	path = tests/SoftCreatR/MimeDetector/fixtures
-	url = https://github.com/SoftCreatR/mime-detector-fixtures
