@@ -1,21 +1,11 @@
 <?php
 
-/*
- * This file is part of flagrow/upload.
- *
- * Copyright (c) Flagrow.
- *
- * http://flagrow.github.io
- *
- * For the full copyright and license information, please view the license.md
- * file that was distributed with this source code.
- */
+namespace FoF\Upload\Api\Controllers;
 
-
-namespace Flagrow\Upload\Api\Controllers;
-
-use Flarum\Api\Controller\UploadFaviconController;
-use Flarum\Core\Group;
+use Flarum\Api\Controller\ShowForumController;
+use Flarum\Foundation\Paths;
+use Flarum\Settings\SettingsRepositoryInterface;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
@@ -23,36 +13,42 @@ use League\Flysystem\MountManager;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
-class WatermarkUploadController extends UploadFaviconController
+class WatermarkUploadController extends ShowForumController
 {
+    protected $settings;
+    protected $paths;
+
+    public function __construct(SettingsRepositoryInterface $settings, Paths $paths)
+    {
+        $this->settings = $settings;
+        $this->paths = $paths;
+    }
+
     public function data(ServerRequestInterface $request, Document $document)
     {
-        $this->assertAdmin($request->getAttribute('actor'));
+        $request->getAttribute('actor')->assertAdmin();
 
+        $file = Arr::get($request->getUploadedFiles(), 'fof/watermark');
 
-        $file = array_get($request->getUploadedFiles(), 'flagrow/watermark');
-
-        $tmpFile = tempnam($this->app->storagePath() . '/tmp', 'flagrow.watermark');
+        $tmpFile = tempnam($this->paths->storage.'/tmp', 'fof-watermark');
 
         $file->moveTo($tmpFile);
 
         $mount = new MountManager([
             'source' => new Filesystem(new Local(pathinfo($tmpFile, PATHINFO_DIRNAME))),
-            'target' => new Filesystem(new Local($this->app->storagePath())),
+            'target' => new Filesystem(new Local($this->paths->storage)),
         ]);
 
-        if (($path = $this->settings->get('flagrow.upload.watermark')) && $mount->has($file = "target://$path")) {
+        if (($path = $this->settings->get('fof-upload.watermark')) && $mount->has($file = "target://$path")) {
             $mount->delete($file);
         }
 
-        $uploadName = 'watermark-' . Str::lower(Str::quickRandom(8));
+        $uploadName = 'fof-upload-watermark-'.Str::lower(Str::random(8));
 
-        $mount->move('source://' . pathinfo($tmpFile, PATHINFO_BASENAME), "target://$uploadName");
+        $mount->move('source://'.pathinfo($tmpFile, PATHINFO_BASENAME), "target://$uploadName");
 
-        $this->settings->set('flagrow.upload.watermark', $uploadName);
+        $this->settings->set('fof-upload.watermark', $uploadName);
 
-        return [
-            'groups' => Group::whereVisibleTo($request->getAttribute('actor'))->get()
-        ];
+        return parent::data($request, $document);
     }
 }

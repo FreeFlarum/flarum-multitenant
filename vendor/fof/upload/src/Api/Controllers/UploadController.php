@@ -1,31 +1,19 @@
 <?php
 
-/*
- * This file is part of flagrow/upload.
- *
- * Copyright (c) Flagrow.
- *
- * http://flagrow.github.io
- *
- * For the full copyright and license information, please view the license.md
- * file that was distributed with this source code.
- */
+namespace FoF\Upload\Api\Controllers;
 
-
-namespace Flagrow\Upload\Api\Controllers;
-
-use Flagrow\Upload\Api\Serializers\FileSerializer;
-use Flagrow\Upload\Commands\Upload;
-use Flarum\Api\Controller\AbstractCollectionController;
+use FoF\Upload\Commands\Upload;
+use FoF\Upload\Exceptions\InvalidUploadException;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
+use Laminas\Diactoros\Response\JsonResponse;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Tobscure\JsonApi\Document;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class UploadController extends AbstractCollectionController
+class UploadController implements RequestHandlerInterface
 {
-    public $serializer = FileSerializer::class;
-
     /**
      * @var Dispatcher
      */
@@ -37,19 +25,26 @@ class UploadController extends AbstractCollectionController
     }
 
     /**
-     * Get the data to be serialized and assigned to the response document.
+     * @param \Psr\Http\Message\ServerRequestInterface $request
      *
-     * @param ServerRequestInterface $request
-     * @param Document $document
-     * @return mixed
+     * @throws InvalidUploadException
+     *
+     * @return \Psr\Http\Message\ResponseInterface
      */
-    protected function data(ServerRequestInterface $request, Document $document)
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $actor = $request->getAttribute('actor');
         $files = collect(Arr::get($request->getUploadedFiles(), 'files', []));
 
-        return $this->bus->dispatch(
+        /** @var Collection $collection */
+        $collection = $this->bus->dispatch(
             new Upload($files, $actor)
         );
+
+        if ($collection->isEmpty()) {
+            throw new InvalidUploadException('No files were uploaded');
+        }
+
+        return new JsonResponse($collection->toArray(), 201);
     }
 }

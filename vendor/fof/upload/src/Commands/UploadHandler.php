@@ -1,40 +1,24 @@
 <?php
 
-/*
- * This file is part of flagrow/upload.
- *
- * Copyright (c) Flagrow.
- *
- * http://flagrow.github.io
- *
- * For the full copyright and license information, please view the license.md
- * file that was distributed with this source code.
- */
+namespace FoF\Upload\Commands;
 
-
-namespace Flagrow\Upload\Commands;
-
-use Flagrow\Upload\Contracts\UploadAdapter;
-use Flagrow\Upload\Events\File as Events;
-use Flagrow\Upload\File;
-use Flagrow\Upload\Helpers\Settings;
-use Flagrow\Upload\Validators\FileValidator;
-use Flagrow\Upload\Validators\MimeValidator;
-use Flarum\Core\Access\AssertPermissionTrait;
-use Flarum\Core\Exception\ValidationException;
+use Exception;
+use FoF\Upload\Adapters\Manager;
+use FoF\Upload\Contracts\UploadAdapter;
+use FoF\Upload\Events;
+use FoF\Upload\File;
+use FoF\Upload\Helpers\Settings;
+use FoF\Upload\Repositories\FileRepository;
 use Flarum\Foundation\Application;
-use Illuminate\Events\Dispatcher;
-use Illuminate\Support\Str;
-use Illuminate\Support\Str as IllStr;
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\Filesystem;
+use Flarum\Foundation\ValidationException;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Support\Arr;
 use Psr\Http\Message\UploadedFileInterface;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+use SoftCreatR\MimeDetector\MimeDetector;
+use SoftCreatR\MimeDetector\MimeDetectorException;
 
 class UploadHandler
 {
-    use AssertPermissionTrait;
-
     /**
      * @var Application
      */
@@ -46,179 +30,159 @@ class UploadHandler
     protected $settings;
 
     /**
-     * @var FileValidator
-     */
-    protected $fileValidator;
-
-    /**
      * @var Dispatcher
      */
     protected $events;
+    /**
+     * @var FileRepository
+     */
+    protected $files;
 
     /**
-     * @var UploadAdapter
+     * @var MimeDetector
      */
-    protected $upload;
+    protected $mimeDetector;
 
     public function __construct(
         Application $app,
-        FileValidator $fileValidator,
         Dispatcher $events,
-        Settings $settings
+        Settings $settings,
+        FileRepository $files,
+        MimeDetector $mimeDetector
     ) {
         $this->app = $app;
         $this->settings = $settings;
-        $this->fileValidator = $fileValidator;
         $this->events = $events;
+        $this->files = $files;
+        $this->mimeDetector = $mimeDetector;
     }
 
     /**
      * @param Upload $command
-     * @return static
+     *
+     * @return \Illuminate\Support\Collection
+     * @throws \Flarum\User\Exception\PermissionDeniedException
      */
     public function handle(Upload $command)
     {
-        $this->assertCan(
-            $command->actor,
-            'flagrow.upload'
-        );
+        $command->actor->assertCan('fof-upload.upload');
 
         $savedFiles = $command->files->map(function (UploadedFileInterface $file) use ($command) {
+            try {
+                $upload = $this->files->moveUploadedFileToTemp($file);
 
-            // Move the file to a temporary location first.
-            $tempFile = tempnam($this->app->storagePath() . '/tmp', 'flagrow.upload.');
-            $file->moveTo($tempFile);
+                try {
+                    $this->mimeDetector->setFile($upload->getPathname());
+                } catch (MimeDetectorException $e) {
+                    throw new ValidationException(['upload' => app('translator')->trans('fof-upload.api.upload_errors.could_not_detect_mime')]);
+                }
 
-            $uploadedFile = new UploadedFile(
-                $tempFile,
-                $file->getClientFilename(),
-                $file->getClientMediaType(),
-                $file->getSize(),
-                $file->getError(),
-                true
-            );
+                $uploadFileData = $this->mimeDetector->getFileType();
 
-            unset($tempFile);
+                if ($uploadFileData['mime'] === null) {
+                    try {
+                        $uploadFileData['mime'] = mime_content_type($upload->getPathname());
+                    } catch (Exception $e) {
+                        throw new ValidationException(['upload' => app('translator')->trans('fof-upload.api.upload_errors.could_not_detect_mime')]);
+                    }
+                }
 
-            $this->fileValidator->assertValid(['file' => $uploadedFile]);
+                $mimeConfiguration = $this->getMimeConfiguration($uploadFileData['mime']);
+                $adapter = $this->getAdapter(Arr::get($mimeConfiguration, 'adapter'));
+                $template = $this->getTemplate(Arr::get($mimeConfiguration, 'template', 'file'));
 
-            $this->upload = $this->identifyUploadAdapterForMime($uploadedFile->getMimeType());
+                $this->events->dispatch(
+                    new Events\Adapter\Identified($command->actor, $upload, $adapter)
+                );
 
-            $tempFilesystem = $this->getTempFilesystem($uploadedFile);
+                if (!$adapter) {
+                    throw new ValidationException(['upload' => app('translator')->trans('fof-upload.api.upload_errors.forbidden_type')]);
+                }
 
-            if (!$this->upload) {
-                $tempFilesystem->delete($uploadedFile->getBasename());
-                throw new ValidationException('Uploading files of this type is not allowed.');
+                if (!$adapter->forMime($uploadFileData['mime'])) {
+                    throw new ValidationException(['upload' => app('translator')->trans('fof-upload.api.upload_errors.unsupported_type', ['mime' => $uploadFileData['mime']])]);
+                }
+
+                $file = $this->files->createFileFromUpload($upload, $command->actor, $uploadFileData['mime']);
+
+                $this->events->dispatch(
+                    new Events\File\WillBeUploaded($command->actor, $file, $upload, $uploadFileData['mime'])
+                );
+
+                $response = $adapter->upload(
+                    $file,
+                    $upload,
+                    $this->files->readUpload($upload, $adapter)
+                );
+
+                $this->files->removeFromTemp($upload);
+
+                if (!($response instanceof File)) {
+                    return false;
+                }
+
+                $file = $response;
+
+                $file->upload_method = $adapter;
+                $file->tag = $template;
+                $file->actor_id = $command->actor->id;
+
+                $this->events->dispatch(
+                    new Events\File\WillBeSaved($command->actor, $file, $upload, $uploadFileData['mime'])
+                );
+
+                if ($file->isDirty() || !$file->exists) {
+                    $file->save();
+                }
+
+                $this->events->dispatch(
+                    new Events\File\WasSaved($command->actor, $file, $upload, $uploadFileData['mime'])
+                );
+            } catch (Exception $e) {
+                if (isset($upload)) {
+                    $this->files->removeFromTemp($upload);
+                }
+
+                throw $e;
             }
 
-            if (!$this->upload->forMime($uploadedFile->getMimeType())) {
-                $tempFilesystem->delete($uploadedFile->getBasename());
-                throw new ValidationException('Upload adapter does not support the provided mime type.');
-            }
-
-            $file = (new File())->forceFill([
-                'base_name' => $this->getBasename($uploadedFile),
-                'size' => $uploadedFile->getSize(),
-                'type' => $uploadedFile->getMimeType(),
-                'actor_id' => $command->actor->id,
-            ]);
-
-            $this->events->fire(
-                new Events\WillBeUploaded($command->actor, $file, $uploadedFile)
-            );
-
-            $response = $this->upload->upload(
-                $file,
-                $uploadedFile,
-                $this->upload->supportsStreams() ?
-                    $tempFilesystem->readStream($uploadedFile->getBasename()) :
-                    $tempFilesystem->read($uploadedFile->getBasename())
-            );
-
-            $file->upload_method = IllStr::snake(last(explode('\\', get_class($this->upload))));
-
-            $tempFilesystem->delete($uploadedFile->getBasename());
-
-            if (!($response instanceof File)) {
-                return false;
-            }
-
-            $file = $response;
-            $file->markdown_string = $this->getDefaultMarkdownStringAttribute($file);
-
-            $this->events->fire(
-                new Events\WasUploaded($command->actor, $file, $uploadedFile)
-            );
-
-            $this->events->fire(
-                new Events\WillBeSaved($command->actor, $file, $uploadedFile)
-            );
-
-            if ($file->isDirty() || !$file->exists) {
-                $file->save();
-            }
-
-            $this->events->fire(
-                new Events\WasSaved($command->actor, $file, $uploadedFile)
-            );
-
-            return $file;
+            return $template->preview($file);
         });
 
         return $savedFiles->filter();
     }
 
     /**
-     * @param UploadedFile $uploadedFile
-     * @return Filesystem
-     */
-    protected function getTempFilesystem(UploadedFile $uploadedFile)
-    {
-        return new Filesystem(new Local($uploadedFile->getPath()));
-    }
-
-    /**
-     * @param File $file
-     * @return string
-     */
-    public function getDefaultMarkdownStringAttribute(File $file)
-    {
-        $label = "[$file->base_name]";
-        $url = "({$file->url})";
-
-        return $label . $url;
-    }
-
-    /**
-     * @param UploadedFile $uploadedFile
-     * @return string
-     */
-    protected function getBasename(UploadedFile $uploadedFile)
-    {
-        $name = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
-
-        return sprintf("%s.%s",
-            Str::slug($name),
-            $uploadedFile->guessExtension() ?
-                $uploadedFile->guessExtension() :
-                $uploadedFile->getClientOriginalExtension()
-        );
-    }
-
-    /**
-     * @param $mime
+     * @param $adapter
+     *
      * @return UploadAdapter|null
      */
-    protected function identifyUploadAdapterForMime($mime)
+    protected function getAdapter($adapter)
     {
-        $adapter = $this->settings->getMimeTypesConfiguration()->first(function ($regex, $_) use ($mime) {
-            return preg_match("/$regex/", $mime);
-        });
-
         if (!$adapter) {
             return null;
         }
 
-        return app("flagrow.upload-adapter.$adapter");
+        /** @var Manager $manager */
+        $manager = app(Manager::class);
+
+        return $manager->instantiate()->get($adapter);
+    }
+
+    protected function getTemplate($template)
+    {
+        return $this->settings->getTemplate($template);
+    }
+
+    /**
+     * @param $mime
+     *
+     * @return mixed
+     */
+    protected function getMimeConfiguration($mime)
+    {
+        return $this->settings->getMimeTypesConfiguration()->first(function ($_, $regex) use ($mime) {
+            return preg_match("/$regex/", $mime);
+        });
     }
 }

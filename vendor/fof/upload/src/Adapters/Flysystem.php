@@ -1,41 +1,46 @@
 <?php
 
-/*
- * This file is part of flagrow/upload.
- *
- * Copyright (c) Flagrow.
- *
- * http://flagrow.github.io
- *
- * For the full copyright and license information, please view the license.md
- * file that was distributed with this source code.
- */
-
-
-namespace Flagrow\Upload\Adapters;
+namespace FoF\Upload\Adapters;
 
 use Carbon\Carbon;
-use Flagrow\Upload\Contracts\UploadAdapter;
-use Flagrow\Upload\File;
-use League\Flysystem\Filesystem;
+use FoF\Upload\Contracts\UploadAdapter;
+use FoF\Upload\File;
+use League\Flysystem\AdapterInterface;
+use League\Flysystem\Config;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 abstract class Flysystem implements UploadAdapter
 {
     /**
-     * @var Filesystem
+     * @var AdapterInterface
      */
-    protected $filesystem;
+    protected $adapter;
 
-    public function __construct(Filesystem $filesystem)
+    /**
+     * @var array|false
+     */
+    protected $meta;
+
+    public function __construct(AdapterInterface $adapter)
     {
-        $this->filesystem = $filesystem;
+        $this->adapter = $adapter;
+    }
+
+        /**
+     * Define adapter-specific configuration
+     *
+     * @return Config
+     */
+    protected function getConfig()
+    {
+        return new Config();
     }
 
     /**
      * @param File $file
      * @param UploadedFile $upload
      * @param string $contents
+     *
      * @return File
      */
     public function upload(File $file, UploadedFile $upload, $contents)
@@ -48,47 +53,43 @@ abstract class Flysystem implements UploadAdapter
             $method = 'writeStream';
         }
 
-        if (!$this->filesystem->{$method}(
-            $file->path,
-            $contents
-        )
-        ) {
+        $meta = $this->adapter->{$method}($file->path, $contents, $this->getConfig());
+
+        if (!$meta) {
             return false;
         }
+
+        $this->meta = $meta;
 
         $this->generateUrl($file);
 
         return $file;
     }
 
-    /**
-     * @param File $file
-     */
     protected function generateFilename(File $file)
     {
         $today = (new Carbon());
 
         $file->path = sprintf(
-            "%s/%s",
+            '%s%s%s',
             $today->toDateString(),
-            $today->toTimeString() . $today->micro . '-' . $file->base_name
+            $this instanceof Local ? DIRECTORY_SEPARATOR : '/',
+            $today->timestamp . '-' . $today->micro . '-' . $file->base_name
         );
     }
 
-    /**
-     * @param File $file
-     */
     abstract protected function generateUrl(File $file);
 
     /**
      * In case deletion is not possible, return false.
      *
      * @param File $file
+     *
      * @return File|bool
      */
     public function delete(File $file)
     {
-        if ($this->filesystem->delete($file->path)) {
+        if ($this->adapter->delete($file->path)) {
             return $file;
         }
 
@@ -99,6 +100,7 @@ abstract class Flysystem implements UploadAdapter
      * Whether the upload adapter works on a specific mime type.
      *
      * @param string $mime
+     *
      * @return bool
      */
     public function forMime($mime)
@@ -113,13 +115,5 @@ abstract class Flysystem implements UploadAdapter
     public function supportsStreams()
     {
         return true;
-    }
-
-    /**
-     * @return Filesystem
-     */
-    public function getFilesystem()
-    {
-        return $this->filesystem;
     }
 }

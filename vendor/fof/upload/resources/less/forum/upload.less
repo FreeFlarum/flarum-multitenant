@@ -1,0 +1,40 @@
+.fof-upload-button {
+    overflow: hidden;
+    position: relative;
+
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+    .Button-label {
+        display: none;
+    }
+
+    &:hover, &.uploading {
+        // Cancel the effects of .Button--icon
+        width: auto;
+        padding: 8px 13px;
+
+        // Cancel the effects of .Button--icon
+        .Button-icon {
+            margin-right: 7px;
+        }
+
+        .Button-label {
+            display: inline-block;
+        }
+    }
+}
+
+.Composer.fof-upload-dragging {
+    background-color: #ddd;
+    .box-shadow(~"0 0 0 2px @{primary-color}, 0 2px 6px @{shadow-color}");
+}

@@ -94,7 +94,7 @@
         "fof/stopforumspam": "*",
         "fof/terms": "*",
         "fof/transliterator": "*",
-        "fof/upload": "*",
+        "fof/upload": "^0.12.0",
         "fof/user-bio": "*",
         "fof/user-directory": "*",
         "fof/username-request": "*",

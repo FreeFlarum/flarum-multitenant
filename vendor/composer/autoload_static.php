@@ -55,10 +55,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -119,13 +119,13 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'SychO\\ProfileCover\\' => 19,
+            'SoftCreatR\\MimeDetector\\' => 24,
             'SSNepenthe\\ColorUtils\\' => 22,
         ),
         'R' => 
         array (
             'Reflar\\Webhooks\\' => 16,
             'Ramsey\\Uuid\\' => 12,
-            'Ramsey\\Collection\\' => 18,
         ),
         'P' => 
         array (
@@ -208,6 +208,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\UserRequest\\' => 16,
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
+            'FoF\\Upload\\' => 11,
             'FoF\\Transliterator\\' => 19,
             'FoF\\Terms\\' => 10,
             'FoF\\StopForumSpam\\' => 18,
@@ -261,7 +262,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Flarum\\Embed\\' => 13,
             'Flarum\\Approval\\' => 16,
             'Flarum\\' => 7,
-            'Flagrow\\Upload\\' => 15,
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
         ),
@@ -287,7 +287,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'B' => 
         array (
-            'Brick\\Math\\' => 11,
             'Behat\\Transliterator\\' => 21,
         ),
         'A' => 
@@ -450,6 +449,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/sycho/flarum-profile-cover/src',
         ),
+        'SoftCreatR\\MimeDetector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
+        ),
         'SSNepenthe\\ColorUtils\\' => 
         array (
             0 => __DIR__ . '/..' . '/ssnepenthe/color-utils/src',
@@ -461,10 +464,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
-        ),
-        'Ramsey\\Collection\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -705,6 +704,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/fof/user-bio/src',
         ),
+        'FoF\\Upload\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/upload/src',
+        ),
         'FoF\\Transliterator\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/transliterator/src',
@@ -917,10 +920,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/flarum/core/src',
         ),
-        'Flagrow\\Upload\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/upload/src',
-        ),
         'Fig\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/fig/http-message-util/src',
@@ -972,10 +971,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-        'Brick\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/brick/math/src',
         ),
         'Behat\\Transliterator\\' => 
         array (

@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '5f3cbea52e07c4dff5c0b02eee0af64cca8a29e3',
+    'reference' => 'c73246879ad9636dd506c223eee04193d9fc336e',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -139,15 +139,6 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e5934e844546d660a62bccfa79cee53de951fd0c',
-    ),
-    'brick/math' => 
-    array (
-      'pretty_version' => '0.9.1',
-      'version' => '0.9.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '283a40c901101e66de7061bd359252c013dcc43c',
     ),
     'clarkwinkelmann/flarum-ext-create-user-modal' => 
     array (
@@ -376,6 +367,13 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'flagrow/upload' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
     'flagrow/user-directory' => 
     array (
       'replaced' => 
@@ -465,16 +463,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '5f3cbea52e07c4dff5c0b02eee0af64cca8a29e3',
-    ),
-    'flarum/flarum-ext-markdown' => 
-    array (
-      'pretty_version' => 'v0.1.0-beta.8',
-      'version' => '0.1.0.0-beta8',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'fd67301b9eb18009bf548ffa601d0d61b8d71e8b',
+      'reference' => 'c73246879ad9636dd506c223eee04193d9fc336e',
     ),
     'flarum/lang-english' => 
     array (
@@ -942,12 +931,12 @@ private static $installed = array (
     ),
     'fof/upload' => 
     array (
-      'pretty_version' => '0.4.4',
-      'version' => '0.4.4.0',
+      'pretty_version' => '0.12.0',
+      'version' => '0.12.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f9e79287294ce3a1823fb12ae7d4d93e2d5afaa4',
+      'reference' => 'ad7046dcad6034017015748fe114365a627f453c',
     ),
     'fof/user-bio' => 
     array (
@@ -1579,12 +1568,12 @@ private static $installed = array (
     ),
     'paragonie/random_compat' => 
     array (
-      'pretty_version' => 'v9.99.100',
-      'version' => '9.99.100.0',
+      'pretty_version' => 'v9.99.99',
+      'version' => '9.99.99.0',
       'aliases' => 
       array (
       ),
-      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
+      'reference' => '84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95',
     ),
     'persianfla/flarum-ext-persian' => 
     array (
@@ -1730,23 +1719,14 @@ private static $installed = array (
       ),
       'reference' => '120b605dfeb996808c31b6477290a714d356e822',
     ),
-    'ramsey/collection' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '24d93aefb2cd786b7edd9f45b554aea20b28b9b1',
-    ),
     'ramsey/uuid' => 
     array (
-      'pretty_version' => '4.1.1',
-      'version' => '4.1.1.0',
+      'pretty_version' => '3.9.3',
+      'version' => '3.9.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cd4032040a750077205918c86049aa0f43d22947',
+      'reference' => '7e1633a6964b48589b142d60542f9ed31bd37a92',
     ),
     'realodix/flarum-ext-indonesian' => 
     array (
@@ -1824,7 +1804,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '4.1.1',
+        0 => '3.9.3',
       ),
     ),
     'rikusen0335/lang-japanese-extended' => 
@@ -1892,6 +1872,15 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'softcreatr/php-mime-detector' => 
+    array (
+      'pretty_version' => '3.2.0',
+      'version' => '3.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '61b5fc1454e248a28a545465fc02d695044ba8c3',
     ),
     'ssnepenthe/color-utils' => 
     array (

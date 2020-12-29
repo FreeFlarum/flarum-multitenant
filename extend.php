@@ -6,7 +6,7 @@ use Flarum\Frontend\Document;
 return [
 
     // Disables local file upload for FoF Upload extension:
-    (new \FoF\Upload\Extend\Adapters())->disable('local'),
+    //(new \FoF\Upload\Extend\Adapters())->disable('local'),
 
     // Remove (permanently throttle) test mail function:
     /*(new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
