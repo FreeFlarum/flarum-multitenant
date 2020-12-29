@@ -1,0 +1,28 @@
+# https://github.com/MichaelBelgium/flarum-discussion-views/blob/master/locale/en.yml
+# Tue, 07 Apr 2020 08:24:09 +0800
+
+core:
+  forum:
+    index_sort:
+      popular_button: 熱門
+      unpopular_button: 冷門
+
+flarum_discussion_views:
+  forum:
+    modal_resetviews:
+      title: 重設貼文瀏覽次數
+      submit: 是的，移除全部
+      label: 這將減少 {count} 次瀏覽次數，要繼續嗎？
+    discussion_controls:
+      resetviews_button: 重設瀏覽次數
+  admin:
+    permissions:
+      can_reset_views: 重設貼文瀏覽次數
+      can_view_number: 查看貼文瀏覽次數
+    settings:
+      title: 瀏覽次數設定
+      track_unique: 追蹤唯一瀏覽次數
+      abbr_numbers: 以簡短格式顯示數字
+      show_filter: 啟用熱門/冷門排序
+      max_viewcount: 最近瀏覽列表人數
+      show_viewlist: 啟用最近瀏覽列表

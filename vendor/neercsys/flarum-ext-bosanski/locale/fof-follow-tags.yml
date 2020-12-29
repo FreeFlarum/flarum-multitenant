@@ -11,7 +11,6 @@ fof-follow-tags:
       
       following:
         following_none_label: => fof-follow-tags.ref.filtering_options.none
-        following_all_label: => fof-follow-tags.ref.filtering_options.all
         following_tags_label: => fof-follow-tags.ref.filtering_options.tags
     
     badge:
@@ -47,20 +46,51 @@ fof-follow-tags:
         
   admin:
     settings:
-      title: FriendsOfFlarum Follow Tags
-
-      following_page_default_label: Default Following Page Filtering
+      following_page_default_label: Zadani filteri stranice pratim
 
       following_none_label: => fof-follow-tags.ref.filtering_options.none
       following_tags_label: => fof-follow-tags.ref.filtering_options.tags
-      following_all_label: => fof-follow-tags.ref.filtering_options.all
 
 
   email:
-    newDiscussionInTag: "[Tag | New Discussion] title"
-    newPostInTag: "[Tag | New Post] title"
-    newDiscussionTag: "[Tag | Changed Tag] title"
+    subject:
+        newDiscussionInTag: "[Oznaka | Nove diskusije] {title}"
+        newPostInTag: "[Oznaka | Nova objava] {title}"
+        newDiscussionTag: "[Oznaka | Promijenjena oznaka] {title}"
+    body:
+        newDiscussionInTag: |
+            Hey {recipient_display_name},
 
+            {actor_display_name} započinje novu diskusiju' u oznaci koju pratite: {discussion_title}
+
+            Da biste pogledali novu diskusiju, pogledajte sljedeću vezu:
+            {discussion_url}
+
+            ---
+
+            {post_content}
+        newPostInTag: |
+            Hej {recipient_display_name},
+
+            {actor_display_name} je objavio u diskusiji' sa oznakom koju pratite: {discussion_title}
+
+            Da biste pogledali novu diskusiju, pogledajte sljedeću vezu:
+            {post_url}
+
+            ---
+
+            {post_content}
+
+            ---
+
+            Nećete više primati obavještenja o ovoj diskusiji dok ne budete ažurirani.
+        newDiscussionTag: |
+            Hej {recipient_display_name},
+
+            {actor_display_name} upravo promijenio oznaku u diskusiji od {author_display_name} u oznaku koju vi pratite {discussion_title}
+
+            Da biste pogledali novu diskusiju, pogledajte sljedeću vezu:
+            {discussion_url}
   ref:
     follow: Prati
     following: Pratim
@@ -70,5 +100,4 @@ fof-follow-tags:
     
     filtering_options:
       none: Praćene diskusije
-      all: Sve što pratite
       tags: Praćene oznake

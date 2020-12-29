@@ -4,7 +4,11 @@ fof-best-answer:
       best_answer: Odaberite najbolji odgovor (vlastita rasprava)
       best_answer_not_own_discussion: Odaberite najbolji odgovor (nije vlastita rasprava)
     settings:
-      title: Najbolji odgovor Postavke
+      label:
+        general: General
+        reminders: Reminders
+        advanced: Advanced
+        reminders_notice: For reminders to function correctly, you must have set up the Flarum scheduler correctly.
       allow_select_own_post: Dopustite korisniku da odabere vlastiti post
       select_best_answer_reminder_days: Podsjetite korisnika da odabere najbolji odgovor nakon X dana
       schedule_on_one_server: Koristi 'onOneServer()' za planiranje zadatka (zahtjeva Redis/Memcache)
@@ -23,11 +27,37 @@ fof-best-answer:
 
     notification:
       best_answer_in_discussion: "{username} je u ovoj diskusiji postavio/la najbolji odgovor"
-      best_answer_set_in_discussion_email: Postavljen je najbolji odgovor
       content: Molimo odaberite najbolji odgovor ako je na vaše pitanje odgovoreno
       awarded: Vaš je odgovor postavljen kao najbolji odgovor od strane {username}
-      awarded_email: Vaš je post postavljen kao najbolji odgovor od strane korisnika
-      select_email_title: Jeste li uspjeli riješiti svoj problem?
+
       preferences:
         awarded_best_answer: Kad neko postavi moj post kao najbolji odgovor
         best_answer_in_discussion: Kada se u diskusiji u kojoj sam sudjelovao/la dobije najbolji odgovor
+  email:
+    subject:
+      awarded: Vaš post je postavljen kao najbolji odgovor {display_name}
+      ba-set: Najbolji odgovor je postavio {display_name}
+      select: Jeste li uspjeli dobiti odgovor na svoje pitanje?
+    body:
+      awarded: |
+        Hej {recipient_display_name},
+
+        Sjajan posao, {actor_display_name} je upravo postavio/la vaš post kao najbolji odgovor u diskusiji '{discussion_title}'. Hvala na pomoći.
+
+        View it here: {discussion_url}
+      ba-set: |
+        Hej {recipient_display_name},
+
+        {actor_display_name} je upravo postavio/la najbolji odgovor u raspravi '{discussion_title}', u kojoj ste učestvovali.
+
+        Check it out: {discussion_url}
+      select: |
+        Hej {recipient_display_name},
+
+        Samo se javljam; do sada biste trebali imati puno odgovora na svoje pitanje - '{discussion_title}'. Nadam se da vam je jedan od njih pomogao da riješite svoj problem.
+
+        Ako je to slučaj, bilo bi stvarno korisno za buduće članove ako biste mogli postaviti najbolji odgovor na svoje pitanje. Pomoći će ljudima s istim problemom da pronađu odgovor koji im je potreban, a također je i veliko hvala članovima koji su vam pomogli. Daju svoje vrijeme dobrovoljno, pa je lijepo dati im do znanja da im ide dobro.
+
+        Posjetite diskusiju ovdje: {discussion_url}, i odaberite najprikladniji post kao najbolji odgovor.
+
+        Hvala!

@@ -6,30 +6,36 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "neercsys",
+            "name": "Nermin(nera)",
             "email": "neercsys@gmail.com",
-            "homepage": "https://www.balkanbuzz.net"
+            "homepage": "https://diskusije.balkanbuzz.net"
         }
     ],
     "support": {
         "issues": "https://github.com/neercsys/flarum-ext-bosanski/issues",
         "source": "https://github.com/neercsys/flarum-ext-bosanski"
     },
+	"homepage": "https://diskusije.balkanbuzz.net",
     "require": {
-        "flarum/core": "^0.1.0-beta.14"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "0.1.x-dev"
         },
         "flarum-extension": {
-            "title": "Bosanski",
+            "title": "Bosanski for Ext",
+			"category": "language",
+			"info": {
+                "website": "https://diskusije.balkanbuzz.net",
+                "support": "https://diskusije.balkanbuzz.net"
+            },
             "icon": {
                 "name": "fas fa-language",
-		"background": "#346eeb",
-		"backgroundSize": "cover",
-		"backgroundPosition": "center",
-		"color": "#e9f01d"
+		        "background": "#346eeb",
+		        "backgroundSize": "cover",
+		        "backgroundPosition": "center",
+		        "color": "#e9f01d"
             }
         },
         "flarum-locale": {

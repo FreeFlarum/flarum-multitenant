@@ -1,8 +1,6 @@
 fof-oauth:
   admin:
     settings:
-      title: FriendsOfFlarum OAuth
-
       only_icons_label: Prikazuju se samo ikone gumba za prijavu (alternativni izgled)
 
       providers:
@@ -38,7 +36,13 @@ fof-oauth:
 
           api_key_label: API Key
           api_secret_label: API Secret
+          
+        google:
+          description: Kreirajte aplikaciju na {link}.
 
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+          
   forum:
     log_in:
       with_button: Prijavi se putem {provider}
@@ -54,6 +58,7 @@ fof-oauth:
       github: GitHub
       gitlab: GitLab
       twitter: Twitter
+      google: Google
 
   ref:
     settings:

@@ -1,12 +1,11 @@
 fof-recaptcha:
   admin:
     settings:
-      help_text: Obtain your Google reCAPTCHA credentials <a>here</a>.
-
-      type_label: reCAPTCHA Type
-
-      site_key_label: Site Key
+      help_text: Pribavite svoje vjerodajnice za Google reCAPTCHA <a>ovdje</a>.
       secret_key_label: Secret Key
+      site_key_label: Site Key
+      title: FriendsOfFlarum reCAPTCHA
+      type_label: Tip reCAPTCHA
 
 validation:
   recaptcha: reCAPTCHA neuspjela provjera.

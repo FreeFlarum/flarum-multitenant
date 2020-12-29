@@ -6,16 +6,14 @@ fof-share-social:
     modal:
       title: Podijeli
 
-  admin:
-    settings:
-      title: FriendsOfFlarum Share Social
-
   lib:
     networks:
       facebook: Facebook
       twitter: Twitter
       linkedin: LinkedIn
       reddit: Reddit
+      whatsapp: WhatsApp
+      telegram: Telegram
 
       vkontakte: VKontakte
       odnoklassniki: Odnoklassniki

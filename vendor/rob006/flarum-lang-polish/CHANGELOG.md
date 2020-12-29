@@ -2,6 +2,25 @@ CHANGELOG
 =========
 
 
+0.4.1 (2020-12-28)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`fof/webhooks`](https://github.com/FriendsOfFlarum/webhooks)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`maicol07/flarum-ext-sso`](https://github.com/maicol07/flarum-ext-sso)
+* [`matteocontrini/flarum-imgur-upload`](https://github.com/matteocontrini/flarum-imgur-upload)
+
+
+Wszystkie zmiany: [v0.4.0...v0.4.1](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.0...v0.4.1).
+
+
 0.4.0 (2020-12-20)
 ------------------
 

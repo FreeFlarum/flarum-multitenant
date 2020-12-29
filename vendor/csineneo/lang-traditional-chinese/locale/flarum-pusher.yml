@@ -1,0 +1,26 @@
+# https://github.com/flarum/lang-english/blob/master/locale/flarum-pusher.yml
+# Sat, 12 Oct 2019 10:16:52 +0800
+
+flarum-pusher:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Pusher Settings modal dialog.
+    pusher_settings:
+      app_cluster_label: Cluster
+      app_id_label: App ID
+      app_key_label: App Key
+      app_secret_label: App Secret
+      title: Pusher 設定
+
+  # Translations in this namespace are used by the admin interface.
+  forum:
+
+    # These translations are used in the discussion list.
+    discussion_list:
+      show_updates_text: "有 {count} 條新貼文|有 {count} 條新貼文"

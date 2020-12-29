@@ -10,7 +10,6 @@ fof-byobu:
             send_pd: "Pošalji {username} poruku"
             cancel: Otkaži
             remove_from_discussion: Napusti ovu privatnu diskusiju
-            make_public: Napravi ovu diskusiju javnu
         composer_private_discussion:
             submit_button: Objavi privatnu diskusiju
             title_placeholder: Naslov privatne diskusije         
@@ -19,6 +18,7 @@ fof-byobu:
             user_deleted: -deleted-
         nav:
             start_button: Nova privatna diskusija
+            nav_item: "Privatne diskusije"
         input:
             search_recipients: Pretraživanje primatelja upišite prva tri znaka...
         search:
@@ -40,7 +40,7 @@ fof-byobu:
         user:
             settings:
                 block_pd: Blokirajte privatne diskusije
-
+                unified_index: Kombinirajte privatne rasprave u jedinstvenom indeksu
             byobu_link: Privatne diskusije
             dropdown_label: Privatne diskusije
             
@@ -53,8 +53,6 @@ fof-byobu:
             pd_user_left_text: "{username} napusio/la privatnu diskusiju"
             pd_added_text: "{username} dodao/la vas je u privatnu diskusiju"
             pd_added_label: "Neko me dodaje u postojeću privatnu diskusiju"
-            pd_made_public_label: "Privatna diskusija postaje javna"
-            pd_made_public_text: "{username} pravi ovu diskusiju javnu"
             
         confirm:
             make_public: Time će ova privatna diskusija postati vidljiva svima. Razmislite je li ovo ispravna radnja prije nego što nastavite.
@@ -66,24 +64,52 @@ fof-byobu:
             create_private_discussions_with_blocking_users: Stvorite privatne diskusije s korisnicima koji su je blokirali
             edit_user_recipients: Uredite korisnike koji sudjeluju u privatnim diskusijama
             edit_group_recipients: Uređivanje grupa koje sudjeluju u privatnim diskusijama
-            make_private_into_public: Pretvorite privatnu diskusiju u javnu diskusiju
             view_private_discussions-when-flagged: Pogledajte privatne diskusije drugih korisnika ako su označene
 
         settings:
-            use_tag_slug: Navedite slug oznake kako biste natjerali na sve privatne diskusije
-            use_tag_slug_help: Ostavite prazno kako biste korisnicima omogućili odabir vlastite oznake, odnosi se samo na novo kreirane privatne diskusije
-            use_tag_slug_no_restriction: "- Bez ograničenja -"
-            byobu_index: Prikažite vezu do privatnih diskusija na početnoj stranici
-            byobu_index_help: Kada je ova opcija omogućena, bit će prikazana veza između glavnih stavki foruma do privatnih diskusija
+            badge-icon: Byobu Discussion Badge
+            post-event-icon: Byobu Post Events
+            
+    email:
+        subject:
+            private_discussion_created: "[Private Discussion] {display_name} započinje novu privatnu diskusiju s vama"
+            private_discussion_replied: "[Private Discussion] {display_name} objavljuje u privatnoj diskusiji"
+            recipient_removed: "[Private Discussion] {display_name} napušta diskuisiju"
+            private_discussion_added: "[Private Discussion] {display_name} dodaje vas u privatnu diskusiju"
+        body:
+            private_discussion_created: |
+                Hej {recipient_display_name},
 
-    notifications:
-        private_discussion_created:
-            title: "[Private Discussion] korisnik je započeo/la s vama novu privatnu diskusiju"
-        private_discussion_replied:
-            title: "[Private Discussion] korisnik je objavio u privatnoj diskusiji"
-        recipient_removed:
-            title: "[Private Discussion] korisnik je napustio diskusiju"
-        private_discussion_added:
-            title: "[Private Discussion] korisnik vas je dodao u privatnu diskusiju"
-        made_public:
-            title: "[Private Discussion] korisnik pravi ovu diskusiju javnu"
+                {actor_display_name} započinje novu privatnu diskusiju s vama kao primateljem, pod nazivom '{discussion_title}'.
+
+                Pogledajte ovdje:
+                {discussion_url}
+
+                Možda ćete se prvo morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+            private_discussion_replied: |
+                Hej {recipient_display_name},
+
+                {actor_display_name} objavljuje u privatnoj diskusiji s vama kao primaocem, pod nazivom '{discussion_title}'.
+
+                Pogledajte ovdje:
+                {post_url}
+
+                Možda ćete se prvo morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+            recipient_removed: |
+                Hej {recipient_display_name},
+
+                {actor_display_name} napušta privatnu diskusiju '{discussion_title}'. Više neće moći pregledavati nijedan od njegovih sadržaja.
+
+                Pogledajte ovdje:
+                {discussion_url}
+
+                Možda ćete se prvo morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+            private_discussion_added: |
+                Hej {recipient_display_name},
+
+                {actor_display_name} dodao vas je u postojeću privatnu raspravu pod nazivom '{discussion_title}'.
+
+                Pogledajte ovdje:
+                {discussion_url}
+
+                Možda ćete se prvo morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.

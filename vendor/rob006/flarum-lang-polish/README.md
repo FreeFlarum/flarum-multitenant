@@ -153,6 +153,7 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 | [FoF User Bio](https://github.com/FriendsOfFlarum/user-bio) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/fof-user-bio/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-user-bio/pl/) |
 | [FoF User Directory](https://github.com/FriendsOfFlarum/user-directory) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/fof-user-directory/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-user-directory/pl/) |
 | [FoF Username Request](https://github.com/FriendsOfFlarum/username-request) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/fof-username-request/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-username-request/pl/) |
+| [FoF Webhooks](https://github.com/FriendsOfFlarum/webhooks) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/fof-webhooks/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-webhooks/pl/) |
 | [FoF reCAPTCHA](https://github.com/FriendsOfFlarum/recaptcha) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/fof-recaptcha/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-recaptcha/pl/) |
 
 <!-- fof-extensions-list-stop -->
@@ -247,7 +248,6 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 | [Quiet Edits by The turk](https://github.com/the-turk/flarum-quiet-edits) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/the-turk-quiet-edits/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/the-turk-quiet-edits/pl/) |
 | [ReFlar Level Ranks by Reflar](https://github.com/ReFlar/level-ranks) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/reflar-level-ranks/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/reflar-level-ranks/pl/) |
 | [ReFlar Two Factor by Reflar](https://github.com/ReFlar/twofactor) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/reflar-twofactor/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/reflar-twofactor/pl/) |
-| [ReFlar Webhooks by Reflar](https://github.com/ReFlar/webhooks) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/reflar-webhooks/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/reflar-webhooks/pl/) |
 | [Redis Connector by Zhishiq](https://github.com/ZhiShiQ/FlarumRedis) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/zhishiq-redis/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/zhishiq-redis/pl/) |
 | [Reply 2 See by Kvothe](https://github.com/oaklinq/flarum-ext-reply2see) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/kvothe-reply-to-see/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/kvothe-reply-to-see/pl/) |
 | [SAML2 SSO by Askvortsov](https://github.com/askvortsov1/flarum-saml) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/askvortsov-saml/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/askvortsov-saml/pl/) |

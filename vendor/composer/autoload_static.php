@@ -168,7 +168,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'J' => 
         array (
-            'JordanJay29\\Summaries\\' => 22,
             'JmesPath\\' => 9,
             'JSLirola\\Login2SeePlus\\' => 23,
         ),
@@ -194,6 +193,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Illuminate\\Config\\' => 18,
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
+            'IanM\\Synopsis\\' => 14,
         ),
         'G' => 
         array (
@@ -580,10 +580,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
         ),
-        'JordanJay29\\Summaries\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jordanjay29/flarum-ext-summaries/src',
-        ),
         'JmesPath\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
@@ -671,6 +667,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Illuminate\\Bus\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/bus',
+        ),
+        'IanM\\Synopsis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ianm/synopsis/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

@@ -1,8 +1,5 @@
 fof-linguist:
     admin:
-        menu:
-            title: Linguist
-            description: Prilagodite prijevode.
         buttons:
             apply: Primjeni
             reset: Vrati izvorno
@@ -17,16 +14,23 @@ fof-linguist:
         filters:
             search: Potražite nizove za prijevod...
             with-own-translations: Moji prijevodi
-            with-original-translations-in-locales: Sa originalnim prijevodom u
-            without-original-translations-in-locales: Bez originalnog prijevoda u
-            for-extension: Za ekstenziju
+            missing: Pronađite prijevode koji nedostaju
+            missing-middle-label: prijevodi u
+            negation-options:
+                with: Sa
+                without: Bez
+            type-options:
+                any: Originalno ili prilagođeno
+                original: Original
+                own: Prilagođeno
+            for-extension: Za ekstenzije
             for-extension-unavailable: >
-                No translations were found in the expected namespace "{namespace}".
-                Maybe this extension doesn't have any text to translate or is using a different namespace.
-                Try using the search field to locate its translations.
-            results: Showing {shown} of {total} matching translations
+                U očekivanom prostoru imena nisu pronađeni prijevodi "{namespace}".
+                Možda ovo proširenje nema tekst za prijevod ili koristi drugi prostor imena.
+                Pokušajte upotrijebiti polje za pretraživanje da biste pronašli njegove prijevode.
+            results: Prikaz {shown} od {total} odgovarajućih prijevoda
         clear-cache:
             text: >
-                Novi prijevodi još nisu primijenjeni.
-                Napomena: brisanje predmemorije može trenutačno usporiti vaš forum.
-            button: Očistite predmemoriju sada
+                Novi prevodi još nisu primijenjeni.
+                Napomena: čišćenje predmemorije može trenutno usporiti vaš forum.
+            button: Očisti predmemoriju sada

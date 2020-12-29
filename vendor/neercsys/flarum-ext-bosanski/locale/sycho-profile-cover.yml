@@ -1,0 +1,16 @@
+sycho-profile-cover:
+  admin:
+    thumbnails: Kreiraj sličicu
+    max_size: Maksimalna veličina naslovne slike profila (in KB)
+    permission:
+      set_cover: Postavi naslovnicu profila
+  forum:
+    cover: Naslovna
+    edit_cover: Uredi naslovnicu
+    notice: "Maksimalna veličina: {size}"
+    added:
+      success: Naslovnica profila ažurirana.
+      error: Slika se ne može prenijeti.
+    removed:
+      success: Uklonjena je naslovna slika profila
+      error: Nije moguće ukloniti naslovnicu, pokušajte ponovo kasnije.

@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '26c15cc43837874fd5541d6170c2ccd51588cb72',
+    'reference' => '40b17cbb1a479e0d554cf855f9b1c6ae38d3d545',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -79,12 +79,12 @@ private static $installed = array (
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.171.6',
-      'version' => '3.171.6.0',
+      'pretty_version' => '3.171.7',
+      'version' => '3.171.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5587d22e63ef82ef74dffca5d47f307b84137b51',
+      'reference' => '6c32f57bc381b46c783f70a20060fde1a95f4ab5',
     ),
     'axy/backtrace' => 
     array (
@@ -184,6 +184,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '1b3c374acd899db9dafe5bf27f51ce2de6c5273d',
+    ),
+    'csineneo/lang-traditional-chinese' => 
+    array (
+      'pretty_version' => '1.13.1',
+      'version' => '1.13.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '46aaaf33419a721a38e211fb3c4f44a439061cc9',
     ),
     'customworld/flarum-lang-slovak' => 
     array (
@@ -454,7 +463,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '26c15cc43837874fd5541d6170c2ccd51588cb72',
+      'reference' => '40b17cbb1a479e0d554cf855f9b1c6ae38d3d545',
     ),
     'flarum/lang-english' => 
     array (
@@ -1001,6 +1010,15 @@ private static $installed = array (
       ),
       'reference' => '53330f47520498c0ae1f61f7e2c90f55690c06a3',
     ),
+    'ianm/synopsis' => 
+    array (
+      'pretty_version' => '0.1.0',
+      'version' => '0.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2f98213a1ed4f2190f95c2b7910ed870ada0017f',
+    ),
     'illuminate/bus' => 
     array (
       'pretty_version' => 'v6.20.8',
@@ -1171,15 +1189,6 @@ private static $installed = array (
       array (
       ),
       'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
-    ),
-    'jordanjay29/flarum-ext-summaries' => 
-    array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f3a360582252d85cee3cf90c6bdeeb943c8eec22',
     ),
     'jslirola/flarum-ext-login2seeplus' => 
     array (
@@ -1505,21 +1514,21 @@ private static $installed = array (
     ),
     'neercsys/flarum-ext-bosanski' => 
     array (
-      'pretty_version' => 'v0.37',
-      'version' => '0.37.0.0',
+      'pretty_version' => 'v0.38',
+      'version' => '0.38.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7041c8f614717ed7bb2d286eb41ee5002337d7d1',
+      'reference' => 'd9ab95d9e1785d562e69574eb9fb3d5ec4a22910',
     ),
     'neercsys/flarum-lang-bosanski' => 
     array (
-      'pretty_version' => 'v0.16',
-      'version' => '0.16.0.0',
+      'pretty_version' => 'v0.19',
+      'version' => '0.19.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0bb0161defef0031460d25fd7c3b1f84e90d2b48',
+      'reference' => '84d785c60fd0aafa5f3387f6210b68b6edae6f3d',
     ),
     'nesbot/carbon' => 
     array (
@@ -1809,12 +1818,12 @@ private static $installed = array (
     ),
     'rob006/flarum-lang-polish' => 
     array (
-      'pretty_version' => 'v0.4.0',
-      'version' => '0.4.0.0',
+      'pretty_version' => 'v0.4.1',
+      'version' => '0.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '16d1715c5df8616d712de8a764721ae60ea97642',
+      'reference' => 'f5233dbe4a1cc510a9d9297d14d9affe2a99692f',
     ),
     's9e/regexp-builder' => 
     array (

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c4f2f5b457dbd7c92c2111e08c5d0ec",
+    "content-hash": "4626821f7b087cb05e00cec5c980f5e3",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -219,16 +219,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.6",
+            "version": "3.171.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5587d22e63ef82ef74dffca5d47f307b84137b51"
+                "reference": "6c32f57bc381b46c783f70a20060fde1a95f4ab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5587d22e63ef82ef74dffca5d47f307b84137b51",
-                "reference": "5587d22e63ef82ef74dffca5d47f307b84137b51",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6c32f57bc381b46c783f70a20060fde1a95f4ab5",
+                "reference": "6c32f57bc381b46c783f70a20060fde1a95f4ab5",
                 "shasum": ""
             },
             "require": {
@@ -303,9 +303,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.6"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.7"
             },
-            "time": "2020-12-23T19:12:28+00:00"
+            "time": "2020-12-28T19:12:41+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -865,6 +865,63 @@
                 "source": "https://github.com/Cryental/flarum-l10n-ext-korean"
             },
             "time": "2020-12-06T09:58:13+00:00"
+        },
+        {
+            "name": "csineneo/lang-traditional-chinese",
+            "version": "1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Csineneo/lang-traditional-chinese.git",
+                "reference": "46aaaf33419a721a38e211fb3c4f44a439061cc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Csineneo/lang-traditional-chinese/zipball/46aaaf33419a721a38e211fb3c4f44a439061cc9",
+                "reference": "46aaaf33419a721a38e211fb3c4f44a439061cc9",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.13"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "正體中文語言包",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#fff",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "zh-hant",
+                    "title": "正體中文"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Csineneo",
+                    "email": "csineneo@gmail.com",
+                    "homepage": "https://vivaldi.club"
+                }
+            ],
+            "description": "Flarum 正體中文語言包",
+            "keywords": [
+                "Chinsese",
+                "flarum",
+                "locale",
+                "中文"
+            ],
+            "support": {
+                "issues": "https://vivaldi.club/t/flarum",
+                "source": "https://github.com/Csineneo/lang-traditional-chinese"
+            },
+            "time": "2020-05-08T01:26:34+00:00"
         },
         {
             "name": "customworld/flarum-lang-slovak",
@@ -6341,6 +6398,73 @@
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
+            "name": "ianm/synopsis",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imorland/synopsis.git",
+                "reference": "2f98213a1ed4f2190f95c2b7910ed870ada0017f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imorland/synopsis/zipball/2f98213a1ed4f2190f95c2b7910ed870ada0017f",
+                "reference": "2f98213a1ed4f2190f95c2b7910ed870ada0017f",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15"
+            },
+            "conflict": {
+                "jordanjay29/flarum-ext-summaries": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/25772"
+                },
+                "flarum-extension": {
+                    "title": "Synopsis",
+                    "category": "discussion",
+                    "icon": {
+                        "name": "fas fa-comment-dots",
+                        "backgroundColor": "#008000",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "IanM\\Synopsis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "homepage": "https://discuss.flarum.org/u/ianm"
+                }
+            ],
+            "description": "Show summary excerpts on discussion lists.",
+            "keywords": [
+                "discussion",
+                "excerpt",
+                "excerpts",
+                "flarum",
+                "summaries",
+                "summary",
+                "synopsis"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/25772",
+                "issues": "https://github.com/imorland/synopsis/issues",
+                "source": "https://github.com/imorland/synopsis"
+            },
+            "time": "2020-12-26T20:42:14+00:00"
+        },
+        {
             "name": "illuminate/bus",
             "version": "v6.20.8",
             "source": {
@@ -7389,72 +7513,6 @@
                 "source": "https://github.com/Intervention/image/tree/master"
             },
             "time": "2019-11-02T09:15:47+00:00"
-        },
-        {
-            "name": "jordanjay29/flarum-ext-summaries",
-            "version": "0.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jordanjay29/flarum-ext-summaries.git",
-                "reference": "f3a360582252d85cee3cf90c6bdeeb943c8eec22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jordanjay29/flarum-ext-summaries/zipball/f3a360582252d85cee3cf90c6bdeeb943c8eec22",
-                "reference": "f3a360582252d85cee3cf90c6bdeeb943c8eec22",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": ">=0.1.0-beta.14 <0.1.0-beta.16"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.x-dev"
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/2151-summaries-showing-excerpts-on-discussions-page"
-                },
-                "flarum-extension": {
-                    "title": "Summaries",
-                    "category": "discussion",
-                    "icon": {
-                        "name": "fas fa-sticky-note",
-                        "backgroundColor": "#00bac9",
-                        "color": "#fff"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JordanJay29\\Summaries\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordan Schnaidt (jordanjay29)",
-                    "email": "jordanschnaidt@gmail.com"
-                }
-            ],
-            "description": "Show summaries on all discussions.",
-            "keywords": [
-                "discussion",
-                "excerpt",
-                "excerpts",
-                "flarum",
-                "summaries",
-                "summary"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/2151",
-                "issues": "https://github.com/jordanjay29/flarum-ext-summaries/issues",
-                "source": "https://github.com/jordanjay29/flarum-ext-summaries"
-            },
-            "time": "2020-12-25T19:25:57+00:00"
         },
         {
             "name": "jslirola/flarum-ext-login2seeplus",
@@ -9727,20 +9785,20 @@
         },
         {
             "name": "neercsys/flarum-ext-bosanski",
-            "version": "v0.37",
+            "version": "v0.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neercsys/flarum-ext-bosanski.git",
-                "reference": "7041c8f614717ed7bb2d286eb41ee5002337d7d1"
+                "reference": "d9ab95d9e1785d562e69574eb9fb3d5ec4a22910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neercsys/flarum-ext-bosanski/zipball/7041c8f614717ed7bb2d286eb41ee5002337d7d1",
-                "reference": "7041c8f614717ed7bb2d286eb41ee5002337d7d1",
+                "url": "https://api.github.com/repos/neercsys/flarum-ext-bosanski/zipball/d9ab95d9e1785d562e69574eb9fb3d5ec4a22910",
+                "reference": "d9ab95d9e1785d562e69574eb9fb3d5ec4a22910",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.14"
+                "flarum/core": "^0.1.0-beta.15"
             },
             "type": "flarum-extension",
             "extra": {
@@ -9748,7 +9806,12 @@
                     "dev-master": "0.1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Bosanski",
+                    "title": "Bosanski for Ext",
+                    "category": "language",
+                    "info": {
+                        "website": "https://diskusije.balkanbuzz.net",
+                        "support": "https://diskusije.balkanbuzz.net"
+                    },
                     "icon": {
                         "name": "fas fa-language",
                         "background": "#346eeb",
@@ -9768,12 +9831,13 @@
             ],
             "authors": [
                 {
-                    "name": "neercsys",
+                    "name": "Nermin(nera)",
                     "email": "neercsys@gmail.com",
-                    "homepage": "https://www.balkanbuzz.net"
+                    "homepage": "https://diskusije.balkanbuzz.net"
                 }
             ],
             "description": "Bosnian language pack for Flarum's third party extensions.",
+            "homepage": "https://diskusije.balkanbuzz.net",
             "keywords": [
                 "bosanski",
                 "extension",
@@ -9785,20 +9849,20 @@
                 "issues": "https://github.com/neercsys/flarum-ext-bosanski/issues",
                 "source": "https://github.com/neercsys/flarum-ext-bosanski"
             },
-            "time": "2020-10-26T17:04:09+00:00"
+            "time": "2020-12-28T19:07:08+00:00"
         },
         {
             "name": "neercsys/flarum-lang-bosanski",
-            "version": "v0.16",
+            "version": "v0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neercsys/flarum-lang-bosanski.git",
-                "reference": "0bb0161defef0031460d25fd7c3b1f84e90d2b48"
+                "reference": "84d785c60fd0aafa5f3387f6210b68b6edae6f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neercsys/flarum-lang-bosanski/zipball/0bb0161defef0031460d25fd7c3b1f84e90d2b48",
-                "reference": "0bb0161defef0031460d25fd7c3b1f84e90d2b48",
+                "url": "https://api.github.com/repos/neercsys/flarum-lang-bosanski/zipball/84d785c60fd0aafa5f3387f6210b68b6edae6f3d",
+                "reference": "84d785c60fd0aafa5f3387f6210b68b6edae6f3d",
                 "shasum": ""
             },
             "require": {
@@ -9832,8 +9896,15 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Nermin(nera)",
+                    "email": "neercsys@gmail.com",
+                    "homepage": "https://diskusije.balkanbuzz.net"
+                }
+            ],
             "description": "Bosnian language pack.",
-            "homepage": "https://github.com/neercsys/flarum-lang-bosanski",
+            "homepage": "https://diskusije.balkanbuzz.net",
             "keywords": [
                 "bosanski",
                 "bosnian",
@@ -9842,9 +9913,9 @@
             ],
             "support": {
                 "issues": "https://github.com/neercsys/flarum-lang-bosanski/issues",
-                "source": "https://github.com/neercsys/flarum-lang-bosanski/tree/v0.16"
+                "source": "https://github.com/neercsys/flarum-lang-bosanski"
             },
-            "time": "2020-12-22T14:39:11+00:00"
+            "time": "2020-12-28T19:25:03+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -11031,16 +11102,16 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "16d1715c5df8616d712de8a764721ae60ea97642"
+                "reference": "f5233dbe4a1cc510a9d9297d14d9affe2a99692f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/16d1715c5df8616d712de8a764721ae60ea97642",
-                "reference": "16d1715c5df8616d712de8a764721ae60ea97642",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/f5233dbe4a1cc510a9d9297d14d9affe2a99692f",
+                "reference": "f5233dbe4a1cc510a9d9297d14d9affe2a99692f",
                 "shasum": ""
             },
             "require": {
@@ -11089,7 +11160,7 @@
                 "issues": "https://github.com/rob006-software/flarum-lang-polish/issues",
                 "source": "https://github.com/rob006-software/flarum-lang-polish"
             },
-            "time": "2020-12-20T22:16:26+00:00"
+            "time": "2020-12-28T11:45:55+00:00"
         },
         {
             "name": "s9e/regexp-builder",

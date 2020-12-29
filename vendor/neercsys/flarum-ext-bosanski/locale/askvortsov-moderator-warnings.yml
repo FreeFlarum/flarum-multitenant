@@ -4,6 +4,31 @@ askvortsov-moderator-warnings:
       manage_warnings: Stvorite i uklonite upozorenja moderatora
       view_warnings: Vidjeti upozorenja moderatora
       delete_warnings: Trajno izbrisati upozorenja moderatora
+  emails:
+    post_warned:
+      subject: "{warner_display_name} upozorava vas sa {strikes} strajkova u {discussion_title}"
+      body: |
+        Hej {warnee_display_name}!
+
+        {warner_display_name} upozorio vas s {strikes} strajkova u {discussion_title}
+
+        Naveden je sljedeći razlog:
+
+        ---
+
+        {public_comment}
+    user_warned:
+      subject: "{warner_display_name} te upozorio s {strikes} strajkova"
+      body: |
+        Hej {warnee_display_name}!
+
+        {warner_display_name} upozorio vas s {strikes} strajkova
+
+        Naveden je sljedeći razlog:
+
+        ---
+
+        {public_comment}
   forum:
     notifications:
       warning_text: 'Upozoreni ste sa {strikes} strajkom od strane {mod_username}|Upozoreni ste sa {strikes} strajkova od strane {mod_username}'

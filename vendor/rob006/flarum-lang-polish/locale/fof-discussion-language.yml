@@ -8,6 +8,7 @@ fof-discussion-language:
       allow_change_language_label: 'Edytowanie języka dyskusji'
     settings:
       native_label: 'Używaj lokalnych nazw języków'
+      show_flag_label: 'Wyświetl flagę kraju obok nazwy języka'
   api:
     discussion:
       validation_error: 'Musisz wybrać język dyskusji.'

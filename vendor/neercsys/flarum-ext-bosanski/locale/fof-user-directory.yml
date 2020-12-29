@@ -4,22 +4,28 @@ fof-user-directory:
             users_heading: 'Pretražite sve korisnike "{query}"'
         page:
             nav: Korisnički imenik
-            sort:
-                relevance: Relevantnost
-                default: Zadano
-                username_az: Korisničko ime (a-z)
-                username_za: Korisničko ime (z-a)
-                newest: Najnoviji
-                oldest: Najstariji
-                seen_recent: Posljednji online
-                seen_oldest: Najduže odsutan
-                most_posts: Najviše objava
-                least_posts: Zadnji objavljuje
-                most_discussions: Najviše diskusija
-                least_discussions: Posljednja diskusija
+            refresh_tooltip: => core.forum.index.refresh_tooltip
+            load_more_button: => core.ref.load_more
+            empty_text: We could not find any user matching your search.
+
     admin:
         permissions:
             view_user_directory: Pogledaj korisnički imenik
         settings:
-            title: Postavke korisničkog imenika
             link: Dodajte vezu na početnu stranicu za korisnike koji mogu vidjeti direktorij
+            default-sort: Default sort
+
+    lib:
+        sort:
+            not_specified: Koristi flarum zadano
+            default: Zadano
+            username_az: Korisničko ime (a-z)
+            username_za: Korisničko ime (z-a)
+            newest: Najnoviji
+            oldest: Najstariji
+            seen_recent: Posljednje online
+            seen_oldest: Najduže odsutni
+            most_posts: Najviše objava
+            least_posts: Najmanje objava
+            most_discussions: Najviše diskusija
+            least_discussions: Najmanje diskusija

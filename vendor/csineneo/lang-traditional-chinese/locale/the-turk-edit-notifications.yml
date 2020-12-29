@@ -1,0 +1,16 @@
+# https://github.com/the-turk/flarum-edit-notifications/blob/master/locale/en.yml
+# Thu, 27 Feb 2020 10:29:14 +0800
+
+the-turk-edit-notifications:
+    forum:
+      notifications:
+        interacted_post_edited_text:          "{username} 編輯了他/她的貼文"
+        post_edited_text:                     "{username} 編輯了你的貼文"
+      settings:
+        notify_interacted_post_edited_label:  某人編輯了我參與過的貼文
+        notify_post_edited_label:             某人編輯了我的貼文
+
+    admin:
+      settings:
+        title:                                編輯通知設定
+        enableInteracts:                      為參與過的貼文啟用編輯通知
