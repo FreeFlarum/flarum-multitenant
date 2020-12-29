@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '40b17cbb1a479e0d554cf855f9b1c6ae38d3d545',
+    'reference' => '014c30458102f752ee71978f69d8fd10e09c3703',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -261,12 +261,12 @@
     ),
     'egulias/email-validator' => 
     array (
-      'pretty_version' => '2.1.24',
-      'version' => '2.1.24.0',
+      'pretty_version' => '2.1.25',
+      'version' => '2.1.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ca90a3291eee1538cd48ff25163240695bd95448',
+      'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
     ),
     'ffans/lang-simplified-chinese' => 
     array (
@@ -440,7 +440,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '40b17cbb1a479e0d554cf855f9b1c6ae38d3d545',
+      'reference' => '014c30458102f752ee71978f69d8fd10e09c3703',
     ),
     'flarum/lang-english' => 
     array (
