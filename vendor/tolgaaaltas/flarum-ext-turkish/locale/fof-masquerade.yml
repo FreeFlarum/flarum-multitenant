@@ -14,9 +14,9 @@ fof-masquerade:
       description-help: "Bu alanın kullanımı için isteğe bağlı açıklama.\n"
       disable-user-bio: 'Kullanıcı biyografisi kısmını devre dışı bırak'
       edit: 'Alan düzenle {field}'
-      force-user-to-completion: 'Force user to complete profile'
-      icon: İkon
-      icon-help: "Kullanıcının girdiği değerlerin önünde ikon gösterir. Mevcut ikonlar için <a>FontAwesome website</a> websitesini ziyaret edin. İkonları \"fa-\" ön eki ile kullanın Örn:\"fas fa-info\".\n"
+      force-user-to-completion: 'Kullanıcıyı profilini tamamlamaya zorla'
+      icon: Simge
+      icon-help: "Kullanıcının girdiği değerlerin önünde simge gösterir. Mevcut simgeler için <a>FontAwesome</a> websitesini ziyaret edin. Simgeleri \"fa-\" ön eki ile kullanın Örn: \"fas fa-info\".\n"
       name: 'Alan adı'
       name-help: "Herkes tarafından görülebilen (çevrilmeyen) alan.\n"
       on_bio: 'Kullanıcı biyografisinde bu alana cevabı göster'
@@ -30,7 +30,7 @@ fof-masquerade:
       title: Alanlar
       type: Tip
       validation: Doğrulama
-      validation-help: "Check the supported <a>Laravel validation rules</a>. Eg: \"string|min:5\" or \"url\".\n"
+      validation-help: "Desteklenen <a>Laravel doğrulama kurallarını</a> kontrol edin. Çrn: \"string|min:5\" ya da \"url\".\n"
     general-options: 'Genel ayarlar'
     menu:
       description: "Kullanıcı profili alanlarını düzenle.\n"

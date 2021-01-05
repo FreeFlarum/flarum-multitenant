@@ -28,10 +28,10 @@ fajuu-icons:
       title: 'Simge ayarları'
     icons:
       about_icons_text: "Burada mevcut forum simgelerini istediğiniz gibi değiştirebilirsiniz!\nDeğiştirmek istediğiniz simgeyi forumda arayın (orijinal simge), ona giden yolu (yol öğesi) girin ve yeni bir simge (değiştirilmiş simge) seçin.\nTüm simgeler, <a>Font Awesome</a> simgelerinden oluşan bir pakettir.\n"
-      export_icons_button: 'İkonları dışa aktar'
-      import_icons_button: 'İkonları içe aktar'
+      export_icons_button: 'Simgeleri dışa aktar'
+      import_icons_button: 'Simgeleri içe aktar'
       key_error: 'Kit kodu bulunamadı veya yanlış. Simge ayarlarınızı kontrol edin ve değiştirin! Değişiklikleri kaydettikten sonra sayfayı yenileyin.'
-      list_icons_button: 'İkonlar listesi'
+      list_icons_button: 'Simgeler listesi'
       settings_button: Ayarlar
     nav:
       icons_button: '=> fajuu-icons.ref.icons'

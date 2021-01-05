@@ -44,8 +44,8 @@ core:
       home_page_text: 'Kullanıcıların forumunu ziyaret ettiklerinde ilk görecekleri sayfayı seçin.'
       saved_message: 'Değişikliklerin kaydedildi.'
       show_language_selector_label: 'Dil seçiciyi göster'
-      slug_driver_heading: 'Bağlantı Sürücüsü: {model}'
-      slug_driver_text: 'Bağlantılar için bir sürücü modeli seçin.'
+      slug_driver_heading: 'Adres Kısa Adı Sürücüsü: {model}'
+      slug_driver_text: 'Adres kısa adı için bir sürücü modeli seçin.'
       submit_button: '=> core.ref.save_changes'
       title: 'Temel Öğeler'
       welcome_banner_heading: 'Hoşgeldiniz Mesajı'
@@ -450,7 +450,7 @@ core:
     edit: Düzenle
     email: E-posta
     icon: Simge
-    icon_text: 'Herhangi bir <a>FontAwesome</a> ikonu adını <code>fas fa-</code> <em>öneki dahil</em> olarak girin.'
+    icon_text: 'Herhangi bir <a>FontAwesome</a> simgesi adını <code>fas fa-</code> <em>öneki dahil</em> olarak girin.'
     load_more: 'Daha Fazla Yükle'
     log_in: 'Giriş Yap'
     log_out: 'Çıkış Yap'

@@ -6,14 +6,14 @@ use Flarum\Frontend\Document;
 return [
 
     // Disables local file upload for FoF Upload extension:
-    //(new \FoF\Upload\Extend\Adapters())->disable('local'),
+    (new \FoF\Upload\Extend\Adapters())->disable('local'),
 
     // Remove (permanently throttle) test mail function:
-    /*(new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
+    (new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
         if ($request->getAttribute('routeName') === 'mailTest') {
             return true;
         }
-     }),*/
+     }),
 
     (new Extend\Frontend('forum'))->content(function (Document $document) {
 
@@ -61,8 +61,8 @@ return [
             </script>';
 
         // Hide test mail button (already removed in the Throttle API, but better get this off sight) and upgrade banner (temp-fix, strange how it didn't disappear, even though I can't see it anywhere in the files and clearing cache doesn't help):
-        $document->head[] = '<style>
+        /*$document->head[] = '<style>
             #content > div > div.container > form > fieldset:nth-child(5) { display: none; }
-            </style>';   
+            </style>';*/
     })
 ];

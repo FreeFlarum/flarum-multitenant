@@ -2,6 +2,22 @@ CHANGELOG
 =========
 
 
+0.4.2 (2021-01-03)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`nearata/flarum-ext-tags-color-generator`](https://github.com/Nearata/flarum-ext-tags-color-generator)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/recaptcha`](https://github.com/FriendsOfFlarum/recaptcha)
+
+
+Wszystkie zmiany: [v0.4.1...v0.4.2](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.1...v0.4.2).
+
+
 0.4.1 (2020-12-28)
 ------------------
 

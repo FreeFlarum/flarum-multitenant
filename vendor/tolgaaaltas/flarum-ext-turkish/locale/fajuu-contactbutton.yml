@@ -5,7 +5,7 @@
 fajuu-contactbutton:
   admin:
     settings:
-      icon: 'Buton ikonu'
+      icon: 'Buton simgesi'
       label: 'Butonun adı'
       newtab: 'Bağlantıyı yeni sekmede aç (e-posta için her zaman)'
       title: 'İletişim butonu'

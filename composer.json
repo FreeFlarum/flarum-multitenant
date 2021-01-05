@@ -48,7 +48,7 @@
         "flarum/lang-english": "*",
         "flarum/likes": "*",
         "flarum/lock": "*",
-        "flarum/markdown": "^0.1.0@beta",
+        "flarum/markdown": "*",
         "flarum/mentions": "*",
         "flarum/nicknames": "*",
         "flarum/pusher": "*",

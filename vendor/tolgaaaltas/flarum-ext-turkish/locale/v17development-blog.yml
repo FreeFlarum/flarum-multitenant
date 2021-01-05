@@ -5,7 +5,7 @@
 v17development-flarum-blog:
   forum:
     article:
-      slug: Bağlantı
+      slug: 'Adres Kısa Adı'
       summary: Özet
       title: Başlık
     blog: Blog

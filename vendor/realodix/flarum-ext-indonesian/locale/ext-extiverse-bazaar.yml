@@ -1,7 +1,7 @@
 bazaar:
     admin:
         loader:
-            is_loading: Processing..
+            is_loading: Memproses...
             # error: An error occured. Check the History tab and your Flarum log for details. Don't be afraid to report it to us.
             error: Kesalahan terjadi. Periksa tab History dan log Flarum Anda untuk detailnya. Jangan takut untuk melaporkannya kepada kami.
             # refresh: Refresh page
@@ -14,14 +14,14 @@ bazaar:
             title: Bazaar
             description: The extension marketplace.
         header:
-            extensions: Browse extensions
-            tasks: Tasks history
+            extensions: Telusuri extensi
+            tasks: Riwayat tugas
         modal:
             dashboard:
                 title: Dashboard
-                visit-remote-dashboard: Visit dashboard
+                visit-remote-dashboard: Kunjungi Dashboard
                 sync:
-                    switch: Sync
+                    switch: Sinkronisasi
                     description: >
                         Sinkronkan informasi ekstensi Anda dengan {host} untuk menerima pemberitahuan tepat waktu tentang
                         versi baru ekstensi yang Anda pasang. Selain itu, kami akan mengirimi Anda pemberitahuan berkala
@@ -50,13 +50,13 @@ bazaar:
                     sudah usang atau kemampuan untuk memperbarui semua instalasi Flarum secara terpusat.
             requirements:
                 file-permissions:
-                    title: File permissions
+                    title: Izin file
                     description: >
                         Tampaknya Bazaar tidak memiliki izin yang cukup untuk membuat file
                         dan/atau folder, silahkan tinjau daftar di bawah ini. Untuk informasi
                         lebih lanjut, lihat <a>wiki</a>.
                 php-memory_limit:
-                    title: Memory limit
+                    title: Batas Memori
                     description: >
                         Kami menyarankan agar PHP menggunakan setidaknya {required} memori, pengaturan php.ini Anda saat ini
                         hanya memberikan {limit}. Meskipun kami mencoba meningkatkan batas memori selama runtime, kesuksesan
@@ -70,7 +70,8 @@ bazaar:
                     Otorisasi Anda terhadap flagrow.io api kami gagal. Mungkin penyebabnya adalah koneksi internet yang sedang tidak stabil.
                     Coba refresh kembali halaman ini setelah Anda merasa koneksi Anda sudah cukup stabil. Jika masalah ini tetap terjadi, silakan hubungi kami.
             button:
-                more: "More, load page {current} of {total}"
+                # more: "More, load page {current} of {total}"
+                more: "Lebih lanjut, muat halaman {current} dari {total}"
                 install: Install
                 uninstall: Uninstall
                 # enable: Enable
@@ -78,7 +79,8 @@ bazaar:
                 # disable: Disable
                 disable: Nonaktifkan
                 update: Update
-                connect: Connect
+                # connect: Connect
+                connect: Menghubungkan
                 # favorite_button: "Favorite extension"
                 favorite_button: "Ekstensi favorit"
                 # remove_favorite_button: "Remove extension from your favorites"
@@ -90,10 +92,10 @@ bazaar:
                 # connect_to_subscribe: Connect your Bazaar to subcribe to extensions
                 connect_to_subscribe: Hubungkan Bazaar Anda untuk subcribe ekstensi
             extension:
-                installed: Extension is installed
+                installed: Extensi sudah terpasang
                 # enabled: Extension is enabled
                 enabled: Ekstensi diaktifkan
-                vendor: By {vendor}
+                vendor: Oleh {vendor}
                 # downloads: Downloads
                 downloads: Download
                 # installed_version: Installed version
@@ -106,7 +108,7 @@ bazaar:
                 # pending: Extension waits on a background task to complete
                 pending: Ekstensi menunggu background task untuk diselesaikan
                 # outdated: "Extension is outdated, please update to version {new}"
-                outdated: "Ekstensi kedaluwarsa, harap perbarui ke versi {new}"
+                outdated: "Ekstensi kadaluwarsa, harap perbarui ke versi {new}"
                 premium: Premium
                 subscribed: Subscribed
                 # subscribe_check_failed: It looks like you cancelled the checkout process.
@@ -122,8 +124,8 @@ bazaar:
                     status: Status
                     command: Command
                     output: Output
-                    time: Time
-                    details: Details
+                    time: Waktu
+                    details: Keterangan
                 attribute:
                     # created_at: Created at
                     created_at: Dibuat pada
@@ -132,13 +134,15 @@ bazaar:
                     # finished_at: Finished at
                     finished_at: Diselesaikan pada
                 status:
-                    success: Success
-                    exception: An exception occured
-                    working: Work in progress
-                    unknown: Unknown
+                    success: Berhasil
+                    # exception: An exception occured
+                    exception: Sebuah pengecualian terjadi
+                    working: Sedang bekerja
+                    # unknown: Unknown
+                    unknown: Tidak diketahui
                 command:
-                    sync-lock: Sync composer.lock file
-                    sync-version: Sync {extension} version
+                    sync-lock: Sinkronisasi file composer.lock
+                    sync-version: Sinkronisasi versi {extension}
                     install: Install {extension}
                     update: Update {extension}
                     uninstall: Uninstall {extension}
@@ -146,13 +150,13 @@ bazaar:
                     # today: Today
                     today: Hari ini
                     # lastmonth: Last month
-                    lastmonth: Bulan kemarin
+                    lastmonth: Satu bulan yang lalu
                     # older: Older
                     older: Lebih lama
         search:
             # placeholder: Search extensions
             placeholder: Cari ekstensi
-            filter_installed: Installed
+            filter_installed: Ter-install
             # filter_update: Has update
             filter_update: Telah diperbarui
             filter_favorited: Favorited

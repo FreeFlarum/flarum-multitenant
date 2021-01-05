@@ -44,6 +44,10 @@ class CheckPost
 
     public function handle(Saving $event)
     {
+        if (!$event->post->exists) {
+            return;
+        }
+
         $post = $event->post;
 
         if ($post->auto_mod) {

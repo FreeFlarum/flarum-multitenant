@@ -1,11 +1,21 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Api\Controllers;
 
+use Flarum\Post\PostRepository;
+use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Upload\Api\Serializers\FileSerializer;
 use FoF\Upload\Commands\Download;
-use FoF\Upload\Helpers\Settings;
-use Flarum\Post\PostRepository;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -27,11 +37,11 @@ class DownloadController implements RequestHandlerInterface
      */
     private $posts;
     /**
-     * @var Settings
+     * @var SettingsRepositoryInterface
      */
     private $settings;
 
-    public function __construct(Dispatcher $bus, PostRepository $posts, Settings $settings)
+    public function __construct(Dispatcher $bus, PostRepository $posts, SettingsRepositoryInterface $settings)
     {
         $this->bus = $bus;
         $this->posts = $posts;
@@ -56,7 +66,7 @@ class DownloadController implements RequestHandlerInterface
         /** @var Session $session */
         $session = $request->getAttribute('session');
 
-        if ($this->settings->get('disableHotlinkProtection') != 1 && $csrf !== $session->token()) {
+        if ($this->settings->get('fof-upload.disableHotlinkProtection') != 1 && $csrf !== $session->token()) {
             throw new ModelNotFoundException();
         }
 

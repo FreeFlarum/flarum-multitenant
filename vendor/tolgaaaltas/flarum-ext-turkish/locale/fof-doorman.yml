@@ -20,7 +20,7 @@ fof-doorman:
     page:
       doorkey:
         allow-public:
-          switch-label: 'Kayıt olurken davet kodu girişini opsiyonel tut'
+          switch-label: 'Kayıt olurken davet kodu girişini isteğe bağlı tut'
           title: 'Herkesin kayıt olmasına izin ver'
         heading:
           activate: 'Kullanıcıyı Etkinleştir'
@@ -31,7 +31,7 @@ fof-doorman:
           activates: 'Kullanıcıyı Etkinleştir: Kayıt olan kullanıcıyı otomatik olarak etkinleştirir.'
           group: 'Grup: Kullanıcının kayıt olurken ekleneceği grup.'
           key: 'Anahtar: Kayıt sırasında kullanıcının girmesi gereken kod.'
-          max: 'Maksimum Kullanım: Bir kodun kaç defa kullanılabileceğini belirtir, 0 değeri sınırsız kullanım sağlar.'
+          max: 'Maksimum Kullanım: Bir kodun kaç defa kullanılabileceğini belirtir, 0 değeri sınırsız kullanım sağlar'
         key: Anahtar
         max_uses: 'Maksimum Kullanım'
         title: 'Davetiye Kodları'
@@ -45,5 +45,5 @@ fof-doorman:
     sign_up:
       doorkey_required: 'Lütfen davet kodunu giriniz.'
       doorman_placeholder: 'Davet Kodu'
-      doorman_placeholder_optional: 'Davet Kodu (opsiyonel)'
+      doorman_placeholder_optional: 'Davet Kodu (isteğe bağlı)'
       invalid_doorkey: 'Girilen davet kodu geçersiz.'

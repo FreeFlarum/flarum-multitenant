@@ -41,7 +41,7 @@ fof-gamification:
         auto_upvote: 'Paylaşıldığında otomatik yukarı oyla'
         color_holder: '#ffffff'
         discussion_page: 'Orijinal gönderilerin toplam oylarını tartışma listesinde göster'
-        icon_help: 'İstediğiniz -up ve -down arka eki olan Font-Awesome ikonunu ekleyin. Örn: arrow, thumbs, chevron'
+        icon_help: 'İstediğiniz -up ve -down arka eki olan FontAwesome simgesini ekleyin. Örn: arrow, thumbs, chevron'
         icon_name: 'Upvote/downvote icon'
         points_placeholder: 'Points: '
         points_title: Puanlar

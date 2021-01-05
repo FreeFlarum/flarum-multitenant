@@ -57,7 +57,7 @@ fof-follow-tags:
       notify_email_tooltip: 'Yeni bir tartışma veya gönderi olduğunda e-posta ile bildir'
     user:
       settings:
-        filter_label: 'Varsayılan olarak Takip Ettiklerin sayfasınra gösterilecekler'
+        filter_label: 'Varsayılan olarak Takip Ettiklerin sayfasında gösterilecekler'
         heading: 'Etiketleri Takip Et'
   ref:
     filtering_options:

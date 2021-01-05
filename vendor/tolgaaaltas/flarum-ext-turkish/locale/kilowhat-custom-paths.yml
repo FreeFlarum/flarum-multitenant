@@ -11,6 +11,7 @@ kilowhat-custom-paths:
         flarum-flags: 'Flarum Bildirmeleri'
         flarum-subscriptions: 'Flarum Abonelikleri'
         flarum-tags: 'Flarum Etiketleri'
+        fof-gamification: 'FriendsOfFlarum Gamification'
         fof-pages: 'FriendsOfFlarum Sayfalar'
         fof-user-directory: 'FriendsOfFlarum Kullanıcı Dizini'
       head:
@@ -20,6 +21,7 @@ kilowhat-custom-paths:
         askvortsov-categories: Kategoriler
         discussion: Tartışma
         flags: 'Bildirilenler (mobilde)'
+        fof-gamification: Sıralamalar
         fof-pages: Sayfalar
         fof-user-directory: 'Kullanıcı dizini'
         following: 'Takip edilenler'
@@ -29,6 +31,8 @@ kilowhat-custom-paths:
         tag: 'Etiketler tartışması'
         tags: 'Etiketler listesi'
         user: 'Kullanıcı profili'
+        user-discussions: 'Kullanıcı tartışmaları'
+        user-mentions: 'Kullanıcı bahsetmeleri'
       redirect: 'Varsayılan Flarum dizinlerini yeni dizinlere yönlendirin'
       reset: 'Dizinleri sıfırla'
       title: 'Özel Dizinler'

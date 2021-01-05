@@ -1,17 +1,27 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Repositories;
 
 use Carbon\Carbon;
 use Flarum\Foundation\Paths;
+use Flarum\Settings\SettingsRepositoryInterface;
+use Flarum\User\User;
 use FoF\Upload\Commands\Download as DownloadCommand;
 use FoF\Upload\Contracts\UploadAdapter;
 use FoF\Upload\Download;
 use FoF\Upload\Exceptions\InvalidUploadException;
 use FoF\Upload\File;
-use FoF\Upload\Helpers\Settings;
 use FoF\Upload\Validators\UploadValidator;
-use Flarum\User\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use League\Flysystem\Adapter\Local;
@@ -33,17 +43,15 @@ class FileRepository
     private $validator;
 
     /**
-     *
      * @var MimeDetector
      */
     private $mimeDetector;
     /**
-     *
-     * @var Settings
+     * @var SettingsRepositoryInterface
      */
     private $settings;
 
-    public function __construct(Paths $paths, UploadValidator $validator, MimeDetector $mimeDetector, Settings $settings)
+    public function __construct(Paths $paths, UploadValidator $validator, MimeDetector $mimeDetector, SettingsRepositoryInterface $settings)
     {
         $this->path = $paths->storage;
         $this->validator = $validator;
@@ -66,10 +74,12 @@ class FileRepository
 
     /**
      * @param Upload $file
-     * @param User $actor
+     * @param User   $actor
      * @param string $mime
-     * @return File
+     *
      * @throws \Exception
+     *
+     * @return File
      */
     public function createFileFromUpload(Upload $file, User $actor, string $mime)
     {
@@ -92,9 +102,10 @@ class FileRepository
     /**
      * @param UploadedFileInterface $upload
      *
-     * @return Upload
      * @throws InvalidUploadException
      * @throws \Illuminate\Validation\ValidationException
+     *
+     * @return Upload
      */
     public function moveUploadedFileToTemp(UploadedFileInterface $upload)
     {
@@ -120,6 +131,7 @@ class FileRepository
 
     /**
      * @param $code
+     *
      * @throws InvalidUploadException
      */
     protected function handleUploadError($code)
@@ -156,8 +168,9 @@ class FileRepository
      *
      * @param Upload $file
      *
-     * @return bool
      * @throws \League\Flysystem\FileNotFoundException
+     *
+     * @return bool
      */
     public function removeFromTemp(Upload $file)
     {
@@ -177,13 +190,15 @@ class FileRepository
     }
 
     /**
-     * Chooses a file extension for the upload
+     * Chooses a file extension for the upload.
+     *
      * @param Upload $upload
+     *
      * @return string
      */
     protected function determineExtension(Upload $upload): string
     {
-        $whitelistedClientExtensions = explode(',', $this->settings->get('whitelistedClientExtensions', ''));
+        $whitelistedClientExtensions = explode(',', $this->settings->get('fof-upload.whitelistedClientExtensions', ''));
 
         $originalClientExtension = $upload->getClientOriginalExtension();
 
@@ -213,18 +228,20 @@ class FileRepository
 
         $slug = trim(Str::slug($name));
 
-        return sprintf('%s.%s',
+        return sprintf(
+            '%s.%s',
             empty($slug) ? $uuid : $slug,
             $this->determineExtension($upload)
         );
     }
 
     /**
-     * @param Upload $upload
+     * @param Upload        $upload
      * @param UploadAdapter $adapter
      *
-     * @return bool|false|resource|string
      * @throws \League\Flysystem\FileNotFoundException
+     *
+     * @return bool|false|resource|string
      */
     public function readUpload(Upload $upload, UploadAdapter $adapter)
     {

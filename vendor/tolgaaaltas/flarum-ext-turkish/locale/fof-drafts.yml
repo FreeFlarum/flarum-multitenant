@@ -27,7 +27,7 @@ fof-drafts:
       button: 'Taslağı Sil'
       delete_button: 'Taslağı Sil'
       empty_text: 'Herhangi bir taslak kaydetmediniz'
-      schedule_button: 'Taslağı Zzamanla'
+      schedule_button: 'Taslağı Zamanla'
       title: Taslaklar
       tooltip: '=> fof-drafts.forum.dropdown.title'
     schedule_draft_modal:

@@ -18,6 +18,10 @@ flarum-subscriptions:
       unfollow_button: "Отписка"
       unignore_button: "Не игнорировать"
 
+    # These translations are used on the page that displays all subscriptions.
+    following:
+      meta_title_text: => flarum-subscriptions.ref.following
+
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       following_link: "Подписки"
@@ -42,6 +46,28 @@ flarum-subscriptions:
       not_following_text: "Уведомлять только когда @упоминают."
       notify_alert_tooltip: "Получать уведомления форума при появлении новых сообщений"
       notify_email_tooltip: "Получать письма при появлении новых сообщений"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a post is made in a subscribed discussion
+    new_post:
+      subject: "[Новое сообщение] {title}"
+      body: |
+        Привет, {recipient_display_name}!
+
+        {poster_display_name} опубликовал новое сообщение в дискуссии, на которую Вы подписаны: {title}.
+
+        Чтобы посмотреть новое сообщение, перейдите по следующей ссылке:
+        {url}
+
+        ---
+
+        {content}
+
+        ---
+
+        Вы не будете получать уведомления об этой дискуссии, пока не ознакомитесь с текущей информацией.
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!

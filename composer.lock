@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58783a428b1f9f86733a62f49764d5ac",
+    "content-hash": "d27b6b839841c4dde02c68d72e30518d",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -163,16 +163,16 @@
         },
         {
             "name": "askvortsov/flarum-moderator-warnings",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/askvortsov1/flarum-moderator-warnings.git",
-                "reference": "47554debdd7d4a2b2dcf30b5a9db56088c3b8a58"
+                "reference": "8b507b0ba4ff5e26eccc91132d8cb45697d41357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/askvortsov1/flarum-moderator-warnings/zipball/47554debdd7d4a2b2dcf30b5a9db56088c3b8a58",
-                "reference": "47554debdd7d4a2b2dcf30b5a9db56088c3b8a58",
+                "url": "https://api.github.com/repos/askvortsov1/flarum-moderator-warnings/zipball/8b507b0ba4ff5e26eccc91132d8cb45697d41357",
+                "reference": "8b507b0ba4ff5e26eccc91132d8cb45697d41357",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
             "extra": {
                 "flarum-extension": {
                     "title": "Moderator Warnings",
-                    "category": "feature",
+                    "category": "moderation",
                     "icon": {
                         "name": "fas fa-exclamation-circle",
                         "backgroundColor": "#6932D1",
@@ -215,20 +215,20 @@
                 "issues": "https://github.com/askvortsov1/flarum-moderator-warnings/issues",
                 "source": "https://github.com/askvortsov1/flarum-moderator-warnings"
             },
-            "time": "2020-12-15T22:03:55+00:00"
+            "time": "2021-01-03T19:45:19+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.7",
+            "version": "3.171.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6c32f57bc381b46c783f70a20060fde1a95f4ab5"
+                "reference": "eeebac8f6efd141af09c44dbd9cca4f1d327ef21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6c32f57bc381b46c783f70a20060fde1a95f4ab5",
-                "reference": "6c32f57bc381b46c783f70a20060fde1a95f4ab5",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/eeebac8f6efd141af09c44dbd9cca4f1d327ef21",
+                "reference": "eeebac8f6efd141af09c44dbd9cca4f1d327ef21",
                 "shasum": ""
             },
             "require": {
@@ -303,9 +303,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.11"
             },
-            "time": "2020-12-28T19:12:41+00:00"
+            "time": "2021-01-04T19:13:09+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -978,20 +978,20 @@
         },
         {
             "name": "darkfoxdeveloper/lang-spanish",
-            "version": "v1.0.8",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darkfoxdeveloper/lang-spanish.git",
-                "reference": "7185454ca1282374b7485e248053f09efc61607c"
+                "reference": "aa388e6a8870b6f8289a54d577840daba57876cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darkfoxdeveloper/lang-spanish/zipball/7185454ca1282374b7485e248053f09efc61607c",
-                "reference": "7185454ca1282374b7485e248053f09efc61607c",
+                "url": "https://api.github.com/repos/darkfoxdeveloper/lang-spanish/zipball/aa388e6a8870b6f8289a54d577840daba57876cd",
+                "reference": "aa388e6a8870b6f8289a54d577840daba57876cd",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.14"
+                "flarum/core": "^0.1.0-beta.15"
             },
             "type": "flarum-extension",
             "extra": {
@@ -1030,7 +1030,7 @@
                 "issues": "https://github.com/DaRkFoxDeveloper/lang-spanish/issues",
                 "source": "https://github.com/DaRkFoxDeveloper/lang-spanish"
             },
-            "time": "2020-11-25T19:44:59+00:00"
+            "time": "2020-12-31T12:50:31+00:00"
         },
         {
             "name": "dflydev/fig-cookies",
@@ -3925,16 +3925,16 @@
         },
         {
             "name": "fof/filter",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/filter.git",
-                "reference": "f50365c1d1024e4f3a6318d93b1216f914819762"
+                "reference": "10508fac5fad9600147152df9fbb377a8cee3a5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/f50365c1d1024e4f3a6318d93b1216f914819762",
-                "reference": "f50365c1d1024e4f3a6318d93b1216f914819762",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/10508fac5fad9600147152df9fbb377a8cee3a5d",
+                "reference": "10508fac5fad9600147152df9fbb377a8cee3a5d",
                 "shasum": ""
             },
             "require": {
@@ -3988,7 +3988,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2020-12-17T02:39:18+00:00"
+            "time": "2020-12-30T12:03:41+00:00"
         },
         {
             "name": "fof/formatting",
@@ -5757,16 +5757,16 @@
         },
         {
             "name": "fof/upload",
-            "version": "0.12.0",
+            "version": "0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/upload.git",
-                "reference": "ad7046dcad6034017015748fe114365a627f453c"
+                "reference": "a9e43f8e190ad089a834cb875244632543496af2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/ad7046dcad6034017015748fe114365a627f453c",
-                "reference": "ad7046dcad6034017015748fe114365a627f453c",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/a9e43f8e190ad089a834cb875244632543496af2",
+                "reference": "a9e43f8e190ad089a834cb875244632543496af2",
                 "shasum": ""
             },
             "require": {
@@ -5838,7 +5838,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2020-12-13T23:34:06+00:00"
+            "time": "2021-01-03T16:07:06+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -8819,20 +8819,20 @@
         },
         {
             "name": "marketplace/flarum-l10n-core-russian",
-            "version": "0.1.0-beta.13-2",
+            "version": "0.1.0-beta.15-14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-core-russian.git",
-                "reference": "ee4ac1aad0ec8ab0629677ea8938811ece6184ab"
+                "reference": "1e877a55d2466912660b1886c8ee58f5ca3be3b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/ee4ac1aad0ec8ab0629677ea8938811ece6184ab",
-                "reference": "ee4ac1aad0ec8ab0629677ea8938811ece6184ab",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/1e877a55d2466912660b1886c8ee58f5ca3be3b9",
+                "reference": "1e877a55d2466912660b1886c8ee58f5ca3be3b9",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.13"
+                "flarum/core": "^0.1.0-beta.15"
             },
             "suggest": {
                 "flarum/flarum": "Flarum",
@@ -8845,12 +8845,21 @@
                 },
                 "flarum-extension": {
                     "title": "Русский",
+                    "category": "language",
+                    "info": {
+                        "donate": "https://donation-form.github.io/",
+                        "website": "https://github.com/marketplace-flarum",
+                        "support": "https://discuss.flarum.org/d/1545"
+                    },
                     "icon": {
                         "image": "icon.svg",
-                        "backgroundColor": "#f3f6f9",
+                        "backgroundColor": "#ffffff",
                         "backgroundSize": "cover",
                         "backgroundPosition": "center"
                     }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/1545"
                 },
                 "flarum-locale": {
                     "code": "ru",
@@ -8859,29 +8868,18 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-3.0-or-later"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "z1729 Factory",
-                    "email": "z1729.factory@gmail.com",
-                    "homepage": "https://z1729.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Yu Dunaev (dun43v)",
-                    "email": "dun43v@gmail.com",
-                    "homepage": "https://dunaev.dev/",
-                    "role": "Editor"
-                },
-                {
                     "name": "Kitsune Solar",
                     "email": "kitsune.solar@gmail.com",
-                    "role": "Editor"
+                    "homepage": "https://kitsune.solar",
+                    "role": "Translator"
                 }
             ],
             "description": "Flarum Russian language pack.",
-            "homepage": "https://gitlab.com/marketplace-flarum",
+            "homepage": "https://github.com/marketplace-flarum",
             "keywords": [
                 "extension",
                 "flarum",
@@ -8892,10 +8890,18 @@
                 "translation"
             ],
             "support": {
-                "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian/issues",
-                "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-core-russian"
+                "docs": "https://github.com/marketplace-flarum/flarum-l10n-core-russian/blob/main/README.md",
+                "forum": "https://discuss.flarum.org/d/1545",
+                "issues": "https://github.com/marketplace-flarum/flarum-l10n-core-russian/issues",
+                "source": "https://github.com/marketplace-flarum/flarum-l10n-core-russian"
             },
-            "time": "2020-08-27T08:48:55+00:00"
+            "funding": [
+                {
+                    "url": "https://donation-form.github.io/",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-01-03T19:07:54+00:00"
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
@@ -10979,20 +10985,24 @@
         },
         {
             "name": "realodix/flarum-ext-indonesian",
-            "version": "1.14.0",
+            "version": "1.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realodix/flarum-ext-indonesian.git",
-                "reference": "b7c2a7d314f71e0ec69157be51d1c8923794c6c3"
+                "reference": "80215ef669cc0961698e97f58333165c8a4edc48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/b7c2a7d314f71e0ec69157be51d1c8923794c6c3",
-                "reference": "b7c2a7d314f71e0ec69157be51d1c8923794c6c3",
+                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/80215ef669cc0961698e97f58333165c8a4edc48",
+                "reference": "80215ef669cc0961698e97f58333165c8a4edc48",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.14"
+            },
+            "conflict": {
+                "fof/doorman": "<0.2.0",
+                "fof/upload": "<0.11"
             },
             "type": "flarum-extension",
             "extra": {
@@ -11033,7 +11043,7 @@
                 "issues": "https://github.com/realodix/flarum-ext-indonesian/issues",
                 "source": "https://github.com/realodix/flarum-ext-indonesian"
             },
-            "time": "2020-10-22T19:39:04+00:00"
+            "time": "2020-12-13T20:00:24+00:00"
         },
         {
             "name": "rikusen0335/lang-japanese-extended",
@@ -11098,16 +11108,16 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.4.1",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "f5233dbe4a1cc510a9d9297d14d9affe2a99692f"
+                "reference": "509ca705619bd619f13fab8cfe76c6747aa65079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/f5233dbe4a1cc510a9d9297d14d9affe2a99692f",
-                "reference": "f5233dbe4a1cc510a9d9297d14d9affe2a99692f",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/509ca705619bd619f13fab8cfe76c6747aa65079",
+                "reference": "509ca705619bd619f13fab8cfe76c6747aa65079",
                 "shasum": ""
             },
             "require": {
@@ -11156,7 +11166,7 @@
                 "issues": "https://github.com/rob006-software/flarum-lang-polish/issues",
                 "source": "https://github.com/rob006-software/flarum-lang-polish"
             },
-            "time": "2020-12-28T11:45:55+00:00"
+            "time": "2021-01-03T20:10:43+00:00"
         },
         {
             "name": "s9e/regexp-builder",
@@ -13590,16 +13600,16 @@
         },
         {
             "name": "tolgaaaltas/flarum-ext-turkish",
-            "version": "0.15.0.2",
+            "version": "0.15.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-                "reference": "923a10d51d181064f7cbc9d897e6d1bc567414ba"
+                "reference": "c206bb4207122f677beb1c70ad6a84ad83ecfd89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/923a10d51d181064f7cbc9d897e6d1bc567414ba",
-                "reference": "923a10d51d181064f7cbc9d897e6d1bc567414ba",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/c206bb4207122f677beb1c70ad6a84ad83ecfd89",
+                "reference": "c206bb4207122f677beb1c70ad6a84ad83ecfd89",
                 "shasum": ""
             },
             "require": {
@@ -13665,20 +13675,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2020-12-27T23:50:23+00:00"
+            "time": "2020-12-30T12:20:23+00:00"
         },
         {
             "name": "tolgaaaltas/flarum-lang-turkish",
-            "version": "0.15.0.2",
+            "version": "0.15.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
-                "reference": "28fd369d91243a7851df04505390f275ed4aa334"
+                "reference": "9c30f12b76b32755c6c64f6dfe988d5552c5e924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/28fd369d91243a7851df04505390f275ed4aa334",
-                "reference": "28fd369d91243a7851df04505390f275ed4aa334",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/9c30f12b76b32755c6c64f6dfe988d5552c5e924",
+                "reference": "9c30f12b76b32755c6c64f6dfe988d5552c5e924",
                 "shasum": ""
             },
             "require": {
@@ -13740,7 +13750,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2020-12-27T10:03:00+00:00"
+            "time": "2020-12-30T12:20:17+00:00"
         },
         {
             "name": "v17development/flarum-seo",
@@ -13940,8 +13950,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "flarum/core": 10,
-        "flarum/markdown": 10
+        "flarum/core": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

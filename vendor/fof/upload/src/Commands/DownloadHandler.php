@@ -1,14 +1,24 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Commands;
 
+use Flarum\Discussion\DiscussionRepository;
+use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Upload\Contracts\Downloader;
 use FoF\Upload\Events\File\WasLoaded;
 use FoF\Upload\Events\File\WillBeDownloaded;
 use FoF\Upload\Exceptions\InvalidDownloadException;
-use FoF\Upload\Helpers\Settings;
 use FoF\Upload\Repositories\FileRepository;
-use Flarum\Discussion\DiscussionRepository;
 use GuzzleHttp\Client;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -35,11 +45,11 @@ class DownloadHandler
      */
     private $events;
     /**
-     * @var Settings
+     * @var SettingsRepositoryInterface
      */
     private $settings;
 
-    public function __construct(FileRepository $files, DiscussionRepository $discussions, Client $api, Dispatcher $events, Settings $settings)
+    public function __construct(FileRepository $files, DiscussionRepository $discussions, Client $api, Dispatcher $events, SettingsRepositoryInterface $settings)
     {
         $this->files = $files;
         $this->discussions = $discussions;
@@ -81,7 +91,7 @@ class DownloadHandler
 
                 $download = null;
 
-                if ($this->settings->get('disableDownloadLogging') != 1) {
+                if ($this->settings->get('fof-upload.disableDownloadLogging') != 1) {
                     $download = $this->files->downloadedEntry($file, $command);
                 }
 

@@ -1,12 +1,22 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Adapters;
 
 use Flarum\Foundation\Paths;
+use Flarum\Http\UrlGenerator;
+use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Upload\Contracts\UploadAdapter;
 use FoF\Upload\File;
-use FoF\Upload\Helpers\Settings;
-use Flarum\Http\UrlGenerator;
 
 class Local extends Flysystem implements UploadAdapter
 {
@@ -36,13 +46,13 @@ class Local extends Flysystem implements UploadAdapter
             $this->adapter->applyPathPrefix($this->meta['path'])
         );
 
-        /** @var Settings $settings */
-        $settings = app()->make(Settings::class);
+        /** @var SettingsRepositoryInterface $settings */
+        $settings = app(SettingsRepositoryInterface::class);
         /** @var UrlGenerator $generator */
-        $generator = app()->make(UrlGenerator::class);
+        $generator = app(UrlGenerator::class);
 
-        if ($settings->get('cdnUrl')) {
-            $file->url = $settings->get('cdnUrl') . $file->url;
+        if ($settings->get('fof-upload.cdnUrl')) {
+            $file->url = $settings->get('fof-upload.cdnUrl').$file->url;
         } else {
             $file->url = $generator->to('forum')->path(ltrim($file->url, '/'));
         }

@@ -8,5 +8,5 @@ fof-open-collective:
       api_key_label: 'API Anahtarı'
       desc: 'API anahtarınızı <a>https://opencollective.com/applications</a> bağlantısından alın.'
       group_label: 'Atanacak Grup'
-      slug_label: 'Collective Slug'
+      slug_label: 'Collective Adres Kısa Adı'
       title: 'FriendsOfFlarum Open Collective'

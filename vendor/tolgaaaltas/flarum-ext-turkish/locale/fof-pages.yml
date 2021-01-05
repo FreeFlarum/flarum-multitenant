@@ -39,6 +39,6 @@ fof-pages:
     content: İçerik
     create_page: 'Sayfa oluştur'
     pages: Sayfalar
-    slug: URL
+    slug: 'Adres Kısa Adı'
     title: Başlık
     url: Bağlantı

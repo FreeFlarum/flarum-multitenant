@@ -16,7 +16,7 @@ datitisev-backup:
           description: 'Kullanılacak depolama paketi.'
           label: Bucket
         endpoint:
-          description: 'Depolama uç noktanızın URL''si.'
+          description: 'Depolama uç noktanızın bağlantısı.'
           label: 'Uç nokta'
         path-prefix:
           description: 'Dosyalar için isteğe bağlı varsayılan yol öneki.'

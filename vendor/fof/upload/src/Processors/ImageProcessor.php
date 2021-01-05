@@ -1,12 +1,23 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Processors;
 
 use Flarum\Foundation\Paths;
 use Flarum\Foundation\ValidationException;
+use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Upload\Contracts\Processable;
 use FoF\Upload\File;
-use FoF\Upload\Helpers\Settings;
+use FoF\Upload\Helpers\Util;
 use Intervention\Image\Exception\NotReadableException;
 use Intervention\Image\Image;
 use Intervention\Image\ImageManager;
@@ -15,23 +26,30 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 class ImageProcessor implements Processable
 {
     /**
-     * @var Settings
+     * @var SettingsRepositoryInterface
      */
     protected $settings;
 
     /**
-     * @param Settings $settings
+     * @var Paths
      */
-    public function __construct(Settings $settings)
+    protected $paths;
+
+    /**
+     * @param Settings $settings
+     * @param Paths    $paths
+     */
+    public function __construct(SettingsRepositoryInterface $settings, Paths $paths)
     {
         $this->settings = $settings;
+        $this->paths = $paths;
     }
 
     /**
      * @param File         $file
      * @param UploadedFile $upload
      */
-    public function process(File $file, UploadedFile $upload, String $mimeType)
+    public function process(File $file, UploadedFile $upload, string $mimeType)
     {
         if ($mimeType == 'image/jpeg' || $mimeType == 'image/png') {
             try {
@@ -40,11 +58,11 @@ class ImageProcessor implements Processable
                 throw new ValidationException(['upload' => 'Corrupted image']);
             }
 
-            if ($this->settings->get('mustResize')) {
+            if ($this->settings->get('fof-upload.mustResize')) {
                 $this->resize($image);
             }
 
-            if ($this->settings->get('addsWatermarks')) {
+            if ($this->settings->get('fof-upload.addsWatermarks')) {
                 $this->watermark($image);
             }
 
@@ -62,7 +80,7 @@ class ImageProcessor implements Processable
      */
     protected function resize(Image $manager)
     {
-        $maxSize = $this->settings->get('resizeMaxWidth', Settings::DEFAULT_MAX_IMAGE_WIDTH);
+        $maxSize = $this->settings->get('fof-upload.resizeMaxWidth', Util::DEFAULT_MAX_IMAGE_WIDTH);
         $manager->resize(
             $maxSize,
             $maxSize,
@@ -78,10 +96,10 @@ class ImageProcessor implements Processable
      */
     protected function watermark(Image $image)
     {
-        if ($this->settings->get('watermark')) {
+        if ($this->settings->get('fof-upload.watermark')) {
             $image->insert(
-                app(Paths::class)->storage.DIRECTORY_SEPARATOR.$this->settings->get('watermark'),
-                $this->settings->get('watermarkPosition', 'bottom-right')
+                $this->paths->storage.DIRECTORY_SEPARATOR.$this->settings->get('fof-upload.watermark'),
+                $this->settings->get('fof-upload.watermarkPosition', 'bottom-right')
             );
         }
     }

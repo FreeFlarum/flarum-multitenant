@@ -1,25 +1,35 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Listeners;
 
 use Flarum\Settings\Event\Deserializing;
-use FoF\Upload\Helpers\Settings;
+use FoF\Upload\Helpers\Util;
 
 class AddAvailableOptionsInAdmin
 {
     /**
-     * @var Settings
+     * @var Util
      */
-    protected $settings;
+    protected $util;
 
-    public function __construct(Settings $settings)
+    public function __construct(Util $util)
     {
-        $this->settings = $settings;
+        $this->util = $util;
     }
 
     public function handle(Deserializing $event)
     {
-        $event->settings['fof-upload.availableUploadMethods'] = $this->settings->getAvailableUploadMethods()->toArray();
-        $event->settings['fof-upload.availableTemplates'] = $this->settings->getAvailableTemplates()->toArray();
+        $event->settings['fof-upload.availableUploadMethods'] = $this->util->getAvailableUploadMethods()->toArray();
+        $event->settings['fof-upload.availableTemplates'] = $this->util->getAvailableTemplates()->toArray();
     }
 }

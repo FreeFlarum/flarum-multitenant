@@ -6,12 +6,12 @@ fof-passport:
   admin:
     popup:
       field:
-        app-auth-url: 'OAuth yetkilendirme URL''si'
+        app-auth-url: 'OAuth yetkilendirme bağlantısı'
         app-id: 'OAuth uygulama kimliği'
         app-scopes: 'İstenecek OAuth kapsamları'
         app-secret: 'OAuth uygulama sırrı (secret)'
-        app-token-url: 'OAuth jeton URL''si'
-        app-user-url: 'API URL''si kimlik doğrulaması yapıldığında kullanıcı ayrıntılarını sağlar'
+        app-token-url: 'OAuth jeton bağlantısı'
+        app-user-url: 'API bağlantısı kimlik doğrulaması yapıldığında kullanıcı ayrıntılarını sağlar'
         button-icon: 'Oturum açma düğmesi simgesi'
         button-title: 'Oturum açma düğmesi etiketi'
         button-title-placeholder: '=> fof-passport.api.default-login-button-title'

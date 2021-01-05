@@ -25,7 +25,7 @@ askvortsov-moderator-warnings:
     post_controls:
       warning_button: 'Kullanıcıyı Uyar'
     settings:
-      warning_notification_label: 'Moderatör tarafından uyarıldın'
+      warning_notification_label: 'Moderatör tarafından uyarıldığımda'
     user:
       warnings: 'Moderatör Uyarıları'
     validation:

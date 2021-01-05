@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c73246879ad9636dd506c223eee04193d9fc336e',
+    'reference' => '683266b53cf8a2e4798ebc2f4b03a4aabec8b134',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -63,12 +63,12 @@ private static $installed = array (
     ),
     'askvortsov/flarum-moderator-warnings' => 
     array (
-      'pretty_version' => 'v0.4.0',
-      'version' => '0.4.0.0',
+      'pretty_version' => 'v0.4.1',
+      'version' => '0.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '47554debdd7d4a2b2dcf30b5a9db56088c3b8a58',
+      'reference' => '8b507b0ba4ff5e26eccc91132d8cb45697d41357',
     ),
     'avatar4eg/flarum-ext-share-social' => 
     array (
@@ -79,12 +79,12 @@ private static $installed = array (
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.171.7',
-      'version' => '3.171.7.0',
+      'pretty_version' => '3.171.11',
+      'version' => '3.171.11.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6c32f57bc381b46c783f70a20060fde1a95f4ab5',
+      'reference' => 'eeebac8f6efd141af09c44dbd9cca4f1d327ef21',
     ),
     'axy/backtrace' => 
     array (
@@ -205,12 +205,12 @@ private static $installed = array (
     ),
     'darkfoxdeveloper/lang-spanish' => 
     array (
-      'pretty_version' => 'v1.0.8',
-      'version' => '1.0.8.0',
+      'pretty_version' => 'v1.0.9',
+      'version' => '1.0.9.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7185454ca1282374b7485e248053f09efc61607c',
+      'reference' => 'aa388e6a8870b6f8289a54d577840daba57876cd',
     ),
     'davis/flarum-ext-socialprofile' => 
     array (
@@ -463,7 +463,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c73246879ad9636dd506c223eee04193d9fc336e',
+      'reference' => '683266b53cf8a2e4798ebc2f4b03a4aabec8b134',
     ),
     'flarum/lang-english' => 
     array (
@@ -706,12 +706,12 @@ private static $installed = array (
     ),
     'fof/filter' => 
     array (
-      'pretty_version' => '0.3.0',
-      'version' => '0.3.0.0',
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f50365c1d1024e4f3a6318d93b1216f914819762',
+      'reference' => '10508fac5fad9600147152df9fbb377a8cee3a5d',
     ),
     'fof/formatting' => 
     array (
@@ -931,12 +931,12 @@ private static $installed = array (
     ),
     'fof/upload' => 
     array (
-      'pretty_version' => '0.12.0',
-      'version' => '0.12.0.0',
+      'pretty_version' => '0.12.1',
+      'version' => '0.12.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ad7046dcad6034017015748fe114365a627f453c',
+      'reference' => 'a9e43f8e190ad089a834cb875244632543496af2',
     ),
     'fof/user-bio' => 
     array (
@@ -1379,12 +1379,12 @@ private static $installed = array (
     ),
     'marketplace/flarum-l10n-core-russian' => 
     array (
-      'pretty_version' => '0.1.0-beta.13-2',
-      'version' => '0.1.0.0-beta13-2',
+      'pretty_version' => '0.1.0-beta.15-14',
+      'version' => '0.1.0.0-beta15-14',
       'aliases' => 
       array (
       ),
-      'reference' => 'ee4ac1aad0ec8ab0629677ea8938811ece6184ab',
+      'reference' => '1e877a55d2466912660b1886c8ee58f5ca3be3b9',
     ),
     'marketplace/flarum-l10n-ext-russian' => 
     array (
@@ -1730,12 +1730,12 @@ private static $installed = array (
     ),
     'realodix/flarum-ext-indonesian' => 
     array (
-      'pretty_version' => '1.14.0',
-      'version' => '1.14.0.0',
+      'pretty_version' => '1.14.4',
+      'version' => '1.14.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b7c2a7d314f71e0ec69157be51d1c8923794c6c3',
+      'reference' => '80215ef669cc0961698e97f58333165c8a4edc48',
     ),
     'reflar/cookie-consent' => 
     array (
@@ -1818,12 +1818,12 @@ private static $installed = array (
     ),
     'rob006/flarum-lang-polish' => 
     array (
-      'pretty_version' => 'v0.4.1',
-      'version' => '0.4.1.0',
+      'pretty_version' => 'v0.4.2',
+      'version' => '0.4.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f5233dbe4a1cc510a9d9297d14d9affe2a99692f',
+      'reference' => '509ca705619bd619f13fab8cfe76c6747aa65079',
     ),
     's9e/regexp-builder' => 
     array (
@@ -2168,21 +2168,21 @@ private static $installed = array (
     ),
     'tolgaaaltas/flarum-ext-turkish' => 
     array (
-      'pretty_version' => '0.15.0.2',
-      'version' => '0.15.0.2',
+      'pretty_version' => '0.15.0.3',
+      'version' => '0.15.0.3',
       'aliases' => 
       array (
       ),
-      'reference' => '923a10d51d181064f7cbc9d897e6d1bc567414ba',
+      'reference' => 'c206bb4207122f677beb1c70ad6a84ad83ecfd89',
     ),
     'tolgaaaltas/flarum-lang-turkish' => 
     array (
-      'pretty_version' => '0.15.0.2',
-      'version' => '0.15.0.2',
+      'pretty_version' => '0.15.0.3',
+      'version' => '0.15.0.3',
       'aliases' => 
       array (
       ),
-      'reference' => '28fd369d91243a7851df04505390f275ed4aa334',
+      'reference' => '9c30f12b76b32755c6c64f6dfe988d5552c5e924',
     ),
     'v17development/flarum-seo' => 
     array (

@@ -27,7 +27,7 @@ askvortsov-pwa:
       submit_button: 'Ayarları Kaydet'
       text: 'Flarum web sitenizi İleri Web Uygulamasına dönüştürün! Bu sitenizi otomatik olarak uygulama mağazasında listelendirmez, kullanıcılar sitenizi ziyaret ettiğinde ''Ana ekrana ekle'' hatırlatmasında bulunur.'
     status:
-      config_no_https: 'The url in your config.php file isn''t using HTTPS. HTTPS is required for Progressive Web Apps to work.'
+      config_no_https: 'Config.php dosyanızdaki bağlantı HTTPS kullanmıyor. Progressive Web Uygulamalarının çalışması için HTTPS gereklidir.'
       disabled: 'İleri Web Uygulamasını aktifleştirmelisiniz.'
       manifest_does_not_exist: 'The Web Manifest file does not exist. Try saving settings to refresh configuration.'
       manifest_not_accessible: 'The Web Manifest file is not accessible. It should be at https://YOUR_FLARUM_SITE_URL/webmanifest.json. If it not there, please review your web server''s configuration. If not, you can ignore this message.'

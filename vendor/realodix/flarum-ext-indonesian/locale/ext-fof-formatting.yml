@@ -1,5 +1,7 @@
 fof-formatting:
   admin:
+    title: FriendsOfFlarum Formatting
+
     plugins:
       # Autoimage: Convert image URLs into actual images
       Autoimage: Ubah URL gambar menjadi gambar yang sebenarnya
@@ -12,5 +14,5 @@ fof-formatting:
       # MediaEmbed: Embed content from allowed sites
       MediaEmbed: Sematkan konten dari situs yang diizinkan
       # PipeTables: ASCII-style tables
-      PipeTables: Table ASCII-style
-      TaskLists: GitHub/GitLab flavored task lists
+      PipeTables: Tabel dengan gaya ASCII
+      TaskLists: Daftar tugas seperti yang ada di Github/Gitlab

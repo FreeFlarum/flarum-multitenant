@@ -10,9 +10,9 @@ flarum-pusher:
     # These translations are used in the Pusher Settings modal dialog.
     pusher_settings:
       app_cluster_label: "Кластер"
-      app_id_label: "App ID"
-      app_key_label: "App Key"
-      app_secret_label: "App Secret"
+      app_id_label: "ID приложения"
+      app_key_label: "Ключ"
+      app_secret_label: "Секретный ключ"
       title: "Настройки Pusher"
 
   # Translations in this namespace are used by the admin interface.

@@ -1,14 +1,23 @@
 <?php
 
+/*
+ * This file is part of fof/upload.
+ *
+ * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2016 - 2019 Flagrow
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Upload\Helpers;
 
 use FoF\Upload\Adapters\Manager;
 use FoF\Upload\Contracts\Template;
-use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-class Settings
+class Util
 {
     const DEFAULT_MAX_FILE_SIZE = 2048;
     const DEFAULT_MAX_IMAGE_WIDTH = 100;
@@ -19,44 +28,6 @@ class Settings
      * @var array
      */
     protected $renderTemplates = [];
-
-    protected $prefix = 'fof-upload.';
-
-    /**
-     * @var SettingsRepositoryInterface
-     */
-    protected $settings;
-
-    public function __construct(SettingsRepositoryInterface $settings)
-    {
-        $this->settings = $settings;
-    }
-
-    public function __get($name)
-    {
-        return $this->settings->get($this->prefix . $name);
-    }
-
-    public function __set($name, $value)
-    {
-        $this->settings->set($this->prefix . $name, $value);
-    }
-
-    public function __isset($name)
-    {
-        return $this->settings->get($this->prefix . $name) !== null;
-    }
-
-    /**
-     * @param $name
-     * @param null $default
-     *
-     * @return null
-     */
-    public function get($name, $default = null)
-    {
-        return $this->{$name} ?: $default;
-    }
 
     /**
      * @return Collection
@@ -71,7 +42,7 @@ class Settings
                 return $available;
             })
             ->map(function ($available, $item) {
-                return app('translator')->trans('fof-upload.admin.upload_methods.' . $item);
+                return app('translator')->trans('fof-upload.admin.upload_methods.'.$item);
             });
     }
 
@@ -144,12 +115,11 @@ class Settings
         $collect = [];
 
         /**
-         * @var string
          * @var Template $template
          */
         foreach ($this->renderTemplates as $tag => $template) {
             $collect[$tag] = [
-                'name' => $template->name(),
+                'name'        => $template->name(),
                 'description' => $template->description(),
             ];
         }

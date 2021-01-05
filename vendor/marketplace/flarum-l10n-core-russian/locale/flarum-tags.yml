@@ -15,7 +15,7 @@ flarum-tags:
     edit_tag:
       color_label: => core.ref.color
       delete_tag_button: "Удалить"
-      delete_tag_confirmation: "Вы уверены, что хотите удалить раздел? Дискуссии в этом разделе удалены НЕ будут."
+      delete_tag_confirmation: "Вы уверены, что хотите удалить тег? Дискуссии, помеченные этим тегом, удалены НЕ будут."
       description_label: "Описание"
       hide_label: "Скрыть из списка дискуссий"
       icon_label: => core.ref.icon
@@ -24,75 +24,76 @@ flarum-tags:
       name_placeholder: => flarum-tags.ref.name
       slug_label: "Путь"
       submit_button: => core.ref.save_changes
-      title: => flarum-tags.ref.create_tag
+      title: "Создать тег"
 
     # These translations are used in the navigation bar.
     nav:
       tags_button: => flarum-tags.ref.tags
-      tags_text: "Управление списком разделов, доступных для структурирования дискуссий."
+      tags_text: "Управление списком тегов, доступных для структурирования дискуссий."
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      allow_edit_tags_label: "Разрешить редактирование разделов"
-      restrict_by_tag_heading: "По разделу"
-      tag_discussions_label: "Править разделы дискуссий"
+      allow_edit_tags_label: "Разрешить редактирование тегов"
+      restrict_by_tag_heading: "По тегу"
+      tag_discussions_label: "Править теги дискуссий"
 
     # These translations are used in the Tag Settings modal dialog.
     tag_settings:
       range_separator_text: " - "
-      required_primary_heading: "Количество основных разделов"
-      required_primary_text: "Введите минимальное и максимальное число основных разделов, в которые будет добавлена дискуссия."
-      required_secondary_heading: "Количество дополнительных разделов"
-      required_secondary_text: "Введите минимальное и максимальное число дополнительных разделов, в которые будет добавлена дискуссия."
-      title: "Настройки разделов"
+      required_primary_heading: "Количество основных тегов"
+      required_primary_text: "Введите минимальное и максимальное число основных тегов, которыми будет помечена дискуссия."
+      required_secondary_heading: "Количество дополнительных тегов"
+      required_secondary_text: "Введите минимальное и максимальное число дополнительных тегов, которыми будет помечена дискуссия."
+      title: "Настройки тегов"
 
     # These translations are used in the Tags page.
     tags:
-      about_tags_text: "Разделы используются для структурирования дискуссий. Основные разделы могут представлять собой двухуровневую иерархию. Дополнительные разделы не имеют иерархии и могут быть полезны для микро-структурирования. Разделы из дополнительных в основные можно конвертировать путём простого перетаскивания мышкой."
-      create_tag_button: => flarum-tags.ref.create_tag
+      about_tags_text: "Теги используются для структурирования дискуссий. Основные теги подобны традиционным категориям форумов и представляют собой двухуровневую иерархию. Дополнительные теги не имеют иерархии и могут быть полезны для структурирования дискуссий на микро-уровне."
+      create_primary_tag_button: "Создать основной"
+      create_secondary_tag_button: "Создать дополнительный"
       primary_heading: "Основные"
       secondary_heading: "Дополнительные"
-      settings_button: "Настройки"
+      settings_heading: "Настройки"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
 
     # These translations are displayed on the page that lists all tags.
     all_tags:
-      meta_description_text: "Все разделы"
+      meta_description_text: "Все теги"
       meta_title_text: => flarum-tags.ref.tags
 
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
-      choose_primary_placeholder: "Укажите основной раздел|Укажите {count} основных разделов"
-      choose_secondary_placeholder: "Укажите больше 1 раздела|Укажите больше {count} разделов"
-      edit_title: "Настройка разделов: {title}"
+      choose_primary_placeholder: "Укажите основной тег|Укажите {count} основных тегов"
+      choose_secondary_placeholder: "Укажите больше 1 тега|Укажите больше {count} тегов"
+      edit_title: "Настройка тегов: {title}"
       submit_button: => core.ref.okay
-      title: "Укажите разделы для Вашей дискуссии"
+      title: "Укажите теги для Вашей дискуссии"
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
-      choose_tags_link: "Выбрать разделы"
+      choose_tags_link: "Выбрать теги"
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
-      edit_tags_button: "Править разделы"
+      edit_tags_button: "Править теги"
 
     header:
-      back_to_tags_tooltip: "Вернуться к списку разделов"
+      back_to_tags_tooltip: "Вернуться к списку тегов"
 
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       more_link: "Ещё..."
       tags_link: => flarum-tags.ref.tags
-      untagged_link: "Вне разделов"
+      untagged_link: "Вне тегов"
 
     # These translations are displayed between posts in the post stream.
     post_stream:
       added_and_removed_tags_text: "{username} добавил(а) {tagsAdded} и удалил(а) {tagsRemoved}."
       added_tags_text: "{username} добавил(а) {tagsAdded}."
       removed_tags_text: "{username} удалил(а) {tagsRemoved}."
-      tags_text: "раздел {tags}|разделы {tags}"
+      tags_text: "тег {tags}|теги {tags}"
 
     # These translations are used when visiting a single tag's discussion list.
     tag:
@@ -110,6 +111,5 @@ flarum-tags:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    create_tag: "Создать раздел"
     name: "Название"
-    tags: "Разделы"
+    tags: "Теги"

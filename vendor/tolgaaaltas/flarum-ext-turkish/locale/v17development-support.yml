@@ -31,12 +31,41 @@ v17development-flarum-support:
       article_public: 'Makale {username} tarafından herkese açıldı'
     ask_a_question_on_forums: 'Forumlarda soru sorun'
     ask_your_question_on_forum: 'Forumlarda sorunu sor'
+    composer:
+      article_saved: 'Makale kaydedildi'
+      compose_article: 'Makale oluştur'
+      compose_ticket: 'Bilet oluştur'
+      enter_message_here: 'Mesajınızı buraya girin'
+      manage_tags: 'Etiketleri yönet'
+      new_article_title: 'Yeni makale başlığı'
+      nothing_to_preview: 'Önizlenecek bir şey yok'
+      publish_article: 'Makaleyi paylaş'
+      publish_article_hint: 'Makaleyi gönderdikten sonra paylaş.'
+      view: Görünüm
+      warning_save_changes: "UYARI: Bu sayfadan ayrılmak üzeresiniz ve değişikliklerinizi kaydetmediniz. Ayrılmadan önce değişikliklerinizi kaydetmek ister misiniz?\n\n[OK] = Evet, kaydet. [CANCEL] = Hayır, kaydetme\n"
+      write: Yaz
     create: Oluştur
     discard: İptal
     hero:
       check_forum: 'Aradığını bulamıyorsan <a>foruma göz atabilirsin</a>'
       help_question: 'Sana nasıl yardımcı olabiliriz?'
     knowledge_base: 'Bilgi merkezi'
+    modals:
+      article_ratings:
+        article_not_rated: 'Bu makale henüz derecelendirilmemiş.'
+        confirm_delete_rating: 'Bu derecelendirmeyi silmek istediğinize emin misiniz?'
+        feedback: 'Geri Bildirim'
+        loading_ratings: 'Derecelendirmeler yükleniyor'
+        no_ratings_found: 'Arama kriterlerinizle eşleşen derecelendirme bulunamadı'
+        rated_on: 'Tarihinde derecelendirildi'
+        rating: Derecelendirme
+        title: 'Makale derecelendirmeleri'
+        username: '=> core.ref.username'
+      audit_log:
+        article_created: 'Makale oluşturuldu'
+        loading_auditlog: 'Denetim günlüğü yükleniyor'
+        no_more_events: 'Daha fazla etkinlik bulunamadı'
+        title: 'Makale denetim günlüğü'
     not_found:
       description: 'Üzgünüz, bu makale veya kategori artık mevcut değil.'
       solution: 'Aradığınızı bulmak için yukarıdaki arama kutusunu kullanabilirsiniz.'
@@ -56,6 +85,7 @@ v17development-flarum-support:
         edit_description: 'Açıklamayı düzenle'
         new_article: 'Yeni makale'
         rename_category: 'Kategorini yeniden adlandır'
+    reopen: 'tekrar aç'
     return_to_home: 'Bilgi merkezine geri dön'
     search:
       back_to_search_results: 'Arama sonuçlarına geri dön'
@@ -65,6 +95,7 @@ v17development-flarum-support:
       searching: Aranıyor
       searching_for: '{searchterm} için aranıyor'
       title: Ara
+      use_searchbox_below: 'Bilgi merkezinde arama yapmak için aşağıdaki arama kutusunu kullanın.'
     send: Gönder
     settings: '=> core.ref.settings'
     support_ratings:
@@ -74,3 +105,18 @@ v17development-flarum-support:
       finished: 'Teşekkürler! Geri bildirimininiz kaydedildi.'
       helful_article: 'Bu makale yararlı oldu mu?'
       helful_support: 'Destek talebinize yaklaşımımızdan memnun kaldınız mı?'
+      validation:
+        cannot_rate_article: 'Bu makaleyi derecelendiremezsin.'
+        guest: 'Bu makaleyi derecelendirmeden önce lütfen giriş yapın.'
+        invalid_discussion: 'Ups, bir şeyler yanlış gitti. Bu makaleyi/yardım talebini derecelendiremezsin.'
+        invalid_points: 'Bilinmeyen derecelendirme. Lütfen tekrar deneyin.'
+        missing_article_id: 'Kayıp veya var olmayan makale ID''si'
+        neutral_emoji_disabled: 'Kararsız ifadesi devre dışı bırakılmıştır.'
+    support_tickets: 'Destek biletleri'
+    tickets:
+      subject: Konu
+      ticket: Bilet
+    utils:
+      redirect:
+        link: 'Sayfa sizi yönlendirmezse <a>burayı tıklayın</a>'
+        title: 'Sizi Bilgi Bankası makalemize yönlendiriyoruz...'

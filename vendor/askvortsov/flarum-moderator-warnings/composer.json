@@ -29,7 +29,7 @@
   "extra": {
     "flarum-extension": {
       "title": "Moderator Warnings",
-      "category": "feature",
+      "category": "moderation",
       "icon": {
         "name": "fas fa-exclamation-circle",
         "backgroundColor": "#6932D1",

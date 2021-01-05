@@ -11,7 +11,7 @@ maicol07-sso:
       login_url: 'Giriş Bağlantısı'
       logout_url: 'Çıkış Bağlantısı'
       manage_account_btn_open_in_new_tab: 'Hesap yönetimini yeni bir sekmede açın'
-      manage_account_url: 'Hesap URL''sini yönetin'
+      manage_account_url: 'Hesap bağlantısını yönetin'
       remove_login_btn: 'Giriş düğmesini kaldır'
       remove_signup_btn: 'Kayıt düğmesini kaldır'
       signup_url: 'Kayıt Bağlantısı'

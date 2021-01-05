@@ -5,6 +5,6 @@
 dem13n:
   admin:
     quad_theme:
-      fod: 'Yeni Tartışma İkonunu Göster'
+      fod: 'Yeni Tartışma Simgesini Göster'
       submit_button: '=> core.ref.save_changes'
       title: 'Quad Tema Ayarları'
