@@ -53,12 +53,12 @@ const locale = {
   monthsShort,
   weekStart: 1,
   formats: {
-    LT: 'H:mm',
-    LTS: 'H:mm:ss',
+    LT: 'HH:mm',
+    LTS: 'HH:mm:ss',
     L: 'DD.MM.YYYY',
     LL: 'D MMMM YYYY',
-    LLL: 'D MMMM YYYY, H:mm',
-    LLLL: 'dddd, D MMMM YYYY, H:mm'
+    LLL: 'D MMMM YYYY в HH:mm',
+    LLLL: 'dddd, D MMMM YYYY в HH:mm'
   },
   relativeTime: {
     future: 'через %s',

@@ -17,11 +17,7 @@ fof-pages:
       title_placeholder: => fof-pages.ref.title
       url_label: => fof-pages.ref.url
       url_placeholder: => fof-pages.ref.url
-    nav:
-      pages_button: => fof-pages.ref.pages
-      pages_text: "Создание пользовательских статических страниц."
     pages:
-      about_text: "Создавайте и управляйте статическими страницами."
       create_button: => fof-pages.ref.create_page
     pages_list:
       empty_text: "Похоже, здесь нет страниц."
@@ -33,9 +29,9 @@ fof-pages:
       restricted: "Ограниченный"
 
   ref:
-    content: "Контент"
+    content: "Содержимое"
     create_page: "Создать страницу"
     pages: "Страницы"
     slug: "Короткое имя"
-    title: "Заглавие"
+    title: "Заголовок"
     url: "URL"

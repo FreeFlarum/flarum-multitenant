@@ -13,11 +13,17 @@ fof-ignore-users:
   # Translations in this namespace are used by the forum interface.
   forum:
 
+    profile_link: "Игнорируемые пользователи"
+
     # These strings are used in the User Controls menu.
     user_controls:
       ignore_button: "Игнорировать"
       ignore_confirmation: "Вы уверены, что хотите игнорировать этого пользователя?"
       unignore_button: "Не игнорировать"
       unignore_confirmation: "Вы уверены, что хотите не игнорировать этого пользователя?"
+
+    badge:
+      user_label: "Игнорируемый"
+      discussion_label: "Опубликована игнорируемым пользователем"
 
 

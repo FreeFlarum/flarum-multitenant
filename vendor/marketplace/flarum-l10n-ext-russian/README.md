@@ -1,8 +1,8 @@
-# Information / Информация
+# Information
 
 Пакет русской локализации **Flarum EXTended**.
 
-## Install / Установка
+## Install
 
 **Flarum** использует [**Composer**](https://getcomposer.org/) для управления зависимостями и расширениями.
 
@@ -18,7 +18,7 @@ composer require marketplace/flarum-l10n-ext-russian
 
 Обратите внимание, что пакет локализации будет добавлен в качестве зависимости **Flarum**, и он также будет автоматически обновляться при обновлении движка форума.
 
-## Update / Обновление
+## Update
 
 Для обновления локализации необходимо выполнить следующие команды:
 
@@ -27,6 +27,6 @@ composer update marketplace/flarum-l10n-ext-russian
 php flarum cache:clear
 ```
 
-## Donations / Пожертвования
+## Donations
 
 - [Donation Form](https://donation-form.github.io/)

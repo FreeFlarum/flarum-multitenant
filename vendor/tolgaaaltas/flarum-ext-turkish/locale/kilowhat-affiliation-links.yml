@@ -17,7 +17,7 @@ kilowhat-affiliation-links:
     messages:
       delete-rule-confirmation: 'Bu kural kalıcı olarak silinecektir {match_pattern}. Devam etmek istiyor musunuz?'
     rules:
-      comment: 'Yorum (İsteğe bağlı, yalnızca dokümantasyon amacıyla)'
+      comment: 'Yorum (İsteğe bağlı, yalnızca belgeleme amacıyla)'
       match-component: 'Eşleşen Bileşen'
       match-component-help: 'Bağlantının karşılaştırmak istediğiniz bölümü'
       match-pattern: 'Eşleştirme Örüntüsü'

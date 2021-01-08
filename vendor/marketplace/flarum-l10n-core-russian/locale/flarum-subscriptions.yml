@@ -32,8 +32,8 @@ flarum-subscriptions:
 
     # These translations are used in the Settings page.
     settings:
-      follow_after_reply_label: "Автоматически подписываться на дискуссии, в которых я отвечаю"
-      notify_new_post_label: "Кто-то ответил в дискуссиях, на которые я подписан"
+      follow_after_reply_label: "Автоматически подписываться на дискуссии, в которых я участвую"
+      notify_new_post_label: "Ответ в дискуссиях, на которые я подписан"
 
     # These translations are used in the subscription menu displayed to the right of the post stream.
     sub_controls:
@@ -56,7 +56,7 @@ flarum-subscriptions:
       body: |
         Привет, {recipient_display_name}!
 
-        {poster_display_name} опубликовал новое сообщение в дискуссии, на которую Вы подписаны: {title}.
+        {poster_display_name} опубликовал новое сообщение в дискуссии: {title}.
 
         Чтобы посмотреть новое сообщение, перейдите по следующей ссылке:
         {url}

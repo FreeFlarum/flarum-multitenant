@@ -1,8 +1,8 @@
 fof-username-request:
   admin:
     permissions:
-      start: "Запрос на изменение имени пользователя"
-      moderate: "Одобрение запросов на изменение имени пользователя"
+      start: "Подавать запрос на новое имя пользователя"
+      moderate: "Одобрять запрос на новое имя пользователя"
   forum:
     action:
       title: => fof-username-request.forum.results.title
@@ -13,7 +13,7 @@ fof-username-request:
       submit_button: "Отправить"
       reason_title: "Причина отказа"
       success: "Решение отправлено"
-      name: "{username} запросил разрешение на изменение своего имени на {newUsername}"
+      name: "{username} запросил(а) разрешение на изменение своего имени на {newUsername}"
     results:
       title: "Изменение имени пользователя"
       approved: "Ваш запрос на изменение имени пользователя одобрен"
@@ -35,5 +35,5 @@ fof-username-request:
       empty_text: "Запросы на изменения имени пользователя отсутствуют"
       tooltip: => fof-username-request.forum.dropdown.title
       title: "Запросы на изменение имени"
-      item_text: "{username} запросил изменение имени пользователя"
+      item_text: "{username} запросил(а) изменение имени пользователя"
       exerpt: "Новое имя пользователя: {requestedUsername}"

@@ -26,7 +26,7 @@ flarum-suspend:
       not_suspended_label: "Не заблокирован"
       status_heading: "Статус блокировки"
       submit_button: => core.ref.save_changes
-      title: "Блокировать {username}"
+      title: "Блокировка {username}"
 
     # These translations are displayed as tooltips for user badges.
     user_badge:

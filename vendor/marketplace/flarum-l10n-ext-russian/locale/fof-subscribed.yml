@@ -1,19 +1,54 @@
 fof-subscribed:
-  forum:
-    settings:
-      defaults_label: 'Установить "{setting}" включенной по умолчанию'
-      forced_label: 'Принудительно включить "{setting}" для всех пользователей'
-      notify_discussion_created_label: "Кто-то создаёт дискуссию"
-      notify_post_unapproved_label: "Кто-то публикует сообщение, требующее подтверждения"
-      notify_user_created_label: "Кто-то регистрируется"
-    notifications:
-      discussion_created_text: "{username} создал новую дискуссию"
-      post_unapproved_text: "{username} опубликовал сообщение, которое требует подтверждения"
-      user_created_text: "{username} зарегистрировался"
-  admin:
-    menu:
-      description: "Настройка пользовательских подписок по умолчанию"
-    permission:
-      subscribe_to_discussion_created: "Получать уведомления о создании дискуссий"
-      subscribe_to_post_unapproved: "Получать уведомления о неподтверждённых сообщениях"
-      subscribe_to_user_created: "Получать уведомления о регистрации пользователей"
+    forum:
+        settings:
+            defaults_label: 'Установить "{setting}" включенной по умолчанию'
+            forced_label: 'Принудительно включить "{setting}" для всех пользователей'
+            notify_discussion_created_label: "Создание дискуссии"
+            notify_post_unapproved_label: "Публикация сообщения, требующего подтверждения"
+            notify_user_created_label: "Регистрация пользователя"
+        notifications:
+            discussion_created_text: "{username} создал(а) новую дискуссию"
+            post_unapproved_text: "{username} опубликовал(а) сообщение, которое требует подтверждения"
+            user_created_text: "Пользователь {username} зарегистрировался"
+    admin:
+        menu:
+            description: "Настройка пользовательских подписок по умолчанию"
+        permission:
+            subscribe_to_discussion_created: "Получать уведомления о создании дискуссий"
+            subscribe_to_post_unapproved: "Получать уведомления о неподтверждённых сообщениях"
+            subscribe_to_user_created: "Получать уведомления о регистрации пользователей"
+    email:
+        subject:
+            newDiscussion: "[Подписка | Новая дискуссия] {title}"
+            newUser: "[Подписка | Новый пользователь] {username}"
+            postUnapproved: "[Подписка | Неподтверждённое сообщение] {username} опубликовал(а) в {title}"
+        body:
+            newDiscussion: |
+                Привет, {recipient_display_name}!
+
+                {actor_display_name} опубликовал(а) новую дискуссию: {discussion_title}
+
+                Чтобы посмотреть новую дискуссию, пройдите по следующей ссылке:
+                {discussion_url}
+
+                ---
+
+                {post_content}
+            newUser: |
+                Привет, {recipient_display_name}!
+
+                {actor_display_name} зарегистрировался на {forum_url}.
+
+                Чтобы посмотреть нового пользователя, пройдите по следующей ссылке:
+                {user_url}
+            postUnapproved: |
+                Привет, {recipient_display_name}!
+
+                {actor_display_name} опубликовал(а) сообщение, требующее подтверждения в {discussion_title}
+
+                Чтобы посмотреть неподтверждённое сообщение, пройдите по следующей ссылке:
+                {post_url}
+
+                ---
+
+                {post_content}

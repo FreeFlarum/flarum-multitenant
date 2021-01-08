@@ -34,4 +34,4 @@ flarum-lock:
 
     # These translations are used in the Settings page.
     settings:
-      notify_discussion_locked_label: "Кто-то закрыл мою дискуссию"
+      notify_discussion_locked_label: "Закрытие моей дискуссии"

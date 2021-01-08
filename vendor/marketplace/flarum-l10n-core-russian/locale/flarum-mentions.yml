@@ -29,8 +29,8 @@ flarum-mentions:
 
     # These translations are used in the Settings page.
     settings:
-      notify_post_mentioned_label: "Кто-то отвечает на одно из моих сообщений"
-      notify_user_mentioned_label: "Кто-то упоминает меня в сообщении"
+      notify_post_mentioned_label: "Ответ на одно из моих сообщений"
+      notify_user_mentioned_label: "Упоминание меня в сообщении"
 
     # These translations are used in the user profile page and profile popup.
     user:

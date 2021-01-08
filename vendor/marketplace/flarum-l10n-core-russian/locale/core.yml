@@ -23,11 +23,11 @@ core:
       edit_css_button: "Редактировать CSS"
       edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: => core.ref.custom_header_title
-      enter_hex_message: "Пожалуйста, введите код цвета в HEX-формате."
+      enter_hex_message: "Пожалуйста, введите код цвета в формате HEX."
       favicon_heading: "Favicon"
-      favicon_text: "Загрузка изображения, которое будет отображаться в качестве значка форума."
+      favicon_text: "Загрузите изображение, которое будет отображаться в качестве значка форума."
       logo_heading: "Логотип"
-      logo_text: "Загрузка изображения, которое будет отображаться вместо заголовка форума."
+      logo_text: "Загрузите изображение, которое будет отображаться вместо заголовка форума."
       submit_button: => core.ref.save_changes
       title: "Оформление"
 
@@ -35,16 +35,16 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: "Язык по умолчанию"
-      description: "Настройка название форума, локализации и других основных параметров."
-      display_name_heading: "Отображаемое имя пользователя"
+      description: "Настройка названия форума, локализации и других основных параметров."
+      display_name_heading: "Отображаемое имя"
       display_name_text: "Выберите драйвер, который должен использоваться для отображаемых имён пользователей. По умолчанию, используется username."
       forum_description_heading: "Описание форума"
       forum_description_text: "Введите краткое описание сообщества. Описание появится в одноимённом meta-теге и будет отображаться в поисковых системах."
       forum_title_heading: "Название форума"
       home_page_heading: "Главная страница"
-      home_page_text: "Выберите страницу, которую пользователи будут видеть при посещении форума. При вводе пользовательских значений, используйте путь относительно корня форума."
+      home_page_text: "Выберите страницу, которую пользователи будут видеть первой при посещении форума."
       saved_message: "Изменения сохранены."
-      show_language_selector_label: "Отображать переключатель языка"
+      show_language_selector_label: "Показывать переключатель языка"
       slug_driver_heading: "Драйвер путей: {model}"
       slug_driver_text: "Выберите драйвер, который будет использоваться при создании семантических путей (URL) для этой модели."
       submit_button: => core.ref.save_changes
@@ -75,13 +75,13 @@ core:
     edit_group:
       color_label: => core.ref.color
       delete_button: "Удалить группу"
-      delete_confirmation: "Вы уверены, что хотите удалить группу? Пользователи, находящиеся в этой группе, не будут удалены."
+      delete_confirmation: "Вы уверены, что хотите удалить группу? Пользователи в этой группе НЕ будут удалены."
       hide_label: "Скрыть на форуме"
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: "Название"
-      plural_placeholder: "Множественное число (т.е. Модеры)"
-      singular_placeholder: "Единственное число (т.е. Модер)"
+      plural_placeholder: "Множественное число"
+      singular_placeholder: "Единственное число"
       submit_button: => core.ref.save_changes
       title: "Создание группы"
 
@@ -94,7 +94,7 @@ core:
     # These translations are used in the email page of the admin interface.
     email:
       addresses_heading: "Адреса"
-      description: "Настройка драйвера, параметров и адресов, которые будет использовать Ваш форум для отправки e-mail."
+      description: "Настройка драйвера, параметров и адресов, которые будут использоваться на Вашем форуме для отправки e-mail."
       driver_heading: "Выберите драйвер"
       driver_label: "Драйвер"
       from_label: "Отправитель"
@@ -121,19 +121,19 @@ core:
       confirm_uninstall: "При удалении будут удалены все записи базы данных и ресурсы, связанные с расширением. Вы уверены, что хотите продолжить?"
       disabled: "Отключено"
       enabled: "Включено"
-      enable_to_see: "Включите расширение для отображения и изменения настроек."
+      enable_to_see: "Включите расширение для отображения и изменения его настроек."
       info_links:
         discuss: "Обсуждение"
         documentation: "Документация"
-        donate: "Пожертвовать"
+        donate: "Поддержать"
         source: "Исходный код"
-        support: "Поддержка"
+        support: "Помощь"
         website: "Сайт"
       no_permissions: "Расширение не имеет разрешений."
       no_settings: "Расширение не имеет настроек."
       open_modal: "Открыть настройки"
       permissions_title: "Разрешения"
-      saved_message: "Ваши изменения сохранены."
+      saved_message: "Изменения сохранены."
       uninstall_button: "Удалить"
 
     # These translations are used in the secondary header.
@@ -154,7 +154,7 @@ core:
       categories:
         authentication: "Аутентификация"
         core: "Настройки форума"
-        discussion: "Дискуссия"
+        discussion: "Общение"
         feature: "Особенности"
         formatting: "Форматирование"
         language: "Языки"
@@ -171,7 +171,7 @@ core:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      allow_post_editing_label: "Разрешить править сообщение"
+      allow_post_editing_label: "Разрешить изменять сообщение"
       allow_renaming_label: "Разрешить переименование"
       create_heading: "Создание"
       delete_discussions_forever_label: "Удалять дискуссии (навсегда)"
@@ -179,8 +179,8 @@ core:
       delete_posts_forever_label: "Удалять сообщения (навсегда)"
       delete_posts_label: "Удалять сообщения"
       description: "Настройки прав доступа."
-      edit_posts_label: "Править сообщения"
-      edit_users_label: "Править пользователей"
+      edit_posts_label: "Редактировать сообщения"
+      edit_users_label: "Редактировать пользователей"
       global_heading: "Глобальные"
       moderate_heading: "Модерация"
       new_group_button: "Новая группа"
@@ -232,7 +232,7 @@ core:
 
     # These translations are used in the Change Password modal dialog.
     change_password:
-      send_button: "Отправить пароль на e-mail"
+      send_button: "Отправить пароль"
       text: "Нажмите на кнопку ниже для отправки ссылки изменения пароля на Ваш e-mail."
       title: => core.ref.change_password
 
@@ -246,9 +246,9 @@ core:
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
-      body_placeholder: "Написать сообщение..."
+      body_placeholder: "Введите сообщение..."
       discard_confirmation: "Вы не создали дискуссию. Вы хотите отменить дискуссию?"
-      submit_button: "Отправить"
+      submit_button: "Создать"
       title: => core.ref.start_a_discussion
       title_placeholder: "Название дискуссии"
 
@@ -282,7 +282,7 @@ core:
 
     # These translations are used in the discussion list.
     discussion_list:
-      empty_text: "Дискуссии отсутствуют."
+      empty_text: "Кажется, здесь нет дискуссий."
       load_more_button: => core.ref.load_more
       mark_as_read_tooltip: "Отметить как прочитанное"
       replied_text: "{username} ответил(а) {ago}"
@@ -298,7 +298,7 @@ core:
       password_label: => core.ref.password
       set_password_label: "Установить новый пароль"
       submit_button: => core.ref.save_changes
-      title: "Изменить пользователя"
+      title: "Изменение пользователя"
       username_heading: => core.ref.username
       username_label: => core.ref.username
 
@@ -307,14 +307,14 @@ core:
       dismiss_button: => core.ref.okay
       email_placeholder: => core.ref.email
       email_sent_message: "Мы отправили Вам письмо, содержащее ссылку для восстановления пароля. Проверьте папку со спамом, если Вы не получили письмо в течение нескольких минут."
-      not_found_message: "Зарегистрированные пользователи с указанным e-mail отсутствуют."
+      not_found_message: "Пользователи с указанным e-mail не найдены."
       submit_button: "Восстановить пароль"
       text: "Введите свой e-mail, и мы вышлем Вам ссылку для сброса пароля."
       title: "Забыли пароль"
 
     # These translations are used in the header and session dropdown menu.
     header:
-      admin_button: "Администрирование"
+      admin_button: "Управление"
       back_to_index_tooltip: "Вернуться к списку дискуссий"
       log_in_link: => core.ref.log_in
       log_out_button: => core.ref.log_out
@@ -335,11 +335,11 @@ core:
 
     # These translations are used by the sorting control above the discussion list.
     index_sort:
-      latest_button: "Последние"
-      newest_button: "Новые"
-      oldest_button: "Старые"
+      latest_button: "По обновлению"
+      newest_button: "Новое"
+      oldest_button: "Старое"
       relevance_button: "По релевантности"
-      top_button: "Популярные"
+      top_button: "Популярное"
 
     # These translations are used in the Log In modal dialog.
     log_in:
@@ -347,7 +347,7 @@ core:
       invalid_login_message: "Ваши данные для входа некорректны."
       password_placeholder: => core.ref.password
       remember_me_label: "Запомнить меня"
-      sign_up_text: "Нет аккаунта? <a>Регистрация</a>"
+      sign_up_text: "У Вас нет аккаунта? <a>Регистрация</a>"
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
       username_or_email_placeholder: "Имя пользователя или e-mail"
@@ -364,7 +364,7 @@ core:
     # These translations are used by tooltips displayed for individual posts.
     post:
       edited_text: "Изменено"
-      edited_tooltip: "{username} отредактировал(а) {ago}"
+      edited_tooltip: "{username} изменил(а) {ago}"
       number_tooltip: "Сообщение #{number}"
 
     # These translations are used by the post control buttons.
@@ -381,7 +381,7 @@ core:
       now_link: "Сейчас"
       original_post_link: "Начало"
       unread_text: "{count} не прочитано"
-      viewing_text: "{index} из {count} сообщений|{index} из {count} сообщений"
+      viewing_text: "{index} из {count} сообщение|{index} из {count} сообщений"
 
     # These translations are displayed between posts in the post stream.
     post_stream:
@@ -410,8 +410,8 @@ core:
       notifications_heading: => core.ref.notifications
       notify_by_email_heading: => core.ref.email
       notify_by_web_heading: "Web"
-      notify_discussion_renamed_label: "Кто-то переименовал мою дискуссию"
-      privacy_disclose_online_label: "Отображать мой статус online"
+      notify_discussion_renamed_label: "Переименование моей дискуссии"
+      privacy_disclose_online_label: "Показывать мой статус online"
       privacy_heading: "Конфиденциальность"
       title: => core.ref.settings
 
@@ -419,7 +419,7 @@ core:
     sign_up:
       dismiss_button: => core.ref.okay
       email_placeholder: => core.ref.email
-      log_in_text: "Уже зарегистрированы? <a>Войти</a>"
+      log_in_text: "Вы уже зарегистрированы? <a>Войти</a>"
       password_placeholder: => core.ref.password
       submit_button: => core.ref.sign_up
       title: => core.ref.sign_up
@@ -429,13 +429,13 @@ core:
     # These translations are used in the user profile page and profile popup.
     user:
       avatar_remove_button: => core.ref.remove
-      avatar_upload_button: "Загрузить"
+      avatar_upload_button: "Изменить"
       avatar_upload_tooltip: "Загрузить новый аватар"
       discussions_link: => core.ref.discussions
-      in_discussion_text: 'в "{discussion}"'
+      in_discussion_text: 'В "{discussion}"'
       joined_date_text: "Регистрация: {ago}"
       online_text: "В сети"
-      posts_empty_text: "Сообщения отсутствуют."
+      posts_empty_text: "Кажется, здесь нет сообщений."
       posts_link: => core.ref.posts
       posts_load_more_button: => core.ref.load_more
       settings_link: => core.ref.settings
@@ -492,7 +492,7 @@ core:
     # Translations in this namespace are displayed by the basic HTML content loader.
     content:
       javascript_disabled_message: "Этот сайт лучше всего просматривать в современном браузере с включённым JavaScript."
-      load_error_message: "Что-то пошло не так при попытке загрузки полной версии этого сайта."
+      load_error_message: "Что-то пошло не так при попытке загрузить полную версию этого сайта. Попробуйте обновить страницу с удалением кэша браузера (CTRL+F5) для решения этой проблемы."
       loading_text: "Загрузка..."
 
     # Translations in this namespace are displayed in the basic HTML discussion view.
@@ -578,7 +578,7 @@ core:
 
     # These translations are used when testing mailing configuration
     send_test:
-      subject: Проверка электронной почты Flarum
+      subject: "Проверка электронной почты Flarum"
       body: |
         Привет, {username}!
 
@@ -597,45 +597,45 @@ core:
     all_discussions: "Все дискуссии"
     change_email: "Изменить e-mail"
     change_password: "Изменить пароль"
-    color: "Цвет"                                # Referenced by flarum-tags.yml
+    color: "Цвет"                                   # Referenced by flarum-tags.yml
     confirm_password: "Подтвердить пароль"
     confirmation_email_sent: "Мы отправили письмо с подтверждением на адрес {email}. Если Вы не получите письмо в ближайшее время, проверьте папку со спамом."
-    custom_footer_text: "Специальный HTML, который будет отображаться в самой нижней части страницы."
+    custom_footer_text: "HTML, который будет отображаться в самой нижней части страницы."
     custom_footer_title: "Редактирование нижнего колонтитула"
-    custom_header_text: "Специальный HTML, который будет отображаться в самой верхней части страницы, над заголовком Flarum."
+    custom_header_text: "HTML, который будет отображаться в самой верхней части страницы, над заголовком Flarum."
     custom_header_title: "Редактирование верхнего колонтитула"
     delete: "Удалить"
-    delete_forever: "Удалить навсегда"
-    discussions: "Дискуссии"                     # Referenced by flarum-statistics.yml
+    delete_forever: "Удалить (навсегда)"
+    discussions: "Дискуссии"                        # Referenced by flarum-statistics.yml
     edit: "Править"
     email: "E-mail"
     icon: "Иконка"
-    icon_text: "Введите название любого класса иконки <a>Font Awesome</a>, <em>без</em> префикса <code>fa-</code>."
+    icon_text: "Введите название любого класса иконки <a>Font Awesome</a>, <em>включая</em> префикс <code>fas fa-</code>."
     load_more: "Загрузить ещё"
     log_in: "Войти"
     log_out: "Выйти"
     mark_all_as_read: "Отметить всё как прочитанное"
     next_page: "Следующая страница"
     notifications: "Уведомления"
-    okay: "ОК"                                   # Referenced by flarum-tags.yml
+    okay: "ОК"                                      # Referenced by flarum-tags.yml
     password: "Пароль"
-    posts: "Сообщения"                           # Referenced by flarum-statistics.yml
+    posts: "Сообщения"                              # Referenced by flarum-statistics.yml
     previous_page: "Предыдущая страница"
     remove: "Удалить"
     rename: "Переименовать"
-    reply: "Ответить"                            # Referenced by flarum-mentions.yml
+    reply: "Ответить"                               # Referenced by flarum-mentions.yml
     reset_your_password: "Сбросить пароль"
     restore: "Восстановить"
-    save_changes: "Сохранить"                    # Referenced by flarum-suspend.yml, flarum-tags.yml
+    save_changes: "Сохранить"                       # Referenced by flarum-suspend.yml, flarum-tags.yml
     settings: "Настройки"
     sign_up: "Регистрация"
-    some_others: "{count} другому|{count} другим"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    some_others: "{count} другому|{count} другим"   # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: "Создать дискуссию"
     username: "Имя пользователя"
-    users: "Пользователи"                         # Referenced by flarum-statistics.yml
+    users: "Пользователи"                           # Referenced by flarum-statistics.yml
     view: "Посмотреть"
     write_a_reply: "Написать ответ..."
-    you: "Вам"                                    # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: "Вам"                                      # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.

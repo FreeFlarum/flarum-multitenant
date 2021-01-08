@@ -5,6 +5,9 @@ clarkwinkelmann-author-change:
         modal:
             title-post: "Редактировать автора сообщения"
             title-discussion: "Редактировать автора дискуссии"
+            user: "Автор"
+            created_at: "Время публикации"
+            edited_at: "Время редактирования"
             submit: "Сохранить"
             cancel: "Отмена"
         search:
@@ -14,4 +17,5 @@ clarkwinkelmann-author-change:
 
     admin:
         permissions:
-            edit: "Править автора дискуссии и сообщения"
+            edit-user: "Обновлять дискуссию и сообщение автора"
+            edit-date: "Обновлять дискуссию и дату сообщения"

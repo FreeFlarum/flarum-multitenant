@@ -1,64 +1,63 @@
 fof-masquerade:
-  forum:
-    alerts:
-      profile-completion-required: >
-        Пожалуйста, заполните необходимые поля профиля ниже.
-    buttons:
-      view-profile: "Показать профиль"
-      save-profile: "Сохранить"
-    fields:
-      select:
-        none-optional: "Вариант не выбран (необязательно)"
-        none-required: "Пожалуйста, выберите вариант (обязательно)"
-      boolean:
-        yes: "Да"
-        no: "Нет"
-  admin:
-    title: "Маскарад"
-    general-options: "Общие настройки"
-    buttons:
-      add-field: "Создать поле"
-      edit-field: "Сохранить изменения"
-      delete-field: "Удалить поле"
-    permissions:
-      have-profile: "Есть маскарадный профиль"
-      view-profile: "Показать маскарадный профиль"
-    menu:
-      description: >
-        Настроить поля профиля пользователя.
-    fields:
-      title: "Поля"
-      add: "Добавить поле {field}"
-      edit: "Редактировать поле {field}"
-      name: "Имя поля"
-      name-help: >
-        Публично видимое (непереводимое) имя поля.
-      description: "Описание поля"
-      description-help: >
-        Необязательное описание, объясняющее использование / необходимость этого поля.
-      required: "Сделать обязательным"
-      on_bio: "Показать ответ на это поле в биографии пользователя"
-      type: "Тип"
-      validation: "Проверка"
-      validation-help: >
-        Проверка поддерживает правила валидации <a>Laravel</a>. Например:
-        "string|min:5" or "url".
-      prefix: "Префикс поля"
-      prefix-help: >
-        Показывает ваш префикс перед значениями, введенными пользователем для этого поля.
-      icon: "Иконка"
-      icon-help: >
-        Показывает значок перед значениями, введенными пользователем.
-        Доступные значки, ищите на <a>сайте FontAwesome</a>. Используйте имена значков с
-        префиксом "fa-", например "fas fa-info".
-      force-user-to-completion: "Заставить пользователя заполнить профиль"
-      disable-user-bio: "Отключить пользовательское поле биографии"
-      options: "Опции"
-      option-new: "Новая опция"
-      option-coma-warning: 'Имя опции не может содержать запятые (",").'
-    types:
-      advanced: "Продвинутый"
-      boolean: "Флажок"
-      email: "E-mail"
-      select: "Выбор"
-      url: "Ссылка"
+    forum:
+        alerts:
+            profile-completion-required: >
+                Пожалуйста, заполните необходимые поля профиля ниже.
+        buttons:
+            view-profile: "Посмотреть профиль"
+            save-profile: "Сохранить"
+        fields:
+            select:
+                none-optional: "Вариант не выбран (необязательно)"
+                none-required: "Пожалуйста, выберите вариант (обязательно)"
+            boolean:
+                yes: "Да"
+                no: "Нет"
+    admin:
+        title: "Маскарад"
+        general-options: "Общие настройки"
+        buttons:
+            add-field: "Создать поле"
+            edit-field: "Сохранить изменения"
+            delete-field: Удалить поле"
+        permissions:
+            have-profile: "Есть маскарадный профиль"
+            view-profile: "Посмотреть маскарадный профиль"
+        menu:
+            description: >
+                Настройка полей профиля пользователя.
+        fields:
+            title: "Поля"
+            add: "Добавить поле {field}"
+            edit: "Редактировать поле {field}"
+            name: "Имя поля"
+            name-help: >
+                Публично видимое (непереводимое) имя поля.
+            description: "Описание поля"
+            description-help: >
+                Необязательное описание, объясняющее использование / необходимость этого поля.
+            required: "Сделать обязательным"
+            on_bio: "Показать ответ на это поле в BIO пользователя"
+            type: "Тип"
+            validation: "Проверка"
+            validation-help: >
+                Проверка поддерживает <a>правила валидации Laravel</a>. Например:
+                "string|min:5" или "url".
+            prefix: "Префикс поля"
+            prefix-help: >
+                Показывает Ваш префикс перед значениями, введенными пользователем для этого поля.
+            icon: "Иконка"
+            icon-help: >
+                Показывает иконку перед значениями, введенными пользователем.
+                Доступные иконки, ищите на <a>сайте FontAwesome</a>.
+                Используйте имена значков с префиксом "fa-", например "fas fa-info".
+            force-user-to-completion: "Заставить пользователя заполнить профиль"
+            options: "Опции"
+            option-new: "Новая опция"
+            option-comma-warning: 'Имя опции не может содержать запятые (",").'
+        types:
+            advanced: "Продвинутый"
+            boolean: "Флажок"
+            email: "E-mail"
+            select: "Раскрывающийся список"
+            url: "URL"

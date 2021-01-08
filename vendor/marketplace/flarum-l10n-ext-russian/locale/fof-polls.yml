@@ -1,7 +1,7 @@
 fof-polls:
   admin:
     permissions:
-      moderate: "Править / удалять опросы"
+      moderate: "Изменять / удалять опросы"
       self_edit: "Разрешить редактировать свои опросы"
       start: "Создать опрос"
       vote: "Голосовать в опросе"
@@ -34,7 +34,7 @@ fof-polls:
     moderation:
       delete: "Удалить опрос"
       delete_confirm: "Вы уверены, что хотите удалить этот опрос?"
-      edit: "Править опрос"
+      edit: "Изменить опрос"
 
     tooltip:
       badge: "Опрос"

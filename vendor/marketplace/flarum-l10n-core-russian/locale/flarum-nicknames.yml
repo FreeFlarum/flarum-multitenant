@@ -1,7 +1,7 @@
 flarum-nicknames:
   admin:
     permissions:
-      edit_own_nickname_label: "Править своё имя"
+      edit_own_nickname_label: "Изменять своё имя"
     settings:
       max_label: "Максимальная длина имени пользователя"
       min_label: "Минимальная длина имени пользователя"

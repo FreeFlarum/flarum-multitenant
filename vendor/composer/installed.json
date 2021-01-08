@@ -225,17 +225,17 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.11",
-            "version_normalized": "3.171.11.0",
+            "version": "3.171.14",
+            "version_normalized": "3.171.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "eeebac8f6efd141af09c44dbd9cca4f1d327ef21"
+                "reference": "2bc8681a623caa13d5c1da90ca4d6c76436b545d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/eeebac8f6efd141af09c44dbd9cca4f1d327ef21",
-                "reference": "eeebac8f6efd141af09c44dbd9cca4f1d327ef21",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2bc8681a623caa13d5c1da90ca4d6c76436b545d",
+                "reference": "2bc8681a623caa13d5c1da90ca4d6c76436b545d",
                 "shasum": ""
             },
             "require": {
@@ -271,7 +271,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2021-01-04T19:13:09+00:00",
+            "time": "2021-01-07T19:16:26+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -312,7 +312,7 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.11"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.14"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -3501,26 +3501,27 @@
         },
         {
             "name": "fof/console",
-            "version": "0.6.1",
-            "version_normalized": "0.6.1.0",
+            "version": "0.6.2",
+            "version_normalized": "0.6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/console.git",
-                "reference": "4ae0d161f79abac21cca19125e42a4bfe020586a"
+                "reference": "b6e3b744ab0ac7c0ff3e21f883722daa6520f05f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/console/zipball/4ae0d161f79abac21cca19125e42a4bfe020586a",
-                "reference": "4ae0d161f79abac21cca19125e42a4bfe020586a",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/console/zipball/b6e3b744ab0ac7c0ff3e21f883722daa6520f05f",
+                "reference": "b6e3b744ab0ac7c0ff3e21f883722daa6520f05f",
                 "shasum": ""
             },
             "require": {
                 "dragonmantank/cron-expression": "^1.2.1",
-                "flarum/core": "^0.1.0-beta.14",
-                "illuminate/console": "^6.0",
+                "flarum/core": "^0.1.0-beta.15",
+                "illuminate/console": "^6.20.0",
+                "illuminate/support": "^6.20.0",
                 "symfony/process": "~4.0"
             },
-            "time": "2020-12-14T08:43:14+00:00",
+            "time": "2021-01-06T16:19:13+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -6615,8 +6616,8 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -6667,8 +6668,8 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -6725,8 +6726,8 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -6776,8 +6777,8 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -6837,8 +6838,8 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -6888,8 +6889,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -6939,17 +6940,17 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "c3e7c3d2369063d4124fd870356f887c1143d7c8"
+                "reference": "21a9293bba2e8afaf474b4c86e9ebe8dd643901f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/c3e7c3d2369063d4124fd870356f887c1143d7c8",
-                "reference": "c3e7c3d2369063d4124fd870356f887c1143d7c8",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/21a9293bba2e8afaf474b4c86e9ebe8dd643901f",
+                "reference": "21a9293bba2e8afaf474b4c86e9ebe8dd643901f",
                 "shasum": ""
             },
             "require": {
@@ -6968,7 +6969,7 @@
                 "illuminate/pagination": "Required to paginate the result set (^6.0).",
                 "symfony/finder": "Required to use Eloquent model factories (^4.3.4)."
             },
-            "time": "2020-12-04T14:27:18+00:00",
+            "time": "2020-12-29T15:07:22+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7007,8 +7008,8 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -7059,8 +7060,8 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -7119,8 +7120,8 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -7170,8 +7171,8 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
@@ -7232,8 +7233,8 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -7284,8 +7285,8 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -7351,8 +7352,8 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -7409,8 +7410,8 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -7477,8 +7478,8 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -7530,8 +7531,8 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
@@ -7589,8 +7590,8 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v6.20.8",
-            "version_normalized": "6.20.8.0",
+            "version": "v6.20.9",
+            "version_normalized": "6.20.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -8995,17 +8996,17 @@
         },
         {
             "name": "marketplace/flarum-l10n-core-russian",
-            "version": "0.1.0-beta.15-14",
-            "version_normalized": "0.1.0.0-beta15-14",
+            "version": "0.1.0-beta.15-16",
+            "version_normalized": "0.1.0.0-beta15-16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-core-russian.git",
-                "reference": "1e877a55d2466912660b1886c8ee58f5ca3be3b9"
+                "reference": "f7cc1bba4265bad36fcc337d0c7910241b3b8083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/1e877a55d2466912660b1886c8ee58f5ca3be3b9",
-                "reference": "1e877a55d2466912660b1886c8ee58f5ca3be3b9",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/f7cc1bba4265bad36fcc337d0c7910241b3b8083",
+                "reference": "f7cc1bba4265bad36fcc337d0c7910241b3b8083",
                 "shasum": ""
             },
             "require": {
@@ -9015,7 +9016,7 @@
                 "flarum/flarum": "Flarum",
                 "marketplace/flarum-l10n-ext-russian": "Flarum Extensions Russian language pack."
             },
-            "time": "2021-01-03T19:07:54+00:00",
+            "time": "2021-01-07T21:45:47+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -9084,54 +9085,45 @@
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.6",
-            "version_normalized": "0.1.6.0",
+            "version": "0.1.7",
+            "version_normalized": "0.1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "92ad398911701738bfb98edb67e7b3fdc880b00d"
+                "reference": "1f9daa7a04b64e796f0c4f16d0928b36e09bdad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/92ad398911701738bfb98edb67e7b3fdc880b00d",
-                "reference": "92ad398911701738bfb98edb67e7b3fdc880b00d",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/1f9daa7a04b64e796f0c4f16d0928b36e09bdad3",
+                "reference": "1f9daa7a04b64e796f0c4f16d0928b36e09bdad3",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.13"
+                "flarum/core": "^0.1.0-beta.15"
             },
             "suggest": {
-                "clarkwinkelmann/flarum-ext-post-date": "Change post date",
-                "fof/auth-discord": "Discord Login",
-                "fof/ban-ips": "Ban IPs",
-                "fof/byobu": "Byōbu",
-                "fof/drafts": "Drafts",
-                "fof/follow-tags": "Follow Tags",
-                "fof/ignore-users": "Ignore Users",
-                "fof/masquerade": "Masquerade",
-                "fof/merge-discussions": "Merge Discussions",
-                "fof/nightmode": "Night Mode",
-                "fof/polls": "Polls",
-                "fof/prevent-necrobumping": "Prevent Necrobumping",
-                "fof/reactions": "Reactions",
-                "fof/recaptcha": "reCAPTCHA",
-                "fof/subscribed": "Subscribed",
-                "fof/user-directory": "User Directory",
-                "fof/username-request": "Username Request",
-                "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack.",
-                "zerosonesfun/announce": "Announce"
+                "flarum/flarum": "Flarum",
+                "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack."
             },
-            "time": "2020-08-27T08:49:06+00:00",
+            "time": "2021-01-07T21:46:04+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "Русский (EXT)",
+                    "info": {
+                        "donate": "https://donation-form.github.io/",
+                        "website": "https://github.com/marketplace-flarum",
+                        "support": "https://discuss.flarum.org/d/1545"
+                    },
                     "icon": {
                         "image": "icon.svg",
-                        "backgroundColor": "#f3f6f9",
+                        "backgroundColor": "#ffffff",
                         "backgroundSize": "cover",
                         "backgroundPosition": "center"
                     }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/1545"
                 },
                 "flarum-locale": {
                     "code": "ru",
@@ -9141,39 +9133,28 @@
             "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-3.0-or-later"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "z1729 Factory",
-                    "email": "z1729.factory@gmail.com",
-                    "homepage": "https://z1729.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Yu Dunaev (dun43v)",
-                    "email": "dun43v@gmail.com",
-                    "homepage": "https://dunaev.dev/",
-                    "role": "Editor"
-                },
-                {
                     "name": "Kitsune Solar",
                     "email": "kitsune.solar@gmail.com",
-                    "role": "Editor"
+                    "homepage": "https://kitsune.solar",
+                    "role": "Translator"
                 },
                 {
                     "name": "towuk118",
                     "homepage": "https://vk.com/towuk118",
-                    "role": "Editor"
+                    "role": "Translator"
                 },
                 {
                     "name": "dexif",
                     "homepage": "https://spitsyn.net/",
-                    "role": "Editor"
+                    "role": "Translator"
                 }
             ],
             "description": "Flarum Extensions Russian language pack.",
-            "homepage": "https://gitlab.com/marketplace-flarum",
+            "homepage": "https://github.com/marketplace-flarum",
             "keywords": [
                 "extension",
                 "flarum",
@@ -9182,6 +9163,18 @@
                 "localization",
                 "russian",
                 "translation"
+            ],
+            "support": {
+                "docs": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian/blob/main/README.md",
+                "forum": "https://discuss.flarum.org/d/1545",
+                "issues": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian/issues",
+                "source": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian"
+            },
+            "funding": [
+                {
+                    "url": "https://donation-form.github.io/",
+                    "type": "website"
+                }
             ],
             "install-path": "../marketplace/flarum-l10n-ext-russian"
         },
@@ -9242,17 +9235,17 @@
         },
         {
             "name": "matthiasmullie/minify",
-            "version": "1.3.65",
-            "version_normalized": "1.3.65.0",
+            "version": "1.3.66",
+            "version_normalized": "1.3.66.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthiasmullie/minify.git",
-                "reference": "227f19062451c55a797e0cc667ef983834e6580c"
+                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/227f19062451c55a797e0cc667ef983834e6580c",
-                "reference": "227f19062451c55a797e0cc667ef983834e6580c",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
+                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
                 "shasum": ""
             },
             "require": {
@@ -9262,13 +9255,13 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2.0",
-                "matthiasmullie/scrapbook": "~1.0",
-                "phpunit/phpunit": "~4.8"
+                "matthiasmullie/scrapbook": "dev-master",
+                "phpunit/phpunit": ">=4.8"
             },
             "suggest": {
                 "psr/cache-implementation": "Cache implementation to use with Minify::cache"
             },
-            "time": "2020-12-27T21:43:29+00:00",
+            "time": "2021-01-06T15:18:10+00:00",
             "bin": [
                 "bin/minifycss",
                 "bin/minifyjs"
@@ -9303,7 +9296,7 @@
             ],
             "support": {
                 "issues": "https://github.com/matthiasmullie/minify/issues",
-                "source": "https://github.com/matthiasmullie/minify/tree/1.3.65"
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.66"
             },
             "funding": [
                 {
@@ -12635,17 +12628,17 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c6c942b1ac76c82448322025e084cadc56048b4e",
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e",
                 "shasum": ""
             },
             "require": {
@@ -12654,11 +12647,11 @@
             "suggest": {
                 "ext-ctype": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -12696,21 +12689,38 @@
                 "polyfill",
                 "portable"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-ctype"
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "c536646fdb4f29104dd26effc2fdcb9a5b085024"
+                "reference": "b34bfb8c4c22650ac080d2662ae3502e5f2f4ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/c536646fdb4f29104dd26effc2fdcb9a5b085024",
-                "reference": "c536646fdb4f29104dd26effc2fdcb9a5b085024",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/b34bfb8c4c22650ac080d2662ae3502e5f2f4ae6",
+                "reference": "b34bfb8c4c22650ac080d2662ae3502e5f2f4ae6",
                 "shasum": ""
             },
             "require": {
@@ -12719,11 +12729,11 @@
             "suggest": {
                 "ext-iconv": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -12762,21 +12772,38 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-iconv"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "3b75acd829741c768bc8b1f84eb33265e7cc5117"
+                "reference": "0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3b75acd829741c768bc8b1f84eb33265e7cc5117",
-                "reference": "3b75acd829741c768bc8b1f84eb33265e7cc5117",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44",
+                "reference": "0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44",
                 "shasum": ""
             },
             "require": {
@@ -12787,11 +12814,11 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -12835,21 +12862,38 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-intl-idn"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "727d1096295d807c309fb01a851577302394c897"
+                "reference": "6e971c891537eb617a00bb07a43d182a6915faba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/727d1096295d807c309fb01a851577302394c897",
-                "reference": "727d1096295d807c309fb01a851577302394c897",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/6e971c891537eb617a00bb07a43d182a6915faba",
+                "reference": "6e971c891537eb617a00bb07a43d182a6915faba",
                 "shasum": ""
             },
             "require": {
@@ -12858,11 +12902,11 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T17:09:11+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -12905,21 +12949,38 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-intl-normalizer"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531"
+                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/39d483bdf39be819deabf04ec872eb0b2410b531",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
                 "shasum": ""
             },
             "require": {
@@ -12928,11 +12989,11 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -12971,31 +13032,48 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-mbstring"
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "cede45fcdfabdd6043b3592e83678e42ec69e930"
+                "reference": "cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/cede45fcdfabdd6043b3592e83678e42ec69e930",
-                "reference": "cede45fcdfabdd6043b3592e83678e42ec69e930",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9",
+                "reference": "cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -13033,31 +13111,48 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-php72"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "8ff431c517be11c78c48a39a66d37431e26a6bed"
+                "reference": "a678b42e92f86eca04b7fa4c0f6f19d097fb69e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/8ff431c517be11c78c48a39a66d37431e26a6bed",
-                "reference": "8ff431c517be11c78c48a39a66d37431e26a6bed",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/a678b42e92f86eca04b7fa4c0f6f19d097fb69e2",
+                "reference": "a678b42e92f86eca04b7fa4c0f6f19d097fb69e2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -13098,31 +13193,48 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../symfony/polyfill-php73"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de"
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
-                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -13166,6 +13278,23 @@
                 "polyfill",
                 "portable",
                 "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "install-path": "../symfony/polyfill-php80"
         },
@@ -13597,72 +13726,6 @@
             "install-path": "../tijsverkoyen/css-to-inline-styles"
         },
         {
-            "name": "tiu-ram0n/brazilian-portuguese",
-            "version": "1.1.22",
-            "version_normalized": "1.1.22.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ram0ng1/brazilian-portuguese.git",
-                "reference": "edad9ea2bb7710f63d025a151478f2f8c081d1be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ram0ng1/brazilian-portuguese/zipball/edad9ea2bb7710f63d025a151478f2f8c081d1be",
-                "reference": "edad9ea2bb7710f63d025a151478f2f8c081d1be",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^0.1.0-beta.14"
-            },
-            "time": "2020-11-17T13:38:42+00:00",
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "Brazilian Portuguese",
-                    "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#55a667",
-                        "backgroundSize": "cover",
-                        "backgroundPosition": "center"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18543"
-                },
-                "flarum-locale": {
-                    "code": "pt-BR",
-                    "title": "Português Brasileiro"
-                }
-            },
-            "installation-source": "dist",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ramon Guilherme",
-                    "email": "ramonguilherme@outlook.com",
-                    "homepage": "https://ramonguilherme.com.br"
-                }
-            ],
-            "description": "Pacote de idioma Português do Brasil.",
-            "homepage": "https://ramonguilherme.com.br",
-            "keywords": [
-                "brazilian",
-                "extensão",
-                "language",
-                "locale",
-                "portugues",
-                "portuguese"
-            ],
-            "support": {
-                "issues": "https://github.com/ram0ng1/brazilian-portuguese/issues",
-                "source": "https://github.com/ram0ng1/brazilian-portuguese"
-            },
-            "install-path": "../tiu-ram0n/brazilian-portuguese"
-        },
-        {
             "name": "tobscure/json-api",
             "version": "v0.3.0",
             "version_normalized": "0.3.0.0",
@@ -13717,17 +13780,17 @@
         },
         {
             "name": "tolgaaaltas/flarum-ext-turkish",
-            "version": "0.15.0.3",
-            "version_normalized": "0.15.0.3",
+            "version": "0.15.0.4",
+            "version_normalized": "0.15.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-                "reference": "c206bb4207122f677beb1c70ad6a84ad83ecfd89"
+                "reference": "55ece7c554c88ff8f184007077270877ed8cbcb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/c206bb4207122f677beb1c70ad6a84ad83ecfd89",
-                "reference": "c206bb4207122f677beb1c70ad6a84ad83ecfd89",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/55ece7c554c88ff8f184007077270877ed8cbcb5",
+                "reference": "55ece7c554c88ff8f184007077270877ed8cbcb5",
                 "shasum": ""
             },
             "require": {
@@ -13736,7 +13799,7 @@
             "suggest": {
                 "tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
             },
-            "time": "2020-12-30T12:20:23+00:00",
+            "time": "2021-01-06T17:30:22+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -13799,17 +13862,17 @@
         },
         {
             "name": "tolgaaaltas/flarum-lang-turkish",
-            "version": "0.15.0.3",
-            "version_normalized": "0.15.0.3",
+            "version": "0.15.0.4",
+            "version_normalized": "0.15.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
-                "reference": "9c30f12b76b32755c6c64f6dfe988d5552c5e924"
+                "reference": "651741f520f952bd2a543ad5ba44fe11cb0c65f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/9c30f12b76b32755c6c64f6dfe988d5552c5e924",
-                "reference": "9c30f12b76b32755c6c64f6dfe988d5552c5e924",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/651741f520f952bd2a543ad5ba44fe11cb0c65f4",
+                "reference": "651741f520f952bd2a543ad5ba44fe11cb0c65f4",
                 "shasum": ""
             },
             "require": {
@@ -13818,7 +13881,7 @@
             "suggest": {
                 "tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."
             },
-            "time": "2020-12-30T12:20:17+00:00",
+            "time": "2021-01-04T17:40:17+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {

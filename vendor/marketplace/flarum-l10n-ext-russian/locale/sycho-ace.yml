@@ -1,0 +1,11 @@
+sycho-ace:
+  admin:
+    extensions: "Расширения"
+    category_selection:
+      label: "Сортировка"
+      options:
+        default: "По умолчанию"
+        vendor: "Вендор"
+        none: "Нет"
+    categories:
+      none: "A-Z"

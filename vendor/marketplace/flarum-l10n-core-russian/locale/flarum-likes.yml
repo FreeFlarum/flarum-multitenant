@@ -34,4 +34,4 @@ flarum-likes:
 
     # These translations are used in the Settings page.
     settings:
-      notify_post_liked_label: "Кому-то нравится одно из моих сообщений"
+      notify_post_liked_label: "Понравилось моё сообщение"

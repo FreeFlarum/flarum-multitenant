@@ -33,9 +33,9 @@ flarum-tags:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      allow_edit_tags_label: "Разрешить редактирование тегов"
+      allow_edit_tags_label: "Разрешить изменять теги"
       restrict_by_tag_heading: "По тегу"
-      tag_discussions_label: "Править теги дискуссий"
+      tag_discussions_label: "Изменять теги дискуссий"
 
     # These translations are used in the Tag Settings modal dialog.
     tag_settings:
@@ -77,7 +77,7 @@ flarum-tags:
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
-      edit_tags_button: "Править теги"
+      edit_tags_button: "Изменить теги"
 
     header:
       back_to_tags_tooltip: "Вернуться к списку тегов"

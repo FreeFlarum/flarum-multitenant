@@ -1,4 +1,33 @@
 fof-nightmode:
-  forum:
-    night: "Тёмная тема"
-    day: "Светлая тема"
+    ref:
+        auto: "Автоматическое определение"
+        light: "Светлая тема"
+        dark: "Тёмная тема"
+
+    admin:
+        settings:
+            modal:
+                default_theme: "Тема по умолчанию"
+                default_theme_helper: "Тема по умолчанию автоматически устанавливается для всех новых пользователей и гостей, а также для тех, кто самостоятельно не установил настройки темы у себя в профиле."
+                theme_auto: => fof-nightmode.ref.auto
+                theme_light: => fof-nightmode.ref.light
+                theme_dark: => fof-nightmode.ref.dark
+    forum:
+        day: => fof-nightmode.ref.light
+        night: => fof-nightmode.ref.dark
+
+        user:
+            settings:
+                heading: "Тема"
+                description: "Выберите тему, которая будет использоваться на форуме"
+                description2: "Тема будет привязана к Вашей учётной записи и использоваться на всех устройствах, независимо от их настроек. Если Вы включите переключатель ниже, то тема будет подстраиваться индивидуально под каждое из устройств."
+                device_specific_setting_checkbox: "Использовать в соответствии с настройками каждого устройства"
+                device_specific_setting_checkbox_tooltip: "Выбранная тема будет сохранена индивидуально для каждого из устройств."
+                options:
+                    auto: => fof-nightmode.ref.auto
+                    day: => fof-nightmode.ref.light
+                    night: => fof-nightmode.ref.dark
+                option_descriptions:
+                    auto: "Тема будет автоматически выбрана в зависимости от настроек браузера или устройства. Например, если в iOS включён тёмный режим, то форум тоже будет с тёмной темой."
+                    day: "Классическая тема к которой многие привыкли."
+                    night: "Вы подобны сове. Вы наблюдаете на форумом ночью, пока спят птицы, а лисы вышли на охоту. Или же, Вы просто предпочитаете тёмные цвета!"

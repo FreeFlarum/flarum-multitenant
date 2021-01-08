@@ -2,8 +2,8 @@
   "name": "marketplace/flarum-l10n-ext-russian",
   "description": "Flarum Extensions Russian language pack.",
   "type": "flarum-extension",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://gitlab.com/marketplace-flarum",
+  "license": "MIT",
+  "homepage": "https://github.com/marketplace-flarum",
   "keywords": [
     "extension",
     "flarum",
@@ -15,70 +15,58 @@
   ],
   "authors": [
     {
-      "name": "z1729 Factory",
-      "email": "z1729.factory@gmail.com",
-      "homepage": "https://z1729.com/",
-      "role": "Developer"
-    },
-    {
-      "name": "Yu Dunaev (dun43v)",
-      "email": "dun43v@gmail.com",
-      "homepage": "https://dunaev.dev/",
-      "role": "Editor"
-    },
-    {
       "name": "Kitsune Solar",
       "email": "kitsune.solar@gmail.com",
-      "role": "Editor"
+      "homepage": "https://kitsune.solar",
+      "role": "Translator"
     },
     {
       "name": "towuk118",
       "homepage": "https://vk.com/towuk118",
-      "role": "Editor"
+      "role": "Translator"
     },
     {
       "name": "dexif",
       "homepage": "https://spitsyn.net/",
-      "role": "Editor"
+      "role": "Translator"
     }
   ],
   "support": {
-    "issues": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian/issues",
-    "source": "https://gitlab.com/marketplace-flarum/flarum-l10n-ext-russian"
+    "source": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian",
+    "issues": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian/issues",
+    "docs": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian/blob/main/README.md",
+    "forum": "https://discuss.flarum.org/d/1545"
   },
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://donation-form.github.io/"
+    }
+  ],
   "require": {
-    "flarum/core": "^0.1.0-beta.13"
+    "flarum/core": "^0.1.0-beta.15"
   },
   "suggest": {
-    "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack.",
-    "fof/drafts": "Drafts",
-    "fof/follow-tags": "Follow Tags",
-    "fof/masquerade": "Masquerade",
-    "fof/recaptcha": "reCAPTCHA",
-    "fof/subscribed": "Subscribed",
-    "fof/auth-discord": "Discord Login",
-    "fof/byobu": "Byōbu",
-    "fof/ignore-users": "Ignore Users",
-    "fof/polls": "Polls",
-    "fof/user-directory": "User Directory",
-    "fof/username-request": "Username Request",
-    "fof/nightmode": "Night Mode",
-    "fof/merge-discussions": "Merge Discussions",
-    "fof/prevent-necrobumping": "Prevent Necrobumping",
-    "zerosonesfun/announce": "Announce",
-    "clarkwinkelmann/flarum-ext-post-date": "Change post date",
-    "fof/ban-ips": "Ban IPs",
-    "fof/reactions": "Reactions"
+    "flarum/flarum": "Flarum",
+    "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack."
   },
   "extra": {
     "flarum-extension": {
       "title": "Русский (EXT)",
+      "info": {
+        "donate": "https://donation-form.github.io/",
+        "website": "https://github.com/marketplace-flarum",
+        "support": "https://discuss.flarum.org/d/1545"
+      },
       "icon": {
         "image": "icon.svg",
-        "backgroundColor": "#f3f6f9",
+        "backgroundColor": "#ffffff",
         "backgroundSize": "cover",
         "backgroundPosition": "center"
       }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/1545"
     },
     "flarum-locale": {
       "code": "ru",

@@ -5,15 +5,15 @@
 fof-mason:
   admin:
     buttons:
-      add-answer: 'Cevap ekleyin'
+      add-answer: 'Yanıt ekleyin'
       add-field: 'Alan Ekle'
-      delete-answer: 'Cevabı sil'
+      delete-answer: 'Yanıtı sil'
       delete-field: 'Alanı sil'
       edit-answer: 'Yanıtı Düzenle'
       edit-answer-prompt: 'İçeriği kullanıldığı her yerde düzenleyin'
       edit-field: 'Alanı düzenlemek için tıklayın'
       new-field: 'Yeni alan'
-      save-answer: 'Cevap değişikliklerini kaydedin'
+      save-answer: 'Yanıt değişikliklerini kaydedin'
       save-field: 'Alan değişikliklerini kaydedin'
       show-user-answers: 'Önerilmeyen yanıtları göster ({count})'
     fields:
@@ -25,13 +25,13 @@ fof-mason:
       icon: Simge
       icon-help: "Kullanıcı tarafından girilen değerlerin önünde bir simge gösterir. Mevcut simgelerin referansı için <a>FontAwesome internet sitesine</a> bakın. Önek dahil olmak üzere tam simge sınıfı adını kullanın, örneğin \"fas fa-bolt\".\n"
       icon-preview: 'Ön izleme: {preview}'
-      is_suggested: 'Kullanıcılara cevap önerin'
+      is_suggested: 'Kullanıcılara yanıt önerin'
       name: 'Alan adı'
       name-help: "Herkes tarafından görülebilen (çevrilemez) alan etiketi.\n"
-      new-answer: 'Yeni cevap'
+      new-answer: 'Yeni yanıt'
       new-answer-placeholder: 'Bazı metin'
       required: Gereklidir
-      save-field-for-answers: 'Cevap eklemek için alanı kaydedin'
+      save-field-for-answers: 'Yanıt eklemek için alanı kaydedin'
       show_when_empty: 'Boş olduğunda göster'
       show_when_empty-help: 'Cevabı olmadığında alanın tartışmada gösterilip gösterilmeyeceği'
       user_values_allowed: 'Kullanıcı değerlerine izin verilir'
@@ -42,8 +42,8 @@ fof-mason:
       description: 'Özel tartışma alanlarını yapılandırın.'
       title: Mason
     messages:
-      delete-answer-confirmation: "\"{content}\" yanıtını silmek istediğinizden emin misiniz? Onu kullanan tüm tartışmalardan kaldırılacaktır. Mevcut yanıtları korumak istiyorsanız bunun yerine yanıt önerisini devre dışı bırakın. Cevap silinsin mi?\n"
-      delete-field-confirmation: "\"{name}\" alanını silmek istediğinizden emin misiniz? Alan ve cevapları, onları kullanan tüm tartışmalardan kaldırılacaktır. Alan silinsin mi?\n"
+      delete-answer-confirmation: "\"{content}\" yanıtını silmek istediğinizden emin misiniz? Onu kullanan tüm tartışmalardan kaldırılacaktır. Mevcut yanıtları korumak istiyorsanız bunun yerine yanıt önerisini devre dışı bırakın. Yanıt silinsin mi?\n"
+      delete-field-confirmation: "\"{name}\" alanını silmek istediğinizden emin misiniz? Alan ve yanıtları, onları kullanan tüm tartışmalardan kaldırılacaktır. Alan silinsin mi?\n"
     permissions:
       fill-fields: 'Yeni tartışmalarda alanları doldurun'
       mason-heading: Mason
@@ -82,7 +82,7 @@ fof-mason:
     discussion-controls:
       edit-answers: 'Alanları düzenleyin'
     post-answers:
-      no-answer: 'Cevap yok'
+      no-answer: 'Yanıt yok'
     tags:
       inadequate-settings: "Etiket ayarları doğru yapılandırılmamış. En fazla bir birincil ve ikincil etikete izin verin veya \"Alan olarak etiketler\" özelliğini devre dışı bırakın.\n"
       tags-label: Etiketler

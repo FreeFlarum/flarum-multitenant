@@ -1,14 +1,21 @@
 fof-follow-tags:
   forum:
     settings:
-      notify_new_discussion_label: "Кто-то создает дискуссию в теге, на который я подписан"
-      notify_new_post_label: "Кто-то публикует сообщение в теге, на который я подписан"
-
+      notify_new_discussion_label: "Публикация дискуссии в теге, на который я подписан"
+      notify_new_post_label: "Публикация сообщения в теге, на который я подписан"
+      notify_new_discussion_tag_label: "Перемещение дискуссии в тег, на который я подписан"
 
     index:
       follow_tag_button: "Подписаться"
       unfollow_tag_button: "Отписаться"
 
+      following:
+        following_none_label: => fof-follow-tags.ref.filtering_options.none
+        following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+
+    badge:
+      following_tag_tooltip: "Подписка"
+      lurking_tag_tooltip: "Наблюдение"
 
     sub_controls:
       follow_button: => fof-follow-tags.ref.follow
@@ -26,16 +33,71 @@ fof-follow-tags:
       notify_email_tooltip: "Получать e-mail, когда появляются новые дискуссии или сообщения"
 
     notifications:
-      new_discussion_text: "{username} начал"
-      new_post_text: "{username} опубликовал"
+      new_discussion_text: "{username} начал(а)"
+      new_post_text: "{username} опубликовал(а)"
+      new_discussion_tag_text: "{username} изменил(а) тег"
+
+
+    user:
+      settings:
+        heading: "Follow Tags"
+
+        filter_label: "What to show by default in the Following page"
+
+  admin:
+    settings:
+      following_page_default_label: "Default Following Page Filtering"
+
+      following_none_label: => fof-follow-tags.ref.filtering_options.none
+      following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+
 
   email:
-    newDiscussionInTag: "[Тег | Дискуссия] заголовок"
-    newPostInTag: "[Тег | Сообщение] заголовок"
+    subject:
+        newDiscussionInTag: "[Тег | Новая дискуссия] {title}"
+        newPostInTag: "[Тег | Новое сообщение] {title}"
+        newDiscussionTag: "[Тег | Изменение тега] {title}"
+    body:
+        newDiscussionInTag: |
+            Привет, {recipient_display_name}!
 
+            {actor_display_name} создал(а) новую дискуссию: {discussion_title}
+
+            Чтобы посмотреть новую дискуссию, перейдите по следующей ссылке:
+            {discussion_url}
+
+            ---
+
+            {post_content}
+        newPostInTag: |
+            Привет, {recipient_display_name}!
+
+            {actor_display_name} опубликовал сообщение в дискуссии: {discussion_title}
+
+            Чтобы посмотреть новое сообщение, перейдите по следующей ссылке:
+            {post_url}
+
+            ---
+
+            {post_content}
+
+            ---
+
+            Вы не будете получать уведомления об этой дискуссии, пока не ознакомитесь с текущей информацией.
+        newDiscussionTag: |
+            Привет, {recipient_display_name}!
+
+            {actor_display_name} изменил тег дискуссии, автором которой является {author_display_name} на тег, на который Вы подписаны {discussion_title}
+
+            Чтобы посмотреть новую дискуссию, перейдите по следующей ссылке:
+            {discussion_url}
   ref:
     follow: "Подписка"
     following: "Подписка"
     hiding: "Скрыть"
     ignoring: "Игнорировать"
     lurking: "Следить"
+
+    filtering_options:
+      none: "Наблюдаемые обсуждения"
+      tags: "Наблюдаемые теги"
