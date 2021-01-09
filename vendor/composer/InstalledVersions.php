@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'b04c332bb33e99a2f48b399444575057502c7dde',
+    'reference' => 'c27af75670decd7f10c182d3230b375deac245ca',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -463,7 +463,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'b04c332bb33e99a2f48b399444575057502c7dde',
+      'reference' => 'c27af75670decd7f10c182d3230b375deac245ca',
     ),
     'flarum/lang-english' => 
     array (
@@ -1379,21 +1379,21 @@ private static $installed = array (
     ),
     'marketplace/flarum-l10n-core-russian' => 
     array (
-      'pretty_version' => '0.1.0-beta.15-16',
-      'version' => '0.1.0.0-beta15-16',
+      'pretty_version' => '0.1.0-beta.15-17',
+      'version' => '0.1.0.0-beta15-17',
       'aliases' => 
       array (
       ),
-      'reference' => 'f7cc1bba4265bad36fcc337d0c7910241b3b8083',
+      'reference' => '5090fff1c4abfbcf7b3bc7f73c01750e89c45f68',
     ),
     'marketplace/flarum-l10n-ext-russian' => 
     array (
-      'pretty_version' => '0.1.7',
-      'version' => '0.1.7.0',
+      'pretty_version' => '0.1.9',
+      'version' => '0.1.9.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1f9daa7a04b64e796f0c4f16d0928b36e09bdad3',
+      'reference' => 'db2bf720c127af321487e8b0904f7a7aa07bcd7f',
     ),
     'matteocontrini/flarum-imgur-upload' => 
     array (

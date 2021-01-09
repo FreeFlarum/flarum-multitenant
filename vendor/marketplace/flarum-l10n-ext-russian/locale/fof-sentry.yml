@@ -1,0 +1,7 @@
+fof-sentry:
+  admin:
+    settings:
+      dsn_label: "Sentry DSN"
+      user_feedback_label: "User Feedback" #TODO
+      javascript_label: "Оповещение об ошибках JavaScript"
+      javascript_console_label: "Захват консоли JavaScript"

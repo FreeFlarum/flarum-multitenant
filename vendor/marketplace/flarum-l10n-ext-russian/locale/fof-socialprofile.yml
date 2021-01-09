@@ -1,0 +1,11 @@
+fof-socialprofile:
+  forum:
+    edit:
+      edit: "Править"
+      add: "Добавить"
+      headtitle: "Редактировать кнопки"
+      title: "Заголовок"
+      url: "URL"
+      submit: "Сохранить"
+      delete: "Удалить"
+      deletetitle: "Удалить кнопку"

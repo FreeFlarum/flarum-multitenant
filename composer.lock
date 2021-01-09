@@ -8820,16 +8820,16 @@
         },
         {
             "name": "marketplace/flarum-l10n-core-russian",
-            "version": "0.1.0-beta.15-16",
+            "version": "0.1.0-beta.15-17",
             "source": {
                 "type": "git",
-                "url": "https://github.com/marketplace-flarum/flarum-l10n-core-russian.git",
-                "reference": "f7cc1bba4265bad36fcc337d0c7910241b3b8083"
+                "url": "git@github.com:marketplace-flarum/flarum-l10n-core-russian.git",
+                "reference": "5090fff1c4abfbcf7b3bc7f73c01750e89c45f68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/f7cc1bba4265bad36fcc337d0c7910241b3b8083",
-                "reference": "f7cc1bba4265bad36fcc337d0c7910241b3b8083",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/5090fff1c4abfbcf7b3bc7f73c01750e89c45f68",
+                "reference": "5090fff1c4abfbcf7b3bc7f73c01750e89c45f68",
                 "shasum": ""
             },
             "require": {
@@ -8902,20 +8902,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-01-07T21:45:47+00:00"
+            "time": "2021-01-08T22:41:43+00:00"
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.7",
+            "version": "0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "1f9daa7a04b64e796f0c4f16d0928b36e09bdad3"
+                "reference": "db2bf720c127af321487e8b0904f7a7aa07bcd7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/1f9daa7a04b64e796f0c4f16d0928b36e09bdad3",
-                "reference": "1f9daa7a04b64e796f0c4f16d0928b36e09bdad3",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/db2bf720c127af321487e8b0904f7a7aa07bcd7f",
+                "reference": "db2bf720c127af321487e8b0904f7a7aa07bcd7f",
                 "shasum": ""
             },
             "require": {
@@ -8994,7 +8994,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-01-07T21:46:04+00:00"
+            "time": "2021-01-09T09:55:34+00:00"
         },
         {
             "name": "matteocontrini/flarum-imgur-upload",

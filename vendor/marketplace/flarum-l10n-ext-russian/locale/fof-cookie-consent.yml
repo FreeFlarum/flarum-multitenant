@@ -13,7 +13,7 @@ fof-cookie-consent:
       theme_popup_title: "Цвета всплывающего окна"
       backgroundColor: "Фон"
       textColor: "Текст"
-      theme_dismiss_title: "Цвет кнопки "Закрыть""
+      theme_dismiss_title: 'Цвет кнопки "Закрыть"'
       buttonBackgroundColor: "Фон"
       buttonTextColor: "Текст"
 

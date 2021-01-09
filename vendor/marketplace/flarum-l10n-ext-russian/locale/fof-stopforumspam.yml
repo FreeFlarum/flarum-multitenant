@@ -1,0 +1,24 @@
+fof-stopforumspam:
+  admin:
+    settings:
+      title: "Stop Forum Spam"
+
+      username_label: "Проверка имени пользователя"
+      ip_label: "Проверка IP"
+      email_label: "Проверка e-mail"
+
+      frequency_label: "Порог"
+      frequency_text: "Общее число всех совпадений спам-фильтра, при котором включится система безопасности и предотвратит регистрацию пользователя."
+      frequency_example_text: "Например, если e-mail имеет 1 совпадение, IP имеет 2 совпадения, то общее число совпадений спам-фильтра будет 3. Если порог установлен на 3 или меньше, регистрация пользователя будет предотвращена."
+
+      api_key_label: "Ключ API"
+      api_key_text: "У Вас включено расширение fof/spamblock. У Вас имеется возможность сообщать информацию о спамерах в StopForumSpam, чтобы защитить своё и остальные сообщества от спама."
+      api_key_instructions_text: "<register>Зарегистрируйтесь в StopForumSpam</register>. Вам необходимо <key>получить ключ API</key>."
+
+  forum:
+    message:
+      spam: "Ваша информация отмечена как спам."
+
+  api:
+    error:
+      unknown: "Не удалось сообщить информацию о пользователе в StopForumSpam."

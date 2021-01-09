@@ -11,7 +11,7 @@ flarum-approval:
     permissions:
       approve_posts_label: "Одобрять сообщения"
       reply_without_approval_label: "Отвечать без одобрения"
-      start_discussions_without_approval_label: "Начать дискуссию без одобрения"
+      start_discussions_without_approval_label: "Создавать дискуссии без одобрения"
 
   # Translations in this namespace are used by the forum user interface.
   forum:

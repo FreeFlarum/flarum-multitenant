@@ -17,7 +17,7 @@ flarum-tags:
       delete_tag_button: "Удалить"
       delete_tag_confirmation: "Вы уверены, что хотите удалить тег? Дискуссии, помеченные этим тегом, удалены НЕ будут."
       description_label: "Описание"
-      hide_label: "Скрыть из списка дискуссий"
+      hide_label: "Скрыть дискуссии с этим тегом из общего списка"
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: => flarum-tags.ref.name

@@ -23,7 +23,7 @@ fof-pages:
       empty_text: "Похоже, здесь нет страниц."
       title: => fof-pages.ref.title
     permissions:
-      restricted: "Просмотр ограниченных страниц"
+      restricted: "Смотреть недоступные страницы"
     badges:
       hidden: "Черновик"
       restricted: "Ограниченный"

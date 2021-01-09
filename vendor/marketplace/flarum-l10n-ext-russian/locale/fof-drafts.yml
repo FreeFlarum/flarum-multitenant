@@ -7,7 +7,7 @@ fof-drafts:
       title: "Черновики"
       enable_scheduled_drafts: "Включить расписание для черновиков"
       schedule_on_one_server: "Использовать директиву 'onOneServer()' для планировщика задач (требуется Redis/Memcache)"
-      schedule_log_output: "Добавить логирование планировщика в хранилище журналов"
+      schedule_log_output: "Вести журнал работы планировщика"
   console:
     scheduled_drafts_disabled: "Расписание черновиков отключено в настройках."
   forum:

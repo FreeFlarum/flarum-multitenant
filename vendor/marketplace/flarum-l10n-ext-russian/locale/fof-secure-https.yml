@@ -1,0 +1,7 @@
+fof-secure-https:
+  admin:
+    settings:
+      replace: "Все изображения через HTTPS"
+  forum:
+    removed: "Изображение удалено из-за отсутствия HTTPS."
+    show: "Показать"

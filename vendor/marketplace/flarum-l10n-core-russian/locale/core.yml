@@ -76,7 +76,7 @@ core:
       color_label: => core.ref.color
       delete_button: "Удалить группу"
       delete_confirmation: "Вы уверены, что хотите удалить группу? Пользователи в этой группе НЕ будут удалены."
-      hide_label: "Скрыть на форуме"
+      hide_label: "Скрытая группа"
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: "Название"
@@ -178,7 +178,7 @@ core:
       delete_discussions_label: "Удалять дискуссии"
       delete_posts_forever_label: "Удалять сообщения (навсегда)"
       delete_posts_label: "Удалять сообщения"
-      description: "Настройки прав доступа."
+      description: "Настройка прав доступа к различным местам и функциям форума."
       edit_posts_label: "Редактировать сообщения"
       edit_users_label: "Редактировать пользователей"
       global_heading: "Глобальные"
@@ -309,7 +309,7 @@ core:
       email_sent_message: "Мы отправили Вам письмо, содержащее ссылку для восстановления пароля. Проверьте папку со спамом, если Вы не получили письмо в течение нескольких минут."
       not_found_message: "Пользователи с указанным e-mail не найдены."
       submit_button: "Восстановить пароль"
-      text: "Введите свой e-mail, и мы вышлем Вам ссылку для сброса пароля."
+      text: "Введите свой e-mail и мы вышлем Вам ссылку для сброса пароля."
       title: "Забыли пароль"
 
     # These translations are used in the header and session dropdown menu.
@@ -479,7 +479,7 @@ core:
     # These translations are used to punctuate a series of items.
     series:
       glue_text: ", "
-      three_text: "{first}, {second}, и {third}"
+      three_text: "{first}, {second} и {third}"
       two_text: "{first} и {second}"
 
     # These translations are used to modify usernames.

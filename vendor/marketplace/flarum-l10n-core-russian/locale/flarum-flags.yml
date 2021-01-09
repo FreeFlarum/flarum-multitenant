@@ -14,7 +14,7 @@ flarum-flags:
 
     # These translations are used in the Flags Settings modal dialog.
     settings:
-      flag_own_posts_label: "Разрешить пользователям отмечать свои сообщения"
+      flag_own_posts_label: "Разрешить пользователям жаловаться на свои сообщения"
       guidelines_url_label: "Правила сообщества (URL)"
       title: "Настройки"
 

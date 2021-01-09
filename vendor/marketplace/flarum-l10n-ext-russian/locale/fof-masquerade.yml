@@ -21,7 +21,7 @@ fof-masquerade:
             edit-field: "Сохранить изменения"
             delete-field: Удалить поле"
         permissions:
-            have-profile: "Есть маскарадный профиль"
+            have-profile: "Иметь маскарадный профиль"
             view-profile: "Посмотреть маскарадный профиль"
         menu:
             description: >

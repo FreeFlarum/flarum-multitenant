@@ -1,0 +1,10 @@
+askvortsov-discussion-templates:
+  admin:
+    tags:
+      tag_template_heading: "Шаблон дискуссии"
+      tag_template_text: "Управление шаблоном дискуссий в выбранном теге."
+      tag_template_button: "Изменить шаблон"
+    tag_template_modal:
+      title: "Шаблон дискуссии"
+      customize_text: "Управление шаблоном дискуссий в выбранном теге."
+      submit_button: "Сохранить"
