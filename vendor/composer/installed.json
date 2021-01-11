@@ -13726,6 +13726,72 @@
             "install-path": "../tijsverkoyen/css-to-inline-styles"
         },
         {
+            "name": "tiu-ram0n/brazilian-portuguese",
+            "version": "1.1.23",
+            "version_normalized": "1.1.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ram0ng1/brazilian-portuguese.git",
+                "reference": "4a8146045a90933c24f948c8457dfeda633938d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ram0ng1/brazilian-portuguese/zipball/4a8146045a90933c24f948c8457dfeda633938d2",
+                "reference": "4a8146045a90933c24f948c8457dfeda633938d2",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.14"
+            },
+            "time": "2021-01-10T22:29:07+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Brazilian Portuguese",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#55a667",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18543"
+                },
+                "flarum-locale": {
+                    "code": "pt-BR",
+                    "title": "Português Brasileiro"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ramon Guilherme",
+                    "email": "ramonguilherme@outlook.com",
+                    "homepage": "https://ramonguilherme.com.br"
+                }
+            ],
+            "description": "Pacote de idioma Português do Brasil.",
+            "homepage": "https://ramonguilherme.com.br",
+            "keywords": [
+                "brazilian",
+                "extensão",
+                "language",
+                "locale",
+                "portugues",
+                "portuguese"
+            ],
+            "support": {
+                "issues": "https://github.com/ram0ng1/brazilian-portuguese/issues",
+                "source": "https://github.com/ram0ng1/brazilian-portuguese"
+            },
+            "install-path": "../tiu-ram0n/brazilian-portuguese"
+        },
+        {
             "name": "tobscure/json-api",
             "version": "v0.3.0",
             "version_normalized": "0.3.0.0",

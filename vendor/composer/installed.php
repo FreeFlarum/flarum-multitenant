@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'c27af75670decd7f10c182d3230b375deac245ca',
+    'reference' => '78c8ba02607990533ea38adb26e310ec2a19d5c3',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -440,7 +440,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'c27af75670decd7f10c182d3230b375deac245ca',
+      'reference' => '78c8ba02607990533ea38adb26e310ec2a19d5c3',
     ),
     'flarum/lang-english' => 
     array (
@@ -2124,6 +2124,15 @@
       array (
       ),
       'reference' => 'b43b05cf43c1b6d849478965062b6ef73e223bb5',
+    ),
+    'tiu-ram0n/brazilian-portuguese' => 
+    array (
+      'pretty_version' => '1.1.23',
+      'version' => '1.1.23.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4a8146045a90933c24f948c8457dfeda633938d2',
     ),
     'tobscure/json-api' => 
     array (

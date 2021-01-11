@@ -1,0 +1,35 @@
+---
+amaurycarrade-syndication:
+  forum:
+    autodiscovery:
+      forum_activity: Atividade no fórum
+      forum_new_discussions: Novas discussões do fórum
+      tag_activity: Atividade na tag {tag}
+      tag_new_discussions: Discussões na tag {tag}
+      discussion_last_posts: Esta discussão
+    feeds:
+      titles:
+        main_title: "{forum_name}"
+        main_subtitle: Últimos posts no fórum
+        main_d_title: Novas discussões em {forum_name}
+        main_d_subtitle: As discussões mais recentes no fórum
+        tag_title: Atividade na tag {tag}
+        tag_subtitle: Últimos post na tag {tag}
+        tag_d_title: Novas discussões na tag {tag}
+        tag_d_subtitle: As discussões mais recentes na tag {tag}
+        discussion_title: "{discussion_name}"
+        discussion_subtitle: Últimas mensagens nesta discussão
+  admin:
+    settings:
+      title: Configurações do Syndication
+      full-text:
+        label: Feeds de texto completo
+        help: Se desativado, os feeds conterão apenas trechos de postagens e os usuários
+          terão que ir ao fórum para ler tudo.
+        recommendation: Eu recomendaria deixar essa opção ativa para respeitar as
+          pessoas que seguem o fórum de um agregador de RSS, se houver.
+      html:
+        label: Feeds formatados
+        help: Marque isso para manter o HTML nos feeds gerados. Se desativado, os
+          feeds serão em texto sem formatação.
+      entries-count: Quantas entradas por feed?

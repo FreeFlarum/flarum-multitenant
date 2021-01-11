@@ -1,0 +1,70 @@
+core:
+  forum:
+    index_sort:
+      hot_button: Tendência
+
+fof-gamification:
+  forum:
+    votes: Votos
+    vote_title: Mostrar quem votou
+    nav:
+      name: Rankings
+    ranking:
+      rank: Posição
+      name: Usuário
+      amount: Pontos
+    notification:
+      upvote: "{username} curtiu seu post"
+      downvote: "{username} descurtiu seu post"
+    user:
+      points: "Pontos: {points}"
+      rank: "{rank}"
+    modal:
+      title: Votos
+      upvotes_label: 'Curtidas:'
+      downvotes_label: 'Descurtidas:'
+    mod_item: Ver votos
+  admin:
+    permissions:
+      vote_label: Posts curtidos/descurtidos
+      see_votes_label: ver post curtido/descurtido
+      see_ranking_page: ver página de ranking
+    nav:
+      desc: Gamification para seu fórum
+    page:
+      rankings:
+        blocked:
+          placeholder: CDK2020, Ralkage, AngelAvila, Ram0n
+          title: Usuários ignorados
+          help: Esses usuários não serão mostrados na página de ranking. Os nomes de usuários devem ser separados por uma vírgula seguida por um espaço.
+        title: Página de Ranking
+        enable: Ativar imagens personalizadas
+        custom_image_1: Imagem do 1º lugar
+        custom_image_2: Imagem do 2º lugar
+        custom_image_3: Imagem do 3º lugar
+      votes:
+        points_title: Marcador de Pontos
+        points_placeholder: "Pontos: "
+        color_holder: '#ffffff'
+        auto_upvote: Enviar automaticamente uma curtida quando um post for publicado
+        rate_limit: Colocar um tempo mínimo para votar novamente (10 segundos)
+        discussion_page: Mostrar total de votos da postagem original na lista de discussões
+        title: Votos
+        vote_color: Cor do voto
+        icon_name: ícone curtida/descurtido
+        icon_help: "Insira qualquer ícone Font-Awesome com o sufixo -up e -down. Exemplos: arrow, thumbs, chevron"
+      save_settings: Salvar configurações
+      convert:
+        button: Converter curtidas(forum) em votos(gamification) positivos
+        help: Converta suas curtidas anteriores de flarum-ext-likes em curtidas(gamification), bem como calcule a disponibilidade de todas as discussões atuais.
+        converting: Suas curtidas agora estão sendo convertidas. Atualize seu site após alguns minutos para ver o processo seja concluído. (O tempo de conversão pode demorar um pouco, dependendo do total de curtidas no fórum)
+        converted: "Todas as {number} curtidas convertidas com sucesso!"
+      ranks:
+        title: Ranks
+        ranks: Ranks customizados
+        number_title: Quantos emblemas de classificação devem ser mostrados?
+        help:
+          color: '#ffffff'
+          help: "Insira o número necessário de votos, o nome da classificação e a cor hexadecimal da classificação"
+          points: Pontos
+          name: Nome

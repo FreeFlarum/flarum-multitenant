@@ -1,0 +1,23 @@
+flagrow-linguist:
+    admin:
+        menu:
+            title: Linguista
+            description: Personalize as traduções.
+        buttons:
+            apply: Aplicar
+            reset: Restaurar original
+            copy-original: Copie o texto original
+            load-more: Carregar mais
+        locales:
+            all: Todas
+        placeholder:
+            not-translated: Não traduzido
+            all-locales: O texto definido aqui será mostrado em todos os idiomas
+            hint: Original:
+        filters:
+            search: Pesquisar sequências de tradução ...
+            with-own-translations: Minhas traduções
+            with-original-translations-in-locales: Com traduções originais em
+            without-original-translations-in-locales: Sem traduções originais em
+            for-extension: Para a extensão
+            results: Mostrando {shown} de {total} traduções correspondentes

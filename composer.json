@@ -128,6 +128,7 @@
         "rob006/flarum-lang-polish": "*",
         "ssnepenthe/color-utils": "*",
         "sycho/flarum-profile-cover": "*",
+        "tiu-ram0n/brazilian-portuguese": "^1.1",
         "tolgaaaltas/flarum-ext-turkish": "*",
         "tolgaaaltas/flarum-lang-turkish": "*",
         "v17development/flarum-seo": "*"

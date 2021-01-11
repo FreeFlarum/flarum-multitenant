@@ -1,0 +1,87 @@
+the-turk-diff:
+  forum:
+    revisions: "{revisionCount} revisão| {revisionCount} revisões"
+    emptyText: Sem revisões
+    editedText: "=> core.forum.post.edited_text"
+    deletedText: "(deletado)"
+    tooltips:
+      mostRecent: mais recente
+      originalContent: "=> the-turk-diff.ref.originalContent"
+      revisionWithNumber: "=> the-turk-diff.ref.revisionWithNumber"
+      sideBySide: Lado a lado
+      inline: Linha por linha
+      combined: Combinado
+      preview: "=> core.forum.composer.preview_tooltip"
+    optionsButton: Opções
+    deleteButton: "=> core.forum.post_controls.delete_button"
+    rollbackButton: Reversão para revisão {number}
+    rollbackToOriginalButton: Reversão para o original
+    revertChangesButton: Reverter alterações
+    confirmRollback: Tem certeza de que deseja alterar seu post atual?
+    confirmDelete: Tem certeza de que deseja excluir o conteúdo desta edição do histórico?
+    rollbackErrorMessage: A reversão das alterações falhou.
+    deleteErrorMessage: Falha na exclusão do conteúdo da edição.
+    rollbackSuccessMessage: Suas alterações foram revertidas.
+    deleteSuccessMessage: O conteúdo da edição foi excluído.
+    editedInfo: "=> core.forum.post.edited_tooltip"
+    deletedInfo: "{username} excluiu este conteúdo {ago}"
+    createdInfo: "{username} criado {ago}"
+    revisionInfo: Histórico de Alterações
+    noDiff: Não foram encontradas diferenças entre esses dois conteúdos.
+    differences:
+      originalContent: "=> the-turk-diff.ref.originalContent"
+      currentContent: "=> the-turk-diff.ref.currentContent"
+      revisionWithNumber: "=> the-turk-diff.ref.revisionWithNumber"
+      sentence: Você está visualizando diferenças entre {old} e {new}
+    previewMode:
+      originalContent: "=> the-turk-diff.ref.originalContent"
+      currentContent: "=> the-turk-diff.ref.currentContent"
+      revisionWithNumber: "=> the-turk-diff.ref.revisionWithNumber"
+      sentence: Você está visualizando {content}
+  admin:
+    settings:
+      title: Configurações Diff
+      onlyUnsigned: Somente <strong> números inteiros não assinados </strong> são
+        permitidos!
+      usePoint: Use <strong> point </strong> como separador decimal para valores flutuantes.
+      separateBlock: Mostrar um separador entre diferentes blocos de diferenças nos
+        renderizadores HTML
+      mainPostOnly: Armazenar apenas revisões da postagem principal
+      textFormatting: Ativar formatação de texto para visualizações
+      detailLevel: Nível de detalhe
+      noneLevel: Nenhum nível
+      lineLevel: Nível de linha
+      wordLevel: No nível da palavra
+      charLevel: Nível de Char
+      neighborLines: Linhas vizinhas
+      neighborLinesHelp: Especifique a contagem de linhas vizinhas que você deseja
+        mostrar.
+      mergeThreshold: Limite de mesclagem para o renderizador combinado
+      mergeThresholdHelp: Isso determina se um bloco de tipo de substituição deve
+        ser mesclado ou não, dependendo da taxa de alteração de conteúdo, que tem
+        valores entre 0 e 1.
+      dbOptimisation: Otimização de banco de dados
+      archiveOlds: Arquivar revisões antigas
+      archiveOldsInfo: Se <strong> x ≥ A </strong>, as primeiras revisões de <strong>
+        y = mx + b </strong> para a postagem serão armazenadas como mescladas e compactadas.
+        O <strong> x </strong> refere-se à contagem de revisões da postagem. Os valores
+        flutuantes de <strong> y </strong> serão arredondados para o próximo valor
+        inteiro mais baixo.
+      useCrons: Use crons para arquivar revisões antigas
+      useCronsHelp: Você deve adicionar a entrada Cron ao seu servidor para fazer
+        esta opção funcionar. Funciona semanalmente aos domingos às 02:00. Se você
+        desabilitar essa opção e habilitar acima, todas as revisões da postagem serão
+        examinadas para arquivamento quando a postagem relacionada for revisada.
+      archiveInfo: 'Lembre-se de que você pode desativar as duas opções e executar
+        o comando <code> php flarum diff: archive </code> para arquivar manualmente
+        as revisões antigas.'
+    permissions:
+      viewEditHistory: Ver histórico de edições
+      deleteEditHistory: Excluir outro histórico de edições
+      selfDeleteEditHistory: Excluir histórico de edição próprio
+      rollbackEditHistory: Reversão de outras pessoas editar histórico
+      selfRollbackEditHistory: Reversão própria edição do histórico
+  ref:
+    originalContent: conteúdo original
+    currentContent: conteúdo atual
+    revisionWithNumber: revisão {number}

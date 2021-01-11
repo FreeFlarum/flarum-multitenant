@@ -1,0 +1,19 @@
+sycho-profile-cover:
+  admin:
+    settings: Configurações
+    thumbnails: Criar miniaturas
+    max_size: Tamanho máximo da imagem da capa do perfil (em KB)
+    cover_size: Tamanho da imagem
+    thumb_size: tamanho da miniatura
+    size_of_images: "{size} fora de {count} imagem|{size} fora de {count} imagens"
+    size_of_thumbs: "{size} fora de {count} miniatura|{size} fora de {count} miniaturas"
+  forum:
+    cover: Capa
+    edit_cover: Editar Capa
+    notice: "Tamanho máximo: {size}"
+    added:
+      success: Imagem de capa atualizado.
+      error: Não foi possível carregar a imagem.
+    removed:
+      success: Imagem de capa removido.
+      error: Não foi possível remover a capa, tente novamente mais tarde.

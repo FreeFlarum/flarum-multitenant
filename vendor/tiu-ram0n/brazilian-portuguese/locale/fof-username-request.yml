@@ -1,0 +1,39 @@
+fof-username-request:
+  admin:
+    permissions:
+      start: Solicitar mudança de nome
+      moderate: Aprovar solicitações de mudança de nome de usuário
+  forum:
+    action:
+      title: Solicitações de mudança de nome
+      help_text: Certifique-se de que o nome de usuário siga as regras.
+      decision_title: Decisão
+      approval_label: Aprovar
+      rejected_label: Negar
+      submit_button: Enviar
+      reason_title: Razão
+      success: Enviado.
+      name: '{username} solicitou que seu nome de usuário seja alterado para "{newUsername}"'
+    results:
+      title: Mudar Nome
+      approved: 'Sua solicitação de mudança de nome foi aprovada!'
+      new_username: 'Seu nome de usuário agora é "{username}"'
+      rejected: Seu pedido para alteração de nome foi negado.
+      reason: 'Razão: <i>"{reason}"</i>'
+      resubmit: Você pode reenviar uma nova solicitação de nome de usuário das configurações da sua conta.
+    request:
+      title: Solicitar mudança de nome
+      current_request: Você já solicitou o nome de usuário "{username}." Você pode atualizar ou excluir esta solicitação.
+      submit_button: Enviar Solicitação
+      delete_button: Excluir Solicitação
+      confirmation_message: Sua solicitação foi recebida e será revisada em breve.
+      dismiss_button: Entendido
+      deleted: Pedido para mudança nome excluído.
+    account_label: Mudar Nome
+    profile_link: Histórico do Nome
+    dropdown:
+      empty_text: Nenhuma solicitação de mudança de nome encontrada.
+      tooltip: => fof-username-request.forum.dropdown.title
+      title: Solicitações de mudança de nome
+      item_text: "{username} solicitou uma mudança de nome"
+      exerpt: "Nome requerido: {requestedUsername}"
