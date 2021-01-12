@@ -22,9 +22,10 @@ export default class UploadButton extends Component {
             : app.translator.trans('fof-upload.forum.buttons.attach');
 
         return m(
-            '.Button.hasIcon.fof-upload-button.Button--icon',
+            'button.Button.hasIcon.fof-upload-button.Button--icon',
             {
                 className: this.attrs.uploader.uploading ? 'uploading' : '',
+                onclick: this.uploadButtonClicked.bind(this),
             },
             [
                 this.attrs.uploader.uploading
@@ -54,6 +55,24 @@ export default class UploadButton extends Component {
         // get the file from the input field
         const files = this.$('input').prop('files');
 
+        if (files.length === 0) {
+            // We've got no files to upload, so trying
+            // to begin an upload will show an error
+            // to the user.
+            return;
+        }
+
         this.attrs.uploader.upload(files);
+    }
+
+    /**
+     * Event handler for upload button being clicked
+     *
+     * @param {PointerEvent} e
+     */
+    uploadButtonClicked(e) {
+        // Trigger click on hidden input element
+        // (Opens file dialog)
+        this.$('input').click();
     }
 }

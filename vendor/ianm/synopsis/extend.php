@@ -14,6 +14,7 @@
 namespace IanM\Synopsis;
 
 use Flarum\Api\Controller\ListDiscussionsController;
+use Flarum\Api\Controller\UpdateDiscussionController;
 use Flarum\Extend;
 
 return [
@@ -37,6 +38,9 @@ return [
 
     (new Extend\ApiController(ListDiscussionsController::class))
         ->addInclude(['firstPost', 'lastPost']),
+
+    (new Extend\ApiController(UpdateDiscussionController::class))
+        ->addInclude(['lastPost']),
 
     (new Extend\User())
         ->registerPreference('showSynopsisExcerpts', function ($value) {

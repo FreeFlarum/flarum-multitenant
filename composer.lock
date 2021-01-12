@@ -219,16 +219,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.14",
+            "version": "3.171.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2bc8681a623caa13d5c1da90ca4d6c76436b545d"
+                "reference": "26c7f2deb05110c62e38cc867658f1ef89123365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2bc8681a623caa13d5c1da90ca4d6c76436b545d",
-                "reference": "2bc8681a623caa13d5c1da90ca4d6c76436b545d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/26c7f2deb05110c62e38cc867658f1ef89123365",
+                "reference": "26c7f2deb05110c62e38cc867658f1ef89123365",
                 "shasum": ""
             },
             "require": {
@@ -303,9 +303,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.14"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.15"
             },
-            "time": "2021-01-07T19:16:26+00:00"
+            "time": "2021-01-11T19:28:59+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -3248,16 +3248,16 @@
         },
         {
             "name": "fof/best-answer",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/best-answer.git",
-                "reference": "6dac89ff6c931b0de4cba766c1440f9ac98cd03b"
+                "reference": "6f14a72bfcacf361fb59cd79594451a48f5d89ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/best-answer/zipball/6dac89ff6c931b0de4cba766c1440f9ac98cd03b",
-                "reference": "6dac89ff6c931b0de4cba766c1440f9ac98cd03b",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/best-answer/zipball/6f14a72bfcacf361fb59cd79594451a48f5d89ce",
+                "reference": "6f14a72bfcacf361fb59cd79594451a48f5d89ce",
                 "shasum": ""
             },
             "require": {
@@ -3320,7 +3320,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2020-12-23T11:29:56+00:00"
+            "time": "2021-01-11T13:38:26+00:00"
         },
         {
             "name": "fof/byobu",
@@ -5758,16 +5758,16 @@
         },
         {
             "name": "fof/upload",
-            "version": "0.12.1",
+            "version": "0.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/upload.git",
-                "reference": "a9e43f8e190ad089a834cb875244632543496af2"
+                "reference": "b7c6bf7d6773853847a776b1b77a03d85533285a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/a9e43f8e190ad089a834cb875244632543496af2",
-                "reference": "a9e43f8e190ad089a834cb875244632543496af2",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/b7c6bf7d6773853847a776b1b77a03d85533285a",
+                "reference": "b7c6bf7d6773853847a776b1b77a03d85533285a",
                 "shasum": ""
             },
             "require": {
@@ -5839,7 +5839,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-01-03T16:07:06+00:00"
+            "time": "2021-01-11T19:41:23+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -6400,16 +6400,16 @@
         },
         {
             "name": "ianm/synopsis",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imorland/synopsis.git",
-                "reference": "2f98213a1ed4f2190f95c2b7910ed870ada0017f"
+                "reference": "4cc3beaa20241ea733163bb3ca85dd521f8aefb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imorland/synopsis/zipball/2f98213a1ed4f2190f95c2b7910ed870ada0017f",
-                "reference": "2f98213a1ed4f2190f95c2b7910ed870ada0017f",
+                "url": "https://api.github.com/repos/imorland/synopsis/zipball/4cc3beaa20241ea733163bb3ca85dd521f8aefb4",
+                "reference": "4cc3beaa20241ea733163bb3ca85dd521f8aefb4",
                 "shasum": ""
             },
             "require": {
@@ -6463,11 +6463,11 @@
                 "issues": "https://github.com/imorland/synopsis/issues",
                 "source": "https://github.com/imorland/synopsis"
             },
-            "time": "2020-12-26T20:42:14+00:00"
+            "time": "2021-01-11T23:43:13+00:00"
         },
         {
             "name": "illuminate/bus",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -6516,7 +6516,7 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -6571,7 +6571,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -6619,7 +6619,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -6677,7 +6677,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -6725,7 +6725,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -6773,16 +6773,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "21a9293bba2e8afaf474b4c86e9ebe8dd643901f"
+                "reference": "4611ba6cdcc3fcd17822c7b6bcfe28f18d892aca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/21a9293bba2e8afaf474b4c86e9ebe8dd643901f",
-                "reference": "21a9293bba2e8afaf474b4c86e9ebe8dd643901f",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/4611ba6cdcc3fcd17822c7b6bcfe28f18d892aca",
+                "reference": "4611ba6cdcc3fcd17822c7b6bcfe28f18d892aca",
                 "shasum": ""
             },
             "require": {
@@ -6834,11 +6834,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2020-12-29T15:07:22+00:00"
+            "time": "2021-01-05T22:50:42+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -6887,7 +6887,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -6944,7 +6944,7 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -6992,7 +6992,7 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
@@ -7051,7 +7051,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -7100,7 +7100,7 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -7164,7 +7164,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -7219,7 +7219,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -7284,7 +7284,7 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -7334,16 +7334,16 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "0c14503d18e46d475b761fce36f0cf0c7c561bfd"
+                "reference": "292b63fb50a999cf8cab8deffb60c696b0be8ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/0c14503d18e46d475b761fce36f0cf0c7c561bfd",
-                "reference": "0c14503d18e46d475b761fce36f0cf0c7c561bfd",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/292b63fb50a999cf8cab8deffb60c696b0be8ce1",
+                "reference": "292b63fb50a999cf8cab8deffb60c696b0be8ce1",
                 "shasum": ""
             },
             "require": {
@@ -7386,11 +7386,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2020-12-21T22:30:16+00:00"
+            "time": "2021-01-06T13:35:15+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v6.20.9",
+            "version": "v6.20.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -11457,16 +11457,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.2.4",
+            "version": "v6.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e"
+                "reference": "698a6a9f54d7eb321274de3ad19863802c879fb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e",
-                "reference": "56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/698a6a9f54d7eb321274de3ad19863802c879fb7",
+                "reference": "698a6a9f54d7eb321274de3ad19863802c879fb7",
                 "shasum": ""
             },
             "require": {
@@ -11516,7 +11516,7 @@
             ],
             "support": {
                 "issues": "https://github.com/swiftmailer/swiftmailer/issues",
-                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.4"
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.5"
             },
             "funding": [
                 {
@@ -11528,7 +11528,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-08T18:02:06+00:00"
+            "time": "2021-01-12T09:35:59+00:00"
         },
         {
             "name": "sycho/flarum-profile-cover",
