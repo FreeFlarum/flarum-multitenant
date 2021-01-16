@@ -11,7 +11,7 @@ clarkwinkelmann-author-change:
             submit: "Сохранить"
             cancel: "Отмена"
         search:
-            placeholder: "Поиск пользователей"
+            placeholder: "Поиск пользователей..."
             type-more: "Введите 3 символа для поиска по базе данных"
             no-results: "Результаты отсутствуют"
 

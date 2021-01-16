@@ -1,0 +1,18 @@
+antoinefr-money:
+  admin:
+    settings:
+      title: "Настройки денег"
+      moneyforpost: "За публикацию сообщения"
+      moneyfordiscussion: "За создание дискуссии"
+      moneyname: "Наименование денег (ex: [деньги] баллы)"
+      postminimumlength: "Минимальная длина сообщения для получения денег (0 = отключено)"
+      noshowzero: "Не показывать при нулевом балансе"
+    permissions:
+      edit_money_label: "Редактировать деньги"
+  forum:
+    user_controls:
+      money_button: "Деньги"
+    modal:
+      title: "Деньги {username}"
+      current: "Баланс:"
+      submit_button: => core.ref.save_changes

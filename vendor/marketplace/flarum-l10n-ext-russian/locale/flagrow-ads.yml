@@ -1,0 +1,24 @@
+flagrow-ads:
+    admin:
+        buttons:
+            save: "Сохранить"
+        positions:
+            under-header:
+                title: "Реклама под заголовком навигации"
+                placeholder: "Вставьте рекламный код..."
+            between-posts:
+                title: "Реклама между сообщениями"
+                placeholder: => flagrow-ads.admin.positions.under-header.placeholder
+            under-nav-items:
+                title: "Реклама слева под тегами"
+                placeholder: => flagrow-ads.admin.positions.under-header.placeholder
+        settings:
+            adsense-title: "Настройки AdSense"
+            position-title: "Позиция рекламы"
+            adsense-enable: "AdSense включено"
+            adsense-client-id: "Укажите ID"
+            start-from-post: "Укажите, после какого сообщения размещать рекламу"
+            between-n-posts: "Укажите, через какое количество сообщений размещать рекламу"
+        tab:
+            title: "Реклама"
+            description: "Настройка рекламы и её позиции на форуме."

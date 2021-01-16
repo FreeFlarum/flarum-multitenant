@@ -128,7 +128,7 @@ core:
         source: Sorgente
         support: Assistenza
         website: Sito web
-      no_permissions: Non ci sono permessi
+      no_permissions: Non ci sono permessi.
       no_settings: Non ci sono impostazioni.
       open_modal: Mostra impostazioni
       permissions_title: Permessi
@@ -152,6 +152,7 @@ core:
       basics_title: => core.admin.basics.description
       categories:
         authentication: Autenticazione
+        core: Configurazione Principale
         discussion: Discussione
         feature: Funzionalità
         formatting: Formattazione

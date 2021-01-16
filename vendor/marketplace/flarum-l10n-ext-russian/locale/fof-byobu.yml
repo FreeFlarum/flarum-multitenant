@@ -6,13 +6,13 @@ fof-byobu:
         buttons:
             add_recipients: "Участники"
             submit: "ОК"
-            edit_recipients: "Редактировать участников"
-            send_pd: "Отправить сообщение для {username}"
+            edit_recipients: "Изменить участников"
+            send_pd: "Переписка"
             cancel: "Отмена"
             remove_from_discussion: "Выйти из переписки"
         composer_private_discussion:
             submit_button: "Отправить"
-            title_placeholder: "Название переписки"
+            title_placeholder: "Название переписки..."
         labels:
             recipients: "{count} участник|{count} участников"
             user_deleted: "-удалено-"
@@ -26,7 +26,7 @@ fof-byobu:
                 groups: "Доступные группы"
         modal:
             titles:
-                update_recipients: "Обновить участников в {title}"
+                update_recipients: "Обновление участников в {title}"
                 add_recipients: "Добавить участников в свою переписку"
             help:
                 add_recipients: "Эта дискуссия будет видна только выбранным Вами участникам. Требуется как минимум 1 участник (кроме Вас)."
@@ -40,14 +40,14 @@ fof-byobu:
         user:
             settings:
                 block_pd: "Отключить переписки"
-                unified_index: "Combine private discussions inside unified index"
+                unified_index: "Combine private discussions inside unified index" # TODO
             byobu_link: "Переписки"
             dropdown_label: "Переписки"
 
         notifications:
             pd_label: "Добавление меня в переписку"
             pd_reply_label: "Ответ в переписке, участником которой я являюсь"
-            pd_reply_text: "{username} опубликовал(а) сообщение в переписке, участником которой Вы являетесь"
+            pd_reply_text: "{username} ответил(а) в переписке, участником которой Вы являетесь"
             pd_text: "{username} начал(а) с Вами переписку"
             pd_user_left_label: "Участник покидает переписку, в которой я участвую"
             pd_user_left_text: "{username} покинул(а) переписку"
@@ -73,7 +73,7 @@ fof-byobu:
     email:
         subject:
             private_discussion_created: "[Переписка] {display_name} начал(а) новую переписку с Вами"
-            private_discussion_replied: "[Переписка] {display_name} опубликовал(а) сообщение в переписке"
+            private_discussion_replied: "[Переписка] {display_name} ответил(а) в переписке"
             recipient_removed: "[Переписка] {display_name} покинул(а) переписку"
             private_discussion_added: "[Переписка] {display_name} добавил(а) Вас в переписку"
         body:
@@ -89,7 +89,7 @@ fof-byobu:
             private_discussion_replied: |
                 Привет, {recipient_display_name}!
 
-                {actor_display_name} опубликовал(а) сообщение в переписке, участником которой Вы являетесь. Название переписки: '{discussion_title}'.
+                {actor_display_name} ответил(а) в переписке, участником которой Вы являетесь. Название переписки: '{discussion_title}'.
 
                 Посмотреть:
                 {post_url}

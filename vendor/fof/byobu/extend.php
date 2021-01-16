@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/byobu.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -108,9 +108,6 @@ return [
 
     (new Extend\ApiSerializer(Serializer\UserSerializer::class))
         ->hasMany('privateDiscussions', Serializer\DiscussionSerializer::class),
-
-    (new Extend\ApiSerializer(Serializer\CurrentUserSerializer::class))
-        ->attribute('unreadPrivateMessagesCount', Api\CurrentUserUnreadPrivateMessageCount::class),
 
     (new Extend\View())
         ->namespace('fof-byobu', __DIR__.'/resources/views'),

@@ -1,0 +1,28 @@
+nomiscz-auth-steam:
+  forum:
+    buttons:
+      login: "Войти через Steam"
+      link: "Подключить Steam"
+      unlink: "Отключить Steam"
+    alerts:
+      already_linked: "Аккаунт Steam уже подключён!"
+      already_used: "Аккаунт Steam уже подключён другим пользователем!"
+      link_success: "Аккаунт Steam подключён."
+      unlink_success: "Аккаунт Steam отключён."
+      error: "Что-то пошло не так. Пожалуйста, повторите попытку позже!"
+    modals:
+      link:
+        title: "Подключение аккаунта Steam"
+      unlink:
+        title: "Отключение аккаунта Steam"
+        info:
+          confirm: "Вы уверены, что хотите отключить аккаунт Steam?"
+          no_providers: "У Вас нет других провайдеров для входа! Возможно, Вам придётся сбросить пароль."
+        buttons:
+          confirm: "Да, отключить аккаунт"
+          cancel: "Нет!"
+  admin:
+    settings:
+      title: "Настройки Steam"
+      api_key_label: "Ключ API"
+      use_steam_powered_domain: "Используйте домен steampowered.com вместо steamcommunity.com (заблокировано в Китае)"

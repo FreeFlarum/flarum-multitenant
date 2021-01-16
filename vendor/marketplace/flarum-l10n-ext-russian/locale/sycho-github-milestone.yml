@@ -1,0 +1,25 @@
+sycho-github-milestone:
+
+  admin:
+    repository: "Репозиторий GitHub"
+    repository_example: "Пример: flarum/core"
+    milestone: "ID этапа"
+    default_filter: "Фильтр по умолчанию"
+    closed: => sycho-github-milestone.ref.closed
+    open: => sycho-github-milestone.ref.open
+    all: => sycho-github-milestone.ref.all
+
+  forum:
+    title: "Этап"
+    last_updated: "Обновлено: {time}"
+    closed: => sycho-github-milestone.ref.closed
+    open: => sycho-github-milestone.ref.open
+    all: => sycho-github-milestone.ref.all
+    complete: "{progress} Завершено"
+    load_more: => core.forum.discussion_list.load_more_button
+    tasks_done: "{number} из {total}"
+
+  ref:
+    closed: "Закрыто"
+    open: "Открыто"
+    all: "Всего"

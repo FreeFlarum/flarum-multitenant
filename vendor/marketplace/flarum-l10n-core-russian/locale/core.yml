@@ -19,7 +19,7 @@ core:
       custom_styles_heading: "Пользовательские стили"
       custom_styles_text: "Настройка внешнего вида форума при помощи пользовательского кода LESS/CSS, который переопределяет стандартные стилевые конструкции Flarum."
       dark_mode_label: "Тёмный режим"
-      description: "Настройка цвета, логотипов и других переменных форума."
+      description: "Настройка цвета, логотипа и других элементов оформления."
       edit_css_button: "Редактировать CSS"
       edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: => core.ref.custom_header_title
@@ -39,7 +39,7 @@ core:
       display_name_heading: "Отображаемое имя"
       display_name_text: "Выберите драйвер, который должен использоваться для отображаемых имён пользователей. По умолчанию, используется username."
       forum_description_heading: "Описание форума"
-      forum_description_text: "Введите краткое описание сообщества. Описание появится в одноимённом meta-теге и будет отображаться в поисковых системах."
+      forum_description_text: "Введите краткое описание сообщества. Описание появится в одноимённом meta-теге и будет использоваться поисковыми системами."
       forum_title_heading: "Название форума"
       home_page_heading: "Главная страница"
       home_page_text: "Выберите страницу, которую пользователи будут видеть первой при посещении форума."
@@ -250,7 +250,7 @@ core:
       discard_confirmation: "Вы не создали дискуссию. Вы хотите отменить дискуссию?"
       submit_button: "Создать"
       title: => core.ref.start_a_discussion
-      title_placeholder: "Название дискуссии"
+      title_placeholder: "Название дискуссии..."
 
     # These translations are used by the composer when editing a post.
     composer_edit:
@@ -381,7 +381,7 @@ core:
       now_link: "Сейчас"
       original_post_link: "Начало"
       unread_text: "{count} не прочитано"
-      viewing_text: "{index} из {count} сообщение|{index} из {count} сообщений"
+      viewing_text: "{index} из {count} сообщения|{index} из {count} сообщений"
 
     # These translations are displayed between posts in the post stream.
     post_stream:

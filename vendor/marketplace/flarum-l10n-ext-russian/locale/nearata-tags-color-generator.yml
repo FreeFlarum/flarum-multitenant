@@ -1,0 +1,20 @@
+nearata-tags-color-generator:
+  admin:
+    color_luminosity_label: "Яркость"
+    color_luminosity_options:
+      random: "Случайно"
+      light: "Светлый"
+      bright: "Яркий"
+      dark: "Тёмный"
+    color_hue_label: "Оттенок"
+    color_hue_options:
+      random: "Случайно"
+      red: "Красный"
+      orange: "Оранжевый"
+      yellow: "Жёлтый"
+      green: "Зелёный"
+      blue: "Синий"
+      purple: "Пурпурный"
+      pink: "Розовый"
+      monochrome: "Монохромный"
+    generate_color_button: "Создать"

@@ -1,0 +1,20 @@
+ianm-html-head:
+  admin:
+    create_button: "Создать"
+
+    table:
+      description_label: "Описание"
+      header_label: "Шапка"
+      active_label: "Включить"
+      empty_text: "Нет записей"
+      delete_button: "Удалить" 
+      edit_button: "Править"
+
+    modal:
+      create_title: "Создать новый элемент"
+      edit_title: "Редактировать элемент"
+      text: "Убедитесь в корректности синтаксиса, так как неправильная запись элемента может исказить отображение форума. После сохранения, включите новый элемент при помощи переключателя."
+      description_label: "Описание"
+      header_label: "Элемент"
+      save_button: "Сохранить"
+      

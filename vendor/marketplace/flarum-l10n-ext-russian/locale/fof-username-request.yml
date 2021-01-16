@@ -2,7 +2,7 @@ fof-username-request:
   admin:
     permissions:
       start: "Подавать запрос на новое имя пользователя"
-      moderate: "Одобрять запрос на новое имя пользователя"
+      moderate: "Подтверждать запрос на новое имя пользователя"
   forum:
     action:
       title: => fof-username-request.forum.results.title
@@ -16,7 +16,7 @@ fof-username-request:
       name: "{username} запросил(а) разрешение на изменение своего имени на {newUsername}"
     results:
       title: "Изменение имени пользователя"
-      approved: "Ваш запрос на изменение имени пользователя одобрен"
+      approved: "Ваш запрос на изменение имени пользователя подтверждён"
       new_username: "Ваше имя пользователя было успешно изменено на {username}"
       rejected: "Ваш запрос на изменение имени пользователя отклонён"
       reason: "Причина: <i>{reason}</i>."

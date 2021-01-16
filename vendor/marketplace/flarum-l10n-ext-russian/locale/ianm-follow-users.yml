@@ -1,0 +1,79 @@
+ianm-follow-users:
+
+  admin:
+    permissions:
+      be_followed_label: "Подписываться на пользователей"
+
+  forum:
+    profile_link: => ianm-follow-users.lib.following_link
+    user_controls:
+      follow_button: "Подписка"
+      follow_confirmation: "Вы уверены, что хотите подписаться на пользователя?"
+      unfollow_button: "Отписка"
+      unfollow_confirmation: "Вы уверены, что хотите отписаться от пользователя?"
+
+    settings:
+      notify_new_follower_label: "Подписка на меня"
+      notify_new_unfollower_label: "Отписка от меня"
+      notify_new_discussion_label: "Создание дискуссии участником, на которого я подписан"
+      notify_new_post_label: "Публикация сообщения участником, на которого я подписан"
+      block_follow: "Запретить подписываться на меня"
+
+    index:
+      follow_tag_button: "Подписка"
+      unfollow_tag_button: "Отписка"
+
+    notifications:
+      new_discussion_text: "{username} создал(а)"
+      new_post_text: "{username} ответил(а) в дискуссии"
+      new_follower_text: "{username} подписался(а) на Вас"
+      new_unfollower_text: "{username} отписался(а) от Вас"
+
+    badge:
+      label: "Подписка"
+
+  email:
+    new_discussion_by_user_subject: "[Участник] {title}"
+    new_follower_subject: "[Участник] У Вас новый подписчик!"
+    new_post_subject: "[Участник] Новое сообщение в {title}"
+    new_discussion_by_user_body: |
+      Привет, {recipient_display_name}!
+
+      {user_display_name} создал новую дискуссию: {discussion_title}
+
+      Чтобы посмотреть новую дискуссию, пройдите по следующей ссылке:
+
+      {discussion_url}
+
+      ---
+
+      {post_content}
+
+    new_follower_body: |
+      Привет, {recipient_display_name}!
+
+      {follower_display_name} стал(а) Вашим подписчиком. Этот участник будет получать уведомления о Ваших действиях на форуме.
+
+      Чтобы посмотреть пользователя, пройдите по следующей ссылке:
+
+      {profile_url}
+
+    new_post_body: |
+      Привет, {recipient_display_name}!
+
+      {user_display_name} ответил(а) в дискуссии: {discussion_title}
+
+      Чтобы посмотреть сообщение, пройдите по следующей ссылке:
+
+      {post_url}
+
+      ---
+
+      {post_content}
+
+      ---
+
+      Вы не будете получать уведомления об этой дискуссии, пока не ознакомитесь с текущей информацией.
+
+  lib:
+    following_link: "Подписка (участники)"

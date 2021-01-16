@@ -33,8 +33,8 @@ fof-follow-tags:
       notify_email_tooltip: "Получать e-mail, когда появляются новые дискуссии или сообщения"
 
     notifications:
-      new_discussion_text: "{username} начал(а)"
-      new_post_text: "{username} опубликовал(а)"
+      new_discussion_text: "{username} создал(а)"
+      new_post_text: "{username} ответил(а)"
       new_discussion_tag_text: "{username} изменил(а) тег"
 
 
@@ -42,7 +42,7 @@ fof-follow-tags:
       settings:
         heading: "Follow Tags"
 
-        filter_label: "What to show by default in the Following page"
+        filter_label: "What to show by default in the Following page" # TODO
 
   admin:
     settings:
@@ -72,7 +72,7 @@ fof-follow-tags:
         newPostInTag: |
             Привет, {recipient_display_name}!
 
-            {actor_display_name} опубликовал сообщение в дискуссии: {discussion_title}
+            {actor_display_name} ответил(а) в дискуссии: {discussion_title}
 
             Чтобы посмотреть новое сообщение, перейдите по следующей ссылке:
             {post_url}

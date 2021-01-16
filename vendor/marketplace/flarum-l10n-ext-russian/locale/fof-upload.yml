@@ -35,7 +35,7 @@ fof-upload:
         title: "Настройки хранилища AWS S3"
         advanced_title: "Дополнительные настройки хранилища S3"
         endpoint: "Endpoint"
-        use_path_style_endpoint: "Use path style endpoint"
+        use_path_style_endpoint: "Use path style endpoint" # TODO
         acl: "Список контроля доступа (ACL)"
       disable-download-logging:
         title: "Отключить ведение журнала загрузок"
@@ -47,7 +47,7 @@ fof-upload:
         client_id: "ID клиента Imgur"
         title: "Настройки хранилища Imgur"
       local:
-        cdn_url: "Content Delivery URL (prefixes files)"
+        cdn_url: "Content Delivery URL (prefixes files)" # TODO
         title: "Настройки локального хранилища"
       qiniu:
         title: "Настройки хранилища Qiniu"
@@ -93,7 +93,7 @@ fof-upload:
       qiniu: "QiNiu"
   forum:
     buttons:
-      attach: "Загрузить"
+      attach: "Файл"
     states:
       error: "Ошибка"
       loading: "Загрузка"

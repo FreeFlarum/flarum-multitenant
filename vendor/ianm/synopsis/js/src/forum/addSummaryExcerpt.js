@@ -34,7 +34,11 @@ export default function addSummaryExcerpt() {
         const onMobile = app.session.user ? app.session.user.preferences().showSynopsisExcerptsOnMobile : false;
 
         if (excerptPost) {
-            const excerpt = <span>{m.trust(truncate(richExcerpt ? excerptPost.contentHtml() : excerptPost.contentPlain(), excerptLength))}</span>;
+            const excerpt = (
+                <div>
+                    {richExcerpt ? m.trust(truncate(excerptPost.contentHtml(), excerptLength)) : truncate(excerptPost.contentPlain(), excerptLength)}
+                </div>
+            );
 
             items.add(onMobile ? 'excerptM' : 'excerpt', excerpt, -100);
         }

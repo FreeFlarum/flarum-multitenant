@@ -3,9 +3,9 @@ fof-socialprofile:
     edit:
       edit: "Править"
       add: "Добавить"
-      headtitle: "Редактировать кнопки"
+      headtitle: "Редактирование кнопок"
       title: "Заголовок"
       url: "URL"
       submit: "Сохранить"
       delete: "Удалить"
-      deletetitle: "Удалить кнопку"
+      deletetitle: "Удаление кнопки"

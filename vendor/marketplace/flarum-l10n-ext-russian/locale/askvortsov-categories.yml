@@ -1,0 +1,34 @@
+askvortsov-categories:
+  admin:
+    basics:
+      categories_label: "Категории"
+    labels:
+      keep_tags_nav: "Показать ссылку на теги в боковой панели навигации"
+      child_bare_icon: "Скрыть фон иконок у дочерних категорий"
+      compact_mobile_mode: "Компактный режим"
+      full_page_desktop: "Преобразовать вертикальную боковую панель в горизонтальную панель навигации. Параметр также скроет дополнительные виджеты расширений (например, статистику форума)."
+      parent_remove_icon: "Скрыть иконки"
+      parent_remove_description: "Скрыть описание"
+      parent_remove_stats: "Скрыть статистику"
+      parent_remove_last_discussion: "Скрыть колонку дискуссии"
+      small_forum_optimized: "Оптимизировать для небольших форумов. Более точное количество дискуссий и сообщений, но значительно замедлит работу крупных форумов."
+    headings:
+      nav: "Навигация"
+      layout: "Макет"
+      parent_display: "Родительская категория"
+      child_display: "Дочерняя категория"
+      performance: "Производительность"
+    title: "Настройки категорий"
+  forum:
+    categories:
+    header:
+      back_to_categories_tooltip: "Назад к категориям"
+    index:
+      categories_link: "Категории"
+    meta:
+      categories_title: "Категории"
+    stat-widgets:
+      discussion_label: "Дискуссии"
+      post_label: "Сообщения"
+    last_discussion_widget:
+      no_discussions: "Кажется, здесь нет дискуссий."

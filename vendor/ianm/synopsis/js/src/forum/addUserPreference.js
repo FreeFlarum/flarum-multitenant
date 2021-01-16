@@ -29,7 +29,7 @@ export default function () {
             FieldSet.component(
                 {
                     label: app.translator.trans('ianm-synopsis.forum.user.settings.summaries-heading'),
-                    className: 'Settings-Summaries',
+                    className: 'Settings-Synopsis',
                 },
                 this.summariesItems().toArray()
             )
@@ -40,7 +40,7 @@ export default function () {
         const items = new ItemList();
 
         items.add(
-            'summary-excerpts',
+            'synopsis-excerpts',
             Switch.component(
                 {
                     state: this.user.preferences().showSynopsisExcerpts,
@@ -60,7 +60,7 @@ export default function () {
 
         if (this.user.preferences().showSynopsisExcerpts) {
             items.add(
-                'summary-excerpts-mobile',
+                'synopsis-excerpts-mobile',
                 Switch.component(
                     {
                         state: this.user.preferences().showSynopsisExcerptsOnMobile,

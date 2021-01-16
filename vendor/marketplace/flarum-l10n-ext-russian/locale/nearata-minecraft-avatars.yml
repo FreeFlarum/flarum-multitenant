@@ -1,0 +1,10 @@
+nearata-minecraft-avatars:
+  forum:
+    avatar_changed: "Аватар изменён."
+    use_button: "Использовать аватар Minecraft"
+    change_button: "Изменить аватар Minecraft"
+    dismiss_button: "ОК"
+    help_text: "Имя пользователя Minecraft (без учёта регистра) или UUID (простой строкой или через тире)."
+    title: "Аватары Minecraft"
+    submit_button: "Сохранить"
+    username_uuid_not_valid: "Имя пользователя или UUID некорректны."
