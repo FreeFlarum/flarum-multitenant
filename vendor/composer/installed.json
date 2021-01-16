@@ -9085,17 +9085,17 @@
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.10",
-            "version_normalized": "0.1.10.0",
+            "version": "0.1.11",
+            "version_normalized": "0.1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "c667b10332d91ff18f5875866e8eca6253402272"
+                "reference": "9af44f73387edb5e651e6111b29fbcf098de7c49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/c667b10332d91ff18f5875866e8eca6253402272",
-                "reference": "c667b10332d91ff18f5875866e8eca6253402272",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/9af44f73387edb5e651e6111b29fbcf098de7c49",
+                "reference": "9af44f73387edb5e651e6111b29fbcf098de7c49",
                 "shasum": ""
             },
             "require": {
@@ -9105,7 +9105,7 @@
                 "flarum/flarum": "Flarum",
                 "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack."
             },
-            "time": "2021-01-16T11:44:52+00:00",
+            "time": "2021-01-16T15:59:32+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {

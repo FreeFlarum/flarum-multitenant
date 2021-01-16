@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '29fe7592139aa8516540556730708c225acc958c',
+    'reference' => '5ee0258826508e77e1102893efebaf048e3ecf03',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -463,7 +463,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '29fe7592139aa8516540556730708c225acc958c',
+      'reference' => '5ee0258826508e77e1102893efebaf048e3ecf03',
     ),
     'flarum/lang-english' => 
     array (
@@ -1388,12 +1388,12 @@ private static $installed = array (
     ),
     'marketplace/flarum-l10n-ext-russian' => 
     array (
-      'pretty_version' => '0.1.10',
-      'version' => '0.1.10.0',
+      'pretty_version' => '0.1.11',
+      'version' => '0.1.11.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c667b10332d91ff18f5875866e8eca6253402272',
+      'reference' => '9af44f73387edb5e651e6111b29fbcf098de7c49',
     ),
     'matteocontrini/flarum-imgur-upload' => 
     array (
