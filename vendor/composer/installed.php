@@ -6,19 +6,19 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5ee0258826508e77e1102893efebaf048e3ecf03',
+    'reference' => '12a7b6549e42ee6c7acf4f45782b2c8b35907450',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
   array (
     'antoinefr/flarum-ext-money' => 
     array (
-      'pretty_version' => 'v0.10.0',
-      'version' => '0.10.0.0',
+      'pretty_version' => 'v0.11.0',
+      'version' => '0.11.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2169cda32aee7a3641af06519859e565dee3651e',
+      'reference' => 'a76c30aef82ac4a4e9341b6aaab92b00fcd19705',
     ),
     'askvortsov/flarum-categories' => 
     array (
@@ -440,7 +440,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5ee0258826508e77e1102893efebaf048e3ecf03',
+      'reference' => '12a7b6549e42ee6c7acf4f45782b2c8b35907450',
     ),
     'flarum/lang-english' => 
     array (
@@ -1365,12 +1365,12 @@
     ),
     'marketplace/flarum-l10n-ext-russian' => 
     array (
-      'pretty_version' => '0.1.11',
-      'version' => '0.1.11.0',
+      'pretty_version' => '0.1.12',
+      'version' => '0.1.12.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9af44f73387edb5e651e6111b29fbcf098de7c49',
+      'reference' => 'a4773fd97651224af89e92f9aa048715e8017510',
     ),
     'matteocontrini/flarum-imgur-upload' => 
     array (

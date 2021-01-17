@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e8e9c6a750b1ef975d0a1aa9b482ddc",
+    "content-hash": "0d5460012d94be3bf7b9a9ff76bdb651",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
-            "version": "v0.10.0",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AntoineFr/flarum-ext-money.git",
-                "reference": "2169cda32aee7a3641af06519859e565dee3651e"
+                "reference": "a76c30aef82ac4a4e9341b6aaab92b00fcd19705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AntoineFr/flarum-ext-money/zipball/2169cda32aee7a3641af06519859e565dee3651e",
-                "reference": "2169cda32aee7a3641af06519859e565dee3651e",
+                "url": "https://api.github.com/repos/AntoineFr/flarum-ext-money/zipball/a76c30aef82ac4a4e9341b6aaab92b00fcd19705",
+                "reference": "a76c30aef82ac4a4e9341b6aaab92b00fcd19705",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.14"
+                "flarum/core": "^0.1.0-beta.15"
             },
             "type": "flarum-extension",
             "extra": {
@@ -40,12 +40,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "description": "Give money to your users for different actions.",
             "support": {
+                "forum": "https://discuss.flarum.org/d/4699-money-extension",
                 "issues": "https://github.com/AntoineFr/flarum-ext-money/issues",
                 "source": "https://github.com/AntoineFr/flarum-ext-money"
             },
-            "time": "2020-12-23T18:23:14+00:00"
+            "time": "2021-01-16T16:43:26+00:00"
         },
         {
             "name": "askvortsov/flarum-categories",
@@ -8906,16 +8910,16 @@
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.11",
+            "version": "0.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "9af44f73387edb5e651e6111b29fbcf098de7c49"
+                "reference": "a4773fd97651224af89e92f9aa048715e8017510"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/9af44f73387edb5e651e6111b29fbcf098de7c49",
-                "reference": "9af44f73387edb5e651e6111b29fbcf098de7c49",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/a4773fd97651224af89e92f9aa048715e8017510",
+                "reference": "a4773fd97651224af89e92f9aa048715e8017510",
                 "shasum": ""
             },
             "require": {
@@ -8994,7 +8998,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-01-16T15:59:32+00:00"
+            "time": "2021-01-16T16:18:27+00:00"
         },
         {
             "name": "matteocontrini/flarum-imgur-upload",

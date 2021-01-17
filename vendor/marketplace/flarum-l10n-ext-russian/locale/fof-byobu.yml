@@ -2,14 +2,14 @@ fof-byobu:
     forum:
         badges:
             is_private:
-                tooltip: "Переписка"
+                tooltip: "Переписки"
         buttons:
             add_recipients: "Участники"
             submit: "ОК"
             edit_recipients: "Изменить участников"
             send_pd: "Переписка"
             cancel: "Отмена"
-            remove_from_discussion: "Выйти из переписки"
+            remove_from_discussion: "Покинуть переписку"
         composer_private_discussion:
             submit_button: "Отправить"
             title_placeholder: "Название переписки..."
@@ -26,7 +26,7 @@ fof-byobu:
                 groups: "Доступные группы"
         modal:
             titles:
-                update_recipients: "Обновление участников в {title}"
+                update_recipients: "Изменение участников {title}"
                 add_recipients: "Добавить участников в свою переписку"
             help:
                 add_recipients: "Эта дискуссия будет видна только выбранным Вами участникам. Требуется как минимум 1 участник (кроме Вас)."
@@ -40,7 +40,7 @@ fof-byobu:
         user:
             settings:
                 block_pd: "Отключить переписки"
-                unified_index: "Combine private discussions inside unified index" # TODO
+                unified_index: "Показывать переписки в списке дискуссий"
             byobu_link: "Переписки"
             dropdown_label: "Переписки"
 
@@ -85,7 +85,7 @@ fof-byobu:
                 Посмотреть:
                 {discussion_url}
 
-                Возможно, Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
+                Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
             private_discussion_replied: |
                 Привет, {recipient_display_name}!
 
@@ -94,7 +94,7 @@ fof-byobu:
                 Посмотреть:
                 {post_url}
 
-                Возможно, Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
+                Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
             recipient_removed: |
                 Привет, {recipient_display_name}!
 
@@ -103,7 +103,7 @@ fof-byobu:
                 Посмотреть:
                 {discussion_url}
 
-                Возможно, Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
+                Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
             private_discussion_added: |
                 Привет, {recipient_display_name}!
 
@@ -112,4 +112,4 @@ fof-byobu:
                 Посмотреть:
                 {discussion_url}
 
-                Возможно, Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.
+                Вы должны будете войти под своей учётной записью для того, чтобы получить доступ к переписке.

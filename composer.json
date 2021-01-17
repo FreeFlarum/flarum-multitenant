@@ -99,7 +99,7 @@
         "fof/user-directory": "*",
         "fof/username-request": "*",
         "fof/webhooks": "*",
-        "ianm/synopsis": "*",
+        "ianm/synopsis": "^0.1.2",
         "illuminate/container": "*",
         "jslirola/flarum-ext-login2seeplus": "*",
         "kakifrucht/flarum-de": "*",
