@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0a1b984510397e06cf242ee7510ccd73fe5502c3',
+    'reference' => '6d8c2f13a0685e9c64c3f6a693c0fb8bf034932b',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -440,7 +440,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0a1b984510397e06cf242ee7510ccd73fe5502c3',
+      'reference' => '6d8c2f13a0685e9c64c3f6a693c0fb8bf034932b',
     ),
     'flarum/lang-english' => 
     array (
@@ -1277,12 +1277,12 @@
     ),
     'league/oauth1-client' => 
     array (
-      'pretty_version' => 'v1.8.2',
-      'version' => '1.8.2.0',
+      'pretty_version' => 'v1.9.0',
+      'version' => '1.9.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '159c3d2bf27568f9af87d6c3f4bb616a251eb12b',
+      'reference' => '1e7e6be2dc543bf466236fb171e5b20e1b06aee6',
     ),
     'league/oauth2-client' => 
     array (
@@ -1877,6 +1877,15 @@
       ),
       'reference' => '698a6a9f54d7eb321274de3ad19863802c879fb7',
     ),
+    'sycho/flarum-advanced-extension-categories' => 
+    array (
+      'pretty_version' => 'v0.1.0',
+      'version' => '0.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '262ddd0447e4534fb2f1f65129ce9ca300931604',
+    ),
     'sycho/flarum-profile-cover' => 
     array (
       'pretty_version' => 'v1.2.2',
@@ -2115,6 +2124,15 @@
       array (
       ),
       'reference' => 'bbce94f14d73732340740366fcbe63363663a403',
+    ),
+    'therealsujitk/flarum-ext-gifs' => 
+    array (
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6283d63d5b6678459d9883a2df9c583729f58509',
     ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (

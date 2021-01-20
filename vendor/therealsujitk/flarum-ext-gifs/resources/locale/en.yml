@@ -1,0 +1,13 @@
+therealsujitk:
+    forum:
+      gifs:
+        label: 'Insert GIF'
+        title: 'Select GIF'
+        searchbar: 'Search GIFs'
+        search: 'Search'
+        loading: 'Loading...'
+        noresults: 'No Results'
+        loadmore: 'Load More'
+    admin:
+      gifs:
+        giphyAPIkey: 'Giphy API Key'

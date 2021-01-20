@@ -8502,36 +8502,36 @@
         },
         {
             "name": "league/oauth1-client",
-            "version": "v1.8.2",
-            "version_normalized": "1.8.2.0",
+            "version": "v1.9.0",
+            "version_normalized": "1.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth1-client.git",
-                "reference": "159c3d2bf27568f9af87d6c3f4bb616a251eb12b"
+                "reference": "1e7e6be2dc543bf466236fb171e5b20e1b06aee6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/159c3d2bf27568f9af87d6c3f4bb616a251eb12b",
-                "reference": "159c3d2bf27568f9af87d6c3f4bb616a251eb12b",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/1e7e6be2dc543bf466236fb171e5b20e1b06aee6",
+                "reference": "1e7e6be2dc543bf466236fb171e5b20e1b06aee6",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-openssl": "*",
                 "guzzlehttp/guzzle": "^6.0|^7.0",
-                "php": ">=7.1"
+                "php": ">=7.1||>=8.0"
             },
             "require-dev": {
                 "ext-simplexml": "*",
-                "friendsofphp/php-cs-fixer": "^2.16.1",
-                "mockery/mockery": "^1.3",
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "mockery/mockery": "^1.3.3",
                 "phpstan/phpstan": "^0.12.42",
-                "phpunit/phpunit": "^7.5"
+                "phpunit/phpunit": "^7.5||9.5"
             },
             "suggest": {
                 "ext-simplexml": "For decoding XML-based responses."
             },
-            "time": "2020-09-28T09:39:08+00:00",
+            "time": "2021-01-20T01:40:53+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8574,7 +8574,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/oauth1-client/issues",
-                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.8.2"
+                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.9.0"
             },
             "install-path": "../league/oauth1-client"
         },
@@ -11794,6 +11794,68 @@
             "install-path": "../swiftmailer/swiftmailer"
         },
         {
+            "name": "sycho/flarum-advanced-extension-categories",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SychO9/flarum-advanced-extension-categories.git",
+                "reference": "262ddd0447e4534fb2f1f65129ce9ca300931604"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SychO9/flarum-advanced-extension-categories/zipball/262ddd0447e4534fb2f1f65129ce9ca300931604",
+                "reference": "262ddd0447e4534fb2f1f65129ce9ca300931604",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+            },
+            "time": "2021-01-04T21:52:28+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Advanced Extension Categories",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-wrench",
+                        "background": "#117187",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SychO\\Aec\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sami 'SychO' Mazouz",
+                    "email": "ilyasmazouz@gmail.com",
+                    "homepage": "https://sycho9.github.io"
+                }
+            ],
+            "description": "Advanced extension categorization options for admins.",
+            "homepage": "https://sycho9.github.io",
+            "support": {
+                "issues": "https://github.com/SychO9/flarum-advanced-extension-categories/issues",
+                "source": "https://github.com/SychO9/flarum-advanced-extension-categories"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/sycho",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../sycho/flarum-advanced-extension-categories"
+        },
+        {
             "name": "sycho/flarum-profile-cover",
             "version": "v1.2.2",
             "version_normalized": "1.2.2.0",
@@ -13703,6 +13765,69 @@
                 }
             ],
             "install-path": "../symfony/yaml"
+        },
+        {
+            "name": "therealsujitk/flarum-ext-gifs",
+            "version": "v2.0.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/therealsujitk/flarum-ext-gifs.git",
+                "reference": "6283d63d5b6678459d9883a2df9c583729f58509"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/therealsujitk/flarum-ext-gifs/zipball/6283d63d5b6678459d9883a2df9c583729f58509",
+                "reference": "6283d63d5b6678459d9883a2df9c583729f58509",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15"
+            },
+            "time": "2021-01-19T15:55:07+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "GIFs",
+                    "category": "discussion",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#ff9c59",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Therealsujitk\\GIFs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sujit Kumar",
+                    "email": "me@therealsuji.tk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integrate your forum with GIF search engines.",
+            "homepage": "https://therealsuji.tk",
+            "keywords": [
+                "flarum",
+                "gif",
+                "giphy"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/23101",
+                "issues": "https://github.com/therealsujitk/flarum-ext-gifs/issues",
+                "source": "https://github.com/therealsujitk/flarum-ext-gifs"
+            },
+            "install-path": "../therealsujitk/flarum-ext-gifs"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

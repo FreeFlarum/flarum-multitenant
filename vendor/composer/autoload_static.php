@@ -93,6 +93,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             'Tobscure\\JsonApi\\' => 17,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'Therealsujitk\\GIFs\\' => 19,
         ),
         'S' => 
         array (
@@ -120,6 +121,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'SychO\\ProfileCover\\' => 19,
+            'SychO\\Aec\\' => 10,
             'SoftCreatR\\MimeDetector\\' => 24,
             'SSNepenthe\\ColorUtils\\' => 22,
         ),
@@ -358,6 +360,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
         ),
+        'Therealsujitk\\GIFs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/therealsujitk/flarum-ext-gifs/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -453,6 +459,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'SychO\\ProfileCover\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/flarum-profile-cover/src',
+        ),
+        'SychO\\Aec\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sycho/flarum-advanced-extension-categories/src',
         ),
         'SoftCreatR\\MimeDetector\\' => 
         array (

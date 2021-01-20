@@ -1,0 +1,43 @@
+{
+    "name": "sycho/flarum-advanced-extension-categories",
+    "description": "Advanced extension categorization options for admins.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sami 'SychO' Mazouz",
+            "email": "ilyasmazouz@gmail.com",
+            "homepage": "https://sycho9.github.io"
+        }
+    ],
+    "type": "flarum-extension",
+    "support": {
+      "issues": "https://github.com/SychO9/flarum-advanced-extension-categories/issues",
+      "source": "https://github.com/SychO9/flarum-advanced-extension-categories"
+    },
+    "homepage": "https://sycho9.github.io",
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://www.buymeacoffee.com/sycho"
+        }
+    ],
+    "require": {
+        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "SychO\\Aec\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Advanced Extension Categories",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-wrench",
+                "background": "#117187",
+                "color": "#fff"
+            }
+        }
+    }
+}
