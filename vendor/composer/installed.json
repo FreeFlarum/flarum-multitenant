@@ -229,17 +229,17 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.19",
-            "version_normalized": "3.171.19.0",
+            "version": "3.171.20",
+            "version_normalized": "3.171.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e786e4a8b2ec85b258833d0570ff6b61348cbdb6"
+                "reference": "02aaf7007c5678a6358ea924cd85531300aa1747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e786e4a8b2ec85b258833d0570ff6b61348cbdb6",
-                "reference": "e786e4a8b2ec85b258833d0570ff6b61348cbdb6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/02aaf7007c5678a6358ea924cd85531300aa1747",
+                "reference": "02aaf7007c5678a6358ea924cd85531300aa1747",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2021-01-15T19:26:11+00:00",
+            "time": "2021-01-19T19:13:08+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -316,7 +316,7 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.19"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.20"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -4434,17 +4434,17 @@
         },
         {
             "name": "fof/links",
-            "version": "0.5.0",
-            "version_normalized": "0.5.0.0",
+            "version": "0.5.2",
+            "version_normalized": "0.5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/links.git",
-                "reference": "7f4ed4b56bb14abe32910920fa846fa35a322898"
+                "reference": "72b5c9617b25a092b1b5798126bdd8e56d72b8e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/7f4ed4b56bb14abe32910920fa846fa35a322898",
-                "reference": "7f4ed4b56bb14abe32910920fa846fa35a322898",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/72b5c9617b25a092b1b5798126bdd8e56d72b8e1",
+                "reference": "72b5c9617b25a092b1b5798126bdd8e56d72b8e1",
                 "shasum": ""
             },
             "require": {
@@ -4453,7 +4453,7 @@
             "replace": {
                 "sijad/flarum-ext-links": "*"
             },
-            "time": "2020-12-16T10:16:11+00:00",
+            "time": "2021-01-18T00:27:05+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -5445,17 +5445,17 @@
         },
         {
             "name": "fof/socialprofile",
-            "version": "0.2.0",
-            "version_normalized": "0.2.0.0",
+            "version": "0.2.2",
+            "version_normalized": "0.2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/socialprofile.git",
-                "reference": "cb33d9b0ac055428d2cc29975525302450469ca9"
+                "reference": "bd0763eeb1051454e7b2222981b7db6dd2c42c43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/cb33d9b0ac055428d2cc29975525302450469ca9",
-                "reference": "cb33d9b0ac055428d2cc29975525302450469ca9",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/bd0763eeb1051454e7b2222981b7db6dd2c42c43",
+                "reference": "bd0763eeb1051454e7b2222981b7db6dd2c42c43",
                 "shasum": ""
             },
             "require": {
@@ -5464,7 +5464,7 @@
             "replace": {
                 "davis/flarum-ext-socialprofile": "*"
             },
-            "time": "2020-12-16T10:39:32+00:00",
+            "time": "2021-01-17T21:30:37+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -5981,23 +5981,23 @@
         },
         {
             "name": "fof/user-bio",
-            "version": "0.4.1",
-            "version_normalized": "0.4.1.0",
+            "version": "0.4.2",
+            "version_normalized": "0.4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/user-bio.git",
-                "reference": "ef78ffe75e5907f65301f7edcdf25311b8f0bc99"
+                "reference": "72f49b3561bbf44f7c3af5616fbdebed998ecbc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/user-bio/zipball/ef78ffe75e5907f65301f7edcdf25311b8f0bc99",
-                "reference": "ef78ffe75e5907f65301f7edcdf25311b8f0bc99",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/user-bio/zipball/72f49b3561bbf44f7c3af5616fbdebed998ecbc7",
+                "reference": "72f49b3561bbf44f7c3af5616fbdebed998ecbc7",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2020-12-22T21:30:15+00:00",
+            "time": "2021-01-17T15:39:41+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -6134,23 +6134,23 @@
         },
         {
             "name": "fof/username-request",
-            "version": "0.4.0",
-            "version_normalized": "0.4.0.0",
+            "version": "0.4.1",
+            "version_normalized": "0.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/username-request.git",
-                "reference": "8fe2a05aa509c215a97d64b275152e2bfd971180"
+                "reference": "802db23021909830a27495aa6e71b6de15b97fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/username-request/zipball/8fe2a05aa509c215a97d64b275152e2bfd971180",
-                "reference": "8fe2a05aa509c215a97d64b275152e2bfd971180",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/username-request/zipball/802db23021909830a27495aa6e71b6de15b97fa8",
+                "reference": "802db23021909830a27495aa6e71b6de15b97fa8",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2020-12-16T10:09:05+00:00",
+            "time": "2021-01-18T01:12:04+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -6620,8 +6620,8 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -6672,8 +6672,8 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -6730,8 +6730,8 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -6781,8 +6781,8 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -6842,8 +6842,8 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -6893,8 +6893,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -6944,8 +6944,8 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
@@ -7012,8 +7012,8 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -7064,8 +7064,8 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -7124,8 +7124,8 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -7175,8 +7175,8 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
@@ -7237,8 +7237,8 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -7289,8 +7289,8 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -7356,8 +7356,8 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -7414,8 +7414,8 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -7482,8 +7482,8 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -7535,8 +7535,8 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
@@ -7594,8 +7594,8 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v6.20.12",
-            "version_normalized": "6.20.12.0",
+            "version": "v6.20.13",
+            "version_normalized": "6.20.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -8443,17 +8443,17 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.5.1",
-            "version_normalized": "1.5.1.0",
+            "version": "1.7.0",
+            "version_normalized": "1.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa"
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/353f66d7555d8a90781f6f5e7091932f9a4250aa",
-                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
                 "shasum": ""
             },
             "require": {
@@ -8461,10 +8461,11 @@
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.36",
-                "phpunit/phpunit": "^8.5.8"
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12.68",
+                "phpunit/phpunit": "^8.5.8 || ^9.3"
             },
-            "time": "2020-10-18T11:50:25+00:00",
+            "time": "2021-01-18T20:58:21+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -8483,6 +8484,20 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
+            "support": {
+                "issues": "https://github.com/thephpleague/mime-type-detection/issues",
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../league/mime-type-detection"
         },
         {
@@ -9089,17 +9104,17 @@
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.12",
-            "version_normalized": "0.1.12.0",
+            "version": "0.1.14",
+            "version_normalized": "0.1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "a4773fd97651224af89e92f9aa048715e8017510"
+                "reference": "36f3f0211799e8fcbd271c21fd5006c833ad298c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/a4773fd97651224af89e92f9aa048715e8017510",
-                "reference": "a4773fd97651224af89e92f9aa048715e8017510",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/36f3f0211799e8fcbd271c21fd5006c833ad298c",
+                "reference": "36f3f0211799e8fcbd271c21fd5006c833ad298c",
                 "shasum": ""
             },
             "require": {
@@ -9109,7 +9124,7 @@
                 "flarum/flarum": "Flarum",
                 "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack."
             },
-            "time": "2021-01-16T16:18:27+00:00",
+            "time": "2021-01-17T22:05:52+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -11328,23 +11343,23 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.4.2",
-            "version_normalized": "0.4.2.0",
+            "version": "v0.4.3",
+            "version_normalized": "0.4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "509ca705619bd619f13fab8cfe76c6747aa65079"
+                "reference": "2ca0aee499d8dff848d2b66a0a7d0ed0b9a79fe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/509ca705619bd619f13fab8cfe76c6747aa65079",
-                "reference": "509ca705619bd619f13fab8cfe76c6747aa65079",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/2ca0aee499d8dff848d2b66a0a7d0ed0b9a79fe8",
+                "reference": "2ca0aee499d8dff848d2b66a0a7d0ed0b9a79fe8",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.14"
             },
-            "time": "2021-01-03T20:10:43+00:00",
+            "time": "2021-01-19T20:26:13+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -14019,6 +14034,68 @@
                 }
             ],
             "install-path": "../tolgaaaltas/flarum-lang-turkish"
+        },
+        {
+            "name": "v17development/flarum-blog",
+            "version": "v0.2.1",
+            "version_normalized": "0.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/v17development/flarum-blog.git",
+                "reference": "2748c42f494e77985e1e17540a312be109f3403f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/v17development/flarum-blog/zipball/2748c42f494e77985e1e17540a312be109f3403f",
+                "reference": "2748c42f494e77985e1e17540a312be109f3403f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^0.1.0-beta.15"
+            },
+            "suggest": {
+                "flarum/tags": "The Flarum Tags extension",
+                "v17development/flarum-seo": "Adds Flarum SEO and Social media tags"
+            },
+            "time": "2021-01-18T21:20:29+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Blog",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-blog",
+                        "backgroundColor": "#2dc0e6",
+                        "color": "#ffffff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "V17Development\\FlarumBlog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "V17 Development",
+                    "email": "info@v17.dev"
+                }
+            ],
+            "description": "Adds a blog section to your forum",
+            "homepage": "https://v17.dev/projects/flarum-blog",
+            "support": {
+                "docs": "https://community.v17.dev/knowledgebase/category/flarum-blog",
+                "forum": "https://discuss.flarum.org/d/25392",
+                "issues": "https://github.com/v17development/flarum-blog/issues",
+                "source": "https://github.com/v17development/flarum-blog"
+            },
+            "install-path": "../v17development/flarum-blog"
         },
         {
             "name": "v17development/flarum-seo",

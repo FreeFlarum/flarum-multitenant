@@ -131,6 +131,7 @@
         "tiu-ram0n/brazilian-portuguese": "^1.1",
         "tolgaaaltas/flarum-ext-turkish": "*",
         "tolgaaaltas/flarum-lang-turkish": "*",
+        "v17development/flarum-blog": "^0.2.0",
         "v17development/flarum-seo": "*"
     },
     "config": {

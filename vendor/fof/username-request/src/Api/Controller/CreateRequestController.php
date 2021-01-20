@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/username-request.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -12,7 +12,7 @@
 namespace FoF\UserRequest\Api\Controller;
 
 use Flarum\Api\Controller\AbstractCreateController;
-use Flarum\User\Exception\PermissionDeniedException;
+use Flarum\User\Exception\NotAuthenticatedException;
 use FoF\UserRequest\Api\Serializer\RequestSerializer;
 use FoF\UserRequest\Command\CreateRequest;
 use Illuminate\Contracts\Bus\Dispatcher;
@@ -56,7 +56,7 @@ class CreateRequestController extends AbstractCreateController
         $actor = $request->getAttribute('actor');
 
         if (!$actor->checkPassword(Arr::get($request->getParsedBody(), 'meta.password'))) {
-            throw new PermissionDeniedException();
+            throw new NotAuthenticatedException();
         }
 
         return $this->bus->dispatch(

@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/links.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -73,6 +73,10 @@ class EditLinkHandler
 
         if (isset($attributes['isNewtab'])) {
             $link->is_newtab = $attributes['isNewtab'];
+        }
+
+        if (isset($attributes['visibility'])) {
+            $link->visibility = $attributes['visibility'];
         }
 
         $this->validator->assertValid($link->getDirty());

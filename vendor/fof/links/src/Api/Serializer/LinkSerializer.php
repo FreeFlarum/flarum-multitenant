@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/links.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -26,14 +26,15 @@ class LinkSerializer extends AbstractSerializer
     protected function getDefaultAttributes($link)
     {
         return [
-            'id'         => $link->id,
-            'title'      => $link->title,
-            'icon'       => $link->icon,
-            'url'        => $link->url,
-            'position'   => $link->position,
-            'isInternal' => $link->is_internal,
-            'isNewtab'   => $link->is_newtab,
-            'isChild'    => (bool) $link->parent_id,
+            'id'                  => $link->id,
+            'title'               => $link->title,
+            'icon'                => $link->icon,
+            'url'                 => $link->url,
+            'position'            => $link->position,
+            'isInternal'          => $link->is_internal,
+            'isNewtab'            => $link->is_newtab,
+            'isChild'             => (bool) $link->parent_id,
+            'visibility'          => $link->visibility,
         ];
     }
 

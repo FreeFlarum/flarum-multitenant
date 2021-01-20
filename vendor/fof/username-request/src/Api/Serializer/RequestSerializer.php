@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/username-request.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -31,6 +31,7 @@ class RequestSerializer extends AbstractSerializer
             'status'             => $username_request->status,
             'reason'             => $username_request->reason,
             'createdAt'          => $this->formatDate($username_request->created_at),
+            'forNickname'        => $username_request->for_nickname,
         ];
     }
 

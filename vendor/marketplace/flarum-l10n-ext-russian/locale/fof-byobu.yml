@@ -2,7 +2,7 @@ fof-byobu:
     forum:
         badges:
             is_private:
-                tooltip: "Переписки"
+                tooltip: "Переписка"
         buttons:
             add_recipients: "Участники"
             submit: "ОК"

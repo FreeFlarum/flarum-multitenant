@@ -22,7 +22,8 @@ import RequestsListState from './states/RequestsListState';
 
 app.initializers.add('fof-username-request', () => {
     app.store.models['username-requests'] = UsernameRequest;
-    User.prototype.username_requests = Model.hasOne('username_requests');
+    User.prototype.lastNicknameRequest = Model.hasOne('lastNicknameRequest');
+    User.prototype.lastUsernameRequest = Model.hasOne('lastUsernameRequest');
     User.prototype.usernameHistory = Model.attribute('usernameHistory');
 
     app.routes.username_requests = { path: '/username-requests', component: RequestsPage };

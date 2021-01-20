@@ -2,6 +2,29 @@ CHANGELOG
 =========
 
 
+0.4.3 (2021-01-19)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-bookmarks`](https://github.com/clarkwinkelmann/flarum-ext-bookmarks)
+* [`clarkwinkelmann/flarum-ext-first-post-approval`](https://github.com/clarkwinkelmann/flarum-ext-first-post-approval)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-saml`](https://github.com/askvortsov1/flarum-saml)
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`fof/links`](https://github.com/FriendsOfFlarum/links)
+* [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio)
+* [`itnt/flarum-uitab`](https://github.com/Littlegolden/flarum-uitab)
+* [`kyrne/shout`](https://github.com/KyrneDev/Shout-public)
+* [`xelson/flarum-ext-chat`](https://github.com/Xelson/flarum-ext-chat)
+
+
+Wszystkie zmiany: [v0.4.2...v0.4.3](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.2...v0.4.3).
+
+
 0.4.2 (2021-01-03)
 ------------------
 

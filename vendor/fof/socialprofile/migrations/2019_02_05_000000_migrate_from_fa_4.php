@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/socialprofile.
  *
- * Copyright (c) 2018 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -27,11 +27,10 @@ return [
             $schema->getConnection()->table('users')
                 ->where('id', $user->id)
                 ->update([
-                    'social_buttons' => preg_replace('/"(?<!fab )(fa-\S+?)"/m', '"fab \\1"', $user->social_buttons)
+                    'social_buttons' => preg_replace('/"(?<!fab )(fa-\S+?)"/m', '"fab \\1"', $user->social_buttons),
                 ]);
         }
     },
     'down' => function (Builder $schema) {
-
     },
 ];

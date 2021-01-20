@@ -8,5 +8,7 @@ fof-user-bio:
       editAny: 'Edycja opisu cudzego profilu'
       editOwn: 'Edycja opisu własnego profilu'
       view: 'Przeglądanie opisu w profilu'
+    setting:
+      bioLimit: 'Limit długości opisu w profilu'
   forum:
     userbioPlaceholder: 'Napisz coś o sobie'

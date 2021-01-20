@@ -1,0 +1,44 @@
+import BlogItem from "./pages/BlogItem";
+import Model from "flarum/Model";
+import Discussion from "flarum/models/Discussion";
+import BlogOverview from "./pages/BlogOverview";
+import redirector from "./utils/redirector";
+import BlogMeta from "../common/Models/BlogMeta";
+import extendTagOverview from "./utils/extendTagOverview";
+import discussionRouting from "./utils/discussionRouting";
+import BlogComposer from "./pages/BlogComposer";
+import compat from "./compat";
+import addSidebarNav from "./utils/addSidebarNav";
+
+// Register Flarum Blog
+app.initializers.add("v17development-flarum-blog", (app) => {
+  app.routes.blog = { path: "/blog", component: BlogOverview };
+
+  app.routes.blogCategory = {
+    path: "/blog/category/:slug",
+    component: BlogOverview,
+  };
+
+  app.routes.blogComposer = { path: "/blog/compose", component: BlogComposer };
+
+  app.routes.blogArticle = { path: "/blog/:id", component: BlogItem };
+
+  app.store.models.blogMeta = BlogMeta;
+
+  Discussion.prototype.blogMeta = Model.hasOne("blogMeta");
+
+  // Redirect discussions/tags to their blog post/overview
+  redirector();
+
+  // Extend tag overview.
+  // Hide tags which are used as blog category
+  extendTagOverview();
+
+  // Make that blog articles have a blog route and not a discussion route
+  discussionRouting();
+
+  // Add a link to the blog to the IndexPage sidebar, if enabled.
+  addSidebarNav();
+});
+
+compat();

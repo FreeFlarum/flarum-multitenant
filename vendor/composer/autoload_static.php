@@ -87,6 +87,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'V' => 
         array (
             'V17Development\\FlarumSeo\\' => 25,
+            'V17Development\\FlarumBlog\\' => 26,
         ),
         'T' => 
         array (
@@ -344,6 +345,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'V17Development\\FlarumSeo\\' => 
         array (
             0 => __DIR__ . '/..' . '/v17development/flarum-seo/src',
+        ),
+        'V17Development\\FlarumBlog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/v17development/flarum-blog/src',
         ),
         'Tobscure\\JsonApi\\' => 
         array (

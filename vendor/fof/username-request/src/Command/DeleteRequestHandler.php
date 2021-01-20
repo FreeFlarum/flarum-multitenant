@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/username-request.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -26,7 +26,7 @@ class DeleteRequestHandler
 
         $actor->assertCan('user.requestUsername');
 
-        $usernameRequest = $actor->username_requests();
+        $usernameRequest = $actor->nameChangeRequests()->where('id', $command->requestId)->first();
 
         $usernameRequest->delete();
 

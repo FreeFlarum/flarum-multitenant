@@ -13,6 +13,7 @@ fof-links:
       delete_link_confirmation: "Вы уверены, что хотите удалить ссылку?"
       internal_link: "Это внутренняя ссылка?"
       open_newtab: "Открывать в новом окне"
+      registered_only: "Отображать только зарегистрированным пользователям"
       submit_button: => core.ref.save_changes
       title: => fof-links.ref.create_link
       title_label: => fof-links.ref.title

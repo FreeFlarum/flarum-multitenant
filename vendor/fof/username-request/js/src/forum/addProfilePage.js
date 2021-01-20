@@ -24,7 +24,7 @@ export default function () {
                         href: app.route('username_history', { username: this.user.username() }),
                         icon: 'fas fa-user-edit',
                     },
-                    app.translator.trans('fof-username-request.forum.profile_link')
+                    app.translator.trans('fof-username-request.forum.user.name_history_link')
                 )
             );
         }

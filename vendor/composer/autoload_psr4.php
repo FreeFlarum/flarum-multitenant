@@ -17,6 +17,7 @@ return array(
     'Wohali\\OAuth2\\Client\\' => array($vendorDir . '/wohali/oauth2-discord-new/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'V17Development\\FlarumSeo\\' => array($vendorDir . '/v17development/flarum-seo/src'),
+    'V17Development\\FlarumBlog\\' => array($vendorDir . '/v17development/flarum-blog/src'),
     'Tobscure\\JsonApi\\' => array($vendorDir . '/tobscure/json-api/src'),
     'TijsVerkoyen\\CssToInlineStyles\\' => array($vendorDir . '/tijsverkoyen/css-to-inline-styles/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),

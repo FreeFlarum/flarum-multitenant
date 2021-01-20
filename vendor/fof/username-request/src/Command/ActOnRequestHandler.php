@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/username-request.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) 2019 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -63,16 +63,19 @@ class ActOnRequestHandler
         $usernameRequest->status = $data['attributes']['action'];
 
         if ($usernameRequest->status === 'Approved') {
-            $this->validator->assertValid(['username' => $usernameRequest->requested_username]);
+            $attr = $usernameRequest->for_nickname ? 'nickname' : 'username';
+            $this->validator->assertValid([$attr => $usernameRequest->requested_username]);
 
-            $usernameHistory = json_decode($user->username_history, true);
+            if ($attr === 'username') {
+                $usernameHistory = json_decode($user->username_history, true);
 
-            $usernameHistory === null ? $usernameHistory = [] : $usernameHistory;
+                $usernameHistory === null ? $usernameHistory = [] : $usernameHistory;
 
-            array_push($usernameHistory, [$user->username => time()]);
-            $user->username_history = json_encode($usernameHistory);
+                array_push($usernameHistory, [$user->username => time()]);
+                $user->username_history = json_encode($usernameHistory);
+            }
 
-            $user->username = $usernameRequest->requested_username;
+            $user->$attr = $usernameRequest->requested_username;
             $user->save();
         } else {
             $usernameRequest->reason = $data['attributes']['reason'];

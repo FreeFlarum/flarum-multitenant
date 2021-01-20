@@ -24,10 +24,12 @@ export default class ActionModal extends Modal {
         this.approved = Stream('Rejected');
 
         this.reason = Stream('');
+
+        this.translationPrefix = `fof-username-request.forum.${this.request.forNickname() ? 'nickname' : 'username'}_modals.action`;
     }
 
     title() {
-        return app.translator.trans('fof-username-request.forum.action.title');
+        return app.translator.trans(`${this.translationPrefix}.title`);
     }
 
     className() {
@@ -39,13 +41,13 @@ export default class ActionModal extends Modal {
             <div className="Modal-body">
                 <div className="Form">
                     <h3 className="Notification-content">
-                        {app.translator.trans('fof-username-request.forum.action.name', {
-                            username: username(this.request.user()),
-                            newUsername: this.request.requestedUsername(),
+                        {app.translator.trans(`${this.translationPrefix}.name`, {
+                            name: username(this.request.user()),
+                            requestedName: this.request.requestedUsername(),
                         })}
                     </h3>
-                    <p className="help">{app.translator.trans('fof-username-request.forum.action.help_text')}</p>
-                    <legend>{app.translator.trans('fof-username-request.forum.action.decision_title')}</legend>
+                    <p className="help">{app.translator.trans(`${this.translationPrefix}.help_text`)}</p>
+                    <legend>{app.translator.trans(`${this.translationPrefix}.decision_title`)}</legend>
                     <div className="Form-group">
                         <label className="checkbox">
                             <input
@@ -55,7 +57,7 @@ export default class ActionModal extends Modal {
                                 checked={this.approved() === 'Approved'}
                                 onclick={withAttr('value', this.approved)}
                             />
-                            {app.translator.trans('fof-username-request.forum.action.approval_label')}
+                            {app.translator.trans(`${this.translationPrefix}.approval_label`)}
                         </label>
                         <label className="checkbox">
                             <input
@@ -65,12 +67,12 @@ export default class ActionModal extends Modal {
                                 checked={this.approved() === 'Rejected'}
                                 onclick={withAttr('value', this.approved)}
                             />
-                            {app.translator.trans('fof-username-request.forum.action.rejected_label')}
+                            {app.translator.trans(`${this.translationPrefix}.rejected_label`)}
                         </label>
                     </div>
                     {this.approved() === 'Rejected' ? (
                         <div className="Form-group">
-                            <legend>{app.translator.trans('fof-username-request.forum.action.reason_title')}</legend>
+                            <legend>{app.translator.trans(`${this.translationPrefix}.reason_title`)}</legend>
                             <div className="BasicsPage-reason-input">
                                 <textarea
                                     className="FormControl"
@@ -91,7 +93,7 @@ export default class ActionModal extends Modal {
                                 loading: this.loading,
                                 disabled: this.approved() === 'Rejected' && !this.reason() ? true : false,
                             },
-                            app.translator.trans('fof-username-request.forum.action.submit_button')
+                            app.translator.trans(`${this.translationPrefix}.submit_button`)
                         )}
                     </div>
                 </div>
@@ -110,7 +112,7 @@ export default class ActionModal extends Modal {
                 action: this.approved(),
             })
             .then(() => {
-                this.successAlert = app.alerts.show({ type: 'success' }, app.translator.trans('fof-username-request.forum.action.success'));
+                this.successAlert = app.alerts.show({ type: 'success' }, app.translator.trans(`${this.translationPrefix}.success`));
             });
 
         app.cache.username_requests.some((request, i) => {

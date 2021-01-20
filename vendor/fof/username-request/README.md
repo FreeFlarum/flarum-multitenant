@@ -4,6 +4,10 @@
 
 A [Flarum](http://flarum.org) extension. Allows users to request new usernames which can be approved by moderators or admins.
 
+### Usage
+
+In order for permissions to be honored correctly when using `flarum/nicknames`, be sure to set `Edit Own Nickname` to `admin` in that extension, and use the permissions provided by this extension instead.
+
 ### Installation
 
 Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:

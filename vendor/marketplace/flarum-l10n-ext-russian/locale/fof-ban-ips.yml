@@ -64,11 +64,11 @@ fof-ban-ips:
       unban_button: => fof-ban-ips.ref.unban_label
 
   ref:
-    ban_label: "Блокировать"
+    ban_label: "Блокировать IP"
     ban_ip_addresses: "Блокировать все IP"
     ban_ip_button: "Блокировать IP"
 
-    unban_label: "Разблокировать"
+    unban_label: "Разблокировать IP"
     unban_ip_addresses: "Разблокировать все IP"
     unban_ip_button: "Разблокировать IP"
 

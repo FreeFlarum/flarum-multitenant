@@ -37,13 +37,15 @@ fof-oauth:
           api_key_label: "Ключ API"
           api_secret_label: "Секретный ключ API"
 
-        linkedin:     # ext: luuhai48/oauth-linkedin
-          description: "Создайте приложение по ссылке https://linkedin.com/developers/apps/new."
+        google:
+          description: "Создайте приложение по ссылке {link}."
+
           client_id_label: => fof-oauth.ref.settings.client_id
           client_secret_label: => fof-oauth.ref.settings.client_secret
 
-        google:       # ext: luuhai48/oauth-google
-          description: "Создайте приложение по ссылке https://console.developers.google.com."
+        linkedin: # ext: luuhai48/oauth-linkedin
+          description: "Создайте приложение по ссылке https://linkedin.com/developers/apps/new."
+
           client_id_label: => fof-oauth.ref.settings.client_id
           client_secret_label: => fof-oauth.ref.settings.client_secret
 
@@ -62,8 +64,8 @@ fof-oauth:
       github: "GitHub"
       gitlab: "GitLab"
       twitter: "Twitter"
-      google: "Google" # ext: luuhai48/oauth-google
-      linkedin: "LinkedIn"  # ext: luuhai48/oauth-linkedin
+      google: "Google"
+      linkedin: "LinkedIn" # ext: luuhai48/oauth-linkedin
 
   ref:
     settings:

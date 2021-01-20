@@ -15,7 +15,7 @@ import RequestsList from './RequestsList';
 
 export default class RequestsDropdown extends NotificationsDropdown {
     static initAttrs(attrs) {
-        attrs.label = attrs.label || app.translator.trans('fof-username-request.forum.dropdown.tooltip');
+        attrs.label = attrs.label || app.translator.trans('fof-username-request.forum.pending_requests.tooltip');
         attrs.icon = attrs.icon || 'fas fa-user-edit';
 
         super.initAttrs(attrs);

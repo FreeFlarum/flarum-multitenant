@@ -10,6 +10,8 @@ askvortsov-saml:
       nameid_format: 'NameID Format'
       only_option: 'Użyj SAML2 SSO jako jedynej opcji logowania?'
       sync_attributes: 'Synchronizuj atrybuty (awatar, grupy, opis w profilu oraz pola profilu)? Wymaga rozszerzenia <code>askvortsov/auth-sync</code>.'
+      want_assertions_signed: 'Czy asercje powinny być podpisane?'
+      want_messages_signed: 'Czy wiadomości powinny być podpisane?'
     options:
       nameid_format:
         emailAddress: 'Email (domyślny - użyj, jeśli "persistent" nie jest wspierany)'

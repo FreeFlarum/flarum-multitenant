@@ -13,17 +13,23 @@ import Stream from 'flarum/utils/Stream';
 import Modal from 'flarum/components/Modal';
 import Button from 'flarum/components/Button';
 
-export default class FlagPostModal extends Modal {
+export default class RequestModal extends Modal {
     oninit(vnode) {
         super.oninit(vnode);
 
-        this.username = Stream(app.session.user.username());
+        this.username = Stream(this.attrs.nickname ? app.session.user.displayName() : app.session.user.username());
 
-        if (app.session.user.username_requests()) this.username(app.session.user.username_requests().requestedUsername());
+        this.userRequestAttr = `last${this.attrs.nickname ? 'Nickname' : 'Username'}Request`;
+
+        this.lastRequest = app.session.user[this.userRequestAttr]();
+
+        if (this.lastRequest) this.username(this.lastRequest.requestedUsername());
 
         this.success = false;
 
         this.password = Stream('');
+
+        this.translationPrefix = `fof-username-request.forum.${this.attrs.nickname ? 'nickname' : 'username'}_modals.request`;
     }
 
     className() {
@@ -31,7 +37,7 @@ export default class FlagPostModal extends Modal {
     }
 
     title() {
-        return app.translator.trans('fof-username-request.forum.request.title');
+        return app.translator.trans(`${this.translationPrefix}.title`);
     }
 
     content() {
@@ -39,10 +45,10 @@ export default class FlagPostModal extends Modal {
             return (
                 <div className="Modal-body">
                     <div className="Form Form--centered">
-                        <p className="helpText">{app.translator.trans('fof-username-request.forum.request.confirmation_message')}</p>
+                        <p className="helpText">{app.translator.trans(`${this.translationPrefix}.confirmation_message`)}</p>
                         <div className="Form-group">
                             <Button className="Button Button--primary Button--block" onclick={this.hide.bind(this)}>
-                                {app.translator.trans('fof-username-request.forum.request.dismiss_button')}
+                                {app.translator.trans(`${this.translationPrefix}.dismiss_button`)}
                             </Button>
                         </div>
                     </div>
@@ -53,10 +59,10 @@ export default class FlagPostModal extends Modal {
         return (
             <div className="Modal-body">
                 <div className="Form Form--centered">
-                    {app.session.user.username_requests() ? (
+                    {this.lastRequest ? (
                         <p className="helpText">
-                            {app.translator.trans('fof-username-request.forum.request.current_request', {
-                                username: app.session.user.username_requests().requestedUsername(),
+                            {app.translator.trans(`${this.translationPrefix}.current_request`, {
+                                name: this.lastRequest.requestedUsername(),
                             })}
                         </p>
                     ) : (
@@ -69,7 +75,7 @@ export default class FlagPostModal extends Modal {
                             className="FormControl"
                             placeholder={app.session.user.username()}
                             bidi={this.username}
-                            disabled={this.loading}
+                            disabled={this.deleteLoading || this.submitLoading}
                         />
                     </div>
                     <div className="Form-group">
@@ -79,7 +85,7 @@ export default class FlagPostModal extends Modal {
                             className="FormControl"
                             placeholder={app.translator.trans('core.forum.change_email.confirm_password_placeholder')}
                             bidi={this.password}
-                            disabled={this.loading}
+                            disabled={this.deleteLoading || this.submitLoading}
                         />
                     </div>
                     <div className="Form-group">
@@ -87,20 +93,20 @@ export default class FlagPostModal extends Modal {
                             {
                                 className: 'Button Button--primary Button--block',
                                 type: 'submit',
-                                loading: this.loading,
+                                loading: this.submitLoading,
                             },
-                            app.translator.trans('fof-username-request.forum.request.submit_button')
+                            app.translator.trans(`${this.translationPrefix}.submit_button`)
                         )}
                     </div>
-                    {app.session.user.username_requests() ? (
+                    {this.lastRequest ? (
                         <div className="Form-group">
                             {Button.component(
                                 {
                                     className: 'Button Button--primary Button--block',
                                     onclick: this.deleteRequest.bind(this),
-                                    loading: this.loading,
+                                    loading: this.deleteLoading,
                                 },
-                                app.translator.trans('fof-username-request.forum.request.delete_button')
+                                app.translator.trans(`${this.translationPrefix}.delete_button`)
                             )}
                         </div>
                     ) : (
@@ -114,13 +120,13 @@ export default class FlagPostModal extends Modal {
     deleteRequest(e) {
         e.preventDefault();
 
-        this.loading = true;
+        this.deleteLoading = true;
 
-        app.session.user.username_requests().delete();
+        this.lastRequest.delete();
 
-        this.successAlert = app.alerts.show({ type: 'success' }, app.translator.trans('fof-username-request.forum.request.deleted'));
+        this.successAlert = app.alerts.show({ type: 'success' }, app.translator.trans(`${this.translationPrefix}.deleted`));
 
-        app.session.user.username_requests = Stream();
+        app.session.user[this.userRequestAttr] = Stream();
 
         this.hide();
     }
@@ -130,25 +136,31 @@ export default class FlagPostModal extends Modal {
 
         this.alert = null;
 
-        if (this.username() === app.session.user.username()) {
+        const currentAttr = this.attrs.nickname ? app.session.user.displayName() : app.session.user.username();
+        if (this.username() === currentAttr) {
             this.hide();
             return;
         }
 
-        this.loading = true;
+        this.submitLoading = true;
 
         app.store
             .createRecord('username-requests')
             .save(
-                { username: this.username() },
+                {
+                    username: this.username(),
+                    forNickname: this.attrs.nickname,
+                },
                 {
                     meta: { password: this.password() },
                     errorHandler: this.onerror.bind(this),
                 }
             )
             .then((request) => {
-                app.session.user.username_requests = Stream(request);
+
+                app.session.user[this.userRequestAttr] = Stream(request);
                 this.success = true;
+                this.alertAttrs = null;
             })
             .catch(() => {})
             .then(this.loaded.bind(this));
@@ -156,7 +168,7 @@ export default class FlagPostModal extends Modal {
 
     onerror(error) {
         if (error.status === 401) {
-            error.alert.attrs.content = app.translator.trans('core.forum.change_email.incorrect_password_message');
+            error.alert.content = app.translator.trans('core.forum.change_email.incorrect_password_message');
         }
 
         super.onerror(error);

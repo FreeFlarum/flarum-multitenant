@@ -1,0 +1,61 @@
+v17development-flarum-blog:
+  forum:
+    blog: "Блог"
+    read_more: "Читать далее..."
+    hidden: "Скрыто"
+    recent_posts: "Последние публикации"
+    categories: "Категории"
+    return_to_overview: "Вернуться к блогу"
+    no_more_posts: "Больше нет публикаций."
+    category_empty: "В этой категории нет публикаций."
+
+    compose:
+      write_article: "Написать статью"
+
+    validation:
+      missing_id: "Отсутствует ID"
+
+    article:
+      title: "Заголовок"
+      slug: "Путь"
+      summary: "Описание"
+
+    comment_section:
+      comments: "Комментарии"
+      locked: "Комментарии отключены"
+
+    review_article:
+      pending_review_title: "Ожидание подтверждения"
+      pending_review: "Статья не опубликована и ожидает подтверждения"
+      approve_article: "Подтвердить"
+      approve_article_approved: "Статья подтверждена и опубликована"
+
+    tools:
+      rename_article: "Переименовать"
+      edit_article: "Редактировать"
+      update_category: "Обновить категории"
+      article_settings: "Настройки"
+      approve_article: "Подтвердить"
+      hide_article: "Скрыть"
+      recover_article: "Восстановить"
+      delete_forever: "Удалить (навсегда)"
+      enable_comments: "Включить комментарии"
+      disable_comments: "Отключить комментарии"
+
+    utils:
+      redirect:
+        title: "Перенаправление на статью в блоге..."
+        link: "<a>Нажмите здесь</a>, если перенаправление не сработало"
+
+    composer:
+      no_title: "Нет заголовка"
+      enter_message_here: "Введите сообщение"
+      post_article: "Опубликовать"
+      select_category: "Выбрать категорию"
+      edit_categories: "Редактировать категории"
+      write: "Редактор"
+      view: "Просмотр"
+      nothing_to_preview: "Вы ничего не написали для пред-просмотра"
+      comment_section: "Раздел комментариев недоступен при написании статьи."
+      no_blog_tags_selected: "Ни один из выбранных Вами тегов не является тегом для блога. Выберите хотя бы один тег."
+      post_without_blog_info: "Вы уверены, что хотите опубликовать статью? Вы не ввели описание статьи и не выбрали изображение."

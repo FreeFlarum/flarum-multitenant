@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '12a7b6549e42ee6c7acf4f45782b2c8b35907450',
+    'reference' => '0a1b984510397e06cf242ee7510ccd73fe5502c3',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -79,12 +79,12 @@ private static $installed = array (
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.171.19',
-      'version' => '3.171.19.0',
+      'pretty_version' => '3.171.20',
+      'version' => '3.171.20.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e786e4a8b2ec85b258833d0570ff6b61348cbdb6',
+      'reference' => '02aaf7007c5678a6358ea924cd85531300aa1747',
     ),
     'axy/backtrace' => 
     array (
@@ -463,7 +463,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '12a7b6549e42ee6c7acf4f45782b2c8b35907450',
+      'reference' => '0a1b984510397e06cf242ee7510ccd73fe5502c3',
     ),
     'flarum/lang-english' => 
     array (
@@ -760,12 +760,12 @@ private static $installed = array (
     ),
     'fof/links' => 
     array (
-      'pretty_version' => '0.5.0',
-      'version' => '0.5.0.0',
+      'pretty_version' => '0.5.2',
+      'version' => '0.5.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7f4ed4b56bb14abe32910920fa846fa35a322898',
+      'reference' => '72b5c9617b25a092b1b5798126bdd8e56d72b8e1',
     ),
     'fof/masquerade' => 
     array (
@@ -877,12 +877,12 @@ private static $installed = array (
     ),
     'fof/socialprofile' => 
     array (
-      'pretty_version' => '0.2.0',
-      'version' => '0.2.0.0',
+      'pretty_version' => '0.2.2',
+      'version' => '0.2.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cb33d9b0ac055428d2cc29975525302450469ca9',
+      'reference' => 'bd0763eeb1051454e7b2222981b7db6dd2c42c43',
     ),
     'fof/spamblock' => 
     array (
@@ -940,12 +940,12 @@ private static $installed = array (
     ),
     'fof/user-bio' => 
     array (
-      'pretty_version' => '0.4.1',
-      'version' => '0.4.1.0',
+      'pretty_version' => '0.4.2',
+      'version' => '0.4.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ef78ffe75e5907f65301f7edcdf25311b8f0bc99',
+      'reference' => '72f49b3561bbf44f7c3af5616fbdebed998ecbc7',
     ),
     'fof/user-directory' => 
     array (
@@ -958,12 +958,12 @@ private static $installed = array (
     ),
     'fof/username-request' => 
     array (
-      'pretty_version' => '0.4.0',
-      'version' => '0.4.0.0',
+      'pretty_version' => '0.4.1',
+      'version' => '0.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8fe2a05aa509c215a97d64b275152e2bfd971180',
+      'reference' => '802db23021909830a27495aa6e71b6de15b97fa8',
     ),
     'fof/webhooks' => 
     array (
@@ -1021,8 +1021,8 @@ private static $installed = array (
     ),
     'illuminate/bus' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1030,8 +1030,8 @@ private static $installed = array (
     ),
     'illuminate/cache' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1039,8 +1039,8 @@ private static $installed = array (
     ),
     'illuminate/config' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1048,8 +1048,8 @@ private static $installed = array (
     ),
     'illuminate/console' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1057,8 +1057,8 @@ private static $installed = array (
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1066,8 +1066,8 @@ private static $installed = array (
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1075,8 +1075,8 @@ private static $installed = array (
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1084,8 +1084,8 @@ private static $installed = array (
     ),
     'illuminate/events' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1093,8 +1093,8 @@ private static $installed = array (
     ),
     'illuminate/filesystem' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1102,8 +1102,8 @@ private static $installed = array (
     ),
     'illuminate/hashing' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1111,8 +1111,8 @@ private static $installed = array (
     ),
     'illuminate/mail' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1120,8 +1120,8 @@ private static $installed = array (
     ),
     'illuminate/pipeline' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1129,8 +1129,8 @@ private static $installed = array (
     ),
     'illuminate/queue' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1138,8 +1138,8 @@ private static $installed = array (
     ),
     'illuminate/session' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1147,8 +1147,8 @@ private static $installed = array (
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1156,8 +1156,8 @@ private static $installed = array (
     ),
     'illuminate/translation' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1165,8 +1165,8 @@ private static $installed = array (
     ),
     'illuminate/validation' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1174,8 +1174,8 @@ private static $installed = array (
     ),
     'illuminate/view' => 
     array (
-      'pretty_version' => 'v6.20.12',
-      'version' => '6.20.12.0',
+      'pretty_version' => 'v6.20.13',
+      'version' => '6.20.13.0',
       'aliases' => 
       array (
       ),
@@ -1291,12 +1291,12 @@ private static $installed = array (
     ),
     'league/mime-type-detection' => 
     array (
-      'pretty_version' => '1.5.1',
-      'version' => '1.5.1.0',
+      'pretty_version' => '1.7.0',
+      'version' => '1.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '353f66d7555d8a90781f6f5e7091932f9a4250aa',
+      'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
     ),
     'league/oauth1-client' => 
     array (
@@ -1388,12 +1388,12 @@ private static $installed = array (
     ),
     'marketplace/flarum-l10n-ext-russian' => 
     array (
-      'pretty_version' => '0.1.12',
-      'version' => '0.1.12.0',
+      'pretty_version' => '0.1.14',
+      'version' => '0.1.14.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a4773fd97651224af89e92f9aa048715e8017510',
+      'reference' => '36f3f0211799e8fcbd271c21fd5006c833ad298c',
     ),
     'matteocontrini/flarum-imgur-upload' => 
     array (
@@ -1818,12 +1818,12 @@ private static $installed = array (
     ),
     'rob006/flarum-lang-polish' => 
     array (
-      'pretty_version' => 'v0.4.2',
-      'version' => '0.4.2.0',
+      'pretty_version' => 'v0.4.3',
+      'version' => '0.4.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '509ca705619bd619f13fab8cfe76c6747aa65079',
+      'reference' => '2ca0aee499d8dff848d2b66a0a7d0ed0b9a79fe8',
     ),
     's9e/regexp-builder' => 
     array (
@@ -2183,6 +2183,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '651741f520f952bd2a543ad5ba44fe11cb0c65f4',
+    ),
+    'v17development/flarum-blog' => 
+    array (
+      'pretty_version' => 'v0.2.1',
+      'version' => '0.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2748c42f494e77985e1e17540a312be109f3403f',
     ),
     'v17development/flarum-seo' => 
     array (
