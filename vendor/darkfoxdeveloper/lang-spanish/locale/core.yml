@@ -1,11 +1,5 @@
 #
-# This file is part of DaRkFoxDeveloper/FlarumExtSpanish.
-# -----------------------------------------------------------------------
-# Copyright © 2015-2019 Toby Zerner and Flarum
-# Copyright © 2015-2019 DaRkFoxDeveloper
-# -----------------------------------------------------------------------
-# For the full copyright and license information, please view the LICENSE
-# file that was distributed with this source code.
+# This file is part of DaRkFoxDeveloper/lang-spanish.
 #
 
 core:
@@ -36,6 +30,7 @@ core:
       custom_styles_heading: Estilos personalizados
       custom_styles_text: "Personalice la apariencia de su foro añadiendo su propio código LESS/CSS, que se aplicará sobre los estilos por defecto de Flarum."
       dark_mode_label: Modo oscuro
+      description: "Personalice los colores, logotipos y otras variables de su foro."
       edit_css_button: Editar los estilos personalizados
       edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: => core.ref.custom_header_title
@@ -50,6 +45,7 @@ core:
     basics:
       all_discussions_label: => core.ref.all_discussions
       default_language_heading: Idioma por defecto
+      description: "Configure el título, el idioma y otras configuraciones básicas de su foro."
       display_name_heading: User Display Name
       display_name_text: Select the driver that should be used for users' display names. By default, the username is shown.
       forum_description_heading: Descripción del foro
@@ -65,7 +61,9 @@ core:
 
     # These translations are used in the Dashboard page.
     dashboard:
-      clear_cache_button: Limpiar caché
+      clear_cache_button: Limpiar cache
+      description: Tu foro de un vistazo.
+      title: Tablero
       tools_button: Herramientas
 
     # These translations are used in the Edit Custom CSS modal dialog.
@@ -103,6 +101,7 @@ core:
     # These translations are used in the email page of the admin interface.
     email:
       addresses_heading: Direcciones
+      description: "Configure el controlador, la configuración y las direcciones que usará su foro para enviar correo electrónico."
       driver_heading: Elige un controlador
       driver_label: Driver
       from_label: Remitente
@@ -124,9 +123,23 @@ core:
       text: Configure el servidor SMTP y las direcciones que su foro usará para enviar correos electrónicos.
 
     # These translations are used in the Extensions page.
-    extensions:
-      add_button: Añadir extensión
-      settings_button: => core.ref.settings
+    extension:
+      confirm_uninstall: Uninstalling will remove all database entries and assets related to the extension. Are you sure you want to continue?
+      disabled: Desactivada
+      enabled: Activada
+      enable_to_see: Habilite la extensión para ver y cambiar la configuración.
+      info_links:
+        discuss: Discutir
+        documentation: Documentación
+        donate: Donar
+        source: Fuente
+        support: Soporte
+        website: Sitio web
+      no_permissions: Esta extensión no tiene permisos.
+      no_settings: Esta extensión no tiene configuración.
+      open_modal: Configuración abierta
+      permissions_title: Permisos
+      saved_message: Se guardaron tus cambios.
       uninstall_button: Desinstalar
 
     # These translations are used in the session dropdown menu.
@@ -161,6 +174,7 @@ core:
       delete_discussions_label: Eliminar discusiones
       delete_posts_forever_label: Eliminar publicaciones para siempre
       delete_posts_label: Borrar publicaciones
+      description: Configurar quién puede ver y hacer qué.
       edit_posts_label: Editar publicaciones
       edit_users_label: Editar usuarios
       global_heading: Global

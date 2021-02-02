@@ -1,0 +1,95 @@
+v17development-flarum-blog:
+  admin:
+    blog: "Blog"
+
+    permissions:
+      write_articles: "Pisanje i uređivanje blog članaka"
+      auto_approve_posts: "Objavljivanje članaka bez odobrenja"
+      approve_posts: "Može odobriti članke na blogu"
+
+    settings:
+      no_categories_selected: "Nije odabrana nijedna kategorija"
+      selected_category_count: "Vi imate {count} odabrani kategorija|Vi imate {count} kategorija odabrani"
+      select_categories_button: "Odaberi blog kategorije"
+      blog_heading: "Blog"
+      allow_comments_label: "Dopusti komentare"
+      allow_comments_text: "Prema zadanim postavkama dopustite komentare na postove na blogu. Kad je onemogućen, može se omogućiti pojedinačno po blogu. <b>Napomena:</b> Promjena ove postavke neće utjecati na već postojeće postove na blogu."
+      require_review_label: "Objave na blogu zahtijevaju pregled"
+      require_review_text: "Kada objavljujete članak, on neće biti izravno vidljiv i mora ga pregledati moderator."
+      hide_on_discussion_list_label: "Ne prikazuj na popisu diskusija"
+      hide_on_discussion_list_text: "Sakrijte postove na blogu s popisa rasprava."
+      add_sidebar_nav_label: "Dodaj u navigaciju na bočnoj traci"
+      add_sidebar_nav_text: "Uključite vezu do bloga na navigacijskom izborniku bočne trake."
+      categories_heading: "Kategorije"
+      hide_tags_in_taglist_label: "Sakrij oznake na popisu oznaka"
+      hide_tags_in_taglist_text: "Kad je omogućeno, ovo će proširenje sakriti oznake bloga s vaše početne stranice."
+      show_tag_hierarchy_label: "Prikaži hijerarhiju oznaka"
+      show_tag_hierarchy_text: "Dodajte razmak podređenim kategorijama i dajte popisu kategorija hijerarhiju."
+      redirects_heading: "Preusmjeravanja"
+      redirect_articles_label: "Preusmjeravanje članaka na blogu"
+      redirect_articles_text: "Kad je omogućeno, ovo će proširenje preusmjeriti izvorni URL-ove diskusije na URL njihovog bloga."
+      redirect_tags_label: "Preusmjerite oznake bloga"
+      redirect_tags_text: "Kad je omogućeno, ovo proširenje preusmjerava URL-ove oznaka bloga na URL kategorije bloga."
+      
+      
+  forum:
+    blog: "Blog"
+    read_more: "Pročitaj više"
+    hidden: "Skriveno"
+    recent_posts: "Posljednje blog objave"
+    categories: "Kategorije"
+    forum_nav: "Forum Nav"
+    return_to_overview: "Povratak na pregled bloga "
+    no_more_posts: "Nema više postova na blogu."
+    category_empty: "U ovoj kategoriji nema blog postova."
+    
+    compose:
+      write_article: "Napišite članak"
+
+    validation:
+      missing_id: "Nedostaje ID"
+
+    article:
+      title: "Naslov"
+      slug: "Slug"
+      summary: "Sažetak"
+
+    comment_section:
+      comments: "Komentari"
+      locked: "Odjeljak komentara za ovaj članak je onemogućen"
+
+    review_article:
+      pending_review_title: "Na čekanju za pregled"
+      pending_review: "Ovaj članak čeka pregled i još nije objavljen"
+      approve_article: "Odobri članak"
+      approve_article_approved: "Članak je odobren i objavljen"
+
+    tools:
+      rename_article: "Preimenuj članak"
+      edit_article: "Uredi članak"
+      update_category: "Ažuriranje kategorija"
+      article_settings: "Postavke članka"
+      approve_article: "Odobri članak"
+      hide_article: "Sakrij članak"
+      recover_article: "Vrati članak"
+      delete_forever: "Izbriši zauvijek"
+      enable_comments: "Omogući komentare"
+      disable_comments: "Onemogući komentare"
+
+    utils:
+      redirect:
+        title: "Preusmjeravamo na vaš blog članak"
+        link: "<a>Klikni ovdje</a> ako vas stranica ne preusmjeri"
+
+    composer:
+      no_title: "Nema naslova"
+      enter_message_here: "Ovdje unesite svoju poruku"
+      post_article: "Objavi članak"
+      select_category: "Izaberi kategoriju"
+      edit_categories: "Uredi kategorije"
+      write: "Napiši"
+      view: "Pogledaj"
+      nothing_to_preview: "Nema ništa za pregled"
+      comment_section: "Odjeljak s komentarima nije dostupan pri sastavljanju članka."
+      no_blog_tags_selected: "Nijedna od oznaka koje ste odabrali nije oznaka bloga. Odaberite barem jedan."
+      post_without_blog_info: "Jeste li sigurni da želite objaviti ovaj blog post? Još niste unijeli sažetak bloga ili sliku."

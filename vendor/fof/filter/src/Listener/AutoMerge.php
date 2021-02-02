@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/filter.
  *
- * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) 2020 - 2021 FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the license.md
  * file that was distributed with this source code.
@@ -50,9 +50,9 @@ class AutoMerge
                 ->orderBy('number', 'desc')
                 ->firstOrFail();
 
-            $cooldown = $this->settings->get('fof-filter.cooldown') || '15';
+            $cooldown = $this->settings->get('fof-filter.cooldown') ?? '15';
 
-            if ($oldPost->user_id == $post->user_id && strtotime($oldPost) < strtotime("-$cooldown minutes")) {
+            if ($oldPost->user_id == $post->user_id && strtotime("-$cooldown minutes") < strtotime($oldPost->created_at)) {
                 $oldPost->revise($oldPost->content.'
                 
 '.$post->content, $post->user);

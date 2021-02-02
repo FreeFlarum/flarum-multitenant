@@ -1,0 +1,110 @@
+#
+# This file is part of DaRkFoxDeveloper/lang-spanish.
+# -----------------------------------------------------------------------
+#
+
+fof-upload:
+  admin:
+    pane:
+      title: Subir
+      description: Configure los servicios y las preferencias de carga.
+    buttons:
+      save: Guardar ajustes
+    help_texts:
+      disable-download-logging: |
+        Desactive el registro de todas las descargas realizadas por los usuarios de su foro. Mantenerlo habilitado le permite ver la cantidad de descargas y otras métricas en un futuro cercano.
+      disable-hotlink-protection: |
+        La protección de Hotlink evita la apertura de descargas de otros sitios. El método actual requiere un token csrf y un post id.
+      download_templates: |
+        Las plantillas de descarga son cómo se muestran las cargas en su foro, por ejemplo, como vistas previas, botones. Actualmente disponible:
+      mime_types: |
+        Configure su mapeo aquí. Cada expresión regular de tipo mime será manejada por un adaptador de carga específico y una plantilla de descarga.
+      resize: |
+        Elija si desea cambiar el tamaño de sus imágenes antes de que se carguen. Puede elegir un ancho y un alto máximos, en píxeles. El proceso de cambio de tamaño mantiene la relación de aspecto de las imágenes.
+      client_extension: |
+        Por defecto, Upload elegirá una extensión de archivo segura según el tipo MIME.
+        Para algunos tipos de archivos basados en ZIP o datos binarios, esto puede resultar en el uso de extensiones genéricas en lugar de la esperada.
+        Aquí puede ingresar una lista separada por comas de extensiones de archivo que se mantendrán textualmente.
+      watermark: |
+        Elija si las imágenes tendrán una marca de agua agregada durante la carga. Las marcas de agua se agregan a los no GIF según sus preferencias a continuación.
+      s3_compatible_storage: |
+        Los siguientes ajustes solo son necesarios cuando se utiliza un almacenamiento compatible con S3. Si usa AWS, puede dejarlos en blanco.
+      s3_acl: |
+        La ACL que se debe aplicar al objeto cargado (predeterminado: privado). Para conocer los valores posibles, consulte https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl
+    labels:
+      aws-s3:
+        bucket: Bucket
+        key: Key
+        region: Region
+        secret: Secret
+        title: Configuración de almacenamiento de AWS S3
+        advanced_title: Configuración de almacenamiento avanzada de S3
+        endpoint: Endpoint
+        use_path_style_endpoint: Usar estilo path endpoint
+        acl: Lista de control de acceso (ACL)
+      disable-download-logging:
+        title: Deshabilitar descargas de registro
+        toggle: Inhabilitar
+      disable-hotlink-protection:
+        title: Deshabilitar la protección de hotlink
+        toggle: Inhabilitar
+      imgur:
+        client_id: Imgur client ID
+        title: Configuración de almacenamiento de imágenes de Imgur
+      local:
+        cdn_url: URL de entrega de contenido (archivos de prefijos)
+        title: Configuración de almacenamiento local
+      qiniu:
+        title: Configuración de almacenamiento de Qiniu
+        key: Key
+        secret: Secret
+        bucket: Bucket
+      preferences:
+        max_file_size: Tamaño máximo de archivo (en kilobytes)
+        mime_types: 'Configure su tipo de mime, cargue la asignación del adaptador'
+        title: Preferencias generales
+      resize:
+        max_width: Imagen máximo width/height
+        title: Cambio de tamaño de la imagen
+        toggle: Cambiar el tamaño de las imágenes
+      client_extension:
+        title: Extensiones de archivo proporcionadas por el usuario
+      watermark:
+        file: Sube tu imagen de marca de agua
+        position: Posición de la marca de agua
+        title: Imágenes de marca de agua
+        toggle: Imágenes de marca de aguas
+    permissions:
+      download_label: Descargar archivos
+      upload_label: Subir archivos
+    templates:
+      file: Plantilla de descarga de archivos predeterminada
+      file_description: |
+        Muestra el nombre del archivo y cierta información general. Descargas de proxy a través de php, lo que permite la recopilación de estadísticas y la protección de enlaces directos.
+      image: Plantilla de descarga de imagen predeterminada
+      image-preview: Plantilla de vista previa de imagen completa
+      image-preview_description: |
+        Muestra la imagen completa en línea. No hay funcionalidad de descarga, no se recopilan estadísticas y se ignora la protección de hotlink.
+      image_description: |
+        Muestra una miniatura de la imagen y los proxies descargados a través de php. Permitiendo que se recopilen estadísticas y protección de hotlink.
+      just-url: Solo URL
+      just-url_description: |
+       Inserta solo la URL. El renderizado puede ser manejado por otras extensiones con capacidad de enlace automático. No hay funcionalidad de descarga, no se recopilan estadísticas y se ignora la protección de hotlink.
+    upload_methods:
+      aws-s3: S3/Compatible
+      imgur: Imgur
+      local: Local
+      ovh-svfs: OVH SVFS
+      qiniu: QiNiu
+  forum:
+    buttons:
+      attach: Adjuntar
+    states:
+      error: Error
+      loading: Subiendo
+      unauthorized: No se le permite descargar archivos
+  api:
+    upload_errors:
+      forbidden_type: No se permite subir archivos de este tipo.
+      unsupported_type: 'El adaptador de carga no admite el tipo de mime proporcionado: {mime}.'
+      could_not_detect_mime: No se pudo detectar el tipo MIME de este archivo. Vuelva a intentarlo.

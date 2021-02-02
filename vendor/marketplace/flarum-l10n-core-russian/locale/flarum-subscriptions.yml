@@ -39,7 +39,7 @@ flarum-subscriptions:
     sub_controls:
       follow_button: => flarum-subscriptions.ref.follow
       following_button: => flarum-subscriptions.ref.following
-      following_text: "Уведомлять о всех ответах."
+      following_text: "Уведомлять обо всех ответах."
       ignoring_button: => flarum-subscriptions.ref.ignoring
       ignoring_text: "Отключение уведомлений из этой дискуссии. Скрыть в списке дискуссий."
       not_following_button: "Отписка"

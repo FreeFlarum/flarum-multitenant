@@ -6,6 +6,12 @@ fof-recaptcha:
       site_key_label: Site Key
       title: FriendsOfFlarum reCAPTCHA
       type_label: Tip reCAPTCHA
+    permissions:
+      post_without_captcha: Stvarajte postove i rasprave bez captcha
+  forum:
+    # This text is shown on the javascript error callback for reCAPTCHA.
+    # This is a generic error handler and we don't have access to the reason, so the message has to be vague.
+    error: Došlo je do pogreške prilikom slanja reCAPTCHA. Pokušajte ponovo.
 
 validation:
   recaptcha: reCAPTCHA neuspjela provjera.

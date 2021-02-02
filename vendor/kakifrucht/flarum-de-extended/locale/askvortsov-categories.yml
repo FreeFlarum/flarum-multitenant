@@ -1,7 +1,8 @@
+# link to current english version: https://github.com/askvortsov1/flarum-categories/blob/master/resources/locale/en.yml
 askvortsov-categories:
   admin:
     basics:
-      categories_label: => askvortsov-categories.ref.categories
+      categories_label: Kategorien (Erweiterung)
     labels:
       keep_tags_nav: Link zur klassischen Kategorien Ansicht in der Navigationsleiste behalten.
       child_bare_icon: Symbole in Unterkategorien ohne runden Hintergrund anzeigen.

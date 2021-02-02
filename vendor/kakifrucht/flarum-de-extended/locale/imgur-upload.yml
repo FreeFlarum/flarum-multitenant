@@ -1,0 +1,10 @@
+# link to current english version: https://github.com/matteocontrini/flarum-imgur-upload/blob/master/locale/en.yml
+imgur-upload:
+  admin:
+    settings:
+      hide-markdown-image: Markdown-Bild-Schaltfläche ausblenden
+  forum:
+    upload: Zum Hochladen drücken oder einfügen
+    loading: Lädt hoch…
+    done: Erledigt!
+    error: Fehler

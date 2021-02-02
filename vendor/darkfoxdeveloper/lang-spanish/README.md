@@ -8,4 +8,5 @@
 Use the command: composer require darkfoxdeveloper/lang-spanish
 
 ## Additional information
-Flarum extension based on the original abandoned repository https://github.com/FlarumES/Spanish
+Flarum extension based originally on the abandoned repository https://github.com/FlarumES/Spanish
+It is not updated to support lower beta versions than the one mentioned above in "Minimum Requirements"

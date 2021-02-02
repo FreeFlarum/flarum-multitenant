@@ -14,9 +14,11 @@ namespace FoF\Upload\Adapters;
 
 use Aws\S3\S3Client;
 use Flarum\Foundation\Paths;
+use Flarum\Foundation\ValidationException;
 use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Upload\Adapters;
 use FoF\Upload\Events\Adapter\Collecting;
+use FoF\Upload\Events\Adapter\Instantiate;
 use FoF\Upload\Helpers\Util;
 use GuzzleHttp\Client as Guzzle;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -69,17 +71,28 @@ class Manager
         return $adapters;
     }
 
-    public function instantiate()
+    public function instantiate(string $adapter)
     {
-        return $this->adapters()
+        $configured = $this->adapters()
+            // Drops adapters that cannot be instantiated due to missing packages.
             ->filter(function ($available) {
                 return $available;
             })
-            ->map(function ($_, $adapter) {
-                $method = Str::camel($adapter);
+            ->get($adapter);
 
-                return $this->{$method}($this->util);
-            });
+        if (!$configured) {
+            throw new ValidationException(['upload' => "No adapter configured for $adapter"]);
+        }
+
+        $method = Str::camel($adapter);
+
+        $driver = $this->events->until(new Instantiate($adapter, $this->util));
+
+        if (!$driver && !method_exists($this, $method)) {
+            throw new ValidationException(['upload' => "Cannot instantiate adapter $adapter"]);
+        }
+
+        return $driver ?? $this->{$method}($this->util);
     }
 
     /**
@@ -89,6 +102,10 @@ class Manager
      */
     protected function awsS3(Util $util)
     {
+        if (!$this->settings->get('fof-upload.awsS3Key')) {
+            return null;
+        }
+
         return new Adapters\AwsS3(
             new AwsS3Adapter(
                 new S3Client([
@@ -113,6 +130,10 @@ class Manager
      */
     protected function imgur(Util $util)
     {
+        if (!$this->settings->get('fof-upload.imgurClientId')) {
+            return null;
+        }
+
         return new Adapters\Imgur(
             new Guzzle([
                 'base_uri' => 'https://api.imgur.com/3/',
@@ -142,6 +163,10 @@ class Manager
      */
     protected function qiniu(Util $util)
     {
+        if (!$this->settings->get('fof-upload.qiniuKey')) {
+            return null;
+        }
+
         $client = new QiniuAdapter(
             $this->settings->get('fof-upload.qiniuKey'),
             $this->settings->get('fof-upload.qiniuSecret'),

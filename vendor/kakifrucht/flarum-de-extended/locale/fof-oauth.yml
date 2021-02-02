@@ -1,8 +1,7 @@
+# link to current english version: https://github.com/FriendsOfFlarum/oauth/blob/master/resources/locale/en.yml
 fof-oauth:
   admin:
     settings:
-      title: FriendsOfFlarum OAuth
-
       only_icons_label: Zeige nur die Symbole ohne Text auf den Einloggen-Buttons (alternatives Layout)
 
       providers:
@@ -39,6 +38,12 @@ fof-oauth:
           api_key_label: API Key
           api_secret_label: API Secret
 
+        google:
+          description: Erstelle eine Applikation unter {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
   forum:
     log_in:
       with_button: Mit {provider} anmelden
@@ -54,6 +59,7 @@ fof-oauth:
       github: GitHub
       gitlab: GitLab
       twitter: Twitter
+      google: Google
 
   ref:
     settings:

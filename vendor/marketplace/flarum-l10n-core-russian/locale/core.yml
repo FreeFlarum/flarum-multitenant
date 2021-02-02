@@ -27,7 +27,7 @@ core:
       favicon_heading: "Favicon"
       favicon_text: "Загрузите изображение, которое будет отображаться в качестве значка форума."
       logo_heading: "Логотип"
-      logo_text: "Загрузите изображение, которое будет отображаться вместо заголовка форума."
+      logo_text: "Загрузите изображение, которое будет отображаться вместо названия форума."
       submit_button: => core.ref.save_changes
       title: "Оформление"
 
@@ -43,7 +43,7 @@ core:
       forum_title_heading: "Название форума"
       home_page_heading: "Главная страница"
       home_page_text: "Выберите страницу, которую пользователи будут видеть первой при посещении форума."
-      saved_message: "Изменения сохранены."
+      saved_message: "Настройки сохранены."
       show_language_selector_label: "Показывать переключатель языка"
       slug_driver_heading: "Драйвер путей: {model}"
       slug_driver_text: "Выберите драйвер, который будет использоваться при создании семантических путей (URL) для этой модели."
@@ -160,7 +160,7 @@ core:
         language: "Языки"
         moderation: "Модерация"
         other: "Другие расширения"
-        theme: "Темы"
+        theme: "Оформление"
       dashboard_button: => core.admin.dashboard.title
       dashboard_title: => core.admin.dashboard.description
       email_button: => core.ref.email
@@ -172,7 +172,7 @@ core:
     # These translations are used in the Permissions page of the admin interface.
     permissions:
       allow_post_editing_label: "Разрешить изменять сообщение"
-      allow_renaming_label: "Разрешить переименование"
+      allow_renaming_label: "Разрешить изменять название дискуссии"
       create_heading: "Создание"
       delete_discussions_forever_label: "Удалять дискуссии (навсегда)"
       delete_discussions_label: "Удалять дискуссии"
@@ -187,9 +187,9 @@ core:
       participate_heading: "Участие"
       post_without_throttle_label: "Отвечать подряд без ожидания"
       read_heading: "Чтение"
-      rename_discussions_label: "Переименовывать дискуссии"
+      rename_discussions_label: "Изменять название дискуссий"
       reply_to_discussions_label: "Отвечать в дискуссии"
-      sign_up_label: "Регистрация"
+      sign_up_label: "Регистрация пользователей"
       start_discussions_label: "Создавать дискуссии"
       title: "Разрешения"
       view_discussions_label: "Читать дискуссии"
@@ -255,7 +255,7 @@ core:
     # These translations are used by the composer when editing a post.
     composer_edit:
       discard_confirmation: "Вы не сохранили изменения. Вы хотите отказаться от них?"
-      edited_message: "Ваши изменения внесены."
+      edited_message: "Ваши правки сохранены."
       post_link: "Сообщение #{number} в {discussion}"
       submit_button: => core.ref.save_changes
       view_button: => core.ref.view
@@ -264,7 +264,7 @@ core:
     composer_reply:
       body_placeholder: => core.ref.write_a_reply
       discard_confirmation: "Вы не отправили свой ответ. Вы хотите отменить сообщение?"
-      posted_message: "Ваш ответ опубликован."
+      posted_message: "Ваше сообщение опубликовано."
       submit_button: "Отправить"
       view_button: => core.ref.view
 
@@ -290,7 +290,7 @@ core:
 
     # These translations are used in the Edit User modal dialog (admin function).
     edit_user:
-      activate_button: "Подтвердить пользователя"
+      activate_button: "Активировать пользователя"
       email_heading: => core.ref.email
       email_label: => core.ref.email
       groups_heading: "Группы"
@@ -309,7 +309,7 @@ core:
       email_sent_message: "Мы отправили Вам письмо, содержащее ссылку для восстановления пароля. Проверьте папку со спамом, если Вы не получили письмо в течение нескольких минут."
       not_found_message: "Пользователи с указанным e-mail не найдены."
       submit_button: "Восстановить пароль"
-      text: "Введите свой e-mail и мы вышлем Вам ссылку для сброса пароля."
+      text: "Введите свой e-mail и мы отправим Вам ссылку для сброса пароля."
       title: "Забыли пароль"
 
     # These translations are used in the header and session dropdown menu.
@@ -327,7 +327,7 @@ core:
     index:
       all_discussions_link: => core.ref.all_discussions
       cannot_start_discussion_button: "Нельзя создать"
-      mark_all_as_read_confirmation: "Вы уверены, что хотите отметить все дискуссии как прочитанные?"
+      mark_all_as_read_confirmation: "Вы уверены, что хотите отметить все дискуссии прочитанными?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
       meta_title_text: => core.ref.all_discussions
       refresh_tooltip: "Обновить"
@@ -381,7 +381,7 @@ core:
       now_link: "Сейчас"
       original_post_link: "Начало"
       unread_text: "{count} не прочитано"
-      viewing_text: "{index} из {count} сообщения|{index} из {count} сообщений"
+      viewing_text: "{index} / {count} сообщения|{index} / {count} сообщений"
 
     # These translations are displayed between posts in the post stream.
     post_stream:
@@ -394,7 +394,7 @@ core:
     # These translations are used by the rename discussion modal.
     rename_discussion:
       submit_button: => core.ref.rename
-      title: "Переименовать дискуссию"
+      title: "Изменение названия"
 
     # These translations are used by the search results dropdown list.
     search:
@@ -410,7 +410,7 @@ core:
       notifications_heading: => core.ref.notifications
       notify_by_email_heading: => core.ref.email
       notify_by_web_heading: "Web"
-      notify_discussion_renamed_label: "Переименование моей дискуссии"
+      notify_discussion_renamed_label: "Изменение названия моей дискуссии"
       privacy_disclose_online_label: "Показывать мой статус online"
       privacy_heading: "Конфиденциальность"
       title: => core.ref.settings
@@ -543,9 +543,9 @@ core:
       body: |
         Привет, {username}!
 
-        Кто-то зарегистрировался на форуме {forum} с этим адресом электронной почты.
+        Вы зарегистрировались на форуме {forum} с этим адресом электронной почты.
 
-        Если это были Вы, просто нажмите на ссылку и Ваш аккаунт будет активирован:
+        Нажмите на ссылку и Ваш аккаунт будет активирован:
         {url}
 
         Если Вы не регистрировались, пожалуйста, проигнорируйте это сообщение.
@@ -556,9 +556,9 @@ core:
       body: |
         Привет, {username}!
 
-        Кто-то изменил адрес электронной почты на форуме {forum}.
+        Вы изменили адрес электронной почты на форуме {forum}.
 
-        Если это были Вы, просто нажмите на ссылку и Ваш адрес электронной почты будет подтверждён:
+        Нажмите на ссылку и Ваш адрес электронной почты будет подтверждён:
         {url}
 
         Если это не Вы, пожалуйста, проигнорируйте это сообщение.
@@ -569,9 +569,9 @@ core:
       body: |
         Привет, {username}!
 
-        Кто-то подал запрос на сброс пароля для Вашего аккаунта на форуме {forum}.
+        Вы подали запрос на сброс пароля для аккаунта на форуме {forum}.
 
-        Если это были Вы, нажмите на ссылку для сброса пароля:
+        Нажмите на ссылку для сброса пароля:
         {url}
 
         Если Вы не хотите менять свой пароль, просто проигнорируйте это сообщение и ничего не произойдёт.
@@ -635,7 +635,7 @@ core:
     users: "Пользователи"                           # Referenced by flarum-statistics.yml
     view: "Посмотреть"
     write_a_reply: "Написать ответ..."
-    you: "Вам"                                      # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: "Вы"                                       # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.

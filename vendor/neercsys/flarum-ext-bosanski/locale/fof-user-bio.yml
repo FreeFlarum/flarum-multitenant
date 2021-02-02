@@ -4,6 +4,8 @@ fof-user-bio:
             view: Pregledati bio
             editOwn: Urediti vlastiti bio
             editAny: Urediti bilo čiji bio
+        setting:
+            bioLimit: Ograničenje bioznaka
 
     forum:
         userbioPlaceholder: Napišite nešto o sebi...

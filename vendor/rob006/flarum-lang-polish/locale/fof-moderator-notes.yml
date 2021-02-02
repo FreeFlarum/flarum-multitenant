@@ -24,5 +24,6 @@ fof-moderator-notes:
       noNotes: 'Wygląda na to, że nie ma tutaj żadnych notatek.'
       no_content_given: 'Puste notatki nie są dozwolone.'
       submit_button: 'Zapisz notatkę'
+    no_content_given: 'Puste notatki nie są dozwolone.'
     user:
       notes: 'Notatki moderatorów'

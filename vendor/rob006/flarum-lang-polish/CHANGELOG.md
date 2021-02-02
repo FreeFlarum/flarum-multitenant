@@ -2,6 +2,25 @@ CHANGELOG
 =========
 
 
+0.4.4 (2021-02-01)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`andre-pullinen/ads`](https://github.com/andre-pullinen/ads)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/tags`](https://github.com/flarum/tags)
+* [`fof/moderator-notes`](https://github.com/FriendsOfFlarum/moderator-notes)
+* [`fof/username-request`](https://github.com/FriendsOfFlarum/username-request)
+* [`maicol07/flarum-ext-sso`](https://github.com/maicol07/flarum-ext-sso)
+
+
+Wszystkie zmiany: [v0.4.3...v0.4.4](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.3...v0.4.4).
+
+
 0.4.3 (2021-01-19)
 ------------------
 

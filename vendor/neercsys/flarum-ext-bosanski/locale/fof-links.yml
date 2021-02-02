@@ -11,7 +11,10 @@ fof-links:
     edit_link:
       delete_link_button: Obriši link
       delete_link_confirmation: "Jeste li sigurni da želite izbrisati ovu vezu?"
+      everyone-label: Svi
+      guests-label: Gosti
       internal_link: "Ovo je flarum link?"
+      members-label: Registrovani korisnici
       open_newtab: "Otvori link u novom tabu"
       submit_button: => core.ref.save_changes
       title: => fof-links.ref.create_link
@@ -21,6 +24,7 @@ fof-links:
       icon_text: => core.ref.icon_text
       url_label: => fof-links.ref.url
       url_placeholder: => fof-links.ref.url
+      visibility: Vidljivost linka
 
     # These strings are used in the Links page.
     links:

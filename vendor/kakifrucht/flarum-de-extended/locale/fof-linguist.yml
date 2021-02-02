@@ -1,0 +1,37 @@
+# link to current english version: https://github.com/FriendsOfFlarum/linguist/blob/master/resources/locale/en.yml
+fof-linguist:
+    admin:
+        buttons:
+            apply: Anwenden
+            reset: Original wiederherstellen
+            copy-original: Originaltext kopieren
+            load-more: Mehr laden
+        locales:
+            all: Alle
+        placeholder:
+            not-translated: Nicht übersetzt
+            all-locales: Ein hier definierter Text wird in allen Sprachen angezeigt
+            hint: 'Ursprünglicher Wert:'
+        filters:
+            search: Übersetzungsstrings suchen…
+            with-own-translations: Meine Übersetzungen
+            missing: Fehlende Übersetzungen finden
+            missing-middle-label: Übersetzungen in
+            negation-options:
+                with: Mit
+                without: Ohne
+            type-options:
+                any: Original oder Benutzerdefiniert
+                original: Original
+                own: Benutzerdefiniert
+            for-extension: Für Erweiterung
+            for-extension-unavailable: >
+                Es wurden keine Übersetzungen im erwarteten Namensraum "{namespace}" gefunden.
+                Vielleicht hat diese Erweiterung keinen zu übersetzenden Text oder verwendet einen anderen Namensraum.
+                Versuche das Suchfeld zu benutzen, um deine Übersetzungen zu finden.
+            results: Zeige {shown} von {total} passende Übersetzungen
+        clear-cache:
+            text: >
+                Neue Übersetzungen wurden noch nicht angewendet.
+                Hinweis: Das Löschen des Caches kann dein Forum kurzzeitig verlangsamen.
+            button: Cache leeren

@@ -13,7 +13,7 @@ flarum-nicknames:
   forum:
     change_nickname:
       submit_button: => core.ref.save_changes
-      title:  => flarum-nicknames.ref.change_nickname
+      title:  => "Изменение имени"
     edit_user:
       nicknames_heading: => flarum-nicknames.ref.change_nickname
       nicknames_text: "Имя пользователя"
@@ -21,4 +21,4 @@ flarum-nicknames:
       change_nickname_button: => flarum-nicknames.ref.change_nickname
 
   ref:
-    change_nickname: "Изменить имя пользователя"
+    change_nickname: "Изменить имя"

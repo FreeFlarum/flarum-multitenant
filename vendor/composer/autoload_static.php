@@ -83,6 +83,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             'Wohali\\OAuth2\\Client\\' => 21,
             'Whoops\\' => 7,
+            'Webmozart\\Assert\\' => 17,
         ),
         'V' => 
         array (
@@ -286,6 +287,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Cron\\' => 5,
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
             'ClarkWinkelmann\\EmojioneArea\\' => 29,
+            'ClarkWinkelmann\\AuthorChange\\' => 29,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -343,6 +345,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Webmozart\\Assert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
         'V17Development\\FlarumSeo\\' => 
         array (
@@ -551,9 +557,9 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'League\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth2-client/src',
-            1 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
-            2 => __DIR__ . '/..' . '/league/oauth2-github/src',
-            3 => __DIR__ . '/..' . '/league/oauth2-google/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-github/src',
+            2 => __DIR__ . '/..' . '/league/oauth2-google/src',
+            3 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
         ),
         'League\\OAuth1\\Client\\' => 
         array (
@@ -982,6 +988,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'ClarkWinkelmann\\EmojioneArea\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-emojionearea/src',
+        ),
+        'ClarkWinkelmann\\AuthorChange\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-author-change/src',
         ),
         'Carbon\\' => 
         array (

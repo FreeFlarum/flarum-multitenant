@@ -10,6 +10,7 @@ maicol07-sso:
       jwt_iss: 'Issuer Domain'
       jwt_section_subtitle: 'Ustawienia JWT'
       jwt_signer_key: 'Signer key'
+      jwt_signing_algorithm: 'Signing Method'
       login_url: 'URL logowania'
       logout_url: 'URL wylogowania'
       manage_account_btn_open_in_new_tab: 'Utwórz panel do zarządzania kontem w nowej karcie'
