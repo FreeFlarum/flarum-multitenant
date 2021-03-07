@@ -19,7 +19,8 @@
     ],
     "support": {
         "issues": "https://github.com/Nearata/lang-italian/issues",
-        "source": "https://github.com/Nearata/lang-italian"
+        "source": "https://github.com/Nearata/lang-italian",
+		"forum": "https://discuss.flarum.org/d/5160"
     },
     "extra": {
         "flarum-extension": {

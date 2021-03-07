@@ -4,6 +4,9 @@
 
 askvortsov-discussion-templates:
   admin:
+    permissions:
+      manage_all_reply_templates: 'Zarządzanie szablonami odpowiedzi dla wszystkich dyskusji'
+      manage_own_discussion_reply_templates: 'Zarządzanie szablonami odpowiedzi dla własnych dyskusji'
     tag_template_modal:
       customize_text: 'Zarządzaj szablonem dla nowych dyskusji oznaczonych tym tagiem.'
       submit_button: 'Zapisz szablon'
@@ -12,3 +15,9 @@ askvortsov-discussion-templates:
       tag_template_button: 'Edytuj szablon'
       tag_template_heading: 'Szablon dyskusji'
       tag_template_text: 'Zarządzaj szablonem dla nowych dyskusji oznaczonych tym tagiem.'
+  forum:
+    discussion_controls:
+      reply_template_button: 'Edytuj szablon odpowiedzi'
+    reply_template:
+      submit_button: 'Zapisz szablon odpowiedzi'
+      title: 'Edycja szablonu odpowiedzi'

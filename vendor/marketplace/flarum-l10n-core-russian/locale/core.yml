@@ -195,7 +195,7 @@ core:
       view_discussions_label: "Читать дискуссии"
       view_hidden_groups_label: "Смотреть скрытые группы"
       view_last_seen_at_label: "Смотреть время последнего посещения"
-      view_post_ips_label: "Смотреть IP-адреса"
+      view_post_ips_label: "Смотреть IP"
       view_user_list_label: "Смотреть список пользователей"
 
     # These translations are used in the dropdown menus on the Permissions page.

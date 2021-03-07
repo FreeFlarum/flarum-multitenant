@@ -11,6 +11,11 @@
 
 namespace Askvortsov\FlarumDiscussionTemplates;
 
+use Askvortsov\FlarumDiscussionTemplates\Access\DiscussionPolicy;
+use Askvortsov\FlarumDiscussionTemplates\Listener\SaveReplyTemplateToDatabase;
+use Flarum\Api\Serializer\DiscussionSerializer;
+use Flarum\Discussion\Discussion;
+use Flarum\Discussion\Event\Saving;
 use Flarum\Extend;
 use Flarum\Tags\Api\Serializer\TagSerializer;
 
@@ -32,4 +37,18 @@ return [
         ->attribute('template', function ($serializer, $model) {
             return $model->template;
         }),
+
+    (new Extend\ApiSerializer(DiscussionSerializer::class))
+        ->attribute('replyTemplate', function ($serializer, $model) {
+            return $model->replyTemplate;
+        })
+        ->attribute('canManageReplyTemplates', function ($serializer, $model) {
+            return $serializer->getActor()->can('manageReplyTemplates', $model);
+        }),
+
+    (new Extend\Policy())
+        ->modelPolicy(Discussion::class, DiscussionPolicy::class),
+
+    (new Extend\Event())
+        ->listen(Saving::class, SaveReplyTemplateToDatabase::class),
 ];

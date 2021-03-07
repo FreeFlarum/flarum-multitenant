@@ -40,13 +40,13 @@ fof-follow-tags:
 
     user:
       settings:
-        heading: "Follow Tags"
+        heading: "Follow Tags" # TODO
 
         filter_label: "What to show by default in the Following page" # TODO
 
   admin:
     settings:
-      following_page_default_label: "Default Following Page Filtering"
+      following_page_default_label: "Default Following Page Filtering" # TODO
 
       following_none_label: => fof-follow-tags.ref.filtering_options.none
       following_tags_label: => fof-follow-tags.ref.filtering_options.tags

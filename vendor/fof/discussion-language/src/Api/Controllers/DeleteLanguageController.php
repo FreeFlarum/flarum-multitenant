@@ -1,0 +1,44 @@
+<?php
+
+/*
+ * This file is part of fof/discussion-language.
+ *
+ * Copyright (c) 2020 - 2021 FriendsOfFlarum.
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
+namespace FoF\DiscussionLanguage\Api\Controllers;
+
+use Flarum\Api\Controller\AbstractDeleteController;
+use FoF\DiscussionLanguage\Commands\DeleteLanguageCommand;
+use Illuminate\Contracts\Bus\Dispatcher;
+use Illuminate\Support\Arr;
+use Psr\Http\Message\ServerRequestInterface;
+
+class DeleteLanguageController extends AbstractDeleteController
+{
+    /**
+     * @var Dispatcher
+     */
+    protected $bus;
+
+    /**
+     * @param Dispatcher $bus
+     */
+    public function __construct(Dispatcher $bus)
+    {
+        $this->bus = $bus;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function delete(ServerRequestInterface $request)
+    {
+        return $this->bus->dispatch(
+            new DeleteLanguageCommand($request->getAttribute('actor'), Arr::get($request->getQueryParams(), 'id'))
+        );
+    }
+}

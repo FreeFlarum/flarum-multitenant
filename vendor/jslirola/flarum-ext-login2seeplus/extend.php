@@ -1,10 +1,10 @@
 <?php
 
 /*
- * This file is part of jslirola/flarum-ext-login2seeplus. 
+ * This file is part of jslirola/flarum-ext-login2seeplus.
  *
  * Copyright (c) 2020
- * Original Extension by WiseClock 
+ * Original Extension by WiseClock
  * Updated by jslirola
  *
  * For the full copyright and license information, please view the LICENSE
@@ -13,10 +13,13 @@
 
 namespace JSLirola\Login2SeePlus;
 
+use Flarum\Api\Serializer\BasicPostSerializer;
+use Flarum\Api\Serializer\ForumSerializer;
+use Flarum\Api\Serializer\PostSerializer;
 use Flarum\Extend;
-use Flarum\Api\Event\Serializing;
 use Illuminate\Contracts\Events\Dispatcher;
-use JSLirola\Login2SeePlus\Listeners\LoadSettingsFromDatabase;
+use JSLirola\Login2SeePlus\HideContentInPosts;
+use JSLirola\Login2SeePlus\HideContentInPostPreviews;
 
 return [
     (new Extend\Frontend('forum'))
@@ -27,10 +30,19 @@ return [
         ->js(__DIR__ . '/js/dist/admin.js')
         ->css(__DIR__ . '/less/login2seeplus-settings.less'),
 
-    new Extend\Locales(__DIR__ . '/locale'),
+    (new Extend\Locales(__DIR__ . '/locale')),
 
-    function (Dispatcher $events) {
-        $events->listen(Serializing::class, LoadSettingsFromDatabase::class);
-    }
+    (new Extend\Settings())
+        ->serializeToForum('jslirola.login2seeplus.post', 'jslirola.login2seeplus.post')
+        ->serializeToForum('jslirola.login2seeplus.link', 'jslirola.login2seeplus.link')
+        ->serializeToForum('jslirola.login2seeplus.image', 'jslirola.login2seeplus.image')
+        ->serializeToForum('jslirola.login2seeplus.php', 'jslirola.login2seeplus.php')
+        ->serializeToForum('jslirola.login2seeplus.code', 'jslirola.login2seeplus.code'),
+
+    (new Extend\ApiSerializer(PostSerializer::class))
+        ->mutate(HideContentInPosts::class),
+
+    (new Extend\ApiSerializer(BasicPostSerializer::class))
+        ->mutate(HideContentInPostPreviews::class),
 
 ];

@@ -10,6 +10,7 @@ fof-socialprofile:
       deletetitle: 'Usuń przycisk'
       edit: Edytuj
       headtitle: 'Edytuj przyciski'
+      save_disabled_fetching_favicons: 'Ikony są pobierane, proszę czekać.'
       submit: Zapisz
       title: Tytuł
       url: URL

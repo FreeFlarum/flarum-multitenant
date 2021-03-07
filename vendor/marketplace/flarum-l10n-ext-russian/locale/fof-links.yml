@@ -11,9 +11,11 @@ fof-links:
     edit_link:
       delete_link_button: "Удалить"
       delete_link_confirmation: "Вы уверены, что хотите удалить ссылку?"
+      everyone-label: "Все"
+      guests-label: "Гости"
       internal_link: "Это внутренняя ссылка?"
+      members-label: "Пользователи"
       open_newtab: "Открывать в новом окне"
-      registered_only: "Отображать только зарегистрированным пользователям"
       submit_button: => core.ref.save_changes
       title: => fof-links.ref.create_link
       title_label: => fof-links.ref.title
@@ -22,6 +24,7 @@ fof-links:
       icon_text: => core.ref.icon_text
       url_label: => fof-links.ref.url
       url_placeholder: => fof-links.ref.url
+      visibility: "Видимость ссылки"
 
     # These strings are used in the Links page.
     links:

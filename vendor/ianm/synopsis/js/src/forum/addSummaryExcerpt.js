@@ -12,12 +12,12 @@
 
 import { extend } from 'flarum/extend';
 import app from 'flarum/app';
-import DiscussionList from 'flarum/components/DiscussionList';
+import DiscussionListState from 'flarum/states/DiscussionListState';
 import DiscussionListItem from 'flarum/components/DiscussionListItem';
 import { truncate } from 'flarum/utils/string';
 
 export default function addSummaryExcerpt() {
-    extend(DiscussionList.prototype, 'requestParams', function (params) {
+    extend(DiscussionListState.prototype, 'requestParams', function (params) {
         params.include.push(['firstPost', 'lastPost']);
     });
 

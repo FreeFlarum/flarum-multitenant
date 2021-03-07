@@ -11,12 +11,14 @@
 
 namespace FoF\OAuth;
 
+use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Extend;
 use Flarum\Foundation\Application;
 use Flarum\Frontend\Document;
 use FoF\Components\Extend\AddFofComponents;
 use FoF\Extend\Extend\ExtensionSettings;
+use Illuminate\Events\Dispatcher;
 
 return [
     new AddFofComponents(),
@@ -42,19 +44,15 @@ return [
 
     (new Extend\Routes('forum'))
         ->get('/auth/twitter', 'auth.twitter', Controllers\TwitterAuthController::class)
-        ->get(new OAuth2RoutePattern(), 'fof-oauth', Controllers\AuthController::class),
+        ->get('/auth/{provider}', 'fof-oauth', Controllers\AuthController::class),
 
-    function (Application $app) {
+    (new Extend\Compat(function (Application $app, Dispatcher $events) {
         $app->register(OAuthServiceProvider::class);
-    },
 
-    (new Extend\ApiSerializer(ForumSerializer::class))
-        ->mutate(function (ForumSerializer $serializer) {
-            $attributes = [];
-            if ($serializer->getActor()->isGuest()) {
-                $attributes['fof-oauth'] = app()->make('fof-oauth.providers.forum');
+        $events->listen(Serializing::class, function (Serializing $event) {
+            if ($event->isSerializer(ForumSerializer::class) && $event->actor->isGuest()) {
+                $event->attributes['fof-oauth'] = app()->make('fof-oauth.providers.forum');
             }
-
-            return $attributes;
-        }),
+        });
+    })),
 ];

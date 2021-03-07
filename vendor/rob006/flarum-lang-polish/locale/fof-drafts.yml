@@ -23,6 +23,7 @@ fof-drafts:
       title: 'Zapisz szkic'
     dropdown:
       alert: 'Czy jesteś pewien, że chcesz usunąć ten szkic?'
+      delete_all_alert: 'Czy jesteś pewien, że chcesz usunąć wszystkie swoje szkice?'
       delete_button: 'Usuń szkic'
       empty_text: 'Nie zapisałeś żadnych szkiców'
       schedule_button: 'Zaplanuj publikację'

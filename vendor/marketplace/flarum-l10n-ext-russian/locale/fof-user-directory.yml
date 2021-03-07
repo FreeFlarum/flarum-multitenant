@@ -2,17 +2,20 @@ fof-user-directory:
     forum:
         search:
             users_heading: 'Поиск всех пользователей: "{query}"'
+            field:
+                placeholder: "Найти всех пользователей..."
         page:
             nav: "Каталог участников"
             refresh_tooltip: => core.forum.index.refresh_tooltip
             load_more_button: => core.ref.load_more
             empty_text: "Пользователи, соответствующие Вашему запросу, не найдены."
+            filter_button: "Фильтр групп"
 
     admin:
         permissions:
             view_user_directory: "Смотреть каталог участников"
         settings:
-            link: "Добавить ссылку на главную страницу форума"
+            link: "Ссылка на странице форума"
             default-sort: "Сортировка по умолчанию"
 
     lib:

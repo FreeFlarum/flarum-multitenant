@@ -17,4 +17,5 @@ return [
     (new Extend\Settings)
         ->serializeToForum('imgur-upload.client-id', 'imgur-upload.client-id')
         ->serializeToForum('imgur-upload.hide-markdown-image', 'imgur-upload.hide-markdown-image')
+        ->serializeToForum('imgur-upload.embed-type', 'imgur-upload.embed-type')
 ];

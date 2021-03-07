@@ -59,7 +59,7 @@ return [
             return $model->can('user.deleteWarnings');
         })
         ->attribute('visibleWarningCount', function ($serializer, $model) {
-            return $serializer->getActor()->can('user.viewWarnings') ? Warning::where('user_id', $model->id)->where('hidden_at', null)->count() : null;
+            return Warning::where('user_id', $model->id)->where('hidden_at', null)->count();
         }),
 
     (new Extend\ApiSerializer(FlarumSerializer\BasicPostSerializer::class))

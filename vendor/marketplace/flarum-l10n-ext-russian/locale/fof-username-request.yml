@@ -1,39 +1,88 @@
 fof-username-request:
   admin:
     permissions:
-      start: "Подавать запрос на новое имя пользователя"
-      moderate: "Подтверждать запрос на новое имя пользователя"
+      moderate_requests: "Подтверждать запросы на изменение имён участников"
+      request_nickname: "Запрашивать изменение отображаемого имени пользователя"
+      request_username: "Запрашивать изменение регистрационного имени пользователя"
   forum:
-    action:
-      title: => fof-username-request.forum.results.title
-      help_text: "Пожалуйста, убедитесь что новое имя пользователя соответствует правилам форума."
-      decision_title: "Решение"
-      approval_label: "Разрешить"
-      rejected_label: "Отказать"
-      submit_button: "Отправить"
-      reason_title: "Причина отказа"
-      success: "Решение отправлено"
-      name: "{username} запросил(а) разрешение на изменение своего имени на {newUsername}"
-    results:
-      title: "Изменение имени пользователя"
-      approved: "Ваш запрос на изменение имени пользователя подтверждён"
-      new_username: "Ваше имя пользователя было успешно изменено на {username}"
-      rejected: "Ваш запрос на изменение имени пользователя отклонён"
-      reason: "Причина: <i>{reason}</i>."
-      resubmit: "Если желаете, Вы можете повторно отправить запрос на изменение имени пользователя в настройках своей учётной записи."
-    request:
-      title: "Изменение имени пользователя"
-      current_request: "Вы уже отправили запрос на изменение имени пользователя на {username}. Вы можете обновить свой запрос, или отменить его."
-      submit_button: "Отправить"
-      delete_button: "Удалить"
-      confirmation_message: "Ваш запрос на изменение имени пользователя отправлен и ожидает рассмотрения."
-      dismiss_button: => core.ref.okay
-      deleted: "Запрос удалён"
-    account_label: "Изменить имя"
-    profile_link: "История имени"
-    dropdown:
-      empty_text: "Запросы на изменения имени пользователя отсутствуют"
-      tooltip: => fof-username-request.forum.dropdown.title
-      title: "Запросы на изменение имени"
-      item_text: "{username} запросил(а) изменение имени пользователя"
-      exerpt: "Новое имя пользователя: {requestedUsername}"
+    nickname_modals:
+      action:
+        title: => fof-username-request.ref.nickname_change_request
+        help_text: "Пожалуйста, убедитесь что новое отображаемое имя соответствует правилам форума."
+        decision_title: "Решение"
+        approval_label: "Разрешить"
+        rejected_label: "Отказать"
+        submit_button: "Отправить"
+        reason_title: "Причина отказа"
+        success: "Решение отправлено."
+        name: '{name} запросил(а) разрешение на изменение своего отображаемого имени на "{requestedName}"'
+      results:
+        title: "Изменение отображаемого имени"
+        approved: 'Ваш запрос на изменение отображаемого имени подтверждён'
+        dismiss_button: => core.ref.okay
+        new_name: 'Ваше отображаемое имя изменено на: {name}'
+        rejected: "Ваш запрос на изменение отображаемого имени отклонён"
+        reason: 'Причина: <i>"{reason}"</i>.'
+        resubmit: "Вы можете повторно отправить запрос на изменение отображаемого имени в настройках аккаунта."
+      request:
+        title: "Изменение отображаемого имени"
+        current_request: 'Вы уже отправили запрос на изменение отображаемого имени на "{name}". Вы можете обновить или отменить свой запрос.'
+        submit_button: "Отправить"
+        delete_button: "Удалить"
+        confirmation_message: "Ваш запрос на изменение отображаемого имени отправлен и ожидает рассмотрения."
+        dismiss_button: => core.ref.okay
+        deleted: "Запрос удалён."
+
+    username_modals:
+      action:
+        title: => fof-username-request.ref.username_change_request
+        help_text: "Пожалуйста, убедитесь что новое имя пользователя соответствует правилам форума."
+        decision_title: "Решение"
+        approval_label: "Разрешить"
+        rejected_label: "Отказать"
+        submit_button: "Отправить"
+        reason_title: "Причина отказа"
+        success: "Решение отправлено."
+        name: '{name} запросил(а) разрешение на изменение своего имени пользователя на "{requestedName}"'
+      results:
+        title: "Изменение имени пользователя"
+        approved: 'Ваш запрос на изменение имени пользователя подтверждён'
+        dismiss_button: => core.ref.okay
+        new_name: 'Ваше имя пользователя изменено на: {name}'
+        rejected: "Ваш запрос на изменение имени пользователя отклонён"
+        reason: 'Причина: <i>"{reason}"</i>.'
+        resubmit: "Вы можете повторно отправить запрос на изменение имени пользователя в настройках аккаунта."
+      request:
+        title: "Изменение имени пользователя"
+        current_request: 'Вы уже отправили запрос на изменение имени пользователя на "{name}". Вы можете обновить или отменить свой запрос.'
+        submit_button: "Отправить"
+        delete_button: "Удалить"
+        confirmation_message: "Ваш запрос на изменение имени пользователя отправлен и ожидает рассмотрения."
+        dismiss_button: => core.ref.okay
+        deleted: "Запрос удалён."
+
+    # Pending Requests Dropdown and List
+    pending_requests:
+      empty_text: "Запросы на изменение имени отсутствуют."
+      nickname_item_text: "{name} запросил(а) изменение отображаемого имени"
+      nickname_exerpt: "Новое отображаемое имя: {requestedName}"
+      tooltip: => fof-username-request.ref.name_change_requests
+      title: => fof-username-request.ref.name_change_requests
+      username_item_text: "{name} запросил(а) изменение имени пользователя"
+      username_exerpt: "Новое имя пользователя: {requestedName}"
+
+    # Settings Page
+    settings:
+      nickname_request_button: "Изменить отображаемое имя"
+      username_request_button: "Изменить имя пользователя"
+
+    user:
+      name_history_link: "История имени"
+
+  ref:
+    name_change_request: "Запрос на изменение имени"
+    name_change_requests: "Запросы на изменение имени"
+    nickname_change_request: "Запрос на изменение отображаемого имени"
+    nickname_change_requests: "Запросы на изменение отображаемого имени"
+    username_change_request: "Запрос на изменение имени пользователя"
+    username_change_requests: "Запросы на изменение имени пользователя"

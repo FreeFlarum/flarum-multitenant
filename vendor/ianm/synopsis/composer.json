@@ -43,7 +43,7 @@
             "category": "discussion",
             "icon": {
                 "name": "fas fa-comment-dots",
-                "backgroundColor": "#008000",
+                "backgroundColor": "#0072e3",
                 "color": "#fff"
             }
         }

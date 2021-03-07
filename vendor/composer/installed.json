@@ -110,24 +110,24 @@
         },
         {
             "name": "askvortsov/flarum-discussion-templates",
-            "version": "v0.3.0",
-            "version_normalized": "0.3.0.0",
+            "version": "v0.4.0",
+            "version_normalized": "0.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/askvortsov1/flarum-discussion-templates.git",
-                "reference": "fd0e45a32165a50d6d0e8fad067ee14bbcd8ad29"
+                "reference": "de48950fc0907f6623b42795e0612eef20ba8ada"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/askvortsov1/flarum-discussion-templates/zipball/fd0e45a32165a50d6d0e8fad067ee14bbcd8ad29",
-                "reference": "fd0e45a32165a50d6d0e8fad067ee14bbcd8ad29",
+                "url": "https://api.github.com/repos/askvortsov1/flarum-discussion-templates/zipball/de48950fc0907f6623b42795e0612eef20ba8ada",
+                "reference": "de48950fc0907f6623b42795e0612eef20ba8ada",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15",
                 "flarum/tags": "^0.1.0-beta.15"
             },
-            "time": "2020-12-15T22:15:09+00:00",
+            "time": "2021-02-18T23:43:24+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -170,23 +170,23 @@
         },
         {
             "name": "askvortsov/flarum-moderator-warnings",
-            "version": "v0.4.1",
-            "version_normalized": "0.4.1.0",
+            "version": "v0.4.2",
+            "version_normalized": "0.4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/askvortsov1/flarum-moderator-warnings.git",
-                "reference": "8b507b0ba4ff5e26eccc91132d8cb45697d41357"
+                "reference": "49b77af733ef442f22a44e6b95c2e94ad1a72756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/askvortsov1/flarum-moderator-warnings/zipball/8b507b0ba4ff5e26eccc91132d8cb45697d41357",
-                "reference": "8b507b0ba4ff5e26eccc91132d8cb45697d41357",
+                "url": "https://api.github.com/repos/askvortsov1/flarum-moderator-warnings/zipball/49b77af733ef442f22a44e6b95c2e94ad1a72756",
+                "reference": "49b77af733ef442f22a44e6b95c2e94ad1a72756",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2021-01-03T19:45:19+00:00",
+            "time": "2021-02-18T20:13:27+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -228,18 +228,149 @@
             "install-path": "../askvortsov/flarum-moderator-warnings"
         },
         {
-            "name": "aws/aws-sdk-php",
-            "version": "3.172.4",
-            "version_normalized": "3.172.4.0",
+            "name": "askvortsov/flarum-pwa",
+            "version": "v2.0.4",
+            "version_normalized": "2.0.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "506e60798bb7d13bdafadce9727ab9cc9ac987b0"
+                "url": "https://github.com/askvortsov1/flarum-pwa.git",
+                "reference": "25f2d54d317415a58426aa4d1b68cf2714226d85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/506e60798bb7d13bdafadce9727ab9cc9ac987b0",
-                "reference": "506e60798bb7d13bdafadce9727ab9cc9ac987b0",
+                "url": "https://api.github.com/repos/askvortsov1/flarum-pwa/zipball/25f2d54d317415a58426aa4d1b68cf2714226d85",
+                "reference": "25f2d54d317415a58426aa4d1b68cf2714226d85",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15"
+            },
+            "conflict": {
+                "minishlink/web-push": "<5.2.5 || >=6"
+            },
+            "suggest": {
+                "ext-gmp": "This is required for push notifications",
+                "minishlink/web-push": "This is required for push notifications"
+            },
+            "time": "2021-02-18T18:57:24+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Progressive Web App",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-mobile-alt",
+                        "backgroundColor": "#6932D1",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Askvortsov\\FlarumPWA\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Skvortsov",
+                    "email": "askvortsov@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Turn your flarum site into a progressive web app!",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/23219-progressive-web-app-and-push-notifications",
+                "issues": "https://github.com/askvortsov1/flarum-pwa/issues",
+                "source": "https://github.com/askvortsov1/flarum-pwa"
+            },
+            "install-path": "../askvortsov/flarum-pwa"
+        },
+        {
+            "name": "askvortsov/flarum-trust-levels",
+            "version": "v0.1.4",
+            "version_normalized": "0.1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/askvortsov1/flarum-trust-levels.git",
+                "reference": "582fc8f5777b627d2bc62a27521b9dc3b8a49dfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/askvortsov1/flarum-trust-levels/zipball/582fc8f5777b627d2bc62a27521b9dc3b8a49dfe",
+                "reference": "582fc8f5777b627d2bc62a27521b9dc3b8a49dfe",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15",
+                "illuminate/console": "*"
+            },
+            "require-dev": {
+                "flarum/likes": "^0.1.0",
+                "flarum/testing": "dev-main",
+                "fof/best-answer": "dev-master"
+            },
+            "time": "2021-02-22T22:05:14+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Trust Levels",
+                    "category": "moderation",
+                    "icon": {
+                        "name": "fas fa-arrow-double-up",
+                        "backgroundColor": "#6932D1",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Askvortsov\\TrustLevels\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Skvortsov",
+                    "email": "askvortsov@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Automatically assign groups based on activity.",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/25977-trust-levels-automatic-group-assignment",
+                "issues": "https://github.com/askvortsov1/flarum-trust-levels/issues",
+                "source": "https://github.com/askvortsov1/flarum-trust-levels"
+            },
+            "install-path": "../askvortsov/flarum-trust-levels"
+        },
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "3.173.23",
+            "version_normalized": "3.173.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "259fa1a47a46f81e66b1ea328ed961a58fa061c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/259fa1a47a46f81e66b1ea328ed961a58fa061c2",
+                "reference": "259fa1a47a46f81e66b1ea328ed961a58fa061c2",
                 "shasum": ""
             },
             "require": {
@@ -247,9 +378,9 @@
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
                 "guzzlehttp/guzzle": "^5.3.3|^6.2.1|^7.0",
-                "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.4.1",
-                "mtdowling/jmespath.php": "^2.5",
+                "guzzlehttp/promises": "^1.4.0",
+                "guzzlehttp/psr7": "^1.7.0",
+                "mtdowling/jmespath.php": "^2.6",
                 "php": ">=5.5"
             },
             "require-dev": {
@@ -275,7 +406,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2021-01-29T19:17:51+00:00",
+            "time": "2021-03-05T19:20:35+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -316,7 +447,7 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.172.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.173.23"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -612,6 +743,65 @@
                 "locale"
             ],
             "install-path": "../bertaveira/flarum-pt-pt"
+        },
+        {
+            "name": "brick/math",
+            "version": "0.9.2",
+            "version_normalized": "0.9.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/math.git",
+                "reference": "dff976c2f3487d42c1db75a3b180e2b9f0e72ce0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brick/math/zipball/dff976c2f3487d42c1db75a3b180e2b9f0e72ce0",
+                "reference": "dff976c2f3487d42c1db75a3b180e2b9f0e72ce0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^7.5.15 || ^8.5 || ^9.0",
+                "vimeo/psalm": "4.3.2"
+            },
+            "time": "2021-01-20T22:51:39+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Brick\\Math\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Arbitrary-precision arithmetic library",
+            "keywords": [
+                "Arbitrary-precision",
+                "BigInteger",
+                "BigRational",
+                "arithmetic",
+                "bigdecimal",
+                "bignum",
+                "brick",
+                "math"
+            ],
+            "support": {
+                "issues": "https://github.com/brick/math/issues",
+                "source": "https://github.com/brick/math/tree/0.9.2"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/brick/math",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "../brick/math"
         },
         {
             "name": "clarkwinkelmann/flarum-ext-author-change",
@@ -1281,47 +1471,45 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.10.4",
-            "version_normalized": "2.10.4.0",
+            "version": "2.12.1",
+            "version_normalized": "2.12.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "47433196b6390d14409a33885ee42b6208160643"
+                "reference": "adce7a954a1c2f14f85e94aed90c8489af204086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/47433196b6390d14409a33885ee42b6208160643",
-                "reference": "47433196b6390d14409a33885ee42b6208160643",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/adce7a954a1c2f14f85e94aed90c8489af204086",
+                "reference": "adce7a954a1c2f14f85e94aed90c8489af204086",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.0",
                 "doctrine/event-manager": "^1.0",
                 "ext-pdo": "*",
-                "php": "^7.2"
+                "php": "^7.3 || ^8"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^8.1",
                 "jetbrains/phpstorm-stubs": "^2019.1",
-                "nikic/php-parser": "^4.4",
                 "phpstan/phpstan": "^0.12.40",
-                "phpunit/phpunit": "^8.5.5",
+                "phpunit/phpunit": "^9.4",
                 "psalm/plugin-phpunit": "^0.10.0",
                 "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
-                "vimeo/psalm": "^3.14.2"
+                "vimeo/psalm": "^3.17.2"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
             },
-            "time": "2020-09-12T21:20:41+00:00",
+            "time": "2020-11-14T20:26:58+00:00",
             "bin": [
                 "bin/doctrine-dbal"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10.x-dev",
-                    "dev-develop": "3.0.x-dev"
+                    "dev-master": "4.0.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1374,6 +1562,24 @@
                 "sqlite",
                 "sqlserver",
                 "sqlsrv"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/dbal/issues",
+                "source": "https://github.com/doctrine/dbal/tree/2.12.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdbal",
+                    "type": "tidelift"
+                }
             ],
             "install-path": "../doctrine/dbal"
         },
@@ -1827,6 +2033,126 @@
                 }
             ],
             "install-path": "../ffans/lang-simplified-chinese"
+        },
+        {
+            "name": "fgribreau/mailchecker",
+            "version": "v3.3.17",
+            "version_normalized": "3.3.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FGRibreau/mailchecker.git",
+                "reference": "b822b1d259d8cccef24849f81c9a0f7bcb066c4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/b822b1d259d8cccef24849f81c9a0f7bcb066c4e",
+                "reference": "b822b1d259d8cccef24849f81c9a0f7bcb066c4e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "time": "2020-11-04T21:23:09+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "platform/php/MailChecker.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Temporary (disposable/throwaway) email detection library. Covers 1987 fake email providers.",
+            "keywords": [
+                "detection",
+                "email",
+                "fake"
+            ],
+            "support": {
+                "issues": "https://github.com/FGRibreau/mailchecker/issues",
+                "source": "https://github.com/FGRibreau/mailchecker/tree/v3.3.17"
+            },
+            "install-path": "../fgribreau/mailchecker"
+        },
+        {
+            "name": "fgrosse/phpasn1",
+            "version": "v2.2.0",
+            "version_normalized": "2.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fgrosse/PHPASN1.git",
+                "reference": "d1978f7abd580f3fc33561e7f71d4c12c7531fad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/d1978f7abd580f3fc33561e7f71d4c12c7531fad",
+                "reference": "d1978f7abd580f3fc33561e7f71d4c12c7531fad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.3",
+                "satooshi/php-coveralls": "~2.0"
+            },
+            "suggest": {
+                "ext-bcmath": "BCmath is the fallback extension for big integer calculations",
+                "ext-curl": "For loading OID information from the web if they have not bee defined statically",
+                "ext-gmp": "GMP is the preferred extension for big integer calculations",
+                "phpseclib/bcmath_compat": "BCmath polyfill for servers where neither GMP nor BCmath is available"
+            },
+            "time": "2020-10-11T16:28:18+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FG\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Friedrich Große",
+                    "email": "friedrich.grosse@gmail.com",
+                    "homepage": "https://github.com/FGrosse",
+                    "role": "Author"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/FGrosse/PHPASN1/contributors"
+                }
+            ],
+            "description": "A PHP Framework that allows you to encode and decode arbitrary ASN.1 structures using the ITU-T X.690 Encoding Rules.",
+            "homepage": "https://github.com/FGrosse/PHPASN1",
+            "keywords": [
+                "DER",
+                "asn.1",
+                "asn1",
+                "ber",
+                "binary",
+                "decoding",
+                "encoding",
+                "x.509",
+                "x.690",
+                "x509",
+                "x690"
+            ],
+            "support": {
+                "issues": "https://github.com/fgrosse/PHPASN1/issues",
+                "source": "https://github.com/fgrosse/PHPASN1/tree/v2.2.0"
+            },
+            "install-path": "../fgrosse/phpasn1"
         },
         {
             "name": "fig/http-message-util",
@@ -3898,6 +4224,148 @@
             "install-path": "../fof/default-user-preferences"
         },
         {
+            "name": "fof/discussion-language",
+            "version": "0.3.3",
+            "version_normalized": "0.3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/discussion-language.git",
+                "reference": "f45c0f0507c721f4ee931c43115fdd1fc199b086"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-language/zipball/f45c0f0507c721f4ee931c43115fdd1fc199b086",
+                "reference": "f45c0f0507c721f4ee931c43115fdd1fc199b086",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15",
+                "fof/extend": ">=0.3.1",
+                "ianm/iso-639": "^1.0",
+                "rinvex/countries": "^6.1.2 || ^7.0.1"
+            },
+            "time": "2021-03-05T21:56:42+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Discussion Language",
+                    "category": "discussion",
+                    "icon": {
+                        "name": "fas fa-language",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/23702"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DiscussionLanguage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Specify the language a discussion is written in & sort by language",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/23702",
+                "issues": "https://github.com/FriendsOfFlarum/discussion-language/issues",
+                "source": "https://github.com/FriendsOfFlarum/discussion-language"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/discussion-language"
+        },
+        {
+            "name": "fof/disposable-emails",
+            "version": "0.2.1",
+            "version_normalized": "0.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/disposable-emails.git",
+                "reference": "048d8ac1fd4f09103ba2027092ee33359013c004"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/disposable-emails/zipball/048d8ac1fd4f09103ba2027092ee33359013c004",
+                "reference": "048d8ac1fd4f09103ba2027092ee33359013c004",
+                "shasum": ""
+            },
+            "require": {
+                "fgribreau/mailchecker": "^3.3.17",
+                "flarum/core": "^0.1.0-beta.14"
+            },
+            "time": "2020-12-14T13:48:35+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Disposable Emails",
+                    "category": "moderation",
+                    "icon": {
+                        "name": "fas fa-user-times",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20457-friendsofflarum-disposable-emails"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DisposableEmails\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Prevent users from signing up with disposable emails",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21894",
+                "issues": "https://github.com/FriendsOfFlarum/disposabile-emails/issues",
+                "source": "https://github.com/FriendsOfFlarum/disposable-emails"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/disposable-emails"
+        },
+        {
             "name": "fof/doorman",
             "version": "0.3.0",
             "version_normalized": "0.3.0.0",
@@ -3976,24 +4444,24 @@
         },
         {
             "name": "fof/drafts",
-            "version": "0.3.1",
-            "version_normalized": "0.3.1.0",
+            "version": "0.3.2",
+            "version_normalized": "0.3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/drafts.git",
-                "reference": "cc77ec510c1c7f31c66a45b30a36b1c76798c32e"
+                "reference": "9df5e9c69baaa7b63a7139579f9300a82b3f7928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/cc77ec510c1c7f31c66a45b30a36b1c76798c32e",
-                "reference": "cc77ec510c1c7f31c66a45b30a36b1c76798c32e",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/9df5e9c69baaa7b63a7139579f9300a82b3f7928",
+                "reference": "9df5e9c69baaa7b63a7139579f9300a82b3f7928",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15",
-                "fof/console": "^0.6.1"
+                "fof/console": "^0.6.2"
             },
-            "time": "2020-12-18T16:26:42+00:00",
+            "time": "2021-02-09T18:39:55+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -4535,17 +5003,17 @@
         },
         {
             "name": "fof/links",
-            "version": "0.5.3",
-            "version_normalized": "0.5.3.0",
+            "version": "0.5.4",
+            "version_normalized": "0.5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/links.git",
-                "reference": "6272bf02847c6853bf4b5a4dc945fe760d2ff18f"
+                "reference": "85e79618d42deb5873a7eaf612bcc4ca2dda3d12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/6272bf02847c6853bf4b5a4dc945fe760d2ff18f",
-                "reference": "6272bf02847c6853bf4b5a4dc945fe760d2ff18f",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/85e79618d42deb5873a7eaf612bcc4ca2dda3d12",
+                "reference": "85e79618d42deb5873a7eaf612bcc4ca2dda3d12",
                 "shasum": ""
             },
             "require": {
@@ -4554,7 +5022,7 @@
             "replace": {
                 "sijad/flarum-ext-links": "*"
             },
-            "time": "2021-01-23T13:01:43+00:00",
+            "time": "2021-02-02T20:15:24+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -4611,30 +5079,31 @@
         },
         {
             "name": "fof/masquerade",
-            "version": "0.3.6",
-            "version_normalized": "0.3.6.0",
+            "version": "0.3.7",
+            "version_normalized": "0.3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/masquerade.git",
-                "reference": "3c9db4cf98ace45276e418582e7e4fd701e9d4d7"
+                "reference": "40ca1940098c615c3ac677ec9de9c08721ce46d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/3c9db4cf98ace45276e418582e7e4fd701e9d4d7",
-                "reference": "3c9db4cf98ace45276e418582e7e4fd701e9d4d7",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/40ca1940098c615c3ac677ec9de9c08721ce46d9",
+                "reference": "40ca1940098c615c3ac677ec9de9c08721ce46d9",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.14"
+                "flarum/core": "^0.1.0-beta.15"
             },
             "replace": {
                 "flagrow/masquerade": "*"
             },
-            "time": "2020-12-07T20:50:29+00:00",
+            "time": "2021-02-16T00:43:59+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "FoF Masquerade",
+                    "category": "feature",
                     "icon": {
                         "image": "resources/logo.svg",
                         "backgroundColor": "#e74c3c",
@@ -4661,7 +5130,7 @@
                 {
                     "name": "Daniël Klabbers",
                     "email": "daniel@klabbers.email",
-                    "homepage": "http://luceos.com"
+                    "homepage": "https://luceos.com/"
                 },
                 {
                     "name": "Clark Winkelmann",
@@ -4678,8 +5147,9 @@
                 "user profile"
             ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/5791",
                 "issues": "https://github.com/FriendsOfFlarum/masquerade/issues",
-                "source": "https://github.com/FriendsOfFlarum/masquerade/tree/0.3.6"
+                "source": "https://github.com/FriendsOfFlarum/masquerade"
             },
             "funding": [
                 {
@@ -4843,27 +5313,26 @@
         },
         {
             "name": "fof/oauth",
-            "version": "0.2.1",
-            "version_normalized": "0.2.1.0",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/oauth.git",
-                "reference": "c303ef61e24568aff3b49221b55d16ed5d2d9b4c"
+                "reference": "d5eca0f3b58fcb7962c6a9b5ad3f0b460460fbf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/oauth/zipball/c303ef61e24568aff3b49221b55d16ed5d2d9b4c",
-                "reference": "c303ef61e24568aff3b49221b55d16ed5d2d9b4c",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/oauth/zipball/d5eca0f3b58fcb7962c6a9b5ad3f0b460460fbf4",
+                "reference": "d5eca0f3b58fcb7962c6a9b5ad3f0b460460fbf4",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.15",
+                "flarum/core": "^0.1.0-beta.14",
                 "fof/components": ">=0.2.0",
                 "fof/extend": ">=0.3.0",
                 "league/oauth1-client": "^1.8.2",
                 "league/oauth2-facebook": "^2.0.3",
                 "league/oauth2-github": "^2.0.0",
-                "league/oauth2-google": "^3.0.3",
                 "omines/oauth2-gitlab": "^3.3.0",
                 "wohali/oauth2-discord-new": "^1.1.0"
             },
@@ -4872,15 +5341,13 @@
                 "flarum/auth-github": "*",
                 "flarum/auth-twitter": "*",
                 "fof/auth-discord": "*",
-                "fof/auth-gitlab": "*",
-                "luuhai48/oauth-google": "*"
+                "fof/auth-gitlab": "*"
             },
-            "time": "2021-01-28T17:13:52+00:00",
+            "time": "2020-10-08T23:25:16+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "FoF OAuth",
-                    "category": "authentication",
                     "icon": {
                         "name": "fas fa-sign-in-alt",
                         "backgroundColor": "#e74c3c",
@@ -4888,7 +5355,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/25182"
+                    "discuss": ""
                 }
             },
             "installation-source": "dist",
@@ -4908,8 +5375,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Allow users to log in with GitHub, Twitter, Facebook, Google, and more!",
-            "homepage": "https://friendsofflarum.org",
+            "description": "Allow users to log in with GitHub, Twitter, Facebook, and more!",
             "keywords": [
                 "discord",
                 "facebook",
@@ -4917,19 +5383,17 @@
                 "friendsofflarum",
                 "github",
                 "gitlab",
-                "google",
                 "oauth",
                 "twitter"
             ],
             "support": {
-                "forum": "https://discuss.flarum.org/d/25182",
                 "issues": "https://github.com/FriendsOfFlarum/oauth/issues",
-                "source": "https://github.com/FriendsOfFlarum/oauth"
+                "source": "https://github.com/FriendsOfFlarum/oauth/tree/0.1.0"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
                 }
             ],
             "install-path": "../fof/oauth"
@@ -5547,17 +6011,17 @@
         },
         {
             "name": "fof/socialprofile",
-            "version": "0.2.2",
-            "version_normalized": "0.2.2.0",
+            "version": "0.2.3",
+            "version_normalized": "0.2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/socialprofile.git",
-                "reference": "bd0763eeb1051454e7b2222981b7db6dd2c42c43"
+                "reference": "7cb0048920c4b7393fc37cf465aede3fc728910e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/bd0763eeb1051454e7b2222981b7db6dd2c42c43",
-                "reference": "bd0763eeb1051454e7b2222981b7db6dd2c42c43",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/7cb0048920c4b7393fc37cf465aede3fc728910e",
+                "reference": "7cb0048920c4b7393fc37cf465aede3fc728910e",
                 "shasum": ""
             },
             "require": {
@@ -5566,7 +6030,7 @@
             "replace": {
                 "davis/flarum-ext-socialprofile": "*"
             },
-            "time": "2021-01-17T21:30:37+00:00",
+            "time": "2021-02-09T18:32:57+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -5995,24 +6459,24 @@
         },
         {
             "name": "fof/upload",
-            "version": "0.12.9",
-            "version_normalized": "0.12.9.0",
+            "version": "0.12.10",
+            "version_normalized": "0.12.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/upload.git",
-                "reference": "2f464f0a6e1345b1071a339c4658b5a95f844396"
+                "reference": "d70dd6701f9472f9da7ed254a82043d2a5cdfab4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/2f464f0a6e1345b1071a339c4658b5a95f844396",
-                "reference": "2f464f0a6e1345b1071a339c4658b5a95f844396",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/upload/zipball/d70dd6701f9472f9da7ed254a82043d2a5cdfab4",
+                "reference": "d70dd6701f9472f9da7ed254a82043d2a5cdfab4",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.17",
                 "guzzlehttp/guzzle": "^6.0 || ^7.0",
-                "ramsey/uuid": "^3.5.2",
+                "ramsey/uuid": "^3.5.2 || ^4",
                 "softcreatr/php-mime-detector": "^3.0"
             },
             "replace": {
@@ -6026,7 +6490,7 @@
                 "league/flysystem-aws-s3-v3": "Uploads to AWS S3 using API version 3.",
                 "overtrue/flysystem-qiniu": "Uploads to QiNiu using API."
             },
-            "time": "2021-01-26T07:38:11+00:00",
+            "time": "2021-02-09T20:09:08+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -6154,17 +6618,17 @@
         },
         {
             "name": "fof/user-directory",
-            "version": "0.5.0",
-            "version_normalized": "0.5.0.0",
+            "version": "0.5.3",
+            "version_normalized": "0.5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/user-directory.git",
-                "reference": "b3dd04fb14ca9b7b3c35f6fa661b6bcd46be0d4e"
+                "reference": "f5164f94314c60a374f105c4f83205bc7e65c98b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/user-directory/zipball/b3dd04fb14ca9b7b3c35f6fa661b6bcd46be0d4e",
-                "reference": "b3dd04fb14ca9b7b3c35f6fa661b6bcd46be0d4e",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/user-directory/zipball/f5164f94314c60a374f105c4f83205bc7e65c98b",
+                "reference": "f5164f94314c60a374f105c4f83205bc7e65c98b",
                 "shasum": ""
             },
             "require": {
@@ -6174,7 +6638,7 @@
             "replace": {
                 "flagrow/user-directory": "*"
             },
-            "time": "2020-12-16T10:44:43+00:00",
+            "time": "2021-03-05T17:02:49+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -6236,23 +6700,23 @@
         },
         {
             "name": "fof/username-request",
-            "version": "0.4.1",
-            "version_normalized": "0.4.1.0",
+            "version": "0.4.2",
+            "version_normalized": "0.4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/username-request.git",
-                "reference": "802db23021909830a27495aa6e71b6de15b97fa8"
+                "reference": "ba139452715c55084a69fd31e1193c0801e3b430"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/username-request/zipball/802db23021909830a27495aa6e71b6de15b97fa8",
-                "reference": "802db23021909830a27495aa6e71b6de15b97fa8",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/username-request/zipball/ba139452715c55084a69fd31e1193c0801e3b430",
+                "reference": "ba139452715c55084a69fd31e1193c0801e3b430",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2021-01-18T01:12:04+00:00",
+            "time": "2021-02-16T21:06:30+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -6307,28 +6771,29 @@
         },
         {
             "name": "fof/webhooks",
-            "version": "0.4.1",
-            "version_normalized": "0.4.1.0",
+            "version": "0.5.0",
+            "version_normalized": "0.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/webhooks.git",
-                "reference": "240fb53f092c780fef484abf30d96fe794a1ef36"
+                "reference": "e69ecacc4c5115ff50f859e17c40d441f6ce67b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/webhooks/zipball/240fb53f092c780fef484abf30d96fe794a1ef36",
-                "reference": "240fb53f092c780fef484abf30d96fe794a1ef36",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/webhooks/zipball/e69ecacc4c5115ff50f859e17c40d441f6ce67b6",
+                "reference": "e69ecacc4c5115ff50f859e17c40d441f6ce67b6",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15",
                 "guzzlehttp/guzzle": "6.* || 7.*",
+                "html2text/html2text": "^4.3.1",
                 "ssnepenthe/color-utils": "^0.4.2"
             },
             "replace": {
                 "reflar/webhooks": "*"
             },
-            "time": "2021-01-26T23:45:27+00:00",
+            "time": "2021-02-09T14:07:44+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -6419,45 +6884,39 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.2.0",
-            "version_normalized": "7.2.0.0",
+            "version": "6.5.5",
+            "version_normalized": "6.5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79"
+                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0aa74dfb41ae110835923ef10a9d803a22d50e79",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
+                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.4",
-                "guzzlehttp/psr7": "^1.7",
-                "php": "^7.2.5 || ^8.0",
-                "psr/http-client": "^1.0"
-            },
-            "provide": {
-                "psr/http-client-implementation": "1.0"
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.6.1",
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.17.0"
             },
             "require-dev": {
                 "ext-curl": "*",
-                "php-http/client-integration-tests": "^3.0",
-                "phpunit/phpunit": "^8.5.5 || ^9.3.5",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
                 "psr/log": "^1.1"
             },
             "suggest": {
-                "ext-curl": "Required for CURL handler support",
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
-            "time": "2020-10-10T11:47:56+00:00",
+            "time": "2020-06-16T21:01:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.1-dev"
+                    "dev-master": "6.5-dev"
                 }
             },
             "installation-source": "dist",
@@ -6478,11 +6937,6 @@
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://sagikazarmark.hu"
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library",
@@ -6493,48 +6947,28 @@
                 "framework",
                 "http",
                 "http client",
-                "psr-18",
-                "psr-7",
                 "rest",
                 "web service"
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.2.0"
+                "source": "https://github.com/guzzle/guzzle/tree/6.5"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/Nyholm",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/alexeyshockov",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/gmponos",
-                    "type": "github"
-                }
-            ],
             "install-path": "../guzzlehttp/guzzle"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.4.0",
-            "version_normalized": "1.4.0.0",
+            "version": "1.4.1",
+            "version_normalized": "1.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "60d379c243457e073cff02bc323a2a86cb355631"
+                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/60d379c243457e073cff02bc323a2a86cb355631",
-                "reference": "60d379c243457e073cff02bc323a2a86cb355631",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/8e7d04f1f6450fef59366c399cfad4b9383aa30d",
+                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d",
                 "shasum": ""
             },
             "require": {
@@ -6543,7 +6977,7 @@
             "require-dev": {
                 "symfony/phpunit-bridge": "^4.4 || ^5.1"
             },
-            "time": "2020-09-30T07:37:28+00:00",
+            "time": "2021-03-07T09:25:29+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -6574,6 +7008,10 @@
             "keywords": [
                 "promise"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/promises/issues",
+                "source": "https://github.com/guzzle/promises/tree/1.4.1"
+            },
             "install-path": "../guzzlehttp/promises"
         },
         {
@@ -6651,18 +7089,112 @@
             "install-path": "../guzzlehttp/psr7"
         },
         {
-            "name": "ianm/synopsis",
-            "version": "0.1.2",
-            "version_normalized": "0.1.2.0",
+            "name": "html2text/html2text",
+            "version": "4.3.1",
+            "version_normalized": "4.3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/imorland/synopsis.git",
-                "reference": "2e869fc6d07bff765cfa28e88dec81b4b030d965"
+                "url": "https://github.com/mtibben/html2text.git",
+                "reference": "61ad68e934066a6f8df29a3d23a6460536d0855c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imorland/synopsis/zipball/2e869fc6d07bff765cfa28e88dec81b4b030d965",
-                "reference": "2e869fc6d07bff765cfa28e88dec81b4b030d965",
+                "url": "https://api.github.com/repos/mtibben/html2text/zipball/61ad68e934066a6f8df29a3d23a6460536d0855c",
+                "reference": "61ad68e934066a6f8df29a3d23a6460536d0855c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "symfony/polyfill-mbstring": "If you can't install ext-mbstring"
+            },
+            "time": "2020-04-16T23:44:31+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Html2Text\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Converts HTML to formatted plain text",
+            "support": {
+                "issues": "https://github.com/mtibben/html2text/issues",
+                "source": "https://github.com/mtibben/html2text/tree/4.3.1"
+            },
+            "install-path": "../html2text/html2text"
+        },
+        {
+            "name": "ianm/iso-639",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imorland/php-iso-639.git",
+                "reference": "1dff6806fcb714ff62e3d20efea21d92383d5a6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imorland/php-iso-639/zipball/1dff6806fcb714ff62e3d20efea21d92383d5a6d",
+                "reference": "1dff6806fcb714ff62e3d20efea21d92383d5a6d",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "time": "2020-12-24T19:20:38+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "IanM\\ISO639\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Zamroni",
+                    "email": "halo@matriphe.com"
+                }
+            ],
+            "description": "PHP library to convert ISO-639-1 code to language name.",
+            "keywords": [
+                "639",
+                "iso",
+                "iso-639",
+                "lang",
+                "language",
+                "laravel"
+            ],
+            "support": {
+                "source": "https://github.com/imorland/php-iso-639/tree/1.0"
+            },
+            "install-path": "../ianm/iso-639"
+        },
+        {
+            "name": "ianm/synopsis",
+            "version": "0.1.3",
+            "version_normalized": "0.1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imorland/synopsis.git",
+                "reference": "adcbe4c6834420fa52821e6d895aaf4e8c4705bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imorland/synopsis/zipball/adcbe4c6834420fa52821e6d895aaf4e8c4705bf",
+                "reference": "adcbe4c6834420fa52821e6d895aaf4e8c4705bf",
                 "shasum": ""
             },
             "require": {
@@ -6671,7 +7203,7 @@
             "conflict": {
                 "jordanjay29/flarum-ext-summaries": "*"
             },
-            "time": "2021-01-13T20:12:09+00:00",
+            "time": "2021-03-05T23:34:08+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flagrow": {
@@ -6682,7 +7214,7 @@
                     "category": "discussion",
                     "icon": {
                         "name": "fas fa-comment-dots",
-                        "backgroundColor": "#008000",
+                        "backgroundColor": "#0072e3",
                         "color": "#fff"
                     }
                 }
@@ -6722,8 +7254,8 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -6774,8 +7306,8 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -6832,8 +7364,8 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -6883,8 +7415,8 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -6944,8 +7476,8 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -6995,8 +7527,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -7046,17 +7578,17 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "00b016a6d770c5c01bcce3fbe7df5d67eac75bae"
+                "reference": "99890e3bc59b80f360e52f8838d4745ea5d9b7b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/00b016a6d770c5c01bcce3fbe7df5d67eac75bae",
-                "reference": "00b016a6d770c5c01bcce3fbe7df5d67eac75bae",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/99890e3bc59b80f360e52f8838d4745ea5d9b7b8",
+                "reference": "99890e3bc59b80f360e52f8838d4745ea5d9b7b8",
                 "shasum": ""
             },
             "require": {
@@ -7075,7 +7607,7 @@
                 "illuminate/pagination": "Required to paginate the result set (^6.0).",
                 "symfony/finder": "Required to use Eloquent model factories (^4.3.4)."
             },
-            "time": "2021-01-21T14:07:23+00:00",
+            "time": "2021-02-24T13:50:12+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7114,8 +7646,8 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -7166,8 +7698,8 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -7226,8 +7758,8 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -7277,8 +7809,8 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
@@ -7339,8 +7871,8 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -7391,8 +7923,8 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -7458,8 +7990,8 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -7516,17 +8048,17 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "338777190c1169087e1d8f61a0fb7b1255310c74"
+                "reference": "20e0535a59b2ba902de334138a632fe2f7455e01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/338777190c1169087e1d8f61a0fb7b1255310c74",
-                "reference": "338777190c1169087e1d8f61a0fb7b1255310c74",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/20e0535a59b2ba902de334138a632fe2f7455e01",
+                "reference": "20e0535a59b2ba902de334138a632fe2f7455e01",
                 "shasum": ""
             },
             "require": {
@@ -7548,7 +8080,7 @@
                 "symfony/var-dumper": "Required to use the dd function (^4.3.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^3.3)."
             },
-            "time": "2020-12-21T22:30:16+00:00",
+            "time": "2021-02-08T19:49:57+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7584,8 +8116,8 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -7637,8 +8169,8 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
@@ -7696,8 +8228,8 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v6.20.16",
-            "version_normalized": "6.20.16.0",
+            "version": "v6.20.17",
+            "version_normalized": "6.20.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -7825,29 +8357,30 @@
         },
         {
             "name": "jslirola/flarum-ext-login2seeplus",
-            "version": "v0.1.7",
-            "version_normalized": "0.1.7.0",
+            "version": "v0.1.8.1",
+            "version_normalized": "0.1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jslirola/flarum-ext-login2seeplus.git",
-                "reference": "f063e38a63ef6b5734ae4d96e0b8c8425e49e4a3"
+                "reference": "f1141b1cd08eec57f0c81a733c42d2150dc8c8d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jslirola/flarum-ext-login2seeplus/zipball/f063e38a63ef6b5734ae4d96e0b8c8425e49e4a3",
-                "reference": "f063e38a63ef6b5734ae4d96e0b8c8425e49e4a3",
+                "url": "https://api.github.com/repos/jslirola/flarum-ext-login2seeplus/zipball/f1141b1cd08eec57f0c81a733c42d2150dc8c8d6",
+                "reference": "f1141b1cd08eec57f0c81a733c42d2150dc8c8d6",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.14"
+                "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2020-11-14T20:44:15+00:00",
+            "time": "2021-03-01T18:39:12+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "Login2SeePlus",
                     "icon": {
                         "name": "fas fa-eye",
+                        "category": "discussion",
                         "backgroundColor": "#ff1a00",
                         "color": "#fff"
                     }
@@ -7869,7 +8402,11 @@
                 }
             ],
             "description": "Make posts hidden for visitors.",
+            "keywords": [
+                "discussion"
+            ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/24193-login-2-see-plus",
                 "issues": "https://github.com/jslirola/flarum-ext-login2seeplus/issues",
                 "source": "https://github.com/jslirola/flarum-ext-login2seeplus"
             },
@@ -7877,32 +8414,28 @@
         },
         {
             "name": "kakifrucht/flarum-de",
-            "version": "0.14.1",
-            "version_normalized": "0.14.1.0",
+            "version": "0.14.3",
+            "version_normalized": "0.14.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kakifrucht/flarum-de.git",
-                "reference": "937a6a670bfd9715103721c922b5daa4765a3b53"
+                "reference": "ee9ed874cf6202d3202a6b559cc5fb4c7028031f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kakifrucht/flarum-de/zipball/937a6a670bfd9715103721c922b5daa4765a3b53",
-                "reference": "937a6a670bfd9715103721c922b5daa4765a3b53",
+                "url": "https://api.github.com/repos/Kakifrucht/flarum-de/zipball/ee9ed874cf6202d3202a6b559cc5fb4c7028031f",
+                "reference": "ee9ed874cf6202d3202a6b559cc5fb4c7028031f",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2021-01-26T05:04:52+00:00",
+            "time": "2021-02-27T00:44:52+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
                     "title": "German",
                     "category": "language",
-                    "info": {
-                        "website": "https://github.com/Kakifrucht/flarum-de",
-                        "support": "https://discuss.flarum.org/d/2648"
-                    },
                     "icon": {
                         "image": "icon.svg",
                         "backgroundColor": "#ffffff",
@@ -7920,6 +8453,13 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Fabian Prieto Wunderlich",
+                    "email": "prieto@wunderlich.pw",
+                    "role": "Translator"
+                }
+            ],
             "description": "German language pack for Flarum and its bundled extensions.",
             "homepage": "https://github.com/Kakifrucht/flarum-de",
             "keywords": [
@@ -7934,23 +8474,23 @@
         },
         {
             "name": "kakifrucht/flarum-de-extended",
-            "version": "0.2.2",
-            "version_normalized": "0.2.2.0",
+            "version": "0.3.0",
+            "version_normalized": "0.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kakifrucht/flarum-de-extended.git",
-                "reference": "6d45ddbb43d1e7b6b75bb5905d32e41ce3aa11e6"
+                "reference": "cf871e3c39c9dfba4d0e2dc1a98f3751906a3580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kakifrucht/flarum-de-extended/zipball/6d45ddbb43d1e7b6b75bb5905d32e41ce3aa11e6",
-                "reference": "6d45ddbb43d1e7b6b75bb5905d32e41ce3aa11e6",
+                "url": "https://api.github.com/repos/Kakifrucht/flarum-de-extended/zipball/cf871e3c39c9dfba4d0e2dc1a98f3751906a3580",
+                "reference": "cf871e3c39c9dfba4d0e2dc1a98f3751906a3580",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2021-01-28T01:41:11+00:00",
+            "time": "2021-02-27T00:39:43+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -7972,6 +8512,13 @@
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Prieto Wunderlich",
+                    "email": "prieto@wunderlich.pw",
+                    "role": "Translator"
+                }
             ],
             "description": "German language pack for third-party Flarum extensions.",
             "homepage": "https://github.com/Kakifrucht/flarum-de-extended",
@@ -8065,38 +8612,38 @@
         },
         {
             "name": "laminas/laminas-escaper",
-            "version": "2.6.1",
-            "version_normalized": "2.6.1.0",
+            "version": "2.7.0",
+            "version_normalized": "2.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-escaper.git",
-                "reference": "25f2a053eadfa92ddacb609dcbbc39362610da70"
+                "reference": "5e04bc5ae5990b17159d79d331055e2c645e5cc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/25f2a053eadfa92ddacb609dcbbc39362610da70",
-                "reference": "25f2a053eadfa92ddacb609dcbbc39362610da70",
+                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/5e04bc5ae5990b17159d79d331055e2c645e5cc5",
+                "reference": "5e04bc5ae5990b17159d79d331055e2c645e5cc5",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^5.6 || ^7.0"
+                "php": "^7.3 || ~8.0.0"
             },
             "replace": {
-                "zendframework/zend-escaper": "self.version"
+                "zendframework/zend-escaper": "^2.6.1"
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
-                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2"
+                "phpunit/phpunit": "^9.3",
+                "psalm/plugin-phpunit": "^0.12.2",
+                "vimeo/psalm": "^3.16"
             },
-            "time": "2019-12-31T16:43:30+00:00",
+            "suggest": {
+                "ext-iconv": "*",
+                "ext-mbstring": "*"
+            },
+            "time": "2020-11-17T21:26:43+00:00",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6.x-dev",
-                    "dev-develop": "2.7.x-dev"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -8113,26 +8660,40 @@
                 "escaper",
                 "laminas"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-escaper/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-escaper/issues",
+                "rss": "https://github.com/laminas/laminas-escaper/releases.atom",
+                "source": "https://github.com/laminas/laminas-escaper"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "install-path": "../laminas/laminas-escaper"
         },
         {
             "name": "laminas/laminas-httphandlerrunner",
-            "version": "1.2.0",
-            "version_normalized": "1.2.0.0",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-httphandlerrunner.git",
-                "reference": "e1a5dad040e0043135e8095ee27d1fbf6fb640e1"
+                "reference": "e8f850bd12cb82b268ff235fe74b2df906e8bfe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-httphandlerrunner/zipball/e1a5dad040e0043135e8095ee27d1fbf6fb640e1",
-                "reference": "e1a5dad040e0043135e8095ee27d1fbf6fb640e1",
+                "url": "https://api.github.com/repos/laminas/laminas-httphandlerrunner/zipball/e8f850bd12cb82b268ff235fe74b2df906e8bfe8",
+                "reference": "e8f850bd12cb82b268ff235fe74b2df906e8bfe8",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.1",
+                "php": "^7.3 || ~8.0.0",
                 "psr/http-message": "^1.0",
                 "psr/http-message-implementation": "^1.0",
                 "psr/http-server-handler": "^1.0"
@@ -8142,16 +8703,12 @@
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
-                "laminas/laminas-diactoros": "^1.7 || ^2.1.1",
-                "phpunit/phpunit": "^7.0.2"
+                "laminas/laminas-diactoros": "^2.1.1",
+                "phpunit/phpunit": "^9.3"
             },
-            "time": "2020-06-03T15:52:17+00:00",
+            "time": "2020-11-19T17:12:59+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev",
-                    "dev-develop": "1.3.x-dev"
-                },
                 "laminas": {
                     "config-provider": "Laminas\\HttpHandlerRunner\\ConfigProvider"
                 }
@@ -8175,28 +8732,42 @@
                 "psr-15",
                 "psr-7"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-httphandlerrunner/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-httphandlerrunner/issues",
+                "rss": "https://github.com/laminas/laminas-httphandlerrunner/releases.atom",
+                "source": "https://github.com/laminas/laminas-httphandlerrunner"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "install-path": "../laminas/laminas-httphandlerrunner"
         },
         {
             "name": "laminas/laminas-stratigility",
-            "version": "3.2.2",
-            "version_normalized": "3.2.2.0",
+            "version": "3.3.0",
+            "version_normalized": "3.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stratigility.git",
-                "reference": "3f88aa174324bc9e6dd55715f401f9f25dbd722c"
+                "reference": "d6336b873fe8f766f84b82164f2a25e4decd6a9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/3f88aa174324bc9e6dd55715f401f9f25dbd722c",
-                "reference": "3f88aa174324bc9e6dd55715f401f9f25dbd722c",
+                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/d6336b873fe8f766f84b82164f2a25e4decd6a9a",
+                "reference": "d6336b873fe8f766f84b82164f2a25e4decd6a9a",
                 "shasum": ""
             },
             "require": {
                 "fig/http-message-util": "^1.1",
                 "laminas/laminas-escaper": "^2.3",
                 "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.1",
+                "php": "^7.3 || ~8.0.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
@@ -8210,19 +8781,15 @@
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "laminas/laminas-diactoros": "^1.7.1",
                 "malukenho/docheader": "^0.1.6",
-                "phpunit/phpunit": "^7.0.1"
+                "phpspec/prophecy": "^1.12",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.3"
             },
             "suggest": {
                 "psr/http-message-implementation": "Please install a psr/http-message-implementation to consume Stratigility; e.g., laminas/laminas-diactoros"
             },
-            "time": "2020-03-29T13:31:02+00:00",
+            "time": "2020-10-20T10:38:04+00:00",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2.x-dev",
-                    "dev-develop": "3.3.x-dev"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "files": [
@@ -8252,31 +8819,47 @@
                 "psr-15",
                 "psr-7"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-stratigility/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-stratigility/issues",
+                "rss": "https://github.com/laminas/laminas-stratigility/releases.atom",
+                "source": "https://github.com/laminas/laminas-stratigility"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "install-path": "../laminas/laminas-stratigility"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.1.1",
-            "version_normalized": "1.1.1.0",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "6ede70583e101030bcace4dcddd648f760ddf642"
+                "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6ede70583e101030bcace4dcddd648f760ddf642",
-                "reference": "6ede70583e101030bcace4dcddd648f760ddf642",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6cccbddfcfc742eb02158d6137ca5687d92cee32",
+                "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0 || ^8.0"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.1 || ^9.3",
-                "squizlabs/php_codesniffer": "^3.5"
+                "psalm/plugin-phpunit": "^0.15.1",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "^4.6"
             },
-            "time": "2020-09-14T14:23:00+00:00",
+            "time": "2021-02-25T21:54:58+00:00",
             "type": "library",
             "extra": {
                 "laminas": {
@@ -8302,6 +8885,18 @@
                 "autoloading",
                 "laminas",
                 "zf"
+            ],
+            "support": {
+                "forum": "https://discourse.laminas.dev/",
+                "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
+                "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
+                "source": "https://github.com/laminas/laminas-zendframework-bridge"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
             ],
             "install-path": "../laminas/laminas-zendframework-bridge"
         },
@@ -8880,17 +9475,17 @@
         },
         {
             "name": "league/oauth2-google",
-            "version": "3.0.3",
-            "version_normalized": "3.0.3.0",
+            "version": "3.0.4",
+            "version_normalized": "3.0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-google.git",
-                "reference": "18d1889897a8b18d85ecadacf74c9274d678d943"
+                "reference": "6b79441f244040760bed5fdcd092a2bda7cf34c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/18d1889897a8b18d85ecadacf74c9274d678d943",
-                "reference": "18d1889897a8b18d85ecadacf74c9274d678d943",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/6b79441f244040760bed5fdcd092a2bda7cf34c6",
+                "reference": "6b79441f244040760bed5fdcd092a2bda7cf34c6",
                 "shasum": ""
             },
             "require": {
@@ -8902,7 +9497,7 @@
                 "phpunit/phpunit": "^6.0",
                 "squizlabs/php_codesniffer": "^2.0"
             },
-            "time": "2020-07-24T15:16:12+00:00",
+            "time": "2021-01-27T16:09:03+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -8930,6 +9525,10 @@
                 "oauth",
                 "oauth2"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth2-google/issues",
+                "source": "https://github.com/thephpleague/oauth2-google/tree/3.0.4"
+            },
             "install-path": "../league/oauth2-google"
         },
         {
@@ -9069,6 +9668,70 @@
             "install-path": "../luatdolphin/lang-vietnamese"
         },
         {
+            "name": "luuhai48/oauth-google",
+            "version": "v1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/luuhai48/oauth-google.git",
+                "reference": "8e98ad5278f2295ad5ac1432a731e75a20665ecb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/luuhai48/oauth-google/zipball/8e98ad5278f2295ad5ac1432a731e75a20665ecb",
+                "reference": "8e98ad5278f2295ad5ac1432a731e75a20665ecb",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.14",
+                "fof/oauth": "^0.1.0",
+                "league/oauth2-google": "^3.0"
+            },
+            "time": "2020-12-08T14:58:39+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Oauth Google",
+                    "icon": {
+                        "name": "fab fa-google",
+                        "backgroundColor": "#4286f4",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": ""
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Luuhai48\\OauthGoogle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luuhai48",
+                    "email": "luuhai.hn48@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add google oauth to Flarum, extends Fof/Oauth",
+            "keywords": [
+                "flarum",
+                "google",
+                "oauth"
+            ],
+            "support": {
+                "issues": "https://github.com/luuhai48/oauth-google/issues",
+                "source": "https://github.com/luuhai48/oauth-google/tree/v1.1.0"
+            },
+            "install-path": "../luuhai48/oauth-google"
+        },
+        {
             "name": "madnest/flarum-lang-czech",
             "version": "v0.1.0-beta.14.1",
             "version_normalized": "0.1.0.0-beta14.1",
@@ -9130,17 +9793,17 @@
         },
         {
             "name": "marketplace/flarum-l10n-core-russian",
-            "version": "0.1.0-beta.15-19",
-            "version_normalized": "0.1.0.0-beta15-19",
+            "version": "0.1.0-beta.15-20",
+            "version_normalized": "0.1.0.0-beta15-20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-core-russian.git",
-                "reference": "b793acc7628aef1831a6054c71ecef2e382232a7"
+                "reference": "2dbfdb58242e0c1134f6186d8ada75f58fce1814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/b793acc7628aef1831a6054c71ecef2e382232a7",
-                "reference": "b793acc7628aef1831a6054c71ecef2e382232a7",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-core-russian/zipball/2dbfdb58242e0c1134f6186d8ada75f58fce1814",
+                "reference": "2dbfdb58242e0c1134f6186d8ada75f58fce1814",
                 "shasum": ""
             },
             "require": {
@@ -9150,7 +9813,7 @@
                 "flarum/flarum": "Flarum",
                 "marketplace/flarum-l10n-ext-russian": "Flarum Extensions Russian language pack."
             },
-            "time": "2021-01-23T22:13:20+00:00",
+            "time": "2021-02-14T09:22:22+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -9219,17 +9882,17 @@
         },
         {
             "name": "marketplace/flarum-l10n-ext-russian",
-            "version": "0.1.14",
-            "version_normalized": "0.1.14.0",
+            "version": "0.1.16",
+            "version_normalized": "0.1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marketplace-flarum/flarum-l10n-ext-russian.git",
-                "reference": "36f3f0211799e8fcbd271c21fd5006c833ad298c"
+                "reference": "c8c54c74f2bfd6212b47fa40f8714a99e5b3df1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/36f3f0211799e8fcbd271c21fd5006c833ad298c",
-                "reference": "36f3f0211799e8fcbd271c21fd5006c833ad298c",
+                "url": "https://api.github.com/repos/marketplace-flarum/flarum-l10n-ext-russian/zipball/c8c54c74f2bfd6212b47fa40f8714a99e5b3df1a",
+                "reference": "c8c54c74f2bfd6212b47fa40f8714a99e5b3df1a",
                 "shasum": ""
             },
             "require": {
@@ -9239,7 +9902,7 @@
                 "flarum/flarum": "Flarum",
                 "marketplace/flarum-l10n-core-russian": "Flarum Russian language pack."
             },
-            "time": "2021-01-17T22:05:52+00:00",
+            "time": "2021-03-04T14:58:43+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -9314,23 +9977,23 @@
         },
         {
             "name": "matteocontrini/flarum-imgur-upload",
-            "version": "v3.5.0",
-            "version_normalized": "3.5.0.0",
+            "version": "v3.6.0",
+            "version_normalized": "3.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matteocontrini/flarum-imgur-upload.git",
-                "reference": "5d8e535d4b9f98e3879956f27790ec7e61206cf4"
+                "reference": "7b34e465c72ff185f5d23049f8a8f4b4f6c3fc0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matteocontrini/flarum-imgur-upload/zipball/5d8e535d4b9f98e3879956f27790ec7e61206cf4",
-                "reference": "5d8e535d4b9f98e3879956f27790ec7e61206cf4",
+                "url": "https://api.github.com/repos/matteocontrini/flarum-imgur-upload/zipball/7b34e465c72ff185f5d23049f8a8f4b4f6c3fc0b",
+                "reference": "7b34e465c72ff185f5d23049f8a8f4b4f6c3fc0b",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
             },
-            "time": "2020-12-26T20:41:17+00:00",
+            "time": "2021-02-17T16:48:39+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -9551,17 +10214,17 @@
         },
         {
             "name": "michaelbelgium/flarum-discussion-views",
-            "version": "v5.0.0",
-            "version_normalized": "5.0.0.0",
+            "version": "v5.0.1",
+            "version_normalized": "5.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MichaelBelgium/flarum-discussion-views.git",
-                "reference": "23572a6ae7dfcecbe019195cf47c970a80da4c55"
+                "reference": "24e57332a2b364fa87e522d6d5d0e4d2d24285d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MichaelBelgium/flarum-discussion-views/zipball/23572a6ae7dfcecbe019195cf47c970a80da4c55",
-                "reference": "23572a6ae7dfcecbe019195cf47c970a80da4c55",
+                "url": "https://api.github.com/repos/MichaelBelgium/flarum-discussion-views/zipball/24e57332a2b364fa87e522d6d5d0e4d2d24285d8",
+                "reference": "24e57332a2b364fa87e522d6d5d0e4d2d24285d8",
                 "shasum": ""
             },
             "require": {
@@ -9573,7 +10236,7 @@
                 "rob006/flarum-lang-polish": "Includes Polish translation for this extension",
                 "rooaaar/lang-french-extended": "Includes French translation for this extension"
             },
-            "time": "2020-10-22T19:41:21+00:00",
+            "time": "2021-02-23T11:41:15+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -9585,7 +10248,7 @@
                     }
                 },
                 "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/7339"
+                    "discuss": "https://discuss.flarum.org/d/26269"
                 }
             },
             "installation-source": "dist",
@@ -9616,6 +10279,77 @@
                 }
             ],
             "install-path": "../michaelbelgium/flarum-discussion-views"
+        },
+        {
+            "name": "michaelbelgium/flarum-dutch",
+            "version": "v8.0.0",
+            "version_normalized": "8.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MichaelBelgium/flarum-dutch.git",
+                "reference": "8fb78d86d3fa33356460c6b21f2da774095c1421"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MichaelBelgium/flarum-dutch/zipball/8fb78d86d3fa33356460c6b21f2da774095c1421",
+                "reference": "8fb78d86d3fa33356460c6b21f2da774095c1421",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15"
+            },
+            "time": "2021-01-04T18:28:00+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Dutch",
+                    "category": "language",
+                    "icon": {
+                        "image": "dutch_core.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "nl",
+                    "title": "Nederlands"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rody Molenaar",
+                    "email": "rody.molenaar@xtrada.nl",
+                    "homepage": "http://rodymolenaar.nl/"
+                },
+                {
+                    "name": "Michael V.",
+                    "email": "michael@michaelbelgium.me",
+                    "homepage": "http://michaelbelgium.me"
+                }
+            ],
+            "description": "Dutch language pack for Flarum.",
+            "homepage": "https://github.com/michaelbelgium/flarum-dutch",
+            "keywords": [
+                "Dutch",
+                "locale"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18962",
+                "issues": "https://github.com/michaelbelgium/flarum-dutch/issues",
+                "source": "https://github.com/michaelbelgium/flarum-dutch"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/MichaelBelgium",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../michaelbelgium/flarum-dutch"
         },
         {
             "name": "middlewares/base-path",
@@ -9894,6 +10628,69 @@
             "install-path": "../migratetoflarum/canonical"
         },
         {
+            "name": "minishlink/web-push",
+            "version": "v5.2.5",
+            "version_normalized": "5.2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-push-libs/web-push-php.git",
+                "reference": "0e75af425126435794ed42d7aa92119fd563e503"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-push-libs/web-push-php/zipball/0e75af425126435794ed42d7aa92119fd563e503",
+                "reference": "0e75af425126435794ed42d7aa92119fd563e503",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.2",
+                "lib-openssl": "*",
+                "php": "^7.1",
+                "web-token/jwt-key-mgmt": "^1.0",
+                "web-token/jwt-signature": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpstan/phpstan": "0.11.2",
+                "phpunit/phpunit": "^7.0"
+            },
+            "time": "2020-08-02T08:58:01+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Minishlink\\WebPush\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Louis Lagrange",
+                    "email": "lagrange.louis@gmail.com",
+                    "homepage": "https://github.com/Minishlink"
+                }
+            ],
+            "description": "Web Push library for PHP",
+            "homepage": "https://github.com/web-push-libs/web-push-php",
+            "keywords": [
+                "Push API",
+                "WebPush",
+                "notifications",
+                "push",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/web-push-libs/web-push-php/issues",
+                "source": "https://github.com/web-push-libs/web-push-php/tree/v5.2.5"
+            },
+            "install-path": "../minishlink/web-push"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.26.0",
             "version_normalized": "1.26.0.0",
@@ -10048,23 +10845,23 @@
         },
         {
             "name": "nearata/lang-italian",
-            "version": "v0.1.0-beta.15.1",
-            "version_normalized": "0.1.0.0-beta15.1",
+            "version": "v0.1.0-beta.15.2",
+            "version_normalized": "0.1.0.0-beta15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nearata/lang-italian.git",
-                "reference": "6c0cbf068044a19f147c7e40bc802968179cad9c"
+                "reference": "b94f5170db8110485e4b34978217125276ed1176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nearata/lang-italian/zipball/6c0cbf068044a19f147c7e40bc802968179cad9c",
-                "reference": "6c0cbf068044a19f147c7e40bc802968179cad9c",
+                "url": "https://api.github.com/repos/Nearata/lang-italian/zipball/b94f5170db8110485e4b34978217125276ed1176",
+                "reference": "b94f5170db8110485e4b34978217125276ed1176",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.15"
             },
-            "time": "2021-01-12T21:51:03+00:00",
+            "time": "2021-03-05T20:58:11+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -10104,6 +10901,7 @@
                 "locale"
             ],
             "support": {
+                "forum": "https://discuss.flarum.org/d/5160",
                 "issues": "https://github.com/Nearata/lang-italian/issues",
                 "source": "https://github.com/Nearata/lang-italian"
             },
@@ -10251,17 +11049,17 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.44.0",
-            "version_normalized": "2.44.0.0",
+            "version": "2.45.1",
+            "version_normalized": "2.45.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd"
+                "reference": "528783b188bdb853eb21239b1722831e0f000a8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd",
-                "reference": "e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/528783b188bdb853eb21239b1722831e0f000a8d",
+                "reference": "528783b188bdb853eb21239b1722831e0f000a8d",
                 "shasum": ""
             },
             "require": {
@@ -10280,7 +11078,7 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.14",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2021-01-26T20:46:41+00:00",
+            "time": "2021-02-11T18:30:17+00:00",
             "bin": [
                 "bin/carbon"
             ],
@@ -10393,17 +11191,17 @@
         },
         {
             "name": "omines/oauth2-gitlab",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.4.0",
+            "version_normalized": "3.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omines/oauth2-gitlab.git",
-                "reference": "bd958b5d3433f11da617123dc2bc4b43d8ab787c"
+                "reference": "0c37361c54fae71a85350c445bda1834db5859af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/bd958b5d3433f11da617123dc2bc4b43d8ab787c",
-                "reference": "bd958b5d3433f11da617123dc2bc4b43d8ab787c",
+                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/0c37361c54fae71a85350c445bda1834db5859af",
+                "reference": "0c37361c54fae71a85350c445bda1834db5859af",
                 "shasum": ""
             },
             "require": {
@@ -10414,15 +11212,15 @@
                 "friendsofphp/php-cs-fixer": "^2.0",
                 "guzzlehttp/psr7": "^1.6",
                 "http-interop/http-factory-guzzle": "^1.0",
-                "m4tthumphrey/php-gitlab-api": "^9.0|^10.0",
+                "m4tthumphrey/php-gitlab-api": "^10.0|^11.0",
                 "mockery/mockery": "^1.0",
-                "php-http/guzzle6-adapter": "^2.0",
+                "php-http/guzzle7-adapter": "^0.1",
                 "phpunit/phpunit": "^8.0|^9.0"
             },
             "suggest": {
                 "m4tthumphrey/php-gitlab-api": "For further API usage using the acquired OAuth2 token"
             },
-            "time": "2020-08-28T09:55:21+00:00",
+            "time": "2021-02-08T12:15:55+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -10457,7 +11255,7 @@
             ],
             "support": {
                 "issues": "https://github.com/omines/oauth2-gitlab/issues",
-                "source": "https://github.com/omines/oauth2-gitlab/tree/3.3.0"
+                "source": "https://github.com/omines/oauth2-gitlab/tree/3.4.0"
             },
             "install-path": "../omines/oauth2-gitlab"
         },
@@ -10527,21 +11325,21 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v9.99.99",
-            "version_normalized": "9.99.99.0",
+            "version": "v9.99.100",
+            "version_normalized": "9.99.100.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7"
+                "php": ">= 7"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*|5.*",
@@ -10550,7 +11348,7 @@
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
-            "time": "2018-07-02T15:55:56+00:00",
+            "time": "2020-10-15T08:29:30+00:00",
             "type": "library",
             "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
@@ -10577,6 +11375,95 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "install-path": "../paragonie/random_compat"
+        },
+        {
+            "name": "paragonie/sodium_compat",
+            "version": "v1.14.0",
+            "version_normalized": "1.14.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/sodium_compat.git",
+                "reference": "a1cfe0b21faf9c0b61ac0c6188c4af7fd6fd0db3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/a1cfe0b21faf9c0b61ac0c6188c4af7fd6fd0db3",
+                "reference": "a1cfe0b21faf9c0b61ac0c6188c4af7fd6fd0db3",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": ">=1",
+                "php": "^5.2.4|^5.3|^5.4|^5.5|^5.6|^7|^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3|^4|^5|^6|^7|^8|^9"
+            },
+            "suggest": {
+                "ext-libsodium": "PHP < 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security.",
+                "ext-sodium": "PHP >= 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security."
+            },
+            "time": "2020-12-03T16:26:19+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com"
+                },
+                {
+                    "name": "Frank Denis",
+                    "email": "jedisct1@pureftpd.org"
+                }
+            ],
+            "description": "Pure PHP implementation of libsodium; uses the PHP extension if it exists",
+            "keywords": [
+                "Authentication",
+                "BLAKE2b",
+                "ChaCha20",
+                "ChaCha20-Poly1305",
+                "Chapoly",
+                "Curve25519",
+                "Ed25519",
+                "EdDSA",
+                "Edwards-curve Digital Signature Algorithm",
+                "Elliptic Curve Diffie-Hellman",
+                "Poly1305",
+                "Pure-PHP cryptography",
+                "RFC 7748",
+                "RFC 8032",
+                "Salpoly",
+                "Salsa20",
+                "X25519",
+                "XChaCha20-Poly1305",
+                "XSalsa20-Poly1305",
+                "Xchacha20",
+                "Xsalsa20",
+                "aead",
+                "cryptography",
+                "ecdh",
+                "elliptic curve",
+                "elliptic curve cryptography",
+                "encryption",
+                "libsodium",
+                "php",
+                "public-key cryptography",
+                "secret-key cryptography",
+                "side-channel resistant"
+            ],
+            "support": {
+                "issues": "https://github.com/paragonie/sodium_compat/issues",
+                "source": "https://github.com/paragonie/sodium_compat/tree/v1.14.0"
+            },
+            "install-path": "../paragonie/sodium_compat"
         },
         {
             "name": "persianfla/flarum-ext-persian",
@@ -10638,29 +11525,24 @@
         },
         {
             "name": "psr/container",
-            "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "1.1.1",
+            "version_normalized": "1.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.2.0"
             },
-            "time": "2017-02-14T16:28:37+00:00",
+            "time": "2021-03-05T17:36:06+00:00",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -10674,7 +11556,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common Container Interface (PHP FIG PSR-11)",
@@ -10686,62 +11568,11 @@
                 "container-interop",
                 "psr"
             ],
-            "install-path": "../psr/container"
-        },
-        {
-            "name": "psr/http-client",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-client.git",
-                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
-                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0 || ^8.0",
-                "psr/http-message": "^1.0"
-            },
-            "time": "2020-06-29T06:28:15+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP clients",
-            "homepage": "https://github.com/php-fig/http-client",
-            "keywords": [
-                "http",
-                "http-client",
-                "psr",
-                "psr-18"
-            ],
             "support": {
-                "source": "https://github.com/php-fig/http-client/tree/master"
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/1.1.1"
             },
-            "install-path": "../psr/http-client"
+            "install-path": "../psr/container"
         },
         {
             "name": "psr/http-factory",
@@ -11224,56 +12055,145 @@
             "install-path": "../ralouphie/getallheaders"
         },
         {
-            "name": "ramsey/uuid",
-            "version": "3.9.3",
-            "version_normalized": "3.9.3.0",
+            "name": "ramsey/collection",
+            "version": "1.1.3",
+            "version_normalized": "1.1.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ramsey/uuid.git",
-                "reference": "7e1633a6964b48589b142d60542f9ed31bd37a92"
+                "url": "https://github.com/ramsey/collection.git",
+                "reference": "28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/7e1633a6964b48589b142d60542f9ed31bd37a92",
-                "reference": "7e1633a6964b48589b142d60542f9ed31bd37a92",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1",
+                "reference": "28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1",
                 "shasum": ""
             },
             "require": {
+                "php": "^7.2 || ^8"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "ergebnis/composer-normalize": "^2.6",
+                "fakerphp/faker": "^1.5",
+                "hamcrest/hamcrest-php": "^2",
+                "jangregor/phpstan-prophecy": "^0.8",
+                "mockery/mockery": "^1.3",
+                "phpstan/extension-installer": "^1",
+                "phpstan/phpstan": "^0.12.32",
+                "phpstan/phpstan-mockery": "^0.12.5",
+                "phpstan/phpstan-phpunit": "^0.12.11",
+                "phpunit/phpunit": "^8.5 || ^9",
+                "psy/psysh": "^0.10.4",
+                "slevomat/coding-standard": "^6.3",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "^4.4"
+            },
+            "time": "2021-01-21T17:40:04+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Ramsey\\Collection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                }
+            ],
+            "description": "A PHP 7.2+ library for representing and manipulating collections.",
+            "keywords": [
+                "array",
+                "collection",
+                "hash",
+                "map",
+                "queue",
+                "set"
+            ],
+            "support": {
+                "issues": "https://github.com/ramsey/collection/issues",
+                "source": "https://github.com/ramsey/collection/tree/1.1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ramsey/collection",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "../ramsey/collection"
+        },
+        {
+            "name": "ramsey/uuid",
+            "version": "4.1.1",
+            "version_normalized": "4.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/uuid.git",
+                "reference": "cd4032040a750077205918c86049aa0f43d22947"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/cd4032040a750077205918c86049aa0f43d22947",
+                "reference": "cd4032040a750077205918c86049aa0f43d22947",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.8 || ^0.9",
                 "ext-json": "*",
-                "paragonie/random_compat": "^1 | ^2 | 9.99.99",
-                "php": "^5.4 | ^7 | ^8",
+                "php": "^7.2 || ^8",
+                "ramsey/collection": "^1.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
             },
             "require-dev": {
-                "codeception/aspect-mock": "^1 | ^2",
-                "doctrine/annotations": "^1.2",
-                "goaop/framework": "1.0.0-alpha.2 | ^1 | ^2.1",
-                "jakub-onderka/php-parallel-lint": "^1",
-                "mockery/mockery": "^0.9.11 | ^1",
+                "codeception/aspect-mock": "^3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7.0",
+                "doctrine/annotations": "^1.8",
+                "goaop/framework": "^2",
+                "mockery/mockery": "^1.3",
                 "moontoast/math": "^1.1",
                 "paragonie/random-lib": "^2",
-                "php-mock/php-mock-phpunit": "^0.3 | ^1.1",
-                "phpunit/phpunit": "^4.8 | ^5.4 | ^6.5",
-                "squizlabs/php_codesniffer": "^3.5"
+                "php-mock/php-mock-mockery": "^1.3",
+                "php-mock/php-mock-phpunit": "^2.5",
+                "php-parallel-lint/php-parallel-lint": "^1.1",
+                "phpbench/phpbench": "^0.17.1",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-mockery": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "psy/psysh": "^0.10.0",
+                "slevomat/coding-standard": "^6.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "3.9.4"
             },
             "suggest": {
-                "ext-ctype": "Provides support for PHP Ctype functions",
-                "ext-libsodium": "Provides the PECL libsodium extension for use with the SodiumRandomGenerator",
-                "ext-openssl": "Provides the OpenSSL extension for use with the OpenSslGenerator",
-                "ext-uuid": "Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator",
-                "moontoast/math": "Provides support for converting UUID to 128-bit integer (in string form).",
+                "ext-bcmath": "Enables faster math with arbitrary-precision integers using BCMath.",
+                "ext-ctype": "Enables faster processing of character classification using ctype functions.",
+                "ext-gmp": "Enables faster math with arbitrary-precision integers using GMP.",
+                "ext-uuid": "Enables the use of PeclUuidTimeGenerator and PeclUuidRandomGenerator.",
                 "paragonie/random-lib": "Provides RandomLib for use with the RandomLibAdapter",
-                "ramsey/uuid-console": "A console application for generating UUIDs with ramsey/uuid",
                 "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid as Doctrine field type."
             },
-            "time": "2020-02-21T04:36:14+00:00",
+            "time": "2020-08-18T17:17:46+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.x-dev"
+                    "dev-master": "4.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -11289,22 +12209,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
-                },
-                {
-                    "name": "Marijn Huizendveld",
-                    "email": "marijn.huizendveld@gmail.com"
-                },
-                {
-                    "name": "Thibaud Fabre",
-                    "email": "thibaud@aztech.io"
-                }
-            ],
-            "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
+            "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
             "homepage": "https://github.com/ramsey/uuid",
             "keywords": [
                 "guid",
@@ -11314,24 +12219,29 @@
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
                 "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid",
-                "wiki": "https://github.com/ramsey/uuid/wiki"
+                "source": "https://github.com/ramsey/uuid"
             },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                }
+            ],
             "install-path": "../ramsey/uuid"
         },
         {
             "name": "realodix/flarum-ext-indonesian",
-            "version": "1.15.0",
-            "version_normalized": "1.15.0.0",
+            "version": "1.15.1",
+            "version_normalized": "1.15.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realodix/flarum-ext-indonesian.git",
-                "reference": "ae49811b6048a6efe0e7879e7662a91fe8bad3ad"
+                "reference": "c1dfe390f0a655570b84b578222ea4b6edb08f2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/ae49811b6048a6efe0e7879e7662a91fe8bad3ad",
-                "reference": "ae49811b6048a6efe0e7879e7662a91fe8bad3ad",
+                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/c1dfe390f0a655570b84b578222ea4b6edb08f2f",
+                "reference": "c1dfe390f0a655570b84b578222ea4b6edb08f2f",
                 "shasum": ""
             },
             "require": {
@@ -11349,6 +12259,7 @@
                 "fof/formatting": "<0.3.1",
                 "fof/forum-statistics-widget": "<0.4.0",
                 "fof/gamification": "<0.4.0",
+                "fof/moderator-notes": "<0.4.1",
                 "fof/nightmode": "<0.7.0",
                 "fof/pages": "<0.6.0",
                 "fof/reactions": "<0.5.0",
@@ -11356,7 +12267,7 @@
                 "fof/upload": "<0.11",
                 "fof/username-request": "<0.4.1"
             },
-            "time": "2021-01-25T12:50:43+00:00",
+            "time": "2021-02-11T08:53:36+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -11460,24 +12371,110 @@
             "install-path": "../rikusen0335/lang-japanese-extended"
         },
         {
-            "name": "rob006/flarum-lang-polish",
-            "version": "v0.4.4",
-            "version_normalized": "0.4.4.0",
+            "name": "rinvex/countries",
+            "version": "v7.3.2",
+            "version_normalized": "7.3.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "cff93e629e57b8e2e892af40414e687b772fde1d"
+                "url": "https://github.com/rinvex/countries.git",
+                "reference": "4696d23976e27d6cedf7e55db3fa24e11924b727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/cff93e629e57b8e2e892af40414e687b772fde1d",
-                "reference": "cff93e629e57b8e2e892af40414e687b772fde1d",
+                "url": "https://api.github.com/repos/rinvex/countries/zipball/4696d23976e27d6cedf7e55db3fa24e11924b727",
+                "reference": "4696d23976e27d6cedf7e55db3fa24e11924b727",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4.0 || ^8.0.0"
+            },
+            "require-dev": {
+                "codedungeon/phpunit-result-printer": "^0.30.0",
+                "phpunit/phpunit": "^9.5.0"
+            },
+            "time": "2020-12-25T01:36:24+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rinvex\\Country\\Providers\\CountryServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Rinvex\\Country\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rinvex LLC",
+                    "email": "help@rinvex.com",
+                    "homepage": "https://rinvex.com"
+                },
+                {
+                    "name": "Abdelrahman Omran",
+                    "email": "me@omranic.com",
+                    "homepage": "https://omranic.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "The Generous PHP Community",
+                    "homepage": "https://github.com/rinvex/countries/contributors"
+                }
+            ],
+            "description": "Rinvex Countries is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.",
+            "homepage": "https://rinvex.com",
+            "keywords": [
+                "Flexible",
+                "Simple",
+                "countries",
+                "country",
+                "currencies",
+                "demonym",
+                "dialling",
+                "emoji",
+                "flags",
+                "geographic",
+                "languages",
+                "rinvex",
+                "svg"
+            ],
+            "support": {
+                "docs": "https://github.com/rinvex/countries/blob/master/README.md",
+                "email": "help@rinvex.com",
+                "issues": "https://github.com/rinvex/countries/issues",
+                "source": "https://github.com/rinvex/countries"
+            },
+            "install-path": "../rinvex/countries"
+        },
+        {
+            "name": "rob006/flarum-lang-polish",
+            "version": "v0.4.7",
+            "version_normalized": "0.4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rob006-software/flarum-lang-polish.git",
+                "reference": "c6a797ea28f19b0674c69a0035cd8edddf08d675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/c6a797ea28f19b0674c69a0035cd8edddf08d675",
+                "reference": "c6a797ea28f19b0674c69a0035cd8edddf08d675",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.14"
             },
-            "time": "2021-02-01T09:54:18+00:00",
+            "time": "2021-03-06T11:51:46+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -11614,17 +12611,17 @@
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.8.2",
-            "version_normalized": "2.8.2.0",
+            "version": "2.8.4",
+            "version_normalized": "2.8.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "a6edb261947230eff8457d9d87ce2cf80de72872"
+                "reference": "7856f66f4cfaf1402b8ec30c0f0ba124da4e9b76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/a6edb261947230eff8457d9d87ce2cf80de72872",
-                "reference": "a6edb261947230eff8457d9d87ce2cf80de72872",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/7856f66f4cfaf1402b8ec30c0f0ba124da4e9b76",
+                "reference": "7856f66f4cfaf1402b8ec30c0f0ba124da4e9b76",
                 "shasum": ""
             },
             "require": {
@@ -11649,10 +12646,10 @@
                 "ext-xsl": "Enables the XSLT renderer",
                 "ext-zlib": "Enables gzip compression when scraping content via the MediaEmbed plugin"
             },
-            "time": "2021-01-23T00:22:46+00:00",
+            "time": "2021-03-02T08:58:26+00:00",
             "type": "library",
             "extra": {
-                "version": "2.8.2"
+                "version": "2.8.4"
             },
             "installation-source": "dist",
             "autoload": {
@@ -11685,7 +12682,7 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/TextFormatter/issues",
-                "source": "https://github.com/s9e/TextFormatter/tree/2.8.2"
+                "source": "https://github.com/s9e/TextFormatter/tree/2.8.4"
             },
             "install-path": "../s9e/text-formatter"
         },
@@ -11757,6 +12754,74 @@
                 }
             ],
             "install-path": "../softcreatr/php-mime-detector"
+        },
+        {
+            "name": "spomky-labs/base64url",
+            "version": "v2.0.4",
+            "version_normalized": "2.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Spomky-Labs/base64url.git",
+                "reference": "7752ce931ec285da4ed1f4c5aa27e45e097be61d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Spomky-Labs/base64url/zipball/7752ce931ec285da4ed1f4c5aa27e45e097be61d",
+                "reference": "7752ce931ec285da4ed1f4c5aa27e45e097be61d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.11|^0.12",
+                "phpstan/phpstan-beberlei-assert": "^0.11|^0.12",
+                "phpstan/phpstan-deprecation-rules": "^0.11|^0.12",
+                "phpstan/phpstan-phpunit": "^0.11|^0.12",
+                "phpstan/phpstan-strict-rules": "^0.11|^0.12"
+            },
+            "time": "2020-11-03T09:10:25+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Base64Url\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky-Labs/base64url/contributors"
+                }
+            ],
+            "description": "Base 64 URL Safe Encoding/Decoding PHP Library",
+            "homepage": "https://github.com/Spomky-Labs/base64url",
+            "keywords": [
+                "base64",
+                "rfc4648",
+                "safe",
+                "url"
+            ],
+            "support": {
+                "issues": "https://github.com/Spomky-Labs/base64url/issues",
+                "source": "https://github.com/Spomky-Labs/base64url/tree/v2.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Spomky",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../spomky-labs/base64url"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -11835,17 +12900,17 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.2.5",
-            "version_normalized": "6.2.5.0",
+            "version": "v6.2.6",
+            "version_normalized": "6.2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "698a6a9f54d7eb321274de3ad19863802c879fb7"
+                "reference": "d2791ff0b73247cdc2096b14f5580aba40c12bff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/698a6a9f54d7eb321274de3ad19863802c879fb7",
-                "reference": "698a6a9f54d7eb321274de3ad19863802c879fb7",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d2791ff0b73247cdc2096b14f5580aba40c12bff",
+                "reference": "d2791ff0b73247cdc2096b14f5580aba40c12bff",
                 "shasum": ""
             },
             "require": {
@@ -11862,7 +12927,7 @@
             "suggest": {
                 "ext-intl": "Needed to support internationalized email addresses"
             },
-            "time": "2021-01-12T09:35:59+00:00",
+            "time": "2021-03-05T12:08:49+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -11897,7 +12962,7 @@
             ],
             "support": {
                 "issues": "https://github.com/swiftmailer/swiftmailer/issues",
-                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.5"
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.6"
             },
             "funding": [
                 {
@@ -12041,17 +13106,17 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "2c4c7827a7e143f5cf375666641b0f448eab8802"
+                "reference": "98606c6fa1a8f55ff964ccdd704275bf5b9f71b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/2c4c7827a7e143f5cf375666641b0f448eab8802",
-                "reference": "2c4c7827a7e143f5cf375666641b0f448eab8802",
+                "url": "https://api.github.com/repos/symfony/config/zipball/98606c6fa1a8f55ff964ccdd704275bf5b9f71b3",
+                "reference": "98606c6fa1a8f55ff964ccdd704275bf5b9f71b3",
                 "shasum": ""
             },
             "require": {
@@ -12072,7 +13137,7 @@
             "suggest": {
                 "symfony/yaml": "To use the yaml reference dumper"
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-02-22T15:36:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12100,7 +13165,7 @@
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/config/tree/v4.4.19"
+                "source": "https://github.com/symfony/config/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -12120,17 +13185,17 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "24026c44fc37099fa145707fecd43672831b837a"
+                "reference": "c98349bda966c70d6c08b4cd8658377c94166492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/24026c44fc37099fa145707fecd43672831b837a",
-                "reference": "24026c44fc37099fa145707fecd43672831b837a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/c98349bda966c70d6c08b4cd8658377c94166492",
+                "reference": "c98349bda966c70d6c08b4cd8658377c94166492",
                 "shasum": ""
             },
             "require": {
@@ -12164,7 +13229,7 @@
                 "symfony/lock": "",
                 "symfony/process": ""
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-02-22T18:44:15+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12192,7 +13257,7 @@
             "description": "Eases the creation of beautiful and testable command line interfaces",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/console/tree/v4.4.19"
+                "source": "https://github.com/symfony/console/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -12212,8 +13277,8 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.2",
-            "version_normalized": "5.2.2.0",
+            "version": "v5.2.4",
+            "version_normalized": "5.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -12260,7 +13325,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v5.2.2"
+                "source": "https://github.com/symfony/css-selector/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -12280,17 +13345,17 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "af4987aa4a5630e9615be9d9c3ed1b0f24ca449c"
+                "reference": "157bbec4fd773bae53c5483c50951a5530a2cc16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/af4987aa4a5630e9615be9d9c3ed1b0f24ca449c",
-                "reference": "af4987aa4a5630e9615be9d9c3ed1b0f24ca449c",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/157bbec4fd773bae53c5483c50951a5530a2cc16",
+                "reference": "157bbec4fd773bae53c5483c50951a5530a2cc16",
                 "shasum": ""
             },
             "require": {
@@ -12304,7 +13369,7 @@
             "require-dev": {
                 "symfony/http-kernel": "^3.4|^4.0|^5.0"
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-01-28T16:54:48+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12332,7 +13397,7 @@
             "description": "Provides tools to ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/debug/tree/v4.4.19"
+                "source": "https://github.com/symfony/debug/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -12405,8 +13470,8 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -12471,7 +13536,7 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher/tree/v4.4.19"
+                "source": "https://github.com/symfony/event-dispatcher/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -12556,24 +13621,24 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.2.2",
-            "version_normalized": "5.2.2.0",
+            "version": "v5.2.4",
+            "version_normalized": "5.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "262d033b57c73e8b59cd6e68a45c528318b15038"
+                "reference": "710d364200997a5afde34d9fe57bd52f3cc1e108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/262d033b57c73e8b59cd6e68a45c528318b15038",
-                "reference": "262d033b57c73e8b59cd6e68a45c528318b15038",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/710d364200997a5afde34d9fe57bd52f3cc1e108",
+                "reference": "710d364200997a5afde34d9fe57bd52f3cc1e108",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "symfony/polyfill-ctype": "~1.8"
             },
-            "time": "2021-01-27T10:01:46+00:00",
+            "time": "2021-02-12T10:38:38+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12601,7 +13666,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.2.2"
+                "source": "https://github.com/symfony/filesystem/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -12621,23 +13686,23 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "25d79cfccfc12e84e7a63a248c3f0720fdd92db6"
+                "reference": "2543795ab1570df588b9bbd31e1a2bd7037b94f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/25d79cfccfc12e84e7a63a248c3f0720fdd92db6",
-                "reference": "25d79cfccfc12e84e7a63a248c3f0720fdd92db6",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/2543795ab1570df588b9bbd31e1a2bd7037b94f6",
+                "reference": "2543795ab1570df588b9bbd31e1a2bd7037b94f6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3"
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-02-12T10:48:09+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12665,7 +13730,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v4.4.19"
+                "source": "https://github.com/symfony/finder/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -12685,17 +13750,17 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "8888741b633f6c3d1e572b7735ad2cae3e03f9c5"
+                "reference": "02d968647fe61b2f419a8dc70c468a9d30a48d3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8888741b633f6c3d1e572b7735ad2cae3e03f9c5",
-                "reference": "8888741b633f6c3d1e572b7735ad2cae3e03f9c5",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/02d968647fe61b2f419a8dc70c468a9d30a48d3a",
+                "reference": "02d968647fe61b2f419a8dc70c468a9d30a48d3a",
                 "shasum": ""
             },
             "require": {
@@ -12708,7 +13773,7 @@
                 "predis/predis": "~1.0",
                 "symfony/expression-language": "^3.4|^4.0|^5.0"
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-02-25T17:11:33+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12736,7 +13801,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v4.4.19"
+                "source": "https://github.com/symfony/http-foundation/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -12756,17 +13821,17 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v5.2.2",
-            "version_normalized": "5.2.2.0",
+            "version": "v5.2.4",
+            "version_normalized": "5.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "37bade585ea100d235c031b258eff93b5b6bb9a9"
+                "reference": "5155d2fe14ef1eb150e3bdbbc1ec1455df95e9cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/37bade585ea100d235c031b258eff93b5b6bb9a9",
-                "reference": "37bade585ea100d235c031b258eff93b5b6bb9a9",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/5155d2fe14ef1eb150e3bdbbc1ec1455df95e9cd",
+                "reference": "5155d2fe14ef1eb150e3bdbbc1ec1455df95e9cd",
                 "shasum": ""
             },
             "require": {
@@ -12789,7 +13854,7 @@
                 "symfony/property-info": "^4.4|^5.1",
                 "symfony/serializer": "^5.2"
             },
-            "time": "2021-01-25T14:08:25+00:00",
+            "time": "2021-02-15T18:55:04+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -12821,7 +13886,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/v5.2.2"
+                "source": "https://github.com/symfony/mime/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -12841,8 +13906,8 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -12903,7 +13968,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -12923,17 +13988,17 @@
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "b34bfb8c4c22650ac080d2662ae3502e5f2f4ae6"
+                "reference": "06fb361659649bcfd6a208a0f1fcaf4e827ad342"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/b34bfb8c4c22650ac080d2662ae3502e5f2f4ae6",
-                "reference": "b34bfb8c4c22650ac080d2662ae3502e5f2f4ae6",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/06fb361659649bcfd6a208a0f1fcaf4e827ad342",
+                "reference": "06fb361659649bcfd6a208a0f1fcaf4e827ad342",
                 "shasum": ""
             },
             "require": {
@@ -12942,7 +14007,7 @@
             "suggest": {
                 "ext-iconv": "For best performance"
             },
-            "time": "2021-01-07T16:49:33+00:00",
+            "time": "2021-01-22T09:19:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -12986,7 +14051,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13006,17 +14071,17 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44"
+                "reference": "2d63434d922daf7da8dd863e7907e67ee3031483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44",
-                "reference": "0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/2d63434d922daf7da8dd863e7907e67ee3031483",
+                "reference": "2d63434d922daf7da8dd863e7907e67ee3031483",
                 "shasum": ""
             },
             "require": {
@@ -13027,7 +14092,7 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "time": "2021-01-07T16:49:33+00:00",
+            "time": "2021-01-22T09:19:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -13076,7 +14141,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13096,17 +14161,17 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "6e971c891537eb617a00bb07a43d182a6915faba"
+                "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/6e971c891537eb617a00bb07a43d182a6915faba",
-                "reference": "6e971c891537eb617a00bb07a43d182a6915faba",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/43a0283138253ed1d48d352ab6d0bdb3f809f248",
+                "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248",
                 "shasum": ""
             },
             "require": {
@@ -13115,7 +14180,7 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "time": "2021-01-07T17:09:11+00:00",
+            "time": "2021-01-22T09:19:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -13163,7 +14228,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13183,17 +14248,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
                 "shasum": ""
             },
             "require": {
@@ -13202,7 +14267,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2021-01-07T16:49:33+00:00",
+            "time": "2021-01-22T09:19:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -13246,7 +14311,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13266,8 +14331,8 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -13325,7 +14390,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13345,8 +14410,8 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -13407,7 +14472,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13427,8 +14492,8 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.22.0",
-            "version_normalized": "1.22.0.0",
+            "version": "v1.22.1",
+            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -13493,7 +14558,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -13513,8 +14578,8 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -13557,7 +14622,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v4.4.19"
+                "source": "https://github.com/symfony/process/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -13642,17 +14707,17 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "e1d0c67167a553556d9f974b5fa79c2448df317a"
+                "reference": "2271b6d577018a7dea75a9162a08ac84f8234deb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/e1d0c67167a553556d9f974b5fa79c2448df317a",
-                "reference": "e1d0c67167a553556d9f974b5fa79c2448df317a",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/2271b6d577018a7dea75a9162a08ac84f8234deb",
+                "reference": "2271b6d577018a7dea75a9162a08ac84f8234deb",
                 "shasum": ""
             },
             "require": {
@@ -13667,7 +14732,7 @@
                 "symfony/yaml": "<3.4"
             },
             "provide": {
-                "symfony/translation-implementation": "1.0"
+                "symfony/translation-implementation": "1.0|2.0"
             },
             "require-dev": {
                 "psr/log": "~1.0",
@@ -13685,7 +14750,7 @@
                 "symfony/config": "",
                 "symfony/yaml": ""
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-02-26T13:53:48+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -13713,7 +14778,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v4.4.19"
+                "source": "https://github.com/symfony/translation/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -13814,17 +14879,17 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.4.19",
-            "version_normalized": "4.4.19.0",
+            "version": "v4.4.20",
+            "version_normalized": "4.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "17ed9f14c1aa05b1a5cf2e2c5ef2d0be28058ef9"
+                "reference": "29e61305e1c79d25f71060903982ead8f533e267"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/17ed9f14c1aa05b1a5cf2e2c5ef2d0be28058ef9",
-                "reference": "17ed9f14c1aa05b1a5cf2e2c5ef2d0be28058ef9",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/29e61305e1c79d25f71060903982ead8f533e267",
+                "reference": "29e61305e1c79d25f71060903982ead8f533e267",
                 "shasum": ""
             },
             "require": {
@@ -13840,7 +14905,7 @@
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
             },
-            "time": "2021-01-27T09:09:26+00:00",
+            "time": "2021-02-22T15:36:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -13868,7 +14933,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v4.4.19"
+                "source": "https://github.com/symfony/yaml/tree/v4.4.20"
             },
             "funding": [
                 {
@@ -14282,28 +15347,28 @@
         },
         {
             "name": "v17development/flarum-blog",
-            "version": "v0.2.1",
-            "version_normalized": "0.2.1.0",
+            "version": "v0.2.3",
+            "version_normalized": "0.2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/v17development/flarum-blog.git",
-                "reference": "2748c42f494e77985e1e17540a312be109f3403f"
+                "reference": "533d73f531008c04cf5f18080bb85b5cb149fa19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/v17development/flarum-blog/zipball/2748c42f494e77985e1e17540a312be109f3403f",
-                "reference": "2748c42f494e77985e1e17540a312be109f3403f",
+                "url": "https://api.github.com/repos/v17development/flarum-blog/zipball/533d73f531008c04cf5f18080bb85b5cb149fa19",
+                "reference": "533d73f531008c04cf5f18080bb85b5cb149fa19",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "flarum/core": "^0.1.0-beta.15"
+                "flarum/core": "^0.1.0-beta.15",
+                "flarum/tags": "^0.1.0-beta.15"
             },
             "suggest": {
-                "flarum/tags": "The Flarum Tags extension",
                 "v17development/flarum-seo": "Adds Flarum SEO and Social media tags"
             },
-            "time": "2021-01-18T21:20:29+00:00",
+            "time": "2021-02-16T11:23:34+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -14344,27 +15409,31 @@
         },
         {
             "name": "v17development/flarum-seo",
-            "version": "1.5.1",
-            "version_normalized": "1.5.1.0",
+            "version": "v1.6.2",
+            "version_normalized": "1.6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/v17development/flarum-seo.git",
-                "reference": "68cd1d662795880f6604c1fdeba9629299d864d4"
+                "reference": "c670daf87fda9d9a417fece2483ae21fc08c6b19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/68cd1d662795880f6604c1fdeba9629299d864d4",
-                "reference": "68cd1d662795880f6604c1fdeba9629299d864d4",
+                "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/c670daf87fda9d9a417fece2483ae21fc08c6b19",
+                "reference": "c670daf87fda9d9a417fece2483ae21fc08c6b19",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "flarum/core": "^0.1.0-beta.15"
             },
+            "conflict": {
+                "franzl/flarum-open-links-in-new-tab": "*",
+                "zerosonesfun/elint": "*"
+            },
             "suggest": {
                 "fof/sitemap": "Allows you to generate powerful sitemap.xml files"
             },
-            "time": "2020-12-21T00:12:24+00:00",
+            "time": "2021-02-17T16:57:58+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -14405,6 +15474,750 @@
                 "source": "https://github.com/v17development/flarum-seo"
             },
             "install-path": "../v17development/flarum-seo"
+        },
+        {
+            "name": "web-token/jwt-core",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-core.git",
+                "reference": "30e9df9e040d933043b16237f9dba7a3be746566"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-core/zipball/30e9df9e040d933043b16237f9dba7a3be746566",
+                "reference": "30e9df9e040d933043b16237f9dba7a3be746566",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "ext-mbstring": "*",
+                "fgrosse/phpasn1": "^2.0",
+                "php": "^7.1",
+                "spomky-labs/base64url": "^1.0|^2.0",
+                "web-token/jwt-util-ecc": "^1.3"
+            },
+            "conflict": {
+                "spomky-labs/jose": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "Core component of the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-core/tree/v1.3.10"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-core"
+        },
+        {
+            "name": "web-token/jwt-key-mgmt",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-key-mgmt.git",
+                "reference": "65b1e908e50b0e5be6b28135085d3c1097b81801"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-key-mgmt/zipball/65b1e908e50b0e5be6b28135085d3c1097b81801",
+                "reference": "65b1e908e50b0e5be6b28135085d3c1097b81801",
+                "shasum": ""
+            },
+            "require": {
+                "lib-openssl": "*",
+                "paragonie/sodium_compat": "^1.2",
+                "web-token/jwt-core": "^1.3",
+                "web-token/jwt-util-ecc": "^1.3"
+            },
+            "require-dev": {
+                "php-http/httplug": "^1.1",
+                "php-http/message-factory": "^1.0",
+                "php-http/mock-client": "^1.0",
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "suggest": {
+                "php-http/httplug": "To enable JKU/X5U support.",
+                "php-http/message-factory": "To enable JKU/X5U support."
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\KeyManagement\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-key-mgmt/contributors"
+                }
+            ],
+            "description": "Key Management component of the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-key-mgmt/tree/v1.3.10"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-key-mgmt"
+        },
+        {
+            "name": "web-token/jwt-signature",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-signature.git",
+                "reference": "00f23e997c9032536444f819bc3338ab475d69f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-signature/zipball/00f23e997c9032536444f819bc3338ab475d69f9",
+                "reference": "00f23e997c9032536444f819bc3338ab475d69f9",
+                "shasum": ""
+            },
+            "require": {
+                "web-token/jwt-core": "^1.3",
+                "web-token/jwt-signature-algorithm-ecdsa": "^1.3",
+                "web-token/jwt-signature-algorithm-eddsa": "^1.3",
+                "web-token/jwt-signature-algorithm-hmac": "^1.3",
+                "web-token/jwt-signature-algorithm-none": "^1.3",
+                "web-token/jwt-signature-algorithm-rsa": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "suggest": {
+                "web-token/jwt-signature-algorithm-ecdsa": "ECDSA Based Signature Algorithms",
+                "web-token/jwt-signature-algorithm-eddsa": "EdDSA Based Signature Algorithms",
+                "web-token/jwt-signature-algorithm-experimental": "Experimental Signature Algorithms",
+                "web-token/jwt-signature-algorithm-hmac": "HMAC Based Signature Algorithms",
+                "web-token/jwt-signature-algorithm-none": "None Signature Algorithm",
+                "web-token/jwt-signature-algorithm-rsa": "RSA Based Signature Algorithms"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Signature\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-signature/contributors"
+                }
+            ],
+            "description": "Signature component of the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-signature/tree/v1.3.10"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-signature"
+        },
+        {
+            "name": "web-token/jwt-signature-algorithm-ecdsa",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-signature-algorithm-ecdsa.git",
+                "reference": "a3babd3b82c29c739d426271ccb9dc1a56222e36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-signature-algorithm-ecdsa/zipball/a3babd3b82c29c739d426271ccb9dc1a56222e36",
+                "reference": "a3babd3b82c29c739d426271ccb9dc1a56222e36",
+                "shasum": ""
+            },
+            "require": {
+                "web-token/jwt-signature": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Signature\\Algorithm\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "ECDSA Based Signature Algorithms the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-signature-algorithm-ecdsa/tree/v1.3.10"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-signature-algorithm-ecdsa"
+        },
+        {
+            "name": "web-token/jwt-signature-algorithm-eddsa",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-signature-algorithm-eddsa.git",
+                "reference": "b0dad134313b14b3ba077b63a7afcc2b38e5f793"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-signature-algorithm-eddsa/zipball/b0dad134313b14b3ba077b63a7afcc2b38e5f793",
+                "reference": "b0dad134313b14b3ba077b63a7afcc2b38e5f793",
+                "shasum": ""
+            },
+            "require": {
+                "web-token/jwt-signature": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Signature\\Algorithm\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "EdDSA Signature Algorithm the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-signature-algorithm-eddsa/tree/v1.3.10"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-signature-algorithm-eddsa"
+        },
+        {
+            "name": "web-token/jwt-signature-algorithm-hmac",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-signature-algorithm-hmac.git",
+                "reference": "3bc85e1d13804902a8d81a11f58c28c9a471b5e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-signature-algorithm-hmac/zipball/3bc85e1d13804902a8d81a11f58c28c9a471b5e2",
+                "reference": "3bc85e1d13804902a8d81a11f58c28c9a471b5e2",
+                "shasum": ""
+            },
+            "require": {
+                "web-token/jwt-signature": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Signature\\Algorithm\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "HMAC Based Signature Algorithms the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-signature-algorithm-hmac/tree/v1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-signature-algorithm-hmac"
+        },
+        {
+            "name": "web-token/jwt-signature-algorithm-none",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-signature-algorithm-none.git",
+                "reference": "0391e160367e85846736e63ea6026e2dab667b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-signature-algorithm-none/zipball/0391e160367e85846736e63ea6026e2dab667b6e",
+                "reference": "0391e160367e85846736e63ea6026e2dab667b6e",
+                "shasum": ""
+            },
+            "require": {
+                "web-token/jwt-signature": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Signature\\Algorithm\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "None Signature Algorithm the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-signature-algorithm-none/tree/v1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-signature-algorithm-none"
+        },
+        {
+            "name": "web-token/jwt-signature-algorithm-rsa",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-signature-algorithm-rsa.git",
+                "reference": "344181ef6cdd3aca77f7ff7defc9fb502eb33ec0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-signature-algorithm-rsa/zipball/344181ef6cdd3aca77f7ff7defc9fb502eb33ec0",
+                "reference": "344181ef6cdd3aca77f7ff7defc9fb502eb33ec0",
+                "shasum": ""
+            },
+            "require": {
+                "web-token/jwt-signature": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Signature\\Algorithm\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "RSA Based Signature Algorithms the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-signature-algorithm-rsa/tree/v1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-signature-algorithm-rsa"
+        },
+        {
+            "name": "web-token/jwt-util-ecc",
+            "version": "v1.3.10",
+            "version_normalized": "1.3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-token/jwt-util-ecc.git",
+                "reference": "2011af8454561ebce06a77fcd681c29a252e0068"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-token/jwt-util-ecc/zipball/2011af8454561ebce06a77fcd681c29a252e0068",
+                "reference": "2011af8454561ebce06a77fcd681c29a252e0068",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "ext-mbstring": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "time": "2020-03-20T13:29:04+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jose\\Component\\Core\\Util\\Ecc\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Morselli",
+                    "homepage": "https://github.com/Spomky"
+                },
+                {
+                    "name": "All contributors",
+                    "homepage": "https://github.com/web-token/jwt-core/contributors"
+                }
+            ],
+            "description": "ECC Tools for the JWT Framework.",
+            "homepage": "https://github.com/web-token",
+            "keywords": [
+                "JOSE",
+                "JWE",
+                "JWK",
+                "JWKSet",
+                "JWS",
+                "Jot",
+                "RFC7515",
+                "RFC7516",
+                "RFC7517",
+                "RFC7518",
+                "RFC7519",
+                "RFC7520",
+                "bundle",
+                "jwa",
+                "jwt",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/web-token/jwt-util-ecc/tree/v1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../web-token/jwt-util-ecc"
         },
         {
             "name": "webmozart/assert",

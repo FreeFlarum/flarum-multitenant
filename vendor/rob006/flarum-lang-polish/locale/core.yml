@@ -105,6 +105,7 @@ core:
       text: 'Skonfiguruj sterownik, ustawienia i adresy, z których Twoje forum będzie korzystać podczas wysyłania wiadomości e-mail.'
       title: '=> core.ref.email'
     extension:
+      configure_scopes: 'Konfiguruj zakresy'
       confirm_uninstall: 'Odinstalowanie usunie wszystkie wpisy w bazie i zasoby powiązane z tym rozszerzeniem. Czy jesteś pewien, że chcesz kontynuować?'
       disabled: Wyłączone
       enable_to_see: 'Włącz to rozszerzenie aby uzyskać dostęp do jego ustawień.'
@@ -164,12 +165,14 @@ core:
       allow_post_editing_label: 'Pozwól na edycję posta'
       allow_renaming_label: 'Pozwól na zmianę tytułu dyskusji'
       create_heading: 'Rozpoczynanie dyskusji'
-      delete_discussions_forever_label: 'Usuwanie dyskusji na zawsze'
+      delete_discussions_forever_label: 'Nieodwracalne usuwanie dyskusji'
       delete_discussions_label: 'Usuwanie dyskusji'
-      delete_posts_forever_label: 'Usuwanie postów na zawsze'
+      delete_posts_forever_label: 'Nieodwracalne usuwanie postów'
       delete_posts_label: 'Usuwanie postów'
       description: 'Skonfiguruj uprawnienia użytkowników i grup.'
       edit_posts_label: 'Edytowanie postów'
+      edit_users_credentials_label: 'Edytowanie danych logowania użytkownika'
+      edit_users_groups_label: 'Edytowanie grup użytkownika'
       edit_users_label: 'Edytowanie użytkowników'
       global_heading: Globalne
       moderate_heading: Moderacja
@@ -197,6 +200,7 @@ core:
       signup_closed_button: Zamknięta
       signup_open_button: Otwarta
     settings:
+      saved_message: 'Twoje zmiany zostały zapisane.'
       submit_button: '=> core.ref.save_changes'
     upload_image:
       remove_button: '=> core.ref.remove'
@@ -273,6 +277,7 @@ core:
       email_heading: '=> core.ref.email'
       email_label: '=> core.ref.email'
       groups_heading: Grupy
+      nothing_available: 'Nie ma żadnych danych, które mógłbyś edytować.'
       password_heading: '=> core.ref.password'
       password_label: '=> core.ref.password'
       set_password_label: 'Ustaw nowe hasło'
@@ -362,7 +367,7 @@ core:
       change_password_button: '=> core.ref.change_password'
       notifications_heading: '=> core.ref.notifications'
       notify_by_email_heading: '=> core.ref.email'
-      notify_by_web_heading: Sieć
+      notify_by_web_heading: Web
       notify_discussion_renamed_label: 'Ktoś zmienił tytuł dyskusji, którą rozpocząłem'
       privacy_disclose_online_label: 'Pozwól innym widzieć, kiedy jestem online'
       privacy_heading: Prywatność
@@ -439,7 +444,7 @@ core:
     custom_header_text: 'Dodaj własny kod HTML, który będzie wyświetlany na samej górze forum.'
     custom_header_title: 'Edytuj nagłówek'
     delete: Usuń
-    delete_forever: 'Usuń na zawsze'
+    delete_forever: 'Usuń nieodwracalnie'
     discussions: Dyskusje
     edit: Edytuj
     email: E-mail

@@ -5,13 +5,13 @@ fof-moderator-notes:
       viewnotes: "Смотреть заметки модератора"
       deletenotes: "Удалять заметки модератора"
   forum:
+    no_content_given: "Пустая заметка не допускается."
     moderatorNotes:
       created_text: "{username} создал(а) эту заметку в {date}"
       add_button: "Создать заметку"
       create-heading: "Создание новой заметки модератора"
       dismiss_button: "Готово"
       input_heading: "Введите заметку для <strong>{username}</strong>, (поддерживается markdown)"
-      no_content_given: "Пустая заметка не допускается."
       noNotes: "Кажется, здесь нет заметок."
       submit_button: "Сохранить"
       delete: "Удалить"
@@ -21,6 +21,6 @@ fof-moderator-notes:
       notes: "Заметки модератора"
 
   api:
-    auto_note: "_I switched to this user:_ reason"
-    auto_note_actor: "_Switched to_ @username: reason"
-    no_reason_provided: "No reason provided"
+    auto_note: "_I switched to this user:_ reason" # TODO
+    auto_note_actor: "_Switched to_ @username: reason" # TODO
+    no_reason_provided: "No reason provided" # TODO

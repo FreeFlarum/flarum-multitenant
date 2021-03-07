@@ -77,7 +77,10 @@ fof-webhooks:
         extra_text_label: 'Dodatkowy tekst'
         group_help: 'Wyślij zasoby, do których ma dostęp ta grupa'
         group_label: Grupa
+        max_post_content_length_help: 'Ustaw limit długości treści posta dla wszystkich zdarzeń powiązanych z postami. Ustaw zero lub pozostaw pole puste, aby usunąć limit.'
+        max_post_content_length_label: 'Maksymalna długość treści posta'
         title: 'Ustawienia webhooka'
+        use_plain_text_label: 'Ogranicz formatowanie treści posta'
       services:
         discord: Discord
         microsoft-teams: 'Microsoft Teams'

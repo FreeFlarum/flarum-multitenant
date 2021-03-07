@@ -333,6 +333,7 @@ class Request
             'SCRIPT_FILENAME' => '',
             'SERVER_PROTOCOL' => 'HTTP/1.1',
             'REQUEST_TIME' => time(),
+            'REQUEST_TIME_FLOAT' => microtime(true),
         ], $server);
 
         $server['PATH_INFO'] = '';
@@ -1715,7 +1716,7 @@ class Request
     }
 
     /**
-     * Returns true if the request is a XMLHttpRequest.
+     * Returns true if the request is an XMLHttpRequest.
      *
      * It works if your JavaScript library sets an X-Requested-With HTTP header.
      * It is known to work with common JavaScript frameworks:

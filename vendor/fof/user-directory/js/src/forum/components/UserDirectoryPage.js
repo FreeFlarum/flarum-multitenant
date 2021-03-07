@@ -7,8 +7,12 @@ import Select from 'flarum/components/Select';
 import Button from 'flarum/components/Button';
 import LinkButton from 'flarum/components/LinkButton';
 import SelectDropdown from 'flarum/components/SelectDropdown';
+import Dropdown from 'flarum/components/Dropdown';
 import UserDirectoryList from './UserDirectoryList';
 import UserDirectoryState from '../states/UserDirectoryState';
+import CheckableButton from './CheckableButton';
+import SearchField from './SearchField';
+import Separator from 'flarum/components/Separator';
 
 /**
  * This page re-uses Flarum's IndexPage CSS classes
@@ -21,6 +25,21 @@ export default class UserDirectoryPage extends Page {
         this.state.refreshParams(app.search.params());
 
         this.bodyClass = 'User--directory';
+
+        let idSegments = [];
+        if (this.params().q) {
+            Array.from(this.params().q.matchAll(/group:([\d,]+)/g)).forEach((match) => {
+                idSegments.push(match[1]);
+            });
+        }
+        this.enabledGroupFilters = idSegments
+            .join(',')
+            .split(',')
+            .filter((id) => id);
+
+        this.enabledSpecialGroupFilters = [];
+
+        app.history.push('users', app.translator.trans('fof-user-directory.forum.header.back_to_user_directory_tooltip'));
     }
 
     view() {
@@ -107,9 +126,89 @@ export default class UserDirectoryPage extends Page {
             Select.component({
                 options: sortOptions,
                 value: this.params().sort || app.forum.attribute('userDirectoryDefaultSort'),
-                onchange: this.changeSort.bind(this),
+                onchange: this.changeParams.bind(this),
             })
         );
+
+        items.add(
+            'filterGroups',
+            Dropdown.component(
+                {
+                    caretIcon: 'fas fa-filter',
+                    label: app.translator.trans('fof-user-directory.forum.page.filter_button'),
+                    buttonClassName: 'FormControl',
+                    className: 'GroupFilterDropdown',
+                },
+                this.groupItems().toArray()
+            )
+        );
+
+        items.add(
+            'search',
+            SearchField.component({
+                state: this.state,
+            })
+        );
+
+        return items;
+    }
+
+    groupItems() {
+        const items = new ItemList();
+
+        app.store
+            .all('groups')
+            .filter((group) => group.id() !== '2' && group.id() !== '3')
+            .forEach((group) => {
+                items.add(
+                    group.namePlural(),
+                    CheckableButton.component(
+                        {
+                            className: 'GroupFilterButton',
+                            icon: group.icon(),
+                            checked: this.enabledGroupFilters.includes(group.id()),
+                            onclick: () => {
+                                const id = group.id();
+                                if (this.enabledGroupFilters.includes(id)) {
+                                    this.enabledGroupFilters = this.enabledGroupFilters.filter((e) => e != id);
+                                } else {
+                                    this.enabledGroupFilters.push(id);
+                                }
+
+                                this.changeParams(this.params().sort);
+                            },
+                        },
+                        group.namePlural()
+                    )
+                );
+            });
+
+        if (app.initializers.has('flarum-suspend') && app.forum.attribute('hasSuspendPermission')) {
+            items.add(
+                'suspend',
+                CheckableButton.component(
+                    {
+                        className: 'GroupFilterButton',
+                        icon: 'fas fa-ban',
+                        checked: this.enabledSpecialGroupFilters['flarum-suspend'] === 'is:suspended',
+                        onclick: () => {
+                            const id = 'flarum-suspend';
+                            if (this.enabledSpecialGroupFilters[id] === 'is:suspended') {
+                                this.enabledSpecialGroupFilters[id] = '';
+                            } else {
+                                this.enabledSpecialGroupFilters[id] = 'is:suspended';
+                            }
+
+                            this.changeParams(this.params().sort);
+                        },
+                    },
+                    app.translator.trans('flarum-suspend.forum.user_badge.suspended_tooltip')
+                ),
+                90
+            );
+
+            items.add('seperator', Separator.component(), 50);
+        }
 
         return items;
     }
@@ -141,7 +240,7 @@ export default class UserDirectoryPage extends Page {
      *
      * @param {String} sort
      */
-    changeSort(sort) {
+    changeParams(sort) {
         const params = this.params();
 
         if (sort === app.forum.attribute('userDirectoryDefaultSort')) {
@@ -150,7 +249,18 @@ export default class UserDirectoryPage extends Page {
             params.sort = sort;
         }
 
-        m.route.set(app.route(this.attrs.routeName, params));
+        let moreQ = '';
+        for (var filter in this.enabledSpecialGroupFilters) {
+            moreQ += this.enabledSpecialGroupFilters[filter] + ' ';
+        }
+
+        if (this.enabledGroupFilters.length > 0) {
+            params.qBuilder = { groups: 'group:' + this.enabledGroupFilters.join(',') };
+        } else {
+            params.qBuilder = { groups: '', q: moreQ.trim() };
+        }
+
+        this.state.refreshParams(params);
     }
 
     stickyParams() {

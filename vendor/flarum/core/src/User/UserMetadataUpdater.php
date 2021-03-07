@@ -42,7 +42,9 @@ class UserMetadataUpdater
      */
     public function whenPostWasDeleted(PostDeleted $event)
     {
-        $this->updateCommentsCount($event->post->user);
+        if ($event->post->user && $event->post->user) {
+            $this->updateCommentsCount($event->post->user);
+        }
     }
 
     /**
@@ -65,7 +67,7 @@ class UserMetadataUpdater
     /**
      * @param \Flarum\User\User $user
      */
-    private function updateCommentsCount(User $user)
+    private function updateCommentsCount(?User $user)
     {
         if ($user && $user->exists) {
             $user->refreshCommentCount()->save();
@@ -81,3 +83,4 @@ class UserMetadataUpdater
         }
     }
 }
+

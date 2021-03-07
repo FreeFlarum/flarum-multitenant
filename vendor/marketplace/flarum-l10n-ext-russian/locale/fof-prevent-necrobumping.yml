@@ -18,4 +18,4 @@ fof-prevent-necrobumping:
       message_agreement_label: "Соглашение (флажок)"
 
       tags_title: "Теги"
-      tags_help: "Override the global days for a specific tag. Empty means use default value. If a discussion has multiple tags with different day values, it will use the smallest amount of days configured."
+      tags_help: "Override the global days for a specific tag. Empty means use default value. If a discussion has multiple tags with different day values, it will use the smallest amount of days configured." # TODO

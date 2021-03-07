@@ -109,17 +109,9 @@ export default class UploadButton extends Component {
         this.isLoading = false;
         this.isSuccess = true;
         m.redraw();
-        
-        let imageLink = response.data.link;
-        let previewLink = imageLink;
 
-        // If the image is large, use a smaller version as the preview image
-        if (response.data.width > 1024) {
-            let extensionIndex = previewLink.lastIndexOf('.');
-            previewLink = previewLink.slice(0, extensionIndex) + 'h' + previewLink.slice(extensionIndex);
-        }
+        let stringToInject = this.buildEmbedCode(response.data.link, response.data.width > 1024);
 
-        let stringToInject = `[URL=${imageLink}][IMG]${previewLink}[/IMG][/URL]\n`;
         this.attrs.textArea.insertAtCursor(stringToInject);
 
         // After a bit, re-enable upload
@@ -127,6 +119,31 @@ export default class UploadButton extends Component {
             this.isSuccess = false;
             m.redraw();
         }, 2000);
+    }
+
+    buildEmbedCode(imageUrl, isLarge) {
+        let previewUrl = (isLarge ? this.previewUrl(imageUrl) : imageUrl);
+        let embedType = app.forum.attribute('imgur-upload.embed-type');
+
+        if (embedType == 'full-with-link') {
+            return `[URL=${imageUrl}][IMG]${imageUrl}[/IMG][/URL]\n`;
+        }
+        else if (embedType == 'full-without-link') {
+            return `[IMG]${imageUrl}[/IMG]\n`;
+        }
+        else if (embedType == 'preview-without-link') {
+            return `[IMG]${previewUrl}[/IMG]\n`;
+        }
+        else {
+            // Preview with link (default case)
+            return `[URL=${imageUrl}][IMG]${previewUrl}[/IMG][/URL]\n`;
+        }
+
+    }
+
+    previewUrl(url) {
+        let extensionIndex = url.lastIndexOf('.');
+        return url.slice(0, extensionIndex) + 'h' + url.slice(extensionIndex);
     }
     
     error(response) {

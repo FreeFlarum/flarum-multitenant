@@ -2,13 +2,13 @@
 
 > A [Flarum](https://flarum.org) extension that translate the core, its bundled extensions and libraries.
 
-## Installation
+## Install
 
 ```shell
 composer require nearata/lang-italian
 ```
 
-## Updating
+## Update
 
 ```shell
 composer update nearata/lang-italian
@@ -24,31 +24,11 @@ php flarum cache:clear
 
 ## Translations
 
-- Bundled extensions
-  - flarum-akismet
-  - flarum-approval
-  - flarum-auth-facebook
-  - flarum-auth-github
-  - flarum-auth-twitter
-  - flarum-emoji
-  - flarum-flags
-  - flarum-likes
-  - flarum-lock
-  - flarum-markdown
-  - flarum-mentions
-  - flarum-pusher
-  - flarum-statistics
-  - flarum-sticky
-  - flarum-subscriptions
-  - flarum-suspend
-  - flarum-tags
-- Bundled libraries
-  - Validation
-  - Day.js
+See [TRANSLATIONS.md](TRANSLATIONS) to see the list of supported extensions.
 
 ## License
 
-Distributed under the MIT license. See `LICENSE` for more information.
+Distributed under the MIT license. See [LICENSE](LICENSE) for more information.
 
 ## Contributing
 

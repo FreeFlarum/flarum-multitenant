@@ -123,7 +123,7 @@ xelson-chat:
           resend: 'Wyślij ponownie'
         censored: 'Zaloguj się, aby zobaczyć tę wiadomość!'
         deleted: 'usunięto przez'
-        deleted_forever: 'usunięto na zawsze przez'
+        deleted_forever: 'nieodwracalnie usunięto przez'
         events:
           channel:
             created: '{creatorname} utworzył kanał {chatname}'

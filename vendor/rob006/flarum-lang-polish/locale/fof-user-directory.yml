@@ -10,13 +10,18 @@ fof-user-directory:
       default-sort: 'Domyślne sortowanie'
       link: 'Dodaj link do katalogu użytkowników na stronie głównej'
   forum:
+    header:
+      back_to_user_directory_tooltip: 'Wróć do katalogu użytkowników'
     page:
       empty_text: 'Nie udało się znaleźć żadnego użytkownika pasującego do kryteriów wyszukiwania.'
+      filter_button: 'Filtruj po grupie'
       load_more_button: '=> core.ref.load_more'
       nav: 'Katalog użytkowników'
       refresh_tooltip: '=> core.forum.index.refresh_tooltip'
     search:
-      users_heading: 'Przeszukaj wszystkich użytkowników dla "{query}"'
+      field:
+        placeholder: 'Wyszukaj użytkowników'
+      users_heading: 'Wyszukaj użytkowników dla "{query}"'
   lib:
     sort:
       default: Domyślne

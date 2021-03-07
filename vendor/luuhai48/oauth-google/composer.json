@@ -1,0 +1,41 @@
+{
+  "name": "luuhai48/oauth-google",
+  "description": "Add google oauth to Flarum, extends Fof/Oauth",
+  "keywords": [
+    "flarum",
+    "oauth",
+    "google"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.14",
+    "league/oauth2-google": "^3.0",
+    "fof/oauth": "^0.1.0"
+  },
+  "authors": [
+    {
+      "name": "Luuhai48",
+      "email": "luuhai.hn48@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Luuhai48\\OauthGoogle\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Oauth Google",
+      "icon": {
+        "name": "fab fa-google",
+        "backgroundColor": "#4286f4",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

@@ -3,12 +3,12 @@
 Paket bahasa Indonesia untuk Flarum dan beberapa ekstensi yang [didukung](#extensi-yang-didukung).
 
 ## Informasi
-[![Latest Stable Version](https://poser.pugx.org/realodix/flarum-ext-indonesian/v/stable)](https://packagist.org/packages/realodix/flarum-ext-indonesian)
+[![GitHub tag](https://img.shields.io/github/tag/realodix/flarum-ext-indonesian.svg)](https://GitHub.com/realodix/flarum-ext-indonesian/tags/)
 [![Latest Unstable Version](https://poser.pugx.org/realodix/flarum-ext-indonesian/v/unstable)](https://github.com/realodix/flarum-ext-indonesian/archive/master.zip)
 [![License](https://poser.pugx.org/realodix/flarum-ext-indonesian/license)](https://github.com/realodix/flarum-ext-indonesian/blob/master/LICENSE)
 
-**Requires**: [Flarum v0.1.0-beta.14](https://github.com/flarum/lang-english/releases/tag/v0.1.0-beta.14) <br>
-**Compatible up to**: [Flarum v0.1.0-beta.14](https://github.com/flarum/lang-english/releases/tag/v0.1.0-beta.14)
+**Requires**: [Flarum v0.1.0-beta.15](https://github.com/flarum/lang-english/releases/tag/v0.1.0-beta.15) <br>
+**Compatible up to**: [Flarum v0.1.0-beta.15](https://github.com/flarum/lang-english/releases/tag/v0.1.0-beta.15)
 
 ### Cara Memasang
 Flarum mengandalkan [Composer](https://getcomposer.org/) untuk mengelola dependensi dan ekstensi. Paket bahasa Indonesia tersedia di [Packagist](https://packagist.org/packages/realodix/flarum-ext-indonesian) dan dapat dikelola dengan cara di bawah ini. Pastikan Composer sudah terinstall di komputer Anda, lalu ikuti langkah berikut ini:
@@ -28,6 +28,7 @@ Perintah yang sama (pada langkah 1) dapat digunakan untuk memperbarui secara man
 ### Extensi Yang Didukung
 Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di bawah ini, maka semua kalimat pada ekstensi tersebut akan ikut diterjemahkan ke dalam bahasa Indonesia.
 
+- [askvortsov/flarum-trust-levels](https://github.com/askvortsov/flarum-trust-levels) v0.1.2
 - [askvortsov1/flarum-categories](https://github.com/askvortsov1/flarum-categories) v1.1.0
 - [askvortsov1/flarum-moderator-warnings](https://github.com/askvortsov1/flarum-moderator-warnings) v0.3.0
 - [clarkwinkelmann/flarum-ext-bookmarks](https://github.com/clarkwinkelmann/flarum-ext-bookmarks) v0.1.1
@@ -39,9 +40,9 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [clarkwinkelmann/flarum-ext-group-invitation](https://github.com/clarkwinkelmann/flarum-ext-group-invitation) v0.1.2
 - [clarkwinkelmann/flarum-ext-likes-received](https://github.com/clarkwinkelmann/flarum-ext-likes-received) v0.1.1
 - [clarkwinkelmann/flarum-ext-mailing](https://github.com/clarkwinkelmann/flarum-ext-mailing) v0.4.0
-- [clarkwinkelmann/flarum-ext-passwordless](https://github.com/clarkwinkelmann/flarum-ext-passwordless) v1.1.0
+- [clarkwinkelmann/flarum-ext-passwordless](https://github.com/clarkwinkelmann/flarum-ext-passwordless) v1.2.0
 - [clarkwinkelmann/flarum-ext-popular-discussion-badge](https://github.com/clarkwinkelmann/flarum-ext-popular-discussion-badge) v0.2.1
-- [clarkwinkelmann/flarum-ext-see-past-first-post](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post) v1.0.3
+- [clarkwinkelmann/flarum-ext-see-past-first-post](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post) v1.1.0
 - [clarkwinkelmann/flarum-ext-silent-mailchimp](https://github.com/clarkwinkelmann/flarum-ext-silent-mailchimp) v1.0.0
 - [clarkwinkelmann/flarum-ext-status](https://github.com/clarkwinkelmann/flarum-ext-status) v0.1.1
 - [clarkwinkelmann/flarum-ext-watch-search](https://github.com/clarkwinkelmann/flarum-ext-watch-search) dev-master
@@ -51,12 +52,13 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [flagrow/users-list](https://github.com/flagrow/users-list) v0.1.2
 - [fof/ads](https://github.com/friendsofflarum/ads) v0.2.4
 - [fof/analytics](https://github.com/friendsofflarum/analytics) v0.11.0
-- [fof/byobu](https://github.com/friendsofflarum/byobu) v0.6.0
+- [fof/best-answer](https://github.com/FriendsOfFlarum/best-answer) v0.3.5
+- [fof/byobu](https://github.com/friendsofflarum/byobu) v0.6.1
 - [fof/custom-footer](https://github.com/friendsofflarum/custom-footer) v0.3.0
 - [fof/discussion-language](https://github.com/FriendsOfFlarum/discussion-language) v0.3.2
 - [fof/doorman](https://github.com/FriendsOfFlarum/doorman) v0.3.0
-- [fof/drafts](https://github.com/FriendsOfFlarum/drafts) v0.3.1
-- [fof/filter](https://github.com/FriendsOfFlarum/filter) v0.3.0
+- [fof/drafts](https://github.com/FriendsOfFlarum/drafts) v0.3.2
+- [fof/filter](https://github.com/FriendsOfFlarum/filter) v0.3.2
 - [fof/formatting](https://github.com/friendsofflarum/formatting) v0.3.1
 - [fof/forum-statistics-widget](https://github.com/FriendsOfFlarum/forum-statistics-widget) v0.4.0
 - [fof/gamification](https://github.com/friendsofflarum/gamification) v0.4.2
@@ -64,7 +66,7 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [fof/linguist](https://github.com/FriendsOfFlarum/linguist) v0.5.0
 - [fof/masquerade](https://github.com/friendsofflarum/masquerade) v0.3.4
 - [fof/merge-discussions](https://github.com/friendsofflarum/merge-discussions) v0.5.1
-- [fof/moderator-notes](https://github.com/FriendsOfFlarum/moderator-notes) v0.4.0
+- [fof/moderator-notes](https://github.com/FriendsOfFlarum/moderator-notes) v0.4.3
 - [fof/nightmode](https://github.com/friendsofflarum/nightmode) v0.7.1
 - [fof/pages](https://github.com/friendsofflarum/pages) v0.6.0
 - [fof/polls](https://github.com/friendsofflarum/polls) v0.3.2
@@ -76,12 +78,12 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [fof/split](https://github.com/friendsofflarum/split) v0.6.0
 - [fof/stopforumspam](https://github.com/friendsofflarum/stopforumspam) v0.2.2
 - [fof/subscribed](https://github.com/friendsofflarum/subscribed) v0.4.1
-- [fof/upload](https://github.com/friendsofflarum/upload) v0.12.2
-- [fof/user-bio](https://github.com/friendsofflarum/user-bio) v0.4.1
+- [fof/upload](https://github.com/friendsofflarum/upload) v0.12.10
+- [fof/user-bio](https://github.com/friendsofflarum/user-bio) v0.4.2
 - [fof/user-directory](https://github.com/friendsofflarum/user-directory) v0.5.0
-- [fof/username-request](https://github.com/friendsofflarum/username-request) v0.4.0
+- [fof/username-request](https://github.com/friendsofflarum/username-request) v0.4.1
 - [jslirola/flarum-ext-login2seeplus](https://github.com/jslirola/flarum-ext-login2seeplus) v0.1.7
-- [KyrneDev/Shout-public](https://github.com/KyrneDev/Shout-public) v0.2.10
+- [KyrneDev/Shout-public](https://github.com/KyrneDev/Shout-public) v0.3.2
 - [michaelbelgium/flarum-discussion-views](https://github.com/michaelbelgium/flarum-discussion-views) v5.0.0
 - [michaelbelgium/flarum-profile-views](https://github.com/michaelbelgium/flarum-profile-views) v4.0.0
 - [michaelbelgium/mybb_to_flarum](https://github.com/michaelbelgium/mybb_to_flarum) v6.0

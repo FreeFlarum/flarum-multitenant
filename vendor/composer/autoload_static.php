@@ -52,7 +52,9 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'dd89a2771fc24829c6aade9a7786bd8f' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/path.legacy.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
+        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '3c3a02bc9945aa3571024986c07a1e55' => __DIR__ . '/..' . '/rinvex/countries/src/helpers.php',
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
@@ -128,8 +130,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'R' => 
         array (
+            'Rinvex\\Country\\' => 15,
             'Reflar\\Webhooks\\' => 16,
             'Ramsey\\Uuid\\' => 12,
+            'Ramsey\\Collection\\' => 18,
         ),
         'P' => 
         array (
@@ -137,7 +141,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
-            'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
             'PersianFla\\Persian\\' => 19,
         ),
@@ -149,6 +152,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Minishlink\\WebPush\\' => 19,
             'MigrateToFlarum\\Canonical\\' => 26,
             'Middlewares\\Utils\\' => 18,
             'Middlewares\\' => 12,
@@ -158,6 +162,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'L' => 
         array (
+            'Luuhai48\\OauthGoogle\\' => 21,
             'League\\OAuth2\\Client\\' => 21,
             'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
@@ -172,6 +177,11 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'J' => 
         array (
+            'Jose\\Component\\Signature\\Algorithm\\' => 35,
+            'Jose\\Component\\Signature\\' => 25,
+            'Jose\\Component\\KeyManagement\\' => 29,
+            'Jose\\Component\\Core\\Util\\Ecc\\' => 29,
+            'Jose\\Component\\Core\\' => 20,
             'JmesPath\\' => 9,
             'JSLirola\\Login2SeePlus\\' => 23,
         ),
@@ -198,6 +208,11 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
             'IanM\\Synopsis\\' => 14,
+            'IanM\\ISO639\\' => 12,
+        ),
+        'H' => 
+        array (
+            'Html2Text\\' => 10,
         ),
         'G' => 
         array (
@@ -242,6 +257,8 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\Extend\\' => 11,
             'FoF\\Drafts\\' => 11,
             'FoF\\Doorman\\' => 12,
+            'FoF\\DisposableEmails\\' => 21,
+            'FoF\\DiscussionLanguage\\' => 23,
             'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\DefaultGroup\\' => 17,
             'FoF\\CookieConsent\\' => 18,
@@ -268,6 +285,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Flarum\\' => 7,
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
+            'FG\\' => 3,
         ),
         'E' => 
         array (
@@ -292,12 +310,16 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'B' => 
         array (
+            'Brick\\Math\\' => 11,
             'Behat\\Transliterator\\' => 21,
+            'Base64Url\\' => 10,
         ),
         'A' => 
         array (
             'Aws\\' => 4,
+            'Askvortsov\\TrustLevels\\' => 23,
             'Askvortsov\\FlarumWarnings\\' => 26,
+            'Askvortsov\\FlarumPWA\\' => 21,
             'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
             'Askvortsov\\FlarumCategories\\' => 28,
             'App\\' => 4,
@@ -478,6 +500,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/ssnepenthe/color-utils/src',
         ),
+        'Rinvex\\Country\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rinvex/countries/src',
+        ),
         'Reflar\\Webhooks\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/webhooks/src/Legacy',
@@ -485,6 +511,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Ramsey\\Collection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -503,10 +533,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Psr\\Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -527,6 +553,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Minishlink\\WebPush\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/minishlink/web-push/src',
         ),
         'MigrateToFlarum\\Canonical\\' => 
         array (
@@ -554,12 +584,16 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
+        'Luuhai48\\OauthGoogle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/luuhai48/oauth-google/src',
+        ),
         'League\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth2-client/src',
-            1 => __DIR__ . '/..' . '/league/oauth2-github/src',
-            2 => __DIR__ . '/..' . '/league/oauth2-google/src',
-            3 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
+            2 => __DIR__ . '/..' . '/league/oauth2-github/src',
+            3 => __DIR__ . '/..' . '/league/oauth2-google/src',
         ),
         'League\\OAuth1\\Client\\' => 
         array (
@@ -600,6 +634,30 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Laminas\\Diactoros\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
+        ),
+        'Jose\\Component\\Signature\\Algorithm\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web-token/jwt-signature-algorithm-ecdsa',
+            1 => __DIR__ . '/..' . '/web-token/jwt-signature-algorithm-eddsa',
+            2 => __DIR__ . '/..' . '/web-token/jwt-signature-algorithm-hmac',
+            3 => __DIR__ . '/..' . '/web-token/jwt-signature-algorithm-none',
+            4 => __DIR__ . '/..' . '/web-token/jwt-signature-algorithm-rsa',
+        ),
+        'Jose\\Component\\Signature\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web-token/jwt-signature',
+        ),
+        'Jose\\Component\\KeyManagement\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web-token/jwt-key-mgmt',
+        ),
+        'Jose\\Component\\Core\\Util\\Ecc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web-token/jwt-util-ecc',
+        ),
+        'Jose\\Component\\Core\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web-token/jwt-core',
         ),
         'JmesPath\\' => 
         array (
@@ -692,6 +750,15 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'IanM\\Synopsis\\' => 
         array (
             0 => __DIR__ . '/..' . '/ianm/synopsis/src',
+        ),
+        'IanM\\ISO639\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ianm/iso-639/src',
+        ),
+        'Html2Text\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/html2text/html2text/src',
+            1 => __DIR__ . '/..' . '/html2text/html2text/test',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -845,6 +912,14 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/fof/doorman/src',
         ),
+        'FoF\\DisposableEmails\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/disposable-emails/src',
+        ),
+        'FoF\\DiscussionLanguage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/discussion-language/src',
+        ),
         'FoF\\DefaultUserPreferences\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/default-user-preferences/src',
@@ -949,6 +1024,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
+        'FG\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fgrosse/phpasn1/lib',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -997,17 +1076,33 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Brick\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
         'Behat\\Transliterator\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/transliterator/src/Behat/Transliterator',
+        ),
+        'Base64Url\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spomky-labs/base64url/src',
         ),
         'Aws\\' => 
         array (
             0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
         ),
+        'Askvortsov\\TrustLevels\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-trust-levels/src',
+        ),
         'Askvortsov\\FlarumWarnings\\' => 
         array (
             0 => __DIR__ . '/..' . '/askvortsov/flarum-moderator-warnings/src',
+        ),
+        'Askvortsov\\FlarumPWA\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-pwa/src',
         ),
         'Askvortsov\\FlarumDiscussionTemplates\\' => 
         array (
@@ -1041,6 +1136,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'MailChecker' => __DIR__ . '/..' . '/fgribreau/mailchecker/platform/php/MailChecker.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',

@@ -1,6 +1,8 @@
 fof-oauth:
   admin:
     settings:
+      title: FriendsOfFlarum OAuth
+
       only_icons_label: Only show the Log In Button icons (alternative layout)
 
       providers:
@@ -37,12 +39,6 @@ fof-oauth:
           api_key_label: API Key
           api_secret_label: API Secret
 
-        google:
-          description: Create an application at {link}.
-
-          client_id_label: => fof-oauth.ref.settings.client_id
-          client_secret_label: => fof-oauth.ref.settings.client_secret
-
   forum:
     log_in:
       with_button: Log In with {provider}
@@ -58,7 +54,6 @@ fof-oauth:
       github: GitHub
       gitlab: GitLab
       twitter: Twitter
-      google: Google
 
   ref:
     settings:

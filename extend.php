@@ -20,7 +20,9 @@ return [
             // FreeFlarum's foter:
             if (!file_exists("/etc/hide_powered_by")) {
                 $document->foot[] = '
-                    <hr/><p align="center" style="text-align: center !important; height: initial !important; position: initial !important; clip-path: unset !important; transform: unset !important; color: unset !important; background-color: unset !important; visibility: visible !important; display: block !important; text-align: center !important; margin: 5px 0 !important; opacity: 1.0 !important; max-height: unset !important; padding: 10px 0 !important; font-family: \'Arial\', sans-serif !important; font-size: 13px !important;">A free forum powered by <a href="https://www.freeflarum.com" target="_blank">FreeFlarum</a> (<a href="https://www.freeflarum.com/docs/faq/#can-i-pay-to-remove-the-powered-by-freeflarum-footer-for-my-or-other-forum" target="_blank">remove this footer</a>)<br/><a href="https://www.freeflarum.com/docs/legal/terms/" target="_blank">Terms & Conditions</a> | <a href="https://www.freeflarum.com/docs/faq/#can-i-report-a-forum-that-violates-your-terms-conditions-or-is-inappropriate-by-any-other-means" target="_blank">Report This Forum</a> | <a href="https://www.freeflarum.com/docs/legal/privacy-policy/" target="_blank">Privacy Policy</a></p></div>
+                    <div style="height: initial !important; position: absolute !important; width: 100% !important; clip-path: unset !important; transform: unset !important; color: unset !important; background-color: unset !important; visibility: visible !important; display: block !important; text-align: center !important; margin: 5px 0 !important; opacity: 1.0 !important; max-height: unset !important; padding: 10px 0 !important; font-family: \'Poppins\', sans-serif !important; font-size: 11px !important;">
+                    A free forum powered by <a href="https://www.freeflarum.com" target="_blank">FreeFlarum.com</a> (<a href="https://www.freeflarum.com/docs/faq/#can-i-pay-to-remove-the-powered-by-freeflarum-footer-for-my-or-other-forum" target="_blank">remove this footer</a>)<br/><a href="https://www.freeflarum.com/docs/legal/terms/" target="_blank">Terms & Conditions</a> | <a href="https://www.freeflarum.com/docs/faq/#can-i-report-a-forum-that-violates-your-terms-conditions-or-is-inappropriate-by-any-other-means" target="_blank">Report This Forum</a> | <a href="https://www.freeflarum.com/docs/legal/privacy-policy/" target="_blank">Privacy Policy</a>
+                    </div></div>
                 ';
             };
 
@@ -50,7 +52,8 @@ return [
             <hr/>
             <div id="news" align="center" style="width: 100%; font-size: 1rem;">
                 <p style="font-size: 1.25rem; font-weight: 800; text-decoration: underline; margin-bottom: 5px;">What\'s new?</p>
-                <a style="margin-top: 5px;" href="https://discuss.flarum.org/d/7585/1915" target="_blank">18/01/2021 - Added the Blog extension</a>
+                <a style="margin-top: 5px; font-weight: 900;" href="https://discuss.flarum.org/d/7585/2224" target="_blank">21/02/2021 - Upgraded MariaDB of all forums - Flarum PWA & Discussion Language extensions appear!</a>
+                <br/>
             </p>
             <br/>
         ';
