@@ -7,6 +7,7 @@ fof-linguist:
     buttons:
       apply: Zastosuj
       copy-original: 'Skopiuj oryginalny tekst'
+      delete-redundant: 'Usuń redundantne tłumaczenia'
       load-more: 'Wczytaj więcej'
       reset: 'Przywróć oryginał'
     clear-cache:
@@ -33,3 +34,8 @@ fof-linguist:
       all-locales: 'Tekst, który tutaj wpiszesz, zostanie pokazany dla wszystkich języków'
       hint: 'Oryginalny tekst:'
       not-translated: Nieprzetłumaczone
+    tabs:
+      coverage: Pokrycie
+      export: Eksport
+      import: Import
+      strings: Tłumaczenia

@@ -162,7 +162,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'L' => 
         array (
-            'Luuhai48\\OauthGoogle\\' => 21,
             'League\\OAuth2\\Client\\' => 21,
             'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
@@ -294,6 +293,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'D' => 
         array (
             'Doctrine\\Inflector\\' => 19,
+            'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\DBAL\\' => 14,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
@@ -583,10 +583,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'MatthiasMullie\\Minify\\' => 
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
-        ),
-        'Luuhai48\\OauthGoogle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/luuhai48/oauth-google/src',
         ),
         'League\\OAuth2\\Client\\' => 
         array (
@@ -1035,6 +1031,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+        ),
+        'Doctrine\\Deprecations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
         ),
         'Doctrine\\DBAL\\' => 
         array (

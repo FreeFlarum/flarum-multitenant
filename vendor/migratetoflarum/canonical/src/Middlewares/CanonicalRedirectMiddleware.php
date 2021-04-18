@@ -13,21 +13,21 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class CanonicalRedirectMiddleware implements MiddlewareInterface
 {
+    protected $settings;
+    protected $url;
+
+    public function __construct(SettingsRepositoryInterface $settings, UrlGenerator $url)
+    {
+        $this->settings = $settings;
+        $this->url = $url;
+    }
+
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        /**
-         * @var $settings SettingsRepositoryInterface
-         */
-        $settings = app(SettingsRepositoryInterface::class);
-
-        $status = intval($settings->get('migratetoflarum-canonical.status'));
+        $status = intval($this->settings->get('migratetoflarum-canonical.status'));
 
         if ($status === 301 || $status === 302) {
-            /**
-             * @var $generator UrlGenerator
-             */
-            $generator = app(UrlGenerator::class);
-            $canonical = new Uri($generator->to('forum')->base());
+            $canonical = new Uri($this->url->to('forum')->base());
 
             /**
              * @var $uri Uri

@@ -4,6 +4,8 @@
 
 askvortsov-saml:
   admin:
+    header:
+      text: 'Upewnij się, że metadane lub URL z metadanymi są uzupełnione.'
     labels:
       idp_metadata: 'XML z metadanymi dostawcy tożsamości (alternatywa dla URL)'
       idp_metadata_url: 'URL z metadanymi dostawcy tożsamości (alternatywa dla XML)'

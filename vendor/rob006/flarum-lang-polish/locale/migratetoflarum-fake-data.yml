@@ -7,7 +7,13 @@ migratetoflarum-fake-data:
     generator:
       bulk-mode: '=> migratetoflarum-fake-data.ref.bulk-mode'
       bulk-mode-description: '=> migratetoflarum-fake-data.ref.bulk-mode-description'
-      discussion-count: '=> migratetoflarum-fake-data.ref.discussion-count'
+      date: '=> migratetoflarum-fake-data.ref.date'
+      date-interval-placeholder: '=> migratetoflarum-fake-data.ref.date-interval-placeholder'
+      date-start-placeholder: '=> migratetoflarum-fake-data.ref.date-start-placeholder'
+      discussion-count: 'Liczba dyskusji do utworzenia'
+      discussion-tags: 'Tagi dla nowych dyskusji'
+      discussion-tags-none: Brak
+      discussion-tags-random: Losowo
       post-count: '=> migratetoflarum-fake-data.ref.post-count'
       send: '=> migratetoflarum-fake-data.ref.send'
       title: 'Generowanie danych testowych'
@@ -19,6 +25,9 @@ migratetoflarum-fake-data:
     generator:
       bulk-mode: '=> migratetoflarum-fake-data.ref.bulk-mode'
       bulk-mode-description: '=> migratetoflarum-fake-data.ref.bulk-mode-description'
+      date: '=> migratetoflarum-fake-data.ref.date'
+      date-interval-placeholder: '=> migratetoflarum-fake-data.ref.date-interval-placeholder'
+      date-start-placeholder: '=> migratetoflarum-fake-data.ref.date-start-placeholder'
       post-count: '=> migratetoflarum-fake-data.ref.post-count'
       send: '=> migratetoflarum-fake-data.ref.send'
       title: 'Generuj odpowiedzi'
@@ -28,6 +37,9 @@ migratetoflarum-fake-data:
   ref:
     bulk-mode: 'Tryb masowy'
     bulk-mode-description: 'Generuje jedną losową wartość i używa jej dla wszystkich wygenerowanych rekordów'
+    date: 'Ustawienia daty'
+    date-interval-placeholder: 'Interwał (domyślnie 1 sekunda)'
+    date-start-placeholder: 'Data początkowa (domyślnie aktualna data)'
     discussion-count: 'Liczba dyskusji do utworzenia'
     post-count: 'Liczba postów do utworzenia'
     send: 'Wygeneruj dane'

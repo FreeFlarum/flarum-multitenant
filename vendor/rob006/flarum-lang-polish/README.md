@@ -1,11 +1,10 @@
 # Polska paczka językowa dla [Flarum](https://flarum.org/)
 
-[![Latest Stable Version](https://poser.pugx.org/rob006/flarum-lang-polish/v/stable)](https://packagist.org/packages/rob006/flarum-lang-polish) 
-[![Latest Unstable Version](https://img.shields.io/badge/unstable-v0.4.x--dev-e68718)](https://packagist.org/packages/rob006/flarum-lang-polish) 
-[![License](https://poser.pugx.org/rob006/flarum-lang-polish/license)](https://packagist.org/packages/rob006/flarum-lang-polish) 
-[![Total Downloads](https://poser.pugx.org/rob006/flarum-lang-polish/downloads)](https://packagist.org/packages/rob006/flarum-lang-polish/stats) 
-[![Monthly Downloads](https://poser.pugx.org/rob006/flarum-lang-polish/d/monthly)](https://packagist.org/packages/rob006/flarum-lang-polish/stats) 
-[![Daily Downloads](https://poser.pugx.org/rob006/flarum-lang-polish/d/daily)](https://packagist.org/packages/rob006/flarum-lang-polish/stats)
+[![Latest Stable Version](https://img.shields.io/packagist/v/rob006/flarum-lang-polish?color=success&label=stable)](https://packagist.org/packages/rob006/flarum-lang-polish) 
+[![Latest Unstable Version](https://img.shields.io/packagist/v/rob006/flarum-lang-polish?include_prereleases&label=unstable)](https://packagist.org/packages/rob006/flarum-lang-polish) 
+[![License](https://img.shields.io/packagist/l/rob006/flarum-lang-polish)](https://packagist.org/packages/rob006/flarum-lang-polish) 
+[![Total Downloads](https://img.shields.io/packagist/dt/rob006/flarum-lang-polish)](https://packagist.org/packages/rob006/flarum-lang-polish/stats) 
+[![Monthly Downloads](https://img.shields.io/packagist/dm/rob006/flarum-lang-polish)](https://packagist.org/packages/rob006/flarum-lang-polish/stats) 
 
 Paczka zawiera tłumaczenia dla Flarum (kompatybilne z wersją `0.1.0-beta.14` lub nowszą) oraz niemal wszystkich popularnych rozszerzeń. Pełna lista obsługiwanych rozszerzeń dostępna jest poniżej.
 

@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/polls.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -30,14 +30,22 @@ class PollSerializer extends AbstractSerializer
      */
     protected function getDefaultAttributes($poll)
     {
-        return [
-            'question'    => $poll->question,
-            'hasEnded'    => $poll->hasEnded(),
-            'publicPoll'  => (bool) $poll->public_poll,
-            'endDate'     => $this->formatDate($poll->end_date),
-            'createdAt'   => $this->formatDate($poll->created_at),
-            'updatedAt'   => $this->formatDate($poll->updated_at),
+        $attributes = [
+            'question'      => $poll->question,
+            'hasEnded'      => $poll->hasEnded(),
+            'publicPoll'    => (bool) $poll->public_poll,
+            'endDate'       => $this->formatDate($poll->end_date),
+            'createdAt'     => $this->formatDate($poll->created_at),
+            'updatedAt'     => $this->formatDate($poll->updated_at),
+            'canSeeVotes'   => $this->actor->can('seeVotes', $poll),
+            'canChangeVote' => $this->actor->can('changeVote', $poll),
         ];
+
+        if ($this->actor->can('seeVoteCount', $poll)) {
+            $attributes['voteCount'] = (int) $poll->vote_count;
+        }
+
+        return $attributes;
     }
 
     public function options($model)
@@ -50,6 +58,23 @@ class PollSerializer extends AbstractSerializer
 
     public function votes($model)
     {
+        if ($this->actor->cannot('seeVotes', $model)) {
+            return null;
+        }
+
+        return $this->hasMany(
+            $model,
+            PollVoteSerializer::class
+        );
+    }
+
+    public function myVotes($model)
+    {
+        Poll::setStateUser($this->actor);
+
+        // When called inside ShowDiscussionController, Flarum has already pre-loaded our relationship incorrectly
+        $model->unsetRelation('myVotes');
+
         return $this->hasMany(
             $model,
             PollVoteSerializer::class

@@ -29,6 +29,9 @@ fof-oauth:
           client_id_label: '=> fof-oauth.ref.settings.client_id'
           client_secret_label: '=> fof-oauth.ref.settings.client_secret'
           description: 'Utwórz aplikację na {link}.'
+        linkedin:
+          client_id_label: '=> fof-oauth.ref.settings.client_id'
+          description: 'Utwórz aplikację na {link}.'
         twitter:
           api_key_label: 'API Key'
           api_secret_label: 'API Secret'
@@ -46,6 +49,7 @@ fof-oauth:
       github: GitHub
       gitlab: GitLab
       google: Google
+      linkedin: LinkedIn
       twitter: Twitter
   ref:
     settings:

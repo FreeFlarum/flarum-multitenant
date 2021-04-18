@@ -20,9 +20,9 @@
     "extra": {
         "flarum-extension": {
             "title": "Login2SeePlus",
+            "category": "discussion",
             "icon": {
                 "name": "fas fa-eye",
-                "category": "discussion",
                 "backgroundColor": "#ff1a00",
                 "color": "#fff"
             }

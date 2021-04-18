@@ -2,6 +2,34 @@ CHANGELOG
 =========
 
 
+0.4.8 (2021-03-28)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-discussion-templates`](https://github.com/askvortsov1/flarum-discussion-templates)
+* [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa)
+* [`askvortsov/flarum-saml`](https://github.com/askvortsov1/flarum-saml)
+* [`flarum/markdown`](https://github.com/flarum/markdown)
+* [`fof/forum-statistics-widget`](https://github.com/FriendsOfFlarum/forum-statistics-widget)
+* [`fof/linguist`](https://github.com/FriendsOfFlarum/linguist)
+* [`fof/oauth`](https://github.com/FriendsOfFlarum/oauth)
+* [`fof/sentry`](https://github.com/FriendsOfFlarum/sentry)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`jslirola/flarum-ext-login2seeplus`](https://github.com/jslirola/flarum-ext-login2seeplus)
+* [`migratetoflarum/fake-data`](https://github.com/migratetoflarum/fake-data)
+* [`nearata/flarum-ext-tags-color-generator`](https://github.com/Nearata/flarum-ext-tags-color-generator)
+* [`xelson/flarum-ext-chat`](https://github.com/Xelson/flarum-ext-chat)
+
+
+Wszystkie zmiany: [v0.4.7...v0.4.8](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.7...v0.4.8).
+
+
 0.4.7 (2021-03-06)
 ------------------
 

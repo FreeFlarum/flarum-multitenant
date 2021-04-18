@@ -22,3 +22,12 @@ nearata-tags-color-generator:
       light: Jasny
       random: Losowo
     generate_color_button: 'Wygeneruj losowy kolor'
+    text_color:
+      custom_helptext: 'Wpisz kod HEX koloru (włącznie z "#"), rgb(a) lub hls(a).'
+      custom_label: 'Niestandardowy kolor tekstu'
+      label: 'Kolor tekstu'
+      options:
+        custom: 'Niestandardowy kolor'
+        default: Domyślny
+        theme_primary_color: 'Główny kolor motywu'
+        theme_secondary_color: 'Drugorzędny kolor motywu'

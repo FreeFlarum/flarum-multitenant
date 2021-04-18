@@ -2,6 +2,7 @@
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
+use Flarum\Core\Exception\ValidationException;
 
 return [
 
@@ -9,15 +10,18 @@ return [
     (new \FoF\Upload\Extend\Adapters())->disable('local'),
 
     // Remove (permanently throttle) test mail function:
-    (new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
+    (new Flarum\Extend\ThrottleApi)->set('FreeFlarumThrottle', function ($request) {
+        /*if ($_SERVER['REQUEST_URI'] === '/api/extensions/migratetoflarum-canonical') {
+            return true;
+        };*/
         if ($request->getAttribute('routeName') === 'mailTest') {
             return true;
-        }
+        };
      }),
 
     (new Extend\Frontend('forum'))->content(function (Document $document) {
 
-            // FreeFlarum's foter:
+            // FreeFlarum's footer:
             if (!file_exists("/etc/hide_powered_by")) {
                 $document->foot[] = '
                     <div style="height: initial !important; position: absolute !important; width: 100% !important; clip-path: unset !important; transform: unset !important; color: unset !important; background-color: unset !important; visibility: visible !important; display: block !important; text-align: center !important; margin: 5px 0 !important; opacity: 1.0 !important; max-height: unset !important; padding: 10px 0 !important; font-family: \'Poppins\', sans-serif !important; font-size: 11px !important;">

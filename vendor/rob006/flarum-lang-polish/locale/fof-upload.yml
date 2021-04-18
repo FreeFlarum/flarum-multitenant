@@ -8,6 +8,7 @@ fof-upload:
       save: 'Zapisz ustawienia'
     help_texts:
       client_extension: "Domyślnie wtyczka wybierze bezpieczne rozszerzenie dla wysłanego pliku na podstawie typu MIME.\nDla niektórych typów bazujących na ZIP lub plików binarnych, może to skutkować zastąpieniem oryginalnego rozszerzenia na bardziej ogólne.\nTutaj możesz podać listę rozszerzeń (rozdzielonych przecinkami), które mają zostać pozostawione bez zmian.\n"
+      composer_buttons: "Domyślnie przycisk dla managera plików oraz przycisk do wysyłania plików są jednocześnie widoczne. Ale możesz to zmienić i wyświetlać tylko jeden przycisk.\n"
       disable-download-logging: "Wyłącz rejestrowanie każdego pobrania przez użytkowników Twojego forum. Pozostawienie tej opcji włączonej pozwoli Ci na zobaczenie ilości pobrań i innych statystyk w niedalekiej przyszłości.\n"
       disable-hotlink-protection: "Ochrona przed hotlinkowaniem zapobiega otwieraniu tutejszych plików z poziomu innych stron. Obecna metoda wymaga tokenu CSRF i identyfikatora postu.\n"
       download_templates: "Szablony pobierania decydują o tym jak przesłane pliki są wyświetlane na Twoim forum, np. podgląd miniatury, przyciski. Obecnie dostępne:\n"
@@ -29,6 +30,12 @@ fof-upload:
         use_path_style_endpoint: 'Use path style endpoint'
       client_extension:
         title: 'Rozszerzenia pików podane przez użytkownika'
+      composer_buttons:
+        options:
+          both: Oba
+          media-btn: 'Jedynie przycisk managera plików'
+          upload-btn: 'Jedynie przycisk do wysyłania plików'
+        title: 'Przyciski w kompozytorze'
       disable-download-logging:
         title: 'Wyłącz rejestrowanie pobrań'
         toggle: Wyłącz
@@ -63,8 +70,10 @@ fof-upload:
       description: 'Skonfiguruj ustawienia przesyłania plików.'
       title: 'Przesyłanie plików'
     permissions:
+      delete_uploads_of_others_label: 'Usuwanie plików użytkowników'
       download_label: 'Pobieranie plików'
       upload_label: 'Przesyłanie plików'
+      view_user_uploads_label: 'Przeglądanie plików użytkowników'
     templates:
       file: 'Domyślny szablon pobierania pliku'
       file_description: "Wyświetla nazwę pliku i podstawowe informacje o nim. Przekierowuje pobieranie przez PHP, pozwalając na zbieranie statystyk i ochronę przed hotlinkowaniem.\n"
@@ -88,6 +97,26 @@ fof-upload:
   forum:
     buttons:
       attach: Załącz
+      cancel: Anuluj
+      media: 'Moje pliki'
+      upload: Wyślij
+      user_uploads: 'Pliki użytkownika'
+    file_list:
+      confirm_selection_btn: 'Wybierz plik|Wybierz pliki'
+      empty: 'Nie ma żadnych plików do pokazania.'
+      hide_file:
+        btn_a11y_label: 'Ukryj "{fileName}" z managera plików'
+        hide_confirmation: 'Czy jesteś pewien, że chcesz ukryć "{fileName}"? Ukrycie pliku jedynie usunie go z twojego managera plików i nie wpłynie na istniejące posty.'
+        hide_fail: 'Nie udało się ukryć pliku "{fileName}"'
+        hide_success: 'Plik ukryty'
+        loading: 'Ukrywanie pliku...'
+      load_more_files_btn: 'Załaduj więcej plików'
+      loading: 'Ładowanie plików...'
+      modal_empty_desktop: 'Lista twoich plików jest pusta. Kliknij przycisk lub przeciągnij plik, aby coś wysłać.'
+      modal_empty_phone: 'Lista twoich plików jest pusta. Wciśnij przycisk powyżej, aby wysłać plik.'
+      release_to_upload: 'Upuść, aby wysłać'
+      select_file_a11y_label: 'Wybierz plik "{fileName}"'
+    media_manager: 'Manager plików'
     states:
       error: Błąd
       loading: Wysyłanie

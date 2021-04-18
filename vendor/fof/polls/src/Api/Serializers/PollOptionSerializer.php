@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/polls.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -30,10 +30,16 @@ class PollOptionSerializer extends AbstractSerializer
      */
     protected function getDefaultAttributes($option)
     {
-        return [
+        $attributes = [
             'answer'    => $option->answer,
             'createdAt' => $this->formatDate($option->created_at),
             'updatedAt' => $this->formatDate($option->updated_at),
         ];
+
+        if ($this->actor->can('seeVoteCount', $option->poll)) {
+            $attributes['voteCount'] = (int) $option->vote_count;
+        }
+
+        return $attributes;
     }
 }

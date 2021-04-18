@@ -3,7 +3,7 @@
 /*
  * This file is part of askvortsov/flarum-discussion-templates
  *
- *  Copyright (c) 2020 Alexander Skvortsov.
+ *  Copyright (c) 2021 Alexander Skvortsov.
  *
  *  For detailed copyright and license information, please view the
  *  LICENSE file that was distributed with this source code.
@@ -51,4 +51,9 @@ return [
 
     (new Extend\Event())
         ->listen(Saving::class, SaveReplyTemplateToDatabase::class),
+
+    (new Extend\Settings())
+        ->serializeToForum('appendTemplateOnTagChange', 'appendTemplateOnTagChange', function ($value) {
+            return boolval($value);
+        }),
 ];

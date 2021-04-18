@@ -92,7 +92,7 @@ core:
       driver_label: 邮件驱动
       from_label: 发件地址
       heading: '=> core.ref.email'
-      mail_encryption_label: '加密协议（ssl 或 tls）'
+      mail_encryption_label: '加密协议（小写 ssl 或 tls）'
       mail_host_label: 主机
       mail_mailgun_domain_label: 域名
       mail_mailgun_region_label: 区域
@@ -103,7 +103,7 @@ core:
       mail_ses_key_label: Key
       mail_ses_region_label: 区域
       mail_ses_secret_label: Secret
-      mail_username_label: 用户名（一般同发件地址）
+      mail_username_label: 用户名（部分邮件服务商要求用户名必须与发件地址一致）
       mailgun_heading: 'Mailgun 设置'
       mandrill_heading: 'Mandrill 设置'
       not_sending_message: 'Flarum 当前无法发送电子邮件，请检查邮件驱动及其配置。'
@@ -117,7 +117,8 @@ core:
       text: 配置论坛发信服务方式。
       title: '=> core.ref.email'
     extension:
-      confirm_uninstall: 该扩展程序相关的数据库内容和文件资源将被永久性删除。确定要卸载吗？
+      configure_scopes: 设置范围
+      confirm_uninstall: 此扩展的的数据库条目和文件资源都将被永久性删除，确定要继续吗？
       disabled: 关闭
       enable_to_see: 开启扩展程序以查看或修改设置。
       enabled: 开启
@@ -184,7 +185,9 @@ core:
       delete_posts_label: 删除回复
       description: 设置各用户组访问及操作权限
       edit_posts_label: 编辑回复
-      edit_users_label: 编辑用户
+      edit_users_credentials_label: 编辑用户身份标识
+      edit_users_groups_label: 编辑用户组
+      edit_users_label: 编辑用户入口
       global_heading: 全局
       moderate_heading: 管理相关
       new_group_button: 添加用户组
@@ -211,6 +214,7 @@ core:
       signup_closed_button: 关闭注册
       signup_open_button: 开放注册
     settings:
+      saved_message: 您的修改已保存。
       submit_button: '=> core.ref.save_changes'
     upload_image:
       remove_button: '=> core.ref.remove'
@@ -276,6 +280,7 @@ core:
       rename_button: '=> core.ref.rename'
       reply_button: '=> core.ref.reply'
       restore_button: '=> core.ref.restore'
+      toggle_dropdown_accessible_label: 主题下拉菜单开关
     discussion_list:
       empty_text: 这里空空如也...
       load_more_button: '=> core.ref.load_more'
@@ -287,6 +292,7 @@ core:
       email_heading: '=> core.ref.email'
       email_label: '=> core.ref.email'
       groups_heading: 用户组
+      nothing_available: 暂无可供您编辑的项目。
       password_heading: '=> core.ref.password'
       password_label: '=> core.ref.password'
       set_password_label: 设置新密码
@@ -305,10 +311,12 @@ core:
     header:
       admin_button: 后台管理
       back_to_index_tooltip: 返回主题列表
+      locale_dropdown_accessible_label: 更改论坛语言
       log_in_link: '=> core.ref.log_in'
       log_out_button: '=> core.ref.log_out'
       profile_button: 个人主页
       search_placeholder: 搜索
+      session_dropdown_accessible_label: 会话下拉菜单开关
       settings_button: 设置
       sign_up_link: '=> core.ref.sign_up'
     index:
@@ -319,11 +327,13 @@ core:
       meta_title_text: '=> core.ref.all_discussions'
       refresh_tooltip: 刷新
       start_discussion_button: '=> core.ref.start_a_discussion'
+      toggle_sidenav_dropdown_accessible_label: 导航栏下拉菜单开关
     index_sort:
       latest_button: 最新回复
       newest_button: 新鲜出炉
       oldest_button: 陈年旧贴
       relevance_button: 相关推荐
+      toggle_dropdown_accessible_label: 更改「全部主题」排序
       top_button: 热门主题
     log_in:
       forgot_password_link: 忘记密码？
@@ -340,6 +350,7 @@ core:
       mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
       mark_as_read_tooltip: 标记为已读
       title: '=> core.ref.notifications'
+      toggle_dropdown_accessible_label: 查看通知
       tooltip: '=> core.ref.notifications'
     post:
       edited_text: 已编辑
@@ -352,6 +363,7 @@ core:
       edit_button: '=> core.ref.edit'
       hide_confirmation: 确定要删除这个帖子吗？
       restore_button: '=> core.ref.restore'
+      toggle_dropdown_accessible_label: 帖子下拉菜单开关
     post_scrubber:
       now_link: 最新回复
       original_post_link: 最早内容
@@ -407,8 +419,9 @@ core:
       delete_button: '=> core.ref.delete'
       delete_confirmation: 确定要删除此用户？此账号会被注销，已发布的帖子仍会保留。
       delete_error_message: '删除用户 <i>{username} ({email})</i> 失败'
-      delete_success_message: '用户 <i>{username} ({email})</i> 已删除'
+      delete_success_message: '已删除用户 <i>{username} ({email})</i>'
       edit_button: '=> core.ref.edit'
+      toggle_dropdown_accessible_label: 用户下拉菜单开关
     user_email_confirmation:
       alert_message: '=> core.ref.confirmation_email_sent'
       resend_button: 重新发送验证邮件
@@ -425,6 +438,8 @@ core:
   lib:
     badge:
       hidden_tooltip: 隐藏
+    dropdown:
+      toggle_dropdown_accessible_label: 下拉菜单开关
     error:
       dependent_extensions_message: '无法停用「{extension}」，请先停用依赖扩展「{extensions}」'
       generic_message: 糟糕，出错啦！请刷新页面重试。
@@ -438,7 +453,7 @@ core:
       ten_kilo_text: 万
     series:
       glue_text: '， '
-      three_text: '{first}，{second} 还有 {third}'
+      three_text: '{first}，{second} 和 {third}'
       two_text: '{first} 和 {second}'
     username:
       deleted_text: '[已注销]'

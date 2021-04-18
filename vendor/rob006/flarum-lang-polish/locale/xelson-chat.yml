@@ -40,6 +40,7 @@ xelson-chat:
     permissions:
       create:
         channel: 'Tworzenie kanałów'
+        chat: 'Rozpoczynanie czatu'
       delete: 'Usuwanie wiadomości na czacie'
       edit: 'Edytowanie wiadomości na czacie'
       enabled: 'Włączony czat'
@@ -63,6 +64,7 @@ xelson-chat:
       edit_modal:
         form:
           color:
+            label: Kolor
             validator: 'Wpisz kod HEX koloru'
           delete:
             button: 'Usuń czat'
@@ -70,10 +72,12 @@ xelson-chat:
             placeholder: 'Nazwa czatu'
             title: 'Czy jesteś pewien, że chcesz usunąć ten czat?'
           icon:
+            label: '=> core.ref.icon'
             validator: '=> core.ref.icon_text'
           leave: 'Opuść czat'
           return: 'Dołącz do czatu'
           title:
+            label: 'Nazwa czatu'
             validator: 'Co najmniej jeden znak'
           users:
             edit: 'Wybierz i edytuj użytkowników'
@@ -99,8 +103,10 @@ xelson-chat:
             chat: 'Utwórz nowy czat'
           form:
             color:
+              label: '=> xelson-chat.forum.chat.edit_modal.form.color.label'
               validator: '=> xelson-chat.forum.chat.edit_modal.form.color.validator'
             icon:
+              label: '=> core.ref.icon'
               validator: '=> core.ref.icon_text'
             title:
               channel: 'Nazwa kanału'
@@ -113,7 +119,7 @@ xelson-chat:
             placeholder: 'Wyszukaj użytkowników'
           title: 'Wybierz użytkowników'
         pin: 'Przypnij panel'
-        placeholder: Szukaj
+        placeholder: 'Filtruj czaty'
         preview:
           empty: 'Brak wiadomości'
         unpin: 'Odepnij panel'
@@ -151,12 +157,17 @@ xelson-chat:
         you: Ty
       moder: Moderator
       placeholder: 'Wpisz swoją wiadomość...'
+      rejoin: 'Dołącz ponownie'
       welcome:
         header: 'Witaj w Neon Chat!'
+        subheader: 'Aby porozmawiać, wybierz kanał w panelu po lewej stronie'
     errors:
       chatdenied: 'Twoja grupa nie ma uprawnień, aby pisać wiadomości'
       removed: 'Zostałeś wyrzucony z czatu'
       unauthenticated: 'Jedynie zarejestrowani użytkownicy mogą korzystać z czatu'
+    index:
+      chat_link: Czat
+    pusher_not_found: 'Pusher lub Websockety są wymagane, aby czat aktualizował się w czasie rzeczywistym.'
     toolbar:
       chat:
         settings: 'Ustawienia czatu'

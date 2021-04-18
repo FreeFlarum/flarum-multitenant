@@ -8,12 +8,13 @@
     "license": "MIT",
     "require": {
         "flarum/approval": "^0.1.0-beta.14",
-        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.17"
     },
     "authors": [
         {
             "name": "Clark Winkelmann",
             "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/",
             "role": "Developer"
         }
     ],

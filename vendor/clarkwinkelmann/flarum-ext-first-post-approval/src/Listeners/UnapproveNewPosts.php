@@ -9,6 +9,13 @@ use Flarum\Settings\SettingsRepositoryInterface;
 
 class UnapproveNewPosts
 {
+    protected $settings;
+
+    public function __construct(SettingsRepositoryInterface $settings)
+    {
+        $this->settings = $settings;
+    }
+
     public function handle(Saving $event)
     {
         $post = $event->post;
@@ -17,12 +24,7 @@ class UnapproveNewPosts
             return;
         }
 
-        /**
-         * @var $settings SettingsRepositoryInterface
-         */
-        $settings = app(SettingsRepositoryInterface::class);
-
-        $discussionCount = $settings->get('clarkwinkelmann-first-post-approval.discussionCount');
+        $discussionCount = $this->settings->get('clarkwinkelmann-first-post-approval.discussionCount');
 
         if ($post->discussion->post_number_index == 0 && $discussionCount) {
             // If this is a new discussion and if a rule has been defined for new discussions
@@ -31,7 +33,7 @@ class UnapproveNewPosts
             }
         } else {
             // If this is a reply, or if there's no rule defined for new discussions
-            if (($event->actor->first_discussion_approval_count + $event->actor->first_post_approval_count) >= $settings->get('clarkwinkelmann-first-post-approval.postCount')) {
+            if (($event->actor->first_discussion_approval_count + $event->actor->first_post_approval_count) >= $this->settings->get('clarkwinkelmann-first-post-approval.postCount')) {
                 return;
             }
         }

@@ -14,10 +14,10 @@ jslirola-login2seeplus:
       title: 'Tryb legacy'
     post:
       help: 'Wpisz <em>-1</em> aby pokazać całą.'
-      title: 'Ukryj treść przekraczającą tę długość'
+      title: 'Ukryj treść przekraczającą tę długość (wpisz <em>-1</em>, aby pokazać całość)'
     title: Login2SeePlus
   forum:
-    code: 'Zaloguj się aby zobaczyć kod'
-    image: 'Zaloguj się aby zobaczyć obrazek'
-    link: 'Zaloguj się aby zobaczyć link'
+    code: 'Zaloguj się, aby zobaczyć kod'
+    image: 'Zaloguj się, aby zobaczyć obrazek'
+    link: 'Zaloguj się, aby zobaczyć link'
     post: '{login} lub {register}, aby zobaczyć pełną treść'

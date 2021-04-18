@@ -1,7 +1,8 @@
 import app from 'flarum/app';
-import Component from 'flarum/Component';
-import icon from 'flarum/helpers/icon';
-import LoadingIndicator from 'flarum/components/LoadingIndicator';
+import Component from 'flarum/common/Component';
+import Button from 'flarum/common/components/Button';
+import LoadingIndicator from 'flarum/common/components/LoadingIndicator';
+import classList from 'flarum/common/utils/classList';
 
 export default class UploadButton extends Component {
     oninit(vnode) {
@@ -14,35 +15,64 @@ export default class UploadButton extends Component {
             // redraw to reflect uploader.loading in the DOM
             m.redraw();
         });
+
+        this.isMediaUploadButton = vnode.attrs.isMediaUploadButton || false;
+    }
+
+    oncreate(vnode) {
+        super.oncreate(vnode);
+
+        // Add tooltip
+        if (!this.isMediaUploadButton) {
+            this.$().tooltip();
+        }
     }
 
     view() {
         const buttonText = this.attrs.uploader.uploading
             ? app.translator.trans('fof-upload.forum.states.loading')
-            : app.translator.trans('fof-upload.forum.buttons.attach');
+            : app.translator.trans('fof-upload.forum.buttons.upload');
 
-        return m(
-            'button.Button.hasIcon.fof-upload-button.Button--icon',
-            {
-                className: this.attrs.uploader.uploading ? 'uploading' : '',
-                onclick: this.uploadButtonClicked.bind(this),
-            },
-            [
-                this.attrs.uploader.uploading
-                    ? LoadingIndicator.component({
-                          size: 'tiny',
-                          className: 'LoadingIndicator--inline Button-icon',
-                      })
-                    : icon('fas fa-file-upload', { className: 'Button-icon' }),
-                m('span.Button-label', buttonText),
-                m('form', [
-                    m('input', {
-                        type: 'file',
-                        multiple: true,
-                        onchange: this.process.bind(this),
-                    }),
-                ]),
-            ]
+        /**
+         * Flarum core has decided that all buttons should have tooltips, but
+         * it uses `extractText` to get a title attr when none is provided.
+         *
+         * That returns `false` when no text is available, like the icon in a
+         * button.
+         *
+         * This means that it starts creating weird tooltips, such as `falsefalse`
+         * and `falseUpload`.
+         *
+         * To override this behaviour, we pass `" "` when no tooltip is desired.
+         * Using `""` won't work as JS interprets this as a falsey value which will
+         * trigger the core logic.
+         *
+         * Thankfully, browsers ignore title attributes made of only whitespace,
+         * preventing a ghost-like tooltip.
+         */
+        const tooltip = (!this.isMediaUploadButton && buttonText) || ' ';
+
+        return (
+            <Button
+                className={classList([
+                    'Button',
+                    'hasIcon',
+                    'fof-upload-button',
+                    !this.isMediaUploadButton && !this.attrs.uploader.uploading && 'Button--icon',
+                    !this.isMediaUploadButton && !this.attrs.uploader.uploading && 'Button--link',
+                    this.attrs.uploader.uploading && 'uploading',
+                ])}
+                icon={!this.attrs.uploader.uploading && 'fas fa-file-upload'}
+                onclick={this.uploadButtonClicked.bind(this)}
+                title={tooltip}
+                disabled={this.attrs.disabled}
+            >
+                {this.attrs.uploader.uploading && <LoadingIndicator size="tiny" className="LoadingIndicator--inline Button-icon" />}
+                {(this.isMediaUploadButton || this.attrs.uploader.uploading) && <span className="Button-label">{buttonText}</span>}
+                <form>
+                    <input type="file" multiple={true} onchange={this.process.bind(this)} />
+                </form>
+            </Button>
         );
     }
 
@@ -62,7 +92,7 @@ export default class UploadButton extends Component {
             return;
         }
 
-        this.attrs.uploader.upload(files);
+        this.attrs.uploader.upload(files, !this.isMediaUploadButton);
     }
 
     /**
