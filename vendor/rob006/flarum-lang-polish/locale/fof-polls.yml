@@ -5,9 +5,11 @@
 fof-polls:
   admin:
     permissions:
+      change_vote: 'Zmiana głosu'
       moderate: 'Edytowanie i usuwanie ankiet'
       self_edit: 'Edytowanie swoich własnych ankiet'
       start: 'Tworzenie ankiet'
+      view_results_without_voting: 'Podglądanie wyników bez zagłosowania'
       vote: 'Głosowanie w ankietach'
   forum:
     composer_discussion:

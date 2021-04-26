@@ -7,7 +7,10 @@ fof-linguist:
     buttons:
       apply: Zastosuj
       copy-original: 'Skopiuj oryginalny tekst'
+      delete-all: 'Usuń wszystkie tłumaczenia'
+      delete-all-confirm: "Spowoduje to usunięcie wszystkich {count} niestandardowych tłumaczeń. Upewnij się, że masz kopię wszystkich tłumaczeń, które chciałbyś zachować.\n"
       delete-redundant: 'Usuń redundantne tłumaczenia'
+      delete-redundant-confirm: "Spowoduje to usunięcie {count} tłumaczeń, które mają niestandardowe tłumaczenie takie same jak oryginalne tłumaczenie. Może to być przydatne do czyszczenia niepotrzebnych tłumaczeń po aktualizacji pakietu językowego.\n"
       load-more: 'Wczytaj więcej'
       reset: 'Przywróć oryginał'
     clear-cache:
@@ -21,6 +24,9 @@ fof-linguist:
       negation-options:
         with: Posiadające
         without: Nieposiadające
+      operation-options:
+        and: 'wszystkich wybranych:'
+        or: 'dowolnego z wybranych:'
       results: 'Wyświetlono {shown} z {total} pasujących tłumaczeń'
       search: 'Szukaj tekstu tłumaczenia...'
       type-options:

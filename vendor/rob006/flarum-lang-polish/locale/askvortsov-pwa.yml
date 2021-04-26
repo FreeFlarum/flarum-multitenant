@@ -11,8 +11,9 @@ askvortsov-pwa:
       about:
         description_text: 'Możesz ustawić opis w podstawowych ustawieniach forum w panelu admina.'
         heading: 'O forum'
+        long_name_text: 'Nazwa aplikacji wyświetlana użytkownikowi.'
         name_text: 'Wpisz pełną nazwę, która będzie używana przez PWA.'
-        short_name_text: 'Możesz ustawić skróconą nazwę w podstawowych ustawieniach forum w panelu admina.'
+        short_name_text: 'Nazwa aplikacji wyświetlana użytkownikowi, jeśli nie ma wystarczająco miejsca na wyświetlenie pełnej nazwy.'
       colors:
         background_color_text: 'Jest używany jako kolor wypełnienia na ekranie powitalnym, który jest wyświetlany podczas ładowania PWA. Nie jest wykorzystywany gdy aplikacja zostanie załadowana.'
         heading: Kolory

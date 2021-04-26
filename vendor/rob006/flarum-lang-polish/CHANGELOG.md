@@ -2,6 +2,28 @@ CHANGELOG
 =========
 
 
+0.4.9 (2021-04-24)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`askvortsov/flarum-rich-text`](https://github.com/askvortsov1/flarum-rich-text)
+* [`ianm/flarum-diff`](https://github.com/imorland/flarum-diff)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa)
+* [`clarkwinkelmann/flarum-ext-carving-contest`](https://github.com/clarkwinkelmann/flarum-ext-carving-contest)
+* [`clarkwinkelmann/flarum-ext-email-as-display-name`](https://github.com/clarkwinkelmann/flarum-ext-email-as-display-name)
+* [`fof/linguist`](https://github.com/FriendsOfFlarum/linguist)
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+* [`matteocontrini/flarum-imgur-upload`](https://github.com/matteocontrini/flarum-imgur-upload)
+
+
+Wszystkie zmiany: [v0.4.8...v0.4.9](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.8...v0.4.9).
+
+
 0.4.8 (2021-03-28)
 ------------------
 

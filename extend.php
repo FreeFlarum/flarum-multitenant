@@ -20,6 +20,9 @@ return [
      }),
 
     (new Extend\Frontend('forum'))->content(function (Document $document) {
+            if ($_SERVER['HTTP_HOST'] == "portuguesada.flarum.cloud") {
+                $document->head[] = '<meta name="google-site-verification" content="GfpRiTLr_tvVskoEgSjtSqZP9eI7tap2p7DqrcGAQbM" />';
+            };
 
             // FreeFlarum's footer:
             if (!file_exists("/etc/hide_powered_by")) {

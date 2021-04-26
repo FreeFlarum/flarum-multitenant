@@ -6,8 +6,8 @@ clarkwinkelmann-email-as-display-name:
   admin:
     permissions:
       heading: 'Wyświetlaj e-mail zamiast nazwy użytkownika'
-      view-all: 'Wyświetlanie na wszystkich profilach'
-      view-own: 'Wyświetlanie na własnym profilu'
+      view-all: 'Przeglądanie adresów e-mail na wszystkich profilach'
+      view-own: 'Przeglądanie adresu e-mail na własnym profilu'
     settings:
       remove-username-registration: 'Usuń pole na nazwę użytkownika z formularza rejestracyjnego'
       title: 'Ustawienia rozszerzenia'

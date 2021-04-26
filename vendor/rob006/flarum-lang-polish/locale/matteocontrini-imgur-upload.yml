@@ -5,6 +5,7 @@
 imgur-upload:
   admin:
     settings:
+      allow-paste: 'Pozwól na wysyłanie poprzez wklejenie obrazka'
       embed-type:
         full-with-link: 'Pełnowymiarowy obrazek z linkiem'
         full-without-link: 'Pełnowymiarowy obrazek bez linka'
