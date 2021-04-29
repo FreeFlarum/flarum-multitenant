@@ -7301,7 +7301,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.24",
+            "version": "v6.20.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -7349,7 +7349,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.24",
+            "version": "v6.20.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -7397,16 +7397,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.24",
+            "version": "v6.20.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "da124fbe2eeed5315a8b768af6f37fb712dd0f3a"
+                "reference": "8445174d134a37d921ee07ff1289e44dcc6a47db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/da124fbe2eeed5315a8b768af6f37fb712dd0f3a",
-                "reference": "da124fbe2eeed5315a8b768af6f37fb712dd0f3a",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/8445174d134a37d921ee07ff1289e44dcc6a47db",
+                "reference": "8445174d134a37d921ee07ff1289e44dcc6a47db",
                 "shasum": ""
             },
             "require": {
@@ -7458,7 +7458,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-04-08T12:38:18+00:00"
+            "time": "2021-04-28T13:18:19+00:00"
         },
         {
             "name": "illuminate/events",
@@ -7843,7 +7843,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.24",
+            "version": "v6.20.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
