@@ -1,0 +1,4 @@
+askvortsov-help-tags:
+  admin:
+    permissions:
+      view_tag_label: View Tag

@@ -8,6 +8,8 @@ fof-user-bio:
       editAny: 'Herhangi bir biyografiyi düzenleme'
       editOwn: 'Kendi biyografisini düzenleme'
       view: 'Biyografiyi görüntüle'
+    setting:
+      bioLimit: 'Biyografi karakter sınırı'
   forum:
     userbioPlaceholder: 'Kendin hakkında bir şeyler yaz'
 fof-userbio:

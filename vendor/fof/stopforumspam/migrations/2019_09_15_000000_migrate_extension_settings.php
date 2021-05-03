@@ -17,7 +17,7 @@ return [
         /**
          * @var SettingsRepositoryInterface
          */
-        $settings = app('flarum.settings');
+        $settings = resolve('flarum.settings');
         $keys = ['username', 'email', 'ip', 'frequency', 'api_key'];
 
         foreach ($keys as $key) {

@@ -3,7 +3,7 @@
 /*
  * This file is part of askvortsov/flarum-pwa
  *
- *  Copyright (c) 2020 Alexander Skvortsov.
+ *  Copyright (c) 2021 Alexander Skvortsov.
  *
  *  For detailed copyright and license information, please view the
  *  LICENSE file that was distributed with this source code.
@@ -19,7 +19,7 @@ use Flarum\Foundation\Paths;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Minishlink\WebPush\VAPID;
 use Psr\Http\Message\ServerRequestInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Tobscure\JsonApi\Document;
 
 class ShowPWASettingsController extends AbstractShowController
@@ -81,7 +81,7 @@ class ShowPWASettingsController extends AbstractShowController
             }
         }
 
-        if (!$this->settings->get('askvortsov-pwa.longName')) {
+        if (!isset($this->buildManifest()['name'])) {
             $status_messages[] = [
                 'type'    => 'error',
                 'message' => $this->translator->trans('askvortsov-pwa.admin.status.no_name'),

@@ -21,8 +21,8 @@ class FormatContent
 {
     public function __construct()
     {
-        $this->settings = app(SettingsRepositoryInterface::class);
-        $this->translator = app(TranslatorInterface::class);
+        $this->settings = resolve(SettingsRepositoryInterface::class);
+        $this->translator = resolve(TranslatorInterface::class);
     }
 
     protected function truncate_html($string, $length)

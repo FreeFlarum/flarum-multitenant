@@ -9,9 +9,9 @@
  *
  */
 
-import Modal from 'flarum/components/Modal';
-import Button from 'flarum/components/Button';
-import Stream from 'flarum/utils/Stream';
+import Modal from 'flarum/common/components/Modal';
+import Button from 'flarum/common/components/Button';
+import Stream from 'flarum/common/utils/Stream';
 
 export default class ResultsModal extends Modal {
     oninit(vnode) {
@@ -36,15 +36,16 @@ export default class ResultsModal extends Modal {
         return (
             <div className="Modal-body">
                 <div className="Form Form--centered">
-                    {this.request.status() === 'Approved' ?
-                        [
-                            <h2>{app.translator.trans(`${this.translationPrefix}.approved`)}</h2>,
-                            <h3>{app.translator.trans(`${this.translationPrefix}.new_name`, { name: app.session.user.displayName() })}</h3>
-                        ] : [
-                            <h2>{app.translator.trans(`${this.translationPrefix}.rejected`)}</h2>,
-                            <h3>{app.translator.trans(`${this.translationPrefix}.reason`, { reason: this.request.reason(), i: <i /> })}</h3>,
-                            <p className="helpText">{app.translator.trans(`${this.translationPrefix}.resubmit`)}</p>
-                        ]}
+                    {this.request.status() === 'Approved'
+                        ? [
+                              <h2>{app.translator.trans(`${this.translationPrefix}.approved`)}</h2>,
+                              <h3>{app.translator.trans(`${this.translationPrefix}.new_name`, { name: app.session.user.displayName() })}</h3>,
+                          ]
+                        : [
+                              <h2>{app.translator.trans(`${this.translationPrefix}.rejected`)}</h2>,
+                              <h3>{app.translator.trans(`${this.translationPrefix}.reason`, { reason: this.request.reason(), i: <i /> })}</h3>,
+                              <p className="helpText">{app.translator.trans(`${this.translationPrefix}.resubmit`)}</p>,
+                          ]}
                     <div className="Form-group">
                         <Button className="Button Button--primary Button--block" onclick={this.hide.bind(this)}>
                             {app.translator.trans(`${this.translationPrefix}.dismiss_button`)}
@@ -52,7 +53,7 @@ export default class ResultsModal extends Modal {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 
     onremove() {

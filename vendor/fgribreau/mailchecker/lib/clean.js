@@ -1,18 +1,16 @@
 'use strict';
 
-var fs = require('fs');
-var p = require('path');
-var psl = require('psl');
+const fs = require('fs');
+const p = require('path');
+const psl = require('psl');
 
-var path = p.resolve(__dirname, '../list.txt');
-var rawList = fs.readFileSync(path)
-                .toString()
-                .trim()
-                .split("\n");
+const path = p.resolve(__dirname, '../list.txt');
+const rawList = [...new Set(fs.readFileSync(path)
+  .toString()
+  .trim()
+  .split("\n"))]
+  .sort();
 
-var cleanedList = rawList.filter(function(domain){
-  var parsed = psl.parse(domain); 
-  return parsed.listed;
-});
+const cleanedList = rawList.filter((domain) => psl.parse(domain).listed);
 
 fs.writeFileSync(path, cleanedList.join("\n"))

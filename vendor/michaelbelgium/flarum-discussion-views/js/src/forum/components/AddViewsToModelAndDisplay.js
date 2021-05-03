@@ -9,7 +9,6 @@ import abbreviateNumber from 'flarum/utils/abbreviateNumber';
 import DiscussionView from '../models/DiscussionView';
 import avatar from 'flarum/helpers/avatar';
 import ItemList from 'flarum/utils/ItemList';
-import {ucfirst} from 'flarum/utils/string';
 import humanTime from 'flarum/utils/humanTime';
 
 export default function () {
@@ -17,13 +16,14 @@ export default function () {
 
     Discussion.prototype.views = Model.hasMany('latestViews');
     Discussion.prototype.canReset = Model.attribute('canReset');
+    Discussion.prototype.canViewNumber = Model.attribute('canViewNumber');
     Discussion.prototype.viewCount = Model.attribute('viewCount');
 
     extend(DiscussionListItem.prototype, 'infoItems', function(items) {
-        if(this.attrs.discussion.attribute('canViewNumber')) {
+        if(this.attrs.discussion.canViewNumber()) {
             const views = this.attrs.discussion.viewCount();
 
-            var number = app.forum.attribute('mb-discussionviews.abbr_numbers') == 1 ? abbreviateNumber(views) : views;
+            var number = app.forum.attribute('abbrNumber') == 1 ? abbreviateNumber(views) : views;
             items.add('discussion-views', <span>{number}</span>);   
         }
     });
@@ -33,13 +33,13 @@ export default function () {
     })
     
     extend(DiscussionPage.prototype, 'sidebarItems', function(items) {
-        if(app.forum.attribute('mb-discussionviews.show_viewlist') == 0) return;
+        if(app.forum.attribute('showViewList') == 0) return;
         
         const views = this.discussion.views();
         const viewList = new ItemList();
 
         $.each(views, function(key, view) {
-            var userName = view.user() === false ? 'Guest' : ucfirst(view.user().username());
+            var userName = view.user() === false ? 'Guest' : view.user().username();
 
             var listitem = 
                 <div className="item-lastUser-content">

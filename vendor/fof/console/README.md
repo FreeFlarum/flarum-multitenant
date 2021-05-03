@@ -6,14 +6,15 @@ This package is meant for extension developers and offers the ability to add tas
 
 ## Use in your extension
 
-The real deal is using it in your own extension.
-Simply require it in your extension `composer.json` file:
+The real deal is using it in your own extension. Simply require it in your extension `composer.json` file:
 
+```json
     "require": {
-        "fof/console": "^0.5"
+        "fof/console": "^0.6"
     },
+```
 
-Now make sure the ConsoleProvider is registered inside Flarum. There's an Extender that helps you with that, inside
+Now make sure the `ConsoleProvider` is registered inside Flarum. There's an Extender that helps you with that, inside
 your `extend.php` add:
 
 ```php
@@ -34,3 +35,4 @@ for the command, see the [Task Scheduling documentation](https://laravel.com/doc
 - [Source code on GitHub](https://github.com/FriendsOfFlarum/console)
 - [Report an issue](https://github.com/FriendsOfFlarum/console/issues)
 - [Download via Packagist](https://packagist.org/packages/fof/console)
+- [Discuss](https://discuss.flarum.org/d/7161)

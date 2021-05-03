@@ -9,8 +9,8 @@
  *
  */
 
-import UserPage from 'flarum/components/UserPage';
-import humanTime from 'flarum/helpers/humanTime';
+import UserPage from 'flarum/common/components/UserPage';
+import humanTime from 'flarum/common/helpers/humanTime';
 
 export default class ProfileConfigurePane extends UserPage {
     oninit(vnode) {

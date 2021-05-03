@@ -1,6 +1,6 @@
-import app from 'flarum/app';
-import { extend } from 'flarum/extend';
-import TextEditor from 'flarum/components/TextEditor';
+import app from 'flarum/common/app';
+import { extend } from 'flarum/common/extend';
+import TextEditor from 'flarum/common/components/TextEditor';
 import UploadButton from './components/UploadButton';
 import DragAndDrop from './components/DragAndDrop';
 import PasteClipboard from './components/PasteClipboard';
@@ -62,14 +62,14 @@ export default function () {
             }
         });
 
-        const dragAndDrop = new DragAndDrop((files) => this.uploader.upload(files), this.$().parents('.Composer')[0]);
+        this.dragAndDrop = new DragAndDrop((files) => this.uploader.upload(files), this.$().parents('.Composer')[0]);
 
-        const unloadHandler = () => {
-            dragAndDrop.unload();
-        };
+        new PasteClipboard((files) => this.uploader.upload(files), this.$('.TextEditor-editor')[0]);
+    });
 
-        this.$('textarea').bind('onunload', unloadHandler);
+    extend(TextEditor.prototype, 'onremove', function (f_, vnode) {
+        if (!app.forum.attribute('fof-upload.canUpload')) return;
 
-        new PasteClipboard((files) => this.uploader.upload(files), this.$('textarea')[0]);
+        this.dragAndDrop.unload();
     });
 }

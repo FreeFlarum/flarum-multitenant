@@ -17,18 +17,22 @@ class HideContentInPostPreviews extends FormatContent
 {
     public function __invoke($serializer, $model, $attributes)
     {
-        $newHTML = $attributes["contentHtml"];
+        if (isset($attributes["contentHtml"])) {
 
-        if (!$serializer->getActor()->isGuest())
-            return $attributes;
+            $newHTML = $attributes["contentHtml"];
 
-        $s_summary_links = $this->settings->get('jslirola.login2seeplus.link', false);
+            if (!$serializer->getActor()->isGuest())
+                return $attributes;
 
-        if (!is_null($newHTML) && $s_summary_links == 1)
-            $newHTML = preg_replace('/(<a((?!PostMention).)*?>)[^<]*<\/a>/is',
-                '[' . $this->get_link('jslirola-login2seeplus.forum.link') . ']', $newHTML);
+            $s_summary_links = $this->settings->get('jslirola.login2seeplus.link', false);
 
-        $attributes['contentHtml'] = $newHTML;
+            if (!is_null($newHTML) && $s_summary_links == 1)
+                $newHTML = preg_replace('/(<a((?!PostMention).)*?>)[^<]*<\/a>/is',
+                    '[' . $this->get_link('jslirola-login2seeplus.forum.link') . ']', $newHTML);
+
+            $attributes['contentHtml'] = $newHTML;
+
+        }
 
         return $attributes;
     }

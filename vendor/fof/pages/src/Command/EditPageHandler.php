@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/pages.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -40,7 +40,7 @@ class EditPageHandler
     /**
      * @param EditPage $command
      *
-     * @throws \Flarum\Core\Exception\PermissionDeniedException
+     * @throws \Flarum\User\Exception\PermissionDeniedException
      *
      * @return \FoF\Pages\Page
      */

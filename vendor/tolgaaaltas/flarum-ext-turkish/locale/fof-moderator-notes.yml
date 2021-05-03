@@ -24,5 +24,6 @@ fof-moderator-notes:
       noNotes: 'Görünüşe göre burada hiç not yok.'
       no_content_given: 'Boş bir nota izin verilmez.'
       submit_button: 'Notu kaydet'
+    no_content_given: 'Boş bir nota izin verilmez.'
     user:
       notes: 'Moderatör Notları'

@@ -21,6 +21,13 @@ app.initializers.add('imgur-upload', () => {
         )
         .registerSetting(
             {
+                setting: 'imgur-upload.allow-paste',
+                label: app.translator.trans('imgur-upload.admin.settings.allow-paste'),
+                type: 'boolean'
+            }
+        )
+        .registerSetting(
+            {
                 setting: 'imgur-upload.embed-type',
                 label: app.translator.trans('imgur-upload.admin.settings.embed-type.title'),
                 type: 'select',

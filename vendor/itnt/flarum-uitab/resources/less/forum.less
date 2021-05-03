@@ -1,0 +1,81 @@
+/* Mobile UI Tab */
+@media(max-width: 799px) {
+    .mobile-app-icon-bar {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        background: none;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 48px;
+        z-index: 2;
+        /*border: 1px solid #fff !important;*/
+    }
+    .mobile-app-icon-bar > a{
+    		width: 100%;
+            height: 100%;
+    	}
+    /* Addthis button fix. If you also use the addthis widget, this setting prevents it from blocking the navigation bar */
+    .at-expanding-share-button[data-position=bottom-right] {
+        bottom: 58px !important;
+    }
+    .foureightheight{
+        display: block;
+        height: 48px;
+    }
+}
+@media(max-width: 992px) {
+    a.scroll-up {
+        bottom: 100px;
+    }
+}
+.buttonstyle.active {
+    color: #fff !important;
+}
+.buttonstyle {
+    width: 100%;
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    background: @config-primary-color;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    margin-top: 0px;
+    border-radius: 0px;
+}
+.spanstyle {
+    font-size: 10px;
+    margin-top: 5px;
+}
+.dark .buttonstyle {
+    background: #1b2028;
+    color: #667c99;
+}
+.mobile-app-icon-bar button {
+    padding: 0.75rem !important;
+    cursor: pointer;
+}
+.mobile-app-icon-bar a{
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+}
+.mobile-app-icon-bar a:focus, .buttonstyle:focus{outline: none;}
+
+@media(min-width: 800px) {
+    .mobile-app-icon-bar {
+        display: none !important;
+    }
+    .foureightheight{
+        display: none;
+    }
+}

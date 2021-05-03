@@ -7,9 +7,10 @@ fof-socialprofile:
     edit:
       add: Ekle
       delete: Sil
-      deletetitle: 'Butonu Sil'
+      deletetitle: 'Düğmeyi Sil'
       edit: Düzenle
-      headtitle: 'Butonları Düzenle'
+      headtitle: 'Düğmeleri Düzenle'
+      save_disabled_fetching_favicons: 'Bir veya daha fazla simge getiriliyor. Lütfen bekle.'
       submit: Kaydet
       title: Başlık
       url: Bağlantı

@@ -16,6 +16,7 @@ import PostStreamState from './states/PostStreamState';
 import SearchState from './states/SearchState';
 import AffixedSidebar from './components/AffixedSidebar';
 import DiscussionPage from './components/DiscussionPage';
+import DiscussionListPane from './components/DiscussionListPane';
 import LogInModal from './components/LogInModal';
 import ComposerBody from './components/ComposerBody';
 import ForgotPasswordModal from './components/ForgotPasswordModal';
@@ -35,8 +36,8 @@ import HeaderSecondary from './components/HeaderSecondary';
 import ComposerButton from './components/ComposerButton';
 import DiscussionList from './components/DiscussionList';
 import ReplyPlaceholder from './components/ReplyPlaceholder';
-import TextEditor from './components/TextEditor';
-import TextEditorButton from './components/TextEditorButton';
+import TextEditor from '../common/components/TextEditor'; // @deprecated beta 16, remove beta 17. Moved to common.
+import TextEditorButton from '../common/components/TextEditorButton'; // @deprecated beta 16, remove beta 17. Moved to common.
 import AvatarEditor from './components/AvatarEditor';
 import Post from './components/Post';
 import SettingsPage from './components/SettingsPage';
@@ -72,6 +73,7 @@ import DiscussionListItem from './components/DiscussionListItem';
 import LoadingPost from './components/LoadingPost';
 import PostsUserPage from './components/PostsUserPage';
 import DiscussionPageResolver from './resolvers/DiscussionPageResolver';
+import BasicEditorDriver from '../common/utils/BasicEditorDriver';
 import routes from './routes';
 import ForumApplication from './ForumApplication';
 
@@ -84,6 +86,8 @@ export default Object.assign(compat, {
   'utils/alertEmailConfirmation': alertEmailConfirmation,
   'utils/UserControls': UserControls,
   'utils/Pane': Pane,
+  'utils/BasicEditorDriver': BasicEditorDriver,
+  'utils/SuperTextarea': BasicEditorDriver, // @deprecated beta 16, remove beta 17
   'states/ComposerState': ComposerState,
   'states/DiscussionListState': DiscussionListState,
   'states/GlobalSearchState': GlobalSearchState,
@@ -92,6 +96,7 @@ export default Object.assign(compat, {
   'states/SearchState': SearchState,
   'components/AffixedSidebar': AffixedSidebar,
   'components/DiscussionPage': DiscussionPage,
+  'components/DiscussionListPane': DiscussionListPane,
   'components/LogInModal': LogInModal,
   'components/ComposerBody': ComposerBody,
   'components/ForgotPasswordModal': ForgotPasswordModal,
@@ -111,8 +116,8 @@ export default Object.assign(compat, {
   'components/ComposerButton': ComposerButton,
   'components/DiscussionList': DiscussionList,
   'components/ReplyPlaceholder': ReplyPlaceholder,
-  'components/TextEditor': TextEditor,
-  'components/TextEditorButton': TextEditorButton,
+  'components/TextEditor': TextEditor, // @deprecated beta 16, remove beta 17. Moved to common.
+  'components/TextEditorButton': TextEditorButton, // @deprecated beta 16, remove beta 17. Moved to common.
   'components/AvatarEditor': AvatarEditor,
   'components/Post': Post,
   'components/SettingsPage': SettingsPage,

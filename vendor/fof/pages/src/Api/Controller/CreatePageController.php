@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/pages.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,6 +12,7 @@
 namespace FoF\Pages\Api\Controller;
 
 use Flarum\Api\Controller\AbstractCreateController;
+use FoF\Pages\Api\Serializer\PageSerializer;
 use FoF\Pages\Command\CreatePage;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Support\Arr;
@@ -23,7 +24,7 @@ class CreatePageController extends AbstractCreateController
     /**
      * {@inheritdoc}
      */
-    public $serializer = 'FoF\Pages\Api\Serializer\PageSerializer';
+    public $serializer = PageSerializer::class;
 
     /**
      * @var Dispatcher

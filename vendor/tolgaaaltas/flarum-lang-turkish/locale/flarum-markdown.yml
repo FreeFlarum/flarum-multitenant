@@ -3,6 +3,10 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 flarum-markdown:
+  admin:
+    settings:
+      mdarea_help: 'mdarea, listeleri otomatik olarak devam ettiren, kod biçimlendirmeye yardımcı olan ve girintilemeye yardımcı olan bir metin alanıdır.'
+      mdarea_label: 'mdarey etinleştirilsin mi?'
   forum:
     composer:
       bold_tooltip: 'Kalın metin ekle'

@@ -7,6 +7,7 @@ kyrne-shout:
     permissions:
       start_label: 'Özel görüşme başlat'
     settings:
+      return_key: 'Dönüş tuşu mesaj gönderir'
       set_own_password: 'Kullanıcıların kendi şifresini oluşturmasına izin ver - SSO Uyumluluğu'
       title: 'Shout Ayarları'
   forum:

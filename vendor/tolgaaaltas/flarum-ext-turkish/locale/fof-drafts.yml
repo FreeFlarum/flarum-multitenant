@@ -25,6 +25,7 @@ fof-drafts:
     dropdown:
       alert: 'Taslağınızı silmek istediğine emin misiniz?'
       button: 'Taslağı Sil'
+      delete_all_alert: 'Tüm taslaklarınızı silmek istediğinizden emin misiniz?'
       delete_button: 'Taslağı Sil'
       empty_text: 'Herhangi bir taslak kaydetmediniz'
       schedule_button: 'Taslağı Zamanla'

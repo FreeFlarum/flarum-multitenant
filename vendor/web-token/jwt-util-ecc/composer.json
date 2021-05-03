@@ -11,7 +11,7 @@
             "homepage": "https://github.com/Spomky"
         },{
             "name": "All contributors",
-            "homepage": "https://github.com/web-token/jwt-core/contributors"
+            "homepage": "https://github.com/web-token/jwt-framework/contributors"
         }
     ],
     "autoload": {
@@ -20,19 +20,10 @@
         }
     },
     "require": {
-        "php": "^7.1",
-        "ext-gmp": "*",
-        "ext-mbstring": "*"
+        "brick/math": "^0.8.17|^0.9"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^6.0|^7.0"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.3.x-dev"
-        }
-    },
-    "config": {
-        "sort-packages": true
+    "suggest": {
+        "ext-gmp": "GMP or BCMath is highly recommended to improve the library performance",
+        "ext-bcmath": "GMP or BCMath is highly recommended to improve the library performance"
     }
 }

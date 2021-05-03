@@ -2,15 +2,15 @@
 
 namespace FoF\HtmlErrors\Providers;
 
+use Flarum\Foundation\AbstractServiceProvider;
 use Flarum\Foundation\ErrorHandling\ViewFormatter;
 use FoF\HtmlErrors\ErrorHandling\CustomViewFormatter;
-use Illuminate\Support\ServiceProvider;
 
-class ErrorServiceProvider extends ServiceProvider
+class ErrorServiceProvider extends AbstractServiceProvider
 {
     public function register()
     {
         // Replace Flarum's error view formatter with our own
-        $this->app->bind(ViewFormatter::class, CustomViewFormatter::class);
+        $this->container->bind(ViewFormatter::class, CustomViewFormatter::class);
     }
 }

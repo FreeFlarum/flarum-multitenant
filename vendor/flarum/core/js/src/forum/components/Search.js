@@ -113,6 +113,16 @@ export default class Search extends Component {
   onupdate() {
     // Highlight the item that is currently selected.
     this.setIndex(this.getCurrentNumericIndex());
+
+    // If there are no sources, the search view is not shown.
+    if (!this.sources.length) return;
+
+    // Since extensions might add elements above the search box on mobile,
+    // we need to calculate and set the max height dynamically.
+    const resultsElementMargin = 14;
+    const maxHeight =
+      window.innerHeight - this.element.querySelector('.Search-input>.FormControl').getBoundingClientRect().bottom - resultsElementMargin;
+    this.element.querySelector('.Search-results').style['max-height'] = `${maxHeight}px`;
   }
 
   oncreate(vnode) {

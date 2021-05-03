@@ -28,7 +28,6 @@ core:
       favicon_text: "Загрузите изображение, которое будет отображаться в качестве значка форума."
       logo_heading: "Логотип"
       logo_text: "Загрузите изображение, которое будет отображаться вместо названия форума."
-      submit_button: => core.ref.save_changes
       title: "Оформление"
 
     # These translations are used in the Basics page.
@@ -43,11 +42,9 @@ core:
       forum_title_heading: "Название форума"
       home_page_heading: "Главная страница"
       home_page_text: "Выберите страницу, которую пользователи будут видеть первой при посещении форума."
-      saved_message: "Настройки сохранены."
       show_language_selector_label: "Показывать переключатель языка"
       slug_driver_heading: "Драйвер путей: {model}"
       slug_driver_text: "Выберите драйвер, который будет использоваться при создании семантических путей (URL) для этой модели."
-      submit_button: => core.ref.save_changes
       title: "Основные"
       welcome_banner_heading: "Баннер приветствия"
       welcome_banner_text: "Введите текст, который будет отображаться на всех страницах форума. Используйте этот элемент для того, чтобы приветствовать гостей форума."
@@ -113,15 +110,15 @@ core:
       send_test_mail_success: "Пробное письмо успешно отправлено!"
       send_test_mail_text: "На Ваш адрес электронной почты {email} будет отправлено письмо с использованием указанной выше конфигурации."
       smtp_heading: "Настройки SMTP"
-      submit_button: => core.ref.save_changes
       title: => core.ref.email
 
     # These translations are used on default extension pages.
     extension:
+      configure_scopes: "Configure Scopes" # TODO
       confirm_uninstall: "При удалении будут удалены все записи базы данных и ресурсы, связанные с расширением. Вы уверены, что хотите продолжить?"
       disabled: "Отключено"
-      enabled: "Включено"
       enable_to_see: "Включите расширение для отображения и изменения его настроек."
+      enabled: "Включено"
       info_links:
         discuss: "Обсуждение"
         documentation: "Документация"
@@ -133,7 +130,6 @@ core:
       no_settings: "Расширение не имеет настроек."
       open_modal: "Открыть настройки"
       permissions_title: "Разрешения"
-      saved_message: "Изменения сохранены."
       uninstall_button: "Удалить"
 
     # These translations are used in the secondary header.
@@ -181,6 +177,8 @@ core:
       description: "Настройка прав доступа к различным местам и функциям форума."
       edit_posts_label: "Редактировать сообщения"
       edit_users_label: "Редактировать пользователей"
+      edit_users_credentials_label: "Редактировать учётные данные пользователя"
+      edit_users_groups_label: "Редактировать группы пользователя"
       global_heading: "Глобальные"
       moderate_heading: "Модерация"
       new_group_button: "Новая группа"
@@ -209,8 +207,9 @@ core:
       signup_closed_button: "Закрыто"
       signup_open_button: "Открыто"
 
-    # These translations are used in the Settings modal dialog.
+    # These translations are used generically in setting fields.
     settings:
+      saved_message: "Настройки сохранены."
       submit_button: => core.ref.save_changes
 
     # These translations are used in image upload buttons.
@@ -294,6 +293,7 @@ core:
       email_heading: => core.ref.email
       email_label: => core.ref.email
       groups_heading: "Группы"
+      nothing_available: "Информация для редактирования отсутствует."
       password_heading: => core.ref.password
       password_label: => core.ref.password
       set_password_label: "Установить новый пароль"

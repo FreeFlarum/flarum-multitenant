@@ -1,6 +1,6 @@
 {
     "name": "sycho/flarum-advanced-extension-categories",
-    "description": "Advanced extension categorization options for admins.",
+    "description": "Advanced extension categorisation options for admins.",
     "license": "MIT",
     "authors": [
         {
@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+        "flarum/core": ">=0.1.0-beta.16"
     },
     "autoload": {
         "psr-4": {
@@ -35,7 +35,7 @@
             "category": "feature",
             "icon": {
                 "name": "fas fa-wrench",
-                "background": "#117187",
+                "backgroundColor": "#117187",
                 "color": "#fff"
             }
         }

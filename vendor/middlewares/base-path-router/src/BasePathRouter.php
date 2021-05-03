@@ -4,6 +4,7 @@ declare(strict_types = 1);
 namespace Middlewares;
 
 use Middlewares\Utils\Factory;
+use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -22,18 +23,24 @@ class BasePathRouter implements MiddlewareInterface
     private $stripPrefix = true;
 
     /**
-     * @var Handler
+     * @var bool
      */
-    private $defaultHandler;
+    private $continueOnError = false;
+
+    /**
+     * @var ResponseFactoryInterface
+     */
+    private $responseFactory;
 
     /**
      * @var string Attribute name for handler reference
      */
     private $attribute = 'request-handler';
 
-    public function __construct(array $middlewares)
+    public function __construct(array $middlewares, ResponseFactoryInterface $responseFactory = null)
     {
         $this->middlewares = $middlewares;
+        $this->responseFactory = $responseFactory ?: Factory::getResponseFactory();
 
         // Make sure the longest path prefixes are matched first
         // (otherwise, a path /foo would always match, even when /foo/bar
@@ -69,16 +76,13 @@ class BasePathRouter implements MiddlewareInterface
     }
 
     /**
-     * Provide a default request handler
-     *
-     * This request handler will be assigned to the current request whenever no
-     * prefix matches. By default, an empty 404 response will be returned.
-     *
-     * @param mixed $handler
+     * Configure if continue to the next middleware whenever no
+     * prefix matches. By default, it does not continue and an empty 404 response
+     * will be returned.
      */
-    public function defaultHandler($handler): self
+    public function continueOnError(bool $continueOnError = true): self
     {
-        $this->defaultHandler = $handler;
+        $this->continueOnError = $continueOnError;
 
         return $this;
     }
@@ -99,13 +103,11 @@ class BasePathRouter implements MiddlewareInterface
             }
         }
 
-        if ($this->defaultHandler) {
-            return $handler->handle(
-                $request->withAttribute($this->attribute, $this->defaultHandler)
-            );
+        if ($this->continueOnError) {
+            return $handler->handle($request);
         }
 
-        return Factory::createResponse(404);
+        return $this->responseFactory->createResponse(404);
     }
 
     private function unprefixedRequest(ServerRequestInterface $request, string $prefix): ServerRequestInterface

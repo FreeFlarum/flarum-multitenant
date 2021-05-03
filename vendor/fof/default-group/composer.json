@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "flarum/core": "^0.1.0-beta.15"
+    "flarum/core": "^0.1.0-beta.16"
   },
   "authors": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "David Sevilla Martín",
-      "email": "david.s@redevs.org",
+      "email": "me+fof@datitisev.me",
       "role": "Developer"
     }
   ],
@@ -41,15 +41,12 @@
   "extra": {
     "flarum-extension": {
       "title": "FoF Default Group",
-      "category": "moderation",
+      "category": "feature",
       "icon": {
         "name": "fas fa-users",
         "backgroundColor": "#e74c3c",
         "color": "#fff"
       }
-    },
-    "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/18158"
     }
   }
 }

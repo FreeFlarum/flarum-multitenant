@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of askvortsov/flarum-trust-levels
+ *
+ *  Copyright (c) 2021 Alexander Skvortsov.
+ *
+ *  For detailed copyright and license information, please view the
+ *  LICENSE file that was distributed with this source code.
+ */
+
 namespace Askvortsov\TrustLevels\Tests\integration\metric;
 
 use Carbon\Carbon;
@@ -17,7 +26,7 @@ class LikesReceivedTest extends TestCase
     /**
      * @inheritDoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -29,9 +38,9 @@ class LikesReceivedTest extends TestCase
                 $this->normalUser(),
             ],
             'discussions' => [
-                ['id' => 1, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 2, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 3, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
+                ['id' => 1, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 2, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 3, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
             ],
             'posts' => [
                 ['id' => 1, 'discussion_id' => 1, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
@@ -39,7 +48,7 @@ class LikesReceivedTest extends TestCase
                 ['id' => 2, 'discussion_id' => 1, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
                 ['id' => 3, 'discussion_id' => 2, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
                 ['id' => 4, 'discussion_id' => 3, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 1, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
-                ['id' => 5, 'discussion_id' => 3, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>']
+                ['id' => 5, 'discussion_id' => 3, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
             ],
             'post_likes' => [
                 ['post_id' => 1, 'user_id' => 1],
@@ -49,7 +58,7 @@ class LikesReceivedTest extends TestCase
                 ['post_id' => 4, 'user_id' => 1],
                 ['post_id' => 5, 'user_id' => 1],
                 ['post_id' => 5, 'user_id' => 2],
-            ]
+            ],
         ]);
     }
 
@@ -60,7 +69,7 @@ class LikesReceivedTest extends TestCase
     {
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertNotContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertNotContains(4, User::find(2)->groups->pluck('id')->all());
     }
 
     /**
@@ -70,15 +79,15 @@ class LikesReceivedTest extends TestCase
     {
         $this->prepareDatabase(['trust_levels' => [
             $this->genTrustLevel('likes received', 4, [
-                'likes_received' => [2, 10]
-            ])
+                'likes_received' => [2, 10],
+            ]),
         ]]);
 
         $this->app();
         User::find(2)->refreshCommentCount()->save();
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertContains(4, User::find(2)->groups->pluck('id')->all());
     }
 
     /**
@@ -88,23 +97,23 @@ class LikesReceivedTest extends TestCase
     {
         $this->prepareDatabase(['trust_levels' => [
             $this->genTrustLevel('likes received', 4, [
-                'likes_received' => [-1, 3]
+                'likes_received' => [-1, 3],
             ]),
             $this->genTrustLevel('likes received', 4, [
-                'likes_received' => [1, 3]
+                'likes_received' => [1, 3],
             ]),
             $this->genTrustLevel('likes received', 4, [
-                'likes_received' => [5, 100]
+                'likes_received' => [5, 100],
             ]),
             $this->genTrustLevel('likes received', 4, [
-                'likes_received' => [5, -1]
-            ])
+                'likes_received' => [5, -1],
+            ]),
         ]]);
 
         $this->app();
         User::find(2)->refreshCommentCount()->save();
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertNotContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertNotContains(4, User::find(2)->groups->pluck('id')->all());
     }
 }

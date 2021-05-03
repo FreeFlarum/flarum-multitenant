@@ -12,6 +12,10 @@ namespace Flarum\Flags\Event;
 use Flarum\Post\Post;
 use Flarum\User\User;
 
+/**
+ * @deprecated 0.1.0-beta.16, remove 0.1.0-beta.17
+ * Listen for Flarum\Flags\Event\Deleting instead
+ */
 class FlagsWillBeDeleted
 {
     /**

@@ -16,7 +16,10 @@ use UnexpectedValueException;
  */
 class CallableHandler implements MiddlewareInterface, RequestHandlerInterface
 {
+    /** @var callable */
     private $callable;
+
+    /** @var ResponseFactoryInterface|null */
     private $responseFactory;
 
     public function __construct(callable $callable, ResponseFactoryInterface $responseFactory = null)
@@ -26,9 +29,8 @@ class CallableHandler implements MiddlewareInterface, RequestHandlerInterface
     }
 
     /**
-     * {@inheritdoc}
-     *
      * Process a server request and return a response.
+     *
      * @see RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
@@ -37,9 +39,8 @@ class CallableHandler implements MiddlewareInterface, RequestHandlerInterface
     }
 
     /**
-     * {@inheritdoc}
-     *
      * Process a server request and return a response.
+     *
      * @see MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
@@ -85,6 +86,7 @@ class CallableHandler implements MiddlewareInterface, RequestHandlerInterface
                 $return = ob_get_clean().$return;
             }
 
+            $return = (string) $return;
             $body = $response->getBody();
 
             if ($return !== '' && $body->isWritable()) {

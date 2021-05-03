@@ -70,7 +70,7 @@ class RegisterMiddleware implements MiddlewareInterface
                 ]);
             } catch (\Throwable $e) {
                 return (new JsonApiFormatter())->format(
-                    app(Registry::class)->handle($e),
+                    resolve(Registry::class)->handle($e),
                     $request
                 );
             }
@@ -88,9 +88,9 @@ class RegisterMiddleware implements MiddlewareInterface
                 if ($frequency !== 0 && $frequency >= (int) $this->settings->get('fof-stopforumspam.frequency')) {
                     return (new JsonApiFormatter())
                         ->format(
-                            app(Registry::class)
+                            resolve(Registry::class)
                                 ->handle(new ValidationException([
-                                    'username' => app('translator')->trans('fof-stopforumspam.forum.message.spam'),
+                                    'username' => resolve('translator')->trans('fof-stopforumspam.forum.message.spam'),
                                 ])),
                             $request
                         );

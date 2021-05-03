@@ -9,8 +9,8 @@
  *
  */
 
-import User from 'flarum/models/User';
-import Model from 'flarum/Model';
+import User from 'flarum/common/models/User';
+import Model from 'flarum/common/Model';
 import UsernameRequest from './models/UsernameRequest';
 import addRequestSetting from './addRequestSetting';
 import RequestsPage from './components/RequestsPage';

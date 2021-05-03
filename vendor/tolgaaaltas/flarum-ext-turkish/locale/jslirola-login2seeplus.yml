@@ -14,7 +14,7 @@ jslirola-login2seeplus:
       title: 'Eski Mod'
     post:
       help: 'Tümü için <em>-1</em> girin.'
-      title: 'Bu uzunluğu aşan içeriği gizle'
+      title: 'Bu uzunluğu aşan içeriği gizle (<em>-1</em> hepsini gösterir)'
     title: Login2SeePlus
   forum:
     code: 'Kodu görmek isim giriş yapın'

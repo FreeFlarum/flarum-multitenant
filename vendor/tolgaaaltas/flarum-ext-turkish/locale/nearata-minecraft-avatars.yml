@@ -7,8 +7,9 @@ nearata-minecraft-avatars:
     avatar_changed: 'Avatar başarıyla değiştirildi.'
     change_button: 'Minecraft Avatarını Değiştir'
     dismiss_button: TAMAM
-    help_text: 'Minecraft Kullanıcı Adı (büyük/küçük harfe duyarlı değildir) veya UUID (plain veya dashed).'
+    help_text: 'Geçerli bir kullanıcı adı veya UUID (düz veya kesikli) olmalıdır.'
     submit_button: 'Değişiklikleri Kaydet'
     title: 'Minecraft Avatarları'
     use_button: 'Minecraft Avatarını Kullan'
+    username_not_found: 'Kullanıcı adı bulunamadı.'
     username_uuid_not_valid: 'Kullanıcı adı veya UUID geçerli değil.'

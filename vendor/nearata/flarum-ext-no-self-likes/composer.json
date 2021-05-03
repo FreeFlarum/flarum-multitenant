@@ -1,0 +1,43 @@
+{
+    "name": "nearata/flarum-ext-no-self-likes",
+    "description": "An extension that disallow users to like their own posts.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/Nearata/flarum-ext-no-self-likes/issues",
+        "source": "https://github.com/Nearata/flarum-ext-no-self-likes"
+    },
+    "require": {
+        "flarum/core": ">=0.1.0-beta.16 <=0.1.0",
+        "flarum/likes": "^0.1.0-beta.16"
+    },
+    "authors": [
+        {
+            "name": "Nearata",
+            "email": "williamdicicco@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nearata\\NoSelfLikes\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "No Self Likes",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-thumbs-up",
+                "backgroundColor": "#63C7B2",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": ""
+        }
+    }
+}

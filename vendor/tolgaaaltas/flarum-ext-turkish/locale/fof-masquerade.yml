@@ -46,6 +46,7 @@ fof-masquerade:
       url: Bağlantı
   forum:
     alerts:
+      profile-completed: 'Profil tamamlandı! <a>Ana sayfaya gidin</a>'
       profile-completion-required: "Lütfen aşağıdaki gerekli alanları doldurun.\n"
     buttons:
       save-profile: Kaydet

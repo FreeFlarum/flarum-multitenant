@@ -15,6 +15,7 @@ use Flarum\Foundation\ValidationException;
 use FoF\Spamblock\Event\MarkedUserAsSpammer;
 use FoF\StopForumSpam\StopForumSpam;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\Message;
 
 class ReportSpammer
 {
@@ -51,11 +52,11 @@ class ReportSpammer
             ]);
         } catch (RequestException $e) {
             throw new ValidationException([
-                'sfs' => strip_tags(RequestException::getResponseBodySummary($e->getResponse())),
+                'sfs' => strip_tags(Message::bodySummary($e->getResponse())),
             ]);
         } catch (\Throwable $e) {
             throw new ValidationException([
-                'sfs' => app('translator')->trans('fof-stopforumspam.api.error.unknown'),
+                'sfs' => resolve('translator')->trans('fof-stopforumspam.api.error.unknown'),
             ]);
         }
     }

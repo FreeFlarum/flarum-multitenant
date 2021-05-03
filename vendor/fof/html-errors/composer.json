@@ -30,7 +30,7 @@
         }
     ],
     "require": {
-        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+        "flarum/core": "^0.1.0-beta.16"
     },
     "replace": {
         "flagrow/html-errors": "*"
@@ -38,7 +38,7 @@
     "extra": {
         "flarum-extension": {
             "title": "FoF HTML Errors",
-            "category": "formatting",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-exclamation-circle",
                 "backgroundColor": "#e74c3c",

@@ -10,22 +10,22 @@ use Psr\Http\Message\ServerRequestInterface;
 class FormatNegotiator
 {
     /**
-     * @var array Available formats with MIME types
+     * @var array Available format handlers
      */
     private static $formats = [
-        'html' => ['text/html', 'application/xhtml+xml'],
-        'json' => ['application/json', 'text/json', 'application/x-json'],
-        'xml' => ['text/xml', 'application/xml', 'application/x-xml'],
-        'txt' => ['text/plain']
+        Formats\Html::class,
+        Formats\Json::class,
+        Formats\PlainText::class,
+        Formats\Xml::class,
     ];
 
     /**
      * Returns the preferred format based on the Accept header
      *
      * @param ServerRequestInterface $request
-     * @return string
+     * @return Formats\Format
      */
-    public static function getPreferredFormat(ServerRequestInterface $request)
+    public static function negotiate(ServerRequestInterface $request): Formats\Format
     {
         $acceptTypes = $request->getHeader('accept');
 
@@ -33,20 +33,33 @@ class FormatNegotiator
             $acceptType = $acceptTypes[0];
 
             // As many formats may match for a given Accept header, let's try to find the one that fits the best
-            $counters = [];
-            foreach (self::$formats as $format => $values) {
-                foreach ($values as $value) {
-                    $counters[$format] = isset($counters[$format]) ? $counters[$format] : 0;
-                    $counters[$format] += intval(strpos($acceptType, $value) !== false);
+            // We do this by storing the best (i.e. earliest) match for each type.
+            $memo = [];
+            foreach (self::$formats as $format) {
+                foreach ($format::MIMES as $value) {
+                    if (! isset($memo[$format])) {
+                        $memo[$format] = PHP_INT_MAX;
+                    }
+
+                    $match = strpos($acceptType, $value);
+                    if ($match !== false) {
+                        $memo[$format] = min($match, $memo[$format]);
+                    }
                 }
             }
 
             // Sort the array to retrieve the format that best matches the Accept header
-            asort($counters);
-            end($counters);
-            return key($counters);
+            asort($memo);
+            reset($memo);
+
+            if (current($memo) == PHP_INT_MAX) {
+                return new Formats\PlainText;
+            } else {
+                $class = key($memo);
+                return new $class;
+            }
         }
 
-        return 'html';
+        return new Formats\Html;
     }
 }

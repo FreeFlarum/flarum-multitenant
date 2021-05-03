@@ -10,10 +10,9 @@ use V17Development\FlarumSeo\Managers\Tag;
 use V17Development\FlarumSeo\Extend;
 
 // Flarum classes
+use Flarum\Http\UrlGenerator;
 use Flarum\Frontend\Document;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Flarum\Discussion\DiscussionRepository;
-use Flarum\User\UserRepository;
 
 // Laravel classes
 use Psr\Http\Message\ServerRequestInterface;
@@ -25,20 +24,17 @@ use Psr\Http\Message\ServerRequestInterface;
 class PageListener
 {
     // Config
-    protected $config;
     protected $applicationUrl;
 
-    // Settings
+    /**
+     * @var SettingsRepositoryInterface
+     */
     protected $settings;
-    protected $discussionRepository;
-    protected $userRepository;
+
     protected $enabled_extensions;
 
     // Document
     protected $flarumDocument;
-
-    // Server request data
-    protected $serverRequest;
 
     private $requestType = null;
 
@@ -61,25 +57,19 @@ class PageListener
      * PageListener constructor.
      *
      * @param SettingsRepositoryInterface $settings
-     * @param DiscussionRepository $discussionRepository
-     * @param UserRepository $userRepository
+     * @param Profile $profileManager
+     * @param Tag $tagManager
+     * @param Discussion $discussionManager
      */
-    public function __construct(SettingsRepositoryInterface $settings, DiscussionRepository $discussionRepository, UserRepository $userRepository)
-    {
+    public function __construct(
+        SettingsRepositoryInterface $settings,
+        UrlGenerator $url
+    ) {
         // Get Flarum settings
         $this->settings = $settings;
 
-        // Get Discussion Repository
-        $this->discussionRepository = $discussionRepository;
-
-        // Get User Repository
-        $this->userRepository = $userRepository;
-
-        // Get Flarum config
-        $this->config = app('flarum.config');
-
         // Set forum base URL
-        $this->applicationUrl = $this->config['url']; // Set site url
+        $this->applicationUrl = $url->to('forum')->base();
 
         // List enabled extensions
         $this->enabled_extensions = json_decode($this->settings->get("extensions_enabled"), true);
@@ -110,54 +100,51 @@ class PageListener
         // Flarum document
         $this->flarumDocument = $flarumDocument;
 
-        // Current Server Request
-        $this->serverRequest = $serverRequestInterface;
-
         // Default site tags
         $this->setSiteTags();
 
         // Check out type of page
-        $this->determine();
+        $this->determine($serverRequestInterface);
 
         // TODO: Move finish function back to BeforePageRenders
         // After PR and release of BETA 14
-        $this->finish();
+        $this->finish($serverRequestInterface);
     }
 
     /**
      * Determine the current page type
      */
-    private function determine()
+    private function determine($serverRequest)
     {
         // Request type
-        $routeName = $this->serverRequest->getAttribute('routeName');
+        $routeName = $serverRequest->getAttribute('routeName');
 
         // Query params
-        $queryParams = $this->serverRequest->getQueryParams();
+        $queryParams = $serverRequest->getQueryParams();
 
         // User profile page
         if($routeName === 'user') {
-            new Profile($this, $this->userRepository, isset($queryParams['username']) ? $queryParams['username'] : false);
+            resolve(Profile::class)->handle($this, isset($queryParams['username']) ? $queryParams['username'] : false);
         }
 
         // Tag page
         else if($routeName === 'tag') {
-            new Tag($this, isset($queryParams['slug']) ? $queryParams['slug'] : false);
+            resolve(Tag::class)->handle($this, isset($queryParams['slug']) ? $queryParams['slug'] : false);
         }
 
         // Friends Of Flarum pages
         else if($routeName === 'pages.home') {
-            new Page($this, isset($queryParams['id']) ? $queryParams['id'] : false);
+            resolve(Page::class)->handle($this, isset($queryParams['id']) ? $queryParams['id'] : false);
         }
 
         // Default SEO (no fancy QA layout)
         else if($routeName === 'discussion' && $this->discussionType === 1) {
-            new Discussion($this, $this->discussionRepository, isset($queryParams['id']) ? $queryParams['id'] : false);
+            resolve(Discussion::class)->handle($this, isset($queryParams['id']) ? $queryParams['id'] : false);
         }
 
         // QuestionAnswer page
         else if($routeName === 'discussion' && $this->discussionType === 2) {
-            new QADiscussion($this, $this->discussionRepository, isset($queryParams['id']) ? $queryParams['id'] : false);
+            resolve(QADiscussion::class)->handle($this, isset($queryParams['id']) ? $queryParams['id'] : false);
         }
 
         // Home page/discussion overview page
@@ -231,10 +218,10 @@ class PageListener
     /**
      * Finish process and output language, meta property tags, canonical urls & Schema.org json
      */
-    public function finish()
+    public function finish($serverRequest)
     {
         // Add language attribute to html tag
-        $this->flarumDocument->language = $this->serverRequest->getAttribute('locale');
+        $this->flarumDocument->language = $serverRequest->getAttribute('locale');
 
         // Write meta property tags
         foreach ($this->metaProperty as $name => $content) {
@@ -405,17 +392,6 @@ class PageListener
     }
 
     /**
-     * Get user data
-     *
-     * @param $userId
-     * @return mixed
-     */
-    public function getUser($userId)
-    {
-        return $this->userRepository->findOrFail($userId);
-    }
-
-    /**
      * Set title
      *
      * @param $title
@@ -562,14 +538,5 @@ class PageListener
         $this->flarumDocument->title = $title;
         
         return $this;
-    }
-
-    /**
-     * Return server request
-     *
-     * @return mixed
-     */
-    public function getServerRequest() {
-        return $this->serverRequest;
     }
 }

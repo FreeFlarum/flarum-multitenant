@@ -1,0 +1,5 @@
+itnt-uitab:
+  admin:
+    settings:
+      help_text: "フォーラムがサブディレクトリに配置されている場合は、以下のサブディレクトリ（/ で終わる）を指定してください。e.g. <code>/sub/</code>"
+      home_page_label: サブディレクトリ

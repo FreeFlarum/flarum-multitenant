@@ -1,8 +1,13 @@
 <?php
 
 /*
- * Original Copyright Flarum. Licensed under MIT License
- * See license text at https://github.com/flarum/core/blob/master/LICENSE
+ * This file is part of fof/pretty-mail.
+ *
+ * Copyright (c) FriendsOfFlarum.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
  */
 
 namespace FoF\PrettyMail\Overrides;
@@ -17,7 +22,7 @@ use Illuminate\Contracts\View\Factory as View;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Str;
 use s9e\TextFormatter\Bundles\Fatdown;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class NotificationMailer extends \Flarum\Notification\NotificationMailer
 {

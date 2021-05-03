@@ -8,6 +8,7 @@ fof-upload:
       save: 'Ayarları kaydet'
     help_texts:
       client_extension: "Varsayılan olarak Yükle, MIME türüne göre güvenli bir dosya uzantısı seçecektir.\nZIP veya ikili verilere dayalı bazı dosya türleri için bu, beklenen uzantıların yerine genel uzantıların kullanılmasına neden olabilir.\nBurada, aynen tutulacak dosya uzantılarının virgülle ayrılmış bir listesini girebilirsiniz.\n"
+      composer_buttons: "Varsayılan olarak hem medya yöneticisi düğmesi hem de yükleme düğmesi görünür durumdadır. Ayrıca yalnızca bir düğmeyi görüntülemeyi de seçebilirsiniz.\n"
       description: "Dosya yükleme servisleri ve ayarları.\n"
       disable-download-logging: "Forum kullanıcıları tarafından yapılan her indirme işleminin kaydını kapat. Etkinleştirilmesi, gelecekte indirenlerin sayısını ve diğer ölçümleri görmenizi sağlar.\n"
       disable-hotlink-protection: "Hotlink koruması, diğer sitelerden indirme yapılmasına engel olur. Geçerli bir csrf token ve post id'si gereklidir.\n"
@@ -30,6 +31,12 @@ fof-upload:
         use_path_style_endpoint: 'Dizin stili endpoint kullan'
       client_extension:
         title: 'Kullanıcı tarafından sağlanan dosya uzantıları'
+      composer_buttons:
+        options:
+          both: 'İkisi de'
+          media-btn: 'Yalnızca medya yöneticisi düğmesi'
+          upload-btn: 'Yalnızca yükleme düğmesi'
+        title: 'Düzenleyici düğmeleri'
       disable-download-logging:
         title: 'İndirme kayılarını kapat'
         toggle: Kapat
@@ -64,8 +71,10 @@ fof-upload:
       description: 'Yükleme hizmetlerini ve tercihlerini ayarlayın.'
       title: Yükle
     permissions:
+      delete_uploads_of_others_label: 'Kullanıcı yüklemelerini silin'
       download_label: 'Dosya indirme'
       upload_label: 'Dosya yükleme'
+      view_user_uploads_label: 'Kullanıcı yüklemelerini göster'
     templates:
       file: 'Varsayılan dosya indirme şablonu'
       file_description: "Dosya adını ve bazı genel bilgileri gösterir. Proxyler php aracılığı ile indirilir, bu da istatistik toplama ve hotlink koruması sağlar.\n"
@@ -89,6 +98,26 @@ fof-upload:
   forum:
     buttons:
       attach: 'Dosya Ekle'
+      cancel: İptal
+      media: Medyalarım
+      upload: Yükle
+      user_uploads: 'Kullanıcı yüklemeleri'
+    file_list:
+      confirm_selection_btn: 'Dosya seçin|Dosyaları seçin'
+      empty: 'Gösterilecek dosya bulunmuyor.'
+      hide_file:
+        btn_a11y_label: '"{fileName}" dosyasını medya yöneticisinden gizle'
+        hide_confirmation: '"{fileName}" dosyasını gizlemek istediğinizden emin misiniz? Bir dosyayı gizlemek, onu yalnızca medya yöneticinizden kaldırır ve mevcut gönderileri etkilemez.'
+        hide_fail: '"{fileName}" dosyası gizlenemedi'
+        hide_success: 'Dosya gizlendi'
+        loading: 'Dosya gizleniyor...'
+      load_more_files_btn: 'Daha fazla dosya yükle'
+      loading: 'Dosyalar yükleniyor...'
+      modal_empty_desktop: 'Dosya listeniz boş. Yüklemek için düğmeye tıklayın veya buraya bir dosya sürükleyin.'
+      modal_empty_phone: 'Dosya listeniz boş. Bir dosya yüklemek için yukarıdaki düğmeye dokunun.'
+      release_to_upload: 'Yüklemek için bırakın'
+      select_file_a11y_label: '"{fileName}" dosyasını seçin'
+    media_manager: 'Medya yöneticisi'
     states:
       error: Hata
       loading: Yükleniyor

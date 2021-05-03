@@ -40,9 +40,9 @@ return [
         ->serializeToForum('jslirola.login2seeplus.code', 'jslirola.login2seeplus.code'),
 
     (new Extend\ApiSerializer(PostSerializer::class))
-        ->mutate(HideContentInPosts::class),
+        ->attributes(HideContentInPosts::class),
 
     (new Extend\ApiSerializer(BasicPostSerializer::class))
-        ->mutate(HideContentInPostPreviews::class),
+        ->attributes(HideContentInPostPreviews::class),
 
 ];

@@ -113,10 +113,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return getCategories; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getVendors", function() { return getVendors; });
 function getCategories() {
-  if (app.data.settings["sycho-ace.selected-categorization"] === "none") return {
-    none: 0
-  };else if (app.data.settings["sycho-ace.selected-categorization"] === "vendor") return getVendors();
-  return app.extensionCategories;
+  switch (app.data.settings['sycho-ace.selected-categorization']) {
+    case 'none':
+      return {
+        none: 0
+      };
+
+    case 'vendor':
+      return getVendors();
+
+    case 'availability':
+      return {
+        enabled: 10,
+        disabled: 0
+      };
+
+    default:
+      return app.extensionCategories;
+  }
 }
 function getVendors() {
   var vendors = {};
@@ -125,7 +139,7 @@ function getVendors() {
     vendorsArray.push(id.split('-')[0]);
   });
   vendorsArray.sort(function (a, b) {
-    return a === "flarum" ? -1 : a > b ? 1 : a === b ? 0 : -1;
+    return a === 'flarum' ? -1 : a > b ? 1 : a === b ? 0 : -1;
   });
   var k = vendorsArray.length * 10;
   vendorsArray.forEach(function (v) {
@@ -153,7 +167,18 @@ function getCategoryLabels() {
   var labels = {};
   var categories = Object(_getCategories__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object.keys(categories).map(function (category) {
-    if (app.data.settings["sycho-ace.selected-categorization"] === "default") labels[category] = app.translator.trans("core.admin.nav.categories." + category);else if (app.data.settings["sycho-ace.selected-categorization"] === "none") labels[category] = app.translator.trans("sycho-ace.admin.categories.none");else labels[category] = category;
+    switch (app.data.settings['sycho-ace.selected-categorization']) {
+      case 'default':
+        labels[category] = app.translator.trans("core.admin.nav.categories." + category);
+        break;
+
+      case 'vendor':
+        labels[category] = category;
+        break;
+
+      default:
+        labels[category] = app.translator.trans("sycho-ace.admin.categories." + category);
+    }
   });
   return labels;
 }
@@ -215,15 +240,16 @@ app.initializers.add('sycho-advanced-extension-categories', function (app) {
   var categorizationOptions = {
     "default": app.translator.trans('sycho-ace.admin.category_selection.options.default'),
     vendor: app.translator.trans('sycho-ace.admin.category_selection.options.vendor'),
+    availability: app.translator.trans('sycho-ace.admin.category_selection.options.availability'),
     none: app.translator.trans('sycho-ace.admin.category_selection.options.none')
   };
   app.extensionData["for"]('sycho-advanced-extension-categories').registerSetting(function () {
     var selectbox = this.buildSettingComponent({
-      setting: "sycho-ace.selected-categorization",
+      setting: 'sycho-ace.selected-categorization',
       label: app.translator.trans('sycho-ace.admin.category_selection.label'),
-      type: "select",
+      type: 'select',
       options: categorizationOptions,
-      "default": "default"
+      "default": 'default'
     });
     var originalSaveSettings = this.saveSettings;
 
@@ -238,7 +264,7 @@ app.initializers.add('sycho-advanced-extension-categories', function (app) {
 
   var saveCategorization = function saveCategorization(value) {
     flarum_admin_utils_saveSettings__WEBPACK_IMPORTED_MODULE_9___default()({
-      "sycho-ace.selected-categorization": value
+      'sycho-ace.selected-categorization': value
     }).then(function () {
       return window.location.reload();
     });
@@ -252,7 +278,7 @@ app.initializers.add('sycho-advanced-extension-categories', function (app) {
     var _app$data$settings$sy;
 
     var items = new flarum_common_utils_ItemList__WEBPACK_IMPORTED_MODULE_5___default.a();
-    var selectedCategorization = (_app$data$settings$sy = app.data.settings["sycho-ace.selected-categorization"]) != null ? _app$data$settings$sy : "default";
+    var selectedCategorization = (_app$data$settings$sy = app.data.settings['sycho-ace.selected-categorization']) != null ? _app$data$settings$sy : 'default';
     items.add('categorization', m("div", {
       className: "ExtensionsWidget-control-item"
     }, m(flarum_common_components_Dropdown__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -270,28 +296,10 @@ app.initializers.add('sycho-advanced-extension-categories', function (app) {
     return items;
   };
 
-  flarum_admin_components_ExtensionsWidget__WEBPACK_IMPORTED_MODULE_3___default.a.prototype.extension = function (extension) {
-    return m("li", {
-      className: 'ExtensionListItem ' + (!flarum_admin_utils_isExtensionEnabled__WEBPACK_IMPORTED_MODULE_10___default()(extension.id) ? 'disabled' : '')
-    }, m(flarum_common_components_Link__WEBPACK_IMPORTED_MODULE_11___default.a, {
-      href: app.route('extension', {
-        id: extension.id
-      })
-    }, m("div", {
-      className: "ExtensionListItem-content"
-    }, m("span", {
-      className: "ExtensionListItem-icon ExtensionIcon",
-      style: extension.icon
-    }, extension.icon ? flarum_common_helpers_icon__WEBPACK_IMPORTED_MODULE_8___default()(extension.icon.name) : ''), m("span", {
-      className: "ExtensionListItem-title"
-    }, extension.extra['flarum-extension'].title))));
-  };
-
-  Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["override"])(flarum_admin_components_ExtensionsWidget__WEBPACK_IMPORTED_MODULE_3___default.a.prototype, 'content', function (original, vnode) {
-    var _this = this;
-
-    var categorizedExtensions = Object(_overrideGetCategorizedExtensions__WEBPACK_IMPORTED_MODULE_12__["default"])();
-    var categories = app.extensionCategories;
+  Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["override"])(flarum_admin_components_ExtensionsWidget__WEBPACK_IMPORTED_MODULE_3___default.a.prototype, 'oninit', function () {
+    this.categorizedExtensions = Object(_overrideGetCategorizedExtensions__WEBPACK_IMPORTED_MODULE_12__["default"])();
+  });
+  Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["override"])(flarum_admin_components_ExtensionsWidget__WEBPACK_IMPORTED_MODULE_3___default.a.prototype, 'content', function (original) {
     return [m("div", {
       className: "ExtensionsWidget-list-heading"
     }, m("h2", {
@@ -302,37 +310,26 @@ app.initializers.add('sycho-advanced-extension-categories', function (app) {
       className: "ExtensionsWidget-list-title"
     }, app.translator.trans('sycho-ace.admin.extensions'))), m("div", {
       className: "ExtensionsWidget-list-controls"
-    }, this.controlItems().toArray())), m("div", {
-      className: "ExtensionsWidget-list"
-    }, Object.keys(categories).map(function (category) {
-      if (categorizedExtensions[category]) {
-        return m("div", {
-          className: "ExtensionList-Category"
-        }, m("h4", {
-          className: "ExtensionList-Label"
-        }, categoryLabels[category]), m("ul", {
-          className: "ExtensionList"
-        }, categorizedExtensions[category].map(function (extension) {
-          return _this.extension(extension);
-        })));
-      }
-    }))];
+    }, this.controlItems().toArray())), original()];
+  });
+  Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_admin_components_ExtensionsWidget__WEBPACK_IMPORTED_MODULE_3___default.a.prototype, 'extensionCategory', function (vnode, category) {
+    vnode.children[0].text = categoryLabels[category];
   });
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["override"])(flarum_admin_components_AdminNav__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'extensionItems', function () {
-    var _this2 = this;
+    var _this = this;
 
     var items = new flarum_common_utils_ItemList__WEBPACK_IMPORTED_MODULE_5___default.a();
     var categorizedExtensions = Object(_overrideGetCategorizedExtensions__WEBPACK_IMPORTED_MODULE_12__["default"])();
-    var categories = Object(_getCategories__WEBPACK_IMPORTED_MODULE_13__["default"])();
+    var categories = app.extensionCategories;
     Object.keys(categorizedExtensions).map(function (category) {
-      if (!_this2.query()) {
+      if (!_this.query()) {
         items.add("category-" + category, m("h4", {
           className: "ExtensionListTitle"
         }, categoryLabels[category]), categories[category]);
       }
 
       categorizedExtensions[category].map(function (extension) {
-        var query = _this2.query().toUpperCase();
+        var query = _this.query().toUpperCase();
 
         var title = extension.extra['flarum-extension'].title;
 
@@ -368,14 +365,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_admin_utils_getCategorizedExtensions__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_utils_getCategorizedExtensions__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_getAlphabeticallyOrderedExtensions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/getAlphabeticallyOrderedExtensions */ "./src/admin/utils/getAlphabeticallyOrderedExtensions.js");
 /* harmony import */ var _utils_getVendorCategorizedExtensions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/getVendorCategorizedExtensions */ "./src/admin/utils/getVendorCategorizedExtensions.js");
+/* harmony import */ var _utils_getAvailabilityCategorizedExtensions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/getAvailabilityCategorizedExtensions */ "./src/admin/utils/getAvailabilityCategorizedExtensions.js");
+
 
 
 
 function overrideGetCategorizedExtensions() {
-  if (app.data.settings["sycho-ace.selected-categorization"] === "none") return Object(_utils_getAlphabeticallyOrderedExtensions__WEBPACK_IMPORTED_MODULE_1__["default"])();else if (app.data.settings["sycho-ace.selected-categorization"] === "vendor") return Object(_utils_getVendorCategorizedExtensions__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  return flarum_admin_utils_getCategorizedExtensions__WEBPACK_IMPORTED_MODULE_0___default()();
+  switch (app.data.settings['sycho-ace.selected-categorization']) {
+    case 'none':
+      return Object(_utils_getAlphabeticallyOrderedExtensions__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+    case 'vendor':
+      return Object(_utils_getVendorCategorizedExtensions__WEBPACK_IMPORTED_MODULE_2__["default"])();
+
+    case 'availability':
+      return Object(_utils_getAvailabilityCategorizedExtensions__WEBPACK_IMPORTED_MODULE_3__["default"])();
+
+    default:
+      return flarum_admin_utils_getCategorizedExtensions__WEBPACK_IMPORTED_MODULE_0___default()();
+  }
 }
-;
 
 /***/ }),
 
@@ -392,6 +401,33 @@ __webpack_require__.r(__webpack_exports__);
 function getAlphabeticallyOrderedExtensions() {
   var extensions = {};
   extensions.none = Object.values(app.data.extensions);
+  return extensions;
+}
+
+/***/ }),
+
+/***/ "./src/admin/utils/getAvailabilityCategorizedExtensions.js":
+/*!*****************************************************************!*\
+  !*** ./src/admin/utils/getAvailabilityCategorizedExtensions.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return getAvailabilityCategorizedExtensions; });
+/* harmony import */ var flarum_admin_utils_isExtensionEnabled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/admin/utils/isExtensionEnabled */ "flarum/admin/utils/isExtensionEnabled");
+/* harmony import */ var flarum_admin_utils_isExtensionEnabled__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_utils_isExtensionEnabled__WEBPACK_IMPORTED_MODULE_0__);
+
+function getAvailabilityCategorizedExtensions() {
+  var extensions = {
+    enabled: [],
+    disabled: []
+  };
+  Object.keys(app.data.extensions).map(function (id) {
+    var category = flarum_admin_utils_isExtensionEnabled__WEBPACK_IMPORTED_MODULE_0___default()(id) ? 'enabled' : 'disabled';
+    extensions[category].push(app.data.extensions[id]);
+  });
   return extensions;
 }
 

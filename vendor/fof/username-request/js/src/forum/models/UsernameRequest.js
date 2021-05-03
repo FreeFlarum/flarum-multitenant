@@ -8,9 +8,9 @@
  *  file that was distributed with this source code.
  *
  */
-import Model from 'flarum/Model';
-import computed from 'flarum/utils/computed';
-import mixin from 'flarum/utils/mixin';
+import Model from 'flarum/common/Model';
+import computed from 'flarum/common/utils/computed';
+import mixin from 'flarum/common/utils/mixin';
 
 export default class UsernameRequest extends mixin(Model, {
     user: Model.hasOne('user'),

@@ -14,7 +14,7 @@ namespace Askvortsov\FlarumWarnings\Notification;
 use Askvortsov\FlarumWarnings\Model\Warning;
 use Flarum\Notification\Blueprint\BlueprintInterface;
 use Flarum\Notification\MailableInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class WarningBlueprint implements BlueprintInterface, MailableInterface
 {

@@ -10,18 +10,13 @@ import Stream from 'flarum/utils/Stream';
 import tagLabel from '../../common/helpers/tagLabel';
 import tagIcon from '../../common/helpers/tagIcon';
 import sortTags from '../../common/utils/sortTags';
+import getSelectableTags from '../utils/getSelectableTags';
 
 export default class TagDiscussionModal extends Modal {
   oninit(vnode) {
     super.oninit(vnode);
 
-    this.tags = app.store.all('tags');
-
-    if (this.attrs.discussion) {
-      this.tags = this.tags.filter(tag => tag.canAddToDiscussion() || this.attrs.discussion.tags().indexOf(tag) !== -1);
-    } else {
-      this.tags = this.tags.filter(tag => tag.canStartDiscussion());
-    }
+    this.tags = getSelectableTags(this.attrs.discussion);
 
     this.tags = sortTags(this.tags);
 
@@ -177,7 +172,7 @@ export default class TagDiscussionModal extends Modal {
             </div>
           </div>
           <div className="TagDiscussionModal-form-submit App-primaryControl">
-            <Button type="submit" className="Button Button--primary" disabled={primaryCount < this.minPrimary || secondaryCount < this.minSecondary} icon="fas fa-check">
+            <Button type="submit" className="Button Button--primary" disabled={!this.meetsRequirements(primaryCount, secondaryCount)} icon="fas fa-check">
               {app.translator.trans('flarum-tags.forum.choose_tags.submit_button')}
             </Button>
           </div>
@@ -218,6 +213,14 @@ export default class TagDiscussionModal extends Modal {
     ];
   }
 
+  meetsRequirements(primaryCount, secondaryCount) {
+    if (app.forum.attribute('canBypassTagCounts')) {
+      return true;
+    }
+
+    return primaryCount >= this.minPrimary && secondaryCount >= this.minSecondary;
+  }
+
   toggleTag(tag) {
     const index = this.selected.indexOf(tag);
 
@@ -239,7 +242,9 @@ export default class TagDiscussionModal extends Modal {
     // Ctrl + Enter submits the selection, just Enter completes the current entry
     if (e.metaKey || e.ctrlKey || this.selected.indexOf(this.index) !== -1) {
       if (this.selected.length) {
-        this.$('form').submit();
+        // The DOM submit method doesn't emit a `submit event, so we
+        // simulate a manual submission so our `onsubmit` logic is run.
+        this.$('button[type="submit"]').click();
       }
     } else {
       this.getItem(this.index)[0].dispatchEvent(new Event('click'));

@@ -64,7 +64,7 @@ class Extension implements Arrayable
      * Unique Id of the extension.
      *
      * @info    Identical to the directory in the extensions directory.
-     * @example flarum_suspend
+     * @example flarum-suspend
      *
      * @var string
      */
@@ -90,6 +90,14 @@ class Extension implements Arrayable
      * @var string[]
      */
     protected $extensionDependencyIds;
+
+    /**
+     * The IDs of all Flarum extensions that this extension should be booted after
+     * if enabled.
+     *
+     * @var string[]
+     */
+    protected $optionalDependencyIds;
 
     /**
      * Whether the extension is installed.
@@ -124,7 +132,7 @@ class Extension implements Arrayable
         $this->id = static::nameToId($this->name);
     }
 
-    public function extend(Container $app)
+    public function extend(Container $container)
     {
         foreach ($this->getExtenders() as $extender) {
             // If an extension has not yet switched to the new extend.php
@@ -134,7 +142,7 @@ class Extension implements Arrayable
                 $extender = new Compat($extender);
             }
 
-            $extender->extend($app, $this);
+            $extender->extend($container, $this);
         }
     }
 
@@ -203,16 +211,29 @@ class Extension implements Arrayable
      * @param array $extensionSet: An associative array where keys are the composer package names
      *                             of installed extensions. Used to figure out which dependencies
      *                             are flarum extensions.
+     * @param array $enabledIds:   An associative array where keys are the composer package names
+     *                             of enabled extensions. Used to figure out optional dependencies.
      */
-    public function calculateDependencies($extensionSet)
+    public function calculateDependencies($extensionSet, $enabledIds)
     {
         $this->extensionDependencyIds = (new Collection(Arr::get($this->composerJson, 'require', [])))
             ->keys()
             ->filter(function ($key) use ($extensionSet) {
                 return array_key_exists($key, $extensionSet);
-            })->map(function ($key) {
+            })
+            ->map(function ($key) {
                 return static::nameToId($key);
-            })->toArray();
+            })
+            ->toArray();
+
+        $this->optionalDependencyIds = (new Collection(Arr::get($this->composerJson, 'extra.flarum-extension.optional-dependencies', [])))
+            ->map(function ($key) {
+                return static::nameToId($key);
+            })
+            ->filter(function ($key) use ($enabledIds) {
+                return array_key_exists($key, $enabledIds);
+            })
+            ->toArray();
     }
 
     /**
@@ -281,6 +302,14 @@ class Extension implements Arrayable
     /**
      * @return string
      */
+    public function getTitle()
+    {
+        return $this->composerJsonAttribute('extra.flarum-extension.title');
+    }
+
+    /**
+     * @return string
+     */
     public function getPath()
     {
         return $this->path;
@@ -291,9 +320,20 @@ class Extension implements Arrayable
      *
      * @return array
      */
-    public function getExtensionDependencyIds()
+    public function getExtensionDependencyIds(): array
     {
         return $this->extensionDependencyIds;
+    }
+
+    /**
+     * The IDs of all Flarum extensions that this extension should be booted after
+     * if enabled.
+     *
+     * @return array
+     */
+    public function getOptionalDependencyIds(): array
+    {
+        return $this->optionalDependencyIds;
     }
 
     private function getExtenders(): array
@@ -332,15 +372,6 @@ class Extension implements Arrayable
 
         if (file_exists($filename)) {
             return $filename;
-        }
-
-        // To give extension authors some time to migrate to the new extension
-        // format, we will also fallback to the old bootstrap.php name. Consider
-        // this feature deprecated.
-        $deprecatedFilename = "{$this->path}/bootstrap.php";
-
-        if (file_exists($deprecatedFilename)) {
-            return $deprecatedFilename;
         }
 
         return null;
@@ -456,6 +487,7 @@ class Extension implements Arrayable
             'hasAssets'              => $this->hasAssets(),
             'hasMigrations'          => $this->hasMigrations(),
             'extensionDependencyIds' => $this->getExtensionDependencyIds(),
+            'optionalDependencyIds'  => $this->getOptionalDependencyIds(),
             'links'                  => $this->getLinks(),
         ], $this->composerJson);
     }

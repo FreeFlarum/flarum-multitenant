@@ -1,0 +1,243 @@
+.ChatModal .Modal-body {
+    mark {
+        background: none;
+        font-weight: bold;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .ChatType {
+        margin-bottom: 15px;
+    }
+
+    .Tab {
+        display: inline-block;
+        background-color: #FFF;
+        height: 36px;
+        text-align: center;
+        vertical-align: middle;
+        width: 50%;
+        padding: 7px;
+        .user-select(none);
+
+        &.Tab--active {
+            background-color: #313946;
+            color: #FFF;
+        }
+
+        &.Tab--left {
+            border-radius: 4px 0px 0px 4px;
+        }
+
+        &.Tab--right {
+            border-radius: 0px 4px 4px 0px;
+        }
+
+        &:hover:not(.Tab--active) {
+            background-color: #d0d3d8;
+        }
+    }
+
+    .Color-Input {
+        position: relative;
+
+        color {
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            background-color: #000;
+            display: block;
+            border-radius: 100px;
+            right: 10px;
+            top: 25%;
+        }
+    }
+
+    icon.Chat-FullColor {
+        background: none !important;
+        color: #000;
+    }
+
+    .Icon-Input {
+        position: relative;
+
+        icon {
+            .fa();
+            position: absolute;
+            display: block;
+            border-radius: 100px;
+            right: 10px;
+            top: 25%;
+            font-size: 13pt;
+        }
+    }
+
+    .FormControl {
+        margin: 5px 0px;
+    }
+
+    .InputTitle {
+        width: 225px;
+        margin: auto;
+
+        .ButtonsPadding {
+            height: 350px;
+        }
+
+        .ButtonSave {
+            margin-bottom: 25px;
+        }
+
+        .ButtonLeave {
+            background-color: #1A6696;
+        }
+
+        .ButtonDelete {
+            background-color: @error-color;
+        }
+    }
+
+    .UserMention {
+        .user-select(none);
+
+        display: inline-block;
+        background: #d8dade;
+        color: #566888;
+        border-radius: 4px;
+        padding: 2px 5px;
+        margin: 5px 0px 0px 5px;
+        border: 0 !important;
+        position: relative;
+        cursor: pointer;
+
+        &.moder {
+            &:before {
+                .fa();
+                content: @fa-var-users-cog;
+
+                padding-right: 2px;
+            }
+        }
+
+        &.creator {
+            &:before {
+                .fa();
+                content: @fa-var-crown;
+
+                padding-right: 2px;
+            }
+        }
+
+        &.removed {
+            text-decoration: line-through;
+            color: #878e9c;
+        }
+
+        .Button--mention-edit {
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            margin-left: 2px;
+        }
+
+        .Dropdown-menu {
+            right: -80px;
+        }
+
+        &.deletable {
+            &:hover {
+                background: #afb2b9;
+                color: #3e495d;
+
+                &:after {
+                    .fa();
+                    content: @fa-var-trash-alt;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    z-index: 999;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .Alert {
+        background: @control-danger-bg;
+        color: @control-danger-color;
+        padding: 5px;
+        margin: 5px 0px;
+        border-radius: 5px;
+        position: relative;
+        padding-left: 40px;
+
+        &:before {
+            .fa();
+            content: @fa-var-times;
+
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            font-size: 20pt;
+        }
+    }
+
+    .UsersTags {
+        width: 225px;
+        border-radius: 4px;
+        margin: auto;
+        margin-bottom: 10px;
+
+        .user-select(none);
+    }
+
+    .UsersSearch {
+        .SearchFailed {
+            padding: 10px 15px;
+            color: #868686;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .SearchInput {
+            &:before {
+                top: 6px;
+            }
+        }
+
+        .UserSearchResult {
+            span.username {
+                display: inline-block;
+                max-width: 110px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            span {
+                .user-select(none);
+
+                &:hover {
+                    background-color: #eaecf0;
+                }
+
+                &.selected:before {
+                    .fa();
+                    content: @fa-var-check;
+
+                    line-height: inherit;
+                    margin-left: 175px;
+                    position: fixed;
+                }
+            }
+        }
+
+        .Dropdown--Users {
+            width: 225px;
+        }
+
+        .ModalBody--Users {
+            height: 400px;
+        }
+    }
+}

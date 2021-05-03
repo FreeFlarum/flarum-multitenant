@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-import app from 'flarum/app';
+import app from 'flarum/common/app';
 
 import addSummaryExcerpt from './addSummaryExcerpt';
 import addUserPreference from './addUserPreference';

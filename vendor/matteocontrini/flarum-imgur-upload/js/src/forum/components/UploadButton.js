@@ -1,10 +1,12 @@
-import Component from 'flarum/Component';
-import icon from 'flarum/helpers/icon';
-import LoadingIndicator from 'flarum/components/LoadingIndicator';
+import app from 'flarum/app';
+import Component from 'flarum/common/Component';
+import LoadingIndicator from 'flarum/common/components/LoadingIndicator';
+import Button from 'flarum/common/components/Button';
+import classList from "flarum/common/utils/classList";
 
 export default class UploadButton extends Component {
-    oncreate(vnode) {
-        super.oncreate(vnode);
+    oninit(vnode) {
+        super.oninit(vnode);
 
         this.isLoading = false;
         this.isSuccess = false;
@@ -12,57 +14,52 @@ export default class UploadButton extends Component {
         this.isPasteListenerAttached = false;
     }
 
+    oncreate(vnode) {
+        super.oncreate(vnode);
+
+        this.$().tooltip();
+    }
+
     onupdate(vnode) {
-        if (!this.isPasteListenerAttached) {
+        if (!this.isPasteListenerAttached && app.forum.attribute('imgur-upload.allow-paste') === '1') {
             this.isPasteListenerAttached = true;
-            this.attrs.textArea.el.addEventListener('paste', this.paste.bind(this));
+            this.attrs.textArea.addEventListener('paste', this.paste.bind(this));
         }
     }
-    
+
     view() {
-        let attrs = {
-            className: 'Button hasIcon imgur-upload-button',
-            title: app.translator.trans('imgur-upload.forum.upload'),
-            oncreate: (el) => {
-                $(el.dom).tooltip();
-            }
-        };
-        
         let buttonIcon;
-        if (this.isLoading) buttonIcon = LoadingIndicator.component({ className: 'Button-icon' });
-        else if (this.isSuccess) buttonIcon = icon('fas fa-check green', { className: 'Button-icon' });
-        else if (this.isError) buttonIcon = icon('fas fa-times red', { className: 'Button-icon' });
-        else buttonIcon = icon('far fa-image', { className: 'Button-icon' });
-        
+        if (this.isSuccess) buttonIcon = 'fas fa-check green';
+        else if (this.isError) buttonIcon = 'fas fa-times red';
+        else if (!this.isLoading) buttonIcon = 'far fa-image';
+
         let label = '';
         if (this.isLoading) label = app.translator.trans('imgur-upload.forum.loading');
         else if (this.isSuccess) label = app.translator.trans('imgur-upload.forum.done');
         else if (this.isError) label = app.translator.trans('imgur-upload.forum.error');
-        
-        // When there is no label, the component element should be shown as a square button
-        if (label == '') {
-            attrs.className += ' Button--icon';
-        }
-        
-        return m('div', attrs, [
-            buttonIcon,
-                m('span', { className: 'Button-label' }, label),
-                m('form#imgur-upload-form', [
-                    m('input', {
-                        type: 'file',
-                        accept: 'image/*',
-                        onchange: this.formUpload.bind(this),
-                        // disable button while doing things
-                        disabled: this.isLoading || this.isSuccess || this.isError
-                    })
-                ])
-            ]
-        );
+
+        return <Button
+            className={classList([
+                'Button',
+                'hasIcon',
+                'imgur-upload-button',
+                label === '' && 'Button--icon',
+            ])}
+            icon={buttonIcon}
+            onclick={this.buttonClicked.bind(this)}
+            title={app.translator.trans('imgur-upload.forum.upload')}>
+            {this.isLoading && <LoadingIndicator size="tiny" className="LoadingIndicator--inline Button-icon"/>}
+            <span className="Button-label">{label}</span>
+            <form>
+                <input type="file" accept="image/*" onchange={this.formUpload.bind(this)}
+                       disabled={this.isLoading || this.isSuccess || this.isError}/>
+            </form>
+        </Button>
     }
-    
+
     paste(e) {
         if (this.isLoading) return;
-        
+
         if (e.clipboardData && e.clipboardData.items) {
             let item = e.clipboardData.items[0];
 
@@ -74,18 +71,27 @@ export default class UploadButton extends Component {
             this.upload(file);
         }
     }
-    
-    formUpload(e) {
-        let file = $(e.target)[0].files[0];
-        this.upload(file);
+
+    buttonClicked(e) {
+        this.$('input').click();
     }
-    
+
+    formUpload(e) {
+        const files = this.$('input').prop('files');
+
+        if (files.length === 0) {
+            return;
+        }
+
+        this.upload(files[0]);
+    }
+
     upload(file) {
-        $(this.element).tooltip('hide'); // force removal of the tooltip
+        this.$().tooltip('hide'); // force removal of the tooltip
         this.isLoading = true;
         m.redraw();
 
-        let formData = new FormData();
+        const formData = new FormData();
         formData.append('image', file);
 
         $.ajax({
@@ -102,17 +108,17 @@ export default class UploadButton extends Component {
             error: this.error.bind(this)
         });
     }
-    
+
     success(response) {
-        $('#imgur-upload-form input').val('');
-        
+        this.$('input').val('');
+
         this.isLoading = false;
         this.isSuccess = true;
         m.redraw();
 
         let stringToInject = this.buildEmbedCode(response.data.link, response.data.width > 1024);
 
-        this.attrs.textArea.insertAtCursor(stringToInject);
+        this.attrs.editor.insertAtCursor(stringToInject);
 
         // After a bit, re-enable upload
         setTimeout(() => {
@@ -125,30 +131,26 @@ export default class UploadButton extends Component {
         let previewUrl = (isLarge ? this.previewUrl(imageUrl) : imageUrl);
         let embedType = app.forum.attribute('imgur-upload.embed-type');
 
-        if (embedType == 'full-with-link') {
+        if (embedType === 'full-with-link') {
             return `[URL=${imageUrl}][IMG]${imageUrl}[/IMG][/URL]\n`;
-        }
-        else if (embedType == 'full-without-link') {
+        } else if (embedType === 'full-without-link') {
             return `[IMG]${imageUrl}[/IMG]\n`;
-        }
-        else if (embedType == 'preview-without-link') {
+        } else if (embedType === 'preview-without-link') {
             return `[IMG]${previewUrl}[/IMG]\n`;
-        }
-        else {
+        } else {
             // Preview with link (default case)
             return `[URL=${imageUrl}][IMG]${previewUrl}[/IMG][/URL]\n`;
         }
-
     }
 
     previewUrl(url) {
         let extensionIndex = url.lastIndexOf('.');
         return url.slice(0, extensionIndex) + 'h' + url.slice(extensionIndex);
     }
-    
+
     error(response) {
         $('#imgur-upload-form').val('');
-        
+
         this.isLoading = false;
         this.isError = true;
         m.redraw();

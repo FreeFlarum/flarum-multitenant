@@ -3,7 +3,10 @@
 namespace ClarkWinkelmann\AuthorChange;
 
 use Flarum\Api\Controller;
+use Flarum\Api\Serializer\ForumSerializer;
+use Flarum\Discussion\Event\Saving as DiscussionSaving;
 use Flarum\Extend;
+use Flarum\Post\Event\Saving as PostSaving;
 
 return [
     (new Extend\Frontend('forum'))
@@ -22,6 +25,10 @@ return [
     (new Extend\ApiController(Controller\UpdateDiscussionController::class))
         ->addInclude('user'),
 
-    new Extenders\ForumAttributes(),
-    new Extenders\SaveAuthor(),
+    (new Extend\Event())
+        ->listen(DiscussionSaving::class, Listeners\SaveDiscussion::class)
+        ->listen(PostSaving::class, Listeners\SavePost::class),
+
+    (new Extend\ApiSerializer(ForumSerializer::class))
+        ->attributes(ForumAttributes::class),
 ];

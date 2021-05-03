@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2014-2018 Spomky-Labs
+ * Copyright (c) 2014-2020 Spomky-Labs
  *
  * This software may be modified and distributed under the terms
  * of the MIT license.  See the LICENSE file for details.
@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace Jose\Component\Signature;
 
+use function count;
+use InvalidArgumentException;
 use Jose\Component\Core\JWT;
 
 class JWS implements JWT
@@ -23,9 +25,9 @@ class JWS implements JWT
     private $isPayloadDetached = false;
 
     /**
-     * @var string|null
+     * @var null|string
      */
-    private $encodedPayload = null;
+    private $encodedPayload;
 
     /**
      * @var Signature[]
@@ -33,28 +35,15 @@ class JWS implements JWT
     private $signatures = [];
 
     /**
-     * @var string|null
+     * @var null|string
      */
-    private $payload = null;
+    private $payload;
 
-    /**
-     * JWS constructor.
-     */
-    private function __construct(?string $payload, ?string $encodedPayload = null, bool $isPayloadDetached = false)
+    public function __construct(?string $payload, ?string $encodedPayload = null, bool $isPayloadDetached = false)
     {
         $this->payload = $payload;
         $this->encodedPayload = $encodedPayload;
         $this->isPayloadDetached = $isPayloadDetached;
-    }
-
-    /**
-     * Creates a JWS object.
-     *
-     * @return JWS
-     */
-    public static function create(?string $payload, ?string $encodedPayload = null, bool $isPayloadDetached = false): self
-    {
-        return new self($payload, $encodedPayload, $isPayloadDetached);
     }
 
     public function getPayload(): ?string
@@ -95,6 +84,8 @@ class JWS implements JWT
 
     /**
      * Returns the signature at the given index.
+     *
+     * @throws InvalidArgumentException if the signature index does not exist
      */
     public function getSignature(int $id): Signature
     {
@@ -102,7 +93,7 @@ class JWS implements JWT
             return $this->signatures[$id];
         }
 
-        throw new \InvalidArgumentException('The signature does not exist.');
+        throw new InvalidArgumentException('The signature does not exist.');
     }
 
     /**
@@ -116,7 +107,7 @@ class JWS implements JWT
     public function addSignature(string $signature, array $protectedHeader, ?string $encodedProtectedHeader, array $header = []): self
     {
         $jws = clone $this;
-        $jws->signatures[] = Signature::create($signature, $protectedHeader, $encodedProtectedHeader, $header);
+        $jws->signatures[] = new Signature($signature, $protectedHeader, $encodedProtectedHeader, $header);
 
         return $jws;
     }
@@ -126,7 +117,7 @@ class JWS implements JWT
      */
     public function countSignatures(): int
     {
-        return \count($this->signatures);
+        return count($this->signatures);
     }
 
     /**
@@ -139,17 +130,17 @@ class JWS implements JWT
     {
         $result = [];
         foreach ($this->signatures as $signature) {
-            $jws = self::create(
+            $jws = new self(
                 $this->payload,
                 $this->encodedPayload,
                 $this->isPayloadDetached
             );
             $jws = $jws->addSignature(
-                 $signature->getSignature(),
-                 $signature->getProtectedHeader(),
-                 $signature->getEncodedProtectedHeader(),
-                 $signature->getHeader()
-             );
+                $signature->getSignature(),
+                $signature->getProtectedHeader(),
+                $signature->getEncodedProtectedHeader(),
+                $signature->getHeader()
+            );
 
             $result[] = $jws;
         }

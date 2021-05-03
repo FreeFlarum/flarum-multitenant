@@ -37,5 +37,5 @@ return [
         ->listen(Saving::class, Listeners\ValidateNecrobumping::class),
 
     (new Vanilla\ApiSerializer(DiscussionSerializer::class))
-        ->mutate(Listeners\AddForumAttributes::class),
+        ->attributes(Listeners\AddForumAttributes::class),
 ];

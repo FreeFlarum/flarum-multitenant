@@ -20,7 +20,7 @@ fof-best-answer:
       schedule_stop_overnight: 'Hatırlatıcının aktif olunmayan saatlerde çalışmasını engelleyin (ÖS 9 - ÖÖ 8 sunucu saati)'
       select_best_answer_reminder_days: 'Kullanıcıya X günden sonra en iyi yanıtı seçmesini hatırlat'
       title: 'En İyi Yanıt Ayarları'
-      use_alt_ui: 'Alternatif şablonu kullanın (En İyi Yanıt butonları gönderinin sonunda yer alır)'
+      use_alt_ui: 'Alternatif şablonu kullanın (En İyi Yanıt düğmeleri gönderinin sonunda yer alır)'
   email:
     body:
       awarded: "Hey {recipient_display_name},\n\nHarika, {actor_display_name} senin '{discussion_title}' başlıklı tartışmadaki yanıtını en iyi yanıt olarak seçti. Yardımcı olduğun için teşekkürler.\n\nBuradan görüntüle: {discussion_url}\n"

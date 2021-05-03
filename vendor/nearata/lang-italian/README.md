@@ -24,7 +24,7 @@ php flarum cache:clear
 
 ## Translations
 
-See [TRANSLATIONS.md](TRANSLATIONS) to see the list of supported extensions.
+See [TRANSLATIONS.md](TRANSLATIONS.md) to see the list of supported extensions.
 
 ## License
 

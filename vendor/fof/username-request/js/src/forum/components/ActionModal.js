@@ -9,11 +9,11 @@
  *
  */
 
-import Button from 'flarum/components/Button';
-import Modal from 'flarum/components/Modal';
-import username from 'flarum/helpers/username';
-import Stream from 'flarum/utils/Stream';
-import withAttr from 'flarum/utils/withAttr';
+import Button from 'flarum/common/components/Button';
+import Modal from 'flarum/common/components/Modal';
+import username from 'flarum/common/helpers/username';
+import Stream from 'flarum/common/utils/Stream';
+import withAttr from 'flarum/common/utils/withAttr';
 
 export default class ActionModal extends Modal {
     oninit(vnode) {

@@ -1,14 +1,24 @@
 <?php
 
+/*
+ * This file is part of fof/pretty-mail.
+ *
+ * Copyright (c) FriendsOfFlarum.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ */
+
 namespace FoF\PrettyMail;
 
-use Symfony\Component\Debug\Exception\FatalThrowableError;
+use Exception;
 
 class BladeCompiler
 {
     public static function render($string, $data)
     {
-        $php = app('blade.compiler')->compileString($string);
+        $php = resolve('blade.compiler')->compileString($string);
 
         $obLevel = ob_get_level();
         ob_start();
@@ -27,7 +37,7 @@ class BladeCompiler
                 ob_end_clean();
             }
 
-            throw new FatalThrowableError($e);
+            throw new Exception($e);
         }
 
         return ob_get_clean();

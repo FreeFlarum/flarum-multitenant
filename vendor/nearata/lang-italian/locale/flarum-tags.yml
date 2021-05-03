@@ -1,10 +1,12 @@
 flarum-tags:
+
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
+
     # These translations are used in the Basics page.
     basics:
       tags_label: => flarum-tags.ref.tags
@@ -56,6 +58,7 @@ flarum-tags:
 
   # Translations in this namespace are used by the forum user interface.
   forum:
+
     # These translations are displayed on the page that lists all tags.
     all_tags:
       meta_description_text: Tutti i tag
@@ -77,6 +80,9 @@ flarum-tags:
     discussion_controls:
       edit_tags_button: Modifica Etichette
 
+    header:
+      back_to_tags_tooltip: Ritorna alla lista delle etichette
+
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       more_link: Di più...
@@ -96,6 +102,7 @@ flarum-tags:
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
+
     # This translation is displayed in place of the name of a tag that's been deleted.
     deleted_tag_text: Eliminata
 

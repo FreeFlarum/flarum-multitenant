@@ -9,12 +9,12 @@
  *
  */
 
-import Component from 'flarum/Component';
-import LoadingIndicator from 'flarum/components/LoadingIndicator';
-import avatar from 'flarum/helpers/avatar';
-import username from 'flarum/helpers/username';
-import icon from 'flarum/helpers/icon';
-import humanTime from 'flarum/helpers/humanTime';
+import Component from 'flarum/common/Component';
+import LoadingIndicator from 'flarum/common/components/LoadingIndicator';
+import avatar from 'flarum/common/helpers/avatar';
+import username from 'flarum/common/helpers/username';
+import icon from 'flarum/common/helpers/icon';
+import humanTime from 'flarum/common/helpers/humanTime';
 import ActionModal from './ActionModal';
 
 export default class FlagList extends Component {
@@ -30,7 +30,9 @@ export default class FlagList extends Component {
         return (
             <div className="NotificationList RequestsList">
                 <div className="NotificationList-header">
-                    <h4 className="App-titleControl App-titleControl--text">{app.translator.trans('fof-username-request.forum.pending_requests.title')}</h4>
+                    <h4 className="App-titleControl App-titleControl--text">
+                        {app.translator.trans('fof-username-request.forum.pending_requests.title')}
+                    </h4>
                 </div>
                 <div className="NotificationList-content">
                     <ul className="NotificationGroup-content">
@@ -58,7 +60,9 @@ export default class FlagList extends Component {
                                 );
                             })
                         ) : !this.loading ? (
-                            <div className="NotificationList-empty">{app.translator.trans('fof-username-request.forum.pending_requests.empty_text')}</div>
+                            <div className="NotificationList-empty">
+                                {app.translator.trans('fof-username-request.forum.pending_requests.empty_text')}
+                            </div>
                         ) : (
                             LoadingIndicator.component({ className: 'LoadingIndicator--block' })
                         )}

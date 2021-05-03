@@ -1,0 +1,5 @@
+itnt-uitab:
+  admin:
+    settings:
+      help_text: "如果您的论坛置于子目录中，请在下方指定子目录（以斜杠结尾），否则请保持默认值。例如：<code>/sub/</code>"
+      home_page_label: 子目录

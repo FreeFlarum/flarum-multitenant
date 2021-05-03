@@ -11,8 +11,11 @@ fof-user-directory:
       link: 'Kullanıcı listesinin görülebilmesi için anasayfaya bağlantı ekle'
       title: 'Kullanıcı Listesi Ayarları'
   forum:
+    header:
+      back_to_user_directory_tooltip: 'Kullanıcı Listesine Dön'
     page:
       empty_text: 'Aramanızla eşleşen bir kullanıcı bulamadık.'
+      filter_button: 'Grupları Filtrele'
       load_more_button: '=> core.ref.load_more'
       nav: 'Kullanıcı Listesi'
       refresh_tooltip: '=> core.forum.index.refresh_tooltip'
@@ -30,6 +33,8 @@ fof-user-directory:
         username_az: 'Kullanıcı adı (a-z)'
         username_za: 'Kullanıcı adı (z-a)'
     search:
+      field:
+        placeholder: 'Tüm kullanıcılarda ara'
       users_heading: 'Tüm kullanıcılarda ara "{query}"'
   lib:
     sort:

@@ -3,7 +3,7 @@
 /*
  * This file is part of askvortsov/flarum-pwa
  *
- *  Copyright (c) 2020 Alexander Skvortsov.
+ *  Copyright (c) 2021 Alexander Skvortsov.
  *
  *  For detailed copyright and license information, please view the
  *  LICENSE file that was distributed with this source code.
@@ -25,7 +25,6 @@ trait PWATrait
         $basePath = rtrim(parse_url($this->app->url(), PHP_URL_PATH), '/').'/' ?: '/';
         $manifest = [
             'name'        => $this->settings->get('askvortsov-pwa.longName', $this->settings->get('forum_title')),
-            'short_name'  => $this->settings->get('forum_title'),
             'description' => $this->settings->get('forum_description', ''),
             //"categories" => $this->settings->get('askvortsov-pwa.categories', []),
             'start_url'        => $basePath,
@@ -36,6 +35,11 @@ trait PWATrait
             'display'          => 'standalone',
             'icons'            => [],
         ];
+
+        $shortName = $this->settings->get('askvortsov-pwa.shortName');
+        if ($shortName) {
+            $manifest['short_name'] = $shortName;
+        }
 
         foreach (PWATrait::$SIZES as $size) {
             if ($this->settings->get("askvortsov-pwa.icon_${size}_path")) {

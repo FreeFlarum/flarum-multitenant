@@ -3,7 +3,6 @@
 namespace FoF\HtmlErrors;
 
 use Flarum\Extend;
-use Flarum\Foundation\Application;
 
 return [
     (new Extend\Frontend('admin'))
@@ -11,7 +10,6 @@ return [
 
     new Extend\Locales(__DIR__ . '/locale'),
 
-    function (Application $app) {
-        $app->register(Providers\ErrorServiceProvider::class);
-    },
+    (new Extend\ServiceProvider())
+        ->register(Providers\ErrorServiceProvider::class),
 ];

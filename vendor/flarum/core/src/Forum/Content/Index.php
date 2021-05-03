@@ -18,7 +18,7 @@ use Flarum\User\User;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class Index
 {
@@ -75,9 +75,13 @@ class Index
 
         $params = [
             'sort' => $sort && isset($sortMap[$sort]) ? $sortMap[$sort] : '',
-            'filter' => compact('q'),
+            'filter' => [],
             'page' => ['offset' => ($page - 1) * 20, 'limit' => 20]
         ];
+
+        if ($q) {
+            $params['filter']['q'] = $q;
+        }
 
         $apiDocument = $this->getApiDocument($request->getAttribute('actor'), $params);
         $defaultRoute = $this->settings->get('default_route');

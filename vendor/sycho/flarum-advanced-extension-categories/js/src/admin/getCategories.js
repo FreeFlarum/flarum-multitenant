@@ -1,8 +1,17 @@
 export default function getCategories() {
-  if (app.data.settings['sycho-ace.selected-categorization'] === 'none') return { none: 0 };
-  else if (app.data.settings['sycho-ace.selected-categorization'] === 'vendor') return getVendors();
+  switch (app.data.settings['sycho-ace.selected-categorization']) {
+    case 'none':
+      return { none: 0 };
 
-  return app.extensionCategories;
+    case 'vendor':
+      return getVendors();
+
+    case 'availability':
+      return { enabled: 10, disabled: 0 };
+
+    default:
+      return app.extensionCategories;
+  }
 }
 
 export function getVendors() {

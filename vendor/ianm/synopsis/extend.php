@@ -28,12 +28,8 @@ return [
     new Extend\Locales(__DIR__.'/resources/locale'),
 
     (new Extend\Settings())
-        ->serializeToForum('synopsis.excerpt_length', 'ianm-synopsis.excerpt_length', function ($value) {
-            return (int) $value;
-        })
-        ->serializeToForum('synopsis.rich_excerpts', 'ianm-synopsis.rich-excerpts', function ($value) {
-            return (bool) $value;
-        })
+        ->serializeToForum('synopsis.excerpt_length', 'ianm-synopsis.excerpt_length', 'intVal')
+        ->serializeToForum('synopsis.rich_excerpts', 'ianm-synopsis.rich-excerpts', 'boolVal')
         ->serializeToForum('synopsis.excerpt_type', 'ianm-synopsis.excerpt-type'),
 
     (new Extend\ApiController(ListDiscussionsController::class))
@@ -43,10 +39,6 @@ return [
         ->addInclude(['lastPost']),
 
     (new Extend\User())
-        ->registerPreference('showSynopsisExcerpts', function ($value) {
-            return (bool) $value;
-        }, true)
-        ->registerPreference('showSynopsisExcerptsOnMobile', function ($value) {
-            return (bool) $value;
-        }, false),
+        ->registerPreference('showSynopsisExcerpts', 'boolVal', true)
+        ->registerPreference('showSynopsisExcerptsOnMobile', 'boolVal', false),
 ];

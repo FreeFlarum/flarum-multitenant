@@ -5,10 +5,13 @@
 sycho-ace:
   admin:
     categories:
+      disabled: 'Devre dışı'
+      enabled: Etkin
       none: A-Z
     category_selection:
       label: 'Kategoriye Göre'
       options:
+        availability: Kullanılabilirlik
         default: Varsayılan
         none: Yok
         vendor: Vendor

@@ -10,10 +10,10 @@ askvortsov-moderator-warnings:
       view_warnings: 'Moderatör uyarılarını göster'
   emails:
     post_warned:
-      body: "Merhaba {warnee_display_name}!\n\n{warner_display_name}, sizi {discussion_title} tartışması için {strikes} ihtarla uyardı\n\nNeden aşağıda yazmaktadır:\n\n---\n\n{public_comment}"
+      body: "Merhaba {warnee_display_name}!\n\n{warner_display_name}, sizi {discussion_title} tartışması için {strikes} ihtarla uyardı\n\nNeden aşağıda yazmaktadır:\n\n---\n\n{public_comment}\n"
       subject: '{warner_display_name}, sizi {discussion_title} tartışması için {strikes} ihtarla uyardı'
     user_warned:
-      body: "Merhaba {warner_display_name}!\n\n{warner_display_name} sizi {strikes} ihtarla uyardı\n\nNeden aşağıda yazmaktadır:\n\n---\n\n{public_comment}"
+      body: "Merhaba {warner_display_name}!\n\n{warner_display_name} sizi {strikes} ihtarla uyardı\n\nNeden aşağıda yazmaktadır:\n\n---\n\n{public_comment}\n"
       subject: '{warner_display_name} sizi {strikes} ihtarla uyardı'
   forum:
     notifications:

@@ -5,9 +5,11 @@
 fof-polls:
   admin:
     permissions:
+      change_vote: 'Oyu değiştir'
       moderate: 'Anketi düzenle veya sil'
       self_edit: 'Kullanıcıların anketlerini düzenlemesine izin ver'
       start: 'Anket oluştur'
+      view_results_without_voting: 'Sonuçları oy vermeden göster'
       vote: 'Ankete oy ver'
   forum:
     composer_discussion:

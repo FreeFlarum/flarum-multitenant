@@ -1,10 +1,12 @@
 core:
+
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
+
     # These translations are used in the Appearance page.
     appearance:
       colored_header_label: Header colorato
@@ -219,6 +221,7 @@ core:
 
   # Translations in this namespace are used by the forum user interface.
   forum:
+
     # These translations are used in the Change Email modal dialog.
     change_email:
       confirmation_message: => core.ref.confirmation_email_sent
@@ -455,6 +458,7 @@ core:
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
+
     # These translations are displayed as tooltips for discussion badges.
     badge:
       hidden_tooltip: Nascosto
@@ -485,6 +489,7 @@ core:
 
   # Translations in this namespace are used in views other than Flarum's normal JS client.
   views:
+
     # Translations in this namespace are displayed by the basic HTML content loader.
     content:
       javascript_disabled_message: Questo sito è ottimizzato per un browser moderno con JavaScript abilitato.
@@ -532,6 +537,7 @@ core:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
+
     # These translations are used in emails sent when users register new accounts.
     activate_account:
       subject: Attiva il tuo account
@@ -577,7 +583,7 @@ core:
       body: |
         Ciao {username}!
 
-        Se ricevi questa email, significa che l'attuale configurazione sta funzionando correttamente.
+        Questa è un'email di prova per confermarti che l'attuale configurazione sta funzionando correttamente.
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!

@@ -10,12 +10,12 @@
  * file that was distributed with this source code.
  */
 
-import { extend } from 'flarum/extend';
-import SettingsPage from 'flarum/components/SettingsPage';
-import FieldSet from 'flarum/components/FieldSet';
-import ItemList from 'flarum/utils/ItemList';
-import Switch from 'flarum/components/Switch';
-import Stream from 'flarum/utils/Stream';
+import { extend } from 'flarum/common/extend';
+import SettingsPage from 'flarum/common/components/SettingsPage';
+import FieldSet from 'flarum/common/components/FieldSet';
+import ItemList from 'flarum/common/utils/ItemList';
+import Switch from 'flarum/common/components/Switch';
+import Stream from 'flarum/common/utils/Stream';
 
 export default function () {
     extend(SettingsPage.prototype, 'oninit', function () {

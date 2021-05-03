@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^0.1.0-beta.15"
+        "flarum/core": "^0.1.0-beta.16"
     },
     "suggest": {
 		"tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."

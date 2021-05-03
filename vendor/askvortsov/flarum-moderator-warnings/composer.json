@@ -12,7 +12,7 @@
     "forum": "https://discuss.flarum.org/d/23228-moderator-warnings-extension"
   },
   "require": {
-    "flarum/core": "^0.1.0-beta.15"
+    "flarum/core": "^0.1.0-beta.16"
   },
   "authors": [
     {
@@ -29,7 +29,7 @@
   "extra": {
     "flarum-extension": {
       "title": "Moderator Warnings",
-      "category": "moderation",
+      "category": "feature",
       "icon": {
         "name": "fas fa-exclamation-circle",
         "backgroundColor": "#6932D1",

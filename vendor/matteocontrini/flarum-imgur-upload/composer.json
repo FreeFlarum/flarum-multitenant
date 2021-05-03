@@ -10,7 +10,7 @@
       }
     ],
     "require": {
-        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+        "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17"
     },
     "extra": {
         "flarum-extension": {
@@ -20,7 +20,8 @@
                 "name": "fas fa-circle",
                 "backgroundColor": "#272727",
                 "color": "#85BF25"
-            }
+            },
+            "optional-dependencies": ["flarum/markdown"]
         }
     },
     "support": {

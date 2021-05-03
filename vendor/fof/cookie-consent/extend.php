@@ -1,12 +1,12 @@
 <?php
 
-/**
- *  This file is part of fof/cookie-consent.
+/*
+ * This file is part of fof/cookie-consent.
  *
- *  Copyright (c) FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- *  For the full copyright and license information, please view the license.md
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
  */
 
 namespace FoF\CookieConsent;
@@ -30,9 +30,9 @@ return [
 
     new Extend\Locales(__DIR__.'/resources/locale'),
 
-    function (Container $app) {
-        $app->resolving('flarum.assets.forum', function (Assets $assets) use ($app) {
-            if ($app['flarum.settings']->get('reflar-cookie-consent.ccTheme') != 'no_css') {
+    function (Container $container) {
+        $container->resolving('flarum.assets.forum', function (Assets $assets) use ($container) {
+            if ($container['flarum.settings']->get('reflar-cookie-consent.ccTheme') != 'no_css') {
                 $assets->css(function (SourceCollector $sources) {
                     $sources->addFile(__DIR__.'/resources/less/forum.less');
                 });
@@ -41,5 +41,5 @@ return [
     },
 
     (new Extend\ApiSerializer(ForumSerializer::class))
-        ->mutate(Listeners\LoadSettingsFromDatabase::class),
+        ->attributes(Listeners\LoadSettingsFromDatabase::class),
 ];

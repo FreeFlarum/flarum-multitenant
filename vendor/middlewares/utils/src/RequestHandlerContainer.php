@@ -16,20 +16,15 @@ use ReflectionMethod;
  */
 class RequestHandlerContainer implements ContainerInterface
 {
-    protected $arguments;
+    /** @var array */
+    protected $constructorArguments;
 
-    /**
-     * @param array $arguments Arguments passed to the request handler constructor
-     */
-    public function __construct(array $arguments = [])
+    public function __construct(array $constructorArguments = [])
     {
-        $this->arguments = $arguments;
+        $this->constructorArguments = $constructorArguments;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function has($id)
+    public function has($id): bool
     {
         $id = $this->split($id);
 
@@ -41,8 +36,7 @@ class RequestHandlerContainer implements ContainerInterface
     }
 
     /**
-     * {@inheritdoc}
-     *
+     * @param  mixed                   $id
      * @return RequestHandlerInterface
      */
     public function get($id)
@@ -58,19 +52,12 @@ class RequestHandlerContainer implements ContainerInterface
         } catch (NotFoundExceptionInterface $exception) {
             throw $exception;
         } catch (Exception $exception) {
-            throw new class("Error getting the handler $id", 0, $exception) extends Exception implements
-                ContainerExceptionInterface {
+            $message = sprintf('Error getting the handler %s', $id);
+            throw new class($message, 0, $exception) extends Exception implements ContainerExceptionInterface {
             };
         }
     }
 
-    /**
-     * Resolves a handler
-     *
-     * @param string $handler
-     *
-     * @return mixed
-     */
     protected function resolve(string $handler)
     {
         $handler = $this->split($handler);
@@ -90,21 +77,19 @@ class RequestHandlerContainer implements ContainerInterface
 
     /**
      * Returns the instance of a class.
-     *
-     * @return object
      */
-    protected function createClass(string $className)
+    protected function createClass(string $className): object
     {
         if (!class_exists($className)) {
-            throw new class("The class $className does not exists") extends Exception implements
-                NotFoundExceptionInterface {
+            $message = sprintf('The class %s does not exists', $className);
+            throw new class($message) extends Exception implements NotFoundExceptionInterface {
             };
         }
 
         $reflection = new ReflectionClass($className);
 
         if ($reflection->hasMethod('__construct')) {
-            return $reflection->newInstanceArgs($this->arguments);
+            return $reflection->newInstanceArgs($this->constructorArguments);
         }
 
         return $reflection->newInstance();

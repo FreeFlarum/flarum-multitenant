@@ -9,7 +9,7 @@
  *
  */
 
-import app from 'flarum/app';
+import app from 'flarum/common/app';
 import ResultsModal from './components/ResultsModal';
 
 export default function () {

@@ -9,7 +9,6 @@
 
 namespace Flarum\Notification;
 
-use Flarum\Event\ConfigureNotificationTypes;
 use Flarum\Foundation\AbstractServiceProvider;
 use Flarum\Notification\Blueprint\DiscussionRenamedBlueprint;
 
@@ -20,14 +19,14 @@ class NotificationServiceProvider extends AbstractServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('flarum.notification.drivers', function () {
+        $this->container->singleton('flarum.notification.drivers', function () {
             return [
                 'alert' => Driver\AlertNotificationDriver::class,
                 'email' => Driver\EmailNotificationDriver::class,
             ];
         });
 
-        $this->app->singleton('flarum.notification.blueprints', function () {
+        $this->container->singleton('flarum.notification.blueprints', function () {
             return [
                 DiscussionRenamedBlueprint::class => ['alert']
             ];
@@ -48,8 +47,8 @@ class NotificationServiceProvider extends AbstractServiceProvider
      */
     protected function setNotificationDrivers()
     {
-        foreach ($this->app->make('flarum.notification.drivers') as $driverName => $driver) {
-            NotificationSyncer::addNotificationDriver($driverName, $this->app->make($driver));
+        foreach ($this->container->make('flarum.notification.drivers') as $driverName => $driver) {
+            NotificationSyncer::addNotificationDriver($driverName, $this->container->make($driver));
         }
     }
 
@@ -58,12 +57,7 @@ class NotificationServiceProvider extends AbstractServiceProvider
      */
     protected function setNotificationTypes()
     {
-        $blueprints = $this->app->make('flarum.notification.blueprints');
-
-        // Deprecated in beta 15, remove in beta 16
-        $this->app->make('events')->dispatch(
-            new ConfigureNotificationTypes($blueprints)
-        );
+        $blueprints = $this->container->make('flarum.notification.blueprints');
 
         foreach ($blueprints as $blueprint => $driversEnabledByDefault) {
             $this->addType($blueprint, $driversEnabledByDefault);

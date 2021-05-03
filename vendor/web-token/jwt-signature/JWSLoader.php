@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2014-2018 Spomky-Labs
+ * Copyright (c) 2014-2020 Spomky-Labs
  *
  * This software may be modified and distributed under the terms
  * of the MIT license.  See the LICENSE file for details.
@@ -13,10 +13,12 @@ declare(strict_types=1);
 
 namespace Jose\Component\Signature;
 
+use Exception;
 use Jose\Component\Checker\HeaderCheckerManager;
 use Jose\Component\Core\JWK;
 use Jose\Component\Core\JWKSet;
 use Jose\Component\Signature\Serializer\JWSSerializerManager;
+use Throwable;
 
 class JWSLoader
 {
@@ -26,7 +28,7 @@ class JWSLoader
     private $jwsVerifier;
 
     /**
-     * @var HeaderCheckerManager|null
+     * @var null|HeaderCheckerManager
      */
     private $headerCheckerManager;
 
@@ -73,7 +75,7 @@ class JWSLoader
      * This method will try to load and verify the token using the given key.
      * It returns a JWS and will populate the $signature variable in case of success, otherwise an exception is thrown.
      *
-     * @throws \Exception
+     * @throws Exception if the token cannot be loaded or verified
      */
     public function loadAndVerifyWithKey(string $token, JWK $key, ?int &$signature, ?string $payload = null): JWS
     {
@@ -86,7 +88,7 @@ class JWSLoader
      * This method will try to load and verify the token using the given key set.
      * It returns a JWS and will populate the $signature variable in case of success, otherwise an exception is thrown.
      *
-     * @throws \Exception
+     * @throws Exception if the token cannot be loaded or verified
      */
     public function loadAndVerifyWithKeySet(string $token, JWKSet $keyset, ?int &$signature, ?string $payload = null): JWS
     {
@@ -100,11 +102,11 @@ class JWSLoader
                     return $jws;
                 }
             }
-        } catch (\Exception $e) {
+        } catch (Throwable $e) {
             // Nothing to do. Exception thrown just after
         }
 
-        throw new \Exception('Unable to load and verify the token.');
+        throw new Exception('Unable to load and verify the token.');
     }
 
     private function processSignature(JWS $jws, JWKSet $keyset, int $signature, ?string $payload): bool
@@ -115,7 +117,7 @@ class JWSLoader
             }
 
             return $this->jwsVerifier->verifyWithKeySet($jws, $keyset, $signature, $payload);
-        } catch (\Exception $e) {
+        } catch (Throwable $e) {
             return false;
         }
     }

@@ -20,8 +20,8 @@
         }
     ],
     "require": {
-        "flarum/core": ">=0.1.0-beta.15",
-        "guzzlehttp/guzzle": "6.* || 7.*"
+        "flarum/core": "^0.1.0-beta.16",
+        "guzzlehttp/guzzle": "^7.2"
     },
     "replace": {
         "reflar/stopforumspam": "*"
@@ -46,7 +46,7 @@
     "extra": {
         "flarum-extension": {
             "title": "FoF Stop Forum Spam",
-            "category": "moderation",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-stop",
                 "backgroundColor": "#e74c3c",

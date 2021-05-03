@@ -1,5 +1,96 @@
 # Changelog
 
+## [0.1.0-beta.16](https://github.com/flarum/core/compare/v0.1.0-beta.15...v0.1.0-beta.16)
+
+### Added
+- Allow event subscribers (https://github.com/flarum/core/pull/2535)
+- Allow Settings extender to have a default value (https://github.com/flarum/core/pull/2495)
+- Allow hooking into the sending of notifications before being send (https://github.com/flarum/core/pull/2533)
+- PHP 8 support (https://github.com/flarum/core/pull/2507)
+- Search extender (https://github.com/flarum/core/pull/2483)
+- User badges to post preview (https://github.com/flarum/core/pull/2555)
+- Optional extension dependencies allow a booting order (https://github.com/flarum/core/pull/2579)
+- Auth extender (https://github.com/flarum/core/pull/2176)
+- `X-Powered-By` header added to allow indexers easier data aggregation of Flarum adoption (https://github.com/flarum/core/pull/2618)
+
+### Changed
+- Run integration tests in transaction (https://github.com/flarum/core/pull/2304)
+- Allow policies to return a boolean for simplified allow/deny (https://github.com/flarum/core/pull/2534)
+- Converted highlight helper to typescript (https://github.com/flarum/core/pull/2532)
+- Add accessibility attributes to Mark as Read button (https://github.com/flarum/core/pull/2564)
+- Dismiss errors on change email modal upon a new request ([00913d5](https://github.com/flarum/core/commit/00913d5b0be2172cfce1f16aaf64a24f3d2e6d4b))
+- Disabled extensions now are marked with a red circle instead of a red dot (https://github.com/flarum/core/pull/2562)
+- Extension dependency errors now show the extension title instead of the ID (https://github.com/flarum/core/pull/2563)
+- Change `mutate` method on ApiSerializer extender to `attributes` (https://github.com/flarum/core/pull/2578)
+- Moved locale files to the core from the language pack (https://github.com/flarum/core/pull/2408)
+- AdminPage extensibility and generic improvements (https://github.com/flarum/core/pull/2593)
+- Remove entry of authors, link to https://flarum.org/team (https://github.com/flarum/core/pull/2625)
+- Search and filtering are split (https://github.com/flarum/core/pull/2454)
+- Move IP identification into a middleware (https://github.com/flarum/core/pull/2624)
+- Editor Driver abstraction introduced (https://github.com/flarum/core/pull/2594)
+- Allow overriding routes (https://github.com/flarum/core/pull/2577)
+- Split user edit permissions into permissions for editing of user credentials, username, groups and suspending (https://github.com/flarum/core/pull/2620)
+- Reduced number of admin extension categories (https://github.com/flarum/core/pull/2604)
+- Move search related classes to a dedicated Query namespace (https://github.com/flarum/core/pull/2645)
+- Rewrite common helpers into typescript (https://github.com/flarum/core/pull/2541)
+- `TextEditor` is moved to the common namespace for use in the admin frontend (https://github.com/flarum/core/pull/2649)
+- Update Laravel/Illuminate components to 8 (https://github.com/flarum/core/pull/2576)
+- Eager load relations in discussion listing to improve performance (https://github.com/flarum/core/pull/2639)
+- Adopt flarum/testing package (https://github.com/flarum/core/pull/2545)
+- Replace `user` gambit with `author` gambit ([612a57c](https://github.com/flarum/core/commit/612a57c4664415a3ea120103483645c32acc6f12))
+- Posts page of on user profile loads posts using username instead of id ([30017ee](https://github.com/flarum/core/commit/30017eef09ae9e78640c4e2cacd4909fffa8d775))
+
+### Fixed
+- Transform css breaks iOS scroll functionality (https://github.com/flarum/core/pull/2527)
+- Composer header is hidden on mobile devices (https://github.com/flarum/core/pull/2279)
+- Cannot delete a post or discussion of a deleted user (https://github.com/flarum/core/pull/2521)
+- DiscussionListPane jumps around not keeping the scroll position (https://github.com/flarum/core/pull/2402)
+- Infinite scroll on notifications dropdown broken (https://github.com/flarum/core/pull/2524)
+- The show language selector switch remains toggled on ([9347b12](https://github.com/flarum/core/commit/9347b12b47bf4ab97ffb7ca92673604b237c1012))
+- Model Visibility extender throws exception on extensions that aren't installed or enabled (https://github.com/flarum/core/pull/2580)
+- Extensions are marked as enabled when enabling fails to unmet extension dependencies (https://github.com/flarum/core/pull/2558)
+- Routes to admin extension pages without a valid ID break the admin page (https://github.com/flarum/core/pull/2584)
+- Disabled fieldset use an incorrect CSS property `disallowed` (https://github.com/flarum/core/pull/2585)
+- Scrolling to a post that is already loaded the Load More button shows and does not trigger (https://github.com/flarum/core/pull/2388)
+- Opening discussions on some mobile devices require a double tap (https://github.com/flarum/core/pull/2607)
+- iOS devices show erratic behavior in the post stream while updating (https://github.com/flarum/core/pull/2548)
+- Small mobile screens partially hides the composer when the keyboard is open (https://github.com/flarum/core/pull/2631)
+- Clearing cache does not clear the template cache in storage/views (https://github.com/flarum/core/pull/2648)
+- Boot errors show critical information (https://github.com/flarum/core/pull/2633)
+- List user endpoint discloses last online even if user choose against it (https://github.com/flarum/core/pull/2634)
+- Group gambit disclosed hidden groups (https://github.com/flarum/core/pull/2657)
+- Search results on small windows not fully visible (https://github.com/flarum/core/pull/2650)
+- Composer goes off screen on Safari when starting to type (https://github.com/flarum/core/pull/2660)
+- A search that has no results shows the search results dropdown ([b88a7cb](https://github.com/flarum/core/commit/b88a7cb33b56e318f11670e9e2d563aef94db039))
+- The composer modal moves around when typing on Safari ([a64c398](https://github.com/flarum/core/commit/a64c39835aba43e831209609f4a9638ae589aa41))
+
+### Removed
+- Deprecated CSRF wildcard path match
+- Deprecated policy and visibility scoping events
+- Deprecated post types event
+- Deprecated validation events
+- Deprecated notification events
+- Deprecated floodgate
+- Deprecated user preferences event
+- Deprecated formatting events
+- Deprecated api events
+- Deprecated bootstrap.php support
+- PHP 7.2 support (https://github.com/flarum/core/pull/2507)
+- Bidi attribute in the rendered HTML (https://github.com/flarum/core/pull/2602)
+- `AccessToken::find`, use `AccessToken::findValid` instead (https://github.com/flarum/core/pull/2651)
+
+### Deprecated
+- `GetModelIsPrivate` event (https://github.com/flarum/core/pull/2587)
+- `CheckingPassword` event (https://github.com/flarum/core/pull/2176)
+- `event()` helper (https://github.com/flarum/core/pull/2608)
+- `AccessToken::generate` argument `$lifetime` (https://github.com/flarum/core/pull/2651)
+- `Rememberer::remember` argument `$token` should receive an instance of `RememberAccessToken` with `AccessToken` being deprecated (https://github.com/flarum/core/pull/2651)
+- `Rememberer::rememberUser` (https://github.com/flarum/core/pull/2651)
+- `SessionAuthenticator::logIn` argument `$userId`, should be replaced with `AccessToken` (https://github.com/flarum/core/pull/2651)
+- `TextEditor` has been moved to `common` (https://github.com/flarum/core/pull/2649) 
+- `UserFilter` ([91e8b56](https://github.com/flarum/core/commit/91e8b569618957c86757ef89bac666e9102db5ae))
+
+
 ## [0.1.0-beta.15](https://github.com/flarum/core/compare/v0.1.0-beta.14.1...v0.1.0-beta.15)
 
 ### Added
@@ -210,7 +301,7 @@
 - SES mail support (#2011)
 - Backward compatibility layer for `Flarum\Mail\DriverInterface`, new methods from beta.12 are now required
 - `Flarum\Util\Str` helper class
-- `Flarum\Event\ConfigureMiddleware` event 
+- `Flarum\Event\ConfigureMiddleware` event
 
 ### Deprecated
 - `Flarum\Event\AbstractConfigureRoutes` event class

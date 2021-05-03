@@ -1,0 +1,113 @@
+.NeonChatFrame {
+    position: fixed;
+    bottom: 0;
+    z-index: @zindex-composer - 10;
+    max-width: 100%;
+    color: #000;
+
+    @media @phone {
+        right: 0 !important;
+
+        .ChatViewport .wrapper {
+            height: 400px;
+        }
+    }
+
+    .list {
+        max-height: 92%;
+    }
+
+    #chat-panel, .ChatViewport {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ChatViewport {
+        flex: 1;
+        max-height: 95%;
+    }
+
+    .ChatInput {
+        margin-top: auto;
+    }
+
+    .frame {
+        display: flex;
+        position: relative;
+        float: right;
+        max-width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+        outline: none;
+        height: 100%;
+
+        .censored {
+            box-shadow: inset 0px 0px 0px 1000px #dedede;
+            color: #dedede !important;
+            line-break: anywhere;
+            cursor: pointer;
+            .user-select(none);
+        }
+
+        #chat-panel {
+            width: 650px;
+
+            @media @phone {
+                max-width: 500px;
+            }
+
+            @media (max-width: 600px) {
+                max-width: 350px;
+            }
+
+            @media (max-width: 500px) {
+                max-width: 300px;
+            }
+
+            @media (max-width: 400px) {
+                max-width: 250px;
+            }
+        }
+
+        *[data-title]:after {
+            content: '';
+            opacity: 0;
+        }
+
+        *[data-title]:hover:after {
+            content: attr(data-title);
+            .transition(opacity .3s);
+
+            padding: 4px 8px;
+            color: #FFF;
+            position: absolute;
+            right: 0;
+            top: -30px;
+            white-space: nowrap;
+            z-index: 20;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #000;
+            opacity: 1.0;
+            font-size: 9pt;
+            line-height: 18px;
+        }
+    }
+}
+
+.moving {
+    cursor: move;
+
+    iframe {
+        pointer-events: none;
+    }
+}
+
+.hidden {
+    .frame {
+        .ChatViewport, .ChatList {
+            display: none;
+        }
+    }
+}

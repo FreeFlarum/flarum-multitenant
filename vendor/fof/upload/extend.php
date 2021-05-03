@@ -26,6 +26,8 @@ return [
         ->get('/fof/download/{uuid}/{post}/{csrf}', 'fof-upload.download', Api\Controllers\DownloadController::class)
         ->patch('/fof/upload/hide', 'fof-upload.hide', Api\Controllers\HideUploadFromMediaManagerController::class),
 
+    (new Extend\Csrf())->exemptRoute('fof-upload.download'),
+
     (new Extend\Frontend('admin'))
         ->css(__DIR__.'/resources/less/admin.less')
         ->js(__DIR__.'/js/dist/admin.js'),
@@ -42,7 +44,7 @@ return [
     new Extenders\CreateStorageFolder('tmp'),
 
     (new Extend\ApiSerializer(ForumSerializer::class))
-        ->mutate(Extenders\AddForumAttributes::class),
+        ->attributes(Extenders\AddForumAttributes::class),
 
     (new Extend\Event())
         ->listen(Deserializing::class, Listeners\AddAvailableOptionsInAdmin::class)
@@ -60,5 +62,5 @@ return [
         ->parse(Formatter\ReplaceDeprecatedTemplates::class),
 
     (new Extend\ApiSerializer(CurrentUserSerializer::class))
-        ->mutate(Extenders\AddCurrentUserAttributes::class),
+        ->attributes(Extenders\AddCurrentUserAttributes::class),
 ];

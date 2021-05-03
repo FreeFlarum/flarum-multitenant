@@ -9,7 +9,7 @@
  *
  */
 
-import Page from 'flarum/components/Page';
+import Page from 'flarum/common/components/Page';
 
 import RequestsList from './RequestsList';
 
@@ -18,6 +18,8 @@ export default class RequestsPage extends Page {
         super.oninit(vnode);
 
         app.history.push('requests');
+
+        app.usernameRequests.load();
 
         this.bodyClass = 'App--requests';
     }

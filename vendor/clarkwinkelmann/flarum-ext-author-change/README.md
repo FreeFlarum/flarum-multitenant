@@ -13,7 +13,7 @@ Users with "Update author" permission must also have the "View user list" permis
 #### Date edit
 
 The field uses the native [datetime-local](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local) picker in browsers that support it (at the time of writing, Chrome/Edge/Opera).
-The field format in supported browser will match your browser/operating system language and country setting.
+The field format in supported browsers will match your browser/operating system language and country setting.
 
 **The time in the modal is UTC.**
 

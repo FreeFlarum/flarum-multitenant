@@ -9,7 +9,6 @@
 
 use Flarum\Api\Serializer\BasicUserSerializer;
 use Flarum\Api\Serializer\UserSerializer;
-use Flarum\Event\ConfigureUserGambits;
 use Flarum\Extend;
 use Flarum\Suspend\Access\UserPolicy;
 use Flarum\Suspend\AddUserSuspendAttributes;
@@ -18,11 +17,12 @@ use Flarum\Suspend\Event\Unsuspended;
 use Flarum\Suspend\Listener;
 use Flarum\Suspend\Notification\UserSuspendedBlueprint;
 use Flarum\Suspend\Notification\UserUnsuspendedBlueprint;
+use Flarum\Suspend\Query\SuspendedFilterGambit;
 use Flarum\Suspend\RevokeAccessFromSuspendedUsers;
-use Flarum\Suspend\Search\Gambit\SuspendedGambit;
 use Flarum\User\Event\Saving;
+use Flarum\User\Filter\UserFilterer;
+use Flarum\User\Search\UserSearcher;
 use Flarum\User\User;
-use Illuminate\Contracts\Events\Dispatcher;
 
 return [
     (new Extend\Frontend('forum'))
@@ -37,7 +37,7 @@ return [
         ->dateAttribute('suspended_until'),
 
     (new Extend\ApiSerializer(UserSerializer::class))
-        ->mutate(AddUserSuspendAttributes::class),
+        ->attributes(AddUserSuspendAttributes::class),
 
     new Extend\Locales(__DIR__.'/locale'),
 
@@ -56,9 +56,9 @@ return [
     (new Extend\User())
         ->permissionGroups(RevokeAccessFromSuspendedUsers::class),
 
-    function (Dispatcher $events) {
-        $events->listen(ConfigureUserGambits::class, function (ConfigureUserGambits $event) {
-            $event->gambits->add(SuspendedGambit::class);
-        });
-    }
+    (new Extend\Filter(UserFilterer::class))
+        ->addFilter(SuspendedFilterGambit::class),
+
+    (new Extend\SimpleFlarumSearch(UserSearcher::class))
+        ->addGambit(SuspendedFilterGambit::class)
 ];

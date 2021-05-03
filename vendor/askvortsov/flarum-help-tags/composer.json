@@ -1,0 +1,41 @@
+{
+  "name": "askvortsov/flarum-help-tags",
+  "description": "Allow members to post in a tag, but only see discussions that they created or have been granted access to.",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/askvortsov1/flarum-help-tags/issues",
+    "source": "https://github.com/askvortsov1/flarum-help-tags",
+    "forum": "https://discuss.flarum.org/d/23004-flarum-help-tags"
+  },
+  "require": {
+    "flarum/core": "^0.1.0-beta.16",
+    "flarum/tags": "^0.1.0-beta.16"
+  },
+  "authors": [
+    {
+      "name": "Alexander Skvortsov",
+      "email": "askvortsov@flarum.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Askvortsov\\FlarumHelpTags\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Help Tags",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-question-circle",
+        "backgroundColor": "#6932d1",
+        "color": "#fff"
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@ return [
         ->post('/users/{id}/spamblock', 'users.spamblock', Controllers\MarkAsSpammerController::class),
 
     (new Extend\ApiSerializer(UserSerializer::class))
-        ->mutate(AddPermissions::class),
+        ->attributes(AddPermissions::class),
 
     (new Extend\Policy())
         ->modelPolicy(User::class, Access\UserPolicy::class),

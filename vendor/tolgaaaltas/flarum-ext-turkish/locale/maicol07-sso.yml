@@ -8,6 +8,7 @@ maicol07-sso:
       jwt_iss: 'Sertifikayı Veren Etki Alanı'
       jwt_section_subtitle: 'JWT Eklenti ayarları'
       jwt_signer_key: 'İmzalayan anahtarı'
+      jwt_signing_algorithm: 'İmzalama Yöntemi'
       login_url: 'Giriş Bağlantısı'
       logout_url: 'Çıkış Bağlantısı'
       manage_account_btn_open_in_new_tab: 'Hesap yönetimini yeni bir sekmede açın'

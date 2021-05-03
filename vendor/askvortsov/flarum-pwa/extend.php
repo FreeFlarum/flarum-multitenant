@@ -3,7 +3,7 @@
 /*
  * This file is part of askvortsov/flarum-pwa
  *
- *  Copyright (c) 2020 Alexander Skvortsov.
+ *  Copyright (c) 2021 Alexander Skvortsov.
  *
  *  For detailed copyright and license information, please view the
  *  LICENSE file that was distributed with this source code.
@@ -22,15 +22,17 @@ use Illuminate\Support\Arr;
 
 $metaClosure = function (Document $document) {
     $forumApiDocument = $document->getForumApiDocument();
-    $forumName = Arr::get($forumApiDocument, 'data.attributes.title');
     $basePath = rtrim(Arr::get($forumApiDocument, 'data.attributes.basePath'), '/');
+
+    $settings = app(SettingsRepositoryInterface::class);
+    $appName = $settings->get('askvortsov-pwa.shortName', $settings->get('askvortsov-pwa.longName', $settings->get('forum_title')));
 
     $document->head[] = "<link rel='manifest' href='$basePath/webmanifest'>";
     $document->head[] = "<meta name='apple-mobile-web-app-capable' content='yes'>";
     $document->head[] = "<meta id='apple-style' name='apple-mobile-web-app-status-bar-style' content='default'>";
-    $document->head[] = "<meta id='apple-title' name='apple-mobile-web-app-title' content='$forumName'>";
+    $document->head[] = "<meta id='apple-title' name='apple-mobile-web-app-title' content='$appName'>";
 
-    $settings = app(SettingsRepositoryInterface::class);
+    $settings = resolve(SettingsRepositoryInterface::class);
 
     foreach (PWATrait::$SIZES as $size) {
         if (($sizePath = $settings->get('askvortsov-pwa.icon_'.strval($size).'_path'))) {
@@ -69,9 +71,7 @@ return [
         }),
 
     (new Extend\Settings())
-        ->serializeToForum('vapidPublicKey', 'askvortsov-pwa.vapid.public', function ($val) {
-            return Util::url_encode($val);
-        }),
+        ->serializeToForum('vapidPublicKey', 'askvortsov-pwa.vapid.public', [Util::class, 'url_encode']),
 
     (new Extend\Notification())
         ->driver('push', PushNotificationDriver::class),

@@ -3,9 +3,9 @@
 /*
  * This file is part of fof/sitemap.
  *
- * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- *  For the full copyright and license information, please view the LICENSE.md
+ *  For the full copyright and license information, please view the LICENSE
  *  file that was distributed with this source code.
  *
  */
@@ -20,14 +20,14 @@ class ResourceProvider extends AbstractServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('fof.sitemap.resources', function () {
+        $this->container->singleton('fof.sitemap.resources', function () {
             $resources = [
                 new Resources\User(),
                 new Resources\Discussion(),
             ];
 
             /** @var ExtensionManager $extensions */
-            $extensions = $this->app->make(ExtensionManager::class);
+            $extensions = $this->container->make(ExtensionManager::class);
 
             if ($extensions->isEnabled('flarum-tags')) {
                 $resources[] = new Resources\Tag();

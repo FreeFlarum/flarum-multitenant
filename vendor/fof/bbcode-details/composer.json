@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "flarum/core": "^0.1.0-beta.14"
+    "flarum/core": "^0.1.0-beta.16"
   },
   "authors": [
     {
@@ -43,7 +43,7 @@
   "extra": {
     "flarum-extension": {
       "title": "FoF BBCode Details",
-      "category": "formatting",
+      "category": "feature",
       "icon": {
         "name": "fas fa-minus-square",
         "backgroundColor": "#e74c3c",

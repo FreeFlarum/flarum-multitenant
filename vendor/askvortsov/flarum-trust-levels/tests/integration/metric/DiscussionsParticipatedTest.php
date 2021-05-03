@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of askvortsov/flarum-trust-levels
+ *
+ *  Copyright (c) 2021 Alexander Skvortsov.
+ *
+ *  For detailed copyright and license information, please view the
+ *  LICENSE file that was distributed with this source code.
+ */
+
 namespace Askvortsov\TrustLevels\Tests\integration\metric;
 
 use Carbon\Carbon;
@@ -17,7 +26,7 @@ class DiscussionsParticipatedTest extends TestCase
     /**
      * @inheritDoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -28,11 +37,11 @@ class DiscussionsParticipatedTest extends TestCase
                 $this->normalUser(),
             ],
             'discussions' => [
-                ['id' => 1, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 2, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 3, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 4, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 5, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
+                ['id' => 1, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 2, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 3, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 4, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 5, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
             ],
             'posts' => [
                 ['id' => 1, 'discussion_id' => 1, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
@@ -40,7 +49,7 @@ class DiscussionsParticipatedTest extends TestCase
                 ['id' => 2, 'discussion_id' => 1, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
                 ['id' => 3, 'discussion_id' => 2, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
                 ['id' => 4, 'discussion_id' => 3, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
-                ['id' => 5, 'discussion_id' => 3, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>']
+                ['id' => 5, 'discussion_id' => 3, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
             ],
         ]);
     }
@@ -52,7 +61,7 @@ class DiscussionsParticipatedTest extends TestCase
     {
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertNotContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertNotContains(4, User::find(2)->groups->pluck('id')->all());
     }
 
     /**
@@ -62,15 +71,15 @@ class DiscussionsParticipatedTest extends TestCase
     {
         $this->prepareDatabase(['trust_levels' => [
             $this->genTrustLevel('discussions participated', 4, [
-                'discussions_participated' => [2, 10]
-            ])
+                'discussions_participated' => [2, 10],
+            ]),
         ]]);
 
         $this->app();
-        User::find(2)->refreshCommentCount()->save();
-        $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
+        User::where('id', 2)->first()->refreshCommentCount()->save();
+        $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::where('id', 2)->first(), new AccessToken([])));
 
-        $this->assertContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertContains(4, User::where('id', 2)->first()->groups->pluck('id')->all());
     }
 
     /**
@@ -80,23 +89,23 @@ class DiscussionsParticipatedTest extends TestCase
     {
         $this->prepareDatabase(['trust_levels' => [
             $this->genTrustLevel('discussions participated', 4, [
-                'discussions_participated' => [-1, 2]
+                'discussions_participated' => [-1, 2],
             ]),
             $this->genTrustLevel('discussions participated', 4, [
-                'discussions_participated' => [1, 2]
+                'discussions_participated' => [1, 2],
             ]),
             $this->genTrustLevel('discussions participated', 4, [
-                'discussions_participated' => [4, 100]
+                'discussions_participated' => [4, 100],
             ]),
             $this->genTrustLevel('discussions participated', 4, [
-                'discussions_participated' => [4, -1]
-            ])
+                'discussions_participated' => [4, -1],
+            ]),
         ]]);
 
         $this->app();
         User::find(2)->refreshCommentCount()->save();
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertNotContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertNotContains(4, User::find(2)->groups->pluck('id')->all());
     }
 }

@@ -11,9 +11,4 @@ jslirola-login2seeplus:
     image: Imágenes
     code: Código
     post:
-      title: Ocultar contenido que exceda esta longitud
-      help: Introduce <em>-1</em> para mostrar todo.
-    php:
-      title: Legacy Mode
-      help: "El servidor procesa el contenido. Requiere la extensión <code>mbstring</code> instalada."
-      label: Usar PHP
+      title: Ocultar contenido que exceda esta longitud (<em>-1</em> para mostrar todo)

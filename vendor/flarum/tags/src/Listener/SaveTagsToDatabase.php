@@ -16,7 +16,7 @@ use Flarum\Tags\Event\DiscussionWasTagged;
 use Flarum\Tags\Tag;
 use Flarum\User\Exception\PermissionDeniedException;
 use Illuminate\Contracts\Validation\Factory;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class SaveTagsToDatabase
 {
@@ -57,25 +57,46 @@ class SaveTagsToDatabase
         $discussion = $event->discussion;
         $actor = $event->actor;
 
-        // TODO: clean up, prevent discussion from being created without tags
-        if (isset($event->data['relationships']['tags']['data'])) {
-            if ($discussion->exists) {
-                $actor->assertCan('tag', $discussion);
-            }
+        $newTagIds = [];
+        $newTags = [];
 
+        $primaryCount = 0;
+        $secondaryCount = 0;
+
+        if (isset($event->data['relationships']['tags']['data'])) {
             $linkage = (array) $event->data['relationships']['tags']['data'];
 
-            $newTagIds = [];
             foreach ($linkage as $link) {
                 $newTagIds[] = (int) $link['id'];
             }
 
             $newTags = Tag::whereIn('id', $newTagIds)->get();
-            $primaryCount = 0;
-            $secondaryCount = 0;
+        }
+
+        if ($discussion->exists && isset($event->data['relationships']['tags']['data'])) {
+            $actor->assertCan('tag', $discussion);
+
+            $oldTags = $discussion->tags()->get();
+            $oldTagIds = $oldTags->pluck('id')->all();
+
+            if ($oldTagIds == $newTagIds) {
+                return;
+            }
 
             foreach ($newTags as $tag) {
-                if ($actor->cannot('startDiscussion', $tag)) {
+                if (! in_array($tag->id, $oldTagIds) && $actor->cannot('addToDiscussion', $tag)) {
+                    throw new PermissionDeniedException;
+                }
+            }
+
+            $discussion->raise(
+                new DiscussionWasTagged($discussion, $actor, $oldTags->all())
+            );
+        }
+
+        if (! $discussion->exists || isset($event->data['relationships']['tags']['data'])) {
+            foreach ($newTags as $tag) {
+                if (! $discussion->exists && $actor->cannot('startDiscussion', $tag)) {
                     throw new PermissionDeniedException;
                 }
 
@@ -86,33 +107,18 @@ class SaveTagsToDatabase
                 }
             }
 
-            $this->validateTagCount('primary', $primaryCount);
-            $this->validateTagCount('secondary', $secondaryCount);
+            if (! $discussion->exists && $primaryCount === 0 && $secondaryCount === 0 && ! $actor->hasPermission('startDiscussion')) {
+                throw new PermissionDeniedException;
+            }
 
-            if ($discussion->exists) {
-                $oldTags = $discussion->tags()->get();
-                $oldTagIds = $oldTags->pluck('id')->all();
-
-                if ($oldTagIds == $newTagIds) {
-                    return;
-                }
-
-                foreach ($newTags as $tag) {
-                    if (! in_array($tag->id, $oldTagIds) && $actor->cannot('addToDiscussion', $tag)) {
-                        throw new PermissionDeniedException;
-                    }
-                }
-
-                $discussion->raise(
-                    new DiscussionWasTagged($discussion, $actor, $oldTags->all())
-                );
+            if (! $actor->can('bypassTagCounts', $discussion)) {
+                $this->validateTagCount('primary', $primaryCount);
+                $this->validateTagCount('secondary', $secondaryCount);
             }
 
             $discussion->afterSave(function ($discussion) use ($newTagIds) {
                 $discussion->tags()->sync($newTagIds);
             });
-        } elseif (! $discussion->exists && ! $actor->hasPermission('startDiscussion')) {
-            throw new PermissionDeniedException;
         }
     }
 

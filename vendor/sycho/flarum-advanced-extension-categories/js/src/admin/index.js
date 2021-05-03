@@ -1,4 +1,4 @@
-import { override } from 'flarum/common/extend';
+import { override, extend } from 'flarum/common/extend';
 import AdminNav from 'flarum/admin/components/AdminNav';
 import ExtensionLinkButton from 'flarum/admin/components/ExtensionLinkButton';
 import ExtensionsWidget from 'flarum/admin/components/ExtensionsWidget';
@@ -20,6 +20,7 @@ app.initializers.add(
     const categorizationOptions = {
       default: app.translator.trans('sycho-ace.admin.category_selection.options.default'),
       vendor: app.translator.trans('sycho-ace.admin.category_selection.options.vendor'),
+      availability: app.translator.trans('sycho-ace.admin.category_selection.options.availability'),
       none: app.translator.trans('sycho-ace.admin.category_selection.options.none'),
     };
 
@@ -78,25 +79,11 @@ app.initializers.add(
       return items;
     };
 
-    ExtensionsWidget.prototype.extension = function (extension) {
-      return (
-        <li className={'ExtensionListItem ' + (!isExtensionEnabled(extension.id) ? 'disabled' : '')}>
-          <Link href={app.route('extension', { id: extension.id })}>
-            <div className="ExtensionListItem-content">
-              <span className="ExtensionListItem-icon ExtensionIcon" style={extension.icon}>
-                {extension.icon ? icon(extension.icon.name) : ''}
-              </span>
-              <span className="ExtensionListItem-title">{extension.extra['flarum-extension'].title}</span>
-            </div>
-          </Link>
-        </li>
-      );
-    };
+    override(ExtensionsWidget.prototype, 'oninit', function () {
+      this.categorizedExtensions = overrideGetCategorizedExtensions();
+    });
 
-    override(ExtensionsWidget.prototype, 'content', function (original, vnode) {
-      const categorizedExtensions = overrideGetCategorizedExtensions();
-      const categories = app.extensionCategories;
-
+    override(ExtensionsWidget.prototype, 'content', function (original) {
       return [
         <div className="ExtensionsWidget-list-heading">
           <h2 className="ExtensionsWidget-list-name">
@@ -105,30 +92,19 @@ app.initializers.add(
           </h2>
           <div className="ExtensionsWidget-list-controls">{this.controlItems().toArray()}</div>
         </div>,
-        <div className="ExtensionsWidget-list">
-          {Object.keys(categories).map((category) => {
-            if (categorizedExtensions[category]) {
-              return (
-                <div className="ExtensionList-Category">
-                  <h4 className="ExtensionList-Label">{categoryLabels[category]}</h4>
-                  <ul className="ExtensionList">
-                    {categorizedExtensions[category].map((extension) => {
-                      return this.extension(extension);
-                    })}
-                  </ul>
-                </div>
-              );
-            }
-          })}
-        </div>,
+        original()
       ];
+    });
+
+    extend(ExtensionsWidget.prototype, 'extensionCategory', function (vnode, category) {
+      vnode.children[0].text = categoryLabels[category];
     });
 
     override(AdminNav.prototype, 'extensionItems', function () {
       const items = new ItemList();
 
       const categorizedExtensions = overrideGetCategorizedExtensions();
-      const categories = getCategories();
+      const categories = app.extensionCategories;
 
       Object.keys(categorizedExtensions).map((category) => {
         if (!this.query()) {

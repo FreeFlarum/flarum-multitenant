@@ -12,7 +12,7 @@ namespace Flarum\Mentions\Notification;
 use Flarum\Notification\Blueprint\BlueprintInterface;
 use Flarum\Notification\MailableInterface;
 use Flarum\Post\Post;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class PostMentionedBlueprint implements BlueprintInterface, MailableInterface
 {
@@ -74,7 +74,7 @@ class PostMentionedBlueprint implements BlueprintInterface, MailableInterface
     public function getEmailSubject(TranslatorInterface $translator)
     {
         return $translator->trans('flarum-mentions.email.post_mentioned.subject', [
-            '{replier_display_name}' => $this->post->user->display_name,
+            '{replier_display_name}' => $this->reply->user->display_name,
             '{title}' => $this->post->discussion->title
         ]);
     }

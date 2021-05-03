@@ -5,11 +5,18 @@ export default function getCategoryLabels() {
   const categories = getCategories();
 
   Object.keys(categories).map((category) => {
-    if (app.data.settings['sycho-ace.selected-categorization'] === 'default')
-      labels[category] = app.translator.trans(`core.admin.nav.categories.${category}`);
-    else if (app.data.settings['sycho-ace.selected-categorization'] === 'none')
-      labels[category] = app.translator.trans(`sycho-ace.admin.categories.none`);
-    else labels[category] = category;
+    switch (app.data.settings['sycho-ace.selected-categorization']) {
+      case 'default':
+        labels[category] = app.translator.trans(`core.admin.nav.categories.${category}`);
+        break;
+
+      case 'vendor':
+        labels[category] = category;
+        break;
+
+      default:
+        labels[category] = app.translator.trans(`sycho-ace.admin.categories.${category}`);
+    }
   });
 
   return labels;

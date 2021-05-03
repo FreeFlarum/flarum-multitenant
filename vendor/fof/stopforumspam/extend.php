@@ -24,5 +24,6 @@ return[
     (new Extend\Event())
         ->listen(MarkedUserAsSpammer::class, Listeners\ReportSpammer::class),
 
-    (new Extend\Middleware('forum'))->add(RegisterMiddleware::class),
+    (new Extend\Middleware('forum'))
+        ->add(RegisterMiddleware::class),
 ];

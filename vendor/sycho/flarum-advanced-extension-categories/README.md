@@ -1,6 +1,6 @@
 # Advanced Extension Categories
 [![latest version](https://img.shields.io/packagist/v/sycho/flarum-advanced-extension-categories.svg?style=flat-square)](https://packagist.org/packages/sycho/flarum-advanced-extension-categories)
-![flarum version](https://img.shields.io/badge/flarum-%3E=0.1.0--beta.15%3C0.1.0--beta.16-%23e7742e?style=flat-square)
+![flarum version](https://img.shields.io/badge/flarum-%3E=0.1.0--beta.16-%23e7742e?style=flat-square)
 ![mit license](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&color=green)
 ![downloads](https://img.shields.io/packagist/dt/sycho/flarum-advanced-extension-categories?color=%23f28d1a&style=flat-square)
 

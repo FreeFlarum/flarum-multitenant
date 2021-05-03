@@ -9,9 +9,9 @@
  *
  */
 
-import { extend } from 'flarum/extend';
-import Button from 'flarum/components/Button';
-import SettingsPage from 'flarum/components/SettingsPage';
+import { extend } from 'flarum/common/extend';
+import Button from 'flarum/common/components/Button';
+import SettingsPage from 'flarum/common/components/SettingsPage';
 import RequestModal from './components/RequestModal';
 
 export default function () {

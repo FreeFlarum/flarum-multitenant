@@ -1,0 +1,51 @@
+{
+  "name": "itnt/flarum-uitab",
+  "description": "Add a UI Tab to your Flarum.",
+  "keywords": [
+    "flarum",
+    "extension",
+    "tab",
+    "ui"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Golden",
+      "email": "littlegoldenjin@gmail.com",
+      "homepage": "https://bbs.csur.fun/u/Golden"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/Littlegolden/flarum-uitab",
+    "issues": "https://github.com/Littlegolden/flarum-uitab/issues"
+  },
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://pay.csur.fun/"
+    }
+  ],
+  "require": {
+    "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17"
+  },
+  "autoload": {
+    "psr-4": {
+        "ITNT\\UITab\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "UI Tab ",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-grip-horizontal",
+        "background": "#f8504b",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+			"discuss": "https://discuss.flarum.org/d/22880"
+		}
+  }
+}

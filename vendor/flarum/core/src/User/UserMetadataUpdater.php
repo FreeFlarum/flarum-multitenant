@@ -42,9 +42,7 @@ class UserMetadataUpdater
      */
     public function whenPostWasDeleted(PostDeleted $event)
     {
-        if ($event->post->user && $event->post->user) {
-            $this->updateCommentsCount($event->post->user);
-        }
+        $this->updateCommentsCount($event->post->user);
     }
 
     /**
@@ -83,4 +81,3 @@ class UserMetadataUpdater
         }
     }
 }
-

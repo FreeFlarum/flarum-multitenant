@@ -1,10 +1,12 @@
 flarum-flags:
+
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the admin interface.
   admin:
+
     # These translations are used in the Permissions page of the admin interface.
     permissions:
       flag_posts_label: Segnalare un messaggio
@@ -18,6 +20,7 @@ flarum-flags:
 
   # Translations in this namespace are used by the forum user interface.
   forum:
+
     # These translations are used by the Flag Post modal dialog.
     flag_post:
       confirmation_message: Grazie per la segnalazione.

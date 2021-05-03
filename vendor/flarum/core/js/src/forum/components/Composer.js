@@ -76,13 +76,13 @@ export default class Composer extends Component {
 
     // Whenever any of the inputs inside the composer are have focus, we want to
     // add a class to the composer to draw attention to it.
-    this.$().on('focus blur', ':input', (e) => {
+    this.$().on('focus blur', ':input,.TextEditor-editorContainer', (e) => {
       this.active = e.type === 'focusin';
       m.redraw();
     });
 
     // When the escape key is pressed on any inputs, close the composer.
-    this.$().on('keydown', ':input', 'esc', () => this.state.close());
+    this.$().on('keydown', ':input,.TextEditor-editorContainer', 'esc', () => this.state.close());
 
     this.handlers = {};
 
@@ -157,7 +157,7 @@ export default class Composer extends Component {
    * Draw focus to the first focusable content element (the text editor).
    */
   focus() {
-    this.$('.Composer-content :input:enabled:visible:first').focus();
+    this.$('.Composer-content :input:enabled:visible, .TextEditor-editor').first().focus();
   }
 
   /**
@@ -265,7 +265,17 @@ export default class Composer extends Component {
     this.animateHeightChange().then(() => this.focus());
 
     if (app.screen() === 'phone') {
-      this.$().css('top', $(window).scrollTop());
+      // On safari fixed position doesn't properly work on mobile,
+      // So we use absolute and set the top value.
+      // https://github.com/flarum/core/issues/2652
+
+      // Due to another safari bug, `scrollTop` is unreliable when
+      // at the very bottom of the page AND opening the composer.
+      // So we fallback to a calculated version of scrollTop.
+      // https://github.com/flarum/core/issues/2683
+      const scrollElement = document.documentElement;
+      const topOfViewport = Math.min(scrollElement.scrollTop, scrollElement.scrollHeight - scrollElement.clientHeight);
+      this.$().css('top', $('.App').is('.mobile-safari') ? topOfViewport : 0);
       this.showBackdrop();
     }
   }

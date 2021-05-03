@@ -20,6 +20,8 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
@@ -30,64 +32,82 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '25ccdd149a72aa542534d9fe6641b419b6fc16ba',
+    'reference' => '55a562ec0fc8abd9610ef7b420344a31d1bf3484',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
   array (
     'antoinefr/flarum-ext-money' => 
     array (
-      'pretty_version' => 'v0.11.0',
-      'version' => '0.11.0.0',
+      'pretty_version' => 'v0.12.0',
+      'version' => '0.12.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a76c30aef82ac4a4e9341b6aaab92b00fcd19705',
+      'reference' => '8b21be5d9aca56d267567a96bf15af40ce466f59',
     ),
     'askvortsov/flarum-categories' => 
     array (
-      'pretty_version' => 'v2.0.0',
-      'version' => '2.0.0.0',
+      'pretty_version' => 'v2.1.1',
+      'version' => '2.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '96f9426f7016d9690674bae8dea8863ba84d42d2',
+      'reference' => '368b3812a0f0c8bc9298a5fa6211ed7de99224b4',
     ),
     'askvortsov/flarum-discussion-templates' => 
+    array (
+      'pretty_version' => 'v0.7.0',
+      'version' => '0.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '38013cfb3194546944507ad74ae2f297f3b8de1a',
+    ),
+    'askvortsov/flarum-help-tags' => 
+    array (
+      'pretty_version' => 'v0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '70a3246538f6026f30f24f7ee650bfbe91b25cfe',
+    ),
+    'askvortsov/flarum-moderator-warnings' => 
     array (
       'pretty_version' => 'v0.5.0',
       'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fd432f0515c9c4fcb54f10dfff6692bc8fea0eab',
-    ),
-    'askvortsov/flarum-moderator-warnings' => 
-    array (
-      'pretty_version' => 'v0.4.2',
-      'version' => '0.4.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '49b77af733ef442f22a44e6b95c2e94ad1a72756',
+      'reference' => '3655d6445ad773a2fec65d37a3d770d28183f854',
     ),
     'askvortsov/flarum-pwa' => 
     array (
-      'pretty_version' => 'v2.0.4',
-      'version' => '2.0.4.0',
+      'pretty_version' => 'v2.4.1',
+      'version' => '2.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '25f2d54d317415a58426aa4d1b68cf2714226d85',
+      'reference' => '97287fde4b6013136dbcba12cd0c053fd463c5eb',
+    ),
+    'askvortsov/flarum-rich-text' => 
+    array (
+      'pretty_version' => 'v1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c0c6a82b16528cef02a5f76624362b56f8a34bb7',
     ),
     'askvortsov/flarum-trust-levels' => 
     array (
-      'pretty_version' => 'v0.1.4',
-      'version' => '0.1.4.0',
+      'pretty_version' => 'v0.2.1',
+      'version' => '0.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '582fc8f5777b627d2bc62a27521b9dc3b8a49dfe',
+      'reference' => 'd34a941ae42b1bb4b5adf2e598b1fa100f0ef6aa',
     ),
     'avatar4eg/flarum-ext-share-social' => 
     array (
@@ -98,12 +118,12 @@ private static $installed = array (
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.178.9',
-      'version' => '3.178.9.0',
+      'pretty_version' => '3.179.2',
+      'version' => '3.179.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '89710500988a8a7d77f1282fcf6a1d0ad8297eaf',
+      'reference' => '7d3490e35878d0884905fa0c1ab43ecf178c8d9b',
     ),
     'axy/backtrace' => 
     array (
@@ -168,14 +188,23 @@ private static $installed = array (
       ),
       'reference' => 'dff976c2f3487d42c1db75a3b180e2b9f0e72ce0',
     ),
-    'clarkwinkelmann/flarum-ext-author-change' => 
+    'clarkwinkelmann/catch-the-fish' => 
     array (
-      'pretty_version' => '0.2.2',
-      'version' => '0.2.2.0',
+      'pretty_version' => '0.1.3',
+      'version' => '0.1.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9dc6aaf2e149655f81b8e70d6f63ad6e30ba41f9',
+      'reference' => 'df2af7c98e339c39183b9e94908ab824a6f4a93d',
+    ),
+    'clarkwinkelmann/flarum-ext-author-change' => 
+    array (
+      'pretty_version' => '0.2.3',
+      'version' => '0.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '12409758686a5da9556bc091d5b20ae85315ef1a',
     ),
     'clarkwinkelmann/flarum-ext-create-user-modal' => 
     array (
@@ -188,12 +217,12 @@ private static $installed = array (
     ),
     'clarkwinkelmann/flarum-ext-emojionearea' => 
     array (
-      'pretty_version' => '0.3.0',
-      'version' => '0.3.0.0',
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '91737d5b25439d06c1890e12c0e6d7da021bec9d',
+      'reference' => 'd10ac24ab195d7e357042484e11b9f8e07c91363',
     ),
     'clarkwinkelmann/flarum-ext-first-post-approval' => 
     array (
@@ -263,14 +292,23 @@ private static $installed = array (
         0 => '*',
       ),
     ),
-    'dflydev/fig-cookies' => 
+    'dem13n/discussion-cards' => 
     array (
-      'pretty_version' => 'v2.0.3',
-      'version' => '2.0.3.0',
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b',
+      'reference' => '55fa0fea048eab95af368a4a89497472030e7d50',
+    ),
+    'dflydev/fig-cookies' => 
+    array (
+      'pretty_version' => 'v3.0.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ea6934204b1b34ffdf5130dc7e0928d18ced2498',
     ),
     'doctrine/cache' => 
     array (
@@ -355,12 +393,12 @@ private static $installed = array (
     ),
     'fgribreau/mailchecker' => 
     array (
-      'pretty_version' => 'v3.3.17',
-      'version' => '3.3.17.0',
+      'pretty_version' => 'v4.0.7',
+      'version' => '4.0.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b822b1d259d8cccef24849f81c9a0f7bcb066c4e',
+      'reference' => '72b5ba8492acd4ee10fd8b94687be988219ed376',
     ),
     'fgrosse/phpasn1' => 
     array (
@@ -454,12 +492,12 @@ private static $installed = array (
     ),
     'flarum/approval' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '6d73226a3dbe8867f48a53e98a2a7e55b33bbf32',
+      'reference' => '6331da4a2aa77b1435cdb1b078f6c2c9683aa07a',
     ),
     'flarum/auth-facebook' => 
     array (
@@ -484,48 +522,48 @@ private static $installed = array (
     ),
     'flarum/bbcode' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'f870df04a68175004d1e67be0a0c0ce1407b5fb9',
+      'reference' => 'e2c5c28829b30d3a05ea175a359fc4415219e45c',
     ),
     'flarum/core' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'f8edc2d827fee47dc78fbb75ee1d3b28580ed11d',
+      'reference' => '9fffb8ec1a15926b5ee10c052224e5cc8035b6f5',
     ),
     'flarum/embed' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '3d3f72b6c8db74d6b92f74992eef8871a0088957',
+      'reference' => '6f4345b7da072e45c6f08f4ae68e75464d49a124',
     ),
     'flarum/emoji' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'e51c59f0128e9c877ff61e2ce9efd63e861209b8',
+      'reference' => '1f9356087457da90799d6601edec002d1a9873f6',
     ),
     'flarum/flags' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '4a6d7657d1259c217b43f814ca3e4918ab55ef6b',
+      'reference' => '53465badf825392f402f70702dc5c5660a1bac76',
     ),
     'flarum/flarum' => 
     array (
@@ -534,124 +572,124 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '25ccdd149a72aa542534d9fe6641b419b6fc16ba',
+      'reference' => '55a562ec0fc8abd9610ef7b420344a31d1bf3484',
     ),
     'flarum/lang-english' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'db94e7e178be298f266558953555cb6f5373a94e',
+      'reference' => 'aec3e4f9b39d61caf63d601306b35e57828fce12',
     ),
     'flarum/likes' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '985ca7a2022148f64ac291c2e18c3300a0b1423c',
+      'reference' => '975739e8bfc762405348c0b4822442126e0d5932',
     ),
     'flarum/lock' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '3dcbfc67af206e34095e32af5f96a603145db752',
+      'reference' => 'c4383c318899fce6d5e7c936695edbe5f7f49c88',
     ),
     'flarum/markdown' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16.1',
+      'version' => '0.1.0.0-beta16.1',
       'aliases' => 
       array (
       ),
-      'reference' => 'd27e1087b37ac9ae5375252d6b9bff31ff6ca71d',
+      'reference' => '88e41c73a28f48f24fe346ed3a1d35ec11455d3b',
     ),
     'flarum/mentions' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'e785d89b43e483d9b6f5d070b9828c87b7bcb4b6',
+      'reference' => '21b885fdca94a9088a2fed1146c0961188d10e52',
     ),
     'flarum/nicknames' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => '0.1.0-beta.16.1',
+      'version' => '0.1.0.0-beta16.1',
       'aliases' => 
       array (
       ),
-      'reference' => 'ef05f8a8c6801a6336c0ba1338ce3d7d6abba605',
+      'reference' => '1c72993c6345baea5131296288b87dd641a91142',
     ),
     'flarum/pusher' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '1d7a94a26deed07a1b38eb3ef6ef2014043a10f4',
+      'reference' => 'ce8c3b789e52ca7c003c68092774be53fd750988',
     ),
     'flarum/statistics' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '8764dc652d29ba68bc5dd69b7892b7e5c88c23ef',
+      'reference' => '2179b16b8d0200d798f05b476bf3a9c3e8764639',
     ),
     'flarum/sticky' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15.1',
-      'version' => '0.1.0.0-beta15.1',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '0b7a172e0eed21aef05f7220542390b2526a04ce',
+      'reference' => 'c421777bdd39354952e6e58f650afc44a51b3660',
     ),
     'flarum/subscriptions' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'f1ab545679f4fd14633ebdf66742d804314749f4',
+      'reference' => 'b19d49c5726e8f56dd2395cf9f97897179939cf8',
     ),
     'flarum/suspend' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => 'c00094d89baf32d9fae2e56fd82b54877eae4a06',
+      'reference' => '46ff4bc08e9888e6aa28df00c96ec989adcde724',
     ),
     'flarum/tags' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15',
-      'version' => '0.1.0.0-beta15',
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
       'aliases' => 
       array (
       ),
-      'reference' => '9f3a12376998b3d43bb996dd5ab1b4d822e677c2',
+      'reference' => '2582358a00e6edbce847336276406ae80a3a6106',
     ),
     'fof/analytics' => 
     array (
-      'pretty_version' => '0.11.0',
-      'version' => '0.11.0.0',
+      'pretty_version' => '0.12.0',
+      'version' => '0.12.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a154e222688409662553597b6eb2ddfdd0b648de',
+      'reference' => 'bde964f841b9c49886c645d37ffa5a50af70c5e2',
     ),
     'fof/auth-discord' => 
     array (
@@ -678,21 +716,21 @@ private static $installed = array (
     ),
     'fof/bbcode-details' => 
     array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2f72f8a2ab5f118291e9b3d48824578a161530bb',
+      'reference' => '3b397747d5ba50ae7db2d3e9d5d6d91b65166112',
     ),
     'fof/best-answer' => 
     array (
-      'pretty_version' => '0.3.6',
-      'version' => '0.3.6.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd741d8d09e89e41e6756a607ef066b21eda0daa8',
+      'reference' => 'bc88c85bbbb2d5e344e310b7ea91c31b29188274',
     ),
     'fof/byobu' => 
     array (
@@ -714,75 +752,84 @@ private static $installed = array (
     ),
     'fof/console' => 
     array (
-      'pretty_version' => '0.6.3',
-      'version' => '0.6.3.0',
+      'pretty_version' => '0.7.0',
+      'version' => '0.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4671dc842d92d9ed8cf1eee3eb4ea84d43340d20',
+      'reference' => '90d944ee596c48efe5f5c9e21c4d307daea63896',
     ),
     'fof/cookie-consent' => 
+    array (
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cc50a271bc32a5333e57eaa84b04a5a4a9d7f5df',
+    ),
+    'fof/default-group' => 
     array (
       'pretty_version' => '0.4.0',
       'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ea01045106fe26ebbf98c6df4e994a44a6f0e823',
-    ),
-    'fof/default-group' => 
-    array (
-      'pretty_version' => '0.3.1',
-      'version' => '0.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '9d4c9a30c87466de0c1c6f3535b16818ef57c2ea',
+      'reference' => '623ad04ce17fea5afa8413f5512c6697bb131256',
     ),
     'fof/default-user-preferences' => 
     array (
-      'pretty_version' => '0.3.1',
-      'version' => '0.3.1.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c42c05fb7bb6c433d23364d1371b03885dfca603',
+      'reference' => 'ebd672fa704dd1b3924ff8c0d6ced996fda320e9',
     ),
     'fof/discussion-language' => 
     array (
-      'pretty_version' => '0.3.3',
-      'version' => '0.3.3.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f45c0f0507c721f4ee931c43115fdd1fc199b086',
+      'reference' => '4c54d7bff3528bb3624884ff9faea2b98e3e1431',
+    ),
+    'fof/discussion-thumbnail' => 
+    array (
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '367a20e42b427ce34121bbd95ca6ff15d8af8255',
     ),
     'fof/disposable-emails' => 
     array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '048d8ac1fd4f09103ba2027092ee33359013c004',
+      'reference' => 'c1183a230ada5e46b4377b4c43a6141653cc42f2',
     ),
     'fof/doorman' => 
     array (
-      'pretty_version' => '0.3.1',
-      'version' => '0.3.1.0',
+      'pretty_version' => '0.4.1',
+      'version' => '0.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f984cc0c75199d16cf14e87abd9aaa03a736de75',
+      'reference' => '8733475d52b9ea7b20d01b4f1fa3253a2dd640b8',
     ),
     'fof/drafts' => 
     array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9df5e9c69baaa7b63a7139579f9300a82b3f7928',
+      'reference' => 'ce6092e01046ce267dc6ccd807e32e9d93831676',
     ),
     'fof/extend' => 
     array (
@@ -795,75 +842,75 @@ private static $installed = array (
     ),
     'fof/filter' => 
     array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '66920724414098f819fa24055fa477a8a5552345',
+      'reference' => '8b4c0899d9af06ae005aa67f96eb635c09cb8803',
     ),
     'fof/formatting' => 
-    array (
-      'pretty_version' => '0.3.1',
-      'version' => '0.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '31c6da0645a1f2cd6e50260835b4c66b95e70510',
-    ),
-    'fof/forum-statistics-widget' => 
     array (
       'pretty_version' => '0.4.0',
       'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bfd2009753025d750fb9990b1ba3bc80f68a9871',
+      'reference' => '834a5bcdf1e500dfcec958a2b12e79feefc938ca',
     ),
-    'fof/gamification' => 
+    'fof/forum-statistics-widget' => 
     array (
-      'pretty_version' => '0.4.3',
-      'version' => '0.4.3.0',
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ce16e2097a1c0f74e8cf21d416be922eb175ba7d',
+      'reference' => '560bfe405806f5c094749c318dec0af82481e45b',
     ),
-    'fof/html-errors' => 
+    'fof/gamification' => 
     array (
       'pretty_version' => '0.5.0',
       'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '73bf2df87b4a88458d829fd874cc73dc625a908a',
+      'reference' => '5f35ab591645906945bee0cee97ea58736c029b1',
+    ),
+    'fof/html-errors' => 
+    array (
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'eca5b302218acd2b962f60ed96fd0bc5f862d4e2',
     ),
     'fof/linguist' => 
     array (
-      'pretty_version' => '0.5.1',
-      'version' => '0.5.1.0',
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '64afea64176f0a87770905d1477dd61360c11599',
+      'reference' => '7cd1bde62ee0b7fdade933a348f10c4a531878f3',
     ),
     'fof/links' => 
     array (
-      'pretty_version' => '0.5.4',
-      'version' => '0.5.4.0',
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '85e79618d42deb5873a7eaf612bcc4ca2dda3d12',
+      'reference' => '3aba6d3d04edf6cdb1dbf2a76e625ff2d19dcddc',
     ),
     'fof/masquerade' => 
     array (
-      'pretty_version' => '0.3.7',
-      'version' => '0.3.7.0',
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '40ca1940098c615c3ac677ec9de9c08721ce46d9',
+      'reference' => 'fc9beb138614b26169c16b741af3d01219c81cc6',
     ),
     'fof/merge-discussions' => 
     array (
@@ -876,138 +923,138 @@ private static $installed = array (
     ),
     'fof/nightmode' => 
     array (
-      'pretty_version' => '0.7.1',
-      'version' => '0.7.1.0',
+      'pretty_version' => '0.8.0',
+      'version' => '0.8.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e885e50521e7b0a4d2a3f2e7591c3551f3db64e5',
+      'reference' => 'a3d7614537f0e270e0a7a0ea745db8d0294a6c9e',
     ),
     'fof/oauth' => 
-    array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c303ef61e24568aff3b49221b55d16ed5d2d9b4c',
-    ),
-    'fof/pages' => 
-    array (
-      'pretty_version' => '0.6.0',
-      'version' => '0.6.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '08154f2d6bbf8b91d660e9168b7233e123dddfc4',
-    ),
-    'fof/polls' => 
-    array (
-      'pretty_version' => '0.3.3',
-      'version' => '0.3.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f008d8a1fc4b01d2034ebc0219900e18630a4bad',
-    ),
-    'fof/pretty-mail' => 
     array (
       'pretty_version' => '0.3.0',
       'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7081df0f08a98aad783b5aa16f5ac5cfb8f7be42',
+      'reference' => '4f96747caaa84c3235ac690854698ec8e7d1dee9',
     ),
-    'fof/prevent-necrobumping' => 
+    'fof/pages' => 
+    array (
+      'pretty_version' => '0.7.0',
+      'version' => '0.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '82ab30faf714bb22d46a2d666474e442481d48be',
+    ),
+    'fof/polls' => 
+    array (
+      'pretty_version' => '0.4.1',
+      'version' => '0.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'eba85565fa6088576cc870d754468305c14dc63d',
+    ),
+    'fof/pretty-mail' => 
     array (
       'pretty_version' => '0.4.0',
       'version' => '0.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b7df1805e4a4f8ca754a495e16baa4a00e88b320',
+      'reference' => '094877155017126eeca9fbca8afface4acb121e0',
     ),
-    'fof/profile-image-crop' => 
-    array (
-      'pretty_version' => '0.2.1',
-      'version' => '0.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b0b7c724a15172d69054b3331dd402e8213cecf8',
-    ),
-    'fof/reactions' => 
+    'fof/prevent-necrobumping' => 
     array (
       'pretty_version' => '0.5.0',
       'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '562a5e60bf92af9d2ab8ca315c9c815e232e1937',
+      'reference' => '3f47eef3121e0e8ed5bc40179fe092214ab360ef',
     ),
-    'fof/share-social' => 
+    'fof/profile-image-crop' => 
     array (
       'pretty_version' => '0.3.0',
       'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '34ad3ade60bca15c34d485e5764157528f0a618d',
+      'reference' => 'c52d12e130befd1455ed2495179f57e659020954',
+    ),
+    'fof/reactions' => 
+    array (
+      'pretty_version' => '0.6.0',
+      'version' => '0.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd1147b891d3fd9352a13e02d36daae21dcf0e88c',
+    ),
+    'fof/share-social' => 
+    array (
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e5a2d8a86ef905b8af262d62f0cee06857b2312e',
     ),
     'fof/sitemap' => 
     array (
-      'pretty_version' => '0.6.0',
-      'version' => '0.6.0.0',
+      'pretty_version' => '0.7.0',
+      'version' => '0.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e81b4a9ddab7e492be2494a23edfbe249f131628',
+      'reference' => 'dc6ae8bf2fdf83832d9ff009bf8ec3aaee472a0e',
     ),
     'fof/socialprofile' => 
     array (
-      'pretty_version' => '0.2.3',
-      'version' => '0.2.3.0',
+      'pretty_version' => '0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7cb0048920c4b7393fc37cf465aede3fc728910e',
+      'reference' => '324cf97dbb8cdeaaf397e07c17ec76a0fa62b079',
     ),
     'fof/spamblock' => 
     array (
-      'pretty_version' => '0.4.0',
-      'version' => '0.4.0.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '565cfa41d10f2eaea5a3e9c503e7db19e634e507',
+      'reference' => '41c80861c0373c4590e2ad49cd93a81b14a60a65',
     ),
     'fof/split' => 
     array (
-      'pretty_version' => '0.6.0',
-      'version' => '0.6.0.0',
+      'pretty_version' => '0.7.0',
+      'version' => '0.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4907653db8af083b4290e4091c89bc83c3082950',
+      'reference' => '1fae4e73780d49dd9b3990da03af8e772f8dcdc5',
     ),
     'fof/stopforumspam' => 
     array (
-      'pretty_version' => '0.4.0',
-      'version' => '0.4.0.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '517b99e5d901fcca399bf309ec764c0f99315d95',
+      'reference' => 'e98af2ea1633bc948995c9f9ced8abfa3ce5bfd1',
     ),
     'fof/terms' => 
     array (
-      'pretty_version' => '0.6.1',
-      'version' => '0.6.1.0',
+      'pretty_version' => '0.6.2',
+      'version' => '0.6.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2bb03cab9e05a52d85e9a455c3a09caef26972c4',
+      'reference' => '9f6611649bf09ac189485589d004e2f0f738a0be',
     ),
     'fof/transliterator' => 
     array (
@@ -1020,39 +1067,39 @@ private static $installed = array (
     ),
     'fof/upload' => 
     array (
-      'pretty_version' => '0.13.1',
-      'version' => '0.13.1.0',
+      'pretty_version' => '0.14.0',
+      'version' => '0.14.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a13851ce9f871978e7121c1f46cd5fcf048eeda9',
+      'reference' => '6051bbfe30329be03fcc0b87420e7fa6c5fb393b',
     ),
     'fof/user-bio' => 
     array (
-      'pretty_version' => '0.4.2',
-      'version' => '0.4.2.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '72f49b3561bbf44f7c3af5616fbdebed998ecbc7',
+      'reference' => 'bb263c677aa79fb3b3750dd7d9631d4c68e11aad',
     ),
     'fof/user-directory' => 
     array (
-      'pretty_version' => '0.5.3',
-      'version' => '0.5.3.0',
+      'pretty_version' => '0.6.1',
+      'version' => '0.6.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f5164f94314c60a374f105c4f83205bc7e65c98b',
+      'reference' => 'f096c456c5e607a99ecc6bfcfc500955f28bc568',
     ),
     'fof/username-request' => 
     array (
-      'pretty_version' => '0.4.2',
-      'version' => '0.4.2.0',
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ba139452715c55084a69fd31e1193c0801e3b430',
+      'reference' => '8fe79258e8defa37304bd03946625708b22b2847',
     ),
     'fof/webhooks' => 
     array (
@@ -1065,21 +1112,21 @@ private static $installed = array (
     ),
     'franzl/whoops-middleware' => 
     array (
-      'pretty_version' => '0.4.1',
-      'version' => '0.4.1.0',
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '625a80d90b22c38d8a9372187e76ae5f844e4412',
+      'reference' => '71d75c5fff75587d6194a051d510a9eca0e3a047',
     ),
     'guzzlehttp/guzzle' => 
     array (
-      'pretty_version' => '6.5.5',
-      'version' => '6.5.5.0',
+      'pretty_version' => '7.3.0',
+      'version' => '7.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9d4290de1cfd701f38099ef7e183b64b4b7b0c5e',
+      'reference' => '7008573787b430c1c1f650e3722d9bba59967628',
     ),
     'guzzlehttp/promises' => 
     array (
@@ -1092,12 +1139,12 @@ private static $installed = array (
     ),
     'guzzlehttp/psr7' => 
     array (
-      'pretty_version' => '1.8.1',
-      'version' => '1.8.1.0',
+      'pretty_version' => '1.8.2',
+      'version' => '1.8.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '35ea11d335fd638b5882ff1725228b3d35496ab1',
+      'reference' => 'dc960a912984efb74d0a90222870c72c87f10c91',
     ),
     'html2text/html2text' => 
     array (
@@ -1107,6 +1154,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '61ad68e934066a6f8df29a3d23a6460536d0855c',
+    ),
+    'ianm/html-head' => 
+    array (
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '012597454fbd64d7732007ccadb42161ec5690e6',
     ),
     'ianm/iso-639' => 
     array (
@@ -1119,174 +1175,192 @@ private static $installed = array (
     ),
     'ianm/synopsis' => 
     array (
-      'pretty_version' => '0.1.3',
-      'version' => '0.1.3.0',
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'adcbe4c6834420fa52821e6d895aaf4e8c4705bf',
+      'reference' => '0dff3bfb76aa4fccd00f47e38926cade7d686c25',
     ),
     'illuminate/bus' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '107fd91aa7bc121fef8b43fb51a5bdee19e77e94',
+      'reference' => '7b5c0f1aa52cc70259352ff6b7adb67c7d46bcc5',
     ),
     'illuminate/cache' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c24628c01406d14e2fd1e7842888cd84cb0e3e37',
+      'reference' => '267a541171a375d56622117fbd0a60515402f2ef',
+    ),
+    'illuminate/collections' => 
+    array (
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'deccb956d38710f3f8baf36dd876c3fa1585ec22',
     ),
     'illuminate/config' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e52084805fcfc0d36f891121dd14c64ce388a892',
+      'reference' => '8441c542312b4d57220b1f942b947b6517c05008',
     ),
     'illuminate/console' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e500b84f88c313432638d84911aa4ddfaa31c663',
+      'reference' => '395002ac2d4ec404c42e6e97997f4236dc8ab2b6',
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'aa6e7030cba7458bbeeddfb1ddb54b3c2f7ba113',
+      'reference' => '0e38ee1632d470e56aece0079e6e22d13e6bea8e',
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '89dc8d7ac32cdfa254461cdd4da5d692b44169a4',
+      'reference' => '5152041a5c4ac4dbebb3c8ee72d05666c592ae08',
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'da124fbe2eeed5315a8b768af6f37fb712dd0f3a',
+      'reference' => '742c062a6447278f6b6f8622bd649173ed51fa3a',
     ),
     'illuminate/events' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '668581e3c31f9d499dc6919fe873003969a88e6c',
+      'reference' => 'bd2941d4d55f5d357b203dc2ed81ac5c138593dc',
     ),
     'illuminate/filesystem' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5355953da41db06aac064a3d08dfa1f9bafffd24',
+      'reference' => '8ef5902052c5b3bb4a6c1c3afc399f30e7723cb8',
     ),
     'illuminate/hashing' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd1fcfd3acf9629708c00a6b4c946857a5f877bf2',
+      'reference' => 'e0541364324c4cc165d4fd54afade571e1bb1626',
+    ),
+    'illuminate/macroable' => 
+    array (
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '300aa13c086f25116b5f3cde3ca54ff5c822fb05',
     ),
     'illuminate/mail' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '223b093866bb37a32f418ff30335988c04cc8e63',
+      'reference' => '6e2af3a60ac68669ee302fdc98501f55980b653f',
     ),
     'illuminate/pipeline' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '01063d3605efd22453316d771802cf5075ed848e',
+      'reference' => '23aeff5b26ae4aee3f370835c76bd0f4e93f71d2',
     ),
     'illuminate/queue' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'eaf5da2b91526bc21485ebf98f08a6cb9948b053',
+      'reference' => '55008cb4af2e0ede708a506e08ba3c404a8f37d7',
     ),
     'illuminate/session' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3103f1fb446f9c3e7d7c0deb8810a8c8d1d22c03',
+      'reference' => '5fee71ca59ce9f8c89ea78a0a2904fcefca772f4',
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '566e3dcfb0e3973ed8cd86ddb4ad4ef33a84fedf',
+      'reference' => 'ce1682ef73ab28a61be01c24ec5b090bdf2c3256',
     ),
     'illuminate/translation' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '717fad58c8451b86c7b5644bc652430a3369d7b3',
+      'reference' => '0fffa8b8f6eed8b4e17eac9d457befbcbae02b47',
     ),
     'illuminate/validation' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '90e2dfd53ca89192cdd06ada89d3a48cda3aeee2',
+      'reference' => '586949f8e530021bab0feb66651f79941fd57647',
     ),
     'illuminate/view' => 
     array (
-      'pretty_version' => 'v6.20.24',
-      'version' => '6.20.24.0',
+      'pretty_version' => 'v8.40.0',
+      'version' => '8.40.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4a3a6da059af652bd11a2c5a0dcaefc0a80ea5c1',
+      'reference' => '696a1d6d2213be192429e97245a3d2bb4d6d1849',
     ),
     'intervention/image' => 
     array (
@@ -1297,14 +1371,23 @@ private static $installed = array (
       ),
       'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
     ),
-    'jslirola/flarum-ext-login2seeplus' => 
+    'itnt/flarum-uitab' => 
     array (
-      'pretty_version' => 'v0.1.8.2',
-      'version' => '0.1.8.2',
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'be57bf10bdf47882619a266d165c5a6f510b5d1d',
+      'reference' => '4e182e9895e8b99108bd5ff1e51eeea8884adf8a',
+    ),
+    'jslirola/flarum-ext-login2seeplus' => 
+    array (
+      'pretty_version' => 'v0.1.9.1',
+      'version' => '0.1.9.1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd847863554f5a4f69266028383c5298f4fb116aa',
     ),
     'kakifrucht/flarum-de' => 
     array (
@@ -1326,12 +1409,12 @@ private static $installed = array (
     ),
     'laminas/laminas-diactoros' => 
     array (
-      'pretty_version' => '1.8.7p2',
-      'version' => '1.8.7.0-patch2',
+      'pretty_version' => '2.5.1',
+      'version' => '2.5.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6991c1af7c8d2c8efee81b22ba97024781824aaa',
+      'reference' => '53df7b7cd66e0905e6133970a4b90392a7a08075',
     ),
     'laminas/laminas-escaper' => 
     array (
@@ -1369,14 +1452,32 @@ private static $installed = array (
       ),
       'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
     ),
-    'league/commonmark' => 
+    'lcobucci/clock' => 
     array (
-      'pretty_version' => '1.5.8',
-      'version' => '1.5.8.0',
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '08fa59b8e4e34ea8a773d55139ae9ac0e0aecbaf',
+      'reference' => '353d83fe2e6ae95745b16b3d911813df6a05bfb3',
+    ),
+    'lcobucci/jwt' => 
+    array (
+      'pretty_version' => '4.1.4',
+      'version' => '4.1.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '71cf170102c8371ccd933fa4df6252086d144de6',
+    ),
+    'league/commonmark' => 
+    array (
+      'pretty_version' => '1.6.0',
+      'version' => '1.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19a9673b833cc37770439097b381d86cd125bfe8',
     ),
     'league/flysystem' => 
     array (
@@ -1450,6 +1551,15 @@ private static $installed = array (
       ),
       'reference' => '6b79441f244040760bed5fdcd092a2bda7cf34c6',
     ),
+    'league/oauth2-linkedin' => 
+    array (
+      'pretty_version' => '5.1.2',
+      'version' => '5.1.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f9ab661ca37884067ca286412b6c17304d3c2fac',
+    ),
     'littlegolden/flarum-lang-japanese' => 
     array (
       'pretty_version' => 'v0.1.67.1',
@@ -1482,6 +1592,13 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'luuhai48/oauth-linkedin' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
     'madnest/flarum-lang-czech' => 
     array (
       'pretty_version' => 'v0.1.0-beta.14.1',
@@ -1491,14 +1608,32 @@ private static $installed = array (
       ),
       'reference' => '462fbe672444ffcdeabe624bf3302443d6902291',
     ),
-    'marketplace/flarum-l10n-core-russian' => 
+    'maicol07/flarum-ext-sso' => 
     array (
-      'pretty_version' => '0.1.0-beta.15-20',
-      'version' => '0.1.0.0-beta15-20',
+      'pretty_version' => '1.9',
+      'version' => '1.9.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2dbfdb58242e0c1134f6186d8ada75f58fce1814',
+      'reference' => '9745f9f88bef061ab2dbbecb348942f99d1a87ca',
+    ),
+    'malago/flarum-achievements' => 
+    array (
+      'pretty_version' => '0.2.8',
+      'version' => '0.2.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '51fd1ae05bf5b4522a6d670de29b3095bfb2d375',
+    ),
+    'marketplace/flarum-l10n-core-russian' => 
+    array (
+      'pretty_version' => '0.1.0-beta.16-1',
+      'version' => '0.1.0.0-beta16-1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ff9aab51aabd28dd47806088b09eb0b332d71e8e',
     ),
     'marketplace/flarum-l10n-ext-russian' => 
     array (
@@ -1511,12 +1646,12 @@ private static $installed = array (
     ),
     'matteocontrini/flarum-imgur-upload' => 
     array (
-      'pretty_version' => 'v3.6.0',
-      'version' => '3.6.0.0',
+      'pretty_version' => 'v3.8.0',
+      'version' => '3.8.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7b34e465c72ff185f5d23049f8a8f4b4f6c3fc0b',
+      'reference' => '7447b079e690cbbda0e581537bcd61b340190724',
     ),
     'matthiasmullie/minify' => 
     array (
@@ -1547,57 +1682,57 @@ private static $installed = array (
     ),
     'michaelbelgium/flarum-discussion-views' => 
     array (
-      'pretty_version' => 'v5.0.1',
-      'version' => '5.0.1.0',
+      'pretty_version' => 'v6.0.0',
+      'version' => '6.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '24e57332a2b364fa87e522d6d5d0e4d2d24285d8',
+      'reference' => '3fbefd040c69fe3d1411a1266650b43323141e4d',
     ),
     'michaelbelgium/flarum-dutch' => 
     array (
-      'pretty_version' => 'v8.0.0',
-      'version' => '8.0.0.0',
+      'pretty_version' => 'v9.1.0',
+      'version' => '9.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8fb78d86d3fa33356460c6b21f2da774095c1421',
+      'reference' => '1190a2af551d2e94caa2d4cea7d597ff9391286d',
     ),
     'middlewares/base-path' => 
     array (
-      'pretty_version' => 'v1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => 'v2.1.0',
+      'version' => '2.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '18277023b9a4acdc85479071a10f702582c3a909',
+      'reference' => '9540b7b3aea29f22be269ad4c182455e70e38b4a',
     ),
     'middlewares/base-path-router' => 
     array (
-      'pretty_version' => 'v0.2.1',
-      'version' => '0.2.1.0',
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1706ec57dbeb7083c7ea17561041f8dc2de3b37c',
+      'reference' => '36e3860cfd917ad51d10e238f82796c8b2504908',
     ),
     'middlewares/request-handler' => 
     array (
-      'pretty_version' => 'v1.4.0',
-      'version' => '1.4.0.0',
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'adcc7dd36361661bd62057a21c052643ede6c726',
+      'reference' => 'e5563184b4c9eab81ecb58c6ef530516559e8488',
     ),
     'middlewares/utils' => 
     array (
-      'pretty_version' => 'v2.2.0',
-      'version' => '2.2.0.0',
+      'pretty_version' => 'v3.2.0',
+      'version' => '3.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7dc49454b4fbf249226023c7b77658b6068abfbc',
+      'reference' => 'a9ef1e5365020ead0ae343b95602bd877a9bf852',
     ),
     'migratetoflarum/canonical' => 
     array (
@@ -1610,12 +1745,12 @@ private static $installed = array (
     ),
     'minishlink/web-push' => 
     array (
-      'pretty_version' => 'v5.2.5',
-      'version' => '5.2.5.0',
+      'pretty_version' => 'v6.0.5',
+      'version' => '6.0.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0e75af425126435794ed42d7aa92119fd563e503',
+      'reference' => 'd87e9e3034ca2b95b1822b1b335e7761c14b89f6',
     ),
     'monolog/monolog' => 
     array (
@@ -1642,14 +1777,23 @@ private static $installed = array (
       ),
       'reference' => '42dae2cbd13154083ca6d70099692fef8ca84bfb',
     ),
-    'nearata/lang-italian' => 
+    'nearata/flarum-ext-no-self-likes' => 
     array (
-      'pretty_version' => 'v0.1.0-beta.15.2',
-      'version' => '0.1.0.0-beta15.2',
+      'pretty_version' => 'v1.1.0',
+      'version' => '1.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b94f5170db8110485e4b34978217125276ed1176',
+      'reference' => '354af292788c8011cdad4b5846d1c0c6d87e9aab',
+    ),
+    'nearata/lang-italian' => 
+    array (
+      'pretty_version' => 'v0.1.0-beta.16',
+      'version' => '0.1.0.0-beta16',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bd48f8f5cafde5af0a000f891c36b186c682fff7',
     ),
     'neercsys/flarum-ext-bosanski' => 
     array (
@@ -1671,12 +1815,12 @@ private static $installed = array (
     ),
     'nesbot/carbon' => 
     array (
-      'pretty_version' => '2.46.0',
-      'version' => '2.46.0.0',
+      'pretty_version' => '2.47.0',
+      'version' => '2.47.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2fd2c4a77d58a4e95234c8a61c5df1f157a91bf4',
+      'reference' => '606262fd8888b75317ba9461825a24fc34001e1e',
     ),
     'nikic/fast-route' => 
     array (
@@ -1714,15 +1858,6 @@ private static $installed = array (
       ),
       'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
     ),
-    'paragonie/sodium_compat' => 
-    array (
-      'pretty_version' => 'v1.15.4',
-      'version' => '1.15.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8a93bfe047c7f699f819459de8ddda144cd636a4',
-    ),
     'persianfla/flarum-ext-persian' => 
     array (
       'pretty_version' => 'v0.0.1',
@@ -1748,7 +1883,39 @@ private static $installed = array (
       ),
       'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
     ),
+    'psr/container-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
+    'psr/event-dispatcher' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dbefd12671e8a14ec7f180cab83036ed26714bb0',
+    ),
     'psr/event-dispatcher-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
+    'psr/http-client' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
+    ),
+    'psr/http-client-implementation' => 
     array (
       'provided' => 
       array (
@@ -1763,6 +1930,13 @@ private static $installed = array (
       array (
       ),
       'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
+    ),
+    'psr/http-factory-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
     ),
     'psr/http-message' => 
     array (
@@ -1835,12 +2009,12 @@ private static $installed = array (
     ),
     'qiaeru/lang-french' => 
     array (
-      'pretty_version' => 'v1.9.1',
-      'version' => '1.9.1.0',
+      'pretty_version' => 'v1.10.0',
+      'version' => '1.10.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a33de570f255b3dbdf05db8069cc31fb4247a631',
+      'reference' => '8bc616cd50647a76e4b82e5c10d5d10090bedc18',
     ),
     'ralouphie/getallheaders' => 
     array (
@@ -1871,12 +2045,12 @@ private static $installed = array (
     ),
     'realodix/flarum-ext-indonesian' => 
     array (
-      'pretty_version' => '1.15.2',
-      'version' => '1.15.2.0',
+      'pretty_version' => '1.16.2',
+      'version' => '1.16.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '270236eaa60184a9c00b482d868eace6094034d3',
+      'reference' => '92e3544d719cd1422c100ea3f76221eb7db0e89b',
     ),
     'reflar/cookie-consent' => 
     array (
@@ -1977,12 +2151,12 @@ private static $installed = array (
     ),
     's9e/regexp-builder' => 
     array (
-      'pretty_version' => '1.4.4',
-      'version' => '1.4.4.0',
+      'pretty_version' => '1.4.5',
+      'version' => '1.4.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '605b33841a766abd40ba3d07c15d0f62b5e7f033',
+      'reference' => '45992e3389e0179672f3a3605d66891a8b64918c',
     ),
     's9e/sweetdom' => 
     array (
@@ -2050,6 +2224,15 @@ private static $installed = array (
       ),
       'reference' => 'a68562f81fd603be0c45d102b4e8064c76ddf863',
     ),
+    'starsriver/mathplus' => 
+    array (
+      'pretty_version' => '0.1.0',
+      'version' => '0.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f27a8fbdee0349cc7938929affc476691f822364',
+    ),
     'swiftmailer/swiftmailer' => 
     array (
       'pretty_version' => 'v6.2.7',
@@ -2061,57 +2244,48 @@ private static $installed = array (
     ),
     'sycho/flarum-advanced-extension-categories' => 
     array (
-      'pretty_version' => 'v0.1.0',
-      'version' => '0.1.0.0',
+      'pretty_version' => 'v0.1.1',
+      'version' => '0.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '262ddd0447e4534fb2f1f65129ce9ca300931604',
+      'reference' => 'f380c032ce5f3c24c115cb0fdc286cd6ca5447bb',
     ),
     'sycho/flarum-profile-cover' => 
     array (
-      'pretty_version' => 'v1.2.3',
-      'version' => '1.2.3.0',
+      'pretty_version' => 'v1.2.4',
+      'version' => '1.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f6489300b4e0ee5ec74f75e9de01fd959332e577',
+      'reference' => 'b0c67047995dc8033276de6efc1af77de6457caa',
     ),
     'symfony/config' => 
     array (
-      'pretty_version' => 'v4.4.20',
-      'version' => '4.4.20.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '98606c6fa1a8f55ff964ccdd704275bf5b9f71b3',
+      'reference' => '3817662ada105c8c4d1afdb4ec003003efd1d8d8',
     ),
     'symfony/console' => 
     array (
-      'pretty_version' => 'v4.4.21',
-      'version' => '4.4.21.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1ba4560dbbb9fcf5ae28b61f71f49c678086cf23',
+      'reference' => '90374b8ed059325b49a29b55b3f8bb4062c87629',
     ),
     'symfony/css-selector' => 
     array (
-      'pretty_version' => 'v5.2.4',
-      'version' => '5.2.4.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f65f217b3314504a1ec99c2d6ef69016bb13490f',
-    ),
-    'symfony/debug' => 
-    array (
-      'pretty_version' => 'v4.4.20',
-      'version' => '4.4.20.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '157bbec4fd773bae53c5483c50951a5530a2cc16',
+      'reference' => '59a684f5ac454f066ecbe6daecce6719aed283fb',
     ),
     'symfony/deprecation-contracts' => 
     array (
@@ -2124,64 +2298,64 @@ private static $installed = array (
     ),
     'symfony/event-dispatcher' => 
     array (
-      'pretty_version' => 'v4.4.20',
-      'version' => '4.4.20.0',
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c352647244bd376bf7d31efbd5401f13f50dad0c',
+      'reference' => 'd08d6ec121a425897951900ab692b612a61d6240',
     ),
     'symfony/event-dispatcher-contracts' => 
     array (
-      'pretty_version' => 'v1.1.9',
-      'version' => '1.1.9.0',
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '84e23fdcd2517bf37aecbd16967e83f0caee25a7',
+      'reference' => '69fee1ad2332a7cbab3aca13591953da9cdb7a11',
     ),
     'symfony/event-dispatcher-implementation' => 
     array (
       'provided' => 
       array (
-        0 => '1.1',
+        0 => '2.0',
       ),
     ),
     'symfony/filesystem' => 
     array (
-      'pretty_version' => 'v5.2.6',
-      'version' => '5.2.6.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8c86a82f51658188119e62cff0a050a12d09836f',
+      'reference' => '056e92acc21d977c37e6ea8e97374b2a6c8551b0',
     ),
     'symfony/finder' => 
     array (
-      'pretty_version' => 'v4.4.20',
-      'version' => '4.4.20.0',
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2543795ab1570df588b9bbd31e1a2bd7037b94f6',
+      'reference' => '0d639a0943822626290d169965804f79400e6a04',
     ),
     'symfony/http-foundation' => 
     array (
-      'pretty_version' => 'v4.4.20',
-      'version' => '4.4.20.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '02d968647fe61b2f419a8dc70c468a9d30a48d3a',
+      'reference' => 'a416487a73bb9c9d120e9ba3a60547f4a3fb7a1f',
     ),
     'symfony/mime' => 
     array (
-      'pretty_version' => 'v5.2.6',
-      'version' => '5.2.6.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1b2092244374cbe48ae733673f2ca0818b37197b',
+      'reference' => '7af452bf51c46f18da00feb32e1ad36db9426515',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -2200,6 +2374,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '06fb361659649bcfd6a208a0f1fcaf4e827ad342',
+    ),
+    'symfony/polyfill-intl-grapheme' => 
+    array (
+      'pretty_version' => 'v1.22.1',
+      'version' => '1.22.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5601e09b69f26c1828b13b6bb87cb07cddba3170',
     ),
     'symfony/polyfill-intl-idn' => 
     array (
@@ -2257,12 +2440,12 @@ private static $installed = array (
     ),
     'symfony/process' => 
     array (
-      'pretty_version' => 'v4.4.20',
-      'version' => '4.4.20.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7e950b6366d4da90292c2e7fa820b3c1842b965a',
+      'reference' => '98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e',
     ),
     'symfony/service-contracts' => 
     array (
@@ -2273,14 +2456,23 @@ private static $installed = array (
       ),
       'reference' => 'f040a30e04b57fbcc9c6cbcf4dbaa96bd318b9bb',
     ),
-    'symfony/translation' => 
+    'symfony/string' => 
     array (
-      'pretty_version' => 'v4.4.21',
-      'version' => '4.4.21.0',
+      'pretty_version' => 'v5.2.6',
+      'version' => '5.2.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'eb8f5428cc3b40d6dffe303b195b084f1c5fbd14',
+      'reference' => 'ad0bd91bce2054103f5eaa18ebeba8d3bc2a0572',
+    ),
+    'symfony/translation' => 
+    array (
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e37ece5242564bceea54d709eafc948377ec9749',
     ),
     'symfony/translation-contracts' => 
     array (
@@ -2295,26 +2487,26 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
+        0 => '2.3',
       ),
     ),
     'symfony/yaml' => 
     array (
-      'pretty_version' => 'v4.4.21',
-      'version' => '4.4.21.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3871c720871029f008928244e56cf43497da7e9d',
+      'reference' => '76546cbeddd0a9540b4e4e57eddeec3e9bb444a5',
     ),
     'therealsujitk/flarum-ext-gifs' => 
     array (
-      'pretty_version' => 'v2.0.0',
-      'version' => '2.0.0.0',
+      'pretty_version' => 'v3.0.0',
+      'version' => '3.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6283d63d5b6678459d9883a2df9c583729f58509',
+      'reference' => '8a6ac4fc1db0cdcbab65223e6d7c28191d4a7ee6',
     ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (
@@ -2327,12 +2519,12 @@ private static $installed = array (
     ),
     'tiu-ram0n/brazilian-portuguese' => 
     array (
-      'pretty_version' => '1.1.23',
-      'version' => '1.1.23.0',
+      'pretty_version' => '1.1.25',
+      'version' => '1.1.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4a8146045a90933c24f948c8457dfeda633938d2',
+      'reference' => 'c1189149c88f24712981d362bf6fab110f8caf00',
     ),
     'tobscure/json-api' => 
     array (
@@ -2345,120 +2537,93 @@ private static $installed = array (
     ),
     'tolgaaaltas/flarum-ext-turkish' => 
     array (
-      'pretty_version' => '0.15.5',
-      'version' => '0.15.5.0',
+      'pretty_version' => '0.16.5',
+      'version' => '0.16.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5f674536d06d98c0b8665211873fb38d079a0062',
+      'reference' => 'b60ce7dbd107d2fd89565c5805450faed9c91a49',
     ),
     'tolgaaaltas/flarum-lang-turkish' => 
     array (
-      'pretty_version' => '0.15.5',
-      'version' => '0.15.5.0',
+      'pretty_version' => '0.16.5',
+      'version' => '0.16.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4939b51bdde51f22c6ffe83ac9ecc66125e7bacb',
+      'reference' => '9d00214ee010d70fe45d15a4211ff2bd7f52be51',
     ),
     'v17development/flarum-blog' => 
     array (
-      'pretty_version' => 'v0.2.3',
-      'version' => '0.2.3.0',
+      'pretty_version' => 'v0.3.0',
+      'version' => '0.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '533d73f531008c04cf5f18080bb85b5cb149fa19',
+      'reference' => '0c571c8f84bf9cb45306bc985d8f0ce9e4d7eb67',
     ),
     'v17development/flarum-seo' => 
     array (
-      'pretty_version' => 'v1.6.2',
-      'version' => '1.6.2.0',
+      'pretty_version' => 'v1.7.2',
+      'version' => '1.7.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c670daf87fda9d9a417fece2483ae21fc08c6b19',
+      'reference' => '877e8bb776d7ddfe8ed5b1d9f0a6e88b9f961c82',
+    ),
+    'voku/portable-ascii' => 
+    array (
+      'pretty_version' => '1.5.6',
+      'version' => '1.5.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '80953678b19901e5165c56752d087fc11526017c',
     ),
     'web-token/jwt-core' => 
     array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
+      'pretty_version' => 'v2.2.10',
+      'version' => '2.2.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => '30e9df9e040d933043b16237f9dba7a3be746566',
+      'reference' => '53beb6f6c1eec4fa93c1c3e5d9e5701e71fa1678',
     ),
     'web-token/jwt-key-mgmt' => 
     array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
+      'pretty_version' => 'v2.2.10',
+      'version' => '2.2.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => '65b1e908e50b0e5be6b28135085d3c1097b81801',
+      'reference' => '0b116379515700d237b4e5de86879078ccb09d8a',
     ),
     'web-token/jwt-signature' => 
     array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
+      'pretty_version' => 'v2.2.10',
+      'version' => '2.2.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => '00f23e997c9032536444f819bc3338ab475d69f9',
+      'reference' => '015b59aaf3b6e8fb9f5bd1338845b7464c7d8103',
     ),
     'web-token/jwt-signature-algorithm-ecdsa' => 
     array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
+      'pretty_version' => 'v2.2.10',
+      'version' => '2.2.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a3babd3b82c29c739d426271ccb9dc1a56222e36',
-    ),
-    'web-token/jwt-signature-algorithm-eddsa' => 
-    array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b0dad134313b14b3ba077b63a7afcc2b38e5f793',
-    ),
-    'web-token/jwt-signature-algorithm-hmac' => 
-    array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3bc85e1d13804902a8d81a11f58c28c9a471b5e2',
-    ),
-    'web-token/jwt-signature-algorithm-none' => 
-    array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0391e160367e85846736e63ea6026e2dab667b6e',
-    ),
-    'web-token/jwt-signature-algorithm-rsa' => 
-    array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '344181ef6cdd3aca77f7ff7defc9fb502eb33ec0',
+      'reference' => '44cbbb4374c51f1cf48b82ae761efbf24e1a8591',
     ),
     'web-token/jwt-util-ecc' => 
     array (
-      'pretty_version' => 'v1.3.10',
-      'version' => '1.3.10.0',
+      'pretty_version' => 'v2.2.10',
+      'version' => '2.2.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2011af8454561ebce06a77fcd681c29a252e0068',
+      'reference' => '915f3fde86f5236c205620d61177b9ef43863deb',
     ),
     'webmozart/assert' => 
     array (
@@ -2501,11 +2666,27 @@ private static $installed = array (
       ),
       'reference' => '0dcb5059cded358f55ae566de9621652cf8542c6',
     ),
+    'wuethrich44/flarum-ext-sso' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'xelson/flarum-ext-chat' => 
+    array (
+      'pretty_version' => 'v1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '14ac7447e467745144b06d1e3f0c79c7e1a81206',
+    ),
     'zendframework/zend-diactoros' => 
     array (
       'replaced' => 
       array (
-        0 => '~1.8.7.0',
+        0 => '^2.2.1',
       ),
     ),
     'zendframework/zend-escaper' => 
@@ -2546,7 +2727,6 @@ $packages = array();
 foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
-
 
 if (1 === \count($packages)) {
 return $packages[0];
@@ -2743,6 +2923,7 @@ self::$installedByVendor = array();
 
 
 
+
 private static function getInstalled()
 {
 if (null === self::$canGetVendors) {
@@ -2752,7 +2933,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

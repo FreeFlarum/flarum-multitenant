@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2014-2018 Spomky-Labs
+ * Copyright (c) 2014-2020 Spomky-Labs
  *
  * This software may be modified and distributed under the terms
  * of the MIT license.  See the LICENSE file for details.
@@ -13,79 +13,129 @@ declare(strict_types=1);
 
 namespace Jose\Component\Core\Util;
 
+use InvalidArgumentException;
+use function is_string;
+use const STR_PAD_LEFT;
+
 /**
  * @internal
  */
-class ECSignature
+final class ECSignature
 {
-    public static function toDER(string $signature, int $partLength): string
+    private const ASN1_SEQUENCE = '30';
+    private const ASN1_INTEGER = '02';
+    private const ASN1_MAX_SINGLE_BYTE = 128;
+    private const ASN1_LENGTH_2BYTES = '81';
+    private const ASN1_BIG_INTEGER_LIMIT = '7f';
+    private const ASN1_NEGATIVE_INTEGER = '00';
+    private const BYTE_SIZE = 2;
+
+    /**
+     * @throws InvalidArgumentException if the length of the signature is invalid
+     */
+    public static function toAsn1(string $signature, int $length): string
     {
-        $signature = \unpack('H*', $signature)[1];
-        if (\mb_strlen($signature, '8bit') !== 2 * $partLength) {
-            throw new \InvalidArgumentException('Invalid length.');
+        $signature = bin2hex($signature);
+
+        if (self::octetLength($signature) !== $length) {
+            throw new InvalidArgumentException('Invalid signature length.');
         }
-        $R = \mb_substr($signature, 0, $partLength, '8bit');
-        $S = \mb_substr($signature, $partLength, null, '8bit');
 
-        $R = self::preparePositiveInteger($R);
-        $Rl = \mb_strlen($R, '8bit') / 2;
-        $S = self::preparePositiveInteger($S);
-        $Sl = \mb_strlen($S, '8bit') / 2;
-        $der = \pack('H*',
-            '30'.($Rl + $Sl + 4 > 128 ? '81' : '').\dechex($Rl + $Sl + 4)
-            .'02'.\dechex($Rl).$R
-            .'02'.\dechex($Sl).$S
+        $pointR = self::preparePositiveInteger(mb_substr($signature, 0, $length, '8bit'));
+        $pointS = self::preparePositiveInteger(mb_substr($signature, $length, null, '8bit'));
+
+        $lengthR = self::octetLength($pointR);
+        $lengthS = self::octetLength($pointS);
+
+        $totalLength = $lengthR + $lengthS + self::BYTE_SIZE + self::BYTE_SIZE;
+        $lengthPrefix = $totalLength > self::ASN1_MAX_SINGLE_BYTE ? self::ASN1_LENGTH_2BYTES : '';
+
+        $bin = hex2bin(
+            self::ASN1_SEQUENCE
+            .$lengthPrefix.dechex($totalLength)
+            .self::ASN1_INTEGER.dechex($lengthR).$pointR
+            .self::ASN1_INTEGER.dechex($lengthS).$pointS
         );
+        if (!is_string($bin)) {
+            throw new InvalidArgumentException('Unable to parse the data');
+        }
 
-        return $der;
+        return $bin;
     }
 
-    public static function fromDER(string $der, int $partLength): string
+    /**
+     * @throws InvalidArgumentException if the signature is not an ASN.1 sequence
+     */
+    public static function fromAsn1(string $signature, int $length): string
     {
-        $hex = \unpack('H*', $der)[1];
-        if ('30' !== \mb_substr($hex, 0, 2, '8bit')) { // SEQUENCE
-            throw new \RuntimeException();
-        }
-        if ('81' === \mb_substr($hex, 2, 2, '8bit')) { // LENGTH > 128
-            $hex = \mb_substr($hex, 6, null, '8bit');
-        } else {
-            $hex = \mb_substr($hex, 4, null, '8bit');
-        }
-        if ('02' !== \mb_substr($hex, 0, 2, '8bit')) { // INTEGER
-            throw new \RuntimeException();
+        $message = bin2hex($signature);
+        $position = 0;
+
+        if (self::ASN1_SEQUENCE !== self::readAsn1Content($message, $position, self::BYTE_SIZE)) {
+            throw new InvalidArgumentException('Invalid data. Should start with a sequence.');
         }
 
-        $Rl = \hexdec(\mb_substr($hex, 2, 2, '8bit'));
-        $R = self::retrievePositiveInteger(\mb_substr($hex, 4, $Rl * 2, '8bit'));
-        $R = \str_pad($R, $partLength, '0', STR_PAD_LEFT);
-
-        $hex = \mb_substr($hex, 4 + $Rl * 2, null, '8bit');
-        if ('02' !== \mb_substr($hex, 0, 2, '8bit')) { // INTEGER
-            throw new \RuntimeException();
+        if (self::ASN1_LENGTH_2BYTES === self::readAsn1Content($message, $position, self::BYTE_SIZE)) {
+            $position += self::BYTE_SIZE;
         }
-        $Sl = \hexdec(\mb_substr($hex, 2, 2, '8bit'));
-        $S = self::retrievePositiveInteger(\mb_substr($hex, 4, $Sl * 2, '8bit'));
-        $S = \str_pad($S, $partLength, '0', STR_PAD_LEFT);
 
-        return \pack('H*', $R.$S);
+        $pointR = self::retrievePositiveInteger(self::readAsn1Integer($message, $position));
+        $pointS = self::retrievePositiveInteger(self::readAsn1Integer($message, $position));
+
+        $bin = hex2bin(str_pad($pointR, $length, '0', STR_PAD_LEFT).str_pad($pointS, $length, '0', STR_PAD_LEFT));
+        if (!is_string($bin)) {
+            throw new InvalidArgumentException('Unable to parse the data');
+        }
+
+        return $bin;
+    }
+
+    private static function octetLength(string $data): int
+    {
+        return (int) (mb_strlen($data, '8bit') / self::BYTE_SIZE);
     }
 
     private static function preparePositiveInteger(string $data): string
     {
-        if (\mb_substr($data, 0, 2, '8bit') > '7f') {
-            return '00'.$data;
+        if (mb_substr($data, 0, self::BYTE_SIZE, '8bit') > self::ASN1_BIG_INTEGER_LIMIT) {
+            return self::ASN1_NEGATIVE_INTEGER.$data;
         }
-        while ('00' === \mb_substr($data, 0, 2, '8bit') && \mb_substr($data, 2, 2, '8bit') <= '7f') {
-            $data = \mb_substr($data, 2, null, '8bit');
+
+        while (0 === mb_strpos($data, self::ASN1_NEGATIVE_INTEGER, 0, '8bit')
+            && mb_substr($data, 2, self::BYTE_SIZE, '8bit') <= self::ASN1_BIG_INTEGER_LIMIT) {
+            $data = mb_substr($data, 2, null, '8bit');
         }
 
         return $data;
     }
 
+    private static function readAsn1Content(string $message, int &$position, int $length): string
+    {
+        $content = mb_substr($message, $position, $length, '8bit');
+        $position += $length;
+
+        return $content;
+    }
+
+    /**
+     * @throws InvalidArgumentException if the data is not an integer
+     */
+    private static function readAsn1Integer(string $message, int &$position): string
+    {
+        if (self::ASN1_INTEGER !== self::readAsn1Content($message, $position, self::BYTE_SIZE)) {
+            throw new InvalidArgumentException('Invalid data. Should contain an integer.');
+        }
+
+        $length = (int) hexdec(self::readAsn1Content($message, $position, self::BYTE_SIZE));
+
+        return self::readAsn1Content($message, $position, $length * self::BYTE_SIZE);
+    }
+
     private static function retrievePositiveInteger(string $data): string
     {
-        while ('00' === \mb_substr($data, 0, 2, '8bit') && \mb_substr($data, 2, 2, '8bit') > '7f') {
-            $data = \mb_substr($data, 2, null, '8bit');
+        while (0 === mb_strpos($data, self::ASN1_NEGATIVE_INTEGER, 0, '8bit')
+            && mb_substr($data, 2, self::BYTE_SIZE, '8bit') > self::ASN1_BIG_INTEGER_LIMIT) {
+            $data = mb_substr($data, 2, null, '8bit');
         }
 
         return $data;

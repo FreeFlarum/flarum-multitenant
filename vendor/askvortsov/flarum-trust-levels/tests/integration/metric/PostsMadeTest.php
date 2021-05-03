@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of askvortsov/flarum-trust-levels
+ *
+ *  Copyright (c) 2021 Alexander Skvortsov.
+ *
+ *  For detailed copyright and license information, please view the
+ *  LICENSE file that was distributed with this source code.
+ */
+
 namespace Askvortsov\TrustLevels\Tests\integration\metric;
 
 use Carbon\Carbon;
@@ -17,11 +26,10 @@ class PostsMadeTest extends TestCase
     /**
      * @inheritDoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
-        $this->extension('fof-best-answer');
         $this->extension('askvortsov-trust-levels');
 
         $this->prepareDatabase([
@@ -29,11 +37,11 @@ class PostsMadeTest extends TestCase
                 $this->normalUser(),
             ],
             'discussions' => [
-                ['id' => 1, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 2, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 3, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 4, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
-                ['id' => 5, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1, 'best_answer_user_id' => 2],
+                ['id' => 1, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 2, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 3, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 4, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
+                ['id' => 5, 'title' => __CLASS__, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'first_post_id' => 1, 'comment_count' => 1],
             ],
             'discussion_user' => [
                 ['discussion_id' => 1, 'user_id' => 2, 'last_read_at' => Carbon::now()->toDateTimeString()],
@@ -41,7 +49,7 @@ class PostsMadeTest extends TestCase
                 ['discussion_id' => 3, 'user_id' => 2, 'last_read_at' => Carbon::now()->toDateTimeString()],
             ],
             'posts' => [
-                ['id' => 1, 'discussion_id' => 1, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>']
+                ['id' => 1, 'discussion_id' => 1, 'created_at' => Carbon::now()->toDateTimeString(), 'user_id' => 2, 'type' => 'comment', 'content' => '<t><p>foo bar</p></t>'],
             ],
         ]);
     }
@@ -53,7 +61,7 @@ class PostsMadeTest extends TestCase
     {
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertNotContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertNotContains(4, User::find(2)->groups->pluck('id')->all());
     }
 
     /**
@@ -63,15 +71,15 @@ class PostsMadeTest extends TestCase
     {
         $this->prepareDatabase(['trust_levels' => [
             $this->genTrustLevel('discussions entered', 4, [
-                'discussions_entered' => [2, 10]
-            ])
+                'discussions_entered' => [2, 10],
+            ]),
         ]]);
 
         $this->app();
         User::find(2)->refreshCommentCount()->save();
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertContains(4, User::find(2)->groups->pluck('id')->all());
     }
 
     /**
@@ -81,23 +89,23 @@ class PostsMadeTest extends TestCase
     {
         $this->prepareDatabase(['trust_levels' => [
             $this->genTrustLevel('discussions entered', 4, [
-                'discussions_entered' => [-1, 2]
+                'discussions_entered' => [-1, 2],
             ]),
             $this->genTrustLevel('discussions entered', 4, [
-                'discussions_entered' => [1, 2]
+                'discussions_entered' => [1, 2],
             ]),
             $this->genTrustLevel('discussions entered', 4, [
-                'discussions_entered' => [4, 100]
+                'discussions_entered' => [4, 100],
             ]),
             $this->genTrustLevel('discussions entered', 4, [
-                'discussions_entered' => [4, -1]
-            ])
+                'discussions_entered' => [4, -1],
+            ]),
         ]]);
 
         $this->app();
         User::find(2)->refreshCommentCount()->save();
         $this->app()->getContainer()->make('events')->dispatch(new LoggedIn(User::find(2), new AccessToken([])));
 
-        $this->assertNotContains('4', User::find(2)->groups->pluck('id')->all());
+        $this->assertNotContains(4, User::find(2)->groups->pluck('id')->all());
     }
 }

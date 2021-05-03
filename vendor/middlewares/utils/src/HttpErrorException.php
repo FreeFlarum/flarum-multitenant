@@ -9,6 +9,7 @@ use Throwable;
 
 class HttpErrorException extends Exception
 {
+    /** @var array<int, string>  */
     private static $phrases = [
         // CLIENT ERROR
         400 => 'Bad Request',
@@ -57,16 +58,13 @@ class HttpErrorException extends Exception
         599 => 'Network Connect Timeout Error',
     ];
 
+    /** @var array */
     private $context = [];
 
     /**
      * Create and returns a new instance
      *
-     * @param int            $code     A valid http error code
-     * @param array          $context
-     * @param Throwable|null $previous
-     *
-     * @return static
+     * @param int $code A valid http error code
      */
     public static function create(int $code = 500, array $context = [], Throwable $previous = null): self
     {
@@ -75,22 +73,11 @@ class HttpErrorException extends Exception
         }
 
         $exception = new static(self::$phrases[$code], $code, $previous);
-        $exception->setContext($context);
+        $exception->context = $context;
 
         return $exception;
     }
 
-    /**
-     * Add data context used in the error handler
-     */
-    public function setContext(array $context)
-    {
-        $this->context = $context;
-    }
-
-    /**
-     * Return the data context
-     */
     public function getContext(): array
     {
         return $this->context;

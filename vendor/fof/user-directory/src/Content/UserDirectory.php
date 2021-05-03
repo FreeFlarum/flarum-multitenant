@@ -34,8 +34,6 @@ class UserDirectory
         'username_za' => '-username',
         'newest' => '-joinedAt',
         'oldest' => 'joinedAt',
-        'seen_recent' => '-lastSeenAt',
-        'seen_oldest' => 'lastSeenAt',
         'most_discussions' => '-discussionCount',
         'least_discussions' => 'discussionCount'
     ];
@@ -59,7 +57,7 @@ class UserDirectory
     {
         $queryParams = $request->getQueryParams();
 
-        $sort = Arr::pull($queryParams, 'sort') ?: app(SettingsRepositoryInterface::class)->get('fof-user-directory.default-sort');
+        $sort = Arr::pull($queryParams, 'sort') ?: resolve(SettingsRepositoryInterface::class)->get('fof-user-directory.default-sort');
         $q = Arr::pull($queryParams, 'q');
         $page = Arr::pull($queryParams, 'page', 1);
 

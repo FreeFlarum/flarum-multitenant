@@ -6,8 +6,8 @@ clarkwinkelmann-email-as-display-name:
   admin:
     permissions:
       heading: 'Görünen ad olarak e-postayı göster'
-      view-all: 'Tüm profillerde göster'
-      view-own: 'Kendi profilinde göster'
+      view-all: 'Postanı tüm profillerde göster'
+      view-own: 'Postanı kendi profilinde göster'
     settings:
       remove-username-registration: 'Kullanıcı adı alanını kayıt formundan kaldır'
       title: 'Uzantı Ayarları'

@@ -7,7 +7,8 @@ fof-discussion-language:
     permissions:
       allow_change_language_label: 'Dil düzenlemesine izin ver'
     settings:
-      composer_default_label: 'Tartışma oluşturucuda mevcut yerel ayarı önceden seçin'
+      composer_default_label: 'Düzenleyicide mevcut yerel ayarı önceden seçin'
+      locale_sort_label: 'Varsayılan tartışma filtresi için algılanan dili kullan'
       native_label: 'Ana dil adlarını kullanın'
       show_flag_label: 'Ülke bayraklarını dil adlarıyla göster'
       title: 'FriendsOfFlarum Tartışma Dili'

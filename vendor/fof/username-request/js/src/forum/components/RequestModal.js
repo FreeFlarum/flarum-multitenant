@@ -9,9 +9,9 @@
  *
  */
 
-import Stream from 'flarum/utils/Stream';
-import Modal from 'flarum/components/Modal';
-import Button from 'flarum/components/Button';
+import Stream from 'flarum/common/utils/Stream';
+import Modal from 'flarum/common/components/Modal';
+import Button from 'flarum/common/components/Button';
 
 export default class RequestModal extends Modal {
     oninit(vnode) {
@@ -157,7 +157,6 @@ export default class RequestModal extends Modal {
                 }
             )
             .then((request) => {
-
                 app.session.user[this.userRequestAttr] = Stream(request);
                 this.success = true;
                 this.alertAttrs = null;

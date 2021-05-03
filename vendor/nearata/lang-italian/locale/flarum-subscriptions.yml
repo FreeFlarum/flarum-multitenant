@@ -1,10 +1,12 @@
 flarum-subscriptions:
+
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the forum user interface.
   forum:
+
     # These translations are displayed as tooltips for discussion badges.
     badge:
       following_tooltip: => flarum-subscriptions.ref.following
@@ -47,17 +49,24 @@ flarum-subscriptions:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
+
     # These translations are used in emails sent when a post is made in a subscribed discussion
     new_post:
       subject: "[Nuovo Post] {title}"
       body: |
         Ciao {recipient_display_name}!
+
         {poster_display_name} ha pubblicato un post in una discussione che stai seguendo: {title}.
+
         Per visualizzare il nuovo post, clicca sul seguente link:
         {url}
+
         ---
+
         {content}
+
         ---
+
         Non riceverai più notifiche su questa discussione finché non sarai aggiornato.
 
   ##

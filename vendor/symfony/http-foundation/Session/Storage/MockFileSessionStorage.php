@@ -28,7 +28,6 @@ class MockFileSessionStorage extends MockArraySessionStorage
 
     /**
      * @param string $savePath Path of directory to save session files
-     * @param string $name     Session name
      */
     public function __construct(string $savePath = null, string $name = 'MOCKSESSID', MetadataBag $metaBag = null)
     {
@@ -68,7 +67,7 @@ class MockFileSessionStorage extends MockArraySessionStorage
     /**
      * {@inheritdoc}
      */
-    public function regenerate($destroy = false, $lifetime = null)
+    public function regenerate(bool $destroy = false, int $lifetime = null)
     {
         if (!$this->started) {
             $this->start();
@@ -114,9 +113,8 @@ class MockFileSessionStorage extends MockArraySessionStorage
             $this->data = $data;
         }
 
-        // this is needed for Silex, where the session object is re-used across requests
-        // in functional tests. In Symfony, the container is rebooted, so we don't have
-        // this issue
+        // this is needed when the session object is re-used across multiple requests
+        // in functional tests.
         $this->started = false;
     }
 

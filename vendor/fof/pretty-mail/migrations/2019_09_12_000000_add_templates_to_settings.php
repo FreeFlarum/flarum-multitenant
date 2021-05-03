@@ -1,5 +1,15 @@
 <?php
 
+/*
+ * This file is part of fof/pretty-mail.
+ *
+ * Copyright (c) FriendsOfFlarum.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ */
+
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Database\Schema\Builder;
 
@@ -8,7 +18,7 @@ return [
         /**
          * @var SettingsRepositoryInterface
          */
-        $settings = app('flarum.settings');
+        $settings = resolve('flarum.settings');
 
         $keys = ['mailhtml', 'newPost', 'postMentioned', 'userMentioned', 'includeCSS'];
 

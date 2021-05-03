@@ -9,7 +9,7 @@ ianm-synopsis:
       excerpt-type: 'Özette hangi içerik gösterilsin?'
       first-label: 'İlk gönderi'
       last-label: 'Son gönderi'
-      rich-excerpts: 'Özeti zengin içerik kullanarak gösterin'
+      rich-excerpts: 'Özeti zengin içerik kullanarak gösterin (Dikkatle kullanın)'
   forum:
     user:
       settings:

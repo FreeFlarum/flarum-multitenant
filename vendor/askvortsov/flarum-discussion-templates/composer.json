@@ -12,8 +12,8 @@
     "forum": "https://discuss.flarum.org/d/23950-discussion-templates-per-tag"
   },
   "require": {
-    "flarum/core": "^0.1.0-beta.15",
-    "flarum/tags": "^0.1.0-beta.15"
+    "flarum/core": "^0.1.0-beta.16",
+    "flarum/tags": "^0.1.0-beta.16"
   },
   "authors": [
     {
@@ -30,7 +30,7 @@
   "extra": {
     "flarum-extension": {
       "title": "Discussion Templates",
-      "category": "discussion",
+      "category": "feature",
       "icon": {
         "name": "fas fa-plus-square",
         "backgroundColor": "#6932D1",

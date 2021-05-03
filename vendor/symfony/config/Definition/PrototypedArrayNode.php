@@ -37,10 +37,8 @@ class PrototypedArrayNode extends ArrayNode
     /**
      * Sets the minimum number of elements that a prototype based node must
      * contain. By default this is zero, meaning no elements.
-     *
-     * @param int $number
      */
-    public function setMinNumberOfElements($number)
+    public function setMinNumberOfElements(int $number)
     {
         $this->minNumberOfElements = $number;
     }
@@ -69,7 +67,7 @@ class PrototypedArrayNode extends ArrayNode
      * @param string $attribute The name of the attribute which value is to be used as a key
      * @param bool   $remove    Whether or not to remove the key
      */
-    public function setKeyAttribute($attribute, $remove = true)
+    public function setKeyAttribute(string $attribute, bool $remove = true)
     {
         $this->keyAttribute = $attribute;
         $this->removeKeyAttribute = $remove;
@@ -87,17 +85,9 @@ class PrototypedArrayNode extends ArrayNode
 
     /**
      * Sets the default value of this node.
-     *
-     * @param string $value
-     *
-     * @throws \InvalidArgumentException if the default value is not an array
      */
-    public function setDefaultValue($value)
+    public function setDefaultValue(array $value)
     {
-        if (!\is_array($value)) {
-            throw new \InvalidArgumentException($this->getPath().': the default value of an array node has to be an array.');
-        }
-
         $this->defaultValue = $value;
     }
 
@@ -185,7 +175,7 @@ class PrototypedArrayNode extends ArrayNode
     protected function finalizeValue($value)
     {
         if (false === $value) {
-            throw new UnsetKeyException(sprintf('Unsetting key for path "%s", value: "%s".', $this->getPath(), json_encode($value)));
+            throw new UnsetKeyException(sprintf('Unsetting key for path "%s", value: %s.', $this->getPath(), json_encode($value)));
         }
 
         foreach ($value as $k => $v) {

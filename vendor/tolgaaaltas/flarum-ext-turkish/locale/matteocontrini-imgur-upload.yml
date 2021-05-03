@@ -5,6 +5,13 @@
 imgur-upload:
   admin:
     settings:
+      allow-paste: 'Görüntüyü yapıştırarak yüklemeye izin ver'
+      embed-type:
+        full-with-link: 'Tam boyutlu görsel ile bağlantı'
+        full-without-link: 'Bağlantı olmadan tam boyutlu görsel'
+        preview-with-link: 'Önizleme (1024px) ile tam boyutlu görsele bağlantı'
+        preview-without-link: 'Önizleme olmadan bağlantı'
+        title: 'İçe gömme tipi'
       hide-markdown-image: 'Markdown görsel düğmesini Gizle'
       title: 'Imgur Yükleme Ayarları'
   forum:

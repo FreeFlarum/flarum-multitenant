@@ -19,7 +19,7 @@
     "forum": "https://discuss.flarum.org/d/18607"
   },
   "require": {
-    "flarum/core": "^0.1.0-beta.14"
+    "flarum/core": "^0.1.0-beta.16"
   },
   "replace": {
     "piotr-tokarczyk/flarum-user-default-preferences": "*"

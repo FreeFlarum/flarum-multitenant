@@ -2,8 +2,53 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) 
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [3.2.0] - 2020-11-30
+### Fixed
+- Added support for PHP 8 [#22] [#23]
+
+## [3.1.0] - 2020-01-19
+### Changed
+- Zend Diactoros is deprecated, switched to Laminas Diactoros [#20], [#21].
+  THIS IS A BREAKING CHANGE, so, if you want to keep using Zend Diactoros, you should configure the `Factory` as follows:
+  ```php
+  Factory::setFactory(
+    new FactoryDiscovery([
+        'request' => 'Zend\Diactoros\RequestFactory',
+        'response' => 'Zend\Diactoros\ResponseFactory',
+        'serverRequest' => 'Zend\Diactoros\ServerRequestFactory',
+        'stream' => 'Zend\Diactoros\StreamFactory',
+        'uploadedFile' => 'Zend\Diactoros\UploadedFileFactory',
+        'uri' => 'Zend\Diactoros\UriFactory',
+    ])
+  );
+  ```
+
+## [3.0.1] - 2019-11-29
+### Fixed
+- Moved a dependency to dev
+- Updated docs
+
+## [3.0.0] - 2019-11-29
+### Added
+- Added `FactoryInterface` that returns all PSR-17 factories
+- Added `FactoryDiscovery` class to discover automatically PSR-17 implementation libraries
+- Added `Factory::getFactory()` and `Factory::setFactory()` to set manually PSR-17 factories
+- Added `Factory::getResponseFactory()`
+- Added `Factory::getRequestFactory()`
+- Added `Factory::getServerRequestFactory()`
+- Added `Factory::getStreamFactory()`
+- Added `Factory::getUriFactory()`
+- Added `Factory::getUploadedFileFactory()`
+- Added `Sunrise` to the list of factories detected automatically
+
+### Removed
+- Support for PHP 7.0 and 7.1
+- `Factory::setStrategy`
+- `HttpErrorException::setContext` method, to make the exception class inmutable
+- Traits `HasResponseFactory` and `HasStreamFactory`
 
 ## [2.2.0] - 2019-03-05
 ### Added
@@ -155,7 +200,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [#16]: https://github.com/middlewares/utils/issues/16
 [#17]: https://github.com/middlewares/utils/issues/17
+[#20]: https://github.com/middlewares/utils/issues/20
+[#21]: https://github.com/middlewares/utils/issues/21
+[#22]: https://github.com/middlewares/utils/issues/22
+[#23]: https://github.com/middlewares/utils/issues/23
 
+[3.2.0]: https://github.com/middlewares/utils/compare/v3.1.0...v3.2.0
+[3.1.0]: https://github.com/middlewares/utils/compare/v3.0.1...v3.1.0
+[3.0.1]: https://github.com/middlewares/utils/compare/v3.0.0...v3.0.1
+[3.0.0]: https://github.com/middlewares/utils/compare/v2.2.0...v3.0.0
 [2.2.0]: https://github.com/middlewares/utils/compare/v2.1.1...v2.2.0
 [2.1.1]: https://github.com/middlewares/utils/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/middlewares/utils/compare/v2.0.0...v2.1.0

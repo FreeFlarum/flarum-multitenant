@@ -1,12 +1,12 @@
 <?php
 
-/**
- *  This file is part of fof/cookie-consent.
+/*
+ * This file is part of fof/cookie-consent.
  *
- *  Copyright (c) FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- *  For the full copyright and license information, please view the license.md
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
  */
 
 namespace FoF\CookieConsent\Listeners;
