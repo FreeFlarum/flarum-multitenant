@@ -67,7 +67,7 @@ kilowhat-audit:
         user_changed: '{discussion} yazarı {old_user} iken {new_user} olarak değiştirildi'
       empty: 'Sonuç yok'
       extension:
-        disabled: 'Devre dışı bırakılan uzantı {package}'
+        disabled: 'Uzantı etkisizleştirildi {package}'
         enabled: 'Etkin uzantı {package}'
       filterApply: Uygula
       filterPlaceholder: 'Günlükleri filtrele'

@@ -8,6 +8,36 @@ define('CONF', json_decode(file_get_contents($flarum_conf_path), true));
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
+use Flarum\Extension\Event\Disabling;
+use Flarum\Extension\Event\Enabling;
+use Flarum\Foundation\Console\CacheClearCommand;
+use Illuminate\Contracts\Events\Dispatcher;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\NullOutput;
+
+
+class ClearCacheOnExtension
+{
+    protected $command;
+
+    public function __construct(CacheClearCommand $command)
+    {
+        $this->command = $command;
+    }
+
+    public function subscribe(Dispatcher $events)
+    {
+        $events->listen([Enabling::class, Disabling::class], [$this, 'clearCache']);
+    }
+
+    public function clearCache($event)
+    {
+        $this->command->run(
+            new ArrayInput([]),
+            new NullOutput()
+        );
+    }
+}
 
 
 // Disables local file upload for FoF Upload extension, if it's not enabled:
@@ -21,6 +51,8 @@ function disableLocalUpload() {
 
 
 return [
+    (new Extend\Event())->subscribe(ClearCacheOnExtension::class),
+
     disableLocalUpload(),
 
     // Remove (permanently throttle) test mail function, if not allowed:
@@ -56,14 +88,14 @@ return [
     (new Extend\Frontend('admin'))->content(function (Document $document) {
 
         // Adds notice about upgrading to higher Flarum version (in case the vendor patch doesn't want to work, for some reason):
-        $document->head[] = '
+        /*$document->head[] = '
             <p style="margin: 0; font-size: 13px; text-align: center; padding: 15px 12.5vw; background: #f0e87d; color: black;">
                 <i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i> 
                 We are currently upgrading all forums to Flarum beta.16. There might be some downtimes and outages. Some of the extensions will be removed due to incompatibility. Your forum might stop working after the upgrade.
                 <a style="color: darkblue;" href="https://discuss.flarum.org/d/7585/2524">Follow the progress here</a>.<br/>
                 <i style="color: #666666; font-size: 12px;">This notice will disappear when all forums are upgraded.</i>
              </p>
-        ';
+        ';*/
 
         // News box at the bottom of the admin panel:
         $document->foot[] = '

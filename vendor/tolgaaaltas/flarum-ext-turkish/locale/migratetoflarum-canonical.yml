@@ -11,7 +11,7 @@ migratetoflarum-canonical:
       option:
         301: '301 (Kalıcı yeniden yönlendirme)'
         302: '302 (Geçici yönlendirme, test için)'
-        disabled: 'Devre dışı (uzantı hiçbir şey yapmaz)'
+        disabled: 'Etkisizleştir (uzantı hiçbir şey yapmaz)'
       step:
         admin_on_canonical: 'Canonical bağlantı üzerinden yönetici paneline erişin'
         check_config_url: 'Config.php''de tanımlanan bağlantının tercih ettiğiniz canonical bağlantı olup olmadığını kontrol edin (şu anda: {url})'

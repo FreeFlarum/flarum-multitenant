@@ -66,6 +66,7 @@ return array(
     'PersianFla\\Persian\\' => array($vendorDir . '/persianfla/flarum-ext-persian/src'),
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
     'Omines\\OAuth2\\Client\\' => array($vendorDir . '/omines/oauth2-gitlab/src'),
+    'NomisCZ\\SteamAuth\\' => array($vendorDir . '/nomiscz/flarum-ext-auth-steam/src'),
     'Nearata\\NoSelfLikes\\' => array($vendorDir . '/nearata/flarum-ext-no-self-likes/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Minishlink\\WebPush\\' => array($vendorDir . '/minishlink/web-push/src'),

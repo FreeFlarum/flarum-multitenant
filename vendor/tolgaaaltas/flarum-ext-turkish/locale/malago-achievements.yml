@@ -18,7 +18,7 @@ malago-achievements:
       description_placeholder: 'Başarı Açıklaması'
       height_label: 'Resim yüksekliği'
       height_placeholder: '32'
-      image_label: 'Görsel Bağlantısı'
+      image_label: 'Görsel Bağlantısı veya simge kodu'
       image_placeholder: 'Görsel Resim Bağlantısı'
       name_label: İsim
       name_placeholder: 'Başarı Adı'

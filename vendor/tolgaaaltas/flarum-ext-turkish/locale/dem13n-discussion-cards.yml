@@ -12,7 +12,7 @@ dem13n:
       desktop_card_width: 'Masaüstü cihazlarda kartların genişliği: %{percent}'
       output_on_index_page: 'Anasayfada çıktısını göster'
       preview_text: 'Kısa metni göster'
-      settings_error: 'Önbelleği temizleyin, bu uzantıyı devre dışı bırakın, Kaldır düğmesine (sağda) tıklayın, verileri silmeyi onaylayın ve uzantıyı etkinleştirin'
+      settings_error: 'Önbelleği temizleyin, bu uzantıyı etkisizleştirin, Kaldır düğmesine (sağda) tıklayın, verileri silmeyi onaylayın ve uzantıyı etkinleştirin'
       show_replies: 'Yanıtları göster'
       small_cards: 'Birincil kartların sayısı'
       tablet_card_width: 'Tabletlerde kartların genişliği: %{percent}'

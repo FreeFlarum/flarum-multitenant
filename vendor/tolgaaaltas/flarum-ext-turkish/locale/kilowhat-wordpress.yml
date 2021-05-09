@@ -20,3 +20,5 @@ kilowhat-wordpress:
       wordpress_login_path_help: 'Yalnızca giriş bağlantısını bir eklenti ile yeniden tanımladıysanız gereklidir'
       wordpress_url: 'WordPress Bağlantısı'
       wordpress_username: 'WordPress Yönetici Kullanıcı Adı'
+    tabs:
+      disabled: Etkisizleştirildi

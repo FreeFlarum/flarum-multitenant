@@ -111,7 +111,7 @@ v17development-flarum-support:
         invalid_discussion: 'Ups, bir şeyler yanlış gitti. Bu makaleyi/yardım talebini derecelendiremezsin.'
         invalid_points: 'Bilinmeyen derecelendirme. Lütfen tekrar deneyin.'
         missing_article_id: 'Kayıp veya var olmayan makale ID''si'
-        neutral_emoji_disabled: 'Kararsız ifadesi devre dışı bırakılmıştır.'
+        neutral_emoji_disabled: 'Kararsız ifadesi etkisizleştirilmiştir.'
     support_tickets: 'Destek biletleri'
     tickets:
       subject: Konu

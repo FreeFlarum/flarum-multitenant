@@ -9,7 +9,7 @@ core:
 datitisev-maintenance:
   admin:
     dashboard:
-      disable_maintenance_mode_button: 'Bakım Modunu Kapat'
+      disable_maintenance_mode_button: 'Bakım Modunu Etkisizleştir'
       enable_maintenance_mode_button: 'Bakım Modunu Etkinleştir'
     permissions:
       allow_bypass_maintenance_label: 'Bakım modunu Bypass et (ayar etkinleştirilmelidir)'
@@ -17,8 +17,8 @@ datitisev-maintenance:
       active_label: 'Bakım modu durumu'
       allow_bypass_hint: 'DB erişilebilir değilse bypass olmaz. Forum ve API için geçerlidir (API, <code>config.php</code> aracılığıyla tamamen devre dışı bırakılmadıkça)'
       allow_bypass_label: 'İzin kullanarak forum ve API bakımının atlanmasına izin ver'
-      disable_admin_label: 'Yönetici erişimini devre dışı bırakın'
-      disable_api_label: 'Tüm API erişimini devre dışı bırakın'
+      disable_admin_label: 'Yönetici erişimini etkisizleştirin'
+      disable_api_label: 'Tüm API erişimini etkisizleştirin'
       error_page_file_hint: 'Flarum kökünden yol - <code>vendor</code> ve <code>storage</code> ''nın bulunduğu yer.'
       error_page_file_label: 'Hata Sayfası Dosya Yolu'
       error_page_hint: 'Blade ile $app, $translator, $settings, $title, ve $message kullanabilirsiniz.'
@@ -30,7 +30,7 @@ datitisev-maintenance:
       title: 'Bakım Modu'
       title_label: 'Hata Sayfası Başlığı'
   lib:
-    maintenance_active_disabled_api_message: 'API şu anda herkes için kapalı.'
+    maintenance_active_disabled_api_message: 'API şu anda herkes için etkisizleştirilmiş durumda.'
     maintenance_active_message: 'Bu forum şu anda bakımda.'
     maintenance_active_not_db_message: 'Bakım modu <code>config.php</code> üzerinden etkinleştirilir.'
   views:

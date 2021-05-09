@@ -5,6 +5,11 @@
 sycho-action-log:
   admin:
     action_settings: 'Buradan hangi eylemlerin günlüğe kaydedileceğini kontrol edebilirsiniz.'
+    actions:
+      administration:
+        extension:
+          disabled:
+            label: Etkisizleştirildi
     clear: 'Girdileri Temizle'
     description: 'Geçtiğimiz hafta içerisinde gerçekleştirilen tüm denetim ve yönetim eylemlerinin listesini görüntüleyin.'
     no_entries: 'Girdi Yok'

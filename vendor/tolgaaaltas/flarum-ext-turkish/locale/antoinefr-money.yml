@@ -11,7 +11,7 @@ antoinefr-money:
       moneyforpost: 'Yeni gönderi için verilen tutar'
       moneyname: 'Para adı (örn: [para] puan)'
       noshowzero: 'Değer sıfır ise gösterme'
-      postminimumlength: 'Para kazanmak için gönderinin minimum karakter uzunluğu (Devredışı bırakmak için 0 girin)'
+      postminimumlength: 'Para kazanmak için gönderinin minimum karakter uzunluğu (Etkisizleştirmek için 0 girin)'
       title: Ayarlar
   forum:
     modal:

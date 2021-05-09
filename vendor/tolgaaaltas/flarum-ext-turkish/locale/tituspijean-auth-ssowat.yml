@@ -9,7 +9,7 @@ tituspijean-auth-ssowat:
     description: 'SSOwat alan adı ayarla'
     settings:
       domain: 'SSOwat alan adı ("https://" veya "/" olmadan)'
-      onlyUse: 'Flarum girişi kapat ve yalnızca SSOwat girişi aktif et'
+      onlyUse: 'Flarum girişi etkisizleştir ve yalnızca SSOwat girişi aktif et'
       title: 'SSOwat ayarları'
   forum:
     log_in: '=> core.ref.log_in'

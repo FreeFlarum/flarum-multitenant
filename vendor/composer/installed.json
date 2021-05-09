@@ -484,17 +484,17 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.179.2",
-            "version_normalized": "3.179.2.0",
+            "version": "3.180.5",
+            "version_normalized": "3.180.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7d3490e35878d0884905fa0c1ab43ecf178c8d9b"
+                "reference": "948a4defbe2a571cc4460725015b8e98b7060f2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7d3490e35878d0884905fa0c1ab43ecf178c8d9b",
-                "reference": "7d3490e35878d0884905fa0c1ab43ecf178c8d9b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/948a4defbe2a571cc4460725015b8e98b7060f2d",
+                "reference": "948a4defbe2a571cc4460725015b8e98b7060f2d",
                 "shasum": ""
             },
             "require": {
@@ -530,7 +530,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2021-04-30T19:46:52+00:00",
+            "time": "2021-05-07T18:12:43+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -571,7 +571,7 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.179.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.180.5"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -2415,17 +2415,17 @@
         },
         {
             "name": "fgrosse/phpasn1",
-            "version": "v2.2.0",
-            "version_normalized": "2.2.0.0",
+            "version": "v2.3.0",
+            "version_normalized": "2.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fgrosse/PHPASN1.git",
-                "reference": "d1978f7abd580f3fc33561e7f71d4c12c7531fad"
+                "reference": "20299033c35f4300eb656e7e8e88cf52d1d6694e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/d1978f7abd580f3fc33561e7f71d4c12c7531fad",
-                "reference": "d1978f7abd580f3fc33561e7f71d4c12c7531fad",
+                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/20299033c35f4300eb656e7e8e88cf52d1d6694e",
+                "reference": "20299033c35f4300eb656e7e8e88cf52d1d6694e",
                 "shasum": ""
             },
             "require": {
@@ -2441,7 +2441,7 @@
                 "ext-gmp": "GMP is the preferred extension for big integer calculations",
                 "phpseclib/bcmath_compat": "BCmath polyfill for servers where neither GMP nor BCmath is available"
             },
-            "time": "2020-10-11T16:28:18+00:00",
+            "time": "2021-04-24T19:01:55+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2487,7 +2487,7 @@
             ],
             "support": {
                 "issues": "https://github.com/fgrosse/PHPASN1/issues",
-                "source": "https://github.com/fgrosse/PHPASN1/tree/v2.2.0"
+                "source": "https://github.com/fgrosse/PHPASN1/tree/v2.3.0"
             },
             "install-path": "../fgrosse/phpasn1"
         },
@@ -9654,6 +9654,65 @@
             "install-path": "../laminas/laminas-zendframework-bridge"
         },
         {
+            "name": "laravel/helpers",
+            "version": "v1.4.1",
+            "version_normalized": "1.4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/helpers.git",
+                "reference": "febb10d8daaf86123825de2cb87f789a3371f0ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/helpers/zipball/febb10d8daaf86123825de2cb87f789a3371f0ac",
+                "reference": "febb10d8daaf86123825de2cb87f789a3371f0ac",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0",
+                "php": "^7.1.3|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "time": "2021-02-16T15:27:11+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Dries Vints",
+                    "email": "dries.vints@gmail.com"
+                }
+            ],
+            "description": "Provides backwards compatibility for helpers in the latest Laravel release.",
+            "keywords": [
+                "helpers",
+                "laravel"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/helpers/tree/v1.4.1"
+            },
+            "install-path": "../laravel/helpers"
+        },
+        {
             "name": "lcobucci/clock",
             "version": "2.0.0",
             "version_normalized": "2.0.0.0",
@@ -9796,17 +9855,17 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.6.0",
-            "version_normalized": "1.6.0.0",
+            "version": "1.6.1",
+            "version_normalized": "1.6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "19a9673b833cc37770439097b381d86cd125bfe8"
+                "reference": "2651c497f005de305c7ba3f232cbd87b8c00ee8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/19a9673b833cc37770439097b381d86cd125bfe8",
-                "reference": "19a9673b833cc37770439097b381d86cd125bfe8",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2651c497f005de305c7ba3f232cbd87b8c00ee8c",
+                "reference": "2651c497f005de305c7ba3f232cbd87b8c00ee8c",
                 "shasum": ""
             },
             "require": {
@@ -9829,7 +9888,7 @@
                 "scrutinizer/ocular": "^1.5",
                 "symfony/finder": "^4.2"
             },
-            "time": "2021-05-01T19:00:49+00:00",
+            "time": "2021-05-08T16:08:00+00:00",
             "bin": [
                 "bin/commonmark"
             ],
@@ -12329,6 +12388,71 @@
             "install-path": "../nikic/fast-route"
         },
         {
+            "name": "nomiscz/flarum-ext-auth-steam",
+            "version": "v0.2.1",
+            "version_normalized": "0.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NomisCZ/flarum-ext-auth-steam.git",
+                "reference": "bd63a746ee293b15ed5e38fd5a0955603949283d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NomisCZ/flarum-ext-auth-steam/zipball/bd63a746ee293b15ed5e38fd5a0955603949283d",
+                "reference": "bd63a746ee293b15ed5e38fd5a0955603949283d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.15",
+                "fof/components": ">=0.2.0",
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
+                "laravel/helpers": "^v1.4.0"
+            },
+            "time": "2021-02-04T17:02:32+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "NomisCZ Steam Login",
+                    "icon": {
+                        "name": "fab fa-steam",
+                        "backgroundColor": "#171a21",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/19750-steam-auth"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "NomisCZ\\SteamAuth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "NomisCZ",
+                    "email": "nomiscz@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allow users to log in with Steam",
+            "keywords": [
+                "Authentication",
+                "flarum",
+                "steam"
+            ],
+            "support": {
+                "issues": "https://github.com/NomisCZ/flarum-ext-auth-steam/issues",
+                "source": "https://github.com/NomisCZ/flarum-ext-auth-steam/tree/v0.2.1"
+            },
+            "install-path": "../nomiscz/flarum-ext-auth-steam"
+        },
+        {
             "name": "omines/oauth2-gitlab",
             "version": "3.4.0",
             "version_normalized": "3.4.0.0",
@@ -12958,23 +13082,23 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.3",
-            "version_normalized": "1.1.3.0",
+            "version": "1.1.4",
+            "version_normalized": "1.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2020-03-23T09:12:05+00:00",
+            "time": "2021-05-03T11:20:27+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -12994,7 +13118,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -13004,6 +13128,9 @@
                 "psr",
                 "psr-3"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
             "install-path": "../psr/log"
         },
         {
@@ -16586,17 +16713,17 @@
         },
         {
             "name": "tolgaaaltas/flarum-ext-turkish",
-            "version": "0.16.5",
-            "version_normalized": "0.16.5.0",
+            "version": "0.16.6",
+            "version_normalized": "0.16.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-                "reference": "b60ce7dbd107d2fd89565c5805450faed9c91a49"
+                "reference": "1df84032eb70711244e46808d78c3920cf985bbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/b60ce7dbd107d2fd89565c5805450faed9c91a49",
-                "reference": "b60ce7dbd107d2fd89565c5805450faed9c91a49",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/1df84032eb70711244e46808d78c3920cf985bbb",
+                "reference": "1df84032eb70711244e46808d78c3920cf985bbb",
                 "shasum": ""
             },
             "require": {
@@ -16605,7 +16732,7 @@
             "suggest": {
                 "tolgaaaltas/flarum-lang-turkish": "Turkish language pack for Flarum's core."
             },
-            "time": "2021-04-25T17:50:38+00:00",
+            "time": "2021-05-03T14:30:42+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -16668,17 +16795,17 @@
         },
         {
             "name": "tolgaaaltas/flarum-lang-turkish",
-            "version": "0.16.5",
-            "version_normalized": "0.16.5.0",
+            "version": "0.16.6",
+            "version_normalized": "0.16.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
-                "reference": "9d00214ee010d70fe45d15a4211ff2bd7f52be51"
+                "reference": "c3d90c2c665432281abed40060c5da99ff754582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/9d00214ee010d70fe45d15a4211ff2bd7f52be51",
-                "reference": "9d00214ee010d70fe45d15a4211ff2bd7f52be51",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/c3d90c2c665432281abed40060c5da99ff754582",
+                "reference": "c3d90c2c665432281abed40060c5da99ff754582",
                 "shasum": ""
             },
             "require": {
@@ -16687,7 +16814,7 @@
             "suggest": {
                 "tolgaaaltas/flarum-ext-turkish": "Turkish language pack for Flarum's third party extensions."
             },
-            "time": "2021-04-25T17:50:34+00:00",
+            "time": "2021-04-29T22:10:37+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {

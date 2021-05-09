@@ -59,6 +59,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
         'b71cbb215bc01dc90edaec1c3a55b3ef' => __DIR__ . '/..' . '/flarum/core/src/TranslatorInterface.php',
+        '17d016dc52a631c1e74d2eb8fdd57342' => __DIR__ . '/..' . '/laravel/helpers/src/helpers.php',
         '3c3a02bc9945aa3571024986c07a1e55' => __DIR__ . '/..' . '/rinvex/countries/src/helpers.php',
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
@@ -167,6 +168,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'N' => 
         array (
+            'NomisCZ\\SteamAuth\\' => 18,
             'Nearata\\NoSelfLikes\\' => 20,
         ),
         'M' => 
@@ -603,6 +605,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Omines\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
+        ),
+        'NomisCZ\\SteamAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nomiscz/flarum-ext-auth-steam/src',
         ),
         'Nearata\\NoSelfLikes\\' => 
         array (

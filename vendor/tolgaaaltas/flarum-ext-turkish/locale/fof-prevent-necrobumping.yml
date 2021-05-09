@@ -5,7 +5,7 @@
 fof-prevent-necrobumping:
   admin:
     settings:
-      days_help: 'Bir tartışma, söz konusu tartışmadaki son gönderiden bu yana belirtilen gün sayısı geçtiğinde eski olarak işaretlenir. Varsayılan olarak deaktif etmek için <code>0</code> değerini kullanın.'
+      days_help: 'Bir tartışma, söz konusu tartışmadaki son gönderiden bu yana belirtilen gün sayısı geçtiğinde eski olarak işaretlenir. Varsayılan olarak etkisizleştirmek için <code>0</code> değerini kullanın.'
       days_label: Gün
       message_agreement_label: 'Mesaj Onay (Onay Kutusu)'
       message_description_label: 'Mesaj Açıklaması'

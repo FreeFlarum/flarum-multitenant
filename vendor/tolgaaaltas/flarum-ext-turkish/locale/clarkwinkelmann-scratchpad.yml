@@ -17,7 +17,7 @@ clarkwinkelmann-scratchpad:
       compile: 'JS''yi derle'
       delete: Sil
       delete-confirmation: 'Sil "{title}" ?'
-      disable: 'Kapatmak için tıkla'
+      disable: 'Etkisizleştirmek için tıkla'
       enable: 'Etkinleştirmek için tıkla'
       new: Yeni
       new-confirmation: 'Mevcut çalışma defteri kaydedilmedi. Bırakıp yenisini mi oluşturacaksınız?'

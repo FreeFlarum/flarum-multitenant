@@ -5,7 +5,7 @@
 sycho-ace:
   admin:
     categories:
-      disabled: 'Devre dışı'
+      disabled: Etkisizleştirildi
       enabled: Etkin
       none: A-Z
     category_selection:

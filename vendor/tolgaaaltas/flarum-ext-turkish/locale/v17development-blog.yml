@@ -13,7 +13,7 @@ v17development-flarum-blog:
       add_sidebar_nav_label: 'Kenar çubuğu gezinmesine ekle'
       add_sidebar_nav_text: 'Kenar çubuğu gezinme menüsünde bloga bir bağlantı ekleyin.'
       allow_comments_label: 'Yorumlara izin ver'
-      allow_comments_text: 'Varsayılan olarak, blog gönderilerine yorumlara izin verin. Devre dışı bırakıldığında, her blog yazısı için ayrı ayrı etkinleştirilebilir. <b>Not:</b> Bu ayarı değiştirmek, önceden var olan blog gönderilerini etkilemeyecektir.'
+      allow_comments_text: 'Varsayılan olarak, blog gönderilerine yorumlara izin verin. Etkisizleştirildiğinde, her blog yazısı için ayrı ayrı etkinleştirilebilir. <b>Not:</b> Bu ayarı değiştirmek, önceden var olan blog gönderilerini etkilemeyecektir.'
       blog_heading: Blog
       categories_heading: Kategoriler
       default_article_image_label: 'Varsayılan makale görseli'
@@ -44,7 +44,7 @@ v17development-flarum-blog:
     category_empty: 'Bu kategoride bir blog gönderisi bulunmamaktadır.'
     comment_section:
       comments: Yorumlar
-      locked: 'Bu makale için yorumlar kısmı kapatılmıştır'
+      locked: 'Bu makale için yorumlar kısmı etkisizleştirilmiştir'
     compose:
       write_article: 'Makale yaz'
     composer:
@@ -74,7 +74,7 @@ v17development-flarum-blog:
       approve_article: 'Makaleyi onayla'
       article_settings: 'Makale ayarları'
       delete_forever: 'Kalıcı olarak sil'
-      disable_comments: 'Yorumları kapat'
+      disable_comments: 'Yorumları etkisizleştir'
       edit_article: 'Makaleyi düzenle'
       enable_comments: 'Yorumları etkinleştir'
       hide_article: 'Makaleyi gizle'

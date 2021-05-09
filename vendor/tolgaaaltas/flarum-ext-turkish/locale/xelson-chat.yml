@@ -151,8 +151,8 @@ xelson-chat:
     toolbar:
       chat:
         settings: 'Sohbet ayarları'
-      disable_notifications: 'Bildirimleri devre dışı bırak'
-      disable_sounds: 'Sesleri devre dışı bırak'
+      disable_notifications: 'Bildirimleri etkisizleştir'
+      disable_sounds: 'Sesleri etkisizleştir'
       enable_notifications: 'Bildirimleri etkinleştir'
       enable_sounds: 'Sesleri etkinleştir'
       maximize: Büyült

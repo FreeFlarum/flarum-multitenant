@@ -137,6 +137,7 @@
         "nearata/lang-italian": "*",
         "neercsys/flarum-ext-bosanski": "*",
         "neercsys/flarum-lang-bosanski": "*",
+        "nomiscz/flarum-ext-auth-steam": "^0.2.1",
         "paragonie/random_compat": "*",
         "persianfla/flarum-ext-persian": "*",
         "qiaeru/lang-french": "*",

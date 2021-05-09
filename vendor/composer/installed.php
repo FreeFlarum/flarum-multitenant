@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '55a562ec0fc8abd9610ef7b420344a31d1bf3484',
+    'reference' => '4f0e2ef8ab5b7bdd405c3dfee0fefcb40b0931a6',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -92,12 +92,12 @@
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.179.2',
-      'version' => '3.179.2.0',
+      'pretty_version' => '3.180.5',
+      'version' => '3.180.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7d3490e35878d0884905fa0c1ab43ecf178c8d9b',
+      'reference' => '948a4defbe2a571cc4460725015b8e98b7060f2d',
     ),
     'axy/backtrace' => 
     array (
@@ -376,12 +376,12 @@
     ),
     'fgrosse/phpasn1' => 
     array (
-      'pretty_version' => 'v2.2.0',
-      'version' => '2.2.0.0',
+      'pretty_version' => 'v2.3.0',
+      'version' => '2.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd1978f7abd580f3fc33561e7f71d4c12c7531fad',
+      'reference' => '20299033c35f4300eb656e7e8e88cf52d1d6694e',
     ),
     'fig/http-message-util' => 
     array (
@@ -546,7 +546,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '55a562ec0fc8abd9610ef7b420344a31d1bf3484',
+      'reference' => '4f0e2ef8ab5b7bdd405c3dfee0fefcb40b0931a6',
     ),
     'flarum/lang-english' => 
     array (
@@ -1426,6 +1426,15 @@
       ),
       'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
     ),
+    'laravel/helpers' => 
+    array (
+      'pretty_version' => 'v1.4.1',
+      'version' => '1.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'febb10d8daaf86123825de2cb87f789a3371f0ac',
+    ),
     'lcobucci/clock' => 
     array (
       'pretty_version' => '2.0.0',
@@ -1446,12 +1455,12 @@
     ),
     'league/commonmark' => 
     array (
-      'pretty_version' => '1.6.0',
-      'version' => '1.6.0.0',
+      'pretty_version' => '1.6.1',
+      'version' => '1.6.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '19a9673b833cc37770439097b381d86cd125bfe8',
+      'reference' => '2651c497f005de305c7ba3f232cbd87b8c00ee8c',
     ),
     'league/flysystem' => 
     array (
@@ -1805,6 +1814,15 @@
       ),
       'reference' => '31fa86924556b80735f98b294a7ffdfb26789f22',
     ),
+    'nomiscz/flarum-ext-auth-steam' => 
+    array (
+      'pretty_version' => 'v0.2.1',
+      'version' => '0.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bd63a746ee293b15ed5e38fd5a0955603949283d',
+    ),
     'omines/oauth2-gitlab' => 
     array (
       'pretty_version' => '3.4.0',
@@ -1948,12 +1966,12 @@
     ),
     'psr/log' => 
     array (
-      'pretty_version' => '1.1.3',
-      'version' => '1.1.3.0',
+      'pretty_version' => '1.1.4',
+      'version' => '1.1.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
+      'reference' => 'd49695b909c3b7628b6289db5479a1c204601f11',
     ),
     'psr/log-implementation' => 
     array (
@@ -2511,21 +2529,21 @@
     ),
     'tolgaaaltas/flarum-ext-turkish' => 
     array (
-      'pretty_version' => '0.16.5',
-      'version' => '0.16.5.0',
+      'pretty_version' => '0.16.6',
+      'version' => '0.16.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b60ce7dbd107d2fd89565c5805450faed9c91a49',
+      'reference' => '1df84032eb70711244e46808d78c3920cf985bbb',
     ),
     'tolgaaaltas/flarum-lang-turkish' => 
     array (
-      'pretty_version' => '0.16.5',
-      'version' => '0.16.5.0',
+      'pretty_version' => '0.16.6',
+      'version' => '0.16.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9d00214ee010d70fe45d15a4211ff2bd7f52be51',
+      'reference' => 'c3d90c2c665432281abed40060c5da99ff754582',
     ),
     'v17development/flarum-blog' => 
     array (
