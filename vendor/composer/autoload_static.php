@@ -279,6 +279,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\Masquerade\\' => 15,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
+            'FoF\\IgnoreUsers\\' => 16,
             'FoF\\HtmlErrors\\' => 15,
             'FoF\\Gamification\\' => 17,
             'FoF\\ForumStatisticsWidget\\' => 26,
@@ -974,6 +975,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'FoF\\Linguist\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/linguist/src',
+        ),
+        'FoF\\IgnoreUsers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/ignore-users/src',
         ),
         'FoF\\HtmlErrors\\' => 
         array (

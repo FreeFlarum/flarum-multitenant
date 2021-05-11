@@ -1,10 +1,10 @@
 <?php
 
 // Prepare FreeFlarum config:
-$flarum_conf_path = dirname(__FILE__) . "/../etc/flarum.json";
+define('ROOT', dirname(__FILE__));
 
 /* Had to use globals, so the variables are accessible from anywhere in this file. */
-define('CONF', json_decode(file_get_contents($flarum_conf_path), true));
+define('CONF', json_decode(file_get_contents(ROOT . "/../etc/flarum.json"), true));
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
@@ -18,13 +18,6 @@ use Symfony\Component\Console\Output\NullOutput;
 
 class ClearCacheOnExtension
 {
-    protected $command;
-
-    public function __construct(CacheClearCommand $command)
-    {
-        $this->command = $command;
-    }
-
     public function subscribe(Dispatcher $events)
     {
         $events->listen([Enabling::class, Disabling::class], [$this, 'clearCache']);
@@ -32,10 +25,7 @@ class ClearCacheOnExtension
 
     public function clearCache($event)
     {
-        $this->command->run(
-            new ArrayInput([]),
-            new NullOutput()
-        );
+        shell_exec("php " . ROOT . "/flarum cache:clear | tee -a " . ROOT . "/clearcache.txt 2>/dev/null >/dev/null &");
     }
 }
 
@@ -115,3 +105,4 @@ return [
             </script>';
     })
 ];
+

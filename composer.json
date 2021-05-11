@@ -84,6 +84,7 @@
         "fof/forum-statistics-widget": "*",
         "fof/gamification": "*",
         "fof/html-errors": "*",
+        "fof/ignore-users": "^0.4.0",
         "fof/linguist": "*",
         "fof/links": "*",
         "fof/masquerade": "*",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f02ee58f200726ca8bad6ba7d4b601ee",
+    "content-hash": "bdf2a2de8507c14e7d85a49ad0f7ddd9",
     "packages": [
         {
             "name": "antoinefr/flarum-ext-money",
@@ -5151,6 +5151,75 @@
                 }
             ],
             "time": "2021-04-04T23:29:54+00:00"
+        },
+        {
+            "name": "fof/ignore-users",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/ignore-users.git",
+                "reference": "c4332b3674f62da601bfa72dd2a0e0536ea1e917"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/ignore-users/zipball/c4332b3674f62da601bfa72dd2a0e0536ea1e917",
+                "reference": "c4332b3674f62da601bfa72dd2a0e0536ea1e917",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Ignore Users",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-comment-slash",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20681"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\IgnoreUsers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sajjad Hashemian",
+                    "email": "wolaws@gmail.com"
+                },
+                {
+                    "name": "IanM",
+                    "homepage": "https://discuss.flarum.org/u/ianm"
+                }
+            ],
+            "description": "Allow users to ignore other users.",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/20681",
+                "issues": "https://github.com/FriendsOfFlarum/ignore-users/issues",
+                "source": "https://github.com/FriendsOfFlarum/ignore-users"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-04-20T20:33:58+00:00"
         },
         {
             "name": "fof/linguist",

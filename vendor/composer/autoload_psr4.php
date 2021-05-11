@@ -156,6 +156,7 @@ return array(
     'FoF\\Masquerade\\' => array($vendorDir . '/fof/masquerade/src'),
     'FoF\\Links\\' => array($vendorDir . '/fof/links/src'),
     'FoF\\Linguist\\' => array($vendorDir . '/fof/linguist/src'),
+    'FoF\\IgnoreUsers\\' => array($vendorDir . '/fof/ignore-users/src'),
     'FoF\\HtmlErrors\\' => array($vendorDir . '/fof/html-errors/src'),
     'FoF\\Gamification\\' => array($vendorDir . '/fof/gamification/src'),
     'FoF\\ForumStatisticsWidget\\' => array($vendorDir . '/fof/forum-statistics-widget/src'),
