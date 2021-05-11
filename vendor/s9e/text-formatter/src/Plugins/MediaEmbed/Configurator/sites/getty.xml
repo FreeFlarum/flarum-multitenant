@@ -1,0 +1,40 @@
+<site name="Getty Images" homepage="https://www.gettyimages.com/">
+	<example>https://gty.im/3232182</example>
+	<example>https://www.gettyimages.com/detail/3232182</example>
+	<example>https://www.gettyimages.com/detail/news-photo/the-beatles-travel-by-coach-to-the-west-country-for-some-news-photo/3232182</example>
+	<example>https://www.gettyimages.co.uk/detail/3232182</example>
+
+	<tags><tag>images</tag></tags>
+
+	<attributes>
+		<height defaultValue="360" filterChain="#uint"/>
+		<width  defaultValue="640" filterChain="#uint"/>
+	</attributes>
+
+	<host>gettyimages.be</host>
+	<host>gettyimages.cn</host>
+	<host>gettyimages.co.jp</host>
+	<host>gettyimages.co.uk</host>
+	<host>gettyimages.com</host>
+	<host>gettyimages.com.au</host>
+	<host>gettyimages.de</host>
+	<host>gettyimages.dk</host>
+	<host>gettyimages.es</host>
+	<host>gettyimages.fr</host>
+	<host>gettyimages.ie</host>
+	<host>gettyimages.it</host>
+	<host>gettyimages.nl</host>
+	<host>gettyimages.pt</host>
+	<host>gettyimages.se</host>
+	<host>gty.im</host>
+	<extract>!gty\.im/(?'id'\d+)!</extract>
+	<extract>!gettyimages\.[.\w]+/detail(?=/).*?/(?'id'\d+)!</extract>
+	<extract>!#[-\w]*picture-id(?'id'\d+)$!</extract>
+	<scrape url="https://embed.gettyimages.com/preview/{@id}">
+		<extract>!"height":[ "]*(?'height'\d+)!</extract>
+		<extract>!"width":[ "]*(?'width'\d+)!</extract>
+		<extract>!\bid[=:]['"]?(?'et'[-=\w]+)!</extract>
+		<extract>!\bsig[=:]['"]?(?'sig'[-=\w]+)!</extract>
+	</scrape>
+	<iframe width="{@width}" height="{@height}" src="//embed.gettyimages.com/embed/{@id}?et={@et}&amp;tld=com&amp;sig={@sig}&amp;caption=false&amp;ver=1"/>
+</site>

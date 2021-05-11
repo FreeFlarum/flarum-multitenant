@@ -1,0 +1,53 @@
+<site name="YouTube" homepage="https://www.youtube.com/">
+	<source>https://support.google.com/youtube/bin/answer.py?hl=en&amp;answer=171780</source>
+	<example>https://www.youtube.com/watch?v=-cEzsCAzTak</example>
+	<example>https://youtu.be/-cEzsCAzTak</example>
+	<example>https://www.youtube.com/watch?feature=player_detailpage&amp;v=jofNR_WkoCE#t=40</example>
+	<example>https://www.youtube.com/watch?v=pC35x6iIPmo&amp;list=PLOU2XLYxmsIIxJrlMIY5vYXAFcO5g83gA</example>
+
+	<oembed endpoint="https://www.youtube.com/oembed"
+	          scheme="https://www.youtube.com/watch?v={@id}"/>
+
+	<tags><tag>livestreaming</tag><tag>videos</tag></tags>
+
+	<attributes>
+		<id filterChain="#identifier" required="false"/>
+		<t  filterChain="#timestamp"/>
+	</attributes>
+
+	<host>youtube.com</host>
+	<host>youtu.be</host>
+	<extract>!youtube\.com/(?:watch.*?v=|shorts/|v/|attribution_link.*?v%3D)(?'id'[-\w]+)!</extract>
+	<extract>!youtu\.be/(?'id'[-\w]+)!</extract>
+	<extract>@[#&amp;?]t=(?'t'\d[\dhms]*)@</extract>
+	<extract>![&amp;?]list=(?'list'[-\w]+)!</extract>
+	<iframe>
+		<src><![CDATA[
+			<xsl:text>https://www.youtube.com/embed/</xsl:text>
+			<xsl:value-of select="@id"/>
+			<xsl:if test="@list">
+				<xsl:text>?list=</xsl:text>
+				<xsl:value-of select="@list"/>
+			</xsl:if>
+			<xsl:if test="@t">
+				<xsl:choose>
+					<xsl:when test="@list">&amp;</xsl:when>
+					<xsl:otherwise>?</xsl:otherwise>
+				</xsl:choose>
+				<xsl:text>start=</xsl:text>
+				<xsl:value-of select="@t"/>
+			</xsl:if>
+		]]></src>
+		<style background="url(https://i.ytimg.com/vi/{@id}/hqdefault.jpg) 50% 50% / cover"/>
+	</iframe>
+
+	<amp custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js">
+		<template><![CDATA[
+			<amp-youtube layout="responsive" width="640" height="360"
+				data-param-list="{@list}"
+				data-param-start="{@t}"
+				data-videoid="{@id}"
+			></amp-youtube>
+		]]></template>
+	</amp>
+</site>

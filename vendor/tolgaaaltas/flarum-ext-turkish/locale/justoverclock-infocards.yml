@@ -14,13 +14,19 @@ flarum-ext-infocards:
     Tuesday: Salı
     Wednesday: Çarşamba
     forumstats: 'Forum İstatistikleri'
+    friday: Cuma
     geninfo: 'Genel Bilgi'
     groups: Gruplarınız
+    monday: Pazartesi
     opthread: 'Başlatılan Tartışmalar'
+    saturday: Cumartesi
     sunday: Pazar
+    thursday: Perşembe
     times: Zaman
     totalpost: 'Toplam Gönderi'
     totdisc: 'Toplam Tartışma'
+    tuesday: Salı
     viscounter: 'Sayacı Ziyaret Et'
     wasviewed: 'Bu sayfa görüntülendi'
+    wednesday: Çarşamba
     welcome_back: 'Tekrar hoşgeldin,'

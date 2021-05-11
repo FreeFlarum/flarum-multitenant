@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ae4e2f9b2c635d7fb79014354abcf915dc277a0a',
+    'reference' => 'd09e10057eeb4e26cec9a298aaf88869c425bb5c',
     'name' => 'flarum/flarum',
   ),
   'versions' => 
@@ -92,12 +92,12 @@
     ),
     'aws/aws-sdk-php' => 
     array (
-      'pretty_version' => '3.180.5',
-      'version' => '3.180.5.0',
+      'pretty_version' => '3.180.6',
+      'version' => '3.180.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '948a4defbe2a571cc4460725015b8e98b7060f2d',
+      'reference' => '1a836be14ba664ea11eb965dec77715e9e607013',
     ),
     'axy/backtrace' => 
     array (
@@ -546,7 +546,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ae4e2f9b2c635d7fb79014354abcf915dc277a0a',
+      'reference' => 'd09e10057eeb4e26cec9a298aaf88869c425bb5c',
     ),
     'flarum/lang-english' => 
     array (
@@ -1674,12 +1674,12 @@
     ),
     'michaelbelgium/flarum-discussion-views' => 
     array (
-      'pretty_version' => 'v6.0.0',
-      'version' => '6.0.0.0',
+      'pretty_version' => 'v6.0.1',
+      'version' => '6.0.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3fbefd040c69fe3d1411a1266650b43323141e4d',
+      'reference' => '66212a9ad8f4da254c433cfb7a6984c29fdf939a',
     ),
     'michaelbelgium/flarum-dutch' => 
     array (
@@ -2170,12 +2170,12 @@
     ),
     's9e/text-formatter' => 
     array (
-      'pretty_version' => '2.9.0',
-      'version' => '2.9.0.0',
+      'pretty_version' => '2.9.1',
+      'version' => '2.9.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd764e9e4ac70b9bc398afe15b45b27568aa3ff23',
+      'reference' => 'e81057d923f654f1fa6a5a6ed22c872723ff6c33',
     ),
     'sijad/flarum-ext-details' => 
     array (
@@ -2227,12 +2227,12 @@
     ),
     'starsriver/mathplus' => 
     array (
-      'pretty_version' => '0.1.0',
-      'version' => '0.1.0.0',
+      'pretty_version' => '0.2.1',
+      'version' => '0.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f27a8fbdee0349cc7938929affc476691f822364',
+      'reference' => '6831b7cccd21604031b1417b83139d5e721d87af',
     ),
     'swiftmailer/swiftmailer' => 
     array (
@@ -2538,21 +2538,21 @@
     ),
     'tolgaaaltas/flarum-ext-turkish' => 
     array (
-      'pretty_version' => '0.16.6',
-      'version' => '0.16.6.0',
+      'pretty_version' => '0.16.7',
+      'version' => '0.16.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1df84032eb70711244e46808d78c3920cf985bbb',
+      'reference' => '99ce7867c2bdd03329e219970d5cbab50207ebea',
     ),
     'tolgaaaltas/flarum-lang-turkish' => 
     array (
-      'pretty_version' => '0.16.6',
-      'version' => '0.16.6.0',
+      'pretty_version' => '0.16.7',
+      'version' => '0.16.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c3d90c2c665432281abed40060c5da99ff754582',
+      'reference' => '3c8c9a2d3cebe43d3fcff5d9f71d098ad496b8f8',
     ),
     'v17development/flarum-blog' => 
     array (

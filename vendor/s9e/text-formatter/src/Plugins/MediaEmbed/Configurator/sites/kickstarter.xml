@@ -1,0 +1,19 @@
+<site name="Kickstarter" homepage="https://www.kickstarter.com/">
+	<example>https://www.kickstarter.com/projects/1869987317/wish-i-was-here-1</example>
+	<example>https://www.kickstarter.com/projects/1869987317/wish-i-was-here-1/widget/card.html</example>
+	<example>https://www.kickstarter.com/projects/1869987317/wish-i-was-here-1/widget/video.html</example>
+
+	<tags><tag>fundraising</tag></tags>
+
+	<host>kickstarter.com</host>
+	<extract>!kickstarter\.com/projects/(?'id'[^/]+/[^/?]+)(?:/widget/(?:(?'card'card)|(?'video'video)))?!</extract>
+
+	<choose>
+		<when test="@video">
+			<iframe width="640" height="360" src="//www.kickstarter.com/projects/{@id}/widget/video.html"/>
+		</when>
+		<otherwise>
+			<iframe width="220" height="420" src="//www.kickstarter.com/projects/{@id}/widget/card.html"/>
+		</otherwise>
+	</choose>
+</site>

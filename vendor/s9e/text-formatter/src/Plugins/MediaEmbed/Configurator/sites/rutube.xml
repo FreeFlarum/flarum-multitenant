@@ -1,0 +1,15 @@
+<site name="Rutube" homepage="https://rutube.ru/">
+	<example>https://rutube.ru/play/embed/4782775</example>
+	<example>https://rutube.ru/tracks/4118278.html?v=8b490a46447720d4ad74616f5de2affd</example>
+
+	<tags><tag>.ru</tag></tags>
+
+	<host>rutube.ru</host>
+	<extract>!rutube\.ru/(?:play/embed|tracks)/(?'id'\d+)!</extract>
+	<scrape url="https://rutube.ru/api/oembed/?url=https://rutube.ru/video/{@vid}/">
+		<header>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.0.0 Safari/537.36</header>
+		<match>!rutube\.ru/video/(?'vid'[0-9a-f]{32})!</match>
+		<extract>!rutube\.ru/play/embed/(?'id'\d+)!</extract>
+	</scrape>
+	<iframe width="720" height="405" src="//rutube.ru/play/embed/{@id}"/>
+</site>

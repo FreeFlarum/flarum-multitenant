@@ -1,0 +1,63 @@
+<site name="SoundCloud" homepage="https://soundcloud.com/">
+	<source>https://soundcloud.com/pages/widgets</source>
+	<example>https://api.soundcloud.com/tracks/98282116</example>
+	<example>https://soundcloud.com/andrewbird/three-white-horses</example>
+	<example>https://soundcloud.com/tenaciousd/sets/rize-of-the-fenix/</example>
+
+	<tags><tag>music</tag></tags>
+
+	<host>soundcloud.com</host>
+	<extract>@https?://(?:api\.)?soundcloud\.com/(?!pages/)(?'id'[-/\w]+/[-/\w]+|^[^/]+/[^/]+$)@i</extract>
+	<extract>@api\.soundcloud\.com/playlists/(?'playlist_id'\d+)@</extract>
+	<extract>@api\.soundcloud\.com/tracks/(?'track_id'\d+)(?:\?secret_token=(?'secret_token'[-\w]+))?@</extract>
+	<extract>@soundcloud\.com/(?!playlists|tracks)[-\w]+/[-\w]+/(?=s-)(?'secret_token'[-\w]+)@</extract>
+	<scrape>
+		<header>User-agent: PHP (not Mozilla)</header>
+		<match>@soundcloud\.com/(?!playlists/\d|tracks/\d)[-\w]+/[-\w]@</match>
+		<extract>@soundcloud:tracks:(?'track_id'\d+)@</extract>
+	</scrape>
+	<scrape>
+		<header>User-agent: PHP (not Mozilla)</header>
+		<match>@soundcloud\.com/[-\w]+/sets/@</match>
+		<extract>@soundcloud://playlists:(?'playlist_id'\d+)@</extract>
+	</scrape>
+	<iframe width="100%" max-width="900">
+		<height><![CDATA[
+			<xsl:choose>
+				<xsl:when test="@playlist_id or contains(@id,'/sets/')">450</xsl:when>
+				<xsl:otherwise>166</xsl:otherwise>
+			</xsl:choose>
+		]]></height>
+		<src><![CDATA[
+			<xsl:text>https://w.soundcloud.com/player/?url=</xsl:text>
+			<xsl:choose>
+				<xsl:when test="@playlist_id">
+					<xsl:text>https%3A//api.soundcloud.com/playlists/</xsl:text>
+					<xsl:value-of select="@playlist_id"/>
+				</xsl:when>
+				<xsl:when test="@track_id">
+					<xsl:text>https%3A//api.soundcloud.com/tracks/</xsl:text>
+					<xsl:value-of select="@track_id"/>
+					<xsl:text>&amp;secret_token=</xsl:text>
+					<xsl:value-of select="@secret_token"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="not(contains(@id, '://'))">
+						<xsl:text>https%3A//soundcloud.com/</xsl:text>
+					</xsl:if>
+					<xsl:value-of select="@id"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		]]></src>
+	</iframe>
+
+	<amp custom-element="amp-soundcloud" src="https://cdn.ampproject.org/v0/amp-soundcloud-0.1.js">
+		<template><![CDATA[
+			<amp-soundcloud layout="fixed-height" height="150"
+				data-playlistid="{@playlist_id}"
+				data-secret-token="{@secret_token}"
+				data-trackid="{@track_id}"
+			></amp-soundcloud>
+		]]></template>
+	</amp>
+</site>

@@ -1,0 +1,21 @@
+<site name="Twitter" homepage="https://twitter.com/">
+	<example>https://twitter.com/IJasonAlexander/statuses/526635414338023424</example>
+	<example>https://mobile.twitter.com/DerekTVShow/status/463372588690202624</example>
+	<example>https://twitter.com/#!/IJasonAlexander/status/526635414338023424</example>
+
+	<tags><tag>social</tag></tags>
+
+	<host>twitter.com</host>
+	<extract>@twitter\.com/(?:#!/|i/)?\w+/(?:status(?:es)?|tweet)/(?'id'\d+)@</extract>
+	<iframe allow="autoplay *" width="550" height="250" src="https://s9e.github.io/iframe/2/twitter.min.html#{@id}{$MEDIAEMBED_THEME}" onload="var c=new MessageChannel;c.port1.onmessage=function(e){{style.height=e.data+'px'}};contentWindow.postMessage('s9e:init','https://s9e.github.io',[c.port2])" data-s9e-livepreview-ignore-attrs="style"/>
+
+	<amp custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js">
+		<template><![CDATA[
+			<amp-twitter layout="responsive" width="550" height="250" data-tweetid="{@id}">
+				<blockquote placeholder="">
+					<a href="https://twitter.com/user/status/{@id}">Twitter</a>
+				</blockquote>
+			</amp-twitter>
+		]]></template>
+	</amp>
+</site>

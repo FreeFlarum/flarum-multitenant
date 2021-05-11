@@ -1,0 +1,29 @@
+<site name="Megaphone" homepage="https://megaphone.fm/">
+	<example>https://cms.megaphone.fm/channel/lockedonheat?selected=LKN8165322853</example>
+	<example>https://player.megaphone.fm/LKN8165322853</example>
+
+	<tags><tag>podcasts</tag></tags>
+
+	<host>megaphone.fm</host>
+	<host>megaphone.link</host>
+	<extract>@megaphone\.fm/.*?\?(?:e|selected)=(?'id'\w+)@</extract>
+	<extract>@(?:dcs|player|traffic)\.megaphone\.fm/(?'id'\w+)@</extract>
+	<extract>@megaphone\.link/(?'id'\w+)@</extract>
+	<iframe width="100%" height="200" max-width="900">
+		<src><![CDATA[
+			<xsl:text>https://player.megaphone.fm/</xsl:text>
+			<xsl:value-of select="@id"/>
+			<xsl:if test="$MEDIAEMBED_THEME = 'light'">?light=true</xsl:if>
+		]]></src>
+	</iframe>
+
+	<amp custom-element="amp-megaphone" src="https://cdn.ampproject.org/v0/amp-megaphone-0.1.js">
+		<template><![CDATA[
+			<amp-megaphone layout="fixed-height" height="200" data-episode="{@id}">
+				<xsl:if test="$MEDIAEMBED_THEME = 'light'">
+					<xsl:attribute name="data-light"/>
+				</xsl:if>
+			</amp-megaphone>
+		]]></template>
+	</amp>
+</site>

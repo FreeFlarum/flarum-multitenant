@@ -466,16 +466,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.180.5",
+            "version": "3.180.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "948a4defbe2a571cc4460725015b8e98b7060f2d"
+                "reference": "1a836be14ba664ea11eb965dec77715e9e607013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/948a4defbe2a571cc4460725015b8e98b7060f2d",
-                "reference": "948a4defbe2a571cc4460725015b8e98b7060f2d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1a836be14ba664ea11eb965dec77715e9e607013",
+                "reference": "1a836be14ba664ea11eb965dec77715e9e607013",
                 "shasum": ""
             },
             "require": {
@@ -550,9 +550,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.180.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.180.6"
             },
-            "time": "2021-05-07T18:12:43+00:00"
+            "time": "2021-05-10T18:17:07+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -10992,16 +10992,16 @@
         },
         {
             "name": "michaelbelgium/flarum-discussion-views",
-            "version": "v6.0.0",
+            "version": "v6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MichaelBelgium/flarum-discussion-views.git",
-                "reference": "3fbefd040c69fe3d1411a1266650b43323141e4d"
+                "reference": "66212a9ad8f4da254c433cfb7a6984c29fdf939a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MichaelBelgium/flarum-discussion-views/zipball/3fbefd040c69fe3d1411a1266650b43323141e4d",
-                "reference": "3fbefd040c69fe3d1411a1266650b43323141e4d",
+                "url": "https://api.github.com/repos/MichaelBelgium/flarum-discussion-views/zipball/66212a9ad8f4da254c433cfb7a6984c29fdf939a",
+                "reference": "66212a9ad8f4da254c433cfb7a6984c29fdf939a",
                 "shasum": ""
             },
             "require": {
@@ -11054,7 +11054,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-19T20:33:56+00:00"
+            "time": "2021-05-09T09:29:20+00:00"
         },
         {
             "name": "michaelbelgium/flarum-dutch",
@@ -13505,16 +13505,16 @@
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "d764e9e4ac70b9bc398afe15b45b27568aa3ff23"
+                "reference": "e81057d923f654f1fa6a5a6ed22c872723ff6c33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/d764e9e4ac70b9bc398afe15b45b27568aa3ff23",
-                "reference": "d764e9e4ac70b9bc398afe15b45b27568aa3ff23",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/e81057d923f654f1fa6a5a6ed22c872723ff6c33",
+                "reference": "e81057d923f654f1fa6a5a6ed22c872723ff6c33",
                 "shasum": ""
             },
             "require": {
@@ -13541,7 +13541,7 @@
             },
             "type": "library",
             "extra": {
-                "version": "2.9.0"
+                "version": "2.9.1"
             },
             "autoload": {
                 "psr-4": {
@@ -13573,9 +13573,9 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/TextFormatter/issues",
-                "source": "https://github.com/s9e/TextFormatter/tree/2.9.0"
+                "source": "https://github.com/s9e/TextFormatter/tree/2.9.1"
             },
-            "time": "2021-04-17T23:41:09+00:00"
+            "time": "2021-05-09T00:43:29+00:00"
         },
         {
             "name": "softcreatr/php-mime-detector",
@@ -13782,28 +13782,28 @@
         },
         {
             "name": "starsriver/mathplus",
-            "version": "0.1.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/StarsRivers/FlaJax.git",
-                "reference": "f27a8fbdee0349cc7938929affc476691f822364"
+                "url": "https://github.com/StarsRivers/Mathplus.git",
+                "reference": "6831b7cccd21604031b1417b83139d5e721d87af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StarsRivers/FlaJax/zipball/f27a8fbdee0349cc7938929affc476691f822364",
-                "reference": "f27a8fbdee0349cc7938929affc476691f822364",
+                "url": "https://api.github.com/repos/StarsRivers/Mathplus/zipball/6831b7cccd21604031b1417b83139d5e721d87af",
+                "reference": "6831b7cccd21604031b1417b83139d5e721d87af",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": ">=0.1.0-beta.16 <=0.1.0"
+                "flarum/core": ">=0.1.0-beta.16"
             },
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
-                    "title": "FlaJax",
+                    "title": "Mathplus",
                     "icon": {
                         "name": "fas fa-smile",
-                        "backgroundColor": "#238c59",
+                        "backgroundColor": "#FF6688",
                         "color": "#fff"
                     }
                 }
@@ -13814,11 +13814,27 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "description": "MathJax extension for flarum",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "星河",
+                    "email": "weizixuan110@foxmail.com",
+                    "homepage": "https://include.uotan.cn/"
+                }
+            ],
+            "description": "MathJax extension for flarum,more support.",
+            "keywords": [
+                "MathJax",
+                "extension",
+                "math",
+                "mathren"
+            ],
             "support": {
-                "source": "https://github.com/StarsRivers/FlaJax/tree/v0.1"
+                "source": "https://github.com/StarsRivers/Mathplus/tree/0.2.1"
             },
-            "time": "2021-04-17T08:10:15+00:00"
+            "time": "2021-05-09T12:41:36+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -16198,16 +16214,16 @@
         },
         {
             "name": "tolgaaaltas/flarum-ext-turkish",
-            "version": "0.16.6",
+            "version": "0.16.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-ext-turkish.git",
-                "reference": "1df84032eb70711244e46808d78c3920cf985bbb"
+                "reference": "99ce7867c2bdd03329e219970d5cbab50207ebea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/1df84032eb70711244e46808d78c3920cf985bbb",
-                "reference": "1df84032eb70711244e46808d78c3920cf985bbb",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-ext-turkish/zipball/99ce7867c2bdd03329e219970d5cbab50207ebea",
+                "reference": "99ce7867c2bdd03329e219970d5cbab50207ebea",
                 "shasum": ""
             },
             "require": {
@@ -16273,20 +16289,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-05-03T14:30:42+00:00"
+            "time": "2021-05-09T20:40:39+00:00"
         },
         {
             "name": "tolgaaaltas/flarum-lang-turkish",
-            "version": "0.16.6",
+            "version": "0.16.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tolgaaaltas/flarum-lang-turkish.git",
-                "reference": "c3d90c2c665432281abed40060c5da99ff754582"
+                "reference": "3c8c9a2d3cebe43d3fcff5d9f71d098ad496b8f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/c3d90c2c665432281abed40060c5da99ff754582",
-                "reference": "c3d90c2c665432281abed40060c5da99ff754582",
+                "url": "https://api.github.com/repos/tolgaaaltas/flarum-lang-turkish/zipball/3c8c9a2d3cebe43d3fcff5d9f71d098ad496b8f8",
+                "reference": "3c8c9a2d3cebe43d3fcff5d9f71d098ad496b8f8",
                 "shasum": ""
             },
             "require": {
@@ -16348,7 +16364,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-04-29T22:10:37+00:00"
+            "time": "2021-05-05T00:00:41+00:00"
         },
         {
             "name": "v17development/flarum-blog",

@@ -1,0 +1,10 @@
+<site name="MLB" homepage="https://mlb.com/video/">
+	<example>https://www.mlb.com/video/statcast-stantons-two-homers/c-1898424783</example>
+	<example>https://m.mlb.com/video/v1205791883</example>
+
+	<tags><tag>sports</tag></tags>
+
+	<host>mlb.com</host>
+	<extract>#mlb\.com/video/(?:[-\w/]+/)?(?:c-|v|[-\w]+-c)(?'id'\d+)#</extract>
+	<iframe src="https://www.mlb.com/video/share/c-{@id}"/>
+</site>

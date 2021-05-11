@@ -1,0 +1,11 @@
+<site name="Sportsnet" homepage="https://www.sportsnet.ca/">
+	<example>https://www.sportsnet.ca/soccer/west-ham-2-hull-2/</example>
+
+	<tags><tag>.ca</tag><tag>sports</tag></tags>
+
+	<host>sportsnet.ca</host>
+	<scrape>
+		<extract>@bc_videos\s*:\s*(?'id'\d+)@</extract>
+	</scrape>
+	<iframe src="//players.brightcove.net/1704050871/rkedLxwfab_default/index.html?videoId={@id}"/>
+</site>

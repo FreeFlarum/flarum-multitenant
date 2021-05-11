@@ -1,0 +1,29 @@
+<site name="Pinterest" homepage="https://www.pinterest.com/">
+	<source>https://developers.pinterest.com/tools/widget-builder/</source>
+	<example>https://www.pinterest.com/pin/99360735500167749/</example>
+	<example>https://www.pinterest.com/pinterest/official-news/</example>
+
+	<tags><tag>social</tag></tags>
+
+	<host>pinterest.com</host>
+	<extract>@pinterest.com/pin/(?'id'\d+)@</extract>
+	<extract>@pinterest.com/(?!_/|discover/|explore/|news_hub/|pin/|search/)(?'id'[-\w]+/[-\w]+)@</extract>
+	<iframe height="360" src="https://s9e.github.io/iframe/2/pinterest.min.html#{@id}" onload="var c=new MessageChannel;c.port1.onmessage=function(e){{style.height=e.data+'px'}};contentWindow.postMessage('s9e:init','https://s9e.github.io',[c.port2])" data-s9e-livepreview-ignore-attrs="style">
+		<width><![CDATA[
+			<xsl:choose>
+				<xsl:when test="contains(@id, '/')">730</xsl:when>
+				<xsl:otherwise>345</xsl:otherwise>
+			</xsl:choose>
+		]]></width>
+	</iframe>
+
+	<amp custom-element="amp-pinterest" src="https://cdn.ampproject.org/v0/amp-pinterest-0.1.js">
+		<template><![CDATA[
+			<amp-pinterest width="245" height="330"
+				data-do="embedPin"
+				data-url="https://www.pinterest.com/pin/{@id}/"
+			>
+			</amp-pinterest>
+		]]></template>
+	</amp>
+</site>

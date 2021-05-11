@@ -1,0 +1,24 @@
+<site name="Gifs.com" homepage="https://gifs.com/">
+	<example>https://gifs.com/gif/zm4DLy</example>
+	<example>https://j.gifs.com/Y6YZoO.gif</example>
+
+	<tags><tag>images</tag></tags>
+
+	<attributes>
+		<height defaultValue="360" filterChain="#uint"/>
+		<width  defaultValue="640" filterChain="#uint"/>
+	</attributes>
+
+	<host>gifs.com</host>
+	<extract>!gifs\.com/(?:gif/)?(?'id'\w+)!</extract>
+	<scrape url="https://gifs.com/gif/{@id}">
+		<extract>!meta property="og:image:width" content="(?'width'\d+)!</extract>
+		<extract>!meta property="og:image:height" content="(?'height'\d+)!</extract>
+	</scrape>
+	<iframe width="{@width}" height="{@height}" src="//gifs.com/embed/{@id}"/>
+
+	<video width="{@width}" height="{@height}" poster="https://j.gifs.com/{@id}.jpg">
+		<source type="video/mp4" src="https://j.gifs.com/{@id}@large.mp4"/>
+		<source type="video/mp4" src="https://j.gifs.com/{@id}.mp4"/>
+	</video>
+</site>

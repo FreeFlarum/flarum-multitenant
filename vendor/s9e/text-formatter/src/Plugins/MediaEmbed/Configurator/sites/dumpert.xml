@@ -1,0 +1,9 @@
+<site name="dumpert" homepage="https://www.dumpert.nl/">
+	<example>https://www.dumpert.nl/item/6622577_4652b140</example>
+
+	<tags><tag>.nl</tag><tag>entertainment</tag></tags>
+
+	<host>dumpert.nl</host>
+	<extract>!dumpert\.nl/(?:item|mediabase)/(?'id'\d+[/_]\w+)!</extract>
+	<iframe src="//www.dumpert.nl/embed/{translate(@id,'/','_')}"/>
+</site>

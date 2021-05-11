@@ -1,0 +1,14 @@
+.rst-content dl,
+.rst-content ul
+{
+	font-size: 16px
+}
+.wy-nav-content
+{
+	max-width: unset;
+}
+/* MediaEmbed's supported sites */
+tr:target
+{
+	outline: red solid 2px;
+}

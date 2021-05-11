@@ -1,0 +1,9 @@
+<site name="Youku" homepage="https://www.youku.com/">
+	<example>https://v.youku.com/v_show/id_XMzY0NTMyMTgxMg==.html</example>
+
+	<tags><tag>.cn</tag></tags>
+
+	<host>youku.com</host>
+	<extract>!youku\.com/v(?:_show|ideo)/id_(?'id'\w+=*)!</extract>
+	<iframe src="//player.youku.com/embed/{@id}"/>
+</site>

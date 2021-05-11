@@ -1,0 +1,5 @@
+<template>
+  <element name="br" id="1" void="yes">
+    <closeTag id="1"/>
+  </element>
+</template>

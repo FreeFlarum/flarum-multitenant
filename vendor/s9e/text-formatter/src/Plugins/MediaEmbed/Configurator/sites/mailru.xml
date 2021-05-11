@@ -1,0 +1,13 @@
+<site name="Mail.Ru" homepage="https://my.mail.ru/">
+	<example>https://my.mail.ru/corp/auto/video/testdrive/34.html</example>
+	<example>https://my.mail.ru/mail/alenka1957/video/1/7.html</example>
+
+	<tags><tag>.ru</tag></tags>
+
+	<host>my.mail.ru</host>
+	<scrape>
+		<match>!my\.mail\.ru/\w+/\w+/video/\w+/\d!</match>
+		<extract>!"itemId": ?"?(?'id'\d+)!</extract>
+	</scrape>
+	<iframe src="https://my.mail.ru/video/embed/{@id}"/>
+</site>

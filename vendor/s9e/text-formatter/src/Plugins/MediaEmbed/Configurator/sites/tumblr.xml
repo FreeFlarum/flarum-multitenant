@@ -1,0 +1,15 @@
+<site name="Tumblr" homepage="https://www.tumblr.com/">
+	<example>https://staff.tumblr.com/post/180624227620/</example>
+
+	<tags><tag>social</tag></tags>
+
+	<host>tumblr.com</host>
+	<extract>!(?'name'[-\w]+)\.tumblr\.com/post/(?'id'\d+)!</extract>
+	<scrape url="https://www.tumblr.com/oembed/1.0?url=https://{@name}.tumblr.com/post/{@id}">
+		<header>User-agent: curl</header>
+		<match>!\w\.tumblr\.com/post/\d!</match>
+		<extract>!did=\\u0022(?'did'[-\w]+)!</extract>
+		<extract>!embed\\/post\\/(?'key'[-\w]+)!</extract>
+	</scrape>
+	<iframe width="520" height="300" src="https://s9e.github.io/iframe/2/tumblr.min.html#{@key}/{@id}" onload="var c=new MessageChannel;c.port1.onmessage=function(e){{style.height=e.data+'px'}};contentWindow.postMessage('s9e:init','https://s9e.github.io',[c.port2])" data-s9e-livepreview-ignore-attrs="style"/>
+</site>

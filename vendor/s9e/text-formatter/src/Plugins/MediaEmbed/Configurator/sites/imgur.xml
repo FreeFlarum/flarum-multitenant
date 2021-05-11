@@ -1,0 +1,37 @@
+<site name="Imgur" homepage="https://imgur.com/">
+	<example>https://imgur.com/AsQ0K3P</example>
+	<example>https://imgur.com/a/9UGCL</example>
+	<example>https://imgur.com/gallery/9UGCL</example>
+	<example>https://i.imgur.com/u7Yo0Vy.gifv</example>
+	<example>https://i.imgur.com/UO1UrIx.mp4</example>
+
+	<oembed endpoint="https://api.imgur.com/oembed.json"
+	          scheme="https://imgur.com/{@id}"/>
+
+	<tags><tag>images</tag></tags>
+
+	<host>imgur.com</host>
+	<extract>@imgur\.com/(?'id'a/\w+)@</extract>
+	<extract>@i\.imgur\.com/(?'id'\w{5,7})[lms]?\.@</extract>
+	<extract>@imgur\.com/(?'id'\w+)(?![\w./])@</extract>
+	<scrape url="https://api.imgur.com/oembed.xml?url=/{@path}">
+		<match>@imgur\.com/(?![art]/|user/)(?'path'(?:gallery/)?\w+)(?![\w.])@</match>
+		<extract>@data-id="(?'id'[\w/]+)"@</extract>
+	</scrape>
+	<iframe width="542" height="400" onload="var c=new MessageChannel;c.port1.onmessage=function(e){{var d=e.data.split(' ');style.height=d[0]+'px';style.width=d[1]+'px'}};contentWindow.postMessage('s9e:init','https://s9e.github.io',[c.port2])" data-s9e-livepreview-ignore-attrs="style">
+		<src><![CDATA[
+			<xsl:text>https://s9e.github.io/iframe/2/imgur.min.html#</xsl:text>
+			<xsl:if test="@type='album'">a/</xsl:if>
+			<xsl:value-of select="@id"/>
+		]]></src>
+	</iframe>
+
+	<!-- https://github.com/ampproject/amphtml/pull/30589 -->
+	<amp custom-element="amp-imgur" src="https://cdn.ampproject.org/v0/amp-imgur-0.1.js">
+		<template><![CDATA[
+			<amp-imgur layout="responsive" width="542" height="400"
+				data-imgur-id="{@id}"
+			></amp-imgur>
+		]]></template>
+	</amp>
+</site>

@@ -1,0 +1,15 @@
+<site name="Comedy Central" homepage="https://www.cc.com/">
+	<example>https://www.cc.com/video-clips/uu5qz4/key-and-peele-dueling-hats</example>
+	<example>https://www.comedycentral.com/video-clips/uu5qz4/key-and-peele-dueling-hats</example>
+	<example>https://tosh.cc.com/video-clips/aet4lh/rc-car-crash</example>
+
+	<tags><tag>entertainment</tag></tags>
+
+	<host>cc.com</host>
+	<host>comedycentral.com</host>
+	<scrape>
+		<match>!c(?:c|omedycentral)\.com/(?:full-episode|video-clip)s/!</match>
+		<extract>!(?'id'mgid:arc:(?:episode|video):[.\w]+:[-\w]+)!</extract>
+	</scrape>
+	<iframe src="//media.mtvnservices.com/embed/{@id}"/>
+</site>

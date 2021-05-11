@@ -1,0 +1,32 @@
+<site name="Dailymotion" homepage="https://www.dailymotion.com/">
+	<source>http://www.dailymotion.com/doc/api/player.html</source>
+	<example>https://dai.ly/x5e9eog</example>
+	<example>https://www.dailymotion.com/video/x5e9eog</example>
+
+	<oembed endpoint="https://www.dailymotion.com/services/oembed"
+	          scheme="https://www.dailymotion.com/video/{@id}"/>
+
+	<tags><tag>videos</tag></tags>
+
+	<host>dai.ly</host>
+	<host>dailymotion.com</host>
+	<extract>!dai\.ly/(?'id'[a-z0-9]+)!i</extract>
+	<extract>!dailymotion\.com/(?:live/|swf/|user/[^#]+#video=|(?:related/\d+/)?video/)(?'id'[a-z0-9]+)!i</extract>
+	<extract>!start=(?'t'\d+)!</extract>
+	<iframe>
+		<src><![CDATA[
+			<xsl:text>//www.dailymotion.com/embed/video/</xsl:text>
+			<xsl:value-of select="@id"/>
+			<xsl:if test="@t">?start=<xsl:value-of select="@t"/></xsl:if>
+		]]></src>
+	</iframe>
+
+	<amp custom-element="amp-dailymotion" src="https://cdn.ampproject.org/v0/amp-dailymotion-0.1.js">
+		<template><![CDATA[
+			<amp-dailymotion layout="responsive" width="640" height="360"
+				data-start="{@t}"
+				data-videoid="{@id}"
+			></amp-dailymotion>
+		]]></template>
+	</amp>
+</site>
