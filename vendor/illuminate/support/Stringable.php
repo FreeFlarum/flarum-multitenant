@@ -499,7 +499,7 @@ class Stringable implements JsonSerializable
      */
     public function replace($search, $replace)
     {
-        return new static(str_replace($search, $replace, $this->value));
+        return new static(Str::replace($search, $replace, $this->value));
     }
 
     /**
@@ -706,6 +706,19 @@ class Stringable implements JsonSerializable
     public function ucfirst()
     {
         return new static(Str::ucfirst($this->value));
+    }
+
+    /**
+     * Apply the callback's string changes if the given "value" is false.
+     *
+     * @param  mixed  $value
+     * @param  callable  $callback
+     * @param  callable|null  $default
+     * @return mixed|$this
+     */
+    public function unless($value, $callback, $default = null)
+    {
+        return $this->when(! $value, $callback, $default);
     }
 
     /**

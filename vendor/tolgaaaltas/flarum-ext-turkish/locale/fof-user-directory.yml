@@ -10,6 +10,7 @@ fof-user-directory:
       default-sort: 'Varsayılan sıralama'
       link: 'Kullanıcı listesinin görülebilmesi için anasayfaya bağlantı ekle'
       title: 'Kullanıcı Listesi Ayarları'
+      use-small-cards: 'Küçük kullanıcı kartlarını kullan'
   forum:
     header:
       back_to_user_directory_tooltip: 'Kullanıcı Listesine Dön'

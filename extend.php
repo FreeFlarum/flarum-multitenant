@@ -16,16 +16,13 @@ use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
 
 
-class ClearCacheOnExtension
-{
-    public function subscribe(Dispatcher $events)
-    {
+class ClearCacheOnExtension {
+    public function subscribe(Dispatcher $events) {
         $events->listen([Enabling::class, Disabling::class], [$this, 'clearCache']);
     }
 
-    public function clearCache($event)
-    {
-        shell_exec("php " . ROOT . "/flarum cache:clear | tee -a " . ROOT . "/clearcache.txt 2>/dev/null >/dev/null &");
+    public function clearCache($event) {
+        shell_exec("/usr/bin/sh /usr/bin/php " . ROOT . "/flarum cache:clear");
     }
 }
 

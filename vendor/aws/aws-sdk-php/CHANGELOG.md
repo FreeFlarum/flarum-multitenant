@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 3.181.2 - 2021-05-14
+
+* `Aws\CloudWatchEvents` - Update InputTransformer variable limit from 10 to 100 variables.
+* `Aws\Detective` - Updated descriptions of array parameters to add the restrictions on the array and value lengths.
+* `Aws\ElasticsearchService` - Adds support for cold storage.
+* `Aws\Endpoint` - Support for FIPS and handle global regions
+* `Aws\EventBridge` - Update InputTransformer variable limit from 10 to 100 variables.
+* `Aws\Macie2` - This release of the Amazon Macie API adds support for defining run-time, S3 bucket criteria for classification jobs. It also adds resources for querying data about AWS resources that Macie monitors.
+* `Aws\SecurityHub` - Updated descriptions to add notes on array lengths.
+* `Aws\TranscribeService` - Transcribe Medical now supports identification of PHI entities within transcripts
+* `Aws\imagebuilder` - Text-only updates for bundled documentation feedback tickets - spring 2021.
+
+## 3.181.1 - 2021-05-12
+
+* `Aws\EC2` - High Memory virtual instances are powered by Intel Sky Lake CPUs and offer up to 12TB of memory.
+
+## 3.181.0 - 2021-05-11
+
+* `Aws\S3Control` - Documentation updates for Amazon S3-control
+* `Aws\SSMContacts` - AWS Systems Manager Incident Manager enables faster resolution of critical application availability and performance issues, management of contacts and post incident analysis
+* `Aws\SSMIncidents` - AWS Systems Manager Incident Manager enables faster resolution of critical application availability and performance issues, management of contacts and post-incident analysis
+* `Aws\TranscribeStreamingService` - Amazon Transcribe supports partial results stabilization for streaming transcription.
+
 ## 3.180.6 - 2021-05-10
 
 * `Aws\CodeArtifact` - Documentation updates for CodeArtifact

@@ -153,7 +153,6 @@ return array(
     'FoF\\OAuth\\' => array($vendorDir . '/fof/oauth/src'),
     'FoF\\NightMode\\' => array($vendorDir . '/fof/nightmode/src'),
     'FoF\\MergeDiscussions\\' => array($vendorDir . '/fof/merge-discussions/src'),
-    'FoF\\Masquerade\\' => array($vendorDir . '/fof/masquerade/src'),
     'FoF\\Links\\' => array($vendorDir . '/fof/links/src'),
     'FoF\\Linguist\\' => array($vendorDir . '/fof/linguist/src'),
     'FoF\\IgnoreUsers\\' => array($vendorDir . '/fof/ignore-users/src'),

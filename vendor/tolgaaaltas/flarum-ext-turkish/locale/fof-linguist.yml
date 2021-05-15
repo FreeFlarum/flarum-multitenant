@@ -35,10 +35,13 @@ fof-linguist:
         count: Sayı
         percent: Yüzde
     export:
+      download: İndir
       include-originals: 'Tüm asıl çevirileri dahil et'
       locale: Yerel
       namespace: 'Ad Alanı'
       namespace-all: Tümü
+      output: Çıktı
+      output-loading: 'Dışa aktarma yükleniyor...'
       title: 'Dışa Aktar'
     filters:
       for-extension: 'Uzantılar için'
@@ -63,6 +66,12 @@ fof-linguist:
       with-original-translations-in-locales: 'Asıl çevirilerde'
       with-own-translations: Çevirilerim
       without-original-translations-in-locales: 'Asıl çeviriler olmadan'
+    import:
+      submit: 'İçe Aktar'
+      title: 'İçe Aktar'
+    known-frontend:
+      admin: Yönetici
+      forum: Forum
     locales:
       all: Tümü
     menu:
