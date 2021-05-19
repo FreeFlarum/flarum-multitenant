@@ -276,6 +276,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\OAuth\\' => 10,
             'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
+            'FoF\\Masquerade\\' => 15,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
             'FoF\\IgnoreUsers\\' => 16,
@@ -770,8 +771,8 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/collections',
-            1 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            1 => __DIR__ . '/..' . '/illuminate/collections',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -962,6 +963,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'FoF\\MergeDiscussions\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/merge-discussions/src',
+        ),
+        'FoF\\Masquerade\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/masquerade/src',
         ),
         'FoF\\Links\\' => 
         array (

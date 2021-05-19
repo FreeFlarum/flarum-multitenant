@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 3.183.0 - 2021-05-18
+
+* `Aws\AppRunner` - AWS App Runner is a service that provides a fast, simple, and cost-effective way to deploy from source code or a container image directly to a scalable and secure web application in the AWS Cloud.
+* `Aws\ComputeOptimizer` - This release enables compute optimizer to support exporting recommendations to Amazon S3 for EBS volumes and Lambda Functions.
+* `Aws\IoTSiteWise` - Documentation updates for AWS IoT SiteWise.
+* `Aws\LexModelsV2` - This release adds support for exporting and importing Lex V2 bots and bot locales. It also adds validations to enforce minimum number of tags on Lex V2 resources. For details, see https://docs.aws.amazon.com/lexv2/latest/dg/importing-exporting.html
+* `Aws\LicenseManager` - AWS License Manager now supports periodic report generation.
+* `Aws\Personalize` - Amazon Personalize now supports the ability to optimize a solution for a custom objective in addition to maximizing relevance.
+* `Aws\Support` - Documentation updates for support
+
+## 3.182.0 - 2021-05-17
+
+* `Aws\` - Performed the migration to static API to in order to use the future versions Guzzle\Psr7 using the [migration guide](https://github.com/guzzle/psr7#upgrading-from-function-api).
+* `Aws\Api` - Fixed a bug where certain characters weren't escaped in the XML encoding
+* `Aws\ApplicationCostProfiler` - APIs for AWS Application Cost Profiler.
+* `Aws\AugmentedAIRuntime` - Documentation updates for Amazon A2I Runtime model
+* `Aws\ElastiCache` - Documentation updates for elasticache
+* `Aws\IoTDeviceAdvisor` - AWS IoT Core Device Advisor is fully managed test capability for IoT devices. Device manufacturers can use Device Advisor to test their IoT devices for reliable and secure connectivity with AWS IoT.
+* `Aws\MediaConnect` - MediaConnect now supports JPEG XS for AWS Cloud Digital Interface (AWS CDI) uncompressed workflows, allowing you to establish a bridge between your on-premises live video network and the AWS Cloud.
+* `Aws\Neptune` - Neptune support for CopyTagsToSnapshots
+
 ## 3.181.2 - 2021-05-14
 
 * `Aws\CloudWatchEvents` - Update InputTransformer variable limit from 10 to 100 variables.

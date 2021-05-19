@@ -28,7 +28,7 @@ Aktualizacje instalujemy za pomocą [Composera](https://getcomposer.org/):
 composer update rob006/flarum-lang-polish
 ```
 
-lub aby wymusić najnowszą wersję (zalecane przy aktualizacji do nowej wersji Flarum — sprawdź wcześniej [changelog](https://github.com/rob006-software/flarum-lang-polish/blob/master/CHANGELOG.md), czy żadne z wykorzystywanych przez Ciebie rozszerzeń nie utraciło wsparcia):
+Lub aby wymusić najnowszą wersję (zalecane przy aktualizacji do nowej wersji Flarum — sprawdź wcześniej [changelog](https://github.com/rob006-software/flarum-lang-polish/blob/master/CHANGELOG.md), czy żadne z wykorzystywanych przez Ciebie rozszerzeń nie utraciło wsparcia):
 
 ```console
 composer require rob006/flarum-lang-polish
@@ -58,8 +58,8 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 
 | Component | Status |
 | --- | --- |
-| [Core](https://github.com/flarum/core) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/core/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/core/) |
-| Validation | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/validation/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/validation/) |
+| [Core](https://github.com/flarum/core) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/core/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/core/pl/) |
+| Validation | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/validation/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/validation/pl/) |
 
 
 ## Status tłumaczeń dla oficjalnych rozszerzeń
@@ -189,6 +189,7 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 | [Help Tags by Askvortsov](https://github.com/askvortsov1/flarum-help-tags) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/askvortsov-help-tags/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/askvortsov-help-tags/pl/) |
 | [IM Follow Users by Ianm](https://github.com/imorland/follow-users) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/ianm-follow-users/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/ianm-follow-users/pl/) |
 | [Imgur Upload by Matteocontrini](https://github.com/matteocontrini/flarum-imgur-upload) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/matteocontrini-imgur-upload/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/matteocontrini-imgur-upload/pl/) |
+| [LDAP login by Tituspijean](https://github.com/tituspijean/flarum-ext-auth-ldap) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/tituspijean-auth-ldap/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/tituspijean-auth-ldap/pl/) |
 | [Login to See by Irony](https://github.com/892768447/flarum-ext-login2see) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/irony-login2see/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/irony-login2see/pl/) |
 | [Login2SeePlus by Jslirola](https://github.com/jslirola/flarum-ext-login2seeplus) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/jslirola-login2seeplus/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/jslirola-login2seeplus/pl/) |
 | [Mailing by Clarkwinkelmann](https://github.com/clarkwinkelmann/flarum-ext-mailing) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/clarkwinkelmann-mailing/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-mailing/pl/) |
@@ -210,7 +211,6 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 | [Profile Cover by Sycho](https://github.com/SychO9/flarum-profile-cover) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/sycho-profile-cover/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/sycho-profile-cover/pl/) |
 | [Profile views by Michaelbelgium](https://github.com/MichaelBelgium/flarum-profile-views) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/michaelbelgium-profile-views/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/michaelbelgium-profile-views/pl/) |
 | [Progressive Web App by Askvortsov](https://github.com/askvortsov1/flarum-pwa) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/askvortsov-pwa/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/askvortsov-pwa/pl/) |
-| [Quad Theme by Dem13n](https://github.com/Dem13n/quad-theme) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/dem13n-quad-theme/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/dem13n-quad-theme/pl/) |
 | [ReFlar Level Ranks by Reflar](https://github.com/ReFlar/level-ranks) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/reflar-level-ranks/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/reflar-level-ranks/pl/) |
 | [Reply 2 See by Kvothe](https://github.com/oaklinq/flarum-ext-reply2see) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/kvothe-reply-to-see/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/kvothe-reply-to-see/pl/) |
 | [Rich Text by Askvortsov](https://github.com/askvortsov1/flarum-rich-text) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/askvortsov-rich-text/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/askvortsov-rich-text/pl/) |
@@ -229,6 +229,7 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 | [Tags Color Generator by Nearata](https://github.com/Nearata/flarum-ext-tags-color-generator) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/nearata-tags-color-generator/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/nearata-tags-color-generator/pl/) |
 | [Topic Starter Label by Dem13n](https://github.com/Dem13n/topic-starter-label) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/dem13n-topic-starter-label/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/dem13n-topic-starter-label/pl/) |
 | [UI Tab  by Itnt](https://github.com/Littlegolden/flarum-uitab) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/itnt-uitab/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/itnt-uitab/pl/) |
+| [User badges by V17development](https://github.com/v17development/flarum-user-badges) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/v17development-user-badges/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/v17development-user-badges/pl/) |
 | [Who read by Clarkwinkelmann](https://github.com/clarkwinkelmann/flarum-ext-who-read) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/clarkwinkelmann-who-read/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-who-read/pl/) |
 | [highlight.js by Therealsujitk](https://github.com/therealsujitk/flarum-ext-hljs) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pl/therealsujitk-hljs/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/therealsujitk-hljs/pl/) |
 
@@ -239,6 +240,6 @@ Uwagi oraz błędy można zgłaszać na [GitHubie](https://github.com/rob006-sof
 
 Paczka bazuje na [rozszerzeniu stworzonym przez bepropl](https://github.com/bepropl/lang-polish). Tworzona z udziałem społeczności jako część [Kolektywu tłumaczeń Flarum](https://github.com/rob006-software/flarum-translations).
 
-Tłumaczenie dla `day.js` pochodzi bezpośrednio ze [źródła](https://github.com/iamkun/dayjs/blob/v1.9.3/src/locale/pl.js).
+Tłumaczenie dla `day.js` pochodzi bezpośrednio ze [źródła](https://github.com/iamkun/dayjs/blob/v1.10.4/src/locale/pl.js).
 
-Tłumaczenie dla `validation.yml` bazuje na [paczce językowej dla Laravela](https://github.com/caouecs/Laravel-lang/blob/4.0.2/src/pl/validation.php).
+Tłumaczenie dla `validation.yml` bazuje na [paczce językowej dla Laravela](https://github.com/Laravel-Lang/lang/blob/8.1.3/src/pl/validation.php).

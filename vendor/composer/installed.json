@@ -290,33 +290,27 @@
         },
         {
             "name": "askvortsov/flarum-pwa",
-            "version": "v2.4.1",
-            "version_normalized": "2.4.1.0",
+            "version": "v2.5.0",
+            "version_normalized": "2.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/askvortsov1/flarum-pwa.git",
-                "reference": "97287fde4b6013136dbcba12cd0c053fd463c5eb"
+                "reference": "9d06c8cdda324daf7860e5147d055fd758631e2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/askvortsov1/flarum-pwa/zipball/97287fde4b6013136dbcba12cd0c053fd463c5eb",
-                "reference": "97287fde4b6013136dbcba12cd0c053fd463c5eb",
+                "url": "https://api.github.com/repos/askvortsov1/flarum-pwa/zipball/9d06c8cdda324daf7860e5147d055fd758631e2f",
+                "reference": "9d06c8cdda324daf7860e5147d055fd758631e2f",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^0.1.0-beta.16"
-            },
-            "conflict": {
-                "minishlink/web-push": "<6"
-            },
-            "require-dev": {
+                "flarum/core": "^0.1.0-beta.16",
                 "minishlink/web-push": "^6.0"
             },
             "suggest": {
-                "ext-gmp": "This is required for push notifications",
-                "minishlink/web-push": "This is required for push notifications"
+                "ext-gmp": "This can improve push notification performance."
             },
-            "time": "2021-05-01T16:49:19+00:00",
+            "time": "2021-05-17T21:08:34+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -484,17 +478,17 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.181.2",
-            "version_normalized": "3.181.2.0",
+            "version": "3.183.0",
+            "version_normalized": "3.183.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ca4839367aa57de005d52593081eab777b87a6b0"
+                "reference": "bf4a4e56859b89ab307033bf695467f6d6042dda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ca4839367aa57de005d52593081eab777b87a6b0",
-                "reference": "ca4839367aa57de005d52593081eab777b87a6b0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/bf4a4e56859b89ab307033bf695467f6d6042dda",
+                "reference": "bf4a4e56859b89ab307033bf695467f6d6042dda",
                 "shasum": ""
             },
             "require": {
@@ -530,7 +524,7 @@
                 "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2021-05-14T18:16:31+00:00",
+            "time": "2021-05-18T18:13:37+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -571,7 +565,7 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.181.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.183.0"
             },
             "install-path": "../aws/aws-sdk-php"
         },
@@ -1654,17 +1648,17 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.11.0",
-            "version_normalized": "1.11.0.0",
+            "version": "1.11.1",
+            "version_normalized": "1.11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "a9c1b59eba5a08ca2770a76eddb88922f504e8e0"
+                "reference": "163074496dc7c3c7b8ccbf3d4376c0187424ed81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/a9c1b59eba5a08ca2770a76eddb88922f504e8e0",
-                "reference": "a9c1b59eba5a08ca2770a76eddb88922f504e8e0",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/163074496dc7c3c7b8ccbf3d4376c0187424ed81",
+                "reference": "163074496dc7c3c7b8ccbf3d4376c0187424ed81",
                 "shasum": ""
             },
             "require": {
@@ -1687,7 +1681,7 @@
             "suggest": {
                 "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
             },
-            "time": "2021-04-13T14:46:17+00:00",
+            "time": "2021-05-18T16:45:32+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1736,7 +1730,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.11.0"
+                "source": "https://github.com/doctrine/cache/tree/1.11.1"
             },
             "funding": [
                 {
@@ -5546,6 +5540,88 @@
             "install-path": "../fof/links"
         },
         {
+            "name": "fof/masquerade",
+            "version": "0.4.0",
+            "version_normalized": "0.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/masquerade.git",
+                "reference": "fc9beb138614b26169c16b741af3d01219c81cc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/masquerade/zipball/fc9beb138614b26169c16b741af3d01219c81cc6",
+                "reference": "fc9beb138614b26169c16b741af3d01219c81cc6",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "replace": {
+                "flagrow/masquerade": "*"
+            },
+            "time": "2021-04-04T23:15:51+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Masquerade",
+                    "category": "feature",
+                    "icon": {
+                        "image": "resources/logo.svg",
+                        "backgroundColor": "#e74c3c",
+                        "backgroundSize": "90%",
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/5791"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Masquerade\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "https://luceos.com/"
+                },
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "User profile builder extension for your Flarum forum.",
+            "keywords": [
+                "extension",
+                "flarum",
+                "member profile",
+                "profile",
+                "user profile"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/5791",
+                "issues": "https://github.com/FriendsOfFlarum/masquerade/issues",
+                "source": "https://github.com/FriendsOfFlarum/masquerade"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "install-path": "../fof/masquerade"
+        },
+        {
             "name": "fof/merge-discussions",
             "version": "0.5.1",
             "version_normalized": "0.5.1.0",
@@ -7766,17 +7842,17 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
-                "reference": "7b5c0f1aa52cc70259352ff6b7adb67c7d46bcc5"
+                "reference": "2156797125702623af47983867c05cc965490c19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/bus/zipball/7b5c0f1aa52cc70259352ff6b7adb67c7d46bcc5",
-                "reference": "7b5c0f1aa52cc70259352ff6b7adb67c7d46bcc5",
+                "url": "https://api.github.com/repos/illuminate/bus/zipball/2156797125702623af47983867c05cc965490c19",
+                "reference": "2156797125702623af47983867c05cc965490c19",
                 "shasum": ""
             },
             "require": {
@@ -7789,7 +7865,7 @@
             "suggest": {
                 "illuminate/queue": "Required to use closures when chaining jobs (^7.0)."
             },
-            "time": "2021-04-28T12:55:54+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7822,17 +7898,17 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
-                "reference": "267a541171a375d56622117fbd0a60515402f2ef"
+                "reference": "499d15db9b58b5701aa85a4790ae1404d79009aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cache/zipball/267a541171a375d56622117fbd0a60515402f2ef",
-                "reference": "267a541171a375d56622117fbd0a60515402f2ef",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/499d15db9b58b5701aa85a4790ae1404d79009aa",
+                "reference": "499d15db9b58b5701aa85a4790ae1404d79009aa",
                 "shasum": ""
             },
             "require": {
@@ -7849,7 +7925,7 @@
                 "illuminate/redis": "Required to use the redis cache driver (^8.0).",
                 "symfony/cache": "Required to PSR-6 cache bridge (^5.1.4)."
             },
-            "time": "2021-04-27T20:56:51+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7882,8 +7958,8 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -7939,8 +8015,8 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -7990,17 +8066,17 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "395002ac2d4ec404c42e6e97997f4236dc8ab2b6"
+                "reference": "01d6bec8d741ca812cfa14a9b91cf081f8d7fdad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/console/zipball/395002ac2d4ec404c42e6e97997f4236dc8ab2b6",
-                "reference": "395002ac2d4ec404c42e6e97997f4236dc8ab2b6",
+                "url": "https://api.github.com/repos/illuminate/console/zipball/01d6bec8d741ca812cfa14a9b91cf081f8d7fdad",
+                "reference": "01d6bec8d741ca812cfa14a9b91cf081f8d7fdad",
                 "shasum": ""
             },
             "require": {
@@ -8020,7 +8096,7 @@
                 "illuminate/filesystem": "Required to use the generator command (^8.0).",
                 "illuminate/queue": "Required to use closures for scheduled jobs (^8.0)."
             },
-            "time": "2021-04-26T12:39:58+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8053,17 +8129,17 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "0e38ee1632d470e56aece0079e6e22d13e6bea8e"
+                "reference": "07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/0e38ee1632d470e56aece0079e6e22d13e6bea8e",
-                "reference": "0e38ee1632d470e56aece0079e6e22d13e6bea8e",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2",
+                "reference": "07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2",
                 "shasum": ""
             },
             "require": {
@@ -8074,7 +8150,7 @@
             "provide": {
                 "psr/container-implementation": "1.0"
             },
-            "time": "2021-03-16T19:42:20+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8107,17 +8183,17 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "64abbe2aeee0855a11cfce49d0ea08a0aa967cd2"
+                "reference": "68036b4fb17ad40a599323bda3f2c0845c8100d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/64abbe2aeee0855a11cfce49d0ea08a0aa967cd2",
-                "reference": "64abbe2aeee0855a11cfce49d0ea08a0aa967cd2",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/68036b4fb17ad40a599323bda3f2c0845c8100d8",
+                "reference": "68036b4fb17ad40a599323bda3f2c0845c8100d8",
                 "shasum": ""
             },
             "require": {
@@ -8125,7 +8201,7 @@
                 "psr/container": "^1.0",
                 "psr/simple-cache": "^1.0"
             },
-            "time": "2021-05-06T14:58:48+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8158,17 +8234,17 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "6277b39728bce436d2509d215223137d87265792"
+                "reference": "d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/6277b39728bce436d2509d215223137d87265792",
-                "reference": "6277b39728bce436d2509d215223137d87265792",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9",
+                "reference": "d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9",
                 "shasum": ""
             },
             "require": {
@@ -8190,7 +8266,7 @@
                 "illuminate/pagination": "Required to paginate the result set (^8.0).",
                 "symfony/finder": "Required to use Eloquent model factories (^5.1.4)."
             },
-            "time": "2021-05-11T13:24:37+00:00",
+            "time": "2021-05-19T13:01:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8229,8 +8305,8 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -8287,17 +8363,17 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "8ef5902052c5b3bb4a6c1c3afc399f30e7723cb8"
+                "reference": "7c7372874615475f46d484a2190f90e8effcd8b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/8ef5902052c5b3bb4a6c1c3afc399f30e7723cb8",
-                "reference": "8ef5902052c5b3bb4a6c1c3afc399f30e7723cb8",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/7c7372874615475f46d484a2190f90e8effcd8b5",
+                "reference": "7c7372874615475f46d484a2190f90e8effcd8b5",
                 "shasum": ""
             },
             "require": {
@@ -8319,7 +8395,7 @@
                 "symfony/filesystem": "Required to enable support for relative symbolic links (^5.1.4).",
                 "symfony/mime": "Required to enable support for guessing extensions (^5.1.4)."
             },
-            "time": "2021-04-05T18:45:36+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8352,8 +8428,8 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -8403,8 +8479,8 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -8452,17 +8528,17 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
-                "reference": "6e2af3a60ac68669ee302fdc98501f55980b653f"
+                "reference": "ab6ba9329353ce82f6aab1bff65bdf639dd1ab1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/mail/zipball/6e2af3a60ac68669ee302fdc98501f55980b653f",
-                "reference": "6e2af3a60ac68669ee302fdc98501f55980b653f",
+                "url": "https://api.github.com/repos/illuminate/mail/zipball/ab6ba9329353ce82f6aab1bff65bdf639dd1ab1d",
+                "reference": "ab6ba9329353ce82f6aab1bff65bdf639dd1ab1d",
                 "shasum": ""
             },
             "require": {
@@ -8483,7 +8559,7 @@
                 "guzzlehttp/guzzle": "Required to use the Mailgun mail driver (^6.5.5|^7.0.1).",
                 "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
             },
-            "time": "2021-04-23T12:41:34+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8516,8 +8592,8 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -8567,17 +8643,17 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
-                "reference": "ecb4913c86349c64cdb09e3912042446855a02d7"
+                "reference": "c490f2b0c5136e0e9aac197a74a8037a341f3b26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/queue/zipball/ecb4913c86349c64cdb09e3912042446855a02d7",
-                "reference": "ecb4913c86349c64cdb09e3912042446855a02d7",
+                "url": "https://api.github.com/repos/illuminate/queue/zipball/c490f2b0c5136e0e9aac197a74a8037a341f3b26",
+                "reference": "c490f2b0c5136e0e9aac197a74a8037a341f3b26",
                 "shasum": ""
             },
             "require": {
@@ -8602,7 +8678,7 @@
                 "illuminate/redis": "Required to use the Redis queue driver (^8.0).",
                 "pda/pheanstalk": "Required to use the Beanstalk queue driver (^4.0)."
             },
-            "time": "2021-05-04T13:15:37+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8635,8 +8711,8 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -8694,17 +8770,17 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "31e91a12f0aac770d02a05b5d5771829132213b4"
+                "reference": "ed5adf8494e6c047fcf6de8b56153640379bf08d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/31e91a12f0aac770d02a05b5d5771829132213b4",
-                "reference": "31e91a12f0aac770d02a05b5d5771829132213b4",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/ed5adf8494e6c047fcf6de8b56153640379bf08d",
+                "reference": "ed5adf8494e6c047fcf6de8b56153640379bf08d",
                 "shasum": ""
             },
             "require": {
@@ -8729,7 +8805,7 @@
                 "symfony/var-dumper": "Required to use the dd function (^5.1.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.2)."
             },
-            "time": "2021-05-10T13:42:57+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8765,17 +8841,17 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
-                "reference": "0fffa8b8f6eed8b4e17eac9d457befbcbae02b47"
+                "reference": "2af0b8af56468284d7ce4fb61e0fc7b3c0194fc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/translation/zipball/0fffa8b8f6eed8b4e17eac9d457befbcbae02b47",
-                "reference": "0fffa8b8f6eed8b4e17eac9d457befbcbae02b47",
+                "url": "https://api.github.com/repos/illuminate/translation/zipball/2af0b8af56468284d7ce4fb61e0fc7b3c0194fc8",
+                "reference": "2af0b8af56468284d7ce4fb61e0fc7b3c0194fc8",
                 "shasum": ""
             },
             "require": {
@@ -8787,7 +8863,7 @@
                 "illuminate/support": "^8.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2021-03-21T13:42:27+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8820,17 +8896,17 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "337da4b6891906fe7017adef929512267bb50ab6"
+                "reference": "4d386dca490bb37f703d6e7973670fbf17eb7fe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/337da4b6891906fe7017adef929512267bb50ab6",
-                "reference": "337da4b6891906fe7017adef929512267bb50ab6",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/4d386dca490bb37f703d6e7973670fbf17eb7fe9",
+                "reference": "4d386dca490bb37f703d6e7973670fbf17eb7fe9",
                 "shasum": ""
             },
             "require": {
@@ -8849,7 +8925,7 @@
             "suggest": {
                 "illuminate/database": "Required to use the database presence verifier (^8.0)."
             },
-            "time": "2021-05-06T21:47:19+00:00",
+            "time": "2021-05-19T12:56:22+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8882,17 +8958,17 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v8.41.0",
-            "version_normalized": "8.41.0.0",
+            "version": "v8.42.1",
+            "version_normalized": "8.42.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "696a1d6d2213be192429e97245a3d2bb4d6d1849"
+                "reference": "e5157304e3c29f4f04ec6dd566252c3cbb51c190"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/696a1d6d2213be192429e97245a3d2bb4d6d1849",
-                "reference": "696a1d6d2213be192429e97245a3d2bb4d6d1849",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/e5157304e3c29f4f04ec6dd566252c3cbb51c190",
+                "reference": "e5157304e3c29f4f04ec6dd566252c3cbb51c190",
                 "shasum": ""
             },
             "require": {
@@ -8906,7 +8982,7 @@
                 "illuminate/support": "^8.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2020-11-02T14:01:41+00:00",
+            "time": "2021-05-18T12:49:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -9259,17 +9335,17 @@
         },
         {
             "name": "laminas/laminas-diactoros",
-            "version": "2.5.1",
-            "version_normalized": "2.5.1.0",
+            "version": "2.6.0",
+            "version_normalized": "2.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-diactoros.git",
-                "reference": "53df7b7cd66e0905e6133970a4b90392a7a08075"
+                "reference": "7d2034110ae18afe05050b796a3ee4b3fe177876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/53df7b7cd66e0905e6133970a4b90392a7a08075",
-                "reference": "53df7b7cd66e0905e6133970a4b90392a7a08075",
+                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/7d2034110ae18afe05050b796a3ee4b3fe177876",
+                "reference": "7d2034110ae18afe05050b796a3ee4b3fe177876",
                 "shasum": ""
             },
             "require": {
@@ -9297,9 +9373,11 @@
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "php-http/psr7-integration-tests": "^1.1",
                 "phpspec/prophecy-phpunit": "^2.0",
-                "phpunit/phpunit": "^9.1"
+                "phpunit/phpunit": "^9.1",
+                "psalm/plugin-phpunit": "^0.14.0",
+                "vimeo/psalm": "^4.3"
             },
-            "time": "2021-04-13T19:39:11+00:00",
+            "time": "2021-05-18T14:41:54+00:00",
             "type": "library",
             "extra": {
                 "laminas": {
@@ -13519,17 +13597,17 @@
         },
         {
             "name": "realodix/flarum-ext-indonesian",
-            "version": "1.16.2",
-            "version_normalized": "1.16.2.0",
+            "version": "1.16.3",
+            "version_normalized": "1.16.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realodix/flarum-ext-indonesian.git",
-                "reference": "92e3544d719cd1422c100ea3f76221eb7db0e89b"
+                "reference": "a8adeaca819b559aa31e7bb5376e6142ba40664b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/92e3544d719cd1422c100ea3f76221eb7db0e89b",
-                "reference": "92e3544d719cd1422c100ea3f76221eb7db0e89b",
+                "url": "https://api.github.com/repos/realodix/flarum-ext-indonesian/zipball/a8adeaca819b559aa31e7bb5376e6142ba40664b",
+                "reference": "a8adeaca819b559aa31e7bb5376e6142ba40664b",
                 "shasum": ""
             },
             "require": {
@@ -13568,7 +13646,7 @@
                 "michaelbelgium/flarum-profile-views": "<5.0.0",
                 "michaelbelgium/mybb-to-flarum": "<7.0"
             },
-            "time": "2021-04-19T12:08:37+00:00",
+            "time": "2021-05-19T12:09:07+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -13759,23 +13837,23 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.4.9",
-            "version_normalized": "0.4.9.0",
+            "version": "v0.4.10",
+            "version_normalized": "0.4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "cf3d59dc083586f2d15c4e76965bfabfaa7ed3a2"
+                "reference": "fcf35e2b44932d8520f823d461335a78efa8aa33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/cf3d59dc083586f2d15c4e76965bfabfaa7ed3a2",
-                "reference": "cf3d59dc083586f2d15c4e76965bfabfaa7ed3a2",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/fcf35e2b44932d8520f823d461335a78efa8aa33",
+                "reference": "fcf35e2b44932d8520f823d461335a78efa8aa33",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^0.1.0-beta.14"
             },
-            "time": "2021-04-24T09:23:34+00:00",
+            "time": "2021-05-16T20:54:43+00:00",
             "type": "flarum-extension",
             "extra": {
                 "branch-alias": {
@@ -13916,17 +13994,17 @@
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.9.1",
-            "version_normalized": "2.9.1.0",
+            "version": "2.9.2",
+            "version_normalized": "2.9.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "e81057d923f654f1fa6a5a6ed22c872723ff6c33"
+                "reference": "918f105365229056cb2b8710fc2e2470f4783ae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/e81057d923f654f1fa6a5a6ed22c872723ff6c33",
-                "reference": "e81057d923f654f1fa6a5a6ed22c872723ff6c33",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/918f105365229056cb2b8710fc2e2470f4783ae4",
+                "reference": "918f105365229056cb2b8710fc2e2470f4783ae4",
                 "shasum": ""
             },
             "require": {
@@ -13951,10 +14029,10 @@
                 "ext-xsl": "Enables the XSLT renderer",
                 "ext-zlib": "Enables gzip compression when scraping content via the MediaEmbed plugin"
             },
-            "time": "2021-05-09T00:43:29+00:00",
+            "time": "2021-05-17T16:13:01+00:00",
             "type": "library",
             "extra": {
-                "version": "2.9.1"
+                "version": "2.9.2"
             },
             "installation-source": "source",
             "autoload": {
@@ -13987,7 +14065,7 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/TextFormatter/issues",
-                "source": "https://github.com/s9e/TextFormatter/tree/2.9.1"
+                "source": "https://github.com/s9e/TextFormatter/tree/2.9.2"
             },
             "install-path": "../s9e/text-formatter"
         },
@@ -14651,23 +14729,23 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.7",
-            "version_normalized": "5.2.7.0",
+            "version": "v5.2.9",
+            "version_normalized": "5.2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "59a684f5ac454f066ecbe6daecce6719aed283fb"
+                "reference": "5d5f97809015102116208b976eb2edb44b689560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/59a684f5ac454f066ecbe6daecce6719aed283fb",
-                "reference": "59a684f5ac454f066ecbe6daecce6719aed283fb",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/5d5f97809015102116208b976eb2edb44b689560",
+                "reference": "5d5f97809015102116208b976eb2edb44b689560",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5"
             },
-            "time": "2021-04-07T16:07:52+00:00",
+            "time": "2021-05-16T13:07:46+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -14699,7 +14777,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v5.3.0-BETA1"
+                "source": "https://github.com/symfony/css-selector/tree/v5.2.9"
             },
             "funding": [
                 {
@@ -15024,23 +15102,23 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.2.8",
-            "version_normalized": "5.2.8.0",
+            "version": "v5.2.9",
+            "version_normalized": "5.2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "eccb8be70d7a6a2230d05f6ecede40f3fdd9e252"
+                "reference": "ccccb9d48ca42757dd12f2ca4bf857a4e217d90d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/eccb8be70d7a6a2230d05f6ecede40f3fdd9e252",
-                "reference": "eccb8be70d7a6a2230d05f6ecede40f3fdd9e252",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/ccccb9d48ca42757dd12f2ca4bf857a4e217d90d",
+                "reference": "ccccb9d48ca42757dd12f2ca4bf857a4e217d90d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5"
             },
-            "time": "2021-05-10T14:39:23+00:00",
+            "time": "2021-05-16T13:07:46+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -15068,7 +15146,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.2.8"
+                "source": "https://github.com/symfony/finder/tree/v5.2.9"
             },
             "funding": [
                 {
@@ -15164,17 +15242,17 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v5.2.7",
-            "version_normalized": "5.2.7.0",
+            "version": "v5.2.9",
+            "version_normalized": "5.2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "7af452bf51c46f18da00feb32e1ad36db9426515"
+                "reference": "64258e870f8cc75c3dae986201ea2df58c210b52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/7af452bf51c46f18da00feb32e1ad36db9426515",
-                "reference": "7af452bf51c46f18da00feb32e1ad36db9426515",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/64258e870f8cc75c3dae986201ea2df58c210b52",
+                "reference": "64258e870f8cc75c3dae986201ea2df58c210b52",
                 "shasum": ""
             },
             "require": {
@@ -15198,7 +15276,7 @@
                 "symfony/property-info": "^4.4|^5.1",
                 "symfony/serializer": "^5.2"
             },
-            "time": "2021-04-29T20:47:09+00:00",
+            "time": "2021-05-16T13:07:46+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -15230,7 +15308,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/v5.2.7"
+                "source": "https://github.com/symfony/mime/tree/v5.2.9"
             },
             "funding": [
                 {
@@ -16239,17 +16317,17 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v5.2.8",
-            "version_normalized": "5.2.8.0",
+            "version": "v5.2.9",
+            "version_normalized": "5.2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "445caa74a5986f1cc9dd91a2975ef68fa7cb2068"
+                "reference": "61af68dba333e2d376a325a29c2a3f2a605b4876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/445caa74a5986f1cc9dd91a2975ef68fa7cb2068",
-                "reference": "445caa74a5986f1cc9dd91a2975ef68fa7cb2068",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/61af68dba333e2d376a325a29c2a3f2a605b4876",
+                "reference": "61af68dba333e2d376a325a29c2a3f2a605b4876",
                 "shasum": ""
             },
             "require": {
@@ -16284,7 +16362,7 @@
                 "symfony/config": "",
                 "symfony/yaml": ""
             },
-            "time": "2021-05-07T13:41:16+00:00",
+            "time": "2021-05-16T13:07:46+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -16315,7 +16393,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v5.2.8"
+                "source": "https://github.com/symfony/translation/tree/v5.2.9"
             },
             "funding": [
                 {
@@ -16416,17 +16494,17 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.2.7",
-            "version_normalized": "5.2.7.0",
+            "version": "v5.2.9",
+            "version_normalized": "5.2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "76546cbeddd0a9540b4e4e57eddeec3e9bb444a5"
+                "reference": "d23115e4a3d50520abddccdbec9514baab1084c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/76546cbeddd0a9540b4e4e57eddeec3e9bb444a5",
-                "reference": "76546cbeddd0a9540b4e4e57eddeec3e9bb444a5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/d23115e4a3d50520abddccdbec9514baab1084c8",
+                "reference": "d23115e4a3d50520abddccdbec9514baab1084c8",
                 "shasum": ""
             },
             "require": {
@@ -16443,7 +16521,7 @@
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
             },
-            "time": "2021-04-29T20:47:09+00:00",
+            "time": "2021-05-16T13:07:46+00:00",
             "bin": [
                 "Resources/bin/yaml-lint"
             ],
@@ -16474,7 +16552,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.2.7"
+                "source": "https://github.com/symfony/yaml/tree/v5.2.9"
             },
             "funding": [
                 {

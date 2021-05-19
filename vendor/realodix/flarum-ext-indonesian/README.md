@@ -54,14 +54,14 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [fof/analytics](https://github.com/friendsofflarum/analytics) v0.12.0
 - [fof/best-answer](https://github.com/FriendsOfFlarum/best-answer) v0.3.5
 - [fof/byobu](https://github.com/friendsofflarum/byobu) v0.6.1
-- [fof/custom-footer](https://github.com/friendsofflarum/custom-footer) v0.3.0
-- [fof/discussion-language](https://github.com/FriendsOfFlarum/discussion-language) v0.3.3
-- [fof/doorman](https://github.com/FriendsOfFlarum/doorman) v0.3.0
+- [fof/custom-footer](https://github.com/friendsofflarum/custom-footer) v0.4.0
+- [fof/discussion-language](https://github.com/FriendsOfFlarum/discussion-language) v0.4.0
+- [fof/doorman](https://github.com/FriendsOfFlarum/doorman) v0.4.1
 - [fof/drafts](https://github.com/FriendsOfFlarum/drafts) v0.4.0
-- [fof/filter](https://github.com/FriendsOfFlarum/filter) v0.3.2
+- [fof/filter](https://github.com/FriendsOfFlarum/filter) v0.4.0
 - [fof/formatting](https://github.com/friendsofflarum/formatting) v0.4.0
 - [fof/forum-statistics-widget](https://github.com/FriendsOfFlarum/forum-statistics-widget) v0.6.0
-- [fof/gamification](https://github.com/friendsofflarum/gamification) v0.4.3
+- [fof/gamification](https://github.com/friendsofflarum/gamification) v0.5.0
 - [fof/impersonate](https://github.com/FriendsOfFlarum/impersonate) v0.8.0
 - [fof/linguist](https://github.com/FriendsOfFlarum/linguist) v0.6.0
 - [fof/masquerade](https://github.com/friendsofflarum/masquerade) v0.4.0
@@ -80,13 +80,13 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [fof/subscribed](https://github.com/friendsofflarum/subscribed) v0.5.0
 - [fof/upload](https://github.com/friendsofflarum/upload) v0.14.0
 - [fof/user-bio](https://github.com/friendsofflarum/user-bio) v0.5.0
-- [fof/user-directory](https://github.com/friendsofflarum/user-directory) v0.6.1
+- [fof/user-directory](https://github.com/friendsofflarum/user-directory) v0.6.2
 - [fof/username-request](https://github.com/friendsofflarum/username-request) v0.5.0
 - [jslirola/flarum-ext-login2seeplus](https://github.com/jslirola/flarum-ext-login2seeplus) v0.1.9.1
 - [KyrneDev/Shout-public](https://github.com/KyrneDev/Shout-public) v0.3.3
 - [michaelbelgium/flarum-discussion-views](https://github.com/michaelbelgium/flarum-discussion-views) v6.0.0
 - [michaelbelgium/flarum-profile-views](https://github.com/michaelbelgium/flarum-profile-views) v5.0.0
-- [michaelbelgium/mybb_to_flarum](https://github.com/michaelbelgium/mybb_to_flarum) v7.0
+- [michaelbelgium/mybb_to_flarum](https://github.com/michaelbelgium/mybb_to_flarum) v7.1
 - [oaklinq/flarum-ext-reply2see](https://github.com/oaklinq/flarum-ext-reply2see) v0.1.2
 - [reflar/level-ranks](https://github.com/reflar/level-ranks) v1.2.3
 - [the-turk/flarum-diff](https://github.com/the-turk/flarum-diff) v1.0.8 (tags)
@@ -96,7 +96,7 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 
 ### Catatan
 - Sejauh ini sudah hampir 100% diterjemahkan.
-- Beberapa kalimat diterjemahkan dengan bahasa tidak baku. Sebagai contoh kata _password_ tetap Saya tulis _password_ (harusnya kata sandi), dan kata _upload_ tetap Saya tulis _upload_ (harusnya unggah).
+- Beberapa kalimat diterjemahkan dengan bahasa tidak baku. Sebagai contoh kata _password_ tetap Saya tulis _password_ (harusnya kata sandi, dan kata _upload_ tetap Saya tulis _upload_ (harusnya unggah).
 - Teks bahasa Inggris masih ada dalam bentuk komentar yaml, diharapkan Anda bisa dengan mudah membantu Saya untuk mengkoreksi terjemahan yang sudah ada.
 
 ## Berkontribusi

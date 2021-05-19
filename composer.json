@@ -87,6 +87,7 @@
         "fof/ignore-users": "^0.4.0",
         "fof/linguist": "*",
         "fof/links": "*",
+        "fof/masquerade": "^0.4.0",
         "fof/merge-discussions": "*",
         "fof/nightmode": "*",
         "fof/oauth": "*",

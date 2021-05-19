@@ -17,7 +17,6 @@ use Flarum\Api\Controller\AbstractShowController;
 use Flarum\Foundation\Application;
 use Flarum\Foundation\Paths;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Minishlink\WebPush\VAPID;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Tobscure\JsonApi\Document;
@@ -109,10 +108,17 @@ class ShowPWASettingsController extends AbstractShowController
             ];
         }
 
-        if (!class_exists(VAPID::class) || !function_exists('gmp_init')) {
+        if (!function_exists('gmp_init')) {
+            $status_messages[] = [
+                'type'    => 'warning',
+                'message' => $this->translator->trans('askvortsov-pwa.admin.status.suggest_gmp'),
+            ];
+        }
+
+        if (!$this->settings->get('askvortsov-pwa.vapid.success', true)) {
             $status_messages[] = [
                 'type'    => 'error',
-                'message' => $this->translator->trans('askvortsov-pwa.admin.status.push_needs_gmp_and_web_push'),
+                'message' => $this->translator->trans('askvortsov-pwa.admin.status.key_gen_failed', ['error' => $this->settings->get('askvortsov-pwa.vapid.error', '')]),
             ];
         }
 

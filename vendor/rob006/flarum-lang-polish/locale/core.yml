@@ -161,6 +161,8 @@ core:
       permissions_text: 'Skonfiguruj uprawnienia użytkowników i grup.'
       permissions_title: '=> core.admin.permissions.description'
       search_placeholder: 'Wyszukaj rozszerzenia'
+      userlist_button: '=> core.admin.users.title'
+      userlist_title: '=> core.admin.users.description'
     permissions:
       allow_post_editing_label: 'Pozwól na edycję posta'
       allow_renaming_label: 'Pozwól na zmianę tytułu dyskusji'
@@ -182,10 +184,12 @@ core:
       read_heading: Czytanie
       rename_discussions_label: 'Zmiana tytułu dyskusji'
       reply_to_discussions_label: 'Odpowiadanie w dyskusji'
+      search_users_label: 'Wyszukiwanie użytkowników'
       sign_up_label: Rejestracja
       start_discussions_label: 'Rozpoczynanie dyskusji'
       title: Uprawnienia
       view_discussions_label: 'Przeglądanie dyskusji'
+      view_forum_label: 'Przeglądanie forum (dyskusji i użytkowników)'
       view_hidden_groups_label: 'Przeglądanie etykiet ukrytych grup'
       view_last_seen_at_label: 'Dostęp do daty ostatniej wizyty użytkownika'
       view_post_ips_label: 'Przeglądanie IP użytkowników'
@@ -205,6 +209,35 @@ core:
     upload_image:
       remove_button: '=> core.ref.remove'
       upload_button: 'Wybierz obrazek...'
+    users:
+      description: 'Stronicowana lista wszystkich użytkowników na twoim forum.'
+      grid:
+        columns:
+          edit_user:
+            button: '=> core.ref.edit'
+            title: '=> core.ref.edit_user'
+            tooltip: 'Edytuj {username}'
+          email:
+            title: '=> core.ref.email'
+            visibility_hide: 'Ukryj adres e-mail'
+            visibility_show: 'Wyświetl adres e-mail'
+          group_badges:
+            no_badges: Brak
+            title: Grupy
+          join_time:
+            title: Dołączył
+          user_id:
+            title: ID
+          username:
+            profile_link_tooltip: 'Zobacz profil {username}'
+            title: '=> core.ref.username'
+        invalid_column_content: Nieprawidłowe
+      pagination:
+        back_button: 'Poprzednia strona'
+        next_button: 'Następna strona'
+        page_counter: 'Strona {current} z {total}'
+      title: '=> core.ref.users'
+      total_users: 'Wszystkich użytkowników: {count}'
   api:
     invalid_username_message: 'Nazwa użytkownika może zawierać jedynie litery, cyfry i myślniki.'
   email:
@@ -426,6 +459,18 @@ core:
       hidden_tooltip: Ukryte
     dropdown:
       toggle_dropdown_accessible_label: 'Przełącz menu rozwijane'
+    edit_user:
+      activate_button: 'Aktywuj użytkownika'
+      email_heading: '=> core.ref.email'
+      email_label: '=> core.ref.email'
+      groups_heading: Grupy
+      password_heading: '=> core.ref.password'
+      password_label: '=> core.ref.password'
+      set_password_label: 'Ustaw nowe hasło'
+      submit_button: '=> core.ref.save_changes'
+      title: '=> core.ref.edit_user'
+      username_heading: '=> core.ref.username'
+      username_label: '=> core.ref.username'
     error:
       dependent_extensions_message: 'Nie można wyłączyć {extension}, jeśli następujące zależne rozszerzenia są włączone: {extensions}'
       generic_message: 'Ups! Coś poszło nie tak. Odśwież stronę i spróbuj ponownie.'
@@ -433,6 +478,8 @@ core:
       not_found_message: 'Żądany zasób nie został znaleziony.'
       permission_denied_message: 'Nie masz uprawnień, aby to zrobić.'
       rate_limit_exceeded_message: 'Nie bądź taki hop do przodu! Spróbuj ponownie za kilka sekund.'
+    loading_indicator:
+      accessible_label: '=> core.ref.loading'
     number_suffix:
       kilo_text: K
       mega_text: M
@@ -457,10 +504,12 @@ core:
     delete_forever: 'Usuń nieodwracalnie'
     discussions: Dyskusje
     edit: Edytuj
+    edit_user: 'Edytuj użytkownika'
     email: E-mail
     icon: Ikona
     icon_text: 'Wpisz nazwę dowolnej klasy z <a>Font Awesome</a>, <em>włącznie</em> z prefiksem <code>fas fa-</code>.'
     load_more: 'Wczytaj więcej'
+    loading: Ładowanie...
     log_in: 'Zaloguj się'
     log_out: 'Wyloguj się'
     mark_all_as_read: 'Oznacz wszystko jako przeczytane'

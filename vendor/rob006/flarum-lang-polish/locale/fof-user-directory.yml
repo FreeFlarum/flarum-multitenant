@@ -9,6 +9,7 @@ fof-user-directory:
     settings:
       default-sort: 'Domyślne sortowanie'
       link: 'Dodaj link do katalogu użytkowników na stronie głównej'
+      use-small-cards: 'Użyj małych kart użytkowników'
   forum:
     header:
       back_to_user_directory_tooltip: 'Wróć do katalogu użytkowników'

@@ -2,6 +2,32 @@ CHANGELOG
 =========
 
 
+0.4.10 (2021-05-16)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń dayjs.
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+* Aktualizacja tłumaczeń komunikatów walidacji.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`v17development/flarum-user-badges`](https://github.com/v17development/flarum-user-badges)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`antoinefr/flarum-ext-online`](https://github.com/AntoineFr/flarum-ext-online)
+* [`flarum/mentions`](https://github.com/flarum/mentions)
+* [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory)
+* [`tituspijean/flarum-ext-auth-ldap`](https://github.com/tituspijean/flarum-ext-auth-ldap)
+
+
+Wszystkie zmiany: [v0.4.9...v0.4.10](https://github.com/rob006-software/flarum-lang-polish/compare/v0.4.9...v0.4.10).
+
+
 0.4.9 (2021-04-24)
 ------------------
 

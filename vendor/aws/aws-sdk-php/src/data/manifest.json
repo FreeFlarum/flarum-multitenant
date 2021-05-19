@@ -105,12 +105,26 @@
             "2018-11-25": "2018-11-25"
         }
     },
+    "applicationcostprofiler": {
+        "namespace": "ApplicationCostProfiler",
+        "versions": {
+            "latest": "2020-09-10",
+            "2020-09-10": "2020-09-10"
+        }
+    },
     "appmesh": {
         "namespace": "AppMesh",
         "versions": {
             "latest": "2019-01-25",
             "2019-01-25": "2019-01-25",
             "2018-10-01": "2018-10-01"
+        }
+    },
+    "apprunner": {
+        "namespace": "AppRunner",
+        "versions": {
+            "latest": "2020-05-15",
+            "2020-05-15": "2020-05-15"
         }
     },
     "appstream": {
