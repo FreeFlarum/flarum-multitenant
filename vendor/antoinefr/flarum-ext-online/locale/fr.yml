@@ -1,0 +1,9 @@
+antoinefr-online:
+  forum:
+    title: Qui est connecté ?
+    andmore: "et {more} de plus ..."
+  admin:
+    settings:
+      title: Paramètres
+      displaymax: Nombre de membres affichés
+      titleoflist: Titre à afficher au-dessus de la liste

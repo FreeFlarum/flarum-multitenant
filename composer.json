@@ -27,6 +27,7 @@
     },
     "require": {
         "antoinefr/flarum-ext-money": "*",
+        "antoinefr/flarum-ext-online": "^0.5.0",
         "askvortsov/flarum-categories": "*",
         "askvortsov/flarum-discussion-templates": "*",
         "askvortsov/flarum-help-tags": "*",
@@ -40,6 +41,7 @@
         "clarkwinkelmann/flarum-ext-create-user-modal": "*",
         "clarkwinkelmann/flarum-ext-emojionearea": "*",
         "clarkwinkelmann/flarum-ext-first-post-approval": "*",
+        "clarkwinkelmann/flarum-ext-likes-received": "^0.1.2",
         "cryental/flarum-l10n-ext-korean": "*",
         "csineneo/lang-traditional-chinese": "*",
         "cwkevo/flarum-lang-slovak": "*",
@@ -97,6 +99,7 @@
         "fof/prevent-necrobumping": "*",
         "fof/profile-image-crop": "*",
         "fof/reactions": "*",
+        "fof/recaptcha": "^0.3.2",
         "fof/share-social": "*",
         "fof/sitemap": "*",
         "fof/socialprofile": "*",

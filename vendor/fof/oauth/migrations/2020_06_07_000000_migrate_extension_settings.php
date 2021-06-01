@@ -17,7 +17,7 @@ return [
         /**
          * @var $settings SettingsRepositoryInterface
          */
-        $settings = resolve(SettingsRepositoryInterface::class);
+        $settings = app(SettingsRepositoryInterface::class);
         $connection = $schema->getConnection();
         $rows = $connection->table('settings')
             ->where('key', 'LIKE', 'flarum-auth-%')

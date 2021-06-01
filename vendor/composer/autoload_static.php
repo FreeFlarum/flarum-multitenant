@@ -15,9 +15,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
@@ -114,6 +115,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php81\\' => 23,
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
@@ -147,6 +149,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             'Rinvex\\Country\\' => 15,
             'Reflar\\Webhooks\\' => 16,
+            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -267,6 +270,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\Sitemap\\' => 12,
             'FoF\\ShareSocial\\' => 16,
             'FoF\\Reactions\\' => 14,
+            'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\PreventNecrobumping\\' => 24,
             'FoF\\PrettyMail\\' => 15,
@@ -337,6 +341,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'C' => 
         array (
             'Cron\\' => 5,
+            'ClarkWinkelmann\\LikesReceived\\' => 30,
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
             'ClarkWinkelmann\\EmojioneArea\\' => 29,
             'ClarkWinkelmann\\CatchTheFish\\' => 29,
@@ -360,6 +365,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
             'Askvortsov\\FlarumCategories\\' => 28,
             'App\\' => 4,
+            'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
         ),
     );
@@ -436,6 +442,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Therealsujitk\\GIFs\\' => 
         array (
             0 => __DIR__ . '/..' . '/therealsujitk/flarum-ext-gifs/src',
+        ),
+        'Symfony\\Polyfill\\Php81\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php81',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -557,6 +567,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/fof/webhooks/src/Legacy',
         ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -671,7 +685,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             1 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
             2 => __DIR__ . '/..' . '/league/oauth2-github/src',
             3 => __DIR__ . '/..' . '/league/oauth2-google/src',
-            4 => __DIR__ . '/..' . '/league/oauth2-linkedin/src',
         ),
         'League\\OAuth1\\Client\\' => 
         array (
@@ -928,6 +941,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/fof/reactions/src',
         ),
+        'FoF\\ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/recaptcha/src',
+        ),
         'FoF\\ProfileImageCrop\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
@@ -1172,6 +1189,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'ClarkWinkelmann\\LikesReceived\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-likes-received/src',
+        ),
         'ClarkWinkelmann\\FirstPostApproval\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-first-post-approval/src',
@@ -1240,6 +1261,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'AntoineFr\\Online\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-online/src',
+        ),
         'AntoineFr\\Money\\' => 
         array (
             0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
@@ -1265,6 +1290,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherInstance' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
+        'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',

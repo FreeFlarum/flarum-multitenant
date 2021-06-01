@@ -23,8 +23,6 @@ class OAuthServiceProvider extends ServiceProvider
             Providers\GitHub::class,
             Providers\GitLab::class,
             Providers\Twitter::class,
-            Providers\Google::class,
-            Providers\LinkedIn::class,
         ], 'fof-oauth.providers');
 
         $this->app->singleton('fof-oauth.providers.forum', $this->map(function (Provider $provider) {
