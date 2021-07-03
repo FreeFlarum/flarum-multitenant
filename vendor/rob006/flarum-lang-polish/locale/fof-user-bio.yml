@@ -12,3 +12,4 @@ fof-user-bio:
       bioLimit: 'Limit długości opisu w profilu'
   forum:
     userbioPlaceholder: 'Napisz coś o sobie'
+    userbioPlaceholderOtherUser: 'Utwórz opis dla {username}'

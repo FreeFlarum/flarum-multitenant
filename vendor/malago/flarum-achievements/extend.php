@@ -28,10 +28,14 @@ use Flarum\Likes\Event\PostWasUnliked;
 
 use Malago\Achievements\Api\Serializers;
 use Malago\Achievements\Api\Controllers;
+use Malago\Achievements\Achievement;
 use Malago\Achievements\Api\Serializers\AchievementSerializer;
 use Malago\Achievements\Middlewares\MiddlewarePosted;
 
 return [
+    (new Extend\Frontend('forum'))
+        ->route('/achievements', 'malago-achievements'),
+        
     (new Extend\Routes('api'))
         ->get('/achievements', 'achievements.index', Controllers\ListAchievementsController::class)
         ->post('/achievements', 'achievements.create', Controllers\CreateAchievementController::class)
@@ -46,12 +50,11 @@ return [
         ->css(__DIR__.'/less/admin.less'),
     new Extend\Locales(__DIR__.'/locale'),
     (new Extend\Model(User::class))
-        ->relationship('achievements', function ($ach) {
-            return $ach->belongsToMany(Achievement::class, 'achievement_user')
+        ->relationship('achievements', function ($user) {
+            return $user->belongsToMany(Achievement::class, 'achievement_user')
                 ->withPivot("new")
                 ->withTimestamps();
         }),
-
     (new Extend\ApiSerializer(Serializer\ForumSerializer::class))
         ->hasMany('achievements', Serializers\AchievementSerializer::class),
 
@@ -63,7 +66,8 @@ return [
     (new Extend\ApiController(Controller\ShowUserController::class))
         ->addInclude('achievements'),
     (new Extend\ApiSerializer(Serializer\PostSerializer::class))
-        ->mutate(AddPostData::class),
+        ->attributes(AddPostData::class),
+
 
     (new Extend\Event())
         ->listen(LoggedIn::class, Listeners\UpdateAchievementsOnLogin::class),
@@ -78,4 +82,8 @@ return [
     
     (new Extend\Middleware('api'))->add(MiddlewarePosted::class),
     (new Extend\Middleware('forum'))->add(MiddlewarePosted::class),
+
+    (new Extend\Settings)
+        ->serializeToForum('malago-achievements.show-post-footer', 'malago-achievements.show-post-footer')
+        ->serializeToForum('malago-achievements.show-user-card', 'malago-achievements.show-user-card')
 ];

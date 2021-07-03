@@ -11,7 +11,7 @@ fof-pretty-mail:
     nav:
       desc: 'Dostosuj szablony HTML dla wiadomości e-mail.'
     settings:
-      confirm: 'Czy na pewno chcesz wrócić do podstawowego szablonu wiadomości e-mail dla'
+      confirm: 'Czy jesteś pewien, że chcesz wrócić do podstawowego szablonu wiadomości e-mail dla'
       default: 'Domyślny szablon'
       help: '"$body" zawiera rzeczywistą treść wiadomości e-mail, "$forumStyle" zawiera <strong>cały CSS forum</strong>, "$url" zawiera <code>UrlGenerator</code>, "$settings" zapewnia dostęp do <code>SettingsRepositoryInterface</code>, a "$link" zawiera link w wiadomości e-mail. Sprawdź istniejące szablony, aby zobaczyć jak wykorzystywać dostępne zmienne.'
       label: 'Szablony wiadomości e-mail'

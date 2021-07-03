@@ -1,40 +1,30 @@
 flarum-subscriptions:
-
-  ##
   # UNIQUE KEYS - The following keys are used in only one location each.
-  ##
-
+  # 
   # Translations in this namespace are used by the forum user interface.
   forum:
-
     # These translations are displayed as tooltips for discussion badges.
     badge:
       following_tooltip: => flarum-subscriptions.ref.following
       ignoring_tooltip: => flarum-subscriptions.ref.ignoring
-
     # These translations are used by the discussion control buttons.
     discussion_controls:
       follow_button: => flarum-subscriptions.ref.follow
       unfollow_button: Non seguire
       unignore_button: Non ignorare
-
     # These translations are used on the page that displays all subscriptions.
     following:
       meta_title_text: => flarum-subscriptions.ref.following
-
     # These translations are used on the index page, peripheral to the discussion list.
     index:
-      following_link: Seguite
-
+      following_link: Discussioni seguite
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
-      new_post_text: "{username} ha scritto un messaggio"
-
+      new_post_text: "{username} ha creato un post"
     # These translations are used in the Settings page.
     settings:
       follow_after_reply_label: Segui automaticamente le discussioni a cui rispondo
       notify_new_post_label: Qualcuno ha scritto in una discussione che sto seguendo
-
     # These translations are used in the subscription menu displayed to the right of the post stream.
     sub_controls:
       follow_button: => flarum-subscriptions.ref.follow
@@ -43,36 +33,31 @@ flarum-subscriptions:
       ignoring_button: => flarum-subscriptions.ref.ignoring
       ignoring_text: Nessuna notifica. Nascondimi dalla lista della discussione.
       not_following_button: Non seguire
-      not_following_text: "Mandami una notifica solo quando sono @citato."
-      notify_alert_tooltip: Ricevi una email quando qualcuno risponde
-      notify_email_tooltip: Ricevi una notifica quando qualcuno risponde
-
+      not_following_text: "Mandami una notifica solo quando @citato."
+      notify_alert_tooltip: Ricevi una notifica quando ci sono nuovi post
+      notify_email_tooltip: Ricevi una email quando ci sono nuovi post
   # Translations in this namespace are used in emails sent by the forum.
   email:
-
     # These translations are used in emails sent when a post is made in a subscribed discussion
     new_post:
       subject: "[Nuovo Post] {title}"
       body: |
         Ciao {recipient_display_name}!
-
+        
         {poster_display_name} ha pubblicato un post in una discussione che stai seguendo: {title}.
-
+        
         Per visualizzare il nuovo post, clicca sul seguente link:
         {url}
-
+        
         ---
-
+        
         {content}
-
+        
         ---
-
+        
         Non riceverai più notifiche su questa discussione finché non sarai aggiornato.
-
-  ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
-  ##
-
+  # 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
     follow: Segui

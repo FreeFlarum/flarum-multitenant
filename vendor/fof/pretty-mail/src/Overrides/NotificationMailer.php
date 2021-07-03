@@ -12,6 +12,7 @@
 
 namespace FoF\PrettyMail\Overrides;
 
+use Flarum\Foundation\Paths;
 use Flarum\Http\UrlGenerator;
 use Flarum\Notification\MailableInterface;
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -43,15 +44,17 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
      *
      * @var string
      */
-    protected $assets_dir = (__DIR__.'/../../../../public/assets/');
+    protected $assets_dir;
 
-    public function __construct(Mailer $mailer, View $view, SettingsRepositoryInterface $settings, TranslatorInterface $translator, UrlGenerator $url)
+    public function __construct(Mailer $mailer, View $view, SettingsRepositoryInterface $settings, TranslatorInterface $translator, UrlGenerator $url, Paths $paths)
     {
         parent::__construct($mailer, $translator);
 
         $this->view = $view;
         $this->settings = $settings;
         $this->url = $url;
+
+        $this->assets_dir = $paths->public.DIRECTORY_SEPARATOR.'assets'.DIRECTORY_SEPARATOR;
     }
 
     /**

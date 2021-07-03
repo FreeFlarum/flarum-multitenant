@@ -16,7 +16,7 @@ class RoundSerializer extends AbstractSerializer
      * @param Round $round
      * @return array
      */
-    protected function getDefaultAttributes($round)
+    protected function getDefaultAttributes($round): array
     {
         /**
          * @var $ranking Ranking
@@ -31,11 +31,7 @@ class RoundSerializer extends AbstractSerializer
         ];
     }
 
-    /**
-     * @param Round $round
-     * @return Relationship
-     */
-    public function ranking($round)
+    public function ranking(Round $round): ?Relationship
     {
         $data = $round->userRanking($this->actor);
 

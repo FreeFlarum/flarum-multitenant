@@ -10,7 +10,6 @@ clarkwinkelmann-carving-contest:
       custom-help: 'Lista wartości #hex lub rgb(), rozdzielonych przecinkami'
       simple: 'Prosty zestaw kolorów'
     permissions:
-      heading: 'Zawody w rzeźbieniu'
       like: 'Polubienie prac'
       moderate: Moderacja
       participate: Uczestnictwo
@@ -18,7 +17,6 @@ clarkwinkelmann-carving-contest:
     settings:
       colorMode: 'Użyj trybu kolorowania zamiast trybu rzeźbienia'
       maxEntriesPerUser: 'Maksymalna liczba zgłoszeń na użytkownika'
-      title: 'Ustawienia zawodów w rzeźbieniu'
   forum:
     likes_modal:
       title: 'Użytkownicy, którzy polubili tę pracę'
@@ -37,8 +35,8 @@ clarkwinkelmann-carving-contest:
       delete-confirmation: 'Czy jesteś pewien, że chcesz usunąć dynię "{name}" utworzoną przez {username}?'
       like: 'Lubię to'
       likes:
-        liked_by_self_text: '{users} lubisz to.|{users} lubicie to.'
-        liked_by_text: '{users} lubi to.|{users} lubią to.'
+        liked_by_self_text: '{count, plural, one {{users} lubisz to} other {{users} lubicie to}}.'
+        liked_by_text: '{users} {count, plural, one {lubi to} =2 {lubią to} =3 {lubią to} =4 {lubią to} other {lubi to}}.'
         others_link: '=> core.ref.some_others'
         you_text: '=> core.ref.you'
       load-more: 'Załaduj więcej wyników'

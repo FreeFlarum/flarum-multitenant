@@ -24,7 +24,7 @@ class Achievement extends AbstractModel
      */
     protected $table = 'achievements';
 
-    public static function build($name, $description="", $computation="", $points=0, $image="", $rectangle="0,0,0,0",$active=1)
+    public static function build($name, $description="", $computation="", $points=0, $image="", $rectangle="0,0,0,0",$active=1,$hidden=0)
     {
         $achievement = new static();
         $achievement->name = $name;
@@ -34,6 +34,7 @@ class Achievement extends AbstractModel
         $achievement->image = $image;
         $achievement->rectangle = $rectangle;
         $achievement->active = $active;
+        $achievement->hidden = $hidden;
 
         return $achievement;
     }

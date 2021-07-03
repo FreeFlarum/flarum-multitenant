@@ -33,15 +33,29 @@ class GlobalPolicy extends AbstractPolicy
      */
     public function can(User $actor, string $ability)
     {
-        if (in_array($ability, ['viewDiscussions', 'startDiscussion'])) {
-            if ($actor->hasPermission($ability) && $actor->hasPermission('bypassTagCounts')) {
-                return $this->allow();
+        static $enoughPrimary;
+        static $enoughSecondary;
+
+        if ($ability === 'startDiscussion'
+            && $actor->hasPermission($ability)
+            && $actor->hasPermission('bypassTagCounts')) {
+            return $this->allow();
+        }
+
+        if (in_array($ability, ['viewForum', 'startDiscussion'])) {
+            if (! isset($enoughPrimary[$actor->id][$ability])) {
+                $enoughPrimary[$actor->id][$ability] = Tag::whereHasPermission($actor, $ability)
+                    ->where('tags.position', '!=', null)
+                    ->count() >= $this->settings->get('flarum-tags.min_primary_tags');
             }
 
-            $enoughPrimary = count(Tag::getIdsWhereCan($actor, $ability, true, false)) >= $this->settings->get('flarum-tags.min_primary_tags');
-            $enoughSecondary = count(Tag::getIdsWhereCan($actor, $ability, false, true)) >= $this->settings->get('flarum-tags.min_secondary_tags');
+            if (! isset($enoughSecondary[$actor->id][$ability])) {
+                $enoughSecondary[$actor->id][$ability] = Tag::whereHasPermission($actor, $ability)
+                    ->where('tags.position', '=', null)
+                    ->count() >= $this->settings->get('flarum-tags.min_secondary_tags');
+            }
 
-            if ($enoughPrimary && $enoughSecondary) {
+            if ($enoughPrimary[$actor->id][$ability] && $enoughSecondary[$actor->id][$ability]) {
                 return $this->allow();
             } else {
                 return $this->deny();

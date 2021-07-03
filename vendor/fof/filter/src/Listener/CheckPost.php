@@ -11,9 +11,13 @@
 
 namespace FoF\Filter\Listener;
 
+use Flarum\Flags\Event\Created;
 use Flarum\Flags\Flag;
 use Flarum\Post\Event\Saving;
+use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
+use Flarum\User\Guest;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Mail\Mailer;
 use Illuminate\Mail\Message;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -35,19 +39,21 @@ class CheckPost
      */
     protected $mailer;
 
-    public function __construct(SettingsRepositoryInterface $settings, TranslatorInterface $translator, Mailer $mailer)
+    /**
+     * @var Dispatcher
+     */
+    protected $bus;
+
+    public function __construct(SettingsRepositoryInterface $settings, TranslatorInterface $translator, Mailer $mailer, Dispatcher $bus)
     {
         $this->settings = $settings;
         $this->translator = $translator;
         $this->mailer = $mailer;
+        $this->bus = $bus;
     }
 
     public function handle(Saving $event)
     {
-        if (!$event->post->exists) {
-            return;
-        }
-
         $post = $event->post;
 
         if ($post->auto_mod) {
@@ -56,6 +62,7 @@ class CheckPost
 
         if ($this->checkContent($post->content)) {
             $this->flagPost($post);
+
             if ($this->settings->get('fof-filter.emailWhenFlagged') == 1 && $post->emailed == 0) {
                 $this->sendEmail($post);
             }
@@ -81,7 +88,7 @@ class CheckPost
         return $isExplicit;
     }
 
-    public function flagPost($post): void
+    public function flagPost(Post $post): void
     {
         $post->is_approved = false;
         $post->auto_mod = true;
@@ -90,12 +97,15 @@ class CheckPost
                 $post->discussion->is_approved = false;
                 $post->discussion->save();
             }
+
             $flag = new Flag();
             $flag->post_id = $post->id;
-            $flag->type = $this->translator->trans('fof-filter.forum.flagger_name');
-            $flag->reason = $this->translator->trans('fof-filter.forum.flag_message');
+            $flag->type = 'autoMod';
+            $flag->reason_detail = $this->translator->trans('fof-filter.forum.flag_message');
             $flag->created_at = time();
             $flag->save();
+
+            $this->bus->dispatch(new Created($flag, new Guest()));
         });
     }
 

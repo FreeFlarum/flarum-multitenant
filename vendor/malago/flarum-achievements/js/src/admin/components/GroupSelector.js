@@ -38,6 +38,7 @@ export default class GroupSelector extends Component {
                         $(".FormInline").addClass("FormHidden");
                       }else{
                         $(".FormInline").removeClass("FormHidden");
+                        $("input.FormInline").attr("data-original-title", app.translator.trans("malago-achievements.admin.achievement_modal.tooltip."+g));
                       }
                   },
                 },

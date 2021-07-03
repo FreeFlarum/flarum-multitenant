@@ -18,6 +18,10 @@ import LoadingIndicator from "flarum/components/LoadingIndicator";
 import icon from "flarum/helpers/icon";
 import AchievementModal from "./AchievementModal";
 import AchievementUserModal from "./AchievementUserModal";
+import saveSettings from "flarum/utils/saveSettings";
+import Stream from 'flarum/utils/Stream';
+import Switch from 'flarum/components/Switch';
+import Button from "flarum/components/Button";
 
 function AchievementsItem(achievement) {
 
@@ -62,6 +66,18 @@ export default class AchievementsPage extends ExtensionPage {
   oninit(vnode) {
     super.oninit(vnode);
 
+    const settings = app.data.settings;
+    this.values = {};
+
+    this.settingsPrefix = "malago-achievements";
+
+    this.settings = [
+      'show-post-footer',
+      'show-user-card'
+    ];
+
+    this.settings.forEach((key) => (this.values[key] = Stream(Number(settings[this.addPrefix(key)]))));
+
     this.loading = true;
 
     app.store.find("achievements").then(() => {
@@ -80,7 +96,7 @@ export default class AchievementsPage extends ExtensionPage {
         </div>
       );
     }
-
+    
     return (
       <div className="Achievements">
         <div className="container">
@@ -97,8 +113,38 @@ export default class AchievementsPage extends ExtensionPage {
               ]}
             </div>
           </div>
+          <p className="Achievements-list-heading">
+              {app.translator.trans(
+                "malago-achievements.admin.achievements_page.show"
+              )}
+            </p>
+          {
+            m('form', {onsubmit: this.onsubmit.bind(this)},
+              m('fieldset', {className: 'Achievements-settings'}, [
+                Switch.component(
+                  {
+                      state: this.values['show-post-footer']() || false,
+                      onchange: this.values['show-post-footer'],
+                  },
+                  app.translator.trans('malago-achievements.admin.settings.show-post-footer')
+                ),
+                Switch.component(
+                  {
+                      state: this.values['show-user-card']() || false,
+                      onchange: this.values['show-user-card'],
+                  },
+                  app.translator.trans('malago-achievements.admin.settings.show-user-card')
+                ),
+                  Button.component({
+                    type: 'submit',
+                    className: 'Button Button--primary',
+                    disabled: !this.changed()
+                }, app.translator.trans('flagrow-ads.admin.buttons.save')),
+              ])
+            )
+          }
           <div className="Achievements-footer">
-            <p>
+            <p className="Achievements-list-heading">
               {app.translator.trans(
                 "malago-achievements.admin.achievements_page.instructions_header"
               )}
@@ -112,5 +158,46 @@ export default class AchievementsPage extends ExtensionPage {
         </div>
       </div>
     );
+  }
+  /**
+     * Checks if the values of the fields and checkboxes are different from
+     * the ones stored in the database
+     *
+     * @returns boolean
+     */
+  changed() {
+    const settingsChecked = this.settings.some(key => this.values[key]() !== app.data.settings[this.addPrefix(key)]);
+    return settingsChecked;
+  }
+  onsubmit(e) {
+    e.preventDefault();
+    // if the page is already saving, do nothing
+    if (this.loading) return;
+
+    // prevents multiple savings
+    this.loading = true;
+
+    // remove previous success popup
+    app.alerts.dismiss(this.successAlert);
+
+    const settings = {};
+
+    // gets all the values from the form
+    this.settings.forEach(key => settings[this.addPrefix(key)] = this.values[key]());
+    saveSettings(settings)
+      .then(() => {
+          // on success, show popup
+          app.alerts.show({ type: 'success' }, app.translator.trans('core.admin.settings.saved_message'));
+      })
+      .catch(() => {
+      })
+      .then(() => {
+          // return to the initial state and redraw the page
+          this.loading = false;
+          // window.location.reload();
+      });  
+  }
+  addPrefix(key) {
+      return this.settingsPrefix + '.' + key;
   }
 }

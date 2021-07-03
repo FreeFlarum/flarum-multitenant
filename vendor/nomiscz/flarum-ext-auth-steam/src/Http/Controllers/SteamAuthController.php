@@ -12,7 +12,7 @@
 namespace NomisCZ\SteamAuth\Http\Controllers;
 
 use NomisCZ\SteamAuth\Providers\SteamAuth;
-use NomisCZ\SteamAuth\Flarum\Forum\Auth\NResponseFactory;
+use Flarum\Forum\Auth\ResponseFactory;
 use Exception;
 use Flarum\Forum\Auth\Registration;
 use Psr\Http\Message\ResponseInterface;
@@ -24,7 +24,7 @@ class SteamAuthController implements RequestHandlerInterface
     protected $response;
     protected $steam;
 
-    public function __construct(NResponseFactory $response, SteamAuth $steam)
+    public function __construct(ResponseFactory $response, SteamAuth $steam)
     {
         $this->response = $response;
         $this->steam = $steam;
@@ -52,7 +52,8 @@ class SteamAuthController implements RequestHandlerInterface
                 ];
 
                 return $this->response->make(
-                    'steam', $suggestions['id'],
+                    'steam',
+                    $suggestions['id'],
                     function (Registration $registration) use ($suggestions) {
                         $registration
                             ->provideAvatar($suggestions['avatarUrl'])

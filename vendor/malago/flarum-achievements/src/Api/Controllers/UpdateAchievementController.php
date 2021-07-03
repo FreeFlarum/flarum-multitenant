@@ -73,6 +73,7 @@ class UpdateAchievementController extends AbstractShowController
             $ach->image = Arr::get($attributes,"image");
             $ach->rectangle = Arr::get($attributes,"rectangle");
             $ach->active = Arr::get($attributes,"active");
+            $ach->hidden = Arr::get($attributes,"hidden");
         }
 
         $this->validator->assertValid($ach->getDirty());

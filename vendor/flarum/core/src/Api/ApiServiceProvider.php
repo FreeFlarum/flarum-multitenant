@@ -21,6 +21,7 @@ use Flarum\Http\Middleware as HttpMiddleware;
 use Flarum\Http\RouteCollection;
 use Flarum\Http\RouteHandlerFactory;
 use Flarum\Http\UrlGenerator;
+use Illuminate\Contracts\Container\Container;
 use Laminas\Stratigility\MiddlewarePipe;
 
 class ApiServiceProvider extends AbstractServiceProvider
@@ -30,8 +31,8 @@ class ApiServiceProvider extends AbstractServiceProvider
      */
     public function register()
     {
-        $this->container->extend(UrlGenerator::class, function (UrlGenerator $url) {
-            return $url->addCollection('api', $this->container->make('flarum.api.routes'), 'api');
+        $this->container->extend(UrlGenerator::class, function (UrlGenerator $url, Container $container) {
+            return $url->addCollection('api', $container->make('flarum.api.routes'), 'api');
         });
 
         $this->container->singleton('flarum.api.routes', function () {
@@ -51,12 +52,13 @@ class ApiServiceProvider extends AbstractServiceProvider
             ];
         });
 
-        $this->container->bind(Middleware\ThrottleApi::class, function ($container) {
+        $this->container->bind(Middleware\ThrottleApi::class, function (Container $container) {
             return new Middleware\ThrottleApi($container->make('flarum.api.throttlers'));
         });
 
         $this->container->singleton('flarum.api.middleware', function () {
             return [
+                HttpMiddleware\InjectActorReference::class,
                 'flarum.api.error_handler',
                 HttpMiddleware\ParseJsonBody::class,
                 Middleware\FakeHttpMethods::class,
@@ -71,23 +73,23 @@ class ApiServiceProvider extends AbstractServiceProvider
             ];
         });
 
-        $this->container->bind('flarum.api.error_handler', function () {
+        $this->container->bind('flarum.api.error_handler', function (Container $container) {
             return new HttpMiddleware\HandleErrors(
-                $this->container->make(Registry::class),
-                new JsonApiFormatter($this->container['flarum.config']->inDebugMode()),
-                $this->container->tagged(Reporter::class)
+                $container->make(Registry::class),
+                new JsonApiFormatter($container['flarum.config']->inDebugMode()),
+                $container->tagged(Reporter::class)
             );
         });
 
-        $this->container->bind('flarum.api.route_resolver', function () {
-            return new HttpMiddleware\ResolveRoute($this->container->make('flarum.api.routes'));
+        $this->container->bind('flarum.api.route_resolver', function (Container $container) {
+            return new HttpMiddleware\ResolveRoute($container->make('flarum.api.routes'));
         });
 
-        $this->container->singleton('flarum.api.handler', function () {
+        $this->container->singleton('flarum.api.handler', function (Container $container) {
             $pipe = new MiddlewarePipe;
 
             foreach ($this->container->make('flarum.api.middleware') as $middleware) {
-                $pipe->pipe($this->container->make($middleware));
+                $pipe->pipe($container->make($middleware));
             }
 
             $pipe->pipe(new HttpMiddleware\ExecuteRoute());
@@ -100,18 +102,46 @@ class ApiServiceProvider extends AbstractServiceProvider
                 'discussionRenamed' => BasicDiscussionSerializer::class
             ];
         });
+
+        $this->container->singleton('flarum.api_client.exclude_middleware', function () {
+            return [
+                HttpMiddleware\InjectActorReference::class,
+                HttpMiddleware\ParseJsonBody::class,
+                Middleware\FakeHttpMethods::class,
+                HttpMiddleware\StartSession::class,
+                HttpMiddleware\AuthenticateWithSession::class,
+                HttpMiddleware\AuthenticateWithHeader::class,
+                HttpMiddleware\CheckCsrfToken::class
+            ];
+        });
+
+        $this->container->singleton(Client::class, function ($container) {
+            $pipe = new MiddlewarePipe;
+
+            $middlewareStack = array_filter($container->make('flarum.api.middleware'), function ($middlewareClass) use ($container) {
+                return ! in_array($middlewareClass, $container->make('flarum.api_client.exclude_middleware'));
+            });
+
+            foreach ($middlewareStack as $middleware) {
+                $pipe->pipe($container->make($middleware));
+            }
+
+            $pipe->pipe(new HttpMiddleware\ExecuteRoute());
+
+            return new Client($pipe);
+        });
     }
 
     /**
      * {@inheritdoc}
      */
-    public function boot()
+    public function boot(Container $container)
     {
         $this->setNotificationSerializers();
 
-        AbstractSerializeController::setContainer($this->container);
+        AbstractSerializeController::setContainer($container);
 
-        AbstractSerializer::setContainer($this->container);
+        AbstractSerializer::setContainer($container);
     }
 
     /**

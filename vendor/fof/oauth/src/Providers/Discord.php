@@ -3,9 +3,9 @@
 /*
  * This file is part of fof/oauth.
  *
- * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -55,11 +55,13 @@ class Discord extends Provider
         $this->verifyEmail($email = $user->getEmail());
 
         $hash = $user->getAvatarHash();
-        $file = $hash ? "{$user->getId()}/{$user->getAvatarHash()}.png" : '0.png';
+        $file = $hash ?
+            "https://cdn.discordapp.com/avatars/{$user->getId()}/{$user->getAvatarHash()}.png"
+            : 'https://cdn.discordapp.com/embed/avatars/0.png';
 
         $registration
             ->provideTrustedEmail($email)
-            ->provideAvatar("https://cdn.discordapp.com/avatars/$file")
+            ->provideAvatar($file)
             ->suggestUsername($user->getUsername() ?: '')
             ->setPayload($user->toArray());
     }

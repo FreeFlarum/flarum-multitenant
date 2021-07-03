@@ -39,17 +39,20 @@ fof-byobu:
     composer_private_discussion:
       submit_button: 'Dodaj prywatną dyskusję'
       title_placeholder: 'Tytuł prywatnej dyskusji'
-    confirm:
-      make_public: 'To sprawi, że ta prywatna dyskusja będzie widoczna dla wszystkich. Upewnij się, że właśnie tego chcesz.'
     input:
       search_recipients: 'Wpisz 3 pierwsze znaki, aby wyszukać uczestników...'
     labels:
-      recipients: '{count} uczestnik|{count} uczestników'
+      recipients: '{count, plural, one {{count} uczestnik} other {{count} uczestników}}'
       user_deleted: '-usunięty-'
     modal:
       help:
         add_recipients: 'Ta dyskusja będzie widoczna tylko dla użytkowników, których tutaj wybierzesz. Wymagany jest przynajmniej jeden uczestnik (oprócz Ciebie).'
+        click_user_to_remove_tooltip: 'Kliknij, aby usunąć'
+        selected_users: 'Kliknij nazwę użytkownika, aby go usunąć.'
         update_recipients: 'Ta dyskusja będzie widoczna tylko dla użytkowników, których tutaj wybierzesz.'
+      labels:
+        search_field: 'Wyszukaj użytkownika'
+        selected_users: 'Wybrani użytkownicy'
       titles:
         add_recipients: 'Dodaj uczestników do swojej dyskusji'
         update_recipients: 'Uaktualnij uczestników dla {title}'
@@ -79,4 +82,3 @@ fof-byobu:
       dropdown_label: 'Prywatne dyskusje'
       settings:
         block_pd: 'Blokuj prywatne dyskusje'
-        unified_index: 'Wyświetl prywatne dyskusje na liście dyskusji na forum'

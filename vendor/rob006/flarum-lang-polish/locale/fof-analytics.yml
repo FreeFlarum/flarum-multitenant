@@ -4,6 +4,8 @@
 
 fof-analytics:
   admin:
+    matomo-widget:
+      title: Matomo
     popup:
       field:
         googleGTMCode: 'Identyfikator śledzenia GTM (opcjonalne)'
@@ -16,14 +18,14 @@ fof-analytics:
         piwikSiteId: 'ID serwisu'
         piwikTrackAccounts: 'Śledź konta użytkowników'
         piwikTrackSubdomain: 'Śledź odwiedzających na wszystkich subdomenach forum'
-        piwikUrl: 'Domena lub URL Piwik'
+        piwikUrl: 'Domena lub URL Matomo'
         statusGoogle: 'Włącz Google Analytics'
-        statusPiwik: 'Włącz Piwik'
+        statusPiwik: 'Włącz Matomo'
       placeholder:
-        piwikAuthToken: "Uzupełnij ten token, aby włączyć statystyki Piwik w zakładce w panelu admina.\nMożesz go znaleźć w Ustawienia > Osobiste > Token autentykacji API.\n"
+        piwikAuthToken: "Uzupełnij ten token, aby włączyć widget ze statystykami Matomo w panelu admina.\nMożesz go znaleźć w Ustawienia > Osobiste > Token autentykacji API.\n"
       section:
         googleAnalytics: 'Google Analytics'
-        piwik: Piwik
+        piwik: Matomo
       trackAccounts:
         email: 'Śledź na podstawie adresu e-mail'
         none: 'Nie śledź'

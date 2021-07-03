@@ -1,6 +1,6 @@
-import { extend } from 'flarum/extend';
-import UserControls from 'flarum/utils/UserControls';
-import Button from 'flarum/components/Button';
+import { extend } from 'flarum/common/extend';
+import UserControls from 'flarum/forum/utils/UserControls';
+import Button from 'flarum/common/components/Button';
 
 export default function () {
     extend(UserControls, 'userControls', function (items, user) {

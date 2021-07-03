@@ -14,10 +14,26 @@
             "homepage": "https://flarum.org/team"
         }
     ],
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/flarum"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/flarum"
+        },
+        {
+            "type": "other",
+            "url": "https://flarum.org/donate"
+        }
+    ],
     "support": {
         "issues": "https://github.com/flarum/core/issues",
         "source": "https://github.com/flarum/core",
-        "docs": "https://flarum.org/docs/"
+        "docs": "https://docs.flarum.org",
+        "forum": "https://discuss.flarum.org",
+        "chat": "https://flarum.org/chat"
     },
     "require": {
         "php": ">=7.3",
@@ -25,10 +41,12 @@
         "components/font-awesome": "^5.14.0",
         "dflydev/fig-cookies": "^3.0.0",
         "doctrine/dbal": "^2.7",
+        "dragonmantank/cron-expression": "^3.1.0",
         "franzl/whoops-middleware": "^2.0.0",
         "illuminate/bus": "^8.0",
         "illuminate/cache": "^8.0",
         "illuminate/config": "^8.0",
+        "illuminate/console": "^8.0",
         "illuminate/container": "^8.0",
         "illuminate/contracts": "^8.0",
         "illuminate/database": "^8.0",
@@ -61,21 +79,21 @@
         "symfony/console": "^5.2.2",
         "symfony/event-dispatcher": "^5.2.2",
         "symfony/mime": "^5.2.0",
+        "symfony/polyfill-intl-messageformatter": "^1.22.0",
         "symfony/translation": "^5.1.5",
         "symfony/yaml": "^5.2.2",
         "tobscure/json-api": "^0.3.0",
         "wikimedia/less.php": "^3.0"
     },
     "require-dev": {
-        "flarum/testing": "^0.1.0-beta.16"
+        "flarum/testing": "1.0@dev"
     },
     "autoload": {
         "psr-4": {
             "Flarum\\": "src/"
         },
         "files": [
-            "src/helpers.php",
-            "src/TranslatorInterface.php"
+            "src/helpers.php"
         ]
     },
     "autoload-dev": {
@@ -88,7 +106,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.x-dev"
+            "dev-master": "1.x-dev"
         }
     },
     "scripts": {

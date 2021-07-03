@@ -24,19 +24,26 @@ fof-drafts:
     dropdown:
       alert: 'Czy jesteś pewien, że chcesz usunąć ten szkic?'
       delete_all_alert: 'Czy jesteś pewien, że chcesz usunąć wszystkie swoje szkice?'
+      delete_all_button: 'Usuń wszystkie szkice'
       delete_button: 'Usuń szkic'
       empty_text: 'Nie zapisałeś żadnych szkiców'
-      schedule_button: 'Zaplanuj publikację'
+      schedule_button: '=> fof-drafts.ref.schedule_draft'
+      scheduled_icon_tooltip: 'Zaplanowano publikację na {datetime}'
+      scheduled_icon_tooltip_formatter: 'LL [o] LT'
       title: Szkice
       tooltip: '=> fof-drafts.forum.dropdown.title'
     schedule_draft_modal:
       reschedule_button: 'Zaktualizuj zaplanowaną publikację'
       schedule_button: 'Zaplanuj publikację'
-      scheduled_error: 'Publikacja nie powiodła się z powodu: {error}.'
-      scheduled_text: 'Zaplanowano publikację na: {datetime}.'
+      schedule_time_preview: 'Ten szkic zostanie automatycznie opublikowany <b>{datetime}</b>.'
+      schedule_time_preview_formatter: 'LL [o] LT'
+      schedule_time_preview_invalid: 'Nieprawidłowa data'
+      scheduled_error: 'Zaplanowanie publikacji szkicu nie powiodło się: {error}.'
+      scheduled_text: 'Zaplanowano publikację na {datetime}.'
       text: 'Zaplanuj automatyczną publikację szkicu w określonym czasie.'
-      title: 'Zaplanuj publikację szkicu'
+      title: '=> fof-drafts.ref.schedule_draft'
       unschedule_button: 'Wyłącz zaplanowaną publikację'
+      unschedule_warning: 'Czy jesteś pewien, że chcesz wyłączyć zaplanowaną publikację tego szkicu?'
     user:
       settings:
         draft_autosave_enable: 'Włącz automatyczny zapis szkiców'
@@ -44,3 +51,5 @@ fof-drafts:
         draft_autosave_interval_invalid: 'Częstotliwość musi być liczbą większą niż 4.'
         draft_autosave_interval_label: 'Częstotliwość automatycznego zapisu (w sekundach)'
         drafts_heading: Szkice
+  ref:
+    schedule_draft: 'Zaplanuj publikację'

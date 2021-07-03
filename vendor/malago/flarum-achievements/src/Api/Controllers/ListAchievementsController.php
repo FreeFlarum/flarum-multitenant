@@ -35,12 +35,10 @@ class ListAchievementsController extends AbstractListController
         $actor = $request->getAttribute('actor');
         $include = $this->extractInclude($request);
 
-        $actor->assertCan('administrate');
+        //$actor->assertCan('administrate');
 
         $ach = Achievement::query()->whereVisibleTo($actor)->get();
 
         return $ach->load($include);
-
-       //return Achievement::all();
     }
 }

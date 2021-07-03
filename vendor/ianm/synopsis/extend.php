@@ -33,7 +33,8 @@ return [
         ->serializeToForum('synopsis.excerpt_type', 'ianm-synopsis.excerpt-type'),
 
     (new Extend\ApiController(ListDiscussionsController::class))
-        ->addInclude(['firstPost', 'lastPost']),
+        ->addInclude(['firstPost', 'lastPost'])
+        ->load('lastPost'),
 
     (new Extend\ApiController(UpdateDiscussionController::class))
         ->addInclude(['lastPost']),

@@ -5,8 +5,11 @@ import UploadButton from './components/UploadButton';
 
 app.initializers.add('imgur-upload', () => {
     extend(TextEditor.prototype, 'controlItems', function (items) {
-        items.add('imgur-upload', <UploadButton textArea={this.$().parents('.Composer')[0]}
-                                                editor={this.attrs.composer.editor}/>);
+        items.add(
+            'imgur-upload',
+            <UploadButton textArea={this.$().parents('.Composer')[0]}
+                          editor={this.attrs.composer.editor}/>
+        );
     });
 
     extend(TextEditor.prototype, 'toolbarItems', function (items) {

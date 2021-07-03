@@ -35,10 +35,6 @@ class UpdateAchievementsOnLogin
         $years = date_diff($datetime2, $datetime1)->days/365;
 
         $arr = array(
-            
-        );
-
-        $arr = array(
             array(
                 "type"=>"years",
                 "count"=>$years,

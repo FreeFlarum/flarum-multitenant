@@ -12,7 +12,7 @@
 import { extend } from 'flarum/common/extend';
 import app from 'flarum/common/app';
 import LinkButton from 'flarum/common/components/LinkButton';
-import UserPage from 'flarum/common/components/UserPage';
+import UserPage from 'flarum/forum/components/UserPage';
 
 export default function () {
     extend(UserPage.prototype, 'navItems', function (items) {

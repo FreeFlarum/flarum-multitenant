@@ -12,7 +12,7 @@ namespace Flarum\Search;
 use LogicException;
 
 /**
- * @todo This whole gambits thing needs way better documentation.
+ * @internal
  */
 class GambitManager
 {
@@ -27,29 +27,21 @@ class GambitManager
     protected $fulltextGambit;
 
     /**
+     * @param GambitInterface $gambit
+     */
+    public function __construct(GambitInterface $fulltextGambit)
+    {
+        $this->fulltextGambit = $fulltextGambit;
+    }
+
+    /**
      * Add a gambit.
      *
      * @param GambitInterface $gambit
      */
-    public function add($gambit)
+    public function add(GambitInterface $gambit)
     {
         $this->gambits[] = $gambit;
-    }
-
-    /**
-     * @deprecated Do not use. Added temporarily to provide support for ConfigureUserGambits and ConfigureDiscussionGambits until they are removed in beta 17.
-     */
-    public function getFullTextGambit()
-    {
-        return $this->fulltextGambit;
-    }
-
-    /**
-     * @deprecated Do not use. Added temporarily to provide support for ConfigureUserGambits and ConfigureDiscussionGambits until they are removed in beta 17.
-     */
-    public function getGambits()
-    {
-        return $this->gambits;
     }
 
     /**
@@ -65,16 +57,6 @@ class GambitManager
         if ($query) {
             $this->applyFulltext($search, $query);
         }
-    }
-
-    /**
-     * Set the gambit to handle fulltext searching.
-     *
-     * @param GambitInterface $gambit
-     */
-    public function setFulltextGambit($gambit)
-    {
-        $this->fulltextGambit = $gambit;
     }
 
     /**
@@ -126,10 +108,6 @@ class GambitManager
      */
     protected function applyFulltext(SearchState $search, $query)
     {
-        if (! $this->fulltextGambit) {
-            return;
-        }
-
         $search->addActiveGambit($this->fulltextGambit);
         $this->fulltextGambit->apply($search, $query);
     }

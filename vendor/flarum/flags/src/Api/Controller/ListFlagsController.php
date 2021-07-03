@@ -12,6 +12,7 @@ namespace Flarum\Flags\Api\Controller;
 use Flarum\Api\Controller\AbstractListController;
 use Flarum\Flags\Api\Serializer\FlagSerializer;
 use Flarum\Flags\Flag;
+use Flarum\Http\RequestUtil;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
@@ -37,17 +38,25 @@ class ListFlagsController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
+        $include = $this->extractInclude($request);
 
         $actor->assertRegistered();
 
         $actor->read_flags_at = time();
         $actor->save();
 
-        return Flag::whereVisibleTo($actor)
-            ->with($this->extractInclude($request))
+        $flags = Flag::whereVisibleTo($actor)
             ->latest('flags.created_at')
             ->groupBy('post_id')
             ->get();
+
+        if (in_array('post.user', $include)) {
+            $include[] = 'post.user.groups';
+        }
+
+        $this->loadRelations($flags, $include);
+
+        return $flags;
     }
 }

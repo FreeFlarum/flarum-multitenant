@@ -31,9 +31,6 @@ clarkwinkelmann-scratchpad:
       forum_less: 'Less forum'
       php: PHP
       title: 'Nazwa notatnika'
-    menu:
-      description: 'Z łatwością testuj kod na swoim forum developerskim'
-      title: Notatnik
     placeholders:
       js-log: 'Cześć, {frontend}!'
       php-comment: 'Zarejestruj rozszerzenia (extenders) tutaj'

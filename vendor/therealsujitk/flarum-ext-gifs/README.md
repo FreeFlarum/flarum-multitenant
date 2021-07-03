@@ -22,7 +22,7 @@ A [Flarum](http://flarum.org) extension that integrates your forum with GIF sear
 Install with composer:
 
 ```sh
-composer require therealsujitk/flarum-ext-gifs
+composer require therealsujitk/flarum-ext-gifs:"*"
 ```
 
 ### Updating

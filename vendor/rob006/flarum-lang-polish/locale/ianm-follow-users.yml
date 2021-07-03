@@ -16,6 +16,8 @@ ianm-follow-users:
   forum:
     badge:
       label: 'Obserwowany użytkownik'
+    filter:
+      following: 'Obserwowani użytkownicy'
     index:
       follow_tag_button: Obserwuj
       unfollow_tag_button: 'Przestań obserwować'

@@ -10,6 +10,7 @@
 namespace Flarum\Api\Controller;
 
 use Flarum\Api\Serializer\UserSerializer;
+use Flarum\Http\RequestUtil;
 use Flarum\Http\UrlGenerator;
 use Flarum\Query\QueryCriteria;
 use Flarum\User\Filter\UserFilterer;
@@ -72,9 +73,9 @@ class ListUsersController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
-        $actor->assertCan('viewUserList');
+        $actor->assertCan('searchUsers');
 
         if (! $actor->hasPermission('user.viewLastSeenAt')) {
             // If a user cannot see everyone's last online date, we prevent them from sorting by it
@@ -85,12 +86,13 @@ class ListUsersController extends AbstractListController
 
         $filters = $this->extractFilter($request);
         $sort = $this->extractSort($request);
+        $sortIsDefault = $this->sortIsDefault($request);
 
         $limit = $this->extractLimit($request);
         $offset = $this->extractOffset($request);
         $include = $this->extractInclude($request);
 
-        $criteria = new QueryCriteria($actor, $filters, $sort);
+        $criteria = new QueryCriteria($actor, $filters, $sort, $sortIsDefault);
         if (array_key_exists('q', $filters)) {
             $results = $this->searcher->search($criteria, $limit, $offset);
         } else {
@@ -105,6 +107,10 @@ class ListUsersController extends AbstractListController
             $results->areMoreResults() ? null : 0
         );
 
-        return $results->getResults()->load($include);
+        $results = $results->getResults();
+
+        $this->loadRelations($results, $include);
+
+        return $results;
     }
 }

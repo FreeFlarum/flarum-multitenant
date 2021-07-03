@@ -11,6 +11,7 @@ namespace Flarum\Api\Controller;
 
 use Flarum\Api\Serializer\GroupSerializer;
 use Flarum\Group\Group;
+use Flarum\Http\RequestUtil;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
@@ -26,8 +27,12 @@ class ListGroupsController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
-        return Group::whereVisibleTo($actor)->get();
+        $results = Group::whereVisibleTo($actor)->get();
+
+        $this->loadRelations($results, []);
+
+        return $results;
     }
 }

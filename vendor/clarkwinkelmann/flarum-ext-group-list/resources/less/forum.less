@@ -1,0 +1,76 @@
+.GroupList-UserList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .Avatar {
+        .Avatar--size(100px);
+    }
+
+    .UserOnline {
+        margin-right: 5px;
+
+        .icon {
+            font-size: 12px;
+        }
+
+        .fa-circle {
+            color: @online-user-circle-color;
+        }
+    }
+}
+
+.GroupList-UserList-item {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 2px;
+    width: 120px;
+
+    a {
+        color: @text-color;
+        font-weight: bold;
+    }
+
+    .badges {
+        position: absolute;
+        top: -3px;
+        left: 0;
+        right: 0;
+        text-align: right;
+        white-space: nowrap;
+        margin: 0; // Cancel rules in .DiscussionHero
+
+        .Badge {
+            margin-left: -10px;
+        }
+    }
+}
+
+.GroupList-UserList-avatar {
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.GroupList-UserList-user {
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.GroupList-content {
+    text-align: center;
+}
+
+.GroupList-title {
+    font-size: 2em;
+}
+
+.GroupList-description {
+    margin-bottom: 20px;
+}

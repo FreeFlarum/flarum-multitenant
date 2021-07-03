@@ -12,10 +12,14 @@
 
 namespace FoF\PrettyMail;
 
+use Flarum\Foundation\Paths;
 use Flarum\Http\UrlGenerator;
 use Flarum\Settings\SettingsRepositoryInterface;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Mail\Mailer as LaravelMailer;
 use s9e\TextFormatter\Bundles\Fatdown;
+use Swift_Mailer;
 
 class Mailer extends LaravelMailer
 {
@@ -24,7 +28,14 @@ class Mailer extends LaravelMailer
      *
      * @var string
      */
-    protected $assets_dir = (__DIR__.'/../../../public/assets/');
+    protected $assets_dir;
+
+    public function __construct(string $name, Factory $views, Swift_Mailer $swift, Dispatcher $events = null)
+    {
+        parent::__construct($name, $views, $swift, $events);
+
+        $this->assets_dir = resolve(Paths::class)->public.DIRECTORY_SEPARATOR.'assets'.DIRECTORY_SEPARATOR;
+    }
 
     public function raw($text, $callback, $use_fatdown = true)
     {

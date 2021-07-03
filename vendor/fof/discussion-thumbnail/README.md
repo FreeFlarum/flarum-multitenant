@@ -9,7 +9,7 @@ A [Flarum](http://flarum.org) extension. Replace author avatars with the first i
 Install manually with composer:
 
 ```sh
-composer require fof/discussion-thumbnail
+composer require fof/discussion-thumbnail:"*"
 ```
 
 ### Updating

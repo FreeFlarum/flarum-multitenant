@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "flarum/core": "^0.1.0-beta.16"
+    "flarum/core": "^1.0.0"
   },
   "authors": [
     {
@@ -29,6 +29,11 @@
     {
       "name": "David Sevilla Martín",
       "email": "david.s@redevs.org",
+      "role": "Developer"
+    },
+    {
+      "name": "Katos",
+      "email": "katos@flarum.org",
       "role": "Developer"
     }
   ],

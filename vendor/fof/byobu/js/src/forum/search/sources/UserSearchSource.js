@@ -1,6 +1,6 @@
-import highlight from 'flarum/helpers/highlight';
-import avatar from 'flarum/helpers/avatar';
-import username from 'flarum/helpers/username';
+import highlight from 'flarum/common/helpers/highlight';
+import avatar from 'flarum/common/helpers/avatar';
+import username from 'flarum/common/helpers/username';
 
 export default class UserSearchSource {
     view(query) {
@@ -33,7 +33,7 @@ export default class UserSearchSource {
                         <li className="SearchResult" data-index={'users:' + user.id()}>
                             <a data-index={'users:' + user.id()}>
                                 {avatar(user)}
-                                {{...name, text: undefined, children}}
+                                {{ ...name, text: undefined, children }}
                             </a>
                         </li>
                     );

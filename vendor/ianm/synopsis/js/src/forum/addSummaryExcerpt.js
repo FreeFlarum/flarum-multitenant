@@ -12,8 +12,8 @@
 
 import { extend } from 'flarum/common/extend';
 import app from 'flarum/common/app';
-import DiscussionListState from 'flarum/common/states/DiscussionListState';
-import DiscussionListItem from 'flarum/common/components/DiscussionListItem';
+import DiscussionListState from 'flarum/forum/states/DiscussionListState';
+import DiscussionListItem from 'flarum/forum/components/DiscussionListItem';
 import { truncate } from 'flarum/common/utils/string';
 
 export default function addSummaryExcerpt() {

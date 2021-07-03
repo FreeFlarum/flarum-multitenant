@@ -27,6 +27,3 @@ michaelbelgium-mybb-to-flarum:
           migrate_userGroups_label: 'Migruj grupy użytkowników'
           migrate_users_label: 'Migruj użytkowników'
           title: 'Ogólne opcje migracji'
-    nav:
-      description_text: 'Konwertuj forum MyBB do tej instalacji Flarum'
-      title: 'Migracja MyBB do Flarum'

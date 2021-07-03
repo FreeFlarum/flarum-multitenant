@@ -30,12 +30,9 @@ fof-masquerade:
       validation: Walidacja
       validation-help: "Sprawdź wspierane <a>reguły walidacji Laravela</a>, np. \"string|min:5\" lub \"url\".\n"
     general-options: 'Opcje ogólne'
-    menu:
-      description: "Konfiguruj pola profilu użytkownika.\n"
     permissions:
       have-profile: 'Posiadanie profilu masquerade'
       view-profile: 'Przeglądanie profilu masquerade'
-    title: Masquerade
     types:
       advanced: Zaawansowane
       boolean: Checkbox

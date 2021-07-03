@@ -1,26 +1,19 @@
 flarum-flags:
-
-  ##
   # UNIQUE KEYS - The following keys are used in only one location each.
-  ##
-
+  # 
   # Translations in this namespace are used by the admin interface.
   admin:
-
     # These translations are used in the Permissions page of the admin interface.
     permissions:
       flag_posts_label: Segnalare un messaggio
       view_flags_label: Visualizzare le segnalazioni
-
     # These translations are used in the Flags Settings modal dialog.
     settings:
       flag_own_posts_label: Consenti agli utenti di segnalare i propri messaggi
       guidelines_url_label: URL Linea di Condotta
       title: Impostazioni Segnalazioni
-
   # Translations in this namespace are used by the forum user interface.
   forum:
-
     # These translations are used by the Flag Post modal dialog.
     flag_post:
       confirmation_message: Grazie per la segnalazione.
@@ -36,28 +29,22 @@ flarum-flags:
       reason_spam_text: Questo messaggio è un annuncio.
       submit_button: => flarum-flags.ref.flag_post
       title: => flarum-flags.ref.flag_post
-
     # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
     flagged_posts:
       empty_text: Non ci sono segnalazioni
       item_text: "{username} in <em>{discussion}</em>"
       title: => flarum-flags.ref.flagged_posts
       tooltip: => flarum-flags.ref.flagged_posts
-
     # These translations are used by the frame displayed around flagged posts.
     post:
       dismiss_flag_button: Elimina Segnalazione
       flagged_by_text: "Segnalato da {username}"
       flagged_by_with_reason_text: "Segnalato da {username} per {reason}"
-
     # These translations are used by the post control buttons.
     post_controls:
       flag_button: Segnala
-
-  ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
-  ##
-
+  # 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
     flag_post: Segnala Messaggio

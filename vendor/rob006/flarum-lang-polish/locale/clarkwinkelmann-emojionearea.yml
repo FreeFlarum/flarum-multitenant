@@ -10,9 +10,7 @@ clarkwinkelmann-emojionearea:
       enableTones: 'Włącz odcienie'
       filtersPosition: 'Przenieś kategorie na dół'
       hideFlarumButton: 'Ukryj przycisk wyboru emoji od Flarum'
-      hideFlarumButtonHelp: 'Rozszerzenie Emoji Picker musi być włączone po rozszerzeniu Emoji, aby to ustawienie działało'
       searchPosition: 'Przenieś wyszukiwanie i odcienie na dół'
-      title: 'Ustawienia EmojioneArea'
   forum:
     picker_button: 'Emoji Picker'
     search_placeholder: Szukaj...

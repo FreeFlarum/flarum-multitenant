@@ -33,7 +33,5 @@ fof-user-directory:
       newest: 'Najnowsi użytkownicy'
       not_specified: 'Użyj domyślnego dla Flarum'
       oldest: 'Najstarsi użytkownicy'
-      seen_oldest: 'Najdłużej offline'
-      seen_recent: 'Ostatnio online'
       username_az: 'Nazwa użytkownika (a-z)'
       username_za: 'Nazwa użytkownika (z-a)'

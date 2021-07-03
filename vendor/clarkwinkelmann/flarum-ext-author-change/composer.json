@@ -2,12 +2,14 @@
     "name": "clarkwinkelmann/flarum-ext-author-change",
     "description": "Let mods update the author and date of discussions and posts",
     "keywords": [
-        "flarum"
+        "flarum",
+        "author",
+        "date"
     ],
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17"
+        "flarum/core": "^1.0"
     },
     "replace": {
         "clarkwinkelmann/flarum-ext-post-date": "*"
@@ -33,7 +35,7 @@
     "extra": {
         "flarum-extension": {
             "title": "Author Change",
-            "category": "moderation",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-user-edit",
                 "backgroundColor": "#684ba6",

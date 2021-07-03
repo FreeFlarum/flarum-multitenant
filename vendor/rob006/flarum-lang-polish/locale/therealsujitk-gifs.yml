@@ -4,12 +4,8 @@
 
 therealsujitk:
   admin:
-    about:
-      stringA: 'Rozszerzenie stworzone przez '
-      stringB: 'Wesprzyj mnie przez '
     gifs:
       giphyAPIkey: 'Giphy API Key'
-      title: 'Ustawienia API GIFów'
   forum:
     gifs:
       label: 'Wstaw GIF'

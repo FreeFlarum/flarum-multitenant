@@ -5,10 +5,7 @@
 tank-perspective:
   admin:
     settings:
-      api_key_help: 'Twój klucz API od Google do Perspective API'
       donotstore: 'Nie przechowuj'
-      donotstore_help: 'To ustawienie informuje Google, aby nie przechowywać treści postów wysłanych do analizy'
-      experimental_help: 'To ustawienie powinno być włączone tylko wtedy, gdy Twój język nie jest obsługiwany przez produkcyjne modele'
       field:
         api_key: 'API Key'
         flirtation: Flirtowanie
@@ -17,8 +14,6 @@ tank-perspective:
         threat: Groźby
         threshold: 'Próg dla zgłoszeń'
         toxicity: Toksyczność
-      maxscore_help: 'To ustawienie informuje wtyczkę, aby użyć maksymalnego wyniku zamiast średniej'
-      threshold_help: 'To jest minimalny wynik (jako liczba całkowita), który musi uzyskać post, aby zostać automatycznie zgłoszony'
       title: 'Ustawienia Perspective'
       useexperimental: 'Użyj eksperymentalnych modeli (experimental models)'
       usemax: 'Użyj maksymalnego wyniku'

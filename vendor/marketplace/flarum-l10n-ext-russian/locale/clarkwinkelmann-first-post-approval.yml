@@ -1,7 +1,0 @@
-clarkwinkelmann-first-post-approval:
-    admin:
-        permissions:
-            bypass: "Игнорировать подтверждение первого сообщения"
-        settings:
-            discussionCount: "Количество дискуссий, требующих подтверждения"
-            postCount: "Количество сообщений, требующих подтверждения"

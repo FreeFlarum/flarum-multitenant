@@ -27,5 +27,6 @@ fof-filter:
       text: Filtrowanie
     title: Filtrowanie
   forum:
+    flag_message: 'Zawiera zablokowane ciągi znaków'
     flaged_text: 'Zawiera zablokowane ciągi znaków'
     flagger_name: 'Automatyczny moderator'

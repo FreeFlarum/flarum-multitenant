@@ -34,7 +34,7 @@ class AchievementSerializer extends AbstractSerializer
             );
         }
 
-        // app('log')->error("NEW: ".print_r($ach->pivot["new"],TRUE));
+        // // app('log')->error("NEW: ".print_r($ach->pivot["new"],TRUE));
 		$new=$ach->pivot == null?0:$ach->pivot["new"];
 		
         return [
@@ -45,6 +45,7 @@ class AchievementSerializer extends AbstractSerializer
             'image'   => $ach->image,
             'rectangle'   => $ach->rectangle,
             'active'   => $ach->active,
+            'hidden'   => $ach->hidden,
             'new'   => $new,
         ];
     }

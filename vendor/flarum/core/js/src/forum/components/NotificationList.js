@@ -12,87 +12,87 @@ import Discussion from '../../common/models/Discussion';
 export default class NotificationList extends Component {
   view() {
     const state = this.attrs.state;
-    const pages = state.getNotificationPages();
 
     return (
       <div className="NotificationList">
         <div className="NotificationList-header">
-          <div className="App-primaryControl">
-            {Button.component({
-              className: 'Button Button--icon Button--link',
-              icon: 'fas fa-check',
-              title: app.translator.trans('core.forum.notifications.mark_all_as_read_tooltip'),
-              onclick: state.markAllAsRead.bind(state),
-            })}
-          </div>
-
           <h4 className="App-titleControl App-titleControl--text">{app.translator.trans('core.forum.notifications.title')}</h4>
+
+          <div className="App-primaryControl">
+            <Button
+              className="Button Button--link"
+              icon="fas fa-check"
+              title={app.translator.trans('core.forum.notifications.mark_all_as_read_tooltip')}
+              onclick={state.markAllAsRead.bind(state)}
+            />
+          </div>
         </div>
 
-        <div className="NotificationList-content">
-          {pages.length
-            ? pages.map((notifications) => {
-                const groups = [];
-                const discussions = {};
-
-                notifications.forEach((notification) => {
-                  const subject = notification.subject();
-
-                  if (typeof subject === 'undefined') return;
-
-                  // Get the discussion that this notification is related to. If it's not
-                  // directly related to a discussion, it may be related to a post or
-                  // other entity which is related to a discussion.
-                  let discussion = false;
-                  if (subject instanceof Discussion) discussion = subject;
-                  else if (subject && subject.discussion) discussion = subject.discussion();
-
-                  // If the notification is not related to a discussion directly or
-                  // indirectly, then we will assign it to a neutral group.
-                  const key = discussion ? discussion.id() : 0;
-                  discussions[key] = discussions[key] || { discussion: discussion, notifications: [] };
-                  discussions[key].notifications.push(notification);
-
-                  if (groups.indexOf(discussions[key]) === -1) {
-                    groups.push(discussions[key]);
-                  }
-                });
-
-                return groups.map((group) => {
-                  const badges = group.discussion && group.discussion.badges().toArray();
-
-                  return (
-                    <div className="NotificationGroup">
-                      {group.discussion ? (
-                        <Link className="NotificationGroup-header" href={app.route.discussion(group.discussion)}>
-                          {badges && badges.length ? <ul className="NotificationGroup-badges badges">{listItems(badges)}</ul> : ''}
-                          {group.discussion.title()}
-                        </Link>
-                      ) : (
-                        <div className="NotificationGroup-header">{app.forum.attribute('title')}</div>
-                      )}
-
-                      <ul className="NotificationGroup-content">
-                        {group.notifications.map((notification) => {
-                          const NotificationComponent = app.notificationComponents[notification.contentType()];
-                          return NotificationComponent ? <li>{NotificationComponent.component({ notification })}</li> : '';
-                        })}
-                      </ul>
-                    </div>
-                  );
-                });
-              })
-            : ''}
-          {state.isLoading() ? (
-            <LoadingIndicator className="LoadingIndicator--block" />
-          ) : pages.length ? (
-            ''
-          ) : (
-            <div className="NotificationList-empty">{app.translator.trans('core.forum.notifications.empty_text')}</div>
-          )}
-        </div>
+        <div className="NotificationList-content">{this.content(state)}</div>
       </div>
     );
+  }
+
+  content(state) {
+    if (state.isLoading()) {
+      return <LoadingIndicator className="LoadingIndicator--block" />;
+    }
+
+    if (state.hasItems()) {
+      return state.getPages().map((page) => {
+        const groups = [];
+        const discussions = {};
+
+        page.items.forEach((notification) => {
+          const subject = notification.subject();
+
+          if (typeof subject === 'undefined') return;
+
+          // Get the discussion that this notification is related to. If it's not
+          // directly related to a discussion, it may be related to a post or
+          // other entity which is related to a discussion.
+          let discussion = null;
+          if (subject instanceof Discussion) discussion = subject;
+          else if (subject && subject.discussion) discussion = subject.discussion();
+
+          // If the notification is not related to a discussion directly or
+          // indirectly, then we will assign it to a neutral group.
+          const key = discussion ? discussion.id() : 0;
+          discussions[key] = discussions[key] || { discussion: discussion, notifications: [] };
+          discussions[key].notifications.push(notification);
+
+          if (groups.indexOf(discussions[key]) === -1) {
+            groups.push(discussions[key]);
+          }
+        });
+
+        return groups.map((group) => {
+          const badges = group.discussion && group.discussion.badges().toArray();
+
+          return (
+            <div className="NotificationGroup">
+              {group.discussion ? (
+                <Link className="NotificationGroup-header" href={app.route.discussion(group.discussion)}>
+                  {badges && !!badges.length && <ul className="NotificationGroup-badges badges">{listItems(badges)}</ul>}
+                  <span>{group.discussion.title()}</span>
+                </Link>
+              ) : (
+                <div className="NotificationGroup-header">{app.forum.attribute('title')}</div>
+              )}
+
+              <ul className="NotificationGroup-content">
+                {group.notifications.map((notification) => {
+                  const NotificationComponent = app.notificationComponents[notification.contentType()];
+                  return NotificationComponent ? <li>{NotificationComponent.component({ notification })}</li> : '';
+                })}
+              </ul>
+            </div>
+          );
+        });
+      });
+    }
+
+    return <div className="NotificationList-empty">{app.translator.trans('core.forum.notifications.empty_text')}</div>;
   }
 
   oncreate(vnode) {
@@ -107,7 +107,9 @@ export default class NotificationList extends Component {
     this.$scrollParent.on('scroll', this.boundScrollHandler);
   }
 
-  onremove() {
+  onremove(vnode) {
+    super.onremove(vnode);
+
     this.$scrollParent.off('scroll', this.boundScrollHandler);
   }
 
@@ -122,8 +124,8 @@ export default class NotificationList extends Component {
     // by a fraction of a pixel, so we compensate for that.
     const atBottom = Math.abs(scrollParent.scrollHeight - scrollParent.scrollTop - scrollParent.clientHeight) <= 1;
 
-    if (state.hasMoreResults() && !state.isLoading() && atBottom) {
-      state.loadMore();
+    if (state.hasNext() && !state.isLoadingNext() && atBottom) {
+      state.loadNext();
     }
   }
 

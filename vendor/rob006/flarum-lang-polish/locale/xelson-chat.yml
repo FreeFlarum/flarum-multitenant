@@ -2,39 +2,6 @@
 # Use https://weblate.rob006.net/projects/flarum/xelson-chat/pl/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
-pushedx-chat:
-  admin:
-    permissions:
-      delete: 'Usuwanie wiadomości na czacie'
-      edit: 'Edycja wiadomości na czacie'
-      moderate:
-        delete: 'Usuwanie wiadomości na czacie'
-      post: 'Pisanie na czacie'
-    settings:
-      charlimit: 'Limit znaków w wiadomości'
-      floodgate:
-        number: 'Liczba wiadomości wysłanych pod rząd'
-        time: 'W czasie'
-        title: Antyflood
-      title: 'Ustawienia czatu'
-  forum:
-    chat:
-      message:
-        actions:
-          hide: Ukryj
-          resend: 'Wyślij ponownie'
-      placeholder: 'Wpisz swoją wiadomość...'
-    errors:
-      chatdenied: 'Nie masz uprawnień, aby pisać na czacie'
-      unauthenticated: 'Tylko zarejestrowani użytkownicy mogą korzystać z czatu'
-    toolbar:
-      disable_notifications: 'Wyłącz powiadomienia'
-      disable_sounds: 'Wyłącz dźwięki'
-      enable_notifications: 'Włącz powiadomienia'
-      enable_sounds: 'Włącz dźwięki'
-      maximize: Maksymalizuj
-      minimize: Minimalizuj
-      title: Czat
 xelson-chat:
   admin:
     permissions:

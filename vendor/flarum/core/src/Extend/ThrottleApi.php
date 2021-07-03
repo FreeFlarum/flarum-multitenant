@@ -26,7 +26,7 @@ class ThrottleApi implements ExtenderInterface
      *
      * The callable can be a closure or invokable class, and should accept:
      *   - $request: The current `\Psr\Http\Message\ServerRequestInterface` request object.
-     *               `$request->getAttribute('actor')` can be used to get the current user.
+     *               `\Flarum\Http\RequestUtil::getActor($request)` can be used to get the current user.
      *               `$request->getAttribute('routeName')` can be used to get the current route.
      * Please note that every throttler runs by default on every route.
      * If you only want to throttle certain routes, you'll need to check for that inside your logic.
@@ -38,7 +38,7 @@ class ThrottleApi implements ExtenderInterface
      *
      * @return self
      */
-    public function set(string $name, $callback)
+    public function set(string $name, $callback): self
     {
         $this->setThrottlers[$name] = $callback;
 
@@ -49,10 +49,9 @@ class ThrottleApi implements ExtenderInterface
      * Remove a throttler registered with this name.
      *
      * @param string $name: The name of the throttler to remove.
-     *
      * @return self
      */
-    public function remove(string $name)
+    public function remove(string $name): self
     {
         $this->removeThrottlers[] = $name;
 

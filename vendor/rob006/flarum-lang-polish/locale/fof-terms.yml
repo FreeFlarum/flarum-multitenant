@@ -41,7 +41,7 @@ fof-terms:
   forum:
     accept-modal:
       accept: Potwierdź
-      close: 'Możesz teraz zamknąć to okienko'
+      close: 'Dziękujemy za akceptację, możesz teraz wrócić na forum'
       i-accept: 'Akceptuję nową politykę: <a>{policy}</a>'
       title: 'Aktualizacja warunków korzystania z forum'
       updated-at: 'Warunki korzystania z forum zostały zaktualizowane {date}'

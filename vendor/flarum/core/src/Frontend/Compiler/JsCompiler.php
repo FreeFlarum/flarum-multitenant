@@ -12,11 +12,11 @@ namespace Flarum\Frontend\Compiler;
 use axy\sourcemap\SourceMap;
 use Flarum\Frontend\Compiler\Source\FileSource;
 
+/**
+ * @internal
+ */
 class JsCompiler extends RevisionCompiler
 {
-    /**
-     * {@inheritdoc}
-     */
     protected function save(string $file, array $sources): bool
     {
         if (empty($sources)) {
@@ -60,9 +60,6 @@ class JsCompiler extends RevisionCompiler
         return true;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function format(string $string): string
     {
         return preg_replace('~//# sourceMappingURL.*$~m', '', $string)."\n";

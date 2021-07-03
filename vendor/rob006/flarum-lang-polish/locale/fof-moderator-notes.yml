@@ -9,8 +9,8 @@ fof-moderator-notes:
       deletenotes: 'Usuwanie notatek dla moderatorów'
       viewnotes: 'Przeglądanie notatek dla moderatorów'
   api:
-    auto_note: '_Przełączyłem się na tego użytkownika:_ reason'
-    auto_note_actor: '_Przełączono się na konto_ @username: reason'
+    auto_note: '_Przełączyłem się na tego użytkownika:_ {reason}'
+    auto_note_actor: '_Przełączono się na konto_ @{username}: {reason}'
     no_reason_provided: 'Nie podano powodu'
   forum:
     moderatorNotes:
@@ -22,7 +22,6 @@ fof-moderator-notes:
       dismiss_button: Gotowe
       input_heading: 'Wpisz notatki dotyczące <strong>{username}</strong> (możesz użyć markdown)'
       noNotes: 'Wygląda na to, że nie ma tutaj żadnych notatek.'
-      no_content_given: 'Puste notatki nie są dozwolone.'
       submit_button: 'Zapisz notatkę'
     no_content_given: 'Puste notatki nie są dozwolone.'
     user:

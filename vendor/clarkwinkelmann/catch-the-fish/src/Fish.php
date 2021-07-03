@@ -104,7 +104,7 @@ class Fish extends AbstractModel
         return $this->image;
     }
 
-    public function scopeActiveFish(Builder $query)
+    public function scopeActiveFish(Builder $query): Builder
     {
         return $query->where('placement_valid_since', '<', Carbon::now());
     }

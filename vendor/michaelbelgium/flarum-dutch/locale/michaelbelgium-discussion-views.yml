@@ -23,7 +23,7 @@ michaelbelgium-discussion-views:
     discussion_controls:
       resetviews_button: 'Reset aantal keer bekeken'
     modal_resetviews:
-      label: 'Deze actie zal {count} view verwijderen van deze discussie. Doorgaan?|Deze actie zal {count} views verwijderen van deze discussie. Doorgaan?'
+      label: '{count, plural, one {Deze actie zal {count} view verwijderen van deze discussie. Doorgaan?} other {Deze actie zal {count} views verwijderen van deze discussie. Doorgaan?}}'
       submit_button: 'Ja, alles verwijderen'
       title: 'Wijzig aantal keer bekeken'
     viewlist:

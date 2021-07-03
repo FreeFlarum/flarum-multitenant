@@ -9,7 +9,7 @@
  *
  */
 
-import app from 'flarum/app';
+import app from 'flarum/admin/app';
 import WordConfigPage from './components/WordConfigPage';
 
 app.initializers.add('fof-filter', (app) => {

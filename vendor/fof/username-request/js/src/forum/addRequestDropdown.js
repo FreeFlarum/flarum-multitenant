@@ -11,7 +11,7 @@
 
 import { extend } from 'flarum/common/extend';
 import app from 'flarum/common/app';
-import HeaderSecondary from 'flarum/common/components/HeaderSecondary';
+import HeaderSecondary from 'flarum/forum/components/HeaderSecondary';
 import RequestsDropdown from './components/RequestsDropdown';
 
 export default function () {

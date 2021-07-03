@@ -19,15 +19,15 @@
     "forum": "https://discuss.flarum.org/d/18607"
   },
   "require": {
-    "flarum/core": "^0.1.0-beta.16"
+    "flarum/core": "^1.0.0"
   },
   "replace": {
     "piotr-tokarczyk/flarum-user-default-preferences": "*"
   },
   "authors": [
     {
-      "name": "David Sevilla Martín",
-      "email": "david.s@redevs.org",
+      "name": "FoF Team",
+      "email": "team@friendsofflarum.org",
       "role": "Developer"
     }
   ],

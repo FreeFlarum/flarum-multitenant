@@ -1,7 +1,7 @@
-import { extend } from 'flarum/extend';
-import Discussion from 'flarum/models/Discussion';
-import User from 'flarum/models/User';
-import Badge from 'flarum/components/Badge';
+import { extend } from 'flarum/common/extend';
+import Discussion from 'flarum/common/models/Discussion';
+import User from 'flarum/common/models/User';
+import Badge from 'flarum/common/components/Badge';
 
 export default function addSubscriptionBadge() {
     extend(Discussion.prototype, 'badges', function (badges) {

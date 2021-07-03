@@ -6,6 +6,7 @@ use ClarkWinkelmann\CatchTheFish\Fish;
 use Flarum\Api\Serializer\AbstractSerializer;
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Foundation\ValidationException;
+use Tobscure\JsonApi\Relationship;
 
 class FishSerializer extends AbstractSerializer
 {
@@ -26,7 +27,7 @@ class FishSerializer extends AbstractSerializer
      * @param Fish $fish
      * @return array
      */
-    protected function getDefaultAttributes($fish)
+    protected function getDefaultAttributes($fish): array
     {
         $canPlace = $this->actorCan('place', $fish);
 
@@ -46,17 +47,17 @@ class FishSerializer extends AbstractSerializer
         ];
     }
 
-    public function round($fish)
+    public function round($fish): ?Relationship
     {
         return $this->buildRelationship($fish, RoundSerializer::class, 'round');
     }
 
-    public function lastUserPlacement($fish)
+    public function lastUserPlacement($fish): ?Relationship
     {
         return $this->buildRelationship($fish, UserSerializer::class, 'lastUserPlacement');
     }
 
-    public function lastUserNaming($fish)
+    public function lastUserNaming($fish): ?Relationship
     {
         return $this->buildRelationship($fish, UserSerializer::class, 'lastUserNaming');
     }

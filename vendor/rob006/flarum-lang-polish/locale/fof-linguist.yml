@@ -18,7 +18,6 @@ fof-linguist:
       text: "Nowe tłumaczenia jeszcze nie zostały zastosowane. Uwaga: wyczyszczenie cache może chwilowo spowolnić Twoje forum.\n"
     filters:
       for-extension: Rozszerzenia
-      for-extension-unavailable: "Nie znaleziono żadnych tłumaczeń dla prefiksu \"{namespace}\". Możliwe, że to rozszerzenie nie posiada żadnych testów do przetłumaczenia lub korzysta z innego prefiksu. Spróbuj skorzystać z wyszukiwarki, aby znaleźć brakujące tłumaczenia.\n"
       missing: 'Znajdź brakujące tłumaczenia'
       missing-middle-label: 'tłumaczenia dla'
       negation-options:

@@ -21,4 +21,3 @@ migratetoflarum-canonical:
         suggestions: 'Inne sugestie, których to rozszerzenie nie wymusza lub nie obejmuje'
         use_hsts: 'Użyj HSTS, aby zapobiec atakom typu downgrade (downgrade attacks)'
         use_https: 'Użyj HTTPS dla adresu kanonicznego'
-      title: 'Ustawienia adresów kanonicznych'

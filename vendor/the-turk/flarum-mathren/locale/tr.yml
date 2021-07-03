@@ -1,0 +1,90 @@
+the-turk-mathren:
+    admin:
+        settings:
+            # Settings Pane
+            title:                   MathRen
+            description:             TeX işleyicisini kişiselleştirin.
+
+            ####################
+            #   KaTeX Options  #
+            ####################
+
+            katexOptionsHeading:     KaTeX Seçenekleri
+            katexOptionsInfo:        KaTeX seçenekleri ile ilgili daha ayrıntılı bilgiyi <a>burada</a> bulabilirsiniz.
+
+            # Delimiters
+            delimiters:              Sınırlayıcılar
+            delimitersHelp:          Virgül ile ayırın. <strong>%e%</strong>, matematiksel ifadeyi temsil etmektedir.
+            blockDelimiters:         Blok ifadeler için <strong>BBCode</strong> sınırlayıcıları
+            inlineDelimiters:        Satır içindeki ifadeler için <strong>BBCode</strong> sınırlayıcıları
+            mainDelimitersInfo:      Yukarıda bulunan listelerdeki ilk sınırlayıcılar, metin editörü tarafından varsayılan olarak kabul edilecektir.
+
+            # Ignoring Expressions
+            ignoringExpressions:     Atlanacak İfadeler
+            ignoringExpressionsHelp: Virgül ile ayırın.
+            decisiveKeywords:        Atlamayı belirleyici kelimeler
+            decisiveKeywordsHelp:    >-
+                        Matematiksel ifadelerin işlenmesini önlemek için bu kelimeleri BBCode içine
+                        (örn. <code>[math=<strong>kelime</strong>]%e%[/math]</code>) yazacaksınız.
+            ignoredTags:             Atlanacak etiketler
+            ignoredClasses:          Atlanacak sınıflar
+            ignoredClassesInfo:      Bu listeye yazılan ilk sınıf, atlanan ifadeler için varsayılan olarak kullanılacaktır.
+
+            # Output mode
+            outputMode:              Biçimlendirme
+            outputModeHelp:          Matematik ifadelerin gösterilmesinde kullanılacak biçimlendirme dilini seçin.
+
+            # Unsupported commands
+            errorColor:              Hatalı komutu renklendir
+            errorColorHelp:          Konsola hata mesajı göndermek yerine desteklenmeyen komutu renklendirebilirsiniz.
+
+            # Sizing options
+            sizeSettings:            Boyutlandırma ayarları
+            sizeSettingsHelp:        Ondalık değerler için <strong>nokta</strong> kullanın.
+            minRuleThickness:        Minimum kalınlık (em)
+            maxSize:                 Maksimum yazı boyutu (em)
+
+            # Macros
+            macros:                  Makrolar
+            macrosHelp:              Kullanmak istediğiniz özel makroları buraya yazabilirsiniz.
+            syntaxInfo:              JavaScript sözdizimi kurallarına uymalısınız.
+            maxExpand:               Maksimum genişleme sınırı
+
+            # Switch Components
+            enableFleqn:             Matematiksel ifadeleri sola yasla (fleqn)
+            enableLeqno:             İfade etiketlerini sola yasla (leqno)
+            enableColorIsTextColor:  <code>\color</code> komutunun iki ifade içermesine izin ver (colorIsTextColor)
+            enableThrowOnError:      Desteklenmeyen komut girildiğinde konsola hata mesajı gönder
+
+            # ---
+
+            # Warnings
+            regexInfo:               Sadece büyük/küçük harf ve tire kullanabilirsiniz.
+
+            ####################
+            #   Other Options  #
+            ####################
+
+            otherOptionsHeading:     Diğer Seçenekler
+
+            # Switch Components
+            enableTextEditorButtons: Metin editöründe butonları göster
+            enableCopyTeX:           KaTeX tarafından işlenmiş ifadelerin kaynaklarının kopyalanmasına izin ver.
+
+            # ---
+
+            # Informations
+            mentions:                Alıntı butonunu kullanabilmek için <code>flarum/mentions</code> eklentisini etkinleştirmelisiniz.
+
+            ####################
+            #  General Strings #
+            ####################
+
+            # Alerts
+            saved_message:           => core.admin.basics.saved_message
+            validation:              "\"{field_key}\" alanı doğrulanamadı."
+    forum:
+        textEditor:
+            # Text Editor Buttons
+            blockExpression:         Blok İfade
+            inlineExpression:        Satır İçi İfade

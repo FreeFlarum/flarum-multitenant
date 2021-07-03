@@ -50,12 +50,14 @@ class AutoMerge
                 ->orderBy('number', 'desc')
                 ->firstOrFail();
 
+            if (!$oldPost instanceof CommentPost) {
+                return;
+            }
+
             $cooldown = $this->settings->get('fof-filter.cooldown') ?? '15';
 
             if ($oldPost->user_id == $post->user_id && strtotime("-$cooldown minutes") < strtotime($oldPost->created_at)) {
-                $oldPost->revise($oldPost->content.'
-                
-'.$post->content, $post->user);
+                $oldPost->revise($oldPost->content."\n\n".$post->content, $post->user);
 
                 $oldPost->save();
 

@@ -7,6 +7,11 @@ askvortsov-rich-text:
     settings:
       toggle_on_editor: 'Pokazać przełącznik trybu edytora wizualnego?'
   forum:
+    settings:
+      composer_heading: Edytor
+      rich_text_compact_paragraphs_label: 'Nie oddzielaj akapitów nową linią.'
+      use_rich_text_editor_label: 'Używać edytora wizualnego?'
+  lib:
     composer:
       additional_items_tooltip: 'Dodatkowe elementy'
       bold_tooltip: 'Pogrubiony tekst <{modifierKey}-b>'
@@ -14,7 +19,7 @@ askvortsov-rich-text:
       code_tooltip: 'Kod w tekście <{modifierKey}-`>'
       header_tooltip: 'Zmień na nagłówek {level} <shift-{modifierKey}-{level}>'
       horizontal_rule_tooltip: 'Wstaw poziomą linię'
-      image_tooltip: 'Dodaj obrazek'
+      image_tooltip: 'Wstaw obrazek'
       insert_button: Wstaw
       insert_image:
         src_placeholder: Link
@@ -25,7 +30,7 @@ askvortsov-rich-text:
         text_placeholder: Tekst
         title_placeholder: 'Tytuł (pokazywany po najechaniu kursorem)'
       italic_tooltip: 'Kursywa <{modifierKey}-i>'
-      link_tooltip: 'Dodaj link'
+      link_tooltip: 'Wstaw link'
       ordered_list_tooltip: 'Lista numerowana <shift-{modifierKey}-9>'
       paragraph_tooltip: 'Zmień na akapit <shift-{modifierKey}-0>'
       quote_tooltip: 'Wstaw cytat <{modifierKey}-q>'
@@ -37,7 +42,3 @@ askvortsov-rich-text:
       text_type_tooltip: 'Wybierz styl tekstu'
       toggle_button: 'Przełącz tryb wizualny'
       unordered_list_tooltip: 'Lista punktowana <shift-{modifierKey}-8>'
-    settings:
-      composer_heading: Edytor
-      rich_text_compact_paragraphs_label: 'Nie oddzielaj akapitów nową linią.'
-      use_rich_text_editor_label: 'Używać edytora wizualnego?'

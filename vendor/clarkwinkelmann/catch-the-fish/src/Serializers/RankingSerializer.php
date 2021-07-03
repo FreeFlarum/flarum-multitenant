@@ -5,6 +5,7 @@ namespace ClarkWinkelmann\CatchTheFish\Serializers;
 use ClarkWinkelmann\CatchTheFish\Ranking;
 use Flarum\Api\Serializer\AbstractSerializer;
 use Flarum\Api\Serializer\UserSerializer;
+use Tobscure\JsonApi\Relationship;
 
 class RankingSerializer extends AbstractSerializer
 {
@@ -14,18 +15,14 @@ class RankingSerializer extends AbstractSerializer
      * @param Ranking $ranking
      * @return array
      */
-    protected function getDefaultAttributes($ranking)
+    protected function getDefaultAttributes($ranking): array
     {
         return [
             'catch_count' => $ranking->catch_count,
         ];
     }
 
-    /**
-     * @param Ranking $ranking
-     * @return \Tobscure\JsonApi\Relationship
-     */
-    public function user($ranking)
+    public function user(Ranking $ranking): ?Relationship
     {
         return $this->hasOne($ranking, UserSerializer::class, 'user');
     }

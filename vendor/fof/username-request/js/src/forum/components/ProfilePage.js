@@ -9,7 +9,7 @@
  *
  */
 
-import UserPage from 'flarum/common/components/UserPage';
+import UserPage from 'flarum/forum/components/UserPage';
 import humanTime from 'flarum/common/helpers/humanTime';
 
 export default class ProfileConfigurePane extends UserPage {

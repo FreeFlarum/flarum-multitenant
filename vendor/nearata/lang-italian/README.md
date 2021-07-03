@@ -28,7 +28,7 @@ See [TRANSLATIONS.md](TRANSLATIONS.md) to see the list of supported extensions.
 
 ## License
 
-Distributed under the MIT license. See [LICENSE](LICENSE) for more information.
+Distributed under the MIT license. See [LICENSE](LICENSE) for details.
 
 ## Contributing
 

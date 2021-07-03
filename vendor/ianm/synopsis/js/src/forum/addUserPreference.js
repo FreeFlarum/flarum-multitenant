@@ -11,7 +11,7 @@
  */
 
 import { extend } from 'flarum/common/extend';
-import SettingsPage from 'flarum/common/components/SettingsPage';
+import SettingsPage from 'flarum/forum/components/SettingsPage';
 import FieldSet from 'flarum/common/components/FieldSet';
 import ItemList from 'flarum/common/utils/ItemList';
 import Switch from 'flarum/common/components/Switch';

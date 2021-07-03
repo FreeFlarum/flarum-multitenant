@@ -4,9 +4,5 @@
 
 therealsujitk:
   admin:
-    about:
-      stringA: 'Rozszerzenie stworzone przez '
-      stringB: 'Wesprzyj mnie przez '
     hljs:
       themename: Motyw
-      title: highlight.js

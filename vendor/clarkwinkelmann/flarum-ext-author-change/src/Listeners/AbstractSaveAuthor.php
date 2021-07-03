@@ -45,21 +45,18 @@ abstract class AbstractSaveAuthor
                 $newUser = User::query()->findOrFail($userId);
 
                 $model->user()->associate($newUser);
-
-                // Update discussion meta when editing a post
-                if ($model instanceof Post) {
-                    $model->afterSave(function () use ($model) {
-                        $model->discussion->refreshParticipantCount();
-
-                        if ($model->id === $model->discussion->last_post_id) {
-                            $model->discussion->setLastPost($model);
-                        }
-
-                        $model->discussion->save();
-                    });
-                }
             } else if (empty($data['relationships']['user']['data'])) {
                 $model->user()->dissociate();
+            }
+
+            // Update discussion metadata
+            if ($model instanceof Post) {
+                $model->afterSave(function () use ($model) {
+                    $model->discussion
+                        ->refreshParticipantCount()
+                        ->refreshLastPost()
+                        ->save();
+                });
             }
 
             // Update user metadata
@@ -95,6 +92,11 @@ abstract class AbstractSaveAuthor
 
             if ($model instanceof Post) {
                 $model->raise(new Event\PostCreateDateChanged($model, $model->created_at));
+
+                // Update discussion metadata
+                $model->afterSave(function (Post $post) {
+                    $post->discussion->refreshLastPost()->save();
+                });
             } else {
                 $model->raise(new Event\DiscussionCreateDateChanged($model, $model->created_at));
             }

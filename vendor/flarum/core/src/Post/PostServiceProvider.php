@@ -10,7 +10,9 @@
 namespace Flarum\Post;
 
 use DateTime;
+use Flarum\Formatter\Formatter;
 use Flarum\Foundation\AbstractServiceProvider;
+use Flarum\Http\RequestUtil;
 use Flarum\Post\Access\ScopePostVisibility;
 
 class PostServiceProvider extends AbstractServiceProvider
@@ -26,7 +28,7 @@ class PostServiceProvider extends AbstractServiceProvider
                     return;
                 }
 
-                $actor = $request->getAttribute('actor');
+                $actor = RequestUtil::getActor($request);
 
                 if ($actor->can('postWithoutThrottle')) {
                     return false;
@@ -41,12 +43,9 @@ class PostServiceProvider extends AbstractServiceProvider
         });
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function boot()
+    public function boot(Formatter $formatter)
     {
-        CommentPost::setFormatter($this->container->make('flarum.formatter'));
+        CommentPost::setFormatter($formatter);
 
         $this->setPostTypes();
 

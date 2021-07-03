@@ -70,15 +70,19 @@ return [
 
     (new Extend\ApiController(Controller\ListDiscussionsController::class))
         ->addInclude(['recipientUsers', 'recipientGroups'])
-        ->addOptionalInclude(['oldRecipientUsers', 'oldRecipientGroups']),
+        ->load(['recipientUsers', 'recipientGroups']),
 
     (new Extend\ApiController(Controller\ShowDiscussionController::class))
-        ->addOptionalInclude(['recipientUsers', 'oldRecipientUsers', 'recipientGroups', 'oldRecipientGroups']),
+        ->addOptionalInclude(['oldRecipientUsers', 'oldRecipientGroups'])
+        ->addInclude(['recipientUsers', 'recipientGroups'])
+        ->load(['recipientUsers', 'recipientGroups']),
 
     (new Extend\ApiSerializer(Serializer\BasicDiscussionSerializer::class))
         ->hasMany('recipientUsers', Serializer\BasicUserSerializer::class)
+        ->hasMany('recipientGroups', Serializer\GroupSerializer::class),
+
+    (new Extend\ApiSerializer(Serializer\DiscussionSerializer::class))
         ->hasMany('oldRecipientUsers', Serializer\BasicUserSerializer::class)
-        ->hasMany('recipientGroups', Serializer\GroupSerializer::class)
         ->hasMany('oldRecipientGroups', Serializer\GroupSerializer::class),
 
     (new Extend\ApiSerializer(Serializer\DiscussionSerializer::class))
@@ -137,6 +141,10 @@ return [
         ->addGambit(Gambits\User\AllowsPdGambit::class),
 
     (new Extend\Settings())
-        ->serializeToForum('byobu.icon-badge', 'fof-byobu.icon-badge', 'strVal', 'fas fa-map')
-        ->serializeToForum('byobu.icon-postAction', 'fof-byobu.icon-postAction', 'strVal', 'far fa-map'),
+        ->serializeToForum('byobu.icon-badge', 'fof-byobu.icon-badge', function ($value) {
+            return empty($value) ? 'fas fa-map' : $value;
+        })
+        ->serializeToForum('byobu.icon-postAction', 'fof-byobu.icon-postAction', function ($value) {
+            return empty($value) ? 'far fa-map' : $value;
+        }),
 ];

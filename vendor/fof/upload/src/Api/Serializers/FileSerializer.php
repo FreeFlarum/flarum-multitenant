@@ -3,10 +3,10 @@
 /*
  * This file is part of fof/upload.
  *
- * Copyright (c) 2020 - 2021 FriendsOfFlarum.
- * Copyright (c) 2016 - 2019 Flagrow
+ * Copyright (c) FriendsOfFlarum.
+ * Copyright (c) Flagrow.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -14,6 +14,7 @@ namespace FoF\Upload\Api\Serializers;
 
 use Flarum\Api\Serializer\AbstractSerializer;
 use FoF\Upload\File;
+use FoF\Upload\Helpers\Util;
 
 class FileSerializer extends AbstractSerializer
 {
@@ -28,6 +29,9 @@ class FileSerializer extends AbstractSerializer
      */
     protected function getDefaultAttributes($model)
     {
+        /** @var Util */
+        $util = resolve(Util::class);
+
         return [
             'baseName'  => $model->base_name,
             'path'      => $model->path,
@@ -39,6 +43,7 @@ class FileSerializer extends AbstractSerializer
             'uuid'      => $model->uuid,
             'tag'       => $model->tag,
             'hidden'    => $model->hidden_from_media_manager,
+            'bbcode'    => $util->getBbcodeForFile($model),
         ];
     }
 }

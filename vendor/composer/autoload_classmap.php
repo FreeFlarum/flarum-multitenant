@@ -8,8 +8,10 @@ $baseDir = dirname($vendorDir);
 return array(
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'IntlException' => $vendorDir . '/symfony/polyfill-intl-messageformatter/Resources/stubs/IntlException.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     'MailChecker' => $vendorDir . '/fgribreau/mailchecker/platform/php/MailChecker.php',
+    'MessageFormatter' => $vendorDir . '/symfony/polyfill-intl-messageformatter/Resources/stubs/MessageFormatter.php',
     'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
     'Pusher' => $vendorDir . '/pusher/pusher-php-server/lib/Pusher.php',
     'PusherException' => $vendorDir . '/pusher/pusher-php-server/lib/Pusher.php',

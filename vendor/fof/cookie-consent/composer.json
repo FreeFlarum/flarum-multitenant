@@ -19,11 +19,15 @@
         {
             "name": "IanM",
             "homepage": "https://discuss.flarum.org/u/ianm"
+        },
+        {
+            "name": "Katos",
+            "homepage": "https://discuss.flarum.org/u/Katos"
         }
     ],
     "support": {
-        "issues": "https://github.com/reflar/cookie-consent/issues",
-        "source": "https://github.com/reflar/cookie-consent",
+        "issues": "https://github.com/friendsofflarum/cookie-consent/issues",
+        "source": "https://github.com/friendsofflarum/cookie-consent",
         "forum": "https://discuss.flarum.org/d/10395"
     },
     "homepage": "https://friendsofflarum.org",
@@ -34,8 +38,8 @@
         }
     ],
     "require": {
-        "flarum/core": "^0.1.0-beta.16",
-        "fof/components": "^0.2.0"
+        "flarum/core": "^1.0.0",
+        "fof/components": "^1.0.0"
     },
     "replace": {
         "reflar/cookie-consent": "*"

@@ -21,7 +21,7 @@ class Application
      *
      * @var string
      */
-    const VERSION = '0.1.0-beta.16';
+    const VERSION = '1.0.4';
 
     /**
      * The IoC container for the Flarum application.
@@ -136,7 +136,8 @@ class Application
         \Illuminate\Container\Container::setInstance($this->container);
 
         /**
-         * @deprecated beta 16, remove beta 17
+         * Needed for the laravel framework code.
+         * Use container inside flarum instead.
          */
         $this->container->instance('app', $this->container);
         $this->container->alias('app', \Illluminate\Container\Container::class);

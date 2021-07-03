@@ -3,7 +3,7 @@
 /*
  * This file is part of askvortsov/flarum-help-tags
  *
- *  Copyright (c) 2020 Alexander Skvortsov.
+ *  Copyright (c) 2021 Alexander Skvortsov.
  *
  *  For detailed copyright and license information, please view the
  *  LICENSE file that was distributed with this source code.
@@ -25,5 +25,7 @@ class ScopeDiscussionVisibility
         if (!$actor->isGuest()) {
             $query->orWhere('discussions.user_id', $actor->id);
         }
+
+        $query->orWhere('discussions.show_to_all', true);
     }
 }

@@ -11,8 +11,8 @@
         "source": "https://github.com/Nearata/flarum-ext-no-self-likes"
     },
     "require": {
-        "flarum/core": ">=0.1.0-beta.16 <=0.1.0",
-        "flarum/likes": "^0.1.0-beta.16"
+        "flarum/core": "^1.0.0",
+        "flarum/likes": "*"
     },
     "authors": [
         {
@@ -35,9 +35,6 @@
                 "backgroundColor": "#63C7B2",
                 "color": "#fff"
             }
-        },
-        "flagrow": {
-            "discuss": ""
         }
     }
 }

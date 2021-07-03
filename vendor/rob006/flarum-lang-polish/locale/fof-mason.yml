@@ -38,15 +38,11 @@ fof-mason:
       user_values_allowed-help: "Jeśli włączone, użytkownicy będą mogli podawać własne wartości zamiast tych zdefiniowanych przez administratora. Te wartości zostaną sprawdzone zgodnie z regułami walidacji podanymi poniżej. Jeśli wyłączone, użytkownicy będą mogli używać jedynie \"sugerowanych\" odpowiedzi.\n"
       validation: 'Walidacja dla wartości wprowadzonych przez użytkownika'
       validation-help: "Sprawdź wspierane <a>reguły walidacji Laravela</a>. Na przykład: \"string|min:5\" lub \"url\".\n"
-    menu:
-      description: 'Konfiguruj niestandardowe pola dyskusji.'
-      title: Mason
     messages:
       delete-answer-confirmation: "Czy jesteś pewien, że chcesz usunąć odpowiedź \"{content}\"? Zostanie ona usunięta ze wszystkich dyskusji, które ją wykorzystują. Jeśli chcesz zachować istniejące odpowiedzi, wyłącz jedynie sugerowanie tej odpowiedzi. Usunąć odpowiedź?\n"
       delete-field-confirmation: "Czy jesteś pewien, że chcesz usunąć pole \"{name}\"? Pole oraz jego odpowiedzi zostaną usunięte ze wszystkich dyskusji, które je wykorzystują. Usunąć pole?\n"
     permissions:
       fill-fields: 'Uzupełnianie pól dla nowych dyskusji'
-      mason-heading: Mason
       see-other-fields: 'Przeglądanie pól we wszystkich dyskusjach'
       see-own-fields: 'Przeglądanie pól we własnych dyskusjach'
       skip-required-fields: 'Pomijanie wymaganych pól'

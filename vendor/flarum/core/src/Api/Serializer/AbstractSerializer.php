@@ -11,6 +11,7 @@ namespace Flarum\Api\Serializer;
 
 use Closure;
 use DateTime;
+use Flarum\Http\RequestUtil;
 use Flarum\User\User;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Arr;
@@ -64,7 +65,7 @@ abstract class AbstractSerializer extends BaseAbstractSerializer
     public function setRequest(Request $request)
     {
         $this->request = $request;
-        $this->actor = $request->getAttribute('actor');
+        $this->actor = RequestUtil::getActor($request);
     }
 
     /**
@@ -273,6 +274,8 @@ abstract class AbstractSerializer extends BaseAbstractSerializer
 
     /**
      * @param Container $container
+     *
+     * @internal
      */
     public static function setContainer(Container $container)
     {
@@ -282,8 +285,10 @@ abstract class AbstractSerializer extends BaseAbstractSerializer
     /**
      * @param string $serializerClass
      * @param callable $callback
+     *
+     * @internal
      */
-    public static function addAttributeMutator(string $serializerClass, callable $callback)
+    public static function addAttributeMutator(string $serializerClass, callable $callback): void
     {
         if (! isset(static::$attributeMutators[$serializerClass])) {
             static::$attributeMutators[$serializerClass] = [];
@@ -296,8 +301,10 @@ abstract class AbstractSerializer extends BaseAbstractSerializer
      * @param string $serializerClass
      * @param string $relation
      * @param callable $callback
+     *
+     * @internal
      */
-    public static function setRelationship(string $serializerClass, string $relation, callable $callback)
+    public static function setRelationship(string $serializerClass, string $relation, callable $callback): void
     {
         static::$customRelations[$serializerClass][$relation] = $callback;
     }

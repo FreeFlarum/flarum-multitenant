@@ -7,12 +7,13 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.17"
+        "flarum/core": "^1.0"
     },
     "authors": [
         {
             "name": "Clark Winkelmann",
             "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/",
             "role": "Developer"
         }
     ],
@@ -24,7 +25,7 @@
     "extra": {
         "flarum-extension": {
             "title": "Create User Modal",
-            "category": "moderation",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-user-plus",
                 "backgroundColor": "#684ba6",

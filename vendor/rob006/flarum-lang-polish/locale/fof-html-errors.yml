@@ -12,4 +12,3 @@ fof-html-errors:
         503: 'Błąd 503: Usługa niedostępna (niedostępne z powodu konserwacji)'
       placeholder:
         empty_for_default: 'Pozostaw puste dla domyślnej strony błędu Flarum'
-      title: 'Niestandardowe strony błędów HTML'

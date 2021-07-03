@@ -12,19 +12,19 @@
 namespace NomisCZ\SteamAuth\Api\Controllers;
 
 use Fig\Http\Message\StatusCodeInterface;
-use NomisCZ\SteamAuth\Flarum\Forum\Auth\NResponseFactory;
+use Flarum\Forum\Auth\ResponseFactory;
 use NomisCZ\SteamAuth\Providers\SteamAuth;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response\EmptyResponse;
+use Laminas\Diactoros\Response\EmptyResponse;
 
 class SteamUnlinkController implements RequestHandlerInterface
 {
     protected $response;
     protected $steam;
 
-    public function __construct(NResponseFactory $response, SteamAuth $steam)
+    public function __construct(ResponseFactory $response, SteamAuth $steam)
     {
         $this->response = $response;
         $this->steam = $steam;
@@ -35,11 +35,12 @@ class SteamUnlinkController implements RequestHandlerInterface
         $actor = $request->getAttribute('actor');
         $actorLoginProviders = $actor->loginProviders()->where('provider', 'steam')->first();
 
-        if ($actorLoginProviders) {
-            $actorLoginProviders->delete();
-            return new EmptyResponse(StatusCodeInterface::STATUS_OK);
+        if (!$actorLoginProviders) {
+            return new EmptyResponse(StatusCodeInterface::STATUS_BAD_REQUEST);
         }
 
-        return new EmptyResponse(StatusCodeInterface::STATUS_BAD_REQUEST);
+        $actorLoginProviders->delete();
+
+        return new EmptyResponse(StatusCodeInterface::STATUS_OK);
     }
 }

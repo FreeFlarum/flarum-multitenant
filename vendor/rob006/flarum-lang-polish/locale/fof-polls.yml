@@ -39,6 +39,6 @@ fof-polls:
     public_poll: 'Zobacz głosujących'
     tooltip:
       badge: Ankieta
-      votes: '1 głos|{count} głosy|{count} głosów'
+      votes: '{count, plural, one {# głos} few {# głosy} many {# głosów} other {# głosa}}'
     votes_modal:
       title: 'Głosujący użytkownicy'

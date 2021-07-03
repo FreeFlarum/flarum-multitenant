@@ -1,15 +1,18 @@
 {
     "name": "madnest/flarum-lang-czech",
     "type": "flarum-extension",
-    "description": "Czech language pack.",
-    "keywords": ["locale", "flarum"],
+    "description": "Czech language pack for Flarum.",
+    "keywords": [
+        "locale",
+        "flarum"
+    ],
     "license": "MIT",
     "require": {
-        "flarum/core": "^0.1.0-beta.14"
+        "flarum/core": "^1.0.0"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.x-dev"
+            "dev-master": "1.0.x-dev"
         },
         "flarum-extension": {
             "title": "Czech",

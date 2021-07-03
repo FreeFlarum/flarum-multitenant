@@ -1,12 +1,12 @@
-import Modal from 'flarum/components/Modal';
-import DiscussionPage from 'flarum/components/DiscussionPage';
-import Button from 'flarum/components/Button';
-import ItemList from 'flarum/utils/ItemList';
-import Stream from 'flarum/utils/Stream';
-import SearchState from 'flarum/states/SearchState';
+import Modal from 'flarum/common/components/Modal';
+import DiscussionPage from 'flarum/forum/components/DiscussionPage';
+import Button from 'flarum/common/components/Button';
+import ItemList from 'flarum/common/utils/ItemList';
+import Stream from 'flarum/common/utils/Stream';
+import SearchState from 'flarum/forum/states/SearchState';
 import RecipientSearch from '../search/RecipientSearch';
-import User from 'flarum/models/User';
-import Group from 'flarum/models/Group';
+import User from 'flarum/common/models/User';
+import Group from 'flarum/common/models/Group';
 
 export default class AddRecipientModal extends Modal {
     oninit(vnode) {
@@ -25,7 +25,7 @@ export default class AddRecipientModal extends Modal {
             this.selected().add('users:' + app.session.user.id(), app.session.user);
         }
 
-        this.recipientSearch = new SearchState;
+        this.recipientSearch = new SearchState();
     }
 
     isDismissible() {
@@ -68,15 +68,21 @@ export default class AddRecipientModal extends Modal {
                         discussion: this.attrs.discussion,
                     })}
                     <div className="AddRecipientModal-form-submit App-primaryControl">
-                        {Button.component({
-                            type: 'submit',
-                            className: 'Button Button--primary',
-                            icon: 'fas fa-check',
-                        }, app.translator.trans('fof-byobu.forum.buttons.submit'))}
-                        {Button.component({
-                            onclick: this.hide.bind(this),
-                            className: 'Button Button--cancel',
-                        }, app.translator.trans('fof-byobu.forum.buttons.cancel'))}
+                        {Button.component(
+                            {
+                                type: 'submit',
+                                className: 'Button Button--primary',
+                                icon: 'fas fa-check',
+                            },
+                            app.translator.trans('fof-byobu.forum.buttons.submit')
+                        )}
+                        {Button.component(
+                            {
+                                onclick: this.hide.bind(this),
+                                className: 'Button Button--cancel',
+                            },
+                            app.translator.trans('fof-byobu.forum.buttons.cancel')
+                        )}
                     </div>
                 </div>
             </div>,
@@ -125,7 +131,7 @@ export default class AddRecipientModal extends Modal {
 
         app.modal.close();
 
-        if (! this.attrs.discussion) {
+        if (!this.attrs.discussion) {
             app.composer.show();
         }
 

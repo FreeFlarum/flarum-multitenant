@@ -16,7 +16,6 @@ migratetoflarum-fake-data:
       discussion-tags-random: Losowo
       post-count: '=> migratetoflarum-fake-data.ref.post-count'
       send: '=> migratetoflarum-fake-data.ref.send'
-      title: 'Generowanie danych testowych'
       user-count: '=> migratetoflarum-fake-data.ref.user-count'
   api:
     no-discussions-matched: 'Nie znaleziono pasujących dyskusji'
@@ -40,7 +39,6 @@ migratetoflarum-fake-data:
     date: 'Ustawienia daty'
     date-interval-placeholder: 'Interwał (domyślnie 1 sekunda)'
     date-start-placeholder: 'Data początkowa (domyślnie aktualna data)'
-    discussion-count: 'Liczba dyskusji do utworzenia'
     post-count: 'Liczba postów do utworzenia'
     send: 'Wygeneruj dane'
     user-count: 'Liczba użytkowników do utworzenia'

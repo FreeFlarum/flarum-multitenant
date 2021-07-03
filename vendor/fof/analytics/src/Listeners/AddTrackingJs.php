@@ -5,7 +5,7 @@
  *
  * Copyright (c) FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -34,7 +34,7 @@ class AddTrackingJs
         $this->piwik($document, $request);
     }
 
-    private function analytics(Document &$document)
+    private function analytics(Document $document)
     {
         $statusGoogle = (bool) $this->settings->get('fof-analytics.statusGoogle');
         $googleTrackingCode = $this->settings->get('fof-analytics.googleTrackingCode');

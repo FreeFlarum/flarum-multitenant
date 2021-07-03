@@ -4,5 +4,4 @@
 
 nearata-copy-code-to-clipboard:
   forum:
-    copied: 'Skopiowano do schowka'
     copy: 'Skopiuj do schowka'

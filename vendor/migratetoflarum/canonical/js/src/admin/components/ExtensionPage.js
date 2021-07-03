@@ -1,6 +1,6 @@
-import app from 'flarum/app';
-import BaseExtensionPage from 'flarum/components/ExtensionPage';
-import Select from 'flarum/components/Select';
+import app from 'flarum/admin/app';
+import BaseExtensionPage from 'flarum/admin/components/ExtensionPage';
+import Select from 'flarum/common/components/Select';
 
 const settingsPrefix = 'migratetoflarum-canonical.';
 const translationPrefix = 'migratetoflarum-canonical.admin.settings.';

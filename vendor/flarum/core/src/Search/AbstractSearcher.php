@@ -37,13 +37,6 @@ abstract class AbstractSearcher
 
     abstract protected function getQuery(User $actor): Builder;
 
-    protected function mutateSearch(SearchState $search, QueryCriteria $criteria)
-    {
-        foreach ($this->searchMutators as $mutator) {
-            $mutator($search, $criteria);
-        }
-    }
-
     /**
      * @param QueryCriteria $criteria
      * @param int|null $limit
@@ -61,11 +54,13 @@ abstract class AbstractSearcher
         $search = new SearchState($query->getQuery(), $actor);
 
         $this->gambits->apply($search, $criteria->query['q']);
-        $this->applySort($search, $criteria->sort);
+        $this->applySort($search, $criteria->sort, $criteria->sortIsDefault);
         $this->applyOffset($search, $offset);
         $this->applyLimit($search, $limit + 1);
 
-        $this->mutateSearch($search, $criteria);
+        foreach ($this->searchMutators as $mutator) {
+            $mutator($search, $criteria);
+        }
 
         // Execute the search query and retrieve the results. We get one more
         // results than the user asked for, so that we can say if there are more

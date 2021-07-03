@@ -3,7 +3,7 @@
 /*
  * This file is part of askvortsov/flarum-moderator-warnings
  *
- *  Copyright (c) 2020 Alexander Skvortsov.
+ *  Copyright (c) 2021 Alexander Skvortsov.
  *
  *  For detailed copyright and license information, please view the
  *  LICENSE file that was distributed with this source code.
@@ -14,6 +14,7 @@ namespace Askvortsov\FlarumWarnings\Api\Controller;
 use Askvortsov\FlarumWarnings\Api\Serializer\WarningSerializer;
 use Askvortsov\FlarumWarnings\Model\Warning;
 use Flarum\Api\Controller\AbstractListController;
+use Flarum\Http\RequestUtil;
 use Flarum\User\Exception\PermissionDeniedException;
 use Flarum\User\User;
 use Illuminate\Support\Arr;
@@ -40,7 +41,7 @@ class ListWarningsController extends AbstractListController
     {
         $id = Arr::get($request->getQueryParams(), 'user_id');
 
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $actor->assertCan('user.viewWarnings', User::find($id));
 

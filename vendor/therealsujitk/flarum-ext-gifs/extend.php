@@ -3,7 +3,7 @@
 /*
  * This file is part of therealsujitk/flarum-ext-gifs.
  *
- * Copyright (c) 2021 Sujit Kumar.
+ * Copyright (c) Sujit Kumar.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.

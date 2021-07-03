@@ -46,9 +46,9 @@ class UpdateAchievementsOnPost
             ),
             array(
                 "type"=>"comments",
-                "count"=>Discussion::where("user_id","=",$event->post->user_id)->max("comment_count"),
+                "count"=>Discussion::where("user_id","=",$event->post->discussion->user_id)->max("comment_count"),
                 "user"=>$event->post->discussion->user,
-                "new"=>0,
+                "new"=>1,
             ),
         );
 

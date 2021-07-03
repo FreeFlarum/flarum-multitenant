@@ -10,10 +10,10 @@ In order for permissions to be honored correctly when using `flarum/nicknames`, 
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Install with composer:
 
 ```sh
-composer require fof/username-request
+composer require fof/username-request:"*"
 ```
 
 ### Updating

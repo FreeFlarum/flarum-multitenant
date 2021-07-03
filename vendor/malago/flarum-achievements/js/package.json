@@ -1,7 +1,7 @@
 {
   "name": "@malago/flarum-achievements",
   "description": "Achievements",
-  "version": "0.2.6",
+  "version": "0.3.1",
   "license": "GPL-3.0-or-later",
   "dependencies": {},
   "scripts": {

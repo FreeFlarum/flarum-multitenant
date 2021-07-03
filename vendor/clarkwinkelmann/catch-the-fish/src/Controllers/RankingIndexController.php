@@ -6,7 +6,7 @@ use ClarkWinkelmann\CatchTheFish\Repositories\RankingRepository;
 use ClarkWinkelmann\CatchTheFish\Repositories\RoundRepository;
 use ClarkWinkelmann\CatchTheFish\Serializers\RankingSerializer;
 use Flarum\Api\Controller\AbstractListController;
-use Flarum\User\Exception\PermissionDeniedException;
+use Flarum\Http\RequestUtil;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
@@ -28,19 +28,13 @@ class RankingIndexController extends AbstractListController
         $this->rankings = $rankings;
     }
 
-    /**
-     * @param ServerRequestInterface $request
-     * @param Document $document
-     * @return mixed
-     * @throws PermissionDeniedException
-     */
     protected function data(ServerRequestInterface $request, Document $document)
     {
         $roundId = Arr::get($request->getQueryParams(), 'id');
 
         $round = $this->rounds->findOrFail($roundId);
 
-        $request->getAttribute('actor')->assertCan('listRankings', $round);
+        RequestUtil::getActor($request)->assertCan('listRankings', $round);
 
         return $this->rankings->all($round);
     }

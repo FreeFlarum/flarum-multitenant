@@ -24,7 +24,6 @@ core:
       favicon_text: 'Upload een afbeelding om weergegeven te worden als snelkoppeling.'
       logo_heading: Logo
       logo_text: 'Upload een afbeelding om weergegeven te worden i.p.v. de forum titel.'
-      submit_button: '=> core.ref.save_changes'
       title: Vormgeving
     basics:
       all_discussions_label: '=> core.ref.all_discussions'
@@ -37,11 +36,9 @@ core:
       forum_title_heading: 'Forum titel'
       home_page_heading: Homepage
       home_page_text: 'Kies de pagina die gebruikers voor het eerst te zien krijgen wanneer ze je forum bezoeken. Als je zelf een waarde typt, gebruik dan het path relatief aan de forum root.'
-      saved_message: 'De wijzigingen zijn opgeslagen.'
       show_language_selector_label: 'Toon taalkiezer'
       slug_driver_heading: 'Slug Driver: {model}'
       slug_driver_text: 'Selecteer een driver dat moet worden gebruikt om dit model te sluggen.'
-      submit_button: '=> core.ref.save_changes'
       title: Basis
       welcome_banner_heading: 'Welkom banner'
       welcome_banner_text: 'Configureer de tekst die wordt weergegeven in de banner op de ''Alle discussies'' pagina. Gebruik dit om je gasten welkom te heten.'
@@ -95,7 +92,6 @@ core:
       send_test_mail_success: 'Testmail succesvol verzonden!'
       send_test_mail_text: 'Hiermee wordt een e-mail met de bovenstaande configuratie naar uw e-mailadres gestuurd, {email}.'
       smtp_heading: 'SMTP instellingen'
-      submit_button: '=> core.ref.save_changes'
       title: '=> core.ref.email'
     extension:
       configure_scopes: 'Configureer bereiken'
@@ -114,7 +110,6 @@ core:
       no_settings: 'Deze extensie heeft geen instellingen.'
       open_modal: 'Open instellingen'
       permissions_title: Rechten
-      saved_message: 'Uw wijzigingen zijn opgeslagen.'
       uninstall_button: Deïnstalleren
     header:
       get_help: 'Krijg hulp'
@@ -143,6 +138,8 @@ core:
       permissions_button: '=> core.admin.permissions.title'
       permissions_title: '=> core.admin.permissions.description'
       search_placeholder: 'Extensies zoeken'
+      userlist_button: '=> core.admin.users.title'
+      userlist_title: '=> core.admin.users.description'
     permissions:
       allow_post_editing_label: 'Sta bericht bewerking toe'
       allow_renaming_label: 'Sta hernoemen toe'
@@ -164,17 +161,17 @@ core:
       read_heading: Lezen
       rename_discussions_label: 'Discussies hernoemen'
       reply_to_discussions_label: 'Reageren op discussies'
+      search_users_label: 'Gebruikers zoeken'
       sign_up_label: Registreren
       start_discussions_label: 'Start discussies'
       title: Permissies
-      view_discussions_label: 'Bekijk discussies'
+      view_forum_label: 'Bekijk forum (discussies en gebruikers)'
       view_hidden_groups_label: 'Bekijk verborgen groepsbadges'
       view_last_seen_at_label: 'Bekijk gebruiker laatst gezien'
       view_post_ips_label: 'Bekijk IP adressen van bericht'
-      view_user_list_label: 'Bekijk gebruikerslijst'
     permissions_controls:
       allow_indefinitely_button: 'Voor onbepaalde tijd'
-      allow_some_minutes_button: 'Voor {count} minuut|Voor {count} minuten'
+      allow_some_minutes_button: '{count, plural, one {Voor # minuut} other {Voor # minuten}}'
       allow_ten_minutes_button: 'Voor 10 minuten'
       allow_until_reply_button: 'Tot de volgende reactie'
       everyone_button: Iedereen
@@ -187,6 +184,35 @@ core:
     upload_image:
       remove_button: Verwijderen
       upload_button: 'Afbeelding kiezen...'
+    users:
+      description: 'Een gepagineerde lijst van alle gebruikers op je forum.'
+      grid:
+        columns:
+          edit_user:
+            button: '=> core.ref.edit'
+            title: '=> core.ref.edit_user'
+            tooltip: '{username} wijzigen'
+          email:
+            title: '=> core.ref.email'
+            visibility_hide: 'E-mailadres verbergen'
+            visibility_show: 'Toon e-mailadres'
+          group_badges:
+            no_badges: Geen
+            title: Groepen
+          join_time:
+            title: Aangesloten
+          user_id:
+            title: ID
+          username:
+            profile_link_tooltip: 'Bezoek het profiel van {username}'
+            title: '=> core.ref.username'
+        invalid_column_content: Ongeldig
+      pagination:
+        back_button: 'Vorige pagina'
+        next_button: 'Volgende pagina'
+        page_counter: 'Pagina {current} van {total}'
+      title: '=> core.ref.users'
+      total_users: 'Aantal gebruikers: {count}'
   api:
     invalid_username_message: 'De gebruikersnaam mag alleen letters, cijfers en streepjes (-) bevatten.'
   email:
@@ -255,19 +281,6 @@ core:
       mark_as_read_tooltip: 'Markeren als gelezen'
       replied_text: '{username} heeft {ago} gereageerd'
       started_text: '{username} heeft {ago} gereageerd'
-    edit_user:
-      activate_button: 'Activeer gebruiker'
-      email_heading: '=> core.ref.email'
-      email_label: '=> core.ref.email'
-      groups_heading: Groepen
-      nothing_available: 'Er is op dit moment niets beschikbaar dat u kunt bewerken.'
-      password_heading: '=> core.ref.password'
-      password_label: '=> core.ref.password'
-      set_password_label: 'Stel een nieuw wachtwoord in'
-      submit_button: '=> core.ref.save_changes'
-      title: 'Gebruiker bewerken'
-      username_heading: '=> core.ref.username'
-      username_label: '=> core.ref.username'
     forgot_password:
       dismiss_button: '=> core.ref.okay'
       email_placeholder: '=> core.ref.email'
@@ -336,7 +349,7 @@ core:
       now_link: Nu
       original_post_link: 'Origineel bericht'
       unread_text: '{count} ongelezen'
-      viewing_text: '{index} van {count} bericht|{index} van {count} berichten'
+      viewing_text: '{count, plural, one {{index} van {formattedCount} bericht} other {{index} van {formattedCount} berichten}}'
     post_stream:
       discussion_renamed_old_tooltip: 'De titel was: "{old}"'
       discussion_renamed_text: '{username} heeft de titel veranderd naar {new}.'
@@ -408,6 +421,18 @@ core:
       hidden_tooltip: Verborgen
     dropdown:
       toggle_dropdown_accessible_label: 'Toggle menu'
+    edit_user:
+      activate_button: 'Activeer gebruiker'
+      email_heading: '=> core.ref.email'
+      email_label: '=> core.ref.email'
+      groups_heading: Groepen
+      password_heading: '=> core.ref.password'
+      password_label: '=> core.ref.password'
+      set_password_label: 'Nieuw wachtwoord instellen'
+      submit_button: '=> core.ref.save_changes'
+      title: '=> core.ref.edit_user'
+      username_heading: '=> core.ref.username'
+      username_label: '=> core.ref.username'
     error:
       dependent_extensions_message: 'Kan {extension} pas uitschakelen als de volgende afhankelijke extensies zijn uitgeschakeld: {extensions}'
       generic_message: 'Oeps! Er is iets misgegaan. Herlaad de pagina en probeer het opnieuw.'
@@ -415,6 +440,8 @@ core:
       not_found_message: 'Het opgevraagde kon niet worden gevonden.'
       permission_denied_message: 'Je hebt geen permissie om dat te doen.'
       rate_limit_exceeded_message: 'Je gaat een beetje te snel. Probeer het over een paar seconden nog eens.'
+    loading_indicator:
+      accessible_label: '=> core.ref.loading'
     number_suffix:
       kilo_text: K
       mega_text: M
@@ -439,10 +466,12 @@ core:
     delete_forever: 'Permanent verwijderen'
     discussions: Discussies
     edit: Bewerken
+    edit_user: 'Wijzig gebruiker'
     email: E-mail
     icon: Icoon
     icon_text: 'Kies een <a>FontAwesome</a> icon class, <em>zonder</em> de <code>fa-</code> prefix.'
     load_more: 'Meer laden'
+    loading: Laden...
     log_in: Inloggen
     log_out: Uitloggen
     mark_all_as_read: 'Alles als gelezen markeren'
@@ -460,7 +489,7 @@ core:
     save_changes: 'Wijzigingen opslaan'
     settings: Instellingen
     sign_up: Registreren
-    some_others: '{count} ander|{count} andere'
+    some_others: '{count, plural, one {# ander} other {# andere}}'
     start_a_discussion: 'Start een discussie'
     username: Gebruikersnaam
     users: Gebruikers
@@ -471,7 +500,7 @@ core:
     content:
       javascript_disabled_message: 'Deze website werkt het beste in een moderne browser met JavaScript ingeschakeld.'
       load_error_message: 'Er is iets misgegaan bij het laden van de volledige versie van deze website.'
-      loading_text: Laden...
+      loading_text: '=> core.ref.loading'
     discussion:
       next_page_button: '=> core.ref.next_page'
       previous_page_button: '=> core.ref.previous_page'

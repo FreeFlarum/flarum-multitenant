@@ -34,7 +34,6 @@ class PWASettingsSerializer extends AbstractSerializer
             'manifest'        => $settings['manifest'],
             'sizes'           => $settings['sizes'],
             'status_messages' => $settings['status_messages'],
-            'base_path'       => $settings['base_path'],
         ];
     }
 

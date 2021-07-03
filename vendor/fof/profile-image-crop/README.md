@@ -11,7 +11,7 @@ A [Flarum](http://flarum.org) extension. Allow cropping when uploading a profile
 Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
 
 ```sh
-composer require fof/profile-image-crop
+composer require fof/profile-image-crop:"*"
 ```
 
 ### Updating

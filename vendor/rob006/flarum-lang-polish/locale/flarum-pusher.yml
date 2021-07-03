@@ -12,4 +12,4 @@ flarum-pusher:
       title: 'Ustawienia Pushera'
   forum:
     discussion_list:
-      show_updates_text: 'Pokaż {count} zaktualizowaną dyskusję|Pokaż {count} zaktualizowane dyskusje|Pokaż {count} zaktualizowanych dyskusji'
+      show_updates_text: '{count, plural, one {Pokaż # zaktualizowaną dyskusję} few {Pokaż # zaktualizowane dyskusje} other {Pokaż # zaktualizowanych dyskusji}}'

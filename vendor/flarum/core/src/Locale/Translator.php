@@ -12,9 +12,8 @@ namespace Flarum\Locale;
 use Illuminate\Contracts\Translation\Translator as TranslatorContract;
 use Symfony\Component\Translation\MessageCatalogueInterface;
 use Symfony\Component\Translation\Translator as BaseTranslator;
-use Symfony\Component\Translation\TranslatorInterface;  // Defined locally as BC layer
 
-class Translator extends BaseTranslator implements TranslatorContract, TranslatorInterface
+class Translator extends BaseTranslator implements TranslatorContract
 {
     const REFERENCE_REGEX = '/^=>\s*([a-z0-9_\-\.]+)$/i';
 
@@ -25,7 +24,8 @@ class Translator extends BaseTranslator implements TranslatorContract, Translato
 
     public function choice($key, $number, array $replace = [], $locale = null)
     {
-        return $this->transChoice($key, $number, $replace, nil, $locale);
+        // Symfony's translator uses ICU MessageFormat, which pluralizes based on arguments.
+        return $this->trans($key, $replace, null, $locale);
     }
 
     /**

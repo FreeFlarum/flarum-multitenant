@@ -1,5 +1,5 @@
-import Model from 'flarum/Model';
-import User from 'flarum/models/User';
+import Model from 'flarum/common/Model';
+import User from 'flarum/common/models/User';
 import addIgnoreUserControlButton from './addIgnoreUserControlButton';
 import addHideIgnoredPost from './addHideIgnoredPost';
 import addProfilePage from './addProfilePage';

@@ -20,6 +20,8 @@ class Formatter
 
     protected $parsingCallbacks = [];
 
+    protected $unparsingCallbacks = [];
+
     protected $renderingCallbacks = [];
 
     /**
@@ -42,16 +44,33 @@ class Formatter
         $this->cacheDir = $cacheDir;
     }
 
+    /**
+     * @internal
+     */
     public function addConfigurationCallback($callback)
     {
         $this->configurationCallbacks[] = $callback;
     }
 
+    /**
+     * @internal
+     */
     public function addParsingCallback($callback)
     {
         $this->parsingCallbacks[] = $callback;
     }
 
+    /**
+     * @internal
+     */
+    public function addUnparsingCallback($callback)
+    {
+        $this->unparsingCallbacks[] = $callback;
+    }
+
+    /**
+     * @internal
+     */
     public function addRenderingCallback($callback)
     {
         $this->renderingCallbacks[] = $callback;
@@ -98,10 +117,15 @@ class Formatter
      * Unparse XML.
      *
      * @param string $xml
+     * @param mixed $context
      * @return string
      */
-    public function unparse($xml)
+    public function unparse($xml, $context = null)
     {
+        foreach ($this->unparsingCallbacks as $callback) {
+            $xml = $callback($context, $xml);
+        }
+
         return Unparser::unparse($xml);
     }
 

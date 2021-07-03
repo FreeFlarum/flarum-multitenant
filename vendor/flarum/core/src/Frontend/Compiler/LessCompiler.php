@@ -12,6 +12,9 @@ namespace Flarum\Frontend\Compiler;
 use Flarum\Frontend\Compiler\Source\FileSource;
 use Less_Parser;
 
+/**
+ * @internal
+ */
 class LessCompiler extends RevisionCompiler
 {
     /**
@@ -24,33 +27,21 @@ class LessCompiler extends RevisionCompiler
      */
     protected $importDirs = [];
 
-    /**
-     * @return string
-     */
     public function getCacheDir(): string
     {
         return $this->cacheDir;
     }
 
-    /**
-     * @param string $cacheDir
-     */
     public function setCacheDir(string $cacheDir)
     {
         $this->cacheDir = $cacheDir;
     }
 
-    /**
-     * @return array
-     */
     public function getImportDirs(): array
     {
         return $this->importDirs;
     }
 
-    /**
-     * @param array $importDirs
-     */
     public function setImportDirs(array $importDirs)
     {
         $this->importDirs = $importDirs;
@@ -84,11 +75,10 @@ class LessCompiler extends RevisionCompiler
         return $parser->getCss();
     }
 
-    /**
-     * @return mixed
-     */
-    protected function getCacheDifferentiator()
+    protected function getCacheDifferentiator(): ?array
     {
-        return time();
+        return [
+            'import_dirs' => $this->importDirs
+        ];
     }
 }

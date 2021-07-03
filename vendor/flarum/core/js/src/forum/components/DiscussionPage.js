@@ -41,7 +41,7 @@ export default class DiscussionPage extends Page {
     // page, then we don't want Mithril to redraw the whole page – if it did,
     // then the pane would redraw which would be slow and would cause problems with
     // event handlers.
-    if (app.discussions.hasDiscussions()) {
+    if (app.discussions.hasItems()) {
       app.pane.enable();
       app.pane.hide();
     }
@@ -51,8 +51,9 @@ export default class DiscussionPage extends Page {
     this.bodyClass = 'App--discussion';
   }
 
-  onremove() {
-    super.onremove();
+  onremove(vnode) {
+    super.onremove(vnode);
+
     // If we are indeed navigating away from this discussion, then disable the
     // discussion list pane. Also, if we're composing a reply to this
     // discussion, minimize the composer – unless it's empty, in which case
@@ -73,23 +74,25 @@ export default class DiscussionPage extends Page {
       <div className="DiscussionPage">
         <DiscussionListPane state={app.discussions} />
         <div className="DiscussionPage-discussion">
-          {discussion
-            ? [
-                DiscussionHero.component({ discussion }),
-                <div className="container">
-                  <nav className="DiscussionPage-nav">
-                    <ul>{listItems(this.sidebarItems().toArray())}</ul>
-                  </nav>
-                  <div className="DiscussionPage-stream">
-                    {PostStream.component({
-                      discussion,
-                      stream: this.stream,
-                      onPositionChange: this.positionChanged.bind(this),
-                    })}
-                  </div>
-                </div>,
-              ]
-            : LoadingIndicator.component({ className: 'LoadingIndicator--block' })}
+          {discussion ? (
+            [
+              DiscussionHero.component({ discussion }),
+              <div className="container">
+                <nav className="DiscussionPage-nav">
+                  <ul>{listItems(this.sidebarItems().toArray())}</ul>
+                </nav>
+                <div className="DiscussionPage-stream">
+                  {PostStream.component({
+                    discussion,
+                    stream: this.stream,
+                    onPositionChange: this.positionChanged.bind(this),
+                  })}
+                </div>
+              </div>,
+            ]
+          ) : (
+            <LoadingIndicator />
+          )}
         </div>
       </div>
     );
@@ -189,6 +192,7 @@ export default class DiscussionPage extends Page {
           icon: 'fas fa-ellipsis-v',
           className: 'App-primaryControl',
           buttonClassName: 'Button--primary',
+          accessibleToggleLabel: app.translator.trans('core.forum.discussion_controls.toggle_dropdown_accessible_label'),
         },
         DiscussionControls.controls(this.discussion, this).toArray()
       )

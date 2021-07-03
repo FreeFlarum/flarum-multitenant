@@ -10,14 +10,13 @@
 namespace Flarum\Tags\Content;
 
 use Flarum\Api\Client;
-use Flarum\Api\Controller\ListDiscussionsController;
 use Flarum\Frontend\Document;
+use Flarum\Http\RequestUtil;
 use Flarum\Tags\TagRepository;
-use Flarum\User\User;
-use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class Tag
 {
@@ -37,7 +36,7 @@ class Tag
     protected $tags;
 
     /**
-     * @var Translator
+     * @var TranslatorInterface
      */
     protected $translator;
 
@@ -45,9 +44,9 @@ class Tag
      * @param Client $api
      * @param Factory $view
      * @param TagRepository $tags
-     * @param Translator $translator
+     * @param TranslatorInterface $translator
      */
-    public function __construct(Client $api, Factory $view, TagRepository $tags, Translator $translator)
+    public function __construct(Client $api, Factory $view, TagRepository $tags, TranslatorInterface $translator)
     {
         $this->api = $api;
         $this->view = $view;
@@ -58,7 +57,7 @@ class Tag
     public function __invoke(Document $document, Request $request)
     {
         $queryParams = $request->getQueryParams();
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $slug = Arr::pull($queryParams, 'slug');
         $sort = Arr::pull($queryParams, 'sort');
@@ -73,12 +72,20 @@ class Tag
         $params = [
             'sort' => $sort && isset($sortMap[$sort]) ? $sortMap[$sort] : '',
             'filter' => [
-                'q' => "$q tag:$slug"
+                'tag' => "$slug"
             ],
             'page' => ['offset' => ($page - 1) * 20, 'limit' => 20]
         ];
 
-        $apiDocument = $this->getApiDocument($actor, $params);
+        $apiDocument = $this->getApiDocument($request, $params);
+
+        $tagsDocument = $this->getTagsDocument($request, $slug);
+
+        $apiDocument->included[] = $tagsDocument->data;
+        $includedTags = $tagsDocument->included ?? [];
+        foreach ((array) $includedTags as $includedTag) {
+            $apiDocument->included[] = $includedTag;
+        }
 
         $document->title = $tag->name;
         if ($tag->description) {
@@ -109,13 +116,16 @@ class Tag
 
     /**
      * Get the result of an API request to list discussions.
-     *
-     * @param User $actor
-     * @param array $params
-     * @return object
      */
-    private function getApiDocument(User $actor, array $params)
+    private function getApiDocument(Request $request, array $params)
     {
-        return json_decode($this->api->send(ListDiscussionsController::class, $actor, $params)->getBody());
+        return json_decode($this->api->withParentRequest($request)->withQueryParams($params)->get('/discussions')->getBody());
+    }
+
+    private function getTagsDocument(Request $request, string $slug)
+    {
+        return json_decode($this->api->withParentRequest($request)->withQueryParams([
+            'include' => 'children,children.parent,parent,parent.children.parent,state'
+        ])->get("/tags/$slug")->getBody());
     }
 }

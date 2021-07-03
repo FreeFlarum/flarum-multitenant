@@ -3,14 +3,19 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fof/default-user-preferences.svg)](https://packagist.org/packages/fof/default-user-preferences)
 
 A [Flarum](http://flarum.org) extension.
-Enables 'Someone replies to one of my posts (email)' and 'Someone mentions me in a post (email)' user preferences by default for each new user.
+
+Enaables the following preferences by default for all new user signing up to your forum:
+
+- 'Someone replies to one of my posts (email) notification'
+- 'Someone mentions me in a post (email) notification'
+- 'Follow after reply'
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Install manually with composer:
 
 ```sh
-composer require fof/default-user-preferences
+composer require fof/default-user-preferences:"*"
 ```
 
 ### Updating

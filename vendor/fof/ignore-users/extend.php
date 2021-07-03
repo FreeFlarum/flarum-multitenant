@@ -18,7 +18,6 @@ use Flarum\Extend;
 use Flarum\User\Event\Saving;
 use Flarum\User\Search\UserSearcher;
 use Flarum\User\User;
-use FoF\Byobu\Events\SearchingRecipient;
 use FoF\IgnoreUsers\User\Search\Gambit\IgnoredGambit;
 
 return [
@@ -46,8 +45,8 @@ return [
         ->hasMany('ignoredUsers', Serializer\UserSerializer::class),
 
     (new Extend\ApiController(Controller\ListUsersController::class))
-        ->prepareDataForSerialization(PrepareIgnoredUsers::class)
-        ->addInclude('ignoredUsers'),
+        ->addInclude('ignoredUsers')
+        ->load('ignoredUsers'),
 
     (new Extend\ApiController(Controller\ShowUserController::class))
         ->addInclude('ignoredUsers'),
@@ -67,8 +66,7 @@ return [
         ->modelPolicy(User::class, Access\ByobuPolicy::class),
 
     (new Extend\Event())
-        ->listen(Saving::class, Listener\SaveIgnoredToDatabase::class)
-        ->listen(SearchingRecipient::class, Listener\AddByobuDMPrevention::class),
+        ->listen(Saving::class, Listener\SaveIgnoredToDatabase::class),
 
     (new Extend\SimpleFlarumSearch(UserSearcher::class))
         ->addGambit(IgnoredGambit::class),

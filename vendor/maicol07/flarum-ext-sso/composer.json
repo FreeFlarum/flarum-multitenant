@@ -16,8 +16,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Maicol Battistini",
-            "email": "maicolbattistini@live.it"
+            "name": "Maicol Battistini (maicol07)",
+            "email": "webmaster@maicol07.it",
+            "homepage": "https://www.maicol07.it"
         }
     ],
     "support": {
@@ -39,11 +40,14 @@
     "require": {
         "php": ">=7.3",
         "ext-json": "*",
-        "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17",
-        "lcobucci/jwt": ">=3.4.2|^4"
+        "flarum/core": "^1"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "lcobucci/jwt": ">=4.1"
+    },
+    "suggest": {
+        "lcobucci/jwt": ">=4.1. This is required if you want to use the JWT features that comes with the premium addon"
     },
     "autoload": {
         "psr-4": {

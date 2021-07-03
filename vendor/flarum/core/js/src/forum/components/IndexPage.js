@@ -37,7 +37,7 @@ export default class IndexPage extends Page {
       app.discussions.clear();
     }
 
-    app.discussions.refreshParams(app.search.params());
+    app.discussions.refreshParams(app.search.params(), m.route.param('page'));
 
     app.history.push('index', app.translator.trans('core.forum.header.back_to_index_tooltip'));
 
@@ -116,14 +116,16 @@ export default class IndexPage extends Page {
     }
   }
 
-  onbeforeremove() {
+  onbeforeremove(vnode) {
+    super.onbeforeremove(vnode);
+
     // Save the scroll position so we can restore it when we return to the
     // discussion list.
     app.cache.scrollTop = $(window).scrollTop();
   }
 
-  onremove() {
-    super.onremove();
+  onremove(vnode) {
+    super.onremove(vnode);
 
     $('#app').css('min-height', '');
   }
@@ -172,6 +174,7 @@ export default class IndexPage extends Page {
         {
           buttonClassName: 'Button',
           className: 'App-titleControl',
+          accessibleToggleLabel: app.translator.trans('core.forum.index.toggle_sidenav_dropdown_accessible_label'),
         },
         this.navItems(this).toArray()
       )
@@ -227,6 +230,7 @@ export default class IndexPage extends Page {
         {
           buttonClassName: 'Button',
           label: sortOptions[app.search.params().sort] || Object.keys(sortMap).map((key) => sortOptions[key])[0],
+          accessibleToggleLabel: app.translator.trans('core.forum.index_sort.toggle_dropdown_accessible_label'),
         },
         Object.keys(sortOptions).map((value) => {
           const label = sortOptions[value];

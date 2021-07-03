@@ -21,13 +21,13 @@
 		"source": "https://github.com/rob006-software/flarum-lang-polish"
 	},
 	"require": {
-		"flarum/core": "^0.1.0-beta.14"
+		"flarum/core": "^1.0"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"extra": {
 		"branch-alias": {
-			"dev-master": "0.4.x-dev"
+			"dev-master": "0.5.x-dev"
 		},
 		"flarum-extension": {
 			"title": "Polish",
@@ -41,7 +41,7 @@
 			"code": "pl",
 			"title": "Polski"
 		},
-		"flagrow": {
+		"extiverse": {
 			"discuss": "https://discuss.flarum.org/d/18134/30"
 		}
 	}

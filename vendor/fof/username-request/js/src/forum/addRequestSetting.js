@@ -11,7 +11,7 @@
 
 import { extend } from 'flarum/common/extend';
 import Button from 'flarum/common/components/Button';
-import SettingsPage from 'flarum/common/components/SettingsPage';
+import SettingsPage from 'flarum/forum/components/SettingsPage';
 import RequestModal from './components/RequestModal';
 
 export default function () {

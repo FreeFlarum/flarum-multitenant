@@ -1,4 +1,4 @@
-import app from 'flarum/app';
+import app from 'flarum/common/app';
 
 app.initializers.add('fof-ignore-users', () => {
     app.extensionData.for('fof-ignore-users').registerPermission(

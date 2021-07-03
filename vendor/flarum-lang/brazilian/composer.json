@@ -1,0 +1,44 @@
+{
+   "name":"flarum-lang/brazilian",
+   "type":"flarum-extension",
+   "description":"Pacote de idioma Português do Brasil.",
+   "keywords":[
+      "brazilian",
+      "portuguese",
+      "language",
+      "locale",
+      "português",
+      "extensao"
+   ],
+   "license":"MIT",
+   "authors": [
+      {
+         "name":"Ramon Guilherme",
+         "email":"ramonguilherme@outlook.com",
+         "homepage":"https://ramonguilherme.com.br"
+      }
+   ],
+   "support": {
+      "issues":"https://github.com/flarum-lang/brazilian/issues",
+      "source":"https://github.com/flarum-lang/brazilian",
+      "forum": "https://discuss.flarum.org/d/18543"
+   },
+   "require": {
+      "flarum/core":"^1.0.0"
+   },
+   "extra": {
+      "flarum-extension": {
+         "title":"Brazilian Portuguese",
+         "icon":{
+            "image":"icon.svg",
+            "backgroundColor":"#55a667",
+            "backgroundSize":"cover",
+            "backgroundPosition":"center"
+         }
+      },
+      "flarum-locale": {
+         "code":"pt-BR",
+         "title":"Português Brasileiro"
+      }
+   }
+}

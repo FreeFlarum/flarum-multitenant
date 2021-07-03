@@ -13,7 +13,6 @@ use Flarum\Api\Client;
 use Flarum\Frontend\Document;
 use Flarum\Http\Exception\RouteNotFoundException;
 use Flarum\Http\UrlGenerator;
-use Flarum\User\User;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -50,18 +49,20 @@ class Discussion
     public function __invoke(Document $document, Request $request)
     {
         $queryParams = $request->getQueryParams();
-        $page = max(1, intval(Arr::get($queryParams, 'page')));
+        $id = Arr::get($queryParams, 'id');
+        $near = intval(Arr::get($queryParams, 'near'));
+        $page = max(1, intval(Arr::get($queryParams, 'page')), 1 + intdiv($near, 20));
 
         $params = [
-            'id' => (int) Arr::get($queryParams, 'id'),
+            'id' => $id,
             'page' => [
-                'near' => Arr::get($queryParams, 'near'),
+                'near' => $near,
                 'offset' => ($page - 1) * 20,
                 'limit' => 20
             ]
         ];
 
-        $apiDocument = $this->getApiDocument($request->getAttribute('actor'), $params);
+        $apiDocument = $this->getApiDocument($request, $id, $params);
 
         $getResource = function ($link) use ($apiDocument) {
             return Arr::first($apiDocument->included, function ($value) use ($link) {
@@ -72,10 +73,16 @@ class Discussion
         $url = function ($newQueryParams) use ($queryParams, $apiDocument) {
             $newQueryParams = array_merge($queryParams, $newQueryParams);
             unset($newQueryParams['id']);
+            unset($newQueryParams['near']);
+
+            if (Arr::get($newQueryParams, 'page') == 1) {
+                unset($newQueryParams['page']);
+            }
+
             $queryString = http_build_query($newQueryParams);
 
             return $this->url->to('forum')->route('discussion', ['id' => $apiDocument->data->attributes->slug]).
-            ($queryString ? '?'.$queryString : '');
+                ($queryString ? '?'.$queryString : '');
         };
 
         $posts = [];
@@ -86,9 +93,12 @@ class Discussion
             }
         }
 
+        $hasPrevPage = $page > 1;
+        $hasNextPage = $page < 1 + intval($apiDocument->data->attributes->commentCount / 20);
+
         $document->title = $apiDocument->data->attributes->title;
-        $document->canonicalUrl = $url([]);
-        $document->content = $this->view->make('flarum.forum::frontend.content.discussion', compact('apiDocument', 'page', 'getResource', 'posts', 'url'));
+        $document->canonicalUrl = $url(['page' => $page]);
+        $document->content = $this->view->make('flarum.forum::frontend.content.discussion', compact('apiDocument', 'page', 'hasPrevPage', 'hasNextPage', 'getResource', 'posts', 'url'));
         $document->payload['apiDocument'] = $apiDocument;
 
         return $document;
@@ -97,15 +107,15 @@ class Discussion
     /**
      * Get the result of an API request to show a discussion.
      *
-     * @param User $actor
-     * @param array $params
-     * @return object
      * @throws RouteNotFoundException
      */
-    protected function getApiDocument(User $actor, array $params)
+    protected function getApiDocument(Request $request, string $id, array $params)
     {
         $params['bySlug'] = true;
-        $response = $this->api->send('Flarum\Api\Controller\ShowDiscussionController', $actor, $params);
+        $response = $this->api
+            ->withParentRequest($request)
+            ->withQueryParams($params)
+            ->get("/discussions/$id");
         $statusCode = $response->getStatusCode();
 
         if ($statusCode === 404) {

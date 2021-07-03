@@ -1,18 +1,18 @@
-import { extend } from 'flarum/extend';
-import Model from "flarum/Model";
-import User from "flarum/models/User";
-import UserControls from 'flarum/utils/UserControls';
+import { extend } from 'flarum/common/extend';
+import Model from 'flarum/common/Model';
+import User from 'flarum/common/models/User';
+import UserControls from 'flarum/forum/utils/UserControls';
 import PrivateDiscussionComposer from './../pages/discussions/PrivateDiscussionComposer';
-import Button from 'flarum/components/Button';
-import ItemList from 'flarum/utils/ItemList';
-import UserPage from 'flarum/components/UserPage';
-import LinkButton from 'flarum/components/LinkButton';
+import Button from 'flarum/common/components/Button';
+import ItemList from 'flarum/common/utils/ItemList';
+import UserPage from 'flarum/forum/components/UserPage';
+import LinkButton from 'flarum/common/components/LinkButton';
 
 export default (app) => {
     attributes();
     message(app);
     sharedMessageHistory(app);
-}
+};
 
 function message(app) {
     extend(UserControls, 'userControls', function (items, user) {
@@ -24,31 +24,34 @@ function message(app) {
         ) {
             items.add(
                 'private-discussion',
-                Button.component({
-                    icon: app.forum.data.attributes['byobu.icon-badge'],
-                    onclick: (e) => {
-                        e.preventDefault();
+                Button.component(
+                    {
+                        icon: app.forum.data.attributes['byobu.icon-badge'],
+                        onclick: (e) => {
+                            e.preventDefault();
 
-                        return new Promise((resolve) => {
-                            let recipients = new ItemList();
-                            recipients.add('users:' + app.session.user.id(), app.session.user);
-                            recipients.add('users:' + user.id(), user);
+                            return new Promise((resolve) => {
+                                let recipients = new ItemList();
+                                recipients.add('users:' + app.session.user.id(), app.session.user);
+                                recipients.add('users:' + user.id(), user);
 
-                            PrivateDiscussionComposer.prototype.recipients = recipients;
+                                PrivateDiscussionComposer.prototype.recipients = recipients;
 
-                            app.composer.load(PrivateDiscussionComposer, {
-                                user: app.session.user,
-                                recipients: recipients,
-                                recipientUsers: recipients,
-                                titlePlaceholder: app.translator.trans('fof-byobu.forum.composer_private_discussion.title_placeholder'),
-                                submitLabel: app.translator.trans('fof-byobu.forum.composer_private_discussion.submit_button'),
+                                app.composer.load(PrivateDiscussionComposer, {
+                                    user: app.session.user,
+                                    recipients: recipients,
+                                    recipientUsers: recipients,
+                                    titlePlaceholder: app.translator.trans('fof-byobu.forum.composer_private_discussion.title_placeholder'),
+                                    submitLabel: app.translator.trans('fof-byobu.forum.composer_private_discussion.submit_button'),
+                                });
+                                app.composer.show();
+
+                                return resolve(app.composer);
                             });
-                            app.composer.show();
-
-                            return resolve(app.composer);
-                        })
+                        },
                     },
-                }, app.translator.trans('fof-byobu.forum.buttons.send_pd', { username: user.username() }))
+                    app.translator.trans('fof-byobu.forum.buttons.send_pd', { username: user.username() })
+                )
             );
         }
 
@@ -67,10 +70,13 @@ function sharedMessageHistory(app) {
 
         items.add(
             'byobu',
-            LinkButton.component({
-                href,
-                icon: app.forum.data.attributes['byobu.icon-badge'],
-            }, app.translator.trans('fof-byobu.forum.user.byobu_link')),
+            LinkButton.component(
+                {
+                    href,
+                    icon: app.forum.data.attributes['byobu.icon-badge'],
+                },
+                app.translator.trans('fof-byobu.forum.user.byobu_link')
+            ),
             85
         );
     });

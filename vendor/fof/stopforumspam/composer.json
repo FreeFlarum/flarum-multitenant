@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^0.1.0-beta.16",
+        "flarum/core": "^1.0.0",
         "guzzlehttp/guzzle": "^7.2"
     },
     "replace": {
@@ -28,13 +28,8 @@
     },
     "authors": [
         {
-            "name": "Charlie K",
-            "email": "charlie.k@redevs.org",
-            "role": "Developer"
-        },
-        {
-            "name": "David Sevilla Martin",
-            "email": "me@datitisev.me",
+            "name": "FoF Team",
+            "email": "team@friendsofflarum.org",
             "role": "Developer"
         }
     ],
@@ -51,7 +46,10 @@
                 "name": "fas fa-stop",
                 "backgroundColor": "#e74c3c",
                 "color": "#fff"
-            }
+            },
+            "optional-dependencies": [
+                "fof/spamblock"
+            ]
         },
         "flagrow": {
             "discuss": "https://discuss.flarum.org/d/17846"

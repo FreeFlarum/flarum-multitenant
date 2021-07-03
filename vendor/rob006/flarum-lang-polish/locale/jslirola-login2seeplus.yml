@@ -8,12 +8,7 @@ jslirola-login2seeplus:
     hide: Ukryj
     image: Obrazki
     link: Linki
-    php:
-      help: '*NIE ZALECANE* Wykonuje przetwarzanie po stronie backendu, aby obsługiwać przestarzałe przeglądarki. Funkcje <code>mb_substr()</code> oraz <code>mb_strlen()</code> muszą być dostępne.'
-      label: 'Użyj PHP'
-      title: 'Tryb legacy'
     post:
-      help: 'Wpisz <em>-1</em> aby pokazać całą.'
       title: 'Ukryj treść przekraczającą tę długość (wpisz <em>-1</em>, aby pokazać całość)'
     title: Login2SeePlus
   forum:

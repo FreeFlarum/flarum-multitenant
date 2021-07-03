@@ -8,11 +8,15 @@ import ItemList from './utils/ItemList';
 import mixin from './utils/mixin';
 import humanTime from './utils/humanTime';
 import computed from './utils/computed';
+import insertText from './utils/insertText';
+import styleSelectedText from './utils/styleSelectedText';
 import Drawer from './utils/Drawer';
 import anchorScroll from './utils/anchorScroll';
 import RequestError from './utils/RequestError';
 import abbreviateNumber from './utils/abbreviateNumber';
+import escapeRegExp from './utils/escapeRegExp';
 import * as string from './utils/string';
+import * as ThrottleDebounce from './utils/throttleDebounce';
 import Stream from './utils/Stream';
 import SubtreeRetainer from './utils/SubtreeRetainer';
 import setRouteWithForcedRefresh from './utils/setRouteWithForcedRefresh';
@@ -59,6 +63,8 @@ import Modal from './components/Modal';
 import GroupBadge from './components/GroupBadge';
 import TextEditor from './components/TextEditor';
 import TextEditorButton from './components/TextEditorButton';
+import EditUserModal from './components/EditUserModal';
+import Tooltip from './components/Tooltip';
 import Model from './Model';
 import Application from './Application';
 import fullTime from './helpers/fullTime';
@@ -72,6 +78,7 @@ import userOnline from './helpers/userOnline';
 import listItems from './helpers/listItems';
 import Fragment from './Fragment';
 import DefaultResolver from './resolvers/DefaultResolver';
+import PaginatedListState from './states/PaginatedListState';
 
 export default {
   extend: extend,
@@ -84,12 +91,15 @@ export default {
   'utils/mixin': mixin,
   'utils/humanTime': humanTime,
   'utils/computed': computed,
+  'utils/insertText': insertText,
+  'utils/styleSelectedText': styleSelectedText,
   'utils/Drawer': Drawer,
   'utils/anchorScroll': anchorScroll,
   'utils/RequestError': RequestError,
   'utils/abbreviateNumber': abbreviateNumber,
   'utils/string': string,
   'utils/SubtreeRetainer': SubtreeRetainer,
+  'utils/escapeRegExp': escapeRegExp,
   'utils/extract': extract,
   'utils/ScrollListener': ScrollListener,
   'utils/stringToColor': stringToColor,
@@ -103,6 +113,7 @@ export default {
   'utils/formatNumber': formatNumber,
   'utils/mapRoutes': mapRoutes,
   'utils/withAttr': withAttr,
+  'utils/throttleDebounce': ThrottleDebounce,
   'models/Notification': Notification,
   'models/User': User,
   'models/Post': Post,
@@ -136,6 +147,8 @@ export default {
   'components/GroupBadge': GroupBadge,
   'components/TextEditor': TextEditor,
   'components/TextEditorButton': TextEditorButton,
+  'components/Tooltip': Tooltip,
+  'components/EditUserModal': EditUserModal,
   Model: Model,
   Application: Application,
   'helpers/fullTime': fullTime,
@@ -148,4 +161,5 @@ export default {
   'helpers/userOnline': userOnline,
   'helpers/listItems': listItems,
   'resolvers/DefaultResolver': DefaultResolver,
+  'states/PaginatedListState': PaginatedListState,
 };

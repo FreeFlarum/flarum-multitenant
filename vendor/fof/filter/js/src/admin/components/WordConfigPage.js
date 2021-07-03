@@ -9,14 +9,13 @@
  *
  */
 
-import ExtensionPage from 'flarum/components/ExtensionPage';
-import Button from 'flarum/components/Button';
-import saveSettings from 'flarum/utils/saveSettings';
-import Switch from 'flarum/components/Switch';
-import Alert from 'flarum/components/Alert';
-import FieldSet from 'flarum/components/FieldSet';
-import Stream from 'flarum/utils/Stream';
-import withAttr from 'flarum/utils/withAttr';
+import ExtensionPage from 'flarum/admin/components/ExtensionPage';
+import Button from 'flarum/common/components/Button';
+import saveSettings from 'flarum/admin/utils/saveSettings';
+import Switch from 'flarum/common/components/Switch';
+import FieldSet from 'flarum/common/components/FieldSet';
+import Stream from 'flarum/common/utils/Stream';
+import withAttr from 'flarum/common/utils/withAttr';
 
 export default class WordConfigPage extends ExtensionPage {
     oninit(vnode) {
@@ -117,7 +116,7 @@ export default class WordConfigPage extends ExtensionPage {
                                 className: 'Button Button--primary',
                                 loading: this.loading,
                             },
-                            app.translator.trans('core.admin.email.submit_button')
+                            app.translator.trans('core.admin.settings.submit_button')
                         )}
                     </form>
                 </div>
@@ -143,7 +142,7 @@ export default class WordConfigPage extends ExtensionPage {
         saveSettings(settings)
             .then(() => {
                 // on success, show popup
-                app.alerts.show({ type: 'success' }, app.translator.trans('core.admin.basics.saved_message'));
+                app.alerts.show({ type: 'success' }, app.translator.trans('core.admin.settings.saved_message'));
             })
             .catch(() => {})
             .then(() => {

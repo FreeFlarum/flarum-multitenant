@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "flarum-webpack-config": "^0.1.0-beta.10",
-    "intersection-observer": "^0.7.0",
+    "intersection-observer": "^0.12.0",
     "object.assign": "^4.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
@@ -12,10 +12,10 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "lint": "prettier --single-quote --trailing-comma es5 --print-width 150 --tab-width 4 --write src"
+    "format": "prettier --single-quote --trailing-comma es5 --print-width 150 --tab-width 4 --write src"
   },
   "devDependencies": {
-    "flarum": "0.1.0-beta.16",
-    "prettier": "^2.1.2"
+    "flarum": "github:flarum/types#v1",
+    "prettier": "^2.3.0"
   }
 }

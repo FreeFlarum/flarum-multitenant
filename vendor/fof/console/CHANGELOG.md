@@ -1,5 +1,0 @@
-- 0.2
-    - Upgrades to illuminate/console.
-    - Adds scheduling ability.
-- 0.1
-    - Initial version using symfony/console.

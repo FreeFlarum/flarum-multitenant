@@ -1,0 +1,39 @@
+{
+    "name": "flarum-lang/german",
+    "type": "flarum-extension",
+    "description": "German language pack for Flarum.",
+    "homepage": "https://github.com/flarum-lang",
+    "keywords": ["locale"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/flarum-lang/german/issues",
+        "source": "https://github.com/flarum-lang/german",
+        "forum": "https://discuss.flarum.org/d/2648"
+    },
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Fabian Prieto Wunderlich",
+            "email": "prieto@wunderlich.pw",
+            "role": "Translator"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "German",
+            "category": "language",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#ffffff",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "de",
+            "title": "Deutsch"
+        }
+    }
+}

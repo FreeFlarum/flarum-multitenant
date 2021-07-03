@@ -13,9 +13,8 @@
 
 namespace JSLirola\Login2SeePlus;
 
-use Flarum\Api\Serializer\PostSerializer;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class FormatContent
 {

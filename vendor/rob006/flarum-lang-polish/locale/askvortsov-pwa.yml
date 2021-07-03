@@ -12,12 +12,11 @@ askvortsov-pwa:
         description_text: 'Możesz ustawić opis w podstawowych ustawieniach forum w panelu admina.'
         heading: 'O forum'
         long_name_text: 'Nazwa aplikacji wyświetlana użytkownikowi.'
-        name_text: 'Wpisz pełną nazwę, która będzie używana przez PWA.'
         short_name_text: 'Nazwa aplikacji wyświetlana użytkownikowi, jeśli nie ma wystarczająco miejsca na wyświetlenie pełnej nazwy.'
       colors:
         background_color_text: 'Jest używany jako kolor wypełnienia na ekranie powitalnym, który jest wyświetlany podczas ładowania PWA. Nie jest wykorzystywany gdy aplikacja zostanie załadowana.'
         heading: Kolory
-        theme_color_text: 'Ten kolor jest wykorzystywany w niektórych sytuacjach podczas wyświetlania Twojej aplikacji. Na przykład przełącznik aplikacji w Androidzie użyje go jako kolor wokół strony. Możesz go ustawić, zmieniając kolor wiodący w ustawieniach wyglądu forum w panelu admina.'
+        theme_color_text: 'Ten kolor jest wykorzystywany w niektórych sytuacjach podczas wyświetlania Twojej aplikacji. Na przykład przełącznik aplikacji w Androidzie użyje go jako kolor wokół strony.'
       heading: 'Konfiguracja Progressive Web App'
       logo_heading: 'Loga i ikony'
       logo_size_text: 'Wyślij logo, które zostanie przeskalowane do rozmiaru {size} na {size} pikseli.'
@@ -25,17 +24,21 @@ askvortsov-pwa:
       maintenance:
         debug_label: 'Włączyć tryb debug? Informacje o powiadomieniach będą zapisywane w `storage/logs`.'
         heading: Konserwacja
+      other:
+        force_portrait_text: 'Wymusić pionową orientację ekranu?'
+        heading: Inne
       refreshed_message: 'Konfiguracja PWA została pomyślnie odświeżona.'
       status_check_heading: Status
       submit_button: 'Zapisz ustawienia'
       text: 'Skonfiguruj swoje Flarum, aby działało jako Progressive Web App! Zauważ, że nie umieści to Twojej aplikacji w App Store. Zamiast tego przeglądarka udostępni opcję "Dodaj do ekranu głównego". Rozszerzenie zapewnia podstawowe sprawdzenie konfiguracji, ale najlepszym sposobem na przetestowanie go jest instalacja i sprawdzenie czy działa (instrukcję instalacji Progressive Web App można znaleźć w Google). Miej na uwadze, że popup "zainstaluj jako PWA" jest kontrolowany przez przeglądarkę i nie może być wywołany przez developera/administratora/aplikację. Zalecane jest udostępnienie instrukcji jak zainstalować PWA na Twojej stronie.'
     status:
       config_no_https: 'URL w pliku <code>config.php</code> nie korzysta z HTTPS. HTTPS jest wymagany do działania Progressive Web App.'
+      key_gen_failed: 'Nie udało się wygenerować kluczy potrzebnych do działania powiadomień push. Pełna treść błędu: {error}'
       no_logo: 'Aby Twoja aplikacja działała, musisz wysłać co najmniej jedno logo o minimalnych wymiarach 196px na 196px.'
       no_name: 'Aby Twoja aplikacja działała, musisz podać jej pełną nazwę.'
-      possible_https_disabled: 'Twoja strona może nie korzystać z HTTPS. Jeśli korzysta z HTTPS, zignoruj to ostrzeżenie. Jeśli nie, miej na uwadze, że HTTPS jest wymagany do działania Progressive Web App.'
-      push_needs_gmp_and_web_push: 'Rozszerzenie <code>gmp</code> oraz biblioteka <code>minishlink/web-push</code> (<code>composer require minishlink/web-push</code>) MUSZĄ być włączone, aby powiadomienia push działały.'
+      possible_https_disabled: 'Twoja strona może nie korzystać z HTTPS. Wyczyszczenie cache (przycisk "Narzędzia" w kokpicie panelu admina) może pomóc. Jeśli Twoja strona korzysta z HTTPS, zignoruj to ostrzeżenie. Jeśli nie, miej na uwadze, że HTTPS jest wymagany do działania Progressive Web App.'
       success: 'Nie wyryto żadnych potencjalnych problemów!'
+      suggest_gmp: 'Wygląda na to, że rozszerzenie gmp dla PHP nie jest włączone na Twoim serwerze. Nie jest ono wymagane, ale może poprawić wydajność i jego włączenie jest zalecane. Niektóre hostingi współdzielone nie wspierają tego rozszerzenia.'
   forum:
     alerts:
       optin: 'Masz włączone powiadomienia push, ale nie skonfigurowałeś jeszcze tego urządzenia.'
@@ -57,3 +60,7 @@ askvortsov-pwa:
         no_browser_support_button: 'Dowiedz się więcej'
     user_controls:
       share_button: Udostępnij
+  views:
+    offline:
+      header: 'Błąd połączenia sieciowego'
+      text: 'Ta aplikacja wymaga połączenia sieciowego i nie może być używana w trybie offline. Sprawdź swoje połączenie.'

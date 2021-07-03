@@ -11,7 +11,6 @@ clarkwinkelmann-status:
     settings:
       enable-text: 'Pozwól na tekstowy status'
       only-countries: 'Tylko flagi krajów'
-      title: 'Ustawienia statusów'
   forum:
     menu:
       set-status: 'Ustaw status'

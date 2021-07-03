@@ -85,7 +85,6 @@ fof-webhooks:
         discord: Discord
         microsoft-teams: 'Microsoft Teams'
         slack: Slack
-      title: Webhooki
   ref:
     deleted: Usunięto
     hidden: Ukryto

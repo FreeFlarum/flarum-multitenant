@@ -3,10 +3,10 @@
 /*
  * This file is part of fof/upload.
  *
- * Copyright (c) 2020 - 2021 FriendsOfFlarum.
- * Copyright (c) 2016 - 2019 Flagrow
+ * Copyright (c) FriendsOfFlarum.
+ * Copyright (c) Flagrow.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -15,6 +15,7 @@ namespace FoF\Upload\Helpers;
 use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Upload\Adapters\Manager;
 use FoF\Upload\Contracts\Template;
+use FoF\Upload\File;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
@@ -137,5 +138,18 @@ class Util
     public function getTemplate($template)
     {
         return Arr::get($this->renderTemplates, $template);
+    }
+
+    /**
+     * @param File $file
+     *
+     * @return string|null
+     */
+    public function getBbcodeForFile(File $file): ?string
+    {
+        /** @var Template */
+        $template = $this->getTemplate($file->tag);
+
+        return $template ? $template->preview($file) : null;
     }
 }

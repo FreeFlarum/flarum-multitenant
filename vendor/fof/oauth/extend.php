@@ -3,22 +3,19 @@
 /*
  * This file is part of fof/oauth.
  *
- * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 namespace FoF\OAuth;
 
-use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Extend;
-use Flarum\Foundation\Application;
 use Flarum\Frontend\Document;
 use FoF\Components\Extend\AddFofComponents;
 use FoF\Extend\Extend\ExtensionSettings;
-use Illuminate\Events\Dispatcher;
 
 return [
     new AddFofComponents(),
@@ -31,7 +28,7 @@ return [
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less')
         ->content(function (Document $document) {
-            $document->payload['fof-oauth'] = app('fof-oauth.providers.admin');
+            $document->payload['fof-oauth'] = resolve('fof-oauth.providers.admin');
         }),
 
     new Extend\Locales(__DIR__.'/resources/locale'),
@@ -43,16 +40,18 @@ return [
         ->addKey('fof-oauth.only_icons', false),
 
     (new Extend\Routes('forum'))
-        ->get('/auth/twitter', 'auth.twitter', Controllers\TwitterAuthController::class)
-        ->get('/auth/{provider}', 'fof-oauth', Controllers\AuthController::class),
+        ->get('/auth/twitter', 'auth.twitter', Controllers\TwitterAuthController::class),
 
-    (new Extend\Compat(function (Application $app, Dispatcher $events) {
-        $app->register(OAuthServiceProvider::class);
+    (new Extend\ServiceProvider())
+        ->register(OAuthServiceProvider::class),
 
-        $events->listen(Serializing::class, function (Serializing $event) {
-            if ($event->isSerializer(ForumSerializer::class) && $event->actor->isGuest()) {
-                $event->attributes['fof-oauth'] = app()->make('fof-oauth.providers.forum');
+    (new Extend\ApiSerializer(ForumSerializer::class))
+        ->attributes(function (ForumSerializer $serializer) {
+            $attributes = [];
+            if ($serializer->getActor()->isGuest()) {
+                $attributes['fof-oauth'] = resolve('fof-oauth.providers.forum');
             }
-        });
-    })),
+
+            return $attributes;
+        }),
 ];

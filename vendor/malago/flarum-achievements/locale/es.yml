@@ -4,12 +4,18 @@ malago-achievements:
     new_achievement_title: ¡Nuevo logro!
     new_achievement_name: Logro
     new_achievement_close: ¡Entendido!
+    list_heading: Logros
+    achievement_total_points: Total
+    your_achievements: Tus logros
+    other_achievements: Otros logros
+    hidden_achievements: Logros ocultos
   admin:
     achievement_modal:
       title: Crear logro
       name_label: Nombre
       name_placeholder: Nombre del logro
       active_label: Activo
+      hidden_label: Ocultar de la lista de logros
       description_label: Descripción
       description_placeholder: Descripción del logro
       variable_label: Variable
@@ -49,6 +55,17 @@ malago-achievements:
         years: Años registrado
         meanwords: Media de palabras
         tagposts: Mensajes en una etiqueta
+      tooltip:
+          posts: Mínimo número de mensajes (ej. 10) o un rango inclusivo (ej. 10,19)
+          likes: Mínimo número de me gustas dados (ej. 10) o un rango inclusivo (ej. 10,19)
+          selflikes: Mínimo número de me gustas recibidos (ej. 10) o un rango inclusivo (ej. 10,19)
+          discussions: Mínimo número de discusiones creadas (ej. 10) o un rango inclusivo (ej. 10,19)
+          edits: Mínimo número de mensajes editados (ej. 10) o un rango inclusivo (ej. 10,19)
+          contains: Palabra o palabras y número mínimo de mensajes que las contienen (ej. pollo,10) o un rango inclusivo (ej. pollo,10,19)
+          comments: Número mínimo de respuestas recibidas en una discusión (ej. 10) o un rango inclusivo (ej. 10,19)
+          years:  Número mínimo de años registrado (ej. 10) o un rango inclusivo (ej. 10,19)
+          meanwords: Palabra a buscar y número mínimo de veces que aparece de media (ej. pollo,10) o un rango inclusivo (ej. pollo,10,19)
+          tagposts: Slug de la etiqueta a buscar y número mínimo de mensajes en ella (ej. off-topic,10) o un rango inclusivo (ej. off-topic,10,19)
     achievements_page:
       list_heading: Logros
       create_achievement_button: Crear logro nuevo
@@ -64,3 +81,7 @@ malago-achievements:
         <li>Introduce the width and height of the icon.</li>
         <li>Optional: If the image has more than one achievement icon, you can select which row and column to show for the icon.</li>
       add_delete_users: Añadir/Borrar logros de usuarios
+      show: Mostrar lista de logros:
+    settings:
+      show-post-footer: Al pie de cada mensaje
+      show-user-card: En la tarjeta de usuario

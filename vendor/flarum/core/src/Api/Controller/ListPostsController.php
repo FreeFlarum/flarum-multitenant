@@ -10,6 +10,7 @@
 namespace Flarum\Api\Controller;
 
 use Flarum\Api\Serializer\PostSerializer;
+use Flarum\Http\RequestUtil;
 use Flarum\Http\UrlGenerator;
 use Flarum\Post\Filter\PostFilterer;
 use Flarum\Post\PostRepository;
@@ -74,16 +75,17 @@ class ListPostsController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $filters = $this->extractFilter($request);
         $sort = $this->extractSort($request);
+        $sortIsDefault = $this->sortIsDefault($request);
 
         $limit = $this->extractLimit($request);
         $offset = $this->extractOffset($request);
         $include = $this->extractInclude($request);
 
-        $results = $this->filterer->filter(new QueryCriteria($actor, $filters, $sort), $limit, $offset);
+        $results = $this->filterer->filter(new QueryCriteria($actor, $filters, $sort, $sortIsDefault), $limit, $offset);
 
         $document->addPaginationLinks(
             $this->url->to('api')->route('posts.index'),
@@ -93,7 +95,22 @@ class ListPostsController extends AbstractListController
             $results->areMoreResults() ? null : 0
         );
 
-        return $results->getResults()->load($include);
+        // Eager load discussion for use in the policies,
+        // eager loading does not affect the JSON response,
+        // the response only includes relations included in the request.
+        if (! in_array('discussion', $include)) {
+            $include[] = 'discussion';
+        }
+
+        if (in_array('user', $include)) {
+            $include[] = 'user.groups';
+        }
+
+        $results = $results->getResults();
+
+        $this->loadRelations($results, $include);
+
+        return $results;
     }
 
     /**
@@ -101,7 +118,7 @@ class ListPostsController extends AbstractListController
      */
     protected function extractOffset(ServerRequestInterface $request)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
         $queryParams = $request->getQueryParams();
         $sort = $this->extractSort($request);
         $limit = $this->extractLimit($request);

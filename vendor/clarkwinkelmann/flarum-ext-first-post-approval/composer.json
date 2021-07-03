@@ -2,13 +2,14 @@
     "name": "clarkwinkelmann/flarum-ext-first-post-approval",
     "description": "Hold posts and discussions from new users for approval",
     "keywords": [
-        "flarum"
+        "flarum",
+        "approval"
     ],
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/approval": "^0.1.0-beta.14",
-        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.17"
+        "flarum/approval": "^1.0",
+        "flarum/core": "^1.0"
     },
     "authors": [
         {
@@ -44,7 +45,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "beta",
-    "prefer-stable": true
+    }
 }

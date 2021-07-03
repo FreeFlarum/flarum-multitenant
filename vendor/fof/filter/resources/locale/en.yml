@@ -1,7 +1,7 @@
 fof-filter:
     forum:
         flagger_name: Auto Moderator
-        flaged_text: Contained blocked strings
+        flag_message: Contained blocked strings
     admin:
         title: Filter
         help: Input text or words to filter, separated by comma + space. If the content of a user’s post contains a string you want to filter, it will be flagged for approval. Resistant against 133t.

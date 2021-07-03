@@ -9,7 +9,6 @@ clarkwinkelmann-see-past-first-post:
     settings:
       hide-comment-count: 'Ukryj liczbę odpowiedzi na liście dyskusji'
       hide-last-post: 'Ukryj autora i datę ostatniej odpowiedzi na liście dyskusji'
-      title: 'Ustawienia dostępu do odpowiedzi'
   forum:
     cant-see: 'Nie masz uprawnień, aby zobaczyć odpowiedzi'
     login-to-see: 'Zaloguj się, aby zobaczyć odpowiedzi'

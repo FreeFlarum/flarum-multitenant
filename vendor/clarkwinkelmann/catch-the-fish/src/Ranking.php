@@ -4,6 +4,7 @@ namespace ClarkWinkelmann\CatchTheFish;
 
 use Flarum\Database\AbstractModel;
 use Flarum\User\User;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
@@ -30,12 +31,12 @@ class Ranking extends AbstractModel
 
     public $timestamps = true;
 
-    public function round()
+    public function round(): BelongsTo
     {
         return $this->belongsTo(Round::class);
     }
 
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

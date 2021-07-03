@@ -15,8 +15,9 @@ import slidable from '../utils/slidable';
 import extractText from '../../common/utils/extractText';
 import classList from '../../common/utils/classList';
 import DiscussionPage from './DiscussionPage';
+import escapeRegExp from '../../common/utils/escapeRegExp';
+import Tooltip from '../../common/components/Tooltip';
 
-import { escapeRegExp } from 'lodash-es';
 /**
  * The `DiscussionListItem` component shows a single discussion in the
  * discussion list.
@@ -87,6 +88,7 @@ export default class DiscussionListItem extends Component {
                 icon: 'fas fa-ellipsis-v',
                 className: 'DiscussionListItem-controls',
                 buttonClassName: 'Button Button--icon Button--flat Slidable-underneath Slidable-underneath--right',
+                accessibleToggleLabel: app.translator.trans('core.forum.discussion_controls.toggle_dropdown_accessible_label'),
               },
               controls
             )
@@ -100,18 +102,14 @@ export default class DiscussionListItem extends Component {
         </span>
 
         <div className={'DiscussionListItem-content Slidable-content' + (isUnread ? ' unread' : '') + (isRead ? ' read' : '')}>
-          <Link
-            href={user ? app.route.user(user) : '#'}
-            className="DiscussionListItem-author"
-            title={extractText(
-              app.translator.trans('core.forum.discussion_list.started_text', { user: user, ago: humanTime(discussion.createdAt()) })
-            )}
-            oncreate={function (vnode) {
-              $(vnode.dom).tooltip({ placement: 'right' });
-            }}
+          <Tooltip
+            text={app.translator.trans('core.forum.discussion_list.started_text', { user, ago: humanTime(discussion.createdAt()) })}
+            position="right"
           >
-            {avatar(user, { title: '' })}
-          </Link>
+            <Link className="DiscussionListItem-author" href={user ? app.route.user(user) : '#'}>
+              {avatar(user, { title: '' })}
+            </Link>
+          </Tooltip>
 
           <ul className="DiscussionListItem-badges badges">{listItems(discussion.badges().toArray())}</ul>
 

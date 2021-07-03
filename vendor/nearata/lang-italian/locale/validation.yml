@@ -1,4 +1,4 @@
-# https://github.com/caouecs/Laravel-lang/blob/master/src/it/validation.php
+# https://github.com/Laravel-Lang/lang/blob/master/locales/it/validation.php
 
 validation:
   accepted: ":attribute deve essere accettato."
@@ -71,6 +71,7 @@ validation:
     file: ":attribute deve essere almeno di :min kilobytes."
     string: ":attribute deve contenere almeno :min caratteri."
     array: ":attribute deve avere almeno :min elementi."
+  multiple_of: ":attribute deve essere un multiplo di :value"
   not_in: "Il valore selezionato per :attribute non è valido."
   not_regex: "Il formato di :attribute non è valido."
   numeric: ":attribute deve essere un numero."
@@ -84,6 +85,9 @@ validation:
   required_with_all: "Il campo :attribute è richiesto quando :values sono presenti."
   required_without: "Il campo :attribute è richiesto quando :values non è presente."
   required_without_all: "Il campo :attribute è richiesto quando nessuno di :values è presente."
+  prohibited: ":attribute non consentito."
+  prohibited_if: ":attribute non consentito quando :other è :value."
+  prohibited_unless: ":attribute non consentito a meno che :other sia contenuto in :values."
   same: ":attribute e :other devono coincidere."
   size:
     numeric: ":attribute deve essere :size."

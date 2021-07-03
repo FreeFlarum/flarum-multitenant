@@ -1,7 +1,0 @@
-# https://github.com/FriendsOfFlarum/disposable-emails/blob/master/locale/en.yml
-# 75341c7
-# Sat, 25 Jan 2020 22:40:58 +0800
-
-fof-email-checker:
-  error:
-    disposable_email_message: 一度限りのメールボックス登録なし

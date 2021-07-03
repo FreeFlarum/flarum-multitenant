@@ -20,7 +20,7 @@ return [
             /**
              * @var SettingsRepositoryInterface $settings
              */
-            $settings = app(SettingsRepositoryInterface::class);
+            $settings = resolve(SettingsRepositoryInterface::class);
 
             // We are using the core API endpoint for creating users,
             // which is accessible to anyone when signup is open, and accessible only to admins when signup is closed

@@ -37,5 +37,11 @@ app.initializers.add('fof-username-request', (app) => {
                 permission: 'user.requestNickname',
             },
             'start'
-        );
+        )
+        .registerSetting(function(){
+            return [
+                <h3>Important</h3>,
+                <p>In order for permissions to be honored correctly when using <code>flarum/nicknames</code>, be sure to set <code>Edit Own Nickname</code> to <code>admin</code> in that extension, and use the permissions provided by this extension instead.</p>
+            ]
+        });
 });

@@ -31,6 +31,8 @@ class ApiSerializer implements ExtenderInterface
     }
 
     /**
+     * Add a single attribute to this serializer.
+     *
      * @param string $name: The name of the attribute.
      * @param callable|string $callback
      *
@@ -44,7 +46,7 @@ class ApiSerializer implements ExtenderInterface
      *
      * @return self
      */
-    public function attribute(string $name, $callback)
+    public function attribute(string $name, $callback): self
     {
         $this->attribute[$name] = $callback;
 
@@ -67,33 +69,11 @@ class ApiSerializer implements ExtenderInterface
      *
      * @return self
      */
-    public function attributes($callback)
+    public function attributes($callback): self
     {
         $this->attributes[] = $callback;
 
         return $this;
-    }
-
-    /**
-     * Add to or modify the attributes array of this serializer.
-     *
-     * @param callable|string $callback
-     *
-     * The callback can be a closure or an invokable class, and should accept:
-     * - $serializer: An instance of this serializer.
-     * - $model: An instance of the model being serialized.
-     * - $attributes: An array of existing attributes.
-     *
-     * The callable should return:
-     * - An array of additional attributes to merge with the existing array.
-     *   Or a modified $attributes array.
-     *
-     * @deprecated in beta 16, removed in beta 17
-     * @return self
-     */
-    public function mutate($callback)
-    {
-        return $this->attributes($callback);
     }
 
     /**
@@ -106,7 +86,7 @@ class ApiSerializer implements ExtenderInterface
      *                                 This serializer should extend from \Flarum\Api\Serializer\AbstractSerializer.
      * @return self
      */
-    public function hasOne(string $name, string $serializerClass)
+    public function hasOne(string $name, string $serializerClass): self
     {
         return $this->relationship($name, function (AbstractSerializer $serializer, $model) use ($serializerClass, $name) {
             return $serializer->hasOne($model, $serializerClass, $name);
@@ -123,7 +103,7 @@ class ApiSerializer implements ExtenderInterface
      *                                 This serializer should extend from \Flarum\Api\Serializer\AbstractSerializer.
      * @return self
      */
-    public function hasMany(string $name, string $serializerClass)
+    public function hasMany(string $name, string $serializerClass): self
     {
         return $this->relationship($name, function (AbstractSerializer $serializer, $model) use ($serializerClass, $name) {
             return $serializer->hasMany($model, $serializerClass, $name);
@@ -146,7 +126,7 @@ class ApiSerializer implements ExtenderInterface
      *
      * @return self
      */
-    public function relationship(string $name, $callback)
+    public function relationship(string $name, $callback): self
     {
         $this->relationships[$this->serializerClass][$name] = $callback;
 

@@ -1,7 +1,7 @@
-import { extend } from 'flarum/extend';
-import UserControls from 'flarum/utils/UserControls';
-import CommentPost from 'flarum/components/CommentPost';
-import Button from 'flarum/components/Button';
+import { extend } from 'flarum/common/extend';
+import UserControls from 'flarum/forum/utils/UserControls';
+import CommentPost from 'flarum/forum/components/CommentPost';
+import Button from 'flarum/common/components/Button';
 
 export default function () {
     extend(CommentPost.prototype, 'elementAttrs', function (elementAttrs) {

@@ -26,7 +26,7 @@ Give the "view discussions" permission in a tag to groups of users who should be
 
 You can use the "view tag" permission to show a tag to (possibly) all users. This will not affect how discussions in the tag are shown.
 
-I highly recommend explaining the nature of help tags in the tag description. This was not included by default because of how many different possible use cases there are.
+Admins can designate certain discussions as "visible to all" (there's a button in the discussion controls). This will show the discussion to all users who can post in the discussions tags. You might want to use this together with the sticky extension.
 
 ### Links
 

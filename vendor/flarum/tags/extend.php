@@ -15,7 +15,7 @@ use Flarum\Discussion\Event\Saving;
 use Flarum\Discussion\Filter\DiscussionFilterer;
 use Flarum\Discussion\Search\DiscussionSearcher;
 use Flarum\Extend;
-use Flarum\Flags\Flag;
+use Flarum\Flags\Api\Controller\ListFlagsController;
 use Flarum\Tags\Access;
 use Flarum\Tags\Api\Controller;
 use Flarum\Tags\Api\Serializer\TagSerializer;
@@ -44,6 +44,7 @@ return [
         ->get('/tags', 'tags.index', Controller\ListTagsController::class)
         ->post('/tags', 'tags.create', Controller\CreateTagController::class)
         ->post('/tags/order', 'tags.order', Controller\OrderTagsController::class)
+        ->get('/tags/{slug}', 'tags.show', Controller\ShowTagController::class)
         ->patch('/tags/{id}', 'tags.update', Controller\UpdateTagController::class)
         ->delete('/tags/{id}', 'tags.delete', Controller\DeleteTagController::class),
 
@@ -62,17 +63,24 @@ return [
             return $serializer->getActor()->can('tag', $model);
         }),
 
+    (new Extend\ApiController(FlarumController\ListPostsController::class))
+        ->load('discussion.tags'),
+
+    (new Extend\ApiController(ListFlagsController::class))
+        ->load('post.discussion.tags'),
+
     (new Extend\ApiController(FlarumController\ListDiscussionsController::class))
-        ->addInclude(['tags', 'tags.state']),
+        ->addInclude(['tags', 'tags.state', 'tags.parent'])
+        ->load('tags'),
 
     (new Extend\ApiController(FlarumController\ShowDiscussionController::class))
-        ->addInclude(['tags', 'tags.state']),
+        ->addInclude(['tags', 'tags.state', 'tags.parent']),
 
     (new Extend\ApiController(FlarumController\CreateDiscussionController::class))
-        ->addInclude(['tags', 'tags.state']),
+        ->addInclude(['tags', 'tags.state', 'tags.parent']),
 
     (new Extend\ApiController(FlarumController\ShowForumController::class))
-        ->addInclude(['tags', 'tags.lastPostedDiscussion', 'tags.parent'])
+        ->addInclude(['tags', 'tags.parent'])
         ->prepareDataForSerialization(LoadForumTagsRelationship::class),
 
     (new Extend\Settings())
@@ -87,11 +95,7 @@ return [
         ->globalPolicy(Access\GlobalPolicy::class),
 
     (new Extend\ModelVisibility(Discussion::class))
-        ->scope(Access\ScopeDiscussionVisibility::class)
         ->scopeAll(Access\ScopeDiscussionVisibilityForAbility::class),
-
-    (new Extend\ModelVisibility(Flag::class))
-        ->scope(Access\ScopeFlagVisibility::class),
 
     (new Extend\ModelVisibility(Tag::class))
         ->scope(Access\ScopeTagVisibility::class),

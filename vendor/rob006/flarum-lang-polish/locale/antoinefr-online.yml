@@ -6,9 +6,8 @@ antoinefr-online:
   admin:
     settings:
       displaymax: 'Liczba wyświetlanych użytkowników'
-      title: Ustawienia
       titleoflist: 'Tytuł wyświetlany ponad listą'
   forum:
     andmore: 'i {more} więcej...'
-    online_users: '{more} użytkownik jest online|{more} użytkowników jest online'
+    online_users: '{more, plural, one {# użytkownik jest online} other {# użytkowników jest online}}'
     title: 'Kto jest online?'

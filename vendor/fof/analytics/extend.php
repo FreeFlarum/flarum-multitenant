@@ -5,17 +5,15 @@
  *
  * Copyright (c) FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 namespace FoF\Analytics;
 
 use Flarum\Extend;
-use FoF\Components\Extend\AddFofComponents;
 
 return [
-    (new AddFofComponents()),
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->content(Listeners\AddTrackingJs::class),

@@ -9,6 +9,9 @@
     ],
     "type": "flarum-extension",
     "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0"
+    },
     "authors": [
         {
             "name": "Clark Winkelmann",
@@ -20,9 +23,6 @@
         "issues": "https://github.com/migratetoflarum/canonical/issues",
         "source": "https://github.com/migratetoflarum/canonical",
         "forum": "https://discuss.flarum.org/d/19307"
-    },
-    "require": {
-        "flarum/core": "^0.1.0-beta.15"
     },
     "extra": {
         "flarum-extension": {

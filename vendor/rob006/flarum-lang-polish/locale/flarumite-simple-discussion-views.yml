@@ -11,6 +11,8 @@ flarumite-simple-discussion-views:
   admin:
     permissions:
       reset_views_label: 'Ustawianie liczby wyświetleń dyskusji'
+    settings:
+      ignore_crawlers: 'Ignoruj wizyty botów'
   forum:
     discussion_controls:
       resetviews_button: 'Ustaw liczbę wyświetleń'

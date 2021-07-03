@@ -31,7 +31,7 @@ v17development-flarum-blog:
       require_review_label: 'Wpisy na blogu wymagające zatwierdzenia'
       require_review_text: 'Po utworzeniu wpisu nie będzie on publicznie widoczny i będzie wymagał zatwierdzenia przez moderatora.'
       select_categories_button: 'Wybierz kategorie bloga'
-      selected_category_count: 'Wybrano {count} kategorię|Wybrano {count} kategorie|Wybrano {count} kategorii'
+      selected_category_count: '{count, plural, one {Wybrano {count} kategorię} few {Wybrano {count} kategorie} other {Wybrano {count} kategorii}}'
       show_tag_hierarchy_label: 'Pokaż hierarchię tagów'
       show_tag_hierarchy_text: 'Dodaje odstępy do kategorii podrzędnych oraz uwzględnia hierarchię dla listy kategorii.'
   forum:
@@ -57,6 +57,7 @@ v17development-flarum-blog:
       post_article: 'Opublikuj wpis'
       post_without_blog_info: 'Czy jesteś pewien, że chcesz opublikować ten wpis? Nie uzupełniłeś podsumowania lub obrazka wpisu.'
       select_category: 'Wybierz kategorię'
+      update_settings: 'Zaktualizuj ustawienia bloga'
       view: Podgląd
       write: Edytor
     forum_nav: 'Nawigacja forum'
@@ -83,7 +84,7 @@ v17development-flarum-blog:
       update_category: 'Edytuj kategorie'
     utils:
       redirect:
-        link: '<a>Kliknij tutaj</a> jeśli strona nie przekieruje Cię automatycznie'
+        link: '<a>Kliknij tutaj</a>, jeśli strona nie przekieruje Cię automatycznie'
         title: 'Przekierowuję Cię do wpisu na blogu...'
     validation:
       missing_id: 'Brakujące ID'

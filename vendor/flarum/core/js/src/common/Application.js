@@ -20,7 +20,6 @@ import Discussion from './models/Discussion';
 import Post from './models/Post';
 import Group from './models/Group';
 import Notification from './models/Notification';
-import { flattenDeep } from 'lodash-es';
 import PageState from './states/PageState';
 import ModalManagerState from './states/ModalManagerState';
 import AlertManagerState from './states/AlertManagerState';
@@ -159,9 +158,11 @@ export default class Application {
   title = '';
   titleCount = 0;
 
+  initialRoute;
+
   load(payload) {
     this.data = payload;
-    this.translator.locale = payload.locale;
+    this.translator.setLocale(payload.locale);
   }
 
   boot() {
@@ -174,13 +175,19 @@ export default class Application {
     this.session = new Session(this.store.getById('users', this.data.session.userId), this.data.session.csrfToken);
 
     this.mount();
+
+    this.initialRoute = window.location.href;
   }
 
+  // TODO: This entire system needs a do-over for v2
   bootExtensions(extensions) {
     Object.keys(extensions).forEach((name) => {
       const extension = extensions[name];
 
-      const extenders = flattenDeep(extension.extend);
+      // If an extension doesn't define extenders, there's nothing more to do here.
+      if (!extension.extend) return;
+
+      const extenders = extension.extend.flat(Infinity);
 
       for (const extender of extenders) {
         extender.extend(this, { name, exports: extension });
@@ -226,7 +233,8 @@ export default class Application {
    * @public
    */
   preloadedApiDocument() {
-    if (this.data.apiDocument) {
+    // If the URL has changed, the preloaded Api document is invalid.
+    if (this.data.apiDocument && window.location.href === this.initialRoute) {
       const results = this.store.pushPayload(this.data.apiDocument);
 
       this.data.apiDocument = null;

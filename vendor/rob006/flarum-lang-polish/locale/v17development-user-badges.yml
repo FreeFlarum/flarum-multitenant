@@ -4,6 +4,23 @@
 
 v17development-flarum-badges:
   admin:
+    auto_moderator:
+      action_drivers:
+        badge_id: 'ID odznaki'
+        give_badge: 'Przyznaj odznakę'
+        remove_badge: 'Odbierz odznakę'
+      badge_selector:
+        loading_badges: 'Ładowanie odznak'
+        placeholder: 'Wybierz odznakę'
+      metric_drivers:
+        badges_received: 'Przyznano odznaki'
+      not_installed:
+        content: 'To rozszerzenie oferuje większą funkcjonalność jeśli rozszerzenie <a>Auto Moderator</a> jest włączone. Użytkownicy mogą być wtedy automatycznie nagradzani odznakami bez udziału moderatorów lub administracji!'
+        dismiss: 'Nie pokazuj ponownie'
+        install: Zainstaluj
+        title: 'Automatycznie nagradzaj użytkowników odznakami'
+      requirement_drivers:
+        has_badge: 'Posiada odznakę'
     badge:
       description: 'Opis odznaki'
       icon: 'Ikona odznaki'
@@ -11,6 +28,8 @@ v17development-flarum-badges:
       visible: Widoczna
       visible_description: 'Jeśli odznaczysz tę opcję, odznaka nie będzie widoczna.'
     badge_category:
+      blockview: 'Układ blokowy'
+      blockview_description: 'Wyświetl odznaki w tej kategorii w postaci bloków na liście odznak. Jeśli wyłączone, odznaki będą wyświetlane w postaci tabeli.'
       description: 'Opis kategorii'
       enabled: Włączona
       enabled_description: 'Jeśli wyłączysz kategorię, wszystkie zawarte w niej odznaki zostaną ukryte, a kategoria nie będzie widoczna.'
@@ -27,6 +46,7 @@ v17development-flarum-badges:
     new_badge: 'Nowa odznaka'
     nothing_here_yet: 'Nie utworzono jeszcze żadnych odznak ani kategorii.'
     permissions:
+      badge_detail_users: 'Przeglądanie listy użytkowników z daną odznaką'
       give_badge: 'Przyznawanie odznak użytkownikom'
       take_badge: 'Odbieranie odznak użytkownikom'
     uncategorized: 'Bez kategorii'
@@ -37,14 +57,17 @@ v17development-flarum-badges:
     all_users: 'Zobacz wszystkich użytkowników'
     badge:
       badge: Odznaka
+      badge_details: 'Szczegóły odznaki'
       badges: Odznaki
       category: 'Kategoria odznaki'
       description: 'Opis odznaki'
-      earned_count: '<b>{count} użytkownik</b> uzyskał tę odznakę|<b>{count} użytkowników</b> uzyskało tę odznakę'
+      earned_by_count: '{count, plural, one {<b># użytkownik uzyskał</b>} other {<b># użytkowników uzyskało</b>}} tę odznakę'
+      earned_count: '{count, plural, one {<b>{count} użytkownik</b> uzyskał} other {<b>{count} użytkowników</b> uzyskało}} tę odznakę'
       earned_on: 'Odznakę przyznano'
       earning_reason: 'Powód przyznania odznaki'
       name: 'Nazwa odznaki'
       no_earning_reason: 'Nie podano powodu przyznania odznaki'
+      received_on: 'Uzyskano {date}'
       update_earning_reason: 'Edytuj powód przyznania odznaki'
     badge_information: 'Informacje o odznace'
     give_badge: 'Przyznaj odznakę'
@@ -52,6 +75,10 @@ v17development-flarum-badges:
       give_badge: 'Przyznaj odznakę'
       remove_badge: 'Odbierz odznakę użytkownikowi'
       remove_badge_confirm: 'Czy jesteś pewien, że chcesz odebrać tę odznakę temu użytkownikowi?'
+    no_received: 'Żaden użytkownik nie uzyskał jeszcze tej odznaki.'
+    notification:
+      settings: 'Uzyskałem nową odznakę'
+      title: 'Uzyskałeś nową odznakę'
     select_badge: 'Wybierz odznakę'
     uncategorized: '=> v17development-flarum-badges.admin.uncategorized'
     update_badge: 'Edytuj odznakę'

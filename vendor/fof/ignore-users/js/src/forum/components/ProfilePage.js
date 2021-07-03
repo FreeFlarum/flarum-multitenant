@@ -9,11 +9,11 @@
  *
  */
 
-import avatar from 'flarum/helpers/avatar';
-import Button from 'flarum/components/Button';
-import username from 'flarum/helpers/username';
-import UserPage from 'flarum/components/UserPage';
-import Stream from 'flarum/utils/Stream';
+import avatar from 'flarum/common/helpers/avatar';
+import Button from 'flarum/common/components/Button';
+import username from 'flarum/common/helpers/username';
+import UserPage from 'flarum/forum/components/UserPage';
+import Stream from 'flarum/common/utils/Stream';
 
 export default class ProfilePage extends UserPage {
     oninit(vdom) {

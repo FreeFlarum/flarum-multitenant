@@ -11,6 +11,7 @@ namespace Flarum\Api\Controller;
 
 use Flarum\Api\Serializer\NotificationSerializer;
 use Flarum\Discussion\Discussion;
+use Flarum\Http\RequestUtil;
 use Flarum\Http\UrlGenerator;
 use Flarum\Notification\NotificationRepository;
 use Psr\Http\Message\ServerRequestInterface;
@@ -62,7 +63,7 @@ class ListNotificationsController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $actor->assertRegistered();
 
@@ -76,9 +77,11 @@ class ListNotificationsController extends AbstractListController
             $include[] = 'subject';
         }
 
-        $notifications = $this->notifications->findByUser($actor, $limit + 1, $offset)
-            ->load(array_diff($include, ['subject.discussion']))
-            ->all();
+        $notifications = $this->notifications->findByUser($actor, $limit + 1, $offset);
+
+        $this->loadRelations($notifications, array_diff($include, ['subject.discussion']));
+
+        $notifications = $notifications->all();
 
         $areMoreResults = false;
 

@@ -6,7 +6,7 @@ use ClarkWinkelmann\CatchTheFish\Repositories\RoundRepository;
 use ClarkWinkelmann\CatchTheFish\Round;
 use ClarkWinkelmann\CatchTheFish\Serializers\RoundSerializer;
 use Flarum\Api\Controller\AbstractListController;
-use Flarum\User\Exception\PermissionDeniedException;
+use Flarum\Http\RequestUtil;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 
@@ -24,15 +24,9 @@ class RoundIndexController extends AbstractListController
         $this->rounds = $rounds;
     }
 
-    /**
-     * @param ServerRequestInterface $request
-     * @param Document $document
-     * @return mixed
-     * @throws PermissionDeniedException
-     */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $request->getAttribute('actor')->assertCan('list', Round::class);
+        RequestUtil::getActor($request)->assertCan('list', Round::class);
 
         return $this->rounds->all();
     }

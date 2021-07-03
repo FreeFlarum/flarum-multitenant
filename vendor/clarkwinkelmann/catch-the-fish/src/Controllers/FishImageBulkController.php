@@ -2,11 +2,11 @@
 
 namespace ClarkWinkelmann\CatchTheFish\Controllers;
 
-use ClarkWinkelmann\CatchTheFish\Fish;
 use ClarkWinkelmann\CatchTheFish\Repositories\FishRepository;
 use ClarkWinkelmann\CatchTheFish\Repositories\RoundRepository;
 use ClarkWinkelmann\CatchTheFish\Serializers\FishSerializer;
 use Flarum\Api\Controller\AbstractListController;
+use Flarum\Http\RequestUtil;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Psr\Http\Message\ServerRequestInterface;
@@ -25,19 +25,13 @@ class FishImageBulkController extends AbstractListController
         $this->fishes = $fishes;
     }
 
-    /**
-     * @param ServerRequestInterface $request
-     * @param Document $document
-     * @return Fish[]
-     * @throws \Flarum\User\Exception\PermissionDeniedException
-     */
     protected function data(ServerRequestInterface $request, Document $document)
     {
         $roundId = Arr::get($request->getQueryParams(), 'id');
 
         $round = $this->rounds->findOrFail($roundId);
 
-        $request->getAttribute('actor')->assertCan('createFish', $round);
+        RequestUtil::getActor($request)->assertCan('createFish', $round);
 
         $files = array_filter($request->getUploadedFiles(), function (string $key) {
             return Str::startsWith($key, 'image');

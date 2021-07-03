@@ -6,3 +6,9 @@ askvortsov-help-tags:
   admin:
     permissions:
       view_tag_label: 'Przeglądanie tagu'
+  forum:
+    badge:
+      show_to_all_tooltip: 'Ta dyskusja jest widoczna dla wszystkich, którzy mają dostęp do jej tagów.'
+    discussion_controls:
+      show_to_all_button: 'Pokaż wszystkim'
+      unshow_to_all_button: 'Pokaż tylko autorowi'

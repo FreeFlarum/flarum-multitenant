@@ -3,7 +3,7 @@
 /*
  * This file is part of fof/links.
  *
- * Copyright (c) 2019 - 2021 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -39,7 +39,7 @@ class LoadForumLinksRelationship
 
         // So that admins don't have to see guest only items but can manage them in admin panel,
         // we only serialize all links if we're visiting the admin panel
-        if ($actor->isAdmin() && $request->getUri()->getPath() === "/$adminPath") {
+        if ($actor->isAdmin() && $request->getServerParams()['REQUEST_URI'] === "/$adminPath") {
             return $data['links'] = Link::all();
         }
 

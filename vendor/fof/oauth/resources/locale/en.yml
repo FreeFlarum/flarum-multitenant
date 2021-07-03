@@ -1,8 +1,6 @@
 fof-oauth:
   admin:
     settings:
-      title: FriendsOfFlarum OAuth
-
       only_icons_label: Only show the Log In Button icons (alternative layout)
 
       providers:
@@ -39,9 +37,42 @@ fof-oauth:
           api_key_label: API Key
           api_secret_label: API Secret
 
+        google:
+          description: Create an application at {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        linkedin:
+          description: Create an application at {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
   forum:
     log_in:
       with_button: Log In with {provider}
+
+      # Modify these if your provider requires specific wording.
+      # You may use {provider} in the translation.
+      with_discord_button: '=> fof-oauth.forum.log_in.with_button'
+      with_facebook_button: '=> fof-oauth.forum.log_in.with_button'
+      with_github_button: '=> fof-oauth.forum.log_in.with_button'
+      with_gitlab_button: '=> fof-oauth.forum.log_in.with_button'
+      with_google_button: '=> fof-oauth.forum.log_in.with_button'
+      with_linkedin_button: '=> fof-oauth.forum.log_in.with_button'
+      with_twitter_button: '=> fof-oauth.forum.log_in.with_button'
+
+    # Modify these if you need to change how the provider name
+    # appears in the log in button.
+    providers:
+      discord: '=> fof-oauth.lib.providers.discord'
+      facebook: '=> fof-oauth.lib.providers.facebook'
+      github: '=> fof-oauth.lib.providers.github'
+      gitlab: '=> fof-oauth.lib.providers.gitlab'
+      google: '=> fof-oauth.lib.providers.google'
+      linkedin: '=> fof-oauth.lib.providers.linkedin'
+      twitter: '=> fof-oauth.lib.providers.twitter'
 
     error:
       bad_verification_code: Invalid or expired verification token. Please try again.
@@ -54,6 +85,8 @@ fof-oauth:
       github: GitHub
       gitlab: GitLab
       twitter: Twitter
+      google: Google
+      linkedin: LinkedIn
 
   ref:
     settings:

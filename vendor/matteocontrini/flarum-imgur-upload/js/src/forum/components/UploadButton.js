@@ -2,6 +2,7 @@ import app from 'flarum/app';
 import Component from 'flarum/common/Component';
 import LoadingIndicator from 'flarum/common/components/LoadingIndicator';
 import Button from 'flarum/common/components/Button';
+import Tooltip from 'flarum/common/components/Tooltip';
 import classList from "flarum/common/utils/classList";
 
 export default class UploadButton extends Component {
@@ -16,11 +17,11 @@ export default class UploadButton extends Component {
 
     oncreate(vnode) {
         super.oncreate(vnode);
-
-        this.$().tooltip();
     }
 
     onupdate(vnode) {
+        super.onupdate(vnode);
+
         if (!this.isPasteListenerAttached && app.forum.attribute('imgur-upload.allow-paste') === '1') {
             this.isPasteListenerAttached = true;
             this.attrs.textArea.addEventListener('paste', this.paste.bind(this));
@@ -38,23 +39,24 @@ export default class UploadButton extends Component {
         else if (this.isSuccess) label = app.translator.trans('imgur-upload.forum.done');
         else if (this.isError) label = app.translator.trans('imgur-upload.forum.error');
 
-        return <Button
-            className={classList([
-                'Button',
-                'hasIcon',
-                'imgur-upload-button',
-                label === '' && 'Button--icon',
-            ])}
-            icon={buttonIcon}
-            onclick={this.buttonClicked.bind(this)}
-            title={app.translator.trans('imgur-upload.forum.upload')}>
-            {this.isLoading && <LoadingIndicator size="tiny" className="LoadingIndicator--inline Button-icon"/>}
-            <span className="Button-label">{label}</span>
-            <form>
-                <input type="file" accept="image/*" onchange={this.formUpload.bind(this)}
-                       disabled={this.isLoading || this.isSuccess || this.isError}/>
-            </form>
-        </Button>
+        return <Tooltip text={app.translator.trans('imgur-upload.forum.upload')}>
+            <Button
+                className={classList([
+                    'Button',
+                    'hasIcon',
+                    'imgur-upload-button',
+                    label === '' && 'Button--icon',
+                ])}
+                icon={buttonIcon}
+                onclick={this.buttonClicked.bind(this)}>
+                {this.isLoading && <LoadingIndicator size="small" display="inline" />}
+                <span className="Button-label">{label}</span>
+                <form>
+                    <input type="file" accept="image/*" onchange={this.formUpload.bind(this)}
+                           disabled={this.isLoading || this.isSuccess || this.isError}/>
+                </form>
+            </Button>
+        </Tooltip>
     }
 
     paste(e) {
@@ -87,7 +89,6 @@ export default class UploadButton extends Component {
     }
 
     upload(file) {
-        this.$().tooltip('hide'); // force removal of the tooltip
         this.isLoading = true;
         m.redraw();
 

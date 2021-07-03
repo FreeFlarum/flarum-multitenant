@@ -13,7 +13,6 @@ imgur-upload:
         preview-without-link: 'Podgląd bez linka'
         title: 'Sposób osadzenia obrazka'
       hide-markdown-image: 'Ukryj przycisk do wstawiania obrazka za pomocą Markdown'
-      title: 'Ustawienia Imgura'
   forum:
     done: Gotowe!
     error: Błąd

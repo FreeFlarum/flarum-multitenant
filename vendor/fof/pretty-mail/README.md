@@ -9,10 +9,10 @@ A [Flarum](http://flarum.org) extension. Make custom HTML templates for emails!
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Install with composer:
 
 ```sh
-composer require fof/pretty-mail
+composer require fof/pretty-mail:"*"
 ```
 
 ### Updating
@@ -31,6 +31,5 @@ Due to how Flarum handles certain emails, I had to utilize a "hack" to get it to
 
 - [Packagist](https://packagist.org/packages/fof/pretty-mail)
 - [GitHub](https://github.com/packages/FriendsOfFlarum/pretty-mail)
-- [ReFlar's Pretty Mail](https://packagist.org/packages/reflar/pretty-mail)
 
 An extension by [FriendsOfFlarum](https://github.com/FriendsOfFlarum).

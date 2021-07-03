@@ -3,8 +3,6 @@ fof-upload:
     pane:
       title: Upload
       description: Set up uploading services and preferences.
-    buttons:
-      save: Save settings
     help_texts:
       disable-download-logging: |
         Disable logging every download made by users of your forum. Keeping it enabled allows you to view the number of downloads and other metrics in the nearby future.
@@ -119,7 +117,7 @@ fof-upload:
       modal_empty_desktop: Your file list is empty. Click the button or drag a file here to upload.
       modal_empty_phone: Your file list is empty. Tap the button above to upload a file.
       select_file_a11y_label: Select file "{fileName}"
-      confirm_selection_btn: Select file|Select files
+      confirm_selection_btn: "{fileCount, plural, =0 {None selected} one {Select file} other {Select files}}"
       load_more_files_btn: Load more files
       hide_file:
         btn_a11y_label: Hide "{fileName}" from media manager

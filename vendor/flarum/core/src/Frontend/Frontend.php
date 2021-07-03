@@ -10,7 +10,6 @@
 namespace Flarum\Frontend;
 
 use Flarum\Api\Client;
-use Flarum\Api\Controller\ShowForumController;
 use Illuminate\Contracts\View\Factory;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -66,10 +65,8 @@ class Frontend
 
     private function getForumDocument(Request $request): array
     {
-        $actor = $request->getAttribute('actor');
-
         return $this->getResponseBody(
-            $this->api->send(ShowForumController::class, $actor)
+            $this->api->withParentRequest($request)->get('/')
         );
     }
 

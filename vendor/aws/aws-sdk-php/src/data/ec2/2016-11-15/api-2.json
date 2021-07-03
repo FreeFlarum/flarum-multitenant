@@ -200,6 +200,15 @@
       "input":{"shape":"AssociateTransitGatewayRouteTableRequest"},
       "output":{"shape":"AssociateTransitGatewayRouteTableResult"}
     },
+    "AssociateTrunkInterface":{
+      "name":"AssociateTrunkInterface",
+      "http":{
+        "method":"POST",
+        "requestUri":"/"
+      },
+      "input":{"shape":"AssociateTrunkInterfaceRequest"},
+      "output":{"shape":"AssociateTrunkInterfaceResult"}
+    },
     "AssociateVpcCidrBlock":{
       "name":"AssociateVpcCidrBlock",
       "http":{
@@ -2403,6 +2412,15 @@
       "input":{"shape":"DescribeTransitGatewaysRequest"},
       "output":{"shape":"DescribeTransitGatewaysResult"}
     },
+    "DescribeTrunkInterfaceAssociations":{
+      "name":"DescribeTrunkInterfaceAssociations",
+      "http":{
+        "method":"POST",
+        "requestUri":"/"
+      },
+      "input":{"shape":"DescribeTrunkInterfaceAssociationsRequest"},
+      "output":{"shape":"DescribeTrunkInterfaceAssociationsResult"}
+    },
     "DescribeVolumeAttribute":{
       "name":"DescribeVolumeAttribute",
       "http":{
@@ -2616,6 +2634,15 @@
       "input":{"shape":"DisableFastSnapshotRestoresRequest"},
       "output":{"shape":"DisableFastSnapshotRestoresResult"}
     },
+    "DisableImageDeprecation":{
+      "name":"DisableImageDeprecation",
+      "http":{
+        "method":"POST",
+        "requestUri":"/"
+      },
+      "input":{"shape":"DisableImageDeprecationRequest"},
+      "output":{"shape":"DisableImageDeprecationResult"}
+    },
     "DisableSerialConsoleAccess":{
       "name":"DisableSerialConsoleAccess",
       "http":{
@@ -2730,6 +2757,15 @@
       "input":{"shape":"DisassociateTransitGatewayRouteTableRequest"},
       "output":{"shape":"DisassociateTransitGatewayRouteTableResult"}
     },
+    "DisassociateTrunkInterface":{
+      "name":"DisassociateTrunkInterface",
+      "http":{
+        "method":"POST",
+        "requestUri":"/"
+      },
+      "input":{"shape":"DisassociateTrunkInterfaceRequest"},
+      "output":{"shape":"DisassociateTrunkInterfaceResult"}
+    },
     "DisassociateVpcCidrBlock":{
       "name":"DisassociateVpcCidrBlock",
       "http":{
@@ -2756,6 +2792,15 @@
       },
       "input":{"shape":"EnableFastSnapshotRestoresRequest"},
       "output":{"shape":"EnableFastSnapshotRestoresResult"}
+    },
+    "EnableImageDeprecation":{
+      "name":"EnableImageDeprecation",
+      "http":{
+        "method":"POST",
+        "requestUri":"/"
+      },
+      "input":{"shape":"EnableImageDeprecationRequest"},
+      "output":{"shape":"EnableImageDeprecationResult"}
     },
     "EnableSerialConsoleAccess":{
       "name":"EnableSerialConsoleAccess",
@@ -5088,6 +5133,37 @@
         }
       }
     },
+    "AssociateTrunkInterfaceRequest":{
+      "type":"structure",
+      "required":[
+        "BranchInterfaceId",
+        "TrunkInterfaceId"
+      ],
+      "members":{
+        "BranchInterfaceId":{"shape":"NetworkInterfaceId"},
+        "TrunkInterfaceId":{"shape":"NetworkInterfaceId"},
+        "VlanId":{"shape":"Integer"},
+        "GreKey":{"shape":"Integer"},
+        "ClientToken":{
+          "shape":"String",
+          "idempotencyToken":true
+        },
+        "DryRun":{"shape":"Boolean"}
+      }
+    },
+    "AssociateTrunkInterfaceResult":{
+      "type":"structure",
+      "members":{
+        "InterfaceAssociation":{
+          "shape":"TrunkInterfaceAssociation",
+          "locationName":"interfaceAssociation"
+        },
+        "ClientToken":{
+          "shape":"String",
+          "locationName":"clientToken"
+        }
+      }
+    },
     "AssociateVpcCidrBlockRequest":{
       "type":"structure",
       "required":["VpcId"],
@@ -7139,6 +7215,13 @@
       "type":"string",
       "enum":["Topic"]
     },
+    "ConnectivityType":{
+      "type":"string",
+      "enum":[
+        "private",
+        "public"
+      ]
+    },
     "ContainerFormat":{
       "type":"string",
       "enum":["ova"]
@@ -7680,7 +7763,8 @@
         "TagSpecifications":{
           "shape":"TagSpecificationList",
           "locationName":"TagSpecification"
-        }
+        },
+        "Context":{"shape":"String"}
       }
     },
     "CreateFleetResult":{
@@ -8038,11 +8122,9 @@
     },
     "CreateNatGatewayRequest":{
       "type":"structure",
-      "required":[
-        "SubnetId",
-        "AllocationId"
-      ],
+      "required":["SubnetId"],
       "members":{
+        "AllocationId":{"shape":"AllocationId"},
         "ClientToken":{
           "shape":"String",
           "idempotencyToken":true
@@ -8053,7 +8135,7 @@
           "shape":"TagSpecificationList",
           "locationName":"TagSpecification"
         },
-        "AllocationId":{"shape":"AllocationId"}
+        "ConnectivityType":{"shape":"ConnectivityType"}
       }
     },
     "CreateNatGatewayResult":{
@@ -8250,6 +8332,10 @@
         "TagSpecifications":{
           "shape":"TagSpecificationList",
           "locationName":"TagSpecification"
+        },
+        "ClientToken":{
+          "shape":"String",
+          "idempotencyToken":true
         }
       }
     },
@@ -8259,6 +8345,10 @@
         "NetworkInterface":{
           "shape":"NetworkInterface",
           "locationName":"networkInterface"
+        },
+        "ClientToken":{
+          "shape":"String",
+          "locationName":"clientToken"
         }
       }
     },
@@ -11811,6 +11901,7 @@
           "shape":"OwnerStringList",
           "locationName":"Owner"
         },
+        "IncludeDeprecated":{"shape":"Boolean"},
         "DryRun":{
           "shape":"Boolean",
           "locationName":"dryRun"
@@ -13964,6 +14055,40 @@
         }
       }
     },
+    "DescribeTrunkInterfaceAssociationsMaxResults":{
+      "type":"integer",
+      "max":255,
+      "min":5
+    },
+    "DescribeTrunkInterfaceAssociationsRequest":{
+      "type":"structure",
+      "members":{
+        "AssociationIds":{
+          "shape":"TrunkInterfaceAssociationIdList",
+          "locationName":"AssociationId"
+        },
+        "DryRun":{"shape":"Boolean"},
+        "Filters":{
+          "shape":"FilterList",
+          "locationName":"Filter"
+        },
+        "NextToken":{"shape":"String"},
+        "MaxResults":{"shape":"DescribeTrunkInterfaceAssociationsMaxResults"}
+      }
+    },
+    "DescribeTrunkInterfaceAssociationsResult":{
+      "type":"structure",
+      "members":{
+        "InterfaceAssociations":{
+          "shape":"TrunkInterfaceAssociationList",
+          "locationName":"interfaceAssociationSet"
+        },
+        "NextToken":{
+          "shape":"String",
+          "locationName":"nextToken"
+        }
+      }
+    },
     "DescribeVolumeAttributeRequest":{
       "type":"structure",
       "required":[
@@ -14823,6 +14948,23 @@
         }
       }
     },
+    "DisableImageDeprecationRequest":{
+      "type":"structure",
+      "required":["ImageId"],
+      "members":{
+        "ImageId":{"shape":"ImageId"},
+        "DryRun":{"shape":"Boolean"}
+      }
+    },
+    "DisableImageDeprecationResult":{
+      "type":"structure",
+      "members":{
+        "Return":{
+          "shape":"Boolean",
+          "locationName":"return"
+        }
+      }
+    },
     "DisableSerialConsoleAccessRequest":{
       "type":"structure",
       "members":{
@@ -15051,6 +15193,31 @@
         "Association":{
           "shape":"TransitGatewayAssociation",
           "locationName":"association"
+        }
+      }
+    },
+    "DisassociateTrunkInterfaceRequest":{
+      "type":"structure",
+      "required":["AssociationId"],
+      "members":{
+        "AssociationId":{"shape":"TrunkInterfaceAssociationId"},
+        "ClientToken":{
+          "shape":"String",
+          "idempotencyToken":true
+        },
+        "DryRun":{"shape":"Boolean"}
+      }
+    },
+    "DisassociateTrunkInterfaceResult":{
+      "type":"structure",
+      "members":{
+        "Return":{
+          "shape":"Boolean",
+          "locationName":"return"
+        },
+        "ClientToken":{
+          "shape":"String",
+          "locationName":"clientToken"
         }
       }
     },
@@ -15768,6 +15935,27 @@
         "Unsuccessful":{
           "shape":"EnableFastSnapshotRestoreErrorSet",
           "locationName":"unsuccessful"
+        }
+      }
+    },
+    "EnableImageDeprecationRequest":{
+      "type":"structure",
+      "required":[
+        "ImageId",
+        "DeprecateAt"
+      ],
+      "members":{
+        "ImageId":{"shape":"ImageId"},
+        "DeprecateAt":{"shape":"MillisecondDateTime"},
+        "DryRun":{"shape":"Boolean"}
+      }
+    },
+    "EnableImageDeprecationResult":{
+      "type":"structure",
+      "members":{
+        "Return":{
+          "shape":"Boolean",
+          "locationName":"return"
         }
       }
     },
@@ -16632,6 +16820,10 @@
         "Instances":{
           "shape":"DescribeFleetsInstancesSet",
           "locationName":"fleetInstanceSet"
+        },
+        "Context":{
+          "shape":"String",
+          "locationName":"context"
         }
       }
     },
@@ -18424,6 +18616,10 @@
         "BootMode":{
           "shape":"BootModeValues",
           "locationName":"bootMode"
+        },
+        "DeprecationTime":{
+          "shape":"String",
+          "locationName":"deprecationTime"
         }
       }
     },
@@ -20506,6 +20702,7 @@
         "m5dn.12xlarge",
         "m5dn.16xlarge",
         "m5dn.24xlarge",
+        "m5dn.metal",
         "m5n.large",
         "m5n.xlarge",
         "m5n.2xlarge",
@@ -20514,6 +20711,7 @@
         "m5n.12xlarge",
         "m5n.16xlarge",
         "m5n.24xlarge",
+        "m5n.metal",
         "r5dn.large",
         "r5dn.xlarge",
         "r5dn.2xlarge",
@@ -20522,6 +20720,7 @@
         "r5dn.12xlarge",
         "r5dn.16xlarge",
         "r5dn.24xlarge",
+        "r5dn.metal",
         "r5n.large",
         "r5n.xlarge",
         "r5n.2xlarge",
@@ -20530,6 +20729,7 @@
         "r5n.12xlarge",
         "r5n.16xlarge",
         "r5n.24xlarge",
+        "r5n.metal",
         "inf1.xlarge",
         "inf1.2xlarge",
         "inf1.6xlarge",
@@ -20742,6 +20942,13 @@
       "enum":[
         "INSTANCE-ATTACH",
         "EIP-ASSOCIATE"
+      ]
+    },
+    "InterfaceProtocolType":{
+      "type":"string",
+      "enum":[
+        "VLAN",
+        "GRE"
       ]
     },
     "InternetGateway":{
@@ -22628,7 +22835,8 @@
           "locationName":"LaunchTemplateConfig"
         },
         "FleetId":{"shape":"FleetId"},
-        "TargetCapacitySpecification":{"shape":"TargetCapacitySpecificationRequest"}
+        "TargetCapacitySpecification":{"shape":"TargetCapacitySpecificationRequest"},
+        "Context":{"shape":"String"}
       }
     },
     "ModifyFleetResult":{
@@ -23110,7 +23318,8 @@
           "shape":"Integer",
           "locationName":"targetCapacity"
         },
-        "OnDemandTargetCapacity":{"shape":"Integer"}
+        "OnDemandTargetCapacity":{"shape":"Integer"},
+        "Context":{"shape":"String"}
       }
     },
     "ModifySpotFleetRequestResponse":{
@@ -23787,6 +23996,10 @@
         "Tags":{
           "shape":"TagList",
           "locationName":"tagSet"
+        },
+        "ConnectivityType":{
+          "shape":"ConnectivityType",
+          "locationName":"connectivityType"
         }
       }
     },
@@ -24355,7 +24568,11 @@
     },
     "NetworkInterfaceCreationType":{
       "type":"string",
-      "enum":["efa"]
+      "enum":[
+        "efa",
+        "branch",
+        "trunk"
+      ]
     },
     "NetworkInterfaceId":{"type":"string"},
     "NetworkInterfaceIdList":{
@@ -24494,7 +24711,8 @@
       "enum":[
         "interface",
         "natGateway",
-        "efa"
+        "efa",
+        "trunk"
       ]
     },
     "NetworkPerformance":{"type":"string"},
@@ -25504,7 +25722,8 @@
         "PoolTagSpecifications":{
           "shape":"TagSpecificationList",
           "locationName":"PoolTagSpecification"
-        }
+        },
+        "MultiRegion":{"shape":"Boolean"}
       }
     },
     "ProvisionByoipCidrResult":{
@@ -29304,6 +29523,10 @@
           "shape":"Integer",
           "locationName":"instancePoolsToUseCount"
         },
+        "Context":{
+          "shape":"String",
+          "locationName":"context"
+        },
         "TagSpecifications":{
           "shape":"TagSpecificationList",
           "locationName":"TagSpecification"
@@ -31851,6 +32074,54 @@
         "tcp",
         "udp"
       ]
+    },
+    "TrunkInterfaceAssociation":{
+      "type":"structure",
+      "members":{
+        "AssociationId":{
+          "shape":"TrunkInterfaceAssociationId",
+          "locationName":"associationId"
+        },
+        "BranchInterfaceId":{
+          "shape":"String",
+          "locationName":"branchInterfaceId"
+        },
+        "TrunkInterfaceId":{
+          "shape":"String",
+          "locationName":"trunkInterfaceId"
+        },
+        "InterfaceProtocol":{
+          "shape":"InterfaceProtocolType",
+          "locationName":"interfaceProtocol"
+        },
+        "VlanId":{
+          "shape":"Integer",
+          "locationName":"vlanId"
+        },
+        "GreKey":{
+          "shape":"Integer",
+          "locationName":"greKey"
+        },
+        "Tags":{
+          "shape":"TagList",
+          "locationName":"tagSet"
+        }
+      }
+    },
+    "TrunkInterfaceAssociationId":{"type":"string"},
+    "TrunkInterfaceAssociationIdList":{
+      "type":"list",
+      "member":{
+        "shape":"TrunkInterfaceAssociationId",
+        "locationName":"item"
+      }
+    },
+    "TrunkInterfaceAssociationList":{
+      "type":"list",
+      "member":{
+        "shape":"TrunkInterfaceAssociation",
+        "locationName":"item"
+      }
     },
     "TunnelInsideIpVersion":{
       "type":"string",

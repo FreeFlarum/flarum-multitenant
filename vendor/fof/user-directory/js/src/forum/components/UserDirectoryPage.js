@@ -1,8 +1,8 @@
-import app from 'flarum/common/app';
+import app from 'flarum/forum/app';
 import Page from 'flarum/common/components/Page';
 import ItemList from 'flarum/common/utils/ItemList';
 import listItems from 'flarum/common/helpers/listItems';
-import IndexPage from 'flarum/common/components/IndexPage';
+import IndexPage from 'flarum/forum/components/IndexPage';
 import Select from 'flarum/common/components/Select';
 import Button from 'flarum/common/components/Button';
 import LinkButton from 'flarum/common/components/LinkButton';
@@ -125,7 +125,7 @@ export default class UserDirectoryPage extends Page {
             'sort',
             Select.component({
                 options: sortOptions,
-                value: this.params().sort || app.forum.attribute('userDirectoryDefaultSort'),
+                value: this.state.getParams().sort || app.forum.attribute('userDirectoryDefaultSort'),
                 onchange: this.changeParams.bind(this),
             })
         );

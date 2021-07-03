@@ -14,10 +14,10 @@ A [Flarum](http://flarum.org) extension that filters and flags posts by keywords
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Install with composer:
 
 ```bash
-composer require fof/filter
+composer require fof/filter:"*"
 ```
 
 ### Links

@@ -1,0 +1,7 @@
+/* 精华 */
+.Badge--span.Badge.Badge--frontpage {
+  background: #fbbd08;
+}
+.Badge--frontpage .fa-home::before {
+  content: "\f091";
+}

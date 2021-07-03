@@ -23,6 +23,6 @@ fof-merge-discussions:
       type_target_help_text: 'Wybierz dyskusje do włączenia do <b>{title}</b>.'
       type_target_label: 'Włącz do mnie'
     post:
-      merged: 'Włączono <b>{count}</b> post z {titles}.|Włączono <b>{count}</b> posty z {titles}.|Włączono <b>{count}</b> postów z {titles}.'
+      merged: '{count, plural, one {Włączono <b>{count}</b> post z {titles}.} few {Włączono <b>{count}</b> posty z {titles}.} other {Włączono <b>{count}</b> postów z {titles}.}}'
   ref:
     merge: Scal

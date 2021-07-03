@@ -1,9 +1,9 @@
-.Post .Achievement{
+.PostStream-item .Achievement, .PostsUserPage .Achievement{
   display:inline-block;
   transform: scale(.5);
 }
 
-.Post .Achievement--Points {
+.Post .Achievement--Points, .AchievementsList-points {
   float: inherit;
   margin-left: 8px;
   color: #667c99;
@@ -15,6 +15,11 @@
   white-space: nowrap;
   vertical-align: middle;
 }
+.AchievementsList-total{
+  width:150px;
+  float:right;
+  text-align: center !important;
+}
 
 .Post .Achievement--Icon{
   margin:2px;
@@ -22,6 +27,10 @@
 
 .Post .Achievement--User{
   width:100%
+}
+
+.Post-footer .Achievement--Icon .icon{
+  margin:0;
 }
 
 .Modal--New-Achievement{
@@ -35,4 +44,63 @@
 
 .Modal--New-Achievement .Achievement--Icon{
   transform: scale(2);
+}
+
+.IndexPage-results .AchievementsList-achievements{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.AchievementsList-Item{
+  height: 40px;
+  display: inline;
+  vertical-align: middle;
+}
+
+.AchievementsList-Item .AchievementsList-info{
+  width:-webkit-fill-available;
+}
+
+.AchievementsList-Item .Achievement{
+  float:left;
+  margin-right: 20px;
+}
+
+.AchievementsList-achievements li{
+  position:relative;
+  min-height: 60px;
+  margin-top:5px;
+  margin-bottom:10px;
+}
+
+.AchievementsList-Item .AchievementsList-name{
+  margin-left:20px;
+  font-size:150%;
+}
+
+.AchievementsList-points{
+  margin-right:20px;
+  font-size:110%;
+  text-align: right;
+}
+
+.AchievementsList-description{
+  margin-left: 40px;
+    font-size: 110%;
+}
+
+.AchievementsList .Achievement--Icon{
+  transform: scale(1.5);
+  float:left;
+  margin-right: 20px;
+}
+
+.AchievementsHidden{
+  margin-top:10px;
+}
+
+.AchievementsList.AchievementsList-Other{
+  filter:grayscale(1);
 }

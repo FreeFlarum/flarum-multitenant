@@ -3,10 +3,10 @@
 /*
  * This file is part of fof/upload.
  *
- * Copyright (c) 2020 - 2021 FriendsOfFlarum.
- * Copyright (c) 2016 - 2019 Flagrow
+ * Copyright (c) FriendsOfFlarum.
+ * Copyright (c) Flagrow.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -112,7 +112,19 @@ class FileRepository
         $this->handleUploadError($upload->getError());
 
         // Move the file to a temporary location first.
-        $tempFile = tempnam($this->path.'/tmp', 'fof.upload.');
+        /**
+         * sometimes function tempnam() maybe show notice
+         * https://www.php.net/manual/zh/function.tempnam.php.
+         *
+         * Please note that this function might throw a notice in PHP 7.1.0 and above.
+         * This was a bugfix: https://bugs.php.net/bug.php?id=69489
+         * PHP Notice:tempnam(): file created in the system's temporary directory
+         *
+         * That Notice will lead to
+         * Fatal error: Uncaught Laminas\HttpHandlerRunner\Exception\EmitterException:
+         * Output has been emitted previously; cannot emit response
+         */
+        $tempFile = @tempnam($this->path.'/tmp', 'fof.upload.');
         $upload->moveTo($tempFile);
 
         $file = new Upload(

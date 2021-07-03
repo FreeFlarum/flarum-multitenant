@@ -1,0 +1,96 @@
+v17development-flarum-badges:
+  admin:
+    uncategorized: Uncategorized
+    new_badge: New badge
+    create_category: Create category
+    update_badge: Update badge
+    update_category: Update category
+    edit_category: Edit category
+    nothing_here_yet: You did not create any badges or categories yet.
+
+    permissions:
+      badge_detail_users: Can see users on badge details page
+      give_badge: Give badge to user
+      take_badge: Take badge from user
+
+    confirm_dialog:
+      title: Confirm
+      no: No
+      yes: Yes
+
+    confirm_messages:
+      delete_badge: Are you sure you want to remove this badge? It is removed from all users and is irreversible.
+      delete_category: Are you sure you want to remove this category? If there are any badges in this category, they will be marked as 'uncategorized'.
+
+    badge:
+      name: Badge name
+      icon: Badge icon
+      description: Badge description
+      visible: Visible
+      visible_description: Enable this badge. When disabled, the badge will not be visible.
+
+    badge_category:
+      name: Category name
+      description: Category description
+      blockview: Block-view
+      blockview_description: Show category-badges in blockview on badge overview. When disabled, all badges will be displayed in a table.
+      enabled: Enabled
+      enabled_description: Enable this category. When disabled, all badges will be disabled and the category will be hidden.
+
+    auto_moderator:
+      not_installed:
+        title: Automatically reward users with badges
+        content: This extension offers more functionality when <a>Auto Moderator</a> is installed and activated. When you install this extension, users can be automatically rewarded with badges without the intervention of a community employee!
+        install: Install
+        dismiss: Do not show again
+
+      action_drivers:
+        badge_id: Badge ID
+        give_badge: Give badge
+        remove_badge: Remove badge
+
+      requirement_drivers:
+        has_badge: Has badge
+
+      metric_drivers:
+        badges_received: Badges received
+
+      badge_selector:
+        placeholder: Select a badge
+        loading_badges: Loading badges
+
+  forum:
+    badge_information: Badge information
+    all_badges: See all badges
+    all_users: See all users
+    give_badge: Give badge
+    update_badge: Update badge
+    select_badge: Select badge
+    user_has_badge: The user already has this badge.
+    user_no_badges: This user does not have any badges yet.
+    no_received: No user have earned this badge.
+    uncategorized: => v17development-flarum-badges.admin.uncategorized
+
+    badge:
+      badge: Badge
+      badges: Badges
+      name: Badge name
+      description: Badge description
+      earning_reason: Badge earning reason
+      update_earning_reason: Update earning reason
+      no_earning_reason: No earning reason set
+      earned_on: Badge earned on
+      category: Badge category
+      received_on: "Received on {date}"
+      badge_details: Badge details
+      earned_count: "{count, plural, one {<b># user</b> has earned this badge} other {<b># users</b> have earned this badge}}"
+      earned_by_count: "{count, plural, one {Earned by <b># user</b>} other {Earned by <b># users</b>}}"
+
+    moderation:
+      remove_badge: Remove badge from user
+      remove_badge_confirm: Are you sure you want to remove this badge from this user?
+      give_badge: Give badge
+
+    notification:
+      title: You have received a new badge
+      settings: I have received a badge

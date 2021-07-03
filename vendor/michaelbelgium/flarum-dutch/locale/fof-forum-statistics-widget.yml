@@ -5,7 +5,6 @@
 fof-forum-statistics-widget:
   admin:
     settings:
-      title: 'Widget instellingen'
       widget_helper_text: 'Bewerk deze instelling om de positie van deze widget in het navigatie-gedeelte van je Flarum-forum aan te passen. Hoe hoger het getal, hoe hoger deze widget in de lijst met navigatie-items staat (deze waarde kan positief of negatief zijn).'
       widget_order_label: 'Widget Order'
   forum:

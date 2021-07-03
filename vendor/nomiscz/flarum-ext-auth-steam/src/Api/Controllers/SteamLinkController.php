@@ -12,7 +12,7 @@
 namespace NomisCZ\SteamAuth\Api\Controllers;
 
 use Laminas\Diactoros\Response\HtmlResponse;
-use NomisCZ\SteamAuth\Flarum\Forum\Auth\NResponseFactory;
+use Flarum\Forum\Auth\ResponseFactory;
 use NomisCZ\SteamAuth\Providers\SteamAuth;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -25,7 +25,7 @@ class SteamLinkController implements RequestHandlerInterface
     protected $steam;
     protected $loginProvider;
 
-    public function __construct(NResponseFactory $response, SteamAuth $steam, LoginProvider $loginProvider)
+    public function __construct(ResponseFactory $response, SteamAuth $steam, LoginProvider $loginProvider)
     {
         $this->response = $response;
         $this->steam = $steam;

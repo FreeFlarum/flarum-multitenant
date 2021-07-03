@@ -1,3 +1,21 @@
+### 0.4.0
+- Added two options for where to show the achievements (on post footer and on user card)
+- Added a new location for the achievements on the popup user card
+- Fixed display of achievements list on users profile
+- Fixed bug with achievement for posts on discussion
+
+### 0.3.1
+- Fixed Achievements page
+- Achievements page link will not show for non registered users
+- Changed tooltip to use the Tooltip component
+
+### 0.3.0
+- Added a page in the forum with the Achievements list
+- Improved the modal for Achievements in the admin
+- Added a tooltip to help with the Variable field in the admin
+- Changed how the achievement type _posts on tag_ works, now it uses the `slug` of the tag and not the full name. The variable field will need to be changed for this type of achievements.
+- Compatible with Flarum 1.0
+
 ### 0.2.8
 - Fix JS error when receiving an EmptyResponse
 

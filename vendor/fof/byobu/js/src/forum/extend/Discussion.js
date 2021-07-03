@@ -1,27 +1,26 @@
-import { extend } from 'flarum/extend';
-import Model from 'flarum/Model';
-import Badge from 'flarum/components/Badge';
-import Discussion from 'flarum/models/Discussion';
-import User from 'flarum/models/User';
-import Group from 'flarum/models/Group';
-import Button from 'flarum/components/Button';
-import DiscussionListItem from 'flarum/components/DiscussionListItem';
-import DiscussionPage from 'flarum/components/DiscussionPage';
-import DiscussionHero from 'flarum/components/DiscussionHero';
-import DiscussionListState from 'flarum/states/DiscussionListState';
-import recipientsLabel from '../pages/labels/recipientsLabel';
-import DiscussionControls from 'flarum/utils/DiscussionControls';
-import ItemList from 'flarum/utils/ItemList';
+import { extend } from 'flarum/common/extend';
+import Model from 'flarum/common/Model';
+import Badge from 'flarum/common/components/Badge';
+import Discussion from 'flarum/common/models/Discussion';
+import User from 'flarum/common/models/User';
+import Group from 'flarum/common/models/Group';
+import Button from 'flarum/common/components/Button';
+import DiscussionListItem from 'flarum/forum/components/DiscussionListItem';
+import DiscussionHero from 'flarum/forum/components/DiscussionHero';
+import DiscussionListState from 'flarum/forum/states/DiscussionListState';
+import recipientsLabel from '../pages/labels/recipientsLabels';
+import DiscussionControls from 'flarum/forum/utils/DiscussionControls';
+import ItemList from 'flarum/common/utils/ItemList';
 import AddRecipientModal from './../modals/AddRecipientModal';
 
-export default (app) => {
+export default () => {
     attributes();
-    badges(app);
+    badges();
     index();
     hero();
     apiInclude();
     controls();
-}
+};
 
 const add = function (discussion, items, long) {
     let recipients = [];
@@ -43,7 +42,7 @@ const add = function (discussion, items, long) {
     }
 };
 
-function badges(app) {
+function badges() {
     extend(Discussion.prototype, 'badges', function (badges) {
         if (this.recipientUsers().length || this.recipientGroups().length) {
             badges.add(
@@ -76,10 +75,6 @@ function hero() {
 }
 
 function apiInclude() {
-    extend(DiscussionPage.prototype, 'params', function (params) {
-        params.include.push('recipientUsers');
-        params.include.push('recipientGroups');
-    });
     extend(DiscussionListState.prototype, 'requestParams', function (params) {
         params.include.push('recipientUsers');
         params.include.push('recipientGroups');
@@ -87,53 +82,59 @@ function apiInclude() {
 }
 
 function controls() {
-    if (!app.session) return;
-    
     extend(DiscussionControls, 'moderationControls', function (items, discussion) {
         if (discussion.canEditRecipients()) {
             items.add(
                 'recipients',
-                Button.component({
-                    icon: app.forum.data.attributes['byobu.icon-badge'],
-                    onclick: () => app.modal.show(AddRecipientModal, { discussion }),
-                }, app.translator.trans('fof-byobu.forum.buttons.edit_recipients'))
+                Button.component(
+                    {
+                        icon: app.forum.data.attributes['byobu.icon-badge'],
+                        onclick: () => app.modal.show(AddRecipientModal, { discussion }),
+                    },
+                    app.translator.trans('fof-byobu.forum.buttons.edit_recipients')
+                )
             );
         }
-        if (discussion && discussion.recipientUsers().find(user => user.id() === app.session.user.id())) {
+        if (discussion && discussion.recipientUsers().find((user) => user.id() === app.session.user.id())) {
             items.add(
                 'remove',
-                Button.component({
-                    icon: 'fas fa-user-slash',
-                    onclick: () => {
-                        if (discussion) {
-                            let recipients = new ItemList();
-                            discussion.recipientUsers().map((user) => {
-                                if (app.session.user.id() !== user.id()) {
-                                    recipients.add('users:' + user.id(), user);
-                                }
-                            });
+                Button.component(
+                    {
+                        icon: 'fas fa-user-slash',
+                        onclick: () => {
+                            if (discussion) {
+                                let recipients = new ItemList();
+                                discussion.recipientUsers().map((user) => {
+                                    if (app.session.user.id() !== user.id()) {
+                                        recipients.add('users:' + user.id(), user);
+                                    }
+                                });
 
-                            let recipientGroups = [];
-                            let recipientUsers = [];
+                                let recipientGroups = [];
+                                let recipientUsers = [];
 
-                            recipients.toArray().forEach((recipient) => {
-                                if (recipient instanceof User) {
-                                    recipientUsers.push(recipient);
-                                }
-                                if (recipient instanceof Group) {
-                                    recipientGroups.push(recipient);
-                                }
-                            });
+                                recipients.toArray().forEach((recipient) => {
+                                    if (recipient instanceof User) {
+                                        recipientUsers.push(recipient);
+                                    }
+                                    if (recipient instanceof Group) {
+                                        recipientGroups.push(recipient);
+                                    }
+                                });
 
-                            discussion.save({
-                                relationships: {
-                                    recipientUsers,
-                                    recipientGroups
-                                }
-                            }).then(() => app.history.back());
-                        }
+                                discussion
+                                    .save({
+                                        relationships: {
+                                            recipientUsers,
+                                            recipientGroups,
+                                        },
+                                    })
+                                    .then(() => app.history.back());
+                            }
+                        },
                     },
-                }, app.translator.trans('fof-byobu.forum.buttons.remove_from_discussion'))
+                    app.translator.trans('fof-byobu.forum.buttons.remove_from_discussion')
+                )
             );
         }
     });

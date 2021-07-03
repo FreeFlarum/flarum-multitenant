@@ -17,54 +17,98 @@ const { default: registerModels } = require("../common/registerModels");
 
 import { extend } from 'flarum/extend';
 import CommentPost from 'flarum/components/CommentPost';
-import Post from 'flarum/components/Post';
-import PostUser from 'flarum/components/PostUser';
-import ModalManager from 'flarum/components/ModalManager';
-import Model from 'flarum/Model';
-import User from 'flarum/models/User';
-import TextEditor from 'flarum/components/TextEditor';
-import PostEdited from 'flarum/components/PostEdited'
-import Achievement from '../common/models/Achievement';
 import Application from 'flarum/common/Application';
 import NewAchievementModal from './modals/NewAchievementModal';
-import icon from "flarum/helpers/icon";
 import IndexPage from 'flarum/components/IndexPage'
 import Page from 'flarum/components/Page'
+import AchievementsPage from './components/AchievementsPage'
+import LinkButton from 'flarum/components/LinkButton';
+import Tooltip from "flarum/components/Tooltip";
+import UserCard from 'flarum/components/UserCard'
 
 app.initializers.add('malago-achievements', app => {
+  app.routes['achievements'] = { path: '/achievements', component: AchievementsPage };
+  extend(IndexPage.prototype, 'navItems', function (items) {
+    if (!app.session.user) {
+        return;
+    }
+    items.add('achievements', <LinkButton icon="fas fa-trophy" href={app.route('achievements')}>
+      {app.translator.trans("malago-achievements.forum.list_heading")}
+    </LinkButton>
+      , -11);
+  });
+  
   registerModels();
-
-  extend(CommentPost.prototype, 'oncreate', function (x) {
-    var html = "";
+  
+  extend(UserCard.prototype, 'view', function (element) {
     var points = 0;
+    //comment.children[0].children[2].children.splice(0,0, m("div.Achievements--User"));
+    const here = app.forum.attribute('malago-achievements.show-user-card');
+    // var element = this.element;
+    // element.appendChild(m('div'));
+    // $(element).append(m("div","HOLA"));
+    var list = m("div.UserCard-Achievement-list");
+    
+    if (here == "1" && element.attrs.className.includes("UserCard--popover")) {
+      var achievements = this.attrs.user.store.data.achievements;
+      if (achievements !== undefined) {
+        Object.keys(achievements).forEach(obj => {
+          var item = achievements[obj].data.attributes;
+          var rectangle = item.rectangle.split(',');
+          if (item.image.includes("http")) {
+            var style = "background:url(" + item.image + ");\
+              background-position:-"+ rectangle[0] + "px -" + rectangle[1] + "px;\
+              height:"+ rectangle[2] + "px;\
+              width:"+ rectangle[3] + "px;\
+              margin: -"+ (rectangle[3] / 4 - 4) + "px;";
+            list.children.push(m(Tooltip, { text: item.name },
+              m("span.Badge.Achievement", { style: style }, ""))
+            );
+          } else {
+            list.children.push(m(Tooltip, { text: item.name }, m("span.Badge.Achievement--Icon",
+              m("i.icon." + item.image))
+            ));
+          }
 
-    if (!this.attrs.post.data.attributes.isHidden) {
+          points += item.points;
+        });
+        if (list.children.length > 0 && points > 0) {
+          list.children.push(m(Tooltip, { text: app.translator.trans("malago-achievements.forum.achievement_points") }, m("span.Achievement--Points", app.translator.trans(
+            "malago-achievements.forum.achievement_points") + ": ", m("span.Achievement--Points--Number", points))));
+        }
+        element.children.push(list);
+      }
+    }
+  })
+
+  extend(CommentPost.prototype, 'view', function (comment) {
+    var points = 0;
+    //comment.children[0].children[2].children.splice(0,0, m("div.Achievements--User"));
+    const here = app.forum.attribute('malago-achievements.show-post-footer');
+
+    if (here=="1" && !this.attrs.post.data.attributes.isHidden) {
       this.attrs.post.data.attributes.achievements.forEach(function (item, index) {
-
         var rectangle = item.rectangle.split(',');
         if (item.image.includes("http")) {
           var style = "background:url(" + item.image + ");\
             background-position:-"+ rectangle[0] + "px -" + rectangle[1] + "px;\
             height:"+ rectangle[2] + "px;\
             width:"+ rectangle[3] + "px;\
-            margin: -"+ (rectangle[3] / 4 - 4) + "px;";
-          html += "<span class='Badge Achievement' style='" + style + "' data-toggle='tooltip' title='" + item.name + "'></span>";
+            margin: -"+ (rectangle[3] / 4 - 4) + "px;";            
+          comment.children[0].children[2].children[0].children.push(m(Tooltip,{text:item.name},
+            m("span.Badge.Achievement", { style: style }, ""))
+          );
         } else {
-          html += "<span class='Badge Achievement--Icon' data-toggle='tooltip' title='" + item.name + "'><i class='icon " + item.image + "'></i></span>";
+          comment.children[0].children[2].children[0].children.push(m(Tooltip, { text: item.name }, m("span.Badge.Achievement--Icon",
+            m("i.icon." + item.image))
+          ));
         }
 
         points += item.points;
       });
-      if (html !== "") {
-        if (points > 0) {
-          html += "<span class='Achievement--Points' data-toggle='tooltip' title='" + app.translator.trans(
-            "malago-achievements.forum.achievement_points") + "'>" + app.translator.trans(
-              "malago-achievements.forum.achievement_points") + ": <span class='Achievement--Points--Number'>" + points + "</span></span>";
-        }
-        $(this.element).find(".Post-body").after("<div class='Achievements--User'>" + html + "</div>");
-        $(".Achievement--Icon").tooltip();
-        $(".Achievement").tooltip();
-        $(".Achievement--Points").tooltip();
+      if (comment.children[0].children[2].children[0].children.length>0 && points > 0) {
+          comment.children[0].children[2].children[0].children.push(m(Tooltip,{text:app.translator.trans("malago-achievements.forum.achievement_points")},m("span.Achievement--Points", app.translator.trans(
+            "malago-achievements.forum.achievement_points") + ": ",m("span.Achievement--Points--Number", points))));
       }
     }
   });

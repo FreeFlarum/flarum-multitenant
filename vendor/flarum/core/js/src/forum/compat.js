@@ -36,8 +36,6 @@ import HeaderSecondary from './components/HeaderSecondary';
 import ComposerButton from './components/ComposerButton';
 import DiscussionList from './components/DiscussionList';
 import ReplyPlaceholder from './components/ReplyPlaceholder';
-import TextEditor from '../common/components/TextEditor'; // @deprecated beta 16, remove beta 17. Moved to common.
-import TextEditorButton from '../common/components/TextEditorButton'; // @deprecated beta 16, remove beta 17. Moved to common.
 import AvatarEditor from './components/AvatarEditor';
 import Post from './components/Post';
 import SettingsPage from './components/SettingsPage';
@@ -53,8 +51,6 @@ import PostPreview from './components/PostPreview';
 import EventPost from './components/EventPost';
 import DiscussionHero from './components/DiscussionHero';
 import PostMeta from './components/PostMeta';
-import EditUserModal from './components/EditUserModal';
-import SearchSource from './components/SearchSource';
 import DiscussionRenamedPost from './components/DiscussionRenamedPost';
 import DiscussionComposer from './components/DiscussionComposer';
 import LogInButtons from './components/LogInButtons';
@@ -87,7 +83,6 @@ export default Object.assign(compat, {
   'utils/UserControls': UserControls,
   'utils/Pane': Pane,
   'utils/BasicEditorDriver': BasicEditorDriver,
-  'utils/SuperTextarea': BasicEditorDriver, // @deprecated beta 16, remove beta 17
   'states/ComposerState': ComposerState,
   'states/DiscussionListState': DiscussionListState,
   'states/GlobalSearchState': GlobalSearchState,
@@ -116,8 +111,6 @@ export default Object.assign(compat, {
   'components/ComposerButton': ComposerButton,
   'components/DiscussionList': DiscussionList,
   'components/ReplyPlaceholder': ReplyPlaceholder,
-  'components/TextEditor': TextEditor, // @deprecated beta 16, remove beta 17. Moved to common.
-  'components/TextEditorButton': TextEditorButton, // @deprecated beta 16, remove beta 17. Moved to common.
   'components/AvatarEditor': AvatarEditor,
   'components/Post': Post,
   'components/SettingsPage': SettingsPage,
@@ -133,8 +126,6 @@ export default Object.assign(compat, {
   'components/EventPost': EventPost,
   'components/DiscussionHero': DiscussionHero,
   'components/PostMeta': PostMeta,
-  'components/EditUserModal': EditUserModal,
-  'components/SearchSource': SearchSource,
   'components/DiscussionRenamedPost': DiscussionRenamedPost,
   'components/DiscussionComposer': DiscussionComposer,
   'components/LogInButtons': LogInButtons,

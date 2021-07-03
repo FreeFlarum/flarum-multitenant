@@ -15,6 +15,5 @@ fof-passport:
         button-icon: 'Ikona przycisku logowania'
         button-title: 'Etykieta przycisku logowania'
         button-title-placeholder: '=> fof-passport.api.default-login-button-title'
-      title: 'FoF Passport'
   api:
     default-login-button-title: '=> core.ref.log_in'

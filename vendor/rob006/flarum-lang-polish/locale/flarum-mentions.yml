@@ -20,11 +20,11 @@ flarum-mentions:
       reply_to_post_text: 'Odpowiedz na #{number}'
     notifications:
       others_text: '=> core.ref.some_others'
-      post_mentioned_text: '{username} odpowiedział na Twój post|{username} odpowiedzieli na Twój post'
+      post_mentioned_text: '{username} odpowiedział na Twój post'
       user_mentioned_text: '{username} wspomniał o Tobie'
     post:
-      mentioned_by_self_text: '{users} odpowiedziałeś na to.|{users} odpowiedzieliście na to.'
-      mentioned_by_text: '{users} odpowiedział na to.|{users} odpowiedzieli na to.'
+      mentioned_by_self_text: '{count, plural, one {{users} odpowiedziałeś na to} other {{users} odpowiedzieliście na to}}.'
+      mentioned_by_text: '{users} {count, plural, one {odpowiedział na to} =2 {odpowiedzieli na to} =3 {odpowiedzieli na to} =4 {odpowiedzieli na to} other {odpowiedziało na to}}.'
       others_text: '=> core.ref.some_others'
       quote_button: Cytuj
       reply_link: '=> core.ref.reply'
@@ -35,4 +35,4 @@ flarum-mentions:
       notify_post_mentioned_label: 'Ktoś odpowiedział na mój post'
       notify_user_mentioned_label: 'Ktoś wspomniał o mnie w poście'
     user:
-      mentions_link: Wspomniany
+      mentions_link: Wzmianki

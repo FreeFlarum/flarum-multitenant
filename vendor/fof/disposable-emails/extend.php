@@ -3,9 +3,9 @@
 /*
  * This file is part of fof/disposable-emails.
  *
- * Copyright (c) 2019 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -24,7 +24,7 @@ return [
         ->listen(Saving::class, function (Saving $event) {
             $email = Arr::get($event->data, 'attributes.email');
 
-            if ($email !== null && !MailChecker::isValid($email)) {
+            if (!empty($email) && !MailChecker::isValid($email)) {
                 throw new ValidationException([
                     resolve('translator')->trans('fof-email-checker.error.disposable_email_message'),
                 ]);

@@ -10,18 +10,16 @@
 namespace Flarum\Extension;
 
 use Flarum\Database\Migrator;
-use Flarum\Extend\Compat;
 use Flarum\Extend\LifecycleInterface;
+use Flarum\Extension\Exception\ExtensionBootError;
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Filesystem\Filesystem as FilesystemInterface;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\Filesystem;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\MountManager;
-use League\Flysystem\Plugin\ListFiles;
+use Throwable;
 
 /**
  * @property string $name
@@ -51,14 +49,6 @@ class Extension implements Arrayable
         'jpeg' => 'image/jpeg',
         'jpg' => 'image/jpeg',
     ];
-
-    protected static function nameToId($name)
-    {
-        list($vendor, $package) = explode('/', $name);
-        $package = str_replace(['flarum-ext-', 'flarum-'], '', $package);
-
-        return "$vendor-$package";
-    }
 
     /**
      * Unique Id of the extension.
@@ -124,6 +114,14 @@ class Extension implements Arrayable
         $this->assignId();
     }
 
+    protected static function nameToId($name)
+    {
+        [$vendor, $package] = explode('/', $name);
+        $package = str_replace(['flarum-ext-', 'flarum-'], '', $package);
+
+        return "$vendor-$package";
+    }
+
     /**
      * Assigns the id for the extension used globally.
      */
@@ -132,17 +130,17 @@ class Extension implements Arrayable
         $this->id = static::nameToId($this->name);
     }
 
+    /**
+     * @internal
+     */
     public function extend(Container $container)
     {
         foreach ($this->getExtenders() as $extender) {
-            // If an extension has not yet switched to the new extend.php
-            // format, it might return a function (or more of them). We wrap
-            // these in a Compat extender to enjoy an unique interface.
-            if ($extender instanceof \Closure || is_string($extender)) {
-                $extender = new Compat($extender);
+            try {
+                $extender->extend($container, $this);
+            } catch (Throwable $e) {
+                throw new ExtensionBootError($this, $extender, $e);
             }
-
-            $extender->extend($container, $this);
         }
     }
 
@@ -165,7 +163,7 @@ class Extension implements Arrayable
     /**
      * Dot notation getter for composer.json attributes.
      *
-     * @see https://laravel.com/docs/5.1/helpers#arrays
+     * @see https://laravel.com/docs/8.x/helpers#arrays
      *
      * @param $name
      * @return mixed
@@ -178,6 +176,8 @@ class Extension implements Arrayable
     /**
      * @param bool $installed
      * @return Extension
+     *
+     * @internal
      */
     public function setInstalled($installed)
     {
@@ -197,6 +197,8 @@ class Extension implements Arrayable
     /**
      * @param string $version
      * @return Extension
+     *
+     * @internal
      */
     public function setVersion($version)
     {
@@ -213,6 +215,8 @@ class Extension implements Arrayable
      *                             are flarum extensions.
      * @param array $enabledIds:   An associative array where keys are the composer package names
      *                             of enabled extensions. Used to figure out optional dependencies.
+     *
+     * @internal
      */
     public function calculateDependencies($extensionSet, $enabledIds)
     {
@@ -275,6 +279,9 @@ class Extension implements Arrayable
         return $icon;
     }
 
+    /**
+     * @internal
+     */
     public function enable(Container $container)
     {
         foreach ($this->getLifecycleExtenders() as $extender) {
@@ -282,6 +289,9 @@ class Extension implements Arrayable
         }
     }
 
+    /**
+     * @internal
+     */
     public function disable(Container $container)
     {
         foreach ($this->getLifecycleExtenders() as $extender) {
@@ -430,22 +440,22 @@ class Extension implements Arrayable
         return realpath($this->path.'/assets/') !== false;
     }
 
+    /**
+     * @internal
+     */
     public function copyAssetsTo(FilesystemInterface $target)
     {
         if (! $this->hasAssets()) {
             return;
         }
 
-        $mount = new MountManager([
-            'source' => $source = new Filesystem(new Local($this->getPath().'/assets')),
-            'target' => $target,
-        ]);
+        $source = new Filesystem();
 
-        $source->addPlugin(new ListFiles);
-        $assetFiles = $source->listFiles('/', true);
+        $assetFiles = $source->allFiles("$this->path/assets");
 
-        foreach ($assetFiles as $file) {
-            $mount->copy("source://$file[path]", "target://extensions/$this->id/$file[path]");
+        foreach ($assetFiles as $fullPath) {
+            $relPath = substr($fullPath, strlen("$this->path/assets"));
+            $target->put("extensions/$this->id/$relPath", $source->get($fullPath));
         }
     }
 
@@ -459,6 +469,9 @@ class Extension implements Arrayable
         return realpath($this->path.'/migrations/') !== false;
     }
 
+    /**
+     * @internal
+     */
     public function migrate(Migrator $migrator, $direction = 'up')
     {
         if (! $this->hasMigrations()) {

@@ -17,7 +17,7 @@ core:
       custom_header_heading: Custom Header
       custom_header_text: => core.ref.custom_header_text
       custom_styles_heading: Custom Styles
-      custom_styles_text: Customize your forum's appearance by adding your own LESS/CSS code to be applied on top of Flarum's default styles.
+      custom_styles_text: Customize your forum's appearance by adding your own Less/CSS code to be applied on top of Flarum's default styles.
       dark_mode_label: Dark Mode
       description: "Customize your forum's colors, logos, and other variables."
       edit_css_button: Edit Custom CSS
@@ -58,7 +58,7 @@ core:
 
     # These translations are used in the Edit Custom CSS modal dialog.
     edit_css:
-      customize_text: "Customize your forum's appearance by adding your own LESS/CSS code to be applied on top of Flarum's <a>default styles</a>."
+      customize_text: "Customize your forum's appearance by adding your own Less/CSS code to be applied on top of Flarum's <a>default styles</a>."
       submit_button: => core.ref.save_changes
       title: Edit Custom CSS
 
@@ -163,6 +163,8 @@ core:
       email_title: => core.admin.email.description
       permissions_button: => core.admin.permissions.title
       permissions_title: => core.admin.permissions.description
+      userlist_button: => core.admin.users.title
+      userlist_title: => core.admin.users.description
       search_placeholder: Search Extensions
 
     # These translations are used in the Permissions page of the admin interface.
@@ -187,19 +189,19 @@ core:
       read_heading: Read
       rename_discussions_label: Rename discussions
       reply_to_discussions_label: Reply to discussions
+      search_users_label: Search users
       sign_up_label: Sign up
       start_discussions_label: Start discussions
       title: Permissions
-      view_discussions_label: View discussions
+      view_forum_label: View forum (discussions and users)
       view_hidden_groups_label: View hidden group badges
       view_last_seen_at_label: Always view user last seen time
       view_post_ips_label: View post IP addresses
-      view_user_list_label: View user list
 
     # These translations are used in the dropdown menus on the Permissions page.
     permissions_controls:
       allow_indefinitely_button: Indefinitely
-      allow_some_minutes_button: "For {count} minute|For {count} minutes"
+      allow_some_minutes_button: "{count, plural, one {For # minute} other {For # minutes}}"
       allow_ten_minutes_button: For 10 minutes
       allow_until_reply_button: Until next reply
       everyone_button: Everyone
@@ -216,6 +218,46 @@ core:
     upload_image:
       remove_button: => core.ref.remove
       upload_button: Choose an Image...
+
+    # These translations are used for the users list on the admin dashboard.
+    users:
+      description: A paginated list of all users on your forum.
+
+      grid:
+        columns:
+          edit_user:
+            button: => core.ref.edit
+            title: => core.ref.edit_user
+            tooltip: Edit {username}
+
+          email:
+            title: => core.ref.email
+            visibility_hide: Hide email address
+            visibility_show: Show email address
+
+          group_badges:
+            no_badges: None
+            title: Groups
+
+          join_time:
+            title: Joined
+
+          user_id:
+            title: ID
+
+          username:
+            profile_link_tooltip: Visit {username}'s profile
+            title: => core.ref.username
+
+        invalid_column_content: Invalid
+
+      pagination:
+        back_button: Previous page
+        next_button: Next page
+        page_counter: Page {current} of {total}
+
+      title: => core.ref.users
+      total_users: "Total users: {count}"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -278,6 +320,7 @@ core:
       rename_button: => core.ref.rename
       reply_button: => core.ref.reply
       restore_button: => core.ref.restore
+      toggle_dropdown_accessible_label: Toggle discussion actions dropdown menu
 
     # These translations are used in the discussion list.
     discussion_list:
@@ -286,21 +329,6 @@ core:
       mark_as_read_tooltip: Mark as Read
       replied_text: "{username} replied {ago}"
       started_text: "{username} started {ago}"
-
-    # These translations are used in the Edit User modal dialog (admin function).
-    edit_user:
-      activate_button: Activate User
-      email_heading: => core.ref.email
-      email_label: => core.ref.email
-      groups_heading: Groups
-      nothing_available: There is nothing available for you to edit at this time.
-      password_heading: => core.ref.password
-      password_label: => core.ref.password
-      set_password_label: Set new password
-      submit_button: => core.ref.save_changes
-      title: Edit User
-      username_heading: => core.ref.username
-      username_label: => core.ref.username
 
     # These translations are used in the Forgot Password modal dialog.
     forgot_password:
@@ -316,10 +344,12 @@ core:
     header:
       admin_button: Administration
       back_to_index_tooltip: Back to Discussion List
+      locale_dropdown_accessible_label: Change forum locale
       log_in_link: => core.ref.log_in
       log_out_button: => core.ref.log_out
       profile_button: Profile
       search_placeholder: Search Forum
+      session_dropdown_accessible_label: Toggle session options dropdown menu
       settings_button: => core.ref.settings
       sign_up_link: => core.ref.sign_up
 
@@ -332,6 +362,7 @@ core:
       meta_title_text: => core.ref.all_discussions
       refresh_tooltip: Refresh
       start_discussion_button: => core.ref.start_a_discussion
+      toggle_sidenav_dropdown_accessible_label: Toggle navigation dropdown menu
 
     # These translations are used by the sorting control above the discussion list.
     index_sort:
@@ -339,6 +370,7 @@ core:
       newest_button: Newest
       oldest_button: Oldest
       relevance_button: Relevance
+      toggle_dropdown_accessible_label: Change discussion list sorting
       top_button: Top
 
     # These translations are used in the Log In modal dialog.
@@ -359,6 +391,7 @@ core:
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
       mark_as_read_tooltip: Mark as Read
       title: => core.ref.notifications
+      toggle_dropdown_accessible_label: View notifications
       tooltip: => core.ref.notifications
 
     # These translations are used by tooltips displayed for individual posts.
@@ -375,13 +408,14 @@ core:
       edit_button: => core.ref.edit
       hide_confirmation: "Are you sure you want to delete this post?"
       restore_button: => core.ref.restore
+      toggle_dropdown_accessible_label: Toggle post controls dropdown menu
 
     # These translations are used in the scrubber to the right of the post stream.
     post_scrubber:
       now_link: Now
       original_post_link: Original Post
       unread_text: "{count} unread"
-      viewing_text: "{index} of {count} post|{index} of {count} posts"
+      viewing_text: "{count, plural, one {{index} of {formattedCount} post} other {{index} of {formattedCount} posts}}"
 
     # These translations are displayed between posts in the post stream.
     post_stream:
@@ -448,6 +482,7 @@ core:
       delete_error_message: "Deletion of user <i>{username} ({email})</i> failed"
       delete_success_message: "User <i>{username} ({email})</i> was deleted"
       edit_button: => core.ref.edit
+      toggle_dropdown_accessible_label: Toggle user controls dropdown menu
 
     # These translations are used in the alert that is shown when a new user has not confirmed their email address.
     user_email_confirmation:
@@ -462,6 +497,24 @@ core:
     badge:
       hidden_tooltip: Hidden
 
+    # These translations are used in the dropdown component.
+    dropdown:
+      toggle_dropdown_accessible_label: Toggle dropdown menu
+
+    # These translations are used in the Edit User modal dialog (admin function).
+    edit_user:
+      activate_button: Activate User
+      email_heading: => core.ref.email
+      email_label: => core.ref.email
+      groups_heading: Groups
+      password_heading: => core.ref.password
+      password_label: => core.ref.password
+      set_password_label: Set new password
+      submit_button: => core.ref.save_changes
+      title: => core.ref.edit_user
+      username_heading: => core.ref.username
+      username_label: => core.ref.username
+
     # These translations are displayed as error messages.
     error:
       dependent_extensions_message: "Cannot disable {extension} until the following dependent extensions are disabled: {extensions}"
@@ -470,6 +523,10 @@ core:
       not_found_message: The requested resource was not found.
       permission_denied_message: You do not have permission to do that.
       rate_limit_exceeded_message: You're going a little too quickly. Please try again in a few seconds.
+
+    # These translations are used in the loading indicator component.
+    loading_indicator:
+      accessible_label: => core.ref.loading
 
     # These translations are used as suffixes when abbreviating numbers.
     number_suffix:
@@ -493,7 +550,7 @@ core:
     content:
       javascript_disabled_message: This site is best viewed in a modern browser with JavaScript enabled.
       load_error_message: Something went wrong while trying to load the full version of this site. Try hard-refreshing this page to fix the error.
-      loading_text: Loading...
+      loading_text: => core.ref.loading
 
     # Translations in this namespace are displayed in the basic HTML discussion view.
     discussion:
@@ -608,10 +665,12 @@ core:
     delete_forever: Delete Forever
     discussions: Discussions                     # Referenced by flarum-statistics.yml
     edit: Edit
+    edit_user: Edit User
     email: Email
     icon: Icon
     icon_text: "Enter the name of any <a>FontAwesome</a> icon class, <em>including</em> the <code>fas fa-</code> prefix."
     load_more: Load More
+    loading: Loading...
     log_in: Log In
     log_out: Log Out
     mark_all_as_read: Mark All as Read
@@ -629,7 +688,7 @@ core:
     save_changes: Save Changes                   # Referenced by flarum-suspend.yml, flarum-tags.yml
     settings: Settings
     sign_up: Sign Up
-    some_others: "{count} other|{count} others"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    some_others: "{count, plural, one {# other} other {# others}}"  # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: Start a Discussion
     username: Username
     users: Users                                 # Referenced by flarum-statistics.yml

@@ -12,9 +12,9 @@
 namespace Askvortsov\FlarumPWA\Forum\Controller;
 
 use Askvortsov\FlarumPWA\PWATrait;
-use Flarum\Foundation\Application;
-use Flarum\Foundation\Paths;
-use Flarum\Settings\SettingsRepositoryInterface;
+use Illuminate\Contracts\Filesystem\Factory as FilesystemFactory;
+use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Contracts\View\Factory as ViewFactory;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -25,35 +25,25 @@ class OfflineController implements RequestHandlerInterface
     use PWATrait;
 
     /**
-     * @var SettingsRepositoryInterface
+     * @var Filesystem
      */
-    protected $settings;
+    protected $assetDir;
 
     /**
-     * @var Application
+     * @var ViewFactory
      */
-    protected $app;
+    protected $viewFactory;
 
-    /**
-     * @var Paths
-     */
-    protected $paths;
-
-    /**
-     * @param SettingsRepositoryInterface $settings
-     */
-    public function __construct(SettingsRepositoryInterface $settings, Application $app, Paths $paths)
+    public function __construct(FilesystemFactory $filesystemFactory, ViewFactory $viewFactory)
     {
-        $this->settings = $settings;
-        $this->app = $app;
-        $this->paths = $paths;
+        $this->assetDir = $filesystemFactory->disk('flarum-assets');
+        $this->viewFactory = $viewFactory;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        return new HtmlResponse($this->mount()->read('ext://offline.html'));
+        $html = $this->viewFactory->make('askvortsov-pwa::offline')->render();
+
+        return new HtmlResponse($html);
     }
 }

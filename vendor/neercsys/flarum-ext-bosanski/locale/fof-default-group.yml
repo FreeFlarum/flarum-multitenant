@@ -1,4 +1,0 @@
-fof-default-group:
-  admin:
-    settings:
-      info: U nastavku možete odabrati grupu kojoj ćete dodijeliti korisniku kada je njihov račun aktiviran.

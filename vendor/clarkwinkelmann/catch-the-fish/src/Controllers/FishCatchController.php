@@ -2,12 +2,11 @@
 
 namespace ClarkWinkelmann\CatchTheFish\Controllers;
 
-use ClarkWinkelmann\CatchTheFish\Fish;
 use ClarkWinkelmann\CatchTheFish\Repositories\FishRepository;
 use ClarkWinkelmann\CatchTheFish\Repositories\PlacementRepository;
 use ClarkWinkelmann\CatchTheFish\Serializers\FishSerializer;
 use Flarum\Api\Controller\AbstractShowController;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Flarum\Http\RequestUtil;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
@@ -29,20 +28,12 @@ class FishCatchController extends AbstractShowController
         $this->placement = $placement;
     }
 
-    /**
-     * @param ServerRequestInterface $request
-     * @param Document $document
-     * @return Fish
-     * @throws ModelNotFoundException
-     * @throws \Flarum\Foundation\ValidationException
-     * @throws \Flarum\User\Exception\PermissionDeniedException
-     */
     protected function data(ServerRequestInterface $request, Document $document)
     {
         $id = Arr::get($request->getQueryParams(), 'id');
 
         $fish = $this->fishes->findOrFail($id);
 
-        return $this->placement->catch($request->getAttribute('actor'), $fish, $request->getParsedBody());
+        return $this->placement->catch(RequestUtil::getActor($request), $fish, $request->getParsedBody());
     }
 }

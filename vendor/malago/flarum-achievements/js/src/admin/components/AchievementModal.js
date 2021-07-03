@@ -16,6 +16,7 @@
 import Modal from "flarum/components/Modal";
 import Button from "flarum/components/Button";
 import Checkbox from "flarum/components/Checkbox";
+import Tooltip from "flarum/components/Tooltip";
 import LoadingIndicator from "flarum/components/LoadingIndicator";
 import ItemList from "flarum/utils/ItemList";
 import Stream from "flarum/utils/Stream";
@@ -46,7 +47,8 @@ export default class AchievementModal extends Modal {
 
     this.points = Stream(this.achievement.points() || "");
     this.image = Stream(this.achievement.image() || "");
-    this.active = Stream(this.achievement.active() || "");
+    this.active = Stream(this.achievement.active() || 1);
+    this.hidden = Stream(this.achievement.hidden() || 0);
 
     if (this.achievement.rectangle()) {
       var rectangle = this.achievement.rectangle().split(',');
@@ -66,7 +68,7 @@ export default class AchievementModal extends Modal {
   }
 
   className() {
-    return "EditAchievementModal Modal--small";
+    return "EditAchievementModal Modal--large";
   }
 
   title() {
@@ -90,9 +92,13 @@ export default class AchievementModal extends Modal {
       );
     }
 
+    var all_fields = this.fields().toArray();
     return (
       <div className="Modal-body">
-        <div className="Form">{this.fields().toArray()}</div>
+        <div className="Form">
+          <div className="ModalColumn">{all_fields.slice(0, 6)}</div>
+          <div className="ModalColumn">{all_fields.slice(6)}</div>
+        </div>
       </div>
     );
   }
@@ -140,6 +146,26 @@ export default class AchievementModal extends Modal {
     );
 
     items.add(
+      "hidden",
+      <div className="Form-group">
+        <label>
+          {app.translator.trans(
+            "malago-achievements.admin.achievement_modal.hidden_label"
+          )}
+        </label>
+        {Checkbox.component(
+          {
+            state: this.hidden(),
+            onchange: () => {
+              this.hidden((this.hidden() + 1) % 2);
+            },
+          }
+        )}
+      </div>,
+      50
+    );
+
+    items.add(
       "description",
       <div className="Form-group">
         <label>
@@ -170,13 +196,15 @@ export default class AchievementModal extends Modal {
           )}
           id={this.selected_variable}
         ></GroupSelector>
-        <input
-          className={this.selected_variable() == "avatar" || this.selected_variable() == "manual" ? "FormControl FormHidden FormInline" : "FormControl FormInline"}
-          placeholder={app.translator.trans(
-            "malago-achievements.admin.achievement_modal.computation_placeholder"
-          )}
-          bidi={this.computation}
-        />
+        <Tooltip id='Tooltip-computation' text="">
+          <input
+            className={this.selected_variable() == "avatar" || this.selected_variable() == "manual" ? "FormControl FormHidden FormInline" : "FormControl FormInline"}
+            placeholder={app.translator.trans(
+              "malago-achievements.admin.achievement_modal.computation_placeholder"
+            )}
+            bidi={this.computation}
+            />
+          </Tooltip>
       </div>
       ,
       50
@@ -379,7 +407,8 @@ export default class AchievementModal extends Modal {
       points: this.points(),
       image: this.image(),
       rectangle: [(this.row() - 1) * this.height(), (this.col() - 1) * this.width(), this.height(), this.width()].join(','),
-      active: this.active()
+      active: this.active(),
+      hidden: this.hidden()
     };
 
     return data;

@@ -1074,7 +1074,8 @@
         "MaxInstanceLifetime":{"shape":"MaxInstanceLifetime"},
         "CapacityRebalance":{"shape":"CapacityRebalanceEnabled"},
         "WarmPoolConfiguration":{"shape":"WarmPoolConfiguration"},
-        "WarmPoolSize":{"shape":"WarmPoolSize"}
+        "WarmPoolSize":{"shape":"WarmPoolSize"},
+        "Context":{"shape":"Context"}
       }
     },
     "AutoScalingGroupDesiredCapacity":{"type":"integer"},
@@ -1193,6 +1194,11 @@
       "max":20000,
       "min":100
     },
+    "BlockDeviceEbsThroughput":{
+      "type":"integer",
+      "max":1000,
+      "min":125
+    },
     "BlockDeviceEbsVolumeSize":{
       "type":"integer",
       "max":16384,
@@ -1275,6 +1281,7 @@
         "InstanceId":{"shape":"XmlStringMaxLen19"}
       }
     },
+    "Context":{"type":"string"},
     "Cooldown":{"type":"integer"},
     "CreateAutoScalingGroupType":{
       "type":"structure",
@@ -1306,7 +1313,8 @@
         "LifecycleHookSpecificationList":{"shape":"LifecycleHookSpecifications"},
         "Tags":{"shape":"Tags"},
         "ServiceLinkedRoleARN":{"shape":"ResourceName"},
-        "MaxInstanceLifetime":{"shape":"MaxInstanceLifetime"}
+        "MaxInstanceLifetime":{"shape":"MaxInstanceLifetime"},
+        "Context":{"shape":"Context"}
       }
     },
     "CreateLaunchConfigurationType":{
@@ -1680,7 +1688,8 @@
         "VolumeType":{"shape":"BlockDeviceEbsVolumeType"},
         "DeleteOnTermination":{"shape":"BlockDeviceEbsDeleteOnTermination"},
         "Iops":{"shape":"BlockDeviceEbsIops"},
-        "Encrypted":{"shape":"BlockDeviceEbsEncrypted"}
+        "Encrypted":{"shape":"BlockDeviceEbsEncrypted"},
+        "Throughput":{"shape":"BlockDeviceEbsThroughput"}
       }
     },
     "EbsOptimized":{"type":"boolean"},
@@ -2950,7 +2959,8 @@
         "NewInstancesProtectedFromScaleIn":{"shape":"InstanceProtected"},
         "ServiceLinkedRoleARN":{"shape":"ResourceName"},
         "MaxInstanceLifetime":{"shape":"MaxInstanceLifetime"},
-        "CapacityRebalance":{"shape":"CapacityRebalanceEnabled"}
+        "CapacityRebalance":{"shape":"CapacityRebalanceEnabled"},
+        "Context":{"shape":"Context"}
       }
     },
     "Values":{

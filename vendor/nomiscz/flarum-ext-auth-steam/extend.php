@@ -39,7 +39,7 @@ return [
         ->post('/auth/steam/unlink', 'auth.steam.api.unlink', SteamUnlinkController::class),
 
     (new Extend\ApiSerializer(UserSerializer::class))
-        ->mutate(function($serializer, $user, $attributes) {
+        ->attributes(function($serializer, $user, $attributes) {
 
             $loginProviders = $user->loginProviders();
             $steamProvider = $loginProviders->where('provider', 'steam')->first();

@@ -14,7 +14,10 @@ use Flarum\Foundation\Config;
 use Flarum\Foundation\ErrorHandling\Registry;
 use Flarum\Foundation\ErrorHandling\Reporter;
 use Flarum\Foundation\Paths;
+use Illuminate\Contracts\Cache\Factory as CacheFactory;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandling;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Queue\Factory;
 use Illuminate\Contracts\Queue\Queue;
 use Illuminate\Queue\Connectors\ConnectorInterface;
@@ -41,26 +44,26 @@ class QueueServiceProvider extends AbstractServiceProvider
     {
         // Register a simple connection factory that always returns the same
         // connection, as that is enough for our purposes.
-        $this->container->singleton(Factory::class, function () {
-            return new QueueFactory(function () {
-                return $this->container->make('flarum.queue.connection');
+        $this->container->singleton(Factory::class, function (Container $container) {
+            return new QueueFactory(function () use ($container) {
+                return $container->make('flarum.queue.connection');
             });
         });
 
         // Extensions can override this binding if they want to make Flarum use
         // a different queuing backend.
-        $this->container->singleton('flarum.queue.connection', function ($container) {
+        $this->container->singleton('flarum.queue.connection', function (Container $container) {
             $queue = new SyncQueue;
             $queue->setContainer($container);
 
             return $queue;
         });
 
-        $this->container->singleton(ExceptionHandling::class, function ($container) {
+        $this->container->singleton(ExceptionHandling::class, function (Container $container) {
             return new ExceptionHandler($container['log']);
         });
 
-        $this->container->singleton(Worker::class, function ($container) {
+        $this->container->singleton(Worker::class, function (Container $container) {
             /** @var Config $config */
             $config = $container->make(Config::class);
 
@@ -76,13 +79,13 @@ class QueueServiceProvider extends AbstractServiceProvider
 
         // Override the Laravel native Listener, so that we can ignore the environment
         // option and force the binary to flarum.
-        $this->container->singleton(QueueListener::class, function ($container) {
-            return new Listener($container[Paths::class]->base);
+        $this->container->singleton(QueueListener::class, function (Container $container) {
+            return new Listener($container->make(Paths::class)->base);
         });
 
         // Bind a simple cache manager that returns the cache store.
-        $this->container->singleton('cache', function ($container) {
-            return new class($container) {
+        $this->container->singleton('cache', function (Container $container) {
+            return new class($container) implements CacheFactory {
                 public function __construct($container)
                 {
                     $this->container = $container;
@@ -91,6 +94,13 @@ class QueueServiceProvider extends AbstractServiceProvider
                 public function driver()
                 {
                     return $this->container['cache.store'];
+                }
+
+                // We have to define this explicitly
+                // so that we implement the interface.
+                public function store($name = null)
+                {
+                    return $this->__call($name, null);
                 }
 
                 public function __call($name, $arguments)
@@ -116,8 +126,8 @@ class QueueServiceProvider extends AbstractServiceProvider
 
     protected function registerCommands()
     {
-        $this->container->extend('flarum.console.commands', function ($commands) {
-            $queue = $this->container->make(Queue::class);
+        $this->container->extend('flarum.console.commands', function ($commands, Container $container) {
+            $queue = $container->make(Queue::class);
 
             // There is no need to have the queue commands when using the sync driver.
             if ($queue instanceof SyncQueue) {
@@ -130,16 +140,16 @@ class QueueServiceProvider extends AbstractServiceProvider
         });
     }
 
-    public function boot()
+    public function boot(Dispatcher $events, Container $container)
     {
-        $this->container['events']->listen(JobFailed::class, function (JobFailed $event) {
+        $events->listen(JobFailed::class, function (JobFailed $event) use ($container) {
             /** @var Registry $registry */
-            $registry = $this->container->make(Registry::class);
+            $registry = $container->make(Registry::class);
 
             $error = $registry->handle($event->exception);
 
             /** @var Reporter[] $reporters */
-            $reporters = $this->container->tagged(Reporter::class);
+            $reporters = $container->tagged(Reporter::class);
 
             if ($error->shouldBeReported()) {
                 foreach ($reporters as $reporter) {

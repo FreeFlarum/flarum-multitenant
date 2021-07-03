@@ -52,7 +52,7 @@ class Round extends AbstractModel
         return $this->rankings()->where('user_id', $user->id)->first();
     }
 
-    public function scopeActiveRound(Builder $query)
+    public function scopeActiveRound(Builder $query): Builder
     {
         $now = Carbon::now();
 

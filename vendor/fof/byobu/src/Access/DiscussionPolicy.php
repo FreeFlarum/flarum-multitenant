@@ -50,13 +50,15 @@ class DiscussionPolicy extends AbstractPolicy
      */
     private function approveIfPrivate(Discussion $discussion)
     {
-        /** @var Screener $screener */
-        $screener = resolve('byobu.screener');
-        $screener = $screener->fromDiscussion($discussion);
-
-        return $screener->isPrivate() ? $this->allow() : null;
+        return $this->isPrivate($discussion) ? $this->allow() : null;
     }
 
+    /**
+     * @param User       $actor
+     * @param Discussion $discussion
+     *
+     * @return bool|void
+     */
     public function bypassTagCounts(User $actor, Discussion $discussion)
     {
         $isByobu = $discussion->isByobu;
@@ -64,5 +66,32 @@ class DiscussionPolicy extends AbstractPolicy
         $discussion->offsetUnset('isByobu');
 
         return $isByobu ? $this->allow() : null;
+    }
+
+    /**
+     * @param User       $actor
+     * @param Discussion $discussion
+     *
+     * @return bool|void
+     */
+    public function tag(User $actor, Discussion $discussion)
+    {
+        return $this->isPrivate($discussion) ? $this->deny() : null;
+    }
+
+    /**
+     * Determine if the supplied discussion is a byobu private discussion or not.
+     *
+     * @param Discussion $discussion
+     *
+     * @return bool
+     */
+    private function isPrivate(Discussion $discussion): bool
+    {
+        /** @var Screener $screener */
+        $screener = resolve('byobu.screener');
+        $screener = $screener->fromDiscussion($discussion);
+
+        return $screener->isPrivate();
     }
 }

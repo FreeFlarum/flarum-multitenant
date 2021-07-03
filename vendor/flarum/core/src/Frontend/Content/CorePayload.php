@@ -10,8 +10,8 @@
 namespace Flarum\Frontend\Content;
 
 use Flarum\Api\Client;
-use Flarum\Api\Controller\ShowUserController;
 use Flarum\Frontend\Document;
+use Flarum\Http\RequestUtil;
 use Flarum\Locale\LocaleManager;
 use Flarum\User\User;
 use Psr\Http\Message\ResponseInterface;
@@ -51,10 +51,10 @@ class CorePayload
     {
         $data = $this->getDataFromApiDocument($document->getForumApiDocument());
 
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         if ($actor->exists) {
-            $user = $this->getUserApiDocument($actor);
+            $user = $this->getUserApiDocument($request, $actor);
             $data = array_merge($data, $this->getDataFromApiDocument($user));
         }
 
@@ -80,13 +80,12 @@ class CorePayload
         return $data;
     }
 
-    private function getUserApiDocument(User $user): array
+    private function getUserApiDocument(Request $request, User $actor): array
     {
-        // TODO: to avoid an extra query, something like
-        // $controller = new ShowUserController(new PreloadedUserRepository($user));
+        $id = $actor->id;
 
         return $this->getResponseBody(
-            $this->api->send(ShowUserController::class, $user, ['id' => $user->id])
+            $this->api->withParentRequest($request)->get("/users/$id")
         );
     }
 

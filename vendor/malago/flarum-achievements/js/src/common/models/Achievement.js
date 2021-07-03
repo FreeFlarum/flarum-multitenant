@@ -27,5 +27,6 @@ Object.assign(Achievement.prototype, {
   rectangle: Model.attribute('rectangle'),
   image: Model.attribute('image'),
   new: Model.attribute('new'),
-  active: Model.attribute('active')
+  active: Model.attribute('active'),
+  hidden: Model.attribute('hidden'),
 });

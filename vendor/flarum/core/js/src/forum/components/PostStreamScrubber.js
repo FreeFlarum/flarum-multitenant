@@ -26,9 +26,10 @@ export default class PostStreamScrubber extends Component {
     const count = this.stream.count();
 
     // Index is left blank for performance reasons, it is filled in in updateScubberValues
-    const viewing = app.translator.transChoice('core.forum.post_scrubber.viewing_text', count, {
+    const viewing = app.translator.trans('core.forum.post_scrubber.viewing_text', {
+      count,
       index: <span className="Scrubber-index"></span>,
-      count: <span className="Scrubber-count">{formatNumber(count)}</span>,
+      formattedCount: <span className="Scrubber-count">{formatNumber(count)}</span>,
     });
 
     const unreadCount = this.stream.discussion.unreadCount();
@@ -89,7 +90,9 @@ export default class PostStreamScrubber extends Component {
     );
   }
 
-  onupdate() {
+  onupdate(vnode) {
+    super.onupdate(vnode);
+
     if (this.stream.forceUpdateScrubber) {
       this.stream.forceUpdateScrubber = false;
       this.stream.loadPromise.then(() => this.updateScrubberValues({ animate: true, forceHeightChange: true }));
@@ -112,7 +115,6 @@ export default class PostStreamScrubber extends Component {
 
       // Now we want to make the scrollbar handle draggable. Let's start by
       // preventing default browser events from messing things up.
-      .css({ cursor: 'pointer', 'user-select': 'none' })
       .bind('dragstart mousedown touchstart', (e) => e.preventDefault());
 
     // When the mouse is pressed on the scrollbar handle, we capture some
@@ -124,7 +126,6 @@ export default class PostStreamScrubber extends Component {
     this.indexStart = 0;
 
     this.$('.Scrubber-handle')
-      .css('cursor', 'move')
       .bind('mousedown touchstart', this.onmousedown.bind(this))
 
       // Exempt the scrollbar handle from the 'jump to' click event.
@@ -143,7 +144,9 @@ export default class PostStreamScrubber extends Component {
     this.stream.loadPromise.then(() => this.updateScrubberValues({ animate: false, forceHeightChange: true }));
   }
 
-  onremove() {
+  onremove(vnode) {
+    super.onremove(vnode);
+
     this.scrollListener.stop();
     $(window).off('resize', this.handlers.onresize);
 

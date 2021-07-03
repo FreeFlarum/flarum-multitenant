@@ -9,7 +9,6 @@
 
 namespace Flarum\Query;
 
-use Flarum\Search\SearchCriteria;
 use Flarum\User\User;
 
 /**
@@ -17,7 +16,7 @@ use Flarum\User\User;
  * query. The limit and offset are not included because they only determine
  * which part of the entire result set will be returned.
  */
-class QueryCriteria extends SearchCriteria
+class QueryCriteria
 {
     /**
      * The user performing the query.
@@ -43,16 +42,25 @@ class QueryCriteria extends SearchCriteria
     public $sort;
 
     /**
+     * Is the sort for this request the default sort from the controller?
+     * If false, the current request specifies a sort.
+     *
+     * @var bool
+     */
+    public $sortIsDefault;
+
+    /**
      * @param User $actor The user performing the query.
      * @param array $query The query params.
      * @param array $sort An array of sort-order pairs, where the column is the
      *     key, and the order is the value. The order may be 'asc', 'desc', or
      *     an array of IDs to order by.
      */
-    public function __construct(User $actor, $query, array $sort = null)
+    public function __construct(User $actor, $query, array $sort = null, bool $sortIsDefault = false)
     {
         $this->actor = $actor;
         $this->query = $query;
         $this->sort = $sort;
+        $this->sortIsDefault = $sortIsDefault;
     }
 }

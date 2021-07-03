@@ -3,9 +3,9 @@
 /*
  * This file is part of fof/oauth.
  *
- * Copyright (c) 2020 FriendsOfFlarum.
+ * Copyright (c) FriendsOfFlarum.
  *
- * For the full copyright and license information, please view the LICENSE.md
+ * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -30,7 +30,7 @@ class AuthController extends Controller
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $name = Arr::get($request->getQueryParams(), 'provider');
-        $providers = app()->tagged('fof-oauth.providers');
+        $providers = resolve('container')->tagged('fof-oauth.providers');
 
         foreach ($providers as $provider) {
             if ($provider->name() === $name) {
