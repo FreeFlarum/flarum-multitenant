@@ -1,6 +1,0 @@
-<template>
-  <element name="textarea" id="1">
-    <attribute boolean="yes" name="disabled"/>
-    <closeTag id="1"/>
-  </element>
-</template>

@@ -1,0 +1,13 @@
+therealsujitk:
+    forum:
+      gifs:
+        label: 'Thêm ảnh GIF'
+        title: 'Chọn ảnh GIF'
+        searchbar: 'Tìm kiếm ảnh GIFs'
+        search: 'Tìm kiếm'
+        loading: 'Đang tải...'
+        noresults: 'Không có kết quả'
+        loadmore: 'Tải thêm'
+    admin:
+      gifs:
+        giphyAPIkey: 'Mã API Giphy'

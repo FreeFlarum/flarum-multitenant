@@ -1,0 +1,41 @@
+askvortsov-rich-text:
+  admin:
+    settings:
+      toggle_on_editor: Hiển thị chế độ văn bản đa dạng thức trên trình chỉnh sửa?
+  lib:
+    composer:
+      toggle_button: Chuyển đổi chế độ văn bản có dạng thức
+      insert_button: Chèn
+      insert_image:
+        src_placeholder: Liên kết
+        title_placeholder: Tiêu đề
+      insert_link:
+        text_placeholder: Văn bản
+        href_placeholder: URL
+        title_placeholder: Tiêu đề (hiển thị khi di chuột)
+        remove_button: Xóa
+      additional_items_tooltip: Kiểm soát bổ sung
+      bold_tooltip: Chữ in đậm <{modifierKey}-b>
+      code_tooltip: Dòng code <{modifierKey}-`>
+      code_block_tooltip: Chèn một khối code
+      header_tooltip: Thay đổi thành header {level} <shift-{modifierKey}-{level}>
+      horizontal_rule_tooltip: Chèn đường kẻ ngang
+      image_tooltip: Thêm ảnh
+      italic_tooltip: Chữ nghiêng <{modifierKey}-i>
+      link_tooltip: Thêm liên kết
+      ordered_list_tooltip: Danh sách đánh số <shift-{modifierKey}-9>
+      paragraph_tooltip: Thay đổi thành đoạn văn <shift-{modifierKey}-0>
+      quote_tooltip: Chèn câu trích dẫn <{modifierKey}-q>
+      spoiler_block_tooltip: Khối Spoiler/Dropdown
+      spoiler_inline_tooltip: Spoiler  <{modifierKey}-;>
+      strike_tooltip: Gạch ngang <alt-shift-5>
+      sub_tooltip: Chỉ số dưới <{modifierKey}-,>
+      sup_tooltip: Chỉ số trên <{modifierKey}-.>
+      text_type_tooltip: Chọn kiểu chữ
+      unordered_list_tooltip: Danh sách có dấu đầu dòng <shift-{modifierKey}-8>
+
+  forum:
+    settings:
+      composer_heading: Trình soạn
+      use_rich_text_editor_label: Sử dụng trình chỉnh sửa văn bản đa dạng thức?
+      rich_text_compact_paragraphs_label: Đừng tách các đoạn văn bằng dòng mới.

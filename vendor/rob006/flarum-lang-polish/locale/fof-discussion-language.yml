@@ -10,6 +10,7 @@ fof-discussion-language:
       composer_default_label: 'Wstępnie wybierz aktualny język w formularzu tworzenia dyskusji'
       locale_sort_label: 'Użyj wykrytego języka jako domyślnego filtru dyskusji'
       native_label: 'Używaj lokalnych nazw języków'
+      show_any_lang_opt_label: 'Pozwól na wybranie opcji "Dowolny język".'
       show_flag_label: 'Wyświetl flagę kraju obok nazwy języka'
   api:
     discussion:

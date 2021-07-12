@@ -1,9 +1,0 @@
-imgur-upload:
-  admin:
-    settings:
-        title: Imgur Upload beállítások
-  forum:
-    upload: Kattints ide vagy illeszd be a feltöltéshez
-    loading: Feltöltés...
-    done: Kész!
-    error: Hiba

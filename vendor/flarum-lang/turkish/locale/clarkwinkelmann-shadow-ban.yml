@@ -13,6 +13,8 @@ clarkwinkelmann-shadow-ban:
     badge:
       user: 'Gizlice askıya alınmış'
     banUser:
+      quickChoiceDays: '{count, plural, one {# gün} other {# gün}}'
+      quickChoiceReset: 'Askıda değil'
       submit: Kaydet
       title: '{username} askıya al'
     discussionControl:

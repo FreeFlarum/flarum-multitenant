@@ -13,3 +13,5 @@ the-turk-nodp:
     composer_edit:
       double_posting_warning_description: 'Bu tartışmaya kısa bir süre önce cevap verdiğiniz için, lütfen yeni bir tane gönderi yazmak yerine son gönderinizi düzenleyin.'
       double_posting_warning_title: 'Bu tartışmanın son gönderi yazarı sizsiziniz.'
+    discussion:
+      cannot_reply_alert_message: 'Bir başkası yanıt verene kadar tartışmaya yeni bir yanıt giremezsiniz.'

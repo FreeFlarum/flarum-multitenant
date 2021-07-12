@@ -19,7 +19,7 @@
         "php": "^7.2 || ^8.0",
         "psr/http-message": "^1.0",
         "psr/http-server-middleware": "^1.0",
-        "psr/container": "^1.0",
+        "psr/container": "^1.0 || ^2.0",
         "psr/http-factory": "^1.0"
     },
     "require-dev": {
@@ -29,8 +29,8 @@
         "friendsofphp/php-cs-fixer": "^v2.16",
         "oscarotero/php-cs-fixer-config": "^1.0",
         "squizlabs/php_codesniffer": "^3.5",
-        "slim/psr7": "~0.3",
-        "guzzlehttp/psr7": "dev-master",
+        "slim/psr7": "^1.4",
+        "guzzlehttp/psr7": "^2.0",
         "sunrise/stream": "^1.0.15",
         "sunrise/uri": "^1.0.15",
         "sunrise/http-message": "^1.0",

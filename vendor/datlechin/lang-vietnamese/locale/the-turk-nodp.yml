@@ -1,0 +1,29 @@
+the-turk-nodp:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      double_posting_label: Đăng hai lần
+
+    # These translations are used in the Settings page.
+    settings:
+      time_limit_label: Giới hạn thời gian
+      time_limit_text: Nếu hơn <b>xxx</b> phút đã trôi qua kể từ bài đăng cuối cùng trong cuộc thảo luận, người đăng cuối cùng sẽ buộc phải chỉnh sửa bài đăng của họ. Đặt giá trị này thành <b>0</b> để vô hiệu hóa giới hạn thời gian.
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the composer when editing a post.
+    composer_edit:
+      double_posting_warning_title: Bạn là người đăng cuối cùng của cuộc thảo luận này.
+      double_posting_warning_description: Vì bạn đã trả lời cuộc thảo luận ngắn này cách đây không lâu, vui lòng sửa đổi bài đăng cuối cùng của bạn thay vì tạo một bài mới.
+
+    # Translations in this namespace are displayed in the discussion.
+    discussion:
+      cannot_reply_alert_message: Bạn không thể trả lời cuộc thảo luận này cho đến khi người khác trả lời.

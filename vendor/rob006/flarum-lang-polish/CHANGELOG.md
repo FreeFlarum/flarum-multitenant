@@ -2,6 +2,29 @@ CHANGELOG
 =========
 
 
+0.5.4 (2021-07-06)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`acpl/my-tags`](https://github.com/android-com-pl/my-tags)
+* [`clarkwinkelmann/flarum-ext-shadow-ban`](https://github.com/clarkwinkelmann/flarum-ext-shadow-ban)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`fof/sentry`](https://github.com/FriendsOfFlarum/sentry)
+
+
+Wszystkie zmiany: [v0.5.3...v0.5.4](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.3...v0.5.4).
+
+
 0.5.3 (2021-06-26)
 ------------------
 

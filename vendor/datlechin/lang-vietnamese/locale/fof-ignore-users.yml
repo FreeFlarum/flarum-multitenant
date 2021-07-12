@@ -1,0 +1,27 @@
+fof-ignore-users:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      can_not_be_ignored_label: Không thể bỏ qua
+
+
+  # Translations in this namespace are used by the forum interface.
+  forum:
+
+    profile_link: Người dùng bị bỏ qua
+
+    # These strings are used in the User Controls menu.
+    user_controls:
+      ignore_button: Bỏ qua
+      ignore_confirmation: Bạn có chắc chắn muốn bỏ qua người dùng này không?
+      unignore_button: Hủy bỏ qua
+      unignore_confirmation: Bạn có chắc chắn muốn hủy bỏ qua người dùng này không?
+
+    badge:
+      user_label: Người dùng bị bỏ qua
+      discussion_label: Bắt đầu bởi một người dùng bị bỏ qua

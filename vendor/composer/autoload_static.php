@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
+class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -87,6 +87,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'axy\\errors\\' => 11,
             'axy\\codecs\\base64vlq\\' => 21,
             'axy\\backtrace\\' => 14,
+        ),
+        'Y' => 
+        array (
+            'Yannis\\ConfixTheme\\' => 19,
         ),
         'W' => 
         array (
@@ -269,7 +273,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'FoF\\OAuth\\' => 10,
             'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
-            'FoF\\Masquerade\\' => 15,
             'FoF\\Mason\\' => 10,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
@@ -352,6 +355,7 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
             'Askvortsov\\FlarumDiscussionTemplates\\' => 37,
             'Askvortsov\\FlarumChecklist\\' => 27,
             'Askvortsov\\FlarumCategories\\' => 28,
+            'Askvortsov\\AutoModerator\\' => 25,
             'App\\' => 4,
             'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
@@ -390,6 +394,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         'axy\\backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace',
+        ),
+        'Yannis\\ConfixTheme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yannisme/confixtheme/src',
         ),
         'Wohali\\OAuth2\\Client\\' => 
         array (
@@ -950,10 +958,6 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/fof/merge-discussions/src',
         ),
-        'FoF\\Masquerade\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/masquerade/src',
-        ),
         'FoF\\Mason\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/mason/src',
@@ -1222,6 +1226,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
         array (
             0 => __DIR__ . '/..' . '/askvortsov/flarum-categories/src',
         ),
+        'Askvortsov\\AutoModerator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-auto-moderator/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -1267,10 +1275,10 @@ class ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit8b8db539bf337cdb6b19f1bfa688cc75::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0::$classMap;
 
         }, null, ClassLoader::class);
     }

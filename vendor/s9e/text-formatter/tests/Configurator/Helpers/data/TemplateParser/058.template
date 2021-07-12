@@ -1,3 +1,0 @@
-<td>
-	<xsl:copy-of select="@colspan | @rowspan"/>
-</td>

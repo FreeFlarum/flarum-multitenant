@@ -1,0 +1,47 @@
+kyrne-shout:
+  admin:
+    permissions:
+      start_label: Iniciar conversaciones privadas    
+    settings:
+      return_key: La clave de retorno envía un mensaje
+      set_own_password: "Permita que los usuarios creen su propia contraseña: compatibilidad con SSO"
+      title: Configuración de Shout      
+  forum:
+    chat:
+      cant_send: 'No puede enviar un mensaje hasta que {username} responda (solo el primer mensaje)'
+      cant_send_toomany: 'Espere la respuesta de {username} antes de enviar más mensajes'
+      cant_start: 'No puedo iniciar la conversación'
+      chat_with: 'Chatear con {username}'
+      failed_message: 'Error al descifrar el mensaje, intentando el método de recuperación #{method}'
+      failed_to_decrypt: '[No se pudo descifrar]'
+      messages_multiple: '{count} mensajes totales'
+      messages_single: 'Nueva conversación'
+      recovery_message: 'Mensaje del sistema: sincronización de cifrado perdida y recuperada'
+      send: 'Enviar mensaje'
+      start: 'Iniciar conversación'
+      start_of_conversation: 'Inicio de conversación'
+      text_placeholder: 'Escribe tu mensaje'
+    dropdown:
+      tooltip: Conversaciones
+    modal:
+      already: "Ya tiene una conversación con {username}."
+      copied: Su mensaje se ha copiado al portapapeles.
+      help: Empiece a escribir un nombre de usuario para iniciar un chat.
+      help_start: "Escriba su primer mensaje. Este será el único mensaje que puede enviar hasta que responda {username}. Haga clic en el usuario para seleccionar un destinatario diferente."
+      more_users: Si no ve al usuario que está buscando, no tiene configuración de mensajería privada.
+      search_recipients: Introduzca su nombre de usuario...
+      submit: Enviar e iniciar conversación
+      title: Iniciar conversación      
+    setup:
+      button_import: Importar
+      button_setup: Preparar
+      confirm_password: 'Confirmar contraseña'
+      header_import: 'Ingrese la contraseña de inicio de sesión de su cuenta para importar sus mensajes privados.'
+      header_set_own: 'Ingrese una contraseña para configurar mensajes privados.'
+      header_set_own_import: 'Ingrese su contraseña de mensajes privados para importarlos.'
+      header_setup: 'Ingrese la contraseña de inicio de sesión de su cuenta para configurar la mensajería privada.'
+      invalid_password: 'Su contraseña fue incorrecta.'
+      passwords_mismatch: 'Las contraseñas no coinciden'
+      success: 'La mensajería privada ya está lista, su página ahora se recargará...'
+      title: 'Configurar mensajería privada'
+    user_modal_alert: '{username} tiene una configuración de mensajería privada, su contraseña no se puede cambiar de forma segura.'

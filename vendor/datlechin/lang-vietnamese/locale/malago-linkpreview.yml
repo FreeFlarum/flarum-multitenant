@@ -1,0 +1,8 @@
+
+malago-linkpreview:
+  admin:
+    title:  Xem trước liên kết
+    key:
+      title: Giới thiệu khóa được cung cấp cho bạn tại https://www.linkpreview.net
+      placeholder: 
+    save: Lưu

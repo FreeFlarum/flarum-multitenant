@@ -1,0 +1,38 @@
+{
+  "name": "yannis/confixtheme",
+  "description": "Confix Theme For Flarum",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "*"
+  },
+  "authors": [
+    {
+      "name": "yannis",
+      "email": "rd@yannis.cn",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Yannis\\ConfixTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Confix Theme",
+      "category": "theme",      
+      "icon": {
+        "name": "fab fa-yandex-international",
+        "backgroundColor": "#F783AC",
+        "color": "#FFF"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org.cn/d/2648"
+    }
+  }
+}

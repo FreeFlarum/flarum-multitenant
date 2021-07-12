@@ -1,0 +1,4 @@
+flarum_profile_views:
+  forum:
+    user:
+      views_count_text: visto {viewcount} veces

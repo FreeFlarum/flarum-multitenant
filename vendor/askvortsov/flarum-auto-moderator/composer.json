@@ -1,0 +1,64 @@
+{
+    "name": "askvortsov/flarum-auto-moderator",
+    "description": "Automatically assign groups based on activity.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/askvortsov1/flarum-auto-moderator/issues",
+        "source": "https://github.com/askvortsov1/flarum-auto-moderator",
+        "forum": "https://discuss.flarum.org/d/27306-flarum-automoderator"
+    },
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "*@dev",
+        "flarum/likes": "*@dev",
+        "flarum/suspend": "*@dev",
+        "fof/best-answer": "*@dev",
+        "askvortsov/flarum-moderator-warnings": "*@dev"
+    },
+    "authors": [
+        {
+            "name": "Alexander Skvortsov",
+            "email": "askvortsov@flarum.org",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Askvortsov\\AutoModerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Askvortsov\\AutoModerator\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Auto Moderator",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-robot",
+                "backgroundColor": "#6932D1",
+                "color": "#fff"
+            }
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:integration"
+        ],
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    }
+}

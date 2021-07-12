@@ -1,9 +1,0 @@
-imgur-upload:
-  admin:
-    settings:
-        title: Imgur настройка загрузки
-  forum:
-    upload: Загрузить изображение
-    loading: Загрузка...
-    done: Готово!
-    error: Ошибка

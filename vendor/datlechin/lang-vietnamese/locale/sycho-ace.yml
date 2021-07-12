@@ -1,0 +1,14 @@
+sycho-ace:
+  admin:
+    extensions: Tiện ích mở rộng
+    category_selection:
+      label: Phân loại theo
+      options:
+        default: "Mặc định"
+        vendor: "Vendor"
+        none: "Không"
+        availability: "Khả dụng"
+    categories:
+      none: A-Z
+      enabled: Đã kích hoạt
+      disabled: Đã tắt

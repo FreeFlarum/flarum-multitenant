@@ -1,9 +1,0 @@
-<site name="ABC News" homepage="https://abcnews.go.com/">
-	<example>https://abcnews.go.com/WNN/video/dog-goes-wild-when-owner-leaves-22936610</example>
-
-	<tags><tag>news</tag></tags>
-
-	<host>abcnews.go.com</host>
-	<extract>!abcnews\.go\.com/(?:video/embed\?id=|[^/]+/video/[^/]+-)(?'id'\d+)!</extract>
-	<iframe src="//abcnews.go.com/video/embed?id={@id}"/>
-</site>

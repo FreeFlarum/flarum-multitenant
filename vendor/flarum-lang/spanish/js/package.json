@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "@flarum-lang/spanish",
+  "dependencies": {
+    "flarum-webpack-config": "^1.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "flarum": "^1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

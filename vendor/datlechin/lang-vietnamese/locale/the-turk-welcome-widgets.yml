@@ -1,0 +1,13 @@
+the-turk-welcome-widgets:
+    forum:
+      users:              => core.ref.users
+      discussions:        => core.ref.discussions
+      posts:              => core.ref.posts
+      sinceLastVisit:     "kể từ <span>lần đăng nhập cuối</span> của bạn"
+
+      # Greetings
+      welcome:            "Chào mừng bạn, {username}."
+      goodMorning:        "Chào buổi sáng, {username}."
+      goodAfternoon:      "Chào buổi trưa, {username}."
+      goodEvening:        "Chào buổi tối, {username}."
+      goodNight:          "Chúc ngủ ngon, {username}."

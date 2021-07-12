@@ -1,0 +1,129 @@
+bazaar:
+    admin:
+        loader:
+            is_loading: Đang xử lý...
+            error: Đã xảy ra lỗi. Kiểm tra tab Lịch sử và nhật ký Flarum của bạn để biết chi tiết. Đừng ngại báo cáo cho chúng tôi.
+            refresh: Làm mới trang
+            close: Đóng
+            report_issue: Báo cáo vấn đề
+        nav:
+            title: Bazaar
+            description: Thị trường mở rộng.
+        header:
+            extensions: Duyệt tiện ích mở rộng
+            tasks: Lịch sử công việc
+        modal:
+            dashboard:
+                title: Bảng điều khiển
+                visit-remote-dashboard: Truy cập Trang tổng quan
+                sync:
+                    switch: Đồng bộ hóa
+                    description: >
+                        Đồng bộ hóa thông tin tiện ích mở rộng của bạn với {host} để nhận thông báo kịp thời về các phiên bản mới
+                        trong số các tiện ích mở rộng bạn đã cài đặt. Ngoài ra, chúng tôi sẽ gửi cho bạn thông báo thường xuyên về lỗi thời
+                        tiện ích mở rộng trên tất cả các cài đặt Flarum đã kích hoạt Bazaar đã đồng bộ hóa của bạn.
+            settings:
+                title: Flagrow Bazaar
+                field:
+                    token:
+                        label: API token
+                        description: Mã token API này là bắt buộc để truy cập vào API tiện ích mở rộng Flagrow. Nếu đã được thiết lập, bạn có thể bắt đầu!
+                    use_cron_for_tasks:
+                        label: Cronjobs
+                        description: >
+                           Bằng cách cho phép các cronjobs xử lý các nhiệm vụ trên Bazaar, các quy trình này
+                           ít có khả năng hết thời gian chờ hơn. Xin lưu ý rằng bạn cần có khả năng
+                           định cấu hình cronjob, tham khảo <a>wiki</a>.
+                        toggle: Sử dụng cron để xử lý tác vụ
+            connect-bazaar:
+                title: Kết nối
+                description: >
+                    Kết nối diễn đàn Flarum của bạn với tài khoản cá nhân của bạn trên {host} để mở khóa các tính năng nâng cao; kể cả
+                    một trang tổng quan cung cấp cho bạn tổng quan về tình trạng của tất cả các cài đặt Flarum được kết nối của bạn. Chúng tôi sẽ
+                    thêm nhiều chức năng hơn như thông báo khi diễn đàn của bạn chứa các tiện ích mở rộng lỗi thời hoặc khả năng
+                    để cập nhật tất cả các cài đặt Flarum một cách tập trung.
+            requirements:
+                file-permissions:
+                    title: Quyền đối với tệp
+                    description: >
+                        Có vẻ như Bazaar không có đủ quyền để ghi tệp
+                        và/hoặc các thư mục, vui lòng xem lại danh sách dưới đây. Để biết thêm
+                        thông tin, hãy tham khảo <a>wiki</a>.
+                php-memory_limit:
+                    title: Giới hạn bộ nhớ
+                    description: >
+                        Chúng tôi khuyên bạn nên cho phép PHP sử dụng ít nhất {cần} bộ nhớ, php.ini của bạn hiện cho phép {giới hạn}.
+                        Mặc dù chúng tôi cố gắng tăng giới hạn bộ nhớ trong thời gian chạy, nhưng thành công phụ thuộc vào môi trường lưu trữ của bạn.
+                        Để biết thêm thông tin, hãy tham khảo <a>wiki</a>.
+        page:
+            state:
+                no_results_available: >
+                    Có vẻ như không có kết quả nào vào lúc này.
+                not_authorized: >
+                    Việc ủy ​​quyền của bạn đối với API flagrow.io của chúng tôi không thành công. Có thể kết nối internet không ổn định đang gây ra điều này.
+                    Vui lòng làm mới trang khi kết nối của bạn ổn định. Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với chúng tôi.
+            button:
+                more: "Thêm, tải trang {current} trong tổng số {total}"
+                install: Cài đặt
+                uninstall: Gỡ cài đặt
+                enable: Bật
+                disable: Tắt
+                update: Cập nhật
+                connect: Kết nối
+                favorite_button: Tiện ích mở rộng yêu thích
+                remove_favorite_button: Xóa tiện ích mở rộng khỏi mục yêu thích của bạn
+                subscribe: Mua đăng ký
+                unsubscribe: Hủy đăng ký
+                connect_to_subscribe: Kết nối Bazaar của bạn để đăng ký các tiện ích mở rộng
+            extension:
+                installed: Tiện ích mở rộng đã được cài đặt
+                enabled: Tiện ích mở rộng đã bật
+                vendor: Bởi {vendor}
+                downloads: Lượt tải xuống
+                installed_version: Phiên bản đã cài đặt
+                highest_version: Phiên bản mới nhất
+                favorites: Yêu thích
+                favorited: Một trong những mục yêu thích của bạn
+                pending: Tiện ích mở rộng đợi một tác vụ nền hoàn thành
+                outdated: "Tiện ích mở rộng đã lỗi thời, vui lòng cập nhật lên phiên bản {new}"
+                premium: Cao cấp
+                subscribed: Đã đăng ký
+                subscribe_check_failed: It looks like you cancelled the checkout process.
+                incompatible: Không tương thích với phiên bản Flarum hiện tại của bạn
+                next_incompatible: Không tương thích với phiên bản Flarum sắp tới
+                latest_incompatible: Không tương thích với phiên bản Flarum mới nhất
+            task:
+                header:
+                    status: Trạng thái
+                    command: Lệnh
+                    output: Kết quả
+                    time: Thời gian
+                    details: Chi tiết
+                attribute:
+                    created_at: Tạo lúc
+                    started_at: Bắt đầu lúc
+                    finished_at: Hoàn thành lúc
+                status:
+                    success: Thành công
+                    exception: Có lỗi xảy ra
+                    working: Đang tiến hành
+                    unknown: Không xác định
+                command:
+                    sync-lock: Đồng bộ hóa tệp composer.lock
+                    sync-version: Đồng bộ hóa phiên bản {extension}
+                    install: Cài đặt {extension}
+                    update: Cập nhật {extension}
+                    uninstall: Gỡ cài đặt {extension}
+                group:
+                    today: Hôm nay
+                    lastmonth: Tháng trước
+                    older: Cũ nhất
+        search:
+            placeholder: Tìm kiếm tiện ích mở rộng
+            filter_installed: Đã cài đặt
+            filter_update: Có cập nhật
+            filter_favorited: Yêu thích
+            filter_subscribed: Đã đăng ký
+            filter_premium: Cao cấp
+            filter_pending: Đang chờ
+            filter_languages: Ngôn ngữ
