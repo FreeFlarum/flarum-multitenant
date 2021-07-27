@@ -1,0 +1,39 @@
+.DiscussionPage {
+  &-discussion {
+    > .container {
+      --container-gap: 30px;
+      display: grid;
+      grid-template-areas: "stream nav";
+      grid-template-columns: calc(~"100% - 150px - var(--container-gap)") 150px;
+      gap: var(--container-gap);
+    }
+  }
+
+  &-nav {
+    grid-area: nav;
+    float: none;
+
+    @media @tablet-up {
+      > ul {
+        position: sticky;
+        top: ~"calc(55px + 30px)";
+        max-height: 70vh;
+      }
+    }
+  }
+
+  &-stream {
+    grid-area: stream;
+    margin-right: 0;
+  }
+}
+
+@media @phone {
+  .DiscussionPage {
+    &-discussion {
+      > .container {
+        display: block;
+      }
+    }
+  }
+}

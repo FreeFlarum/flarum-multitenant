@@ -14,11 +14,11 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
@@ -92,6 +92,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             'Yannis\\ConfixTheme\\' => 19,
         ),
+        'X' => 
+        array (
+            'XEngine\\Signature\\' => 18,
+        ),
         'W' => 
         array (
             'Wohali\\OAuth2\\Client\\' => 21,
@@ -109,6 +113,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Tobscure\\JsonApi\\' => 17,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Therealsujitk\\GIFs\\' => 19,
+            'TheTurk\\Stickiest\\' => 18,
             'TheTurk\\MathRen\\' => 16,
         ),
         'S' => 
@@ -136,6 +141,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
@@ -194,6 +200,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\AwsS3v3\\' => 25,
             'League\\Flysystem\\' => 17,
+            'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Stratigility\\' => 21,
@@ -201,8 +208,15 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Laminas\\Escaper\\' => 16,
             'Laminas\\Diactoros\\' => 18,
         ),
+        'K' => 
+        array (
+            'Kyrne\\Whisper\\' => 14,
+            'Kilowhat\\Audit\\' => 15,
+        ),
         'J' => 
         array (
+            'Justoverclock\\Infocards\\' => 24,
+            'Justoverclock\\CustomHeader\\' => 27,
             'Jose\\Component\\Signature\\Algorithm\\' => 35,
             'Jose\\Component\\Signature\\' => 25,
             'Jose\\Component\\KeyManagement\\' => 29,
@@ -234,6 +248,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
             'IanM\\Synopsis\\' => 14,
+            'IanM\\LevelRanks\\' => 16,
             'IanM\\ISO639\\' => 12,
             'IanM\\HtmlHead\\' => 14,
         ),
@@ -328,7 +343,9 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\' => 16,
             'Dflydev\\FigCookies\\' => 19,
+            'Dflydev\\DotAccessData\\' => 22,
             'Dem13n\\Discussion\\Cards\\' => 24,
+            'Davwheat\\CustomSidenavLinks\\' => 28,
         ),
         'C' => 
         array (
@@ -337,6 +354,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
             'ClarkWinkelmann\\EmojioneArea\\' => 29,
             'ClarkWinkelmann\\CatchTheFish\\' => 29,
+            'ClarkWinkelmann\\Bookmarks\\' => 26,
             'ClarkWinkelmann\\AuthorChange\\' => 29,
             'Carbon\\' => 7,
         ),
@@ -359,6 +377,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'App\\' => 4,
             'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
+            'Afrux\\ThemeBase\\' => 16,
+            'Afrux\\Asirem\\' => 13,
         ),
     );
 
@@ -399,6 +419,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/yannisme/confixtheme/src',
         ),
+        'XEngine\\Signature\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/katosdev/signature/src',
+        ),
         'Wohali\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/wohali/oauth2-discord-new/src',
@@ -434,6 +458,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Therealsujitk\\GIFs\\' => 
         array (
             0 => __DIR__ . '/..' . '/therealsujitk/flarum-ext-gifs/src',
+        ),
+        'TheTurk\\Stickiest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the-turk/flarum-stickiest/src',
         ),
         'TheTurk\\MathRen\\' => 
         array (
@@ -530,6 +558,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Symfony\\Component\\DomCrawler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
         ),
         'Symfony\\Component\\CssSelector\\' => 
         array (
@@ -699,6 +731,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'League\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/config/src',
+        ),
         'League\\CommonMark\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
@@ -722,6 +758,22 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Laminas\\Diactoros\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
+        ),
+        'Kyrne\\Whisper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kyrne/whisper/src',
+        ),
+        'Kilowhat\\Audit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kilowhat/flarum-ext-audit-free/src',
+        ),
+        'Justoverclock\\Infocards\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-infocards/src',
+        ),
+        'Justoverclock\\CustomHeader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/custom-header/src',
         ),
         'Jose\\Component\\Signature\\Algorithm\\' => 
         array (
@@ -773,8 +825,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/collections',
-            1 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            1 => __DIR__ . '/..' . '/illuminate/collections',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -836,6 +888,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'IanM\\Synopsis\\' => 
         array (
             0 => __DIR__ . '/..' . '/ianm/synopsis/src',
+        ),
+        'IanM\\LevelRanks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ianm/level-ranks/src',
         ),
         'IanM\\ISO639\\' => 
         array (
@@ -1154,9 +1210,17 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/dflydev/fig-cookies/src/Dflydev/FigCookies',
         ),
+        'Dflydev\\DotAccessData\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
+        ),
         'Dem13n\\Discussion\\Cards\\' => 
         array (
             0 => __DIR__ . '/..' . '/dem13n/discussion-cards/src',
+        ),
+        'Davwheat\\CustomSidenavLinks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/davwheat/custom-sidenav-links/src',
         ),
         'Cron\\' => 
         array (
@@ -1177,6 +1241,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'ClarkWinkelmann\\CatchTheFish\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/catch-the-fish/src',
+        ),
+        'ClarkWinkelmann\\Bookmarks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-bookmarks/src',
         ),
         'ClarkWinkelmann\\AuthorChange\\' => 
         array (
@@ -1242,6 +1310,14 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
         ),
+        'Afrux\\ThemeBase\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/flarum-theme-base/src',
+        ),
+        'Afrux\\Asirem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/asirem/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -1261,6 +1337,61 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'MailChecker' => __DIR__ . '/..' . '/fgribreau/mailchecker/platform/php/MailChecker.php',
         'MessageFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/Resources/stubs/MessageFormatter.php',
+        'Nette\\ArgumentOutOfRangeException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\DeprecatedException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\DirectoryNotFoundException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\FileNotFoundException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\HtmlStringable' => __DIR__ . '/..' . '/nette/utils/src/HtmlStringable.php',
+        'Nette\\IOException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\InvalidArgumentException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\InvalidStateException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\Iterators\\CachingIterator' => __DIR__ . '/..' . '/nette/utils/src/Iterators/CachingIterator.php',
+        'Nette\\Iterators\\Mapper' => __DIR__ . '/..' . '/nette/utils/src/Iterators/Mapper.php',
+        'Nette\\Localization\\ITranslator' => __DIR__ . '/..' . '/nette/utils/src/compatibility.php',
+        'Nette\\Localization\\Translator' => __DIR__ . '/..' . '/nette/utils/src/Translator.php',
+        'Nette\\MemberAccessException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\NotImplementedException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\NotSupportedException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\OutOfRangeException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\Schema\\Context' => __DIR__ . '/..' . '/nette/schema/src/Schema/Context.php',
+        'Nette\\Schema\\DynamicParameter' => __DIR__ . '/..' . '/nette/schema/src/Schema/DynamicParameter.php',
+        'Nette\\Schema\\Elements\\AnyOf' => __DIR__ . '/..' . '/nette/schema/src/Schema/Elements/AnyOf.php',
+        'Nette\\Schema\\Elements\\Base' => __DIR__ . '/..' . '/nette/schema/src/Schema/Elements/Base.php',
+        'Nette\\Schema\\Elements\\Structure' => __DIR__ . '/..' . '/nette/schema/src/Schema/Elements/Structure.php',
+        'Nette\\Schema\\Elements\\Type' => __DIR__ . '/..' . '/nette/schema/src/Schema/Elements/Type.php',
+        'Nette\\Schema\\Expect' => __DIR__ . '/..' . '/nette/schema/src/Schema/Expect.php',
+        'Nette\\Schema\\Helpers' => __DIR__ . '/..' . '/nette/schema/src/Schema/Helpers.php',
+        'Nette\\Schema\\Message' => __DIR__ . '/..' . '/nette/schema/src/Schema/Message.php',
+        'Nette\\Schema\\Processor' => __DIR__ . '/..' . '/nette/schema/src/Schema/Processor.php',
+        'Nette\\Schema\\Schema' => __DIR__ . '/..' . '/nette/schema/src/Schema/Schema.php',
+        'Nette\\Schema\\ValidationException' => __DIR__ . '/..' . '/nette/schema/src/Schema/ValidationException.php',
+        'Nette\\SmartObject' => __DIR__ . '/..' . '/nette/utils/src/SmartObject.php',
+        'Nette\\StaticClass' => __DIR__ . '/..' . '/nette/utils/src/StaticClass.php',
+        'Nette\\UnexpectedValueException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
+        'Nette\\Utils\\ArrayHash' => __DIR__ . '/..' . '/nette/utils/src/Utils/ArrayHash.php',
+        'Nette\\Utils\\ArrayList' => __DIR__ . '/..' . '/nette/utils/src/Utils/ArrayList.php',
+        'Nette\\Utils\\Arrays' => __DIR__ . '/..' . '/nette/utils/src/Utils/Arrays.php',
+        'Nette\\Utils\\AssertionException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
+        'Nette\\Utils\\Callback' => __DIR__ . '/..' . '/nette/utils/src/Utils/Callback.php',
+        'Nette\\Utils\\DateTime' => __DIR__ . '/..' . '/nette/utils/src/Utils/DateTime.php',
+        'Nette\\Utils\\FileSystem' => __DIR__ . '/..' . '/nette/utils/src/Utils/FileSystem.php',
+        'Nette\\Utils\\Floats' => __DIR__ . '/..' . '/nette/utils/src/Utils/Floats.php',
+        'Nette\\Utils\\Helpers' => __DIR__ . '/..' . '/nette/utils/src/Utils/Helpers.php',
+        'Nette\\Utils\\Html' => __DIR__ . '/..' . '/nette/utils/src/Utils/Html.php',
+        'Nette\\Utils\\IHtmlString' => __DIR__ . '/..' . '/nette/utils/src/compatibility.php',
+        'Nette\\Utils\\Image' => __DIR__ . '/..' . '/nette/utils/src/Utils/Image.php',
+        'Nette\\Utils\\ImageException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
+        'Nette\\Utils\\Json' => __DIR__ . '/..' . '/nette/utils/src/Utils/Json.php',
+        'Nette\\Utils\\JsonException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
+        'Nette\\Utils\\ObjectHelpers' => __DIR__ . '/..' . '/nette/utils/src/Utils/ObjectHelpers.php',
+        'Nette\\Utils\\ObjectMixin' => __DIR__ . '/..' . '/nette/utils/src/Utils/ObjectMixin.php',
+        'Nette\\Utils\\Paginator' => __DIR__ . '/..' . '/nette/utils/src/Utils/Paginator.php',
+        'Nette\\Utils\\Random' => __DIR__ . '/..' . '/nette/utils/src/Utils/Random.php',
+        'Nette\\Utils\\Reflection' => __DIR__ . '/..' . '/nette/utils/src/Utils/Reflection.php',
+        'Nette\\Utils\\RegexpException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
+        'Nette\\Utils\\Strings' => __DIR__ . '/..' . '/nette/utils/src/Utils/Strings.php',
+        'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
+        'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',

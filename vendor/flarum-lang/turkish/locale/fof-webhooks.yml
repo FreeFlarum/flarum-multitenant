@@ -34,6 +34,7 @@ fof-webhooks:
   admin:
     errors:
       service_not_found: '''{service}'' hizmeti bulunamıyor.'
+      tag_invalid: 'Bu web kancası geçersiz bir etiketle sınırlandırılmıştır. Kısıtlama uygulanmayacaktır. Bunun amaçlandığından emin olun.'
       url_invalid: 'Bağlantı, seçilen servis için geçerli değil.'
     nav:
       desc: 'Forumunuz için özelleştirilebilir web kancaları.'
@@ -64,6 +65,8 @@ fof-webhooks:
             registered: Kayıtlı
             renamed: '=> fof-webhooks.ref.renamed'
             title: 'Flarum Kullanıcısı'
+      debug_help: 'Web kancaları ve/veya düzgün çalışmayan olaylarla ilgili sorunları ayıklamak için Flarum günlük dosyasına fazladan günlükler ekleyin.'
+      debug_label: 'Hata Gider'
       help:
         disabled: 'Bu web kancası, etkin bir etkinliğe sahip olmadığı için etkisizleştirildi.'
         general: 'Burada forumunuza webhooklar ekleyebilir, düzenleyebilir ve kaldırabilirsiniz.'

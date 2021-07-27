@@ -6,20 +6,19 @@ A [Flarum](http://flarum.org) extension that integrates your forum with GIF sear
 
 ### Preview
 
-![Preview](https://i.imgur.com/kHJZAPC.gif)
+![Preview](https://i.imgur.com/VEww9Qx.gif)
 
 ### Available GIF search engines
 
 - [Giphy](https://giphy.com)
+- [Tenor](https://tenor.com/)
 
 ### Requirements
 
 - The [flarum/markdown](https://github.com/flarum/markdown) extension is necessary for this extension to work.
-- A Giphy API Key that can be obtained from [Giphy Developers](https://developers.giphy.com/dashboard/?create=true).
+- Either a Giphy or Tenor API Key that can be obtained from [Giphy Developers](https://developers.giphy.com/dashboard/?create=true) or [Tenor Developers](https://tenor.com/developer/keyregistration).
 
 ### Installation
-
-Install with composer:
 
 ```sh
 composer require therealsujitk/flarum-ext-gifs:"*"

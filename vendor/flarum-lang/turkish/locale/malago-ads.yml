@@ -21,6 +21,7 @@ flagrow-ads:
       adsense-enable: 'AdSense aktif'
       adsense-title: 'AdSense ayarları'
       between-n-posts: 'Reklamın kaç gönderide bir gösterileceğini belirle'
+      header-only-frontpage: 'Gezinme başlığının altında ve yalnızca ön sayfada göster'
       position-title: 'Reklam Yerleşimleri'
       start-from-post: 'Reklamın kaçıncı gönderiden itibaren başlayacağını belirle'
     tab:

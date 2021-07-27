@@ -1,0 +1,118 @@
+#therealsujitk-gifs-toolbar-item span {
+    display: inline-block;
+}
+
+.therealsujitk-gifs-modal .Modal-header {
+    padding: 20px 30px 0px 30px;
+    background-color: @control-bg;
+}
+
+.therealsujitk-gifs-modal .Modal-header h3 {
+    text-align: left;
+    font-size: 16px;
+    color: @control-color;
+}
+
+#therealsujitk-gifs-back-button {
+    margin-right: 10px;
+}
+
+#therealsujitk-gifs-category {
+    margin: auto 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#therealsujitk-gifs-search-input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#therealsujitk-gifs-search-input input {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.therealsujitk-gifs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    grid-auto-rows: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 45vh;
+    height: 45vh;
+    overflow: auto;
+}
+
+.therealsujitk-gifs-container > div {
+    display: inline-block;
+    position: relative;
+    width: calc(~'100% - 10px');
+    grid-row-end: span 27;
+    margin: 5px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px #000000;
+    text-align: center;
+    line-height: 125px;
+    vertical-align: middle;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: border-box;
+    background-color: fade(@primary-color, 40%);
+    background-blend-mode: luminosity;
+    cursor: pointer;
+    overflow: hidden;
+    animation: fadeIn 0.3s;
+    transition: 0.3s;
+}
+
+.therealsujitk-gifs-container img {
+    width: 100%;
+}
+
+.therealsujitk-gifs-container button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: fade(@body-bg, 80%);
+}
+
+.therealsujitk-gifs-container .tooltip {
+    position: fixed;
+}
+
+.therealsujitk-gifs-container .LoadingIndicator-container {
+    margin: 0;
+}
+
+.therealsujitk-gifs-container > div:hover {
+    border: 2px solid @primary-color;
+    background-color: fade(@primary-color, 80%);
+}
+
+.therealsujitk-gifs-container #therealsujitk-gifs-end {
+    width: 100%;
+    margin: 25px 0px;
+    text-align: center;
+    grid-column-end: span 2;
+}
+
+#therealsujitk-gifs-footer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+#therealsujitk-gifs-footer img {
+    float: right;
+    height: 25px;
+}

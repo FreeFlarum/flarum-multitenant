@@ -17,15 +17,29 @@ use Flarum\Settings\SettingsRepositoryInterface;
 
 return [
     (new Extend\Frontend('forum'))
-        ->js(__DIR__.'/js/dist/forum.js'),
+        ->js(__DIR__.'/js/dist/forum.js')
+        ->css(__DIR__.'/less/forum.less'),
+        
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js'),
     new Extend\Locales(__DIR__ . '/resources/locale'),
 
     (new Extend\ApiSerializer(ForumSerializer::class))
-        ->attribute('therealsujitk-gifs.giphy_api_key', function ($serializer, $model) {
+        ->attribute('therealsujitk-gifs.engine', function ($serializer, $model) {
             $settings = resolve(SettingsRepositoryInterface::class);
-
-            return $settings->get('therealsujitk-gifs.giphy_api_key');
+            return $settings->get('therealsujitk-gifs.engine');
         })
+        ->attribute('therealsujitk-gifs.api_key', function ($serializer, $model) {
+            $settings = resolve(SettingsRepositoryInterface::class);
+            return $settings->get('therealsujitk-gifs.api_key');
+        })
+        ->attribute('therealsujitk-gifs.rating', function ($serializer, $model) {
+            $settings = resolve(SettingsRepositoryInterface::class);
+            return $settings->get('therealsujitk-gifs.rating');
+        }),
+
+    (new Extend\Routes('api'))
+        ->get('/therealsujitk-gifs', 'therealsujitk-gifs.index', Controllers\ListGIFController::class)
+        ->post('/therealsujitk-gifs', 'therealsujitk-gifs.store', Controllers\AddGIFController::class)
+        ->delete('/therealsujitk-gifs/{id}', 'therealsujitk-gifs.delete', Controllers\RemoveGIFController::class)
 ];

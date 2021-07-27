@@ -2,6 +2,28 @@ CHANGELOG
 =========
 
 
+0.5.5 (2021-07-13)
+------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`the-turk/flarum-quiet-edits`](https://github.com/the-turk/flarum-quiet-edits)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`acpl/my-tags`](https://github.com/android-com-pl/my-tags)
+* [`malago/flarum-ads`](https://github.com/malago86/flarum-ads)
+
+
+Wszystkie zmiany: [v0.5.4...v0.5.5](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.4...v0.5.5).
+
+
 0.5.4 (2021-07-06)
 ------------------
 

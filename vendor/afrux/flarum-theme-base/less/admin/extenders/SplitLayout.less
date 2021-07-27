@@ -1,0 +1,37 @@
+@media @desktop-up {
+  .App {
+    padding-top: 0;
+  }
+  .App-header {
+    background-color: transparent;
+    padding: 30px;
+    height: unset;
+
+    > .container {
+      padding: 0;
+    }
+  }
+  .affix {
+    .App-header {
+      position: relative;
+      .box-shadow(none);
+    }
+    .App-nav {
+      position: sticky;
+      top: 0;
+      .box-shadow(none);
+      overflow: auto;
+
+      &-title {
+        display: block;
+      }
+    }
+  }
+  .App-content {
+    border-top: 0;
+
+    .sideNavOffset {
+      margin: 0;
+    }
+  }
+}

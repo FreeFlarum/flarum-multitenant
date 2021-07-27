@@ -13,6 +13,7 @@ namespace Malago\Achievements\Api\Serializers;
 
 use Flarum\Api\Serializer\AbstractSerializer;
 use Malago\Achievements\AchievementUser;
+use Malago\Achievements\Achievement;
 
 class AchievementUserSerializer extends AbstractSerializer
 {
@@ -34,9 +35,18 @@ class AchievementUserSerializer extends AbstractSerializer
             );
         }
 
+        $achievement = Achievement::find($ach->achievement_id);
+
         return [
-            'achievement_id' => $ach->achievement_id,
-            'user_id'   => $ach->user_id,
+            'id' => $ach->achievement_id,
+            'name' => $achievement->name,
+            'description'   => $achievement->description,
+            'computation'   => $achievement->computation,
+            'points'   => $achievement->points,
+            'image'   => $achievement->image,
+            'rectangle'   => $achievement->rectangle,
+            'active'   => $achievement->active,
+            'hidden'   => $achievement->hidden,
             'created_at' => $ach->created_at,
             'new' => $ach->new
         ];

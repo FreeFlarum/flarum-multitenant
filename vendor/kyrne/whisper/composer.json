@@ -1,0 +1,45 @@
+{
+    "name": "kyrne/whisper",
+    "description":  "Private Messaging for Flarum.",
+    "keywords": [
+        "flarum",
+        "friendsofflarum",
+        "kyrne",
+        "settings",
+        "points",
+        "private message"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Charlie Kern",
+          "email": "Charlie.K@redevs.org",
+          "homepage": "https://redevs.org"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/kyrne/whisper-public/issues",
+        "source": "https://github.com/kyrne/whisper-public",
+        "forum":  "https://discuss.flarum.org/d/24073-whisper-private-messaging-for-flarum"
+    },
+    "require": {
+        "flarum/core": "^1.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kyrne\\Whisper\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Whisper",
+            "icon": {
+                "name": "fas fa-comments",
+                "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(224,64,251,1) 0%, rgba(33,150,243,1) 100%)",
+                "color": "#000"
+            },
+            "category": "feature"
+        }
+    }
+}

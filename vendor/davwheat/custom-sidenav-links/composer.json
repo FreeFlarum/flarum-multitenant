@@ -1,0 +1,45 @@
+{
+  "name": "davwheat/custom-sidenav-links",
+  "description": "Add custom links to the side navigation in Flarum.",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "David Wheatley",
+      "email": "hi@davwheat.dev",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/davwheat/flarum-ext-custom-sidenav-links/issues",
+    "source": "https://github.com/davwheat/flarum-ext-custom-sidenav-links",
+    "forum": "https://discuss.flarum.org/d/26380"
+  },
+  "autoload": {
+    "psr-4": {
+      "Davwheat\\CustomSidenavLinks\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "davwheat Custom Side Nav Links",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-link",
+        "backgroundColor": "#51c5dd",
+        "color": "#000"
+      }
+    }
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,ts,jsx,tsx,json,less,md,php,yml}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,jsx,tsx,json,less,md,php,yml}\"",
+    "format:staged": "git-format-staged --formatter \"prettier --stdin-filepath '{}'\" \"*.js\" \"*.jsx\" \"*.ts\" \"*.tsx\" \"*.md\" \"*.less\" \"*.json\" \"*.php\" \"*.svg\""
+  }
+}

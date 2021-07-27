@@ -1,0 +1,80 @@
+.ThemeBase-ExtensionsPage {
+  padding-bottom: 24px;
+}
+
+.ThemeBase-ExtensionCategory {
+  --extension-count: 3;
+
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  &-title {
+    margin-top: 0;
+  }
+
+  &-container {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(var(--extension-count), 1fr);
+
+    @media @tablet {
+      --extension-count: 2;
+    }
+
+    @media @phone {
+      --extension-count: 1;
+    }
+  }
+}
+
+.ThemeBase-Extension {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 50px minmax(0, 1fr);
+  align-items: center;
+
+  &-title {
+    display: flex;
+    align-items: center;
+
+    &-value {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-version {
+    white-space: nowrap;
+  }
+
+  &-desc {
+    white-space: nowrap;
+    max-width: calc(~"100% - 14px");
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-details {
+    display: flex;
+
+    > *:not(:first-child)::before {
+      content: "\2022";
+      margin: 0 4px;
+    }
+
+    > * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 50%;
+    }
+  }
+
+  &-state {
+    position: relative;
+    right: 0;
+    margin: 0 5px 0 0;
+  }
+}

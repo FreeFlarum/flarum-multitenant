@@ -29,7 +29,7 @@ class AchievementSerializer extends AbstractSerializer
     protected function getDefaultAttributes($ach)
     {
         if (!($ach instanceof Achievement)) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
                 get_class($this).' can only serialize instances of '.Achievement::class
             );
         }

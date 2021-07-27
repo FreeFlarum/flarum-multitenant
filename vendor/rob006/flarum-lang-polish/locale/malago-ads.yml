@@ -21,6 +21,7 @@ flagrow-ads:
       adsense-enable: 'AdSense włączone'
       adsense-title: 'Ustawienia AdSense'
       between-n-posts: 'Co ile postów wyświetlać reklamę'
+      header-only-frontpage: 'Reklamę pod nagłówkiem nawigacyjnym wyświetlaj jedynie na stronie głównej'
       position-title: 'Umiejscowienie reklam'
       start-from-post: 'Od którego posta zacząć wyświetlać reklamy'
     tab:

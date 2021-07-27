@@ -1,0 +1,47 @@
+.ThemeBase-StatusWidget {
+  padding: 0;
+  background-color: transparent;
+
+  > ul {
+    > li {
+      padding: 8px;
+      background-color: @body-bg;
+      border-radius: @border-radius;
+      .asirem-border-radius(~'.ThemeBase-StatusWidget-icon');
+      width: 25%;
+    }
+  }
+
+  @media @phone {
+    > ul {
+      flex-wrap: wrap;
+
+      > li {
+        width: calc(~"100% / 2 - 8px");
+        flex-grow: 0;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-icon {
+    .asirem-icon-block(45px);
+    font-size: 20px;
+  }
+
+  &-value {
+    font-weight: 600;
+  }
+
+  &-control {
+    --size: 35px;
+    font-size: 18px;
+    width: var(--size);
+    height: var(--size);
+
+    &.Button {
+      --control-color: @alert-info-bg;
+      --control-bg: @alert-info-color;
+    }
+  }
+}

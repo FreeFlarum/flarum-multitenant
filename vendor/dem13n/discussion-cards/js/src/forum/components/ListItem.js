@@ -5,7 +5,6 @@ import craftTags from "../utils/craftTags";
 import humanTime from 'flarum/common/utils/humanTime';
 import icon from 'flarum/common/helpers/icon';
 import username from 'flarum/common/helpers/username';
-import avatar from 'flarum/common/helpers/avatar';
 import Dropdown from 'flarum/common/components/Dropdown';
 import DiscussionControls from 'flarum/forum/utils/DiscussionControls';
 import Link from 'flarum/common/components/Link';
@@ -20,9 +19,9 @@ export default class listItem extends Component {
   }
 
   view() {
-
     const discussion = this.attrs.discussion;
     const settings = JSON.parse(app.forum.attribute('dem13nDiscussionCards'));
+    const isRead = settings.markCards === 1 && (!discussion.isRead() && app.session.user) ? 'Unread' : '';
     const attrs = {};
     attrs.className = "wrapImg" + (settings.cardFooter === 1 ? " After" : '');
     const image = getPostImage(discussion.firstPost());
@@ -36,7 +35,7 @@ export default class listItem extends Component {
     return (
       <div key={discussion.id()}
            data-id={discussion.id()}
-           className={"CardsListItem List" + (discussion.isHidden() ? " Hidden" : "")}>
+           className={"CardsListItem List " + isRead + (discussion.isHidden() ? " Hidden" : "")}>
         {DiscussionControls.controls(discussion, this).toArray().length
           ? m(Dropdown, {
             icon: 'fas fa-ellipsis-v',
@@ -55,6 +54,12 @@ export default class listItem extends Component {
 
             <div className="rowSpan-3 colSpan">
               <div {...attrs}>
+                {settings.Views === 1 && !isNaN(discussion.views())
+                  ? <div className="imageLabel discussionViews">
+                    {icon('fas fa-eye', {className: 'labelIcon'})}
+                    {discussion.views()}
+                  </div>
+                  : ''}
                 {media}
 
                 {settings.cardFooter === 1
@@ -80,7 +85,7 @@ export default class listItem extends Component {
                 <div className="cardTags">{craftTags(discussion.tags())}</div>
               </div>
 
-              {settings.previewText === 1
+              {settings.previewText === 1 && discussion.firstPost()
                 ? <div className="previewPost">{truncate(discussion.firstPost().contentPlain(), 150)}</div>
                 : ''}
 
@@ -102,7 +107,12 @@ export default class listItem extends Component {
                     </div>
                   </Link>
                 </div>
-                : ''}
+                : settings.Replies === 1 ?
+                  <div className="imageLabel discussionReplyCount">
+                    {icon('fas fa-comment', {className: 'labelIcon'})}
+                    {discussion.replyCount()}
+                  </div> : ''
+              }
             </div>
           </div>
         </Link>

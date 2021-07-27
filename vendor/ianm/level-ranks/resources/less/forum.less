@@ -1,0 +1,33 @@
+.PostUser-level {
+    float: left;
+    position: relative;
+    margin-left: -80px;
+    margin-top: 75px;
+    width: 64px;
+    text-align: center;
+}
+
+div.PostUser-bar--empty {
+    background: @control-bg;
+}
+
+.PostUser-bar {
+    background: @primary-color;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 25px;
+}
+
+.PostUser-levelNumber {
+    position: relative;
+}
+
+.Post--hidden .PostUser-level {
+    display: none;
+}
+
+.Post--hidden.revealContent .PostUser-level {
+  display: block;
+}

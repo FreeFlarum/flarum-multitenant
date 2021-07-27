@@ -25,13 +25,13 @@ return [
     disableLocalUpload(),
 
     // Remove (permanently throttle) test mail function, if not allowed:
-    (new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
+    /*(new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
         if (isset(CONF['freeflarum']['extend']['allow_mail_test']) ? !CONF['freeflarum']['extend']['allow_mail_test'] : true) {
             if ($request->getAttribute('routeName') === 'mailTest') {
                 return true;
             };
         };
-     }),
+     }),*/
 
     (new Extend\Frontend('forum'))->content(function (Document $document) {
 
@@ -80,6 +80,9 @@ return [
         ';
 
         // Change "Get Help" link in the top right corner of admin panel to direct to our discussion (from beta.15):
-        $document->foot[] = '<script>globalThis.window.document.querySelector("#header-secondary > ul > li.item-help > a[href=\"https://docs.flarum.org/troubleshoot.html\"]").setAttribute("href", "https://discuss.flarum.org/d/7585");</script>';
+        //$document->foot[] = '<script>globalThis.window.document.querySelector("#header-secondary > ul > li.item-help > a[href=\"https://docs.flarum.org/troubleshoot.html\"]").setAttribute("href", "https://discuss.flarum.org/d/7585");</script>';
+
+        // Remove Audit Log extension upgrade button, since we don't allow paid extensions:
+        $document->foot[] = '<script>globalThis.window.document.querySelector(".AuditUpgrade[href=\"https://kilowhat.net/flarum/extensions/audit\"]").outerHTML = null;</script>';
     })
 ];

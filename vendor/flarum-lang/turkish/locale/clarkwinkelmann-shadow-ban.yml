@@ -11,11 +11,21 @@ clarkwinkelmann-shadow-ban:
       hideUsers: 'Gizlice askıya alınmış kullanıcıların profillerini gizle'
   forum:
     badge:
+      discussion: 'Gizlice gizle'
+      post: 'Gizlice gizle'
       user: 'Gizlice askıya alınmış'
     banUser:
+      quick: 'Hızlı kararlar'
       quickChoiceDays: '{count, plural, one {# gün} other {# gün}}'
       quickChoiceReset: 'Askıda değil'
       submit: Kaydet
       title: '{username} askıya al'
+      until: 'Şu tarihe kadar (UTC)'
     discussionControl:
       hide: 'Gizlice sakla'
+      restore: 'Gizlice geri getir'
+    postControl:
+      hide: 'Gizlice gizle'
+      restore: 'Gizlice geri getir'
+    userControl:
+      ban: 'Gizlice yasakla'

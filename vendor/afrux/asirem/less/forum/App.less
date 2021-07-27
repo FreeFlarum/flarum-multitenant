@@ -1,0 +1,25 @@
+.App {
+  padding-bottom: 0;
+
+  &-footer {
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+@media @tablet-up {
+  .App {
+    display: flex;
+    flex-direction: column;
+
+    &-content {
+      flex-grow: 1;
+      border-top: 0;
+    }
+  }
+
+  .container {
+    padding: 0;
+  }
+}

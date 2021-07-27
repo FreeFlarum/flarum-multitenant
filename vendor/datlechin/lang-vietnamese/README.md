@@ -132,6 +132,7 @@ php flarum cache:clear
 <details>
   <summary>justoverclockl</summary>
   <ul>
+    <li><a href="https://github.com/justoverclockl/first-visit-indexpage">FirstVisitIndexPage</a> (0.1.1)</li>
     <li><a href="https://github.com/justoverclockl/flarum-ext-feedback">Feedback</a> (0.1.4)</li>
     <li><a href="https://github.com/justoverclockl/flarum-ext-readmore">ReadMore</a> (1.0.4)</li>
     <li><a href="https://github.com/justoverclockl/flarum-ext-contactme">Contactme</a> (0.2.0)</li>
@@ -155,6 +156,11 @@ php flarum cache:clear
 <details>
   <summary>Others</summary>
   <ul>
+    <li><a href="https://github.com/glowingblue/flarum-ext-redis-setup">Redis Setup</a> (1.0.3)</li>
+    <li><a href="https://github.com/ramesh-dada/realtime">Realtime Posts</a> (v100.1)</li>
+    <li><a href="https://github.com/katosdev/signature">Signature</a> (1.0.0)</li>
+    <li><a href="https://github.com/Nearata/flarum-ext-cakeday">Cakeday</a> (v1.3.0)</li>
+    <li><a href="https://github.com/MichaelBelgium/mybb_to_flarum">MyBB to Flarum</a> (v7.1)</li>
     <li><a href="https://github.com/Dem13n/discussion-cards">Discussion Cards</a> (v1.0.0)</li>
     <li><a href="https://github.com/imorland/html-head">HTML Head Items</a> (1.0.0)</li>
     <li><a href="https://github.com/SychO9/flarum-advanced-extension-categories">Advanced Extension Categories</a> (v0.1.3)</li>

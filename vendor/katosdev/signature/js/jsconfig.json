@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "flarum/*": [
+        "../vendor/flarum/core/js/src/common/*",
+        "../vendor/flarum/core/js/src/forum/*",
+        "../vendor/flarum/core/js/src/admin/*"],
+      "flarum/app": ["../vendor/flarum/core/js/src/common/Application"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
+}

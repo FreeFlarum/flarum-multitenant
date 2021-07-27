@@ -1,0 +1,23 @@
+.Navigation-back {
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+@media @tablet {
+  .Navigation-back {
+    margin-left: 15px;
+  }
+}
+
+@media @phone {
+  .App-backControl > .Button {
+    max-width: unset;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .App-backControl > .Button .Button-icon, .App-backControl > .Button .Button-label {
+    display: inline-block;
+  }
+}

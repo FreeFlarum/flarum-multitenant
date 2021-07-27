@@ -10,7 +10,7 @@ kyrne-websocket:
       auth_only: 'Yalnızca kimliği doğrulanmış kullanıcıların websocket sunucusuna bağlanmasına izin ver, CPU yükünü azaltabilir.'
       auto_update: 'Sarı güncelleme başlığını göstermeyin, tartışma listesini hemen güncelleyin.'
       cert_path: 'Yalnızca ssl kullanılıyorsa ve ters proxy DEĞİLSE gereklidir. SUNUCU ÜZERİNDEKİ SSL (https) sertifikanızın yolu websocket sunucunuz üzerindedir - genellikle bir .crt veya .pem dosyası.'
-      host: 'Websocket sunucunuzun ana bilgisayarı - sunucu forumunuzla aynı ana bilgisayarsa olduğu gibi bırakın.'
+      host: 'Websocket sunucunuzun ana bilgisayarı - sunucu yöneticinizle aynı ana bilgisayarsa olduğu gibi bırakın.'
       passphrase: 'Yalnızca ssl kullanılıyorsa ve ters proxy DEĞİLSE gereklidir. Sertifikanızı kodlamak için kullanılan parola - genellikle gerekli değildir.'
       pk_path: 'Yalnızca ssl kullanılıyorsa ve ters proxy DEĞİLSE gereklidir. SUNUCU ÜZERİNDEKİ SSL (https) özel anahtarınızın yolu websocket sunucunuz açıktır - genellikle bir .key veya .pem dosyası.'
       port: 'Websocket sunucunuzun bağlantı noktası - sunucu bağlantı noktasındaki yapıyı değiştirmezseniz olduğu gibi bırakın.'

@@ -3,6 +3,17 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 flarum-mentions:
+  admin:
+    settings:
+      allow_username_format_label: 'Kullanıcıdan bahsetmeye izin ver (@kullanıcı)'
+      allow_username_format_text: "Mevcut bahsetme formatı @\"Görünür Ad\"#ID şeklindedir.\nBu ayar eski format olan @kullanıcı-adı şeklinde kullanmaya olanak tanır.\n"
+  email:
+    post_mentioned:
+      body: "Hey {recipient_display_name}!\n\n{replier_display_name}, {title} tartışmasındaki (#{post_number}) numaralı gönderini yanıtladı.\n\n{url}\n\n---\n\n{content}\n"
+      subject: '{replier_display_name}, {title} tartışmasındaki gönderini yanıtladı'
+    user_mentioned:
+      body: "Hey {recipient_display_name}!\n\n{mentioner_display_name}, {title} tartışmasında senden bahsetti.\n\n{url}\n\n---\n\n{content}\n"
+      subject: '{mentioner_display_name}, {title} tartışmasında senden bahsetti'
   forum:
     composer:
       mention_tooltip: 'Bir kullanıcı veya gönderiden bahset'
@@ -18,6 +29,8 @@ flarum-mentions:
       quote_button: Alıntıla
       reply_link: '=> core.ref.reply'
       you_text: '=> core.ref.you'
+    post_mention:
+      deleted_text: '[bilinmeyen]'
     settings:
       notify_post_mentioned_label: 'Birisi benim gönderimden bahsettiğinde'
       notify_user_mentioned_label: 'Birisi benden gönderide bahsettiğinde'

@@ -18,3 +18,7 @@ nyu8-email-filter:
       description: 'Beyaz listeye alınacak tüm e-postalar'
       label: 'Beyaz Liste'
       placeholder: 'Beyaz listeye e-posta gönder...'
+  forum:
+    blacklist_exception: 'Bu e-posta veya alan adı topluluğun kara listesindedir.'
+    generic_exception: 'Bir şeyler yanlış gitti. Topluluk yöneticisi ile iletişime geçin.'
+    whitelist_exception: 'Bu e-posta veya alan adı topluluğun beyaz listesinde değildir.'

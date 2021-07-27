@@ -47,10 +47,11 @@ app.initializers.add('malago-achievements', app => {
     // var element = this.element;
     // element.appendChild(m('div'));
     // $(element).append(m("div","HOLA"));
+    //console.log(this.attrs.user);
     var list = m("div.UserCard-Achievement-list");
     
     if (here == "1" && element.attrs.className.includes("UserCard--popover")) {
-      var achievements = this.attrs.user.store.data.achievements;
+      var achievements = this.attrs.user.achievements();
       if (achievements !== undefined) {
         Object.keys(achievements).forEach(obj => {
           var item = achievements[obj].data.attributes;
@@ -116,8 +117,9 @@ app.initializers.add('malago-achievements', app => {
   extend(Application.prototype, 'request', function (promise) {
     if (promise) {
       promise.then(function (data) {
-        if (data && data.new_achievements !== undefined && data.new_achievements !== null && data.new_achievements.length > 0)
+        if (data && data.new_achievements !== undefined && data.new_achievements !== null && JSON.parse(data.new_achievements).length > 0) {
           app.modal.show(NewAchievementModal, { achievements: data.new_achievements });
+        }
       });
     }
   });

@@ -14,7 +14,8 @@ export default class AchievementsPage extends Page {
         m.route.set('/');
     }
     this.achievements_ids = [];
-    app.data.resources.map(item => { if(item.type=="achievements") this.achievements_ids.push(item.id)});
+    app.data.resources.map(item => { if (item.type == "achievement_user") this.achievements_ids.push(item.attributes.id) });
+
     this.achievements_all = [];
     this.html_user = "";
     this.html_all = "";
@@ -48,9 +49,9 @@ export default class AchievementsPage extends Page {
             </li>';
         }
         
-        if (this.achievements_ids.indexOf(item.data.id) !== -1) {
+        if (this.achievements_ids.indexOf(parseInt(item.data.id)) !== -1) {
           this.html_user += html;
-          this.points += item.points();
+          this.points += parseFloat(item.points());
         }else if (item.hidden() == 0)
           this.html_all += html;
         else
