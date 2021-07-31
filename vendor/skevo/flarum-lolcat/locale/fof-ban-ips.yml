@@ -50,7 +50,7 @@ fof-ban-ips:
       check_button: "Check" # Original: Check
       save_button: "Saev" # Original: Save
 
-      ban_ip_confirmation: "r u suer u wantz 2 block dis IP addres frum ues on teh forum?  dis will block userz wif dis IP addres(es) frum logging in an registering." # Original: Are you sure you want to block this IP address from use on the forum? This will block users with this IP address(es) from logging in and registering.
+      ban_ip_confirmation: "r u suer u wantz 2 block dis IP addres frum ues on teh forum, Srsly ?  dis will block userz wif dis IP addres(es) frum logging in an registering." # Original: Are you sure you want to block this IP address from use on the forum? This will block users with this IP address(es) from logging in and registering.
       ban_ip_users: User {users} will be banned|Users {users} will be banned
 
       unban_ip_confirmation: "r u suer u wantz 2 unban dis usr an all ofr userz not banned by ofr IPs?" # Original: Are you sure you want to unban this user and all other users not banned by other IPs?

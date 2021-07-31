@@ -94,7 +94,7 @@ the-turk-flamoji:
 
       export_json_button: "Export JSON" # Original: Export JSON
 
-      import_emojis_message: "dis will import emoij configurations only, Srsly .  u ned 2 upload emoij imagez manually." # Original: This will import emoji configurations only. You need to upload emoji images manually.
+      import_emojis_message: "dis will import emoij configurations only.  u ned 2 upload emoij imagez manually." # Original: This will import emoji configurations only. You need to upload emoji images manually.
 
 
 

@@ -3,17 +3,17 @@ ianm-gravatar:
     settings:
       proxy: 
         title: "Proxy gravatars" # Original: Proxy gravatars
-        helptext: "By default, gravatar URLs r fetched directly frum gravatar.com, Srsly .  dis enablez all gravatar requests 2 bees servd directly by teh forum itself." # Original: By default, gravatar URLs are fetched directly from gravatar.com. This enables all gravatar requests to be served directly by the forum itself.
+        helptext: "By default, gravatar URLs r fetched directly frum gravatar.com.  dis enablez all gravatar requests 2 bees servd directly by teh forum itself." # Original: By default, gravatar URLs are fetched directly from gravatar.com. This enables all gravatar requests to be served directly by the forum itself.
       replace-flarum-custom:
         title: "Replaec custom avatars uploaded 2 Forum" # Original: Replace custom avatars uploaded to Forum
         helptext: "Replaec custom avatars already uploaded 2 teh forum wif  Gravatar" # Original: Replace custom avatars already uploaded to the forum with a Gravatar
       defaults:
         title: "defaultz" # Original: Defaults
-        helptext: "wut happenz when an email addres has no matching Gravatar imaeg. Srsly  Gravatar has  numbr ov built in opshuns which u can ues as defaultz.  Most ov thees werk by takin teh requestd email hash an usin it 2 generaet  themed imaeg dat iz unique 2 dat email addres." # Original: What happens when an email address has no matching Gravatar image? Gravatar has a number of built in options which you can use as defaults. Most of these work by taking the requested email hash and using it to generate a themed image that is unique to that email address.
+        helptext: "wut happenz when an email addres has no matching Gravatar imaeg?  Gravatar has  numbr ov built in opshuns which u can ues as defaultz. Srsly  Most ov thees werk by takin teh requestd email hash an usin it 2 generaet  themed imaeg dat iz unique 2 dat email addres." # Original: What happens when an email address has no matching Gravatar image? Gravatar has a number of built in options which you can use as defaults. Most of these work by taking the requested email hash and using it to generate a themed image that is unique to that email address.
         mp_label: "mp: (mystewee-person)  simpel, cartoon-styel silhouetted outlien ov  person (doez not vawee by email hash)" # Original: mp: (mystery-person) a simple, cartoon-style silhouetted outline of a person (does not vary by email hash)
         identicon_label: "identicon:  geometric pattern basd on an email hash" # Original: identicon: a geometric pattern based on an email hash
         monsterid_label: "monsterid:  generatd" # Original: monsterid: a generated 
-        wavatar_label : "wavatar: generated faces with differing features and backgrounds"
+        wavatar_label: "wavatar: generatd facez wif differing featurez an backgrounds" # Original: wavatar: generated faces with differing features and backgrounds
         retro_label: "retor: awsum generatd, 8-bit arcaed-styel pixelated facez" # Original: retro: awesome generated, 8-bit arcade-style pixelated faces
         robohash_label: "robohash:  generatd robot wif different colors, facez, etc" # Original: robohash: a generated robot with different colors, faces, etc
       rating:

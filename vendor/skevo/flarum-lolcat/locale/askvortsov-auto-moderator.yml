@@ -29,8 +29,8 @@ askvortsov-auto-moderator:
       indefinitely: "Suspend Indefinitely?" # Original: Suspend Indefinitely?
     criterion_status:
       heading: "Status Check" # Original: Status Check
-      invalid: "teh criterion iz currently invalid, Srsly .  plz check teh driverz below 4 errorz." # Original: The criterion is currently invalid. Please check the drivers below for errors.
-      no_actions: "No akshuns r defined 4 dis criterion.  nofin will happen when userz gaen or loes dis criterion." # Original: No actions are defined for this criterion. Nothing will happen when users gain or lose this criterion.
+      invalid: "teh criterion iz currently invalid. Srsly  plz check teh driverz below 4 errorz." # Original: The criterion is currently invalid. Please check the drivers below for errors.
+      no_actions: "No akshuns r defined 4 dis criterion, Srsly .  nofin will happen when userz gaen or loes dis criterion." # Original: No actions are defined for this criterion. Nothing will happen when users gain or lose this criterion.
       no_metrics_or_reqs: "No metrics or requirementz r defined 4 dis criterion.  dis meanz dat ALL userz will qualify 4 dis criterion." # Original: No metrics or requirements are defined for this criterion. This means that ALL users will qualify for this criterion.
       valid: "dis criterion iz valid!" # Original: This criterion is valid!
       action_validation_errors: "teh followin akshun drivah validation errorz wuz encountered:" # Original: The following action driver validation errors were encountered:
@@ -46,12 +46,12 @@ askvortsov-auto-moderator:
       loading: => core.ref.loading
       delete_button: => core.ref.delete
       metrics_and_requirements_label: "Metrics an requirementz" # Original: Metrics and Requirements
-      metrics_and_requirements_help: "thees defien whefr userz qualify 4 dis criterion.  Metrics represent ranges ov values, requirementz r boolean condishuns." # Original: These define whether users qualify for this criterion. Metrics represent ranges of values, requirements are boolean conditions.
+      metrics_and_requirements_help: "thees defien whefr userz qualify 4 dis criterion, Srsly .  Metrics represent ranges ov values, requirementz r boolean condishuns." # Original: These define whether users qualify for this criterion. Metrics represent ranges of values, requirements are boolean conditions.
       metrics_heading: "Metrics" # Original: Metrics
       requirements_heading: "requirementz" # Original: Requirements
       add_metric: "Add Metric" # Original: Add Metric
       actions_label: "akshuns" # Original: Actions
-      actions_help: "akshuns on gaen execuet when  usr qualifies 4  nu criterion.  akshuns on loss execuet when  usr stops qualifying 4  criterion." # Original: Actions on gain execute when a user qualifies for a new criterion. Actions on loss execute when a user stops qualifying for a criterion.
+      actions_help: "akshuns on gaen execuet when  usr qualifies 4  nu criterion. Srsly  akshuns on loss execuet when  usr stops qualifying 4  criterion." # Original: Actions on gain execute when a user qualifies for a new criterion. Actions on loss execute when a user stops qualifying for a criterion.
       actions_on_gain_heading: "akshuns on Gaen" # Original: Actions on Gain
       actions_on_loss_heading: "akshuns on Loss" # Original: Actions on Loss
       add_action: "Add akshun" # Original: Add Action
@@ -59,7 +59,7 @@ askvortsov-auto-moderator:
       text: "ERROR! The driver <strong>{driverName}</strong> is not defined. Most likely, it was added by an extension that isn't currently installed. You'll need to reenable the extension or remove this driver for the criterion to be valid again."
 
     automoderator_page:
-      criterion_invalid: "teh criterion iz currently invalid.  plz check itz settingz 4 moar informashun" # Original: The criterion is currently invalid. Please check its settings for more information
+      criterion_invalid: "teh criterion iz currently invalid, Srsly .  plz check itz settingz 4 moar informashun" # Original: The criterion is currently invalid. Please check its settings for more information
       list_heading: "Criteria" # Original: Criteria
       create_criterion_button: "Creaet nu Criterion" # Original: Create New Criterion
     automoderator_instructions:

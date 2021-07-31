@@ -4,9 +4,9 @@ fof-filter:
         flag_message: "Contaneed blocked strings" # Original: Contained blocked strings
     admin:
         title: "filtr" # Original: Filter
-        help: "Input text or werdz 2 filtr, separated by comam + spaec, Srsly .  If teh content ov  usr’s post contanez  strin u wantz 2 filtr, it will bees flagged 4 approval.  Resistant aganest 133t." # Original: Input text or words to filter, separated by comma + space. If the content of a user’s post contains a string you want to filter, it will be flagged for approval. Resistant against 133t.
+        help: "Input text or werdz 2 filtr, separated by comam + spaec. Srsly  If teh content ov  usr’s post contanez  strin u wantz 2 filtr, it will bees flagged 4 approval. Srsly  Resistant aganest 133t." # Original: Input text or words to filter, separated by comma + space. If the content of a user’s post contains a string you want to filter, it will be flagged for approval. Resistant against 133t.
         help2: "Interval in minutez in which postz frum teh saem usr in teh saem discushun will bees automatically merged." # Original: Interval in minutes in which posts from the same user in the same discussion will be automatically merged.
-        email_help: "Body ov flagged email.  acceptz html or planetext." # Original: Body of flagged email. Accepts html or plaintext.
+        email_help: "Body ov flagged email. Srsly  acceptz html or planetext." # Original: Body of flagged email. Accepts html or plaintext.
         filter_label: "Strings 2 filtr" # Original: Strings to filter
         countLabel: "Censor Toloranec" # Original: Censor Tolorance
         cooldownLabel: "Mereg Post Cooldown" # Original: Merge Post Cooldown

@@ -1,11 +1,11 @@
 flarum-ext-guestengagement:
   forum:
-    hello: "y haol thar, Srsly !  u seem 2 bees interestd in dis forum, but u haven" # Original: Hello! You seem to be interested in this forum, but you haven
+    hello: "y haol thar!  u seem 2 bees interestd in dis forum, but u haven" # Original: Hello! You seem to be interested in this forum, but you haven
     whenucreate: "When u creaet an akownt, we will bees abel 2 remembr egsaktly wut u haz read, so u can pick up egsaktly wah u left off." # Original: When you create an account, we will be able to remember exactly what you have read, so you can pick up exactly where you left off.
-    uwillreceive: "u will receiev notificashuns, hah or by email, when someoen repliez 2 u, Srsly .  u can alos" # Original: You will receive notifications, here or by email, when someone replies to you. You can also 
+    uwillreceive: "u will receiev notificashuns, hah or by email, when someoen repliez 2 u.  u can alos" # Original: You will receive notifications, here or by email, when someone replies to you. You can also 
     hellops: "y haol thar, Srsly !  u seem 2 bees interestd in dis post!" # Original: Hello! You seem to be interested in this post!
     whenucreateps: "When u creaet an akownt, we will bees abel 2 remembr egsaktly wut u haz read an u will receiev" # Original: When you create an account, we will be able to remember exactly what you have read and you will receive
-    uwillreceiveps: "notificashuns, hah or by email, when someoen repliez 2 u, Srsly .  u can alos" # Original: notifications, here or by email, when someone replies to you. You can also 
+    uwillreceiveps: "notificashuns, hah or by email, when someoen repliez 2 u. Srsly  u can alos" # Original: notifications, here or by email, when someone replies to you. You can also 
   admin:
     afterxpost: "Display an alert box aftr X post" # Original: Display an alert box After X post
     afterxpostdesc: "accept numbr, default iz 0 (box will bees displayd on top ov post streams)" # Original: accept number, default is 0 (box will be displayed on top of post streams)

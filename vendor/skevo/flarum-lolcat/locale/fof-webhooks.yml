@@ -36,7 +36,7 @@ fof-webhooks:
     errors:
       service_not_found: "teh survis" # Original: The service 
       url_invalid: "URL iz not valid 4 selectd survis." # Original: URL is not valid for selected service.
-      tag_invalid: "dis webhook iz restricted 2 an invalid tag.  teh restricshun will not apply.  mak suer dis iz intendd." # Original: This webhook is restricted to an invalid tag. The restriction will not apply. Make sure this is intended.
+      tag_invalid: "dis webhook iz restricted 2 an invalid tag, Srsly .  teh restricshun will not apply.  mak suer dis iz intendd." # Original: This webhook is restricted to an invalid tag. The restriction will not apply. Make sure this is intended.
 
     nav:
       desc: "Customizabel outgoing webhooks 4 ur forum." # Original: Customizable outgoing webhooks for your forum.

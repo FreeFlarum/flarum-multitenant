@@ -28,6 +28,6 @@ fof-nightmode:
                     day: => fof-nightmode.ref.light
                     night: => fof-nightmode.ref.dark
                 option_descriptions:
-                    auto: "ur theem will bees automatically selectd basd on ur browsr or deviec settingz.  4 exampel, if u haz dark moed enabld in iOS, teh forumz will bees dark 2." # Original: Your theme will be automatically selected based on your browser or device settings. For example, if you have dark mode enabled in iOS, the forums will be dark too.
+                    auto: "ur theem will bees automatically selectd basd on ur browsr or deviec settingz, Srsly .  4 exampel, if u haz dark moed enabld in iOS, teh forumz will bees dark 2." # Original: Your theme will be automatically selected based on your browser or device settings. For example, if you have dark mode enabled in iOS, the forums will be dark too.
                     day: "teh classic experienec which u" # Original: The classic experience which you
                     night: "u" # Original: You

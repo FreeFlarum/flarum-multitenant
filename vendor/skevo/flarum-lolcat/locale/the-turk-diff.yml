@@ -92,7 +92,7 @@ the-turk-diff:
 
             dbOptimisation:           "Databaes Optimisation" # Original: Database Optimisation
             archiveOlds:              "archiv old revisions" # Original: Archive old revisions
-            archiveOldsInfo:          "If x ≥ , furst y=mx+b revisions 4 teh post will bees stord as merged & compressed.  teh x refers 2 post" # Original: If <strong>x ≥ A</strong>, first <strong>y=mx+b</strong> revisions for the post will be stored as merged & compressed. The <strong>x</strong> refers to post
+            archiveOldsInfo:          "If x ≥ , furst y=mx+b revisions 4 teh post will bees stord as merged & compressed. Srsly  teh x refers 2 post" # Original: If <strong>x ≥ A</strong>, first <strong>y=mx+b</strong> revisions for the post will be stored as merged & compressed. The <strong>x</strong> refers to post
             useCrons:                 "Ues crons 2 archiv old revisions" # Original: Use crons to archive old revisions
             useCronsHelp:             "u must add Cron entwee 2 ur servr 2 mak dis opshun werk.  It" # Original: You must add Cron entry to your server to make this option work. It
             archiveInfo:              "Keep in mind dat u can disabel both opshuns an run php flarum diff:archiv command 2 archiv old revisions manually." # Original: Keep in mind that you can disable both options and run <code>php flarum diff:archive</code> command to archive old revisions manually.

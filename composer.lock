@@ -13909,12 +13909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CWKevo/flarum-lolcat.git",
-                "reference": "29dad1cac3c53d113e228b6d7b523150e9917cf1"
+                "reference": "80f09e2e67decc172c69bc847ef93c32dbd4bf6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CWKevo/flarum-lolcat/zipball/29dad1cac3c53d113e228b6d7b523150e9917cf1",
-                "reference": "29dad1cac3c53d113e228b6d7b523150e9917cf1",
+                "url": "https://api.github.com/repos/CWKevo/flarum-lolcat/zipball/80f09e2e67decc172c69bc847ef93c32dbd4bf6b",
+                "reference": "80f09e2e67decc172c69bc847ef93c32dbd4bf6b",
                 "shasum": ""
             },
             "require": {
@@ -13968,7 +13968,7 @@
                 "issues": "https://github.com/cwkevo/flarum-lang-lolcat/issues",
                 "source": "https://github.com/cwkevo/flarum-lang-lolcat"
             },
-            "time": "2021-07-31T10:15:16+00:00"
+            "time": "2021-07-31T10:48:57+00:00"
         },
         {
             "name": "softcreatr/php-mime-detector",

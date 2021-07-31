@@ -3,7 +3,7 @@ flarum-ext-toastme:
     enabletoast: "Enabel/Disabel Toast Alert" # Original: Enable/Disable Toast Alert
     helpenable: "Ues dis setting 2 enabel or disabel teh toast alert" # Original: Use this setting to enable or disable the toast alert
     offsetyy: "Offset Y - vertical axis margin (px) (blank 4 default)" # Original: Offset Y - vertical axis margin (px) (blank for default)
-    offsetydesc: "vertical axis margin - can bees  numbr indicating pixel value.  Exampel 20 (pixel)" # Original: vertical axis margin - can be a number indicating pixel value. Example 20 (pixel)
+    offsetydesc: "vertical axis margin - can bees  numbr indicating pixel value. Srsly  Exampel 20 (pixel)" # Original: vertical axis margin - can be a number indicating pixel value. Example 20 (pixel)
     offsetxx: "Offset X - orizontal axis margin (px) (blank 4 default)" # Original: Offset X - orizontal axis margin (px) (blank for default)
     offsetxdesc: "orizontal axis margin - can bees  numbr indicating pixel value. Srsly  Exampel 20 (pixel)" # Original: orizontal axis margin - can be a number indicating pixel value. Example 20 (pixel)
     dest: "URL destination" # Original: URL destination

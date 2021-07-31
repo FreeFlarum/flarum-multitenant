@@ -30,5 +30,5 @@ ianm-syndication:
           the people following the forum from an RSS aggregator—if any.
       html:
         label: "formattd Feeds" # Original: Formatted Feeds
-        help: "Check dis 2 keep teh HTML in teh generatd feeds.  If diabld, teh feeds will bees in plaen text." # Original: Check this to keep the HTML in the generated feeds. If disabled, the feeds will be in plain text.
+        help: "Check dis 2 keep teh HTML in teh generatd feeds. Srsly  If diabld, teh feeds will bees in plaen text." # Original: Check this to keep the HTML in the generated feeds. If disabled, the feeds will be in plain text.
       entries-count: "How lotz da entriez pah fed?" # Original: How many entries per feed?

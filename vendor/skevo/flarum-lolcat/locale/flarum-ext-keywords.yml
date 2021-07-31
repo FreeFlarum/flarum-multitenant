@@ -2,7 +2,7 @@ flarum-ext-keywords:
   forum:
     title: "Glossawee" # Original: Glossary
     pagetitle: "Glossawee paeg" # Original: Glossary Page
-    tagline: "doez u wantz 2 knoe moar bout teh termz usd on dis siet, Srsly ?  c teh Glossawee 2 find out moar" # Original: Do you want to know more about the terms used on this site? See the Glossary to find out more
+    tagline: "doez u wantz 2 knoe moar bout teh termz usd on dis siet?  c teh Glossawee 2 find out moar" # Original: Do you want to know more about the terms used on this site? See the Glossary to find out more
     searchtext: "Tyep 2 search thur glossawee..." # Original: Type to search through glossary...
   admin:
     word: "werd" # Original: Word

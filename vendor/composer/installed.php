@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9eb290236526dc976bdd979484def537118f3f46',
+        'reference' => 'cf94d64c7618e1ad1fc3992af6dfe077efebf22e',
         'name' => 'flarum/flarum',
         'dev' => true,
     ),
@@ -610,7 +610,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9eb290236526dc976bdd979484def537118f3f46',
+            'reference' => 'cf94d64c7618e1ad1fc3992af6dfe077efebf22e',
             'dev_requirement' => false,
         ),
         'flarum/lang-english' => array(
@@ -2219,7 +2219,7 @@
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../skevo/flarum-lolcat',
             'aliases' => array(),
-            'reference' => '29dad1cac3c53d113e228b6d7b523150e9917cf1',
+            'reference' => '80f09e2e67decc172c69bc847ef93c32dbd4bf6b',
             'dev_requirement' => false,
         ),
         'softcreatr/php-mime-detector' => array(

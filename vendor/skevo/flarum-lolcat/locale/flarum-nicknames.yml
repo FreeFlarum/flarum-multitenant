@@ -1,0 +1,24 @@
+flarum-nicknames:
+  admin:
+    permissions:
+      edit_own_nickname_label: "Edit own nicknaem" # Original: Edit own nickname
+    settings:
+      max_label: "Maximum nicknaem length" # Original: Maximum nickname length
+      min_label: "Minimum nicknaem length" # Original: Minimum nickname length
+      regex_label: "Regular expreshun 4 validation" # Original: Regular expression for validation
+      unique_label: "Requier unique nicknames?" # Original: Require unique nicknames?
+    wrong_driver: "u must select" # Original: You must select 
+  api:
+    invalid_nickname_message: "dis nicknaem iz invalid. Srsly  plz contact ur forum administrator 4 moar informashun on nicknaem rulez." # Original: This nickname is invalid. Please contact your forum administrator for more information on nickname rules.
+  forum:
+    change_nickname:
+      submit_button: => core.ref.save_changes
+      title:  => flarum-nicknames.ref.change_nickname
+    edit_user:
+      nicknames_heading: => flarum-nicknames.ref.change_nickname
+      nicknames_text: "Nicknaem" # Original: Nickname
+    settings:
+      change_nickname_button: => flarum-nicknames.ref.change_nickname
+
+  ref:
+    change_nickname: "Chaneg Nicknaem" # Original: Change Nickname

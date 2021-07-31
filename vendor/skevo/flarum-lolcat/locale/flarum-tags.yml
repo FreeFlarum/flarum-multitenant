@@ -1,0 +1,116 @@
+flarum-tags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Basics page.
+    basics:
+      tags_label: => flarum-tags.ref.tags
+
+    # These translations are used in the Edit Tag modal dialog.
+    edit_tag:
+      color_label: => core.ref.color
+      delete_tag_button: "Deleet Tag" # Original: Delete Tag
+      delete_tag_confirmation: "r u suer u wantz 2 deleet dis tag?  teh tag" # Original: Are you sure you want to delete this tag? The tag
+      description_label: "descripshun" # Original: Description
+      hide_label: "Hied frum All discushuns" # Original: Hide from All Discussions
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      name_label: => flarum-tags.ref.name
+      name_placeholder: => flarum-tags.ref.name
+      slug_label: "Slug" # Original: Slug
+      submit_button: => core.ref.save_changes
+      title: "Creaet Tag" # Original: Create Tag
+
+    # These translations are used in the navigation bar.
+    nav:
+      tags_button: => flarum-tags.ref.tags
+      tags_text: "Manaeg teh list ov tags availabel 2 organies discushuns wif." # Original: Manage the list of tags available to organise discussions with.
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_edit_tags_label: "Allow tag editin" # Original: Allow tag editing
+      bypass_tag_counts_label: "Bypass tag requirementz" # Original: Bypass tag requirements
+      restrict_by_tag_heading: "Restrict by Tag" # Original: Restrict by Tag
+      tag_discussions_label: "Tag discushuns" # Original: Tag discussions
+
+    # These translations are used in the Tag Settings modal dialog.
+    tag_settings:
+      range_separator_text: " to "
+      required_primary_heading: "requird numbr ov Primawee Tags" # Original: Required Number of Primary Tags
+      required_primary_text: "entr teh minimum an maximum numbr ov primawee tags dat cud bees applied 2  discushun." # Original: Enter the minimum and maximum number of primary tags that may be applied to a discussion.
+      required_secondary_heading: "requird numbr ov Secondawee Tags" # Original: Required Number of Secondary Tags
+      required_secondary_text: "entr teh minimum an maximum numbr ov secondawee tags dat cud bees applied 2  discushun." # Original: Enter the minimum and maximum number of secondary tags that may be applied to a discussion.
+      title: "Tag settingz" # Original: Tag Settings
+
+    # These translations are used in the Tags page.
+    tags:
+      about_tags_text: "Tags r usd 2 categoriez discushuns.  Primawee tags r likes traditional forum categories: dey can bees arranged in  2-level hierarchy, Srsly .  Secondawee tags doez not haz hierarchy or ordr, an r useful 4 micor-categorization." # Original: Tags are used to categorize discussions. Primary tags are like traditional forum categories: they can be arranged in a two-level hierarchy. Secondary tags do not have hierarchy or order, and are useful for micro-categorization.
+      create_primary_tag_button: "Creaet Primawee Tag" # Original: Create Primary Tag
+      create_secondary_tag_button: "Creaet Secondawee Tag" # Original: Create Secondary Tag
+      primary_heading: "Primawee Tags" # Original: Primary Tags
+      secondary_heading: "Secondawee Tags" # Original: Secondary Tags
+      settings_heading: "settingz" # Original: Settings
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: "All Tags" # Original: All Tags
+      meta_title_text: => flarum-tags.ref.tags
+
+    # These translations are used by the Choose Tags modal dialog.
+    choose_tags:
+      choose_primary_placeholder: "{count, plural, one {Choose a primary tag} other {Choose # primary tags}}"
+      choose_secondary_placeholder: "{count, plural, one {Choose 1 more tag} other {Choose # more tags}}"
+      edit_title: "Edit Tags for {title}"
+      submit_button: => core.ref.okay
+      title: "chooz Tags 4 ur discushun" # Original: Choose Tags for Your Discussion
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      choose_tags_link: "chooz Tags" # Original: Choose Tags
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      edit_tags_button: "Edit Tags" # Original: Edit Tags
+
+    header:
+      back_to_tags_tooltip: "bak 2 Tag List" # Original: Back to Tag List
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      more_link: "moar..." # Original: More...
+      tags_link: => flarum-tags.ref.tags
+      untagged_link: "Untagged" # Original: Untagged
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      added_and_removed_tags_text: "{username} added the {tagsAdded} and removed the {tagsRemoved}."
+      added_tags_text: "{username} added the {tagsAdded}."
+      removed_tags_text: "{username} removed the {tagsRemoved}."
+      tags_text: "{count, plural, one {{tags} tag} other {{tags} tags}}"
+
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "All discussions with the {tag} tag"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # This translation is displayed in place of the name of a tag that's been deleted.
+    deleted_tag_text: "Deleted" # Original: Deleted
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    name: "naym" # Original: Name
+    tags: "Tags" # Original: Tags

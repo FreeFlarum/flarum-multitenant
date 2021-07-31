@@ -5,7 +5,7 @@ flarum-ext-newsletter:
     listn: "List naym" # Original: List Name
     listndesc: "Add teh naym ov ur list creatd at elasticmail" # Original: Add the name of your list created at elasticmail
   forum:
-    subscribe: "Subscrieb 2 r newslettr. Srsly  plz entr ur email an pres submit." # Original: Subscribe to our newsletter. Please enter your email and press submit.
+    subscribe: "Subscrieb 2 r newslettr, Srsly .  plz entr ur email an pres submit." # Original: Subscribe to our newsletter. Please enter your email and press submit.
     submitbutton: "Submit" # Original: Submit
     modalthanku: "Thank u!" # Original: Thank You!
     modaltext: "u r nao subscribed 2 r newslettr." # Original: You are now subscribed to our newsletter.

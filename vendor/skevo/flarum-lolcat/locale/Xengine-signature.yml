@@ -8,7 +8,7 @@ Xengine-signature:
                 title: "savin" # Original: Saving 
                 content: "plz wait..." # Original: Please wait...
             error:
-                title: "Whoops!  Encountered sum errorz whiel savin..." # Original: Whoops! Encountered some errors while saving...
+                title: "Whoops. Srsly  Encountered sum errorz whiel savin..." # Original: Whoops! Encountered some errors while saving...
                 content: "List ov errorz:" # Original: List of errors:
         errors:
              max_char_limit_exceed: "Maximum charactah limit exceeded." # Original: Maximum character limit exceeded.
@@ -20,13 +20,13 @@ Xengine-signature:
         settings:
             maximum_image_width:
                 description: "Maximum width ov imagez on editor." # Original: Maximum width of images on editor.
-                placeholder: 350 (default)
+                placeholder: "350 (default)" # Original: 350 (default)
             maximum_image_height:
-                description: Maximum height of sum height of total inserted images on editor.
-                placeholder: 500 (default)
+                description: "Maximum heiet ov sum heiet ov total inserted imagez on editor." # Original: Maximum height of sum height of total inserted images on editor.
+                placeholder: "500 (default)" # Original: 500 (default)
             maximum_image_count:
-                description: Maximum inserted images.
-                placeholder: 5 (default)
+                description: "Maximum inserted imagez." # Original: Maximum inserted images.
+                placeholder: "5 (default)" # Original: 5 (default)
             maximum_char_limit:
-                description: Maximum character limit of signature (count characters, does not considering with HTML tags)
-                placeholder: 1000 (default)
+                description: "Maximum charactah limit ov signatuer (count characterz, doez not considerin wif HTML tags)" # Original: Maximum character limit of signature (count characters, does not considering with HTML tags)
+                placeholder: "1000 (default)" # Original: 1000 (default)

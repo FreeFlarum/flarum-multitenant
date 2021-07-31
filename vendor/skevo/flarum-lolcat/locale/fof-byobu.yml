@@ -40,7 +40,7 @@ fof-byobu:
                 search_field: "Search 4 usr" # Original: Search for user
 
             help:
-                add_recipients: "dis discushun will only bees visibel 2 teh userz u chooz hah, Srsly .  At least 1 recipient (ofr than yourself) iz requird." # Original: This discussion will only be visible to the users you choose here. At least 1 recipient (other than yourself) is required.
+                add_recipients: "dis discushun will only bees visibel 2 teh userz u chooz hah.  At least 1 recipient (ofr than yourself) iz requird." # Original: This discussion will only be visible to the users you choose here. At least 1 recipient (other than yourself) is required.
                 update_recipients: "dis discushun will only bees visibel 2 teh userz u chooz hah." # Original: This discussion will only be visible to the users you choose here.
                 selected_users: "Click  usr" # Original: Click a user
                 click_user_to_remove_tooltip: "Click 2 remoev" # Original: Click to remove

@@ -41,7 +41,7 @@ malago-achievements:
       add_delete_title: "Add or deleet an achievement frum  usr" # Original: Add or delete an achievement from a user
       username: "Usernaem" # Original: Username
       username_placeholder: "Usernaem" # Original: Username
-      add_delete_instructions: "If teh usr doez not haz teh achievement, it will bees addd 2 it.  If teh usr doez haz teh achievement, it will bees removd frum it." # Original: If the user does not have the achievement, it will be added to it. If the user does have the achievement, it will be removed from it.
+      add_delete_instructions: "If teh usr doez not haz teh achievement, it will bees addd 2 it, Srsly .  If teh usr doez haz teh achievement, it will bees removd frum it." # Original: If the user does not have the achievement, it will be added to it. If the user does have the achievement, it will be removed from it.
       variable:
         manual: "Manual" # Original: Manual
         posts: "postz" # Original: Posts
@@ -56,16 +56,16 @@ malago-achievements:
         meanwords: "Averaeg werdz" # Original: Average words
         tagposts: "postz in tag" # Original: Posts in tag
       tooltip:
-        posts: "Minimum numbr ov postz (e.g.  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of posts (e.g. 10) or inclusive range (e.g. 10,19)
-        likes: "Minimum numbr ov likes given (e.g, Srsly .  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of likes given (e.g. 10) or inclusive range (e.g. 10,19)
-        selflikes: "Minimum numbr ov likes receivd (e.g.  10) or inclusiev raneg (e.g. Srsly  10,19)" # Original: Minimum number of likes received (e.g. 10) or inclusive range (e.g. 10,19)
-        discussions: "Minimum numbr ov discushuns creatd (e.g.  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of discussions created (e.g. 10) or inclusive range (e.g. 10,19)
+        posts: "Minimum numbr ov postz (e.g.  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of posts (e.g. 10) or inclusive range (e.g. 10,19)
+        likes: "Minimum numbr ov likes given (e.g.  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of likes given (e.g. 10) or inclusive range (e.g. 10,19)
+        selflikes: "Minimum numbr ov likes receivd (e.g, Srsly .  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of likes received (e.g. 10) or inclusive range (e.g. 10,19)
+        discussions: "Minimum numbr ov discushuns creatd (e.g. Srsly  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of discussions created (e.g. 10) or inclusive range (e.g. 10,19)
         edits: "Minimum numbr ov postz edited (e.g. Srsly  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of posts edited (e.g. 10) or inclusive range (e.g. 10,19)
-        contains: "werd or werdz an minimum numbr ov postz contaneing it (e.g.  chicken,10) or inclusiev raneg (e.g, Srsly .  chicken,10,19)" # Original: Word or words and minimum number of posts containing it (e.g. chicken,10) or inclusive range (e.g. chicken,10,19)
-        comments: "Minimum numbr ov responsez receivd in  discushun (e.g.  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of responses received in a discussion (e.g. 10) or inclusive range (e.g. 10,19)
+        contains: "werd or werdz an minimum numbr ov postz contaneing it (e.g, Srsly .  chicken,10) or inclusiev raneg (e.g. Srsly  chicken,10,19)" # Original: Word or words and minimum number of posts containing it (e.g. chicken,10) or inclusive range (e.g. chicken,10,19)
+        comments: "Minimum numbr ov responsez receivd in  discushun (e.g, Srsly .  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of responses received in a discussion (e.g. 10) or inclusive range (e.g. 10,19)
         years: "Minimum numbr ov yeers registered (e.g.  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of years registered (e.g. 10) or inclusive range (e.g. 10,19)
-        meanwords: "werd 2 look 4 an minimum numbr ov averaeg appearances (e.g, Srsly .  chicken,10) or inclusiev raneg (e.g.  chicken,10,19)" # Original: Word to look for and minimum number of average appearances (e.g. chicken,10) or inclusive range (e.g. chicken,10,19)
-        tagposts: "Slug ov teh tag 2 look 4 an minimum numbr ov postz (e.g, Srsly .  off-topic,10) or inclusiev raneg (e.g.  off-topic,10,19)" # Original: Slug of the tag to look for and minimum number of posts (e.g. off-topic,10) or inclusive range (e.g. off-topic,10,19)
+        meanwords: "werd 2 look 4 an minimum numbr ov averaeg appearances (e.g, Srsly .  chicken,10) or inclusiev raneg (e.g. Srsly  chicken,10,19)" # Original: Word to look for and minimum number of average appearances (e.g. chicken,10) or inclusive range (e.g. chicken,10,19)
+        tagposts: "Slug ov teh tag 2 look 4 an minimum numbr ov postz (e.g.  off-topic,10) or inclusiev raneg (e.g. Srsly  off-topic,10,19)" # Original: Slug of the tag to look for and minimum number of posts (e.g. off-topic,10) or inclusive range (e.g. off-topic,10,19)
     achievements_page:
       list_heading: "Achievements" # Original: Achievements
       create_achievement_button: "Creaet nu Achievement" # Original: Create New Achievement

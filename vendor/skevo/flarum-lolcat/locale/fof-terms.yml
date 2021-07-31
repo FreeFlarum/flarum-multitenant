@@ -69,7 +69,7 @@ fof-terms:
 
         update-alert:
             must-accept-message: "We" # Original: We
-            can-accept-message: "We recently updatd teh termz.  u must accept dem 2 continue usin dis websiet." # Original: We recently updated the terms. You must accept them to continue using this website.
+            can-accept-message: "We recently updatd teh termz, Srsly .  u must accept dem 2 continue usin dis websiet." # Original: We recently updated the terms. You must accept them to continue using this website.
             review: "Click hah 2 review an accept teh nu termz" # Original: Click here to review and accept the new terms
 
         user_controls:

@@ -9,7 +9,7 @@ askvortsov-saml:
       only_option: "Ues SAML2 SOS as only login opshun?" # Original: Use SAML2 SSO as only login option?
       sync_attributes: "Sync Attributes (Avatar, Groups, Bio, an Profiel), Srsly ?  requirez askvortsov/auth-sync extension." # Original: Sync Attributes (Avatar, Groups, Bio, and Profile)? Requires askvortsov/auth-sync extension.
       nameid_format: "NameID Format" # Original: NameID Format
-      slo: "Enabel SOL?  If ur IDP doez not support dis, dis will doez nofin." # Original: Enable SLO? If your IDP does not support this, this will do nothing.
+      slo: "Enabel SOL. Srsly  If ur IDP doez not support dis, dis will doez nofin." # Original: Enable SLO? If your IDP does not support this, this will do nothing.
       authn_requests_signed: "Sign aufn requests?" # Original: Sign authn requests?
       logout_request_signed: "Sign logout requests?" # Original: Sign logout requests?
       logout_response_signed: "Sign logout responsez?" # Original: Sign logout responses?
@@ -22,7 +22,7 @@ askvortsov-saml:
     options:
       nameid_format:
         persistent: "Persistent (recommendd if supportd)" # Original: Persistent (Recommended if supported)
-        emailAddress: "Email (Default.  Ues if Persistent not supportd)" # Original: Email (Default. Use if Persistent not supported)
+        emailAddress: "Email (Default, Srsly .  Ues if Persistent not supportd)" # Original: Email (Default. Use if Persistent not supported)
         unspecified: "Unspecified" # Original: Unspecified
   forum:
     log_in:

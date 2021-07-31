@@ -10,7 +10,7 @@ fof-prevent-necrobumping:
   admin:
     settings:
       days_label: "dais" # Original: Days
-      days_help: "discushun will bees marked as old when teh amount ov dais specified has passed sinec teh last post on dat discushun wuz postd.  Ues 0 2 disabel it by default." # Original: A discussion will be marked as old when the amount of days specified has passed since the last post on that discussion was posted. Use <code>0</code> to disable it by default.
+      days_help: "discushun will bees marked as old when teh amount ov dais specified has passed sinec teh last post on dat discushun wuz postd, Srsly .  Ues 0 2 disabel it by default." # Original: A discussion will be marked as old when the amount of days specified has passed since the last post on that discussion was posted. Use <code>0</code> to disable it by default.
 
       message_title_label: "Custom mesaeg Titel" # Original: Custom Message Title
       message_title_help: "Ues [tiem] 4 teh tiem text, e.g." # Original: Use <code>[time]</code> for the time text, e.g. 
@@ -18,4 +18,4 @@ fof-prevent-necrobumping:
       message_agreement_label: "Custom mesaeg Agreement (Checkbox)" # Original: Custom Message Agreement (Checkbox)
 
       tags_title: "Tags" # Original: Tags
-      tags_help: "Overried teh global dais 4  specific tag.  Empty meanz ues default value.  If  discushun has multipel tags wif different dai values, it will ues teh smallest amount ov dais configured." # Original: Override the global days for a specific tag. Empty means use default value. If a discussion has multiple tags with different day values, it will use the smallest amount of days configured.
+      tags_help: "Overried teh global dais 4  specific tag, Srsly .  Empty meanz ues default value.  If  discushun has multipel tags wif different dai values, it will ues teh smallest amount ov dais configured." # Original: Override the global days for a specific tag. Empty means use default value. If a discussion has multiple tags with different day values, it will use the smallest amount of days configured.

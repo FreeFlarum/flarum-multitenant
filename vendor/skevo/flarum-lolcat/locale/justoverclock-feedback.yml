@@ -40,7 +40,7 @@ justoverclock-feedback:
       type-message: "wut feedback doez u haz?" # Original: What feedback do you have?
       success: "thx!👊" # Original: Thanks!👊
       failed-title: "Oops, an error ocurred" # Original: Oops, an error ocurred
-      failed-message: "plz twee agaen. Srsly  If dis keepz happenin, twee 2 send an email instead." # Original: Please try again. If this keeps happening, try to send an email instead.
+      failed-message: "plz twee agaen.  If dis keepz happenin, twee 2 send an email instead." # Original: Please try again. If this keeps happening, try to send an email instead.
       email-field-placeholder: "Email (opshunal field)" # Original: Email (optional field)
       types:
         general: "General feedback" # Original: General feedback

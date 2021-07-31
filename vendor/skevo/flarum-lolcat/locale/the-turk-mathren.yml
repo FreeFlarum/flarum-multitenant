@@ -9,7 +9,7 @@ the-turk-mathren:
     settings:
       katex_options_heading: "KaTeX opshuns" # Original: KaTeX Options
       delimiters_label: "Delimiters" # Original: Delimiters
-      delimiters_text: "Separaet dem wif commas, Srsly .  %e% standz 4 mafematical expreshun." # Original: Separate them with commas. <strong>%e%</strong> stands for mathematical expression.
+      delimiters_text: "Separaet dem wif commas.  %e% standz 4 mafematical expreshun." # Original: Separate them with commas. <strong>%e%</strong> stands for mathematical expression.
       block_delimiters_text: "BBCoed delimiters 4 block expreshuns" # Original: <strong>BBCode</strong> delimiters for block expressions
       inline_delimiters_text: "BBCoed delimiters 4 inlien expreshuns" # Original: <strong>BBCode</strong> delimiters for inline expressions
       alias_block_delimiters_text: "Alias delimiters 4 block expreshuns" # Original: <strong>Alias</strong> delimiters for block expressions

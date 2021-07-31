@@ -61,7 +61,7 @@ askvortsov-moderator-warnings:
       private_comment: "Moderator-Visibel commentz" # Original: Moderator-Visible Comments
       linked_post: "Linked Post" # Original: Linked Post
     warning_modal:
-      confirmation_message: "ur warning has been saved. Srsly  u cud ned 2 refresh teh paeg 2 c it." # Original: Your warning has been saved. You may need to refresh the page to see it.
+      confirmation_message: "ur warning has been saved.  u cud ned 2 refresh teh paeg 2 c it." # Original: Your warning has been saved. You may need to refresh the page to see it.
       heading: Warn <strong>{username}</strong>
       strikes_heading: "How lotz da strikez shud bees applied?" # Original: How many strikes should be applied?
       public_comment_heading: Why is <strong>{username}</strong> receiving these warnings? These comments will be visible to the user and other moderators.

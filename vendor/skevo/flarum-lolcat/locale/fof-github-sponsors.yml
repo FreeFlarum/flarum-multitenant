@@ -5,7 +5,7 @@ fof-github-sponsors:
       organization: "Organization" # Original: Organization
 
     settings:
-      desc: "Obtaen ur AIP token frum https://gifub.com/settingz/tokens/nu.  dis extension requirez teh usr an read:org scopes." # Original: Obtain your API token from <a>https://github.com/settings/tokens/new</a>. This extension requires the <code>user</code> and <code>read:org</code> scopes.
+      desc: "Obtaen ur AIP token frum https://gifub.com/settingz/tokens/nu, Srsly .  dis extension requirez teh usr an read:org scopes." # Original: Obtain your API token from <a>https://github.com/settings/tokens/new</a>. This extension requires the <code>user</code> and <code>read:org</code> scopes.
 
       api_token_label: "AIP Token" # Original: API Token
       account_type_label: "akownt Tyep" # Original: Account Type

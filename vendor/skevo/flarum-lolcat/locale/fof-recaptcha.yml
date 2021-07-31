@@ -10,7 +10,7 @@ fof-recaptcha:
   forum:
     # This text is shown on the javascript error callback for reCAPTCHA.
     # This is a generic error handler and we don't have access to the reason, so the message has to be vague.
-    error: "thar wuz an error submitting reCAPTCAH. Srsly  Twee agaen." # Original: There was an error submitting reCAPTCHA. Try again.
+    error: "thar wuz an error submitting reCAPTCAH.  Twee agaen." # Original: There was an error submitting reCAPTCHA. Try again.
 
 validation:
   recaptcha: "reCAPTCAH validation faild." # Original: reCAPTCHA validation failed.
