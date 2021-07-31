@@ -1,0 +1,46 @@
+{
+    "name": "skevo/flarum-lolcat",
+    "type": "flarum-extension",
+    "description": "I kan haz Flarum?",
+    "keywords": ["locale", "flarum", "lolcat", "april fools"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SKevo",
+            "email": "me@kevo.link"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cwkevo/flarum-lang-lolcat/issues",
+        "source": "https://github.com/cwkevo/flarum-lang-lolcat",
+        "forum": "https://discuss.flarum.org/d/21009"
+    },
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Flarum LOLCat",
+            "category": "language",
+            "info": {
+                "website": "https://github.com/cwkevo/flarum-lang-lolcat",
+                "support": "https://github.com/cwkevo/flarum-lang-lolcat/issues"
+            },
+            "icon": {
+                "image": "icon.png",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "lol",
+            "title": "LOLCat"
+        },
+        "extiverse": {
+            "discuss": "https://discuss.flarum.org/d/21009"
+        }
+    }
+}

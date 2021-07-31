@@ -1,0 +1,14 @@
+ianm-synopsis:
+  admin:
+    settings:
+      excerpt-label: "Summawee excerpt length in characterz" # Original: Summary excerpt length in characters
+      rich-excerpts: "Display excerpts usin rich content (ues wif caushun)" # Original: Display excerpts using rich content (use with caution)
+      excerpt-type: "Which post shud bees displayd as teh excerpt?" # Original: Which post should be displayed as the excerpt?
+      first-label: "furst post" # Original: First post
+      last-label: "Last post" # Original: Last post
+  forum:
+    user:
+      settings:
+        summaries-heading: "Synopsis" # Original: Synopsis
+        show-summaries: "Display an excerpt frum each discushun in discushun listz (Desktop/Tablet)" # Original: Display an excerpt from each discussion in discussion lists (Desktop/Tablet)
+        show-summaries-mobile: "Display an excerpt frum each discushun in discushun listz (Mobiel)" # Original: Display an excerpt from each discussion in discussion lists (Mobile)

@@ -1,0 +1,14 @@
+sycho-ace:
+  admin:
+    extensions: "extenshuns" # Original: Extensions
+    category_selection:
+      label: "Categoriez By" # Original: Categorize By
+      options:
+        default: "Default" # Original: Default
+        vendor: "Vendor" # Original: Vendor
+        none: "Noen" # Original: None
+        availability: "Availability" # Original: Availability
+    categories:
+      none: "-Z" # Original: A-Z
+      enabled: "enabld" # Original: Enabled
+      disabled: "diabld" # Original: Disabled

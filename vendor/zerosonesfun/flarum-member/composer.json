@@ -1,0 +1,45 @@
+{
+  "name": "zerosonesfun/flarum-member",
+  "description": "Give members more class.",
+  "type": "flarum-extension",
+  "keywords": ["users", "members"],
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Billy Wilcosky",
+          "homepage": "https://www.wilcosky.com",
+          "role": "Creator"
+      }
+  ],
+  "support": {
+      "issues": "https://github.com/zerosonesfun/flarum-member/issues",
+      "source": "https://github.com/zerosonesfun/flarum-member",
+      "forum": "https://discuss.flarum.org"
+  },
+  "homepage": "https://www.wilcosky.com",
+  "funding": [
+      {
+          "type": "website",
+          "url": "https://www.wilcosky.com"
+      }
+  ],
+  "require": {
+      "flarum/core": "^0.1.0-beta.16 || ^1.0"
+  },
+  "autoload": {
+      "psr-4": {
+          "Zerosonesfun\\Members\\": "src/"
+      }
+  },
+  "extra": {
+      "flarum-extension": {
+          "title": "Members Class",
+          "category": "feature",
+          "icon": {
+              "name": "fas fa-users",
+              "backgroundColor": "#ddd",
+              "color": "#000"
+          }
+      }
+  }
+}

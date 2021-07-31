@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b99523ed5ac9c9cc8b9a73780c407e4",
+    "content-hash": "63e9ea69918244d03b468f285564f2d4",
     "packages": [
         {
             "name": "afrux/asirem",
@@ -702,16 +702,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.185.21",
+            "version": "3.186.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "58a64da8f232913842f08ce93e62f3a5961664b3"
+                "reference": "037fd80e421b1dde4d32ec16d0f79c61bbee1605"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/58a64da8f232913842f08ce93e62f3a5961664b3",
-                "reference": "58a64da8f232913842f08ce93e62f3a5961664b3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/037fd80e421b1dde4d32ec16d0f79c61bbee1605",
+                "reference": "037fd80e421b1dde4d32ec16d0f79c61bbee1605",
                 "shasum": ""
             },
             "require": {
@@ -786,9 +786,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.185.21"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.186.3"
             },
-            "time": "2021-07-26T18:15:01+00:00"
+            "time": "2021-07-30T18:30:36+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -1499,16 +1499,16 @@
         },
         {
             "name": "datlechin/lang-vietnamese",
-            "version": "v1.1.9.1",
+            "version": "v1.1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/datlechin/lang-vietnamese.git",
-                "reference": "73141b315f89f66bef56e2a094381b7bce6d8d7c"
+                "reference": "c27314f213c454ada4c5676e1f11f741fe544b55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/datlechin/lang-vietnamese/zipball/73141b315f89f66bef56e2a094381b7bce6d8d7c",
-                "reference": "73141b315f89f66bef56e2a094381b7bce6d8d7c",
+                "url": "https://api.github.com/repos/datlechin/lang-vietnamese/zipball/c27314f213c454ada4c5676e1f11f741fe544b55",
+                "reference": "c27314f213c454ada4c5676e1f11f741fe544b55",
                 "shasum": ""
             },
             "require": {
@@ -1565,7 +1565,7 @@
                 "issues": "https://github.com/datlechin/lang-vietnamese/issues",
                 "source": "https://github.com/datlechin/lang-vietnamese"
             },
-            "time": "2021-07-13T08:37:03+00:00"
+            "time": "2021-07-30T11:46:19+00:00"
         },
         {
             "name": "davwheat/custom-sidenav-links",
@@ -3157,16 +3157,16 @@
         },
         {
             "name": "flarum-lang/turkish",
-            "version": "1.0.4.6",
+            "version": "1.0.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum-lang/turkish.git",
-                "reference": "9f61cf9109e3ad65c4eaecc4b942eb41953a3f83"
+                "reference": "434a3ee61b2aa9d2cf5689d18c0dd2bda81e2e2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum-lang/turkish/zipball/9f61cf9109e3ad65c4eaecc4b942eb41953a3f83",
-                "reference": "9f61cf9109e3ad65c4eaecc4b942eb41953a3f83",
+                "url": "https://api.github.com/repos/flarum-lang/turkish/zipball/434a3ee61b2aa9d2cf5689d18c0dd2bda81e2e2f",
+                "reference": "434a3ee61b2aa9d2cf5689d18c0dd2bda81e2e2f",
                 "shasum": ""
             },
             "require": {
@@ -3222,7 +3222,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-07-23T08:21:18+00:00"
+            "time": "2021-07-28T20:11:20+00:00"
         },
         {
             "name": "flarum/approval",
@@ -5111,16 +5111,16 @@
         },
         {
             "name": "fof/discussion-thumbnail",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/discussion-thumbnail.git",
-                "reference": "74adaa5df37beaf434b539f5ca3e31e50d3022a9"
+                "reference": "a14654669b94458a293219e33a91dfe68014e689"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-thumbnail/zipball/74adaa5df37beaf434b539f5ca3e31e50d3022a9",
-                "reference": "74adaa5df37beaf434b539f5ca3e31e50d3022a9",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-thumbnail/zipball/a14654669b94458a293219e33a91dfe68014e689",
+                "reference": "a14654669b94458a293219e33a91dfe68014e689",
                 "shasum": ""
             },
             "require": {
@@ -5175,7 +5175,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-05-27T17:57:46+00:00"
+            "time": "2021-07-30T11:39:14+00:00"
         },
         {
             "name": "fof/disposable-emails",
@@ -9859,16 +9859,16 @@
         },
         {
             "name": "kyrne/whisper",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KyrneDev/whisper.git",
-                "reference": "28c226825c9d79fb20d583a3ebd109fb4d0efaae"
+                "reference": "af7dbb919c458d4c3a25c0335216b2f496789dac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KyrneDev/whisper/zipball/28c226825c9d79fb20d583a3ebd109fb4d0efaae",
-                "reference": "28c226825c9d79fb20d583a3ebd109fb4d0efaae",
+                "url": "https://api.github.com/repos/KyrneDev/whisper/zipball/af7dbb919c458d4c3a25c0335216b2f496789dac",
+                "reference": "af7dbb919c458d4c3a25c0335216b2f496789dac",
                 "shasum": ""
             },
             "require": {
@@ -9916,7 +9916,7 @@
                 "issues": "https://github.com/kyrne/whisper-public/issues",
                 "source": "https://github.com/kyrne/whisper-public"
             },
-            "time": "2021-07-22T22:50:13+00:00"
+            "time": "2021-07-27T16:47:05+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -12273,22 +12273,23 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.50.0",
+            "version": "2.51.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "f47f17d17602b2243414a44ad53d9f8b9ada5fdb"
+                "reference": "8619c299d1e0d4b344e1f98ca07a1ce2cfbf1922"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f47f17d17602b2243414a44ad53d9f8b9ada5fdb",
-                "reference": "f47f17d17602b2243414a44ad53d9f8b9ada5fdb",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8619c299d1e0d4b344e1f98ca07a1ce2cfbf1922",
+                "reference": "8619c299d1e0d4b344e1f98ca07a1ce2cfbf1922",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.1.8 || ^8.0",
                 "symfony/polyfill-mbstring": "^1.0",
+                "symfony/polyfill-php80": "^1.16",
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
@@ -12307,8 +12308,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev",
-                    "dev-3.x": "3.x-dev"
+                    "dev-3.x": "3.x-dev",
+                    "dev-master": "2.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -12362,7 +12363,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-28T22:38:45+00:00"
+            "time": "2021-07-28T13:16:28+00:00"
         },
         {
             "name": "nette/schema",
@@ -13369,16 +13370,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1"
+                "reference": "ab2237657ad99667a5143e32ba2683c8029563d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1",
-                "reference": "28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/ab2237657ad99667a5143e32ba2683c8029563d4",
+                "reference": "ab2237657ad99667a5143e32ba2683c8029563d4",
                 "shasum": ""
             },
             "require": {
@@ -13430,7 +13431,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/1.1.3"
+                "source": "https://github.com/ramsey/collection/tree/1.1.4"
             },
             "funding": [
                 {
@@ -13442,7 +13443,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-21T17:40:04+00:00"
+            "time": "2021-07-30T00:58:27+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -13901,6 +13902,73 @@
                 "source": "https://github.com/s9e/TextFormatter/tree/2.9.4"
             },
             "time": "2021-07-09T23:09:23+00:00"
+        },
+        {
+            "name": "skevo/flarum-lolcat",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CWKevo/flarum-lolcat.git",
+                "reference": "29dad1cac3c53d113e228b6d7b523150e9917cf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CWKevo/flarum-lolcat/zipball/29dad1cac3c53d113e228b6d7b523150e9917cf1",
+                "reference": "29dad1cac3c53d113e228b6d7b523150e9917cf1",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Flarum LOLCat",
+                    "category": "language",
+                    "info": {
+                        "website": "https://github.com/cwkevo/flarum-lang-lolcat",
+                        "support": "https://github.com/cwkevo/flarum-lang-lolcat/issues"
+                    },
+                    "icon": {
+                        "image": "icon.png",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "lol",
+                    "title": "LOLCat"
+                },
+                "extiverse": {
+                    "discuss": "https://discuss.flarum.org/d/21009"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SKevo",
+                    "email": "me@kevo.link"
+                }
+            ],
+            "description": "I kan haz Flarum?",
+            "keywords": [
+                "april fools",
+                "flarum",
+                "locale",
+                "lolcat"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21009",
+                "issues": "https://github.com/cwkevo/flarum-lang-lolcat/issues",
+                "source": "https://github.com/cwkevo/flarum-lang-lolcat"
+            },
+            "time": "2021-07-31T10:15:16+00:00"
         },
         {
             "name": "softcreatr/php-mime-detector",
@@ -14383,16 +14451,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.3.4",
+            "version": "v5.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "ebd610dacd40d75b6a12bf64b5ccd494fc7d6ab1"
+                "reference": "51b71afd6d2dc8f5063199357b9880cea8d8bfe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/ebd610dacd40d75b6a12bf64b5ccd494fc7d6ab1",
-                "reference": "ebd610dacd40d75b6a12bf64b5ccd494fc7d6ab1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/51b71afd6d2dc8f5063199357b9880cea8d8bfe2",
+                "reference": "51b71afd6d2dc8f5063199357b9880cea8d8bfe2",
                 "shasum": ""
             },
             "require": {
@@ -14462,7 +14530,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.3.4"
+                "source": "https://github.com/symfony/console/tree/v5.3.6"
             },
             "funding": [
                 {
@@ -14478,7 +14546,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-26T16:33:26+00:00"
+            "time": "2021-07-27T19:10:22+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -14979,16 +15047,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.3.4",
+            "version": "v5.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "d6602aca7d3e11f401a0b24f43b611c530abfad3"
+                "reference": "a8388f7b7054a7401997008ce9cd8c6b0ab7ac75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d6602aca7d3e11f401a0b24f43b611c530abfad3",
-                "reference": "d6602aca7d3e11f401a0b24f43b611c530abfad3",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a8388f7b7054a7401997008ce9cd8c6b0ab7ac75",
+                "reference": "a8388f7b7054a7401997008ce9cd8c6b0ab7ac75",
                 "shasum": ""
             },
             "require": {
@@ -15032,7 +15100,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v5.3.4"
+                "source": "https://github.com/symfony/http-foundation/tree/v5.3.6"
             },
             "funding": [
                 {
@@ -15048,7 +15116,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-23T15:55:36+00:00"
+            "time": "2021-07-27T17:08:17+00:00"
         },
         {
             "name": "symfony/mime",
@@ -15294,16 +15362,16 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "24b72c6baa32c746a4d0840147c9715e42bb68ab"
+                "reference": "16880ba9c5ebe3642d1995ab866db29270b36535"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/24b72c6baa32c746a4d0840147c9715e42bb68ab",
-                "reference": "24b72c6baa32c746a4d0840147c9715e42bb68ab",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/16880ba9c5ebe3642d1995ab866db29270b36535",
+                "reference": "16880ba9c5ebe3642d1995ab866db29270b36535",
                 "shasum": ""
             },
             "require": {
@@ -15355,7 +15423,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.23.1"
             },
             "funding": [
                 {
@@ -15371,7 +15439,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T09:17:38+00:00"
+            "time": "2021-05-27T12:26:48+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -15630,16 +15698,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1"
+                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
-                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9174a3d80210dca8daa7f31fec659150bbeabfc6",
+                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6",
                 "shasum": ""
             },
             "require": {
@@ -15690,7 +15758,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.1"
             },
             "funding": [
                 {
@@ -15706,7 +15774,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T09:27:20+00:00"
+            "time": "2021-05-27T12:26:48+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -15865,16 +15933,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0"
+                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/eca0bf41ed421bed1b57c4958bab16aa86b757d0",
-                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/1100343ed1a92e3a38f9ae122fc0eb21602547be",
+                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be",
                 "shasum": ""
             },
             "require": {
@@ -15928,7 +15996,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.1"
             },
             "funding": [
                 {
@@ -15944,7 +16012,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2021-07-28T13:41:28+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
@@ -16424,23 +16492,22 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.3.4",
+            "version": "v5.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "90909bd7352ae57411a93fcd67b09e6199340547"
+                "reference": "4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/90909bd7352ae57411a93fcd67b09e6199340547",
-                "reference": "90909bd7352ae57411a93fcd67b09e6199340547",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7",
+                "reference": "4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "symfony/deprecation-contracts": "^2.1",
-                "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-php80": "^1.16"
+                "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
                 "symfony/console": "<4.4"
@@ -16480,7 +16547,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.3.4"
+                "source": "https://github.com/symfony/yaml/tree/v5.3.6"
             },
             "funding": [
                 {
@@ -16496,7 +16563,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-21T12:40:44+00:00"
+            "time": "2021-07-29T06:20:01+00:00"
         },
         {
             "name": "the-turk/flarum-mathren",
@@ -17608,16 +17675,16 @@
         },
         {
             "name": "yannisme/confixtheme",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yannisme/flarum-confix-theme.git",
-                "reference": "f075993b3b530a0cd71033fefe1a3e0d37063535"
+                "reference": "7731a62cd6ce8e2c75ccc54a680d944b528594c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yannisme/flarum-confix-theme/zipball/f075993b3b530a0cd71033fefe1a3e0d37063535",
-                "reference": "f075993b3b530a0cd71033fefe1a3e0d37063535",
+                "url": "https://api.github.com/repos/yannisme/flarum-confix-theme/zipball/7731a62cd6ce8e2c75ccc54a680d944b528594c9",
+                "reference": "7731a62cd6ce8e2c75ccc54a680d944b528594c9",
                 "shasum": ""
             },
             "require": {
@@ -17660,9 +17727,73 @@
             ],
             "support": {
                 "issues": "https://github.com/yannisme/flarum-confix-theme/issues",
-                "source": "https://github.com/yannisme/flarum-confix-theme/tree/2.0.9"
+                "source": "https://github.com/yannisme/flarum-confix-theme/tree/2.0.10"
             },
-            "time": "2021-07-20T15:20:32+00:00"
+            "time": "2021-07-29T15:04:53+00:00"
+        },
+        {
+            "name": "zerosonesfun/flarum-member",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zerosonesfun/flarum-member.git",
+                "reference": "ec195f5499066789684ddfc03023abe0f33bb889"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zerosonesfun/flarum-member/zipball/ec195f5499066789684ddfc03023abe0f33bb889",
+                "reference": "ec195f5499066789684ddfc03023abe0f33bb889",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16 || ^1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Members Class",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-users",
+                        "backgroundColor": "#ddd",
+                        "color": "#000"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zerosonesfun\\Members\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Billy Wilcosky",
+                    "homepage": "https://www.wilcosky.com",
+                    "role": "Creator"
+                }
+            ],
+            "description": "Give members more class.",
+            "homepage": "https://www.wilcosky.com",
+            "keywords": [
+                "Users",
+                "members"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org",
+                "issues": "https://github.com/zerosonesfun/flarum-member/issues",
+                "source": "https://github.com/zerosonesfun/flarum-member"
+            },
+            "funding": [
+                {
+                    "url": "https://www.wilcosky.com",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-05-16T01:18:08+00:00"
         }
     ],
     "packages-dev": [],

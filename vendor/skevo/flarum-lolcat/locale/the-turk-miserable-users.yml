@@ -1,0 +1,60 @@
+the-turk-miserable-users:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      miserable_user_label: => the-turk-miserable-users.ref.miserable_user
+
+    # These translations are used in the Settings page.
+    settings:
+      range_separator_text: " to "
+      range_seconds_text: " Seconds"
+      loading_delay_label: "loadin delay" # Original: Loading delay
+      loading_delay_text: "Miserabel userz will bees subjected 2  paeg loadin delay ov  random period tween teh 2 values providd hah." # Original: Miserable users will be subjected to a page loading delay of a random period between the two values provided here.
+      broken_page_chance_label: "brokd paeg chanec" # Original: Broken page chance
+      broken_page_chance_text: "u cud present miserabel userz wif  brokd paeg frum tiem 2 tiem. Srsly  entr teh percentaeg chanec ov dis happenin." # Original: You may present miserable users with a broken page from time to time. Enter the percentage chance of this happening.
+      flood_time_multiplier_label: "Flood tiem multipliah" # Original: Flood time multiplier
+      flood_time_multiplier_text: "teh standard minimum tiem (which iz 10 secondz) tween mesagez can bees multiplied 2 mak miserabel userz wait longr tween posting." # Original: The standard minimum time (which is 10 seconds) between messages can be multiplied to make miserable users wait longer between posting.
+      redirection_chance_label: "Redirection chanec" # Original: Redirection chance
+      redirection_chance_text: "entr teh percentaeg chanec dat  miserabel usr will bees redirected 2 teh redirection paeg URL." # Original: Enter the percentage chance that a miserable user will be redirected to the redirection page URL.
+      redirection_page_url_label: "Redirection paeg URL" # Original: Redirection page URL
+      redirection_page_url_text: "u cud randomly redirect miserabel userz 2  different paeg. Srsly  leef dis blank 2 redirect 2 teh forum hoem paeg." # Original: You may randomly redirect miserable users to a different page. Leave this blank to redirect to the forum home page.
+      log_out_chance_label: "Log out chanec" # Original: Log out chance
+      log_out_chance_text: "entr teh percentaeg chanec dat  miserabel usr will bees logged out an redirected bak 2 teh hoem paeg. Srsly  remembr, Srsly !  Onec logged out, dey" # Original: Enter the percentage chance that a miserable user will be logged out and redirected back to the home page. <b>Remember!</b> Once logged out, they
+      shuffle_post_chance_label: "Shuffel post chanec" # Original: Shuffle post chance
+      shuffle_post_chance_text: "u cud randomly shuffel  miserabel usr" # Original: You may randomly shuffle a miserable user
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed as tooltips for user badges.
+    user_badge:
+      miserable_user_tooltip: => the-turk-miserable-users.ref.miserable_user
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      miserable_user_button: => the-turk-miserable-users.ref.miserable_user
+
+    # These translations are used in the Miserable User modal dialog (admin function).
+    miserable_user:
+      title: "Miserable {username}"
+      status_heading: "Miserabel Status" # Original: Miserable Status
+      not_miserable_label: "Not miserabel" # Original: Not miserable
+      indefinitely_label: "Miserabel indefinitely" # Original: Miserable indefinitely
+      limited_time_label: "Miserabel 4  limitd tiem..." # Original: Miserable for a limited time...
+      limited_time_days_text: " days"
+      submit_button: => core.ref.save_changes
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    miserable_user: "Miserabel usr" # Original: Miserable User

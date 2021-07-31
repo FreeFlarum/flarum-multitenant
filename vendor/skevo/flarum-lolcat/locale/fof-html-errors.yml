@@ -1,0 +1,11 @@
+fof-html-errors:
+    admin:
+        settings:
+            error:
+                403: "403 Forbidden" # Original: 403 Forbidden
+                404: "404 Not findz" # Original: 404 Not Found
+                500: "500 Internal servr Error" # Original: 500 Internal Server Error
+                503: "503 survis Unavailabel (Down 4 Manetenanec)" # Original: 503 Service Unavailable (Down For Maintenance)
+
+            placeholder:
+                empty_for_default: "leef empty 4 teh default Flarum error paeg" # Original: Leave empty for the default Flarum error page

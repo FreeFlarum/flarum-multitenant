@@ -1,0 +1,48 @@
+kyrne-whisper:
+  admin:
+    settings:
+      return_key: Trả về key gửi tin nhắn
+      title: Thiết lập Whisper
+      set_own_password: "Cho phép người dùng tạo mật khẩu của riêng - Khả năng tương thích SSO"
+    permissions:
+      start_label: Bắt đầu cuộc trò chuyện
+  forum:
+    dropdown:
+      tooltip: Cuộc trò chuyện
+    setup:
+      title: Thiết lập Nhắn tin Riêng tư
+      header_setup: Nhập mật khẩu đăng nhập tài khoản của bạn để thiết lập nhắn tin riêng tư.
+      header_import: Nhập mật khẩu đăng nhập tài khoản của bạn để nhập các tin nhắn riêng tư của bạn.
+      header_set_own: Nhập mật khẩu để thiết lập tin nhắn riêng tư.
+      header_set_own_import: Nhập mật khẩu tin nhắn riêng tư của bạn để nhập chúng.
+      passwords_mismatch: Mật khẩu không khớp.
+      invalid_password: Mật khẩu của bạn không đúng.
+      button_import: Nhập
+      button_setup: Thiết lập
+      confirm_password: Mật khẩu xác nhận
+      success: Tin nhắn riêng tư đã sẵn sàng, trang của bạn sẽ được tải lại ngay...
+    modal:
+      title: Bắt đầu cuộc trò chuyện
+      help: Nhập tên người dùng để bắt đầu trò chuyện.
+      help_start: "Nhập tin nhắn đầu tiên của bạn. Đây là tin duy nhất bạn có thể gửi cho đến khi {username} phản hồi. Nhấp vào người dùng để chọn một người nhận khác."
+      search_recipients: Nhập tên người dùng...
+      submit: Gửi & Bắt đầu cuộc trò chuyện
+      copied: Tin nhắn của bạn đã được sao chép vào bộ nhớ tạm.
+      more_users: Nếu bạn không thấy người dùng đang tìm kiếm, họ chưa có thiết lập tin nhắn riêng tư.
+      already: "Bạn đã có một cuộc trò chuyện với {username}."
+    user_modal_alert: "{username} đã thiết lập cuộc trò chuyện riêng tư, mật khẩu của họ không thể được thay đổi một cách an toàn"
+    chat:
+      chat_with: "Trò chuyện với {username}"
+      messages_multiple: "Toàn bộ {count} tin nhắn"
+      messages_single: Cuộc trò chuyện mới
+      start: Bắt đầu cuộc trò chuỵen
+      read: Đọc
+      cant_start: Không thể bắt đầu cuộc trò chuyện
+      text_placeholder: Nhập tin nhắn của bạn
+      send: Gửi tin nhắn
+      recovery_message: "Thông báo hệ thống: Đồng bộ hóa mã hóa bị mất và được khôi phục"
+      failed_message: "Không giải mã được tin nhắn, đang thử phương thức khôi phục #{method}"
+      cant_send: "Bạn không thể gửi tin nhắn cho đến khi {username} phản hồi (chỉ tin nhắn đầu tiên)"
+      cant_send_toomany: "Vui lòng đợi phản hồi từ {username} trước khi gửi thêm tin nhắn"
+      failed_to_decrypt: "[Không giải mã được]"
+      start_of_conversation: Bắt đầu cuộc trò chuyện

@@ -1,0 +1,9 @@
+akr-chevereto:
+    admin:
+      setting:
+         url: "URL ov teh target Chevereot websiet" # Original: URL of the target Chevereto website
+         insert_type: "Embed codes 2 auot insert in teh target editabel content" # Original: Embed codes to auto insert in the target editable content
+    forum:
+      composer:
+        upload_button: "Upload pictuer" # Original: Upload picture
+        upload_button_details: "Upload an insert pictuer" # Original: Upload and insert picture

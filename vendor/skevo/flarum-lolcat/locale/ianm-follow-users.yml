@@ -1,0 +1,121 @@
+ianm-follow-users:
+  admin:
+    permissions:
+      be_followed_label: "Allow userz 2 follow" # Original: Allow users to follow
+
+  forum:
+    profile_link: => ianm-follow-users.lib.following_link
+
+    profile_page:
+      no_following: "It lookz likes u" # Original: It looks like you
+
+    user_controls:
+      follow_button: => ianm-follow-users.lib.follow
+      unfollow_button: => ianm-follow-users.lib.change_follow_type
+
+    settings:
+      notify_new_follower_label: "Someoen follows meh" # Original: Someone follows me
+      notify_new_unfollower_label: "Someoen stops followin meh" # Original: Someone stops following me
+      notify_new_discussion_label: "Someoen Iz" # Original: Someone I
+      notify_new_post_label: "Someoen Iz" # Original: Someone I
+      block_follow: "Prevent userz frum followin meh" # Original: Prevent users from following me
+
+    index:
+      follow_tag_button: => ianm-follow-users.lib.follow
+      unfollow_tag_button: => ianm-follow-users.lib.change_follow_type
+
+    notifications:
+      new_discussion_text: "{username} started"
+      new_post_text: "{username} posted in a discussion"
+      new_follower_text: "{username} followed you"
+      new_unfollower_text: "{username} stopped following you"
+
+    badge:
+      label:
+        follow: "followin discushuns" # Original: Following discussions
+        lurk: "followin all" # Original: Following all
+
+    filter:
+      following: "Followed userz" # Original: Followed users
+
+    modals:
+      select_follow_level:
+        title: "Select follow level for {username}"
+        description: "chooz how u" # Original: Choose how you
+
+        follow_levels_heading: "Follow levelz" # Original: Follow levels
+        follow_select_label: "Follow tyep" # Original: Follow type
+
+        no_user_attr_provided_err: "Uh o, somefin goed wrong whiel openin dis modal." # Original: Uh oh, something went wrong while opening this modal.
+        no_user_attr_provided_err_debug: "No `usr` attribuet wuz passed 2 teh SelectFollowUserLevel modal when creatd.  Modal cannot bees rendered." # Original: No `user` attribute was passed to the SelectFollowUserLevel modal when created. Modal cannot be rendered.
+
+        save_btn: "Saev" # Original: Save
+        cancel_btn: "Cancel" # Original: Cancel
+
+  email:
+    new_discussion_by_user_subject: "[Follow User] {title}"
+    new_follower_subject: "[Follow usr] u haz  nu followah!" # Original: [Follow User] You have a new follower!
+    new_post_subject: "[Follow User] New post in {title}"
+    new_discussion_by_user_body: |
+      Hey {recipient_display_name},
+
+      {user_display_name} started a new discussion: {discussion_title}
+
+      To view the new discussion, check out the following link:
+
+      {discussion_url}
+
+      ---
+
+      {post_content}
+
+    new_follower_body: |
+      Hey {recipient_display_name},
+
+      {follower_display_name} started following you, so they'll be notified when you start a new discussion.
+
+      To view their profile, check out the following link:
+
+      {profile_url}
+
+    new_post_body: |
+      Hey {recipient_display_name},
+
+      {user_display_name} posted in a discussion: {discussion_title}
+
+      To view the new activity, check out the following link:
+
+      {post_url}
+
+      ---
+
+      {post_content}
+
+      ---
+
+      You won't receive any more notifications about this discussion until you're up-to-date.
+
+  lib:
+    following_link: "Followed userz" # Original: Followed Users
+
+    follow: "Follow" # Original: Follow
+    change_follow_type: "Chaneg follow tyep" # Original: Change follow type
+
+    follow_levels:
+      unfollow:
+        name: "Don" # Original: Don
+
+        description: |
+          Don't receive any notifications for <em>{username}</em>'s activity.
+
+      follow:
+        name: "Follow discushuns" # Original: Follow discussions
+
+        description: |
+          Receive notifications when <em>{username}</em> starts new a new discussion.
+
+      lurk:
+        name: "Follow all" # Original: Follow all
+
+        description: |
+          Receive notifications when <em>{username}</em> starts a new discussion or posts within any discussion.

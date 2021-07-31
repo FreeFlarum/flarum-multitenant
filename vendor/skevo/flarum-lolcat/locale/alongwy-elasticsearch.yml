@@ -1,0 +1,11 @@
+alongwy-elasticsearch:
+  admin:
+    settings:
+      title: "Elasticsearch" # Original: Elasticsearch
+      ESOptionsHeading: "Setting" # Original: Setting
+      host: "Host" # Original: Host
+      hostHelp: "Elasticsearch Host" # Original: Elasticsearch Host
+      port: "Port" # Original: Port
+      portHelp: "Elasticsearch Port" # Original: Elasticsearch Port
+      scheme: "Scheem" # Original: Scheme
+      schemeHelp: "Elasticsearch Scheem (http/https)" # Original: Elasticsearch Scheme (http/https)

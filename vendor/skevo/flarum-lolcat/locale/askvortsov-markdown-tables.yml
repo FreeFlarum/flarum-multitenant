@@ -1,0 +1,16 @@
+askvortsov-markdown-tables:
+  lib:
+    composer:
+      table_menu:
+        num_cols: "# Columns"
+        num_rows: "# Rows (including header)"
+        label_cells: "# Label cells?"
+        column: "Column" # Original: Column
+        remove_column: "Remoev column" # Original: Remove column
+        insert_column_before: "Insert column b4" # Original: Insert column before
+        insert_column_after: "Insert column aftr" # Original: Insert column after
+        row: "Row" # Original: Row
+        remove_row: "Remoev row" # Original: Remove row
+        insert_row_before: "Insert row b4" # Original: Insert row before
+        insert_row_after: "Insert row aftr" # Original: Insert row after
+      table_tooltip: "Tabel" # Original: Table

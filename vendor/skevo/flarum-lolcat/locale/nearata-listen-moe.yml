@@ -1,0 +1,15 @@
+nearata-listen-moe:
+  admin:
+    settings:
+      radio_guests: "Enabel teh radio 4 guests." # Original: Enable the radio for guests.
+      radio_help: "Default radio 4 guests." # Original: Default radio for guests.
+      radio_label: "Radio Tyep" # Original: Radio Type
+      radio_options:
+        jpop: "J-pop" # Original: J-pop
+        kpop: "K-pop" # Original: K-pop
+  forum:
+    settings:
+      radio_label: "Listen Moe Radio" # Original: Listen Moe Radio
+      radio_options:
+        jpop: "J-pop" # Original: J-pop
+        kpop: "K-pop" # Original: K-pop

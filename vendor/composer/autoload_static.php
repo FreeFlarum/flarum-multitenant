@@ -14,11 +14,11 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
@@ -87,6 +87,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'axy\\errors\\' => 11,
             'axy\\codecs\\base64vlq\\' => 21,
             'axy\\backtrace\\' => 14,
+        ),
+        'Z' => 
+        array (
+            'Zerosonesfun\\Members\\' => 21,
         ),
         'Y' => 
         array (
@@ -414,6 +418,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'axy\\backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace',
+        ),
+        'Zerosonesfun\\Members\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerosonesfun/flarum-member/src',
         ),
         'Yannis\\ConfixTheme\\' => 
         array (
@@ -825,8 +833,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 

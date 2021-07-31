@@ -1,0 +1,32 @@
+Xengine-signature:
+    forum:
+        buttons:
+            signature: "Signatuer" # Original: Signature
+            save: "Saev Signatuer" # Original: Save Signature
+        modal:
+            loading:
+                title: "savin" # Original: Saving 
+                content: "plz wait..." # Original: Please wait...
+            error:
+                title: "Whoops!  Encountered sum errorz whiel savin..." # Original: Whoops! Encountered some errors while saving...
+                content: "List ov errorz:" # Original: List of errors:
+        errors:
+             max_char_limit_exceed: "Maximum charactah limit exceeded." # Original: Maximum character limit exceeded.
+             max_image_width_exceed: "Maximum imaeg width limit exceeded." # Original: Maximum image width limit exceeded.
+             max_image_height_exceed: "Maximum imaeg heiet limit exceeded." # Original: Maximum image height limit exceeded.
+             max_image_count_exceed: "Maximum imaeg count exceeded." # Original: Maximum image count exceeded.
+    admin:
+        title: "Signatuer" # Original: Signature
+        settings:
+            maximum_image_width:
+                description: "Maximum width ov imagez on editor." # Original: Maximum width of images on editor.
+                placeholder: 350 (default)
+            maximum_image_height:
+                description: Maximum height of sum height of total inserted images on editor.
+                placeholder: 500 (default)
+            maximum_image_count:
+                description: Maximum inserted images.
+                placeholder: 5 (default)
+            maximum_char_limit:
+                description: Maximum character limit of signature (count characters, does not considering with HTML tags)
+                placeholder: 1000 (default)

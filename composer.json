@@ -147,6 +147,7 @@
         "ramsey/uuid": "*",
         "realodix/flarum-ext-indonesian": "*",
         "rob006/flarum-lang-polish": "*",
+        "skevo/flarum-lolcat": "^1.0",
         "ssnepenthe/color-utils": "*",
         "swiftmailer/swiftmailer": "*",
         "sycho/flarum-advanced-extension-categories": "*",
@@ -157,7 +158,8 @@
         "v17development/flarum-blog": "*",
         "v17development/flarum-seo": "*",
         "v17development/flarum-user-badges": "^0.2.1",
-        "yannisme/confixtheme": "^2.0"
+        "yannisme/confixtheme": "^2.0",
+        "zerosonesfun/flarum-member": "^0.2.0"
     },
     "config": {
         "preferred-install": "dist",

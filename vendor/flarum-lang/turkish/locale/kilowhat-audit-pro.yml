@@ -22,6 +22,7 @@ kilowhat-audit:
       user-title: 'Kullanıcı Denetim Günlüğü'
   lib:
     browser:
+      cache_cleared: 'Önbelleği elle temizledi'
       client:
         access_token: 'Erişim bileti'
         api_key: 'API anahtarı'
@@ -32,7 +33,9 @@ kilowhat-audit:
         filterAction: 'Aynı eylemlere ait günlüğü göster'
         filterActor: 'Bu kullanıcının günlüklerini göster'
         filterClient: 'Bu istemci tipine göre günlüğü göster'
+        filterDiscussion: 'Aynı tartışmayı etkileyen günlükleri göster'
         filterIp: 'Bu IP''ye göre günlüğü göster'
+        filterUser: 'Aynı kullanıcıyı etkileyen günlükleri göster'
         hideRaw: 'Ham günlüğü gizle'
         showRaw: 'Ham günlüğü göster'
       deletedResource:
@@ -41,11 +44,30 @@ kilowhat-audit:
         post: 'Gönderi #{id}'
         tag: 'Etiket #{id}'
         user: 'Kullanıcı #{id}'
+      discussion:
+        create_date_changed: '{discussion} tartışmasının başlangıcını {old_date} tarihinden {new_date} tarihine güncelledi'
+        created: 'Tartışma başlattı {discussion}'
+        deleted: 'Tartışma sildi {discussion}'
+        hidden: 'Tartışmayı gizledi {discussion}'
+        locked: 'Tartışmayı kilitledi {discussion}'
+        renamed: '{old_title} tartışmasını {new_title} olarak yeniden adlandırdı'
+        restored: 'Tartışmayı geri aldı {discussion}'
+        split_away: '{post_count} gönderiyi {discussion} tartışmasından ayırdı'
+        split_into: '{post_count} gönderiyi yeni {discussion} tartışmasına ayırdı'
+        stickied: 'Tartışmayı sabitledi {discussion}'
+        tagged: '{discussion} tartışmasının {old_tags} etiketlerini {new_tags} etiketileri olarak güncelledi'
+        unlocked: 'Tartışmanın kilidini kaldırdı {discussion}'
+        unstickied: 'Tartışmanın sabitini kaldırdı {discussion}'
+        user_changed: '{discussion} tartışmasının yazını {old_user} kullanıcısından {new_user} kullanıcısına verdi'
       empty: 'Sonuç yok'
       extension:
         disabled: 'Uzantı etkisizleştirildi {package}'
+        enabled: 'Uzantıyı etkinleştirdi {package}'
       filterApply: Uygula
       filterPlaceholder: 'Günlükleri filtrele'
+      fof_ban_ips:
+        banned: 'IP yasakladı {ip}'
+        unbanned: 'IP yasağını kaldırdı {ip}'
       genericResource:
         comment: Yorum
         post: Gönderi
@@ -55,4 +77,6 @@ kilowhat-audit:
       permissionGroup:
         everyone: '=> core.admin.permissions_controls.everyone_button'
         members: '=> core.admin.permissions_controls.members_button'
+      post:
+        hidden: '{discussion} tartışmasında {postuser} kullanıcısının {post} gönderisini gizledi'
       withoutActor: '=> core.group.guest'

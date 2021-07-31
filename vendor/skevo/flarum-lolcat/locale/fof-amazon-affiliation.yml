@@ -1,0 +1,16 @@
+fof-amazon-affiliation:
+  admin:
+    settings:
+      title:
+        modal: "Amazon affiliashun settingz" # Original: Amazon Affiliation Settings
+        tags: "Affiliaet Tags" # Original: Affiliate Tags
+        tags-mediaembed: "teh followin Amazon siets r currently not supportd 4 MediaEmbed, so will alwayz display as plaen linkz (obeying teh settingz aboev): CN, BR, MX, AU" # Original: The following Amazon sites are currently not supported for MediaEmbed, so will always display as plain links (obeying the settings above): CN, BR, MX, AU
+
+      field:
+        keep-existing-tag: "Keep Amazon Affiliaet Tags frum original linkz instead ov replacing" # Original: Keep Amazon Affiliate Tags from original links instead of replacing
+        keep-existing-tag-help: "By default any existin tag in teh original url iz replaced by teh tag u defien below." # Original: By default any existing tag in the original url is replaced by the tag you define below.
+        help-mediaembed: "When usd inconjunction wif fof/formatting, teh rich embed will alwayz remoev any existin tags" # Original: When used inconjunction with fof/formatting, the rich embed will always remove any existing tags
+        remove-tag-if-unhandled: "Remoev Amazon Affiliaet Tags on Amazon linkz dat aren" # Original: Remove Amazon Affiliate Tags on Amazon links that aren
+        remove-tag-if-unhandled-help: "By default linkz dat aren" # Original: By default links that aren
+        tag: "{name} (amazon.{domain})"
+        tag-placeholder: "leef empty 2 not covah does linkz" # Original: Leave empty to not cover those links

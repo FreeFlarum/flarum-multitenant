@@ -34,7 +34,8 @@ export default class UserListItem extends Component {
 
   onremove() {
     if (app.pusher) {
-      app.pusher.then(channels => {
+      app.pusher.then(object => {
+        const channels = object.channels;
         channels.user.unbind('typing');
       });
     }
@@ -50,7 +51,8 @@ export default class UserListItem extends Component {
 
   oncreate() {
     if (app.pusher) {
-      app.pusher.then(channels => {
+      app.pusher.then(object => {
+        const channels = object.channels;
         channels.user.bind('typing', data => {
           if (parseInt(data.conversationId) === parseInt(this.conversation.id())) {
             this.typing = true;

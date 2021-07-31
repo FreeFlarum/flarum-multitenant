@@ -8,4 +8,4 @@ clarkwinkelmann-likes-received:
       view: 'Alınan beğenileri görüntüle'
   forum:
     user-card:
-      likes: 'Alınan beğeni: {likes} '
+      likes: '{likes, plural, one {# beğeni aldı} other {# beğeni aldı}}'

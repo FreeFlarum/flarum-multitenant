@@ -1,0 +1,33 @@
+fof-nightmode:
+    ref:
+        auto: "Automatic (basd on browsr or deviec opshuns)" # Original: Automatic (based on browser or device options)
+        light: "dai Moed" # Original: Day Mode
+        dark: "Niet Moed" # Original: Night Mode
+
+    admin:
+        settings:
+            modal:
+                default_theme: "Default forum theem" # Original: Default forum theme
+                default_theme_helper: "teh default theem iz automatically set 4 nu userz, guests an does hoo haz no preferenec set." # Original: The default theme is automatically set for new users, guests and those who have no preference set.
+                theme_auto: => fof-nightmode.ref.auto
+                theme_light: => fof-nightmode.ref.light
+                theme_dark: => fof-nightmode.ref.dark
+    forum:
+        day: => fof-nightmode.ref.light
+        night: => fof-nightmode.ref.dark
+
+        user:
+            settings:
+                heading: "Theem" # Original: Theme
+                description: "chooz which colour theem u wantz 2 ues on teh forum." # Original: Choose which colour theme you want to use on the forum.
+                description2: "dis theem will bees linked 2 ur akownt an appliez 2 all ur devicez unles u toggel on teh switch below 4 pah deviec settingz." # Original: This theme will be linked to your account and applies to all your devices unless you toggle on the switch below for per device settings.
+                device_specific_setting_checkbox: "Ues pah deviec settingz" # Original: Use per device settings
+                device_specific_setting_checkbox_tooltip: "ur theem choiec will bees saved individually 4 each ov ur devicez." # Original: Your theme choice will be saved individually for each of your devices.
+                options:
+                    auto: => fof-nightmode.ref.auto
+                    day: => fof-nightmode.ref.light
+                    night: => fof-nightmode.ref.dark
+                option_descriptions:
+                    auto: "ur theem will bees automatically selectd basd on ur browsr or deviec settingz.  4 exampel, if u haz dark moed enabld in iOS, teh forumz will bees dark 2." # Original: Your theme will be automatically selected based on your browser or device settings. For example, if you have dark mode enabled in iOS, the forums will be dark too.
+                    day: "teh classic experienec which u" # Original: The classic experience which you
+                    night: "u" # Original: You

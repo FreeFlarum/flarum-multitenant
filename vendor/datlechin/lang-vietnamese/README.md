@@ -116,6 +116,9 @@ php flarum cache:clear
 <details>
   <summary>clarkwinkelmann</summary>
   <ul>
+    <li><a href="https://github.com/clarkwinkelmann/flarum-ext-status">Status</a> (1.0.0)</li>
+    <li><a href="https://github.com/clarkwinkelmann/flarum-ext-who-read">Who read</a> (1.4.0)</li>
+    <li><a href="https://github.com/clarkwinkelmann/flarum-ext-likes-received">Likes Received</a> (1.0.0)</li>
     <li><a href="https://github.com/clarkwinkelmann/flarum-ext-first-post-approval">First Post Approval</a> (1.0.0)</li>
     <li><a href="https://github.com/clarkwinkelmann/flarum-ext-author-change">Author Change</a> (1.0.1)</li>
     <li><a href="https://github.com/clarkwinkelmann/flarum-ext-follow-tags-prompt">Follow Tags Prompt</a> (1.0.0)</li>
@@ -132,6 +135,8 @@ php flarum cache:clear
 <details>
   <summary>justoverclockl</summary>
   <ul>
+    <li><a href="https://github.com/justoverclockl/username-blacklist">UsernameBlacklist</a> (0.1.0)</li>
+    <li><a href="https://github.com/justoverclockl/username-blacklist">UsernameBlacklist</a> (0.1.0)</li>
     <li><a href="https://github.com/justoverclockl/first-visit-indexpage">FirstVisitIndexPage</a> (0.1.1)</li>
     <li><a href="https://github.com/justoverclockl/flarum-ext-feedback">Feedback</a> (0.1.4)</li>
     <li><a href="https://github.com/justoverclockl/flarum-ext-readmore">ReadMore</a> (1.0.4)</li>
@@ -156,6 +161,8 @@ php flarum cache:clear
 <details>
   <summary>Others</summary>
   <ul>
+    <li><a href="https://github.com/Ralkage/flarum-hcaptcha">hCaptcha</a> (1.0.0)</li>
+    <li><a href="https://github.com/KyrneDev/whisper">Whisper - Private Messaging</a> (0.1.3)</li>
     <li><a href="https://github.com/glowingblue/flarum-ext-redis-setup">Redis Setup</a> (1.0.3)</li>
     <li><a href="https://github.com/ramesh-dada/realtime">Realtime Posts</a> (v100.1)</li>
     <li><a href="https://github.com/katosdev/signature">Signature</a> (1.0.0)</li>

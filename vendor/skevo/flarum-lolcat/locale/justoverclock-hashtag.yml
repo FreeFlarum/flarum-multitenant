@@ -1,0 +1,4 @@
+justoverclock-hashtag:
+  forum:
+    post:
+      hashtag_link_tooltip: "Search dis hashtag inot Flarum" # Original: Search this hashtag into Flarum

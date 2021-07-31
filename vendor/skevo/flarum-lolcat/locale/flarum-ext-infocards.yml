@@ -1,0 +1,23 @@
+flarum-ext-infocards:
+  forum:
+    geninfo: "General Inof" # Original: General Info
+    welcome_back: "welcom bak," # Original: Welcome Back,
+    forumstats: "Forum statz" # Original: Forum Stats
+    totalpost: "Total Post" # Original: Total Post
+    totdisc: "Total discushuns" # Original: Total Discussions
+    opthread: "Opened Threads" # Original: Opened Threads
+    viscounter: "Visit Countah" # Original: Visit Counter
+    wasviewed: "dis paeg wuz viewd" # Original: This page was viewed
+    groups: "ur akshul Groups" # Original: Your actual Groups
+    times: "tiems" # Original: Times
+    sunday: "Sunday" # Original: Sunday
+    monday: "mondai" # Original: Monday
+    tuesday: "tuesdai" # Original: Tuesday
+    wednesday: "Wednesday" # Original: Wednesday
+    thursday: "thursdai" # Original: Thursday
+    friday: "fridai" # Original: Friday
+    saturday: "katurdai" # Original: Saturday
+  admin:
+    createapikey: "Aip Key" # Original: Api Key
+    apikeyhelp: "Creaet  Free aip key on https://countaip.xyz/" # Original: Create a Free api key on https://countapi.xyz/
+

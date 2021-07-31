@@ -1,0 +1,137 @@
+fof-upload:
+  admin:
+    pane:
+      title: "Upload" # Original: Upload
+      description: "Set up uploading servicez an preferencez." # Original: Set up uploading services and preferences.
+    help_texts:
+      disable-download-logging: |
+        Disable logging every download made by users of your forum. Keeping it enabled allows you to view the number of downloads and other metrics in the nearby future.
+      disable-hotlink-protection: |
+        Hotlink protection prevents opening downloads from other sites. Current method requires a csrf token and post id.
+      download_templates: |
+        Download templates are how uploads are shown on your forum, eg like previews, buttons. Currently available:
+      mime_types: |
+        Please configure your mapping here. Each mime type regular expression will be handled by a specific upload adapter and download template.
+      resize: |
+        Choose whether you want to resize your images before they get uploaded. You can choose a maximum width and height, in pixels. The resizing process keeps the aspect ratio of the images.
+      client_extension: |
+        By default Upload will choose a safe file extension based on the MIME type.
+        For some file types based around ZIP or binary data this can result in generic extensions being used instead of the expected one.
+        Here you can enter a comma-separated list of file extensions that will be kept verbatim.
+      watermark: |
+        Choose whether images will have a watermark added during upload. Watermarks are added to non-gifs based on your preferences below.
+      s3_compatible_storage: |
+        The following settings are only required when using S3 compatible storage. If you use AWS, you can leave them blank.
+      s3_acl: |
+        The ACL that should be applied to the uploaded object (default: private). For possible values, see https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl
+      composer_buttons: |
+        By default both the media manager button and upload button are visible. You can also choose to display only one button.
+    labels:
+      aws-s3:
+        bucket: "Bucket" # Original: Bucket
+        key: "Key" # Original: Key
+        region: "Region" # Original: Region
+        secret: "seekret" # Original: Secret
+        title: "AWS S3 storaeg settingz" # Original: AWS S3 storage settings
+        advanced_title: "advancd S3 storaeg settingz" # Original: Advanced S3 storage settings
+        endpoint: "Endpoint" # Original: Endpoint
+        use_path_style_endpoint: "Ues path styel endpoint" # Original: Use path style endpoint
+        acl: "acces Control List (ACL)" # Original: Access Control List (ACL)
+      disable-download-logging:
+        title: "Disabel logging downloadz" # Original: Disable logging downloads
+        toggle: "Disabel" # Original: Disable
+      disable-hotlink-protection:
+        title: "Disabel hotlink protection" # Original: Disable hotlink protection
+        toggle: "Disabel" # Original: Disable
+      imgur:
+        client_id: "Imgur client ID" # Original: Imgur client ID
+        title: "Imgur imaeg storaeg settingz" # Original: Imgur image storage settings
+      local:
+        cdn_url: "Content Delivewee URL (prefixes filez)" # Original: Content Delivery URL (prefixes files)
+        title: "Local storaeg settingz" # Original: Local storage settings
+      qiniu:
+        title: "Qiniu storaeg settingz" # Original: Qiniu storage settings
+        key: "Key" # Original: Key
+        secret: "seekret" # Original: Secret
+        bucket: "Bucket" # Original: Bucket
+      preferences:
+        max_file_size: "Maximum fiel siez (in kilobytes)" # Original: Maximum file size (in kilobytes)
+        mime_types: "Configuer ur miem tyep, upload adaptah mappin" # Original: Configure your mime type, upload adapter mapping
+        title: "General preferencez" # Original: General preferences
+      resize:
+        max_width: "Maximum imaeg width/heiet" # Original: Maximum image width/height
+        title: "Imaeg resiez" # Original: Image resize
+        toggle: "Resiez imagez" # Original: Resize images
+      client_extension:
+        title: "usr-providd fiel extenshuns" # Original: User-provided file extensions
+      watermark:
+        file: "Upload ur watermark imaeg" # Original: Upload your watermark image
+        position: "Watermark posishun" # Original: Watermark position
+        title: "Watermark imagez" # Original: Watermark images
+        toggle: "Watermark imagez" # Original: Watermark images
+      composer_buttons:
+        title: "Composah buttons" # Original: Composer buttons
+        options:
+          both: "Both" # Original: Both
+          upload-btn: "Upload button only" # Original: Upload button only
+          media-btn: "Media managr button only" # Original: Media manager button only
+
+    permissions:
+      download_label: "Download filez" # Original: Download files
+      upload_label: "Upload filez" # Original: Upload files
+      view_user_uploads_label: "View usr uploadz" # Original: View user uploads
+      delete_uploads_of_others_label: "Deleet usr uploadz" # Original: Delete user uploads
+    templates:
+      file: "Default fiel download templaet" # Original: Default file download template
+      file_description: |
+        Shows the file name and some general information. Proxies downloads through php, allowing for statistics gathering and hotlink protection.
+      image: "Default imaeg download templaet" # Original: Default image download template
+      image-preview: "Compleet imaeg preview templaet" # Original: Complete image preview template
+      image-preview_description: |
+        Shows the complete image in-line. No download functionality, no statistics are gathered and hotlink protection is ignored.
+      image_description: |
+        Shows a thumbnail of the image and proxies download through php. Allowing statistics to be gathered and hotlink protection.
+      just-url: "jus URL" # Original: Just URL
+      just-url_description: |
+        Inserts just the URL. Rendering can be handled by other extensions with auto-link ability. No download functionality, no statistics are gathered and hotlink protection is ignored.
+    upload_methods:
+      aws-s3: "S3/Compatibel" # Original: S3/Compatible
+      imgur: "Imgur" # Original: Imgur
+      local: "Local" # Original: Local
+      ovh-svfs: "OVH SVFS" # Original: OVH SVFS
+      qiniu: "QiNiu" # Original: QiNiu
+  forum:
+    media_manager: "Media managr" # Original: Media manager
+
+    buttons:
+      attach: "Attach" # Original: Attach
+      upload: "Upload" # Original: Upload
+      user_uploads: "usr uploadz" # Original: User uploads
+      cancel: "Cancel" # Original: Cancel
+      media: "mah media" # Original: My media
+
+    file_list:
+      loading: "loadin filez..." # Original: Loading files...
+      empty: "thar r no filez 2 show." # Original: There are no files to show.
+      release_to_upload: "Releaes 2 upload" # Original: Release to upload
+      modal_empty_desktop: "ur fiel list iz empty. Srsly  Click teh button or drag  fiel hah 2 upload." # Original: Your file list is empty. Click the button or drag a file here to upload.
+      modal_empty_phone: "ur fiel list iz empty.  Tap teh button aboev 2 upload  fiel." # Original: Your file list is empty. Tap the button above to upload a file.
+      select_file_a11y_label: "Select fiel" # Original: Select file 
+      confirm_selection_btn: "{fileCount, plural, =0 {None selected} one {Select file} other {Select files}}"
+      load_more_files_btn: "Load moar filez" # Original: Load more files
+      hide_file:
+        btn_a11y_label: "Hied" # Original: Hide 
+        hide_confirmation: "r u suer u wantz 2 hied" # Original: Are you sure you want to hide 
+        hide_success: "Fiel hidden" # Original: File hidden
+        hide_fail: "Couldn" # Original: Couldn
+        loading: "Hiding fiel..." # Original: Hiding file...
+
+    states:
+      error: "Error" # Original: Error
+      loading: "Uploading" # Original: Uploading
+      unauthorized: "u r not allowd 2 download filez" # Original: You are not allowed to download files
+  api:
+    upload_errors:
+      forbidden_type: "Uploading filez ov dis tyep iz not allowd." # Original: Uploading files of this type is not allowed.
+      unsupported_type: 'Upload adapter does not support the provided mime type: {mime}.'
+      could_not_detect_mime: "cud not detect teh MIEM tyep ov dis fiel, plz twee agaen." # Original: Could not detect the MIME type of this file, please try again.

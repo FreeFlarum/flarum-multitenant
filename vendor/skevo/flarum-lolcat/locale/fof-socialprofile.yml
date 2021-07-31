@@ -1,0 +1,12 @@
+fof-socialprofile:
+  forum:
+    edit:
+      edit: "Edit" # Original: Edit
+      add: "Add" # Original: Add
+      headtitle: "Edit Buttons" # Original: Edit Buttons
+      title: "Titel" # Original: Title
+      url: "URL" # Original: URL
+      submit: "Saev" # Original: Save
+      delete: "Deleet" # Original: Delete
+      deletetitle: "Deleet Button" # Original: Delete Button
+      save_disabled_fetching_favicons: "wan or moar iconz r bein fetched.  plz wait." # Original: One or more icons are being fetched. Please wait.

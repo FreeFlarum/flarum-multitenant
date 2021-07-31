@@ -78,7 +78,8 @@ export default class ConversationView extends Component {
 
   onremove() {
     if (app.pusher) {
-      app.pusher.then(channels => {
+      app.pusher.then(object => {
+        const channels = object.channels;
         channels.user.unbind('typing');
         channels.user.unbind('newMessage');
       });
@@ -123,7 +124,8 @@ export default class ConversationView extends Component {
   oncreate() {
 
     if (app.pusher) {
-      app.pusher.then(channels => {
+      app.pusher.then(object => {
+        const channels = object.channels;
         channels.user.bind('newMessage', data => {
           if (parseInt(data.conversationId) === parseInt(this.conversation.id()) && $('.MessagesDropdown').children('.Dropdown-menu').is(':visible')) {
             const message = {

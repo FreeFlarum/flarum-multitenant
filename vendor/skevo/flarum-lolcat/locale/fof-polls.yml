@@ -1,0 +1,46 @@
+fof-polls:
+  admin:
+    permissions:
+      view_results_without_voting: "View resultz wifout votin" # Original: View results without voting
+      start: "Start  poll" # Original: Start a poll
+      self_edit: "Allow userz 2 edit dem own polls" # Original: Allow users to edit their own polls
+      vote: "Voet on polls" # Original: Vote on polls
+      change_vote: "Chaneg voet" # Original: Change vote
+      moderate: "Edit & remoev polls" # Original: Edit & remove polls
+
+  forum:
+    days_remaining: Poll ends {time}.
+    no_permission: "u don" # Original: You don
+    poll_ended: "dis poll has endd." # Original: This poll has ended.
+    public_poll: "View voterz" # Original: View voters
+
+    composer_discussion:
+      add_poll: "Add Poll" # Original: Add Poll
+      edit_poll: => fof-polls.forum.moderation.edit
+
+    modal:
+      add_title: "Add  Poll" # Original: Add a Poll
+      add_option_label: "Add an opshun" # Original: Add an Option
+      date_placeholder: "Poll end daet (opshunal)" # Original: Poll end date (Optional)
+      edit_title: "Edit Poll" # Original: Edit Poll
+      include_question: "u must inclued  queshun" # Original: You must include a question
+      max: "u can haz  maximum ov 10 anzwrs" # Original: You can have a maximum of 10 answers
+      min: "u must inclued  minimum ov 2 anzwrs" # Original: You must include a minimum of 2 answers
+      no_voters: "No Votes" # Original: No Votes
+      option_placeholder: "anzwr" # Original: Answer
+      options_label: "anzwrs" # Original: Answers
+      public_poll_label: "Allow ppl 2 c hoo voted" # Original: Allow people to see who voted
+      question_placeholder: "queshun" # Original: Question
+      submit: "Submit" # Original: Submit
+
+    moderation:
+      delete: "Remoev Poll" # Original: Remove Poll
+      delete_confirm: "r u suer u wantz 2 deleet dis poll?" # Original: Are you sure you want to delete this poll?
+      edit: "Edit Poll" # Original: Edit Poll
+
+    tooltip:
+      badge: "Poll" # Original: Poll
+      votes: "{count, plural, one {# vote} other {# votes}}"
+
+    votes_modal:
+      title: "voterz" # Original: Voters

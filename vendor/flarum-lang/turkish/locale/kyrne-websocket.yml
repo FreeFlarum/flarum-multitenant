@@ -4,6 +4,8 @@
 
 kyrne-websocket:
   admin:
+    chart:
+      title: 'Websocket İstatistikleri'
     help:
       app_id: 'Pusher Uygulama Kimliği - yerleşik websocket sunucusu kullanıyormuş gibi bırakın.'
       app_key: 'Pusher Uygulama Anahtarı - yerleşik websocket sunucusu kullanıyormuş gibi bırakın.'
@@ -18,6 +20,7 @@ kyrne-websocket:
       secret: 'Pusher App Secret (Uygulama Sırrı) - yerleşik websocket sunucusu kullanıyormuş gibi bırakın.'
       secure: 'Websocketini güvenli protokoller kullanmaya zorla - Güvenli bir websocket sunucusu kullanıyorsanız, ancak web sitesi kullanmıyorsanız bunu etkinleştirin.'
       self_signed: 'Yalnızca ssl kullanılıyorsa ve ters proxy DEĞİLSE gereklidir. SSL (https) sertifikanız kendinden imzalıysa bunu etkinleştirin.'
+      stats: 'İstatistikler arasındaki zaman aralığı - saniye cinsinden. 3600 (1 saat) ile 21600 (6 saat) arasında önerilir Varsayılan: 7200.'
     pusher_settings:
       app_host_label: Host
       app_id_label: 'App ID'
@@ -32,7 +35,10 @@ kyrne-websocket:
       passphrase: '(İsteğe bağlı) SSL Anahtar Parolası'
       reverse_proxy: 'Ters Proxy Desteği'
       secure: 'Websocket için wss/https zorla'
+      stats_label: 'İstatistik Aralığı'
       title: 'Websocket/Pusher Ayarları'
   forum:
     discussion_list:
       show_updates_text: '{count, plural, one {Güncellenmiş # tartışmayı göster} other {Güncellenmiş # tartışmayı göster}}'
+    discussion_page:
+      viewing_title: 'Şimdi burada:'

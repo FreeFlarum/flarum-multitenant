@@ -1,0 +1,68 @@
+core:
+  forum:
+    index_sort:
+      hot_button: "Trending" # Original: Trending
+
+fof-gamification:
+  forum:
+    votes: "Votes" # Original: Votes
+    vote_title: "Show hoo Voted" # Original: Show Who Voted
+    nav:
+      name: "Rankings" # Original: Rankings
+    ranking:
+      rank: "Plaec" # Original: Place
+      name: "usr" # Original: User
+      amount: "pointz" # Original: Points
+    notification:
+      upvote: "{username} upvoted your post"
+      downvote: "{username} downvoted your post"
+    user:
+      points: "Points: {points}"
+      rank: "{rank}"
+    modal:
+      title: "voterz" # Original: Voters
+      upvotes_label: "Upvoters:" # Original: Upvoters:
+    mod_item: "View voterz" # Original: View Voters
+  admin:
+    permissions:
+      vote_label: "Upvoet/Downvoet postz" # Original: Upvote/Downvote posts
+      see_votes_label: "c post upvotes/downvotes" # Original: See post upvotes/downvotes
+      see_ranking_page: "c ranking paeg" # Original: See ranking page
+    page:
+      rankings:
+        blocked:
+          placeholder: "CDK2020, Ralkaeg, AngelAvial" # Original: CDK2020, Ralkage, AngelAvila
+          title: "Ignored userz" # Original: Ignored Users
+          help: "thees userz will not bees shown on teh ranking paeg. Srsly  Usernames shud bees separated by  comam followed by  spaec." # Original: These users will not be shown on the ranking page. Usernames should be separated by a comma followed by a space.
+        title: "Rankings paeg" # Original: Rankings Page
+        enable: "Enabel custom imagez" # Original: Enable custom images
+        custom_image_1: "1st plaec imaeg" # Original: 1st place image
+        custom_image_2: "2nd plaec imaeg" # Original: 2nd place image
+        custom_image_3: "3rd plaec imaeg" # Original: 3rd place image
+      votes:
+        points_title: "pointz Placeholdah" # Original: Points Placeholder
+        points_placeholder: "pointz:" # Original: Points: 
+        color_holder: '#ffffff'
+        auto_upvote: "Auot upvoet postz when postd" # Original: Auto upvote posts when posted
+        rate_limit: "Enforec  voet raet limit (10 secondz)" # Original: Enforce a vote rate limit (10 seconds)
+        discussion_page: "Show total votes ov original post on discushuns list" # Original: Show total votes of original post on discussions list
+        alternate_layout: "Ues alternaet layout 2 show an/or doez upvotes/downvotes" # Original: Use alternate layout to show and/or do upvotes/downvotes
+        title: "Votes" # Original: Votes
+        vote_color: "Voted color" # Original: Voted color
+        icon_name: "Upvoet/downvoet icon" # Original: Upvote/downvote icon
+        icon_help: "Input any Font-awsum icon dat iz suffixed wif -up an -down, Srsly .  examplez: arrow, thumbs, chevron" # Original: Input any Font-Awesome icon that is suffixed with -up and -down. Examples: arrow, thumbs, chevron
+      save_settings: "Saev settingz" # Original: Save settings
+      convert:
+        button: "Convert likes 2 upvotes" # Original: Convert likes to upvotes
+        help: "Convert ur previous likes frum flarum-ext-likes inot upvotes, as well as calculaet teh hotness 4 all current discushuns." # Original: Convert your previous likes from flarum-ext-likes into upvotes, as well as calculate the hotness for all current discussions.
+        converting: "ur likes r nao bein convertd. Srsly  Refresh ur siet aftr  few minutez 2 c teh proces finishd, Srsly .  (Conversion tiem miet taek  whiel depending on ur total forum likes)" # Original: Your likes are now being converted. Refresh your site after a few minutes to see the process finished. (Conversion time might take a while depending on your total forum likes)
+        converted: "Successfully converted all {number} likes"
+      ranks:
+        title: "rankz" # Original: Ranks
+        ranks: "Custom rankz" # Original: Custom ranks
+        number_title: "How lotz da rank badges shud bees shown?" # Original: How many rank badges should be shown?
+        help:
+          color: '#ffffff'
+          help: "Input teh requird numbr ov upvotes, teh naym ov teh rank, an teh hex color ov teh rank" # Original: Input the required number of upvotes, the name of the rank, and the hex color of the rank
+          points: "pointz" # Original: Points
+          name: "naym" # Original: Name

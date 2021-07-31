@@ -1,0 +1,10 @@
+flarum-ext-purify:
+  forum:
+    obscure: "[Purified]" # Original: [Purified]
+  admin:
+    additem: "Add wet werd 2 teh Array" # Original: Add Bad Word to the Array
+    additemdesc: "separaet each werd by comam (e.g, Srsly .  word1,word2,word3,)" # Original: separate each word by comma (e.g. word1,word2,word3,)
+    hidemail: "Auot Hied Email addres" # Original: Auto Hide Email Address
+    customreg: "Ues custom Regular expreshun" # Original: Use custom Regular Expression
+    customregexp: "Ues Custom Regexp" # Original: Use Custom Regexp
+    customregexpdesc: "Put hah ur regular expreshun dat match ur needz (e.g, Srsly .  (flarum|best|extension) 2 hied thees 3 werdz)" # Original: Put here your regular expression that match your needs (e.g. (flarum|best|extension) to hide these 3 words)

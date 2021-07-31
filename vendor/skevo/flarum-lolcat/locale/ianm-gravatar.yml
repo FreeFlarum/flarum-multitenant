@@ -1,0 +1,31 @@
+ianm-gravatar:
+  admin:
+    settings:
+      proxy: 
+        title: "Proxy gravatars" # Original: Proxy gravatars
+        helptext: "By default, gravatar URLs r fetched directly frum gravatar.com, Srsly .  dis enablez all gravatar requests 2 bees servd directly by teh forum itself." # Original: By default, gravatar URLs are fetched directly from gravatar.com. This enables all gravatar requests to be served directly by the forum itself.
+      replace-flarum-custom:
+        title: "Replaec custom avatars uploaded 2 Forum" # Original: Replace custom avatars uploaded to Forum
+        helptext: "Replaec custom avatars already uploaded 2 teh forum wif  Gravatar" # Original: Replace custom avatars already uploaded to the forum with a Gravatar
+      defaults:
+        title: "defaultz" # Original: Defaults
+        helptext: "wut happenz when an email addres has no matching Gravatar imaeg. Srsly  Gravatar has  numbr ov built in opshuns which u can ues as defaultz.  Most ov thees werk by takin teh requestd email hash an usin it 2 generaet  themed imaeg dat iz unique 2 dat email addres." # Original: What happens when an email address has no matching Gravatar image? Gravatar has a number of built in options which you can use as defaults. Most of these work by taking the requested email hash and using it to generate a themed image that is unique to that email address.
+        mp_label: "mp: (mystewee-person)  simpel, cartoon-styel silhouetted outlien ov  person (doez not vawee by email hash)" # Original: mp: (mystery-person) a simple, cartoon-style silhouetted outline of a person (does not vary by email hash)
+        identicon_label: "identicon:  geometric pattern basd on an email hash" # Original: identicon: a geometric pattern based on an email hash
+        monsterid_label: "monsterid:  generatd" # Original: monsterid: a generated 
+        wavatar_label : "wavatar: generated faces with differing features and backgrounds"
+        retro_label: "retor: awsum generatd, 8-bit arcaed-styel pixelated facez" # Original: retro: awesome generated, 8-bit arcade-style pixelated faces
+        robohash_label: "robohash:  generatd robot wif different colors, facez, etc" # Original: robohash: a generated robot with different colors, faces, etc
+      rating:
+        title: "ratin" # Original: Rating
+        helptext: "Gravatar allowz userz 2 self-raet dem imagez so dat dey can indicaet if an imaeg iz appropriaet 4  certaen audienec.  By default, only" # Original: Gravatar allows users to self-rate their images so that they can indicate if an image is appropriate for a certain audience. By default, only 
+        g_label: "g: suitabel 4 display on all websiets wif any audienec tyep" # Original: g: suitable for display on all websites with any audience type
+        pg_label: "pg: cud contaen rued gesturez, provocatively dressd individualz, teh lessah swear werdz, or mild violenec" # Original: pg: may contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence
+        r_label: "r: cud contaen such tings as harsh profanity, intenes violenec, nudity, or hard drug ues" # Original: r: may contain such things as harsh profanity, intense violence, nudity, or hard drug use
+        x_label: "x: cud contaen hardcoer sexual imagewee or extremely disturbing violenec" # Original: x: may contain hardcore sexual imagery or extremely disturbing violence
+      force-default:
+        title: "Forec default" # Original: Force default
+        helptext: "Forces teh ues ov  default set, even if teh email hash linkz 2  custom usr uploaded avatar" # Original: Forces the use of a default set, even if the email hash links to a custom user uploaded avatar
+  forum:
+    settings:
+      edit-gravatar: "Manaeg avatar on gravatar.com" # Original: Manage avatar on gravatar.com

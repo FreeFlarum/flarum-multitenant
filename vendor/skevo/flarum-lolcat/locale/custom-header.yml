@@ -1,0 +1,29 @@
+custom-header:
+  admin:
+    headerTitle: "Headah Titel" # Original: Header Title
+    headerTitle-help: "hah u can chaneg teh maen titel ov ur headah" # Original: here u can change the main title of your header
+    headerTagline: "Headah Slogan" # Original: Header Slogan
+    headerTagline-help: "hah u can chaneg ur slogan" # Original: Here you can change your slogan
+    twitterIcon: "Link 2 twittr paeg" # Original: Link to Twitter Page
+    twitterIcon-help: "Paset hah  valid URL 2 ur twittr paeg" # Original: Paste here a valid URL to your twitter page
+    facebookIcon: "Link 2 ur facebook paeg" # Original: Link to your facebook Page
+    facebookIcon-help: "Paset hah  valid URL 2 ur facebook paeg" # Original: Paste here a valid URL to your facebook page
+    youtubeIcon: "Link 2 ur yootoob paeg" # Original: Link to your youtube Page
+    youtubeIcon-help: "Paset hah  valid URL 2 ur yootoob paeg" # Original: Paste here a valid URL to your youtube page
+    githubIcon: "Link 2 ur Gifub paeg" # Original: Link to your GitHub Page
+    githubIcon-help: "Paset hah  valid URL 2 ur Gifub paeg" # Original: Paste here a valid URL to your GitHub page
+    button-text: "Left Button Text" # Original: Left Button Text
+    button-text-help: "Put hah teh text 4 ur left button" # Original: Put here the text for your left button
+    button2-text: "riet Button Text" # Original: Right Button Text
+    button2-text-help: "Put hah teh text 4 ur riet button" # Original: Put here the text for your right button
+    link-button-one: "Link 4 Left Button" # Original: Link for Left Button
+    link-button-one-help: "Put  valid URL hah 4 teh left button" # Original: Put a valid URL here for the left button
+    link-button-two: "Link 4 riet Button" # Original: Link for Right Button
+    link-button-two-help: "Put  valid URL hah 4 teh riet button" # Original: Put a valid URL here for the Right button
+  forum:
+    login: "Login" # Original: Login
+    signup: "Signup" # Original: Signup
+    twitter: "Follow us on twittr" # Original: Follow us on Twitter
+    facebook: "Follow us on Facebook" # Original: Follow us on Facebook
+    youtube: "Follow us on yootoob" # Original: Follow us on Youtube
+    github: "Gifub paeg" # Original: GitHub Page

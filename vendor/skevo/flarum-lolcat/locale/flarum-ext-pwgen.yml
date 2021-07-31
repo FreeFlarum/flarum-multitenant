@@ -1,0 +1,6 @@
+flarum-ext-pwgen:
+  forum:
+    generatebtn: "Generaet Secuer Password" # Original: Generate Secure Password
+  admin:
+    passlenght: "Password Length" # Original: Password Length
+    pwhelp: "Tyep hah teh length ov ur secuer password" # Original: Type here the length of your secure password

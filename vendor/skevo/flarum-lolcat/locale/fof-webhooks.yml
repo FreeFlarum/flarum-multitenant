@@ -1,0 +1,115 @@
+fof-webhooks:
+  actions:
+    discussion:
+      started: "Started discussion `{1}`"
+      renamed:
+        title: "Renamed discussion `{1}`"
+        description: "New title: {1}"
+      hidden: "Hid discussion `{1}`"
+      restored: "Restored discussion `{1}`"
+      deleted: "Deleted discussion `{1}`"
+
+    group:
+      created: "Created `{1}` group"
+      renamed: "Renamed a group to `{1}`"
+      deleted: "Deleted `{1}` group"
+
+    post:
+      posted: "New post in `{1}`"
+      revised: "Edited post in `{1}`"
+      hidden: "Hid post in `{1}`"
+      restored: "Restored post in `{1}`"
+      deleted: "Deleted post in `{1}`"
+
+    user:
+      registered: "nu usr registered" # Original: New user registered
+      renamed:
+        title: "Changed username of `{1}`"
+        description: "New username: {1}"
+      deleted: "Deleted user `{1}`"
+
+  adapters:
+    errors:
+      404: "Webhook Not findz" # Original: Webhook Not Found
+
+  admin:
+    errors:
+      service_not_found: "teh survis" # Original: The service 
+      url_invalid: "URL iz not valid 4 selectd survis." # Original: URL is not valid for selected service.
+      tag_invalid: "dis webhook iz restricted 2 an invalid tag.  teh restricshun will not apply.  mak suer dis iz intendd." # Original: This webhook is restricted to an invalid tag. The restriction will not apply. Make sure this is intended.
+
+    nav:
+      desc: "Customizabel outgoing webhooks 4 ur forum." # Original: Customizable outgoing webhooks for your forum.
+    settings:
+      debug_label: "Debug" # Original: Debug
+      debug_help: "Add extar logz 2 teh Flarum log fiel 2 debug issuez wif webhooks an/or eventz not werkin corectly." # Original: Add extra logs to the Flarum log file to debug issues with webhooks and/or events not working corectly.
+
+      item:
+        tag_any_label: "Any" # Original: Any
+
+      help:
+        disabled: "dis webhook iz diabld cuz it doesn" # Original: This webhook is disabled because it doesn
+        general: "hah u can add, edit, an remoev webhooks frum ur forum." # Original: Here you can add, edit, and remove webhooks from your forum.
+        url: "teh webhook" # Original: The webhook
+
+      modal:
+        title: "Webhook settingz" # Original: Webhook Settings
+        description: "hah u modify wut eventz teh webhook iz fird on." # Original: Here you modify what events the webhook is fired on.
+
+        use_plain_text_label: "Reduec amount ov formatting in post content" # Original: Reduce amount of formatting in post content
+
+        max_post_content_length_label: "Maximum Post Content Length" # Original: Maximum Post Content Length
+        max_post_content_length_help: "Set  numbr 2 limit teh post content in all post-relatd eventz.  Chaneg 2 0 or nofin 2 remoev limit." # Original: Set a number to limit the post content in all post-related events. Change to 0 or nothing to remove limit.
+
+        extra_text_label: "Extar Text" # Original: Extra Text
+        extra_text_help: "Extar text 2 inclued in teh sent webhook." # Original: Extra text to include in the sent webhook.
+
+        group_label: "Group" # Original: Group
+        group_help: "Send resourcez dat can bees seen by dis group" # Original: Send resources that can be seen by this group
+
+        events_label: "eventz" # Original: Events
+
+      services:
+        discord: "Discord" # Original: Discord
+        slack: "Slack" # Original: Slack
+        microsoft-teams: "Microsoft teamz" # Original: Microsoft Teams
+
+      actions:
+        flarum:
+          discussion:
+            title: "Flarum discushun" # Original: Flarum Discussion
+
+            started: "startd" # Original: Started
+            renamed: => fof-webhooks.ref.renamed
+            hidden: => fof-webhooks.ref.hidden
+            restored: => fof-webhooks.ref.restored
+            deleted: => fof-webhooks.ref.deleted
+
+          group:
+            title: "Flarum Group" # Original: Flarum Group
+
+            created: "creatd" # Original: Created
+            renamed: => fof-webhooks.ref.renamed
+            deleted: => fof-webhooks.ref.deleted
+
+          post:
+            title: "Flarum Post" # Original: Flarum Post
+
+            posted: "postd" # Original: Posted
+            revised: "Edited" # Original: Edited
+            hidden: => fof-webhooks.ref.hidden
+            restored: => fof-webhooks.ref.restored
+            deleted: => fof-webhooks.ref.deleted
+
+          user:
+            title: "Flarum usr" # Original: Flarum User
+
+            registered: "Registered" # Original: Registered
+            renamed: => fof-webhooks.ref.renamed
+            deleted: => fof-webhooks.ref.deleted
+
+  ref:
+    deleted: "Deleted" # Original: Deleted
+    hidden: "Hidden" # Original: Hidden
+    renamed: "Renamed" # Original: Renamed
+    restored: "Restored" # Original: Restored

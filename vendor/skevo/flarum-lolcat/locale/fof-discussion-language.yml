@@ -1,0 +1,32 @@
+fof-discussion-language:
+  forum:
+    change_language:
+      edit_title: Editing Language for {title}
+      title: "editin Languaeg" # Original: Editing Language
+
+      submit_button: => core.ref.save_changes
+
+    composer_discussion:
+      choose_language_link: "Languaeg" # Original: Language
+
+    discussion_controls:
+      change_language_button: "Set Languaeg" # Original: Set Language
+
+    index_language:
+      any: "Any Languaeg" # Original: Any Language
+
+  admin:
+    settings:
+      native_label: "Ues natiev languaeg namez" # Original: Use native language names
+      show_flag_label: "Show countwee flags wif languaeg namez" # Original: Show country flags with language names
+      composer_default_label: "Per-select current locael in teh discushun composah" # Original: Pre-select current locale in the discussion composer
+      locale_sort_label: "Ues detected languaeg 4 default discushun filtr" # Original: Use detected language for default discussion filter
+      show_any_lang_opt_label: "Show teh opshun 2 select" # Original: Show the option to select 
+
+    permissions:
+      allow_change_language_label: "Allow languaeg editin" # Original: Allow language editing
+
+  api:
+    discussion:
+      validation_error: "u must select ur discushun" # Original: You must select your discussion
+

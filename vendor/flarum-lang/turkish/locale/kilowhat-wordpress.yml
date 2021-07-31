@@ -18,9 +18,13 @@ kilowhat-wordpress:
       api_key: 'Flarum API Anahtarı'
       comment_tag_custom: 'Özel değerler'
       cookie_domain: 'Çerez Alan Adı'
-      cookie_domain_help: 'Sadece Flarum alan adı farklı ise gereklidir'
+      cookie_domain_help: 'Yalnızca Flarum alan adından farklıysa gereklidir'
       enable_comments: 'Yorum entegrasyonunu etkinleştir'
       enable_sso: 'SSO Entegrasyonunu Etkinleştir'
+      excerpt_html_nodes: 'İçerik alıntısının uzunluğu (HTML etiketleri sayısı olarak)'
+      excerpt_html_whitelist: 'Alıntıda kullanılacak HTML etiketlerinin beyaz listesi (virgülle ayrılmış)'
+      force_username_choice: 'Kullanıcıların ilk ziyaretlerinde kullanıcı adlarını seçmelerini sağlayın'
+      force_username_choice_help: 'Yukarıda seçilen kuralla varsayılan bir değer sağlanacaktır.'
       post_delete_options:
         delete: 'Flarum''da tartışmayı kalıcı olarak sil'
         hide: 'Flarum''da tartışmayı gizle'
@@ -29,16 +33,25 @@ kilowhat-wordpress:
         delete: 'Flarum''da tartışmayı kalıcı olarak sil'
         hide: 'Flarum''da tartışmayı gizle'
         lock: 'Flarum''da tartışmayı kilitle'
+      section_comments_intro: "Bu özellik, WordPress yorumlarını bir Flarum iframe ile değiştirir. Ziyaretçiler artık yorum yapamaz. Tartışmalar yalnızca WordPress'te yorumların etkinleştirildiği gönderiler için oluşturulur. Yorumları etkinleştirmek veya devre dışı bırakmak, Flarum'un tartışma kilidi ile senkronize edilir. Bu özelliği etkinleştirdiğinizde blogunuz zaten gönderiler içeriyorsa, Flarum tartışmasının oluşturulabilmesi için her makale için yorumları yeniden etkinleştirmeniz ve devre dışı bırakmanız gerekir.\n"
       section_general_intro: 'Uzantının çalışmasını için gereken temel ayarlar.'
       section_sso_intro: "Bu özellik, WordPress kullanıcılarını Flarum ile sorunsuz bir şekilde bağlayacaktır. Onlar için otomatik olarak bir hesap oluşturacak ve WordPress ile senkronize edecektir. Flarum'da mevcut bir hesap varsa e-posta üzerinden otomatik eşleştirir. Flarum'da bir kullanıcıyı silerseniz, WordPress üzerinden oturum açarsa tekrar hesap oluşturur. Bu nedenle hesap silmek yerine askıya almayı deneyebilirsiniz.\n"
+      user_delete: 'WordPress''te bir kullanıcı silindiğinde eylem'
+      user_delete_desc: '"Sil"i seçerseniz, Flarum''daki içeriği değil, yalnızca kullanıcı silinir.'
       user_delete_options:
         delete: 'Flarum kullanıcısını sil'
+        ignore: 'Yoksay (Flarum kullanıcısını koru)'
+        suspend: 'Flarum kullanıcısını süresiz olarak askıya al (Askıya alma uzantısı etkinleştirilmelidir)'
       username_strategy: 'Yeni Kullanıcılar için Kullanıcı Adı'
+      username_strategy_help: 'Flarum''da zaten varsa, kullanıcı adına bir sayı eklenecektir'
       username_strategy_options:
         first_name: 'WordPress''ten İlk İsim'
         random: 'Rastgele Kullanıcı Adı'
         user_login: 'WordPress''den Gelenler için Kullanıcı Adı'
+      welcome_message: 'Tanıtım mesajı'
+      welcome_message_help: 'Bu mesaj, kullanıcı forumu ilk ziyaret ettiğinde, etkinleştirilmişse kullanıcı adı seçimiyle birlikte gösterilecektir.'
       wordpress_login_only: 'Yalnızca WordPress ile girişe izin ver'
+      wordpress_login_only_help: "Flarum girişini devre dışı bırakır ve giriş gerektiğinde doğrudan WordPress giriş penceresini açar. Bu, \"Kaydolma\" iznini otomatik olarak Kapalı olarak ayarlayacaktır.\n"
       wordpress_login_path: 'WordPress Giriş Yolu'
       wordpress_login_path_help: 'Yalnızca giriş bağlantısını bir eklenti ile yeniden tanımladıysanız gereklidir'
       wordpress_url: 'WordPress Bağlantısı'

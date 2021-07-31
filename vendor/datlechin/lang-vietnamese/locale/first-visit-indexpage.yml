@@ -1,9 +1,12 @@
 first-visit-indexpage:
   forum:
-    title: Quy định của Diễn đàn...
-    warning-title: Cảnh báo - Bạn phải chấp nhận các quy tắc này để tiếp tục diễn đàn!
-    warning-text: Các quy tắc này được tiết lộ để làm rõ các trách nhiệm khác nhau của tất cả các thành viên cộng đồng ở đây. Tất cả mọi người đều phải tuân thủ chúng để đảm bảo rằng hội đồng quản trị của chúng tôi hoạt động trơn tru và mang lại trải nghiệm thú vị và hiệu quả cho tất cả các thành viên cộng đồng và khách truy cập của chúng tôi.
-    agree-button: Tôi đồng ý...
+    title: Quy định diễn đàn...
+    alert-message: Vui lòng chấp chận để tiếp tục
+    accept-rules: Tôi đã đọc và chấp nhận các quy tắc này
+    app-title: Quy định diễn đàn
+    warning-title: Cảnh báo - Bạn cần chấp nhận các quy tắc này để tiếp tục vào diễn đàn!.
+    warning-text: Các quy tắc này được công bố để làm rõ các trách nhiệm khác nhau của tất cả các thành viên cộng đồng ở đây. Tất cả mọi người đều phải tuân thủ chúng để đảm bảo rằng hội đồng quản trị của chúng tôi hoạt động trơn tru và mang lại trải nghiệm thú vị và hiệu quả cho tất cả các thành viên cộng đồng và khách truy cập của chúng tôi.
+    agree-button: Tôi chấp nhận...
     general-rules: Quy định chung
     general-rules-text: |
       <p>Luôn tôn trọng các thành viên khác</p>

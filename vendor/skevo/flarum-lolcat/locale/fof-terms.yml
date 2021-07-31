@@ -1,0 +1,76 @@
+fof-terms:
+    admin:
+        settings:
+            title: "termz settingz" # Original: Terms Settings
+
+            field:
+                signup-legal-text: "Additional text on signup form" # Original: Additional text on signup form
+                hide-updated-at: "doez not show teh daet ov updaet ov teh termz when an updaet iz availabel" # Original: Do not show the date of update of the terms when an update is available
+                date-format: "Daet format" # Original: Date format
+                date-format-help: "u can ues any valid dai.js format, Srsly .  leef field empty 4 default." # Original: You can use any valid <a>Day.js</a> format. Leave field empty for default.
+
+        titles:
+            policies: "Policies" # Original: Policies
+
+        buttons:
+            new-policy: "nu Policy" # Original: New Policy
+            edit-policy: "Edit Policy" # Original: Edit Policy
+            add-policy: "Add Policy" # Original: Add Policy
+            save-policy: "Saev Policy" # Original: Save Policy
+            delete-policy: "Deleet Policy" # Original: Delete Policy
+            set-to-now: "Set 2 nao" # Original: Set to now
+
+        messages:
+            delete-policy-confirmation: >
+                This will permanently delete the policy {name} and the associated accept dates from the database.
+                Please make sure you made a backup of those dates if you need them for legal reasons.
+                Are you sure you want to delete this policy ?
+
+        policies:
+            name: "naym" # Original: Name
+            name-help: "dis naym will bees shown besied teh checkbox an as teh titel ov teh updaet modal." # Original: This name will be shown beside the checkbox and as the title of the update modal.
+            url: "URL" # Original: URL
+            url-help: "teh URL 2 teh paeg wah u can read teh termz, Srsly .  Will open in  nu tab when clicked." # Original: The URL to the page where you can read the terms. Will open in a new tab when clicked.
+            update-message: "Updaet mesaeg" # Original: Update Message
+            update-message-help: "mesaeg 2 show 2 existin userz hoo haz not yet accepted teh latest termz." # Original: A message to show to existing users who have not yet accepted the latest terms.
+            terms-updated-at: "updatd at" # Original: Updated at
+            terms-updated-at-placeholder: "YYYY-MM-DD (hh:mm:ss)" # Original: YYYY-MM-DD (hh:mm:ss)
+            terms-updated-at-help: >
+                The date of the last terms update.
+                Setting this value will require all users who accepted prior to that date to accept again.
+                Must be in the past (otherwise users would never be able to accept after the date and get past the modal).
+            export-url: "Export URL" # Original: Export URL
+            export-url-help: >
+                Any user with permission "Export all policies data" can access those URLs to download the list of users who accepted this policy.
+                You can find more details about the available options on the <a>extension wiki</a>.
+
+        permissions:
+            see-user-policies-state: "c teh usr policies staet" # Original: See the user policies state
+            postpone-policies-accept: "Can postpoen accepting teh nu termz" # Original: Can postpone accepting the new terms
+            export-policies: "Export all userz an policies daat" # Original: Export all users and policies data
+
+    forum:
+        signup:
+            i-accept: I accept the <a>{policy}</a>
+            must-accept: The {policy} must be accepted.
+
+        accept-modal:
+            title: "termz Updaet" # Original: Terms Update
+            updated-at: The terms were updated on {date}
+            updated-recently: "teh termz wuz updatd sinec ur last visit" # Original: The terms were updated since your last visit
+            i-accept: I accept the new <a>{policy}</a>
+            accept: "Confirm" # Original: Confirm
+            close: "thx 4 accepting, u can nao git bak 2 teh forum" # Original: Thanks for accepting, you can now get back to the forum
+
+        state-modal:
+            title: Terms accept state for user {username}
+            accepted-at: Accepted {date}
+            not-accepted: "Not accepted" # Original: Not accepted
+
+        update-alert:
+            must-accept-message: "We" # Original: We
+            can-accept-message: "We recently updatd teh termz.  u must accept dem 2 continue usin dis websiet." # Original: We recently updated the terms. You must accept them to continue using this website.
+            review: "Click hah 2 review an accept teh nu termz" # Original: Click here to review and accept the new terms
+
+        user_controls:
+            state_button: "termz accept staet" # Original: Terms accept state

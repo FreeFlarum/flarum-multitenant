@@ -1,0 +1,20 @@
+ianm-html-head:
+  admin:
+    create_button: "Creaet" # Original: Create
+
+    table:
+      description_label: "descripshun" # Original: Description
+      header_label: "Headah" # Original: Header
+      active_label: "Actiev" # Original: Active
+      empty_text: "No entriez" # Original: No entries
+      delete_button: "Deleet" # Original: Delete 
+      edit_button: "Edit" # Original: Edit
+
+    modal:
+      create_title: "Creaet nu item" # Original: Create new item
+      edit_title: "Edit item" # Original: Edit item
+      text: "Ensuer ur syntax iz correct, as it" # Original: Ensure your syntax is correct, as it
+      description_label: "descripshun" # Original: Description
+      header_label: "Custom hed item" # Original: Custom head item
+      save_button: "Saev" # Original: Save
+      

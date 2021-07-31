@@ -54,6 +54,12 @@ return [
     }),
 
     (new Extend\Frontend('admin'))->content(function (Document $document) {
+        // Important alert on top:
+        /*$document->head[] = '
+            <div style="text-align: center; padding: 0.5rem 0;">
+                <a style="color: red; font-weight: 900;" href="https://discuss.flarum.org/d/7585/2959" target="_blank">31st July 2021 - DOWNTIME - MariaDB 10.6 update</a>
+            </div>
+        ';*/
 
         // Adds notice about upgrading to higher Flarum version:
         /*
@@ -74,7 +80,7 @@ return [
             <hr/>
             <div id="news" align="center" style="width: 100%; bottom: -10px;">
                 <p style="font-size: 1.1rem; font-weight: 800; text-decoration: underline; margin-bottom: 5px;">What\'s new?</p>
-                <a style="margin-top: 5px; color: lime; font-weight: 700;" href="https://discuss.flarum.org/d/7585/2823" target="_blank">3rd July 2021 - Flarum 1.0.4 & FreeFlarum 3.0 upgrade!</a>
+                <a style="margin-top: 5px; font-weight: 700;" href="https://discuss.flarum.org/d/7585/2965" target="_blank">31st July 2021 - MariaDB 10.6.3 update</a>
             </p>
             <br/>
         ';

@@ -1,0 +1,26 @@
+extiverse-mercury:
+    admin:
+        extension-updates-page:
+            extension-name: "Extension" # Original: Extension
+            extension-is-up-to-date: "iz up 2 daet" # Original: Is up to date
+            highest-version: "Latest releaes" # Original: Latest release
+            installed-version: "installd releaes" # Original: Installed release
+        settings:
+            token: "Extiveres token (request)" # Original: Extiverse token (<a>request</a>)
+            token-description: |
+                Retrieve an API token from <a>Extiverse</a> so that Mercury can securely communicate with your Flarum community.
+        header-secondary:
+            no-token: "Token requird" # Original: Token Required
+            updates: "{count, plural, =0 {No updates} one {One update} other {# updates}}"
+    email:
+        new-extension-update:
+            subject: "{count, plural, one {One update available for your community} other {# updates available for your community}}"
+            body: |
+                Hey {recipient_display_name}!
+
+                {count} updates have been found on your Flarum community. It is highly recommended to
+                update as soon as you can.
+
+                The updates include the following extensions {extensions}.
+
+                Please visit your community for more information: {url}.

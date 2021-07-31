@@ -1,0 +1,26 @@
+fof-moderator-notes:
+  admin:
+    permissions:
+      createnotes: "Creaet moderator notez" # Original: Create moderator notes
+      viewnotes: "View moderator notez" # Original: View moderator notes
+      deletenotes: "Deleet moderator notez" # Original: Delete moderator notes
+  forum:
+    no_content_given: "An empty noet iz not permitted." # Original: An empty note is not permitted.
+    moderatorNotes:
+      created_text: "{username} created this note on {date}"
+      add_button: "nu noet" # Original: New note
+      create-heading: "Creaet  nu moderator noet" # Original: Create a new moderator note
+      dismiss_button: "dun" # Original: Done
+      input_heading: Enter your notes for <strong>{username}</strong>, (markdown is supported)
+      noNotes: "It lookz likes thar r no notez hah." # Original: It looks like there are no notes here.
+      submit_button: "Saev noet" # Original: Save note
+      delete: "Deleet" # Original: Delete
+      confirm: "r u suer u wantz 2 deleet dis noet?" # Original: Are you sure you want to delete this note?
+
+    user:
+      notes: "Moderator notez" # Original: Moderator Notes
+
+  api:
+    auto_note: "_I switched to this user:_ {reason}"
+    auto_note_actor: "_Switched to_ @{username}: {reason}"
+    no_reason_provided: "No reason providd" # Original: No reason provided

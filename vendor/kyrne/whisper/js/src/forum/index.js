@@ -27,7 +27,8 @@ app.initializers.add('kyrne-whisper', function (app) {
 
   extend(IndexPage.prototype, 'oncreate', function() {
     if (app.pusher) {
-      app.pusher.then(channels => {
+      app.pusher.then(object => {
+        const channels = object.channels;
         if (channels.user) {
           channels.user.bind('newMessage', data => {
             app.session.user.unreadMessages = Stream(app.session.user.unreadMessages() + 1);
@@ -40,7 +41,8 @@ app.initializers.add('kyrne-whisper', function (app) {
 
   extend(IndexPage.prototype, 'onremove', function() {
     if (app.pusher) {
-      app.pusher.then(channels => {
+      app.pusher.then(object => {
+        const channels = object.channels;
         if (channels.user) {
           channels.user.unbind('newMessage');
         }

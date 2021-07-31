@@ -27,9 +27,9 @@ clarkwinkelmann-who-read:
       remove-unread: 'Okundu olarak işaretle'
       set-unread: 'Okunmadı olarak işaretle'
     footer:
-      read-no-further: '{0} Herkes devamını okudu|{1} Bir kullanıcı devamını okumadı|]1,Inf] {count} kullanıcı devamını okumadı'
-      read-this-post: '{0} Bu gönderiyi kimse okumadı|{1} Bir kullanıcı bu gönderiyi okudu|]1,Inf] {count} kullanıcı bu gönderiyi okudu'
-      read-to-end: '{0} Kimse sonuna kadar okumadı|{1} Bir kullanıcı sonuna kadar okudu|]1,Inf] {count} kullanıcı sonuna kadar okudu'
+      read-no-further: '{count, plural, =0 {Herkes devamını okudu} one {Bir kullanıcı devamını okumadı} other {# kullanıcı devamını okumadı}}'
+      read-this-post: '{count, plural, =0 {Bu gönderiyi kimse Okumadı} one {Bir kullanıcı bu gönderiyi okudu} other {# kullanıcı bu gönderiyi okudu}}'
+      read-to-end: '{count, plural, =0 {Kimse sonuna kadar Okumadı} one {Bir kullanıcı sonuna kadar okudu} other {# kullanıcı sonuna kadar okudu}}'
     modal:
       behind: 'Sonuna kadar okumayan kullanıcılar'
       past-this-post: 'Okumuş kullanıcılar'

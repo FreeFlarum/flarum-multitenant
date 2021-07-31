@@ -1,0 +1,32 @@
+fof-filter:
+    forum:
+        flagger_name: "Auot Moderator" # Original: Auto Moderator
+        flag_message: "Contaneed blocked strings" # Original: Contained blocked strings
+    admin:
+        title: "filtr" # Original: Filter
+        help: "Input text or werdz 2 filtr, separated by comam + spaec, Srsly .  If teh content ov  usr’s post contanez  strin u wantz 2 filtr, it will bees flagged 4 approval.  Resistant aganest 133t." # Original: Input text or words to filter, separated by comma + space. If the content of a user’s post contains a string you want to filter, it will be flagged for approval. Resistant against 133t.
+        help2: "Interval in minutez in which postz frum teh saem usr in teh saem discushun will bees automatically merged." # Original: Interval in minutes in which posts from the same user in the same discussion will be automatically merged.
+        email_help: "Body ov flagged email.  acceptz html or planetext." # Original: Body of flagged email. Accepts html or plaintext.
+        filter_label: "Strings 2 filtr" # Original: Strings to filter
+        countLabel: "Censor Toloranec" # Original: Censor Tolorance
+        cooldownLabel: "Mereg Post Cooldown" # Original: Merge Post Cooldown
+        input:
+            placeholder: "Strings 2 bees filtered" # Original: Strings to be filtered
+            filter_title: "Strings 2 filtr" # Original: Strings to filter
+            email_label: "Email settingz" # Original: Email Settings
+            switch: 
+              email: "Email usr when post iz filtered" # Original: Email user when post is filtered
+              merge: "Auot mereg doubel postz" # Original: Auto merge double posts
+            email_subject: "Subject" # Original: Subject
+            email_body: "Body" # Original: Body
+        nav:
+            text: "filtr" # Original: Filter
+            desc: "filtr postz by werdz" # Original: Filter posts by words
+        email:
+            default_subject: "regardin ur resent Post" # Original: Regarding Your Recent Post
+            default_text: |
+                Thank you for posting! Unfortunately, your post was removed because it contained something we don't want to see on our forums.
+                
+                If you believe this was an error, you are in luck, each removed post is reviewed by our moderators. If they find that this was wrongfully removed, they will restore it.                
+                
+                Thank you for your understanding.

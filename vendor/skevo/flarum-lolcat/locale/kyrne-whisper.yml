@@ -1,0 +1,48 @@
+kyrne-whisper:
+  admin:
+    settings:
+      return_key: "Return key sends mesaeg" # Original: Return key sends message
+      title: "Whispah settingz" # Original: Whisper Settings
+      set_own_password: "Let userz mak dem own password - SOS Compatibility" # Original: Let users make their own password - SSO Compatibility
+    permissions:
+      start_label: "Start privaet conversations" # Original: Start private conversations
+  forum:
+    dropdown:
+      tooltip: "Conversations" # Original: Conversations
+    setup:
+      title: "Setup Privaet Messaging" # Original: Setup Private Messaging
+      header_setup: "entr ur akownt login password 2 setup privaet messaging." # Original: Enter your account login password to setup private messaging.
+      header_import: "entr ur akownt login password 2 import ur privaet mesagez." # Original: Enter your account login password to import your private messages.
+      header_set_own: "entr  password 2 setup privaet mesagez." # Original: Enter a password to setup private messages.
+      header_set_own_import: "entr ur privaet mesagez password 2 import dem." # Original: Enter your private messages password to import them.
+      passwords_mismatch: "teh passwordz didn" # Original: The passwords didn
+      invalid_password: "ur password wuz incorrect." # Original: Your password was incorrect.
+      button_import: "Import" # Original: Import
+      button_setup: "Setup" # Original: Setup
+      confirm_password: "Confirm Password" # Original: Confirm Password
+      success: "Privaet messaging iz nao ready, ur paeg will nao reload..." # Original: Private messaging is now ready, your page will now reload...
+    modal:
+      title: "Start conversashun" # Original: Start Conversation
+      help: "Start typin  usernaem 2 start  chat." # Original: Start typing a username to start a chat.
+      help_start: "Type your first message. This will be the only message you can send until {username} responds. Click the user to select a different recipient."
+      search_recipients: "entr usernaem..." # Original: Enter username...
+      submit: "Send & Start conversashun" # Original: Send & Start Conversation
+      copied: "ur mesaeg has been copid 2 teh clipboard." # Original: Your message has been copied to the clipboard.
+      more_users: "If u don" # Original: If you don
+      already: "You already have a conversation with {username}."
+    user_modal_alert: "{username} has private messaging setup, their password cannot be safely changed."
+    chat:
+      chat_with: "Chat with {username}"
+      messages_multiple: "{count} total messages"
+      messages_single: "nu conversashun" # Original: New conversation
+      start: "Start conversashun" # Original: Start Conversation
+      read: "Read" # Original: Read
+      cant_start: "Can" # Original: Can
+      text_placeholder: "Tyep ur mesaeg" # Original: Type your message
+      send: "Send mesaeg" # Original: Send Message
+      recovery_message: "sistem mesaeg: encrypshun sync lost an recovered" # Original: System message: Encryption sync lost and recovered
+      failed_message: "Failed to decrypt message, attempting recovery method #{method}"
+      cant_send: "u can" # Original: You can
+      cant_send_toomany: "Please wait for {username}'s reply before sending more messages"
+      failed_to_decrypt: "[faild 2 decrypt]" # Original: [Failed to decrypt]
+      start_of_conversation: "Start ov conversashun" # Original: Start of Conversation

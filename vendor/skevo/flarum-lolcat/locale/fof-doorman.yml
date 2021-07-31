@@ -1,0 +1,57 @@
+fof-doorman:
+  forum:
+    email:
+      subject: "Inviet 2 Join" # Original: Invite to Join
+      body: |
+        Hello,
+
+        You have been invited to sign up for {forum}.
+
+        When you are ready to create your account, simply click the following link and enter the code when signing up:
+
+        Url: {url}
+        Invite code: {code}
+
+        If you received this in error, please ignore this email.
+    sign_up:
+      invalid_doorkey: "teh inviet coed ur entered iz invalid." # Original: The invite code your entered is invalid.
+      doorkey_required: "plz entr an inviet coed." # Original: Please enter an invite code.
+      doorman_placeholder: "Inviet Coed" # Original: Invite Code
+      doorman_placeholder_optional: "Inviet Coed (opshunal)" # Original: Invite Code (optional)
+
+  admin:
+    modal:
+      title: "Send Inviet Codes" # Original: Send Invite Codes
+      group: Sending invites for {group} group
+      help: "acceptz  comam, spaec, or comam-spaec seperated list. Srsly  Tyep an individual email or paset  list then pres spaec 2 add it/dem." # Original: Accepts a comma, space, or comma-space seperated list. Type an individual email or paste a list then press space to add it/them.
+      placeholder: "entr emails hah" # Original: Enter emails here
+      invalid_emails: "The following email(s) are invalid: {emails}"
+      max_use_conflict: "teh numbr ov emails exceeds teh max numbr ov usez 4 dis coed." # Original: The number of emails exceeds the max number of uses for this code.
+      send: "Send Emails" # Original: Send Emails
+      success: "Emails successfully sent" # Original: Emails successfully sent
+    invalid_doorkey: "teh inviet coed u providd iz invalid." # Original: The invite code you provided is invalid.
+    doorkey_required: "u must provied an Inviet Coed" # Original: You must provide an Invite Code
+    nav:
+      desc: "Creaet inviet codes 4 userz 2 sign up an bees assigned 2  group" # Original: Create invite codes for users to sign up and be assigned to a group
+    page:
+      title: "Doorman" # Original: Doorman
+      doorkey:
+        used_times: "{remaining, plural, one {{remaining} Use left} other {{remaining} Uses left}}"
+        title: "Inviet Codes" # Original: Invite Codes
+        help:
+          key: "Key: Coed teh usr will tyep in when registering." # Original: Key: Code the user will type in when registering.
+          group: "Group: teh group teh usr will bees addd 2 when teh registr." # Original: Group: The group the user will be added to when the register.
+          max: "Max usez: teh max numbr ov tiems teh coed can bees usd, set 2 0 4 unlimited usez" # Original: Max Uses: The max number of times the code can be used, set to 0 for unlimited uses
+          activates: "Activates usr: Automatically activates teh usr when dey registr." # Original: Activates User: Automatically activates the user when they register.
+        warning: "dis inviet coed has been usd itz max numbr ov tiems." # Original: This invite code has been used its max number of times.
+        key: "Key" # Original: Key
+        max_uses: "Max usez" # Original: Max Uses
+        heading:
+          key: "Key" # Original: Key
+          group: "Group" # Original: Group
+          activate: "Activates usr" # Original: Activates User
+          max_uses: "Max usez" # Original: Max Uses
+        allow-public:
+          title: "Allow public Sign Up" # Original: Allow public Sign Up
+          switch-label: "mak inviet coed opshunal when signin up" # Original: Make invite code optional when signing up
+        

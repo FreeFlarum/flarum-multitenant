@@ -11,4 +11,4 @@ fof-sentry:
       javascript_trace_sample_rate: 'Ön Yüz Performans İzleme Derecesi (0 - 100)'
       monitor_performance_label: 'Arka Yüz Performans İzleme Derecesi (0 - 100)'
       send_user_emails_label: 'Sentry raporlarıyla kullanıcı e-posta adresleri gönderilsin mi?'
-      user_feedback_label: 'Kullanıcı Geribildirimi'
+      user_feedback_label: 'Kullanıcı Geri bildirimi'

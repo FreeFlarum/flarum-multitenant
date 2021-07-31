@@ -1,0 +1,10 @@
+ianm-level-ranks:
+  admin:
+    settings:
+      levelText: "entr teh text 2 bees displayd 4 teh pointz (e.g.  Rank, Level)" # Original: Enter the text to be displayed for the points (e.g. Rank, Level)
+  forum:
+    desc:
+      expText: "{expTotal} EXP"
+  lib:
+    defaults:
+      level: "Level" # Original: Level

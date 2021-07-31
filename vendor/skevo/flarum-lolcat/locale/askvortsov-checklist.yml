@@ -1,0 +1,7 @@
+askvortsov-checklist:
+  admin:
+    settings:
+      cross_out_completed_items: "Cross out completd checklist itemz?" # Original: Cross out completed checklist items?
+  lib:
+    composer:
+      checklist_tooltip: "Toggel Checklist" # Original: Toggle Checklist

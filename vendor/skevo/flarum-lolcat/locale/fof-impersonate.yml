@@ -1,0 +1,18 @@
+fof-impersonate:
+    admin:
+        permissions:
+            login: "Login as ofr userz" # Original: Login as other users
+        settings:
+            title: "FoF Impersonaet" # Original: FoF Impersonate
+            require_reason: "Requier  reason 2 bees entered b4 proceeding 2 impersonaet anofr usr." # Original: Require a reason to be entered before proceeding to impersonate another user.
+            no_settings_available: "No settingz r currently availabel.  Twee installin fof/moderator-notez" # Original: No settings are currently available. Try installing fof/moderator-notes
+
+    forum:
+        modal:
+            title: "Login as anofr usr" # Original: Login as another user
+            label: With great power comes great responsibility. By continuing, you will become {username} until you log out.
+            placeholder_optional: "(opshunal) Provied ur reason 4 switchin 2 dis usr" # Original: (Optional) Provide your reason for switching to this user
+            placeholder_required: "u must provied ur reason 4 switchin 2 dis usr b4 proceeding" # Original: You must provide your reason for switching to this user before proceeding
+            impersonate_username: Login as {username}
+        user_controls:
+            impersonate_button: "Login as usr" # Original: Login as user

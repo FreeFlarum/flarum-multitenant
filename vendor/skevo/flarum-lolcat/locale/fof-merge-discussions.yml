@@ -1,0 +1,32 @@
+fof-merge-discussions:
+  forum:
+    modal:
+      title: "Mereg discushuns" # Original: Merge Discussions
+
+      type_target_label: "Mereg inot meh" # Original: Merge into me
+      type_target_help_text: Choose discussion(s) to merge into <b>{title}</b>.
+
+      type_from_label: "Mereg dis discushun inot anofr" # Original: Merge this discussion into another
+      type_from_help_text: Choose target discussion to merge <b>{title}</b> into.
+
+      load_preview_button: "Preview" # Original: Preview
+      submit_button: => fof-merge-discussions.ref.merge
+
+    discussion:
+      merge: => fof-merge-discussions.ref.merge
+
+    post:
+      merged: "{count, plural, one {Merged <b>#</b> post from {titles}.} other {Merged <b>#</b> posts from {titles}.}}"
+
+  admin:
+    permissions:
+      merge_discussions_label: "Mereg discushuns" # Original: Merge discussions
+
+  api:
+    error:
+      merging_failed: "faild 2 mereg discushuns." # Original: Failed to merge discussions.
+      updating_failed: "faild 2 updaet discushun detailz." # Original: Failed to update discussion details.
+      deleting_failed: "faild 2 deleet empty discushuns." # Original: Failed to delete empty discussions.
+
+  ref:
+    merge: "Mereg" # Original: Merge

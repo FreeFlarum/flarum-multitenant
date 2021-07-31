@@ -1,0 +1,25 @@
+fof-share-social:
+  admin:
+    settings:
+      canonical-urls: "Ues canonical URLs 4 sharin" # Original: Use canonical URLs for sharing
+  forum:
+    discussion:
+      share_button: "Shaer" # Original: Share
+
+    modal:
+      title: "Shaer" # Original: Share
+
+  lib:
+    networks:
+      facebook: "Facebook" # Original: Facebook
+      twitter: "twittr" # Original: Twitter
+      linkedin: "LinkedIn" # Original: LinkedIn
+      reddit: "Reddit" # Original: Reddit
+      whatsapp: "WhatsApp" # Original: WhatsApp
+      telegram: "Telegram" # Original: Telegram
+
+      vkontakte: "VKontaket" # Original: VKontakte
+      odnoklassniki: "Odnoklassniik" # Original: Odnoklassniki
+      my_mail: "mah wurld" # Original: My World
+      qq: "QQ" # Original: QQ
+      qzone: "QZoen" # Original: QZone

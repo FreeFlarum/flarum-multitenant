@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: "Split postz frum discushuns" # Original: Split posts from discussions
+    forum:
+        post:
+            was_split_to: "{count, plural, one {{count} post was split to {target}.} other {{count} posts were split to {target}.}}"
+            was_split_from: "{count, plural, one {{count} post was split from {target}.} other {{count} posts were split from {target}.}}"
+        split:
+            from: "Split frum hah" # Original: Split from here
+            to: "Split 2 hah" # Original: Split to here
+        modal:
+            title: "Split discushun" # Original: Split discussion
+            new_discussion_label: "Specify teh titel 4 teh nu discushun" # Original: Specify the title for the new discussion
+            submit_button: "Split" # Original: Split

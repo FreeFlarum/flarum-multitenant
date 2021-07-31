@@ -1,0 +1,19 @@
+nearata-auth-minecraft:
+  api:
+    invalid_token_format: "teh token must bees numeric." # Original: The token must be numeric.
+  forum:
+    change_email_modal:
+      confirmation_message: "We" # Original: We
+      dismiss_button: "k" # Original: OK
+      submit_button: "Chaneg Email" # Original: Change Email
+      title: "Chaneg Email" # Original: Change Email
+      token_placeholder: "Token" # Original: Token
+    error_403: "Invalid or expired token." # Original: Invalid or expired token.
+    log_in_modal:
+      submit_button: "Validaet" # Original: Validate
+      title: "Log In wif Minecraft" # Original: Log In with Minecraft
+    log_in_button_title: "Log In wif Minecraft" # Original: Log In with Minecraft
+    settings:
+      change_email_button: "Chaneg Email" # Original: Change Email
+    token_help: "Join teh servr srv.mc-oauth.net:25565 2 git an acces token." # Original: Join the server <strong>srv.mc-oauth.net:25565</strong> to get an access token.
+    token_placeholder: "Token" # Original: Token

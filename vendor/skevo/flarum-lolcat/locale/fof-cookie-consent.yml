@@ -1,0 +1,25 @@
+fof-cookie-consent:
+  admin:
+    settings:
+      configuration_title: "configurashun opshuns" # Original: Configuration Options
+      consentText: "Content mesaeg" # Original: Content Message
+      buttonText: "dismis Button Text" # Original: Dismiss Button Text
+      configuration_button_title: "Learn moar Button" # Original: Learn More Button
+      learnMoreLinkText: "Text" # Original: Text
+      learnMoreLinkUrl: "Link" # Original: Link
+
+      theme_title: "Theem opshuns" # Original: Theme Options
+      ccTheme: "Theem" # Original: Theme
+      theme_popup_title: "Popup Colors" # Original: Popup Colors
+      backgroundColor: "bakground" # Original: Background
+      textColor: "Text" # Original: Text
+      theme_dismiss_title: "dismis Button Colors" # Original: Dismiss Button Colors
+      buttonBackgroundColor: "bakground" # Original: Background
+      buttonTextColor: "Text" # Original: Text
+
+      themes:
+        blocky: "Blocky" # Original: Blocky
+        edgeless: "Edgeless" # Original: Edgeless
+        classic: "Classic" # Original: Classic
+        custom: "Custom" # Original: Custom
+        no_css: "No CSS" # Original: No CSS

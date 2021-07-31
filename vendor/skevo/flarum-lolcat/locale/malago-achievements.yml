@@ -1,0 +1,87 @@
+malago-achievements:
+  forum:
+    achievement_points: "pointz" # Original: Points
+    new_achievement_title: "nu achievement!" # Original: New achievement!
+    new_achievement_name: "Achievement" # Original: Achievement
+    new_achievement_close: "Got it!" # Original: Got it!
+    list_heading: "Achievements" # Original: Achievements
+    achievement_total_points: "Total" # Original: Total
+    your_achievements: "ur achievements" # Original: Your achievements
+    other_achievements: "ofr achievements" # Original: Other achievements
+    hidden_achievements: "Hidden achievements" # Original: Hidden achievements
+  admin:
+    achievement_modal:
+      title: "Creaet Achievement" # Original: Create Achievement
+      name_label: "naym" # Original: Name
+      name_placeholder: "Achievement naym" # Original: Achievement Name
+      active_label: "Actiev" # Original: Active
+      hidden_label: "Hied frum all achievements list" # Original: Hide from all achievements list
+      description_label: "descripshun" # Original: Description
+      description_placeholder: "Achievement descripshun" # Original: Achievement Description
+      variable_label: "Variabel" # Original: Variable
+      computation_label: |
+        Variable to calculate: posts, likes, selflikes, discussions, comments, edits, avatar, contains, years
+      computation_placeholder: "numbr" # Original: Number
+      points_label: "pointz 4 dis achievement" # Original: Points for this achievement
+      points_placeholder: |
+        0
+      image_label: "Imaeg URL or icon coed" # Original: Image URL or icon code
+      image_placeholder: "Achievement Imaeg URL" # Original: Achievement Image URL
+      row_label: "Row" # Original: Row
+      row_placeholder: "Row" # Original: 0
+      col_label: "Column" # Original: Column
+      col_placeholder: "Column" # Original: 0
+      width_label: "Imaeg width" # Original: Image width
+      width_placeholder: "32" # Original: 32
+      height_label: "Imaeg heiet" # Original: Image height
+      height_placeholder: "32" # Original: 32
+      submit_button: => core.ref.save_changes
+      delete_button: "Deleet Achievement" # Original: Delete Achievement
+      delete_confirmation: "r u suer u wantz 2 deleet dis achievement?" # Original: Are you sure you want to delete this achievement?
+      add_delete_title: "Add or deleet an achievement frum  usr" # Original: Add or delete an achievement from a user
+      username: "Usernaem" # Original: Username
+      username_placeholder: "Usernaem" # Original: Username
+      add_delete_instructions: "If teh usr doez not haz teh achievement, it will bees addd 2 it.  If teh usr doez haz teh achievement, it will bees removd frum it." # Original: If the user does not have the achievement, it will be added to it. If the user does have the achievement, it will be removed from it.
+      variable:
+        manual: "Manual" # Original: Manual
+        posts: "postz" # Original: Posts
+        likes: "Likes given" # Original: Likes given
+        selflikes: "Likes receivd" # Original: Likes received
+        discussions: "discushuns" # Original: Discussions
+        edits: "Edited postz" # Original: Edited posts
+        avatar: "Avatar uploaded" # Original: Avatar uploaded
+        contains: "mesaeg contanez" # Original: Message contains
+        comments: "responsez receivd in  discushun" # Original: Responses received in a discussion
+        years: "yeers registered" # Original: Years registered
+        meanwords: "Averaeg werdz" # Original: Average words
+        tagposts: "postz in tag" # Original: Posts in tag
+      tooltip:
+        posts: "Minimum numbr ov postz (e.g.  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of posts (e.g. 10) or inclusive range (e.g. 10,19)
+        likes: "Minimum numbr ov likes given (e.g, Srsly .  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of likes given (e.g. 10) or inclusive range (e.g. 10,19)
+        selflikes: "Minimum numbr ov likes receivd (e.g.  10) or inclusiev raneg (e.g. Srsly  10,19)" # Original: Minimum number of likes received (e.g. 10) or inclusive range (e.g. 10,19)
+        discussions: "Minimum numbr ov discushuns creatd (e.g.  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of discussions created (e.g. 10) or inclusive range (e.g. 10,19)
+        edits: "Minimum numbr ov postz edited (e.g. Srsly  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of posts edited (e.g. 10) or inclusive range (e.g. 10,19)
+        contains: "werd or werdz an minimum numbr ov postz contaneing it (e.g.  chicken,10) or inclusiev raneg (e.g, Srsly .  chicken,10,19)" # Original: Word or words and minimum number of posts containing it (e.g. chicken,10) or inclusive range (e.g. chicken,10,19)
+        comments: "Minimum numbr ov responsez receivd in  discushun (e.g.  10) or inclusiev raneg (e.g, Srsly .  10,19)" # Original: Minimum number of responses received in a discussion (e.g. 10) or inclusive range (e.g. 10,19)
+        years: "Minimum numbr ov yeers registered (e.g.  10) or inclusiev raneg (e.g.  10,19)" # Original: Minimum number of years registered (e.g. 10) or inclusive range (e.g. 10,19)
+        meanwords: "werd 2 look 4 an minimum numbr ov averaeg appearances (e.g, Srsly .  chicken,10) or inclusiev raneg (e.g.  chicken,10,19)" # Original: Word to look for and minimum number of average appearances (e.g. chicken,10) or inclusive range (e.g. chicken,10,19)
+        tagposts: "Slug ov teh tag 2 look 4 an minimum numbr ov postz (e.g, Srsly .  off-topic,10) or inclusiev raneg (e.g.  off-topic,10,19)" # Original: Slug of the tag to look for and minimum number of posts (e.g. off-topic,10) or inclusive range (e.g. off-topic,10,19)
+    achievements_page:
+      list_heading: "Achievements" # Original: Achievements
+      create_achievement_button: "Creaet nu Achievement" # Original: Create New Achievement
+      instructions_header: "instrucshuns" # Original: Instructions
+      instructions_text: |
+        <li>To create an achievement, you must introduce a name.</li>
+        <li>Description is optional.</li>
+        <li>Choose which variable you want to calculate for this achievement from the list.</li>
+        <li>Introduce the threshold for the achievement to be activated. You can introduce two numbers separated with a comma (,) to indicate a minimum threshold and a maximum threshold (both numbers are inclusive).</li>
+        <li>Achievements with two threshold will be removed if the count is beyond the upper threshold.</li>
+        <li>For the "Message contains" achievement, you must introduce the specified word and then the threshold, separated by a comma (e.g. "spinach,5" or "spinach,5,10" for minimum and maximum threshold.)</li>
+        <li>Introduce the image URL with the icon to be used for this achievement.</li>
+        <li>Introduce the width and height of the icon.</li>
+        <li>Optional: If the image has more than one achievement icon, you can select which row and column to show for the icon.</li>
+      add_delete_users: "Add/Deleet achievements frum usr" # Original: Add/Delete achievements from user
+      show: "Show achievement list on:" # Original: Show achievement list on:
+    settings:
+      show-post-footer: "Each post footah" # Original: Each post footer
+      show-user-card: "usr card" # Original: User card

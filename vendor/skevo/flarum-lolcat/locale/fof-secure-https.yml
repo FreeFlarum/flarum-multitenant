@@ -1,0 +1,7 @@
+fof-secure-https:
+  admin:
+    settings:
+      replace: "Proxy imagez thur HTTPS" # Original: Proxy images through HTTPS
+  forum:
+    removed: "Imaeg removd due 2 teh lack ov support 4 HTTPS." # Original: Image removed due to the lack of support for HTTPS.
+    show: "Show Anyway" # Original: Show Anyway

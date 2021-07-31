@@ -1,0 +1,9 @@
+fof-open-collective:
+  admin:
+    settings:
+      title: "FriendsOfFlarum Open Collectiev" # Original: FriendsOfFlarum Open Collective
+      desc: "Obtaen ur AIP key frum https://opencollectiev.com/applicashuns." # Original: Obtain your API key from <a>https://opencollective.com/applications</a>.
+
+      api_key_label: "AIP Key" # Original: API Key
+      slug_label: "Collectiev Slug" # Original: Collective Slug
+      group_label: "Group 2 Assign" # Original: Group to Assign
