@@ -10825,17 +10825,17 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.0.0",
-            "version_normalized": "2.0.0.0",
+            "version": "2.0.1",
+            "version_normalized": "2.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "167142baf9a6b946f99ad9325b06028606f8238e"
+                "reference": "0d57f20aa03129ee7ef5f690e634884315d4238c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/167142baf9a6b946f99ad9325b06028606f8238e",
-                "reference": "167142baf9a6b946f99ad9325b06028606f8238e",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/0d57f20aa03129ee7ef5f690e634884315d4238c",
+                "reference": "0d57f20aa03129ee7ef5f690e634884315d4238c",
                 "shasum": ""
             },
             "require": {
@@ -10865,7 +10865,7 @@
             "suggest": {
                 "symfony/yaml": "v2.3+ required if using the Front Matter extension"
             },
-            "time": "2021-07-24T20:12:58+00:00",
+            "time": "2021-07-31T19:15:22+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -18464,23 +18464,23 @@
         },
         {
             "name": "yannisme/confixtheme",
-            "version": "2.0.10",
-            "version_normalized": "2.0.10.0",
+            "version": "2.0.11",
+            "version_normalized": "2.0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yannisme/flarum-confix-theme.git",
-                "reference": "7731a62cd6ce8e2c75ccc54a680d944b528594c9"
+                "reference": "1f0e9b6d2dd3033061bf73b086bb8cf890dc9d51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yannisme/flarum-confix-theme/zipball/7731a62cd6ce8e2c75ccc54a680d944b528594c9",
-                "reference": "7731a62cd6ce8e2c75ccc54a680d944b528594c9",
+                "url": "https://api.github.com/repos/yannisme/flarum-confix-theme/zipball/1f0e9b6d2dd3033061bf73b086bb8cf890dc9d51",
+                "reference": "1f0e9b6d2dd3033061bf73b086bb8cf890dc9d51",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "*"
             },
-            "time": "2021-07-29T15:04:53+00:00",
+            "time": "2021-07-31T13:49:37+00:00",
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
@@ -18519,7 +18519,7 @@
             ],
             "support": {
                 "issues": "https://github.com/yannisme/flarum-confix-theme/issues",
-                "source": "https://github.com/yannisme/flarum-confix-theme/tree/2.0.10"
+                "source": "https://github.com/yannisme/flarum-confix-theme/tree/2.0.11"
             },
             "install-path": "../yannisme/confixtheme"
         },
