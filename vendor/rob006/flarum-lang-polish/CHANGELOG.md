@@ -2,6 +2,26 @@ CHANGELOG
 =========
 
 
+0.5.6 (2021-08-03)
+------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`katosdev/signature`](https://github.com/katosdev/signature)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`antoinefr/flarum-ext-money`](https://github.com/AntoineFr/flarum-ext-money)
+* [`clarkwinkelmann/flarum-ext-who-read`](https://github.com/clarkwinkelmann/flarum-ext-who-read)
+* [`ianm/follow-users`](https://github.com/imorland/follow-users)
+* [`the-turk/flarum-mathren`](https://github.com/the-turk/flarum-mathren)
+* [`therealsujitk/flarum-ext-gifs`](https://github.com/therealsujitk/flarum-ext-gifs)
+
+
+Wszystkie zmiany: [v0.5.5...v0.5.6](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.5...v0.5.6).
+
+
 0.5.5 (2021-07-13)
 ------------------
 

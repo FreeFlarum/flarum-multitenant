@@ -15,18 +15,31 @@ ianm-follow-users:
     new_post_subject: '[Obserwowany użytkownik] Nowy post w {title}'
   forum:
     badge:
-      label: 'Obserwowany użytkownik'
+      label:
+        follow: 'Obserwujesz dyskusje'
+        lurk: 'Obserwujesz wszystko'
     filter:
       following: 'Obserwowani użytkownicy'
     index:
-      follow_tag_button: Obserwuj
-      unfollow_tag_button: 'Przestań obserwować'
+      follow_tag_button: '=> ianm-follow-users.lib.follow'
+      unfollow_tag_button: '=> ianm-follow-users.lib.change_follow_type'
+    modals:
+      select_follow_level:
+        cancel_btn: Anuluj
+        description: 'Wybierz w jaki sposób chciałbyś obserwować <em>{username}</em>.'
+        follow_levels_heading: 'Poziomy obserwowania'
+        follow_select_label: 'Typ obserwowania'
+        no_user_attr_provided_err: 'Ups, coś poszło nie tak podczas otwierania tego okienka.'
+        save_btn: Zapisz
+        title: 'Wybierz poziom obserwowania dla {username}'
     notifications:
       new_discussion_text: '{username} rozpoczął'
       new_follower_text: '{username} zaczął Cię obserwować'
       new_post_text: '{username} odpowiedział w dyskusji'
       new_unfollower_text: '{username} przestał Cię obserwować'
     profile_link: '=> ianm-follow-users.lib.following_link'
+    profile_page:
+      no_following: 'Wygląda na to, że nikogo jeszcze nie obserwujesz.'
     settings:
       block_follow: 'Nie pozwól innym na obserwowanie mnie'
       notify_new_discussion_label: 'Obserwowany użytkownik utworzył dyskusję'
@@ -34,9 +47,21 @@ ianm-follow-users:
       notify_new_post_label: 'Obserwowany użytkownik odpowiedział w istniejącej dyskusji'
       notify_new_unfollower_label: 'Ktoś przestał mnie obserwować'
     user_controls:
-      follow_button: Obserwuj
+      follow_button: '=> ianm-follow-users.lib.follow'
       follow_confirmation: 'Czy jesteś pewien, że chcesz obserwować tego użytkownika?'
-      unfollow_button: 'Przestań obserwować'
+      unfollow_button: '=> ianm-follow-users.lib.change_follow_type'
       unfollow_confirmation: 'Czy jesteś pewien, że chcesz przestać obserwować tego użytkownika?'
   lib:
+    change_follow_type: 'Ustawienia obserwowania'
+    follow: Obserwuj
+    follow_levels:
+      follow:
+        description: "Otrzymuj powiadomienia, gdy <em>{username}</em> rozpocznie nową dyskusję.\n"
+        name: 'Obserwuj dyskusje'
+      lurk:
+        description: "Otrzymuj powiadomienia, gdy <em>{username}</em> rozpocznie nową dyskusję lub doda post w istniejącej dyskusji.\n"
+        name: 'Obserwuj wszystko'
+      unfollow:
+        description: "Nie otrzymuj powiadomień o aktywności <em>{username}</em>.\n"
+        name: 'Nie obserwuj'
     following_link: 'Obserwowani użytkownicy'
