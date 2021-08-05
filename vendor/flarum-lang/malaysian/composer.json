@@ -1,0 +1,54 @@
+{
+	"name": "flarum-lang/malaysian",
+	"type": "flarum-extension",
+	"description": "Malaysian language pack for Flarum.",
+	"keywords": [
+		"locale",
+		"flarum",
+		"flarum-malaysian",
+		"bahasa-melayu"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Sayuri",
+			"email": "sayuri@yalu.lk",
+			"homepage": "https://discuss.flarum.org/d/3787"
+		},
+		{
+			"name": "Hj Ahmad Rasyid Hj Ismail",
+			"email": "ahrasis@gmail.com",
+			"homepage": "https://flarum.sch.my"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/flarum-lang/malaysian/issues/new",
+		"source": "https://github.com/flarum-lang/malaysian",
+		"forum": "https://discuss.flarum.org/d/3787"
+	},
+	"require": {
+		"flarum/core": "^1.0"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.5.x-dev"
+		},
+		"flarum-extension": {
+			"title": "Malaysian",
+			"icon": {
+				"image": "icon.svg",
+				"backgroundSize": "cover",
+				"backgroundPosition": "center"
+			}
+		},
+		"flarum-locale": {
+			"code": "ms",
+			"title": "Bahasa Melayu"
+		},
+		"extiverse": {
+			"discuss": "https://discuss.flarum.org/d/3787"
+		}
+	}
+}

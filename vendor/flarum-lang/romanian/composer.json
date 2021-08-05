@@ -1,0 +1,34 @@
+{
+    "name": "block-cat/flarum-core-romanian",
+    "type": "flarum-extension",
+    "description": "Romanian language pack for Flarum.",
+    "keywords": [
+        "flarum",
+        "locale",
+        "romanian",
+        "language"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "BlockCat"
+    }],
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Română",
+            "category": "language",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#CB0002",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "ro",
+            "title": "Română"
+        }
+    }
+}

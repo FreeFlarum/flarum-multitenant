@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f5a52a3dd9d48dad5b4134c153ddabc",
+    "content-hash": "2e796f977f0c030a35c8cbfcc216b034",
     "packages": [
         {
             "name": "afrux/asirem",
@@ -2998,6 +2998,269 @@
             "time": "2021-07-10T00:49:41+00:00"
         },
         {
+            "name": "flarum-lang/hindi",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/hindi.git",
+                "reference": "a05afcb32a9853b75be2a619c0e9f15a0ea9607b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/hindi/zipball/a05afcb32a9853b75be2a619c0e9f15a0ea9607b",
+                "reference": "a05afcb32a9853b75be2a619c0e9f15a0ea9607b",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "hindi",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "hi",
+                    "title": "Hindi"
+                },
+                "flagrow": {
+                    "discuss": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "meetdilip",
+                    "homepage": "https://github.com/flarum-lang/hindi"
+                }
+            ],
+            "description": "Hindi language pack for Flarum.",
+            "homepage": "https://github.com/flarum-lang/hindi",
+            "keywords": [
+                "flarum",
+                "hindi-locale",
+                "locale"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/27790-hindi-language-pack",
+                "issues": "https://github.com/yourname/flarum-lang-hindi/issues",
+                "source": "https://github.com/yourname/flarum-lang-hindi"
+            },
+            "time": "2021-06-26T11:58:31+00:00"
+        },
+        {
+            "name": "flarum-lang/hungarian",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/hungarian.git",
+                "reference": "f7eab05ac5833fecfca7e2f4219cacea82ceb750"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/hungarian/zipball/f7eab05ac5833fecfca7e2f4219cacea82ceb750",
+                "reference": "f7eab05ac5833fecfca7e2f4219cacea82ceb750",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "default-branch": true,
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Hungarian",
+                    "icon": {
+                        "image": "hu.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "hu",
+                    "title": "Hungarian"
+                },
+                "extiverse": {
+                    "discuss": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rebootcode",
+                    "email": "office@rebootcode.ro",
+                    "homepage": "https://github.com/flarum-lang/hungarian"
+                }
+            ],
+            "description": "Hungarian language pack for Flarum.",
+            "homepage": "https://github.com/flarum-lang/hungarian",
+            "keywords": [
+                "flarum",
+                "hungarian-locale",
+                "locale"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum-lang/hungarian/issues",
+                "source": "https://github.com/flarum-lang/hungarian"
+            },
+            "time": "2021-08-05T07:22:03+00:00"
+        },
+        {
+            "name": "flarum-lang/italian",
+            "version": "1.0.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/italian.git",
+                "reference": "80896c23a6e80e98a18ea1200e21448bd1653c7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/italian/zipball/80896c23a6e80e98a18ea1200e21448bd1653c7d",
+                "reference": "80896c23a6e80e98a18ea1200e21448bd1653c7d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Italiano",
+                    "category": "language",
+                    "info": {
+                        "website": "https://flarum.it",
+                        "support": "https://github.com/flarum-lang/italian/issues"
+                    },
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#fff",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "it",
+                    "title": "Italiano"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Colia",
+                    "email": "info@flarum.it",
+                    "homepage": "https://flarum.it"
+                }
+            ],
+            "description": "Pacchetto in lingua Italiana per Flarum e relative estensioni.",
+            "keywords": [
+                "extension",
+                "flarum",
+                "italian",
+                "locale",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum-lang/italian/issues",
+                "source": "https://github.com/flarum-lang/italian"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/donate?hosted_button_id=25WSH565TJCLE",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/justoverclockl",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-08-03T07:50:38+00:00"
+        },
+        {
+            "name": "flarum-lang/malaysian",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/malaysian.git",
+                "reference": "d70fe0111b2a6b790f3496dc7477475af244204e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/malaysian/zipball/d70fe0111b2a6b790f3496dc7477475af244204e",
+                "reference": "d70fe0111b2a6b790f3496dc7477475af244204e",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Malaysian",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "ms",
+                    "title": "Bahasa Melayu"
+                },
+                "extiverse": {
+                    "discuss": "https://discuss.flarum.org/d/3787"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sayuri",
+                    "email": "sayuri@yalu.lk",
+                    "homepage": "https://discuss.flarum.org/d/3787"
+                },
+                {
+                    "name": "Hj Ahmad Rasyid Hj Ismail",
+                    "email": "ahrasis@gmail.com",
+                    "homepage": "https://flarum.sch.my"
+                }
+            ],
+            "description": "Malaysian language pack for Flarum.",
+            "keywords": [
+                "bahasa-melayu",
+                "flarum",
+                "flarum-malaysian",
+                "locale"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/3787",
+                "issues": "https://github.com/flarum-lang/malaysian/issues/new",
+                "source": "https://github.com/flarum-lang/malaysian"
+            },
+            "time": "2021-07-15T12:20:53+00:00"
+        },
+        {
             "name": "flarum-lang/portuguese",
             "version": "dev-master",
             "source": {
@@ -3056,6 +3319,62 @@
                 "source": "https://github.com/flarum-lang/portuguese"
             },
             "time": "2021-07-29T16:52:08+00:00"
+        },
+        {
+            "name": "flarum-lang/romanian",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/romanian.git",
+                "reference": "e1440b5c17dd7fbb518210733e76775fc67b5c9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/romanian/zipball/e1440b5c17dd7fbb518210733e76775fc67b5c9b",
+                "reference": "e1440b5c17dd7fbb518210733e76775fc67b5c9b",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Română",
+                    "category": "language",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#CB0002",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "ro",
+                    "title": "Română"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "BlockCat"
+                }
+            ],
+            "description": "Romanian language pack for Flarum.",
+            "keywords": [
+                "flarum",
+                "language",
+                "locale",
+                "romanian"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum-lang/romanian/issues",
+                "source": "https://github.com/flarum-lang/romanian/tree/v1.0.1"
+            },
+            "time": "2021-06-04T18:48:41+00:00"
         },
         {
             "name": "flarum-lang/russian",
@@ -3147,6 +3466,68 @@
             "time": "2021-07-03T20:06:55+00:00"
         },
         {
+            "name": "flarum-lang/sinhala",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/sinhala.git",
+                "reference": "a8abdf90df8544d31391d84b0016365ea6b2c76d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/sinhala/zipball/a8abdf90df8544d31391d84b0016365ea6b2c76d",
+                "reference": "a8abdf90df8544d31391d84b0016365ea6b2c76d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Sinhala",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "si",
+                    "title": "සිංහල"
+                },
+                "extiverse": {
+                    "discuss": "https://discuss.flarum.org/d/27076"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sayuri",
+                    "email": "sayuri@yalu.lk",
+                    "homepage": "https://discuss.flarum.org/d/27076-sinhala-language-pack"
+                }
+            ],
+            "description": "Sinhala language pack for Flarum.",
+            "keywords": [
+                "flarum",
+                "flarum-sinhala",
+                "locale"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/27076",
+                "issues": "https://github.com/flarum-lang/sinhala/issues/new",
+                "source": "https://github.com/flarum-lang/sinhala"
+            },
+            "time": "2021-07-14T05:01:00+00:00"
+        },
+        {
             "name": "flarum-lang/spanish",
             "version": "1.1.2",
             "source": {
@@ -3214,6 +3595,190 @@
                 "source": "https://github.com/flarum-lang/spanish"
             },
             "time": "2021-06-27T20:17:12+00:00"
+        },
+        {
+            "name": "flarum-lang/swedish",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/swedish.git",
+                "reference": "d56fe80b3fbb8df2a5c816f94bfdbb56ade5a791"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/swedish/zipball/d56fe80b3fbb8df2a5c816f94bfdbb56ade5a791",
+                "reference": "d56fe80b3fbb8df2a5c816f94bfdbb56ade5a791",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Swedish for Flarum",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "sv",
+                    "title": "Svenska"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gustav Johansson",
+                    "email": "gust.joha@gmail.com"
+                }
+            ],
+            "description": "Swedish language extension for flarum.",
+            "keywords": [
+                "Swedish",
+                "extension",
+                "flarum",
+                "language",
+                "locale",
+                "translation"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/26393",
+                "issues": "https://github.com/flarum-lang/swedish/issues",
+                "source": "https://github.com/flarum-lang/swedish"
+            },
+            "time": "2021-06-22T10:17:03+00:00"
+        },
+        {
+            "name": "flarum-lang/tamil",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/tamil.git",
+                "reference": "3f408eaf2fa4e982a0bab2342422e20c3a59d0f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/tamil/zipball/3f408eaf2fa4e982a0bab2342422e20c3a59d0f0",
+                "reference": "3f408eaf2fa4e982a0bab2342422e20c3a59d0f0",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Tamil",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "ta",
+                    "title": "தமிழ்"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arun Kumar",
+                    "homepage": "https://discuss.flarum.org/d/27775-tamil-language-pack"
+                }
+            ],
+            "description": "Tamil language pack for Flarum.",
+            "homepage": "https://github.com/flarum-lang/tamil",
+            "keywords": [
+                "flarum",
+                "flarum-tamil",
+                "locale"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum-lang/tamil/issues",
+                "source": "https://github.com/flarum-lang/tamil/"
+            },
+            "time": "2021-06-27T23:30:46+00:00"
+        },
+        {
+            "name": "flarum-lang/thai",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/thai.git",
+                "reference": "c75e0b67dc327d325bacf3850eb31321c3f46cc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/thai/zipball/c75e0b67dc327d325bacf3850eb31321c3f46cc9",
+                "reference": "c75e0b67dc327d325bacf3850eb31321c3f46cc9",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "default-branch": true,
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "ภาษาไทย",
+                    "category": "language",
+                    "info": {
+                        "donate": "https://flarum.org/donate/",
+                        "website": "https://flarum.org",
+                        "support": "https://discuss.flarum.org"
+                    },
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "th",
+                    "title": "ภาษาไทย"
+                },
+                "extiverse": {
+                    "discuss": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kon3ko",
+                    "email": "akoneko47@gmail.com",
+                    "homepage": "https://nekocloud.io/"
+                }
+            ],
+            "description": "Thai language pack for Flarum.",
+            "homepage": "https://github.com/flarum-lang/thai",
+            "keywords": [
+                "flarum",
+                "locale",
+                "thai-locale"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum-lang/thai/issues",
+                "source": "https://github.com/flarum-lang/thai"
+            },
+            "time": "2021-08-02T09:34:12+00:00"
         },
         {
             "name": "flarum-lang/turkish",
@@ -17862,7 +18427,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "flarum-lang/hungarian": 20,
         "flarum-lang/portuguese": 20,
+        "flarum-lang/thai": 20,
         "fof/byobu": 10
     },
     "prefer-stable": true,

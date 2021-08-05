@@ -1,0 +1,52 @@
+{
+    "name": "flarum-lang/thai",
+    "type": "flarum-extension",
+    "description": "Thai language pack for Flarum.",
+    "homepage": "https://github.com/flarum-lang/thai",
+    "keywords": [
+        "locale",
+        "flarum",
+        "thai-locale"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kon3ko",
+            "email": "akoneko47@gmail.com",
+            "homepage": "https://nekocloud.io/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flarum-lang/thai/issues",
+        "source": "https://github.com/flarum-lang/thai"
+    },
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "flarum-extension": {
+            "title": "ภาษาไทย",
+            "category": "language",
+            "info": {
+                "donate": "https://flarum.org/donate/",
+                "website": "https://flarum.org",
+                "support": "https://discuss.flarum.org"
+            },
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#00247d",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "th",
+            "title": "ภาษาไทย"
+        },
+        "extiverse": {
+            "discuss": ""
+        }
+    }
+}
