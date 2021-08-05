@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63e9ea69918244d03b468f285564f2d4",
+    "content-hash": "4f5a52a3dd9d48dad5b4134c153ddabc",
     "packages": [
         {
             "name": "afrux/asirem",
@@ -2996,6 +2996,66 @@
                 "source": "https://github.com/flarum-lang/german"
             },
             "time": "2021-07-10T00:49:41+00:00"
+        },
+        {
+            "name": "flarum-lang/portuguese",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum-lang/portuguese.git",
+                "reference": "35be761623b9e4e5e37116cb40a6a1b7282037ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum-lang/portuguese/zipball/35be761623b9e4e5e37116cb40a6a1b7282037ee",
+                "reference": "35be761623b9e4e5e37116cb40a6a1b7282037ee",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "default-branch": true,
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Portuguese",
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "pt",
+                    "title": "Portuguese"
+                },
+                "extiverse": {
+                    "discuss": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Your Name",
+                    "email": "your@email.net",
+                    "homepage": "https://yourhomepage.com/"
+                }
+            ],
+            "description": "Portuguese language pack for Flarum.",
+            "homepage": "https://github.com/flarum-lang/portuguese",
+            "keywords": [
+                "flarum",
+                "locale",
+                "pt-locale"
+            ],
+            "support": {
+                "issues": "https://github.com/flarum-lang/portuguese/issues",
+                "source": "https://github.com/flarum-lang/portuguese"
+            },
+            "time": "2021-07-29T16:52:08+00:00"
         },
         {
             "name": "flarum-lang/russian",
@@ -17802,6 +17862,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "flarum-lang/portuguese": 20,
         "fof/byobu": 10
     },
     "prefer-stable": true,

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6af1a87e02ad7e04bab19ed9116f42cb9e9a6af0',
+        'reference' => 'f54e3837e177af56a22898db67ab3ba8f0441b9d',
         'name' => 'flarum/flarum',
         'dev' => true,
     ),
@@ -505,6 +505,17 @@
             'reference' => '627c0904ac0489c1a8f95f5e39a9379ea0953434',
             'dev_requirement' => false,
         ),
+        'flarum-lang/portuguese' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../flarum-lang/portuguese',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '35be761623b9e4e5e37116cb40a6a1b7282037ee',
+            'dev_requirement' => false,
+        ),
         'flarum-lang/russian' => array(
             'pretty_version' => '1.0.2-p4',
             'version' => '1.0.2.0-patch4',
@@ -610,7 +621,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6af1a87e02ad7e04bab19ed9116f42cb9e9a6af0',
+            'reference' => 'f54e3837e177af56a22898db67ab3ba8f0441b9d',
             'dev_requirement' => false,
         ),
         'flarum/lang-english' => array(

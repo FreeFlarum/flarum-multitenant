@@ -51,6 +51,7 @@
         "flarum-lang/chinese-simplified": "*",
         "flarum-lang/french": "*",
         "flarum-lang/german": "*",
+        "flarum-lang/portuguese": "dev-master",
         "flarum-lang/russian": "*",
         "flarum-lang/spanish": "^1.1",
         "flarum-lang/turkish": "*",
