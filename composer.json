@@ -44,7 +44,7 @@
         "clarkwinkelmann/flarum-ext-emojionearea": "*",
         "clarkwinkelmann/flarum-ext-first-post-approval": "*",
         "clarkwinkelmann/flarum-ext-group-list": "^1.0",
-        "datlechin/lang-vietnamese": "^1.1",
+        "datlechin/lang-vietnamese": "dev-master",
         "davwheat/custom-sidenav-links": "^1.0",
         "dem13n/discussion-cards": "*",
         "flarum-lang/brazilian": "*",

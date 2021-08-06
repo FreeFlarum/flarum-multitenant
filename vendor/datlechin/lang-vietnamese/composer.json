@@ -14,7 +14,7 @@
   "support": {
     "issues": "https://github.com/datlechin/lang-vietnamese/issues",
     "source": "https://github.com/datlechin/lang-vietnamese",
-    "forum": "https://discuss.flarum.org/d/22902"
+    "forum": "https://discuss.flarum.org/d/28471"
   },
   "require": {
     "flarum/core": "^1.0"
@@ -28,7 +28,7 @@
       "category": "language",
       "info": {
         "website": "https://ngoquocdat.com",
-        "support": "https://discuss.flarum.org/d/22902"
+        "support": "https://discuss.flarum.org/d/28471"
       },
       "icon": {
         "image": "icon.svg",
@@ -42,7 +42,7 @@
       "title": "Vietnamese"
     },
     "extiverse": {
-      "discuss": "https://discuss.flarum.org/d/22902"
+      "discuss": "https://discuss.flarum.org/d/28471"
     }
   }
 }

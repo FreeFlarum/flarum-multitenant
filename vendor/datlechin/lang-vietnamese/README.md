@@ -101,7 +101,7 @@ php flarum cache:clear
 <details>
   <summary>askvortsov</summary>
   <ul>
-    <li><a href="https://github.com/askvortsov1/flarum-rich-text">Rich Text (v2.0.3)</a></li>
+    <li><a href="https://github.com/askvortsov1/flarum-rich-text">Rich Text</a> (v2.0.3)</li>
     <li><a href="https://github.com/askvortsov1/flarum-pwa">Flarum Progressive Web App</a></li>
     <li><a href="https://github.com/askvortsov1/flarum-moderator-warnings">Flarum Moderator Warnings</a></li>
     <li><a href="https://github.com/askvortsov1/flarum-markdown-tables">Markdown Tables</a></li>
@@ -135,7 +135,10 @@ php flarum cache:clear
 <details>
   <summary>justoverclockl</summary>
   <ul>
-    <li><a href="https://github.com/justoverclockl/username-blacklist">UsernameBlacklist</a> (0.1.0)</li>
+    <li><a href="https://github.com/justoverclockl/custom-header">CustomHeader</a> (0.1.4)</li>
+    <li><a href="https://github.com/justoverclockl/header-slideshow">HeaderSlideShow</a> (0.1.1)</li>
+    <li><a href="https://github.com/justoverclockl/last-tweet">Last Tweet</a> (0.1.1)</li>
+    <li><a href="https://github.com/justoverclockl/flarum-ext-infocards">Infocards</a> (0.1.5)</li>
     <li><a href="https://github.com/justoverclockl/username-blacklist">UsernameBlacklist</a> (0.1.0)</li>
     <li><a href="https://github.com/justoverclockl/first-visit-indexpage">FirstVisitIndexPage</a> (0.1.1)</li>
     <li><a href="https://github.com/justoverclockl/flarum-ext-feedback">Feedback</a> (0.1.4)</li>
@@ -149,20 +152,20 @@ php flarum cache:clear
 </details>
 
 <details>
-  <summary>the-turk</summary>
+  <summary>Others</summary>
   <ul>
+    <li><a href="https://github.com/android-com-pl/mobile-tab">Mobile tab</a> (1.0.3)</li>
+    <li><a href="https://github.com/afrux/online-users-widget">Online Users Widget</a> (v0.1.1)</li>
+    <li><a href="https://github.com/afrux/forum-stats-widget">Forum Stats Widget</a> (v0.1.0)</li>
+    <li><a href="https://github.com/afrux/top-posters-widget">Top Posters Widget</a> (v0.1.1)</li>
+    <li><a href="https://github.com/afrux/news-widget">News Widget</a> (v0.1.0)</li>
+    <li><a href="https://github.com/davwheat/flarum-ext-custom-sidenav-links">Custom Side Nav Links</a> (v1.0.0)</li>
+    <li><a href="https://github.com/Ralkage/flarum-hcaptcha">hCaptcha</a> (1.0.0)</li>
+    <li><a href="https://github.com/KyrneDev/whisper">Whisper - Private Messaging</a> (0.1.3)</li>
     <li><a href="https://github.com/the-turk/flarum-nodp">Prevent Double-Posting</a> (1.0.1)</li>
     <li><a href="https://github.com/the-turk/flarum-flamoji">Flamoji</a> (1.0.2)</li>
     <li><a href="https://github.com/the-turk/flarum-diff">Diff</a></li>
     <li><a href="https://github.com/the-turk/flarum-welcome-widgets">Welcome Widgets</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Others</summary>
-  <ul>
-    <li><a href="https://github.com/Ralkage/flarum-hcaptcha">hCaptcha</a> (1.0.0)</li>
-    <li><a href="https://github.com/KyrneDev/whisper">Whisper - Private Messaging</a> (0.1.3)</li>
     <li><a href="https://github.com/glowingblue/flarum-ext-redis-setup">Redis Setup</a> (1.0.3)</li>
     <li><a href="https://github.com/ramesh-dada/realtime">Realtime Posts</a> (v100.1)</li>
     <li><a href="https://github.com/katosdev/signature">Signature</a> (1.0.0)</li>

@@ -7,6 +7,9 @@ antoinefr-money:
       moneyname: "Tên tiền (ví dụ: [money] điểm)"
       postminimumlength: Độ dài tối thiểu của bài viết để nhận tiền (0 để vô hiệu hóa)
       noshowzero: Không hiển thị nếu số tiền bằng 0
+      moneyforlike: Tiền được cộng khi có bài viết được thích
+      helpextensionlikes: Yêu cầu bật tiện ích <code>flarum/likes</code>
+
     permissions:
       edit_money_label: Chỉnh sửa tiền
   forum:
@@ -14,5 +17,5 @@ antoinefr-money:
       money_button: Sửa tiền
     modal:
       title: "Tiền của {username}"
-      current: "Current:"
+      current: "Hiện tại:"
       submit_button: => core.ref.save_changes

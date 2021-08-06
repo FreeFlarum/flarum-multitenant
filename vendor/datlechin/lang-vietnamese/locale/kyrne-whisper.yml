@@ -35,7 +35,7 @@ kyrne-whisper:
       chat_with: "Trò chuyện với {username}"
       messages_multiple: "Toàn bộ {count} tin nhắn"
       messages_single: Cuộc trò chuyện mới
-      start: Bắt đầu cuộc trò chuỵen
+      start: Bắt đầu cuộc trò chuyện
       read: Đọc
       cant_start: Không thể bắt đầu cuộc trò chuyện
       text_placeholder: Nhập tin nhắn của bạn

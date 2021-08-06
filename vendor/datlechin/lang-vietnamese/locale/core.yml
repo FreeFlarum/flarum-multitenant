@@ -11,7 +11,7 @@ core:
     appearance:
       colored_header_label: Màu Header
       colors_heading: Màu sắc
-      colors_text: "Chọn hai màu cho giao diện diễn đàn của bạn. Màu thứ nhất được sử dụng làm màu nền, trong khi màu thứ hai được sử dụng để tạo kiểu cho nền của các component."
+      colors_text: "Chọn hai màu cho giao diện diễn đàn của bạn. Màu thứ nhất làm màu nền, màu thứ hai để làm nền các thành phần."
       custom_footer_heading: Tùy chỉnh Footer
       custom_footer_text: => core.ref.custom_footer_text
       custom_header_heading: Tùy chỉnh Header
@@ -379,7 +379,7 @@ core:
       invalid_login_message: Thông tin đăng nhập của bạn không chính xác.
       password_placeholder: => core.ref.password
       remember_me_label: Ghi nhớ
-      sign_up_text: "Don't have an account? <a>Đăng ký</a>"
+      sign_up_text: "Không có tài khoản? <a>Đăng ký</a>"
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
       username_or_email_placeholder: Tên người dùng hoặc mật khẩu
