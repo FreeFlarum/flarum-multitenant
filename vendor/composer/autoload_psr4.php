@@ -238,7 +238,11 @@ return array(
     'App\\' => array($baseDir . '/app'),
     'AntoineFr\\Online\\' => array($vendorDir . '/antoinefr/flarum-ext-online/src'),
     'AntoineFr\\Money\\' => array($vendorDir . '/antoinefr/flarum-ext-money/src'),
+    'Afrux\\TopPosters\\' => array($vendorDir . '/afrux/top-posters-widget/src'),
     'Afrux\\ThemeBase\\' => array($vendorDir . '/afrux/flarum-theme-base/src'),
+    'Afrux\\OnlineUsers\\' => array($vendorDir . '/afrux/online-users-widget/src'),
+    'Afrux\\News\\' => array($vendorDir . '/afrux/news-widget/src'),
     'Afrux\\ForumWidgets\\' => array($vendorDir . '/afrux/forum-widgets-core/src'),
+    'Afrux\\ForumStats\\' => array($vendorDir . '/afrux/forum-stats-widget/src'),
     'Afrux\\Asirem\\' => array($vendorDir . '/afrux/asirem/src'),
 );

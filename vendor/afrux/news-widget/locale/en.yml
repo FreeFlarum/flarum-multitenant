@@ -1,0 +1,5 @@
+afrux-news-widget:
+  admin:
+    settings:
+      add_line: Add News Line
+      lines: News Lines

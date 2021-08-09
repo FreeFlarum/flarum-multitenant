@@ -27,6 +27,7 @@
     },
     "require": {
         "afrux/asirem": "^0.1.2",
+        "afrux/forum-widgets-bundle": "*",
         "afrux/forum-widgets-core": "^0.1.3",
         "antoinefr/flarum-ext-money": "*",
         "antoinefr/flarum-ext-online": "*",

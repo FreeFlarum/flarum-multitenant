@@ -60,12 +60,12 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '04b6576f786ea6b5b4b577af08f8e4d1' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/bootstrap.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
+        '3c6b16bde9ee0229f373e20a9d2a286a' => __DIR__ . '/..' . '/afrux/forum-widgets-core/src/helpers.php',
         '17d016dc52a631c1e74d2eb8fdd57342' => __DIR__ . '/..' . '/laravel/helpers/src/helpers.php',
         '3c3a02bc9945aa3571024986c07a1e55' => __DIR__ . '/..' . '/rinvex/countries/src/helpers.php',
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
-        '3c6b16bde9ee0229f373e20a9d2a286a' => __DIR__ . '/..' . '/afrux/forum-widgets-core/src/helpers.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
@@ -384,8 +384,12 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'App\\' => 4,
             'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
+            'Afrux\\TopPosters\\' => 17,
             'Afrux\\ThemeBase\\' => 16,
+            'Afrux\\OnlineUsers\\' => 18,
+            'Afrux\\News\\' => 11,
             'Afrux\\ForumWidgets\\' => 19,
+            'Afrux\\ForumStats\\' => 17,
             'Afrux\\Asirem\\' => 13,
         ),
     );
@@ -1330,13 +1334,29 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/antoinefr/flarum-ext-money/src',
         ),
+        'Afrux\\TopPosters\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/top-posters-widget/src',
+        ),
         'Afrux\\ThemeBase\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/flarum-theme-base/src',
         ),
+        'Afrux\\OnlineUsers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/online-users-widget/src',
+        ),
+        'Afrux\\News\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/news-widget/src',
+        ),
         'Afrux\\ForumWidgets\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/forum-widgets-core/src',
+        ),
+        'Afrux\\ForumStats\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/forum-stats-widget/src',
         ),
         'Afrux\\Asirem\\' => 
         array (

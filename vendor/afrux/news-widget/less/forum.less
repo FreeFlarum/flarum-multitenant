@@ -1,0 +1,62 @@
+.Afrux-NewsWidget {
+  color: #667d99;
+
+  &-content {
+    display: flex;
+  }
+
+  &-icon {
+    margin: 0 12px 0 4px;
+  }
+
+  &-line {
+    grid-area: line;
+    opacity: 0;
+    visibility: hidden;
+
+    &--previous {
+      animation: afrux-text-fade-out 0.2s ease-in-out infinite;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &--current {
+      animation: afrux-text-fade-in 0.2s ease-in-out infinite;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &--previous, &--current {
+      animation-duration: 7s;
+    }
+  }
+
+  &-line-container {
+    display: grid;
+    grid-template-areas: none;
+  }
+}
+
+@keyframes afrux-text-fade-out {
+  0, 100% {
+    opacity: 1;
+    visibility: visible
+  }
+
+  10%, 85% {
+    opacity: 0;
+    visibility: hidden
+  }
+}
+
+@keyframes afrux-text-fade-in {
+  0, 100% {
+    opacity: 0;
+    visibility: hidden
+  }
+
+  10%, 85% {
+    opacity: 1;
+    visibility: visible
+  }
+}

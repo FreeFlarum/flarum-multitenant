@@ -1,0 +1,59 @@
+{
+    "name": "afrux/news-widget",
+    "description": "Simple news fader widget",
+    "keywords": [
+        "flarum", "widget", "news", "forum"
+    ],
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://www.buymeacoffee.com/sycho"
+        }
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "homepage": "https://afrux.github.io",
+    "support": {
+      "issues": "https://github.com/afrux/news-widget/issues",
+      "source": "https://github.com/afrux/news-widget",
+      "forum": "https://discuss.flarum.org/"
+    },
+    "require": {
+        "flarum/core": "^1.0.0",
+        "afrux/forum-widgets-core": "^0.1.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Sami Mazouz",
+            "email": "sychocouldy@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Afrux\\News\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Afrux\\News\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "News Widget",
+            "category": "forum-widget",
+            "icon": {
+                "name": "fas fa-bullhorn",
+                "backgroundColor": "#e34b6e",
+                "color": "#fff"
+            }
+        }
+    }
+}

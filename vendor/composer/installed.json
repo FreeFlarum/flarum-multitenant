@@ -134,6 +134,118 @@
             "install-path": "../afrux/flarum-theme-base"
         },
         {
+            "name": "afrux/forum-stats-widget",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afrux/forum-stats-widget.git",
+                "reference": "dcb026bd3795eba99d92ce44384a5d4d1cf63e41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afrux/forum-stats-widget/zipball/dcb026bd3795eba99d92ce44384a5d4d1cf63e41",
+                "reference": "dcb026bd3795eba99d92ce44384a5d4d1cf63e41",
+                "shasum": ""
+            },
+            "require": {
+                "afrux/forum-widgets-core": "^0.1.0",
+                "flarum/core": "^1.0.0"
+            },
+            "require-dev": {
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2021-08-02T16:24:45+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Forum Stats Widget",
+                    "category": "forum-widget",
+                    "icon": {
+                        "name": "fas fa-chart-pie",
+                        "backgroundColor": "#e34b6e",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Afrux\\ForumStats\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sami Mazouz",
+                    "email": "sychocouldy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Forum Statistics Widget",
+            "homepage": "https://afrux.github.io",
+            "keywords": [
+                "flarum",
+                "forum",
+                "stats",
+                "widget"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/",
+                "issues": "https://github.com/afrux/forum-stats-widget/issues",
+                "source": "https://github.com/afrux/forum-stats-widget"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/sycho",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../afrux/forum-stats-widget"
+        },
+        {
+            "name": "afrux/forum-widgets-bundle",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afrux/forum-widgets-bundle.git",
+                "reference": "ec85f729df77206b495ebaa1b934aa2e10cd41db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afrux/forum-widgets-bundle/zipball/ec85f729df77206b495ebaa1b934aa2e10cd41db",
+                "reference": "ec85f729df77206b495ebaa1b934aa2e10cd41db",
+                "shasum": ""
+            },
+            "require": {
+                "afrux/forum-stats-widget": "*",
+                "afrux/forum-widgets-core": "^0.1.0",
+                "afrux/news-widget": "*",
+                "afrux/online-users-widget": "*",
+                "afrux/top-posters-widget": "*"
+            },
+            "time": "2021-08-02T16:46:24+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "All Afrux Forum Widgets.",
+            "support": {
+                "issues": "https://github.com/afrux/forum-widgets-bundle/issues",
+                "source": "https://github.com/afrux/forum-widgets-bundle/tree/v0.1.0"
+            },
+            "install-path": "../afrux/forum-widgets-bundle"
+        },
+        {
             "name": "afrux/forum-widgets-core",
             "version": "v0.1.3",
             "version_normalized": "0.1.3.0",
@@ -208,6 +320,234 @@
                 }
             ],
             "install-path": "../afrux/forum-widgets-core"
+        },
+        {
+            "name": "afrux/news-widget",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afrux/news-widget.git",
+                "reference": "ce79743e0df7579490dea663ac7106310ef3eab0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afrux/news-widget/zipball/ce79743e0df7579490dea663ac7106310ef3eab0",
+                "reference": "ce79743e0df7579490dea663ac7106310ef3eab0",
+                "shasum": ""
+            },
+            "require": {
+                "afrux/forum-widgets-core": "^0.1.0",
+                "flarum/core": "^1.0.0"
+            },
+            "require-dev": {
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2021-08-02T16:28:46+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "News Widget",
+                    "category": "forum-widget",
+                    "icon": {
+                        "name": "fas fa-bullhorn",
+                        "backgroundColor": "#e34b6e",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Afrux\\News\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sami Mazouz",
+                    "email": "sychocouldy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple news fader widget",
+            "homepage": "https://afrux.github.io",
+            "keywords": [
+                "flarum",
+                "forum",
+                "news",
+                "widget"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/",
+                "issues": "https://github.com/afrux/news-widget/issues",
+                "source": "https://github.com/afrux/news-widget"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/sycho",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../afrux/news-widget"
+        },
+        {
+            "name": "afrux/online-users-widget",
+            "version": "v0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afrux/online-users-widget.git",
+                "reference": "3e8d0416e337230f073c8f607b8d90b50429fe86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afrux/online-users-widget/zipball/3e8d0416e337230f073c8f607b8d90b50429fe86",
+                "reference": "3e8d0416e337230f073c8f607b8d90b50429fe86",
+                "shasum": ""
+            },
+            "require": {
+                "afrux/forum-widgets-core": "^0.1.0",
+                "flarum/core": "^1.0.0"
+            },
+            "require-dev": {
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2021-08-02T17:08:58+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Online Users Widget",
+                    "category": "forum-widget",
+                    "icon": {
+                        "name": "fas fa-user-friends",
+                        "backgroundColor": "#e34b6e",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Afrux\\OnlineUsers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sami Mazouz",
+                    "email": "sychocouldy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Forum Widget That Lists Online Users",
+            "homepage": "https://afrux.github.io",
+            "keywords": [
+                "Users",
+                "flarum",
+                "online",
+                "widget"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/",
+                "issues": "https://github.com/afrux/online-users-widget/issues",
+                "source": "https://github.com/afrux/online-users-widget"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/sycho",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../afrux/online-users-widget"
+        },
+        {
+            "name": "afrux/top-posters-widget",
+            "version": "v0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afrux/top-posters-widget.git",
+                "reference": "0453ab53cdf54e904f810bebd5398cafc8bb44be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afrux/top-posters-widget/zipball/0453ab53cdf54e904f810bebd5398cafc8bb44be",
+                "reference": "0453ab53cdf54e904f810bebd5398cafc8bb44be",
+                "shasum": ""
+            },
+            "require": {
+                "afrux/forum-widgets-core": "^0.1.0",
+                "flarum/core": "^1.0.0"
+            },
+            "require-dev": {
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2021-08-02T17:13:06+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Top Posters Widget",
+                    "category": "forum-widget",
+                    "icon": {
+                        "name": "fas fa-sort-numeric-down",
+                        "backgroundColor": "#e34b6e",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Afrux\\TopPosters\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sami Mazouz",
+                    "email": "sychocouldy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Top Posters Widget",
+            "homepage": "https://afrux.github.io",
+            "keywords": [
+                "flarum",
+                "forum",
+                "posters",
+                "widget"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/",
+                "issues": "https://github.com/afrux/top-posters-widget/issues",
+                "source": "https://github.com/afrux/top-posters-widget"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/sycho",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../afrux/top-posters-widget"
         },
         {
             "name": "antoinefr/flarum-ext-money",

@@ -1,0 +1,26 @@
+.Afrux-OnlineUsersWidget-users {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    margin: 2px;
+
+    .Avatar {
+      --size: 35px;
+      width: var(--size);
+      height: var(--size);
+      font-size: calc(~"var(--size) / 2");
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--plus .Avatar {
+      background-color: @body-bg;
+      color: @control-color;
+      font-size: 13px;
+    }
+  }
+}
