@@ -65,6 +65,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
+        '3c6b16bde9ee0229f373e20a9d2a286a' => __DIR__ . '/..' . '/afrux/forum-widgets-core/src/helpers.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
@@ -109,6 +110,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'V' => 
         array (
             'V17Development\\FlarumUserBadges\\' => 32,
+            'V17Development\\FlarumThirdPartyLoginOnly\\' => 41,
             'V17Development\\FlarumSeo\\' => 25,
             'V17Development\\FlarumBlog\\' => 26,
         ),
@@ -355,6 +357,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             'Cron\\' => 5,
             'ClarkWinkelmann\\GroupList\\' => 26,
+            'ClarkWinkelmann\\GroupInvitation\\' => 32,
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
             'ClarkWinkelmann\\EmojioneArea\\' => 29,
             'ClarkWinkelmann\\CatchTheFish\\' => 29,
@@ -382,6 +385,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
             'Afrux\\ThemeBase\\' => 16,
+            'Afrux\\ForumWidgets\\' => 19,
             'Afrux\\Asirem\\' => 13,
         ),
     );
@@ -446,6 +450,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'V17Development\\FlarumUserBadges\\' => 
         array (
             0 => __DIR__ . '/..' . '/v17development/flarum-user-badges/src',
+        ),
+        'V17Development\\FlarumThirdPartyLoginOnly\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/v17development/flarum-third-party-login-only/src',
         ),
         'V17Development\\FlarumSeo\\' => 
         array (
@@ -833,8 +841,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -1238,6 +1246,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-group-list/src',
         ),
+        'ClarkWinkelmann\\GroupInvitation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-group-invitation/src',
+        ),
         'ClarkWinkelmann\\FirstPostApproval\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-first-post-approval/src',
@@ -1321,6 +1333,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Afrux\\ThemeBase\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/flarum-theme-base/src',
+        ),
+        'Afrux\\ForumWidgets\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/forum-widgets-core/src',
         ),
         'Afrux\\Asirem\\' => 
         array (

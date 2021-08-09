@@ -134,6 +134,82 @@
             "install-path": "../afrux/flarum-theme-base"
         },
         {
+            "name": "afrux/forum-widgets-core",
+            "version": "v0.1.3",
+            "version_normalized": "0.1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afrux/forum-widgets-core.git",
+                "reference": "9628c4f0dbbbd4c42469e3e456e517ef0c4d8980"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afrux/forum-widgets-core/zipball/9628c4f0dbbbd4c42469e3e456e517ef0c4d8980",
+                "reference": "9628c4f0dbbbd4c42469e3e456e517ef0c4d8980",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "require-dev": {
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2021-08-03T08:22:43+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "title": "Forum Widgets",
+                    "category": "",
+                    "icon": {
+                        "image": "icon.svg"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Afrux\\ForumWidgets\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sami Mazouz",
+                    "email": "sychocouldy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Core Extension for Managing Forum Widgets",
+            "homepage": "https://afrux.github.io",
+            "keywords": [
+                "core",
+                "flarum",
+                "framework",
+                "widgets"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/",
+                "issues": "https://github.com/afrux/forum-widgets-core/issues",
+                "source": "https://github.com/afrux/forum-widgets-core"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/sycho",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../afrux/forum-widgets-core"
+        },
+        {
             "name": "antoinefr/flarum-ext-money",
             "version": "v1.1.0",
             "version_normalized": "1.1.0.0",
@@ -1463,6 +1539,69 @@
                 "source": "https://github.com/clarkwinkelmann/flarum-ext-first-post-approval"
             },
             "install-path": "../clarkwinkelmann/flarum-ext-first-post-approval"
+        },
+        {
+            "name": "clarkwinkelmann/flarum-ext-group-invitation",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clarkwinkelmann/flarum-ext-group-invitation.git",
+                "reference": "40e176e89174ba505658c91d4cbd8de2e3595dd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clarkwinkelmann/flarum-ext-group-invitation/zipball/40e176e89174ba505658c91d4cbd8de2e3595dd4",
+                "reference": "40e176e89174ba505658c91d4cbd8de2e3595dd4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0"
+            },
+            "time": "2021-06-09T16:09:43+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Group Invitation",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-certificate",
+                        "backgroundColor": "#684ba6",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/24627"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ClarkWinkelmann\\GroupInvitation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Invite users into groups via links",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/24627",
+                "issues": "https://github.com/clarkwinkelmann/flarum-ext-group-invitation/issues",
+                "source": "https://github.com/clarkwinkelmann/flarum-ext-author-change"
+            },
+            "install-path": "../clarkwinkelmann/flarum-ext-group-invitation"
         },
         {
             "name": "clarkwinkelmann/flarum-ext-group-list",
@@ -18396,6 +18535,63 @@
                 "source": "https://github.com/v17development/flarum-seo"
             },
             "install-path": "../v17development/flarum-seo"
+        },
+        {
+            "name": "v17development/flarum-third-party-login-only",
+            "version": "v0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/v17development/flarum-third-party-login-only.git",
+                "reference": "5d4a7edf6079d9830fd347b862db418b71eaa93f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/v17development/flarum-third-party-login-only/zipball/5d4a7edf6079d9830fd347b862db418b71eaa93f",
+                "reference": "5d4a7edf6079d9830fd347b862db418b71eaa93f",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "time": "2021-08-08T11:40:20+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Third party login only",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-sign-in-alt",
+                        "backgroundColor": "#503cc5",
+                        "color": "#ffffff"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "V17Development\\FlarumThirdPartyLoginOnly\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "V17 Development",
+                    "email": "info@v17.dev"
+                }
+            ],
+            "description": "Only allow login and sign ups from oAuth extensions.",
+            "homepage": "https://v17.dev/projects/flarum-third-party-login-only",
+            "support": {
+                "docs": "https://community.v17.dev/knowledgebase/category/flarum-third-party-login-only",
+                "forum": "https://discuss.flarum.org/d/28424",
+                "issues": "https://github.com/v17development/flarum-third-party-login-only/issues",
+                "source": "https://github.com/v17development/flarum-third-party-login-only/tree/v0.1.1"
+            },
+            "install-path": "../v17development/flarum-third-party-login-only"
         },
         {
             "name": "v17development/flarum-user-badges",
