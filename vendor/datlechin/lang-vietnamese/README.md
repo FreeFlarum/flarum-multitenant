@@ -101,15 +101,14 @@ php flarum cache:clear
 <details>
   <summary>askvortsov</summary>
   <ul>
-    <li><a href="https://github.com/askvortsov1/flarum-rich-text">Rich Text</a> (v2.0.3)</li>
-    <li><a href="https://github.com/askvortsov1/flarum-pwa">Flarum Progressive Web App</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-moderator-warnings">Flarum Moderator Warnings</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-markdown-tables">Markdown Tables</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-help-tags">Flarum Help Tags</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-discussion-templates">Flarum Discussion Templates</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-checklist">Checklists</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-auto-moderator">Auto Moderator</a></li>
-    <li><a href="https://github.com/askvortsov1/flarum-categories">Flarum Categories</a></li>
+    <li><a href="https://github.com/askvortsov1/flarum-pwa">Flarum Progressive Web App</a> (v3.0.3)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-moderator-warnings">Flarum Moderator Warnings</a> (v6.0.6)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-markdown-tables">Markdown Tables</a> (v1.2.1)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-help-tags">Flarum Help Tags</a> (v1.1.0)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-discussion-templates">Flarum Discussion Templates</a> (v0.1.3)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-checklist">Checklists</a> (v1.3.1)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-auto-moderator">Auto Moderator</a> (v0.1.1)</li>
+    <li><a href="https://github.com/askvortsov1/flarum-categories">Flarum Categories</a> (v3.0.0)</li>
   </ul>
 </details>
 
@@ -178,7 +177,7 @@ php flarum cache:clear
     <li><a href="https://github.com/SychO9/flarum-profile-cover">Profile Cover</a> (v1.3.0)</li>
     <li><a href="https://github.com/matteocontrini/flarum-imgur-upload">flarum-imgur-upload</a> (v3.6.0)</li>
     <li><a href="https://github.com/imorland/syndication">Syndication</a> (1.0.2)</li>
-    <li><a href="https://github.com/therealsujitk/flarum-ext-gifs">GIFs</a> (v4.0.0)</li>
+    <li><a href="https://github.com/therealsujitk/flarum-ext-gifs">GIFs</a> (v4.1.0)</li>
     <li><a href="https://github.com/NomisCZ/flarum-ext-auth-wechat">WeChat Login</a> (v1.0.0)</li>
     <li><a href="https://github.com/NomisCZ/flarum-ext-auth-steam">Steam Login</a> (v1.0.1)</li>
     <li><a href="https://github.com/ramesh-dada/Flarum-GUI-Image-and-Link">Flarum GUI Image and Link</a> (1.0)</li>
@@ -186,7 +185,6 @@ php flarum cache:clear
     <li><a href="https://github.com/malago86/flarum-linkpreview">Link Preview</a> (0.1.0)</li>
     <li><a href="https://github.com/imorland/level-ranks">Level ranks</a> (1.0.0)</li>
     <li><a href="https://github.com/imorland/gravatar">Gravatar</a> (1.0.1)</li>
-    <li><a href="https://github.com/extiverse/bazaar">Bazaar</a> (0.4.1)</li>
     <li><a href="https://github.com/extiverse/mercury">Mercury</a> (0.1.2)</li>
     <li><a href="https://github.com/jslirola/flarum-ext-login2seeplus">Login 2 See Plus</a> (v0.1.9.1)</li>
     <li><a href="https://github.com/malago86/flarum-ads">Ads</a> (0.3.1)</li>

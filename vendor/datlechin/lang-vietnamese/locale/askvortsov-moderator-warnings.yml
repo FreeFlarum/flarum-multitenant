@@ -39,7 +39,7 @@ askvortsov-moderator-warnings:
     post_controls:
       warning_button: Cảnh báo người dùng
     user:
-      warnings: Cảnh báo của kiểm duyệt 
+      warnings: Cảnh báo kiểm duyệt 
     settings:
       warning_notification_label: Người kiểm duyệt cảnh báo tôi
     validation:
@@ -50,7 +50,7 @@ askvortsov-moderator-warnings:
       restore_button: Khôi phục
       delete_forever_button: Xóa vĩnh viễn
     warning_list:
-      add_button: New Warning
+      add_button: Cảnh báo mới
       no_warnings: Có vẻ như không có cảnh báo nào ở đây.
       warnings: "{strikes, plural, one {Cảnh báo của người kiểm duyệt: # Cảnh báo đã nhận} other {Cảnh báo của người kiểm duyệt: # Cảnh báo đã nhận}}"
       warnings_no_strikes: "Cảnh báo của người kiểm duyệt: Không nhận được cảnh cáo nào"

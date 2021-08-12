@@ -5,6 +5,8 @@
 flarum-ext-welcomebox:
   admin:
     enablepostbox: 'A Welcome Box bekapcsolása vendégeknek'
+    img: 'Kép url (Guest Box)'
+    img-help: 'írd ide a kép URL-jét'
   forum:
     SettingsLink: Beállítások
     discussion: '=> core.ref.discussions'

@@ -1,15 +1,48 @@
 # CHANGELOG
 
 
+<a name="1.10.2"></a>
+## [1.10.2](https://github.com/maicol07/flarum-ext-sso/compare/1.10.1...1.10.2)
+
+> Released on August 09, 2021
+
+### ✨ Features
+- [`fd9bc60`](https://github.com/maicol07/flarum-ext-sso/commit/fd9bc60f9eef914f637aecdc4fd6be16c0af4f88) ✨ Added Typescript config to get Flarum typing definitions
+- [`8b70076`](https://github.com/maicol07/flarum-ext-sso/commit/8b70076deea992c7a69ae45a10d49077edaaef77) **code_tools:** ✨ Added Prettier instead of ESLint
+
+### ⚡ Performance Improvements
+- [`6fbd7f9`](https://github.com/maicol07/flarum-ext-sso/commit/6fbd7f990dd55f2a74dcd34e82f92521f55a1c65) ⚡ Better frontend settings helper
+
+### 🐛 Bug Fixes
+- [`3e24b49`](https://github.com/maicol07/flarum-ext-sso/commit/3e24b492adb415f6b6dd1508523421155dedefdf) New Discussion button opening the Login modal
+
+    Also did some major refactor
+- [`41d1f44`](https://github.com/maicol07/flarum-ext-sso/commit/41d1f44b2507a1eacbcb1ea655b9d53af63739c1) 🐛 Fixed login modal opening when new discussion button is clicked
+- [`ddb3082`](https://github.com/maicol07/flarum-ext-sso/commit/ddb3082801a6ec486490991d4f87c28e58206077) 🐛 Fixed login modal opening when new discussion button is clicked
+- [`f9cb9f4`](https://github.com/maicol07/flarum-ext-sso/commit/f9cb9f4c957fd0ffb9ee3b2b8ff88b19e3b1cd51) 🐛 Wrong app namespace
+
+### ♻ Code Refactoring
+- [`3dce5dc`](https://github.com/maicol07/flarum-ext-sso/commit/3dce5dc3b0d87dff62e7013b6adbe36519551823) Reformatted build action
+- [`edbd507`](https://github.com/maicol07/flarum-ext-sso/commit/edbd507f36832ec95f88eeb83898408e42f804d2) ♻️ Removed old Webpack config
+- [`f17a9a5`](https://github.com/maicol07/flarum-ext-sso/commit/f17a9a5057cb1241f9c56a9118a277ba5526bfa5) ♻️ Removed ESLint comments
+
+### 👷 CI changes
+- [`3233f94`](https://github.com/maicol07/flarum-ext-sso/commit/3233f943c4988562c5ce48c82eb58e2fdee3f7a5) Trigger changelog workflow when JS build has finished
+- [`f244d0f`](https://github.com/maicol07/flarum-ext-sso/commit/f244d0f4d99085740c1ae633a0d1db3aeec3b069) Updated build action
+- [`b8e32e2`](https://github.com/maicol07/flarum-ext-sso/commit/b8e32e23cd3f562af0de63082134504989dadfb6) 👷 Added Flarum Bot to automatically compile JS
+- [`646203c`](https://github.com/maicol07/flarum-ext-sso/commit/646203ce9c6c98d9b9f6c747d82c420e36903c92) 👷 Added conditional commit messages to changelog action
+- [`086bdea`](https://github.com/maicol07/flarum-ext-sso/commit/086bdeae4e9b61b79857eea269ff2640fd10c088) 👷 Updated changelog generation
+
+### Other changes
+- [`5035a00`](https://github.com/maicol07/flarum-ext-sso/commit/5035a005ebc2913dc478499c86ce4174a49d1463) Updated compiled JS
+- [`4145636`](https://github.com/maicol07/flarum-ext-sso/commit/41456364e5f6dc6b086eba83bb33beee4268a5fc) **deps:** ⬆️ Upgraded Flarum Webpack config
+- [`3e99300`](https://github.com/maicol07/flarum-ext-sso/commit/3e993006fb9e97d839010ffa39d7939f8424a5e9) **meta:** Updated extension icon colors for better contrast
+
+
 <a name="1.10.1"></a>
 ## [1.10.1](https://github.com/maicol07/flarum-ext-sso/compare/1.10...1.10.1)
 
 > Released on June 12, 2021
-
-### Release
-- [`0237e22`](https://github.com/maicol07/flarum-ext-sso/commit/0237e224b66838c4a270f4b8ddaefbeeb9967748) 🔖 Updated changelog
-- [`8107b22`](https://github.com/maicol07/flarum-ext-sso/commit/8107b228ac75316d161fa808cd1817d4a868d87e) 🔖 Updated changelog
-- [`bbf508a`](https://github.com/maicol07/flarum-ext-sso/commit/bbf508af582617033cc27d1d59387fd433de438e) 🔖 Updated changelog
 
 ### ⚡ Performance Improvements
 - [`b74c90c`](https://github.com/maicol07/flarum-ext-sso/commit/b74c90cb94c6cf3323614228dcf600f3b1fdf7c4) ⚡ Use dot notation to set array value
@@ -53,9 +86,6 @@
 ## [1.10](https://github.com/maicol07/flarum-ext-sso/compare/1.9...1.10)
 
 > Released on May 22, 2021
-
-### Release
-- [`8753ec6`](https://github.com/maicol07/flarum-ext-sso/commit/8753ec64b3f1c779b8e1df44b77ab496205248f2) 🔖 1.10
 
 ### ✨ Features
 - [`5e58a02`](https://github.com/maicol07/flarum-ext-sso/commit/5e58a02a9c7d0d06433c730c8e13ec3672b8e5f3) ✨ Compatibility with Flarum 1.0

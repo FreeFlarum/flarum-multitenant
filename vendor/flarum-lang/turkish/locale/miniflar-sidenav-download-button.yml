@@ -14,6 +14,7 @@ miniflar-sidenav-download-button:
       enter_link_message: 'Lütfen geçerli bir bağlantı girin.'
       labels:
         add_separator: 'Ayırıcı Eklensin mi?'
+        disable_widget: 'Yerel aracı devre dışı bırakın ve bunun yerine Afrux destekli aracı kullanın'
       separator_order_heading: 'Ayrıcı Sırası'
       separator_order_text: 'Flarum forumunuzun yan menü bölümünde bu araç için ayırıcının konumunu ayarlamaya yönelik olarak bu ayarı düzenleyin. Sayı ne kadar yüksek olursa, ayırıcı yan menü listesinde o kadar yukarda olur (bu değer pozitif veya negatif olabilir).'
   forum:

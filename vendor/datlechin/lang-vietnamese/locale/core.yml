@@ -324,7 +324,7 @@ core:
 
     # These translations are used in the discussion list.
     discussion_list:
-      empty_text: Có vẻ như không có cuộc thảo luận nào ở đây.
+      empty_text: Dường như không có cuộc thảo luận nào ở đây.
       load_more_button: => core.ref.load_more
       mark_as_read_tooltip: Đánh dấu đã đọc
       replied_text: "{username} đăng trả lời lúc {ago}"
@@ -469,7 +469,7 @@ core:
       in_discussion_text: "Trong {discussion}"
       joined_date_text: "Đã tham gia {ago}"
       online_text: Trực tuyến
-      posts_empty_text: Có vẻ như không có bài viết nào ở đây.
+      posts_empty_text: Dường như không có bài viết nào ở đây.
       posts_link: => core.ref.posts
       posts_load_more_button: => core.ref.load_more
       settings_link: => core.ref.settings

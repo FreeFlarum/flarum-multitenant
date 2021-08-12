@@ -1,6 +1,6 @@
 <?php
 
-namespace XEngine\Signature\Model;
+namespace katosdev\Signature\Model;
 
 use Flarum\Api\Event\Serializing;
 use Flarum\Event\PrepareApiAttributes;

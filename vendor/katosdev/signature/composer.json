@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "XEngine\\Signature\\": "src/"
+            "katosdev\\Signature\\": "src/"
         }
     },
     "extra": {

@@ -39,7 +39,7 @@ export default class SignatureSettings extends UserPage {
         items.add(
             'saveSignature',
             <Button className="Button" onclick={() => this.saveSignature()}>
-                {app.translator.trans('Xengine-signature.forum.buttons.save')}
+                {app.translator.trans('signature.forum.buttons.save')}
             </Button>
         );
 
@@ -48,8 +48,8 @@ export default class SignatureSettings extends UserPage {
 
     saveSignature() {
         app.modal.show(SignatureLoadingModal, {
-            titleText: app.translator.trans('Xengine-signature.forum.modal.loading.title'),
-            value: app.translator.trans('Xengine-signature.forum.modal.loading.content'),
+            titleText: app.translator.trans('signature.forum.modal.loading.title'),
+            value: app.translator.trans('signature.forum.modal.loading.content'),
         });
         this.signature = $('.Signature').trumbowyg('html');
 
@@ -65,9 +65,9 @@ export default class SignatureSettings extends UserPage {
     response(response) {
         if (!response.status) {
             if (response.errors) {
-                app.alerts.show({ type: 'error ' }, [app.translator.trans('Xengine-signature.forum.modal.error.title'), '\n', response.errors.map(e => `${e}\n`)]);
+                app.alerts.show({ type: 'error ' }, [app.translator.trans('signature.forum.modal.error.title'), '\n', response.errors.map(e => `${e}\n`)]);
             } else {
-                app.alerts.show({ type: 'error ' }, app.translator.trans('Xengine-signature.forum.modal.error.title'));
+                app.alerts.show({ type: 'error ' }, app.translator.trans('signature.forum.modal.error.title'));
             }
             app.modal.close();
         } else {

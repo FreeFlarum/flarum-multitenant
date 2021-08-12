@@ -16,10 +16,13 @@ askvortsov-pwa:
       colors:
         background_color_text: 'Ez a szín addig használandó, amíg a PWA betöltés alatt van.'
         heading: Színek
+        theme_color_text: 'Ezt a színt néha használják az eszközök, amikor megjelenítik az alkalmazást, például az Android feladatváltóban, a webhelyet körülvevő színként.'
       heading: 'PWA beállítások'
       logo_heading: 'Logók és ikonok'
       logo_size_text: 'Tölts fel egy logót ami {size} x {size} pixel méretűre lesz méretezve.'
+      logo_text: "A progresszív webalkalmazás telepítéséhez legalább egy logót fel kell töltenie. Kérjük, vegye figyelembe, hogy minden logónak négyzet alakúnak kell lennie; ha nem, akkor átméretezik és esetleg kifeszítik.\n\nAz alábbiakban számos méretbeállítás közül választhat. Azt javaslom, hogy próbáljon meg minél több emblémát feltölteni: ez több eszközt támogat.\n\nKérjük, vegye figyelembe, hogy 1 nagy logót tölthet fel a kisebb logók bemeneteire. Például feltölthet 1000 x 1000 képpontos logót az alábbi MINDEN fájlbevitelre. Ha azonban megpróbál 50 x 50 képpont méretű emblémát feltölteni az 512 x 512 -es bemenetre, az nagyon megfeszül.\n"
       maintenance:
+        debug_label: 'Hibakeresési mód? Ez az értesítésekkel kapcsolatos információkat naplózza a "tárolóba/naplókba".'
         heading: 'Teszt mód'
       other:
         force_portrait_text: 'Erőltetett fekvő helyezés?'
@@ -27,12 +30,15 @@ askvortsov-pwa:
       refreshed_message: 'PWA beállítások sikeresen frissítve.'
       status_check_heading: 'Státus ellenőrzés'
       submit_button: Mentés
+      text: 'Állítsa be Flarum webhelyét, hogy progresszív webalkalmazásként fusson! Kérjük, vegye figyelembe, hogy ez nem teszi automatikusan webhelyét az alkalmazásboltba. Ehelyett ez azt jelenti, hogy a felhasználóknak van egy „Hozzáadás a kezdőképernyőhöz” lehetősége az Ön webhelyéhez. Néhány állapotellenőrzést biztosítunk, azonban a legjobb módja annak, hogy teszteljük, ha megpróbáljuk telepíteni (a google -on keressünk utasításokat a progresszív webes alkalmazások telepítésére). Ezenkívül ne feledje, hogy a „telepítse ezt a PWA -t” előugró ablakokat böngészők vezérlik, és a fejlesztők/rendszergazdák/programok nem indíthatják el őket. Javaslom, hogy a webhely dokumentációjában szerepeltesse a PWA telepítésével kapcsolatos utasításokat.'
     status:
       config_no_https: 'A HTTPS kötelező a PWA bekapcsolásához.'
+      key_gen_failed: 'A push értesítésekhez szükséges kulcsok generálása nem sikerült. A teljes hibaüzenet a következő volt: {error}'
       no_logo: 'Legalább egy logó feltöltése kötelező.'
       no_name: 'Név kötelező.'
       possible_https_disabled: 'Az oldal nem HTTPS-ben működik. A HTTPS kötelező a PWA-nak.'
       success: 'Nincs potenciális hiba!'
+      suggest_gmp: 'Úgy tűnik, hogy a gmp PHP bővítmény nincs engedélyezve a szerveren. Nem feltétlenül szükséges, de javíthatja a teljesítményt, és ajánlott. Előfordulhat azonban, hogy egyes megosztott házigazdák nem támogatják.'
   forum:
     alerts:
       optin: 'A push üzenetek be vannak kapcsolva, de nincsenek beállítva az eszközön.'
@@ -57,3 +63,4 @@ askvortsov-pwa:
   views:
     offline:
       header: 'Hálózati kapcsolat hiba'
+      text: 'Ez az alkalmazás hálózati kapcsolatot igényel; offline nem használható. Kérjük, ellenőrizze a kapcsolatot.'

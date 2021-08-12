@@ -1,12 +1,12 @@
 <?php
-namespace XEngine\Signature\Listener;
+namespace katosdev\Signature\Listener;
 
 use Flarum\Extend\Frontend;
 use Flarum\Extend\Routes;
 use Flarum\Extend\Locales;
 use DirectoryIterator;
 use Illuminate\Contracts\Events\Dispatcher;
-use XEngine\Signature\Validation\ValidateSignature;
+use katosdev\Signature\Validation\ValidateSignature;
 
 class AddApplicationAssets
 {
@@ -27,13 +27,13 @@ class AddApplicationAssets
                 __DIR__ . '/../../less/signature.less',
                 __DIR__ . '/../../less/trumbowyg.less',
             ]);
-            $event->addBootstrapper('xengine/signature/main');
+            $event->addBootstrapper('katosdev/signature/main');
         }
         if ($event->isAdmin()) {
             $event->addAssets([
                 __DIR__.'/../../js/admin/dist/extension.js'
             ]);
-            $event->addBootstrapper('xengine/signature/main');
+            $event->addBootstrapper('katosdev/signature/main');
         }
     }
 

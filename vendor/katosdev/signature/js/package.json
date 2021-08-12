@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@cxsquared/signature",
+  "name": "@katosdev/signature",
   "dependencies": {
     "flarum-webpack-config": "^1.0.0",
     "mdarea": "^0.0.10",

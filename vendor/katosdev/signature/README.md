@@ -9,12 +9,12 @@ This extension adds signature support to your Flarum forum!
 ## Installation
 
 ```bash
-composer require katosdev/flarum-ext-signature
+composer require katosdev/signature
 ```
 
 ## Updating
 
 ```bash
-composer update katosdev/flarum-ext-signature
+composer update katosdev/signature
 php flarum cache:clear
 ```

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Contracts\Events\Dispatcher;
-use XEngine\Signature\Validation\ValidateSignature;
-use XEngine\Signature\Model;
+use katosdev\Signature\Validation\ValidateSignature;
+use katosdev\Signature\Model;
 use Flarum\Extend;
 use Flarum\User\User;
 use Flarum\Api\Serializer\UserSerializer;

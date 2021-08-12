@@ -4,6 +4,23 @@
 
 v17development-flarum-badges:
   admin:
+    auto_moderator:
+      action_drivers:
+        badge_id: '徽章 ID'
+        give_badge: 授予徽章
+        remove_badge: 移除徽章
+      badge_selector:
+        loading_badges: 加载徽章中
+        placeholder: 选择徽章
+      metric_drivers:
+        badges_received: 收到徽章
+      not_installed:
+        content: '需要安装额外的扩展。当安装并启用了 <a>Auto Moderator</a> 扩展后，将解锁此功能。此高级功能可以根据设定的条件自动奖励用户徽章，无需管理员人工操作！'
+        dismiss: 不再显示
+        install: 安装
+        title: 自动奖励用户徽章
+      requirement_drivers:
+        has_badge: 已有徽章
     badge:
       description: 徽章描述
       icon: 徽章图标
@@ -11,13 +28,15 @@ v17development-flarum-badges:
       visible: 可见性
       visible_description: 启用此徽章。禁用时，此徽章将不可见。
     badge_category:
+      blockview: 卡片视图
+      blockview_description: 在徽章页采用卡片样式展示所有徽章。此项禁用时，采用默认的列表样式展示。
       description: 分组描述
       enabled: 启用
       enabled_description: 启用此分组。禁用时，所有徽章将不可用且分组被隐藏。
       name: 分组名
     confirm_dialog:
       'no': 取消
-      title: 确认
+      title: 危险！
       'yes': 是
     confirm_messages:
       delete_badge: 确定要删除这个徽章吗？所有用户将失去此徽章，此操作不可撤销。
@@ -27,7 +46,8 @@ v17development-flarum-badges:
     new_badge: 新建徽章
     nothing_here_yet: 您还没有创建任何徽章或分组。
     permissions:
-      give_badge: 分配用户徽章
+      badge_detail_users: 在徽章详情页列出用户
+      give_badge: 授予用户徽章
       take_badge: 撤除用户徽章
     uncategorized: 未命名分组
     update_badge: 更新徽章
@@ -37,14 +57,17 @@ v17development-flarum-badges:
     all_users: 查看所有用户
     badge:
       badge: 徽章
+      badge_details: 徽章详情
       badges: 徽章
       category: 徽章分组
       description: 徽章描述
-      earned_count: '<b>{count} 用户</b> 已获得此徽章|<b>{count} 用户</b> 已获得此徽章'
+      earned_by_count: '{count, plural, one {已授予 <b># 位用户</b>} other {已授予 <b># 位用户</b>}}'
+      earned_count: '{count, plural, one {<b># 位用户</b>获得此徽章} other {<b># 位用户</b>获得此徽章}}'
       earned_on: 徽章授予于
-      earning_reason: 徽章授予理由
+      earning_reason: 授予理由
       name: 徽章名
       no_earning_reason: 无授予理由
+      received_on: '获得于 {date}'
       update_earning_reason: 更新授予理由
     badge_information: 徽章详情
     give_badge: 授予徽章
@@ -52,8 +75,12 @@ v17development-flarum-badges:
       give_badge: 授予徽章
       remove_badge: 移除徽章
       remove_badge_confirm: 确定要移除该用户的这个徽章吗？
+    no_received: 没有人获得此徽章。
+    notification:
+      settings: 获得徽章
+      title: 获得新徽章
     select_badge: 选择徽章
     uncategorized: '=> v17development-flarum-badges.admin.uncategorized'
     update_badge: 更新徽章
-    user_has_badge: 该用户已拥有此徽章。
+    user_has_badge: 已授予该用户此徽章。
     user_no_badges: 该用户尚未拥有徽章。

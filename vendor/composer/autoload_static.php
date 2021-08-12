@@ -82,6 +82,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
         ),
+        'k' => 
+        array (
+            'katosdev\\Signature\\' => 19,
+        ),
         'a' => 
         array (
             'axy\\sourcemap\\' => 14,
@@ -96,10 +100,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Y' => 
         array (
             'Yannis\\ConfixTheme\\' => 19,
-        ),
-        'X' => 
-        array (
-            'XEngine\\Signature\\' => 18,
         ),
         'W' => 
         array (
@@ -411,6 +411,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
         ),
+        'katosdev\\Signature\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/katosdev/signature/src',
+        ),
         'axy\\sourcemap\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/sourcemap',
@@ -434,10 +438,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Yannis\\ConfixTheme\\' => 
         array (
             0 => __DIR__ . '/..' . '/yannisme/confixtheme/src',
-        ),
-        'XEngine\\Signature\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/katosdev/signature/src',
         ),
         'Wohali\\OAuth2\\Client\\' => 
         array (
@@ -845,8 +845,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/collections',
-            1 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            1 => __DIR__ . '/..' . '/illuminate/collections',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
