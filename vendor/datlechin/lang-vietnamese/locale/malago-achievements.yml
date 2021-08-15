@@ -81,3 +81,8 @@ malago-achievements:
         <li>Giới thiệu chiều rộng và chiều cao của biểu tượng.</li>
         <li>Không bắt buộc: Nếu hình ảnh có nhiều biểu tượng thành tích, bạn có thể chọn hàng và cột để hiển thị cho biểu tượng.</li>
       add_delete_users: Thêm/Xóa thành tích khỏi người dùng
+      show: "Hiển thị danh sách thành tựu trên:"
+    settings:
+      show-post-footer: Chân trang bài viết
+      show-user-card: Thẻ người dùng
+      link-left-column: Thêm liên kết đến Thành tựu trên thanh bên

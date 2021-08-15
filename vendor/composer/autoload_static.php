@@ -66,6 +66,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
+        '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
@@ -206,6 +207,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\AwsS3v3\\' => 25,
             'League\\Flysystem\\' => 17,
+            'League\\Csv\\' => 11,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
             'Laminas\\ZendFrameworkBridge\\' => 28,
@@ -255,7 +257,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Illuminate\\Bus\\' => 15,
             'IanM\\Synopsis\\' => 14,
             'IanM\\LevelRanks\\' => 16,
-            'IanM\\ISO639\\' => 12,
             'IanM\\HtmlHead\\' => 14,
         ),
         'H' => 
@@ -385,12 +386,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
             'Afrux\\TopPosters\\' => 17,
-            'Afrux\\ThemeBase\\' => 16,
             'Afrux\\OnlineUsers\\' => 18,
             'Afrux\\News\\' => 11,
             'Afrux\\ForumWidgets\\' => 19,
             'Afrux\\ForumStats\\' => 17,
-            'Afrux\\Asirem\\' => 13,
         ),
     );
 
@@ -751,6 +750,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'League\\Csv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/csv/src',
+        ),
         'League\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/config/src',
@@ -845,8 +848,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -912,10 +915,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'IanM\\LevelRanks\\' => 
         array (
             0 => __DIR__ . '/..' . '/ianm/level-ranks/src',
-        ),
-        'IanM\\ISO639\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ianm/iso-639/src',
         ),
         'IanM\\HtmlHead\\' => 
         array (
@@ -1338,10 +1337,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/afrux/top-posters-widget/src',
         ),
-        'Afrux\\ThemeBase\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/afrux/flarum-theme-base/src',
-        ),
         'Afrux\\OnlineUsers\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/online-users-widget/src',
@@ -1357,10 +1352,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Afrux\\ForumStats\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/forum-stats-widget/src',
-        ),
-        'Afrux\\Asirem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/afrux/asirem/src',
         ),
     );
 

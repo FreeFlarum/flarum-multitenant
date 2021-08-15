@@ -3,12 +3,21 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 fof-socialprofile:
+  admin:
+    permissions:
+      editAny: 'Herhangi bir sosyal profili düzenle'
+      editOwn: 'Kendi sosyal profilini düzenle'
+      view: 'Sosyal profili göster'
+    settings:
+      allow_external_favicons_label: 'Harici sitelerin simgelerini düzenlemeye izin ver'
   forum:
     edit:
-      add: Ekle
+      add: 'Sosyal medyana düğme ekle'
       delete: Sil
       deletetitle: 'Düğmeyi Sil'
-      edit: Düzenle
+      edit: 'Sosyal medya düğmelerini düzenle'
+      favicon: 'Site simgesi'
+      grey_favicon: 'Gri Site Simgesi'
       headtitle: 'Düğmeleri Düzenle'
       save_disabled_fetching_favicons: 'Bir veya daha fazla simge getiriliyor. Lütfen bekle.'
       submit: Kaydet

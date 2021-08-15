@@ -73,7 +73,8 @@ export default class AchievementsPage extends ExtensionPage {
 
     this.settings = [
       'show-post-footer',
-      'show-user-card'
+      'show-user-card',
+      'link-left-column'
     ];
 
     this.settings.forEach((key) => (this.values[key] = Stream(Number(settings[this.addPrefix(key)]))));
@@ -134,6 +135,13 @@ export default class AchievementsPage extends ExtensionPage {
                       onchange: this.values['show-user-card'],
                   },
                   app.translator.trans('malago-achievements.admin.settings.show-user-card')
+                ),
+                Switch.component(
+                  {
+                      state: this.values['link-left-column']() || false,
+                      onchange: this.values['link-left-column'],
+                  },
+                  app.translator.trans('malago-achievements.admin.settings.link-left-column')
                 ),
                   Button.component({
                     type: 'submit',

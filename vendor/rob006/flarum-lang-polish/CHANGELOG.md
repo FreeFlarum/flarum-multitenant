@@ -2,6 +2,18 @@ CHANGELOG
 =========
 
 
+0.5.7 (2021-08-14)
+------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/socialprofile`](https://github.com/FriendsOfFlarum/socialprofile)
+* [`katosdev/signature`](https://github.com/katosdev/signature)
+
+
+Wszystkie zmiany: [v0.5.6...v0.5.7](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.6...v0.5.7).
+
+
 0.5.6 (2021-08-03)
 ------------------
 

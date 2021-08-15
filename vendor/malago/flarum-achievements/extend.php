@@ -99,4 +99,5 @@ return [
     (new Extend\Settings)
         ->serializeToForum('malago-achievements.show-post-footer', 'malago-achievements.show-post-footer')
         ->serializeToForum('malago-achievements.show-user-card', 'malago-achievements.show-user-card')
+        ->serializeToForum('malago-achievements.link-left-column', 'malago-achievements.link-left-column')
 ];

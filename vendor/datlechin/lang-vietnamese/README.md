@@ -50,6 +50,8 @@ php flarum cache:clear
 <details>
   <summary>FriendsOfFlarum</summary>
   <ul>
+    <li><a href="https://github.com/FriendsOfFlarum/passport">Passport</a> (1.0.0)</li>
+    <li><a href="https://github.com/FriendsOfFlarum/socialprofile">Social Profile</a> (1.1.0)</li>
     <li><a href="https://github.com/FriendsOfFlarum/doorman">Doorman</a> (1.0.0)</li>
     <li><a href="https://github.com/FriendsOfFlarum/filter">Filter</a> (1.0.1)</li>
     <li><a href="https://github.com/FriendsOfFlarum/gamification">Gamification</a> (1.0.0)</li>
@@ -134,6 +136,8 @@ php flarum cache:clear
 <details>
   <summary>justoverclockl</summary>
   <ul>
+    <li><a href="https://github.com/justoverclockl/edit-posts">Post Controls Buttons</a> (0.1.1)</li>
+    <li><a href="https://github.com/justoverclockl/events-countdown">Events Countdown Widget</a> (0.1.8)</li>
     <li><a href="https://github.com/justoverclockl/custom-header">CustomHeader</a> (0.1.4)</li>
     <li><a href="https://github.com/justoverclockl/header-slideshow">HeaderSlideShow</a> (0.1.1)</li>
     <li><a href="https://github.com/justoverclockl/last-tweet">Last Tweet</a> (0.1.1)</li>
@@ -153,6 +157,8 @@ php flarum cache:clear
 <details>
   <summary>Others</summary>
   <ul>
+    <li><a href="https://github.com/Nearata/flarum-ext-tags-color-generator">Tags Color Generator</a> (v2.0.0)</li>
+    <li><a href="https://github.com/migratetoflarum/fake-data">Fake Data</a> (1.0.1)</li>
     <li><a href="https://github.com/android-com-pl/mobile-tab">Mobile tab</a> (1.0.3)</li>
     <li><a href="https://github.com/afrux/online-users-widget">Online Users Widget</a> (v0.1.1)</li>
     <li><a href="https://github.com/afrux/forum-stats-widget">Forum Stats Widget</a> (v0.1.0)</li>

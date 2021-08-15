@@ -26,7 +26,6 @@
         "docs": "https://flarum.org/docs/"
     },
     "require": {
-        "afrux/asirem": "^0.1.2",
         "afrux/forum-widgets-bundle": "*",
         "afrux/forum-widgets-core": "^0.1.3",
         "antoinefr/flarum-ext-money": "*",
@@ -139,7 +138,7 @@
         "jslirola/flarum-ext-login2seeplus": "*",
         "justoverclock/custom-header": "^0.1.4",
         "justoverclock/flarum-ext-infocards": "^0.1.5",
-        "katosdev/signature": "^1.0",
+        "katosdev/signature": "^1.1",
         "kilowhat/flarum-ext-audit-free": "^1.4",
         "kyrne/whisper": "^0.1.2",
         "league/flysystem-aws-s3-v3": "*",

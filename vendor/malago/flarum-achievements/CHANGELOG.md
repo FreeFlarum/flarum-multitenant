@@ -1,3 +1,6 @@
+### 0.5.0
+- Added option to show/hide Achievements link on the sidebar
+
 ### 0.4.3
 - Fixed bug with new achievement modal
 

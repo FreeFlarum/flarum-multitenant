@@ -4,5 +4,27 @@
 
 reflar-recache:
   admin:
+    nav:
+      desc: 'Önbellekleme ayarlarını yapılandırın.'
     page:
       check_button: 'Kontrol Et'
+      connection_failed: 'Bağlantı kurulamadı.'
+      heading: Ayarlar
+      redis:
+        check: 'Kaydetmeden önce bağlantıyı kontrol edin!!'
+        database: Veritabanı
+        failed: 'Ayarlar kaydedilemedi, lütfen "vendor/flarum/core/src/Database/" öğesinin sunucunuz tarafından yazılabilir olduğundan emin olun'
+        fillin: 'Lütfen Redis formunu eksiksiz doldurun'
+        host: Host
+        label: Redis
+        password: Şifre
+        port: Port
+        success: 'Redis sunucusuna başarıyla bağlanıldı.'
+      switches:
+        avatar: 'Resim iyileştirmesini etkinleştir'
+        cache: 'Önbelleği etkinleştir'
+        lazy: 'Resimler için tembel yüklemeyi etkinleştir'
+        query: 'Sorgu Önbelleğini Etkinleştir (Yalnızca Redis)'
+  forum:
+    redis:
+      error_alert: 'Redis bağlantısı {time} itibariyle başarısız oldu. Lütfen ayarlarınızı kontrol edin, forum performansı büyük ölçüde zarar görecektir.'

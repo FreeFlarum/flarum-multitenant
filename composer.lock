@@ -4,135 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c54c6442258d66e5d8d4050689c7e3db",
+    "content-hash": "020c7ec285c35754ac389676545bfa76",
     "packages": [
-        {
-            "name": "afrux/asirem",
-            "version": "v0.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/afrux/asirem.git",
-                "reference": "851c55516d2ab279928a0a0318ca40d49644dd98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/afrux/asirem/zipball/851c55516d2ab279928a0a0318ca40d49644dd98",
-                "reference": "851c55516d2ab279928a0a0318ca40d49644dd98",
-                "shasum": ""
-            },
-            "require": {
-                "afrux/flarum-theme-base": "^0.1.0",
-                "flarum/core": "^1.0.0"
-            },
-            "require-dev": {
-                "afrux/flarum-theme-base": "0.1.x-dev",
-                "sycho/flarum-uikit": "0.1.x-dev"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.x-dev"
-                },
-                "flarum-extension": {
-                    "title": "Asirem",
-                    "category": "theme",
-                    "optional-dependencies": [
-                        "flarum/tags",
-                        "flarum/approval",
-                        "sycho/flarum-advanced-extension-categories"
-                    ],
-                    "icon": {
-                        "image": "icon.svg"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Afrux\\Asirem\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sami Mazouz",
-                    "email": "ilyasmazouz@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The weird Flarum theme made with potatoes as fuel, by Afrux.",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/27939",
-                "issues": "https://github.com/afrux/asirem/issues",
-                "source": "https://github.com/afrux/asirem"
-            },
-            "funding": [
-                {
-                    "url": "https://www.buymeacoffee.com/sycho",
-                    "type": "other"
-                }
-            ],
-            "time": "2021-08-04T09:31:30+00:00"
-        },
-        {
-            "name": "afrux/flarum-theme-base",
-            "version": "v0.1.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/afrux/flarum-theme-base.git",
-                "reference": "f8f19deea7def18921145be6d42934b28561fef2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/afrux/flarum-theme-base/zipball/f8f19deea7def18921145be6d42934b28561fef2",
-                "reference": "f8f19deea7def18921145be6d42934b28561fef2",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.0.0"
-            },
-            "suggest": {
-                "sycho/flarum-advanced-extension-categories": "Allows different categorization for dashboard extensions."
-            },
-            "type": "flarum-library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Afrux\\ThemeBase\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sami Mazouz",
-                    "email": "ilyasmazouz@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Base package for shared code between Afrux themes",
-            "keywords": [
-                "base",
-                "flarum",
-                "themes"
-            ],
-            "support": {
-                "issues": "https://github.com/afrux/flarum-theme-base/issues",
-                "source": "https://github.com/afrux/flarum-theme-base/tree/v0.1.6"
-            },
-            "time": "2021-07-07T08:50:30+00:00"
-        },
         {
             "name": "afrux/forum-stats-widget",
             "version": "v0.1.0",
@@ -1100,16 +973,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.190.0",
+            "version": "3.190.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4700c27227649ed7e2ea09028cca1c884ab2c41b"
+                "reference": "8ca6a5f9834de3eb3fb84b28fc12c9088bc01293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4700c27227649ed7e2ea09028cca1c884ab2c41b",
-                "reference": "4700c27227649ed7e2ea09028cca1c884ab2c41b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/8ca6a5f9834de3eb3fb84b28fc12c9088bc01293",
+                "reference": "8ca6a5f9834de3eb3fb84b28fc12c9088bc01293",
                 "shasum": ""
             },
             "require": {
@@ -1184,9 +1057,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.2"
             },
-            "time": "2021-08-11T18:16:23+00:00"
+            "time": "2021-08-13T18:12:28+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -1961,12 +1834,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/datlechin/lang-vietnamese.git",
-                "reference": "2c3a68d1712bec4955446d8bd2d9789e0cf3891d"
+                "reference": "9b903f5db677f528f423c01b66376d06cb32d553"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/datlechin/lang-vietnamese/zipball/2c3a68d1712bec4955446d8bd2d9789e0cf3891d",
-                "reference": "2c3a68d1712bec4955446d8bd2d9789e0cf3891d",
+                "url": "https://api.github.com/repos/datlechin/lang-vietnamese/zipball/9b903f5db677f528f423c01b66376d06cb32d553",
+                "reference": "9b903f5db677f528f423c01b66376d06cb32d553",
                 "shasum": ""
             },
             "require": {
@@ -2024,7 +1897,7 @@
                 "issues": "https://github.com/datlechin/lang-vietnamese/issues",
                 "source": "https://github.com/datlechin/lang-vietnamese"
             },
-            "time": "2021-08-08T02:36:39+00:00"
+            "time": "2021-08-14T18:36:52+00:00"
         },
         {
             "name": "davwheat/custom-sidenav-links",
@@ -2159,16 +2032,16 @@
         },
         {
             "name": "dflydev/dot-access-data",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
-                "reference": "e04ff030d24a33edc2421bef305e32919dd78fc3"
+                "reference": "0992cc19268b259a39e86f296da5f0677841f42c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/e04ff030d24a33edc2421bef305e32919dd78fc3",
-                "reference": "e04ff030d24a33edc2421bef305e32919dd78fc3",
+                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/0992cc19268b259a39e86f296da5f0677841f42c",
+                "reference": "0992cc19268b259a39e86f296da5f0677841f42c",
                 "shasum": ""
             },
             "require": {
@@ -2228,9 +2101,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
-                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.0"
+                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.1"
             },
-            "time": "2021-01-01T22:08:42+00:00"
+            "time": "2021-08-13T13:06:58+00:00"
         },
         {
             "name": "dflydev/fig-cookies",
@@ -3572,16 +3445,16 @@
         },
         {
             "name": "flarum-lang/italian",
-            "version": "1.0.21",
+            "version": "1.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum-lang/italian.git",
-                "reference": "4febfe32bdaddf885d4bf189e37aa88ce835e7df"
+                "reference": "4b44dfd97f74b6769a9888eba80ec08380704837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum-lang/italian/zipball/4febfe32bdaddf885d4bf189e37aa88ce835e7df",
-                "reference": "4febfe32bdaddf885d4bf189e37aa88ce835e7df",
+                "url": "https://api.github.com/repos/flarum-lang/italian/zipball/4b44dfd97f74b6769a9888eba80ec08380704837",
+                "reference": "4b44dfd97f74b6769a9888eba80ec08380704837",
                 "shasum": ""
             },
             "require": {
@@ -3644,7 +3517,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-11T09:50:37+00:00"
+            "time": "2021-08-14T12:50:35+00:00"
         },
         {
             "name": "flarum-lang/malaysian",
@@ -4236,16 +4109,16 @@
         },
         {
             "name": "flarum-lang/turkish",
-            "version": "1.0.4.9",
+            "version": "1.0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum-lang/turkish.git",
-                "reference": "d6e5f65d5fc8db259e91894e5d3d344b755a9679"
+                "reference": "39948f75036fdcf5ea9c7410ac000355f2a4f681"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum-lang/turkish/zipball/d6e5f65d5fc8db259e91894e5d3d344b755a9679",
-                "reference": "d6e5f65d5fc8db259e91894e5d3d344b755a9679",
+                "url": "https://api.github.com/repos/flarum-lang/turkish/zipball/39948f75036fdcf5ea9c7410ac000355f2a4f681",
+                "reference": "39948f75036fdcf5ea9c7410ac000355f2a4f681",
                 "shasum": ""
             },
             "require": {
@@ -4301,7 +4174,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-08-08T21:21:18+00:00"
+            "time": "2021-08-14T12:51:18+00:00"
         },
         {
             "name": "flarum/approval",
@@ -6118,22 +5991,22 @@
         },
         {
             "name": "fof/discussion-language",
-            "version": "1.0.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/discussion-language.git",
-                "reference": "ad1a0efb8a670d88010f7a5c34e1033f6a6e22b6"
+                "reference": "84aa2da57b3627051a3278296f413098d7050082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-language/zipball/ad1a0efb8a670d88010f7a5c34e1033f6a6e22b6",
-                "reference": "ad1a0efb8a670d88010f7a5c34e1033f6a6e22b6",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-language/zipball/84aa2da57b3627051a3278296f413098d7050082",
+                "reference": "84aa2da57b3627051a3278296f413098d7050082",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^1.0.0",
                 "fof/extend": "^1.0.0",
-                "ianm/iso-639": "^1.0",
+                "league/csv": "^9.7",
                 "rinvex/countries": "^6.1.2 || ^7.0.1"
             },
             "type": "flarum-extension",
@@ -6186,7 +6059,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-06-29T13:46:30+00:00"
+            "time": "2021-08-14T23:18:49+00:00"
         },
         {
             "name": "fof/discussion-thumbnail",
@@ -8066,16 +7939,16 @@
         },
         {
             "name": "fof/socialprofile",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/socialprofile.git",
-                "reference": "890f1ccef03ce2f1144a357b9afa928dfd46380f"
+                "reference": "bdd79a762d6e63f7e03d2befe1f78298126f99f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/890f1ccef03ce2f1144a357b9afa928dfd46380f",
-                "reference": "890f1ccef03ce2f1144a357b9afa928dfd46380f",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/bdd79a762d6e63f7e03d2befe1f78298126f99f8",
+                "reference": "bdd79a762d6e63f7e03d2befe1f78298126f99f8",
                 "shasum": ""
             },
             "require": {
@@ -8131,7 +8004,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2021-05-25T07:25:05+00:00"
+            "time": "2021-08-13T01:14:36+00:00"
         },
         {
             "name": "fof/spamblock",
@@ -9244,53 +9117,6 @@
                 "source": "https://github.com/imorland/html-head"
             },
             "time": "2021-05-20T16:42:49+00:00"
-        },
-        {
-            "name": "ianm/iso-639",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imorland/php-iso-639.git",
-                "reference": "1dff6806fcb714ff62e3d20efea21d92383d5a6d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imorland/php-iso-639/zipball/1dff6806fcb714ff62e3d20efea21d92383d5a6d",
-                "reference": "1dff6806fcb714ff62e3d20efea21d92383d5a6d",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "IanM\\ISO639\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Muhammad Zamroni",
-                    "email": "halo@matriphe.com"
-                }
-            ],
-            "description": "PHP library to convert ISO-639-1 code to language name.",
-            "keywords": [
-                "639",
-                "iso",
-                "iso-639",
-                "lang",
-                "language",
-                "laravel"
-            ],
-            "support": {
-                "source": "https://github.com/imorland/php-iso-639/tree/1.0"
-            },
-            "time": "2020-12-24T19:20:38+00:00"
         },
         {
             "name": "ianm/level-ranks",
@@ -11440,21 +11266,21 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "0d57f20aa03129ee7ef5f690e634884315d4238c"
+                "reference": "2df87709f44b0dd733df86aef0830dce9b1f0f13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/0d57f20aa03129ee7ef5f690e634884315d4238c",
-                "reference": "0d57f20aa03129ee7ef5f690e634884315d4238c",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2df87709f44b0dd733df86aef0830dce9b1f0f13",
+                "reference": "2df87709f44b0dd733df86aef0830dce9b1f0f13",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "league/config": "^1.1",
+                "league/config": "^1.1.1",
                 "php": "^7.4 || ^8.0",
                 "psr/event-dispatcher": "^1.0",
                 "symfony/polyfill-php80": "^1.15"
@@ -11547,24 +11373,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-31T19:15:22+00:00"
+            "time": "2021-08-14T14:06:04+00:00"
         },
         {
             "name": "league/config",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/config.git",
-                "reference": "20d42d88f12a76ff862e17af4f14a5a4bbfd0925"
+                "reference": "a9d39eeeb6cc49d10a6e6c36f22c4c1f4a767f3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/config/zipball/20d42d88f12a76ff862e17af4f14a5a4bbfd0925",
-                "reference": "20d42d88f12a76ff862e17af4f14a5a4bbfd0925",
+                "url": "https://api.github.com/repos/thephpleague/config/zipball/a9d39eeeb6cc49d10a6e6c36f22c4c1f4a767f3e",
+                "reference": "a9d39eeeb6cc49d10a6e6c36f22c4c1f4a767f3e",
                 "shasum": ""
             },
             "require": {
-                "dflydev/dot-access-data": "^3.0",
+                "dflydev/dot-access-data": "^3.0.1",
                 "nette/schema": "^1.2",
                 "php": "^7.4 || ^8.0"
             },
@@ -11629,7 +11455,91 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-19T15:52:37+00:00"
+            "time": "2021-08-14T12:15:32+00:00"
+        },
+        {
+            "name": "league/csv",
+            "version": "9.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "0ec57e8264ec92565974ead0d1724cf1026e10c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/0ec57e8264ec92565974ead0d1724cf1026e10c1",
+                "reference": "0ec57e8264ec92565974ead0d1724cf1026e10c1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpstan/phpstan": "^0.12.0",
+                "phpstan/phpstan-phpunit": "^0.12.0",
+                "phpstan/phpstan-strict-rules": "^0.12.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "ext-dom": "Required to use the XMLConverter and or the HTMLConverter classes",
+                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSV data manipulation made easy in PHP",
+            "homepage": "http://csv.thephpleague.com",
+            "keywords": [
+                "convert",
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "transform",
+                "write"
+            ],
+            "support": {
+                "docs": "https://csv.thephpleague.com",
+                "issues": "https://github.com/thephpleague/csv/issues",
+                "rss": "https://github.com/thephpleague/csv/releases.atom",
+                "source": "https://github.com/thephpleague/csv"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-04-17T16:32:08+00:00"
         },
         {
             "name": "league/flysystem",
@@ -12366,16 +12276,16 @@
         },
         {
             "name": "malago/flarum-achievements",
-            "version": "0.4.3",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/malago86/flarum-achievements.git",
-                "reference": "cfa5945345fd116945b6016dd1f44c6dbb0f160d"
+                "reference": "438c21fd160c030bdbcd627f32a944c774426bff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/malago86/flarum-achievements/zipball/cfa5945345fd116945b6016dd1f44c6dbb0f160d",
-                "reference": "cfa5945345fd116945b6016dd1f44c6dbb0f160d",
+                "url": "https://api.github.com/repos/malago86/flarum-achievements/zipball/438c21fd160c030bdbcd627f32a944c774426bff",
+                "reference": "438c21fd160c030bdbcd627f32a944c774426bff",
                 "shasum": ""
             },
             "require": {
@@ -12419,7 +12329,7 @@
                 "issues": "https://github.com/malago86/flarum-achievements/issues",
                 "source": "https://github.com/malago86/flarum-achievements"
             },
-            "time": "2021-07-22T20:58:56+00:00"
+            "time": "2021-08-12T22:38:47+00:00"
         },
         {
             "name": "matteocontrini/flarum-imgur-upload",
@@ -14773,16 +14683,16 @@
         },
         {
             "name": "rob006/flarum-lang-polish",
-            "version": "v0.5.6",
+            "version": "v0.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006-software/flarum-lang-polish.git",
-                "reference": "950f9be3c3439683e88ce1231946962c4b1efbbd"
+                "reference": "f194e90cfe78e25f377bcbe267e430076ee43db1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/950f9be3c3439683e88ce1231946962c4b1efbbd",
-                "reference": "950f9be3c3439683e88ce1231946962c4b1efbbd",
+                "url": "https://api.github.com/repos/rob006-software/flarum-lang-polish/zipball/f194e90cfe78e25f377bcbe267e430076ee43db1",
+                "reference": "f194e90cfe78e25f377bcbe267e430076ee43db1",
                 "shasum": ""
             },
             "require": {
@@ -14831,7 +14741,7 @@
                 "issues": "https://github.com/rob006-software/flarum-lang-polish/issues",
                 "source": "https://github.com/rob006-software/flarum-lang-polish"
             },
-            "time": "2021-08-03T21:16:49+00:00"
+            "time": "2021-08-14T14:49:53+00:00"
         },
         {
             "name": "s9e/regexp-builder",

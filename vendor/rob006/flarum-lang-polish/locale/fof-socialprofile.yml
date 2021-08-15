@@ -3,13 +3,22 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 fof-socialprofile:
+  admin:
+    permissions:
+      editAny: 'Edytowanie cudzych linków do mediów społecznościowych'
+      editOwn: 'Edytowanie własnych linków do mediów społecznościowych'
+      view: 'Przeglądanie linków do mediów społecznościowych'
+    settings:
+      allow_external_favicons_label: 'Zezwalaj na używanie zewnętrznych ikon'
   forum:
     edit:
-      add: Dodaj
+      add: 'Dodaj linki do mediów społecznościowych'
       delete: Usuń
-      deletetitle: 'Usuń przycisk'
-      edit: Edytuj
-      headtitle: 'Edytuj przyciski'
+      deletetitle: 'Usuń link'
+      edit: 'Edytuj linki do mediów społecznościowych'
+      favicon: Favikona
+      grey_favicon: 'Szara favikona'
+      headtitle: 'Edytuj linki'
       save_disabled_fetching_favicons: 'Ikony są pobierane, proszę czekać.'
       submit: Zapisz
       title: Tytuł

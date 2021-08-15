@@ -22,8 +22,10 @@ kilowhat-formulaire:
       seeOwnDiscussion: '=> kilowhat-formulaire.ref.permissions.seeOwnDiscussion'
       seeOwnUser: '=> kilowhat-formulaire.ref.permissions.seeOwnUser'
     settings:
+      checkbox-style: 'Onay kutusu stili'
       history-controls: 'Gönderim sayfasında geri / ileri kontrollerini göster'
       max-file-size: 'Belge boyutu üst limiti (kB)'
+      radio-style: 'Tek seçenek stili'
       side-nav-on-submission: 'Gönderim sayfasında yan menüyü göster'
       title: 'Form genel ayarları'
   forum:

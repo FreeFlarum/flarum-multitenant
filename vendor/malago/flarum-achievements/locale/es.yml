@@ -85,3 +85,4 @@ malago-achievements:
     settings:
       show-post-footer: Al pie de cada mensaje
       show-user-card: En la tarjeta de usuario
+      link-left-column: Añadir enlace a Logros en la barra lateral

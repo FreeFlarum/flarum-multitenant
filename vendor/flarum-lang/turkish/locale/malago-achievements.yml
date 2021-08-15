@@ -66,6 +66,7 @@ malago-achievements:
       list_heading: Başarımlar
       show: 'Başarım listesini şurada göster:'
     settings:
+      link-left-column: 'Yan menüye Başarımlar bağlantısı ekle'
       show-post-footer: 'Her gönderinin altında'
       show-user-card: 'Kullanıcı kartlarında'
   forum:

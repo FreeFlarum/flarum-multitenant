@@ -29,7 +29,9 @@ import UserCard from 'flarum/components/UserCard'
 app.initializers.add('malago-achievements', app => {
   app.routes['achievements'] = { path: '/achievements', component: AchievementsPage };
   extend(IndexPage.prototype, 'navItems', function (items) {
-    if (!app.session.user) {
+    const here = app.forum.attribute('malago-achievements.link-left-column');
+
+    if (!app.session.user || here!=1) {
         return;
     }
     items.add('achievements', <LinkButton icon="fas fa-trophy" href={app.route('achievements')}>
