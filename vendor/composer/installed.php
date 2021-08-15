@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c1c8aa99bfb9b3bb553f9ee8492b63b616dbb335',
+        'reference' => '6913514e3b3d4f488895b9926adbbd367d3e301d',
         'name' => 'flarum/flarum',
         'dev' => false,
     ),
@@ -759,7 +759,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c1c8aa99bfb9b3bb553f9ee8492b63b616dbb335',
+            'reference' => '6913514e3b3d4f488895b9926adbbd367d3e301d',
             'dev_requirement' => false,
         ),
         'flarum/lang-english' => array(
