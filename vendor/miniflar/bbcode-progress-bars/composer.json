@@ -1,0 +1,48 @@
+{
+    "name": "miniflar/bbcode-progress-bars",
+    "description": "Embed progress bars inside Flarum posts using BBCode.",
+    "keywords": [
+        "flarum",
+        "bbcode",
+        "progress-bars",
+        "0E800",
+        "extension-revival"
+    ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/ralkage"
+        }
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "homepage": "https://ralkage.com",
+    "support": {
+        "issues": "https://github.com/miniflar/bbcode-progress-bars/issues",
+        "source": "https://github.com/miniflar/bbcode-progress-bars",
+        "forum": "https://discuss.flarum.org/d/28694"
+    },
+    "require": {
+        "flarum/core": "^1.0.0",
+        "flarum/bbcode": "^1.0.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "MiniFLAR BBCode Progress Bars",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-bars",
+                "backgroundColor": "#5e247e",
+                "color": "#eb6529"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "miniFLAR\\BBCodeProgressBars\\": "src/"
+        }
+    },
+    "extiverse": {
+        "discuss": "https://discuss.flarum.org/d/28694"
+    }
+}

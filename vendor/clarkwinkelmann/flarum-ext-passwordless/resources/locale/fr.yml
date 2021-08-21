@@ -1,0 +1,28 @@
+clarkwinkelmann-passwordless:
+    forum:
+        sign-up:
+            how-it-works: Un lien de login vous sera envoyé par email
+            link-sent: Un lien de login vous a été envoyé par email. Vérifiez votre boîte de réception. <a>Envoyer à nouveau</a>
+            email: Email
+            login-with-password: Vous avez déjà un mot de passe ? <a>Connexion avec mot de passe</a>
+            login-without-password: Votre compte n'a pas de mot de passe ? <a>Connexion via email</a>
+
+    admin:
+        settings:
+            passwordless-login-by-default: Login sans mot de passe par défaut dans la fenêtre de login
+            hide-sign-up-password: Cacher le champ mot de passe lors de l'inscription
+            token-life: Durée de vie des tokens en minutes
+            mail-footer: Texte dans le pied de page des emails
+
+    api:
+        request-throttle-error: Veuillez patienter quelques secondes avant de demander un nouveau lien
+        expired-token-error: Ce lien de login a expiré
+        invalid-token-error: Ce lien de login est invalide
+
+    mail:
+        subject: Votre lien de login pour {title}
+        message: Vous recevez ce message car vous avez demandé un lien de login pour votre compte sur {domain}.
+        link: Cliquez ici pour vous connecter
+        expires: Le lien expirera dans {minutes} minutes.
+        alternative: 'Vous pouvez également saisir ce mot de passe à usage unique durant le login: {token}.'
+        footer: Envoyé par {title}

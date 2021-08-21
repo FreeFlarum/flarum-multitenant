@@ -8,6 +8,7 @@
         }
     ],
     "type": "flarum-extension",
+    "license": "MIT",
     "require": {
         "flarum/core": "^1.0.0",
         "symfony/dom-crawler":"^5.1",
@@ -25,8 +26,8 @@
             "category": "feature",
             "icon" : {
                 "name" : "fas fa-pen-square",
-                "backgroundColor" : "#000",
-                "color": "#DC3522"
+                "backgroundColor" : "#f55c7a",
+                "color": "#ffffff"
             }
         }
     }

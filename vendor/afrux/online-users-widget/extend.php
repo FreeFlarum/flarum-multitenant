@@ -11,7 +11,8 @@
 
 namespace Afrux\OnlineUsers;
 
-use Flarum\Api\Serializer\ForumSerializer;
+use Flarum\Api\Serializer as FlarumSerializer;
+use Flarum\Api\Controller\ShowForumController;
 use Flarum\Extend;
 use Flarum\User\Filter\UserFilterer;
 use Flarum\User\Search\UserSearcher;
@@ -27,10 +28,15 @@ return [
 
     new Extend\Locales(__DIR__.'/locale'),
 
-    (new Extend\ApiSerializer(ForumSerializer::class))
+    (new Extend\ApiSerializer(FlarumSerializer\ForumSerializer::class))
         ->attribute('canViewLastSeenAt', function ($serializer) {
             return $serializer->getActor()->hasPermission('user.viewLastSeenAt');
-        }),
+        })
+        ->hasMany('onlineUsers', FlarumSerializer\UserSerializer::class),
+
+    (new Extend\ApiController(ShowForumController::class))
+        ->addInclude(['onlineUsers'])
+        ->prepareDataForSerialization(LoadForumOnlineUsersRelationship::class),
 
     (new Extend\Settings)
         ->serializeToForum('afrux-online-users-widget.maxUsers', 'afrux-online-users-widget.max_users', 'intval'),

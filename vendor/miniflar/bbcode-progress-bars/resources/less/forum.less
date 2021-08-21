@@ -1,0 +1,30 @@
+// Progress Bar
+.MiniFLAR-ProgressBar-meter {
+  position: relative;
+  width: 100%;
+  border: 5px solid #666;
+  border-radius: 2px;
+  height: 2em;
+  margin-bottom: 2em;
+}
+
+.MiniFLAR-ProgressBar-meter-status {
+  color: white;
+  text-align: right;
+  padding-top: .3em;
+  padding-right: .8em;
+  background-color: #3aa6d0;
+  border-color: white;
+  border-right: 0.5em solid #8ccbe4;
+  width: 0;
+  height: 100%;
+  line-height: 1.2em;
+  -webkit-animation: width .5s ease-in;
+}
+
+@-webkit-keyframes width {
+  from {
+    width: 0;
+  }
+}
+

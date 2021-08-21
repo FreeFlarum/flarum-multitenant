@@ -83,6 +83,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
         ),
+        'm' => 
+        array (
+            'miniFLAR\\BBCodeProgressBars\\' => 28,
+        ),
         'k' => 
         array (
             'katosdev\\Signature\\' => 19,
@@ -100,7 +104,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Y' => 
         array (
-            'Yannis\\ConfixTheme\\' => 19,
+            'Yannisme\\ConfixTheme\\' => 21,
         ),
         'W' => 
         array (
@@ -223,6 +227,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'J' => 
         array (
+            'Justoverclock\\NewsFeed\\' => 23,
             'Justoverclock\\Infocards\\' => 24,
             'Justoverclock\\CustomHeader\\' => 27,
             'Jose\\Component\\Signature\\Algorithm\\' => 35,
@@ -257,6 +262,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Illuminate\\Bus\\' => 15,
             'IanM\\Synopsis\\' => 14,
             'IanM\\LevelRanks\\' => 16,
+            'IanM\\ISO639\\' => 12,
             'IanM\\HtmlHead\\' => 14,
         ),
         'H' => 
@@ -357,6 +363,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'C' => 
         array (
             'Cron\\' => 5,
+            'ClarkWinkelmann\\PasswordLess\\' => 29,
             'ClarkWinkelmann\\GroupList\\' => 26,
             'ClarkWinkelmann\\GroupInvitation\\' => 32,
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
@@ -390,6 +397,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Afrux\\News\\' => 11,
             'Afrux\\ForumWidgets\\' => 19,
             'Afrux\\ForumStats\\' => 17,
+            'Acpl\\MobileTab\\' => 15,
         ),
     );
 
@@ -409,6 +417,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         's9e\\RegexpBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
+        ),
+        'miniFLAR\\BBCodeProgressBars\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/miniflar/bbcode-progress-bars/src',
         ),
         'katosdev\\Signature\\' => 
         array (
@@ -434,7 +446,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/flarum-member/src',
         ),
-        'Yannis\\ConfixTheme\\' => 
+        'Yannisme\\ConfixTheme\\' => 
         array (
             0 => __DIR__ . '/..' . '/yannisme/confixtheme/src',
         ),
@@ -790,6 +802,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/kilowhat/flarum-ext-audit-free/src',
         ),
+        'Justoverclock\\NewsFeed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-newsfeed/src',
+        ),
         'Justoverclock\\Infocards\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-infocards/src',
@@ -915,6 +931,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'IanM\\LevelRanks\\' => 
         array (
             0 => __DIR__ . '/..' . '/ianm/level-ranks/src',
+        ),
+        'IanM\\ISO639\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ianm/iso-639/src',
         ),
         'IanM\\HtmlHead\\' => 
         array (
@@ -1245,6 +1265,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'ClarkWinkelmann\\PasswordLess\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-passwordless/src',
+        ),
         'ClarkWinkelmann\\GroupList\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-group-list/src',
@@ -1352,6 +1376,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Afrux\\ForumStats\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/forum-stats-widget/src',
+        ),
+        'Acpl\\MobileTab\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/acpl/mobile-tab/src',
         ),
     );
 

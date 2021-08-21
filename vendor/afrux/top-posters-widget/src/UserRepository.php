@@ -14,7 +14,6 @@ namespace Afrux\TopPosters;
 use Carbon\Carbon;
 use Flarum\Post\CommentPost;
 use Illuminate\Contracts\Cache\Factory;
-use function Afrux\ForumWidgets\Helper\pretty_number_format;
 
 class UserRepository
 {
@@ -30,7 +29,7 @@ class UserRepository
 
     public function getTopPosters(): array
     {
-        return $this->cache->remember('afrux-top-posters-widget.data', 600, function (): array {
+        return $this->cache->remember('afrux-top-posters-widget.top_poster_counts', 2400, function (): array {
             return CommentPost::query()
                 ->selectRaw('user_id, count(id) as count')
                 ->where('created_at', '>', Carbon::now()->subMonth())
@@ -39,7 +38,7 @@ class UserRepository
                 ->limit(5)
                 ->get()
                 ->mapWithKeys(function ($post) {
-                    return [$post->user_id => pretty_number_format((int) $post->count)];
+                    return [$post->user_id => (int) $post->count];
                 })
                 ->toArray();
         });

@@ -19,13 +19,13 @@ use Flarum\User\User;
 
 return [
     (new Extend\Frontend('forum'))
-        ->js(__DIR__ . '/js/dist/forum.js')
-        ->css(__DIR__ . '/resources/less/forum.less'),
+        ->js(__DIR__.'/js/dist/forum.js')
+        ->css(__DIR__.'/resources/less/forum.less'),
 
     (new Extend\Frontend('admin'))
-        ->js(__DIR__ . '/js/dist/admin.js'),
+        ->js(__DIR__.'/js/dist/admin.js'),
 
-    new Extend\Locales(__DIR__ . '/resources/locale'),
+    new Extend\Locales(__DIR__.'/resources/locale'),
 
     (new Extend\Settings())
         ->serializeToForum(
@@ -36,10 +36,12 @@ return [
         ->serializeToForum(
             'fof-forum-statistics-widget.widget_order',
             'fof-forum-statistics-widget.widget_order',
-            'intval', 0),
+            'intval',
+            0
+        ),
 
     (new Extend\ApiSerializer(ForumSerializer::class))
-    ->attributes(function($serializer, $model, $attributes) {
+    ->attributes(function ($serializer, $model, $attributes) {
         if ($serializer->getActor()->can('fof-forum-statistics-widget.viewWidget.discussionsCount')) {
             $attributes['fof-forum-statistics-widget.discussionsCount'] = $attributes['fof-forum-statistics-widget.ignore_private_discussions'] ?
             Discussion::where('is_private', 0)->count() : Discussion::count();

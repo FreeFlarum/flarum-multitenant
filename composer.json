@@ -26,6 +26,7 @@
         "docs": "https://flarum.org/docs/"
     },
     "require": {
+        "acpl/mobile-tab": "^1.0",
         "afrux/forum-widgets-bundle": "*",
         "afrux/forum-widgets-core": "^0.1.3",
         "antoinefr/flarum-ext-money": "*",
@@ -46,6 +47,7 @@
         "clarkwinkelmann/flarum-ext-first-post-approval": "*",
         "clarkwinkelmann/flarum-ext-group-invitation": "^1.0",
         "clarkwinkelmann/flarum-ext-group-list": "^1.0",
+        "clarkwinkelmann/flarum-ext-passwordless": "^1.4",
         "datlechin/lang-vietnamese": "dev-master",
         "davwheat/custom-sidenav-links": "^1.0",
         "dem13n/discussion-cards": "*",
@@ -138,6 +140,7 @@
         "jslirola/flarum-ext-login2seeplus": "*",
         "justoverclock/custom-header": "^0.1.4",
         "justoverclock/flarum-ext-infocards": "^0.1.5",
+        "justoverclock/flarum-ext-newsfeed": "^1.0",
         "katosdev/signature": "^1.1",
         "kilowhat/flarum-ext-audit-free": "^1.4",
         "kyrne/whisper": "^0.1.2",
@@ -151,6 +154,7 @@
         "michaelbelgium/flarum-discussion-views": "*",
         "michaelbelgium/flarum-dutch": "*",
         "migratetoflarum/canonical": "*",
+        "miniflar/bbcode-progress-bars": "^1.0",
         "minishlink/web-push": "*",
         "nearata/flarum-ext-no-self-likes": "*",
         "nearata/lang-italian": "*",

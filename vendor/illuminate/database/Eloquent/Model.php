@@ -435,6 +435,19 @@ abstract class Model implements Arrayable, ArrayAccess, HasBroadcastChannel, Jso
     }
 
     /**
+     * Qualify the given columns with the model's table.
+     *
+     * @param  array  $columns
+     * @return array
+     */
+    public function qualifyColumns($columns)
+    {
+        return collect($columns)->map(function ($column) {
+            return $this->qualifyColumn($column);
+        })->all();
+    }
+
+    /**
      * Create a new instance of the given model.
      *
      * @param  array  $attributes
@@ -1798,6 +1811,18 @@ abstract class Model implements Arrayable, ArrayAccess, HasBroadcastChannel, Jso
     }
 
     /**
+     * Retrieve the model for a bound value.
+     *
+     * @param  mixed  $value
+     * @param  string|null  $field
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
+    public function resolveSoftDeletableRouteBinding($value, $field = null)
+    {
+        return $this->where($field ?? $this->getRouteKeyName(), $value)->withTrashed()->first();
+    }
+
+    /**
      * Retrieve the child model for a bound value.
      *
      * @param  string  $childType
@@ -1807,15 +1832,41 @@ abstract class Model implements Arrayable, ArrayAccess, HasBroadcastChannel, Jso
      */
     public function resolveChildRouteBinding($childType, $value, $field)
     {
+        return $this->resolveChildRouteBindingQuery($childType, $value, $field)->first();
+    }
+
+    /**
+     * Retrieve the child model for a bound value.
+     *
+     * @param  string  $childType
+     * @param  mixed  $value
+     * @param  string|null  $field
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
+    public function resolveSoftDeletableChildRouteBinding($childType, $value, $field)
+    {
+        return $this->resolveChildRouteBindingQuery($childType, $value, $field)->withTrashed()->first();
+    }
+
+    /**
+     * Retrieve the child model query for a bound value.
+     *
+     * @param  string  $childType
+     * @param  mixed  $value
+     * @param  string|null  $field
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
+    protected function resolveChildRouteBindingQuery($childType, $value, $field)
+    {
         $relationship = $this->{Str::plural(Str::camel($childType))}();
 
         $field = $field ?: $relationship->getRelated()->getRouteKeyName();
 
         if ($relationship instanceof HasManyThrough ||
             $relationship instanceof BelongsToMany) {
-            return $relationship->where($relationship->getRelated()->getTable().'.'.$field, $value)->first();
+            return $relationship->where($relationship->getRelated()->getTable().'.'.$field, $value);
         } else {
-            return $relationship->where($field, $value)->first();
+            return $relationship->where($field, $value);
         }
     }
 

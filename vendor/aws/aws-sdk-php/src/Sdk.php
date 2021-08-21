@@ -362,6 +362,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMediaStoreData(array $args = [])
  * @method \Aws\MediaTailor\MediaTailorClient createMediaTailor(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMediaTailor(array $args = [])
+ * @method \Aws\MemoryDB\MemoryDBClient createMemoryDB(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMemoryDB(array $args = [])
  * @method \Aws\MigrationHub\MigrationHubClient createMigrationHub(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHub(array $args = [])
  * @method \Aws\MigrationHubConfig\MigrationHubConfigClient createMigrationHubConfig(array $args = [])
@@ -557,7 +559,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.190.2';
+    const VERSION = '3.191.1';
 
     /** @var array Arguments for creating clients */
     private $args;

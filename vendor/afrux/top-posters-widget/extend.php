@@ -11,7 +11,8 @@
 
 namespace Afrux\TopPosters;
 
-use Flarum\Api\Serializer\ForumSerializer;
+use Flarum\Api\Serializer as FlarumSerializer;
+use Flarum\Api\Controller\ShowForumController;
 use Flarum\Extend;
 use Flarum\User\Filter\UserFilterer;
 use Flarum\User\Search\UserSearcher;
@@ -28,8 +29,13 @@ return [
 
     new Extend\Locales(__DIR__.'/locale'),
 
-    (new Extend\ApiSerializer(ForumSerializer::class))
-        ->attributes(AddTopPostersToApi::class),
+    (new Extend\ApiSerializer(FlarumSerializer\ForumSerializer::class))
+        ->attributes(AddTopPostersToApi::class)
+        ->hasMany('topPosters', FlarumSerializer\UserSerializer::class),
+
+    (new Extend\ApiController(ShowForumController::class))
+        ->addInclude(['topPosters'])
+        ->prepareDataForSerialization(LoadForumTopPostersRelationship::class),
 
     (new Extend\Filter(UserFilterer::class))
         ->addFilter(Query\TopPosterGambitFilter::class),

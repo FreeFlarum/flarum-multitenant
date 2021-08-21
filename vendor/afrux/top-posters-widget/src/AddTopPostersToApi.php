@@ -11,6 +11,8 @@
 
 namespace Afrux\TopPosters;
 
+use function Afrux\ForumWidgets\Helper\pretty_number_format;
+
 class AddTopPostersToApi
 {
     /**
@@ -25,8 +27,14 @@ class AddTopPostersToApi
 
     public function __invoke()
     {
+        $data = $this->repository->getTopPosters();
+
+        foreach ($data as $id => $count) {
+            $data[$id] = pretty_number_format($count);
+        }
+
         return [
-            'afrux-top-posters-widget.data' => $this->repository->getTopPosters(),
+            'afrux-top-posters-widget.topPosterCounts' => $data,
         ];
     }
 }
