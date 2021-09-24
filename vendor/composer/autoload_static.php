@@ -21,7 +21,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
         '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -49,6 +48,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '3f8ee9969da604d0f15c841b77b11450' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/double-pass-middleware.php',
         'ee5523a5d51d6d51030227439db1ef74' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/host.php',
         '5f6e29ca023a0bdefa2476adb465d527' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/middleware.php',
@@ -101,6 +101,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Z' => 
         array (
             'Zerosonesfun\\Members\\' => 21,
+            'Zerosonesfun\\InlineAudio\\' => 25,
         ),
         'Y' => 
         array (
@@ -156,9 +157,12 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'SychO\\UiKit\\' => 12,
             'SychO\\ProfileCover\\' => 19,
+            'SychO\\MovePosts\\' => 16,
             'SychO\\Aec\\' => 10,
             'SoftCreatR\\MimeDetector\\' => 24,
+            'Serakoi\\FlarumDiscordTheme\\' => 27,
             'SSNepenthe\\ColorUtils\\' => 22,
         ),
         'R' => 
@@ -168,6 +172,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
+            'Ralkage\\HCaptcha\\' => 17,
         ),
         'P' => 
         array (
@@ -214,6 +219,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'League\\Csv\\' => 11,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
+            'Lcobucci\\JWT\\' => 13,
+            'Lcobucci\\Clock\\' => 15,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Stratigility\\' => 21,
             'Laminas\\HttpHandlerRunner\\' => 26,
@@ -227,8 +234,15 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'J' => 
         array (
+            'Justoverclock\\YtVideoFeed\\' => 26,
+            'Justoverclock\\UsernameBlacklist\\' => 32,
             'Justoverclock\\NewsFeed\\' => 23,
+            'Justoverclock\\LastTweet\\' => 24,
             'Justoverclock\\Infocards\\' => 24,
+            'Justoverclock\\HotDiscussions\\' => 29,
+            'Justoverclock\\HeaderSlideShow\\' => 30,
+            'Justoverclock\\GeoWeather\\' => 25,
+            'Justoverclock\\CustomHtmlWidget\\' => 31,
             'Justoverclock\\CustomHeader\\' => 27,
             'Jose\\Component\\Signature\\Algorithm\\' => 35,
             'Jose\\Component\\Signature\\' => 25,
@@ -264,10 +278,12 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'IanM\\LevelRanks\\' => 16,
             'IanM\\ISO639\\' => 12,
             'IanM\\HtmlHead\\' => 14,
+            'IanM\\FlarumFeeds\\' => 17,
         ),
         'H' => 
         array (
             'Html2Text\\' => 10,
+            'HCaptcha\\' => 9,
         ),
         'G' => 
         array (
@@ -297,13 +313,16 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
+            'FoF\\Passport\\' => 13,
             'FoF\\Pages\\' => 10,
             'FoF\\OAuth\\' => 10,
             'FoF\\NightMode\\' => 14,
             'FoF\\MergeDiscussions\\' => 21,
+            'FoF\\Masquerade\\' => 15,
             'FoF\\Mason\\' => 10,
             'FoF\\Links\\' => 10,
             'FoF\\Linguist\\' => 13,
+            'FoF\\Impersonate\\' => 16,
             'FoF\\IgnoreUsers\\' => 16,
             'FoF\\HtmlErrors\\' => 15,
             'FoF\\Gamification\\' => 17,
@@ -363,11 +382,13 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'C' => 
         array (
             'Cron\\' => 5,
+            'ClarkWinkelmann\\ShadowBan\\' => 26,
             'ClarkWinkelmann\\PasswordLess\\' => 29,
             'ClarkWinkelmann\\GroupList\\' => 26,
             'ClarkWinkelmann\\GroupInvitation\\' => 32,
             'ClarkWinkelmann\\FirstPostApproval\\' => 34,
             'ClarkWinkelmann\\EmojioneArea\\' => 29,
+            'ClarkWinkelmann\\EmailWhitelist\\' => 31,
             'ClarkWinkelmann\\CatchTheFish\\' => 29,
             'ClarkWinkelmann\\Bookmarks\\' => 26,
             'ClarkWinkelmann\\AuthorChange\\' => 29,
@@ -445,6 +466,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Zerosonesfun\\Members\\' => 
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/flarum-member/src',
+        ),
+        'Zerosonesfun\\InlineAudio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerosonesfun/flarum-inline-audio/src',
         ),
         'Yannisme\\ConfixTheme\\' => 
         array (
@@ -606,9 +631,17 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
         ),
+        'SychO\\UiKit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sycho/flarum-uikit/src',
+        ),
         'SychO\\ProfileCover\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/flarum-profile-cover/src',
+        ),
+        'SychO\\MovePosts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sycho/flarum-move-posts/src',
         ),
         'SychO\\Aec\\' => 
         array (
@@ -617,6 +650,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'SoftCreatR\\MimeDetector\\' => 
         array (
             0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
+        ),
+        'Serakoi\\FlarumDiscordTheme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/serakoi/flarumdiscordtheme/src',
         ),
         'SSNepenthe\\ColorUtils\\' => 
         array (
@@ -641,6 +678,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Ramsey\\Collection\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
+        ),
+        'Ralkage\\HCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ralkage/flarum-hcaptcha/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -774,6 +815,14 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
         ),
+        'Lcobucci\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
+        ),
+        'Lcobucci\\Clock\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/clock/src',
+        ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
@@ -802,13 +851,41 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/kilowhat/flarum-ext-audit-free/src',
         ),
+        'Justoverclock\\YtVideoFeed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/youtube-video-feed/src',
+        ),
+        'Justoverclock\\UsernameBlacklist\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/username-blacklist/src',
+        ),
         'Justoverclock\\NewsFeed\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-newsfeed/src',
         ),
+        'Justoverclock\\LastTweet\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/last-tweet/src',
+        ),
         'Justoverclock\\Infocards\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-infocards/src',
+        ),
+        'Justoverclock\\HotDiscussions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/hot-discussions/src',
+        ),
+        'Justoverclock\\HeaderSlideShow\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/header-slideshow/src',
+        ),
+        'Justoverclock\\GeoWeather\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/geo-weather/src',
+        ),
+        'Justoverclock\\CustomHtmlWidget\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/custom-html-widget/src',
         ),
         'Justoverclock\\CustomHeader\\' => 
         array (
@@ -940,10 +1017,18 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/ianm/html-head/src',
         ),
+        'IanM\\FlarumFeeds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ianm/syndication/src',
+        ),
         'Html2Text\\' => 
         array (
             0 => __DIR__ . '/..' . '/html2text/html2text/src',
             1 => __DIR__ . '/..' . '/html2text/html2text/test',
+        ),
+        'HCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mitloshuk/hcaptcha/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -1037,6 +1122,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/fof/polls/src',
         ),
+        'FoF\\Passport\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/passport/src',
+        ),
         'FoF\\Pages\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/pages/src',
@@ -1053,6 +1142,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/fof/merge-discussions/src',
         ),
+        'FoF\\Masquerade\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/masquerade/src',
+        ),
         'FoF\\Mason\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/mason/src',
@@ -1064,6 +1157,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'FoF\\Linguist\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/linguist/src',
+        ),
+        'FoF\\Impersonate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/impersonate/src',
         ),
         'FoF\\IgnoreUsers\\' => 
         array (
@@ -1265,6 +1362,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'ClarkWinkelmann\\ShadowBan\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-shadow-ban/src',
+        ),
         'ClarkWinkelmann\\PasswordLess\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-passwordless/src',
@@ -1284,6 +1385,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'ClarkWinkelmann\\EmojioneArea\\' => 
         array (
             0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-emojionearea/src',
+        ),
+        'ClarkWinkelmann\\EmailWhitelist\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clarkwinkelmann/flarum-ext-email-whitelist/src',
         ),
         'ClarkWinkelmann\\CatchTheFish\\' => 
         array (
@@ -1394,6 +1499,29 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
     );
 
     public static $classMap = array (
+        'AWS\\CRT\\Auth\\AwsCredentials' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/AwsCredentials.php',
+        'AWS\\CRT\\Auth\\CredentialsProvider' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/CredentialsProvider.php',
+        'AWS\\CRT\\Auth\\Signable' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/Signable.php',
+        'AWS\\CRT\\Auth\\SignatureType' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SignatureType.php',
+        'AWS\\CRT\\Auth\\SignedBodyHeaderType' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SignedBodyHeaderType.php',
+        'AWS\\CRT\\Auth\\Signing' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/Signing.php',
+        'AWS\\CRT\\Auth\\SigningAlgorithm' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningAlgorithm.php',
+        'AWS\\CRT\\Auth\\SigningConfigAWS' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningConfigAWS.php',
+        'AWS\\CRT\\Auth\\SigningResult' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningResult.php',
+        'AWS\\CRT\\Auth\\StaticCredentialsProvider' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/StaticCredentialsProvider.php',
+        'AWS\\CRT\\CRT' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/CRT.php',
+        'AWS\\CRT\\HTTP\\Headers' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Headers.php',
+        'AWS\\CRT\\HTTP\\Message' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Message.php',
+        'AWS\\CRT\\HTTP\\Request' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Request.php',
+        'AWS\\CRT\\HTTP\\Response' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Response.php',
+        'AWS\\CRT\\IO\\EventLoopGroup' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/IO/EventLoopGroup.php',
+        'AWS\\CRT\\IO\\InputStream' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/IO/InputStream.php',
+        'AWS\\CRT\\Internal\\Encoding' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Internal/Encoding.php',
+        'AWS\\CRT\\Internal\\Extension' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Internal/Extension.php',
+        'AWS\\CRT\\Log' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Log.php',
+        'AWS\\CRT\\NativeResource' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/NativeResource.php',
+        'AWS\\CRT\\OptionValue' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Options.php',
+        'AWS\\CRT\\Options' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Options.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'IntlException' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/Resources/stubs/IntlException.php',
@@ -1453,6 +1581,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Nette\\Utils\\Reflection' => __DIR__ . '/..' . '/nette/utils/src/Utils/Reflection.php',
         'Nette\\Utils\\RegexpException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Strings' => __DIR__ . '/..' . '/nette/utils/src/Utils/Strings.php',
+        'Nette\\Utils\\Type' => __DIR__ . '/..' . '/nette/utils/src/Utils/Type.php',
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',

@@ -1,0 +1,43 @@
+{
+    "name": "justoverclock/hot-discussions",
+    "description": "Hot Discussions widget for Flarum",
+    "keywords": [
+        "flarum",
+        "afrux",
+        "widget",
+        "hot discussions",
+        "popular discussions"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0",
+        "afrux/forum-widgets-core": "^0.1.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\HotDiscussions\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Hot Discussions",
+            "category": "",
+            "icon": {
+                "name": "fab fa-hotjar",
+                "backgroundColor": "red",
+                "color": "white"
+            }
+        }
+    }
+}

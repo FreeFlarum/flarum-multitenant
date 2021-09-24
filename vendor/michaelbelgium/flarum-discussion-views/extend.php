@@ -21,6 +21,7 @@ use Michaelbelgium\Discussionviews\Serializers\DiscussionViewSerializer;
 
 $settings = resolve(SettingsRepositoryInterface::class);
 
+const DV_RELATIONSHIP_UNIQUE = 'uniqueViews'; //discussion->uniqueViews()
 const DV_RELATIONSHIP = 'views'; //$discussion->views()
 const DV_RELATIONSHIP_LATEST = 'latestViews';
 
@@ -39,12 +40,16 @@ return [
             return $model->hasMany(DiscussionView::class)->orderBy('visited_at', 'DESC');
         })->relationship(DV_RELATIONSHIP_LATEST, function (AbstractModel $model) use ($settings) {
             return $model->views()->limit($settings->get('michaelbelgium-discussionviews.max_listcount', 5));
+        })->relationship(DV_RELATIONSHIP_UNIQUE, function (AbstractModel $model) use ($settings) {
+            return $model->hasMany(DiscussionView::class)->groupBy('user_id')->havingRaw('user_id IS NOT NULL')->orderByRaw('MAX(visited_at) DESC')
+                ->limit($settings->get('michaelbelgium-discussionviews.max_listcount', 5));
         }),
 
     (new Settings)
         ->serializeToForum('toggleFilter', 'michaelbelgium-discussionviews.show_filter', null, true)
         ->serializeToForum('abbrNumber', 'michaelbelgium-discussionviews.abbr_numbers', null, false)
-        ->serializeToForum('showViewList', 'michaelbelgium-discussionviews.show_viewlist', null, true),
+        ->serializeToForum('showViewList', 'michaelbelgium-discussionviews.show_viewlist', null, true)
+        ->serializeToForum('showFooterViewList', 'michaelbelgium-discussionviews.show_footer_viewlist', null, false),
 
     (new ApiSerializer(DiscussionSerializer::class))
         ->attribute('canReset', function (DiscussionSerializer $serializer, $discussion) {
@@ -53,11 +58,15 @@ return [
             return $discussion->view_count;
         })->attribute('canViewNumber', function (DiscussionSerializer $serializer, $discussion) {
             return (bool)$serializer->getActor()->can('discussion.readViewnumber', $discussion);
-        })->hasMany(DV_RELATIONSHIP_LATEST, DiscussionViewSerializer::class),
+        })->hasMany(DV_RELATIONSHIP_LATEST, DiscussionViewSerializer::class)
+        ->hasMany(DV_RELATIONSHIP_UNIQUE, DiscussionViewSerializer::class),
 
     (new ApiController(ShowDiscussionController::class))
         ->prepareDataForSerialization(Listeners\AddDiscussionViewHandler::class)
-        ->addInclude([DV_RELATIONSHIP_LATEST, DV_RELATIONSHIP_LATEST.'.user']),
+        ->addInclude([
+            DV_RELATIONSHIP_UNIQUE, DV_RELATIONSHIP_UNIQUE . '.user',
+            DV_RELATIONSHIP_LATEST, DV_RELATIONSHIP_LATEST . '.user'
+        ]),
 
     (new ApiController(ListDiscussionsController::class))
         ->addSortField('view_count'),

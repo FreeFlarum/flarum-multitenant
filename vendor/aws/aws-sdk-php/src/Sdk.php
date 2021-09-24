@@ -284,6 +284,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionIotDataPlane(array $args = [])
  * @method \Aws\Kafka\KafkaClient createKafka(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionKafka(array $args = [])
+ * @method \Aws\KafkaConnect\KafkaConnectClient createKafkaConnect(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionKafkaConnect(array $args = [])
  * @method \Aws\Kinesis\KinesisClient createKinesis(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionKinesis(array $args = [])
  * @method \Aws\KinesisAnalytics\KinesisAnalyticsClient createKinesisAnalytics(array $args = [])
@@ -378,6 +380,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionNetworkManager(array $args = [])
  * @method \Aws\NimbleStudio\NimbleStudioClient createNimbleStudio(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionNimbleStudio(array $args = [])
+ * @method \Aws\OpenSearchService\OpenSearchServiceClient createOpenSearchService(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionOpenSearchService(array $args = [])
  * @method \Aws\OpsWorks\OpsWorksClient createOpsWorks(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionOpsWorks(array $args = [])
  * @method \Aws\OpsWorksCM\OpsWorksCMClient createOpsWorksCM(array $args = [])
@@ -559,7 +563,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.191.1';
+    const VERSION = '3.194.4';
 
     /** @var array Arguments for creating clients */
     private $args;

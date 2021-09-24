@@ -4,6 +4,8 @@
 
 fof-filter:
   admin:
+    auto_merge_title: 'Otomatik birleştir'
+    bad_words_help: 'Her satırda bir tane olacak şekilde filtrelenecek metin veya sözcükleri girin. Bir kullanıcının gönderisinin içeriği filtrelemek istediğiniz bir dize içeriyorsa, onay için işaretlenir. 133t''ye karşı dayanıklıdır.'
     cooldownLabel: 'Peş peşe birleştirme süresi'
     countLabel: 'Sansür Toleransı'
     email:
@@ -25,6 +27,8 @@ fof-filter:
     nav:
       desc: 'Gönderileri kelimelere göre filtrele'
       text: Filtre
+    permission:
+      bypass_filter_label: 'Kelime filtrelerini atla'
     title: Filtre
   forum:
     flag_message: 'İçerdiği engellenen dizeler'

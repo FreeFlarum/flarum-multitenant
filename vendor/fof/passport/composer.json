@@ -1,0 +1,63 @@
+{
+    "name": "fof/passport",
+    "description": "The OAuth2 (and Laravel passport) compatible oauth extension",
+    "keywords": [
+        "flarum",
+        "passport",
+        "league",
+        "oauth",
+        "oauth2"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniël Klabbers",
+            "email": "daniel+flarum@klabbers.email",
+            "homepage": "https://hyn.me/"
+        },
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/passport/issues",
+        "source": "https://github.com/FriendsOfFlarum/passport",
+        "forum": "https://discuss.flarum.org/d/5203"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.0",
+        "league/oauth2-client": "^2.3.0"
+    },
+    "replace": {
+        "flagrow/passport": "*"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Passport",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-key",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/5203"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Passport\\": "src/"
+        }
+    }
+}

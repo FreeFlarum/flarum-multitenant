@@ -15,8 +15,8 @@ use Flarum\Foundation\ErrorHandling\JsonApiFormatter;
 use Flarum\Foundation\ErrorHandling\Registry;
 use Flarum\Foundation\ValidationException;
 use Flarum\Http\UrlGenerator;
-use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\StopForumSpam\StopForumSpam;
+use Illuminate\Support\Arr;
 use Laminas\Diactoros\Uri;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -31,19 +31,13 @@ class RegisterMiddleware implements MiddlewareInterface
     private $sfs;
 
     /**
-     * @var SettingsRepositoryInterface
-     */
-    private $settings;
-
-    /**
      * @var UrlGenerator
      */
     private $url;
 
-    public function __construct(StopForumSpam $sfs, SettingsRepositoryInterface $settings, UrlGenerator $url)
+    public function __construct(StopForumSpam $sfs, UrlGenerator $url)
     {
         $this->sfs = $sfs;
-        $this->settings = $settings;
         $this->url = $url;
     }
 
@@ -52,19 +46,12 @@ class RegisterMiddleware implements MiddlewareInterface
         $registerUri = new Uri($this->url->to('forum')->path('/register'));
         if ($request->getUri()->getPath() === $registerUri->getPath()) {
             $data = $request->getParsedBody();
-            $serverParams = $request->getServerParams();
 
-            if (isset($serverParams['HTTP_CF_CONNECTING_IP'])) {
-                $ipAddress = $serverParams['HTTP_CF_CONNECTING_IP'];
-            } else {
-                $ipAddress = $serverParams['REMOTE_ADDR'];
-            }
-
-            $body = null;
+            $shouldPrevent = false;
 
             try {
-                $body = $this->sfs->check([
-                    'ip'       => $ipAddress,
+                $shouldPrevent = $this->sfs->shouldPreventLogin([
+                    'ip'       => $this->getIpAddress($request),
                     'email'    => $data['email'],
                     'username' => $data['username'],
                 ]);
@@ -75,29 +62,28 @@ class RegisterMiddleware implements MiddlewareInterface
                 );
             }
 
-            if ($body->success === 1) {
-                unset($body->success);
-                $frequency = 0;
-
-                foreach ($body as $key => $value) {
-                    if ((int) $this->settings->get("fof-stopforumspam.$key")) {
-                        $frequency += $value->frequency;
-                    }
-                }
-
-                if ($frequency !== 0 && $frequency >= (int) $this->settings->get('fof-stopforumspam.frequency')) {
-                    return (new JsonApiFormatter())
-                        ->format(
-                            resolve(Registry::class)
-                                ->handle(new ValidationException([
-                                    'username' => resolve('translator')->trans('fof-stopforumspam.forum.message.spam'),
-                                ])),
-                            $request
-                        );
-                }
+            if ($shouldPrevent) {
+                return (new JsonApiFormatter())
+                    ->format(
+                        resolve(Registry::class)
+                            ->handle(new ValidationException([
+                                'username' => resolve('translator')->trans('fof-stopforumspam.forum.message.spam'),
+                            ])),
+                        $request
+                    );
             }
         }
 
         return $handler->handle($request);
+    }
+
+    protected function getIpAddress(ServerRequestInterface $request): ?string
+    {
+        $serverParams = $request->getServerParams();
+
+        return Arr::get($serverParams, 'HTTP_CLIENT_IP')
+            ?? Arr::get($serverParams, 'HTTP_CF_CONNECTING_IP')
+            ?? Arr::get($serverParams, 'HTTP_X_FORWARDED_FOR')
+            ?? Arr::get($serverParams, 'REMOTE_ADDR');
     }
 }

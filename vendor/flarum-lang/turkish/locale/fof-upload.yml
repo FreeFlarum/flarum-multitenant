@@ -14,15 +14,15 @@ fof-upload:
       download_templates: "İndirme şablonları, dosyaların forumunuzda nasıl görüneceğini ayarlamanızı sağlar, örneğin önizleme veya düğme gibi. Mevcut olanlar:\n"
       mime_types: "Please configure your mapping here. Each mime type regular expression will be handled by a specific upload adapter and download template.\n"
       resize: "Resimlerin yüklenmeden önce yeniden boyulandırılıp boyutlandırılmayacağını seçin. Piksel cinsinden maksimum genişlik ve yükseklik belirtebilirsiniz. Yeniden boyutlandırma işlemi görüntülerin enini ve boyunu korur.\n"
-      s3_acl: 'Yüklenen nesneye uygulanması gereken ACL (varsayılan: özel). Olası değerler için bkz. https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl'
-      s3_compatible_storage: 'Aşağıdaki ayarlar yalnızca S3 uyumlu depolama kullanılırken gereklidir. AWS kullanıyorsanız, bunları boş bırakabilirsiniz.'
+      s3_acl: "Yüklenen nesneye uygulanması gereken ACL (varsayılan: özel). Olası değerler için bkz. https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl\n"
+      s3_compatible_storage: "Aşağıdaki ayarlar yalnızca S3 uyumlu depolama kullanılırken gereklidir. AWS kullanıyorsanız, bunları boş bırakabilirsiniz.\n"
       watermark: "Yükleme sırasında resimlere filigran (watermark) eklenip eklenmeyeceğini seçin. Filigranlar gif olmayan dosyalara eklenebilir.\n"
     labels:
       aws-s3:
         acl: 'Access Control List (ACL)'
         advanced_title: 'Gelişmiş S3 depolama ayarları'
         bucket: Bucket
-        endpoint: "Endpoint\n"
+        endpoint: Endpoint
         key: Key
         region: Region
         secret: Secret
@@ -75,6 +75,8 @@ fof-upload:
       upload_label: 'Dosya yükleme'
       view_user_uploads_label: 'Kullanıcı yüklemelerini göster'
     templates:
+      bbcode-image: 'BBCode resim şablonu'
+      bbcode-image_description: "BBCode kullanarak tüm görüntüyü satır içinde gösterir. <strong>Bunun çalışması için flarum/bbcode'un kurulu ve etkinleştirilmiş olması gerekir.</strong> İndirme işlevi yoktur, istatistik toplanmaz ve hotlink koruması yok sayılır.\n"
       file: 'Varsayılan dosya indirme şablonu'
       file_description: "Dosya adını ve bazı genel bilgileri gösterir. Proxyler php aracılığı ile indirilir, bu da istatistik toplama ve hotlink koruması sağlar.\n"
       image: 'Varsayılan resim indirme şablonu'
@@ -83,6 +85,8 @@ fof-upload:
       image_description: "Resimin küçük halini gösterir ve proxyler php yoluyla indirilir. İstatistiklerin toplanması ve hotlink korunması mevcuttur.\n"
       just-url: 'Sadece Bağlantı'
       just-url_description: "Yalnızca URL'yi ekler. Oluşturma, otomatik bağlanma özelliğine sahip diğer uzantılar tarafından gerçekleştirilebilir. İndirme işlevi yoktur, hiçbir istatistik toplanmaz ve hotlink koruması göz ardı edilir.\n"
+      markdown-image: 'Markdown resim şablonu'
+      markdown-image_description: "Markdown'ı kullanarak tam görseli satır içinde gösterir. <strong>Bunun çalışması için flarum/markdown'ın kurulu ve etkinleştirilmiş olması gerekir.</strong> İndirme işlevi yoktur, istatistik toplanmaz ve hotlink koruması yok sayılır.\n"
     upload_methods:
       aws-s3: S3/Compatible
       imgur: Imgur

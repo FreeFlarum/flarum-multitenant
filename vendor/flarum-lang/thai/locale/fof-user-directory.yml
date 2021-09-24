@@ -16,7 +16,9 @@ fof-user-directory:
     page:
       empty_text: เราไม่พบผู้ใช้คนไหนที่ตรงกับการค้นหาของคุณ
       filter_button: กรอกจากกลุ่ม
+      load_more_button: '=> core.ref.load_more'
       nav: รายชื่อผู้ใช้
+      refresh_tooltip: '=> core.forum.index.refresh_tooltip'
     search:
       field:
         placeholder: ค้าหาผู้ใช้ทั้งหมด

@@ -1,3 +1,12 @@
+# 2.14.3
+
+* Support PHP 8.1
+
+# 2.14.1
+
+* Fix syntax highlighting scrolling too far.
+* Improve the way we detect xdebug linkformat.
+
 # 2.14.0
 
 * Switched syntax highlighting to Prism.js

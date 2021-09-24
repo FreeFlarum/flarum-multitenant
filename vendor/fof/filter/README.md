@@ -2,6 +2,8 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fof/filter.svg)](https://packagist.org/packages/fof/filter)
 
+![Extiverse](https://extiverse.com/extension/fof/filter/open-graph-image)(https://extiverse.com/extension/fof/filter)
+
 A [Flarum](http://flarum.org) extension that filters and flags posts by keywords, with the ability to auto-merge double posts.
 
 ### Goals
@@ -10,7 +12,7 @@ A [Flarum](http://flarum.org) extension that filters and flags posts by keywords
 
 ### Usage
 
-- Input strings seperated by a comma and a space ", "
+- Input strings seperated by a new line
 
 ### Installation
 

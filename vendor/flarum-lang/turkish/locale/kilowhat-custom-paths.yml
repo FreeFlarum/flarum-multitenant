@@ -9,6 +9,11 @@ kilowhat-custom-paths:
       extensions:
         askvortsov-categories: 'Askvortsov Kategoriler'
         clarkwinkelmann-group-list: 'ClarkWinkelmann Grup Listesi'
+        flamarkt-balance: 'Flamarkt Bakiye'
+        flamarkt-categories: 'Flamarkt Kategoriler'
+        flamarkt-core: 'Flamarkt Çekirdek'
+        flamarkt-identity: 'Flamarkt Kimlik'
+        flamarkt-signup-page: 'Flamarkt Kayıt Sayfası'
         flarum-flags: 'Flarum Bildirmeleri'
         flarum-subscriptions: 'Flarum Abonelikleri'
         flarum-tags: 'Flarum Etiketleri'
@@ -26,6 +31,17 @@ kilowhat-custom-paths:
         clarkwinkelmann-group-list: 'Grup listesi'
         discussion: Tartışma
         flags: 'Bildirilenler (mobilde)'
+        flamarkt-account: Hesap
+        flamarkt-balance: 'Hesap Bakiyesi'
+        flamarkt-cart: Sepet
+        flamarkt-categories: 'Kategori listesi'
+        flamarkt-category: 'Kategori ürünleri'
+        flamarkt-identity: 'Hesap Kimliği'
+        flamarkt-order: Sipariş
+        flamarkt-orders: 'Hesap Siparişleri'
+        flamarkt-product: Ürün
+        flamarkt-products: 'Ürünler dizini'
+        flamarkt-signup: 'Kayıt Ol'
         fof-byobu: 'Özel tartışmalar'
         fof-byobu-profile: 'Kullanıcı tartışmaları'
         fof-gamification: Sıralamalar
@@ -33,7 +49,7 @@ kilowhat-custom-paths:
         fof-user-directory: 'Kullanıcı dizini'
         following: 'Takip edilenler'
         formulaire-form: Form
-        formulaire-submission: Submission
+        formulaire-submission: Başvuru
         index: 'Tartışma listesi (anasayfada olmadığınızda)'
         notifications: 'Bildirimler (mobilde)'
         settings: Ayarlar

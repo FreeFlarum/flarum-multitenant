@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 1.5.0 - 2021-09-22
+
+
+-----
+
+### Release Notes for [1.5.0](https://github.com/laminas/laminas-httphandlerrunner/milestone/6)
+
+Feature release (minor)
+
+### 1.5.0
+
+- Total issues resolved: **0**
+- Total pull requests resolved: **1**
+- Total contributors: **1**
+
+#### Enhancement
+
+ - [24: Support PHP 8.1](https://github.com/laminas/laminas-httphandlerrunner/pull/24) thanks to @Ocramius
+
 ## 1.4.0 - 2021-04-08
 
 

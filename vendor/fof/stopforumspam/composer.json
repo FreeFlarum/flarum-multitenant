@@ -1,6 +1,6 @@
 {
     "name": "fof/stopforumspam",
-    "description": "Stop Forum Spam",
+    "description": "Check user registrations against the StopForumSpam database",
     "keywords": [
         "flarum",
         "friendsofflarum"
@@ -43,7 +43,7 @@
             "title": "FoF Stop Forum Spam",
             "category": "feature",
             "icon": {
-                "name": "fas fa-stop",
+                "name": "fas fa-stop-circle",
                 "backgroundColor": "#e74c3c",
                 "color": "#fff"
             },

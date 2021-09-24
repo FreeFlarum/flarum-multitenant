@@ -21,12 +21,9 @@ use Flarum\Post\Event\Saving as PostSaving;
 use Flarum\User\Event\Saving as UserSaving;
 use Flarum\User\Search\UserSearcher;
 use Flarum\User\User;
-use FoF\Components\Extend\AddFofComponents;
 use FoF\Split\Events\DiscussionWasSplit;
 
 return [
-    (new AddFofComponents()),
-
     (new Extend\Frontend('admin'))
         ->css(__DIR__.'/resources/less/admin.less')
         ->js(__DIR__.'/js/dist/admin.js'),
@@ -86,7 +83,8 @@ return [
         ->hasMany('oldRecipientGroups', Serializer\GroupSerializer::class),
 
     (new Extend\ApiSerializer(Serializer\DiscussionSerializer::class))
-        ->attributes(Api\DiscussionPermissionAttributes::class),
+      ->attributes(Api\DiscussionPermissionAttributes::class)
+      ->attributes(Api\DiscussionDataAttributes::class),
 
     (new Extend\ApiSerializer(Serializer\ForumSerializer::class))
         ->attributes(Api\ForumPermissionAttributes::class),

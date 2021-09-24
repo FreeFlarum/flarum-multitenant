@@ -66,6 +66,7 @@ malago-achievements:
       list_heading: Traguardi
       show: 'Mostra lista traguardi su:'
     settings:
+      link-left-column: 'Aggiungi link ai traguardi nella sidebar'
       show-post-footer: 'Ogni post'
       show-user-card: 'Card Profilo Utente'
   forum:

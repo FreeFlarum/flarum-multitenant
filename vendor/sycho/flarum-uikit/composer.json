@@ -1,0 +1,36 @@
+{
+  "name": "sycho/flarum-uikit",
+  "description": "Frontend utilities for extension developers.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sami 'SychO' Mazouz",
+      "email": "ilyasmazouz@gmail.com",
+      "homepage": "https://sycho9.github.io"
+    }
+  ],
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/SychO9/flarum-uikit/issues",
+    "source": "https://github.com/SychO9/flarum-uikit"
+  },
+  "funding": [
+    {
+      "type": "other",
+      "url": "https://www.buymeacoffee.com/sycho"
+    }
+  ],
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SychO\\UiKit\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
+}

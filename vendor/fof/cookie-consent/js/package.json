@@ -5,7 +5,7 @@
     "cookieconsent": "^3.1.1",
     "flarum-webpack-config": "^1.0.0",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^4.8.0"
   },
   "scripts": {
     "build": "webpack --mode production",
@@ -13,6 +13,7 @@
     "lint": "prettier --single-quote --trailing-comma es5 --print-width 150 --tab-width 4 --write src"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "flarum": "github:flarum/types#v1",
+    "prettier": "^2.3.1"
   }
 }

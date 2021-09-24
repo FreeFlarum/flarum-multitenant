@@ -10,9 +10,9 @@ export default class ResultButton extends Component {
         super.oninit(vnode);
 
         this.loading = false;
-        this.hidden = true;                         // Hide the image until the height has been adjusted
-        this.rowSpan = Math.random() * 15 + 25;     // The number of rows the button covers (random before loading)
-        
+        this.hidden = true; // Hide the image until the height has been adjusted
+        this.rowSpan = Math.random() * 15 + 25; // The number of rows the button covers (random before loading)
+
         this.id;
 
         $(window).resize(() => {
@@ -24,7 +24,7 @@ export default class ResultButton extends Component {
 
     view() {
         const attrs = this.attrs.attributes;
-        
+
         this.id = attrs.id;
         this.favourite = attrs.favourite;
 
@@ -38,12 +38,37 @@ export default class ResultButton extends Component {
             }
         }
 
-        return <div style={this.rowSpan && `grid-row-end: span ${Math.round(this.rowSpan)}`}>
-            <img alt={title} src={url} style={this.hidden ? 'visibility: hidden' : ''} onclick={(e) => {onclick(e, this.id)}} onload={(e) => {this.setRowSpan(e.target)}} />
-            <Tooltip showOnFocus={false} text={!attrs.isFavourite ? app.translator.trans(`${prefix}.forum.addFavourite`) : app.translator.trans(`${prefix}.forum.removeFavourite`)}>
-                <Button className={`Button Button--icon hasIcon`} style={this.hidden ? 'visibility: hidden' : ''} icon={!this.loading ? (attrs.isFavourite ? 'fas fa-star' : 'far fa-star') : ''} loading={this.loading} onclick={this.handleFavourite.bind(this)} />
-            </Tooltip>
-        </div>;
+        return (
+            <div style={this.rowSpan && `grid-row-end: span ${Math.round(this.rowSpan)}`}>
+                <img
+                    alt={title}
+                    src={url}
+                    style={this.hidden ? 'visibility: hidden' : ''}
+                    onclick={(e) => {
+                        onclick(e, this.id);
+                    }}
+                    onload={(e) => {
+                        this.setRowSpan(e.target);
+                    }}
+                />
+                <Tooltip
+                    showOnFocus={false}
+                    text={
+                        !attrs.isFavourite
+                            ? app.translator.trans(`${prefix}.forum.addFavourite`)
+                            : app.translator.trans(`${prefix}.forum.removeFavourite`)
+                    }
+                >
+                    <Button
+                        className={`Button Button--icon hasIcon`}
+                        style={this.hidden ? 'visibility: hidden' : ''}
+                        icon={!this.loading ? (attrs.isFavourite ? 'fas fa-star' : 'far fa-star') : ''}
+                        loading={this.loading}
+                        onclick={this.handleFavourite.bind(this)}
+                    />
+                </Tooltip>
+            </div>
+        );
     }
 
     setRowSpan(img) {

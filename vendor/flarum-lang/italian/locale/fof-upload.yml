@@ -75,6 +75,8 @@ fof-upload:
       upload_label: 'Carica file'
       view_user_uploads_label: 'Visualizza i caricamenti degli utenti'
     templates:
+      bbcode-image: 'Template BBcode Immagine'
+      bbcode-image_description: "Mostra l'immagine completa in linea utilizzando BBCode. <strong>Devi avere flarum/bbcode installato e abilitato affinché funzioni.</strong> Nessuna funzionalità di download, nessuna statistica viene raccolta e la protezione hotlink viene ignorata.\n"
       file: 'Modello predefinito per i file'
       file_description: "Mostra il nome del file e alcune info generali. Proxa i download attraverso php, permettendo la raccolta di statistiche e protezione hotlink.\n"
       image: 'Modello predefinito per le immagini'
@@ -83,6 +85,8 @@ fof-upload:
       image_description: "Mostra una miniatura dell'immagine e proxa il download attraverso php. Permette la raccolta di statistiche e la protezione da hotlink.\n"
       just-url: 'Solo URL'
       just-url_description: "Inserisci solo l'URL. Il rendering può essere gestito da altre estensioni con capacità di collegamento automatico. Nessuna funzionalità di download, nessuna statistica viene raccolta e la protezione hotlink viene ignorata.\n"
+      markdown-image: 'Template Markdown Immagine'
+      markdown-image_description: "Mostra l'immagine completa in linea utilizzando Markdown. <strong>Devi avere flarum/markdown installato e abilitato affinché funzioni.</strong> Nessuna funzionalità di download, nessuna statistica viene raccolta e la protezione hotlink viene ignorata.\n"
     upload_methods:
       aws-s3: 'Amazon S3'
       imgur: Imgur
@@ -102,7 +106,7 @@ fof-upload:
       upload: Carica
       user_uploads: 'Caricamenti Utente'
     file_list:
-      confirm_selection_btn: 'Scegli file|Scegli file'
+      confirm_selection_btn: '{fileCount, plural, =0 {Nessuno selezionato} one {Scegli file} other {Scegli file}}'
       empty: 'Non ci sono file da mostrare.'
       hide_file:
         btn_a11y_label: 'Nascondi "{fileName}" dal media manager'

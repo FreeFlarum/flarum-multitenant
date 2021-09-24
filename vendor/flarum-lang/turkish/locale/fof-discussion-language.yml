@@ -8,6 +8,8 @@ fof-discussion-language:
       allow_change_language_label: 'Dil düzenlemesine izin ver'
     settings:
       composer_default_label: 'Düzenleyicide mevcut yerel ayarı önceden seçin'
+      errors:
+        loading_data: 'Dil ve ülke verileri alınırken bir hata oluştu. Uzantıyı devre dışı bırakıp yeniden etkinleştirmeyi deneyin.'
       locale_sort_label: 'Varsayılan tartışma filtresi için algılanan dili kullan'
       native_label: 'Ana dil adlarını kullanın'
       show_any_lang_opt_label: '"Herhangi bir dil" seçilebilir olsun.'

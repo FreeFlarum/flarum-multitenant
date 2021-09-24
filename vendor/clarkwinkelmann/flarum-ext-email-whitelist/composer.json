@@ -1,0 +1,47 @@
+{
+    "name": "clarkwinkelmann/flarum-ext-email-whitelist",
+    "description": "Whitelist or blacklist specific email addresses by domain or regex",
+    "keywords": [
+        "flarum",
+        "email",
+        "validation",
+        "whitelist",
+        "blacklist"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "homepage": "https://clarkwinkelmann.com/",
+            "email": "clark.winkelmann@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-email-whitelist",
+        "forum": "https://discuss.flarum.org/d/28377"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClarkWinkelmann\\EmailWhitelist\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Email Whitelist",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-at",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/28377"
+        }
+    }
+}

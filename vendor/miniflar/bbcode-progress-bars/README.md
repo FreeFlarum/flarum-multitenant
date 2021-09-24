@@ -8,8 +8,6 @@ A revival of [0E800's BBCode Progress Bar Extension](https://github.com/0E800/fl
 
 ## Installation
 
-This will also install [flarum/bbcode](https://github.com/flarum/bbcode) as it relies on it.
-
 Install with composer:
 
 ```sh

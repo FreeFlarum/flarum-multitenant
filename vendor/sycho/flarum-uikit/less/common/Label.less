@@ -1,0 +1,39 @@
+/* ref: https://github.com/flarum/tags/blob/master/less/common/TagLabel.less */
+
+.UiKit-Label {
+  font-size: 85%;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: @border-radius;
+  background: @control-bg;
+  color: @control-color;
+  text-transform: none;
+
+  &.untagged {
+    background: transparent;
+    border: 1px dotted @muted-color;
+    color: @muted-color;
+  }
+
+  &.colored {
+    .UiKit-Label-text {
+      color: @body-bg !important;
+    }
+  }
+}
+.UiKit-LabelGroup {
+  .UiKit-Label {
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: @border-radius 0 0 @border-radius;
+    }
+    &:last-child {
+      border-radius: 0 @border-radius @border-radius 0;
+    }
+    &:first-child:last-child {
+      border-radius: @border-radius;
+    }
+  }
+}

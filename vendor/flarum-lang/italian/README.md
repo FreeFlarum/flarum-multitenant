@@ -1,3 +1,6 @@
+![logo-ixhepxvy](https://user-images.githubusercontent.com/79002016/132468108-80e119fe-7d09-48a9-8657-9a199c19ad9a.png)
+
+
 # Pacchetto di traduzione italiana per Flarum ed estensioni di terze parti
 
 ! Aggiorniamo il pacchetto di traduzioni anche più volte al giorno, oltre ad essere sincronizzato con Weblate, quindi l'elenco delle estensioni tradotte può essere più ampio :).

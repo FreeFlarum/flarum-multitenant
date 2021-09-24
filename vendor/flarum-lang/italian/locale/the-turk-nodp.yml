@@ -13,3 +13,5 @@ the-turk-nodp:
     composer_edit:
       double_posting_warning_description: 'Poiché hai già risposto a questa discussione poco tempo fa, per favore rivedi il tuo ultimo post invece di crearne uno nuovo.'
       double_posting_warning_title: 'Hai risposto per ultimo a questa discussione.'
+    discussion:
+      cannot_reply_alert_message: 'Non puoi rispondere a questa discussione fino a che qualcun altro non risponde.'

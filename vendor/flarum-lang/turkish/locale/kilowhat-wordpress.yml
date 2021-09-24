@@ -51,7 +51,7 @@ kilowhat-wordpress:
       welcome_message: 'Tanıtım mesajı'
       welcome_message_help: 'Bu mesaj, kullanıcı forumu ilk ziyaret ettiğinde, etkinleştirilmişse kullanıcı adı seçimiyle birlikte gösterilecektir.'
       wordpress_login_only: 'Yalnızca WordPress ile girişe izin ver'
-      wordpress_login_only_help: "Flarum girişini devre dışı bırakır ve giriş gerektiğinde doğrudan WordPress giriş penceresini açar. Bu, \"Kaydolma\" iznini otomatik olarak Kapalı olarak ayarlayacaktır.\n"
+      wordpress_login_only_help: "Flarum girişini devre dışı bırakır ve giriş gerektiğinde doğrudan WordPress giriş penceresini açar. Bu, \"Kayıt Olma\" iznini otomatik olarak Kapalı olarak ayarlayacaktır.\n"
       wordpress_login_path: 'WordPress Giriş Yolu'
       wordpress_login_path_help: 'Yalnızca giriş bağlantısını bir eklenti ile yeniden tanımladıysanız gereklidir'
       wordpress_url: 'WordPress Bağlantısı'

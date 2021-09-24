@@ -9,6 +9,10 @@ flarum-approval:
       reply_without_approval_label: ตอบกลับการสนทนานี้โดยไม่ต้องอนุมัติ
       start_discussions_without_approval_label: เริ่มการสนทนาโดยไม่ต้องอนุมัติ
   forum:
+    badge:
+      awaiting_approval_tooltip: '=> flarum-approval.ref.awaiting_approval'
+    post:
+      awaiting_approval_text: '=> flarum-approval.ref.awaiting_approval'
     post_controls:
       approve_button: การอนุมัติ
   ref:

@@ -19,13 +19,13 @@ class UserPolicy extends AbstractPolicy
     /**
      * @param User $actor
      * @param $ability
-     * @param User $user
+     * @param User|string $user
      *
      * @return bool|null
      */
-    public function can(User $actor, $ability, User $user)
+    public function can(User $actor, $ability, $user)
     {
-        if ($ability === 'user.viewWarnings' && $actor->id == $user->id) {
+        if ($ability === 'user.viewWarnings' && $user instanceof User && $actor->id == $user->id) {
             return $this->allow();
         }
     }

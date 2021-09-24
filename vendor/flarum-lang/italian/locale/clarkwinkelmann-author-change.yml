@@ -15,6 +15,9 @@ clarkwinkelmann-author-change:
       created_at: 'Orario creazione'
       edited_at: 'Modifica data'
       submit: Salva
+      sync-impossible: 'Impossibile trovare il primo post. Prova a scorrere fino all''inizio della discussione.'
+      sync-with-discussion: 'Sincronizza con discussione'
+      sync-with-post: 'Sincronizza con primo post'
       title-discussion: 'Modifica Autore e data discussione'
       title-post: 'Modifica autore post e data'
       user: Autore

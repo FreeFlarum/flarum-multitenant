@@ -16,7 +16,7 @@ fof-doorman:
       success: 'E-postalar başarıyla gönderildi'
       title: 'Davetiye Kodu Gönder'
     nav:
-      desc: 'Kullanıcıların kaydolması ve bir gruba atanması için davet kodları oluşturun'
+      desc: 'Kullanıcıların kayıt olması ve bir gruba atanması için davet kodları oluşturun'
     page:
       doorkey:
         allow-public:

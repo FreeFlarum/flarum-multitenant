@@ -11,6 +11,7 @@ flarum-ext-welcomebox:
     SettingsLink: Ayarlar
     discussion: '=> core.ref.discussions'
     goToProfile: Profil
+    lastSeen: 'Son Ziyaret'
     notregistered: 'Henüz bu foruma üye olmadınız.'
     npost: '=> core.ref.posts'
     tooltipDisclist: Tartışmalarım

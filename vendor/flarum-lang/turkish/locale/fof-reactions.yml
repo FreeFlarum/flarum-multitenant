@@ -41,6 +41,7 @@ fof-reactions:
     modal:
       title: İfadeler
     notification: '{username}, gönderinize {reaction} ifadesi bıraktı'
+    react_button_label: Tepki
     reacting-own-post: 'Kendi gönderine ifade bırakamazsın'
     settings:
       notify_post_reacted_label: 'Birisi gönderime ifade bıraktığında'

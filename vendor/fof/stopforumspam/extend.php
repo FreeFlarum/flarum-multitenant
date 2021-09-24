@@ -12,17 +12,20 @@
 namespace FoF\StopForumSpam;
 
 use Flarum\Extend;
+use Flarum\User\Event\RegisteringFromProvider;
 use FoF\Spamblock\Event\MarkedUserAsSpammer;
 use FoF\StopForumSpam\Middleware\RegisterMiddleware;
 
 return[
     (new Extend\Frontend('admin'))
-        ->js(__DIR__.'/js/dist/admin.js'),
+        ->js(__DIR__.'/js/dist/admin.js')
+        ->css(__DIR__.'/resources/less/admin.less'),
 
-    (new Extend\Locales(__DIR__.'/locale')),
+    (new Extend\Locales(__DIR__.'/resources/locale')),
 
     (new Extend\Event())
-        ->listen(MarkedUserAsSpammer::class, Listeners\ReportSpammer::class),
+        ->listen(MarkedUserAsSpammer::class, Listeners\ReportSpammer::class)
+        ->listen(RegisteringFromProvider::class, Listeners\ProviderRegistration::class),
 
     (new Extend\Middleware('forum'))
         ->add(RegisterMiddleware::class),

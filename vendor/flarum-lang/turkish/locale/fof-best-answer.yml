@@ -4,22 +4,36 @@
 
 fof-best-answer:
   admin:
+    edit_tag:
+      qna_label: 'Bu etikette En İyi Yanıtların belirlenmesine izin ver'
+      reminders: 'Bu etiketteki tartışmalar için bir En İyi Yanıt belirlemesi amacıyla hatırlatıcı gönderin'
     permissions:
       best_answer: 'En iyi yanıtı seç (kendi tartışmasında)'
       best_answer_not_own_discussion: 'En iyi yanıtı seç (başkasının tartışmasında)'
     settings:
-      allow_select_own_post: 'Kullanıcının kendi gönderisini seçmesine izin ver'
+      allow_select_own_post: 'Kendi gönderini seç'
+      allow_select_own_post_help: 'Tartışma sahibinin tartışmadaki kendi gönderilerinden birini en iyi cevap olarak seçmesine izin verin'
+      documentation: Belgeler
+      enable_all_tags_button: 'Tüm etiketlerde En İyi Yanıtı etkinleştir'
+      enable_all_tags_reminder_button: 'En İyi Yanıt hatırlatıcısını için tüm etiketleri etkinleştir'
+      introduction: "<code><a>flarum/tags</a></code> içinde hangi etiketlerin En İyi Yanıtları destekleyeceğini ve isteğe bağlı olarak hangi etiketlerin hatırlatıcıları desteklemesi gerektiğini etkinleştirin. Bir etiket için En İyi Yanıt etkinleştirildiğinde, yanıtları ayarlayabilen her kullanıcı grubuna (kendi tartışması, herhangi bir tartışma) izinler atayın. İzinler genel olarak (En İyi Yanıtın etkinleştirildiği herhangi bir etiket için) veya etiket bazında atanabilir.\n"
       label:
         advanced: Gelişmiş
         general: Genel
         reminders: Hatırlatıcılar
-        reminders_notice: 'Hatırlatıcıların doğru şekilde çalışması için Flarum planlayıcısını doğru şekilde ayarlamış olmanız gerekir.'
+        reminders_notice: 'Hatırlatıcıların çalışması için Flarum planlayıcısını doğru şekilde ayarlamış olmanız gerekir.'
       remind_tag_ids: 'Hatırlatıcıyı belirli etiketlerde etkinleştirmek için etiketleri belirleyin (virgülle ayırarak)'
       schedule_log_output: 'Zamanlayıcı çıktısını kayıt dosyasına ekle'
-      schedule_on_one_server: 'Zamanlayıcı için ''onOneServer()'' kullanın (Redis/Memcache gerektirir)'
-      schedule_stop_overnight: 'Hatırlatıcının aktif olunmayan saatlerde çalışmasını engelleyin (ÖS 9 - ÖÖ 8 sunucu saati)'
-      select_best_answer_reminder_days: 'Kullanıcıya X günden sonra en iyi yanıtı seçmesini hatırlat'
-      use_alt_ui: 'Alternatif şablonu kullanın (En İyi Yanıt düğmeleri gönderinin sonunda yer alır)'
+      schedule_on_one_server: 'Zamanlayıcı için ''onOneServer()'' kullanın'
+      schedule_on_one_server_help: 'Redis/Memcache gerektirir'
+      schedule_stop_overnight: 'Aktif olmayan saatlerde hatırlatma bildirimlerinin gönderilmesini önleyin'
+      schedule_stop_overnight_help: '9ös - 8öö sunucu zamanı'
+      select_best_answer_reminder_days: 'Hatırlatma sıklığı'
+      select_best_answer_reminder_days_help: 'Yapılandırılabilir gün sayısından sonra tartışma sahibine En İyi Yanıtı seçmesi için bir hatırlatıcı gönderin, 0 = hatırlatıcıları devre dışı bırakın.'
+      show_filter_help: 'En İyi Yanıtların etkinleştirildiği etiketler için, tartışma listesinde çözülmüş/çözülmemiş filtre seçeneğini görüntülemeyi seçin'
+      show_filter_label: 'En İyi Yanıt filtresini göster'
+      use_alt_ui: 'Alternatif dizilim'
+      use_alt_ui_help: 'Altbilgideki en iyi yanıt kontrolleri'
   email:
     body:
       awarded: "Hey {recipient_display_name},\n\nHarika, {actor_display_name} senin {discussion_title} başlıklı tartışmadaki yanıtını en iyi yanıt olarak seçti. Yardımcı olduğun için teşekkürler.\n\nBuradan görüntüle: {discussion_url}\n"
@@ -33,8 +47,20 @@ fof-best-answer:
     answered_badge: Yanıtlandı
     best_answer_button: 'En İyi Yanıt'
     best_answer_label: '<a>{username}</a> tarafından {time_set}'
+    composer:
+      titlePlaceholder: 'Soru başlığı'
     errors:
       mismatch: 'Seçilen gönderi bu tartışmada mevcut değil.'
+    filter:
+      accessible_label: 'Çözülmüş/Çözülmemiş seçimi'
+      all_label: 'Tüm sorular'
+      solved_label: 'Çözülen sorular'
+      unsolved_label: 'Çözülmeyen sorular'
+    index:
+      ask_question: 'Bir Soru Sor'
+      cannot_ask_question: 'Soru Soramazsın'
+      solved_link: 'Çözülen tartışmalar'
+      unsolved_link: 'Çözülmeyen tartışmalar'
     notification:
       awarded: 'Gönderiniz {username} tarafından en iyi yanıt olarak seçti'
       best_answer_in_discussion: '{username} bu tartışmada en iyi yanıtı verdi'

@@ -1,0 +1,41 @@
+{
+    "name": "justoverclock/custom-html-widget",
+    "description": "Add your custom html to Flarum",
+    "keywords": [
+        "widget",
+        "afrux",
+        "custom html"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0",
+        "afrux/forum-widgets-core": "^0.1.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\CustomHtmlWidget\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Custom Html Widget",
+            "category": "",
+            "icon": {
+                "name": "far fa-file-code",
+                "backgroundColor": "green",
+                "color": "white"
+            }
+        }
+    }
+}

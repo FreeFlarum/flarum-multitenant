@@ -24,9 +24,9 @@ class Helpers
             return false;
         }
 
-        return self::tagEnabledForBestAnswer($discussion) && ($user->id === $discussion->user_id
+        return $user->id === $discussion->user_id
             ? $user->can('selectBestAnswerOwnDiscussion', $discussion)
-            : $user->can('selectBestAnswerNotOwnDiscussion', $discussion));
+            : $user->can('selectBestAnswerNotOwnDiscussion', $discussion);
     }
 
     public static function canSelectPostAsBestAnswer(User $user, Post $post): bool
@@ -40,20 +40,5 @@ class Helpers
         }
 
         return true;
-    }
-
-    private static function tagEnabledForBestAnswer(Discussion $discussion): bool
-    {
-        $enabled = false;
-
-        $discussionTags = $discussion->tags;
-        foreach ($discussionTags as $discussionTag) {
-            if ((bool) $discussionTag->is_qna) {
-                $enabled = true;
-                break;
-            }
-        }
-
-        return $enabled;
     }
 }

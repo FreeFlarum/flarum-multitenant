@@ -10,10 +10,12 @@ dem13n:
       choose_tags: 'Scegli categorie'
       default_img: 'Immagine di default'
       desktop_card_width: 'Larghezza delle schede primarie sugli schermi desktop: {percent}%'
+      mark_cards: 'Segna le schede con discussioni non lette'
       output_on_index_page: 'Mostra schede nella pagina iniziale'
       preview_text: 'Mostra testo breve'
       settings_error: 'Pulisci la cache, disabilita l''estensione, clicca il pulsante Disinstalla (sulla destra), conferma l''eliminazione dei dati, quindi riabilita l''estensione'
       show_replies: 'Mostra risposte'
+      show_views: 'Mostra visualizzazioni (quando è installata l''estensione "Flarumite Simple Discussion Views")'
       small_cards: 'Numero di schede primarie'
       tablet_card_width: 'Larghezza delle schede primarie sui tablet: {percent}%'
   forum:

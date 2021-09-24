@@ -1,0 +1,41 @@
+{
+    "name": "justoverclock/last-tweet",
+    "description": "Fetch last X tweet from Twitter",
+    "keywords": [
+        "afrux",
+        "widget",
+        "twitter widget"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0",
+        "afrux/forum-widgets-core": "^0.1.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\LastTweet\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Last Tweet",
+            "category": "",
+            "icon": {
+                "name": "fab fa-twitter",
+                "backgroundColor": "red",
+                "color": "white"
+            }
+        }
+    }
+}

@@ -14,6 +14,10 @@ class FlarumFlagsEvents implements ExtenderInterface
 {
     public function extend(Container $container, Extension $extension = null)
     {
+        if (!class_exists(Flag::class)) {
+            return;
+        }
+
         Flag::created(function (Flag $flag) {
             // We only log flags created manually via the extension
             // We don't log the creation of Approval/Akismet flags

@@ -20,10 +20,7 @@ app.initializers.add(
         override(CommentPost.prototype, 'flagReason', function (original, flag) {
             if (flag.type() === 'autoMod') {
                 const detail = flag.reasonDetail();
-                return [
-                    app.translator.trans('fof-filter.forum.flagger_name'), 
-                    detail ? <span className="Post-flagged-detail">{detail}</span> : ''
-                ];
+                return [app.translator.trans('fof-filter.forum.flagger_name'), detail ? <span className="Post-flagged-detail">{detail}</span> : ''];
             }
             return original(flag);
         });

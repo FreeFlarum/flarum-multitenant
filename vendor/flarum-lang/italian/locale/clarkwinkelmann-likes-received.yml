@@ -8,4 +8,4 @@ clarkwinkelmann-likes-received:
       view: 'Vedi like ricevuti'
   forum:
     user-card:
-      likes: '{likes} like ricevuti'
+      likes: '{likes, plural, one {# like ricevuto} other {# likes ricevuti}}'

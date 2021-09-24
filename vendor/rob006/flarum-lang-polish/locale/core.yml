@@ -456,6 +456,7 @@ core:
     change_email: 'Zmień adres e-mail'
     change_password: 'Zmień hasło'
     color: Kolor
+    confirm_email: 'Potwierdź e-mail'
     confirm_password: 'Potwierdź hasło'
     confirmation_email_sent: 'Wysłaliśmy e-mail aktywacyjny na {email}. Jeśli nie dotrze wkrótce, sprawdź folder ze spamem.'
     custom_footer_text: 'Dodaj własny kod HTML, który będzie wyświetlany na samym dole forum.'
@@ -497,6 +498,8 @@ core:
     write_a_reply: 'Napisz odpowiedź...'
     you: Ty
   views:
+    confirm_email:
+      text: 'Kliknij poniższy przycisk, aby potwierdzić adres e-mail swojego konta.'
     content:
       javascript_disabled_message: 'Ta strona najlepiej działa w nowoczesnych przeglądarkach z włączonym JavaScriptem.'
       load_error_message: 'Coś poszło nie tak podczas ładowania pełnej wersji strony. Jeśli problem będzie się powtarzał, wyczyść pamięć przeglądarki (cache) i spróbuj ponownie.'

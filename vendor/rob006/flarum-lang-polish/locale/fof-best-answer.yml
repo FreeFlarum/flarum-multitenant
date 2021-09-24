@@ -4,11 +4,17 @@
 
 fof-best-answer:
   admin:
+    edit_tag:
+      qna_label: 'Włącz możliwość ustawiania najlepszej odpowiedzi w tym tagu'
+      reminders: 'Wysyłaj przypomnienia o ustawieniu najlepszej odpowiedzi dla dyskusji w tym tagu'
     permissions:
       best_answer: 'Wybieranie najlepszej odpowiedzi (własna dyskusja)'
       best_answer_not_own_discussion: 'Wybieranie najlepszej odpowiedzi (cudza dyskusja)'
     settings:
-      allow_select_own_post: 'Pozwól użytkownikowi wybrać swój własny post'
+      allow_select_own_post: 'Wybieranie własnego posta'
+      allow_select_own_post_help: 'Pozwól autorowi dyskusji wybrać jeden z jego własnych postów jako najlepszą odpowiedź'
+      documentation: Dokumentacja
+      introduction: "W ustawieniach <code>flarum/tags</code> wybierz, które tagi mają obsługiwać najlepsze odpowiedzi i, opcjonalnie, które tagi powinny obsługiwać przypomnienia. Gdy tag ma włączoną funkcję najlepszych odpowiedzi, przydziel uprawnienia dla każdej grupy użytkowników, którzy mogą wybierać odpowiedzi (własne dyskusje, cudze dyskusje). Uprawnienia mogą być przypisane globalnie (dla każdego tagu z włączoną opcją najlepszej odpowiedzi), lub dla każdego tagu osobno.\n"
       label:
         advanced: Zaawansowane
         general: Ogólne
@@ -16,10 +22,14 @@ fof-best-answer:
         reminders_notice: 'Aby przypomnienia działały, harmonogram zadań Flarum musi być prawidłowo skonfigurowany.'
       remind_tag_ids: 'Aby wysyłać przypomnienia tylko dla dyskusji w konkretnych tagach, wpisz tutaj ich ID (ID tagów rozdzielone przecinkami)'
       schedule_log_output: 'Zapisz logi harmonogramu zadań'
-      schedule_on_one_server: 'Użyj dyrektywy "onOneServer()" dla harmonogramu zadań (task scheduler) (wymaga Redis/Memcache)'
-      schedule_stop_overnight: 'Wyłącz przypomnienia w godzinach nocnych (21.00 - 8.00 według czasu serwera)'
-      select_best_answer_reminder_days: 'Przypomnij użytkownikowi o wybraniu najlepszej odpowiedzi po X dniach'
-      use_alt_ui: 'Użyj alternatywnego układu (przycisk najlepszej odpowiedzi w stopce posta)'
+      schedule_on_one_server: 'Użyj dyrektywy "onOneServer()" dla harmonogramu zadań (task scheduler)'
+      schedule_on_one_server_help: 'Wymaga Redis/Memcache'
+      schedule_stop_overnight: 'Wyłącz przypomnienia w godzinach nocnych'
+      schedule_stop_overnight_help: '21.00 - 8.00 według czasu serwera'
+      select_best_answer_reminder_days: 'Częstotliwość przypominania'
+      select_best_answer_reminder_days_help: 'Po podanej liczbie dni wyślij przypomnienie do autora dyskusji, aby wybrał najlepszą odpowiedź. Ustaw 0, aby wyłączyć przypomnienia.'
+      use_alt_ui: 'Alternatywny układ'
+      use_alt_ui_help: 'Wyświetl opcje do ustawiania najlepszej odpowiedzi w stopce posta'
   email:
     body:
       awarded: "Witaj {recipient_display_name},\n\nŚwietna robota, {actor_display_name} właśnie wybrał Twój post jako najlepsza odpowiedź w \"{discussion_title}\". Dzięki za pomoc!\n\nAby zobaczyć dyskusję, kliknij poniższy link:\n{discussion_url}\n"
@@ -33,8 +43,20 @@ fof-best-answer:
     answered_badge: Rozwiązane
     best_answer_button: 'Najlepsza odpowiedź'
     best_answer_label: 'wybrana przez <a>{username}</a> {time_set}'
+    composer:
+      titlePlaceholder: 'Tytuł pytania'
     errors:
       mismatch: 'Wybrany post nie istnieje w tej dyskusji.'
+    filter:
+      accessible_label: 'Wybór rozwiązany/nierozwiązany'
+      all_label: 'Wszystkie pytania'
+      solved_label: 'Rozwiązane pytania'
+      unsolved_label: 'Nierozwiązane pytania'
+    index:
+      ask_question: 'Zadaj pytanie'
+      cannot_ask_question: 'Nie można zadać pytania'
+      solved_link: 'Rozwiązane dyskusje'
+      unsolved_link: 'Nierozwiązane dyskusje'
     notification:
       awarded: 'Twój post został wybrany jako najlepsza odpowiedź przez {username}'
       best_answer_in_discussion: '{username} wybrał najlepszą odpowiedź w tej dyskusji'

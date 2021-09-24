@@ -1,0 +1,373 @@
+:root {
+    --fld-bg: #2C2F33;
+    --fld-bg-2: #23272A;
+    --fld-bg-2-dark: #1b2028;
+    --fld-bg-2-transparent: #23272ae0;
+    --fld-bg-3: #000000;
+    --fld-blurple: #7289DA;
+    --fld-blurple-new: #5865F2;
+    --fld-white: #FFFFFF;
+    --fld-grey: #99AAB5;
+}
+
+body {
+    background: var(--fld-bg);
+    color: var(--fld-white);
+}
+
+.App-content {
+    border-color: var(--fld-bg);
+    background: var(--fld-bg);
+    color: var(--fld-white);
+}
+
+a {
+    color: var(--fld-blurple);
+}
+.Button {
+    background: var(--fld-blurple);
+    color: var(--fld-white);
+}
+.App-header {
+    background: var(--fld-bg-2);
+}
+.App-header .FormControl {
+    background: var(--fld-bg);
+    color: var(--fld-white);
+}
+.FormControl:focus, .FormControl.focus {
+    background-color: var(--fld-bg);
+    color: var(--fld-white);
+    border-color: var(--fld-bg);
+    outline: none;
+}
+
+.App-header .Button {
+    color: var(--fld-grey) !important;
+    background-color: var(--fld-bg-2);
+}
+
+.App-header .Button:hover {
+    color: var(--fld-white) !important;
+}
+
+.App-header .Button:hover {
+    color: var(--fld-white) !important;
+    background: var(--fld-bg);
+}
+
+@media (min-width: 768px){
+    .App-header .Button:active, .App-header .Button.active, .App-header .Button:focus, .App-header .Button.focus, .App-header .open>.Dropdown-toggle.Button {
+        background: var(--fld-bg);
+        color: #ce9fef;
+    }
+}
+
+.Button:hover, .Button:focus, .Button.focus {
+    background-color: var(--fld-blurple-new);
+}
+.DiscussionListItem:hover {
+    background: var(--fld-bg-2);
+}
+.Button--primary {
+    background: var(--fld-blurple-new);
+}
+.Composer {
+    background: var(--fld-bg-2-transparent);
+}
+.Composer.active:not(.fullScreen) {
+    background: var(--fld-bg-2);
+}
+.Composer.minimized {
+    background: var(--fld-bg-2);
+}
+
+.FormControl {
+    color: var(--fld-grey);
+    background-color: var(--fld-bg-2);
+}
+.sideNav .Dropdown--select .Dropdown-menu>li.active>a {
+    color: var(--fld-grey);
+}
+
+.sideNav .Dropdown--select .Dropdown-menu>li>a {
+    color: var(--fld-grey);
+}
+
+.Dropdown-menu {
+    color: var(--fld-grey)
+}
+.PostStream-item {
+    border-color: var(--fld-bg-2) !important;
+}
+.Post-body blockquote {
+    background: var(--fld-bg-2);
+    color: var(--fld-grey);
+    border-top: none;
+    border-left: 4px solid var(--fld-blurple-new);
+    border-bottom: none;
+}
+.PostUser h3, .PostUser h3 a {
+    color: var(--fld-blurple);
+}
+.PostMention, .UserMention {
+    background: var(--fld-blurple-new) !important;
+    color: var(--fld-white) !important;
+}
+.DiscussionPage-list {
+    background: var(--fld-bg-2);
+    border-color: var(--fld-bg-2);
+}
+.DiscussionPage-list .DiscussionListItem.active {
+    background: var(--fld-bg);
+}
+.DiscussionListItem-title {
+    color: var(--fld-blurple);
+}
+
+// Mobile support
+.App-navigation {
+    background: var(--fld-blurple);
+}
+.App-primaryControl>.Button, .App-backControl>.Button {
+    color: var(--fld-white) !important;
+}
+.App-drawer {
+    background: var(--fld-bg-2);
+}
+.App-drawer .Button, .App-drawer .Button:hover {
+    color: var(--fld-white);
+}
+.Dropdown .Dropdown-menu>li>a, .Dropdown .Dropdown-menu>li>button {
+    background: var(--fld-bg);
+}
+.Dropdown-separator {
+    background-color: var(--fld-bg);
+}
+.Dropdown .Dropdown-menu>li>a:hover, .Dropdown .Dropdown-menu>li>button:hover {
+    background: var(--fld-blurple);
+    color: var(--fld-white);
+}
+.Composer:not(.minimized):before {
+    background: var(--fld-blurple);
+    border-color: var(--fld-bg-2);
+}
+.Dropdown-menu {
+    background: var(--fld-bg);
+    color: var(--fld-white);
+}
+
+.Dropdown .Dropdown-menu>li>a, .Dropdown .Dropdown-menu>li>button {
+    background: var(--fld-bg);
+    color: var(--fld-white);
+}
+.sideNav .Dropdown--select .Dropdown-menu>li>a:hover {
+    background: none;
+    color: var(--fld-blurple);
+    text-decoration: none;
+}
+
+.PostsUserPage-list>li {
+    border-color: var(--fld-bg-2);
+}
+
+// Best anwser intergration
+.Post-footer .item-bestAnswerPost .Post-body {
+    color: var(--fld-white);
+    word-break: break-word;
+}
+.MentionsDropdown .PostPreview .username, .PostMention-preview .PostPreview .username, .Post-mentionedBy-preview .PostPreview .username {
+    color: var(--fld-white);
+    font-weight: bold;
+}
+.PostMention:hover, .UserMention:hover, .PostMention:active, .UserMention:active {
+    color: var(--fld-grey);
+}
+
+// Made here: https://discuss.flarum.org/d/26007-adding-author-label-to-posts
+// This may be added in as a complete feature sometime...
+article.CommentPost.Post.Post--by-start-user .Post-header h3 span.username:after {
+    background: var(--fld-blurple-new) !important;
+    //content: "Author";
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    margin-left: 14px;
+    text-decoration: none;
+}
+
+.App-header .Button.Navigation-back {
+    color: var(--fld-white) !important;
+    background: var(--fld-blurple);
+}
+.App-header .Button.Navigation-back:hover {
+    color: var(--fld-white);
+    background: var(--fld-blurple-new);
+}
+.App-header .Navigation-pin {
+    color: var(--fld-white) !important;
+    background: var(--fld-blurple);
+}
+
+.App-header .Navigation-pin:hover {
+    color: var(--fld-white);
+    background: var(--fld-blurple-new);
+}
+.App-header .Navigation-pin.active {
+    color: var(--fld-white);
+    background: var(--fld-blurple-new);
+}
+
+@media (min-width: 768px){
+    .Modal-header {
+        text-align: center;
+        border: 0;
+        padding: 25px;
+        background: var(--fld-bg-2);
+    }
+}
+@media (max-width: 767px){
+    .ModalManager:before {
+        background: var(--fld-bg-2);
+        border-color: var(--fld-bg-2);
+    }
+}
+.Modal-body {
+    background-color: var(--fld-bg);
+    color: var(--fld-white)
+}
+.Form-group>label {
+    color: var(--fld-grey);
+}
+
+.unread .DiscussionListItem-count {
+    color: var(--fld-grey);
+    font-weight: 700;
+}
+.EmojiDropdown>li>button {
+    color: var(--fld-grey);
+}
+.Dropdown-menu>li.active>a, .Dropdown-menu>li.active>button {
+    background: var(--fld-bg-2);
+}
+
+@media (min-width: 768px){
+    .unread .DiscussionListItem-count {
+        color: var(--fld-grey);
+        font-weight: 700;
+    }
+}
+
+// Support for tags..
+@media (min-width: 768px){
+    .TagDiscussionModal .Modal-header {
+        background: var(--fld-bg-2);
+    }
+}
+.Modal-body .FormControl {
+    background-color: var(--fld-bg-2);
+    color: var(--fld-white);
+}
+.SelectTagList {
+    background: var(--fld-bg);
+}
+.SelectTagList>li.active {
+    background: var(--fld-bg-2);
+}
+
+// scrollbar
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px !important;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--fld-bg-2);
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+// Modal footer support
+.Modal-footer {
+    background: var(--fld-bg-2);
+}
+
+// Tag support
+.TagLabel {
+    background: var(--fld-bg-2-dark);
+    color: var(--fld-grey);
+}
+// Hero support
+.Hero {
+    background: #1b2028;
+}
+
+// Notifications
+.NotificationGroup-header {
+    color: var(--fld-grey) !important;
+}
+@media (min-width: 768px){
+    .NotificationList-header {
+        border-color: var(--fld-bg-2);
+    }
+}
+.Notification:hover, .Notification:focus, .Notification:focus-within {
+    text-decoration: none;
+    background: var(--fld-bg-2);
+}
+// App-title bug
+@media (max-width: 767px){
+    .App-titleControl>.Button {
+        color: var(--fld-white);
+    }
+}
+@media (max-width: 767px){
+    .Dropdown .Dropdown-menu>.active>a, .Dropdown .Dropdown-menu>.active>button, .Dropdown .Dropdown-menu>.active>a:hover, .Dropdown .Dropdown-menu>.active>button:hover {
+        background: var(--fld-bg-2) !important;
+        color: #fff !important;
+    }
+}
+
+// Notifications
+.Notification.unread {
+    background: var(--fld-bg-2);
+}
+
+// Group list intergration
+.GroupList-UserList-item a {
+    color: var(--fld-grey);
+}
+
+// Discussion thing
+.DiscussionListItem-info {
+    color: var(--fld-grey);
+}
+
+@media (max-width: 767px){
+    .DiscussionListItem-content:active {
+        background: var(--fld-bg-2);
+    }
+}
+@media (max-width: 767px){
+    .item-discussion-views {
+        background: var(--fld-bg-2-dark) !important;
+        color: var(--fld-grey) !important;
+    }
+}
+@media (max-width: 767px){
+    .unread .DiscussionListItem-count {
+        background: var(--fld-blurple) !important;
+        color: var(--fld-white) !important;
+        font-weight: bold;
+    }
+}
+// Post
+.Post-body pre {
+    background: var(--fld-bg-2);
+    color: var(--fld-grey);
+}

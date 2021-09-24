@@ -27,5 +27,6 @@ fof-filter:
       text: Filtro
     title: Filtro
   forum:
+    flag_message: 'Stringhe bloccate contenute'
     flaged_text: 'Conteneva stringhe bloccate'
     flagger_name: 'Auto Moderazione'

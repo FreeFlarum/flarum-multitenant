@@ -1,0 +1,43 @@
+{
+  "name": "justoverclock/geo-weather",
+  "description": "Add a weather widget to Flarum",
+  "keywords": [
+    "Geo Weather",
+    "wheater",
+    "wheater widget"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\GeoWeather\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Geo Weather",
+      "category": "",
+      "icon": {
+        "name": "fas fa-cloud-sun",
+        "backgroundColor": "yellow",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

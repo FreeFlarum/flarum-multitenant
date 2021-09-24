@@ -27,4 +27,5 @@ michaelbelgium-discussion-views:
       submit_button: 'Tak, usuń wszystkie'
       title: 'Zresetuj liczbę wyświetleń dyskusji'
     viewlist:
+      guest: Gość
       title: 'Ostatnio oglądający'

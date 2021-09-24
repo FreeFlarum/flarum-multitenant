@@ -1,3 +1,28 @@
+### 1.0.3
+- Fixed a possible security issue.
+
+### 1.0.2
+- PHP 7.3 support
+
+### 1.0.1
+- **Fix** wrapping expressions with `code` should preserve alias delimiters when they set as primary delimiters (https://github.com/the-turk/flarum-mathren/issues/27).
+- **Fix** "Quote" button should be hidden if you disable the `flarum/mentions` extension.
+
+### 1.0.0
+
+All hail the new TeX renderer solution! I practically rewritten the whole thing.
+
+- As we're using native TextFormatter methods now, expressions should be rendered Flarum-wide automatically.
+- Bring back special delimiters (aka the "dollar signs") support. You can even use euro, yuan, turkish lira signs. Not to mention that they're 100% compatible with Markdown & BBCode and ready to render your most complex expressions.
+- **Fix** AMS environments won't render outside block delimiters.
+- **Drop** decisive keywords & DOM node excluders (they were causing too much confusion, wrap your expressions with the `code` tag instead).
+- The backend is more clear than ever, come and join me!
+
+**Breaking changes!**
+
+- Your settings won't be preserved.
+- Old expressions might not be rendered until you edit and save the post.
+
 ### 0.3.7
 - Use `['oncreate', 'onupdate']` lifecycle hooks for `CommentPost` component instead of `onupdate` only.
 

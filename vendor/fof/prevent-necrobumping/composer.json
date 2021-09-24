@@ -20,7 +20,6 @@
     ],
     "require": {
         "flarum/core": "^1.0.0",
-        "fof/components": "^1.0.0",
         "fof/extend": "^1.0.0"
     },
     "authors": [

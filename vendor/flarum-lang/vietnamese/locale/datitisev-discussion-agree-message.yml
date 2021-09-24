@@ -1,0 +1,6 @@
+datitisev-discussion-agree-message:
+  admin:
+    settings:
+      title_label: Tiêu đề
+      description_label: Mô tả
+      agreement_label: Văn bản điều khoản

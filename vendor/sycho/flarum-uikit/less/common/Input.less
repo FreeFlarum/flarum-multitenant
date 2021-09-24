@@ -1,0 +1,17 @@
+.UiKit-Input {
+  display: flex;
+  align-items: center;
+}
+
+.UiKit-Input-icon {
+  width: @uikit-InputIconWidth;
+  text-align: center;
+  margin-right: -@uikit-InputIconWidth;
+  padding-left: 13px;
+  z-index: 1;
+  color: @control-color;
+}
+
+.UiKit-FormControl.hasIcon {
+  padding-left: calc(@uikit-InputIconWidth + 13px);
+}

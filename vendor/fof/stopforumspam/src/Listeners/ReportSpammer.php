@@ -40,7 +40,7 @@ class ReportSpammer
 
         $ipAddress = '8.8.8.8';
 
-        if ($post && filter_var($post->ip_address, FILTER_VALIDATE_IP, [FILTER_FLAG_IPV4, FILTER_FLAG_NO_PRIV_RANGE])) {
+        if ($post && filter_var($post->ip_address, FILTER_VALIDATE_IP, [FILTER_FLAG_NO_PRIV_RANGE])) {
             $ipAddress = $post->ip_address;
         }
 

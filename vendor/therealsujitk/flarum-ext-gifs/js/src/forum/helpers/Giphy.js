@@ -21,58 +21,62 @@ export async function getTrendingTerms() {
     var url = `${this.baseUrl}/trending/searches?api_key=${this.apiKey}`;
 
     await fetch(url)
-    .then((response) => response.json())
-    .then((content) => {
-        if (content.data === undefined) {
-            console.error('Sorry, there was something wrong with the Giphy API Key.');
-            return;
-        }
+        .then((response) => response.json())
+        .then((content) => {
+            if (content.data === undefined) {
+                console.error('Sorry, there was something wrong with the Giphy API Key.');
+                return;
+            }
 
-        terms = content.data;
-    });
+            terms = content.data;
+        });
 
     return terms;
 }
 
 export async function getTrendingGIFs(offset, limit) {
     var obj;
-    var url = `${this.baseUrl}/gifs/trending?api_key=${this.apiKey}&rating=${this.rating}&limit=${limit || this.defaultLimit}${offset ? `&offset=${offset}` : ''}`;
+    var url = `${this.baseUrl}/gifs/trending?api_key=${this.apiKey}&rating=${this.rating}&limit=${
+        limit || this.defaultLimit
+    }${offset ? `&offset=${offset}` : ''}`;
 
     await fetch(url)
-    .then((response) => response.json())
-    .then((content) => {
-        if (content.data === undefined) {
-            console.error('Sorry, there was something wrong with the Tenor API Key.');
-            return;
-        }
+        .then((response) => response.json())
+        .then((content) => {
+            if (content.data === undefined) {
+                console.error('Sorry, there was something wrong with the Tenor API Key.');
+                return;
+            }
 
-        obj = {
-            gifs: content.data,
-            next: offset + (limit || this.defaultLimit)
-        };
-    });
-    
+            obj = {
+                gifs: content.data,
+                next: offset + (limit || this.defaultLimit)
+            };
+        });
+
     return obj;
 }
 
 export async function getGIFs(query, offset, limit) {
     var obj;
-    var url = `${this.baseUrl}/gifs/search?api_key=${this.apiKey}&rating=${this.rating}&q=${query}&limit=${limit || this.defaultLimit}${offset ? `&offset=${offset}` : ''}`;
+    var url = `${this.baseUrl}/gifs/search?api_key=${this.apiKey}&rating=${this.rating}&q=${query}&limit=${
+        limit || this.defaultLimit
+    }${offset ? `&offset=${offset}` : ''}`;
 
     await fetch(url)
-    .then((response) => response.json())
-    .then((content) => {
-        if (content.data === undefined) {
-            console.error('Sorry, there was something wrong with the Tenor API Key.');
-            return;
-        }
+        .then((response) => response.json())
+        .then((content) => {
+            if (content.data === undefined) {
+                console.error('Sorry, there was something wrong with the Tenor API Key.');
+                return;
+            }
 
-        obj = {
-            gifs: content.data,
-            next: offset + (limit || this.defaultLimit)
-        };
-    });
-    
+            obj = {
+                gifs: content.data,
+                next: offset + (limit || this.defaultLimit)
+            };
+        });
+
     return obj;
 }
 
@@ -81,10 +85,10 @@ export async function getGIFsByIDs(ids) {
     var url = `${this.baseUrl}/gifs?api_key=${this.apiKey}&ids=${ids}`;
 
     await fetch(url)
-    .then((response) => response.json())
-    .then((content) => {
-        gifs = content.data;
-    });
+        .then((response) => response.json())
+        .then((content) => {
+            gifs = content.data;
+        });
 
     return gifs;
 }

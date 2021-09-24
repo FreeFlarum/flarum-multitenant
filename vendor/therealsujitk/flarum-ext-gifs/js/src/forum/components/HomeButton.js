@@ -9,8 +9,10 @@ export default class SuggestionButton extends Component {
         const icon = attrs.icon;
         const onclick = attrs.onclick;
 
-        return <div style={url && `background-image: url(${url})`} onclick={onclick}>
-            {icon && <i class={icon}></i>}  {title}
-        </div>;
+        return (
+            <div style={url && `background-image: url(${url})`} onclick={onclick}>
+                {icon && <i class={icon}></i>} {title}
+            </div>
+        );
     }
 }

@@ -21,9 +21,9 @@ export default class GIFModal extends Modal {
 
         this.textArea = this.attrs.textArea;
         this.baseUrl = app.forum.attribute('baseUrl');
-        this.engine = app.forum.attribute(`${prefix}.engine`);
+        this.engine = app.forum.attribute(`${prefix}.engine`) || 'giphy';
         this.apiKey = app.forum.attribute(`${prefix}.api_key`);
-        this.rating = app.forum.attribute(`${prefix}.rating`);
+        this.rating = app.forum.attribute(`${prefix}.rating`) || 'off';
 
         this.Engine = this.getEngine();
         this.Engine.initialize(this.apiKey, this.rating);
@@ -63,36 +63,80 @@ export default class GIFModal extends Modal {
      * TRENDING and RESULTS use the same container
      */
     content() {
-        return <div className="Modal-body">
-            <div style="display: flex;">
-                <Button id={`${prefix}-back-button`} className="Button Button--icon hasIcon" style={!this.isHomeVisible ? '' : 'display: none'} icon="fas fa-long-arrow-alt-left" onclick={this.showHome.bind(this)} />
-                <span id={`${prefix}-category`} style={this.isFavouritesVisible || this.isTrendingVisible ? '' : 'display: none'}>{this.category && this.category}</span>
-                <div id={`${prefix}-search-input`} className="Search-input" style={this.isHomeVisible || this.isResultsVisible ? '' : 'display: none'}>
-                    <input className="FormControl" placeholder={this.getPlaceholder()} value={this.query()} bidi={this.query} onkeydown={this.onkeydown.bind(this)} />
+        return (
+            <div className="Modal-body">
+                <div style="display: flex;">
+                    <Button
+                        id={`${prefix}-back-button`}
+                        className="Button Button--icon hasIcon"
+                        style={!this.isHomeVisible ? '' : 'display: none'}
+                        icon="fas fa-long-arrow-alt-left"
+                        onclick={this.showHome.bind(this)}
+                    />
+                    <span
+                        id={`${prefix}-category`}
+                        style={this.isFavouritesVisible || this.isTrendingVisible ? '' : 'display: none'}
+                    >
+                        {this.category && this.category}
+                    </span>
+                    <div
+                        id={`${prefix}-search-input`}
+                        className="Search-input"
+                        style={this.isHomeVisible || this.isResultsVisible ? '' : 'display: none'}
+                    >
+                        <input
+                            className="FormControl"
+                            placeholder={this.getPlaceholder()}
+                            value={this.query()}
+                            bidi={this.query}
+                            onkeydown={this.onkeydown.bind(this)}
+                        />
+                    </div>
+                    <Button
+                        id={`${prefix}-search-button`}
+                        className="Button Button--primary"
+                        style={this.isHomeVisible || this.isResultsVisible ? '' : 'display: none'}
+                        onclick={() => {
+                            this.resetResultsPage();
+                            this.loadResultsPage();
+                        }}
+                    >
+                        {app.translator.trans(`${prefix}.forum.search`)}
+                    </Button>
                 </div>
-                <Button id={`${prefix}-search-button`} className="Button Button--primary" style={this.isHomeVisible || this.isResultsVisible ? '' : 'display: none'} onclick={() => {this.resetResultsPage(); this.loadResultsPage();}}>
-                    {app.translator.trans(`${prefix}.forum.search`)}
-                </Button>
-            </div>
 
-            <div className={`${prefix}-container`} style={this.isHomeVisible ? '' : 'display: none'}>
-                {this.homeButtons && this.homeButtons.map(homeButton => <HomeButton attributes={homeButton} />)}
-            </div>
+                <div className={`${prefix}-container`} style={this.isHomeVisible ? '' : 'display: none'}>
+                    {this.homeButtons && this.homeButtons.map((homeButton) => <HomeButton attributes={homeButton} />)}
+                </div>
 
-            <div className={`${prefix}-container`} style={this.isFavouritesVisible ? '' : 'display: none'} scrollTop={this.isTrendingVisible || this.isResultsVisible ? '0' : ''}>
-                {this.favouriteButtons && this.favouriteButtons.map(favouriteButton => <ResultButton attributes={favouriteButton} />)}
-                <span id={`${prefix}-end`}>You've reached the end</span>
-            </div>
+                <div
+                    className={`${prefix}-container`}
+                    style={this.isFavouritesVisible ? '' : 'display: none'}
+                    scrollTop={this.isTrendingVisible || this.isResultsVisible ? '0' : ''}
+                >
+                    {this.favouriteButtons &&
+                        this.favouriteButtons.map((favouriteButton) => <ResultButton attributes={favouriteButton} />)}
+                    <span id={`${prefix}-end`}>You've reached the end</span>
+                </div>
 
-            <div className={`${prefix}-container`} style={this.isTrendingVisible || this.isResultsVisible ? '' : 'display: none'} onscroll={this.loadMore.bind(this)} scrollTop={this.isTrendingVisible || this.isResultsVisible ? '0' : ''}>
-                {this.resultButtons && this.resultButtons.map(resultButton => <ResultButton attributes={resultButton} />)}
-                <span id={`${prefix}-end`}>You've reached the end</span>
-            </div>
+                <div
+                    className={`${prefix}-container`}
+                    style={this.isTrendingVisible || this.isResultsVisible ? '' : 'display: none'}
+                    onscroll={this.loadMore.bind(this)}
+                    scrollTop={this.isTrendingVisible || this.isResultsVisible ? '0' : ''}
+                >
+                    {this.resultButtons &&
+                        this.resultButtons.map((resultButton) => <ResultButton attributes={resultButton} />)}
+                    <span id={`${prefix}-end`}>You've reached the end</span>
+                </div>
 
-            <div id={`${prefix}-footer`}>
-                <img src={`${this.baseUrl}/assets/extensions/therealsujitk-gifs/powered_by_${this.engine}.svg`}></img>
+                <div id={`${prefix}-footer`}>
+                    <img
+                        src={`${this.baseUrl}/assets/extensions/therealsujitk-gifs/powered_by_${this.engine}.svg`}
+                    ></img>
+                </div>
             </div>
-        </div>
+        );
     }
 
     getEngine() {
@@ -163,7 +207,7 @@ export default class GIFModal extends Modal {
             }
         };
 
-        this.injectGIFs(null, 1, CATEGORY_HOME, 1);    // Background for the trending button
+        this.injectGIFs(null, 1, CATEGORY_HOME, 1); // Background for the trending button
         this.homeButtons.push(favouritesButton, trendingButton);
 
         var trendingTerms = await this.Engine.getTrendingTerms();
@@ -183,11 +227,10 @@ export default class GIFModal extends Modal {
     }
 
     async loadFavouritesPage() {
-        app.store.find(prefix)
-        .then((response) => {
+        app.store.find(prefix).then((response) => {
             var gifIDs = '';
 
-            response.forEach(el => {
+            response.forEach((el) => {
                 var gifID = el.data.attributes.gifID;
                 gifIDs = `${gifIDs}${gifID},`;
 
@@ -228,7 +271,7 @@ export default class GIFModal extends Modal {
 
     resetResultsPage() {
         this.resultButtons = new Array();
-        m.redraw.sync();    // WARNING: Make sure this method is not called during the mithril lifecycle
+        m.redraw.sync(); // WARNING: Make sure this method is not called during the mithril lifecycle
 
         this.next = null;
         this.reachedEnd = false;
@@ -302,51 +345,56 @@ export default class GIFModal extends Modal {
                 var title = e.target.alt;
                 var url = e.target.src;
                 var embed = `![${this.engine[0].toUpperCase()}${this.engine.slice(1)} - ${title}](${url})`;
-                
+
                 this.textArea.insertAtCursor(embed);
                 app.modal.close();
 
                 // For the Tenor API, it is required to register the shared GIF
                 if (this.engine === ENGINE_TENOR) {
-                    var url = `https://g.tenor.com/v1/registershare?&key=${this.apiKey}${this.query() != '' ? `&q=${this.query()}` : ''}&id=${id}`;
+                    var url = `https://g.tenor.com/v1/registershare?&key=${this.apiKey}${
+                        this.query() != '' ? `&q=${this.query()}` : ''
+                    }&id=${id}`;
                     fetch(url);
                 }
-            }
+            };
             button.favourite = async (id) => {
                 var result = false;
 
                 if (this.favourites.has(id)) {
-                    await app.request({
-                        method: 'DELETE',
-                        url: `${app.forum.attribute('apiUrl')}/${prefix}/${id}`,
-                    }).then(() => {
-                        var index = this.favouriteButtons.findIndex(
-                            el => el.id === id
-                        );
-                        this.favouriteButtons.splice(index, 1);
-                        this.favourites.delete(id);
+                    await app
+                        .request({
+                            method: 'DELETE',
+                            url: `${app.forum.attribute('apiUrl')}/${prefix}/${id}`
+                        })
+                        .then(() => {
+                            var index = this.favouriteButtons.findIndex((el) => el.id === id);
+                            this.favouriteButtons.splice(index, 1);
+                            this.favourites.delete(id);
 
-                        if (this.favouriteButtons.length == 0) {
-                            delete this.homeButtons[0].url;
-                        } else {
-                            this.homeButtons[0].url = this.favouriteButtons[0].url;
-                        }
+                            if (this.favouriteButtons.length == 0) {
+                                delete this.homeButtons[0].url;
+                            } else {
+                                this.homeButtons[0].url = this.favouriteButtons[0].url;
+                            }
 
-                        result = true;
-                    });
+                            result = true;
+                        });
                 } else {
-                    await app.store.createRecord(prefix).save({
-                        gifID: id
-                    }).then(() => {
-                        this.injectGIFs(id, 0, CATEGORY_FAVOURITE, 1);
-                        this.favourites.add(id);
+                    await app.store
+                        .createRecord(prefix)
+                        .save({
+                            gifID: id
+                        })
+                        .then(() => {
+                            this.injectGIFs(id, 0, CATEGORY_FAVOURITE, 1);
+                            this.favourites.add(id);
 
-                        result = true;
-                    });
+                            result = true;
+                        });
                 }
 
                 return result;
-            }
+            };
 
             if (category === CATEGORY_HOME) {
                 this.homeButtons[startIndex + i].url = gif.url;

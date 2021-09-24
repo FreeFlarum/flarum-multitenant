@@ -8,7 +8,7 @@ use Tobscure\JsonApi\Document;
 use Therealsujitk\GIFs\GIF;
 use Therealsujitk\GIFs\Serializers\GIFSerializer;
 
-class ListGifController extends AbstractListController {
+class ListGIFController extends AbstractListController {
     public $serializer = GIFSerializer::class;
 
     protected function data(ServerRequestInterface $request, Document $document) {

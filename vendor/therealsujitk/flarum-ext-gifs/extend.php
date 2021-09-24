@@ -27,15 +27,15 @@ return [
     (new Extend\ApiSerializer(ForumSerializer::class))
         ->attribute('therealsujitk-gifs.engine', function ($serializer, $model) {
             $settings = resolve(SettingsRepositoryInterface::class);
-            return $settings->get('therealsujitk-gifs.engine');
+            return $settings->get('therealsujitk-gifs.engine', 'giphy');
         })
         ->attribute('therealsujitk-gifs.api_key', function ($serializer, $model) {
             $settings = resolve(SettingsRepositoryInterface::class);
-            return $settings->get('therealsujitk-gifs.api_key');
+            return $settings->get('therealsujitk-gifs.api_key', null);
         })
         ->attribute('therealsujitk-gifs.rating', function ($serializer, $model) {
             $settings = resolve(SettingsRepositoryInterface::class);
-            return $settings->get('therealsujitk-gifs.rating');
+            return $settings->get('therealsujitk-gifs.rating', 'off');
         }),
 
     (new Extend\Routes('api'))

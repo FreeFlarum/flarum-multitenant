@@ -162,7 +162,7 @@ core:
       rename_discussions_label: 'Tartışmaları yeniden adlandır'
       reply_to_discussions_label: 'Tartışmalara yanıt ver'
       search_users_label: 'Kullanıcılarda ara'
-      sign_up_label: Kaydol
+      sign_up_label: 'Kayıt Ol'
       start_discussions_label: 'Tartışmalar başlat'
       title: İzinler
       view_forum_label: 'Forumu görüntüle (tartışmalar ve kullanıcılar)'
@@ -217,7 +217,7 @@ core:
     invalid_username_message: 'Kullanıcı adı sadece harfler, rakamlar ve kısa çizgiler içerebilir.'
   email:
     activate_account:
-      body: "Hey {username}!\n\nBirisi (umarım sensindir!) bu e-posta hesabı ile {forum} sitesine kaydoldu.\n\nBu sen isen, hesabını aktifleştirmek için aşağıdaki bağlantıyı tıkla:\n{url}\n\nEğer sen kaydolmadıysan, bu e-postayı dikkate alma.\n"
+      body: "Hey {username}!\n\nBirisi (umarım sensindir!) bu e-posta hesabı ile {forum} sitesine kayıt oldu.\n\nBu sen isen, hesabını aktifleştirmek için aşağıdaki bağlantıyı tıkla:\n{url}\n\nEğer sen kayıt olmadıysan, bu e-postayı dikkate alma.\n"
       subject: 'Yeni Hesabını Etkinleştir'
     confirm_email:
       body: "Hey {username} !\n\nBirisi (umarım sensindir!) {forum} sitesindeki hesabının e-posta adresini değiştirdi.\n\nBu sen isen, e-postanı doğrulamak için aşağıdaki bağlantıyı tıkla: \n{url} \n\nŞifreni değiştirmek istemiyorsan, bu e-postayı dikkate alma.\n"
@@ -296,7 +296,9 @@ core:
       log_in_link: '=> core.ref.log_in'
       log_out_button: '=> core.ref.log_out'
       profile_button: Profil
+      search_clear_button_accessible_label: 'Arama terimini temizle'
       search_placeholder: 'Forumda Ara'
+      search_role_label: 'Forumda Ara'
       session_dropdown_accessible_label: 'Oturum seçenekleri açılır menüsünü aç / kapat'
       settings_button: '=> core.ref.settings'
       sign_up_link: '=> core.ref.sign_up'
@@ -321,7 +323,7 @@ core:
       invalid_login_message: 'Giriş bilgilerin hatalıydı.'
       password_placeholder: '=> core.ref.password'
       remember_me_label: 'Beni Hatırla'
-      sign_up_text: 'Hesabın yok mu? <a> Kaydol </a>'
+      sign_up_text: 'Hesabın yok mu? <a> Kayıt Ol </a>'
       submit_button: '=> core.ref.log_in'
       title: '=> core.ref.log_in'
       username_or_email_placeholder: 'Kullanıcı Adı ya da E-posta'
@@ -438,6 +440,7 @@ core:
       generic_message: 'Oops! Bir şeyler yanlış gitti. Lütfen sayfayı yenileyin ve tekrar deneyin.'
       missing_dependencies_message: '{extension} şu uzantı aktif edilmeden önce aktif edilemez: {extensions}'
       not_found_message: 'İstenen kaynak bulunamadı.'
+      payload_too_large_message: 'İstek yükü çok büyük.'
       permission_denied_message: 'Bunu yapmaya yetkiniz bulunmuyor.'
       rate_limit_exceeded_message: 'Biraz fazla hızlı gidiyorsun. Lütfen birkaç saniye içinde tekrar dene.'
     loading_indicator:
@@ -456,6 +459,7 @@ core:
     change_email: 'E-posta Değiştir'
     change_password: 'Şifre Değiştir'
     color: Renk
+    confirm_email: 'E-posta adresini doğrula'
     confirm_password: 'Şifreyi Onayla'
     confirmation_email_sent: '{email} adresine bir onay e-postası gönderdik. Yakında gelmezse, spam klasörünü kontrol et.'
     custom_footer_text: 'Sayfanın en altında görülecek HTML kodunu ekleyin.'
@@ -468,6 +472,7 @@ core:
     edit: Düzenle
     edit_user: 'Kullanıcıyı Düzenle'
     email: E-posta
+    extensions: Uzantılar
     icon: Simge
     icon_text: 'Herhangi bir <a>FontAwesome</a> simgesi adını <code>fas fa-</code> <em>öneki dahil</em> olarak girin.'
     load_more: 'Daha Fazla Yükle'
@@ -488,7 +493,7 @@ core:
     restore: 'Geri Yükle'
     save_changes: 'Değişiklikleri Kaydet'
     settings: Ayarlar
-    sign_up: Kaydol
+    sign_up: 'Kayıt Ol'
     some_others: '{count, plural, one {# diğer} other {# diğer}}'
     start_a_discussion: 'Bir Tartışma Başlat'
     username: 'Kullanıcı Adı'
@@ -497,6 +502,22 @@ core:
     write_a_reply: 'Bir Yanıt Yaz...'
     you: Sen
   views:
+    admin:
+      extensions:
+        caption: '=> core.ref.extensions'
+        disable: Etkisizleştir
+        empty: 'Yüklenen uzantı yok'
+        enable: Etkinleştir
+        name: 'Uzantı Adı'
+        package_name: 'Paket Adı'
+        version: Sürüm
+      info:
+        caption: 'Uygulama Bilgisi'
+      title: Yönetim
+    confirm_email:
+      submit_button: '=> core.ref.confirm_email'
+      text: 'Hesabınızın e-postasını onaylamak için aşağıdaki düğmeyi tıklayın.'
+      title: '=> core.ref.confirm_email'
     content:
       javascript_disabled_message: 'Bu site en iyi JavaScript etkinleştirilmiş modern bir tarayıcıda görüntülenir.'
       load_error_message: 'Bu sitenin tam sürümünü yüklemeye çalışırken bir şeyler ters gitti. Hatayı düzeltmek için bu sayfayı yenilemeyi deneyin.'

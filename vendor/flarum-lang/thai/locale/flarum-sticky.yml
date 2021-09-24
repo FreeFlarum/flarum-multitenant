@@ -7,7 +7,10 @@ flarum-sticky:
     permissions:
       sticky_discussions_label: ตรึงการสนทนา
   forum:
+    badge:
+      sticky_tooltip: '=> flarum-sticky.ref.sticky'
     discussion_controls:
+      sticky_button: '=> flarum-sticky.ref.sticky'
       unsticky_button: เลิกตรึง
     post_stream:
       discussion_stickied_text: '{username} ได้ตรึงการสนทนานี้'

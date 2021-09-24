@@ -1,0 +1,41 @@
+{
+  "name": "justoverclock/header-slideshow",
+  "description": "Add a slideshow to header",
+  "keywords": [
+    "slideshow"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\HeaderSlideShow\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "HeaderSlideShow",
+      "category": "",
+      "icon": {
+        "name": "far fa-images",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

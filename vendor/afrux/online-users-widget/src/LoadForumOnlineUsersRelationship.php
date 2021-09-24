@@ -43,6 +43,7 @@ class LoadForumOnlineUsersRelationship
         $loadWithInitialResponse = $this->settings->get('afrux-forum-widgets-core.prefer_data_with_initial_load', false);
 
         if (! $loadWithInitialResponse) {
+            $data['onlineUsers'] = [];
             return;
         }
 

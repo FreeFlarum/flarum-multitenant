@@ -56,7 +56,7 @@ class CheckPost
     {
         $post = $event->post;
 
-        if ($post->auto_mod) {
+        if ($post->auto_mod || $event->actor->can('bypassFoFFilter', $post->discussion)) {
             return;
         }
 
@@ -112,20 +112,24 @@ class CheckPost
     public function sendEmail($post): void
     {
         // Admin hasn't saved an email template to the database
-        if ($this->settings->get('flaggedSubject') == '' && $this->settings->get('flaggedEmail') == '') {
+        if (empty($this->settings->get('fof-filter.flaggedSubject'))) {
             $this->settings->set(
-                'flaggedSubject',
+                'fof-filter.flaggedSubject',
                 $this->translator->trans('fof-filter.admin.email.default_subject')
             );
+        }
+
+        if (empty($this->settings->get('fof-filter.flaggedEmail'))) {
             $this->settings->set(
-                'flaggedEmail',
+                'fof-filter.flaggedEmail',
                 $this->translator->trans('fof-filter.admin.email.default_text')
             );
         }
+
         $email = $post->user->email;
         $linebreaks = ["\n", "\r\n"];
-        $subject = $this->settings->get('flaggedSubject');
-        $text = str_replace($linebreaks, $post->user->username, $this->settings->get('flaggedEmail'));
+        $subject = $this->settings->get('fof-filter.flaggedSubject');
+        $text = str_replace($linebreaks, $post->user->username, $this->settings->get('fof-filter.flaggedEmail'));
         $this->mailer->send(
             'fof-filter::default',
             ['text' => $text],

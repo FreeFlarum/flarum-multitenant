@@ -1,0 +1,22 @@
+@import "common/common";
+
+.UiKit-Search {
+  .FormControl, .Search-results {
+    width: 100%;
+  }
+
+  .Search-results {
+    display: none;
+    position: relative;
+  }
+
+  .Search-input:focus-within + .Search-results {
+    display: block;
+  }
+
+  .DiscussionSearchResult-id {
+    font-weight: bold;
+    color: @muted-more-color;
+    font-size: 11px;
+  }
+}

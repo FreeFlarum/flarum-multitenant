@@ -13,3 +13,5 @@ For the pro version and full documentation, visit [kilowhat.net](https://kilowha
 This extension source code is published on GitHub for transparency.
 However it's not released under an open-source license.
 You may not re-use or re-distribute this code.
+
+The translation files may be copied and distributed under the terms of the MIT License.

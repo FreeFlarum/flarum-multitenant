@@ -74,7 +74,7 @@ return [
         */
 
         // News box at the bottom of the admin panel:
-        $document->foot[] = '
+        /*$document->foot[] = '
             <style>@media only screen and (max-width: 991px) { #tip, #news { width: 95% !important; left: 2.5% !important; }; }
             </style>
             <hr/>
@@ -83,7 +83,7 @@ return [
                 <a style="margin-top: 5px; font-weight: 700;" href="https://discuss.flarum.org/d/7585/2965" target="_blank">31st July 2021 - MariaDB 10.6.3 update</a>
             </p>
             <br/>
-        ';
+        ';*/
 
         // Change "Get Help" link in the top right corner of admin panel to direct to our discussion (from beta.15):
         //$document->foot[] = '<script>globalThis.window.document.querySelector("#header-secondary > ul > li.item-help > a[href=\"https://docs.flarum.org/troubleshoot.html\"]").setAttribute("href", "https://discuss.flarum.org/d/7585");</script>';

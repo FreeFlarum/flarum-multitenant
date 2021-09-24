@@ -152,13 +152,20 @@ class PushNotificationDriver implements NotificationDriverInterface
         $this->log("[PWA PUSH] Sent $sentCounter notifications successfully.\n\n");
     }
 
-    protected function getPayload($blueprint)
+    protected function getPayload(BlueprintInterface $blueprint)
     {
         $content = '';
         $link = $this->url->to('forum')->base();
 
         $subject = $blueprint->getSubject();
-        switch ($blueprint->getSubjectModel()) {
+        $subjectModel = $blueprint->getSubjectModel();
+
+        if ($blueprint->getType() === 'newPost') {
+            $subject = $blueprint->post;
+            $subjectModel = CommentPost::class;
+        }
+
+        switch ($subjectModel) {
             case User::class:
                 $link = $this->url->to('forum')->route('user', ['id' =>  $subject->username]);
                 break;
@@ -168,11 +175,11 @@ class PushNotificationDriver implements NotificationDriverInterface
                 break;
             case CommentPost::class:
                 $content = $subject->formatContent();
-                $link = $this->url->to('forum')->route('discussion', ['id' => $subject->discussion_id]).'/'.$subject->number;
+                $link = $this->url->to('forum')->route('discussion', ['id' => $subject->discussion_id, 'near' => $subject->number]);
                 break;
             case Post::class:
                 $content = '';
-                $link = $this->url->to('forum')->route('discussion', ['id' => $subject->discussion_id]).'/'.$subject->number;
+                $link = $this->url->to('forum')->route('discussion', ['id' => $subject->discussion_id, 'near' => $subject->number]);
                 break;
         }
 
