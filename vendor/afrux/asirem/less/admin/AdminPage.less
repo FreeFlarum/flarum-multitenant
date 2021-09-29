@@ -1,0 +1,122 @@
+.ThemeBase-AdminHeader {
+  background-color: transparent;
+  color: @text-color;
+  padding: 0;
+
+  &-title, h2 {
+    color: inherit !important;
+  }
+
+  &-description {
+    color: inherit;
+    opacity: 0.8;
+  }
+
+  &-container {
+    padding: 0 0 15px 0px !important;
+    border-radius: 0 14px 14px 0;
+
+    @media @desktop-up {
+      .App-content & {
+        margin: 0 30px;
+        width: unset;
+        max-width: unset;
+      }
+    }
+  }
+
+  &-icon {
+    --size: 60px;
+    font-size: 24px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 14px;
+    margin-right: 20px;
+    border-radius: 100%;
+    box-shadow: @asirem-box-shadow;
+    background-color: @body-bg;
+
+    > .icon {
+      margin: 0;
+    }
+  }
+}
+
+@media @tablet, @phone {
+  .ThemeBase-AdminHeader {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.AdminPage {
+  background-color: transparent !important;
+}
+
+.ThemeBase-ExtensionPage {
+  padding-bottom: 24px;
+
+  &-body {
+    > .container {
+      > :first-child {
+        border-top-left-radius: @border-radius;
+        border-top-right-radius: @border-radius;
+      }
+      > :last-child {
+        border-bottom-left-radius: @border-radius;
+        border-bottom-right-radius: @border-radius;
+      }
+    }
+  }
+
+  &-section {
+    padding: 15px;
+
+    .container {
+      padding: 0;
+      max-width: unset !important;
+      width: unset !important;
+    }
+  }
+
+  &-headerItems {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &-headerItems, &-sections-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &-headerItems, &-sections {
+    background-color: @body-bg;
+
+    .Button {
+      --control-bg: @control-bg;
+
+      &--primary {
+        --control-bg: @primary-color;
+      }
+    }
+  }
+
+  &-sections-nav {
+    background-color: @control-bg-light;
+
+    .Button {
+      border-radius: 0;
+      --control-bg: @control-bg-light;
+
+      &--active {
+        --control-bg: @control-bg;
+      }
+    }
+  }
+
+  &-ExtensionInfo {
+    li, a {
+      color: @control-color;
+    }
+  }
+}

@@ -134,6 +134,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionConnectContactLens(array $args = [])
  * @method \Aws\ConnectParticipant\ConnectParticipantClient createConnectParticipant(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionConnectParticipant(array $args = [])
+ * @method \Aws\ConnectWisdomService\ConnectWisdomServiceClient createConnectWisdomService(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionConnectWisdomService(array $args = [])
  * @method \Aws\CostExplorer\CostExplorerClient createCostExplorer(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionCostExplorer(array $args = [])
  * @method \Aws\CostandUsageReportService\CostandUsageReportServiceClient createCostandUsageReportService(array $args = [])
@@ -530,6 +532,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionTransfer(array $args = [])
  * @method \Aws\Translate\TranslateClient createTranslate(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionTranslate(array $args = [])
+ * @method \Aws\VoiceID\VoiceIDClient createVoiceID(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionVoiceID(array $args = [])
  * @method \Aws\WAFV2\WAFV2Client createWAFV2(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionWAFV2(array $args = [])
  * @method \Aws\Waf\WafClient createWaf(array $args = [])
@@ -563,7 +567,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.194.4';
+    const VERSION = '3.195.2';
 
     /** @var array Arguments for creating clients */
     private $args;

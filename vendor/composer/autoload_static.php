@@ -221,6 +221,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'League\\CommonMark\\' => 18,
             'Lcobucci\\JWT\\' => 13,
             'Lcobucci\\Clock\\' => 15,
+            'Laravel\\SerializableClosure\\' => 28,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Stratigility\\' => 21,
             'Laminas\\HttpHandlerRunner\\' => 26,
@@ -414,10 +415,12 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'AntoineFr\\Online\\' => 17,
             'AntoineFr\\Money\\' => 16,
             'Afrux\\TopPosters\\' => 17,
+            'Afrux\\ThemeBase\\' => 16,
             'Afrux\\OnlineUsers\\' => 18,
             'Afrux\\News\\' => 11,
             'Afrux\\ForumWidgets\\' => 19,
             'Afrux\\ForumStats\\' => 17,
+            'Afrux\\Asirem\\' => 13,
             'Acpl\\MobileTab\\' => 15,
         ),
     );
@@ -823,6 +826,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/lcobucci/clock/src',
         ),
+        'Laravel\\SerializableClosure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
+        ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
@@ -941,8 +948,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/collections',
-            1 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            1 => __DIR__ . '/..' . '/illuminate/collections',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -1466,6 +1473,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/afrux/top-posters-widget/src',
         ),
+        'Afrux\\ThemeBase\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/flarum-theme-base/src',
+        ),
         'Afrux\\OnlineUsers\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/online-users-widget/src',
@@ -1481,6 +1492,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Afrux\\ForumStats\\' => 
         array (
             0 => __DIR__ . '/..' . '/afrux/forum-stats-widget/src',
+        ),
+        'Afrux\\Asirem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/afrux/asirem/src',
         ),
         'Acpl\\MobileTab\\' => 
         array (

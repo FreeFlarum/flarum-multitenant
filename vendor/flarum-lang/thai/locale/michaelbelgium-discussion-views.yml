@@ -15,17 +15,25 @@ michaelbelgium-discussion-views:
     settings:
       abbr_numbers_label: ย่อจำนวนนับ
       max_viewcount_label: รายการรับชมสูงสุด
+      max_viewcount_text: สิ่งนี้ใช้กับรายชื่อผู้ชมส่วนท้ายและรายชื่อผู้ชมแถบด้านข้าง
       show_filter_label: เปิดใช้งานฟิลด์การเรียงลำดับไม่นิยม
+      show_footer_viewlist_label: เปิดรายชื่อผู้ชมส่วนท้าย
       show_viewlist_label: เปิดรายการรับชม
       title: ตั้งค่าการนับผู้เข้าชม
+      track_guests: ติดตามผู้มาเยือน
       track_unique_label: นับเพียงครั้งเดียว
   forum:
     discussion_controls:
       resetviews_button: รีเซ็ตจำนวนการเข้าชม
     modal_resetviews:
-      label: '{count, plural, one {This will remove {count} view of this discussion. Continue?} other {This will remove {count} views of this discussion. Continue?}}'
+      label: '{count, plural, one {จะลบยอดวิวจำนวน {count} ของกระทู้นี้ ต้องการดำเนินการหรือไม่?} other {จะลบยอดวิวจำนวน {count} ของกระทู้นี้ ต้องการดำเนินการหรือไม่?}}'
       submit_button: 'ใช่ ลบมันให้หมด'
       title: รีเซ็ตจำนวนการเข้าชม
+    post:
+      modal_title_text: ผู้ใช้คนสุดท้านที่ดูกระทู้นี้
+      others_link: '=> core.ref.some_others'
+      viewed_by: '{users} ดูสิ่งนี้'
+      you: '=> core.ref.you'
     viewlist:
       guest: ผู้เข้าชม
       title: ผู้ชมล่าสุด

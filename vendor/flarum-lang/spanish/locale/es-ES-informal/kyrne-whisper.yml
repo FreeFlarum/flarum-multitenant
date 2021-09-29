@@ -7,6 +7,7 @@ kyrne-whisper:
     permissions:
       start_label: 'Iniciar conversaciones privadas'
     settings:
+      return_key: 'La tecla intro envía el mensaje'
       set_own_password: 'Permite que los usuarios creen su propia contraseña - Compatiblidad SSO'
       title: 'Configuración de Whisper'
   forum:
