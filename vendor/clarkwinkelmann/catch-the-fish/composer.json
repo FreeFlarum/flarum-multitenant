@@ -22,7 +22,8 @@
         "forum": "https://discuss.flarum.org/d/19532"
     },
     "require": {
-        "flarum/core": "^1.0"
+        "flarum/core": "^1.0",
+        "ext-json": "*"
     },
     "extra": {
         "flarum-extension": {
@@ -32,7 +33,11 @@
                 "name": "fas fa-fish",
                 "backgroundColor": "#90d71b",
                 "color": "#166b14"
-            }
+            },
+            "optional-dependencies": [
+                "flarum/suspend",
+                "flarum/tags"
+            ]
         },
         "flagrow": {
             "discuss": "https://discuss.flarum.org/d/19532"

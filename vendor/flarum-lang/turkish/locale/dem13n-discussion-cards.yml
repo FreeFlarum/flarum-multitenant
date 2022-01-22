@@ -15,7 +15,7 @@ dem13n:
       preview_text: 'Kısa metni göster'
       settings_error: 'Önbelleği temizleyin, bu uzantıyı etkisizleştirin, Kaldır düğmesine (sağda) tıklayın, verileri silmeyi onaylayın ve uzantıyı etkinleştirin'
       show_replies: 'Yanıtları göster'
-      show_views: 'Görünümleri göster ("Flarumite Basit Tartışma Görünümleri" uzantısı yüklendiğinde ve etkinleştirildiğinde)'
+      show_views: 'Görünümleri göster ("Flarumite Basit Tartışma Görünümleri" uzantısı yüklendiğinde)'
       small_cards: 'Birincil kartların sayısı'
       tablet_card_width: 'Tabletlerde kartların genişliği: %{percent}'
   forum:

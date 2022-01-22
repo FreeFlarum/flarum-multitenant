@@ -1,0 +1,140 @@
+.ModeratorNotes-toolbar {
+    margin-bottom: 24px;
+
+    &-action,
+    &-view {
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+
+    &-view {
+        float: right;
+    }
+}
+
+.ModeratorNotesList-discussions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.ModeratorNotesListItem {
+    margin-bottom: 26px;
+
+    .tooltip .tooltip-inner {
+        max-width: none;
+    }
+}
+
+.ModeratorNotesListItem a {
+    text-decoration: none;
+}
+
+.ModeratorNotesListItem-main {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ModeratorNotesListItem-main {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.ModeratorNotesListItem-title {
+    margin: 0 0 3px;
+    line-height: 1.3;
+    color: @heading-color;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .ModeratorNotesListItem-author {
+        .Avatar {
+            .Avatar--size(24px);
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+}
+
+.ModeratorNotesListItem-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: @muted-color;
+
+    >li {
+        display: inline;
+    }
+
+    .item-content a {
+        text-decoration: underline;
+    }
+}
+
+.ModeratorNotesListItem-count {
+    float: right;
+    margin-top: 12px;
+    text-decoration: none;
+
+    .unread & {
+        cursor: pointer;
+    }
+}
+
+@media @tablet-up {
+    .ModeratorNotesListItem {
+        position: relative;
+        margin-right: -15px;
+        padding-right: 25px;
+        padding-left: 15px;
+        margin-left: -15px;
+        border-radius: @border-radius;
+        transition: background 0.2s;
+        background: mix(@control-bg, @body-bg, 40%);
+        box-shadow: 0 2px 4px 0em rgba(0, 0, 0, 0.04),
+            0 3px 10px 0 rgba(0, 0, 0, 0.07);
+
+        &:hover {
+            background: mix(@control-bg, @body-bg, 60%);
+        }
+
+        &:hover .ModeratorNotesListItem-controls,
+        .ModeratorNotesListItem-controls.open {
+            opacity: 1;
+        }
+
+        .ModeratorNotesListItem-controls.open {
+            z-index: 3;
+        }
+    }
+
+    .ModeratorNotesListItem-controls {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        .Dropdown-toggle {
+            display: block;
+        }
+
+        .Dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+.ModeratorNotesCreateModal {
+    textarea {
+        resize: vertical;
+    }
+}

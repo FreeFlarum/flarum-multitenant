@@ -10,10 +10,12 @@ fof-discussion-language:
       composer_default_label: 'Düzenleyicide mevcut yerel ayarı önceden seçin'
       errors:
         loading_data: 'Dil ve ülke verileri alınırken bir hata oluştu. Uzantıyı devre dışı bırakıp yeniden etkinleştirmeyi deneyin.'
+        missing_assets: 'Bu uzantının ihtiyaç duyduğu gereklilikleri yükleyemedik. <code>php flarum assets:publish</code> çalıştırmayı deneyin ve bunun sorunu çözüp çözmediğine bakın.'
       locale_sort_label: 'Varsayılan tartışma filtresi için algılanan dili kullan'
       native_label: 'Ana dil adlarını kullanın'
-      show_any_lang_opt_label: '"Herhangi bir dil" seçilebilir olsun.'
+      show_any_lang_opt_label: '"Herhangi bir dil" seçilebilir olsun'
       show_flag_label: 'Ülke bayraklarını dil adlarıyla göster'
+      tags_page_discussion_locale_label: 'Etiketler sayfasında yalnızca kullanıcının mevcut dil ayarındaki tartışmaları göster'
   api:
     discussion:
       validation_error: 'Tartışmanın dilini seçmelisin.'

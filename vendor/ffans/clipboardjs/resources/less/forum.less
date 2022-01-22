@@ -1,0 +1,222 @@
+@import "./colang.min.less";
+pre{
+	position: relative;
+}
+
+.clipboard {
+	position: absolute;
+	display: flex;
+	z-index: 1;
+	font-family: inherit;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	text-decoration: none;
+	text-align: center;
+	font-size: 14px;
+	opacity: 0;
+	-webkit-transition:opacity .3s ease-in-out;
+    -o-transition:opacity .3s ease-in-out;
+    transition:opacity .3s ease-in-out;
+}
+.clipboard[disabled] .clippy {
+    opacity:.3
+}
+
+// default
+.clipboard.default{
+	padding: 6px;
+	border-radius: 3px;
+	top: 4px;
+	right: 4px;
+	outline: none;
+	border: 1px solid #d5d5d5;
+}
+.clipboard.default:hover{
+    background-color: #ddd;
+    background-image: linear-gradient(#eee,#ddd);
+    border-color: #ccc;
+}
+.clipboard.default:active{
+	background-color: #dcdcdc;
+    border-color: #b5b5b5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.clipboard.default:focus:hover, .clipboard.default:focus {
+    border-color: rgb(81, 167, 232);
+	outline: none;
+    box-shadow: 0 0 5px rgba(81,167,232,0.5);
+}
+.clipboard.default.succeed{
+    border-color: rgb(40, 167, 69);
+	box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+.clipboard.default.failed{
+    border-color: rgb(203, 36, 49);
+	box-shadow: 0 0 5px rgba(203, 36, 49, 0.5);
+}
+// github
+.clipboard.github{
+	top: 8px;
+	right: 8px;
+	padding: 8px;
+	font-weight: 600;
+	line-height: 20px;
+	border-radius: 6px;
+	color: rgb(36, 41, 46);
+	background-color: rgb(250, 251, 252);
+	border: 1px solid rgba(27, 31, 35, 0.12);
+	box-shadow: rgba(27,31,35,4%) 0px 1px 0px, rgba(255,255,255,25%) 0px 2px 0px inset;
+}
+.clipboard.github:hover {
+	background-color: rgb(243, 244, 246);
+	box-shadow: rgba(209,213,218,20%) 0px 1px 0px, rgba(255,255,255,10%) 0px 2px 0px inset;
+}
+.clipboard.github:active {
+    background-color: rgb(237, 239, 242);
+    box-shadow: rgba(149,157,165,10%) 0px 2px 0px inset;
+    border-color: rgb(209, 213, 218);
+}
+.clipboard.github:focus {
+    border-color: transparent;
+    box-shadow: rgba(3,102,214,30%) 0px 0px 0px 3px;
+    outline: none;
+}
+.clipboard.github .clipboard-icon path {
+    fill-rule: evenodd;
+	color: rgb(106, 115, 125);
+}
+.clipboard.github.succeed, .clipboard.failed{
+	border-color: transparent;
+    box-shadow: rgba(3,102,214,30%) 0px 0px 0px 3px;
+    outline: none;
+}
+.clipboard.github.succeed path,.clipboard.cnblog.succeed{
+	color: rgb(40, 167, 69);
+}
+.clipboard.github.failed path,.clipboard.cnblog.failed{
+	color: rgb(203, 36, 49);
+}
+// lingcoder
+.clipboard.lingcoder{
+	top: 0;
+    right: 0;
+    overflow: visible;
+    padding: .65em .8em;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    font-size: 1em;
+	background: #f8f8f8;
+    color: #7a7a7a;
+}
+// csdn
+.clipboard.csdn{
+	right: 4px;
+    top: 4px;
+	color: #4d4d4d;
+    background-color: white;
+    padding: 2px 8px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.05);
+	border: none;
+}
+.clipboard.csdn:focus{
+	outline: none;
+}
+// cnblog
+.clipboard.cnblog{
+	right: 1em;
+    top: 8px;
+    color: #999;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+}
+// jianshu
+.clipboard.jianshu{
+	top: 6px;
+    right: 6px;
+	width: 32px;
+    height: 24px;
+	padding: 0;
+	border-radius: 6px;
+    color: #ccc;
+    background-color: #525252d9;
+	border: none;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clipboard.jianshu:active{
+	background-color: #4d4d4d;
+	outline: none;
+}
+.clipboard.jianshu:focus{
+	outline: none;
+}
+
+// segmentfault
+.clipboard.segmentfault{
+	top: 0;
+	right: 0;
+	border-radius: 0;
+	color: #fff;
+    background-color: #343a40;
+    border: none;
+	width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+	outline: none;
+}
+.clipboard.segmentfault:focus{
+	color: #fff;
+    background-color: #343a40;
+    border: none;
+    box-shadow: none;
+	outline: none;
+}
+.clipboard.segmentfault.succeed{
+    background-color: rgb(40, 167, 69);
+    border-color: rgb(40, 167, 69);
+}
+.clipboard.segmentfault.failed{
+    background-color: rgb(203, 36, 49);
+    border-color: rgb(203, 36, 49);
+}
+
+pre:hover .clipboard,
+pre .clipboard:focus {
+    opacity:1
+}
+
+pre.copy-ready:not(.sticky):hover:before{
+	right: 50px;
+}
+pre.copy-ready:hover code{
+	padding-right: 26px;
+}
+
+@media screen and (max-width: 768px){
+	pre[class*=language-] {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	pre .clipboard {
+		opacity: 1;
+	}
+	pre.copy-ready:before{
+		right: 50px;
+	}
+	pre.copy-ready code,
+	pre.copy-ready:hover code{
+		padding-right: 34px;
+	}
+}

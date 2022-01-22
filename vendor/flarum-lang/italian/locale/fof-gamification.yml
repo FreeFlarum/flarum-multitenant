@@ -6,9 +6,12 @@ core:
   forum:
     index_sort:
       hot_button: Tendenza
+      votes_button: 'Voto Positivo'
 fof-gamification:
   admin:
     page:
+      alt_votes:
+        icon_name: 'Layout nome icona Alt'
       convert:
         button: 'Converti mi piace in voti positivi'
         converted: 'Tutti i voti sono stati convertiti ({number})'
@@ -35,7 +38,8 @@ fof-gamification:
         title: Grado
       save_settings: 'Salva impostazioni'
       votes:
-        alternate_layout: 'Usa layout alternativo per mostrare e/o fare upvotes/downvotes'
+        alternate_layout: 'Usa layout alternativo dei voti nella lista discussioni'
+        alternate_post_layout: 'Usa layout alternativo dei voti nei post'
         auto_upvote: 'Dai un voto positivo automatico quando i messaggi vengono postati'
         color_holder: '#ffffff'
         discussion_page: 'Mostra i voti totali del messaggio originale nella lista delle discussioni'
@@ -45,10 +49,12 @@ fof-gamification:
         points_title: 'Punti (Segnaposto)'
         rate_limit: 'Applica un tempo limite per votare (10 secondi)'
         title: Voti
+        upvotes_only: 'Permetti solo voti positivi'
         vote_color: 'Colore del voto'
     permissions:
       see_ranking_page: 'Visualizzare la pagina della classifica'
-      see_votes_label: 'Visualizzare i voti positivi/negativi dei messaggi'
+      see_voters_label: 'Vedere chi ha votato'
+      see_votes_label: 'Visualizzare i voti positivi/negativi'
       vote_label: 'Dare voti positivi/negativi ai messaggi'
   forum:
     mod_item: 'Mostra votanti'

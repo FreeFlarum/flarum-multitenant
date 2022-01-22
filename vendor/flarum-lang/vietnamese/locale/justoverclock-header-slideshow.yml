@@ -25,7 +25,7 @@ header-slideshow:
     TextSlide1: 'Văn bản cho slide 1'
     TextSlide1-help: 'Đặt văn bản cho slide đầu tiên'
     TextSlide2: 'Văn bản cho slide 2'
-    TextSlide2-help: 'Đặt văn bản cho slide slide thứ hai'
+    TextSlide2-help: 'Đặt văn bản cho slide thứ hai'
     TextSlide3: 'Văn bản cho slide 3'
     TextSlide3-help: 'Đặt văn bản cho slide thứ ba'
     TitleSlide1: 'Tiêu đề cho Slide 1'

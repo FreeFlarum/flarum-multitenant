@@ -6,10 +6,10 @@ This extension adds a "Log in as user" button on user profiles for administrator
 
 ## Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151) or install manually:
+Install manually:
 
 ```bash
-composer require fof/impersonate
+composer require fof/impersonate:"*"
 ```
 
 ## Updating

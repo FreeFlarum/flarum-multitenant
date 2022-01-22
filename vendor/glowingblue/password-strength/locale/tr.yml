@@ -1,0 +1,29 @@
+glowingblue-password-strength:
+  admin:
+    settings:
+      title: Şifre Zorluk Derecesi Belirteci Ayarları
+
+      ####################
+      #   Color Options  #
+      ####################
+
+      colorOptions: Renk Seçenekleri
+      colorHelp: RGB (Red, Green, Blue) değerlerini R,G,B şeklinde kullanın
+      weakColor: En zayıf şifre rengi
+      mediumColor: Ortalama şifre rengi
+      strongColor: En güçlü şifre rengi
+
+      ####################
+      #   Other Options  #
+      ####################
+
+      otherOptions: Diğer Seçenekler
+      enableInputColor: Şifre zorluğuyla birlikte girdinin ön plan rengini değiştir
+      enableInputBorderColor: Şifre zorluğuyla birlikte girdinin kenarlık rengini değiştir
+      enablePasswordToggle:
+        Kayıt Ol ve Giriş Yap ekranlarında şifre görünürlüğünün değiştirilmesine izin ver
+  forum:
+    strengthLabels:
+      weak: Zayıf
+      medium: Daha iyi olabilir
+      strong: Güçlü

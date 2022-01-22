@@ -4,6 +4,19 @@ import * as _dayjs from 'dayjs';
 declare global {
     const m: Mithril.Static;
     const dayjs: typeof _dayjs;
+
+    interface FlarumExports {
+        extensions: {
+            [id: string]: any
+        }
+        core: {
+            compat: {
+                [id: string]: any
+            }
+        }
+    }
+
+    const flarum: FlarumExports
 }
 
 import Fish from './src/forum/models/Fish';

@@ -22,7 +22,7 @@ The extension comes with a starting pack of (public domain image) fish that you 
 
 You will find the settings for this extension in 3 different places:
 
-- Extension settings modal: global day-based, minute-based and animation settings
+- Extension settings page: global day-based, minute-based and animation settings, as well as probabilities for automatic fish placement and discussion tags whitelist
 - Flarum permissions: all access related settings
 - Front end page (not in admin): Round and fish configuration
 

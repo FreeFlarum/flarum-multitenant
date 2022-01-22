@@ -147,7 +147,7 @@ export default class AchievementsPage extends ExtensionPage {
                     type: 'submit',
                     className: 'Button Button--primary',
                     disabled: !this.changed()
-                }, app.translator.trans('flagrow-ads.admin.buttons.save')),
+                }, app.translator.trans('malago-achievements.admin.achievement_modal.submit_button')),
               ])
             )
           }

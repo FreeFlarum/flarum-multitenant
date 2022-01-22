@@ -10,9 +10,12 @@ fof-byobu:
       create_private_discussions_with_users: 'Tạo cuộc thảo luận riêng tư với người dùng'
       edit_group_recipients: 'Thay đổi nhóm tham gia trong cuộc thảo luận riêng tư'
       edit_user_recipients: 'Thay đổi người dùng tham gia vào cuộc thảo luận riêng tư'
+      make_private_into_public: 'Chuyển thảo luận riêng thành thảo luận công khai'
       view_private_discussions-when-flagged: 'Xem cuộc thảo luận riêng tư của những người dùng khác nếu bị gắn cờ'
     settings:
       badge-icon: 'Huy hiệu thảo luận của Byobu'
+      enable-make-public-option: 'Bật tuỳ chọn "đặt ở chế độ công khai"'
+      enable-make-public-option-help: 'Thêm tuỳ chọn cho những người có quyền xóa tất cả người nhận, chỉ định thẻ mới và hiển thị cuộc thảo luận ở chế độ công khai (cộng với cài đặt hiển thị của thẻ đã chọn).'
       post-event-icon: 'Sự kiện đăng bài của Byobu'
   email:
     body:
@@ -33,12 +36,15 @@ fof-byobu:
       add_recipients: 'Người nhận'
       cancel: Hủy
       edit_recipients: 'Sửa người nhận'
+      make_public: 'Đặt cuộc thảo luận này thành công khai'
       remove_from_discussion: 'Rời khỏi cuộc thảo luận này'
       send_pd: 'Thảo luận với {username}'
       submit: OK
     composer_private_discussion:
-      submit_button: Đăng
+      submit_button: 'Đăng cuộc thảo luận'
       title_placeholder: 'Tiêu đề thảo luận riêng tư'
+    confirm:
+      make_public: 'Bạn có chắc chắn muốn xóa người nhận và hiển thị cuộc thảo luận này cho bất kỳ ai có thể xem thẻ được chỉ định không?'
     input:
       search_recipients: 'Tìm kiếm người nhận bằng cách nhập ba ký tự đầu tiên...'
     labels:
@@ -71,6 +77,7 @@ fof-byobu:
       recipients_modified:
         added: '{username} đã thêm người nhận {added}.'
         added_and_removed: '{username} đã thêm người nhận {added} và xóa {remove}.'
+        made_public: '{username} đã xóa tất cả người nhận và đặt cuộc thảo luận ở chế độ công khai'
         redmove: '{username} đã loại bỏ người nhận {remove}.'
         removed: '{username} đã gỡ người nhận {removed}.'
         removed_self: '{username} đã rời khỏi cuộc thảo luận riêng tư.'

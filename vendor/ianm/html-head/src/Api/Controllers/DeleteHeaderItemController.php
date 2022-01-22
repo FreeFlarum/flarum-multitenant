@@ -12,6 +12,7 @@
 namespace IanM\HtmlHead\Api\Controllers;
 
 use Flarum\Api\Controller\AbstractDeleteController;
+use Flarum\Http\RequestUtil;
 use IanM\HtmlHead\Command\DeleteHeaderItem;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Support\Arr;
@@ -38,7 +39,7 @@ class DeleteHeaderItemController extends AbstractDeleteController
     protected function delete(ServerRequestInterface $request)
     {
         /** @var \Flarum\User\User */
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $this->bus->dispatch(
             new DeleteHeaderItem($actor, Arr::get($request->getQueryParams(), 'id'))

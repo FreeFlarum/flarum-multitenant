@@ -12,6 +12,7 @@
 namespace FoF\UserRequest\Api\Controller;
 
 use Flarum\Api\Controller\AbstractListController;
+use Flarum\Http\RequestUtil;
 use FoF\UserRequest\Api\Serializer\RequestSerializer;
 use FoF\UserRequest\UsernameRequest;
 use Psr\Http\Message\ServerRequestInterface;
@@ -36,7 +37,7 @@ class ListRequestsController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $actor->assertCan('user.viewUsernameRequests');
 

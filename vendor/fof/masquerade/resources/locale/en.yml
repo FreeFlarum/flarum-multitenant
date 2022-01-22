@@ -6,6 +6,7 @@ fof-masquerade:
             profile-completed: Profile completed! <a>Proceed to homepage</a>
         buttons:
             view-profile: View profile
+            edit-profile: Edit profile
             save-profile: Save
         fields:
             select:
@@ -21,6 +22,7 @@ fof-masquerade:
             edit-field: Save changes
             delete-field: Delete field
         permissions:
+            edit-others-profile: Edit the profile of other users
             have-profile: Have masquerade profile
             view-profile: View masquerade profile
         fields:

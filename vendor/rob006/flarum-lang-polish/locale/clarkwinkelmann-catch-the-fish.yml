@@ -14,11 +14,27 @@ clarkwinkelmann-catch-the-fish:
     settings:
       alert-round: 'Pokaż na stronie głównej alert z nazwą rundy i czasem trwania'
       animate-flip: 'Odwróć obrazki ryb na podstawie kierunku'
+      discussion: Dyskusje
       discussion-age: 'Jak stare mogą być dyskusje, aby móc umieścić na nich rybę (dni)'
+      discussion-tags: 'Biała lista tagów'
+      discussion-tags-unavailable: 'Ustawienie nie jest dostępne, ponieważ rozszerzenie obsługujące tagi nie jest włączone.'
+      general: Ogólne
+      post: Posty
       post-age: 'Jak stare mogą być posty, aby móc umieścić na nich rybę (dni)'
+      tags-control:
+        add: 'Dodaj do białej listy'
+        choose: 'Wybierz tag'
+        delete: 'Usuń z białej listy'
+        down: 'Przenieś niżej'
+        up: 'Przenieś wyżej'
+      tags-header:
+        probability: Prawdopodobieństwo
+        tag: Tag
       time-to-place: 'Czas na umieszczenie ryby, zanim zostanie rozmieszczona losowo (minuty)'
       title: 'Ustawienia łowienia ryb'
+      user: Użytkownicy
       user-age: 'Jak długo użytkownik może być nieaktywny, aby móc umieścić na nim rybę (dni)'
+      user-probability: 'Prawdopodobieństwo umieszczenia na profilu użytkownika (%)'
   api:
     cannot-catch-hold-fish: 'Użytkownik, który poprzednio złowił rybę, musi ją uwolnić, zanim będzie można ją złowić ponownie'
     cannot-catch-own-fish: 'Nie możesz złowić ryby, którą sam umieściłeś'
@@ -37,6 +53,7 @@ clarkwinkelmann-catch-the-fish:
     random-error: 'Nie udało się wygenerować losowej pozycji dla tej ryby'
     round-finished: 'Ta runda jest zakończona'
     round-not-started: 'Ta runda jeszcze się nie rozpoczęła'
+    tag-not-allowed: 'Nie możesz umieścić ryby w tym tagu'
     too-many-placement-models: 'Rybę można umieścić tylko w jednym miejscu'
     user-suspended: 'Nie można umieścić ryby na zbanowanym użytkowniku'
     wrong-catch-placement: 'Tu nie ma żadnych ryb. Może nie byłeś wystarczająco szybki i ktoś inny złowił ją przed Tobą?'
@@ -119,6 +136,7 @@ clarkwinkelmann-catch-the-fish:
       new-from-image: 'Twórz nowe ryby poprzez zbiorczy import obrazków'
       no-user-name: 'Nie zmieniono nazwy'
       no-user-place: Losowo
+      placement: 'Obecna pozycja'
       title: 'Ryby dla rundy "{name}"'
       upload: 'Prześlij nowy obrazek'
       user-name: 'Ostatnio nazwana przez'

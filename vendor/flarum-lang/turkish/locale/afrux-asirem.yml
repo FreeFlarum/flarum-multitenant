@@ -2,9 +2,32 @@
 # Use https://weblate.rob006.net/projects/flarum/afrux-asirem/tr/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
-afrux-asirem:
+afrux-theme-base:
   admin:
-    permissions:
-      edit_group: Düzenle
-      edit_group_permissions: İzinler
-      filter_scopes: 'Filtre Kapsamları'
+    extension:
+      sections:
+        content: 'Ana Ayarlar'
+        permissions: İzinler
+    extensions:
+      description: 'Yüklenen tüm uzantıların listesi.'
+      title: Uzantılar
+    header:
+      go_back: 'Foruma dön'
+    settings:
+      edit_footer_links: 'Alt Bilgi Bağlantılarını Düzenle'
+      footer_bottom_line: 'Alt Bilgi Alt Çizgisi'
+      footer_description: 'Alt Bilgi Açıklaması'
+      hero_banner: 'Hoşgeldiniz Mesajı Resmi'
+      hero_banner_position: 'Hoşgeldiniz Resmi CSS Pozisyonu (örnek: "center top" veya "center 20%")'
+      links_modal:
+        add_group: 'Yeni Grup Bağlantıları'
+        add_link: 'Bağlantı ekle'
+        group_name: 'Grup {number} Adı'
+        group_title: 'Grup Başlığı Bağlantısı'
+        link_label: 'Bağlantı Etiketi'
+        link_url: 'Bağlantı Adresi'
+    users:
+      grid:
+        columns:
+          avatar:
+            title: Avatar

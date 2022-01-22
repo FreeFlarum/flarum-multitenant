@@ -1,9 +1,9 @@
 import app from 'flarum/admin/app';
-import settings from './settings';
+import SettingsPage from './SettingsPage';
 
 app.initializers.add('clarkwinkelmann-catch-the-fish', () => {
     app.extensionData.for('clarkwinkelmann-catch-the-fish')
-        .registerSetting(settings)
+        .registerPage(SettingsPage)
         .registerPermission({
             icon: 'fas fa-fish',
             label: app.translator.trans('clarkwinkelmann-catch-the-fish.admin.permissions.visible'),

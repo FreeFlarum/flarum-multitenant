@@ -12,6 +12,7 @@
 namespace IanM\HtmlHead\Api\Controllers;
 
 use Flarum\Api\Controller\AbstractListController;
+use Flarum\Http\RequestUtil;
 use IanM\HtmlHead\Api\Serializers\HeaderSerializer;
 use IanM\HtmlHead\Header;
 use Psr\Http\Message\ServerRequestInterface;
@@ -29,10 +30,7 @@ class ListHeadersController extends AbstractListController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        /** @var \Flarum\User\User */
-        $actor = $request->getAttribute('actor');
-
-        $actor->assertAdmin();
+        RequestUtil::getActor($request)->assertAdmin();
 
         return Header::all();
     }

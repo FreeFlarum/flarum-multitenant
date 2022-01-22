@@ -1,0 +1,145 @@
+xelson-chat:
+  forum:
+    pusher_not_found: Yêu cầu Pusher hoặc Websockets để các cuộc trò chuyện cập nhật theo thời gian thực.
+    index:
+      chat_link: Trò chuyện
+    toolbar:
+      title: Trò chuyện
+      enable_sounds: Bật âm thanh
+      disable_sounds: Tắt âm thanh
+      enable_notifications: Bật thông báo
+      disable_notifications: Tắt thông báo
+      minimize: Thu nhỏ
+      maximize: Phóng to
+      chat:
+        settings: Thiết lập trò chuyện
+    chat:
+      welcome:
+        header: Chào mừng đến với Neon Chat!
+        subheader: Chọn phòng trò chuyện bên trái để bắt đầu trò chuyện với mọi người 
+      moder: Kiểm duyệt
+      kick: Kích
+      leave: Rời
+      rejoin: Tham gia lại
+      edit_modal:
+        title: Thiết lập cuộc trò chuyện
+        moderator:
+          got: Bạn vừa nhận được quyền Người kiểm duyệt trong cuộc trò chuyện {chatname}!
+          lost: Bạn vừa mất quyền Người kiểm duyệt trong cuộc trò chuyện {chatname}.
+        form:
+          title:
+            label: Tên cuộc trò chuyện
+            validator: Ít nhất 1 ký tự
+          color:
+            label: Màu
+            validator: Định dạng hex
+          icon:
+            label: => core.ref.icon
+            validator: => core.ref.icon_text
+          users:
+            edit: Chọn và chỉnh sửa người dùng
+          leave: Rời cuộc trò chuyện
+          return: Tham gia cuộc trò chuyện
+          delete:
+            title: Bạn có chắc chắn muốn xoá cuộc trò chuyện này?
+            desc: Sao chép và dán tên cuộc trò chuyện để tiếp tục
+            placeholder: Tên cuộc trò chuyện
+            button: Xoá cuộc trò chuyện
+        search:
+          placeholder: Tìm kiếm người dùng
+          failed: Không tìm thấy người dùng
+          invited: Đã mời
+        save_button: => core.ref.save_changes
+      list:
+        pin: Ghim bảng điều khiển
+        unpin: Bỏ ghim bảng điều khiển
+        placeholder: Bộ lọc cuộc trò chuyện
+        preview:
+          empty: Không có tin nhắn nào
+        add_modal:
+          title: Chọn người dùng
+          chat: Trò chuyện
+          channel: Kênh
+          create:
+            chat: Tạo cuộc trò chuyện mới
+            channel: Tạo kênh mới
+          alerts:
+            exists: Bạn không thể nhắn tin riêng với người dùng này!
+          form:
+            title:
+              chat: Tên cuộc trò chuyện
+              channel: Tên kênh
+              validator: Ít nhất 1 ký tự
+            icon:
+              label: => core.ref.icon
+              validator: => core.ref.icon_text
+            color:
+              label: => xelson-chat.forum.chat.edit_modal.form.color.label
+              validator: => xelson-chat.forum.chat.edit_modal.form.color.validator
+            users: Người dùng đã chọn
+          search:
+            placeholder: Tìm kiếm người dùng
+            failed: Không tìm thấy người dùng
+            invited: Đã mời
+            more_results: Và {more_results} nữa...
+      placeholder: Nhập nội dung tin nhắn...
+      message:
+        actions:
+          hide: Ẩn
+          resend: Gửi lại
+        censored: Đăng nhập để xem tin nhắn!
+        deleted: được xoá bởi
+        deleted_forever: được xoá vĩnh viễn bởi
+        you: Bạn
+        type:
+          url: URL
+          event: Sự kiện
+          code: <Code />
+        events:
+          chat:
+            created: "{creatorname} đã tạo {chatname} và mời {usernames}"
+          pm:
+            created: "{creatorname} đã tạo cuộc trò chuyện với {username}"
+          channel:
+            created: "{creatorname} đã tạo kênh {chatname}"
+          title:
+            edited: "{editorname} đã thay đổi tên cuộc trò chuyện {old} thành {new}"
+          icon:
+            edited: "{editorname} đã thay đổi icon cuộc trò chuyện {old} thành {new}"
+          color:
+            edited: "{editorname} đã thay đổi màu cuộc trò chuyện {old} thành {new}"
+          users:
+            invited: "{editorname} đã mời {usernames}"
+            kicked: "{editorname} đã kích {usernames}"
+            invited_kicked: "{editorname} đã mời {invitednames} và kích {kickednames}"
+          self:
+            leaved: "{username} đã rời khỏi cuộc trò chuyện"
+            entered: "{username} đã tham gia cuộc trò chuyện"
+    errors:
+      unauthenticated: Chỉ người dùng đã đăng nhập mới có thể trò chuyện
+      chatdenied: Nhóm người dùng của bạn không được phép gửi tin nhắn
+      removed: Bạn đã bị xoá khỏi cuộc trò chuyện
+  admin:
+    permissions:
+      post: Gửi tin nhắn
+      edit: Sửa tin nhắn
+      delete: Xoá tin nhắn
+      enabled: Bật cuộc trò chuyện
+      create:
+        chat: Tạo cuộc trò chuyện
+        channel: Tạo kênh
+      moderate:
+        delete: Xoá tin nhắn
+        vision: Xem tin nhắn đã xoá
+
+    settings:
+      title: Thiết lập cuộc trò chuyện
+      charlimit: Ký tự tin nhắn tối đa
+      floodgate:
+        title: Antiflood
+        number: Số lượng tin nhắn trong một hàng
+        time: Trong khoảng thời gian
+      display:
+        title: Hiển hị
+        minimize: Thu nhỏ lần đầu
+        censor: Kiểm duyệt tin nhắn cho người dùng chưa xác thực

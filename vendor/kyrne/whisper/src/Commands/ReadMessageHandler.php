@@ -38,6 +38,10 @@ class ReadMessageHandler
         $oldRead = $convUser->last_read_message_number;
 
         $message = Message::find($data['messageId']);
+        
+        if ($message->conversation_id != $conversation->id) {
+            throw new PermissionDeniedException;
+        }
 
         $number = $message->number;
 

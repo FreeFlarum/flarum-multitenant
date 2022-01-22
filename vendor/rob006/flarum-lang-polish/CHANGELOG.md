@@ -2,6 +2,123 @@ CHANGELOG
 =========
 
 
+0.5.13 (2022-01-02)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`acpl/flarum-lscache`](https://github.com/android-com-pl/flarum-lscache)
+* [`afrux/news-widget`](https://github.com/afrux/news-widget)
+* [`datlechin/flarum-signup-button`](https://github.com/datlechin/flarum-signup-button)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/suspend`](https://github.com/flarum/suspend)
+* [`flarum/tags`](https://github.com/flarum/tags)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/masquerade`](https://github.com/FriendsOfFlarum/masquerade)
+* [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions)
+* [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+* [`v17development/flarum-user-badges`](https://github.com/v17development/flarum-user-badges)
+* [`xelson/flarum-ext-chat`](https://github.com/Xelson/flarum-ext-chat)
+
+
+Wszystkie zmiany: [v0.5.12...v0.5.13](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.12...v0.5.13).
+
+
+0.5.12 (2021-11-21)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+* Aktualizacja tłumaczeń komunikatów walidacji.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`afrux/forum-stats-widget`](https://github.com/afrux/forum-stats-widget)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`acpl/my-tags`](https://github.com/android-com-pl/my-tags)
+* [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa)
+* [`clarkwinkelmann/catch-the-fish`](https://github.com/clarkwinkelmann/catch-the-fish)
+* [`flarum/nicknames`](https://github.com/flarum/nicknames)
+* [`fof/default-group`](https://github.com/FriendsOfFlarum/default-group)
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`fof/webhooks`](https://github.com/FriendsOfFlarum/webhooks)
+* [`ianm/follow-users`](https://github.com/imorland/follow-users)
+* [`justoverclock/flarum-ext-hashtag`](https://github.com/justoverclockl/flarum-ext-hashtag)
+* [`migratetoflarum/canonical`](https://github.com/migratetoflarum/canonical)
+* [`sycho/flarum-move-posts`](https://github.com/SychO9/flarum-move-posts)
+
+
+Wszystkie zmiany: [v0.5.11...v0.5.12](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.11...v0.5.12).
+
+
+0.5.11 (2021-11-04)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`afrux/forum-widgets-core`](https://github.com/afrux/forum-widgets-core)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`clarkwinkelmann/flarum-ext-see-past-first-post`](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/links`](https://github.com/FriendsOfFlarum/links)
+* [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory)
+* [`justoverclock/flarum-ext-hashtag`](https://github.com/justoverclockl/flarum-ext-hashtag)
+
+
+Wszystkie zmiany: [v0.5.10...v0.5.11](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.10...v0.5.11).
+
+
+0.5.10 (2021-10-14)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+* Aktualizacja tłumaczeń komunikatów walidacji.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`acpl/mobile-tab`](https://github.com/android-com-pl/mobile-tab)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/markdown`](https://github.com/flarum/markdown)
+* [`flarum/suspend`](https://github.com/flarum/suspend)
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language)
+* [`fof/filter`](https://github.com/FriendsOfFlarum/filter)
+* [`fof/oauth`](https://github.com/FriendsOfFlarum/oauth)
+* [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+* [`fof/stopforumspam`](https://github.com/FriendsOfFlarum/stopforumspam)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`justoverclock/flarum-ext-welcomebox`](https://github.com/justoverclockl/flarum-ext-welcomebox)
+* [`michaelbelgium/flarum-discussion-views`](https://github.com/MichaelBelgium/flarum-discussion-views)
+
+
+Wszystkie zmiany: [v0.5.9...v0.5.10](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.9...v0.5.10).
+
+
 0.5.9 (2021-09-05)
 ------------------
 

@@ -6,4 +6,5 @@ afrux-news-widget:
   admin:
     settings:
       add_line: 'Duyuru Satırı Ekle'
+      html_warning: 'Lütfen dikkatli olun, herhangi bir HTML bu alanda kullanılır.'
       lines: 'Duyuru Satırları'

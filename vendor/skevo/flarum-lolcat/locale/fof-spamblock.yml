@@ -1,9 +1,0 @@
-fof-spamblock:
-  forum:
-    user_controls:
-      spammer_button: "Spammah" # Original: Spammer
-      spammer_confirmation: "r u suer u wantz 2 \n• Hied all teh usr" # Original: Are you sure you want to \n• Hide all the user
-
-  admin:
-    permissions:
-      spamblock_users_label: "Mark usr as spammah" # Original: Mark user as spammer

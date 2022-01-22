@@ -93,7 +93,7 @@ validation:
   present: ':attribute alanı mevcut olmalıdır.'
   prohibited: ':attribute alanı yasaktır.'
   prohibited_if: ':other, :value olduğunda :attribute alanı yasaklanmıştır.'
-  prohibited_unless: ':attribute alanı,  :other :values içinde olmadığı sürece yasaklanmıştır.'
+  prohibited_unless: ':attribute alanı, :other :values içinde olmadığı sürece yasaklanmıştır.'
   regex: ':attribute biçimi uygun değil.'
   required: ':attribute alanı zorunlu.'
   required_if: ':other değeri :value olduğunda :attribute alanı zorunludur.'

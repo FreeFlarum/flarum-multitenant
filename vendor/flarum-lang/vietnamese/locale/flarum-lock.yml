@@ -18,4 +18,4 @@ flarum-lock:
       discussion_locked_text: '{username} đã khóa cuộc thảo luận.'
       discussion_unlocked_text: '{username} đã mở khóa cuộc thảo luận.'
     settings:
-      notify_discussion_locked_label: 'Ai đó khóa cuộc thảo luận mà tôi đã đăng'
+      notify_discussion_locked_label: 'Ai đó khóa cuộc thảo luận của tôi'

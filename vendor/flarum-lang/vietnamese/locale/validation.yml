@@ -78,8 +78,8 @@ validation:
     file: 'Dung lượng tập tin trường :attribute không được lớn hơn :max kB.'
     numeric: 'Trường :attribute không được lớn hơn :max.'
     string: 'Trường :attribute không được lớn hơn :max ký tự.'
-  mimes: 'Trường :attribute phải phải là một tập tin có định dạng :values.'
-  mimetypes: 'Trường :attribute phải phải là một tập tin có định dạng :values.'
+  mimes: 'Trường :attribute phải là một tập tin có định dạng :values.'
+  mimetypes: 'Trường :attribute phải là một tập tin có định dạng :values.'
   min:
     array: 'Trường :attribute phải có tối thiểu là :min phần tử.'
     file: 'Dung lượng tập tin trường :attribute phải tối thiểu :min kB.'

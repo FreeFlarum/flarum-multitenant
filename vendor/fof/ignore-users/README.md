@@ -9,7 +9,7 @@ A [Flarum](http://flarum.org) extension. Ignore users - hiding their posts in di
 Install manually with composer:
 
 ```sh
-composer require fof/ignore-users
+composer require fof/ignore-users:"*"
 ```
 
 ### Updating

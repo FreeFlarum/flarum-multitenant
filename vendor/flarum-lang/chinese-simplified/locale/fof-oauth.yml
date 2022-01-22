@@ -4,10 +4,11 @@
 
 fof-oauth:
   admin:
+    configure_button_label: '配置 FoF OAuth'
     settings:
       only_icons_label: 仅显示登录按钮图标（可选布置）
       providers:
-        callback_url_text: '如有必要，将回调 URL 设为 {url}。'
+        callback_url_text: '根据需要可将回调 URL 设为 {url}。'
         discord:
           client_id_label: '=> fof-oauth.ref.settings.client_id'
           client_secret_label: '=> fof-oauth.ref.settings.client_secret'
@@ -31,7 +32,7 @@ fof-oauth:
           description: '前往此处创建应用：{link}'
         linkedin:
           client_id_label: '=> fof-oauth.ref.settings.client_id'
-          client_secret_label: 你好
+          client_secret_label: 'Client Secret'
           description: '前往 {link} 创建应用。'
         twitter:
           api_key_label: 'API Key'
@@ -58,6 +59,8 @@ fof-oauth:
       google: '=> fof-oauth.lib.providers.google'
       linkedin: '=> fof-oauth.lib.providers.linkedin'
       twitter: '=> fof-oauth.lib.providers.twitter'
+    signup:
+      username_help: 请选择一个用户名
   lib:
     providers:
       discord: Discord

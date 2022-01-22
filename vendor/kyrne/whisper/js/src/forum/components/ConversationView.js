@@ -247,7 +247,7 @@ export default class ConversationView extends Component {
                 <textarea id="MessageTextArea" value={this.messageContent()}
                           oninput={withAttr('value', this.typingPush.bind(this))}
                           placeholder={app.translator.trans('kyrne-whisper.forum.chat.text_placeholder')}
-                          rows="3"></textarea>,
+                          rows="3"></textarea>
 
           {Button.component({
               onclick: this.sendMessage.bind(this),

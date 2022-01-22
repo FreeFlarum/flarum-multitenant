@@ -53,7 +53,7 @@ the-turk-flamoji:
       show_variants_label: 'Değişkenleri göster'
       show_variants_text: 'Bazı ifadelerin cilt tonu çeşitleri vardır. Seçicide değişkenleri olan bir emoji seçildiğinde, kullanıcının istediği değişkeni seçebilmesi için bir değişken açılır penceresi görünür.'
       specify_categories_label: 'Kategorileri belirtin'
-      specify_categories_text: 'Burada bir kategori listesi belirtebilirsiniz,  seçici yalnızca bu kategorileri gösterir.'
+      specify_categories_text: 'Burada bir kategori listesi belirtebilirsiniz, seçici yalnızca bu kategorileri gösterir.'
   forum:
     composer:
       emoji_tooltip: 'İfade ekle'

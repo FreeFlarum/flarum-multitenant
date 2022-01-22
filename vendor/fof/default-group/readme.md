@@ -11,7 +11,7 @@ A [Flarum](http://flarum.org) extension. Assign a default group to new users aut
 Install manually with composer:
 
 ```sh
-composer require fof/default-group
+composer require fof/default-group:"*"
 ```
 
 ### Updating

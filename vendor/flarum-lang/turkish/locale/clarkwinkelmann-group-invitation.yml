@@ -33,6 +33,6 @@ clarkwinkelmann-group-invitation:
     title: '{group grubuna katılmak için davet edildin!'
     user:
       already-connected: "{username} kullanısını {group} grubuna ekleyeceğiz. Doğru kullanıcı değil mi? <a>Başka bir hesapta oturum açın</a>.\n"
-      already-member: 'Harika bir haberimiz var, {username} kullanıcınız zaten {group} grubunun bir üyesi! Gruba başka bir kullanıcıyla katılmak ister misiniz? <a>Başka bir hesapta oturum açın</a>.'
+      already-member: "Harika bir haberimiz var, {username} kullanıcınız zaten {group} grubunun bir üyesi! Gruba başka bir kullanıcıyla katılmak ister misiniz? <a>Başka bir hesapta oturum açın</a>.\n"
       not-authorized: 'Mevcut kullanıcınız {username} gruplara katılma iznine sahip değil. <a>Başka bir hesapta oturum açın</a>.'
       not-connected: 'Daveti kabul etmek için <a>oturum açın</a>.'

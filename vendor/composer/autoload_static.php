@@ -15,9 +15,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
@@ -38,8 +36,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
@@ -61,12 +59,104 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '04b6576f786ea6b5b4b577af08f8e4d1' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/bootstrap.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
         '3c6b16bde9ee0229f373e20a9d2a286a' => __DIR__ . '/..' . '/afrux/forum-widgets-core/src/helpers.php',
+        'a4ecaeafb8cfb009ad0e052c90355e98' => __DIR__ . '/..' . '/beberlei/assert/lib/Assert/functions.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '51fcf4e06c07cc00c920b44bcd900e7a' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/apc.php',
+        '47f619d9197b36cf5ab70738d7743fe2' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/libevent.php',
+        'ea6bb8a12ef9b68f6ada99058e530760' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/mssql.php',
+        '9a29089eb3ce41a446744c68a00f118c' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/stats.php',
+        '72243e5536b63e298acb6476f01f1aff' => __DIR__ . '/..' . '/thecodingmachine/safe/lib/special_cases.php',
+        '3f648889e687f31c52f949ba8a9d0873' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apache.php',
+        'eeb4581d958421a4244aaa4167c6a575' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apcu.php',
+        '04cb0b3c1dac5b5ddb23c14e3d66dbe9' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/array.php',
+        '450b332a74a9a21e043c5e953485a791' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/bzip2.php',
+        '6e9b7954ecfd7cbb9ca239319d1acdb6' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/calendar.php',
+        '2c6d7e8bd2de9a272a9d4d43b0a4304a' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/classobj.php',
+        '0b8231c1ad0865447c988a4c16b4001f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/com.php',
+        '7643a71fe1c3256058c8fee234cb86e5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/cubrid.php',
+        '68e1365710575942efc1d55000032cee' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/curl.php',
+        '02fd26bca803106c5b942a7197c3ad8b' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/datetime.php',
+        'f4817dcbd956cd221b1c31f6fbd5749c' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/dir.php',
+        '51c3f2d10ca61a70dbcea0e38d8e902d' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/eio.php',
+        '1d34f34327ca3e81535963016e3be2c3' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/errorfunc.php',
+        '4fd0ba2d3717b0424d474bebfdafa2b4' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/exec.php',
+        '98f4dae054bc7fb19c13be14935cbdd3' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/fileinfo.php',
+        '5530ae063ba88323eaf0a07904efdf85' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/filesystem.php',
+        '633f4f134975d70e97bddad83348e91a' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/filter.php',
+        'fbd163fc68c5faf73d5ed4002ffd836d' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/fpm.php',
+        '21b511999d61411fab0692ff8795bbed' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ftp.php',
+        '85fbd73fc92365cd90526b0ea03cae3a' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/funchand.php',
+        '51df9c146e0b7dcbdf358d8abd24dbdc' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/gmp.php',
+        '93bb7fe678d7dcfb1322f8e3475a48b0' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/gnupg.php',
+        'c171ba99cf316379ff66468392bf4950' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/hash.php',
+        '5ab4aad4c28e468209fbfcceb2e5e6a5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ibase.php',
+        '4d57409c5e8e576b0c64c08d9d731cfb' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ibmDb2.php',
+        'eeb246d5403972a9d62106e4a4883496' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/iconv.php',
+        'c28a05f498c01b810a714f7214b7a8da' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/image.php',
+        '8063cd92acdf00fd978b5599eb7cc142' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/imap.php',
+        '8bd26dbe768e9c9599edad7b198e5446' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/info.php',
+        '0c577fe603b029d4b65c84376b15dbd5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ingres-ii.php',
+        'd4362910bde43c0f956b52527effd7d4' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/inotify.php',
+        '696ba49197d9b55f0428a12bb5a818e1' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/json.php',
+        '9818aaa99c8647c63f8ef62b7a368160' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ldap.php',
+        'bcf523ff2a195eb08e0fbb668ed784d0' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/libxml.php',
+        '68be68a9a8b95bb56cab6109ff03bc88' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/lzf.php',
+        'bdca804bb0904ea9f53f328dfc0bb8a5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mailparse.php',
+        'b0a3fcac3eaf55445796d6af26b89366' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mbstring.php',
+        '98de16b8db03eb0cb4d318b4402215a6' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/misc.php',
+        'c112440003b56e243b192c11fa9d836e' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/msql.php',
+        '7cefd81607cd21b8b3a15656eb6465f5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysql.php',
+        'aaf438b080089c6d0686679cd34aa72e' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysqli.php',
+        'df0ef890e9afbf95f3924feb1c7a89f3' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysqlndMs.php',
+        'db595fee5972867e45c5327010d78735' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysqlndQc.php',
+        'cbac956836b72483dcff1ac39d5c0a0f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/network.php',
+        '6c8f89dfbdc117d7871f572269363f25' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/oci8.php',
+        '169a669966a45c06bf55ed029122729b' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/opcache.php',
+        'def61bf4fecd4d4bca7354919cd69302' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/openssl.php',
+        '26bb010649a6d32d4120181458aa6ef2' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/outcontrol.php',
+        '1212c201fe43c7492a085b2c71505e0f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/password.php',
+        '002ebcb842e2c0d5b7f67fe64cc93158' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pcntl.php',
+        '86df38612982dade72c7085ce7eca81f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pcre.php',
+        '1cacc3e65f82a473fbd5507c7ce4385d' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pdf.php',
+        '1fc22f445c69ea8706e82fce301c0831' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pgsql.php',
+        'c70b42561584f7144bff38cd63c4eef3' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/posix.php',
+        '9923214639c32ca5173db03a177d3b63' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ps.php',
+        '7e9c3f8eae2b5bf42205c4f1295cb7a7' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pspell.php',
+        '91aa91f6245c349c2e2e88bd0025f199' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/readline.php',
+        'd43773cacb9e5e8e897aa255e32007d1' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/rpminfo.php',
+        'f053a3849e9e8383762b34b91db0320b' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/rrd.php',
+        '775b964f72f827a1bf87c65ab5b10800' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sem.php',
+        '816428bd69c29ab5e1ed622af5dca0cd' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/session.php',
+        '5093e233bedbefaef0df262bfbab0a5c' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/shmop.php',
+        '01352920b0151f17e671266e44b52536' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/simplexml.php',
+        'b080617b1d949683c2e37f8f01dc0e15' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sockets.php',
+        '2708aa182ddcfe6ce27c96acaaa40f69' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sodium.php',
+        'f1b96cb260a5baeea9a7285cda82a1ec' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/solr.php',
+        '3fd8853757d0fe3557c179efb807afeb' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/spl.php',
+        '9312ce96a51c846913fcda5f186d58dd' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sqlsrv.php',
+        'd3eb383ad0b8b962b29dc4afd29d6715' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ssdeep.php',
+        '42a09bc448f441a0b9f9367ea975c0bf' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ssh2.php',
+        'ef711077d356d1b33ca0b10b67b0be8f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/stream.php',
+        '764b09f6df081cbb2807b97c6ace3866' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/strings.php',
+        'ef241678769fee4a44aaa288f3b78aa1' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/swoole.php',
+        '0efc8f6778cba932b9e2a89e28de2452' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/uodbc.php',
+        'd383d32907b98af53ee9208c62204fd0' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/uopz.php',
+        '2fd2e4060f7fe772660f002ce38f0b71' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/url.php',
+        '782249e03deebeaf57b9991ff5493aa0' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/var.php',
+        '344440cd1cd7200fdb4f12af0d3c587f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/xdiff.php',
+        '3599f369219c658a5fb6c4fe66832f62' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/xml.php',
+        '7fcd313da9fae337051b091b3492c21b' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/xmlrpc.php',
+        'd668c74cfa92d893b582356733d9a80e' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/yaml.php',
+        '4af1dca6db8c527c6eed27bff85ff0e5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/yaz.php',
+        'fe43ca06499ac37bc2dedd823af71eb5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/zip.php',
+        '356736db98a6834f0a886b8d509b0ecd' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/zlib.php',
         '17d016dc52a631c1e74d2eb8fdd57342' => __DIR__ . '/..' . '/laravel/helpers/src/helpers.php',
         '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
         '3c3a02bc9945aa3571024986c07a1e55' => __DIR__ . '/..' . '/rinvex/countries/src/helpers.php',
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
@@ -102,10 +192,17 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             'Zerosonesfun\\Members\\' => 21,
             'Zerosonesfun\\InlineAudio\\' => 25,
+            'ZerosOnesFun\\Nes\\' => 17,
+            'ZerosOnesFun\\BBcodeButton\\' => 26,
         ),
         'Y' => 
         array (
+            'Yannisme\\OXOTheme\\' => 18,
             'Yannisme\\ConfixTheme\\' => 21,
+        ),
+        'X' => 
+        array (
+            'Xelson\\Chat\\' => 12,
         ),
         'W' => 
         array (
@@ -145,14 +242,17 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Mime\\' => 23,
+            'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
@@ -162,7 +262,9 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'SychO\\MovePosts\\' => 16,
             'SychO\\Aec\\' => 10,
             'SoftCreatR\\MimeDetector\\' => 24,
+            'Serakoi\\FlarumStaffBadge\\' => 25,
             'Serakoi\\FlarumDiscordTheme\\' => 27,
+            'Safe\\' => 5,
             'SSNepenthe\\ColorUtils\\' => 22,
         ),
         'R' => 
@@ -183,16 +285,22 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Psr\\Http\\Client\\' => 16,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
+            'ParagonIE\\ConstantTime\\' => 23,
         ),
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
             'Omines\\OAuth2\\Client\\' => 21,
+            'OTPHP\\' => 6,
         ),
         'N' => 
         array (
             'NomisCZ\\SteamAuth\\' => 18,
+            'Nearata\\TwoFactor\\' => 18,
+            'Nearata\\SignUpConfirmPassword\\' => 30,
             'Nearata\\NoSelfLikes\\' => 20,
+            'Nearata\\MinecraftAvatars\\' => 25,
+            'Nearata\\EmbedVideo\\' => 19,
         ),
         'M' => 
         array (
@@ -204,6 +312,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Michaelbelgium\\Discussionviews\\' => 31,
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
+            'Malago\\FancyBox\\' => 16,
             'Malago\\Achievements\\' => 20,
             'Maicol07\\SSO\\Middleware\\' => 24,
             'Maicol07\\SSO\\Listener\\' => 22,
@@ -236,15 +345,25 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'J' => 
         array (
             'Justoverclock\\YtVideoFeed\\' => 26,
+            'Justoverclock\\Welcomebox\\' => 25,
             'Justoverclock\\UsernameBlacklist\\' => 32,
+            'Justoverclock\\SocialCards\\' => 26,
+            'Justoverclock\\Purify\\' => 21,
             'Justoverclock\\NewsFeed\\' => 23,
             'Justoverclock\\LastTweet\\' => 24,
+            'Justoverclock\\LastPostUserAvatar\\' => 33,
             'Justoverclock\\Infocards\\' => 24,
             'Justoverclock\\HotDiscussions\\' => 29,
             'Justoverclock\\HeaderSlideShow\\' => 30,
+            'Justoverclock\\Hashtag\\' => 22,
             'Justoverclock\\GeoWeather\\' => 25,
+            'Justoverclock\\Feedback\\' => 23,
+            'Justoverclock\\EventsCountDown\\' => 30,
+            'Justoverclock\\DontGoAway\\' => 25,
             'Justoverclock\\CustomHtmlWidget\\' => 31,
             'Justoverclock\\CustomHeader\\' => 27,
+            'Justoverclock\\Contactme\\' => 24,
+            'Justoverclock\\ChristmasSnowEffect\\' => 34,
             'Jose\\Component\\Signature\\Algorithm\\' => 35,
             'Jose\\Component\\Signature\\' => 25,
             'Jose\\Component\\KeyManagement\\' => 29,
@@ -265,6 +384,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Illuminate\\Queue\\' => 17,
             'Illuminate\\Pipeline\\' => 20,
             'Illuminate\\Mail\\' => 16,
+            'Illuminate\\Http\\' => 16,
             'Illuminate\\Hashing\\' => 19,
             'Illuminate\\Filesystem\\' => 22,
             'Illuminate\\Events\\' => 18,
@@ -291,6 +411,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GlowingBlue\\PasswordStrength\\' => 29,
         ),
         'F' => 
         array (
@@ -307,6 +428,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'FoF\\SocialProfile\\' => 18,
             'FoF\\Sitemap\\' => 12,
             'FoF\\ShareSocial\\' => 16,
+            'FoF\\SecureHttps\\' => 16,
             'FoF\\Reactions\\' => 14,
             'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
@@ -318,6 +440,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'FoF\\Pages\\' => 10,
             'FoF\\OAuth\\' => 10,
             'FoF\\NightMode\\' => 14,
+            'FoF\\ModeratorNotes\\' => 19,
             'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Masquerade\\' => 15,
             'FoF\\Mason\\' => 10,
@@ -362,6 +485,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
             'FG\\' => 3,
+            'FFans\\ClipboardJS\\' => 18,
         ),
         'E' => 
         array (
@@ -403,6 +527,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'A' => 
         array (
             'Aws\\' => 4,
+            'Assert\\' => 7,
             'Askvortsov\\RichText\\' => 20,
             'Askvortsov\\FlarumWarnings\\' => 26,
             'Askvortsov\\FlarumPWA\\' => 21,
@@ -474,9 +599,25 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/flarum-inline-audio/src',
         ),
+        'ZerosOnesFun\\Nes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerosonesfun/flarum-theme-nes/src',
+        ),
+        'ZerosOnesFun\\BBcodeButton\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerosonesfun/flarum-bbcode-button/src',
+        ),
+        'Yannisme\\OXOTheme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yannisme/oxotheme/src',
+        ),
         'Yannisme\\ConfixTheme\\' => 
         array (
             0 => __DIR__ . '/..' . '/yannisme/confixtheme/src',
+        ),
+        'Xelson\\Chat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xelson/flarum-ext-chat/src',
         ),
         'Wohali\\OAuth2\\Client\\' => 
         array (
@@ -586,6 +727,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
@@ -602,6 +747,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
         ),
+        'Symfony\\Component\\HttpKernel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-kernel',
+        ),
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
@@ -617,6 +766,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Symfony\\Component\\ErrorHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/error-handler',
         ),
         'Symfony\\Component\\DomCrawler\\' => 
         array (
@@ -654,9 +807,19 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
         ),
+        'Serakoi\\FlarumStaffBadge\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/serakoi/flarumstaffbadge/src',
+        ),
         'Serakoi\\FlarumDiscordTheme\\' => 
         array (
             0 => __DIR__ . '/..' . '/serakoi/flarumdiscordtheme/src',
+        ),
+        'Safe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thecodingmachine/safe/lib',
+            1 => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated',
+            2 => __DIR__ . '/..' . '/thecodingmachine/safe/generated',
         ),
         'SSNepenthe\\ColorUtils\\' => 
         array (
@@ -716,6 +879,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'ParagonIE\\ConstantTime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
+        ),
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
@@ -724,13 +891,33 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
         ),
+        'OTPHP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spomky-labs/otphp/src',
+        ),
         'NomisCZ\\SteamAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/nomiscz/flarum-ext-auth-steam/src',
         ),
+        'Nearata\\TwoFactor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nearata/flarum-ext-twofactor/src',
+        ),
+        'Nearata\\SignUpConfirmPassword\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nearata/flarum-ext-signup-confirm-password/src',
+        ),
         'Nearata\\NoSelfLikes\\' => 
         array (
             0 => __DIR__ . '/..' . '/nearata/flarum-ext-no-self-likes/src',
+        ),
+        'Nearata\\MinecraftAvatars\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nearata/flarum-ext-minecraft-avatars/src',
+        ),
+        'Nearata\\EmbedVideo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nearata/flarum-ext-embed-video/src',
         ),
         'Monolog\\' => 
         array (
@@ -765,6 +952,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'MatthiasMullie\\Minify\\' => 
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
+        ),
+        'Malago\\FancyBox\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/malago/flarum-ext-fancybox/src',
         ),
         'Malago\\Achievements\\' => 
         array (
@@ -862,9 +1053,21 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/justoverclock/youtube-video-feed/src',
         ),
+        'Justoverclock\\Welcomebox\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-welcomebox/src',
+        ),
         'Justoverclock\\UsernameBlacklist\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/username-blacklist/src',
+        ),
+        'Justoverclock\\SocialCards\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-socialcards/src',
+        ),
+        'Justoverclock\\Purify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-purify/src',
         ),
         'Justoverclock\\NewsFeed\\' => 
         array (
@@ -873,6 +1076,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Justoverclock\\LastTweet\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/last-tweet/src',
+        ),
+        'Justoverclock\\LastPostUserAvatar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/last-post-useravatar/src',
         ),
         'Justoverclock\\Infocards\\' => 
         array (
@@ -886,9 +1093,25 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/justoverclock/header-slideshow/src',
         ),
+        'Justoverclock\\Hashtag\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-hashtag/src',
+        ),
         'Justoverclock\\GeoWeather\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/geo-weather/src',
+        ),
+        'Justoverclock\\Feedback\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-feedback/src',
+        ),
+        'Justoverclock\\EventsCountDown\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/events-countdown/src',
+        ),
+        'Justoverclock\\DontGoAway\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-dontgoaway/src',
         ),
         'Justoverclock\\CustomHtmlWidget\\' => 
         array (
@@ -897,6 +1120,14 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Justoverclock\\CustomHeader\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/custom-header/src',
+        ),
+        'Justoverclock\\Contactme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-contactme/src',
+        ),
+        'Justoverclock\\ChristmasSnowEffect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/christmas-snow-effect/src',
         ),
         'Jose\\Component\\Signature\\Algorithm\\' => 
         array (
@@ -948,8 +1179,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -967,6 +1198,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Illuminate\\Mail\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/mail',
+        ),
+        'Illuminate\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/http',
         ),
         'Illuminate\\Hashing\\' => 
         array (
@@ -1049,6 +1284,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'GlowingBlue\\PasswordStrength\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/glowingblue/password-strength/src',
+        ),
         'Franzl\\Middleware\\Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
@@ -1101,6 +1340,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/fof/share-social/src',
         ),
+        'FoF\\SecureHttps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/secure-https/src',
+        ),
         'FoF\\Reactions\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/reactions/src',
@@ -1144,6 +1387,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'FoF\\NightMode\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/nightmode/src',
+        ),
+        'FoF\\ModeratorNotes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/moderator-notes/src',
         ),
         'FoF\\MergeDiscussions\\' => 
         array (
@@ -1321,6 +1568,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/fgrosse/phpasn1/lib',
         ),
+        'FFans\\ClipboardJS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ffans/clipboardjs/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -1424,6 +1675,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Aws\\' => 
         array (
             0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
+        ),
+        'Assert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/beberlei/assert/lib/Assert',
         ),
         'Askvortsov\\RichText\\' => 
         array (

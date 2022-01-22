@@ -22,8 +22,15 @@ v17development-flarum-badges:
       requirement_drivers:
         has_badge: 'Có huy hiệu'
     badge:
+      background_color: 'Màu nền'
       description: 'Mô tả huy hiệu'
       icon: 'Icon huy hiệu'
+      icon_color: 'Màu icon'
+      image: 'URL ảnh huy hiệu'
+      image_placeholder: 'Nhập URL ảnh huy hiệu'
+      is_image: 'Huy hiệu là hình ảnh'
+      is_image_description: 'Sử dụng hình ảnh thay vì huy hiệu mặc định'
+      label_color: 'Màu chữ'
       name: 'Tên huy hiệu'
       visible: 'Hiển thị'
       visible_description: 'Bật huy hiệu này. Khi bị vô hiệu hóa, huy hiệu sẽ không hiển thị.'

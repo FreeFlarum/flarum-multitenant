@@ -1,14 +1,4 @@
-/*
- *
- *  This file is part of fof/username-request.
- *
- *  Copyright (c) 2019 FriendsOfFlarum.
- *
- *  For the full copyright and license information, please view the LICENSE.md
- *  file that was distributed with this source code.
- *
- */
-
+import app from 'flarum/forum/app';
 import User from 'flarum/common/models/User';
 import Model from 'flarum/common/Model';
 import UsernameRequest from './models/UsernameRequest';
@@ -21,18 +11,18 @@ import addProfilePage from './addProfilePage';
 import RequestsListState from './states/RequestsListState';
 
 app.initializers.add('fof-username-request', () => {
-    app.store.models['username-requests'] = UsernameRequest;
-    User.prototype.lastNicknameRequest = Model.hasOne('lastNicknameRequest');
-    User.prototype.lastUsernameRequest = Model.hasOne('lastUsernameRequest');
-    User.prototype.usernameHistory = Model.attribute('usernameHistory');
+  app.store.models['username-requests'] = UsernameRequest;
+  User.prototype.lastNicknameRequest = Model.hasOne('lastNicknameRequest');
+  User.prototype.lastUsernameRequest = Model.hasOne('lastUsernameRequest');
+  User.prototype.usernameHistory = Model.attribute('usernameHistory');
 
-    app.routes.username_requests = { path: '/username-requests', component: RequestsPage };
-    app.routes.username_history = { path: '/u/:username/history', component: ProfilePage };
+  app.routes.username_requests = { path: '/username-requests', component: RequestsPage };
+  app.routes.username_history = { path: '/u/:username/history', component: ProfilePage };
 
-    app.usernameRequests = new RequestsListState(app);
+  app.usernameRequests = new RequestsListState(app);
 
-    addRequestSetting();
-    addRequestDropdown();
-    checkForApproval();
-    addProfilePage();
+  addRequestSetting();
+  addRequestDropdown();
+  checkForApproval();
+  addProfilePage();
 });

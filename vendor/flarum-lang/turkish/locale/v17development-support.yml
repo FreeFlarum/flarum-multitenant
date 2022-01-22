@@ -177,7 +177,26 @@ v17development-flarum-support:
       overview:
         all_tickets: 'Tüm biletler'
         description: 'Gülümse, sen diğer insanların günlerini kurtaran kahramansın.'
+        filter:
+          assignees:
+            search: 'Görevli ara'
+            title: 'Atananlara göre filtrele'
+            unassigned: Atanmamış
+          language:
+            any: 'Herhangi bir dil'
+          status:
+            filter_count: '{count, plural, one {# filtre} other {# filtre}}'
+            title: 'Bilet durumu'
         no_tickets: 'Kriterlerinize uyan bilet yok, muhtemelen iyi bir iş çıkarıyorsunuz!'
+        refresh: Yenile
+        selection_closed: 'Kapalı biletler'
+        selection_open: 'Açık biletler'
+        selection_unfiltered: Filtrelenmedi
+        sort:
+          least_recent: 'En son etkinlik'
+          newest: 'Önce yeniler'
+          oldest: 'Önce eskiler'
+          recent_activity: 'Son aktiviteler'
         title: 'Biletlere genel bakış'
       reminders_sent: '{count, plural, one {Bir hatırlatıcı gönderildi} other {# hatırlatıcı gönderildi}}'
       return_to_overview: 'Bilete genel bakışa dön'

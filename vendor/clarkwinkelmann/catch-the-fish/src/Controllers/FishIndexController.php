@@ -18,6 +18,8 @@ class FishIndexController extends AbstractListController
     public $include = [
         'lastUserPlacement',
         'lastUserNaming',
+        'placement',
+        'placement.discussion', // For when it's a post
     ];
 
     protected $rounds;

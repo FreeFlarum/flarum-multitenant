@@ -10,6 +10,7 @@ fof-stopforumspam:
       api_key_text: 'Masz włączone rozszerzenie <code>fof/spamblock</code>, teraz możesz zgłaszać spamerów do StopForumSpam, aby pomagać też innym społecznościom walczyć ze spamem.'
       email_label: 'Sprawdzaj adres e-mail'
       frequency_example_text: 'Na przykład: jeśli adres e-mail ma 1 zgłoszenie, a adres IP ma 2 zgłoszenia, w sumie da to 3 zgłoszenia. Jeśli próg to 3 lub mniej, rejestracja będzie niemożliwa.'
+      frequency_help: "Liczba zgłoszeń spamu dla wszystkich sprawdzanych pozycji, której przekroczenie aktywuje filtr spamu.\nNa przykład: jeśli adres e-mail ma 1 zgłoszenie, a adres IP ma 2 zgłoszenia, w sumie da to 3 zgłoszenia. Jeśli próg to 3 lub mniej, rejestracja będzie niemożliwa.\n"
       frequency_label: Próg
       frequency_text: 'Liczba zgłoszeń spamu dla wszystkich sprawdzanych pozycji, której przekroczenie aktywuje filtr spamu.'
       ip_label: 'Sprawdzaj adres IP'

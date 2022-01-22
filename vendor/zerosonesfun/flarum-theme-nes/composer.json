@@ -1,0 +1,49 @@
+{
+    "name": "zerosonesfun/flarum-theme-nes",
+    "description": "A retro gaming theme for Flarum.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Billy Wilcosky",
+            "email": "billy@wilcosky.com",
+            "role": "Developer"
+        }
+    ],
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.wilcosky.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZerosOnesFun\\Nes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZerosOnesFun\\Nes\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "nes theme",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-gamepad",
+                "backgroundColor": "#ddd",
+                "color": "#000"
+            }
+        }
+    }
+}

@@ -175,7 +175,7 @@ kilowhat-formulaire:
         permission-see-own: 'Xem bài gửi của chính mình'
         send-confirmation-to-participants: 'Gửi email xác nhận cho người tham gia'
         show-on-creation:
-          discussion: 'Hiển thị trong trình soạn thảo thảo luận'
+          discussion: 'Hiển thị trong trình soạn thảo'
           user: 'Hiển thị trong đăng ký'
         title: 'Tiêu đề công khai'
         web-confirmation-message: 'Thông báo xác nhận trên web (đã bật định dạng)'

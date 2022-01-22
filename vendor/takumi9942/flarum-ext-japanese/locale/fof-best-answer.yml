@@ -1,0 +1,55 @@
+fof-best-answer:
+  admin:
+    permissions:
+      best_answer: ベストアンサーの選択 (自分のスレッド)
+      best_answer_not_own_discussion: ベストアンサーの選択 (自分以外のスレッド)
+    settings:
+      label:
+        general: 基本設定
+        reminders: リマインダー
+        advanced: 詳細設定
+        reminders_notice: リマインダーが正しく動作するためには、Flarumのスケジューラを正しく設定する必要があります。
+      allow_select_own_post: ユーザーが自分自身の投稿を選ぶことを許可する
+      select_best_answer_reminder_days: ベストアンサーを選ぶように、X日後に通知する
+      schedule_on_one_server: タスクスケジューラに 'onOneServer()' ディレクティブを使用する (Redis/Memcache が必要です)
+      schedule_stop_overnight: 深夜帯はリマインダースケジューラを停止する (サーバー時間で午後9時 ~ 午前8時)
+      schedule_log_output: スケジューラの出力をログストレージに保存する
+      remind_tag_ids: 特定のタグのみでリマインダーを受け取りたい場合は、ここにタグIDを入力してください (カンマ区切り)
+      use_alt_ui: 代替レイアウトを使用する (投稿画面のフッターにボタンを置く)
+  forum:
+    answered_badge: 解決済み
+    this_best_answer: ベストアンサーに選ぶ
+    remove_best_answer: ベストアンサーを解除する
+    best_answer_button: ベストアンサー
+    best_answer_label: <a>{username}</a> が {time_set} に選びました
+    errors:
+      mismatch: "選択された投稿がこのスレッドに存在しません。"
+
+    notification:
+      best_answer_in_discussion: "{username} がこのスレッドのベストアンサーを選びました"
+      content: あなたの質問が解決された場合は、ベストアンサーを選んでください。
+      awarded: あなたの投稿が{username}によってベストアンサーに選ばれました
+      preferences:
+        awarded_best_answer: 自分の投稿がベストアンサーに選ばれたとき
+        best_answer_in_discussion: 参加しているスレッドでベストアンサーが選ばれた時
+  email:
+    subject:
+      awarded: あなたの投稿が{display_name}によってベストアンサーに選ばれました
+      ba-set: "{display_name}によってベストアンサーが選択されました"
+      select: 問題を解決できましたか？
+    body:
+      awarded: |
+        {recipient_display_name}さん、こんにちは。
+        {actor_display_name}さんが、'{discussion_title}'のスレッドにおいて、あなたの投稿をベストアンサーに選びました。ご協力ありがとうございます。
+        内容はこちらから確認できます: {discussion_url}
+      ba-set: |
+        {recipient_display_name}さん、こんにちは。
+        {actor_display_name}さんが、あなたの参加しているスレッド'{discussion_title}'において、ベストアンサーを選択しました。
+        内容はこちらから確認できます: {discussion_url}
+      select: |
+        {recipient_display_name}さん、こんにちは。
+        あなたの質問'{discussion_title}'に対し、いくつかの回答が届いているようです。得られた回答から問題を解決できましたか？
+        もし解決された場合は、ベストアンサーを選択していただけると幸いです。これによって、あなたと同じ問題を持った他のユーザーが、解決方法を知ることができます。
+        以下のURLからスレッドを開き、最も参考になった投稿をベストアンサーに選んでください。
+        {discussion_url}
+        ご協力をお願いします。

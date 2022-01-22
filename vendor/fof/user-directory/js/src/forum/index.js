@@ -1,5 +1,5 @@
 import { extend } from 'flarum/common/extend';
-import app from 'flarum/common/app';
+import app from 'flarum/forum/app';
 import UsersSearchSource from 'flarum/common/components/UsersSearchSource';
 import LinkButton from 'flarum/common/components/LinkButton';
 import IndexPage from 'flarum/common/components/IndexPage';
@@ -9,6 +9,7 @@ import UserDirectoryListItem from './components/UserDirectoryListItem';
 import UserDirectoryState from './states/UserDirectoryState';
 import SortMap from '../common/utils/SortMap';
 import CheckableButton from './components/CheckableButton';
+import Text from './models/Text';
 
 // Allow other extensions to extend the page
 export { UserDirectoryPage, UserDirectoryList, UserDirectoryListItem, UserDirectoryState, SortMap, CheckableButton };
@@ -19,8 +20,10 @@ app.initializers.add('fof-user-directory', (app) => {
         component: UserDirectoryPage,
     };
 
+    app.store.models['fof-user-directory-text'] = Text;
+
     extend(UsersSearchSource.prototype, 'view', function (view, query) {
-        if (!view) {
+        if (!view || app.forum.attribute('userDirectoryDisableGlobalSearchSource')) {
             return;
         }
 
@@ -60,3 +63,4 @@ app.initializers.add('fof-user-directory', (app) => {
 });
 
 export * from './components';
+export * from './searchTypes';

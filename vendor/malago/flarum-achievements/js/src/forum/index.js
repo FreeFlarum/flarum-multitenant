@@ -31,27 +31,24 @@ app.initializers.add('malago-achievements', app => {
   extend(IndexPage.prototype, 'navItems', function (items) {
     const here = app.forum.attribute('malago-achievements.link-left-column');
 
-    if (!app.session.user || here!=1) {
-        return;
+    if (!app.session.user || here != 1) {
+      return;
     }
     items.add('achievements', <LinkButton icon="fas fa-trophy" href={app.route('achievements')}>
       {app.translator.trans("malago-achievements.forum.list_heading")}
     </LinkButton>
       , -11);
   });
-  
+
   registerModels();
-  
+
   extend(UserCard.prototype, 'view', function (element) {
     var points = 0;
-    //comment.children[0].children[2].children.splice(0,0, m("div.Achievements--User"));
+
     const here = app.forum.attribute('malago-achievements.show-user-card');
-    // var element = this.element;
-    // element.appendChild(m('div'));
-    // $(element).append(m("div","HOLA"));
-    //console.log(this.attrs.user);
+
     var list = m("div.UserCard-Achievement-list");
-    
+
     if (here == "1" && element.attrs.className.includes("UserCard--popover")) {
       var achievements = this.attrs.user.achievements();
       if (achievements !== undefined) {
@@ -89,7 +86,7 @@ app.initializers.add('malago-achievements', app => {
     //comment.children[0].children[2].children.splice(0,0, m("div.Achievements--User"));
     const here = app.forum.attribute('malago-achievements.show-post-footer');
 
-    if (here=="1" && !this.attrs.post.data.attributes.isHidden) {
+    if (here == "1" && !this.attrs.post.data.attributes.isHidden) {
       this.attrs.post.data.attributes.achievements.forEach(function (item, index) {
         var rectangle = item.rectangle.split(',');
         if (item.image.includes("http")) {
@@ -97,21 +94,22 @@ app.initializers.add('malago-achievements', app => {
             background-position:-"+ rectangle[0] + "px -" + rectangle[1] + "px;\
             height:"+ rectangle[2] + "px;\
             width:"+ rectangle[3] + "px;\
-            margin: -"+ (rectangle[3] / 4 - 4) + "px;";            
-          comment.children[0].children[2].children[0].children.push(m(Tooltip,{text:item.name},
+            margin: -"+ (rectangle[3] / 4 - 4) + "px;";
+
+          comment.children[0].children[2].children.push(m(Tooltip, { text: item.name },
             m("span.Badge.Achievement", { style: style }, ""))
           );
         } else {
-          comment.children[0].children[2].children[0].children.push(m(Tooltip, { text: item.name }, m("span.Badge.Achievement--Icon",
+          comment.children[0].children[2].children.push(m(Tooltip, { text: item.name }, m("span.Badge.Achievement--Icon",
             m("i.icon." + item.image))
           ));
         }
 
         points += item.points;
       });
-      if (comment.children[0].children[2].children[0].children.length>0 && points > 0) {
-          comment.children[0].children[2].children[0].children.push(m(Tooltip,{text:app.translator.trans("malago-achievements.forum.achievement_points")},m("span.Achievement--Points", app.translator.trans(
-            "malago-achievements.forum.achievement_points") + ": ",m("span.Achievement--Points--Number", points))));
+      if (comment.children[0].children[2].children.length > 0 && points > 0) {
+        comment.children[0].children[2].children.push(m(Tooltip, { text: app.translator.trans("malago-achievements.forum.achievement_points") }, m("span.Achievement--Points", app.translator.trans(
+          "malago-achievements.forum.achievement_points") + ": ", m("span.Achievement--Points--Number", points))));
       }
     }
   });

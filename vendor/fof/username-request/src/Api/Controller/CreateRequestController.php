@@ -12,6 +12,7 @@
 namespace FoF\UserRequest\Api\Controller;
 
 use Flarum\Api\Controller\AbstractCreateController;
+use Flarum\Http\RequestUtil;
 use Flarum\User\Exception\NotAuthenticatedException;
 use FoF\UserRequest\Api\Serializer\RequestSerializer;
 use FoF\UserRequest\Command\CreateRequest;
@@ -53,7 +54,7 @@ class CreateRequestController extends AbstractCreateController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         if (!$actor->checkPassword(Arr::get($request->getParsedBody(), 'meta.password'))) {
             throw new NotAuthenticatedException();

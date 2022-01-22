@@ -42,8 +42,8 @@ flarum-tags:
       meta_description_text: 'Todas as Tags'
       meta_title_text: '=> flarum-tags.ref.tags'
     choose_tags:
-      choose_primary_placeholder: 'Escolha uma tag primária|Escolha {count} tags primárias'
-      choose_secondary_placeholder: 'Escolha mais 1 tag|Escolha mais {count} tags'
+      choose_primary_placeholder: '{count, plural, one {Escolha uma tag primária} other {Escolha # tags primárias}}'
+      choose_secondary_placeholder: '{count, plural, one {Escolha mais 1 tag} other {Escolha mais # tags}}'
       edit_title: 'Edite as Tags de {title}'
       submit_button: '=> core.ref.okay'
       title: 'Escolha Tags para Sua Discussão'
@@ -61,7 +61,7 @@ flarum-tags:
       added_and_removed_tags_text: '{username} adicionou {tagsAdded} e removeu {tagsRemoved}.'
       added_tags_text: '{username} adicionou {tagsAdded}.'
       removed_tags_text: '{username} removeu {tagsRemoved}.'
-      tags_text: 'a tag {tags}|as tags {tags}'
+      tags_text: '{count, plural, one {a tag {tags}} other {as tags {tags} }}'
     tag:
       meta_description_text: 'Todas as discussões com a tag {tag}'
   lib:

@@ -5,9 +5,20 @@
 core:
   admin:
     appearance:
+      colored_header_label: 'நிறம் வடிந்த தலைப்பு'
+      colors_heading: நிறங்கள்
       custom_footer_text: '=> core.ref.custom_footer_text'
       custom_header_text: '=> core.ref.custom_header_text'
+      custom_styles_text: 'Forumஇன் வடிவத்தை மாற்ற Less/CSS code போடுங்கள்.'
+      description: 'Forumஇன் வடிவம், சின்னங்கள், நிறங்கள் போன்றவற்றையும் மற்றதையும் மாற்றுங்கள்.'
+      edit_css_button: 'CSSயை மாற்றுங்கள்'
       edit_footer_button: '=> core.ref.custom_footer_title'
       edit_header_button: '=> core.ref.custom_header_title'
+      logo_heading: சின்னம்
+      logo_text: 'Forumஇன் தலைப்பின் பதிலாக காட்ட ஒரு சின்னத்தை போடுங்கள்.'
+      title: வடிவம்
     basics:
       all_discussions_label: '=> core.ref.all_discussions'
+      default_language_heading: 'Forumஇன் மொழி'
+      description: 'Forumஇன் மொழி, தலைப்பு போன்றவற்றை போடுங்கள்.'
+      forum_description_heading: 'Forumஇன் விளக்கம்'

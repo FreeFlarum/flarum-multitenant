@@ -16,6 +16,7 @@ fof-nightmode:
     night: '=> fof-nightmode.ref.dark'
     user:
       settings:
+        auto_unsupported: 'Tarayıcınız otomatik karanlık modu desteklemiyor.'
         description: 'Forumda hangi renk şemasını kullanmak istediğinizi seçin.'
         description2: 'Bu tema, hesabınızda görünür ve cihaz başına ayarını açmazsanız tüm cihazlar da etkinleştirilir.'
         device_specific_setting_checkbox: 'Cihaz başına ayar'
@@ -24,7 +25,7 @@ fof-nightmode:
         option_descriptions:
           auto: 'Temanız, tarayıcı veya cihaz ayarlarına göre otomatik olarak seçilir. Örneğin iOS''te karanlık modu etkinleştirdiyseniz, forum gece moduna geçer.'
           day: 'Alıştığınız klasik deneyim. Test edildi ve sevildi.'
-          night: 'Biraz gece kuşu gibisin. Kuşlar uyurken ve tilkiler avlanırken forumda geziniyorsun. Ya da sadece koyu renkleri seviyor olabilirsin.'
+          night: 'Biraz gece kuşu gibisin. Kuşlar uyurken ve tilkiler avlanırken forumda geziniyorsun. Ya da sadece koyu renkleri seviyor olabilirsin!'
         options:
           auto: '=> fof-nightmode.ref.auto'
           day: '=> fof-nightmode.ref.light'

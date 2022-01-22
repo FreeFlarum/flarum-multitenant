@@ -21,10 +21,10 @@ askvortsov-categories:
       compact_mobile_mode: 'Modalità mobile compatta'
       full_page_desktop: 'Desktop a pagina intera?'
       keep_tags_nav: 'Lasciare il link alla pagina dei tag nella sidebar?'
-      parent_remove_description: 'Nascondi le descrizioni per le categorie principali'
-      parent_remove_icon: 'Nascondi le icone per le categorie principali'
+      parent_remove_description: 'Nascondi le descrizioni per le categorie principali?'
+      parent_remove_icon: 'Nascondi le icone per le categorie principali?'
       parent_remove_last_discussion: 'Nascondi le discussioni recenti dalle categorie principali?'
-      parent_remove_stats: 'Nascondi statistiche per le categorie principali'
+      parent_remove_stats: 'Nascondi statistiche per le categorie principali?'
       small_forum_optimized: 'Ottimizza per forum piccoli?'
     title: 'Impostazioni Categorie'
   forum:

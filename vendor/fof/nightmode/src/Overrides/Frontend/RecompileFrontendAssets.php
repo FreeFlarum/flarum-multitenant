@@ -14,6 +14,9 @@ namespace Flarum\Frontend;
 use Flarum\Locale\LocaleManager;
 use Flarum\Settings\Event\Saved;
 
+/**
+ * @internal
+ */
 class RecompileFrontendAssets
 {
     /**
@@ -36,9 +39,6 @@ class RecompileFrontendAssets
         $this->locales = $locales;
     }
 
-    /**
-     * @param Saved $event
-     */
     public function whenSettingsSaved(Saved $event)
     {
         if (preg_grep('/^theme_/i', array_keys($event->settings))) {

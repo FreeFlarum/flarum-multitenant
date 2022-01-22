@@ -26,7 +26,7 @@ return [
 
     // Remove (permanently throttle) test mail function, if not allowed:
     /*(new Flarum\Extend\ThrottleApi)->set('throttleMailTests', function ($request) {
-        if (isset(CONF['freeflarum']['extend']['allow_mail_test']) ? !CONF['freeflarum']['extend']['allow_mail_test'] : true) {
+        if (isset(CONF['freeflarum']['allow_mail_test']) ? !CONF['freeflarum']['allow_mail_test'] : true) {
             if ($request->getAttribute('routeName') === 'mailTest') {
                 return true;
             };
@@ -36,20 +36,15 @@ return [
     (new Extend\Frontend('forum'))->content(function (Document $document) {
 
             // FreeFlarum's footer:
-            if (isset(CONF['freeflarum']['amount_donated']) ? CONF['freeflarum']['amount_donated'] < 7 : true) {
+            if (isset(CONF['freeflarum']['hide_footer']) ? CONF['freeflarum']['hide_footer'] == false : (isset(CONF['freeflarum']['amount_donated']) ? CONF['freeflarum']['amount_donated'] < 7 : true)) {
                 $document->foot[] = '
                     <hr/><p align="center" style="text-align: center !important; height: initial !important; position: initial !important; clip-path: unset !important; transform: unset !important; color: unset !important; background-color: unset !important; visibility: visible !important; display: block !important; text-align: center !important; margin: 5px 0 !important; opacity: 1.0 !important; max-height: unset !important; padding: 10px 0 !important; font-family: \'Arial\', sans-serif !important; font-size: 13px !important;">A free forum powered by <a href="https://www.freeflarum.com" target="_blank">FreeFlarum</a> (<a href="https://www.freeflarum.com/docs/faq/#can-i-pay-to-remove-the-powered-by-freeflarum-footer-for-my-or-other-forum" target="_blank">remove this footer</a>)<br/><a href="https://www.freeflarum.com/docs/legal/terms/" target="_blank">Terms & Conditions</a> | <a href="https://www.freeflarum.com/docs/legal/privacy-policy/" target="_blank">Privacy Policy</a></p></div>
                 ';
             };
 
             // Cookie Consent (not needed as long as fof/cookie-consent exists?):
-            if (isset(CONF['freeflarum']['features']['show_cookie_bar']) ? CONF['freeflarum']['features']['show_cookie_bar'] : false) {
+            if (isset(CONF['freeflarum']['show_cookie_bar']) ? CONF['freeflarum']['show_cookie_bar'] : false) {
                 $document->foot[] = '<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?always=1&hideDetailsBtn=1"></script>';
-            };
-
-            // Source Signature:
-            if (isset(CONF['freeflarum']['ads']['hide_source_signature']) ? !CONF['freeflarum']['ads']['hide_source_signature'] : true) {
-                $document->foot[] = '<!-- FreeFlarum.com -->';
             };
     }),
 

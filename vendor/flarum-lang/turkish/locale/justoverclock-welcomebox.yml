@@ -4,6 +4,7 @@
 
 flarum-ext-welcomebox:
   admin:
+    UseWidget: 'Araç Sürümünü Kullan'
     enablepostbox: 'Ziyaretçiler için Hoşgeldin Kutusunu göster'
     img: 'Görsel Bağlantısı (Ziyaretçi Kutusu)'
     img-help: 'Ziyaretçi kutusu için bir görsel bağlantısı girin'

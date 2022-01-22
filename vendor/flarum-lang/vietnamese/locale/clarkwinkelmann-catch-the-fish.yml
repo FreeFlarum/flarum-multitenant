@@ -14,10 +14,31 @@ clarkwinkelmann-catch-the-fish:
     settings:
       alert-round: 'Hiển thị cảnh báo với tên vòng và thời lượng trên trang chủ'
       animate-flip: 'Lật hình ảnh cá dựa trên hướng'
+      discussion: 'Cuộc thảo luận'
       discussion-age: 'Các cuộc thảo luận cũ có thể được đặt trên đó như thế nào (ngày)'
+      discussion-tags: 'Danh sách trắng Thẻ'
+      discussion-tags-help: "Nếu bạn không chọn bất kỳ thẻ nào, bạn có thể chọn bất kỳ cuộc thảo luận nào phù hợp với cài đặt thời gian ở trên. Nếu bất kỳ số lượng thẻ nào được chọn, một cuộc thảo luận cần phải có ít nhất một trong các thẻ đã chọn để được chọn. Xác suất là cơ hội được chọn sau khi tất cả các lựa chọn trước đó đã được thử. Thẻ cuối cùng trong danh sách sẽ luôn hoạt động như một dự phòng, vì vậy hãy đảm bảo rằng thẻ đó có ít nhất một cuộc thảo luận hợp lệ bên trong.\n"
+      discussion-tags-unavailable: 'Thiết lập không khả dụng vì tiện ích Tags bị vô hiệu hoá.'
+      general: Chung
+      post: 'Bài viết'
       post-age: 'Bài viết cũ có thể được đặt trên đó bao nhiêu (ngày)'
+      post-probability: 'Xác suất đặt trên một bài viết hơn là cuộc thảo luận (%)'
+      tags-control:
+        add: 'Thêm vào danh sách trắng'
+        choose: 'Chọn thẻ'
+        delete: 'Xoá khỏi danh sách trắng'
+        down: 'Chuyển xuống'
+        up: 'Chuyển lên'
+      tags-fallback:
+        last-line: 'Dự phòng'
+        single-line: 'Yêu cầu ít nhất 2 thẻ cho xác suất'
+      tags-header:
+        probability: 'Xác suất'
+        tag: Thẻ
       time-to-place: 'Thời gian cho phép đặt cá trước khi đặt ngẫu nhiên (phút)'
+      user: 'Người dùng'
       user-age: 'Người dùng phải hoạt động trong bao lâu để đặt cá lên đó (ngày)'
+      user-probability: 'Xác suất được đưa vào trang cá nhân người dùng (%)'
   api:
     cannot-catch-hold-fish: 'Người bắt trước cần thả cá trước khi bạn có thể bắt được nó'
     cannot-catch-own-fish: 'Bạn không thể bắt một con cá do chính bạn đặt'
@@ -36,6 +57,7 @@ clarkwinkelmann-catch-the-fish:
     random-error: 'Không thể tạo vị trí cá ngẫu nhiên'
     round-finished: 'Vòng này đã kết thúc'
     round-not-started: 'Vòng này chưa bắt đầu'
+    tag-not-allowed: 'Bạn không thể đặt cá bên dưới thẻ này'
     too-many-placement-models: 'Mỗi lần chỉ có thể có một vị trí'
     user-suspended: 'Không thể đặt cá trên người dùng bị đình chỉ'
     wrong-catch-placement: 'Không có cá ở đây. Có thể bạn không đủ nhanh và người khác đã nhận được nó trước'
@@ -45,7 +67,7 @@ clarkwinkelmann-catch-the-fish:
       time: 'Đặt cho đến khi: {time}'
       title: 'Giỏ cá'
     caught-fish-modal:
-      congratulation: 'Chúc mừng bạn, bạn câu được một con cá! Bạn đã bắt được {catch_count} con cá.'
+      congratulation: 'Chúc mừng, bạn câu được một con cá! Bạn đã bắt được {catch_count} con cá.'
       name: 'Tên cá'
       name-help: 'Bạn có thể đổi tên cá nếu muốn. Tên phải tôn trọng các nguyên tắc của diễn đàn.'
       named-by: 'Đặt tên bởi'
@@ -118,6 +140,7 @@ clarkwinkelmann-catch-the-fish:
       new-from-image: 'Tạo cá mới thông qua nhập hàng loạt hình ảnh'
       no-user-name: 'Không đổi tên'
       no-user-place: 'Ngẫu nhiên'
+      placement: 'Vị trí hiện tại'
       title: 'Cá cho vòng {name}'
       upload: 'Tải lên ảnh mới'
       user-name: 'Được đặt tên lần cuối bởi'

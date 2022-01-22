@@ -41,7 +41,7 @@ sycho-move-posts:
   lib:
     discussion:
       first_post:
-        default_content: "*Bài viết này đã được chuyển đến  **[%DISCUSSION_NAME%](%POST_LINK%)**.*\n"
+        default_content: "*Bài viết này đã được chuyển đến **[%DISCUSSION_NAME%](%POST_LINK%)**.*\n"
   ref:
     move_posts: 'Di chuyển bài viết'
     status:

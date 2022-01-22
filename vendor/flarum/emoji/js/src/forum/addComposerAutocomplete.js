@@ -1,9 +1,9 @@
 import emojiMap from 'simple-emoji-map';
 
-import { extend } from 'flarum/extend';
-import TextEditor from 'flarum/components/TextEditor';
-import TextEditorButton from 'flarum/components/TextEditorButton';
-import KeyboardNavigatable from 'flarum/utils/KeyboardNavigatable';
+import { extend } from 'flarum/common/extend';
+import TextEditor from 'flarum/common/components/TextEditor';
+import TextEditorButton from 'flarum/common/components/TextEditorButton';
+import KeyboardNavigatable from 'flarum/forum/utils/KeyboardNavigatable';
 
 import AutocompleteDropdown from './fragments/AutocompleteDropdown';
 import getEmojiIconCode from './helpers/getEmojiIconCode';
@@ -27,7 +27,6 @@ export default function addComposerAutocomplete() {
       .bindTo($editor);
 
     $editor.after($container);
-
   });
 
   extend(TextEditor.prototype, 'buildEditorParams', function (params) {
@@ -41,8 +40,8 @@ export default function addComposerAutocomplete() {
       dropdown.hide();
     };
 
-    params.inputListeners.push(function (e) {
-      const selection = app.composer.editor.getSelectionRange();
+    params.inputListeners.push(() => {
+      const selection = this.attrs.composer.editor.getSelectionRange();
 
       const cursor = selection[0];
 
@@ -51,7 +50,7 @@ export default function addComposerAutocomplete() {
       // Search backwards from the cursor for an ':' symbol. If we find
       // one and followed by a whitespace, we will want to show the
       // autocomplete dropdown!
-      const lastChunk = app.composer.editor.getLastNChars(15);
+      const lastChunk = this.attrs.composer.editor.getLastNChars(15);
       absEmojiStart = 0;
       for (let i = lastChunk.length - 1; i >= 0; i--) {
         const character = lastChunk.substr(i, 1);
@@ -79,7 +78,8 @@ export default function addComposerAutocomplete() {
               onclick={() => applySuggestion(emoji)}
               onmouseenter={function () {
                 dropdown.setIndex($(this).parent().index() - 1);
-              }}>
+              }}
+            >
               <img alt={emoji} class="emoji" draggable="false" loading="lazy" src={`${cdn}72x72/${code}.png`} />
               {name}
             </button>
@@ -91,14 +91,14 @@ export default function addComposerAutocomplete() {
 
           // Build a regular expression to do a fuzzy match of the given input string
           const fuzzyRegexp = function (str) {
-            const reEscape = new RegExp('\\(([' + ('+.*?[]{}()^$|\\'.replace(/(.)/g, '\\$1')) + '])\\)', 'g');
-            return new RegExp('(.*)' + (str.toLowerCase().replace(/(.)/g, '($1)(.*?)')).replace(reEscape, '(\\$1)') + '$', 'i');
+            const reEscape = new RegExp('\\(([' + '+.*?[]{}()^$|\\'.replace(/(.)/g, '\\$1') + '])\\)', 'g');
+            return new RegExp('(.*)' + str.toLowerCase().replace(/(.)/g, '($1)(.*?)').replace(reEscape, '(\\$1)') + '$', 'i');
           };
           const regTyped = fuzzyRegexp(typed);
 
           let maxSuggestions = 7;
 
-          const findMatchingEmojis = matcher => {
+          const findMatchingEmojis = (matcher) => {
             for (let i = 0; i < emojiKeys.length && maxSuggestions > 0; i++) {
               const curEmoji = emojiKeys[i];
 
@@ -116,23 +116,25 @@ export default function addComposerAutocomplete() {
           };
 
           // First, try to find all emojis starting with the given string
-          findMatchingEmojis(emoji => emoji.indexOf(typed) === 0);
+          findMatchingEmojis((emoji) => emoji.indexOf(typed) === 0);
 
           // If there are still suggestions left, try for some fuzzy matches
-          findMatchingEmojis(emoji => regTyped.test(emoji));
+          findMatchingEmojis((emoji) => regTyped.test(emoji));
 
-          const suggestions = similarEmoji.map(emoji => ({
-            emoji,
-            name: emojiMap[emoji][0],
-            code: getEmojiIconCode(emoji),
-          })).map(makeSuggestion);
+          const suggestions = similarEmoji
+            .map((emoji) => ({
+              emoji,
+              name: emojiMap[emoji][0],
+              code: getEmojiIconCode(emoji),
+            }))
+            .map(makeSuggestion);
 
           if (suggestions.length) {
             dropdown.items = suggestions;
             m.render($container[0], dropdown.render());
 
             dropdown.show();
-            const coordinates = app.composer.editor.getCaretCoordinates(absEmojiStart);
+            const coordinates = this.attrs.composer.editor.getCaretCoordinates(absEmojiStart);
             const width = dropdown.$().outerWidth();
             const height = dropdown.$().outerHeight();
             const parent = dropdown.$().offsetParent();
@@ -165,10 +167,11 @@ export default function addComposerAutocomplete() {
   });
 
   extend(TextEditor.prototype, 'toolbarItems', function (items) {
-    items.add('emoji', (
+    items.add(
+      'emoji',
       <TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor(' :')} icon="far fa-smile">
         {app.translator.trans('flarum-emoji.forum.composer.emoji_tooltip')}
       </TextEditorButton>
-    ));
+    );
   });
 }

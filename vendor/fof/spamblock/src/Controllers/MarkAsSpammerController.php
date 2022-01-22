@@ -15,6 +15,7 @@ use Carbon\Carbon;
 use Flarum\Discussion\Command\EditDiscussion;
 use Flarum\Extension\ExtensionManager;
 use Flarum\Flags\Command\DeleteFlags;
+use Flarum\Http\RequestUtil;
 use Flarum\Post\Command\EditPost;
 use Flarum\User\Command\EditUser;
 use Flarum\User\User;
@@ -65,7 +66,7 @@ class MarkAsSpammerController implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $userId = Arr::get($request->getQueryParams(), 'id');
         $user = User::findOrFail($userId);

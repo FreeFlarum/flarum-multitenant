@@ -28,7 +28,7 @@ Perintah yang sama (pada langkah 1) dapat digunakan untuk memperbarui secara man
 ### Extensi Yang Didukung
 Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di bawah ini, maka semua kalimat pada ekstensi tersebut akan ikut diterjemahkan ke dalam bahasa Indonesia.
 
-- [askvortsov1/flarum-categories](https://github.com/askvortsov1/flarum-categories) v1.1.0
+- [askvortsov1/flarum-categories](https://github.com/askvortsov1/flarum-categories) v3.0.4
 - [askvortsov1/flarum-moderator-warnings](https://github.com/askvortsov1/flarum-moderator-warnings) v0.3.0
 - [askvortsov1/flarum-trust-levels](https://github.com/askvortsov1/flarum-trust-levels) v0.2.1
 - [clarkwinkelmann/flarum-ext-bookmarks](https://github.com/clarkwinkelmann/flarum-ext-bookmarks) v1.0.0
@@ -42,7 +42,7 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [clarkwinkelmann/flarum-ext-mailing](https://github.com/clarkwinkelmann/flarum-ext-mailing) v1.0.0
 - [clarkwinkelmann/flarum-ext-passwordless](https://github.com/clarkwinkelmann/flarum-ext-passwordless) v1.4.0
 - [clarkwinkelmann/flarum-ext-popular-discussion-badge](https://github.com/clarkwinkelmann/flarum-ext-popular-discussion-badge) v1.0.0
-- [clarkwinkelmann/flarum-ext-see-past-first-post](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post) v1.1.0
+- [clarkwinkelmann/flarum-ext-see-past-first-post](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post) v1.2.0
 - [clarkwinkelmann/flarum-ext-silent-mailchimp](https://github.com/clarkwinkelmann/flarum-ext-silent-mailchimp) v1.0.0
 - [clarkwinkelmann/flarum-ext-status](https://github.com/clarkwinkelmann/flarum-ext-status) v1.0.0
 - [clarkwinkelmann/flarum-ext-watch-search](https://github.com/clarkwinkelmann/flarum-ext-watch-search) dev-master
@@ -52,8 +52,8 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [flagrow/users-list](https://github.com/flagrow/users-list) v0.1.2
 - [fof/ads](https://github.com/friendsofflarum/ads) v0.2.4
 - [fof/analytics](https://github.com/friendsofflarum/analytics) v1.0.0
-- [fof/best-answer](https://github.com/FriendsOfFlarum/best-answer) v1.0.1
-- [fof/byobu](https://github.com/friendsofflarum/byobu) v0.6.1
+- [fof/best-answer](https://github.com/FriendsOfFlarum/best-answer) v1.1.5
+- [fof/byobu](https://github.com/friendsofflarum/byobu) v1.0.1
 - [fof/custom-footer](https://github.com/friendsofflarum/custom-footer) v1.0.0
 - [fof/discussion-language](https://github.com/FriendsOfFlarum/discussion-language) v1.0.0
 - [fof/doorman](https://github.com/FriendsOfFlarum/doorman) v1.0.0
@@ -63,7 +63,7 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [fof/forum-statistics-widget](https://github.com/FriendsOfFlarum/forum-statistics-widget) v1.0.1
 - [fof/gamification](https://github.com/friendsofflarum/gamification) v1.0.0
 - [fof/impersonate](https://github.com/FriendsOfFlarum/impersonate) v1.0.0
-- [fof/linguist](https://github.com/FriendsOfFlarum/linguist) v1.0.0
+- [fof/linguist](https://github.com/FriendsOfFlarum/linguist) v1.0.3
 - [fof/masquerade](https://github.com/friendsofflarum/masquerade) v1.0.0
 - [fof/merge-discussions](https://github.com/friendsofflarum/merge-discussions) v1.0.0
 - [fof/moderator-notes](https://github.com/FriendsOfFlarum/moderator-notes) v1.0.0
@@ -73,8 +73,8 @@ Ketika Anda menginstall salah satu atau semua ekstensi yang ada pada daftar di b
 - [fof/prevent-necrobumping](https://github.com/friendsofflarum/prevent-necrobumping) v1.0.0
 - [fof/reactions](https://github.com/friendsofflarum/reactions) v1.0.0
 - [fof/secure-https](https://github.com/friendsofflarum/secure-https) v1.0.0
-- [fof/sitemap](https://github.com/FriendsOfFlarum/sitemap) v1.0.0
-- [fof/spamblock](https://github.com/friendsofflarum/spamblock) v1.0.0
+- [fof/sitemap](https://github.com/FriendsOfFlarum/sitemap) v1.0.2
+- [fof/spamblock](https://github.com/friendsofflarum/spamblock) v1.0.1
 - [fof/split](https://github.com/friendsofflarum/split) v1.0.0
 - [fof/stopforumspam](https://github.com/friendsofflarum/stopforumspam) v0.2.2
 - [fof/subscribed](https://github.com/friendsofflarum/subscribed) v1.0.0

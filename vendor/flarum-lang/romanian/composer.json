@@ -1,5 +1,5 @@
 {
-    "name": "block-cat/flarum-core-romanian",
+    "name": "flarum-lang/romanian",
     "type": "flarum-extension",
     "description": "Romanian language pack for Flarum.",
     "keywords": [
@@ -9,6 +9,10 @@
         "language"
     ],
     "license": "MIT",
+    "support": {
+        "source": "https://github.com/flarum-lang/romanian",
+        "forum": "https://discuss.flarum.org/d/27531"
+      },
     "authors": [{
         "name": "BlockCat"
     }],

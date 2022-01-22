@@ -1,0 +1,35 @@
+fof-links:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These strings are used in the Edit Link modal dialog.
+    edit_link:
+      delete_link_button: リンクの削除
+      delete_link_confirmation: "このリンクを削除してもよろしいですか？"
+      internal_link: "Flarum(内部)へのリンク"
+      open_newtab: "新しいタブで開く"
+      submit_button: => core.ref.save_changes
+      title: => fof-links.ref.create_link
+      title_label: => fof-links.ref.title
+      title_placeholder: => fof-links.ref.title
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      url_label: => fof-links.ref.url
+      url_placeholder: => fof-links.ref.url
+
+    # These strings are used in the Links page.
+    links:
+      create_button: => fof-links.ref.create_link
+      links: => fof-links.ref.links
+
+  # Strings in this namespace are referenced by two or more unique keys.
+  ref:
+    create_link: リンクの作成
+    links: リンク
+    title: タイトル
+    url: URL

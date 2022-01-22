@@ -1,0 +1,42 @@
+{
+  "name": "justoverclock/flarum-ext-hashtag",
+  "description": "Replace hashtags with a link that search into Flarum",
+  "keywords": [
+    "flarum",
+      "hashtag"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\Hashtag\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Hashtag",
+      "category": "",
+      "icon": {
+        "name": "fas fa-hashtag",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

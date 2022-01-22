@@ -26,5 +26,11 @@ michaelbelgium-discussion-views:
       label: '{count, plural, one {Questo comando rimuoverà {count} visita dalla discussione. Continuare?} other {Questo comando rimuoverà {count} visite dalla discussione. Continuare?}}'
       submit_button: 'Si, rimuovi tutto'
       title: 'Reimposta conteggio visualizzazioni'
+    post:
+      modal_title_text: 'Utenti che hanno visto la discussione'
+      others_link: '=> core.ref.some_others'
+      viewed_by: '{users} hanno visto.'
+      you: '=> core.ref.you'
     viewlist:
+      guest: Ospite
       title: 'Ultime visite'

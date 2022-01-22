@@ -49,6 +49,7 @@ fof-upload:
       preferences:
         max_file_size: 'Kích thước tối đa (kilobyte)'
         mime_types: 'Cấu hình mine'
+        php_ini_values: 'Các giá trị trong <code>php.ini</code> của bạn là <code>post_max_size={post}</code> và <code>upload_max_filesize={upload}</code>. Đảm bảo giá trị được đặt ở đây thấp hơn các ngưỡng này hoặc điều chỉnh chúng cho phù hợp. Nếu sử dụng <code>Nginx</code>, thì cũng đảm bảo <code>client_max_body_size</code> có đủ kích thước cho giới hạn tối đa bạn đã nhập.'
         title: 'Cài đặt chung'
       qiniu:
         bucket: Bucket
@@ -123,3 +124,5 @@ fof-upload:
       error: Lỗi
       loading: 'Đang tải lên'
       unauthorized: 'Bạn không được phép tải tập tin'
+    validation:
+      max_size: 'Kích thước tệp trên {max} kb không được chấp nhận.'

@@ -1,15 +1,18 @@
+import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import NotificationGrid from 'flarum/forum/components/NotificationGrid';
 import PrivateDiscussionNotification from './PrivateDiscussionNotification';
 import PrivateDiscussionRepliedNotification from './PrivateDiscussionReplyNotification';
 import PrivateDiscussionUserLeftNotification from './PrivateDiscussionUserLeftNotification';
 import PrivateDiscussionAddedNotification from './PrivateDiscussionAddedNotification';
+import PrivateDiscussionMadePublicNotification from './PrivateDiscussionMadePublicNotification';
 
-export default function (app) {
+export default function () {
   app.notificationComponents.byobuPrivateDiscussionCreated = PrivateDiscussionNotification;
   app.notificationComponents.byobuPrivateDiscussionReplied = PrivateDiscussionRepliedNotification;
   app.notificationComponents.byobuRecipientRemoved = PrivateDiscussionUserLeftNotification;
   app.notificationComponents.byobuPrivateDiscussionAdded = PrivateDiscussionAddedNotification;
+  app.notificationComponents.byobuPrivateDiscussionMadePubic = PrivateDiscussionMadePublicNotification;
 
   grid();
 }

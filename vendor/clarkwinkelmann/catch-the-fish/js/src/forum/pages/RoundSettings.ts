@@ -1,7 +1,11 @@
 import {Vnode} from 'mithril';
 import app from 'flarum/forum/app';
+import Link from 'flarum/common/components/Link';
 import Page from 'flarum/common/components/Page';
 import Button from 'flarum/common/components/Button';
+import Discussion from 'flarum/common/models/Discussion';
+import Post from 'flarum/common/models/Post';
+import UserModel from 'flarum/common/models/User';
 import NewFishModal from '../modals/NewFishModal';
 import EditFishModal from '../modals/EditFishModal';
 import FishImage from '../components/FishImage';
@@ -124,13 +128,14 @@ export default class RoundSettings extends Page {
                     m('th', app.translator.trans(translationPrefix + 'name')),
                     m('th', app.translator.trans(translationPrefix + 'user-name')),
                     m('th', app.translator.trans(translationPrefix + 'user-place')),
+                    m('th', app.translator.trans(translationPrefix + 'placement')),
                     m('th', app.translator.trans(translationPrefix + 'actions')),
                 ])),
                 m('tbody', this.fishes.length === 0 ? m('tr', [
                     m('td', 'No fishes'),
                 ]) : this.fishes.map(fish => {
                     const namedBy = fish.namedBy();
-                    const placedBy = fish.namedBy();
+                    const placedBy = fish.placedBy();
 
                     return m('tr', [
                         m('td', m(FishImage, {
@@ -143,6 +148,7 @@ export default class RoundSettings extends Page {
                         m('td', placedBy ? m(User, {
                             user: placedBy,
                         }) : m('em', app.translator.trans(translationPrefix + 'no-user-place'))),
+                        m('td', this.placement(fish)),
                         m('td', [
                             Button.component({
                                 className: 'Button',
@@ -171,5 +177,31 @@ export default class RoundSettings extends Page {
                 })),
             ]),
         ]);
+    }
+
+    placement(fish: Fish): any {
+        const placement = fish.placementModel();
+
+        if (placement instanceof Discussion) {
+            return m(Link, {
+                href: app.route.discussion(placement),
+            }, placement.title());
+        }
+
+        if (placement instanceof Post) {
+            const discussion = placement.discussion();
+
+            return m(Link, {
+                href: app.route.post(placement),
+            }, (discussion ? discussion.title() : '') + ' #' + placement.number());
+        }
+
+        if (placement instanceof UserModel) {
+            return m(User, {
+                user: placement,
+            });
+        }
+
+        return 'N/A';
     }
 }

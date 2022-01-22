@@ -5,4 +5,4 @@
 fof-default-group:
   admin:
     settings:
-      info: 'Poniżej możesz wybrać grupę, do której zostanie przypisany użytkownik gdy jego konto zostanie aktywowane.'
+      info: 'Poniżej możesz wybrać grupę, do której zostanie przypisany użytkownik, gdy jego konto zostanie aktywowane.'

@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of fof/terms.
+ *
+ * Copyright (c) FriendsOfFlarum.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Terms\Controllers;
 
 use Flarum\Api\Controller\AbstractDeleteController;
@@ -21,12 +30,13 @@ class PolicyDeleteController extends AbstractDeleteController
 
     /**
      * @param ServerRequestInterface $request
+     *
      * @throws PermissionDeniedException
      */
     protected function delete(ServerRequestInterface $request)
     {
         /**
-         * @var $actor User
+         * @var User
          */
         $actor = RequestUtil::getActor($request);
         $actor->assertAdmin();
@@ -35,6 +45,6 @@ class PolicyDeleteController extends AbstractDeleteController
 
         $field = $this->policies->findOrFail($id);
 
-        $this->policies->delete($field);
+        $this->policies->delete($actor, $field);
     }
 }

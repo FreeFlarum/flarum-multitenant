@@ -1,6 +1,6 @@
 {
   "name": "zerosonesfun/flarum-inline-audio",
-  "description": "Automatic audio link to minimal player with an advanced [player] BBCode.",
+  "description": "Automatic audio link to minimal inline player.",
   "type": "flarum-extension",
   "keywords": ["discussion", "audio", "bbcode"],
   "license": "MIT",

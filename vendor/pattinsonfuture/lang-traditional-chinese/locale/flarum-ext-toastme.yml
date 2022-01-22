@@ -1,0 +1,22 @@
+flarum-ext-toastme:
+    admin:
+        background: '背景色（HEX 格式）'
+        backgrounddesc: '以 HEX 格式輸入你的背景色 - 例如「#ffcc00」'
+        dest: 目標鏈接
+        destdesc: '點擊 toast 彈窗通知後跳轉的鏈接'
+        duration: 'Toast 彈窗提示的持續時長，-1 為持久提示'
+        durdesc: '使用毫秒 - 例如「3000」為 3 秒'
+        enabletoast: '啟用/禁用 Toast 彈窗提示'
+        gravdesc: '設置 Toast 彈窗的位置，top 頂部或 bottom 底部均可'
+        gravity: '懸靠 - 可以為「top」或「bottom」'
+        helpenable: '使用此設置啟用或禁用 Toast 彈窗提示'
+        message: 'Toast 彈窗提示文本'
+        messagedesc: '你可以在此輸入 Toast 彈窗文本'
+        offsetxdesc: '橫軸外邊距 - 像素數。例如 20 (pixel)'
+        offsetxx: 'X 軸偏移 - 橫軸外邊距 (px)（默認為空）'
+        offsetydesc: '縱軸外邊距 - 像素數。例如 20 （像素）'
+        offsetyy: 'Y 軸偏移 - 縱軸外邊距 (px)（默認為空）'
+        posdesc: '你想讓 Toast 彈窗出現在哪？左邊，右邊，還是中間？'
+        position: '位置 - 可以為「left」「right」或「center」'
+    forum:
+        message1: 一個既定的事實：讀者在看一個頁面的佈局時，會被其中可讀的內容分散注意力。

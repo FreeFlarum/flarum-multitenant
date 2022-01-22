@@ -9,7 +9,7 @@
       "name": "Ngo Quoc Dat (datlechin)",
       "email": "datlechin@gmail.com",
       "role": "Translator",
-      "homepage": "https://ngoquocdat.com"
+      "homepage": "https://vieit.net"
     }
   ],
   "support": {
@@ -17,7 +17,7 @@
     "source": "https://github.com/flarum-lang/vietnamese",
     "forum": "https://discuss.flarum.org/d/28471"
   },
-  "homepage": "https://ngoquocdat.com",
+  "homepage": "https://vieit.net",
   "funding": [
     {
       "type": "website",
@@ -35,7 +35,7 @@
       "title": "Vietnamese",
       "category": "language",
       "info": {
-        "website": "https://ngoquocdat.com",
+        "website": "https://vieit.net",
         "support": "https://discuss.flarum.org/d/28471"
       },
       "icon": {

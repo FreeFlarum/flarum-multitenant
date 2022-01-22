@@ -24,6 +24,9 @@ use League\Flysystem\Adapter\NullAdapter;
 use League\Flysystem\Filesystem;
 use Less_Exception_Parser;
 
+/**
+ * @internal
+ */
 class ValidateCustomLess
 {
     /**
@@ -53,11 +56,6 @@ class ValidateCustomLess
         $this->container = $container;
     }
 
-    /**
-     * @param Saving $event
-     *
-     * @throws ValidationException
-     */
     public function whenSettingsSaving(Saving $event)
     {
         if (!isset($event->settings['custom_less'])) {
@@ -86,9 +84,6 @@ class ValidateCustomLess
         try {
             $this->assets->makeCss()->commit();
 
-            // ++++++
-            $this->assets->makeDarkCss()->commit();
-
             foreach ($this->locales->getLocales() as $locale => $name) {
                 $this->assets->makeLocaleCss($locale)->commit();
             }
@@ -100,9 +95,6 @@ class ValidateCustomLess
         $this->container->instance(SettingsRepositoryInterface::class, $settings);
     }
 
-    /**
-     * @param Saved $event
-     */
     public function whenSettingsSaved(Saved $event)
     {
         if (!isset($event->settings['custom_less'])) {

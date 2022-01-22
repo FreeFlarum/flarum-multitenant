@@ -1,0 +1,56 @@
+fof-oauth:
+    admin:
+        settings:
+            only_icons_label: 僅顯示登錄按鈕圖標（可選佈置）
+            providers:
+                callback_url_text: '如有必要，將回調 URL 設為 {url}。'
+                discord:
+                    client_id_label: 'Client ID'
+                    client_secret_label: 'Client Secret'
+                    description: '前往 {link} 創建應用，並在 OAuth2 選項卡中添加重定向 URL。'
+                facebook:
+                    app_id_label: 'App ID'
+                    app_secret_label: 'App Secret'
+                    description: '前往 {link} 創建應用。'
+                github:
+                    client_id_label: 'Client ID'
+                    client_secret_label: 'Client Secret'
+                    description: '前往 {link} 創建 OAuth 應用。'
+                gitlab:
+                    client_id_label: 'App ID'
+                    client_secret_label: 'App Secret'
+                    description: '在 {link} 創建應用程序，並給予該應用 <code>read_user</code> 權限。'
+                    domain_label: 'GitLab 域名'
+                google:
+                    client_id_label: 'Client ID'
+                    client_secret_label: 'Client Secret'
+                    description: '前往此處創建應用：{link}'
+                linkedin:
+                    client_id_label: 'Client ID'
+                    client_secret_label: 你好
+                    description: '前往 {link} 創建應用。'
+                twitter:
+                    api_key_label: 'API Key'
+                    api_secret_label: 'API Secret'
+                    description: '在 {link} 創建一個應用。您需要提供服務協議和隱私政策 URL，然後確保添加請求郵件權限。'
+    forum:
+        error:
+            bad_verification_code: 無效或過期的驗證令牌，請重試。
+            invalid_state: 無效狀態，請重試。
+        log_in:
+            with_button: '{provider} 帳號登錄'
+    lib:
+        providers:
+            discord: Discord
+            facebook: Facebook
+            github: GitHub
+            gitlab: GitLab
+            google: Google
+            linkedin: LinkedIn
+            twitter: Twitter
+    ref:
+        settings:
+            app_id: 'App ID'
+            app_secret: 'App Secret'
+            client_id: 'Client ID'
+            client_secret: 'Client Secret'

@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace League\Csv;
 
+use ReturnTypeWillChange;
 use SeekableIterator;
 use SplFileObject;
 use TypeError;
@@ -230,12 +231,12 @@ final class Stream implements SeekableIterator
      *
      * @see http://php.net/manual/en/function.stream-filter-append.php
      *
-     * @param  null|mixed      $params
+     *
      * @throws InvalidArgument if the filter can not be appended
      */
-    public function appendFilter(string $filtername, int $read_write, $params = null): void
+    public function appendFilter(string $filtername, int $read_write, array $params = null): void
     {
-        $res = @stream_filter_append($this->stream, $filtername, $read_write, $params);
+        $res = @stream_filter_append($this->stream, $filtername, $read_write, $params ?? []);
         if (!is_resource($res)) {
             throw InvalidArgument::dueToStreamFilterNotFound($filtername);
         }
@@ -280,7 +281,7 @@ final class Stream implements SeekableIterator
      *
      * @see http://php.net/manual/en/SplFileObject.getcsvcontrol.php
      *
-     * @return string[]
+     * @return array<string>
      */
     public function getCsvControl(): array
     {
@@ -304,9 +305,12 @@ final class Stream implements SeekableIterator
      *
      * @return int|false
      */
-    public function fputcsv(array $fields, string $delimiter = ',', string $enclosure = '"', string $escape = '\\')
+    public function fputcsv(array $fields, string $delimiter = ',', string $enclosure = '"', string $escape = '\\', string $eol = "\n")
     {
         $controls = $this->filterControl($delimiter, $enclosure, $escape, __METHOD__);
+        if (80100 <= PHP_VERSION_ID) {
+            $controls[] = $eol;
+        }
 
         return fputcsv($this->stream, $fields, ...$controls);
     }
@@ -315,10 +319,8 @@ final class Stream implements SeekableIterator
      * Get line number.
      *
      * @see http://php.net/manual/en/SplFileObject.key.php
-     *
-     * @return int
      */
-    public function key()
+    public function key(): int
     {
         return $this->offset;
     }
@@ -359,10 +361,8 @@ final class Stream implements SeekableIterator
      * Not at EOF.
      *
      * @see http://php.net/manual/en/SplFileObject.valid.php
-     *
-     * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         if (0 !== ($this->flags & SplFileObject::READ_AHEAD)) {
             return $this->current() !== false;
@@ -378,6 +378,7 @@ final class Stream implements SeekableIterator
      *
      * @return mixed The value of the current element.
      */
+    #[ReturnTypeWillChange]
     public function current()
     {
         if (false !== $this->value) {
@@ -448,7 +449,7 @@ final class Stream implements SeekableIterator
      *
      * @see http://php.net/manual/en/SplFileObject.fread.php
      *
-     * @param int $length The number of bytes to read
+     * @param int<0, max> $length The number of bytes to read
      *
      * @return string|false
      */

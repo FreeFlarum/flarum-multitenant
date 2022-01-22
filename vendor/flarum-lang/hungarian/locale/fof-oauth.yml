@@ -4,6 +4,7 @@
 
 fof-oauth:
   admin:
+    configure_button_label: 'Konfigurálás a FoF OAuth segítségével'
     settings:
       only_icons_label: 'Csak az ikonok mutatása (más elrendezés)'
       providers:
@@ -58,6 +59,8 @@ fof-oauth:
       google: '=> fof-oauth.lib.providers.google'
       linkedin: '=> fof-oauth.lib.providers.linkedin'
       twitter: '=> fof-oauth.lib.providers.twitter'
+    signup:
+      username_help: 'Válassz egy felhasználónevet, hogy itt ismert legyél'
   lib:
     providers:
       discord: Discord

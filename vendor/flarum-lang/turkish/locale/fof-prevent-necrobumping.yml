@@ -17,6 +17,6 @@ fof-prevent-necrobumping:
     composer:
       warning:
         checkbox_label: 'Bu tartışmanın oldukça eski olduğunu ancak yine de yanıt vermek istediğimi onaylıyorum.'
-        description: 'Bu konu oldukça eskimiş ve muhtemelen daha fazla tartışılmaya uygun değil.'
+        description: 'Bu tartışma oldukça eskimiş ve muhtemelen daha fazla tartışılmaya uygun değil.'
         error: 'Bu tartışma yanıtlayamayacağınız kadar eski.'
         title: 'Bu tartışma <b>{time}</b>''den eski.'

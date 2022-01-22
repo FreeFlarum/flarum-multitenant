@@ -14,6 +14,7 @@ namespace FoF\Impersonate\Controllers;
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Foundation\ValidationException;
 use Flarum\Http\Rememberer;
+use Flarum\Http\RequestUtil;
 use Flarum\Http\SessionAccessToken;
 use Flarum\Http\SessionAuthenticator;
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -79,7 +80,7 @@ class LoginController implements RequestHandlerInterface
         /**
          * @var User $actor
          */
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         $requestBody = $request->getParsedBody();
         $requestData = $requestBody['data']['attributes'];

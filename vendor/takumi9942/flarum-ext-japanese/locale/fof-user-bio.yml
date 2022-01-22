@@ -1,0 +1,12 @@
+fof-user-bio:
+    admin:
+        permission:
+            view: ステータスメッセージの閲覧
+            editOwn: 自身のステータスメッセージの編集
+            editAny: 全員のステータスメッセージの編集
+        setting:
+            bioLimit: ステータスメッセージの文字制限
+
+    forum:
+        userbioPlaceholder: ステータスメッセージを入力出来ます
+        userbioPlaceholderOtherUser: "{username} さんのステータスメッセージを入力"

@@ -83,8 +83,8 @@ datitisev-backup:
       gdrive:
         client:
           id:
-            description: 'Bir Google projesi oluşturmak ve almak için @ https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/1-getting-your-dlient-id-and-secret.md talimatlarını izleyin. Sizin Client ID ve Client Secret değerlerinizi kaydedin.'
-            label: "Client ID\n"
+            description: "Bir Google projesi oluşturmak ve almak için @ https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/1-getting-your-dlient-id-and-secret.md talimatlarını izleyin. Sizin Client ID ve Client Secret değerlerinizi kaydedin.\n"
+            label: 'Client ID'
           secret:
             description: ' '
             label: 'Client Secret'
@@ -92,7 +92,7 @@ datitisev-backup:
           description: 'https://drive.google.com/drive/u/0/folders/ID'
           label: 'Klasör ID''si'
         refresh-token:
-          description: 'Google oAuth uygulamanız için yenileme jetonunu almak için @ https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/2-getting-your-refresh-token.md talimatlarını izleyin.'
+          description: "Google oAuth uygulamanız için yenileme jetonunu almak için @ https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/2-getting-your-refresh-token.md talimatlarını izleyin.\n"
           label: 'Tokeni Yenile'
       local:
         target:
@@ -125,7 +125,7 @@ datitisev-backup:
       aliyun: aliyuncs/aliyun-oss-flysystem
       aws: league/flysystem-aws-s3-v3
       azure: league/flysystem-azure
-      copy: "league/flysystem-copy\n"
+      copy: league/flysystem-copy
       dospaces: league/flysystem-aws-s3-v3
       dropbox: spatie/flysystem-dropbox
       gdrive: nao-pon/flysystem-google-drive

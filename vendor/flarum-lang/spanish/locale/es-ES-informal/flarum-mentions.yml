@@ -16,7 +16,7 @@ flarum-mentions:
       reply_to_post_text: 'Respuesta a #{number}'
     notifications:
       others_text: '=> core.ref.some_others'
-      post_mentioned_text: '{count, plural, one {{username} respondió a tu publicación.} other {{username} respondieron a tu publicación.}'
+      post_mentioned_text: '{count, plural, one {{username} respondió a tu publicación.} other {{username} respondieron a tu publicación.}}'
       user_mentioned_text: '{username} te mencionó'
     post:
       mentioned_by_self_text: '{count, plural, one {{users} respondiste a esto} other {{users} respondísteis a esto}}'

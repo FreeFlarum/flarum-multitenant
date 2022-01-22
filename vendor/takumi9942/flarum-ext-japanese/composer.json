@@ -1,0 +1,37 @@
+{
+    "name": "flarum-lang/japanese",
+    "type": "flarum-extension",
+    "description": "Japanese language pack.",
+    "keywords": ["locale", "japanese"],
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "takumi9942",
+            "homepage": "https://github.com/takumi9942"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "Japanese",
+            "category": "language",
+            "info": {
+                "donate": "https://flarum.org/donate/",
+                "website": "https://flarum.org",
+                "support": "https://discuss.flarum.org"
+            },
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#00247d",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "ja",
+            "title": "Japanese"
+        }
+    }
+}

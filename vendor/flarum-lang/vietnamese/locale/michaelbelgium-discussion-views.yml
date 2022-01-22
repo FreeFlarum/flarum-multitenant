@@ -26,7 +26,7 @@ michaelbelgium-discussion-views:
     discussion_controls:
       resetviews_button: 'Đặt lại lượt xem'
     modal_resetviews:
-      label: '{count, plural, one {Điều này sẽ xoá {count} lượt xem của cuộc thảo luận này. Tiếp tục?} other {Điều này sẽ xoá {count} lượt xem của cuộc thảo luận này. Tiếp tục?}}'
+      label: '{count, plural, one {Thao tác này sẽ xoá {count} lượt xem của cuộc thảo luận này. Tiếp tục?} other {Thao tác này sẽ xoá {count} lượt xem của cuộc thảo luận này. Tiếp tục?}}'
       submit_button: 'Có, xoá tất cả'
       title: 'Đặt lại số lượt xem cuộc thảo luận'
     post:

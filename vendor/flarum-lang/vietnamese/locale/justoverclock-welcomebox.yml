@@ -4,6 +4,7 @@
 
 flarum-ext-welcomebox:
   admin:
+    UseWidget: 'Sử dụng cho Widget'
     enablepostbox: 'Bật Welcome Box cho khách'
     img: 'URL ảnh (box khách)'
     img-help: 'nhập url ảnh cho box khách vào đây'
@@ -11,7 +12,7 @@ flarum-ext-welcomebox:
     SettingsLink: 'Cài đặt'
     discussion: '=> core.ref.discussions'
     goToProfile: 'Trang cá nhân'
-    lastSeen: 'Lần truy cập trước'
+    lastSeen: 'Gần đây'
     notregistered: 'Bạn hiện chưa đăng ký thành viên tại diễn đàn.'
     npost: '=> core.ref.posts'
     tooltipDisclist: 'Cuộc thảo luận của tôi'

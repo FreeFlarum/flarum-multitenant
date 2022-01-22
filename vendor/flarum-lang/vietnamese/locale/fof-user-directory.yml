@@ -8,6 +8,7 @@ fof-user-directory:
       view_user_directory: 'Xem thư mục người dùng'
     settings:
       default-sort: 'Sắp xếp mặc định'
+      disable-global-search-source: 'Không thêm Danh mục người dùng vào trường tìm kiếm toàn cục của Flarum'
       link: 'Thêm liên kết trên trang chủ để người dùng có thể xem thư mục'
       use-small-cards: 'Sử dụng thẻ người dùng nhỏ'
   forum:
@@ -22,6 +23,9 @@ fof-user-directory:
     search:
       field:
         placeholder: 'Tìm kiếm tất cả người dùng'
+      kinds:
+        group: Nhóm
+        text: 'Văn bản tự do'
       users_heading: 'Tìm kiếm tất cả người dùng cho "{query}"'
   lib:
     sort:

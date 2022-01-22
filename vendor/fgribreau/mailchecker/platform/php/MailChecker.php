@@ -16,7 +16,14 @@ class MailChecker
 
     public static function init(): void
     {
-        self::$blacklist = require __DIR__.'/blacklist.php';
+        self::$blacklist = require __DIR__ . '/blacklist.php';
+    }
+
+    public static function addCustomDomains(array $domains): void
+    {
+        foreach ($domains as $domain) {
+            self::$blacklist[$domain] = true;
+        }
     }
 
     public static function isValid(string $email): bool
@@ -40,7 +47,7 @@ class MailChecker
         $domain = end($parts);
 
         foreach (self::allDomainSuffixes($domain) as $domainSuffix) {
-            if (array_key_exists($domainSuffix, self::$blacklist)) {
+            if (isset(self::$blacklist[$domainSuffix])) {
                 return true;
             }
         }

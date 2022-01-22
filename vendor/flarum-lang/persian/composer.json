@@ -1,0 +1,45 @@
+{
+	"name": "flarum-lang/persian",
+	"type": "flarum-extension",
+	"description": "Persian language pack for Flarum.",
+	"homepage": "https://github.com/flarum-lang/persian",
+	"keywords": [
+		"locale",
+		"flarum",
+		"persian"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Your Name",
+			"email": "your@email.net",
+			"homepage": "https://yourhomepage.com/"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/flarum-lang/persian/issues",
+		"source": "https://github.com/flarum-lang/persian"
+	},
+	"require": {
+		"flarum/core": "^1.0"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"extra": {
+		"flarum-extension": {
+			"title": "persian",
+			"icon": {
+				"image": "icon.svg",
+				"backgroundSize": "cover",
+				"backgroundPosition": "center"
+			}
+		},
+		"flarum-locale": {
+			"code": "pe",
+			"title": "Persian"
+		},
+		"extiverse": {
+			"discuss": ""
+		}
+	}
+}

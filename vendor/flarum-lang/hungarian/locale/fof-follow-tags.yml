@@ -3,11 +3,61 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 fof-follow-tags:
+  admin:
+    settings:
+      following_none_label: '=> fof-follow-tags.ref.filtering_options.none'
+      following_page_default_label: 'Alapértelmezett követett oldal szűrés'
+      following_tags_label: '=> fof-follow-tags.ref.filtering_options.tags'
+  email:
+    body:
+      newDiscussionInTag: "Üdv {recipient_display_name},\n\n{actor_display_name} új témát nyitott az általad követett címkével: {discussion_title}\n\nHogy megnézd, kattints az alábbi linkre:\n{discussion_url}\n\n---\n\n{post_content}\n"
+      newPostInTag: "Üdv {recipient_display_name},\n\n{actor_display_name} hozzászólt egy témában, ami általad követett címkével rendelkezik: {discussion_title}\n\nHogy megnézd, kattints az alábbi linkre:\n{post_url}\n\n---\n\n{post_content}\n"
+    subject:
+      newDiscussionInTag: '[Tag | New Discussion] {title}'
+      newDiscussionTag: '[Tag | Changed Tag] {title}'
+      newPostInTag: '[Tag | New Post] {title}'
   forum:
     badge:
       following_tag_tooltip: Követed
+      lurking_tag_tooltip: Leselkedő
     index:
       follow_tag_button: Követés
+      following:
+        following_none_label: '=> fof-follow-tags.ref.filtering_options.none'
+        following_tags_label: '=> fof-follow-tags.ref.filtering_options.tags'
       unfollow_tag_button: 'Követés leállítása'
+    notifications:
+      new_discussion_tag_text: '{username} megváltoztatta a címkét'
+      new_discussion_text: '{username} indította'
+      new_post_text: '{username} hozzászólt'
+    settings:
+      notify_new_discussion_label: 'Valaki beszélgetést indított a z általam követett címkével'
+      notify_new_discussion_tag_label: 'Valaki megváltoztatta a címkét egy olyan címkével ellátott témában, amit követek'
+      notify_new_post_label: 'Valaki válaszolt egy témában, amit követek'
     sub_controls:
+      follow_button: '=> fof-follow-tags.ref.follow'
+      following_button: '=> fof-follow-tags.ref.following'
+      following_text: 'Értesíts minden új beszélgetésről.'
+      hiding_button: '=> fof-follow-tags.ref.hiding'
+      hiding_text: 'A beszélgetések elrejtése az Összes beszélgetés oldalról.'
+      ignoring_button: '=> fof-follow-tags.ref.ignoring'
+      ignoring_text: 'Soha ne értesítsen.'
+      lurking_button: '=> fof-follow-tags.ref.lurking'
+      lurking_text: 'Értesítsen minden témáról és beszélgetésről.'
       not_following_button: 'Nem követed'
+      not_following_text: 'Csak akkor értesítsen ha megemlíttettek.'
+      notify_alert_tooltip: 'Értesítést kaphatsz a fórumon, ha új hozzászólások vagy témák jelennek meg'
+      notify_email_tooltip: 'Kapjak e-mailt, ha új témák vagy hozzászólások vannak'
+    user:
+      settings:
+        filter_label: 'Mit jelenítsen meg alapértelmezés szerint a követett oldalon'
+        heading: 'Címke követése'
+  ref:
+    filtering_options:
+      none: 'Követett témák'
+      tags: 'Követett címkék'
+    follow: Követem
+    following: Követve
+    hiding: Elrejtve
+    ignoring: 'Figyelmen kívül'
+    lurking: Leselkedő

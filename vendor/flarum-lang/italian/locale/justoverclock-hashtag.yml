@@ -3,6 +3,10 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 justoverclock-hashtag:
+  admin:
+    settings:
+      regexdesc: 'Un esempio di espressione regolare è visibile qui sotto come placeholder. Modificalo solo se conosci le espressioni regolari.'
+      regexlabel: 'Hashtag Regex'
   forum:
     post:
-      hashtag_link_tooltip: 'Cerca questo hashtag nel Forum'
+      hashtag_link_tooltip: 'Cerca post relativi a questo hashtag'

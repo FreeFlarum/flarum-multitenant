@@ -3,6 +3,8 @@
 namespace ClarkWinkelmann\ShadowBan\Listener;
 
 use Carbon\Carbon;
+use ClarkWinkelmann\ShadowBan\Event\ShadowBannedUser;
+use ClarkWinkelmann\ShadowBan\Event\ShadowUnbannedUser;
 use Flarum\User\Event\Saving;
 use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Support\Arr;
@@ -29,8 +31,12 @@ class SaveUser
             ])->validate();
 
             if ($attributes['shadowBannedUntil']) {
+                $event->user->raise(new ShadowBannedUser($event->user, $event->actor, $event->user->shadow_banned_until));
+
                 $event->user->shadow_banned_until = Carbon::parse($attributes['shadowBannedUntil']);
             } else {
+                $event->user->raise(new ShadowUnbannedUser($event->user, $event->actor, $event->user->shadow_banned_until));
+
                 $event->user->shadow_banned_until = null;
             }
         }

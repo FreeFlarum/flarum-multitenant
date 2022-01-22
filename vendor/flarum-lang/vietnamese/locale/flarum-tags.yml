@@ -46,6 +46,7 @@ flarum-tags:
       meta_description_text: 'Tất cả thẻ'
       meta_title_text: '=> flarum-tags.ref.tags'
     choose_tags:
+      bypass_requirements: 'Bỏ qua các yêu cầu về thẻ'
       choose_primary_placeholder: '{count, plural, one {Chọn thẻ chính} other {Chọn # thẻ chính}}'
       choose_secondary_placeholder: '{count, plural, one {Chọn một thẻ phụ} other {Chọn # thẻ phụ}}'
       edit_title: 'Sửa thẻ cho {title}'

@@ -11,8 +11,9 @@ use Flarum\Locale\Translator;
 use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\User;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Arr;
 
 class Placement
 {
@@ -32,9 +33,36 @@ class Placement
         return resolve(SettingsRepositoryInterface::class)->get('catch-the-fish.postAgeDays', 14);
     }
 
+    protected static function settingPostProbability(): int
+    {
+        $probability = resolve(SettingsRepositoryInterface::class)->get('catch-the-fish.postProbability');
+
+        if (!is_int($probability)) {
+            return 50;
+        }
+
+        return $probability;
+    }
+
     protected static function settingUserAgeDays()
     {
         return resolve(SettingsRepositoryInterface::class)->get('catch-the-fish.userAgeDays', 14);
+    }
+
+    protected static function settingUserProbability(): int
+    {
+        $probability = resolve(SettingsRepositoryInterface::class)->get('catch-the-fish.userProbability');
+
+        if (!is_int($probability)) {
+            return 33;
+        }
+
+        return $probability;
+    }
+
+    protected static function settingDiscussionTags()
+    {
+        return json_decode(resolve(SettingsRepositoryInterface::class)->get('catch-the-fish.discussionTags') ?: '[]', true);
     }
 
     /**
@@ -92,6 +120,27 @@ class Placement
                     'placement' => $translator->trans(self::TRANSLATION_PREFIX . 'model-private'),
                 ]);
             }
+
+            /**
+             * @var $extensions ExtensionManager
+             */
+            $extensions = resolve(ExtensionManager::class);
+
+            $tagSettings = self::settingDiscussionTags();
+
+            if ($extensions->isEnabled('flarum-tags') && is_array($tagSettings) && count($tagSettings)) {
+                if ($model instanceof Post) {
+                    $discussion = $model->discussion;
+                } else {
+                    $discussion = $model;
+                }
+
+                if (!$discussion->tags()->whereIn('id', Arr::pluck($tagSettings, 'tagId'))->exists()) {
+                    throw new ValidationException([
+                        'placement' => $translator->trans(self::TRANSLATION_PREFIX . 'tag-not-allowed'),
+                    ]);
+                }
+            }
         }
 
         if ($model instanceof Discussion) {
@@ -139,9 +188,9 @@ class Placement
     }
 
     /**
-     * @return Model|User
+     * @return Model|User|null
      */
-    protected static function randomUser(): User
+    protected static function randomUser(): ?User
     {
         $query = User::query()
             ->where('last_seen_at', '>', Carbon::now()->subDays(self::settingUserAgeDays()))
@@ -156,55 +205,83 @@ class Placement
             $query->whereNull('suspended_until');
         }
 
-        return $query->inRandomOrder()->firstOrFail();
+        return $query->inRandomOrder()->first();
     }
 
     /**
      * @return Model|Discussion
      */
-    protected static function randomDiscussion(): Discussion
+    protected static function randomDiscussion($tagId = null): Discussion
     {
-        return Discussion::query()
+        $query = Discussion::query()
             ->where('is_private', false)
             ->whereNull('hidden_at')
-            ->where('last_posted_at', '>', Carbon::now()->subDays(self::settingDiscussionAgeDays()))
-            ->inRandomOrder()
-            ->firstOrFail();
+            ->where('last_posted_at', '>', Carbon::now()->subDays(self::settingDiscussionAgeDays()));
+
+        if ($tagId) {
+            $query->whereHas('tags', function (Builder $query) use ($tagId) {
+                $query->where('id', $tagId);
+            });
+        }
+
+        return $query->inRandomOrder()->first();
     }
 
     /**
-     * @return Model|Post
+     * @return Model|Post|null
      */
-    protected static function randomPost(): Post
+    protected static function randomPost(Discussion $discussion): ?Post
     {
-        return Post::query()
-            ->where('is_private', false)
-            ->whereNull('hidden_at')
-            ->where('type', 'comment')
+        return $discussion
+            ->comments()
             ->where('created_at', '>', Carbon::now()->subDays(self::settingPostAgeDays()))
             ->inRandomOrder()
-            ->firstOrFail();
+            ->first();
     }
 
     public static function random(): self
     {
-        $rand = random_int(1, 3);
+        $rand = random_int(1, 100);
 
         $placement = new self();
 
-        try {
-            switch ($rand) {
-                case 1:
-                    $placement->discussionId = self::randomDiscussion()->id;
-                    break;
-                case 2:
-                    $placement->postId = self::randomPost()->id;
-                    break;
-                case 3:
-                    $placement->userId = self::randomUser()->id;
-                    break;
+        if (random_int(0, 99) < self::settingUserProbability()) {
+            $user = self::randomUser();
+
+            if ($user) {
+                $placement->userId = $user->id;
+
+                return $placement;
             }
-        } catch (ModelNotFoundException $exception) {
+        }
+
+        /**
+         * @var $extensions ExtensionManager
+         */
+        $extensions = resolve(ExtensionManager::class);
+
+        $tagSettings = self::settingDiscussionTags();
+
+        $discussion = null;
+
+        if ($extensions->isEnabled('flarum-tags') && is_array($tagSettings) && count($tagSettings)) {
+            foreach ($tagSettings as $index => $tagSetting) {
+
+                if ($index !== count($tagSettings) - 1 && random_int(0, 99) >= Arr::get($tagSetting, 'probability')) {
+                    continue;
+                }
+
+                $discussion = self::randomDiscussion(Arr::get($tagSetting, 'tagId'));
+
+                if ($discussion) {
+                    break;
+                }
+            }
+        } else {
+            $discussion = self::randomDiscussion();
+        }
+
+        if (!$discussion) {
             /**
              * @var $translator Translator
              */
@@ -214,6 +291,18 @@ class Placement
                 'placement' => $translator->trans(self::TRANSLATION_PREFIX . 'random-error'),
             ]);
         }
+
+        if (random_int(0, 99) < self::settingPostProbability()) {
+            $post = self::randomPost($discussion);
+
+            if ($post) {
+                $placement->postId = $post->id;
+
+                return $placement;
+            }
+        }
+
+        $placement->discussionId = $discussion->id;
 
         return $placement;
     }

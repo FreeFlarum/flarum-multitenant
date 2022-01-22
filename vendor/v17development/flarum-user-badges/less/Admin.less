@@ -20,7 +20,7 @@
     margin-bottom: 20px;
     background: @control-bg;
     max-width: 600px;
-  
+
     &-title {
       font-size: 14px;
       font-weight: bold;
@@ -29,5 +29,40 @@
     &-content {
       margin: 5px 0 15px;
     }
+  }
+}
+
+.BadgeForm-split {
+  @media screen and (min-width: 769px) {
+    display: inline-block;
+    width: 48%;
+
+    &:nth-child(odd) {
+      margin-left: 4%;
+    }
+  }
+}
+
+.BadgeForm-ColorField {
+  position: relative;
+
+  .BadgeForm-Chosen-Color {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    bottom: 10px;
+    right: 15px;
+    border-radius: 100%;
+  }
+}
+
+.BadgeForm-IconField {
+  position: relative;
+
+  > span {
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+    font-size: 20px;
   }
 }

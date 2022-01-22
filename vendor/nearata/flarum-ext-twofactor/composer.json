@@ -1,0 +1,38 @@
+{
+    "name": "nearata/flarum-ext-twofactor",
+    "description": "Allow your users to enable two factor authentication.",
+    "keywords": [
+        "flarum",
+        "twofactor",
+        "security"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0",
+        "spomky-labs/otphp": "^10.0.1"
+    },
+    "authors": [
+        {
+            "name": "Nearata",
+            "email": "williamdicicco@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nearata\\TwoFactor\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Two Factor",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-shield-alt",
+                "backgroundColor": "#D72638",
+                "color": "#fff"
+            }
+        }
+    }
+}

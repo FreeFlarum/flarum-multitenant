@@ -3,6 +3,10 @@
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
 justoverclock-hashtag:
+  admin:
+    settings:
+      regexdesc: 'Ví dụ bên dưới là placeholder. Chỉ chỉnh sửa nếu bạn hiểu Biểu thức chính quy.'
+      regexlabel: 'Biểu thức chính quy Hashtag'
   forum:
     post:
-      hashtag_link_tooltip: 'Tìm kiếm hashtag này trong diễn đàn'
+      hashtag_link_tooltip: 'Tìm các bài viết liên quan đến hashtag này'

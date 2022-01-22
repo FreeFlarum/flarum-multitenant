@@ -4,7 +4,12 @@
 
 justoverclock-related-discussions:
   admin:
+    DiscussionPageLayout: 'Mostra discussioni correlate in fondo alla discussione'
     relatedLimit: 'Discussioni Correlate da Mostrare (4 di default)'
     relatedLimit-help: 'Scrivi il numero di discussioni correlate da mostrare (es. "4)'
+    relatedTitle: 'Titolo per "Discussioni Correlate"'
+    relatedTitle-help: 'Rimpiazza il titolo di defaul con un tuo titolo personalizzato'
   forum:
+    participants: Partecipanti
+    postnumber: 'Numero di post'
     reldiscussion: 'Discussioni Correlate'

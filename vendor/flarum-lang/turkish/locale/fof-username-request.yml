@@ -32,7 +32,7 @@ fof-username-request:
         approved: 'Takma ad değişikliği talebiniz onaylandı'
         dismiss_button: '=> core.ref.okay'
         new_name: 'Takma adınız başarıyla değiştirildi: {name}'
-        reason: 'Reddedilme nedeni:  <i>"{reason}"</i>.'
+        reason: 'Reddedilme nedeni: <i>"{reason}"</i>.'
         rejected: 'Takma ad değişikliği isteğiniz reddedildi'
         resubmit: 'Şu anda, isterseniz hesap ayarlarınızdan yeni bir takma ad değişikliği isteğini yeniden gönderebilirsiniz.'
         title: 'Takma Ad Değiştirme İsteği'

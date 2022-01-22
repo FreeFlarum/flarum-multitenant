@@ -6,7 +6,7 @@ v17development-flarum-support:
   emails:
     replied_to_ticket:
       body: "Kính gửi {accept_display_name}!\n\n{replier_display_name} đã trả lời vé #{ticket_id} (chủ đề \"{subject}\") của bạn.\n\nVui lòng sử dụng liên kết dưới đây để xem lại câu trả lời:\n{url}\n\nChúng tôi đang đợi câu trả lời của bạn hoặc cho đến khi bạn đánh dấu rằng vé này đã được giải quyết.\n"
-      subject: '{replier_display_name} đã trả lời phiếu #{ticket_id}'
+      subject: '{replier_display_name} đã trả lời phiếu #{ticket_id} của bạn'
     ticket_pending_reply:
       body: "Kính gửi {accept_display_name}!\n\nGần đây, {replier_display_name} đã trả lời phiếu #{ticket_id} của bạn vào {reply_date} và chúng tôi đang chờ câu trả lời của bạn.\n\nURL của phiếu của bạn là:\n{url}\n\nNếu vấn đề đã được giải quyết, vui lòng đánh dấu phiếu là đã được giải quyết.\n"
       subject: 'Phiếu #{ticket_id} đang chờ bạn trả lời'
@@ -177,7 +177,26 @@ v17development-flarum-support:
       overview:
         all_tickets: 'Tất cả phiếu'
         description: 'Hãy mỉm cười, bạn là người hùng cứu người khác trong ngày của họ.'
+        filter:
+          assignees:
+            search: 'Tìm kiếm người được giao'
+            title: 'Lọc những người được giao'
+            unassigned: 'Chưa giao'
+          language:
+            any: 'Mọi ngôn ngữ'
+          status:
+            filter_count: '{count, plural, one {# bộ lọc} other {# bộ lọc}}'
+            title: 'Trạng thái phiếu'
         no_tickets: 'Không có vé nào phù hợp với tiêu chí của bạn, có lẽ bạn đang làm rất tốt!'
+        refresh: 'Làm mới'
+        selection_closed: 'Phiếu hỗ trợ đã đóng'
+        selection_open: 'Tạo phiếu hỗ trợ'
+        selection_unfiltered: 'Huỷ bộ lọc'
+        sort:
+          least_recent: 'Hoạt động cũ nhất'
+          newest: 'Mới nhất đầu tiên'
+          oldest: 'Cũ nhất đầu tiên'
+          recent_activity: 'Hoạt động gần đây'
         title: 'Tổng quan phiếu'
       reminders_sent: '{count, plural, one {Đã gửi một lời nhắc} other {Đã gửi # lời nhắc}}'
       return_to_overview: 'Quay lại trang tổng quan phiếu'

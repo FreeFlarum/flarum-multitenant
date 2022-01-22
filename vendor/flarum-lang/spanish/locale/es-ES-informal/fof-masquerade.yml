@@ -41,6 +41,7 @@ fof-masquerade:
       url: URL
   forum:
     alerts:
+      profile-completed: '¡Perfil completo! <a>Volver a la página principal</a>'
       profile-completion-required: "Por favor completa los campos del perfil de usuario.\n"
     buttons:
       save-profile: Guardar

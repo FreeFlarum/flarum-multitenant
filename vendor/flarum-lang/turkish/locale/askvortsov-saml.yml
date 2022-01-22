@@ -15,7 +15,7 @@ askvortsov-saml:
       nameid_format: 'NameID Formatı'
       only_option: 'SAML2 SSO giriş seçeneği olarak mı kullanıyorsunuz?'
       sign_metadata: 'Giriş meta verileri?'
-      slo: 'SLO etkinleştirilsin mi? Eğer IDP''niz desteklemiyorsa  bu hiçbir şey yapmayacaktır.'
+      slo: 'SLO etkinleştirilsin mi? Eğer IDP''niz desteklemiyorsa bu hiçbir şey yapmayacaktır.'
       sync_attributes: 'Senkronize işlemi yapılsın mı (Avatar, Gruplar, Biyografi, ve Profil)? askvortsov/auth-sync uzantısı gerektirir.'
       want_assertions_encrypted: 'Onayların şifrelenmesini istiyor musunuz?'
       want_assertions_signed: 'Onayların İmzalanmasını İstiyor musunuz?'

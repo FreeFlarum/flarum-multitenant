@@ -6,18 +6,34 @@ flarum-suspend:
   admin:
     permissions:
       suspend_users_label: 'Banowanie użytkowników'
+  email:
+    suspended:
+      body: "Witaj {recipient_display_name},\n\nTwoje konto zostało zbanowane z następującego powodu:\n\n---\n{suspension_message}\n---\n"
+      subject: 'Twoje konto zostało zbanowane'
+    unsuspended:
+      body: "Witaj {recipient_display_name},\n\nTwoje konto zostało odbanowane. Możesz wrócić na forum klikając poniższy link:\n\n{forum_url}\n"
+      subject: 'Twoje konto zostało odbanowane'
   forum:
     notifications:
-      user_suspended_text: '{username} zbanował Cię na {timeReadable}'
-      user_unsuspended_text: '{username} odbanował Cię'
+      user_suspended_indefinite_text: 'Zostałeś zbanowany na czas nieokreślony'
+      user_suspended_text: 'Zostałeś zbanowany na {timeReadable}'
+      user_unsuspended_text: 'Zostałeś odbanowany'
     suspend_user:
+      display_message: 'Wiadomość wyświetlana użytkownikowi'
       indefinitely_label: 'Zbanowany na zawsze'
       limited_time_days_text: ' dni'
       limited_time_label: 'Zbanowany na określony czas...'
       not_suspended_label: 'Nie jest zbanowany'
+      placeholder_optional: Opcjonalne
+      reason: 'Powód bana'
       status_heading: 'Status bana'
       submit_button: '=> core.ref.save_changes'
       title: 'Zbanuj {username}'
+    suspension_info:
+      dismiss_button: Anuluj
+      indefinite: 'To jest ban na czas nieokreślony'
+      limited: 'Ten ban będzie ważny do {date}'
+      title: 'To konto jest zbanowane'
     user_badge:
       suspended_tooltip: Zbanowany
     user_controls:

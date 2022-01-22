@@ -1,0 +1,147 @@
+/*
+ *  FancyBox Extension for Flarum
+ *  Copyright (C) 2019 Eleanor Hawk
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ */
+
+@import (inline) "jquery.fancybox.css";
+
+#post-image-link() {
+  border: none;
+  border-radius: @border-radius;
+  background-color: @control-bg;
+  overflow: hidden;
+  padding: 6px;
+}
+
+#post-image() {
+  border-radius: @border-radius;
+}
+
+#extlink-badge() {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top-left-radius: @border-radius;
+  background-color: @control-bg;
+  text-align: center;
+  opacity: 0.6;
+  right: 0;
+  bottom: 0;
+
+  span {
+    font-family: "Font Awesome 5 Free";
+    color: @control-color;
+  }
+}
+
+.Post .image-wrapper {
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Post .caption-wrapper span {
+  display: block;
+  color: @text-color;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 5px 0;
+}
+
+.Post a.block-image-link, .Post a.block-image-self-link {
+  #post-image-link;
+  display: block;
+  min-width: 150px;
+  max-width: 450px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    #post-image;
+    width: auto;
+  }
+}
+
+.Post a.block-image-link .extlink-badge {
+  #extlink-badge;
+  span::before {
+    content: "\f35d";
+  }
+}
+
+.Post a.block-image-self-link .extlink-badge {
+  #extlink-badge;
+  span::before {
+    content: "\f03e";
+  }
+}
+
+.Post a.inline-image-link, .Post a.inline-image-self-link {
+  #post-image-link;
+  display: inline-block;
+  min-width: 90px;
+  max-width: 220px;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  img {
+    #post-image;
+    max-height: 120px;
+    width: auto;
+  }
+}
+
+.Post a.inline-image-link .extlink-badge {
+  #extlink-badge;
+  span::before {
+    content: "\f35d";
+  }
+}
+
+.Post a.inline-image-self-link .extlink-badge {
+  #extlink-badge;
+  span::before {
+    content: "\f03e";
+  }
+}
+
+.Post a.fancybox--video-link .extlink-badge span::before {
+  content: "\f03d";
+}
+
+.Post a.fancybox--iframe-link .extlink-badge span::before {
+  content: "\f2d2";
+}
+
+.Post a:hover .extlink-badge {
+  opacity: 1;
+}
+
+.Post th .caption-wrapper {
+  text-align: left;
+}
+
+.fancybox-bg {
+  background-color: @overlay-bg;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 1;
+}
+
+.fancybox-content {
+  .box-shadow(0 7px 15px @shadow-color);
+}

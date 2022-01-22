@@ -13,7 +13,7 @@ core:
       custom_header_heading: 'Özel Üstbilgi'
       custom_header_text: '=> core.ref.custom_header_text'
       custom_styles_heading: 'Özel Stiller'
-      custom_styles_text: 'Flarum''un varsayılan stillerine uygulanacak kendi Less/CSS kodunu ekleyerek forumunun görünümünü özelleştir.'
+      custom_styles_text: 'Flarum''un varsayılan stillerinin üzerine uygulanacak kendi Less/CSS kodunuzu ekleyerek forumunuzun görünümünü özelleştirin.'
       dark_mode_label: 'Karanlık Mod'
       description: 'Forumunun renklerini, logosunu ve diğer değişkenlerini özelleştir.'
       edit_css_button: 'Özel CSS’i Düzenle'
@@ -95,6 +95,7 @@ core:
       title: '=> core.ref.email'
     extension:
       configure_scopes: 'Kapsamları Yapılandır'
+      confirm_purge: 'Temizleme, uzantıyla ilgili tüm veritabanı girdilerini ve varlıkları kaldıracaktır. Uzantıyı kaldırmaz; kaldırma işlemi Composer aracılığıyla yapılmalıdır. Devam etmek istediğine emin misin?'
       confirm_uninstall: 'Kaldırma işlemi, uzantı ile ilgili tüm veritabanı girişlerini kaldıracaktır. Devam etmek istediğine emin misin?'
       disabled: Etkisizleştirildi
       enable_to_see: 'Ayarları görüntülemek ve değiştirmek için uzantıyı etkinleştirin.'
@@ -110,6 +111,11 @@ core:
       no_settings: 'Bu uzantının ayarları yok.'
       open_modal: 'Ayarları aç'
       permissions_title: İzinler
+      purge_button: Temizle
+      readme:
+        button_label: 'BENİ OKU'
+        no_readme: 'Bu uzantı bir BENİ OKU dosyasına sahip değil'
+        title: '{extName} belgeleri'
       uninstall_button: Kaldır
     header:
       get_help: 'Yardım Al'
@@ -281,6 +287,8 @@ core:
       mark_as_read_tooltip: 'Okundu olarak işaretle'
       replied_text: '{username}, {ago} yanıtladı'
       started_text: '{username} {ago} başlattı'
+      total_replies_a11y_label: '{count, plural, one {# yanıt} other {# yanıt}}'
+      unread_replies_a11y_label: '{count, plural, one {# okunmamış yanıt} other {# okunmamış yanıt}}. {count, plural, one {yanıtı} other {yanıtı}} okunmadı olarak işaretle.'
     forgot_password:
       dismiss_button: '=> core.ref.okay'
       email_placeholder: '=> core.ref.email'
@@ -409,6 +417,8 @@ core:
       alert_message: '=> core.ref.confirmation_email_sent'
       resend_button: 'Onay E-postasını Yeniden Gönder'
       sent_message: Gönderildi
+    welcome_hero:
+      hide: 'Hoşgeldin mesajını gizle'
   group:
     admin: Yönetici
     admins: Yöneticiler
@@ -419,8 +429,11 @@ core:
     mod: Moderatör
     mods: Moderatörler
   lib:
+    alert:
+      dismiss_a11y_label: 'Uyarıyı kapat'
     badge:
       hidden_tooltip: Gizli
+    debug_button: 'Hata Ayıklama'
     dropdown:
       toggle_dropdown_accessible_label: 'Açılır menüyü aç / kapat'
     edit_user:
@@ -428,6 +441,7 @@ core:
       email_heading: '=> core.ref.email'
       email_label: '=> core.ref.email'
       groups_heading: Gruplar
+      nothing_available: 'Bu kullanıcıyı düzenleme yetkiniz bulunmamaktadır.'
       password_heading: '=> core.ref.password'
       password_label: '=> core.ref.password'
       set_password_label: 'Yeni şifre ayarla'
@@ -443,8 +457,16 @@ core:
       payload_too_large_message: 'İstek yükü çok büyük.'
       permission_denied_message: 'Bunu yapmaya yetkiniz bulunmuyor.'
       rate_limit_exceeded_message: 'Biraz fazla hızlı gidiyorsun. Lütfen birkaç saniye içinde tekrar dene.'
+      render_failed_message: 'Üzgünüz, bu içeriği görüntülerken bir hatayla karşılaştık. Kullanıcı iseniz, lütfen daha sonra tekrar deneyin. Yöneticiyseniz, daha fazla bilgi için Flarum günlük dosyalarınıza bakın.'
     loading_indicator:
       accessible_label: '=> core.ref.loading'
+    meta_titles:
+      with_page_title: '{pageNumber, plural, =1 {{pageTitle} - {forumName}} other {{pageTitle}: Page # - {forumName}}}'
+      without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Page # - {forumName}}}'
+    modal:
+      close: Kapat
+    nav:
+      drawer_button: 'Gezinme Çekmecesini Aç'
     number_suffix:
       kilo_text: K
       mega_text: M
@@ -542,6 +564,9 @@ core:
       log_out_button: '=> core.ref.log_out'
       log_out_confirmation: '{forum} oturumundan çıkış yapmak istediğine emin misin?'
       title: '=> core.ref.log_out'
+    meta_titles:
+      with_page_title: '{pageNumber, plural, =1 {{pageTitle} - {forumName}} other {{pageTitle}: Sayfa # - {forumName}}}'
+      without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Sayfa # - {forumName}}}'
     reset_password:
       confirm_password_label: 'Yeni Şifreyi Onayla'
       new_password_label: 'Yeni Şifre'

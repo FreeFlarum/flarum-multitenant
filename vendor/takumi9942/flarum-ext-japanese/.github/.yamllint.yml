@@ -1,0 +1,20 @@
+extends: relaxed
+
+rules:
+  document-start: 
+    present: false
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 1 
+  trailing-spaces: disable
+  line-length: 
+    max: 135
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
+  colons: 
+    max-spaces-before: 0
+    max-spaces-after: 1
+  hyphens: 
+    max-spaces-after: 3

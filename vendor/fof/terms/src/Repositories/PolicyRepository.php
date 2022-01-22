@@ -1,13 +1,25 @@
 <?php
 
+/*
+ * This file is part of fof/terms.
+ *
+ * Copyright (c) FriendsOfFlarum.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace FoF\Terms\Repositories;
 
 use Carbon\Carbon;
 use DateTime;
 use Flarum\User\User;
+use FoF\Terms\Events\Created;
+use FoF\Terms\Events\Deleted;
 use FoF\Terms\Policy;
 use FoF\Terms\Validators\PolicyValidator;
 use Illuminate\Contracts\Cache\Repository;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -19,15 +31,21 @@ class PolicyRepository
     protected $validator;
     protected $cache;
 
+    /**
+     * @var Dispatcher
+     */
+    protected $events;
+
     protected $rememberState;
 
     const CACHE_KEY = 'fof-terms-policies';
 
-    public function __construct(Policy $policy, PolicyValidator $validator, Repository $cache)
+    public function __construct(Policy $policy, PolicyValidator $validator, Repository $cache, Dispatcher $events)
     {
         $this->policy = $policy;
         $this->validator = $validator;
         $this->cache = $cache;
+        $this->events = $events;
     }
 
     /**
@@ -47,6 +65,7 @@ class PolicyRepository
 
     /**
      * @param string $id
+     *
      * @return Policy|Model
      */
     public function findOrFail(string $id): Policy
@@ -71,7 +90,7 @@ class PolicyRepository
                 $this->rememberState[$policy->id] = [
                     // Same format as Flarum is using for the serializer responses
                     'accepted_at' => $accepted_at ? $accepted_at->format(DateTime::RFC3339) : null,
-                    'has_update' => $has_update,
+                    'has_update'  => $has_update,
                     'must_accept' => $has_update && !$user->can('postponeAccept', $policy),
                 ];
             }
@@ -115,16 +134,21 @@ class PolicyRepository
     }
 
     /**
+     * @param User  $actor
      * @param array $attributes
-     * @return Policy
+     *
      * @throws ValidationException
+     *
+     * @return Policy
      */
-    public function store(array $attributes)
+    public function store(User $actor, array $attributes)
     {
         $this->validator->assertValid($attributes);
 
         $policy = new Policy($attributes);
         $policy->save();
+
+        $this->events->dispatch(new Created($policy, $actor, $attributes));
 
         $this->clearCache();
 
@@ -133,9 +157,11 @@ class PolicyRepository
 
     /**
      * @param Policy $policy
-     * @param array $attributes
-     * @return Policy
+     * @param array  $attributes
+     *
      * @throws ValidationException
+     *
+     * @return Policy
      */
     public function update(Policy $policy, array $attributes)
     {
@@ -149,9 +175,11 @@ class PolicyRepository
         return $policy;
     }
 
-    public function delete(Policy $policy)
+    public function delete(User $actor, Policy $policy)
     {
         $res = $policy->delete();
+
+        $this->events->dispatch(new Deleted($policy, $actor, []));
 
         $this->clearCache();
 

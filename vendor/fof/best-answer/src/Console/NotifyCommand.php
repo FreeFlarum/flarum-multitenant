@@ -16,6 +16,7 @@ use Flarum\Discussion\Discussion;
 use Flarum\Extension\ExtensionManager;
 use Flarum\Notification\NotificationSyncer;
 use Flarum\Settings\SettingsRepositoryInterface;
+use Flarum\Tags\Tag;
 use FoF\BestAnswer\Notification\SelectBestAnswerBlueprint;
 use Illuminate\Console\Command;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -68,34 +69,28 @@ class NotifyCommand extends Command
         $days = (int) $this->settings->get('fof-best-answer.select_best_answer_reminder_days');
         $time = Carbon::now()->subDays($days);
 
+        // set a max time period to go back, so we don't spam really old discussions too.
+        $timeLimit = Carbon::now()->subDays(7 + $days);
+
         if ($days <= 0) {
             $this->info('Reminders are disabled');
 
             return;
         }
 
-        $this->info('Looking at discussions before '.$time->toDateTimeString());
+        $this->info('Looking at discussions before '.$time->toDateTimeString().' but not older than '.$timeLimit->toDateTimeString());
 
-        $query = Discussion::query();
-
-        if ($this->extensions->isEnabled('flarum-tags') && class_exists(\Flarum\Tags\Tag::class) && $settingIds = $this->settings->get('fof-best-answer.remind_tag_ids')) {
-            $this->info("Restricting to tags $settingIds");
-            $tags = explode(',', $settingIds);
-
-            if (!empty($tags)) {
-                $query->leftJoin('discussion_tag', 'discussion_tag.discussion_id', '=', 'discussions.id');
-                $query->whereIn('discussion_tag.tag_id', $tags);
-            }
-        } else {
-            $this->info('No tag restrictions');
-        }
-
-        $query->whereNull('discussions.best_answer_post_id')
+        $tags = Tag::where('qna_reminders', true)->pluck('id');
+        $query = Discussion::query()
+            ->leftJoin('discussion_tag', 'discussion_tag.discussion_id', '=', 'discussions.id')
+            ->whereIn('discussion_tag.tag_id', $tags)
+            ->whereNull('discussions.best_answer_post_id')
             ->whereNull('discussions.hidden_at')
             ->where('discussions.best_answer_notified', false)
             ->where('discussions.comment_count', '>', 1)
             ->where('discussions.is_private', 0)
-            ->whereDate('discussions.created_at', '<', $time);
+            ->whereDate('discussions.created_at', '<', $time->toIso8601String())
+            ->whereDate('discussions.created_at', '>', $timeLimit->toIso8601String());
 
         $count = $query->count();
 
@@ -107,7 +102,7 @@ class NotifyCommand extends Command
 
         $errors = [];
 
-        $query->chunk(20, function ($discussions) use (&$errors) {
+        $query->chunkById(20, function ($discussions) use (&$errors) {
             /*
              * @var $discussions Discussion[]
              */

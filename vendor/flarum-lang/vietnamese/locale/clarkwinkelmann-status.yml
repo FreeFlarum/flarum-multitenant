@@ -13,7 +13,7 @@ clarkwinkelmann-status:
       only-countries: 'Chỉ cờ quốc gia'
   forum:
     menu:
-      set-status: 'Đặt một trạng thái'
+      set-status: 'Đặt trạng thái'
     modal:
       clear: Xóa
       submit: Gửi

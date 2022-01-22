@@ -37,7 +37,7 @@ class ListMessagesController extends AbstractListController
 
         $conversation = Conversation::find($conversationId);
 
-        if (!$conversation->recipients()->where('user_id', $actor->id)->get()) {
+        if (!$conversation->recipients()->where('user_id', $actor->id)->exists()) {
             throw new PermissionDeniedException;
         }
 

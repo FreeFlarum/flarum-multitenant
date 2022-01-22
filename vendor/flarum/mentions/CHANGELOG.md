@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.1.3](https://github.com/flarum/mentions/compare/v1.1.2...v1.1.3)
+
+### Added
+- chore: add missing compat exports and extensibility by @gianniguida in https://github.com/flarum/mentions/pull/76
+
+### Fixed
+- fix: errors on texteditor re-use again by @davwheat in https://github.com/flarum/mentions/pull/78
+- fix: Allow mentions from non-post objects by @imorland in https://github.com/flarum/mentions/pull/79
+
+## [1.1.2](https://github.com/flarum/mentions/compare/v1.1.1...v1.1.2)
+
+### Fixed
+- Only search users via rest API if user has permission by @askvortsov1 in https://github.com/flarum/mentions/pull/73
+- fix: Cannot reply to posts by deleted authors by @SychO9 in https://github.com/flarum/mentions/pull/75
+- fix: autocomplete errors with TextEditor re-use by @davwheat in https://github.com/flarum/mentions/pull/77
+
+## [1.1.1](https://github.com/flarum/mentions/compare/v1.1.0...v1.1.1)
+
+### Fixed
+- Broken autocompleted user mention format (https://github.com/flarum/mentions/pull/74)
+
+## [1.1.0](https://github.com/flarum/mentions/compare/v1.0.0...v1.1.0)
+
+### Changed
+- Eager load more necessary related mentions (https://github.com/flarum/mentions/pulls/72)
+- Refactors to the frontend JS (https://github.com/flarum/mentions/pulls/69) 
+
+### Fixed
+- Unrecognised user/post mentions (https://github.com/flarum/mentions/pulls/71)
+- Reduced bugginess in mentions username search (https://github.com/flarum/core/issues/3095)
+- Fixed missing space after mentions inserted via post reply (https://github.com/flarum/core/issues/3096)
+
 ## [1.0.0](https://github.com/flarum/mentions/compare/v0.1.0-beta.16...v1.0.0)
 
 ### Changed

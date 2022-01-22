@@ -1,11 +1,9 @@
 <?php
 
 /*
- * This file is part of the ianm/synopsis.
+ * This file is part of ianm/synopsis.
  *
- * (c) 2020 Ian Morland
- * (c) 2019 Jordan Schnaidt
- * (c) Toby Zerner <toby.zerner@gmail.com>
+ * (c) 2020 - 2021 Ian Morland
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,6 +14,8 @@ namespace IanM\Synopsis;
 use Flarum\Api\Controller\ListDiscussionsController;
 use Flarum\Api\Controller\UpdateDiscussionController;
 use Flarum\Extend;
+use Flarum\Tags\Api\Serializer\TagSerializer;
+use Flarum\Tags\Event\Saving as TagSaving;
 
 return [
     (new Extend\Frontend('forum'))
@@ -33,13 +33,18 @@ return [
         ->serializeToForum('synopsis.excerpt_type', 'ianm-synopsis.excerpt-type'),
 
     (new Extend\ApiController(ListDiscussionsController::class))
-        ->addInclude(['firstPost', 'lastPost'])
-        ->load('lastPost'),
+        ->prepareDataForSerialization(LoadRelations::class),
 
     (new Extend\ApiController(UpdateDiscussionController::class))
-        ->addInclude(['lastPost']),
+        ->prepareDataForSerialization(LoadRelations::class),
 
     (new Extend\User())
         ->registerPreference('showSynopsisExcerpts', 'boolVal', true)
         ->registerPreference('showSynopsisExcerptsOnMobile', 'boolVal', false),
+
+    (new Extend\Event())
+        ->listen(TagSaving::class, Tags\Saving::class),
+
+    (new Extend\ApiSerializer(TagSerializer::class))
+        ->attributes(Tags\AddTagsAttrs::class),
 ];

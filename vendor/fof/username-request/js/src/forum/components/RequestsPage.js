@@ -1,34 +1,24 @@
-/*
- *
- *  This file is part of fof/username-request.
- *
- *  Copyright (c) 2019 FriendsOfFlarum.
- *
- *  For the full copyright and license information, please view the LICENSE.md
- *  file that was distributed with this source code.
- *
- */
-
+import app from 'flarum/forum/app';
 import Page from 'flarum/common/components/Page';
 
 import RequestsList from './RequestsList';
 
 export default class RequestsPage extends Page {
-    oninit(vnode) {
-        super.oninit(vnode);
+  oninit(vnode) {
+    super.oninit(vnode);
 
-        app.history.push('requests');
+    app.history.push('requests');
 
-        app.usernameRequests.load();
+    app.usernameRequests.load();
 
-        this.bodyClass = 'App--requests';
-    }
+    this.bodyClass = 'App--requests';
+  }
 
-    view() {
-        return (
-            <div className="RequestsPage">
-                <RequestsList state={app.usernameRequests}></RequestsList>
-            </div>
-        );
-    }
+  view() {
+    return (
+      <div className="RequestsPage">
+        <RequestsList state={app.usernameRequests}></RequestsList>
+      </div>
+    );
+  }
 }

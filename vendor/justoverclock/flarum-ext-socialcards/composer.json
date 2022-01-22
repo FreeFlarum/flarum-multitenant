@@ -1,0 +1,48 @@
+{
+  "name": "justoverclock/flarum-ext-socialcards",
+  "description": "Add social cards on indexpage",
+  "keywords": [
+    "flarum",
+      "social cards"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\SocialCards\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Justoverclock\\SocialCards\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Socialcards",
+      "category": "",
+      "icon": {
+        "name": "fas fa-share-alt-square",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}
+

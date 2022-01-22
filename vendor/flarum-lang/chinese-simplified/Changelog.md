@@ -1,3 +1,262 @@
+# 2021-12-19
+# 🌟 v1.1.1.1220
+
+【新增】
+1. [`clarkwinkelmann/flarum-ext-roll-die`](https://github.com/clarkwinkelmann/flarum-ext-roll-die) 随机骰子。
+
+全部变化：[v1.1.1 (1219)...v1.1.1 (1220)](https://github.com/FFans/lang-simplified-chinese/compare/v1.1.1.1219...v1.1.1.1220)
+
+# 2021-12-19
+# 🌟 v1.1.1.1219
+
+【中文语言包】
+- 增加设置提示。
+
+【核心】*
+- 新增 ：
+  1. 欢迎横幅可以通过开关隐藏。
+  2. 关闭按键。
+  3. 导航抽屉开关。
+  4. 标题增加页码
+
+【原生】*
+1. [`flarum/nicknames`](https://github.com/flarum/nicknames) 昵称。注册时允许设置昵称、用户名可自动生成了。
+2. [`flarum/suspend`](https://github.com/flarum/suspend) 封禁。新增封禁通知。
+
+> \* 下一版本功能。 
+
+【新增】
+1. [`acpl/flarum-lscache`](https://github.com/android-com-pl/flarum-lscache) LiteSpeed 缓存。
+2. [`blomstra/mark-unread`](https://github.com/blomstra/flarum-ext-mark-unread) 标记未读。
+3. [`blomstra/search`](https://github.com/blomstra/flarum-ext-search) 全文搜索。
+4. [`clarkwinkelmann/flarum-ext-collapsible-posts`](https://github.com/clarkwinkelmann/flarum-ext-collapsible-posts) 折叠帖子。
+5. [`datitisev/flarum-discussion-agree-message`](https://github.com/datitisev/flarum-discussion-agree-message) 发帖同意书。
+6. [`datlechin/flarum-add-like-controls`](https://github.com/datlechin/flarum-add-like-controls) 下拉菜单点赞。
+7. [`ganuonglachanh/sonic`](https://github.com/ganuonglachanh/flarum-sonic) Sonic 搜索服务。
+8. [`ianm/oauth-amazon`](https://github.com/imorland/flarum-ext-oauth-amazon) 亚马逊账号登录。
+9. [`justoverclock/auto-post-count-badge`](https://github.com/justoverclockl/auto-post-count-badge) 自动头衔授予。
+10. [`justoverclock/discussion-sentiment-analyzer`](https://github.com/justoverclockl/discussion-sentiment-analyzer) 情绪分析器。
+11. [`justoverclock/flarum-ext-hashtag`](https://github.com/justoverclockl/flarum-ext-hashtag) 话题。
+12. [`ramesh-dada/flarum-gui-image-and-link`](https://github.com/ramesh-dada/Flarum-GUI-Image-and-Link) 弹窗形式添加图片和链接。
+13. [`ramesh-dada/realtime`](https://github.com/ramesh-dada/realtime) 定时器刷新新帖。
+14. [`tokenjenny/flarum-ext-web3`](https://github.com/tokenjenny/flarum-ext-web3) Web3 账号登录。
+15. [`webbinaro/flarum-age-check`](https://github.com/eddiewebb/flarum-age-check) 知情同意书。
+16. [`zerosonesfun/flarum-bbcode-button`](https://github.com/zerosonesfun/flarum-bbcode-button) BBCode 按钮。
+
+【更新】
+1. [`afrux/news-widget`](https://github.com/afrux/news-widget) 公告小部件。增加代码安全提示。
+2. [`askvortsov/flarum-pwa`](https://github.com/askvortsov1/flarum-pwa) 新增 VAPID 重置功能。
+3. [`clarkwinkelmann/flarum-ext-see-past-first-post`](https://github.com/clarkwinkelmann/flarum-ext-see-past-first-post) 隐藏回帖。新增权限设置。
+4. [`davwheat/flarum-ext-ads`](https://github.com/davwheat/flarum-ext-ads) 调整广告代码格式提示翻译。
+5. [`extiverse/mercury`](https://github.com/extiverse/mercury) 调整更新通知邮件翻译。
+6. [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification) 游戏化。
+7. [`fof/masquerade`](https://github.com/FriendsOfFlarum/masquerade) 新增个人资料编辑权限。
+8. [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions) 合并主题。新增帖子编号修复失败提醒。
+9. [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode) 夜间模式。新增自动夜间模式的浏览器支持检测。
+10. [`fof/upload`](https://github.com/FriendsOfFlarum/upload) 文件上传器。新增 php 和 nginx 上限提示；文件大小上限提示。
+11. [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory) 会员名录。可以关闭搜索建议了。
+12. [`ianm/synopsis`](https://github.com/imorland/synopsis) 摘要。增加富文本展示、标签独立配置。
+13. [`justoverclock/first-visit-indexpage`](https://github.com/justoverclockl/first-visit-indexpage) 调整守则翻译。
+14. [`justoverclock/flarum-ext-welcomebox`](https://github.com/justoverclockl/flarum-ext-welcomebox) 欢迎卡片。新增支持转为小部件。
+15. [`justoverclock/last-registered-users`](https://github.com/justoverclockl/last-registered-users) 新增新用户欢迎语。
+16. [`v17development/flarum-user-badges`](https://github.com/v17development/flarum-user-badges) 新增图片徽章。
+
+【付费】
+1. [`justoverclock/auto-post-badge-pro`](https://extiverse.com/extension/justoverclock/auto-post-badge-pro) 自动头衔授予 Pro。
+2. [`justoverclock/related-discussions`](https://extiverse.com/extension/justoverclock/related-discussions) 相关主题。允许自定义标题。
+3. [`justoverclock/theaudiodb-api`](https://extiverse.com/extension/justoverclock/theaudiodb-api) TheAudioDb 数据库。
+4. [`justoverclock/website-live-screenshot`](https://extiverse.com/extension/justoverclock/website-live-screenshot) 链接预览。
+5. [`v17development/flarum-support`](https://extiverse.com/extension/v17development/flarum-support) 工单系统。新增筛选项。
+
+全部变化：[v1.0.4.1009.1 (1009)...v1.1.1 (1219)](https://github.com/FFans/lang-simplified-chinese/compare/v1.0.4.1009.1...v1.1.1.1219)
+
+# 2021-11-2
+# 🌟 v1.1.1
+
+【核心】
+1. 新增：* 扩展重置功能；主题数量、回复数量展示；编辑用户权限提示；出错提示更新。
+
+【更新】
+[`fof/links`](https://github.com/FriendsOfFlarum/links) 导航栏链接。新增二级菜单标题模式。
+
+> \* 下一版本功能。 
+
+# 2021-10-9
+# 🌟 v1.0.4.1009.1
+
+【核心】
+1. 更正「暂无回复」为「暂无内容」（[#10](https://github.com/flarum-lang/chinese-simplified/issues/10)）
+2. 「选择一个主标签」更改为「选择主标签    」以消除裁剪。（[d/28828](https://discuss.flarum.org/d/28828-linguist-to-show-up-the-whole-content-choose-primary-placeholder/2)）
+
+【新增】
+1. [`afrux/asirem`](https://github.com/afrux/asirem) Afrux 主题翻译。
+2. [`davwheat/flarum-ext-share`](https://github.com/davwheat/flarum-ext-share) 分享。
+3. [`justoverclock/feautured-discussions-widget`](https://github.com/justoverclockl/feautured-discussions-widget) 精选主题挂件。
+4. [`justoverclock/flachat`](https://github.com/justoverclockl/flachat) 简易聊天。
+
+【更新】
+1. [`fof/discussion-language`](https://github.com/FriendsOfFlarum/discussion-language) 主题帖语言。
+2. [`nosun/reply-to-see`](https://github.com/nosun/flarum-ext-reply2see) 回复可见。
+
+全部变化：[v1.0.4 (1002)...v1.0.4 (1009)](https://github.com/FFans/lang-simplified-chinese/compare/v1.0.4.1002...v1.0.4.1009.1)
+
+# 2021-10-2
+# 🌟 v1.0.4.1002
+
+【修复】
+1. [FoF OAuth](https://weblate.rob006.net/projects/flarum/fof-oauth) 第三方登录：领英 Client Secret 未翻译问题。
+
+全部变化：[v1.0.4 (0930)...v1.0.4 (1002)](https://github.com/FFans/lang-simplified-chinese/compare/v1.0.4.0930...v1.0.4.1002)
+
+# 2021-9-30
+# 🌟 v1.0.4.0930
+
+【核心】
+1. 更新：「Slug Driver」的翻译。
+2. 更新：* Laraval 验证提示。
+3. 更新：* 新增清空搜索按钮、请求负载过大提示、扩展程序管理。
+
+【Markdown】
+1. 更新：* 新增黑幕、删除线按钮
+
+> \* 下一版本功能。 
+
+【新增】
+1. [`afrux-forum-widgets-core`](https://weblate.rob006.net/projects/flarum/afrux-forum-widgets-core) 可视化小部件排布系统。
+2. [`askvortsov-article-series`](https://weblate.rob006.net/projects/flarum/askvortsov-article-series) 系列博文。
+3. [`clarkwinkelmann-featured-discussions`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-featured-discussions) 精选主题。
+4. [`justoverclock-discussion-hero-showtags`](https://weblate.rob006.net/projects/flarum/justoverclock-discussion-hero-showtags) 主题帖页眉标签。
+5. [`justoverclock-discussion-info`](https://weblate.rob006.net/projects/flarum/justoverclock-discussion-info) 主题信息。
+6. [`justoverclock-edit-posts`](https://weblate.rob006.net/projects/flarum/justoverclock-edit-posts) 帖子操作按钮。
+7. [`justoverclock-hot-discussions`](https://weblate.rob006.net/projects/flarum/justoverclock-hot-discussions) 热门主题。
+8. [`justoverclock-imdb-api`](https://weblate.rob006.net/projects/flarum/justoverclock-imdb-api) IMDb 电影资料卡片。💰
+9. [`justoverclock-last-registered-users`](https://weblate.rob006.net/projects/flarum/justoverclock-last-registered-users) 最新用户小部件。
+10. [`justoverclock-last-users-posts`](https://weblate.rob006.net/projects/flarum/justoverclock-last-users-posts) 最新帖子小部件。
+11. [`justoverclock-related-discussions`](https://weblate.rob006.net/projects/flarum/justoverclock-related-discussions) 相关讨论。💰
+12. [`justoverclock-youtube-video-feed`](https://weblate.rob006.net/projects/flarum/justoverclock-youtube-video-feed) 油管视频小部件。
+13. [`miniflar-top-like-givers-widget`](https://weblate.rob006.net/projects/flarum/miniflar-top-like-givers-widget) 赞不要钱排行榜。
+14. [`sycho-move-posts`](https://weblate.rob006.net/projects/flarum/sycho-move-posts) 移动帖子。
+
+【更新】
+1. [`flarumi-oauth-vkontakte`](https://weblate.rob006.net/projects/flarum/flarumi-oauth-vkontakte) vkontakte 账号登录。
+2. [`fof-best-answer`](https://weblate.rob006.net/projects/flarum/fof-best-answer) 最佳回复：可以为标签单独选择是否开启最佳回复功能。
+3. [`fof-discussion-language`](https://weblate.rob006.net/projects/flarum/fof-discussion-language) 主题帖语言：新增检取数据错误提示。
+4. [`fof-filter`](https://weblate.rob006.net/projects/flarum/fof-filter) 过滤器：新增无视顾虑器权限，更新敏感词说明，抵制 Leet 从你做起。
+5. [`fof-reactions`](https://weblate.rob006.net/projects/flarum/fof-reactions) 戳表情：增加戳表情按钮的鼠标悬浮态标题。
+6. [`fof-socialprofile`](https://weblate.rob006.net/projects/flarum/fof-socialprofile) 社交网络：抽离权限。
+7. [`fof-stopforumspam`](https://weblate.rob006.net/projects/flarum/fof-stopforumspam) 风险数据库：新增邮箱地址散列、查询服务器地区更改功能。
+8. [`fof-upload`](https://weblate.rob006.net/projects/flarum/fof-upload) 文件上传器：新增 Markdown 和 BBCode 图片预览模板。
+9. [`justoverclock-events-countdown`](https://weblate.rob006.net/projects/flarum/justoverclock-events-countdown) 活动倒计时：可以自定义倒计时图标了。
+10. [`justoverclock-guestengagement`](https://weblate.rob006.net/projects/flarum/justoverclock-guestengagement) 访客推销：新增帖子间注册按钮；修改提示翻译。
+11. [`justoverclock-welcomebox`](https://weblate.rob006.net/projects/flarum/justoverclock-welcomebox) 欢迎卡片：新增上次在线时间。
+12. [`kilowhat-custom-paths`](https://weblate.rob006.net/projects/flarum/kilowhat-custom-paths) 自定义页面路径：新增 Flammarkt 系列扩展程序。💰
+13. [`kyrne-websocket`](https://weblate.rob006.net/projects/flarum/kyrne-websocket) 新增在线用户数量。
+14. [`malago-achievements`](https://weblate.rob006.net/projects/flarum/malago-achievements) 成就系统：新增侧边栏入口。
+15. [`michaelbelgium-discussion-views`](https://weblate.rob006.net/projects/flarum/michaelbelgium-discussion-views) 浏览量：「最近查阅的人」更名为足迹、列表条目更新。
+16. [`michaelbelgium-profile-views`](https://weblate.rob006.net/projects/flarum/michaelbelgium-profile-views) 主页访问量。
+
+> 💰 付费扩展。
+
+全部变化：[v1.0.4 (0810)...v1.0.4 (0930)](https://github.com/FFans/lang-simplified-chinese/compare/v1.0.4.0810...v1.0.4.0930)
+
+# 2021-8-10
+# 🌟 v1.0.4.0810
+
+【更新】
+1. [Moderator Warnings by Askvortsov](https://github.com/askvortsov1/flarum-moderator-warnings)
+
+
+# 2021-8-9
+# 🌟 v1.0.4
+
+【新增】
+1. [`acpl-mobile-tab`](https://weblate.rob006.net/projects/flarum/acpl-mobile-tab) 移动端底部导航栏。
+2. [`acpl-my-tags`](https://weblate.rob006.net/projects/flarum/acpl-my-tags) 我的标签。
+3. [`afrux-forum-stats-widget`](https://weblate.rob006.net/projects/flarum/afrux-forum-stats-widget) 论坛统计小部件。
+4. [`afrux-news-widget`](https://weblate.rob006.net/projects/flarum/afrux-news-widget) 滚动公告条。
+5. [`afrux-online-users-widget`](https://weblate.rob006.net/projects/flarum/afrux-online-users-widget) 在线用户小部件。
+6. [`afrux-top-posters-widget`](https://weblate.rob006.net/projects/flarum/afrux-top-posters-widget) 水贴排行榜。
+7. [`clarkwinkelmann-email-whitelist`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-email-whitelist) 邮箱白名单。
+8. [`clarkwinkelmann-post-bookmarks`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-post-bookmarks) 帖子书签。
+9. [`clarkwinkelmann-translation-inspector`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-translation-inspector) 翻译检查。
+10. [`clarkwinkelmann-username-blacklist`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-username-blacklist) 用户名黑名单。
+11. [`davwheat-ads`](https://weblate.rob006.net/projects/flarum/davwheat-ads) 广告。
+12. [`extiverse-mercury`](https://weblate.rob006.net/projects/flarum/extiverse-mercury) 扩展程序信息面板。
+13. [`glowingblue-redis-setup`](https://weblate.rob006.net/projects/flarum/glowingblue-redis-setup)
+14. [`hehongyuanlove-auth-qq`](https://weblate.rob006.net/projects/flarum/hehongyuanlove-auth-qq) QQ 账号登录。
+15. [`ianm-gravatar`](https://weblate.rob006.net/projects/flarum/ianm-gravatar) Gravatar 全球头像。
+16. [`justoverclock-custom-header`](https://weblate.rob006.net/projects/flarum/justoverclock-custom-header) 自定义欢迎横幅。
+17. [`justoverclock-custom-html-widget`](https://weblate.rob006.net/projects/flarum/justoverclock-custom-html-widget) 自定义 HTML 小部件。
+18. [`justoverclock-events-countdown`](https://weblate.rob006.net/projects/flarum/justoverclock-events-countdown) 倒数日。
+19. [`justoverclock-feedback`](https://weblate.rob006.net/projects/flarum/justoverclock-feedback) 意见反馈。
+20. [`justoverclock-first-visit-indexpage`](https://weblate.rob006.net/projects/flarum/justoverclock-first-visit-indexpage) 论坛准则同意。
+21. [`justoverclock-geo-weather`](https://weblate.rob006.net/projects/flarum/justoverclock-geo-weather) 本地天气。
+22. [`justoverclock-hashtag`](https://weblate.rob006.net/projects/flarum/justoverclock-hashtag) 话题。
+23. [`justoverclock-header-slideshow`](https://weblate.rob006.net/projects/flarum/justoverclock-header-slideshow) 轮播图。
+24. [`justoverclock-image-gallery`](https://weblate.rob006.net/projects/flarum/justoverclock-image-gallery) Flickr 画廊。
+25. [`justoverclock-last-tweet`](https://weblate.rob006.net/projects/flarum/justoverclock-last-tweet) 推文展示。
+26. [`justoverclock-og-meta-tag`](https://weblate.rob006.net/projects/flarum/justoverclock-og-meta-tag) 元标签。
+27. [`justoverclock-purify`](https://weblate.rob006.net/projects/flarum/justoverclock-purify) 屏蔽敏感词。
+28. [`justoverclock-username-blacklist`](https://weblate.rob006.net/projects/flarum/justoverclock-username-blacklist) 用户名黑名单。
+29. [`katosdev-signature`](https://weblate.rob006.net/projects/flarum/katosdev-signature) 小尾巴。
+30. [`kyrne-whisper`](https://weblate.rob006.net/projects/flarum/kyrne-whisper) 私信。
+31. [`malago-fancybox`](https://weblate.rob006.net/projects/flarum/malago-fancybox)
+32. [`nearata-dsts`](https://weblate.rob006.net/projects/flarum/nearata-dsts) 解锁首贴。
+33. [`nearata-twofactor`](https://weblate.rob006.net/projects/flarum/nearata-twofactor) 两步验证。
+34. [`nyu8-email-filter`](https://weblate.rob006.net/projects/flarum/nyu8-email-filter) 邮箱黑白名单。
+35. [`ralkage-hcaptcha`](https://weblate.rob006.net/projects/flarum/ralkage-hcaptcha) hCaptcha 验证码。
+36. [`serakoi-flarumdiscordtheme`](https://weblate.rob006.net/projects/flarum/serakoi-flarumdiscordtheme)
+37. [`serakoi-hideprofile`](https://weblate.rob006.net/projects/flarum/serakoi-hideprofile)
+38. [`spookygames-auth-keycloak`](https://weblate.rob006.net/projects/flarum/spookygames-auth-keycloak) keyCloak 登录。
+39. [the-turk-flamoji](https://weblate.rob006.net/projects/flarum/the-turk-flamoji) flamoji 符号表情选择器。
+40. [the-turk-miserable-users](https://weblate.rob006.net/projects/flarum/the-turk-miserable-users) 制裁用户。
+41. [the-turk-nodp](https://weblate.rob006.net/projects/flarum/the-turk-nodp) 禁止连续发帖。
+42. [the-turk-pallet-theme](https://weblate.rob006.net/projects/flarum/the-turk-pallet-theme) Pallet 主题。
+43. [the-turk-quiet-edit](https://weblate.rob006.net/projects/flarum/the-turk-quiet-edits) 静默编辑。
+44. [the-turk-stickiest](https://weblate.rob006.net/projects/flarum/the-turk-stickiest) 超级置顶。
+45. [zerosonesfun-expired-posts](https://weblate.rob006.net/projects/flarum/zerosonesfun-expired-posts) 过期内容。
+
+【更新】
+1. [`antoinefr-money`](https://weblate.rob006.net/projects/flarum/antoinefr-money)
+2. [`clarkwinkelmann-likes-received`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-likes-received)
+3. [`clarkwinkelmann-who-read`](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-who-read) 谁阅读过。
+4. [`dem13n-discussion-cards`](https://weblate.rob006.net/projects/flarum/dem13n-discussion-cards) 卡片式主题。
+5. [`ianm-follow-users`](https://weblate.rob006.net/projects/flarum/ianm-follow-users)
+6. [`kyrne-websocket`](https://weblate.rob006.net/projects/flarum/kyrne-websocket)
+7. [`the-turk-mathren`](https://weblate.rob006.net/projects/flarum/the-turk-mathren) Mathren 数学公式。
+8. [`therealsujitk-gifs`](https://weblate.rob006.net/projects/flarum/therealsujitk-gifs) 动图。
+9. [Achievements by Malago](https://weblate.rob006.net/projects/flarum/malago-achievements) 成就系统：可以选择成就列表展示的地方了。
+10. [Ads by Malago](https://weblate.rob006.net/projects/flarum/malago-ads) 广告。
+11. [Audit Free by Kilowhat](https://weblate.rob006.net/projects/flarum/kilowhat-audit-free) 审计日志。新增昵称修改日志。
+12. [Audit Pro by Kilowhat](https://weblate.rob006.net/projects/flarum/kilowhat-audit-pro) 💰
+13. [blomstra-realtime](https://weblate.rob006.net/projects/flarum/blomstra-realtime) 更新 ICU 格式。
+14. [Diff by The turk](https://weblate.rob006.net/projects/flarum/the-turk-diff) 编辑记录。
+15. [Embed Twitch by Nearata](https://weblate.rob006.net/projects/flarum/nearata-embed-twitch) Twitch 嵌入。
+16. [External Email Validation by Clarkwinkelmann](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-external-email-validation) 邮箱外部校验。
+17. [FoF Analytics](https://weblate.rob006.net/projects/flarum/fof-analytics) 网站统计：Matomo 上线（前 Piwik）。
+18. [FoF Byōbu](https://weblate.rob006.net/projects/flarum/fof-byobu) 私密主题：优化了创建主题时已选择用户的展示方式；新增单击去除用户的方法。
+19. [FoF Discussion Language](https://weblate.rob006.net/projects/flarum/fof-discussion-language) 主题语言：可以隐藏「所有语言」筛选项了。
+20. [FoF Filter](https://weblate.rob006.net/projects/flarum/fof-filter) 过滤器。新增敏感词匹配通知。
+21. [FoF OAuth](https://weblate.rob006.net/projects/flarum/fof-oauth) 第三方登录。
+22. [FoF Sentry](https://weblate.rob006.net/projects/flarum/fof-sentry) Sentry 错误监控：发送报告时可以附加用户的邮箱地址了。
+23. [fof-webhooks](https://weblate.rob006.net/projects/flarum/fof-webhooks)
+24. [justoverclock-welcomebox](https://weblate.rob006.net/projects/flarum/justoverclock-welcomebox) 欢迎卡片。
+25. [kyrne-evergreen](https://weblate.rob006.net/projects/flarum/kyrne-evergreen) 楼中楼回复。新增提及用户功能、未知用户提示、提示邮件。
+26. [Level Ranks by Ianm](https://weblate.rob006.net/projects/flarum/ianm-level-ranks)
+27. [malago-ads](https://weblate.rob006.net/projects/flarum/malago-ads) 广告：增加仅在电脑端显示「导航栏下方」广告的开关。
+28. [MathRen by The turk](https://weblate.rob006.net/projects/flarum/the-turk-mathren) 数学公式。
+29. [Minecraft Auth by Nearata](https://weblate.rob006.net/projects/flarum/nearata-auth-minecraft)
+30. [Online by Antoinefr](https://weblate.rob006.net/projects/flarum/antoinefr-online) 在线用户。
+31. [Profile views by Michaelbelgium](https://weblate.rob006.net/projects/flarum/michaelbelgium-profile-views) 个人主页访问量。
+32. [Registration Roles by The turk](https://weblate.rob006.net/projects/flarum/the-turk-regrole) 注册角色。
+33. [Shadow ban by Clarkwinkelmann](https://weblate.rob006.net/projects/flarum/clarkwinkelmann-shadow-ban) Twitter 版影匿功能 (Shadow ban)。暂定翻译：影匿 (Shadow ban)，影藏 (Shadow hide)。如有建议经前往 GitHub Issues。
+34. [Sycho GitHub-Milestone](https://discuss.flarum.org/d/25521) GitHub 里程碑：「开启的」修改为「进行中」，「上次更新」修改为「最新进展」。
+35. [Syndication by Amaurycarrade](https://weblate.rob006.net/projects/flarum/amaurycarrade-syndication) RSS 订阅。
+36. [User badges by V17development](https://weblate.rob006.net/projects/flarum/v17development-user-badges) 用户徽章：联动 Auto Moderator。
+37. [Webhooks PRO by Datitisev](https://weblate.rob006.net/projects/flarum/datitisev-webhooks-pro)
+
+全部变化：[v1.0.1...v1.0.4](https://github.com/FFans/lang-simplified-chinese/compare/v1.0.1...v1.0.4)
+
 # 2021-6-1
 # 🌟 v1.0.1
 

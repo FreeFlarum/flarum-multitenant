@@ -30,7 +30,7 @@ Open an issue on https://github.com/flarum-lang/tamil/issues/new
 
 ### FAQ
 
-**Question: I installed the tamil language pack but flarum contents still display in english; what should i do?**<br />
+**Question: I installed the tamil language pack but some contents still display in english; what should i do?**<br />
 _Answer: You can help to solve that problem; Please see the details on "Contribute" section._
 
 ## Contribute

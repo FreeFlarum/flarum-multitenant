@@ -1,0 +1,21 @@
+ffans-clipboardjs:
+    admin:
+      settings:
+        codeLang_label: '显示代码语言'
+        copy_enable_label: '开启复制功能'
+        themes_label: '复制按钮风格'
+        themes:
+          default: '默认 Clipboardjs'
+          github: 'GitHub'
+          csdn: 'CSDN'
+          cnblog: '博客园'
+          jianshu: '简书'
+          lingcoder: 'LingCoder'
+          segmentfault: '思否'
+    forum:
+      action_copy: '复制'
+      action_cut: '剪切'
+      ok_btn: '复制成功'
+      error_btn: '复制失败'
+      no_support: '不支持 :('
+      msg: '按 {actionKey} {action}'

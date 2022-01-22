@@ -22,16 +22,18 @@ use Flarum\Api\Serializer\DiscussionSerializer;
 use Flarum\Database\AbstractModel;
 use Flarum\Discussion\Discussion;
 use Flarum\Discussion\Event\Saving;
+use Flarum\Discussion\Filter\DiscussionFilterer;
 use Flarum\Discussion\Search\DiscussionSearcher;
 use Flarum\Extend;
 use Flarum\Post\Post;
+use Flarum\Tags\Api\Serializer\TagSerializer;
+use Flarum\Tags\Event\Creating as TagCreating;
+use Flarum\Tags\Event\Saving as TagSaving;
+use Flarum\Tags\Tag;
 use Flarum\User\User;
 use FoF\BestAnswer\Events\BestAnswerSet;
-use FoF\Components\Extend\AddFofComponents;
 
 return [
-    (new AddFofComponents()),
-
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/resources/less/forum.less'),
@@ -41,6 +43,9 @@ return [
         ->css(__DIR__.'/resources/less/admin.less'),
 
     new Extend\Locales(__DIR__.'/resources/locale'),
+
+    (new Extend\Routes('api'))
+        ->post('/fof/best-answer/enable', 'fof-best-answer.enable-tags-features', Api\Controller\FeatureEnableController::class),
 
     new DefaultSettings(),
 
@@ -53,7 +58,9 @@ return [
 
     (new Extend\Event())
         ->listen(Saving::class, Listeners\SelectBestAnswer::class)
-        ->listen(BestAnswerSet::class, Listeners\QueueNotificationJobs::class),
+        ->listen(BestAnswerSet::class, Listeners\QueueNotificationJobs::class)
+        ->listen(TagCreating::class, Listeners\TagCreating::class)
+        ->listen(TagSaving::class, Listeners\TagEditing::class),
 
     (new Extend\Notification())
         ->type(Notification\SelectBestAnswerBlueprint::class, BasicDiscussionSerializer::class, ['alert', 'email'])
@@ -61,7 +68,7 @@ return [
         ->type(Notification\BestAnswerSetInDiscussionBlueprint::class, BasicDiscussionSerializer::class, []),
 
     (new Extend\ApiSerializer(DiscussionSerializer::class))
-        ->attribute('canSelectBestAnswer', function (DiscussionSerializer $serializer, AbstractModel $discussion) {
+        ->attribute('canSelectBestAnswer', function (DiscussionSerializer $serializer, Discussion $discussion) {
             return Helpers::canSelectBestAnswer($serializer->getActor(), $discussion);
         }),
 
@@ -81,7 +88,8 @@ return [
 
     (new Extend\Settings())
         ->serializeToForum('canSelectBestAnswerOwnPost', 'fof-best-answer.allow_select_own_post', 'boolVal')
-        ->serializeToForum('useAlternativeBestAnswerUi', 'fof-best-answer.use_alternative_ui', 'boolVal'),
+        ->serializeToForum('useAlternativeBestAnswerUi', 'fof-best-answer.use_alternative_ui', 'boolVal')
+        ->serializeToForum('showBestAnswerFilterUi', 'fof-best-answer.show_filter_dropdown', 'boolVal'),
 
     (new Extend\ApiController(ShowDiscussionController::class))
         ->addInclude(['bestAnswerPost', 'bestAnswerUser'])
@@ -91,9 +99,20 @@ return [
         ->addInclude(['discussion.bestAnswerPost', 'discussion.bestAnswerUser', 'discussion.bestAnswerPost.user']),
 
     (new Extend\SimpleFlarumSearch(DiscussionSearcher::class))
-        ->addGambit(Gambit\IsSolvedGambit::class),
+        ->addGambit(Search\BestAnswerFilterGambit::class),
 
     (new Extend\Console())
         ->command(Console\NotifyCommand::class)
         ->schedule(Console\NotifyCommand::class, new Console\NotifySchedule()),
+
+    (new Extend\Filter(DiscussionFilterer::class))
+        ->addFilter(Search\BestAnswerFilterGambit::class),
+
+    (new Extend\ApiSerializer(TagSerializer::class))
+        ->attributes(function (TagSerializer $serializer, Tag $tag, array $attributes) {
+            $attributes['isQnA'] = (bool) $tag->is_qna;
+            $attributes['reminders'] = (bool) $tag->qna_reminders;
+
+            return $attributes;
+        }),
 ];

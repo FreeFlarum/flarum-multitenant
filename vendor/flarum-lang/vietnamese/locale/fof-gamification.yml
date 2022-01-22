@@ -6,9 +6,12 @@ core:
   forum:
     index_sort:
       hot_button: 'Thịnh hành'
+      votes_button: 'Lượt ủng hộ'
 fof-gamification:
   admin:
     page:
+      alt_votes:
+        icon_name: 'Tên icon bố cục alt'
       convert:
         button: 'Chuyển đổi lượt thích thành lượt tán thành'
         converted: 'Đã chuyển đổi thành công tất cả {number} lượt thích'
@@ -35,21 +38,30 @@ fof-gamification:
         title: 'Xếp hạng'
       save_settings: 'Lưu thiết lập'
       votes:
-        alternate_layout: 'Sử dụng bố cục thay thế để hiển thị và/hoặc tán thành/phản đối'
+        alternate_layout: 'Sử dụng bố cục bình chọn trên danh sách thảo luận'
+        alternate_post_layout: 'Sử dụng bố cục bình chọn trên các bài viết'
         auto_upvote: 'Tự động tán thành bài đăng khi được đăng'
         color_holder: '#ffffff'
         discussion_page: 'Hiển thị tổng số phiếu bầu của bài đăng gốc trên danh sách thảo luận'
+        first_post_only: 'Chỉ cho phép bình chọn cho bài viết đầu tiên trong cuộc thảo luận'
         icon_help: 'Nhập bất kỳ biểu tượng Font-Awesome nào đi kèm với -up và -down. Ví dụ: mũi tên, ngón tay cái'
         icon_name: 'Biểu tượng tán thành/phản đối'
         points_placeholder: 'Điểm: '
         points_title: 'Tiêu đề điểm'
         rate_limit: 'Thực thi giới hạn tỷ lệ bình chọn (10 giây)'
         title: 'Bình chọn'
+        upvotes_only: 'Chỉ cho phép ủng hộ'
         vote_color: 'Màu bình chọn'
     permissions:
       see_ranking_page: 'Xem trang xếp hạng'
-      see_votes_label: 'Xem bài đăng tán thành/phản đối'
+      see_voters_label: 'Xem ai đã bình chọn'
+      see_votes_label: 'Số số phiếu bầu tán thành/phản đối'
       vote_label: 'tán thành/Phản đối bài đăng'
+  email:
+    body:
+      postVoted: "Chào {recipient_display_name},\n\n{actor_display_name} vừa mới bình chọn bài viết của bạn trong {discussion_title}.\n\nXem tại đây: {discussion_url}\n"
+    subject:
+      postVoted: 'Bài viết của bạn được bình chọn bởi {display_name}'
   forum:
     mod_item: 'Xem người bình chọn'
     modal:
@@ -59,7 +71,12 @@ fof-gamification:
       name: 'Xếp hạng'
     notification:
       downvote: '{username} phản đối bài đăng của bạn'
+      prefrences:
+        vote: 'Khi 1 trong các bài viết của tôi được bình chọn ủng hộ/phản đối'
       upvote: '{username} tán thành bài đăng của bạn'
+    post:
+      downvote_button: 'Phản đối bài viết'
+      upvote_button: 'Ủng hộ bài viết'
     ranking:
       amount: Điểm
       name: 'Người dùng'
@@ -68,4 +85,8 @@ fof-gamification:
       points: 'Điểm: {points}'
       rank: '{rank}'
     vote_title: 'Hiển thị ai đã bình chọn'
-    votes: 'bình chọn'
+    voters:
+      label: 'Người bình chọn'
+      label_none: 'Không có người bình chọn'
+      none: 'Chưa có người bình chọn nào'
+    votes: 'Bình chọn'

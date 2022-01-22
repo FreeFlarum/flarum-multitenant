@@ -9,11 +9,11 @@ antoinefr-money:
     settings:
       helpextensionlikes: 'Yêu cầu bật tiện ích <code>flarum/likes</code>'
       moneyfordiscussion: 'Số tiền cho một cuộc thảo luận mới'
-      moneyforlike: 'Tiền được cộng khi có bài viết được thích'
+      moneyforlike: 'Cộng tiền khi có bài viết được thích'
       moneyforpost: 'Số tiền cho một bài viết mới'
-      moneyname: 'Tên tiền (ví dụ: [money] điểm)'
-      noshowzero: 'Không hiển thị nếu số tiền bằng 0'
-      postminimumlength: 'Độ dài tối thiểu của bài viết để nhận tiền (0 để vô hiệu hóa)'
+      moneyname: 'Tên của tiền (ví dụ: [money] điểm)'
+      noshowzero: 'Không hiển thị nếu giá trị bằng 0'
+      postminimumlength: 'Độ dài bài viết tối thiểu để nhận tiền (0 để tắt)'
       title: 'Thiết lập'
   forum:
     modal:

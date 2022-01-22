@@ -1,4 +1,17 @@
-.Afrux-NewsWidget-lineSetting {
-  margin-bottom: 8px;
-  display: flex;
+.Afrux-NewsWidget {
+  &-lineSetting {
+    margin-bottom: 8px;
+    display: flex;
+  }
+
+  &-htmlWarning {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+
+    > .Alert {
+      flex-grow: 1;
+    }
+  }
 }

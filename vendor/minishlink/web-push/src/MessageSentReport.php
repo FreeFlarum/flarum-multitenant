@@ -166,9 +166,9 @@ class MessageSentReport implements \JsonSerializable
     }
 
     /**
-     * @return array|mixed
+     * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return [
             'success'  => $this->isSuccess(),

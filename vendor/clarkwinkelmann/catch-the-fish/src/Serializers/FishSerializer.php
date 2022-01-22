@@ -4,9 +4,13 @@ namespace ClarkWinkelmann\CatchTheFish\Serializers;
 
 use ClarkWinkelmann\CatchTheFish\Fish;
 use Flarum\Api\Serializer\AbstractSerializer;
+use Flarum\Api\Serializer\BasicDiscussionSerializer;
+use Flarum\Api\Serializer\BasicUserSerializer;
+use Flarum\Api\Serializer\PostSerializer;
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Foundation\ValidationException;
 use Tobscure\JsonApi\Relationship;
+use Tobscure\JsonApi\Resource;
 
 class FishSerializer extends AbstractSerializer
 {
@@ -34,7 +38,7 @@ class FishSerializer extends AbstractSerializer
         return [
             'name' => $fish->name,
             'image_url' => $fish->image_url,
-            'placement' => $this->actorCan('catch', $fish) ? [
+            'placement' => $this->actorCan('catch', $fish) || $this->actorCan('catchthefish.moderate') ? [
                 'discussion_id' => $fish->discussion_id_placement,
                 'post_id' => $fish->post_id_placement,
                 'user_id' => $fish->user_id_placement,
@@ -60,5 +64,35 @@ class FishSerializer extends AbstractSerializer
     public function lastUserNaming($fish): ?Relationship
     {
         return $this->buildRelationship($fish, UserSerializer::class, 'lastUserNaming');
+    }
+
+    protected function placementRelationship($data, string $serializer): ?Relationship
+    {
+        if (!$data) {
+            return null;
+        }
+
+        $serializer = $this->resolveSerializerClass($serializer);
+
+        $element = new Resource($data, $serializer);
+
+        return new Relationship($element);
+    }
+
+    public function placement(Fish $fish): ?Relationship
+    {
+        if ($fish->discussion_id_placement) {
+            return $this->placementRelationship($fish->placementDiscussion()->whereVisibleTo($this->actor)->first(), BasicDiscussionSerializer::class);
+        }
+
+        if ($fish->post_id_placement) {
+            return $this->placementRelationship($fish->placementPost()->whereVisibleTo($this->actor)->first(), PostSerializer::class);
+        }
+
+        if ($fish->user_id_placement) {
+            return $this->placementRelationship($fish->placementUser()->whereVisibleTo($this->actor)->first(), BasicUserSerializer::class);
+        }
+
+        return null;
     }
 }

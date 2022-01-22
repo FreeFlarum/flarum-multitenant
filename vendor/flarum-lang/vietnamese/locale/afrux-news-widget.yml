@@ -6,4 +6,5 @@ afrux-news-widget:
   admin:
     settings:
       add_line: 'Thêm dòng tin tức'
+      html_warning: 'Hãy cẩn thận, HTML sẽ được hiển thị.'
       lines: 'Dòng tin tức'

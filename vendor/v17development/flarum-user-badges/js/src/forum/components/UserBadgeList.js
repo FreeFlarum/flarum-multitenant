@@ -1,5 +1,6 @@
 import Component from "flarum/common/Component";
-import UserBadge from "./UserBadge";
+import UserBadge from "../../common/components/UserBadge";
+import BadgeModal from "./BadgeModal";
 
 export default class UserBadgeList extends Component {
   view() {
@@ -63,7 +64,12 @@ export default class UserBadgeList extends Component {
                     .map((userBadge) => (
                       <UserBadge
                         badge={userBadge.badge()}
-                        userBadgeData={userBadge}
+                        onclick={() =>
+                          app.modal.show(BadgeModal, {
+                            badge: userBadge.badge(),
+                            userBadgeData: userBadge,
+                          })
+                        }
                       />
                     ))}
                 </div>
@@ -84,7 +90,12 @@ export default class UserBadgeList extends Component {
               .map((userBadge) => (
                 <UserBadge
                   badge={userBadge.badge()}
-                  userBadgeData={userBadge}
+                  onclick={() =>
+                    app.modal.show(BadgeModal, {
+                      badge: userBadge.badge(),
+                      userBadgeData: userBadge,
+                    })
+                  }
                 />
               ))}
           </div>

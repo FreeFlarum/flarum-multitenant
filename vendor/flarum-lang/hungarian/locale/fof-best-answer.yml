@@ -33,8 +33,18 @@ fof-best-answer:
     answered_badge: Megválaszolva
     best_answer_button: 'Legjobb válasz'
     best_answer_label: 'beállította <a>{username}</a> {time_set}'
+    composer:
+      titlePlaceholder: 'A kérdés címe'
     errors:
       mismatch: 'A kiválasztott válasz nincs a beszélgetésben.'
+    filter:
+      all_label: 'Összes kérdés'
+      solved_label: 'Megoldott kérdések'
+      unsolved_label: 'Megoldatlan kérdések'
+    index:
+      ask_question: 'Tegyen fel egy kérdést'
+      solved_link: 'Megoldott beszélgetések'
+      unsolved_link: 'Megoldatlan beszélgetések'
     notification:
       awarded: 'A hozzászólásodat {username} kiválasztotta, mint legjobb válasz'
       best_answer_in_discussion: '{username} kiválasztotta a legjobb választ a beszélgetésben'

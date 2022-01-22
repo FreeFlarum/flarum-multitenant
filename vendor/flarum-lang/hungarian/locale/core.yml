@@ -112,6 +112,7 @@ core:
       title: '=> core.ref.email'
     extension:
       configure_scopes: 'Célok beállítása'
+      confirm_purge: 'A tisztítás eltávolítja az összes, a bővítményhez tartozó adatbázis-bejegyzést és erőforrást. Nem távolítja el a bővítményt; azt a Composer segítségével kell megtenni. Valóban folytatja?'
       confirm_uninstall: 'A bővítmény eltávolítása törli az összes bővítménnyel kapcsolatos adatbázis bejegyzést és beállítást. Biztos folytatni szeretnéd?'
       disabled: Tiltva
       enable_to_see: 'Kapcsold be a bővítményt hogy hozzáférj a beállításaihoz.'
@@ -127,6 +128,11 @@ core:
       no_settings: 'Ennek a bővítménynek nincsenek beállításai.'
       open_modal: 'Beállítások megnyitása'
       permissions_title: Engedélyek
+      purge_button: Tisztítás
+      readme:
+        button_label: README
+        no_readme: 'Úgy tűnik, hogy ehhez a bővítményhez nem tartozik README fájl'
+        title: '{extName} dokumentáció'
       uninstall_button: Eltávolítás
     extensions:
       add_button: 'Kiegészítő hozzáadása'
@@ -311,6 +317,8 @@ core:
       mark_as_read_tooltip: 'Olvasottnak jelölöm'
       replied_text: '{username} válaszolt {ago}'
       started_text: '{username} indította {ago}'
+      total_replies_a11y_label: '{count, plural, one {# válasz} other {# válasz}}'
+      unread_replies_a11y_label: '{count, plural, one {# olvasatlan válasz} other {# olvasatlan válasz}}. Olvasatlan {count, plural, one {válasz} other {válaszok}} olvasottnak jelölése.'
     edit_user:
       activate_button: 'Felhasználó aktiválása'
       email_heading: '=> core.ref.email'
@@ -338,7 +346,9 @@ core:
       log_in_link: '=> core.ref.log_in'
       log_out_button: '=> core.ref.log_out'
       profile_button: Profil
+      search_clear_button_accessible_label: 'Cache sorbaállás leállítása'
       search_placeholder: Keresés
+      search_role_label: 'Fórum keresése'
       session_dropdown_accessible_label: 'Munkamenet opciók legördülő menü váltása'
       settings_button: '=> core.ref.settings'
       sign_up_link: '=> core.ref.sign_up'
@@ -449,6 +459,8 @@ core:
       alert_message: '=> core.ref.confirmation_email_sent'
       resend_button: 'Megerősítő e-mail újraküldése'
       sent_message: Elküldve
+    welcome_hero:
+      hide: 'Üdvözlő üzenet elrejtése'
   group:
     admin: Adminisztrátor
     admins: Adminisztrátorok
@@ -461,6 +473,7 @@ core:
   lib:
     badge:
       hidden_tooltip: Rejtett
+    debug_button: Hibakeresés
     dropdown:
       toggle_dropdown_accessible_label: 'Legördülő menü váltása'
     edit_user:
@@ -468,6 +481,7 @@ core:
       email_heading: '=> core.ref.email'
       email_label: '=> core.ref.email'
       groups_heading: Csoportok
+      nothing_available: 'Nem szerkesztheted ezt a felhasználót.'
       password_heading: '=> core.ref.password'
       password_label: '=> core.ref.password'
       set_password_label: 'Új jelszó adása'
@@ -480,12 +494,18 @@ core:
       generic_message: 'Hoppá! Valami hiba történt. Kérlek, frissítsd az oldalt és próbáld meg még egyszer.'
       missing_dependencies_message: 'Nem kapcsolhatod ki a(z) {extension}  amíg ez a bővítmény be van kapcsolva: {extension}'
       not_found_message: 'A kért erőforrás nem található.'
+      payload_too_large_message: 'A kérés terhelése túl nagy volt.'
       permission_denied_message: 'Nem rendelkezel megfelelő jogokkal ehhez.'
       rate_limit_exceeded_message: 'Túl gyors vagy! Próbáld meg kicsit később.'
+      render_failed_message: 'Sajnáljuk, hiba történt a tartalom megjelenítése közben. Ha felhasználó vagy, próbáld újra később. Ha Rendszergazda vagy, további információért nézd meg a Flarum naplófájljait.'
     loading_indicator:
       accessible_label: '=> core.ref.loading'
+    modal:
+      close: Bezárás
+    nav:
+      drawer_button: 'Navigációs fiók kinyitása'
     number_suffix:
-      kilo_text: K
+      kilo_text: E
       mega_text: M
     series:
       glue_text: ', '
@@ -498,6 +518,7 @@ core:
     change_email: 'E-mail cseréje'
     change_password: 'Jelszó cseréje'
     color: Szín
+    confirm_email: 'Email megerősítése'
     confirm_password: 'Jelszó megerősítése'
     confirmation_email_sent: 'Elküldtük a megerősítő emailt a {email} címre. Ha nem érkezik meg hamarosan, akkor ellenőrizd a spam mappát is.'
     custom_footer_text: 'Adj meg HTML-t, amely az oldal alján fog megjelenni.'
@@ -510,6 +531,7 @@ core:
     edit: Szerkesztés
     edit_user: 'Felhasználó szerkesztése'
     email: E-mail
+    extensions: Bővítmény
     icon: Ikon
     icon_text: 'Adj meg egy nevet bármely <a>FontAwesome</a> ikon-osztályból a <code>fas fa-</code> prefix <em>hozzáadásával</em>.'
     load_more: 'Továbbiak betöltése'
@@ -539,6 +561,22 @@ core:
     write_a_reply: 'Válasz írása...'
     you: Te
   views:
+    admin:
+      extensions:
+        caption: '=> core.ref.extensions'
+        disable: Kikapcsolás
+        empty: 'Nincs telepített bővítmény'
+        enable: Bekapcsolás
+        name: 'Bővítmény neve'
+        package_name: 'Csomag neve'
+        version: Verzió
+      info:
+        caption: 'Alkalmazás infó'
+      title: Adminisztráció
+    confirm_email:
+      submit_button: '=> core.ref.confirm_email'
+      text: 'Kattintson az alábbi gombra az e -mail cím megerősítéséhez.'
+      title: '=> core.ref.confirm_email'
     content:
       javascript_disabled_message: 'A legjobb élményhez egy modern böngésző szükséges engedélyezett JavaScript-tel.'
       load_error_message: 'Valami félresikerült az oldal betöltése közben. Próbáld meg frissíteni az oldalt.'

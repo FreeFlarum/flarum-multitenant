@@ -17,7 +17,7 @@ Forum admins may add additional items into the forum's HTML `<head>`
 Install manually with composer:
 
 ```sh
-composer require ianm/html-head
+composer require ianm/html-head:"*"
 ```
 
 ### Updating

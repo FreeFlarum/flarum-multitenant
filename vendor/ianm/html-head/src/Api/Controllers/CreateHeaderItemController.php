@@ -12,6 +12,7 @@
 namespace IanM\HtmlHead\Api\Controllers;
 
 use Flarum\Api\Controller\AbstractCreateController;
+use Flarum\Http\RequestUtil;
 use IanM\HtmlHead\Api\Serializers\HeaderSerializer;
 use IanM\HtmlHead\Command\CreateHeaderItem;
 use Illuminate\Contracts\Bus\Dispatcher;
@@ -44,7 +45,7 @@ class CreateHeaderItemController extends AbstractCreateController
      */
     protected function data(ServerRequestInterface $request, Document $document)
     {
-        $actor = $request->getAttribute('actor');
+        $actor = RequestUtil::getActor($request);
 
         return $this->bus->dispatch(
             new CreateHeaderItem($actor, Arr::get($request->getParsedBody(), 'data', []))

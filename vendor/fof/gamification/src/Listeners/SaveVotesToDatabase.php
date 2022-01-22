@@ -21,6 +21,7 @@ use Flarum\Post\Post;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\User;
 use FoF\Gamification\Events\PostWasVoted;
+use FoF\Gamification\Events\UserPointsUpdated;
 use FoF\Gamification\Gamification;
 use FoF\Gamification\Notification\VoteBlueprint;
 use FoF\Gamification\Rank;
@@ -106,6 +107,9 @@ class SaveVotesToDatabase
 
     public function vote($post, $isDownvoted, $isUpvoted, $actor, $user)
     {
+        /**
+         * @var Vote $vote
+         */
         $vote = Vote::where([
             'post_id' => $post->id,
             'user_id' => $actor->id,
@@ -117,10 +121,10 @@ class SaveVotesToDatabase
 
                 $vote->delete();
             } else {
-                if ($vote->isUpvote()) {
-                    $vote->value = -1;
-                } else {
+                if ($isUpvoted) {
                     $vote->value = 1;
+                } elseif ($isDownvoted) {
+                    $vote->value = -1;
                 }
 
                 $vote->save();
@@ -154,7 +158,10 @@ class SaveVotesToDatabase
     public function updatePoints(?User $user, Post $post)
     {
         if ($user) {
-            Vote::updateUserVotes($user)->save();
+            $user = Vote::updateUserVotes($user);
+            $user->save();
+
+            $this->events->dispatch(new UserPointsUpdated($user));
         }
 
         $discussion = $post->discussion;

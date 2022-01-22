@@ -34,6 +34,7 @@ fof-webhooks:
   admin:
     errors:
       service_not_found: 'Usługa "{service}" nie została odnaleziona.'
+      tag_invalid: 'Ten webhook jest ograniczony do nieprawidłowego taga. Ograniczenia nie zostaną zastosowane. Upewnij się, że jest to zamierzone.'
       url_invalid: 'Ten adres URL jest nieprawidłowy dla wybranej usługi.'
     nav:
       desc: 'Konfigurowalne wychodzące webhooki dla Twojego forum.'
@@ -64,6 +65,8 @@ fof-webhooks:
             registered: Rejestracja
             renamed: 'Zmieniono nazwę'
             title: Użytkownicy
+      debug_help: 'Dodaj dodatkowe logi do pliku logów Flarum, aby ułatwić debugowanie problemów z webhookami i/lub zdarzeniami, które nie działają prawidłowo.'
+      debug_label: Debug
       help:
         disabled: 'Ten webhook jest wyłączony, ponieważ nie ma żadnych aktywnych zdarzeń.'
         general: 'Tutaj możesz dodać, edytować oraz usuwać webhooki dla swojego forum.'

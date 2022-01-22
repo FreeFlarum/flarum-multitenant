@@ -22,6 +22,7 @@ return [
         ->route('/catch-the-fish/rounds', 'catch-the-fish-rounds')
         ->route('/catch-the-fish/rounds/{id}', 'catch-the-fish-round'),
     (new Extend\Frontend('admin'))
+        ->css(__DIR__ . '/resources/less/admin.less')
         ->js(__DIR__ . '/js/dist/admin.js'),
 
     (new Extend\Routes('api'))

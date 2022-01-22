@@ -4,6 +4,9 @@
 
 A [Flarum](http://flarum.org) extension. Adds class for logged in members. If someone is logged in, "logged-in" is added as a CSS class to the `body` tag. This very simple extension will allow you to make endless CSS customizations just for members. (CSS knowledge required.)
 
+Now includes two BBCodes:
+`[members][/members]` - only logged in members see this content
+`[guests][/guests]` - guests see this content but it will be hidden for logged in members
 
 ### Installation
 

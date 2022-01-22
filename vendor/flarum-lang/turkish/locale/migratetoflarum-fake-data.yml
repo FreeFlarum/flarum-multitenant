@@ -36,7 +36,7 @@ migratetoflarum-fake-data:
   ref:
     bulk-mode: 'Toplu mod'
     bulk-mode-description: 'Tek bir rastgele değer üretir ve her giriş için yeniden kullanır'
-    date: 'Date seed'
+    date: 'Tarih tohumu'
     date-interval-placeholder: 'Aralık (varsayılan: 1 saniye)'
     date-start-placeholder: 'Başlangıç tarihi (varsayılan: şimdi)'
     post-count: 'Oluşturulacak gönderi sayısı'

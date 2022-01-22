@@ -83,6 +83,7 @@ xelson-chat:
           search:
             failed: 'Nie znaleziono pasujących użytkowników'
             invited: Zaproszony
+            more_results: 'I {more_results} więcej...'
             placeholder: 'Wyszukaj użytkowników'
           title: 'Wybierz użytkowników'
         pin: 'Przypnij panel'

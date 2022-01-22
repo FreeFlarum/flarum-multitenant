@@ -14,8 +14,11 @@ fof-oauth:
     log_in:
       with_button: 'Đăng nhập bằng {provider}'
       with_vkontakte_button: '=> fof-oauth.forum.log_in.with_button'
+    providers:
+      vk: '=> fof-oauth.lib.providers.vk'
+      vkontakte: '=> fof-oauth.lib.providers.vkontakte'
   lib:
     providers:
-      vkontakte: Vkontakte
+      vkontakte: VK
   providers:
     vkontakte: '=> fof-oauth.lib.providers.vkontakte'

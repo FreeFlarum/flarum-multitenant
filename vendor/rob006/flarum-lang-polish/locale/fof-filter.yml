@@ -4,6 +4,8 @@
 
 fof-filter:
   admin:
+    auto_merge_title: 'Automatyczne scalanie'
+    bad_words_help: 'Podaj ciągi znaków do odfiltrowania, po jednym na wiersz. Jeśli post zawiera któryś z podanych ciągów, post zostanie oznaczony do zatwierdzenia przez moderację. Odporne na 133t.'
     cooldownLabel: 'Scalanie postów'
     countLabel: 'Poziom tolerancji cenzora'
     email:
@@ -25,6 +27,8 @@ fof-filter:
     nav:
       desc: 'Odfiltruj posty z niedowolnymi słowami.'
       text: Filtrowanie
+    permission:
+      bypass_filter_label: 'Pomijanie filtra słów'
     title: Filtrowanie
   forum:
     flag_message: 'Zawiera zablokowane ciągi znaków'

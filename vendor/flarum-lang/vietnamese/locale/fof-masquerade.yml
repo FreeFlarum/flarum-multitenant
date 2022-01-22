@@ -31,6 +31,7 @@ fof-masquerade:
       validation-help: "Kiểm tra <a>các quy tắc xác thực của Laravel</a>. Vd: \"string|min:5\" hoặc \"url\".\n"
     general-options: 'Tùy chọn chung'
     permissions:
+      edit-others-profile: 'Chỉnh sửa hồ sơ của người dùng khác'
       have-profile: 'Có hồ sơ masquerade'
       view-profile: 'Xem hồ sơ masquerade'
     types:
@@ -44,6 +45,7 @@ fof-masquerade:
       profile-completed: 'Hồ sơ đã hoàn thành! <a>Tiếp tục đến trang chủ</a>'
       profile-completion-required: "Vui lòng hoàn thành các trường hồ sơ cần thiết bên dưới.\n"
     buttons:
+      edit-profile: 'Chỉnh sửa hồ sơ'
       save-profile: 'Lưu lại'
       view-profile: 'Xem hồ sơ'
     fields:

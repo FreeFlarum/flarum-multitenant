@@ -15,9 +15,12 @@ michaelbelgium-discussion-views:
     settings:
       abbr_numbers_label: 'Skróć liczbę wyświetleń ("1k" zamiast "1000")'
       max_viewcount_label: 'Liczba ostatnio oglądających wyświetlanych na liście'
+      max_viewcount_text: 'Ustawienie dotyczy zarówno listy w sidebarze jak i stopce'
       show_filter_label: 'Włącz sortowanie dyskusji na podstawie liczby wyświetleń'
+      show_footer_viewlist_label: 'Włącz listę ostatnio oglądających w stopce'
       show_viewlist_label: 'Włącz listę ostatnio oglądających'
       title: 'Ustawienia liczby wyświetleń dyskusji'
+      track_guests: 'Zliczaj gości'
       track_unique_label: 'Zliczaj unikalne wyświetlania'
   forum:
     discussion_controls:
@@ -26,6 +29,11 @@ michaelbelgium-discussion-views:
       label: '{count, plural, one {Czy jesteś pewien, że chcesz usunąć {count} wyświetlenie tej dyskusji?} few {Czy jesteś pewien, że chcesz usunąć {count} wyświetlenia tej dyskusji?} other {Czy jesteś pewien, że chcesz usunąć {count} wyświetleń tej dyskusji?}}'
       submit_button: 'Tak, usuń wszystkie'
       title: 'Zresetuj liczbę wyświetleń dyskusji'
+    post:
+      modal_title_text: 'Użytkownicy, którzy ostatnio przeglądali tę dyskusję'
+      others_link: '=> core.ref.some_others'
+      viewed_by: 'Wyświetlone przez: {users}.'
+      you: '=> core.ref.you'
     viewlist:
       guest: Gość
       title: 'Ostatnio oglądający'

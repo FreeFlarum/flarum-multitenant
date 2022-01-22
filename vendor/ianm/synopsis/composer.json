@@ -45,7 +45,10 @@
                 "name": "fas fa-comment-dots",
                 "backgroundColor": "#0072e3",
                 "color": "#fff"
-            }
+            },
+            "optional-dependencies": [
+              "flarum/tags"
+            ]
         }
     }
 }

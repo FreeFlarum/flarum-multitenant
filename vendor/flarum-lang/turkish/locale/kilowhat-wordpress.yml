@@ -4,38 +4,60 @@
 
 kilowhat-wordpress:
   admin:
+    appearance:
+      edit_css_button: 'Yalnızca Wordpress Embed için Özel CSS''yi düzenleyin'
+    edit_css:
+      customize_text: 'Yalnızca Wordpress iframe içinde Flarum''un <a>varsayılan stillerinin</a> üzerine uygulanacak kendi LESS/CSS''niz.'
+      title: 'Özel Embed CSS''sini Düzenle'
     health:
       check: 'Şimdi kontrol et'
       errors: 'Bazı sorumlar bulduk.'
       healthy: 'Her şey harika görünüyor!'
+      not-run: 'Wordpress ve Flarum''u bağladığınızda Sağlık kontrolü kullanılabilir hale gelecektir.'
+      request-error: 'Sağlık kontrolünü gerçekleştiremedik.'
       title: 'Sağlık kontrolü'
+    permissions:
+      gambits: 'Wordpress Üçüncü-taraf hileleri (belgelere bakın)'
     save-controls:
       no-unsaved-changes: 'Her şey kaydedildi'
       save: Kaydet
       saved-at: '{ago} kaydedildi'
       unsaved-changes: 'Kaydedilmeyen değişiklikler var'
+      validation-errors: 'Gönderinizde bazı hatalar bulduk'
     settings:
       api_key: 'Flarum API Anahtarı'
+      comment_tag: 'Yeni yorum konuları için etiketleyin'
       comment_tag_custom: 'Özel değerler'
+      comment_tag_custom_help: 'Etiket kimliklerinin virgülle ayrılmış listesi'
+      comment_tag_none: 'Etiket atama'
       cookie_domain: 'Çerez Alan Adı'
       cookie_domain_help: 'Yalnızca Flarum alan adından farklıysa gereklidir'
       enable_comments: 'Yorum entegrasyonunu etkinleştir'
       enable_sso: 'SSO Entegrasyonunu Etkinleştir'
       excerpt_html_nodes: 'İçerik alıntısının uzunluğu (HTML etiketleri sayısı olarak)'
       excerpt_html_whitelist: 'Alıntıda kullanılacak HTML etiketlerinin beyaz listesi (virgülle ayrılmış)'
+      excerpt_length: 'İçerik alıntısının uzunluğu (karakter olarak)'
       force_username_choice: 'Kullanıcıların ilk ziyaretlerinde kullanıcı adlarını seçmelerini sağlayın'
       force_username_choice_help: 'Yukarıda seçilen kuralla varsayılan bir değer sağlanacaktır.'
+      post_delete: 'Bir Wordpress gönderisi kalıcı olarak silindiğinde eylem'
       post_delete_options:
         delete: 'Flarum''da tartışmayı kalıcı olarak sil'
         hide: 'Flarum''da tartışmayı gizle'
+        ignore: 'Yoksay (Flarum tartışmasını mevcut durumda tut)'
         lock: 'Flarum tartışmasını tut ve kilitle'
+      post_hide: 'Bir Wordpress gönderisi gizlendiğinde (çöp kutusuna atıldığında veya taslağa taşındığında) eylem'
       post_hide_options:
         delete: 'Flarum''da tartışmayı kalıcı olarak sil'
         hide: 'Flarum''da tartışmayı gizle'
+        ignore: 'Yoksay (tartışmayı Yorumlara İzin Ver''e göre kilitle)'
         lock: 'Flarum''da tartışmayı kilitle'
       section_comments_intro: "Bu özellik, WordPress yorumlarını bir Flarum iframe ile değiştirir. Ziyaretçiler artık yorum yapamaz. Tartışmalar yalnızca WordPress'te yorumların etkinleştirildiği gönderiler için oluşturulur. Yorumları etkinleştirmek veya devre dışı bırakmak, Flarum'un tartışma kilidi ile senkronize edilir. Bu özelliği etkinleştirdiğinizde blogunuz zaten gönderiler içeriyorsa, Flarum tartışmasının oluşturulabilmesi için her makale için yorumları yeniden etkinleştirmeniz ve devre dışı bırakmanız gerekir.\n"
       section_general_intro: 'Uzantının çalışmasını için gereken temel ayarlar.'
       section_sso_intro: "Bu özellik, WordPress kullanıcılarını Flarum ile sorunsuz bir şekilde bağlayacaktır. Onlar için otomatik olarak bir hesap oluşturacak ve WordPress ile senkronize edecektir. Flarum'da mevcut bir hesap varsa e-posta üzerinden otomatik eşleştirir. Flarum'da bir kullanıcıyı silerseniz, WordPress üzerinden oturum açarsa tekrar hesap oluşturur. Bu nedenle hesap silmek yerine askıya almayı deneyebilirsiniz.\n"
+      summary_as_last_post: 'Özet gönderisini yeni tartışmaların son gönderisi olarak ayarlayın'
+      summary_as_last_post_help: "Bu, Wordpress gönderisi yayınlanır yayınlanmaz yeni yorum tartışmalarının Flarum'daki tartışma listesinin en üstüne çıkmasını sağlar. Varsayılan olarak, tartışma yalnızca ilk kullanıcı bir yorum yazdığında en üste çıkar.\n"
+      use_post_date: 'Tartışma oluşturma tarihi olarak Wordpress gönderi tarihini kullanın'
+      use_post_date_help: "Varsayılan olarak Flarum tartışmaları, oluşturulma tarihi olarak geçerli saati kullanır. Bu seçenek, Wordpress gönderisinin de geçmiş bir tarihi varsa, geçmiş bir tarihle tartışmalar oluşturmaya izin verir.\n"
       user_delete: 'WordPress''te bir kullanıcı silindiğinde eylem'
       user_delete_desc: '"Sil"i seçerseniz, Flarum''daki içeriği değil, yalnızca kullanıcı silinir.'
       user_delete_options:
@@ -65,6 +87,12 @@ kilowhat-wordpress:
       wizard: 'Kurulum sihirbazı'
     wizard:
       install: Kur
+      intro: "Premium Wordpress uzantımı satın aldığınız için teşekkürler! Flarum ve Wordpress'inizi otomatik olarak birbirine bağlamak için aşağıdaki kimlik bilgilerinizi doldurun.\n"
+      wordpress_password: 'Wordpress yönetici şifresi'
+      wordpress_password_help: 'Parola yalnızca ilk yapılandırma için kullanılır ve saklanmaz.'
+      wordpress_url: 'Wordpress Bağlantısı'
+      wordpress_url_help: 'Wordpress ana sayfanıza bir bağlantı'
+      wordpress_username: 'Wordpress yönetici kullanıcı adı'
   api:
     blocked_actions:
       email_change: 'Bu hesap WordPress ile ilişkilendirildi. Elektronik postanı değiştirmek için ana siteyi kullan.'
@@ -72,11 +100,24 @@ kilowhat-wordpress:
       password_reset: 'Bu hesap WordPress ile ilişkilendirildi. Şifreyi sıfırlamak için ana siteyi kullan.'
     wizard:
       already_installed: "Flarum zaten WordPress'e bağlı. Sihirbazı tekrar çalıştırın, Flarum'daki \"WordPress Bağlantısını\" ve WordPress'teki \"Flarum API Anahtarını\" silin.\n"
+      api_error_get: 'Wordpress ayarlarına ({exception}) bir GET isteği gerçekleştirirken hata oluştu.'
+      api_error_post: 'Wordpress ayarlarına POST isteği yapılırken hata oluştu ({exception}).'
+      api_unauthorized: "Verilen kimlik bilgileriyle kimlik doğrulaması yapamadık. URL'yi, kullanıcı adını ve şifreyi iki kez kontrol edin. Daha fazla sorun giderme adımı için belgelere bakın.\n"
+      invalid_wordpress_url: 'Wordpress''teki "WordPress Adresi (URL)" ayarı geçerli bir URL ({actual}) gibi görünmüyor.'
+      plugin_not_installed: "Wordpress eklentisi, o Wordpress sitesinde yüklü veya etkin görünmüyor. En az 1.2.0 sürümünün kurulu olduğundan emin olun.\n"
   forum:
+    edit-user-modal:
+      edit_in_wordpress: 'Wordpress''te düzenleyin'
+      should_not_edit_email: 'E-postayı Wordpress''te düzenlemelisiniz. <a>Yine de düzenleyin</a>'
+      unlink: 'Bu kullanıcının wordpress kullanıcısından bağlantısını kaldırın'
+      unlink_help: 'E-posta bir Wordpress kullanıcısıyla eşleşirse, bu kullanıcı Wordpress''e bir sonraki bağlandığında yeniden bağlanır.'
+      warning: "Bu kullanıcı Wordpress ile senkronize tutulur. E-posta ve şifreyi Wordpress'ten düzenlemelisiniz.\n"
     embed:
       title: Yorumlar
     log_in:
       with_wordpress_button: 'WordPress ile Giriş Yap'
+    settings:
+      edit_on_wordpress: 'Ana web sitesinde e-posta ve şifreyi değiştirin'
     summary-post:
       blog_link: 'Blog''da oku'
       head_label: 'WordPress Gönderisi'
@@ -87,3 +128,6 @@ kilowhat-wordpress:
       submit: 'Forum hesabını etkinleştir'
       title: Hoşgeldin!
       username: 'Kullanıcı adı seç'
+  views:
+    error:
+      missing_wordpress_embed: "Bu yayının henüz bir yorum dizisi yok. Blog yöneticisiyseniz, gönderiyi yayınlayın veya bir ileti dizisi başlatmak için yorumları devre dışı bırakıp yeniden etkinleştirin.\n"

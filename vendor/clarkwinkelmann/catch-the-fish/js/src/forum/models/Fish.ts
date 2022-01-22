@@ -14,6 +14,7 @@ export default class Fish extends Model {
     namedBy: () => User | false = Model.hasOne('lastUserNaming');
     placedBy: () => User | false = Model.hasOne('lastUserPlacement');
     round = Model.hasOne('round');
+    placementModel = Model.hasOne('placement'); // Only used by the admin panel to show the link to the resource
 
     apiEndpoint() {
         return '/catch-the-fish/' + (this.exists ? 'fishes/' + this.data.id : 'rounds/' + this.data.attributes.round_id + '/fishes');

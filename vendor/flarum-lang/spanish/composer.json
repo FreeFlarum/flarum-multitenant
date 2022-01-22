@@ -2,7 +2,7 @@
     "name": "flarum-lang/spanish",
     "type": "flarum-extension",
     "description": "Spanish Language Pack.",
-    "keywords": ["flarum","locale","spanish"],
+    "keywords": ["extension", "flarum", "language", "locale", "spanish", "translation"],
     "license": "MIT",
     "authors": [
         {

@@ -12,7 +12,7 @@ class UserPolicy extends AbstractPolicy
      * @param User|string $user User model or ::class
      * @return bool
      */
-    public function shadowBan(User $actor, $user = '')
+    public function shadowBan(User $actor, $user = ''): bool
     {
         return $actor->hasPermission('clarkwinkelmann-shadow-ban.ban');
     }

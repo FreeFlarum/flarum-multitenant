@@ -1,6 +1,0 @@
-malago-fancybox:
-  forum:
-    next:  "Next" # Original: Next
-    prev:  "Previous" # Original: Previous
-    close: "Cloes" # Original: Close
-    error: "teh requestd content cannot bees loadd." # Original: The requested content cannot be loaded.

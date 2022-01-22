@@ -1,0 +1,51 @@
+{
+  "name": "justoverclock/flarum-ext-feedback",
+  "description": "Add a feedback module to Flarum",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/justoverclockl/flarum-ext-feedback/issues",
+    "source": "https://github.com/justoverclockl/flarum-ext-feedback",
+    "forum": "https://discuss.flarum.org/d/28089-feedback"
+  },
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+        "name": "Marco Colia",
+        "homepage": "https://discuss.flarum.org/u/Justoverclock",
+        "role": "Developer"
+    },
+    {
+      "name": "IanM",
+      "homepage": "https://discuss.flarum.org/u/ianm",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\Feedback\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Feedback",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-comment-dots",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/XXX"
+    }
+  }
+}

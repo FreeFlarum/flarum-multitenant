@@ -113,7 +113,9 @@ class StopForumSpam
 
             foreach ($body as $key => $value) {
                 if ((int) $this->settings->get("fof-stopforumspam.$key")) {
-                    $frequency += $value->frequency;
+                    if (isset($value->frequency)) {
+                        $frequency += $value->frequency;
+                    }
 
                     if (isset($value->confidence)) {
                         $confidence += $value->confidence;

@@ -33,7 +33,7 @@ class EscapeFormula
     /**
      * Spreadsheet formula starting character.
      */
-    const FORMULA_STARTING_CHARS = ['=', '-', '+', '@'];
+    const FORMULA_STARTING_CHARS = ['=', '-', '+', '@', "\t", "\r"];
 
     /**
      * Effective Spreadsheet formula starting characters.
@@ -56,7 +56,7 @@ class EscapeFormula
      * @param string[] $special_chars additional spreadsheet formula starting characters
      *
      */
-    public function __construct(string $escape = "\t", array $special_chars = [])
+    public function __construct(string $escape = "'", array $special_chars = [])
     {
         $this->escape = $escape;
         if ([] !== $special_chars) {
@@ -126,13 +126,13 @@ class EscapeFormula
     /**
      * Escape a CSV cell if its content is stringable.
      *
-     * @param mixed $cell the content of the cell
+     * @param int|float|string|object|resource|array $cell the content of the cell
      *
-     * @return mixed|string the escaped content
+     * @return mixed the escaped content
      */
     protected function escapeField($cell)
     {
-        if (!$this->isStringable($cell)) {
+        if (!is_string($cell) && (!is_object($cell) || !method_exists($cell, '__toString'))) {
             return $cell;
         }
 
@@ -145,6 +145,8 @@ class EscapeFormula
     }
 
     /**
+     * @deprecated since 9.7.2 will be removed in the next major release
+     *
      * Tells whether the submitted value is stringable.
      *
      * @param mixed $value value to check if it is stringable

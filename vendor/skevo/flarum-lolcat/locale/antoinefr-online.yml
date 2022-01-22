@@ -1,9 +1,0 @@
-antoinefr-online:
-  forum:
-    title: "hoo iz onlien?" # Original: Who is online?
-    andmore: "and {more} more..."
-    online_users: "{more, plural, one {# user is online} other {# users are online}}"
-  admin:
-    settings:
-      displaymax: "numbr ov memberz displayd" # Original: Number of members displayed
-      titleoflist: "Titel 2 bees displayd aboev teh list" # Original: Title to be displayed above the list

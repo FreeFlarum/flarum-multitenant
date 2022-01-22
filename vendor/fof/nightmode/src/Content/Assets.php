@@ -70,7 +70,7 @@ class Assets extends \Flarum\Frontend\Content\Assets
     {
         return sprintf(
             '<link rel="stylesheet" media="%s" class="nightmode-%s" href="%s" />',
-            $auto && $type === 'dark' ? '(prefers-color-scheme: dark)' : '',
+            $auto ? ($type === 'dark' ? '(prefers-color-scheme: dark)' : 'not all and (prefers-color-scheme: dark)') : '',
             $type,
             $url
         );
@@ -93,7 +93,7 @@ class Assets extends \Flarum\Frontend\Content\Assets
             return (int) Arr::get($request->getCookieParams(), 'flarum_nightmode', $default);
         }
 
-        return (int) $actor->getPreference('fofNightMode', $default);
+        return (int) ($actor->getPreference('fofNightMode') ?? $default);
     }
 
     // --- original ---

@@ -6,18 +6,21 @@ core:
   forum:
     index_sort:
       hot_button: Sıralama
+      votes_button: 'Yukarı Oylar'
 fof-gamification:
   admin:
     page:
+      alt_votes:
+        icon_name: 'Alternatif düzen simgesi adı'
       convert:
         button: 'Beğenileri yukarı oya çevir'
-        converted: '{number} beğeni başarıyla dönüştürüldü.'
+        converted: '{number} beğeni başarıyla dönüştürüldü'
         converting: 'Beğenileriniz dönüştürülüyor. Sonucu görmek için sayfayı birkaç dakika sonra yenileyin. (Dönüşüm forum beğenilerinize bağlı olarak zaman alabilir)'
         help: 'flarum-ext-likes eklentisindeki beğenilerinizi yukarı oya çevirin, ve şuanki tüm konularınız için aktifliğini hesaplayın.'
       rankings:
         blocked:
           help: 'Bu kullanıcılar sıralama sayfasında görünmeyecek. Kullanıcı adları virgül ve sonrasında boşluk ile ayrılmalıdır.'
-          placeholder: 'CDK2020, Ralkage, AngelAvila'
+          placeholder: 'tolgaaaltas, mekici, DursunCan'
           title: 'Yoksayılan kullanıcılar'
         custom_image_1: '1. sıra resmi'
         custom_image_2: '2. sıra resmi'
@@ -35,21 +38,30 @@ fof-gamification:
         title: Rütbeler
       save_settings: 'Ayarları Kaydet'
       votes:
-        alternate_layout: 'Olumlu/olumsuz oylar yapmak için alternatif düzen kullanın'
+        alternate_layout: 'Tartışma listesinde alternatif oylama düzenini kullan'
+        alternate_post_layout: 'Tartışma listesinde alternatif oylama düzenini kullan'
         auto_upvote: 'Paylaşıldığında otomatik yukarı oyla'
         color_holder: '#ffffff'
         discussion_page: 'Orijinal gönderilerin toplam oylarını tartışma listesinde göster'
+        first_post_only: 'Bir tartışmada yalnızca ilk gönderinin yukarı/aşağı oylanmasına izin verin'
         icon_help: 'İstediğiniz -up ve -down arka eki olan FontAwesome simgesini ekleyin. Örn: arrow, thumbs, chevron'
-        icon_name: 'Upvote/downvote icon'
+        icon_name: 'Yukarı oy/aşağı oy simgesi'
         points_placeholder: 'Points: '
         points_title: Puanlar
         rate_limit: 'Bir oy oranı limiti uygula (10 saniye)'
         title: Oylar
+        upvotes_only: 'Yalnızca yukarı oya izin ver'
         vote_color: 'Oylandığındaki renk'
     permissions:
       see_ranking_page: 'Sıralama sayfasına bak'
-      see_votes_label: 'See post upvotes/downvotes'
+      see_voters_label: 'Kimin oy verdiğini göster'
+      see_votes_label: 'Yukarı oyların/aşağı oyların sayılarını göster'
       vote_label: 'Yukarı/Aşağı oylanan paylaşımlar'
+  email:
+    body:
+      postVoted: "Merhaba {recipient_display_name},\n\n{actor_display_name} az önce {discussion_title} tartışmasındaki gönderini oyladı.\n\nBurada görüntüleyin: {discussion_url}\n"
+    subject:
+      postVoted: 'Gönderiniz {display_name} tarafından oylandı'
   forum:
     mod_item: 'Oy Verenleri Göster'
     modal:
@@ -59,7 +71,12 @@ fof-gamification:
       name: Sıralamalar
     notification:
       downvote: '{username} paylaşımına aşağı oy verdi'
+      prefrences:
+        vote: 'Gönderilerimden biri yukarı/aşağı oylandığında'
       upvote: '{username} paylaşımına yukarı oy verdi'
+    post:
+      downvote_button: 'Aşağı oyla'
+      upvote_button: 'Yukarı oyla'
     ranking:
       amount: Puan
       name: Kullanıcı
@@ -68,4 +85,8 @@ fof-gamification:
       points: 'Puan: {points}'
       rank: '{rank}'
     vote_title: 'Oy Verenleri Göster'
+    voters:
+      label: Oylayanlar
+      label_none: 'Oylayan yok'
+      none: 'Henüz oylayan yok'
     votes: Oylar

@@ -1,0 +1,58 @@
+{
+  "name": "fof/moderator-notes",
+  "description": "Create private notes for your forum users",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/FriendsOfFlarum/moderator-notes/issues",
+    "source": "https://github.com/FriendsOfFlarum/moderator-notes",
+    "forum": "https://discuss.flarum.org/d/22925"
+  },
+  "homepage": "https://friendsofflarum.org",
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://opencollective.com/fof/donate"
+    }
+  ],
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "IanM",
+      "homepage": "https://discuss.flarum.org/u/ianm",
+      "role": "Developer"
+    },
+    {
+      "name": "David Sevilla Martin",
+      "email": "me+fof@datitisev.me",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\ModeratorNotes\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Moderator Notes",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-sticky-note",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      },
+      "optional-dependencies": [
+        "fof/impersonate"
+      ]
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/22925"
+    }
+  }
+}

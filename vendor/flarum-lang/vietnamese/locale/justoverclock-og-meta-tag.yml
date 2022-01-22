@@ -4,7 +4,7 @@
 
 justoverclock-og-meta-tag:
   admin:
-    ogdesc: 'Mô tả  Open Graph'
+    ogdesc: 'Mô tả Open Graph'
     ogdesc-help: 'Mô tả một vài dòng về trang web của bạn.'
     ogimage: 'Ảnh Open Graph'
     ogimage-help: 'URL hình ảnh sẽ đại diện cho object của bạn trong graph.'

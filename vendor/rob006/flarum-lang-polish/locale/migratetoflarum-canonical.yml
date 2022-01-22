@@ -7,7 +7,7 @@ migratetoflarum-canonical:
     settings:
       field:
         status: 'Rodzaj przekierowania'
-        wrong_url: 'Ustawienia rozszerzenia pojawią się gdy uzyskasz dostęp do forum przez adres kanoniczny'
+        wrong_url: 'Ustawienia rozszerzenia pojawią się, gdy uzyskasz dostęp do forum przez adres kanoniczny'
       option:
         301: '301 (trwałe przekierowanie - dla środowisk produkcyjnych)'
         302: '302 (tymczasowe przekierowanie - dla testów)'

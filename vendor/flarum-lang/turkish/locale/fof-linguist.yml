@@ -89,7 +89,7 @@ fof-linguist:
     locales:
       all: Tümü
     placeholder:
-      all-locales: 'Bu alana yazılan bir metin tüm dillerde gösterilir.'
+      all-locales: 'Bu alana yazılan bir metin tüm dillerde gösterilir'
       hint: 'Asıl değer:'
       not-translated: Çevirilmemiş
     tabs:

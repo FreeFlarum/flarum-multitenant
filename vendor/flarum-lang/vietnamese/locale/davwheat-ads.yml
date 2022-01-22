@@ -6,21 +6,27 @@ davwheat:
   ads:
     admin:
       settings:
+        add_script: Mới
         alert:
           code_has_script: 'Một hoặc nhiều quảng cáo của bạn chứa thẻ script, không được phép. Hãy xóa những thứ này và thử lại.'
           fix_errors: 'Vui lòng khắc phục các lỗi phía trên trước khi lưu các thay đổi'
         allow_after_placeholder: 'Giữa các bài viết: hiển thị quảng cáo sau khi trả lời'
         between_posts_gap: 'Giữa các bài viết: khoảng cách giữa các quảng cáo'
-        code_input: 'Mã quảng cáo cho "{for}"'
+        code_input: 'Mã HTML'
         code_input_disabled: 'Kích hoạt vị trí này để chỉnh sửa mã HTML.'
         enabled_locations: 'Vị trí quảng cáo'
+        js_input: 'Mã Javascript'
+        js_input_disabled: 'Bật vị trí này để chỉnh sửa mã JS.'
         pub_id: 'ID nhà xuất bản AdSense'
         save_btn:
           dirty: 'Lưu thay đổi'
           fix_errors: 'Khắc phục các lỗi trước khi lưu'
           saved: 'Tất cả thay đổi đã được lưu lại'
           saving: 'Đang lưu...'
-        warning: "Mã quảng cáo <b>CHỈ</b> được chứa thẻ <code>ins</code> chứ không được chứa các thẻ script nào khác. Script sẽ tự động chạy bởi tiện ích này.\n"
+        script_deletion: 'Để xoá script, để trống và nhấn ''Lưu thay đổi''.'
+        script_urls: 'Tuỳ chỉnh URL script'
+        use_adsense: 'Sử dụng AdSense'
+        warning: "<b>Hướng dẫn:</b>\n<br></br>\n<b>HTML</b> - Chèn nội dung HTML cho quảng cáo vào hộp này. Không chèn bất kỳ thẻ {script} vào hộp này. Chúng sẽ không hoạt động.\n<br></br>\n<b>JS</b> - Chèn mã Javascript tùy chỉnh để chèn vào thẻ script. Cái này <b>KHÔNG</b> bao gồm thẻ {script}.\n"
     lib:
       locations:
         between_posts: 'Giữa các bài viết'

@@ -4,6 +4,9 @@
 
 fof-pages:
   admin:
+    badges:
+      hidden: Borrador
+      restricted: Restringido
     edit_page:
       content_label: '=> fof-pages.ref.content'
       content_placeholder: '=> fof-pages.ref.content'
@@ -11,7 +14,9 @@ fof-pages:
       delete_page_confirmation: '¿Estás seguro de que quieres eliminar esta pagina?'
       hidden_label: 'Guardar como borrador'
       html_label: 'Activar Html'
+      restricted_label: 'Restringir acceso (decidir quién puede acceder en la sección de Permisos)'
       set_as_home_page_confirmation: '¿Estás seguro de que deseas configurar esta página como su página de inicio?'
+      set_as_home_page_done: 'Página principal actualizada'
       slug_label: '=> fof-pages.ref.slug'
       slug_placeholder: '=> fof-pages.ref.slug'
       submit_button: '=> core.ref.save_changes'
@@ -25,6 +30,8 @@ fof-pages:
     pages_list:
       empty_text: 'Parece que no hay páginas aquí.'
       title: '=> fof-pages.ref.title'
+    permissions:
+      restricted: 'Ver páginas restringidas'
   ref:
     content: Contenido
     create_page: 'Crear Página'

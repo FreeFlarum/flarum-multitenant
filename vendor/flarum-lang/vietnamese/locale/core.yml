@@ -50,7 +50,7 @@ core:
     edit_css:
       customize_text: 'Tùy chỉnh giao diện diễn đàn của bạn bằng cách thêm mã LESS/CSS của riêng bạn để được áp dụng trên <a>kiểu mặc định của Flarum</a>.'
       submit_button: '=> core.ref.save_changes'
-      title: 'Chỉnh sửa CSS'
+      title: 'Tuỳ chỉnh CSS'
     edit_footer:
       customize_text: '=> core.ref.custom_footer_text'
       submit_button: '=> core.ref.save_changes'
@@ -95,6 +95,7 @@ core:
       title: '=> core.ref.email'
     extension:
       configure_scopes: 'Cấu hình Phạm vi'
+      confirm_purge: 'Dọn dẹp sẽ xóa tất cả các mục nhập trong cơ sở dữ liệu và nội dung liên quan đến tiện ích mở rộng. Nó sẽ không gỡ tiện ích mở rộng; điều đó phải được thực hiện thông qua Composer. Bạn có chắc chắn muốn tiếp tục không?'
       confirm_uninstall: 'Gỡ cài đặt sẽ xóa tất cả các mục nhập trong cơ sở dữ liệu và nội dung liên quan đến tiện ích mở rộng. Bạn có chắc chắn muốn tiếp tục không?'
       disabled: 'Đã tắt'
       enable_to_see: 'Kích hoạt tiện ích mở rộng để xem và thay đổi cài đặt.'
@@ -110,6 +111,11 @@ core:
       no_settings: 'Tiện ích mở rộng này không có thiết lập nào.'
       open_modal: 'Mở thiết lập'
       permissions_title: Quyền
+      purge_button: 'Dọn dẹp'
+      readme:
+        button_label: README
+        no_readme: 'Tiện ích mở rộng này không có tệp README'
+        title: 'Tài liệu {extName}'
       uninstall_button: 'Gỡ cài đặt'
     header:
       get_help: 'Trợ giúp'
@@ -249,7 +255,7 @@ core:
     composer_discussion:
       body_placeholder: 'Nhập nội dung cho bài viết...'
       discard_confirmation: 'Bạn chưa đăng cuộc thảo luận này. Bạn có muốn huỷ không?'
-      submit_button: Đăng
+      submit_button: 'Đăng cuộc thảo luận'
       title: '=> core.ref.start_a_discussion'
       title_placeholder: 'Tiêu đề cuộc thảo luận'
     composer_edit:
@@ -281,6 +287,8 @@ core:
       mark_as_read_tooltip: 'Đánh dấu đã đọc'
       replied_text: '{username} đã trả lời {ago}'
       started_text: '{username} đã đăng bài {ago}'
+      total_replies_a11y_label: '{count, plural, one {# câu trả lời} other {# câu trả lời}}'
+      unread_replies_a11y_label: '{count, plural, one {# câu trả lời chưa đọc} other {# câu trả lời chưa đọc}}. Đánh dấu chưa đọc {count, plural, one {reply} other {replies}} thành đã đọc.'
     forgot_password:
       dismiss_button: '=> core.ref.okay'
       email_placeholder: '=> core.ref.email'
@@ -290,7 +298,7 @@ core:
       text: 'Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn một liên kết để đặt lại mật khẩu của bạn.'
       title: 'Quên mật khẩu'
     header:
-      admin_button: 'Quản trị viên'
+      admin_button: 'Trang quản trị'
       back_to_index_tooltip: 'Trở lại danh sách thảo luận'
       locale_dropdown_accessible_label: 'Thay đổi ngôn ngữ diễn đàn'
       log_in_link: '=> core.ref.log_in'
@@ -409,6 +417,8 @@ core:
       alert_message: '=> core.ref.confirmation_email_sent'
       resend_button: 'Gửi lại email xác nhận'
       sent_message: Gửi
+    welcome_hero:
+      hide: 'Ẩn thông báo chào mừng'
   group:
     admin: 'Quản trị viên'
     admins: 'Quản trị viên'
@@ -419,8 +429,11 @@ core:
     mod: 'Kiểm duyệt viên'
     mods: 'Kiểm duyệt viên'
   lib:
+    alert:
+      dismiss_a11y_label: 'Ẩn cảnh báo'
     badge:
       hidden_tooltip: 'Bị ẩn'
+    debug_button: 'Gỡ lỗi'
     dropdown:
       toggle_dropdown_accessible_label: 'Chuyển đổi menu thả xuống'
     edit_user:
@@ -428,6 +441,7 @@ core:
       email_heading: '=> core.ref.email'
       email_label: '=> core.ref.email'
       groups_heading: Nhóm
+      nothing_available: 'Bạn không được phép chỉnh sửa người dùng này.'
       password_heading: '=> core.ref.password'
       password_label: '=> core.ref.password'
       set_password_label: 'Đặt mật khẩu mới'
@@ -443,8 +457,16 @@ core:
       payload_too_large_message: 'Yêu cầu tải trọng quá lớn.'
       permission_denied_message: 'Bạn không có quyền để làm điều này.'
       rate_limit_exceeded_message: 'Bạn thao tác hơi nhanh quá. Vui lòng thử lại sau vài giây.'
+      render_failed_message: 'Xin lỗi, chúng tôi đã gặp lỗi khi hiển thị nội dung này. Nếu bạn là người dùng, vui lòng thử lại sau. Nếu bạn là quản trị viên, hãy xem các tệp nhật ký Flarum của bạn để biết thêm thông tin.'
     loading_indicator:
       accessible_label: '=> core.ref.loading'
+    meta_titles:
+      with_page_title: '{pageNumber, plural, =1 {{pageTitle} - {forumName}} other {{pageTitle}: Trang # - {forumName}}}'
+      without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Trang # - {forumName}}}'
+    modal:
+      close: Đóng
+    nav:
+      drawer_button: 'Mở ngăn điều hướng'
     number_suffix:
       kilo_text: 'N'
       mega_text: Tr
@@ -459,7 +481,7 @@ core:
     change_email: 'Đổi email'
     change_password: 'Đổi mật khẩu'
     color: 'Màu sắc'
-    confirm_email: 'Enail xác thực'
+    confirm_email: 'Xác nhận email'
     confirm_password: 'Xác nhận mật khẩu'
     confirmation_email_sent: 'Chúng tôi đã gửi email xác nhận đến {email}. Nếu không có, hãy kiểm tra trong mục Thư rác.'
     custom_footer_text: 'Thêm HTML để hiển thị bên dưới trang.'
@@ -492,7 +514,7 @@ core:
     reset_your_password: 'Đặt lại mật khẩu của bạn'
     restore: 'Khôi phục'
     save_changes: 'Lưu thay đổi'
-    settings: 'Cài đặt'
+    settings: 'Thiết lập'
     sign_up: 'Đăng ký'
     some_others: '{count, plural, one {# người khác} other {# người khác}}'
     start_a_discussion: 'Tạo cuộc thảo luận'
@@ -542,6 +564,9 @@ core:
       log_out_button: '=> core.ref.log_out'
       log_out_confirmation: 'Bạn có chắc chắn muốn đăng xuất khỏi {forum}?'
       title: '=> core.ref.log_out'
+    meta_titles:
+      with_page_title: '{pageNumber, plural, =1 {{pageTitle} - {forumName}} other {{pageTitle}: Trang # - {forumName}}}'
+      without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Trang # - {forumName}}}'
     reset_password:
       confirm_password_label: 'Xác nhận mật khẩu mới'
       new_password_label: 'Mật khẩu mới'

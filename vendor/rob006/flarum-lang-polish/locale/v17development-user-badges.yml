@@ -22,8 +22,15 @@ v17development-flarum-badges:
       requirement_drivers:
         has_badge: 'Posiada odznakę'
     badge:
+      background_color: 'Kolor tła'
       description: 'Opis odznaki'
       icon: 'Ikona odznaki'
+      icon_color: 'Kolor ikony'
+      image: 'URL obrazka'
+      image_placeholder: 'Podaj URL do obrazka dla tej odznaki'
+      is_image: 'Odznaka jest obrazkiem'
+      is_image_description: 'Użyj obrazka zamiast standardowej odznaki'
+      label_color: 'Kolor tekstu'
       name: 'Nazwa odznaki'
       visible: Widoczna
       visible_description: 'Jeśli odznaczysz tę opcję, odznaka nie będzie widoczna.'

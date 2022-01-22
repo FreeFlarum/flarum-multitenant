@@ -1,0 +1,51 @@
+{
+  "name": "malago/flarum-ext-fancybox",
+  "description": "Image formatting and lightbox modal using fancyBox (original from the-turk and squeevee).",
+  "keywords": [
+    "flarum"
+  ],
+  "conflict":
+    {
+      "the-turk/flarum-ext-fancybox": ">=0.1-beta",
+      "squeevee/flarum-ext-fancybox": ">=0.1-beta"
+    },
+  "type": "flarum-extension",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "flarum/core": "^1.0.0",
+    "fof/formatting":">=0.3.1"
+  },
+  "authors": [
+        {
+            "name": "Ellie Hawk",
+            "email": "squeevee@yahoo.com"
+        },
+        {
+            "name": "Hasan Özbey",
+            "email": "hasanoozbey@gmail.com"
+        }
+    ],
+  "autoload": {
+    "psr-4": {
+      "Malago\\FancyBox\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FancyBox",
+      "category": "appearance",
+      "icon": {
+            "name": "far fa-image",
+            "backgroundColor": "#b72a2a",
+            "color": "#fff"
+        }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/19535-fancybox-extension-beta"
+    },
+    "support": {
+        "issues": "https://github.com/malago86/flarum-ext-fancybox/issues",
+        "source": "https://github.com/malago86/flarum-ext-fancybox"
+    }
+  }
+}

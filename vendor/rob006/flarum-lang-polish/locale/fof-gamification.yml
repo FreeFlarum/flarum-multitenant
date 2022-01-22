@@ -6,9 +6,12 @@ core:
   forum:
     index_sort:
       hot_button: Popularne
+      votes_button: Lubiane
 fof-gamification:
   admin:
     page:
+      alt_votes:
+        icon_name: 'Alternatywne ikonki głosowania'
       convert:
         button: 'Konwertuj polubienia na głosy pozytywne'
         converted: 'Pomyślnie przekonwertowano wszystkie {number} polubień'
@@ -35,21 +38,30 @@ fof-gamification:
         title: Rangi
       save_settings: 'Zapisz ustawienia'
       votes:
-        alternate_layout: 'Użyj alternatywnego układu do wyświetlania oraz dodawania głosów'
+        alternate_layout: 'Użyj alternatywnego układu do głosowania na liście dyskusji'
+        alternate_post_layout: 'Użyj alternatywnego układu do głosowania na post'
         auto_upvote: 'Automatycznie oceń pozytywnie posty po ich opublikowaniu'
         color_holder: '#ffffff'
         discussion_page: 'Wyświetl sumę głosów pierwszego posta na liście dyskusji'
+        first_post_only: 'Pozwól głosować jedynie na pierwszy post w dyskusji'
         icon_help: 'Wprowadź dowolną ikonę Font Awesome, która ma końcówkę -up lub -down. Przykłady: arrow, thumbs, chevron'
         icon_name: 'Ikonki głosowania'
         points_placeholder: 'Punkty: '
         points_title: 'Placeholder dla punktów'
         rate_limit: 'Wymuś ograniczenie szybkości głosowania (10 sekund)'
         title: Głosy
+        upvotes_only: 'Pozwól jedynie na głosy pozytywne'
         vote_color: 'Kolor po zagłosowaniu'
     permissions:
       see_ranking_page: 'Przeglądanie rankingu'
-      see_votes_label: 'Przeglądanie głosów na posty'
+      see_voters_label: 'Przeglądanie kto zagłosował'
+      see_votes_label: 'Przeglądanie licznika głosów'
       vote_label: 'Oddawanie głosów na posty'
+  email:
+    body:
+      postVoted: "Witaj {recipient_display_name},\n\n{actor_display_name} właśnie zagłosował na Twój post w {discussion_title}.\n\nKliknij poniższy link, aby przejść do dyskusji:\n{discussion_url}\n"
+    subject:
+      postVoted: '{display_name} zagłosował na Twój post'
   forum:
     mod_item: 'Zobacz głosujących'
     modal:
@@ -59,7 +71,12 @@ fof-gamification:
       name: Rankingi
     notification:
       downvote: '{username} negatywnie ocenił Twój post'
+      prefrences:
+        vote: 'Ktoś zagłosował na mój post'
       upvote: '{username} pozytywnie ocenił Twój post'
+    post:
+      downvote_button: 'Oceń negatywnie'
+      upvote_button: 'Oceń pozytywnie'
     ranking:
       amount: Punkty
       name: Użytkownik
@@ -68,4 +85,8 @@ fof-gamification:
       points: 'Punkty: {points}'
       rank: '{rank}'
     vote_title: 'Pokaż kto zagłosował'
+    voters:
+      label: Głosujący
+      label_none: 'Brak głosujących'
+      none: 'Jeszcze nikt nie zagłosował'
     votes: Głosy

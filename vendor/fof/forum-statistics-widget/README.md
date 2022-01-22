@@ -9,7 +9,7 @@ A [Flarum](http://flarum.org) extension. Add a forum statistics widget to the si
 Using composer:
 
 ```sh
-composer require fof/forum-statistics-widget
+composer require fof/forum-statistics-widget:"*"
 ```
 
 ### Updating

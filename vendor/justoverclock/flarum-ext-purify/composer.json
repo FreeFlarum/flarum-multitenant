@@ -1,0 +1,43 @@
+{
+  "name": "justoverclock/flarum-ext-purify",
+  "description": "Bad words filter for post",
+  "keywords": [
+      "purify",
+      "bad words",
+      "censor"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\Purify\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Purify",
+      "category": "",
+      "icon": {
+        "name": "fas fa-head-side-cough",
+        "backgroundColor": "red",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

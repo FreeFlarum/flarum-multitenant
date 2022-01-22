@@ -22,7 +22,10 @@ use Flarum\Discussion\Event\Saving;
 use Flarum\Discussion\Filter\DiscussionFilterer;
 use Flarum\Discussion\Search\DiscussionSearcher;
 use Flarum\Extend;
+use Flarum\Tags\Api\Serializer\TagSerializer;
+use Flarum\Tags\Event\Creating as TagCreating;
 use FoF\DiscussionLanguage\Api\Serializers\DiscussionLanguageSerializer;
+use FoF\DiscussionLanguage\Api\Serializers\TagLocalizedLastDiscussionSerializer;
 
 return [
     (new Extend\Frontend('forum'))
@@ -47,7 +50,9 @@ return [
         ->hasOne('language', DiscussionLanguage::class, 'id', 'language_id'),
 
     (new Extend\Event())
-        ->listen(Saving::class, Listeners\AddDiscussionLanguage::class),
+        ->listen(Saving::class, Listener\AddDiscussionLanguage::class)
+        ->listen(TagCreating::class, Listener\TagCreating::class)
+        ->subscribe(Listener\UpdateTagMetadata::class),
 
     (new Extend\SimpleFlarumSearch(DiscussionSearcher::class))
         ->addGambit(Search\LanguageFilterGambit::class),
@@ -90,5 +95,9 @@ return [
 
     (new Extend\Settings())
         ->serializeToForum('fof-discussion-language.composerLocaleDefault', 'fof-discussion-language.composerLocaleDefault', 'boolVal')
-        ->serializeToForum('fof-discussion-language.showAnyLangOpt', 'fof-discussion-language.showAnyLangOpt', 'boolVal'),
+        ->serializeToForum('fof-discussion-language.showAnyLangOpt', 'fof-discussion-language.showAnyLangOpt', 'boolVal')
+        ->serializeToForum('fof-discussion-language.useLocaleForTagsPageLastDiscussion', 'fof-discussion-language.useLocaleForTagsPageLastDiscussion', 'boolVal'),
+
+    (new Extend\ApiSerializer(TagSerializer::class))
+        ->attributes(TagLocalizedLastDiscussionSerializer::class),
 ];

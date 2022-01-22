@@ -9,6 +9,7 @@ flarum-ext-welcomebox:
     SettingsLink: Ustawienia
     discussion: '=> core.ref.discussions'
     goToProfile: Profil
+    lastSeen: 'Ostatnia wizyta'
     notregistered: 'Obecnie nie jesteś zarejestrowany na tym forum.'
     npost: '=> core.ref.posts'
     tooltipDisclist: 'Moje dyskusje'

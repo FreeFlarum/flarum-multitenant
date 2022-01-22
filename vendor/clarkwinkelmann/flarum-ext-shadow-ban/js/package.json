@@ -1,5 +1,5 @@
 {
-    "name": "@clarkwinkelmann/create-user-modal",
+    "name": "@clarkwinkelmann/shadow-ban",
     "private": true,
     "dependencies": {
         "flarum-tsconfig": "^1.0",

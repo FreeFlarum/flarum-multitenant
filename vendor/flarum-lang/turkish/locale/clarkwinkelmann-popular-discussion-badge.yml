@@ -13,7 +13,7 @@ clarkwinkelmann-popular-discussion-badge:
       conditions_help: "Yorumlar, ilk gönderi dahil toplam yorum gönderisi sayısıdır. Görüntülenmeler, MichaelBelgium veya Flarumite uzantılarından alınır. Verilen zaman dilimi, son n saat içinde yorumları veya görünümleri saymak için kullanılacaktır. Zaman dilimleri görünümleri için yalnızca MichaelBelgium uzantısı desteklenir. Zaman dilimini boş bırakın veya tüm yorumları veya görünümleri saymak için 0 saat ayarlayın.\n"
       hours: s
       mode: 'Çalışma modu'
-      mode_help: "Frontend modu veritabanını kullanmayan verimli bir çözümdür.  Zamanlayıcı modu bir CRON kurulumu gerektirir ve koşullardaki zaman çerçevelerine izin verir.\n"
+      mode_help: "Frontend modu veritabanını kullanmayan verimli bir çözümdür. Zamanlayıcı modu bir CRON kurulumu gerektirir ve koşullardaki zaman çerçevelerine izin verir.\n"
       mode_options:
         frontend: Frontend
         scheduler: 'Zamanlayıcı (CRON)'

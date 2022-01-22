@@ -1,8 +1,0 @@
-flarum-ext-readmore:
-  forum:
-    readmore: "Read moar..." # Original: Read More...
-  admin:
-    charlenght: "Charactah Lenght" # Original: Character Lenght
-    charlenghtdesc: "Set teh numbr ov characterz beyond which 2 insert teh" # Original: Set the number of characters beyond which to insert the 
-    AlsoPost: "Enabel Excerpt 4 PostStream" # Original: Enable Excerpt for PostStream
-    AlsoPostdesc: "dis will allow extension 2 werk wif all ov ur Flarum post (not only on Profiel paeg)" # Original: This will allow extension to work with all of your Flarum post (not only on Profile Page)

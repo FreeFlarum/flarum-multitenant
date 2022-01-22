@@ -31,6 +31,7 @@ fof-masquerade:
       validation-help: "Desteklenen <a>Laravel doğrulama kurallarını</a> kontrol edin. Çrn: \"string|min:5\" ya da \"url\".\n"
     general-options: 'Genel ayarlar'
     permissions:
+      edit-others-profile: 'Diğer kullanıcıların profilini düzenle'
       have-profile: 'Masquerade profili var'
       view-profile: 'Masquerade profilini görüntüle'
     types:
@@ -44,6 +45,7 @@ fof-masquerade:
       profile-completed: 'Profil tamamlandı! <a>Ana sayfaya gidin</a>'
       profile-completion-required: "Lütfen aşağıdaki gerekli alanları doldurun.\n"
     buttons:
+      edit-profile: 'Profili düzenle'
       save-profile: Kaydet
       view-profile: 'Profili görüntüle'
     fields:

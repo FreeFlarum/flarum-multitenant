@@ -8,6 +8,7 @@ clarkwinkelmann-see-past-first-post:
       see-past-first-post: 'Önce ilk gönderiye bak'
     settings:
       hide-comment-count: 'Tartışmadaki yanıtların sayısını gizle'
+      hide-first-post: 'İlk gönderiyi de gizle'
       hide-last-post: 'Tartışmadaki son gönderi kullanıcısını ve tarihini gizle'
   forum:
     cant-see: 'Yanıtları görmek için yetkiniz bulunmuyor'

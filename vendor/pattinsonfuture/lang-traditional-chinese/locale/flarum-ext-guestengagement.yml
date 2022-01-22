@@ -1,0 +1,19 @@
+flarum-ext-guestengagement:
+    admin:
+        afterxpost: '在第 X 個帖子後顯示'
+        afterxpostdesc: '只允許數字，默認為 0 顯示在帖子流頂部'
+        autohide: 'X 秒後隱藏提示'
+        autohidedesc: '單位毫秒，例如用「5000」表示 5 秒'
+        changetextbox: 修改提示文本
+        changetextboxdesc: 設置位於帖子間的提示文本
+        enablealbox: 啟用/關閉首頁提示
+        enablepostbox: 啟用/關閉帖子間提示
+        maintitle: 修改提示標題
+        maintitledesc: 設置位於帖子間的提示標題
+    forum:
+        hello: 嗨！你似乎對這個論壇很感興趣，但是還沒有註冊賬號。
+        hellops: 嗨！你似乎對這個帖子很感興趣！
+        uwillreceive: 當有人回覆你時，你會收到站內或郵件通知。你也可以通過「點贊」表示讚賞。
+        uwillreceiveps: 當有人回覆你時，你會收到站內或郵件通知。你也可以通過「點贊」表示讚賞。
+        whenucreate: 創建帳戶後，我們能夠準確地記錄你已讀的內容，方便你接著從上次離開的地方閱讀。
+        whenucreateps: 創建帳戶後，我們能夠準確地記錄你已讀的內容，方便你接著從上次離開的地方閱讀。

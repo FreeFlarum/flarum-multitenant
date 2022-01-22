@@ -15,7 +15,7 @@ datitisev-maintenance:
       allow_bypass_maintenance_label: 'Bakım modunu Bypass et (ayar etkinleştirilmelidir)'
     settings:
       active_label: 'Bakım modu durumu'
-      allow_bypass_hint: 'DB erişilebilir değilse bypass olmaz. Forum ve API için geçerlidir (API, <code>config.php</code> aracılığıyla tamamen devre dışı bırakılmadıkça)'
+      allow_bypass_hint: 'DB erişilebilir değilse bypass olmaz. Forum ve API için geçerlidir (API, <code>config.php</code> aracılığıyla tamamen devre dışı bırakılmadıkça).'
       allow_bypass_label: 'İzin kullanarak forum ve API bakımının atlanmasına izin ver'
       disable_admin_label: 'Yönetici erişimini etkisizleştirin'
       disable_api_label: 'Tüm API erişimini etkisizleştirin'

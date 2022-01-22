@@ -22,8 +22,15 @@ v17development-flarum-badges:
       requirement_drivers:
         has_badge: 'Rozeti var'
     badge:
+      background_color: 'Arkaplan rengi'
       description: 'Rozet açıklaması'
       icon: 'Rozet simgesi'
+      icon_color: 'Simge rengi'
+      image: 'Rozet resim bağlantısı'
+      image_placeholder: 'Resim için bir bağlantı girin'
+      is_image: 'Rozeti bir resim yap'
+      is_image_description: 'Varsayılan rozet yerine bir resim kullanın'
+      label_color: 'Yazı rengi'
       name: 'Rozet adı'
       visible: Görünür
       visible_description: 'Bu rozeti etkinleştir. Etkisizleştirildiğinde rozet görünür olmaz.'
@@ -62,7 +69,7 @@ v17development-flarum-badges:
       category: 'Rozet kategorisi'
       description: 'Rozet açıklaması'
       earned_by_count: '{count, plural, one {<b># kullanıcı</b> tarafından edinildi} other {<b># kullanıcı</b> tarafından edinildi}}'
-      earned_count: '{count, plural, one  {<b># kullanıcı</b> bu rozeti kazandı} other {<b># kullanıcı</b> bu rozeti kazandı}}'
+      earned_count: '{count, plural, one {<b># kullanıcı</b> bu rozeti kazandı} other {<b># kullanıcı</b> bu rozeti kazandı}}'
       earned_on: 'Rozet şu nedenle kazanıldı'
       earning_reason: 'Rozeti kazanma nedeni'
       name: 'Rozet adı'

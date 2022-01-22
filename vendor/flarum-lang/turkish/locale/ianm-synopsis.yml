@@ -6,10 +6,18 @@ ianm-synopsis:
   admin:
     settings:
       excerpt-label: 'Özet metninin karakter sayısı'
+      excerpt-length:
+        help: 'Gönderiden kaç karakter görüntülenmelidir?'
+        label: 'Özet alıntısının karakter uzunluğu'
       excerpt-type: 'Özette hangi içerik gösterilsin?'
+      excerpt-type.help: 'Özet içeriği için ilk gönderi mi yoksa son gönderi mi kullanılacağını seçin'
+      excerpt-type.label: 'Hangi gönderi alıntı olarak gösterilmelidir?'
       first-label: 'İlk gönderi'
       last-label: 'Son gönderi'
       rich-excerpts: 'Özeti zengin içerik kullanarak gösterin (Dikkatle kullanın)'
+      rich-excerpts.help: 'Etkinleştirildiğinde özete resimler, yerleştirmeler ve diğer metin dışı öğeler dahil edilebilir'
+      rich-excerpts.label: 'Zengin içerik kullanarak alıntıları görüntüleyin'
+      tags-enabled: '<code>flarum/tags</code>''ı etkinleştirdiniz. Etiketlerin kendi ayarları olmadığı sürece, bu ayarlar varsayılan olacaktır.'
   forum:
     user:
       settings:
