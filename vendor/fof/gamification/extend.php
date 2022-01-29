@@ -47,6 +47,10 @@ return [
         ->relationship('upvotes', function (Post $post) {
             return $post->belongsToMany(User::class, 'post_votes', 'post_id', 'user_id', null, null, 'upvotes')
                 ->where('value', '>', 0);
+        })
+        ->relationship('downvotes', function (Post $post) {
+            return $post->belongsToMany(User::class, 'post_votes', 'post_id', 'user_id', null, null, 'upvotes')
+                ->where('value', -1);
         }),
 
     (new Extend\Model(Post::class))
@@ -83,10 +87,12 @@ return [
         ->listen(Saving::class, Listeners\SaveVotesToDatabase::class)
         ->listen(Posted::class, Listeners\AddVoteHandler::class)
         ->listen(Deleted::class, Listeners\RemoveVoteHandler::class)
-        ->listen(Started::class, Listeners\AddDiscussionVotes::class),
+        ->listen(Started::class, Listeners\AddDiscussionVotes::class)
+        ->subscribe(Listeners\QueueJobs::class),
 
     (new Extend\ApiSerializer(Serializer\PostSerializer::class))
-        ->hasMany('upvotes', Serializer\BasicUserSerializer::class),
+        ->hasMany('upvotes', Serializer\BasicUserSerializer::class)
+        ->hasMany('downvotes', Serializer\BasicUserSerializer::class),
 
     (new Extend\ApiSerializer(Serializer\UserSerializer::class))
         ->hasMany('ranks', Serializers\RankSerializer::class),
@@ -149,19 +155,19 @@ return [
 
     (new Extend\ApiController(Controller\ListPostsController::class))
         ->addInclude('user.ranks')
-        ->addOptionalInclude('upvotes'),
+        ->addOptionalInclude(['upvotes', 'downvotes']),
 
     (new Extend\ApiController(Controller\ShowPostController::class))
         ->addInclude('user.ranks')
-        ->addOptionalInclude('upvotes'),
+        ->addOptionalInclude(['upvotes', 'downvotes']),
 
     (new Extend\ApiController(Controller\CreatePostController::class))
         ->addInclude('user.ranks')
-        ->addOptionalInclude('upvotes'),
+        ->addOptionalInclude(['upvotes', 'downvotes']),
 
     (new Extend\ApiController(Controller\UpdatePostController::class))
         ->addInclude('user.ranks')
-        ->addOptionalInclude('upvotes'),
+        ->addOptionalInclude(['upvotes', 'downvotes']),
 
     (new Extend\ApiController(Controller\ShowForumController::class))
         ->addInclude('ranks'),

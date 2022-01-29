@@ -6,12 +6,19 @@ fof-merge-discussions:
   admin:
     permissions:
       merge_discussions_label: 'Tartışmaları birleştir'
+    settings:
+      search_result_help: '"Tartışmaları Birleştir" kipi içinde arama yaparken kaç tartışma döndürülmelidir. Varsayılan 4'
+      search_result_label: 'Tartışma Arama Sınırını Birleştir'
   api:
     error:
       deleting_failed: 'Boş tartışmalar silinirken bir hata oluştu.'
       fixing_posts_number_failed: 'Gönderi numaraları düzeltilemedi.'
       merging_failed: 'Tartışmalar birleştirilirken bir hata oluştu.'
       updating_failed: 'Tartışma ayrıntıları güncellenirken bir hata oluştu.'
+  email:
+    merged:
+      body: "Merhaba {recipient_display_name}, \n\nTartışmanız {merged_discussion_title},{actor_display_name} tarafından {discussion_title} ile birleştirildi.\n\nBurada görüntüleyin {discussion_url} .\n"
+      subject: '"{merged_discussion_title}" tartışmanız birleştirildi'
   forum:
     discussion:
       merge: '=> fof-merge-discussions.ref.merge'
@@ -23,6 +30,10 @@ fof-merge-discussions:
       type_from_label: 'Bu tartışmayı başka bir tartışmayla birleştir'
       type_target_help_text: '<b>{title}</b> ile birleştirilecek tartışma(lar) seçin.'
       type_target_label: 'Bu tartışmaya birleştir'
+    notification:
+      discussion_merged: '<b>{oldTitle}</b> tartışmanız {username} tarafından bu tartışmayla birleştirildi.'
+      preferences:
+        discussion_merged: 'Birisi tartışmalarımdan birini başka biriyle birleştiriyor'
     post:
       merged: '{count, plural, one {<b>#</b>gönderisi {titles} tartışmasından birleştirildi.} other {<b>#</b> gönderisi {titles} tartışmasından birleştirildi.}}'
   ref:

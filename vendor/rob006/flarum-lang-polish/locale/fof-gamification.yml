@@ -65,6 +65,7 @@ fof-gamification:
   forum:
     mod_item: 'Zobacz głosujących'
     modal:
+      downvotes_label: 'Głosujący negatywnie:'
       title: Głosujący
       upvotes_label: 'Głosujący pozytywnie:'
     nav:

@@ -6,27 +6,27 @@ export default class SettingsPage extends UserPage {
     /**
      * Build an item list for the user's settings controls.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    settingsItems(): ItemList;
+    settingsItems(): ItemList<import('mithril').Children>;
     /**
      * Build an item list for the user's account settings.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    accountItems(): ItemList;
+    accountItems(): ItemList<import('mithril').Children>;
     /**
      * Build an item list for the user's notification settings.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    notificationsItems(): ItemList;
+    notificationsItems(): ItemList<import('mithril').Children>;
     /**
      * Build an item list for the user's privacy settings.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    privacyItems(): ItemList;
+    privacyItems(): ItemList<import('mithril').Children>;
     discloseOnlineLoading: boolean | undefined;
 }
 import UserPage from "./UserPage";

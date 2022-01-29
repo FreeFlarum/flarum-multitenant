@@ -33,6 +33,9 @@ return [
     (new Extend\ApiSerializer(UserSerializer::class))
         ->attribute('staffBadge', function ($serializer, $user) {
             return $user->staffBadge;
+        })
+        ->attribute('tagList', function ($serializer, $user) {
+            return $user->tagList;
         }),
 
     (new Extend\Settings)

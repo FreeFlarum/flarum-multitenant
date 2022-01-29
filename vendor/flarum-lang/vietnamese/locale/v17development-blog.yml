@@ -18,6 +18,8 @@ v17development-flarum-blog:
       categories_heading: 'Danh mục'
       default_article_image_label: 'Hình ảnh bài viết mặc định'
       default_article_image_text: 'Chọn một hình ảnh bài viết mặc định để hiển thị khi không có hình ảnh nào được đặt.'
+      featured_count_label: 'Số lượng bài viết nổi bật tối đa'
+      featured_count_text: 'Số lượng bài viết hiển thị trong grid lớn ở đầu trang blog?'
       hide_on_discussion_list_label: 'Không hiện blog trên danh sách thảo luận'
       hide_on_discussion_list_text: 'Ẩn các bài viết trên blog khỏi danh sách Cuộc thảo luận.'
       hide_tags_in_taglist_label: 'Ẩn thẻ trong danh sách thẻ'

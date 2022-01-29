@@ -1,4 +1,5 @@
-export default class SettingsModal extends Modal {
+export default class SettingsModal extends Modal<import("../../common/components/Modal").IInternalModalAttrs> {
+    constructor();
     settings: {} | undefined;
     form(): string;
     submitButton(): JSX.Element;

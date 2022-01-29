@@ -1,10 +1,10 @@
-# Mobile tab
+# Mobile Tab Component
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/acpl/mobile-tab.svg)](https://packagist.org/packages/acpl/mobile-tab) [![Total Downloads](https://img.shields.io/packagist/dt/acpl/mobile-tab.svg)](https://packagist.org/packages/acpl/mobile-tab) ![Supports latest Flarum](https://flarum-badge-api.davwheat.dev/v1/compat-latest/acpl/mobile-tab)
 
 A [Flarum](https://flarum.org) extension. Adds a bottom tab on mobile.
 
-![Imgur](https://i.imgur.com/cRnwEhZ.png)
+![Imgur](https://i.imgur.com/QGrWQyP.png)
 
 ### Installation
 
@@ -22,7 +22,7 @@ php flarum cache:clear
 ```
 
 ### Extending
-You can add, modify and delete items.
+You can add, modify and delete items with your own extension.
 Read: https://docs.flarum.org/extend/extending-extensions.html#extending-extensions
 
 Examples:

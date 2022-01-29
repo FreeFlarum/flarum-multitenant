@@ -65,6 +65,7 @@ fof-gamification:
   forum:
     mod_item: 'Oy Verenleri Göster'
     modal:
+      downvotes_label: 'Olumsuz oy verenler:'
       title: 'Oy Verenler'
       upvotes_label: 'Yukarı oyverenler:'
     nav:

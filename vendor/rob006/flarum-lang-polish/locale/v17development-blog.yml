@@ -18,6 +18,8 @@ v17development-flarum-blog:
       categories_heading: Kategorie
       default_article_image_label: 'Domyślny obrazek wpisu'
       default_article_image_text: 'Wybierz domyślny obrazek wyświetlany dla wpisów, które nie mają ustawionego obrazka.'
+      featured_count_label: 'Liczba wyróżnionych postów'
+      featured_count_text: 'Jak wiele postów powinno wyświetlać się w kafelkach na górze strony?'
       hide_on_discussion_list_label: 'Nie pokazuj na liście dyskusji'
       hide_on_discussion_list_text: 'Wpisy z bloga nie będą wyświetlane na liście dyskusji na forum.'
       hide_tags_in_taglist_label: 'Ukryj tagi na liście tagów'

@@ -4,6 +4,8 @@
 
 fof-filter:
   admin:
+    auto_merge_title: 'Unione automatica'
+    bad_words_help: 'Inserisci testo o parole da filtrare, una per riga. Se il contenuto del post di un utente contiene una stringa che desideri filtrare, verrà contrassegnata per l''approvazione. Resistente contro 133t.'
     cooldownLabel: 'Unisci post Recuperati'
     countLabel: 'Tolleranza Censura'
     email:
@@ -25,6 +27,8 @@ fof-filter:
     nav:
       desc: 'Filtra post da parole'
       text: Filtro
+    permission:
+      bypass_filter_label: 'Ignora i filtri delle parole'
     title: Filtro
   forum:
     flag_message: 'Stringhe bloccate contenute'

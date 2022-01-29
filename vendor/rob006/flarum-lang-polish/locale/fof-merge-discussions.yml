@@ -6,12 +6,19 @@ fof-merge-discussions:
   admin:
     permissions:
       merge_discussions_label: 'Scalanie dyskusji'
+    settings:
+      search_result_help: 'Ile dyskusji powinno być zwróconych podczas wyszukiwania w okienku "Scal dyskusje". Domyślnie 4.'
+      search_result_label: 'Limit wyszukiwania dyskusji do scalenia'
   api:
     error:
       deleting_failed: 'Nie udało się usunąć pustej dyskusji.'
       fixing_posts_number_failed: 'Nie udało się naprawić numerowania postów.'
       merging_failed: 'Nie udało się scalić dyskusji.'
       updating_failed: 'Nie udało się odświeżyć informacji o dyskusji.'
+  email:
+    merged:
+      body: "Witaj {recipient_display_name},\n\nTwoja dyskusja \"{merged_discussion_title}\" została scalona z dyskusją \"{discussion_title}\" przez {actor_display_name}.\n\nAby ją zobaczyć, kliknij poniższy link:\n{discussion_url}\n"
+      subject: 'Twoja dyskusja "{merged_discussion_title}" została scalona'
   forum:
     discussion:
       merge: '=> fof-merge-discussions.ref.merge'
@@ -23,6 +30,10 @@ fof-merge-discussions:
       type_from_label: 'Włącz tę dyskusję do innej'
       type_target_help_text: 'Wybierz dyskusje do włączenia do <b>{title}</b>.'
       type_target_label: 'Włącz do mnie'
+    notification:
+      discussion_merged: 'Twoja dyskusja <b>{oldTitle}</b> została scalona z tą dyskusją przez {username}.'
+      preferences:
+        discussion_merged: 'Ktoś scalił moją dyskusję z inną'
     post:
       merged: '{count, plural, one {Włączono <b>{count}</b> post z {titles}.} few {Włączono <b>{count}</b> posty z {titles}.} other {Włączono <b>{count}</b> postów z {titles}.}}'
   ref:

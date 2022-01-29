@@ -1,11 +1,11 @@
 declare var _default: {
-    extend: typeof import("../common/extend");
+    extend: any;
     Session: typeof import("../common/Session").default;
     Store: typeof import("../common/Store").default;
     'utils/BasicEditorDriver': typeof import("../common/utils/BasicEditorDriver").default;
     'utils/evented': {
-        handlers: Object;
-        getHandlers(event: string): any[];
+        handlers: Record<string, unknown>;
+        getHandlers(event: string): Function[];
         trigger(event: string, ...args: any[]): void;
         on(event: string, handler: Function): void;
         one(event: string, handler: Function): void;
@@ -32,17 +32,15 @@ declare var _default: {
     'utils/subclassOf': typeof import("../common/utils/subclassOf").default;
     'utils/setRouteWithForcedRefresh': typeof import("../common/utils/setRouteWithForcedRefresh").default;
     'utils/patchMithril': typeof import("../common/utils/patchMithril").default;
-    'utils/proxifyCompat': (compat: {
-        [key: string]: any;
-    }, namespace: string) => {
-        [key: string]: any;
-    };
+    'utils/proxifyCompat': typeof import("../common/utils/proxifyCompat").default;
     'utils/classList': (...classes: import("clsx").ClassValue[]) => string;
     'utils/extractText': typeof import("../common/utils/extractText").default;
     'utils/formatNumber': typeof import("../common/utils/formatNumber").default;
     'utils/mapRoutes': typeof import("../common/utils/mapRoutes").default;
     'utils/withAttr': (key: string, cb: Function) => (this: Element) => void;
     'utils/throttleDebounce': typeof import("../common/utils/throttleDebounce");
+    'utils/isObject': typeof import("../common/utils/isObject").default;
+    'utils/focusTrap': typeof import("../common/utils/focusTrap");
     'models/Notification': typeof import("../common/models/Notification").default;
     'models/User': typeof import("../common/models/User").default;
     'models/Post': typeof import("../common/models/Post").default;
@@ -69,6 +67,7 @@ declare var _default: {
     'components/Link': typeof import("../common/components/Link").default;
     'components/LinkButton': typeof import("../common/components/LinkButton").default;
     'components/Checkbox': typeof import("../common/components/Checkbox").default;
+    'components/ColorPreviewInput': typeof import("../common/components/ColorPreviewInput").default;
     'components/SelectDropdown': typeof import("../common/components/SelectDropdown").default;
     'components/ModalManager': typeof import("../common/components/ModalManager").default;
     'components/Button': typeof import("../common/components/Button").default;

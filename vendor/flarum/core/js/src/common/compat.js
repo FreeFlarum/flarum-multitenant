@@ -1,4 +1,4 @@
-import * as extend from './extend';
+import * as extend from './extend.ts';
 import Session from './Session';
 import Store from './Store';
 import BasicEditorDriver from './utils/BasicEditorDriver';
@@ -31,6 +31,7 @@ import extractText from './utils/extractText';
 import formatNumber from './utils/formatNumber';
 import mapRoutes from './utils/mapRoutes';
 import withAttr from './utils/withAttr';
+import * as FocusTrap from './utils/focusTrap';
 import Notification from './models/Notification';
 import User from './models/User';
 import Post from './models/Post';
@@ -56,6 +57,7 @@ import Alert from './components/Alert';
 import Link from './components/Link';
 import LinkButton from './components/LinkButton';
 import Checkbox from './components/Checkbox';
+import ColorPreviewInput from './components/ColorPreviewInput';
 import SelectDropdown from './components/SelectDropdown';
 import ModalManager from './components/ModalManager';
 import Button from './components/Button';
@@ -79,6 +81,7 @@ import listItems from './helpers/listItems';
 import Fragment from './Fragment';
 import DefaultResolver from './resolvers/DefaultResolver';
 import PaginatedListState from './states/PaginatedListState';
+import isObject from './utils/isObject';
 
 export default {
   extend: extend,
@@ -114,6 +117,8 @@ export default {
   'utils/mapRoutes': mapRoutes,
   'utils/withAttr': withAttr,
   'utils/throttleDebounce': ThrottleDebounce,
+  'utils/isObject': isObject,
+  'utils/focusTrap': FocusTrap,
   'models/Notification': Notification,
   'models/User': User,
   'models/Post': Post,
@@ -140,6 +145,7 @@ export default {
   'components/Link': Link,
   'components/LinkButton': LinkButton,
   'components/Checkbox': Checkbox,
+  'components/ColorPreviewInput': ColorPreviewInput,
   'components/SelectDropdown': SelectDropdown,
   'components/ModalManager': ModalManager,
   'components/Button': Button,

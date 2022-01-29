@@ -5,21 +5,21 @@
 fof-socialprofile:
   admin:
     permissions:
-      editAny: 'Chỉnh sửa bất kỳ mạng xã hội của người nào'
-      editOwn: 'Chỉnh sửa mạng xã hội của riêng họ'
-      view: 'Xem thông tin mạng xã hội'
+      editAny: 'Chỉnh sửa bất kỳ liên kết mạng xã hội nào'
+      editOwn: 'Chỉnh sửa liên kết mạng xã hội của riêng mình'
+      view: 'Xem các liên kết mạng xã hội'
     settings:
-      allow_external_favicons_label: 'Cho phép favicon trang web bên ngoài'
+      allow_external_favicons_label: 'Hiển thị biểu tượng của các trang web bên ngoài'
   forum:
     edit:
-      add: 'Thêm nút mạng xã hội'
+      add: 'Thêm liên kết mạng xã hội'
       delete: Xóa
-      deletetitle: 'Xóa nút'
-      edit: 'Sửa nút mạng xã hội'
+      deletetitle: 'Xóa liên kết'
+      edit: 'Chỉnh sửa liên kết mạng xã hội'
       favicon: Favicon
-      grey_favicon: 'Favicon màu xám'
-      headtitle: 'Sửa nút'
-      save_disabled_fetching_favicons: 'Một hoặc nhiều favicon đang được tìm. Vui lòng chờ...'
+      grey_favicon: 'Favicon xám'
+      headtitle: 'Chỉnh sửa liên kết mạng xã hội'
+      save_disabled_fetching_favicons: 'Đang tìm kiếm các biểu tượng. Vui lòng chờ...'
       submit: 'Lưu lại'
       title: 'Tiêu đề'
       url: URL

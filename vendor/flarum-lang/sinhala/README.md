@@ -42,8 +42,12 @@ https://weblate.rob006.net/projects/flarum/
 
 ## සම්බන්ධ වන්න 
 
-[සයුරි@යාලු.ලංකා]()<br />
-sayuri@yalu.lk
+[ලහිරු@යාළු.ලංකා]() <br />
+lahiru@yalu.lk
+
+**භාෂා ආශ්‍රිත ගැටලු සඳහා** <br />
+දිලිනි චතුරිකා | @dilinic - wire.com <br />
+[දිලිනි@යාළු.ලංකා]() | dilini@yalu.lk <br />
 
 ## ස්තූතිය
 

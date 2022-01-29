@@ -28,11 +28,11 @@ export default abstract class Fragment {
      * containing all of the `li` elements inside the DOM element of this
      * fragment.
      *
-     * @param {String} [selector] a jQuery-compatible selector string
-     * @returns {jQuery} the jQuery object for the DOM node
+     * @param [selector] a jQuery-compatible selector string
+     * @returns the jQuery object for the DOM node
      * @final
      */
-    $(selector: any): JQuery<any>;
+    $(selector?: string): JQuery;
     /**
      * Get the renderable virtual DOM that represents the fragment's view.
      *

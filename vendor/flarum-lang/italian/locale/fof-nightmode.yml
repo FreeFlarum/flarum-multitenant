@@ -13,9 +13,12 @@ fof-nightmode:
         theme_light: '=> fof-nightmode.ref.light'
   forum:
     day: '=> fof-nightmode.ref.light'
+    header:
+      nightmode_button: 'Attiva/disattiva il tema del forum'
     night: '=> fof-nightmode.ref.dark'
     user:
       settings:
+        auto_unsupported: 'Il tuo browser non supporta la modalità dark automatica.'
         description: 'Scegli il tema che desideri utilizzare nel forum.'
         description2: 'Questo tema sarà collegato al tuo account e si applicherà a tutti i tuoi dispositivi a meno che non attivi l''interruttore sottostante per le impostazioni per dispositivo.'
         device_specific_setting_checkbox: 'Usa per impostazioni del dispositivo'

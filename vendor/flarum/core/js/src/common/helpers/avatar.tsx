@@ -1,5 +1,8 @@
 import type Mithril from 'mithril';
+import type { ComponentAttrs } from '../Component';
 import User from '../models/User';
+
+export interface AvatarAttrs extends ComponentAttrs {}
 
 /**
  * The `avatar` helper displays a user's avatar.
@@ -7,7 +10,7 @@ import User from '../models/User';
  * @param user
  * @param attrs Attributes to apply to the avatar element
  */
-export default function avatar(user: User, attrs: Object = {}): Mithril.Vnode {
+export default function avatar(user: User, attrs: ComponentAttrs = {}): Mithril.Vnode {
   attrs.className = 'Avatar ' + (attrs.className || '');
   let content: string = '';
 
@@ -21,8 +24,8 @@ export default function avatar(user: User, attrs: Object = {}): Mithril.Vnode {
   // uploaded image, or the first letter of their username if they haven't
   // uploaded one.
   if (user) {
-    const username: string = user.displayName() || '?';
-    const avatarUrl: string = user.avatarUrl();
+    const username = user.displayName() || '?';
+    const avatarUrl = user.avatarUrl();
 
     if (hasTitle) attrs.title = attrs.title || username;
 

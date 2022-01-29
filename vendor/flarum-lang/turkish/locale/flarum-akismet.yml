@@ -6,7 +6,11 @@ flarum-akismet:
   admin:
     akismet_settings:
       api_key_label: 'API Anahtarı'
+      delete_blatant_spam_help: 'Akismet, yorumun bariz spam olduğunu belirlerse, işaretlemek yerine gönderiyi otomatik olarak silin'
+      delete_blatant_spam_label: 'Bariz spam''i otomatik olarak sil'
       title: 'Akismet Ayarları'
+    permissions:
+      bypass_akismet: 'Akismet''i Atla'
   forum:
     post:
       akismet_flagged_text: 'Akismet istenmeyen olarak işaretledi'

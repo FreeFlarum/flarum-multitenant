@@ -25,13 +25,12 @@ app.initializers.add(slug, () => {
 
 	extend(LogInModal.prototype, 'fields', function (items) {
 		if (app.forum.attribute(`${slug}.enablePasswordToggle`)) {
-			items.replace(
+			items.setContent(
 				'password',
 				<LogInPasswordField
 					parent_this={this}
 					showingPassword={this.showingPassword.bind(this)}
 				/>,
-				20,
 			);
 		}
 	});
@@ -41,18 +40,17 @@ app.initializers.add(slug, () => {
 			const hasConfirmFiled =
 				items.has('nearataConfirmPassword') && this.confirmPassword !== undefined;
 
-			items.replace(
+			items.setContent(
 				'password',
 				<SignUpPasswordField
 					parent_this={this}
 					showingPassword={this.showingPassword.bind(this)}
 					hasConfirmFiled={hasConfirmFiled}
 				/>,
-				10,
 			);
 
 			if (hasConfirmFiled) {
-				items.replace(
+				items.setContent(
 					'nearataConfirmPassword',
 					<SignUpPasswordField
 						parent_this={this}
@@ -60,7 +58,6 @@ app.initializers.add(slug, () => {
 						hasConfirmFiled={hasConfirmFiled}
 						isConfirmFiled={true}
 					/>,
-					10,
 				);
 			}
 		}

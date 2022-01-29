@@ -14,7 +14,7 @@ return [
 
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
-            $document->head[] = '<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script>window.jQuery || document.write(\'<script src="js/vendor/jquery-3.3.1.min.js"><\/script>\')</script><script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.4.0/trumbowyg.js"></script>';
+            $document->head[] = '<script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script>window.jQuery || document.write(\'<script src="js/vendor/jquery-3.3.1.min.js"><\/script>\')</script><script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.4.0/trumbowyg.js"></script>';
         }),
 
     new Extend\Locales(__DIR__ . '/locale'),

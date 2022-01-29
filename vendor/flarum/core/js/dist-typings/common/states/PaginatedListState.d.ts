@@ -1,4 +1,5 @@
 import Model from '../Model';
+import { ApiQueryParamsPlural, ApiResponsePlural } from '../Store';
 export interface Page<TModel> {
     number: number;
     items: TModel[];
@@ -10,24 +11,30 @@ export interface PaginationLocation {
     startIndex?: number;
     endIndex?: number;
 }
-export default abstract class PaginatedListState<T extends Model> {
+export interface PaginatedListParams {
+    [key: string]: any;
+}
+export interface PaginatedListRequestParams extends Omit<ApiQueryParamsPlural, 'include'> {
+    include?: string | string[];
+}
+export default abstract class PaginatedListState<T extends Model, P extends PaginatedListParams = PaginatedListParams> {
     protected location: PaginationLocation;
     protected pageSize: number;
     protected pages: Page<T>[];
-    protected params: any;
+    protected params: P;
     protected initialLoading: boolean;
     protected loadingPrev: boolean;
     protected loadingNext: boolean;
-    protected constructor(params?: any, page?: number, pageSize?: number);
+    protected constructor(params?: P, page?: number, pageSize?: number);
     abstract get type(): string;
     clear(): void;
     loadPrev(): Promise<void>;
     loadNext(): Promise<void>;
-    protected parseResults(pg: number, results: T[]): void;
+    protected parseResults(pg: number, results: ApiResponsePlural<T>): void;
     /**
      * Load a new page of results.
      */
-    protected loadPage(page?: number): Promise<T[]>;
+    protected loadPage(page?: number): Promise<ApiResponsePlural<T>>;
     /**
      * Get the parameters that should be passed in the API request.
      * Do not include page offset unless subclass overrides loadPage.
@@ -35,7 +42,7 @@ export default abstract class PaginatedListState<T extends Model> {
      * @abstract
      * @see loadPage
      */
-    protected requestParams(): any;
+    protected requestParams(): PaginatedListRequestParams;
     /**
      * Update the `this.params` object, calling `refresh` if they have changed.
      * Use `requestParams` for converting `this.params` into API parameters
@@ -44,8 +51,8 @@ export default abstract class PaginatedListState<T extends Model> {
      * @param page
      * @see requestParams
      */
-    refreshParams(newParams: any, page: number): any;
-    refresh(page?: number): any;
+    refreshParams(newParams: P, page: number): Promise<void>;
+    refresh(page?: number): Promise<void>;
     getPages(): Page<T>[];
     getLocation(): PaginationLocation;
     isLoading(): boolean;
@@ -70,9 +77,9 @@ export default abstract class PaginatedListState<T extends Model> {
     /**
      * Stored state parameters.
      */
-    getParams(): any;
+    getParams(): P;
     protected getNextPageNumber(): number;
     protected getPrevPageNumber(): number;
-    protected paramsChanged(newParams: any): boolean;
+    protected paramsChanged(newParams: P): boolean;
     protected getAllItems(): T[];
 }

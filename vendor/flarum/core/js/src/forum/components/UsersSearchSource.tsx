@@ -1,21 +1,23 @@
+import type Mithril from 'mithril';
+
 import app from '../../forum/app';
 import highlight from '../../common/helpers/highlight';
 import avatar from '../../common/helpers/avatar';
 import username from '../../common/helpers/username';
 import Link from '../../common/components/Link';
 import { SearchSource } from './Search';
-import type Mithril from 'mithril';
+import User from '../../common/models/User';
 
 /**
  * The `UsersSearchSource` finds and displays user search results in the search
  * dropdown.
  */
 export default class UsersSearchResults implements SearchSource {
-  protected results = new Map<string, unknown[]>();
+  protected results = new Map<string, User[]>();
 
-  search(query: string) {
+  async search(query: string): Promise<void> {
     return app.store
-      .find('users', {
+      .find<User[]>('users', {
         filter: { q: query },
         page: { limit: 5 },
       })
@@ -31,7 +33,7 @@ export default class UsersSearchResults implements SearchSource {
     const results = (this.results.get(query) || [])
       .concat(
         app.store
-          .all('users')
+          .all<User>('users')
           .filter((user) => [user.username(), user.displayName()].some((value) => value.toLowerCase().substr(0, query.length) === query))
       )
       .filter((e, i, arr) => arr.lastIndexOf(e) === i)

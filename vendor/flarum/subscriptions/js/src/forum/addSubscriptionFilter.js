@@ -1,18 +1,26 @@
-import { extend } from 'flarum/extend';
-import LinkButton from 'flarum/components/LinkButton';
-import IndexPage from 'flarum/components/IndexPage';
-import DiscussionListState from 'flarum/states/DiscussionListState';
-import GlobalSearchState from 'flarum/states/GlobalSearchState';
+import app from 'flarum/forum/app';
+import { extend } from 'flarum/common/extend';
+import LinkButton from 'flarum/common/components/LinkButton';
+import IndexPage from 'flarum/forum/components/IndexPage';
+import DiscussionListState from 'flarum/forum/states/DiscussionListState';
+import GlobalSearchState from 'flarum/forum/states/GlobalSearchState';
 
 export default function addSubscriptionFilter() {
-  extend(IndexPage.prototype, 'navItems', function(items) {
+  extend(IndexPage.prototype, 'navItems', function (items) {
     if (app.session.user) {
       const params = app.search.stickyParams();
 
-      items.add('following', LinkButton.component({
-        href: app.route('following', params),
-        icon: 'fas fa-star'
-      }, app.translator.trans('flarum-subscriptions.forum.index.following_link')), 50);
+      items.add(
+        'following',
+        LinkButton.component(
+          {
+            href: app.route('following', params),
+            icon: 'fas fa-star',
+          },
+          app.translator.trans('flarum-subscriptions.forum.index.following_link')
+        ),
+        50
+      );
     }
   });
 

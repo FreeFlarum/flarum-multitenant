@@ -99,7 +99,7 @@ export default abstract class Component<Attrs extends ComponentAttrs = Component
      *
      * @see https://mithril.js.org/hyperscript.html#mselector,-attributes,-children
      */
-    static component(attrs?: {}, children?: null): Mithril.Vnode;
+    static component<SAttrs extends ComponentAttrs = ComponentAttrs>(attrs?: SAttrs, children?: Mithril.Children): Mithril.Vnode;
     /**
      * Saves a reference to the vnode attrs after running them through initAttrs,
      * and checking for common issues.

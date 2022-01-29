@@ -9,6 +9,7 @@ import icon from '../../common/helpers/icon';
 import SearchState from '../states/SearchState';
 import DiscussionsSearchSource from './DiscussionsSearchSource';
 import UsersSearchSource from './UsersSearchSource';
+import { fireDeprecationWarning } from '../../common/helpers/fireDebugWarning';
 import type Mithril from 'mithril';
 
 /**
@@ -24,8 +25,9 @@ import type Mithril from 'mithril';
 export interface SearchSource {
   /**
    * Make a request to get results for the given query.
+   * The results will be updated internally in the search source, not exposed.
    */
-  search(query: string);
+  search(query: string): Promise<void>;
 
   /**
    * Get an array of virtual <li>s that list the search results for the given
@@ -51,10 +53,34 @@ export interface SearchAttrs extends ComponentAttrs {
  *
  * - state: SearchState instance.
  */
-export default class Search<T extends SearchAttrs = SearchAttrs> extends Component<T> {
-  static MIN_SEARCH_LEN = 3;
+export default class Search<T extends SearchAttrs = SearchAttrs> extends Component<T, SearchState> {
+  /**
+   * The minimum query length before sources are searched.
+   */
+  protected static MIN_SEARCH_LEN = 3;
 
-  protected state!: SearchState;
+  /**
+   * The instance of `SearchState` for this component.
+   */
+  protected searchState!: SearchState;
+
+  /**
+   * The instance of `SearchState` for this component.
+   *
+   * @deprecated Replace with`this.searchState` instead.
+   */
+  // TODO: [Flarum 2.0] Remove this.
+  // @ts-expect-error This is a get accessor, while superclass defines this as a property. This is needed to prevent breaking changes, however.
+  protected get state() {
+    fireDeprecationWarning('`state` property of the Search component is deprecated', '3212');
+    return this.searchState;
+  }
+  protected set state(state: SearchState) {
+    // Workaround to prevent triggering deprecation warnings due to Mithril
+    // setting state to undefined when creating components
+    state !== undefined && fireDeprecationWarning('`state` property of the Search component is deprecated', '3212');
+    this.searchState = state;
+  }
 
   /**
    * Whether or not the search input has focus.
@@ -64,7 +90,7 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
   /**
    * An array of SearchSources.
    */
-  protected sources!: SearchSource[];
+  protected sources?: SearchSource[];
 
   /**
    * The number of sources that are still loading results.
@@ -81,18 +107,18 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
 
   protected navigator!: KeyboardNavigatable;
 
-  protected searchTimeout?: number;
+  protected searchTimeout?: NodeJS.Timeout;
 
   private updateMaxHeightHandler?: () => void;
 
   oninit(vnode: Mithril.Vnode<T, this>) {
     super.oninit(vnode);
 
-    this.state = this.attrs.state;
+    this.searchState = this.attrs.state;
   }
 
   view() {
-    const currentSearch = this.state.getInitialSearch();
+    const currentSearch = this.searchState.getInitialSearch();
 
     // Initialize search sources in the view rather than the constructor so
     // that we have access to app.forum.
@@ -104,15 +130,15 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
     const searchLabel = extractText(app.translator.trans('core.forum.header.search_placeholder'));
 
     const isActive = !!currentSearch;
-    const shouldShowResults = !!(!this.loadingSources && this.state.getValue() && this.hasFocus);
-    const shouldShowClearButton = !!(!this.loadingSources && this.state.getValue());
+    const shouldShowResults = !!(!this.loadingSources && this.searchState.getValue() && this.hasFocus);
+    const shouldShowClearButton = !!(!this.loadingSources && this.searchState.getValue());
 
     return (
       <div
         role="search"
         aria-label={app.translator.trans('core.forum.header.search_role_label')}
         className={classList('Search', {
-          open: this.state.getValue() && this.hasFocus,
+          open: this.searchState.getValue() && this.hasFocus,
           focused: this.hasFocus,
           active: isActive,
           loading: !!this.loadingSources,
@@ -124,8 +150,8 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
             className="FormControl"
             type="search"
             placeholder={searchLabel}
-            value={this.state.getValue()}
-            oninput={(e) => this.state.setValue(e.target.value)}
+            value={this.searchState.getValue()}
+            oninput={(e: InputEvent) => this.searchState.setValue((e?.target as HTMLInputElement)?.value)}
             onfocus={() => (this.hasFocus = true)}
             onblur={() => (this.hasFocus = false)}
           />
@@ -145,7 +171,7 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
           aria-hidden={!shouldShowResults || undefined}
           aria-live={shouldShowResults ? 'polite' : undefined}
         >
-          {shouldShowResults && this.sources.map((source) => source.view(this.state.getValue()))}
+          {shouldShowResults && this.sources.map((source) => source.view(this.searchState.getValue()))}
         </ul>
       </div>
     );
@@ -156,27 +182,32 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
     // we need to calculate and set the max height dynamically.
     const resultsElementMargin = 14;
     const maxHeight =
-      window.innerHeight - this.element.querySelector('.Search-input>.FormControl').getBoundingClientRect().bottom - resultsElementMargin;
-    this.element.querySelector('.Search-results').style['max-height'] = `${maxHeight}px`;
+      window.innerHeight - this.element.querySelector('.Search-input>.FormControl')!.getBoundingClientRect().bottom - resultsElementMargin;
+
+    this.element.querySelector<HTMLElement>('.Search-results')?.style?.setProperty('max-height', `${maxHeight}px`);
   }
 
-  onupdate(vnode) {
+  onupdate(vnode: Mithril.VnodeDOM<T, this>) {
     super.onupdate(vnode);
 
     // Highlight the item that is currently selected.
     this.setIndex(this.getCurrentNumericIndex());
 
     // If there are no sources, the search view is not shown.
-    if (!this.sources.length) return;
+    if (!this.sources?.length) return;
 
     this.updateMaxHeight();
   }
 
-  oncreate(vnode) {
+  oncreate(vnode: Mithril.VnodeDOM<T, this>) {
     super.oncreate(vnode);
 
+    // If there are no sources, we shouldn't initialize logic for
+    // search elements, as they will not be shown.
+    if (!this.sources?.length) return;
+
     const search = this;
-    const state = this.state;
+    const state = this.searchState;
 
     // Highlight the item that is currently selected.
     this.setIndex(this.getCurrentNumericIndex());
@@ -196,7 +227,7 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
     this.navigator
       .onUp(() => this.setIndex(this.getCurrentNumericIndex() - 1, true))
       .onDown(() => this.setIndex(this.getCurrentNumericIndex() + 1, true))
-      .onSelect(this.selectResult.bind(this))
+      .onSelect(this.selectResult.bind(this), true)
       .onCancel(this.clear.bind(this))
       .bindTo($input);
 
@@ -207,12 +238,12 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
 
         if (!query) return;
 
-        clearTimeout(search.searchTimeout);
+        if (search.searchTimeout) clearTimeout(search.searchTimeout);
         search.searchTimeout = setTimeout(() => {
           if (state.isCached(query)) return;
 
-          if (query.length >= Search.MIN_SEARCH_LEN) {
-            search.sources.map((source) => {
+          if (query.length >= (search.constructor as typeof Search).MIN_SEARCH_LEN) {
+            search.sources?.map((source) => {
               if (!source.search) return;
 
               search.loadingSources++;
@@ -239,21 +270,25 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
     window.addEventListener('resize', this.updateMaxHeightHandler);
   }
 
-  onremove(vnode) {
+  onremove(vnode: Mithril.VnodeDOM<T, this>) {
     super.onremove(vnode);
 
-    window.removeEventListener('resize', this.updateMaxHeightHandler);
+    if (this.updateMaxHeightHandler) {
+      window.removeEventListener('resize', this.updateMaxHeightHandler);
+    }
   }
 
   /**
    * Navigate to the currently selected search result and close the list.
    */
   selectResult() {
-    clearTimeout(this.searchTimeout);
+    if (this.searchTimeout) clearTimeout(this.searchTimeout);
+
     this.loadingSources = 0;
 
-    if (this.state.getValue()) {
-      m.route.set(this.getItem(this.index).find('a').attr('href'));
+    const selectedUrl = this.getItem(this.index).find('a').attr('href');
+    if (this.searchState.getValue() && selectedUrl) {
+      m.route.set(selectedUrl);
     } else {
       this.clear();
     }
@@ -265,14 +300,14 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
    * Clear the search
    */
   clear() {
-    this.state.clear();
+    this.searchState.clear();
   }
 
   /**
    * Build an item list of SearchSources.
    */
-  sourceItems(): ItemList {
-    const items = new ItemList();
+  sourceItems(): ItemList<SearchSource> {
+    const items = new ItemList<SearchSource>();
 
     if (app.forum.attribute('canViewForum')) items.add('discussions', new DiscussionsSearchSource());
     if (app.forum.attribute('canSearchUsers')) items.add('users', new UsersSearchSource());
@@ -328,11 +363,11 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
     this.index = parseInt($item.attr('data-index') as string) || fixedIndex;
 
     if (scrollToItem) {
-      const dropdownScroll = $dropdown.scrollTop();
-      const dropdownTop = $dropdown.offset().top;
-      const dropdownBottom = dropdownTop + $dropdown.outerHeight();
-      const itemTop = $item.offset().top;
-      const itemBottom = itemTop + $item.outerHeight();
+      const dropdownScroll = $dropdown.scrollTop()!;
+      const dropdownTop = $dropdown.offset()!.top;
+      const dropdownBottom = dropdownTop + $dropdown.outerHeight()!;
+      const itemTop = $item.offset()!.top;
+      const itemBottom = itemTop + $item.outerHeight()!;
 
       let scrollTop;
       if (itemTop < dropdownTop) {

@@ -43,6 +43,7 @@ fof-gamification:
         auto_upvote: 'Dai un voto positivo automatico quando i messaggi vengono postati'
         color_holder: '#ffffff'
         discussion_page: 'Mostra i voti totali del messaggio originale nella lista delle discussioni'
+        first_post_only: 'Consenti solo voti su/giù nel primo post di una discussione'
         icon_help: 'Inserisci una qualsiasi icona di FontAwesome che è seguita con il suffisso -up e -down. Esempio: arrow, thumbs, chevron'
         icon_name: 'Icona voto positivo/negativo'
         points_placeholder: 'Punti: '
@@ -56,16 +57,27 @@ fof-gamification:
       see_voters_label: 'Vedere chi ha votato'
       see_votes_label: 'Visualizzare i voti positivi/negativi'
       vote_label: 'Dare voti positivi/negativi ai messaggi'
+  email:
+    body:
+      postVoted: "Hey {recipient_display_name},\n\n{actor_display_name} ho appena votato il tuo post in {discussion_title}.\n\nGuardalo qui: {discussion_url}\n"
+    subject:
+      postVoted: 'Il tuo post è stato votato da {display_name}'
   forum:
     mod_item: 'Mostra votanti'
     modal:
+      downvotes_label: 'Votanti contro:'
       title: Votanti
       upvotes_label: 'Voti positivi:'
     nav:
       name: Classifica
     notification:
       downvote: '{username} ha dato un voto negativo al tuo messaggio'
+      prefrences:
+        vote: 'Quando uno dei miei post viene votato su/giù'
       upvote: '{username} ha dato un voto positivo al tuo messaggio'
+    post:
+      downvote_button: 'Vota a sfavore'
+      upvote_button: 'Vota post'
     ranking:
       amount: Punti
       name: Utente
@@ -74,4 +86,8 @@ fof-gamification:
       points: 'Punti: {points}'
       rank: '{rank}'
     vote_title: 'Mostra i votanti'
+    voters:
+      label: Votanti
+      label_none: 'Nessun votante'
+      none: 'Nessun Voto'
     votes: Voti

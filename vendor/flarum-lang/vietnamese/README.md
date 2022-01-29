@@ -8,7 +8,7 @@
 
 ![](https://extiverse.com/extension/flarum-lang/vietnamese/open-graph-image)
 
-Gói ngôn ngữ tiếng Việt cho diễn đàn [Flarum](https://flarum.org) cùng với một số tiện ích mở rộng chính thức và bên thứ ba. Đây là bản phát hành đầu tiên, sẽ có các bản cập nhật tiếp theo để sửa các lỗi dịch chưa sát nghĩa ^^.
+Gói ngôn ngữ tiếng Việt cho diễn đàn [Flarum](https://flarum.org) cùng với một số tiện ích mở rộng chính thức và bên thứ ba.
 
 ### Cài đặt (Installation)
 Cài đặt bằng composer:
@@ -23,7 +23,7 @@ php flarum cache:clear
 ```
 
 ### Yêu cầu phiên bản (Required version)
-- Khả dụng Flarum v1.0.0 (compatible with Flarum v1.0.0)
+- Khả dụng Flarum v1.2 (compatible with Flarum v1.2)
 
 ### Tiện ích được hỗ trợ (Extentions supported)
 

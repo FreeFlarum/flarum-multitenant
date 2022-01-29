@@ -1,4 +1,4 @@
-import Model from 'flarum/Model';
+import Model from 'flarum/common/Model';
 
 class Flag extends Model {}
 
@@ -9,7 +9,7 @@ Object.assign(Flag.prototype, {
   createdAt: Model.attribute('createdAt', Model.transformDate),
 
   post: Model.hasOne('post'),
-  user: Model.hasOne('user')
+  user: Model.hasOne('user'),
 });
 
 export default Flag;

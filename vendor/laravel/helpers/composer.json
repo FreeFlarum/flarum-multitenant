@@ -10,12 +10,12 @@
         },
         {
             "name": "Dries Vints",
-            "email": "dries.vints@gmail.com"
+            "email": "dries@laravel.com"
         }
     ],
     "require": {
         "php": "^7.1.3|^8.0",
-        "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0"
+        "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0|^9.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0|^8.0|^9.0"

@@ -65,6 +65,7 @@ fof-gamification:
   forum:
     mod_item: 'Xem người bình chọn'
     modal:
+      downvotes_label: 'Lượt phản đối:'
       title: 'Người bình chọn'
       upvotes_label: 'Người tán thành:'
     nav:

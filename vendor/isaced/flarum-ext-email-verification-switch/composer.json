@@ -1,0 +1,32 @@
+{
+    "name": "isaced/flarum-ext-email-verification-switch",
+    "description": "Disable new registered user email verification.",
+    "type": "flarum-extension",
+    "keywords": ["register", "email"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "isaced",
+            "email": "isaced@163.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/isaced/flarum-ext-email-verification-switch/issues",
+        "source": "https://github.com/isaced/flarum-ext-email-verification-switch",
+        "forum": "https://discuss.flarum.org/d/6485"
+    },
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Email verification switch",
+            "category": "feature",
+            "icon": {
+                "name": "far fa-envelope",
+                "backgroundColor": "#83AF9B",
+                "color": "#fff"
+            }
+        }
+    }
+}

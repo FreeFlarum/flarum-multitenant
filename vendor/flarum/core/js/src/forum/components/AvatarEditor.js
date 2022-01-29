@@ -69,7 +69,7 @@ export default class AvatarEditor extends Component {
   /**
    * Get the items in the edit avatar dropdown menu.
    *
-   * @return {ItemList}
+   * @return {ItemList<import('mithril').Children>}
    */
   controlItems() {
     const items = new ItemList();
@@ -94,7 +94,7 @@ export default class AvatarEditor extends Component {
   /**
    * Enable dragover style
    *
-   * @param {Event} e
+   * @param {DragEvent} e
    */
   enableDragover(e) {
     e.preventDefault();
@@ -105,7 +105,7 @@ export default class AvatarEditor extends Component {
   /**
    * Disable dragover style
    *
-   * @param {Event} e
+   * @param {DragEvent} e
    */
   disableDragover(e) {
     e.preventDefault();
@@ -116,7 +116,7 @@ export default class AvatarEditor extends Component {
   /**
    * Upload avatar when file is dropped into dropzone.
    *
-   * @param {Event} e
+   * @param {DragEvent} e
    */
   dropUpload(e) {
     e.preventDefault();
@@ -131,7 +131,7 @@ export default class AvatarEditor extends Component {
    * Thus, when the avatar editor's dropdown toggle button is clicked, we prompt
    * the user to upload an avatar immediately.
    *
-   * @param {Event} e
+   * @param {MouseEvent} e
    */
   quickUpload(e) {
     if (!this.attrs.user.avatarUrl()) {
@@ -149,7 +149,7 @@ export default class AvatarEditor extends Component {
 
     // Create a hidden HTML input element and click on it so the user can select
     // an avatar file. Once they have, we will upload it via the API.
-    const $input = $('<input type="file">');
+    const $input = $('<input type="file" accept=".jpg, .jpeg, .png, .bmp, .gif">');
 
     $input
       .appendTo('body')
@@ -206,7 +206,7 @@ export default class AvatarEditor extends Component {
    * After a successful upload/removal, push the updated user data into the
    * store, and force a recomputation of the user's avatar color.
    *
-   * @param {Object} response
+   * @param {object} response
    * @protected
    */
   success(response) {
@@ -220,7 +220,7 @@ export default class AvatarEditor extends Component {
   /**
    * If avatar upload/removal fails, stop loading.
    *
-   * @param {Object} response
+   * @param {object} response
    * @protected
    */
   failure(response) {

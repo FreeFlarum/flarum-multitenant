@@ -86,7 +86,7 @@
         "wikimedia/less.php": "^3.0"
     },
     "require-dev": {
-        "flarum/testing": "1.0@dev"
+        "flarum/testing": "^1.0.0"
     },
     "autoload": {
         "psr-4": {
@@ -107,6 +107,28 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"
+        },
+        "flarum-cli": {
+            "excludeScaffolding": [
+                "LICENSE.md",
+                "js/tsconfig.json",
+                "js/webpack.config.js"
+            ],
+            "modules": {
+                "backendTesting": true,
+                "js": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": true,
+                "editorConfig": true,
+                "styleci": true,
+                "admin": true,
+                "forum": true,
+                "jsCommon": true,
+                "css": true
+            }
         }
     },
     "scripts": {

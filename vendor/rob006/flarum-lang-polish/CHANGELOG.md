@@ -2,6 +2,37 @@ CHANGELOG
 =========
 
 
+0.5.15 (2022-01-20)
+-------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/nicknames`](https://github.com/flarum/nicknames)
+* [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+* [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog)
+
+
+Wszystkie zmiany: [v0.5.14...v0.5.15](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.14...v0.5.15).
+
+
+0.5.14 (2022-01-08)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`justoverclock/hot-discussions-cards`](https://github.com/justoverclockl/hot-discussions-cards)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/akismet`](https://github.com/flarum/akismet)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions)
+
+
+Wszystkie zmiany: [v0.5.13...v0.5.14](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.13...v0.5.14).
+
+
 0.5.13 (2022-01-02)
 -------------------
 

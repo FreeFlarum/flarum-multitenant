@@ -16,11 +16,10 @@ export default {
   /**
    * Get a list of controls for a discussion.
    *
-   * @param {Discussion} discussion
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
-   * @public
+   * @param {import('../../common/models/Discussion').default} discussion
+   * @param {import('../../common/Component').default<any, any>} context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}
    */
   controls(discussion, context) {
     const items = new ItemList();
@@ -40,10 +39,10 @@ export default {
    * Get controls for a discussion pertaining to the current user (e.g. reply,
    * follow).
    *
-   * @param {Discussion} discussion
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
+   * @param {import('../../common/models/Discussion').default} discussion
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}
    * @protected
    */
   userControls(discussion, context) {
@@ -88,10 +87,10 @@ export default {
   /**
    * Get controls for a discussion pertaining to moderation (e.g. rename, lock).
    *
-   * @param {Discussion} discussion
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
+   * @param {import('../../common/models/Discussion').default} discussion
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}
    * @protected
    */
   moderationControls(discussion) {
@@ -116,10 +115,10 @@ export default {
   /**
    * Get controls for a discussion which are destructive (e.g. delete).
    *
-   * @param {Discussion} discussion
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
+   * @param {import('../../common/models/Discussion').default} discussion
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}
    * @protected
    */
   destructiveControls(discussion) {
@@ -175,11 +174,10 @@ export default {
    * logged in, they will be prompted. If they don't have permission to
    * reply, the promise will be rejected.
    *
-   * @param {Boolean} goToLast Whether or not to scroll down to the last post if
-   *     the discussion is being viewed.
-   * @param {Boolean} forceRefresh Whether or not to force a reload of the
-   *     composer component, even if it is already open for this discussion.
-   * @return {Promise}
+   * @param {boolean} goToLast Whether or not to scroll down to the last post if the discussion is being viewed.
+   * @param {boolean} forceRefresh Whether or not to force a reload of the composer component, even if it is already open for this discussion.
+   *
+   * @return {Promise<void>}
    */
   replyAction(goToLast, forceRefresh) {
     return new Promise((resolve, reject) => {
@@ -212,10 +210,10 @@ export default {
   /**
    * Hide a discussion.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   hideAction() {
-    this.pushAttributes({ hiddenAt: new Date(), hiddenUser: app.session.user });
+    this.pushData({ attributes: { hiddenAt: new Date() }, relationships: { hiddenUser: app.session.user } });
 
     return this.save({ isHidden: true });
   },
@@ -223,10 +221,10 @@ export default {
   /**
    * Restore a discussion.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   restoreAction() {
-    this.pushAttributes({ hiddenAt: null, hiddenUser: null });
+    this.pushData({ attributes: { hiddenAt: null }, relationships: { hiddenUser: null } });
 
     return this.save({ isHidden: false });
   },
@@ -234,7 +232,7 @@ export default {
   /**
    * Delete the discussion after confirming with the user.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   deleteAction() {
     if (confirm(extractText(app.translator.trans('core.forum.discussion_controls.delete_confirmation')))) {
@@ -250,8 +248,6 @@ export default {
 
   /**
    * Rename the discussion.
-   *
-   * @return {Promise}
    */
   renameAction() {
     return app.modal.show(RenameDiscussionModal, {

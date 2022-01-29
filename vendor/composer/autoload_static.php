@@ -44,8 +44,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
-        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '3f8ee9969da604d0f15c841b77b11450' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/double-pass-middleware.php',
         'ee5523a5d51d6d51030227439db1ef74' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/host.php',
@@ -193,6 +193,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Zerosonesfun\\Members\\' => 21,
             'Zerosonesfun\\InlineAudio\\' => 25,
             'ZerosOnesFun\\Nes\\' => 17,
+            'ZerosOnesFun\\DirectLinks\\' => 25,
             'ZerosOnesFun\\BBcodeButton\\' => 26,
         ),
         'Y' => 
@@ -209,6 +210,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Wohali\\OAuth2\\Client\\' => 21,
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
+            'Webbinaro\\GpxPreview\\' => 21,
         ),
         'V' => 
         array (
@@ -503,6 +505,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Dflydev\\DotAccessData\\' => 22,
             'Dem13n\\Discussion\\Cards\\' => 24,
             'Davwheat\\CustomSidenavLinks\\' => 28,
+            'Datlechin\\SignupButton\\' => 23,
         ),
         'C' => 
         array (
@@ -603,6 +606,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/flarum-theme-nes/src',
         ),
+        'ZerosOnesFun\\DirectLinks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerosonesfun/direct-links/src',
+        ),
         'ZerosOnesFun\\BBcodeButton\\' => 
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/flarum-bbcode-button/src',
@@ -630,6 +637,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Webbinaro\\GpxPreview\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webbinaro/gpx-preview/src',
         ),
         'V17Development\\FlarumUserBadges\\' => 
         array (
@@ -1615,6 +1626,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Davwheat\\CustomSidenavLinks\\' => 
         array (
             0 => __DIR__ . '/..' . '/davwheat/custom-sidenav-links/src',
+        ),
+        'Datlechin\\SignupButton\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-signup-button/src',
         ),
         'Cron\\' => 
         array (

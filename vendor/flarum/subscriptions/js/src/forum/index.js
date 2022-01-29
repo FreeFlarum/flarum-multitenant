@@ -1,9 +1,9 @@
-import { extend } from 'flarum/extend';
-import app from 'flarum/app';
-import Model from 'flarum/Model';
-import Discussion from 'flarum/models/Discussion';
-import IndexPage from 'flarum/components/IndexPage';
-import NotificationGrid from 'flarum/components/NotificationGrid';
+import { extend } from 'flarum/common/extend';
+import app from 'flarum/forum/app';
+import Model from 'flarum/common/Model';
+import Discussion from 'flarum/common/models/Discussion';
+import IndexPage from 'flarum/forum/components/IndexPage';
+import NotificationGrid from 'flarum/forum/components/NotificationGrid';
 
 import addSubscriptionBadge from './addSubscriptionBadge';
 import addSubscriptionControls from './addSubscriptionControls';
@@ -23,11 +23,11 @@ app.initializers.add('subscriptions', function () {
   addSubscriptionFilter();
   addSubscriptionSettings();
 
-  extend(NotificationGrid.prototype, 'notificationTypes', function(items) {
+  extend(NotificationGrid.prototype, 'notificationTypes', function (items) {
     items.add('newPost', {
       name: 'newPost',
       icon: 'fas fa-star',
-      label: app.translator.trans('flarum-subscriptions.forum.settings.notify_new_post_label')
+      label: app.translator.trans('flarum-subscriptions.forum.settings.notify_new_post_label'),
     });
   });
 });

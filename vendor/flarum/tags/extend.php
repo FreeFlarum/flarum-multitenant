@@ -16,6 +16,7 @@ use Flarum\Discussion\Filter\DiscussionFilterer;
 use Flarum\Discussion\Search\DiscussionSearcher;
 use Flarum\Extend;
 use Flarum\Flags\Api\Controller\ListFlagsController;
+use Flarum\Http\RequestUtil;
 use Flarum\Tags\Access;
 use Flarum\Tags\Api\Controller;
 use Flarum\Tags\Api\Serializer\TagSerializer;
@@ -28,6 +29,13 @@ use Flarum\Tags\LoadForumTagsRelationship;
 use Flarum\Tags\Post\DiscussionTaggedPost;
 use Flarum\Tags\Query\TagFilterGambit;
 use Flarum\Tags\Tag;
+use Psr\Http\Message\ServerRequestInterface;
+
+$eagerLoadTagState = function ($query, ?ServerRequestInterface $request, array $relations) {
+    if ($request && in_array('tags.state', $relations, true)) {
+        $query->withStateFor(RequestUtil::getActor($request));
+    }
+};
 
 return [
     (new Extend\Frontend('forum'))
@@ -71,13 +79,15 @@ return [
 
     (new Extend\ApiController(FlarumController\ListDiscussionsController::class))
         ->addInclude(['tags', 'tags.state', 'tags.parent'])
-        ->load('tags'),
+        ->loadWhere('tags', $eagerLoadTagState),
 
     (new Extend\ApiController(FlarumController\ShowDiscussionController::class))
-        ->addInclude(['tags', 'tags.state', 'tags.parent']),
+        ->addInclude(['tags', 'tags.state', 'tags.parent'])
+        ->loadWhere('tags', $eagerLoadTagState),
 
     (new Extend\ApiController(FlarumController\CreateDiscussionController::class))
-        ->addInclude(['tags', 'tags.state', 'tags.parent']),
+        ->addInclude(['tags', 'tags.state', 'tags.parent'])
+        ->loadWhere('tags', $eagerLoadTagState),
 
     (new Extend\ApiController(FlarumController\ShowForumController::class))
         ->addInclude(['tags', 'tags.parent'])

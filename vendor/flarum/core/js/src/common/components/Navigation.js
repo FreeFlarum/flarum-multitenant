@@ -36,7 +36,7 @@ export default class Navigation extends Component {
   /**
    * Get the back button.
    *
-   * @return {Object}
+   * @return {import('mithril').Children}
    * @protected
    */
   getBackButton() {
@@ -47,7 +47,7 @@ export default class Navigation extends Component {
       className: 'Button Navigation-back Button--icon',
       href: history.backUrl(),
       icon: 'fas fa-chevron-left',
-      title: previous.title,
+      'aria-label': previous.title,
       onclick: (e) => {
         if (e.shiftKey || e.ctrlKey || e.metaKey || e.which === 2) return;
         e.preventDefault();
@@ -59,7 +59,7 @@ export default class Navigation extends Component {
   /**
    * Get the pane pinned toggle button.
    *
-   * @return {Object|String}
+   * @return {import('mithril').Children}
    * @protected
    */
   getPaneButton() {
@@ -77,7 +77,7 @@ export default class Navigation extends Component {
   /**
    * Get the drawer toggle button.
    *
-   * @return {Object|String}
+   * @return {import('mithril').Children}
    * @protected
    */
   getDrawerButton() {
@@ -93,6 +93,7 @@ export default class Navigation extends Component {
         drawer.show();
       },
       icon: 'fas fa-bars',
+      'aria-label': app.translator.trans('core.lib.nav.drawer_button'),
     });
   }
 }

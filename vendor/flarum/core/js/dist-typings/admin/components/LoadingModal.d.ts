@@ -1,3 +1,14 @@
-export default class LoadingModal extends Modal {
+/// <reference path="../../../src/common/translator-icu-rich.d.ts" />
+import Modal, { IInternalModalAttrs } from '../../common/components/Modal';
+export interface ILoadingModalAttrs extends IInternalModalAttrs {
 }
-import Modal from "../../common/components/Modal";
+export default class LoadingModal<ModalAttrs extends ILoadingModalAttrs = ILoadingModalAttrs> extends Modal<ModalAttrs> {
+    /**
+     * @inheritdoc
+     */
+    static readonly isDismissible: boolean;
+    className(): string;
+    title(): import("@askvortsov/rich-icu-message-formatter").NestedStringArray;
+    content(): string;
+    onsubmit(e: Event): void;
+}

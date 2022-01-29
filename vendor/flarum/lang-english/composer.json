@@ -2,10 +2,12 @@
     "name": "flarum/lang-english",
     "type": "flarum-extension",
     "description": "English language pack.",
-    "keywords": ["locale"],
+    "keywords": [
+        "locale"
+    ],
     "license": "MIT",
     "require": {
-        "flarum/core": "^1.1"
+        "flarum/core": "^1.2"
     },
     "extra": {
         "branch-alias": {
@@ -29,6 +31,23 @@
         "flarum-locale": {
             "code": "en",
             "title": "English"
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": false,
+                "js": false,
+                "jsCommon": false,
+                "css": false,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
         }
     }
 }

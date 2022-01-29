@@ -6,4 +6,5 @@ afrux-news-widget:
   admin:
     settings:
       add_line: 'Aggiungi News'
+      html_warning: 'Attenzione, tutto l''HTML verrà renderizzato.'
       lines: 'Righe News'

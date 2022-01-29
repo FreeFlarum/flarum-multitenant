@@ -5,10 +5,10 @@ export default class AdminNav extends Component<import("../../common/Component")
     /**
      * Build an item list of main links to show in the admin navigation.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    items(): ItemList;
-    extensionItems(): ItemList;
+    items(): ItemList<import('mithril').Children>;
+    extensionItems(): ItemList<any>;
 }
 import Component from "../../common/Component";
 import Stream from "../../common/utils/Stream";

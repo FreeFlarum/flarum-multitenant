@@ -1,11 +1,11 @@
 declare var _default: {
-    extend: typeof extend;
+    extend: any;
     Session: typeof Session;
     Store: typeof Store;
     'utils/BasicEditorDriver': typeof BasicEditorDriver;
     'utils/evented': {
-        handlers: Object;
-        getHandlers(event: string): any[];
+        handlers: Record<string, unknown>;
+        getHandlers(event: string): Function[];
         trigger(event: string, ...args: any[]): void;
         on(event: string, handler: Function): void;
         one(event: string, handler: Function): void;
@@ -32,17 +32,15 @@ declare var _default: {
     'utils/subclassOf': typeof subclassOf;
     'utils/setRouteWithForcedRefresh': typeof setRouteWithForcedRefresh;
     'utils/patchMithril': typeof patchMithril;
-    'utils/proxifyCompat': (compat: {
-        [key: string]: any;
-    }, namespace: string) => {
-        [key: string]: any;
-    };
+    'utils/proxifyCompat': typeof proxifyCompat;
     'utils/classList': (...classes: import("clsx").ClassValue[]) => string;
     'utils/extractText': typeof extractText;
     'utils/formatNumber': typeof formatNumber;
     'utils/mapRoutes': typeof mapRoutes;
     'utils/withAttr': (key: string, cb: Function) => (this: Element) => void;
     'utils/throttleDebounce': typeof ThrottleDebounce;
+    'utils/isObject': typeof isObject;
+    'utils/focusTrap': typeof FocusTrap;
     'models/Notification': typeof Notification;
     'models/User': typeof User;
     'models/Post': typeof Post;
@@ -69,6 +67,7 @@ declare var _default: {
     'components/Link': typeof Link;
     'components/LinkButton': typeof LinkButton;
     'components/Checkbox': typeof Checkbox;
+    'components/ColorPreviewInput': typeof ColorPreviewInput;
     'components/SelectDropdown': typeof SelectDropdown;
     'components/ModalManager': typeof ModalManager;
     'components/Button': typeof Button;
@@ -93,7 +92,6 @@ declare var _default: {
     'states/PaginatedListState': typeof PaginatedListState;
 };
 export default _default;
-import * as extend from "./extend";
 import Session from "./Session";
 import Store from "./Store";
 import BasicEditorDriver from "./utils/BasicEditorDriver";
@@ -118,10 +116,13 @@ import Stream from "./utils/Stream";
 import subclassOf from "./utils/subclassOf";
 import setRouteWithForcedRefresh from "./utils/setRouteWithForcedRefresh";
 import patchMithril from "./utils/patchMithril";
+import proxifyCompat from "./utils/proxifyCompat";
 import extractText from "./utils/extractText";
 import formatNumber from "./utils/formatNumber";
 import mapRoutes from "./utils/mapRoutes";
 import * as ThrottleDebounce from "./utils/throttleDebounce";
+import isObject from "./utils/isObject";
+import * as FocusTrap from "./utils/focusTrap";
 import Notification from "./models/Notification";
 import User from "./models/User";
 import Post from "./models/Post";
@@ -148,6 +149,7 @@ import Alert from "./components/Alert";
 import Link from "./components/Link";
 import LinkButton from "./components/LinkButton";
 import Checkbox from "./components/Checkbox";
+import ColorPreviewInput from "./components/ColorPreviewInput";
 import SelectDropdown from "./components/SelectDropdown";
 import ModalManager from "./components/ModalManager";
 import Button from "./components/Button";

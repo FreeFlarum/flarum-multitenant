@@ -5,6 +5,7 @@ import Dropdown from '../../common/components/Dropdown';
 import PostControls from '../utils/PostControls';
 import listItems from '../../common/helpers/listItems';
 import ItemList from '../../common/utils/ItemList';
+import LoadingIndicator from '../../common/components/LoadingIndicator';
 
 /**
  * The `Post` component displays a single post. The basic post template just
@@ -21,6 +22,9 @@ export default class Post extends Component {
   oninit(vnode) {
     super.oninit(vnode);
 
+    /**
+     * May be set by subclasses.
+     */
     this.loading = false;
 
     /**
@@ -30,6 +34,7 @@ export default class Post extends Component {
      * @type {SubtreeRetainer}
      */
     this.subtree = new SubtreeRetainer(
+      () => this.loading,
       () => this.attrs.post.freshness,
       () => {
         const user = this.attrs.post.user();
@@ -50,7 +55,7 @@ export default class Post extends Component {
     return (
       <article {...attrs}>
         <div>
-          {this.content()}
+          {this.loading ? <LoadingIndicator /> : this.content()}
           <aside className="Post-actions">
             <ul>
               {listItems(this.actionItems().toArray())}
@@ -61,8 +66,8 @@ export default class Post extends Component {
                     buttonClassName="Button Button--icon Button--flat"
                     menuClassName="Dropdown-menu--right"
                     icon="fas fa-ellipsis-h"
-                    onshow={() => this.$('.Post-actions').addClass('open')}
-                    onhide={() => this.$('.Post-actions').removeClass('open')}
+                    onshow={() => this.$('.Post-controls').addClass('open')}
+                    onhide={() => this.$('.Post-controls').removeClass('open')}
                     accessibleToggleLabel={app.translator.trans('core.forum.post_controls.toggle_dropdown_accessible_label')}
                   >
                     {controls}
@@ -97,7 +102,7 @@ export default class Post extends Component {
   /**
    * Get attributes for the post element.
    *
-   * @return {Object}
+   * @return {Record<string, unknown>}
    */
   elementAttrs() {
     return {};
@@ -106,16 +111,17 @@ export default class Post extends Component {
   /**
    * Get the post's content.
    *
-   * @return {Array}
+   * @return {import('mithril').Children}
    */
   content() {
+    // TODO: [Flarum 2.0] return `null`
     return [];
   }
 
   /**
    * Get the post's classes.
    *
-   * @param string classes
+   * @param {string} existing
    * @returns {string[]}
    */
   classes(existing) {
@@ -132,7 +138,7 @@ export default class Post extends Component {
       classes.push('Post--by-actor');
     }
 
-    if (user && user === discussion.user()) {
+    if (user && user?.id() === discussion.attribute('startUserId')) {
       classes.push('Post--by-start-user');
     }
 
@@ -142,7 +148,7 @@ export default class Post extends Component {
   /**
    * Build an item list for the post's actions.
    *
-   * @return {ItemList}
+   * @return {ItemList<import('mithril').Children>}
    */
   actionItems() {
     return new ItemList();
@@ -151,7 +157,7 @@ export default class Post extends Component {
   /**
    * Build an item list for the post's footer.
    *
-   * @return {ItemList}
+   * @return {ItemList<import('mithril').Children>}
    */
   footerItems() {
     return new ItemList();

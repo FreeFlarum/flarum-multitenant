@@ -12,7 +12,6 @@
 namespace FoF\NightMode\Content;
 
 use Flarum\Frontend\Document;
-use Illuminate\Support\Arr;
 
 class HideBody
 {
@@ -21,8 +20,19 @@ class HideBody
      */
     public function __invoke(Document $document)
     {
-        $isDay = in_array(Arr::get($document->payload, 'fof-nightmode.assets.day'), $document->css);
-        $isNight = in_array(Arr::get($document->payload, 'fof-nightmode.assets.night'), $document->css);
+        $isDay = false;
+        $isNight = false;
+
+        foreach ($document->head as $line) {
+            if (!$isDay) {
+                $isDay = (bool) strpos($line, $document->payload['fof-nightmode.assets.day']);
+            }
+
+            if (!$isNight) {
+                $isNight = (bool) strpos($line, $document->payload['fof-nightmode.assets.night']);
+            }
+        }
+
         $hasStyle = $isDay || $isNight;
 
         if (!$hasStyle) {

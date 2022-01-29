@@ -35,5 +35,12 @@ class SaveStaffBadgeToDatabase {
                 $user->staffbadge = "false";
             }
         }
+        if (isset($attributes['tagList'])) {
+            $actor->assertAdmin();
+            $tagList = $attributes['tagList'];
+
+            //? Set tagList for user, seperated by coma
+            $user->tagList = $tagList;
+        }
     }
 }

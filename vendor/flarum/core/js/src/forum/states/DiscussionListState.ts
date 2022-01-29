@@ -1,11 +1,16 @@
 import app from '../../forum/app';
-import PaginatedListState, { Page } from '../../common/states/PaginatedListState';
+import PaginatedListState, { Page, PaginatedListParams, PaginatedListRequestParams } from '../../common/states/PaginatedListState';
 import Discussion from '../../common/models/Discussion';
+import { ApiQueryParamsPlural, ApiResponsePlural } from '../../common/Store';
 
-export default class DiscussionListState extends PaginatedListState<Discussion> {
+export interface DiscussionListParams extends PaginatedListParams {
+  sort?: string;
+}
+
+export default class DiscussionListState<P extends DiscussionListParams = DiscussionListParams> extends PaginatedListState<Discussion, P> {
   protected extraDiscussions: Discussion[] = [];
 
-  constructor(params: any, page: number) {
+  constructor(params: P, page: number = 1) {
     super(params, page, 20);
   }
 
@@ -13,21 +18,23 @@ export default class DiscussionListState extends PaginatedListState<Discussion> 
     return 'discussions';
   }
 
-  requestParams() {
-    const params: any = { include: ['user', 'lastPostedUser'], filter: this.params.filter || {} };
-
-    params.sort = this.sortMap()[this.params.sort];
+  requestParams(): PaginatedListRequestParams {
+    const params = {
+      include: ['user', 'lastPostedUser'],
+      filter: this.params.filter || {},
+      sort: this.sortMap()[this.params.sort ?? ''],
+    };
 
     if (this.params.q) {
       params.filter.q = this.params.q;
-
       params.include.push('mostRelevantPost', 'mostRelevantPost.user');
     }
+
     return params;
   }
 
-  protected loadPage(page: number = 1): any {
-    const preloadedDiscussions = app.preloadedApiDocument();
+  protected loadPage(page: number = 1): Promise<ApiResponsePlural<Discussion>> {
+    const preloadedDiscussions = app.preloadedApiDocument<Discussion[]>();
 
     if (preloadedDiscussions) {
       this.initialLoading = false;
@@ -38,7 +45,7 @@ export default class DiscussionListState extends PaginatedListState<Discussion> 
     return super.loadPage(page);
   }
 
-  clear() {
+  clear(): void {
     super.clear();
 
     this.extraDiscussions = [];
@@ -65,11 +72,11 @@ export default class DiscussionListState extends PaginatedListState<Discussion> 
   /**
    * In the last request, has the user searched for a discussion?
    */
-  isSearchResults() {
+  isSearchResults(): boolean {
     return !!this.params.q;
   }
 
-  removeDiscussion(discussion: Discussion) {
+  removeDiscussion(discussion: Discussion): void {
     for (const page of this.pages) {
       const index = page.items.indexOf(discussion);
 
@@ -91,7 +98,7 @@ export default class DiscussionListState extends PaginatedListState<Discussion> 
   /**
    * Add a discussion to the top of the list.
    */
-  addDiscussion(discussion: Discussion) {
+  addDiscussion(discussion: Discussion): void {
     this.removeDiscussion(discussion);
     this.extraDiscussions.unshift(discussion);
 

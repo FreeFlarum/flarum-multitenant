@@ -2,7 +2,9 @@
     "name": "flarum/nicknames",
     "description": "Allow users to set nicknames.",
     "type": "flarum-extension",
-    "keywords": ["nicknames"],
+    "keywords": [
+        "nicknames"
+    ],
     "license": "MIT",
     "support": {
         "issues": "https://github.com/flarum/core/issues",
@@ -17,7 +19,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^1.1"
+        "flarum/core": "^1.2"
     },
     "autoload": {
         "psr-4": {
@@ -36,6 +38,42 @@
                 "backgroundColor": "#8E4529",
                 "color": "#ffffff"
             }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": true,
+                "editorConfig": true,
+                "styleci": true
+            }
         }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0",
+        "flarum/core": "1.x-dev"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
     }
 }

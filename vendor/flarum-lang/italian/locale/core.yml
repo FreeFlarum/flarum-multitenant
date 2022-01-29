@@ -458,6 +458,9 @@ core:
       render_failed_message: 'Spiacenti, si è verificato un errore durante la visualizzazione di questo contenuto. Se sei un utente, riprova più tardi. Se sei un amministratore, dai un''occhiata ai file di registro di Flarum per ulteriori informazioni.'
     loading_indicator:
       accessible_label: '=> core.ref.loading'
+    meta_titles:
+      with_page_title: '{pageNumber, plural, =1 {{pageTitle} - {forumName}} other {{pageTitle}: Pagina # - {forumName}}}'
+      without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Pagina # - {forumName}}}'
     modal:
       close: Chiudi
     nav:

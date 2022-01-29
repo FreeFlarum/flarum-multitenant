@@ -11,11 +11,32 @@ namespace Flarum\User;
 
 use Flarum\Foundation\AbstractValidator;
 use Flarum\Foundation\ValidationException;
+use Illuminate\Validation\Factory;
+use Intervention\Image\Exception\NotReadableException;
+use Intervention\Image\ImageManager;
 use Psr\Http\Message\UploadedFileInterface;
 use Symfony\Component\Mime\MimeTypes;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class AvatarValidator extends AbstractValidator
 {
+    /**
+     * @var \Illuminate\Validation\Validator
+     */
+    protected $laravelValidator;
+
+    /**
+     * @var ImageManager
+     */
+    protected $imageManager;
+
+    public function __construct(Factory $validator, TranslatorInterface $translator, ImageManager $imageManager)
+    {
+        parent::__construct($validator, $translator);
+
+        $this->imageManager = $imageManager;
+    }
+
     /**
      * Throw an exception if a model is not valid.
      *
@@ -23,6 +44,8 @@ class AvatarValidator extends AbstractValidator
      */
     public function assertValid(array $attributes)
     {
+        $this->laravelValidator = $this->makeValidator($attributes);
+
         $this->assertFileRequired($attributes['avatar']);
         $this->assertFileMimes($attributes['avatar']);
         $this->assertFileSize($attributes['avatar']);
@@ -62,6 +85,12 @@ class AvatarValidator extends AbstractValidator
         if (! in_array($guessedExtension, $allowedTypes)) {
             $this->raise('mimes', [':values' => implode(', ', $allowedTypes)]);
         }
+
+        try {
+            $this->imageManager->make($file->getStream());
+        } catch (NotReadableException $_e) {
+            $this->raise('image');
+        }
     }
 
     protected function assertFileSize(UploadedFileInterface $file)
@@ -69,15 +98,21 @@ class AvatarValidator extends AbstractValidator
         $maxSize = $this->getMaxSize();
 
         if ($file->getSize() / 1024 > $maxSize) {
-            $this->raise('max.file', [':max' => $maxSize]);
+            $this->raise('max.file', [':max' => $maxSize], 'max');
         }
     }
 
-    protected function raise($error, array $parameters = [])
+    protected function raise($error, array $parameters = [], $rule = null)
     {
-        $message = $this->translator->trans(
-            "validation.$error",
-            $parameters + [':attribute' => 'avatar']
+        // When we switched to intl ICU message format, the translation parameters
+        // have become required to be in the format `{param}`.
+        // Therefore we cannot use the translator to replace the string params.
+        // We use the laravel validator to make the replacements instead.
+        $message = $this->laravelValidator->makeReplacements(
+            $this->translator->trans("validation.$error"),
+            'avatar',
+            $rule ?? $error,
+            array_values($parameters)
         );
 
         throw new ValidationException(['avatar' => $message]);
@@ -90,6 +125,6 @@ class AvatarValidator extends AbstractValidator
 
     protected function getAllowedTypes()
     {
-        return ['jpg', 'png', 'bmp', 'gif'];
+        return ['jpeg', 'jpg', 'png', 'bmp', 'gif'];
     }
 }

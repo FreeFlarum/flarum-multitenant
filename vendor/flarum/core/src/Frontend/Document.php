@@ -9,6 +9,7 @@
 
 namespace Flarum\Frontend;
 
+use Flarum\Frontend\Driver\TitleDriverInterface;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -95,6 +96,24 @@ class Document implements Renderable
     public $canonicalUrl;
 
     /**
+     * Which page of content are we on?
+     *
+     * This is used to build prev/next meta links for SEO.
+     *
+     * @var null|int
+     */
+    public $page;
+
+    /**
+     * Is there a next page?
+     *
+     * This is used with $page to build next meta links for SEO.
+     *
+     * @var null|bool
+     */
+    public $hasNextPage;
+
+    /**
      * An array of strings to append to the page's <head>.
      *
      * @var array
@@ -159,10 +178,6 @@ class Document implements Renderable
      */
     protected $request;
 
-    /**
-     * @param Factory $view
-     * @param array $forumApiDocument
-     */
     public function __construct(Factory $view, array $forumApiDocument, Request $request)
     {
         $this->view = $view;
@@ -202,9 +217,8 @@ class Document implements Renderable
      */
     protected function makeTitle(): string
     {
-        $onHomePage = rtrim($this->request->getUri()->getPath(), '/') === '';
-
-        return ($this->title && ! $onHomePage ? $this->title.' - ' : '').Arr::get($this->forumApiDocument, 'data.attributes.title');
+        // @todo v2.0 inject as dependency instead
+        return resolve(TitleDriverInterface::class)->makeTitle($this, $this->request, $this->forumApiDocument);
     }
 
     /**
@@ -247,8 +261,17 @@ class Document implements Renderable
             return '<link rel="stylesheet" href="'.e($url).'">';
         }, $this->css);
 
+        if ($this->page) {
+            if ($this->page > 1) {
+                $head[] = '<link rel="prev" href="'.e(self::setPageParam($this->canonicalUrl, $this->page - 1)).'">';
+            }
+            if ($this->hasNextPage) {
+                $head[] = '<link rel="next" href="'.e(self::setPageParam($this->canonicalUrl, $this->page + 1)).'">';
+            }
+        }
+
         if ($this->canonicalUrl) {
-            $head[] = '<link rel="canonical" href="'.e($this->canonicalUrl).'">';
+            $head[] = '<link rel="canonical" href="'.e(self::setPageParam($this->canonicalUrl, $this->page)).'">';
         }
 
         $head = array_merge($head, $this->makePreloads());
@@ -292,5 +315,44 @@ class Document implements Renderable
     public function setForumApiDocument(array $forumApiDocument)
     {
         $this->forumApiDocument = $forumApiDocument;
+    }
+
+    public static function setPageParam(string $url, ?int $page)
+    {
+        if (! $page || $page === 1) {
+            return self::setQueryParam($url, 'page', null);
+        }
+
+        return self::setQueryParam($url, 'page', (string) $page);
+    }
+
+    /**
+     * Set or override a query param on a string URL to a particular value.
+     */
+    protected static function setQueryParam(string $url, string $key, ?string $value)
+    {
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+            $urlParts = parse_url($url);
+            if (isset($urlParts['query'])) {
+                parse_str($urlParts['query'], $urlQueryArgs);
+
+                if ($value === null) {
+                    unset($urlQueryArgs[$key]);
+                } else {
+                    $urlQueryArgs[$key] = $value;
+                }
+
+                $urlParts['query'] = http_build_query($urlQueryArgs);
+                $newUrl = $urlParts['scheme'].'://'.$urlParts['host'].$urlParts['path'].'?'.$urlParts['query'];
+            } elseif ($value !== null) {
+                $newUrl = $url.'?'.http_build_query([$key => $value]);
+            } else {
+                return $url;
+            }
+
+            return $newUrl;
+        } else {
+            return $url;
+        }
     }
 }

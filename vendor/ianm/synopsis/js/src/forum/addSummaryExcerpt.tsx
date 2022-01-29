@@ -42,14 +42,9 @@ export default function addSummaryExcerpt() {
       return;
     }
 
-    // Interim fix, remove after Flarum 1.2 availability, see https://github.com/flarum/core/pull/3193
-    //const content = richExcerpt ? m.trust(truncate(excerptPost.contentHtml(), excerptLength)) : truncate(excerptPost.contentPlain(), excerptLength);
     if (!excerptPost?.contentHtml?.()) return ;
-
-    const content = richExcerpt
-      ? m.trust(truncate(excerptPost?.contentHtml?.(), excerptLength))
-      : truncate(getPlainContent(excerptPost?.contentHtml?.() || excerptPost?.oldContentHtml?.()), excerptLength);
-
+    const content = richExcerpt ? m.trust(truncate(excerptPost.contentHtml(), excerptLength)) : truncate(excerptPost.contentPlain(), excerptLength);
+    
     if (excerptPost) {
       const excerpt = <div inert>{content}</div>;
 

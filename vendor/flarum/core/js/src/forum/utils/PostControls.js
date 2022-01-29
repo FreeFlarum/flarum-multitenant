@@ -13,11 +13,10 @@ export default {
   /**
    * Get a list of controls for a post.
    *
-   * @param {Post} post
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
-   * @public
+   * @param {import('../../common/models/Post').default} post
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}')}
    */
   controls(post, context) {
     const items = new ItemList();
@@ -36,10 +35,10 @@ export default {
   /**
    * Get controls for a post pertaining to the current user (e.g. report).
    *
-   * @param {Post} post
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
+   * @param {import('../../common/models/Post').default} post
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}')}
    * @protected
    */
   userControls(post, context) {
@@ -49,10 +48,10 @@ export default {
   /**
    * Get controls for a post pertaining to moderation (e.g. edit).
    *
-   * @param {Post} post
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
+   * @param {import('../../common/models/Post').default} post
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}')}
    * @protected
    */
   moderationControls(post, context) {
@@ -79,10 +78,10 @@ export default {
   /**
    * Get controls for a post that are destructive (e.g. delete).
    *
-   * @param {Post} post
-   * @param {*} context The parent component under which the controls menu will
-   *     be displayed.
-   * @return {ItemList}
+   * @param {import('../../common/models/Post').default} post
+   * @param {import('../../common/Component').default<any, any>}  context The parent component under which the controls menu will be displayed.
+   *
+   * @return {ItemList<import('mithril').Children>}')}
    * @protected
    */
   destructiveControls(post, context) {
@@ -134,7 +133,7 @@ export default {
   /**
    * Open the composer to edit a post.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   editAction() {
     return new Promise((resolve) => {
@@ -148,11 +147,11 @@ export default {
   /**
    * Hide a post.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   hideAction() {
     if (!confirm(extractText(app.translator.trans('core.forum.post_controls.hide_confirmation')))) return;
-    this.pushAttributes({ hiddenAt: new Date(), hiddenUser: app.session.user });
+    this.pushData({ attributes: { hiddenAt: new Date() }, relationships: { hiddenUser: app.session.user } });
 
     return this.save({ isHidden: true }).then(() => m.redraw());
   },
@@ -160,10 +159,10 @@ export default {
   /**
    * Restore a post.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   restoreAction() {
-    this.pushAttributes({ hiddenAt: null, hiddenUser: null });
+    this.pushData({ attributes: { hiddenAt: null }, relationships: { hiddenUser: null } });
 
     return this.save({ isHidden: false }).then(() => m.redraw());
   },
@@ -171,7 +170,7 @@ export default {
   /**
    * Delete a post.
    *
-   * @return {Promise}
+   * @return {Promise<void>}
    */
   deleteAction(context) {
     if (!confirm(extractText(app.translator.trans('core.forum.post_controls.delete_confirmation')))) return;

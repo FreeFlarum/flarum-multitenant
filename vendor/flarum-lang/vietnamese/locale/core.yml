@@ -395,8 +395,8 @@ core:
       welcome_text: 'Chào mừng bạn, {username}!'
     user:
       avatar_remove_button: '=> core.ref.remove'
-      avatar_upload_button: 'Tải lên'
-      avatar_upload_tooltip: 'Tải lên ảnh đại diện'
+      avatar_upload_button: 'Tải ảnh lên'
+      avatar_upload_tooltip: 'Cập nhật ảnh đại diện'
       discussions_link: '=> core.ref.discussions'
       in_discussion_text: 'Trong {discussion}'
       joined_date_text: 'Đã tham gia {ago}'

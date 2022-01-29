@@ -1,6 +1,6 @@
 {
     "name": "zerosonesfun/flarum-bbcode-button",
-    "description": "Adds a BBcode button to the toolbar.",
+    "description": "Adds a BBCode button to the composer toolbar.",
     "keywords": [
         "flarum"
     ],
@@ -9,24 +9,28 @@
     "require": {
         "flarum/core": "^1.0.0"
     },
-    "require-dev": {
-        "flarum/testing": "^1.0.0"
-    },
     "authors": [
         {
             "name": "Billy Wilcosky",
             "email": "billy@wilcosky.com",
-            "role": "Developer"
+            "role": "Creator"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zerosonesfun/flarum-bbcode-button/issues",
+        "source": "https://github.com/zerosonesfun/flarum-bbcode-button",
+        "forum": "https://discuss.flarum.org/d/29425-bbcode-button"
+    },
+    "homepage": "https://www.wilcosky.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.wilcosky.com"
         }
     ],
     "autoload": {
         "psr-4": {
             "ZerosOnesFun\\BBcodeButton\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ZerosOnesFun\\BBcodeButton\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -39,20 +43,5 @@
                 "color": "#000"
             }
         }
-    },
-    "scripts": {
-        "test": [
-            "@test:unit",
-            "@test:integration"
-        ],
-        "test:unit": "phpunit -c tests/phpunit.unit.xml",
-        "test:integration": "phpunit -c tests/phpunit.integration.xml",
-        "test:setup": "@php tests/integration/setup.php"
-    },
-    "scripts-descriptions": {
-        "test": "Runs all tests.",
-        "test:unit": "Runs all unit tests.",
-        "test:integration": "Runs all integration tests.",
-        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
     }
 }

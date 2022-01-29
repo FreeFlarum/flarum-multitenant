@@ -6,55 +6,51 @@ export default class IndexPage extends Page<import("../../common/components/Page
     static providesInitialSearch: boolean;
     constructor();
     lastDiscussion: any;
-    bodyClass: string | undefined;
-    scrollTopOnCreate: boolean | undefined;
     setTitle(): void;
     /**
      * Get the component to display as the hero.
      *
-     * @return {MithrilComponent}
+     * @return {import('mithril').Children}
      */
-    hero(): any;
+    hero(): import('mithril').Children;
     /**
      * Build an item list for the sidebar of the index page. By default this is a
      * "New Discussion" button, and then a DropdownSelect component containing a
      * list of navigation items.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    sidebarItems(): ItemList;
+    sidebarItems(): ItemList<import('mithril').Children>;
     /**
      * Build an item list for the navigation in the sidebar of the index page. By
      * default this is just the 'All Discussions' link.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    navItems(): ItemList;
+    navItems(): ItemList<import('mithril').Children>;
     /**
      * Build an item list for the part of the toolbar which is concerned with how
      * the results are displayed. By default this is just a select box to change
      * the way discussions are sorted.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    viewItems(): ItemList;
+    viewItems(): ItemList<import('mithril').Children>;
     /**
      * Build an item list for the part of the toolbar which is about taking action
      * on the results. By default this is just a "mark all as read" button.
      *
-     * @return {ItemList}
+     * @return {ItemList<import('mithril').Children>}
      */
-    actionItems(): ItemList;
+    actionItems(): ItemList<import('mithril').Children>;
     /**
      * Open the composer for a new discussion or prompt the user to login.
      *
-     * @return {Promise}
+     * @return {Promise<void>}
      */
-    newDiscussionAction(): Promise<any>;
+    newDiscussionAction(): Promise<void>;
     /**
      * Mark all discussions as read.
-     *
-     * @return void
      */
     markAllAsRead(): void;
 }

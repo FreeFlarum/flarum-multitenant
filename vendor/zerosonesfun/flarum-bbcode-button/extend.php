@@ -25,4 +25,6 @@ return [
     (new Extend\Settings())
     ->serializeToForum('zerosonesfun-bbcode-button.code', 'zerosonesfun-bbcode-button.code')
     ->serializeToForum('zerosonesfun-bbcode-button.pos', 'zerosonesfun-bbcode-button.pos')
+    ->serializeToForum('zerosonesfun-bbcode-button.icon', 'zerosonesfun-bbcode-button.icon')
+    ->serializeToForum('zerosonesfun-bbcode-button.intro', 'zerosonesfun-bbcode-button.intro')
 ];

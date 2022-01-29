@@ -1,6 +1,18 @@
-/// <reference types="mithril" />
+/// <reference path="../../../src/common/translator-icu-rich.d.ts" />
+import type Mithril from 'mithril';
+import type User from '../../common/models/User';
 import ItemList from '../../common/utils/ItemList';
 import AdminPage from './AdminPage';
+declare type ColumnData = {
+    /**
+     * Column title
+     */
+    name: Mithril.Children;
+    /**
+     * Component(s) to show for this column.
+     */
+    content: (user: User) => Mithril.Children;
+};
 /**
  * Admin page which displays a paginated list of all users on the forum.
  */
@@ -50,12 +62,12 @@ export default class UserListPage extends AdminPage {
      *
      * See `UserListPage.tsx` for examples.
      */
-    columns(): ItemList;
+    columns(): ItemList<ColumnData>;
     headerInfo(): {
         className: string;
         icon: string;
-        title: any;
-        description: any;
+        title: import("@askvortsov/rich-icu-message-formatter").NestedStringArray;
+        description: import("@askvortsov/rich-icu-message-formatter").NestedStringArray;
     };
     /**
      * Asynchronously fetch the next set of users to be rendered.
@@ -70,3 +82,4 @@ export default class UserListPage extends AdminPage {
     nextPage(): void;
     previousPage(): void;
 }
+export {};

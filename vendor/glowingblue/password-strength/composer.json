@@ -33,7 +33,7 @@
     "email": "dev@glowingblue.com"
   },
   "require": {
-    "flarum/core": "^1.0.0"
+    "flarum/core": "^1.2.0"
   },
   "conflict": {
     "therealsujitk/flarum-ext-show-password": "*"
