@@ -1,0 +1,76 @@
+.ComposerBody-header {
+  margin: 0 auto 10px 0;
+
+  > li {
+    margin-left: -4px;
+    margin-right: auto;
+  }
+  h3 {
+    input {
+      &, &[disabled], &:focus {
+        //padding: 0 0 0 20px;
+      }
+    }
+    .icon {
+      margin-left: 3px;
+      margin-right: auto;
+    }
+  }
+}
+.Composer-controls {
+  left: 10px;
+  right: auto;
+}
+
+@media @phone {
+  .ComposerBody-content {
+    .minimized & {
+      margin-left: 50px;
+      margin-right: auto;
+    }
+  }
+  .ComposerBody-header {
+    > li {
+      .normal &:first-child {
+        margin: -@header-height-phone auto 0 50px; /* calc(~"0px - var(--header-height-phone)") */
+      }
+    }
+  }
+}
+
+@media @tablet-up {
+  .Composer-content {
+    //padding: 20px 0 0 20px;
+  }
+  .ComposerBody-avatar {
+    float: right;
+  }
+  .ComposerBody-content {
+    margin-left: auto;
+    margin-right: 85px;
+
+    .minimized &, .fullScreen & {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
+
+@media @desktop-up {
+  .Composer:not(.fullScreen) {
+    margin-right: 220px;
+    margin-left: -20px;
+
+    .App--discussion & {
+      margin-right: -20px;
+      margin-left: 205px;
+    }
+  }
+}
+
+@media @desktop-hd {
+  .hasPane.panePinned .App-composer {
+    left: auto;
+    right: @pane-width;
+  }
+}

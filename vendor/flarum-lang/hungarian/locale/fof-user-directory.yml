@@ -8,6 +8,7 @@ fof-user-directory:
       view_user_directory: 'Felhasználók megtekintése'
     settings:
       default-sort: 'Alapértelmezett rendezés'
+      disable-global-search-source: 'Ne adja hozzá a felhasználói címtárat a Flarum globális keresési mezőjéhez'
       link: 'Link hozzáadása a főoldalhoz hogy a felhasználók elérjék a Felhasználók oldalt'
       use-small-cards: 'Kisebb kártyák használata'
   forum:

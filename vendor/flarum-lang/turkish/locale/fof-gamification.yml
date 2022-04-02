@@ -53,9 +53,11 @@ fof-gamification:
         upvotes_only: 'Yalnızca yukarı oya izin ver'
         vote_color: 'Oylandığındaki renk'
     permissions:
+      downvote_notifications: 'Olumsuz oy hakkında bildirimler alın'
       see_ranking_page: 'Sıralama sayfasına bak'
       see_voters_label: 'Kimin oy verdiğini göster'
       see_votes_label: 'Yukarı oyların/aşağı oyların sayılarını göster'
+      upvote_notifications: 'Olumlu oy ile ilgili bildirimler alın'
       vote_label: 'Yukarı/Aşağı oylanan paylaşımlar'
   email:
     body:

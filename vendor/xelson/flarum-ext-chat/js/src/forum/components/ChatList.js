@@ -12,7 +12,15 @@ export default class ChatFrame extends Component {
                     <div className="input-wrapper input--down">
                         <input id="chat-find" bidi={app.chat.q} placeholder={app.translator.trans('xelson-chat.forum.chat.list.placeholder')} />
                     </div>
-                    <i class="fas fa-cloud logo"></i>
+                    <div
+                        className="icon icon-minimize"
+                        onclick={this.toggleChat.bind(this)}
+                        data-title={app.translator.trans(
+                            'xelson-chat.forum.toolbar.' + (app.chat.getFrameState('beingShown') ? 'minimize' : 'maximize')
+                        )}
+                    >
+                        <i className={app.chat.getFrameState('beingShown') ? 'fas fa-window-minimize' : 'fas fa-window-maximize'}></i>
+                    </div>
                     {this.attrs.inPage ? (
                         ''
                     ) : (
@@ -53,6 +61,13 @@ export default class ChatFrame extends Component {
 
     toggleChatsList(e) {
         app.chat.toggleChatsList();
+
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    toggleChat(e) {
+        app.chat.toggleChat();
 
         e.preventDefault();
         e.stopPropagation();

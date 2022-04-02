@@ -52,7 +52,9 @@ class MessageSerializer extends AbstractSerializer
      */
     protected function getDefaultAttributes($message)
     {
-        $attributes = $message->getAttributes();
+        $attributes = $message->getAttributes(); // danger thing, i have to remove this line in all models
+        unset($attributes['ip_address']);
+
         $attributes['created_at'] = $this->formatDate($message->created_at);
         if($attributes['edited_at']) $attributes['edited_at'] = $this->formatDate($message->edited_at);
         if($this->settings->get('xelson-chat.settings.display.censor') && !$this->actor->id)

@@ -14,6 +14,8 @@ export default class ChatModal extends Modal {
         app.search.neonchat = { usersSelected: [] };
         this.usersSelected = app.search.neonchat.usersSelected;
 
+        app.chat.saveFrameState('beingShown', false);
+
         this.input = {
             title: Stream(''),
             color: Stream(''),
@@ -23,6 +25,11 @@ export default class ChatModal extends Modal {
                 lastInput: null,
             },
         };
+    }
+
+    hide() {
+        super.hide();
+        app.chat.saveFrameState('beingShown', true);
     }
 
     onremove(vnode) {

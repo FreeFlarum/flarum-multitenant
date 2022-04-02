@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.ScrollButtons {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 7px;
+  z-index: 900;
+
+  .ScrollButtons-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 0.4;
+    background: @secondary-color;
+    color: #fff;
+
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media @phone {
+    &.has-MobileTab {
+      bottom: 80px;
+    }
+  }
+
+  &.is-visible {
+    display: block;
+    opacity: 1;
+  }
+}

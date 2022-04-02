@@ -4,6 +4,7 @@
 
 flarum-ext-welcomebox:
   admin:
+    UseWidget: 'A widget verzió használata'
     enablepostbox: 'A Welcome Box bekapcsolása vendégeknek'
     img: 'Kép url (Guest Box)'
     img-help: 'írd ide a kép URL-jét'
@@ -11,6 +12,7 @@ flarum-ext-welcomebox:
     SettingsLink: Beállítások
     discussion: '=> core.ref.discussions'
     goToProfile: Profil
+    lastSeen: 'Utolsó látogatás'
     notregistered: 'Jelenleg nem vagy regisztrálva a fórumra.'
     npost: '=> core.ref.posts'
     tooltipDisclist: 'Saját témák'

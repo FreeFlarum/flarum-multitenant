@@ -14,7 +14,7 @@
   "support": {
       "issues": "https://github.com/zerosonesfun/flarum-inline-audio/issues",
       "source": "https://github.com/zerosonesfun/flarum-inline-audio",
-      "forum": "https://discuss.flarum.org"
+      "forum": "https://discuss.flarum.org/d/27255-inline-audio-aka-audio-url-to-player/"
   },
   "homepage": "https://www.wilcosky.com",
   "funding": [
@@ -36,10 +36,10 @@
           "title": "Inline Audio",
           "category": "feature",
           "icon": {
-              "name": "fas fa-headphones",
+              "name": "fas fa-volume-up",
               "backgroundColor": "#ddd",
               "color": "#000"
           }
       }
-  }
+   }
 }

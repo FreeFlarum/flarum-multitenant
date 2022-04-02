@@ -18,6 +18,8 @@ v17development-flarum-blog:
       categories_heading: Kategoriler
       default_article_image_label: 'Varsayılan makale görseli'
       default_article_image_text: 'Resim ayarlanmadığında görüntülenecek varsayılan bir makale resmi seçin.'
+      featured_count_label: 'Maksimum Öne Çıkan Gönderiler'
+      featured_count_text: 'Bir blog sayfasının üst kısmındaki büyük bir ızgarada kaç gönderi görüntülenmelidir?'
       hide_on_discussion_list_label: 'Tartışma listesinde gösterme'
       hide_on_discussion_list_text: 'Tartışma listesinden blog gönderilerini gizleyin.'
       hide_tags_in_taglist_label: 'Etiket listesinde etiketleri gizle'

@@ -15,6 +15,7 @@ blomstra-flag-duplicates:
       reason_duplicate_text: 'Cuộc thảo luận này trùng lặp với cuộc thảo luận khác.'
     post_stream:
       flagged_duplicate_text: '{username} đã đánh dấu cuộc thảo luận này trùng lặp với {duplicate}. Kiểm duyệt viên sẽ sớm kiểm tra.'
+      not_found: 'Không tìm thấy bài viết'
 flarum-flags:
   forum:
     flag_post:

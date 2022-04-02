@@ -51,6 +51,7 @@ fof-upload:
       preferences:
         max_file_size: 'Dimensione massima dei file (in kb)'
         mime_types: 'Configura il mimetype, formato dei file'
+        php_ini_values: 'I tuoi valori <code>php.ini</code> sono <code>post_max_size={post}</code> e <code>upload_max_filesize={upload}</code>. Assicurarsi che il valore impostato qui sia inferiore a queste soglie o regolarle di conseguenza. Se utilizzi <code>Nginx</code>, assicurati anche che <code>client_max_body_size</code> sia di dimensioni sufficienti per il limite massimo scelto.'
         title: 'Preferenze generali'
       qiniu:
         bucket: Cestino
@@ -87,6 +88,8 @@ fof-upload:
       just-url_description: "Inserisci solo l'URL. Il rendering può essere gestito da altre estensioni con capacità di collegamento automatico. Nessuna funzionalità di download, nessuna statistica viene raccolta e la protezione hotlink viene ignorata.\n"
       markdown-image: 'Template Markdown Immagine'
       markdown-image_description: "Mostra l'immagine completa in linea utilizzando Markdown. <strong>Devi avere flarum/markdown installato e abilitato affinché funzioni.</strong> Nessuna funzionalità di download, nessuna statistica viene raccolta e la protezione hotlink viene ignorata.\n"
+      text-preview: 'Anteprima Testo'
+      text-preview_description: "Inserisce un'anteprima (prime 5 righe) del file di testo, con un'opzione per espandere per rivelare l'intero contenuto del file.\n"
     upload_methods:
       aws-s3: 'Amazon S3'
       imgur: Imgur
@@ -125,3 +128,11 @@ fof-upload:
       error: Errore
       loading: Caricamento...
       unauthorized: 'Non hai permessi per scaricare file'
+    text_preview:
+      collapse: 'Comprimi anteprima'
+      error: "Errore durante l'anteprima del file. Potrebbe essere stato eliminato o l'ID file fornito non è valido.\n"
+      expand: 'Espandi anteprima'
+      no_snippet: '<nessun anteprima disponibile>'
+      no_snippet_preview: '<l''anteprima apparirà qui dopo la pubblicazione>'
+    validation:
+      max_size: 'I caricamenti superiori a {max} kb non sono accettati.'

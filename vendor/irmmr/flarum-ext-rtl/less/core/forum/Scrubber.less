@@ -1,0 +1,47 @@
+@control-bg-e: hsl(212.45901639, 26.8722467%, 93%);
+
+.Scrubber {
+  .Scrubber-last {
+    margin-top: 8px;
+  }
+
+  .Scrubber-first {
+    margin-bottom: 8px;
+  }
+
+  & a {
+    margin-right: -1px;
+    margin-left: auto;
+
+    & .fa {
+      margin-left: 2px;
+      margin-right: auto;
+    }
+  }
+}
+.Scrubber-scrollbar {
+  margin: 8px 0 8px 3px;
+}
+.Scrubber-before, .Scrubber-after {
+  border-right: 1px solid @control-bg-e;
+  border-left: 0;
+}
+.Scrubber-unread {
+  border-right: 1px solid @control-bg-e;
+  border-left: 0;
+  padding-right: 13px;
+  padding-left: 0;
+}
+.Scrubber-bar {
+  float: right;
+  margin-right: -2px;
+  margin-left: auto;
+}
+.Scrubber-info {
+  right: 15px;
+  left: auto;
+
+  &, strong, span {
+    text-align: right !important;
+  }
+}

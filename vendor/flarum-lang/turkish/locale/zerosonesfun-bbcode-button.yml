@@ -5,10 +5,14 @@
 flarum-bbcode-button:
   admin:
     settings:
-      codedesc: 'Aşağıdaki BBCode açılış ve kapanış etiketlerini yazın ve kaydedin.'
-      codelabel: 'Özel BBCode'
-      posdesc: 'İmlecin varsayılan olarak açılış ve kapanış etiketleri arasında olmasını istersiniz. Bunu gerçekleştirmek için bu sayıyı ayarlayın. Sayı ne kadar büyükse, imleç o kadar sağda görünecektir.'
-      poslabel: 'İmleç Yerleşimi'
+      codedesc: 'Açılış ve kapanış BBCode etiketlerini yazın.'
+      codelabel: 'BBC Kodu Etiketleri'
+      icondesc: 'Font Awesome sınıf adını girin. Örneğin: fas fa-palette'
+      iconlabel: 'Düğme Simgesi'
+      introdesc: 'Kullanmaya çalışmadan önce bu ayarları kurun ve kaydedin. Bu uzantı, düzenleyici araç çubuğuna yeni bir düğme ekler. Birinin özel bir BBCode eklemesine izin vermek için yapılmıştır. Ancak, hayal gücünüzü kullanmaktan çekinmeyin. Özel Markdown veya ortak bir ifade eklemek için kullanın.'
+      introlabel: 'Özel BBCode Düğmesi [ ]'
+      posdesc: 'Sayı ne kadar büyükse, imleç o kadar sağda görünecektir.'
+      poslabel: 'Düğmeye Bastıktan Sonra İmleç Yerleşimi'
   forum:
     composer:
       bbcode_tooltip: 'BBCode ekle'

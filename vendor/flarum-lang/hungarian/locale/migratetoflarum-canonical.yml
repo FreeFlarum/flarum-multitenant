@@ -7,7 +7,7 @@ migratetoflarum-canonical:
     settings:
       field:
         status: 'Átirányítás típusa'
-        wrong_url: 'A bővítmény beállításai akkor jelennek meg, ha a fórumot a kanonikus URL címen keresztül éri el.'
+        wrong_url: 'A bővítmény beállításai akkor jelennek meg, ha a fórumot a kanonikus URL címen keresztül éri el'
       option:
         301: '301 (Állandó átirányítás, gyártáshoz)'
         302: '302 (ideiglenes átirányítás, tesztelés céljából)'

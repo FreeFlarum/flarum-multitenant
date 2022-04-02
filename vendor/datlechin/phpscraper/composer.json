@@ -1,0 +1,26 @@
+{
+    "name": "datlechin/phpscraper",
+    "description": "An oppinionated way to access the web. See tests/ for examples.",
+    "keywords": [
+        "PHP scraper",
+        "PHP scraping",
+        "web scraping",
+        "PHP library",
+        "web-access"
+    ],
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": "^7.3 | ^8.0",
+        "ext-intl": "*",
+        "fabpot/goutte": "^4.0.2",
+        "symfony/dom-crawler": "^6.0.2",
+        "jeremykendall/php-domain-parser": "^6.1.0",
+        "donatello-za/rake-php-plus": "^1.0.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "spekulatius\\": "src/"
+        }
+    }
+}

@@ -17,7 +17,7 @@ use Flarum\Foundation\ValidationException;
 use Flarum\Http\UrlGenerator;
 use FoF\StopForumSpam\StopForumSpam;
 use Illuminate\Support\Arr;
-use Laminas\Diactoros\Uri;
+use Illuminate\Support\Str;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -43,11 +43,10 @@ class RegisterMiddleware implements MiddlewareInterface
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        $registerUri = new Uri($this->url->to('forum')->path('/register'));
-        if ($request->getUri()->getPath() === $registerUri->getPath()) {
-            $data = $request->getParsedBody();
+        $registerPath = Str::replaceFirst($this->url->to('forum')->base(), '', $this->url->to('forum')->path('register'));
 
-            $shouldPrevent = false;
+        if ($request->getUri()->getPath() === $registerPath) {
+            $data = $request->getParsedBody();
 
             try {
                 $shouldPrevent = $this->sfs->shouldPreventLogin([

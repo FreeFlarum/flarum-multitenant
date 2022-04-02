@@ -12,6 +12,8 @@ custom-header:
     facebookIcon-help: 'Nhập URL hợp lệ trang facebook của bạn'
     githubIcon: 'Liên kết với trang GitHub của bạn'
     githubIcon-help: 'Nhập URL hợp lệ trang GitHub của bạn'
+    headerBackgroundImage: 'Ảnh nền đầu trang'
+    headerBackgroundImage-help: 'Dán URL ảnh nền cho đầu trang'
     headerTagline: 'Khẩu hiệu đầu trang'
     headerTagline-help: 'Tại đây bạn có thể thay đổi khẩu hiệu của bạn'
     headerTitle: 'Tiêu đề đầu trang'

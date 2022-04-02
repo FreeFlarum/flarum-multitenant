@@ -20,6 +20,5 @@ export default function () {
     Forum.prototype.catchTheFishActiveRounds = Model.hasMany('catchTheFishActiveRounds');
     Forum.prototype.catchTheFishCanModerate = Model.attribute('catchTheFishCanModerate');
     Forum.prototype.catchTheFishCanSeeRankingsPage = Model.attribute('catchTheFishCanSeeRankingsPage');
-    Forum.prototype.catchTheFishCanSeeProfileRankings = Model.attribute('catchTheFishCanSeeProfileRankings');
     Forum.prototype.catchTheFishAnimateFlip = Model.attribute('catchTheFishAnimateFlip');
 }

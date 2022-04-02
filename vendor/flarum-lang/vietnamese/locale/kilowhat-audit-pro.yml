@@ -9,15 +9,25 @@ kilowhat-audit:
       pro: 'Cao cấp'
       title: 'Kiểm tra'
       upgrade: 'Nâng cấp lên Cao cấp'
+    limitedSettings:
+      configure: 'Cấu hình'
+      introduction: 'Cấu hình người dùng có quyền truy cập hạn chế có thể thấy'
+      requiresExtension: 'Yêu cầu tiện ích mở rộng {extension}'
+      title: 'Thiết lập giới hạn truy cập'
     permissions:
       view: 'Xem nhật ký kiểm tra'
+      viewLimited: 'Xem nhật ký bị giới hạn'
+    settings:
+      limitedIpAddress: 'Xem địa chỉ IP'
   forum:
     link:
       actor-audit: 'Nhật ký kiểm tra (người dùng với tư cách là tác nhân)'
+      all-audit: 'Nhật ký kiểm tra'
       discussion-audit: 'Nhật ký kiểm tra'
       user-audit: 'Nhật ký kiểm tra (chỉnh sửa tài khoản)'
     modal:
       actor-title: 'Nhật ký kiểm tra tác nhân'
+      all-title: 'Nhật ký kiểm tra'
       discussion-title: 'Nhật ký kiểm tra cuộc thảo luận'
       user-title: 'Nhật ký kiểm tra người dùng'
   lib:

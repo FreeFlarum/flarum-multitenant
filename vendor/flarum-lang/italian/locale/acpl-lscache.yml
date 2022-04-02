@@ -4,6 +4,9 @@
 
 acpl-lscache:
   admin:
+    cache_exclude_help: 'I percorsi contenenti queste stringhe non verranno memorizzati nella cache. Ad esempio, per <code>/mypath/mypage?aa=bb</code>, è possibile utilizzare <code>mypage?aa=</code> qui. Per abbinare l''inizio, aggiungi <code>^</code> all''inizio dell''elemento. Per ottenere una corrispondenza esatta, aggiungi <code>$</code> alla fine dell''URL. Uno per riga.'
+    cache_exclude_label: 'Non memorizzare nella cache i percorsi'
+    clearing_cache_listener_label: 'Svuota LSCache quando la cache di Flarum viene svuotata'
     public_cache_ttl_help: 'Specifica per quanto tempo, in secondi, le pagine pubbliche vengono memorizzate nella cache. Il valore predefinito è 300 secondi'
     public_cache_ttl_label: 'TTL cache pubblica predefinita'
     purge_all: 'Elimina tutto da LSCache'

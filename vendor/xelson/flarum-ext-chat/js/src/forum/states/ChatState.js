@@ -349,6 +349,10 @@ export default class ChatState {
     postChatMessage(model) {
         return model.save({ message: model.content, created_at: new Date(), chat_id: model.chat().id() }).then(
             (r) => {
+                // another ugly workaround. I can't even imagine why pushPayload (pushObject) fails
+                model.pushData(r.data);
+                model.exists = true;
+
                 model.isTimedOut = false;
                 model.isNeedToFlash = true;
                 model.isEditing = false;
@@ -462,6 +466,10 @@ export default class ChatState {
         } else chatLists.classList.add('toggled');
 
         this.saveFrameState('beingShownChatsList', showing);
+    }
+
+    chatIsShown() {
+        return this.getFrameState('beingShown');
     }
 
     toggleChat(e) {

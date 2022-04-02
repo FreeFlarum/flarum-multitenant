@@ -4,22 +4,31 @@
 
 fof-best-answer:
   admin:
+    edit_tag:
+      qna_label: 'Legjobb válasz bekapcsolása erre a címkére'
+      reminders: 'Emlékeztető bekapcsolása erre a címkére'
     permissions:
       best_answer: 'Legjobb válasz kiválasztása (saját téma)'
       best_answer_not_own_discussion: 'Legjobb válasz kiválasztása (nem saját téma)'
     settings:
-      allow_select_own_post: 'A felhasználók kiválaszthatják a saját hozzászólásukat'
+      allow_select_own_post: 'Saját hozzászólás kiválasztása'
+      documentation: Dokumentáció
+      enable_all_tags_button: 'A legjobb válasz bekapcsolása az összes címkére'
+      enable_all_tags_reminder_button: 'Emlékeztető bekapcsolása az összes címkére'
       label:
         advanced: Haladó
         general: Általános
         reminders: Emlékeztetők
-        reminders_notice: 'Ahhoz, hogy az emlékeztető jól működjön, a Flarum időzítő jól kell legyen beállítva.'
+        reminders_notice: 'Ahhoz, hogy az emlékeztető működjön, a Flarum időzítő jól kell legyen beállítva.'
       remind_tag_ids: 'Ha bizonyos címkékre szeretnéd korlátozni az emlékeztetőket, írd be a címkéket (vesszővel elválasztva)'
       schedule_log_output: 'Az ütemező kimenetének hozzáfűzése a naplótárhoz'
-      schedule_on_one_server: 'Használja az ''onOneServer ()'' utasítást a feladatütemezőhöz (Redis / Memcache szükséges)'
-      schedule_stop_overnight: 'Megakadályozza az emlékeztető ütemezőjének futtatását éjszakai órákban (21:00 és 8:00 között)'
-      select_best_answer_reminder_days: 'A felhasználók emlékeztetése hogy válasszák ki a legjobb választ X nap mulva'
-      use_alt_ui: 'Alternatív elrendezés használata (a legjobb válasz gombok a láblécben)'
+      schedule_on_one_server: 'Használja az ''onOneServer ()'' utasítást a feladatütemezőhöz'
+      schedule_stop_overnight: 'Megakadályozza az emlékeztető ütemezőjének futtatását éjszakai órákban'
+      schedule_stop_overnight_help: 'D.U.9 - D.E.8 szerver idő'
+      select_best_answer_reminder_days: 'Emlékeztető gyakorisága'
+      show_filter_label: 'Mutassa a Legjobb válasz szűrő lenyílót'
+      use_alt_ui: 'Alternatív elrendezés'
+      use_alt_ui_help: 'A legjobb válasz gombok a láblécben'
   email:
     body:
       awarded: "Üdv {recipient_display_name},\n\nJó munka, {actor_display_name} épp a legjobb válasznak értékelte a válaszodat itt: {discussion_title}. Köszönjük a segítséget.\n\nNézd meg itt: {discussion_url}\n"
@@ -38,11 +47,13 @@ fof-best-answer:
     errors:
       mismatch: 'A kiválasztott válasz nincs a beszélgetésben.'
     filter:
+      accessible_label: 'Megoldva/Megoldatlan választó'
       all_label: 'Összes kérdés'
       solved_label: 'Megoldott kérdések'
       unsolved_label: 'Megoldatlan kérdések'
     index:
       ask_question: 'Tegyen fel egy kérdést'
+      cannot_ask_question: 'Nem kérdezhet'
       solved_link: 'Megoldott beszélgetések'
       unsolved_link: 'Megoldatlan beszélgetések'
     notification:

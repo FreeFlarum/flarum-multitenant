@@ -19,7 +19,8 @@ class ForumAttributes
         return [
             'catchTheFishCanModerate' => $serializer->getActor()->can('catchthefish.moderate'),
             'catchTheFishCanSeeRankingsPage' => $serializer->getActor()->can('catchthefish.list-rankings'),
-            'catchTheFishAnimateFlip' => (bool)$this->settings->get('catch-the-fish.animateFlip', true),
+            'catchTheFishAlertRound' => $this->settings->get('catch-the-fish.alertRound') !== '0',
+            'catchTheFishAnimateFlip' => $this->settings->get('catch-the-fish.animateFlip') !== '0',
         ];
     }
 }

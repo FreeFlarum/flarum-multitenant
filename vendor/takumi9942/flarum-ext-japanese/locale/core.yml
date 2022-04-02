@@ -116,7 +116,7 @@ core:
     # These translations are used on default extension pages.
     extension:
       configure_scopes: 権限設定
-      confirm_uninstall: アンインストールは、この拡張機能に関連するすべてのデータベースとファイルを削除します。本当に続行しますか？
+      confirm_purge: 初期化は、この拡張機能に関連するすべてのデータベースとファイルを削除します。拡張機能自体は削除されません。拡張機能の削除はComposerで行う必要があります。本当に続行しますか？
       disabled: 無効
       enable_to_see: 設定を確認, 変更するには拡張機能を有効化してください
       enabled: 有効
@@ -131,7 +131,11 @@ core:
       no_settings: この拡張機能には設定がありません
       open_modal: 設定を開く
       permissions_title: 権限
-      uninstall_button: アンインストール
+      purge_button: 初期化
+      readme:
+        button_label: README
+        no_readme: この拡張機能には README ファイルがありません
+        title: "{extName} 取扱説明書"
 
     # These translations are used in the session secondary header.
     header:
@@ -327,9 +331,10 @@ core:
     discussion_list:
       empty_text: 一致するスレッドが見つかりません
       load_more_button: => core.ref.load_more
-      mark_as_read_tooltip: 既読にする
       replied_text: "{username} が {ago} に返信しました"
       started_text: "{username} が {ago} に作成しました"
+      total_replies_a11y_label: "{count, plural, one {# reply} other {# replies}}"
+      unread_replies_a11y_label: "{count, plural, one {# unread reply} other {# unread replies}}. 未読の {count, plural, one {reply} other {replies}} を既読にする"
 
     # These translations are used in the Forgot Password modal dialog.
     forgot_password:
@@ -493,8 +498,16 @@ core:
       resend_button: 確認メールを再送信
       sent_message: 送信しました
 
+    welcome_hero:
+      hide: ウェルカムメッセージを隠す
+
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
+    debug_button: デバッグ
+
+    # These translations are used in the Alert component.
+    alert:
+      dismiss_a11y_label: 通知を閉じる
 
     # These translations are displayed as tooltips for discussion badges.
     badge:
@@ -533,6 +546,19 @@ core:
     # These translations are used in the loading indicator component.
     loading_indicator:
       accessible_label: => core.ref.loading
+
+    # Translations in this namespace are used to format page meta titles.
+    meta_titles:
+      with_page_title: "{pageNumber, plural, =1 {{pageTitle} - {forumName}} other {{pageTitle}: ページ # - {forumName}}}"
+      without_page_title: "{pageNumber, plural, =1 {{forumName}} other {ページ # - {forumName}}}"
+
+    # These translations are used in modals.
+    modal:
+      close: 閉じる
+
+    # These translations are used in the navigation header.
+    nav:
+      drawer_button: ナビゲーション編集ツールを開く
 
     # These translations are used as suffixes when abbreviating numbers.
     number_suffix:

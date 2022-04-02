@@ -24,10 +24,16 @@ fof-merge-discussions:
       merge: '=> fof-merge-discussions.ref.merge'
     modal:
       load_preview_button: Podgląd
+      ordering_date_help: 'Posty w docelowej dyskusji będą posortowane na podstawie ich daty utworzenia'
+      ordering_date_label: 'Włącz posty wg daty utworzenia'
+      ordering_heading: 'Kolejność scalania'
+      ordering_suffix_help: 'Posty włączone do docelowej dyskusji zostaną dodane na końcu dyskusji'
+      ordering_suffix_label: 'Dodaj włączone posty na końcu dyskusji'
       submit_button: '=> fof-merge-discussions.ref.merge'
       title: 'Scal dyskusje'
       type_from_help_text: 'Wybierz docelową dyskusję, do której chcesz włączyć <b>{title}</b>.'
       type_from_label: 'Włącz tę dyskusję do innej'
+      type_heading: 'Typ scalenia'
       type_target_help_text: 'Wybierz dyskusje do włączenia do <b>{title}</b>.'
       type_target_label: 'Włącz do mnie'
     notification:

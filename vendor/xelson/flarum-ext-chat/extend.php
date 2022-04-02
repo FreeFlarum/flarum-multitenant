@@ -43,7 +43,7 @@ return [
         ->patch('/chats/{id}', 'neonchat.chats.edit', EditChatController::class)
         ->delete('/chats/{id}', 'neonchat.chats.delete', DeleteChatController::class)
         ->get('/chatmessages', 'neonchat.chatmessages.fetch', FetchMessageController::class)
-        ->post('/chatmessages', 'neonchat.chatmessages.post', PostMessageController::class)
+        ->post('/chatmessages/{id}', 'neonchat.chatmessages.post', PostMessageController::class)
         ->patch('/chatmessages/{id}', 'neonchat.chatmessages.edit', EditMessageController::class)
         ->delete('/chatmessages/{id}', 'neonchat.chatmessages.delete', DeleteMessageController::class)
 

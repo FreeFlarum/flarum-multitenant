@@ -1,0 +1,45 @@
+{
+	"name": "neerugupta/flarum-lang-arabic",
+	"type": "flarum-extension",
+	"description": "Arabic language pack for Flarum.",
+	"homepage": "https://github.com/yourname/flarum-lang-arabic",
+	"keywords": [
+		"locale",
+		"flarum",
+		"ar-locale"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Neeru Gupta",
+			"email": "neeru.gupta@yahoo.com",
+			"homepage": "https://github.com/neerugupta/"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/neerugupta/flarum-lang-arabic/issues",
+		"source": "https://github.com/neerugupta/flarum-lang-arabic"
+	},
+	"require": {
+		"flarum/core": "^1.0"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"extra": {
+		"flarum-extension": {
+			"title": "Arabic",
+			"icon": {
+				"image": "icon.svg",
+				"backgroundSize": "cover",
+				"backgroundPosition": "center"
+			}
+		},
+		"flarum-locale": {
+			"code": "ar",
+			"title": "Arabic"
+		},
+		"extiverse": {
+			"discuss": ""
+		}
+	}
+}

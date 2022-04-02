@@ -19,4 +19,4 @@ fof-forum-statistics-widget:
       latest_member: 'Thành viên mới: '
       posts_count: 'Bài viết: {postsCount}'
       users_count: 'Thành viên: {usersCount}'
-      widget_title: 'Thống kê diễn đàn'
+      widget_title: 'Thống kê'

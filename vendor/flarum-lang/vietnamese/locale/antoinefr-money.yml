@@ -4,6 +4,9 @@
 
 antoinefr-money:
   admin:
+    automoderator:
+      action_name: 'Tặng tiền'
+      metric_name: Tiền
     permissions:
       edit_money_label: 'Chỉnh sửa tiền'
     settings:

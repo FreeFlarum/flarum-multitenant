@@ -21,7 +21,7 @@ class UploadableBanner implements Extend\ExtenderInterface
 
         (new Extend\Settings)
             ->serializeToForum('afruxHeroBanner', 'afrux-theme-base.welcome_hero_banner', AddHeroImageUrlToApi::class)
-            ->serializeToForum('afruxHeroBannerPosition', 'afrux-theme-base.welcome_hero_banner_position')
+            ->serializeToForum('afruxHeroBannerPosition', 'afrux-theme-base.hero_banner_position')
             ->extend($container, $extension);
 
         (new Extend\ApiSerializer(ForumSerializer::class))

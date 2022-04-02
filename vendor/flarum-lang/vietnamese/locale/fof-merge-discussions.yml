@@ -24,10 +24,16 @@ fof-merge-discussions:
       merge: '=> fof-merge-discussions.ref.merge'
     modal:
       load_preview_button: 'Xem trước'
+      ordering_date_help: 'Các bài viêtw trong cuộc thảo luận kết quả được sắp xếp lại theo ngày tạo cá nhân của họ'
+      ordering_date_label: 'Hợp nhất các bài viết theo ngày'
+      ordering_heading: 'Hợp nhất thứ tự'
+      ordering_suffix_help: 'Các bài viết được hợp nhất vào cuộc thảo luận còn tồn tại sẽ được thêm vào cuối cuộc thảo luận'
+      ordering_suffix_label: 'Thêm các bài viết đã hợp nhất vào cuối cuộc thảo luận'
       submit_button: '=> fof-merge-discussions.ref.merge'
       title: 'Hợp nhất cuộc thảo luận'
       type_from_help_text: 'Chọn cuộc thảo luận mục tiêu để hợp nhất <b>{title}</b> vào.'
       type_from_label: 'Hợp nhất cuộc thảo luận này thành cuộc thảo luận khác'
+      type_heading: 'Kiểu hợp nhất'
       type_target_help_text: 'Chọn cuộc thảo luận để hợp nhất thành <b>{title}</b>.'
       type_target_label: 'Hợp nhất với tôi'
     notification:

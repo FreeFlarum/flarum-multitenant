@@ -121,5 +121,11 @@ fof-upload:
       error: Błąd
       loading: Wysyłanie
       unauthorized: 'Nie masz uprawnień, aby pobierać pliki'
+    text_preview:
+      collapse: 'Zwiń podgląd'
+      error: "Wystąpił błąd podczas generowania podglądu pliku. Plik mógł zostać usunięty lub podane ID pliku jest nieprawidłowe.\n"
+      expand: 'Rozwiń podgląd'
+      no_snippet: '<podgląd nie jest dostępny>'
+      no_snippet_preview: '<podgląd pojawi się tutaj po opublikowaniu posta>'
     validation:
       max_size: 'Wysyłanie plików większych niż {max} kb nie jest obsługiwane.'

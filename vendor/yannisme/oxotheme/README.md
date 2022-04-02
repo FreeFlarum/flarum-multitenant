@@ -2,7 +2,7 @@
 
 A Flarum Theme. OXO Theme  
 Card-style themes, with a few little mockups.
-- Support `FoF Night Mode`、`Blog`
+- Support `FoF Night Mode`、`Blog`、`Hot Cards`、`ProfileCover`、`Welcomebox`、`Popular Discussion Cards`、`last-registered-users-widget`...
 
 There may be some bugs. If you find it, please remind me, and I will fix it in time!
 
@@ -32,10 +32,20 @@ php flarum cache:clear
 - [Discuss](https://discuss.flarum.org)
   
 
-![image.png](https://i.loli.net/2021/11/21/5Z1daxjnRhQOCok.png)
-![image.png](https://i.loli.net/2021/11/21/5leCotdwvVPYaU3.png)
-![image.png](https://i.loli.net/2021/11/21/pZEUJPBThQsYWmr.png)
-![image.png](https://i.loli.net/2021/11/21/bngNXx6uKvHzeco.png)
-![image.png](https://i.loli.net/2021/11/21/p3gcRhSJzsbLH6y.png)
-![image.png](https://i.loli.net/2021/11/21/OdQh9N45oxXw7m1.png)
-![image.png](https://i.loli.net/2021/11/21/QTrb2Ip7PWhUtjs.png)
+## Pictures
+### PC
+![image.png](https://s2.loli.net/2022/03/09/cQvmFfrNyR2qYKT.png)
+![image.png](https://s2.loli.net/2022/03/09/tndqsPeV9iLafhb.png)
+![image.png](https://s2.loli.net/2022/03/09/njbyhJc9TrpGm6V.png)
+![image.png](https://s2.loli.net/2022/03/09/SHiLBYIldTgbtaX.png)
+![image.png](https://s2.loli.net/2022/03/09/2KrUiPJQv9z7shL.png)
+![image.png](https://s2.loli.net/2022/03/09/oGEY67NjXRuOzaJ.png)
+![image.png](https://s2.loli.net/2022/03/09/NzKcdvyORplaq2g.png)
+
+### Mobile
+![image.png](https://s2.loli.net/2022/03/09/fi2BIcgGlHrOXAP.png)
+![image.png](https://s2.loli.net/2022/03/09/BPpeVgiod3EUbNy.png)
+![image.png](https://s2.loli.net/2022/03/09/14Gr5zTUgSalByZ.png)
+![image.png](https://s2.loli.net/2022/03/09/U56esydpV1fzKkn.png)
+![image.png](https://s2.loli.net/2022/03/09/fAuBVGRk7qncle3.png)
+![image.png](https://s2.loli.net/2022/03/09/eK5HXYOBUR3g6wG.png)

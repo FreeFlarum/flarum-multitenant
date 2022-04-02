@@ -9,7 +9,10 @@ justoverclock-related-discussions:
     relatedLimit-help: 'Scrivi il numero di discussioni correlate da mostrare (es. "4)'
     relatedTitle: 'Titolo per "Discussioni Correlate"'
     relatedTitle-help: 'Rimpiazza il titolo di defaul con un tuo titolo personalizzato'
+    showExcerpt: 'Mostra riassunto post'
   forum:
     participants: Partecipanti
+    postedOn: 'il:'
     postnumber: 'Numero di post'
     reldiscussion: 'Discussioni Correlate'
+    repliedOn: 'ha risposto'

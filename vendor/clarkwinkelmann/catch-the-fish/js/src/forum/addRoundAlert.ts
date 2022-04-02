@@ -7,6 +7,10 @@ export default function () {
     override(IndexPage.prototype, 'hero', function (original: any) {
         const existing = original();
 
+        if (!app.forum.attribute('catchTheFishAlertRound')) {
+            return existing;
+        }
+
         const rounds = app.forum.catchTheFishActiveRounds();
 
         if (!rounds) {

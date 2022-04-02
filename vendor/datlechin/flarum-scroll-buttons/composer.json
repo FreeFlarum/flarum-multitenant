@@ -1,0 +1,61 @@
+{
+    "name": "datlechin/flarum-scroll-buttons",
+    "description": "Add scroll up and scroll down buttons.",
+    "keywords": [
+        "flarum",
+        "flarum-extension",
+        "scroll buttons"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/datlechin/flarum-scroll-buttons",
+        "forum": "https://discuss.flarum.org/d/29716"
+    },
+    "homepage": "https://ngoquocdat.com",
+    "autoload": {
+        "psr-4": {
+            "Datlechin\\ScrollButtons\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Scroll Buttons",
+            "category": "feature",
+            "icon": {
+                "image": "icon.svg",
+                "color": "#fff",
+                "backgroundColor": "#D3241C",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}

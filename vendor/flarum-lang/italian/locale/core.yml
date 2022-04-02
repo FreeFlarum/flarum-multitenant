@@ -429,6 +429,8 @@ core:
     mod: Mod
     mods: Mod
   lib:
+    alert:
+      dismiss_a11y_label: 'Ignora avviso'
     badge:
       hidden_tooltip: Nascosto
     debug_button: Debug

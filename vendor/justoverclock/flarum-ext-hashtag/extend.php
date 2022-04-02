@@ -12,7 +12,8 @@
 namespace Justoverclock\Hashtag;
 
 use Flarum\Extend;
-use Flarum\Api\Event\Serializing;
+use Flarum\Settings\Event\Saving as SettingsSaving;
+use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
@@ -21,6 +22,19 @@ return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js'),
     new Extend\Locales(__DIR__.'/resources/locale'),
-    (new Extend\Settings())
-    ->serializeToForum('justoverclock-hashtag.regex', 'justoverclock-hashtag.regex'),
+    (new Extend\Formatter())
+        ->configure(function (Configurator $configurator) {
+            $configurator->plugins->set('Hashtag', Plugins\Hashtag\Configurator::class);
+        }),
+
+    (new Extend\Event())
+        ->listen(SettingsSaving::class, function (SettingsSaving $event) {
+            foreach ($event->settings as $key => $setting) {
+                if ($key === 'justoverclock-hashtag.regex' || $key === 'default_route') {
+                    resolve('flarum.formatter')->flush();
+
+                    return;
+                }
+            }
+        }),
 ];

@@ -17,13 +17,13 @@ fof-polls:
       edit_poll: '=> fof-polls.forum.moderation.edit'
     days_remaining: 'Szavazás véget ér: {time}.'
     modal:
-      add_option_label: 'Opció hozzáadása'
+      add_option_label: 'Lehetőség hozzáadása'
       add_title: 'Szavazás hozzáadása'
       date_placeholder: 'Szavazás vége (nem kötelező)'
       edit_title: 'Szavazás szerkesztése'
-      include_question: 'Kell legyen egy kérdés'
-      max: 'Maximum 10 válasz lehet'
-      min: 'Minimum 2 választ be kell tenni'
+      include_question: 'Lennie kell egy kérdésnek'
+      max: 'Legfeljebb 10 válasz lehet'
+      min: 'Legalább 2 választ meg kell adni'
       no_voters: 'Nincs szavazat'
       option_placeholder: Válasz
       options_label: Válaszok
@@ -41,4 +41,4 @@ fof-polls:
       badge: Szavazás
       votes: '# szavazat'
     votes_modal:
-      title: Szavazatok
+      title: Szavazók

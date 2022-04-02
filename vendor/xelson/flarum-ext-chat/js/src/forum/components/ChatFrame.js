@@ -46,8 +46,24 @@ export default class ChatFrame extends Component {
                         )}
                     </div>
                 </div>
+                {this.componentButtonFixedMaximize()}
             </div>
         );
+    }
+
+    componentButtonFixedMaximize() {
+        let totalUnreaded = app.chat.getUnreadedTotal();
+
+        return (
+            <div className="button-fixed-maximize" onclick={this.toggleChat.bind(this)}>
+                {totalUnreaded ? <div className="unreaded">{totalUnreaded}</div> : null}
+                <i className="fas fa-cloud"></i>
+            </div>
+        );
+    }
+
+    toggleChat() {
+        app.chat.toggleChat();
     }
 
     chatHeaderOnMouseDown(e) {

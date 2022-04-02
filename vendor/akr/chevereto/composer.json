@@ -1,0 +1,25 @@
+{
+    "name": "akr/chevereto",
+    "description": "A flarum extension that helps you upload pictures to remote server powered by Chevereto.",
+    "keywords": [
+        "flarum",
+        "chevereto"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Chevereto",
+            "icon": {
+                "image": "resources/icon.svg",
+                "backgroundColor": "#5f4bb6",
+                "backgroundSize": "90%",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+            }
+        }
+    }
+}

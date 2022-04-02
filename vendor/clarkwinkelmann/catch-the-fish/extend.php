@@ -56,9 +56,7 @@ return [
         ->attributes(ForumAttributes::class),
 
     (new Extend\ApiController(Controller\ShowForumController::class))
-        ->addInclude('catchTheFishActiveRounds.ranking', function (): bool {
-            return resolve(SettingsRepositoryInterface::class)->get('catch-the-fish.alertRound', true);
-        })
+        ->addInclude('catchTheFishActiveRounds.myRanking')
         ->prepareDataForSerialization(LoadRoundsRelationship::class),
 
     (new Extend\Policy())

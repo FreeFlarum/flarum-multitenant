@@ -1,0 +1,22 @@
+.TagLabel {
+  .DiscussionHero .TagsLabel & {
+    &.colored {
+      margin-left: 5px;
+      margin-right: auto;
+    }
+  }
+}
+
+.TagsLabel {
+  .TagLabel {
+    &:first-child {
+      border-radius: 0 @border-radius @border-radius 0 !important;
+    }
+    &:last-child {
+      border-radius: @border-radius 0 0 @border-radius !important;
+    }
+    &:first-child:last-child {
+      border-radius: @border-radius !important;
+    }
+  }
+}

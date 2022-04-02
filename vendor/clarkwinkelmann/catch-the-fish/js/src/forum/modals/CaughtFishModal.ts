@@ -1,17 +1,23 @@
+import {Vnode} from 'mithril'
 import app from 'flarum/forum/app';
-import Modal from 'flarum/common/components/Modal';
+import Modal, {IInternalModalAttrs} from 'flarum/common/components/Modal';
 import Button from 'flarum/common/components/Button';
 import FishImage from '../components/FishImage';
-import User from "../components/User";
+import User from '../components/User';
+import Fish from '../models/Fish';
 
 const translationPrefix = 'clarkwinkelmann-catch-the-fish.forum.caught-fish-modal.';
 
-export default class CaughtFishModal extends Modal {
+interface CaughtFishModalAttrs extends IInternalModalAttrs {
+    fish: Fish
+}
+
+export default class CaughtFishModal extends Modal<CaughtFishModalAttrs> {
     newName!: string
     dirty: boolean = false
     loading: boolean = false
 
-    oninit(vnode) {
+    oninit(vnode: Vnode) {
         super.oninit(vnode);
 
         this.newName = this.attrs.fish.name();
@@ -49,7 +55,7 @@ export default class CaughtFishModal extends Modal {
 
                 if (this.attrs.fish.canPlace() && !randomPlacement) {
                     // Refresh basket by reloading user
-                    app.store.find('users', app.session.user.id()).then(() => {
+                    app.store.find('users', app.session.user!.id()!).then(() => {
                         m.redraw();
                     });
                 }
@@ -63,7 +69,7 @@ export default class CaughtFishModal extends Modal {
 
             if (this.attrs.fish.canPlace() && !randomPlacement) {
                 // Refresh basket by reloading user
-                app.store.find('users', app.session.user.id()).then(() => {
+                app.store.find('users', app.session.user!.id()!).then(() => {
                     m.redraw();
                 });
             }
@@ -96,15 +102,15 @@ export default class CaughtFishModal extends Modal {
                 }),
             ]) : null,
             m('p', app.translator.trans(translationPrefix + 'congratulation', {
-                catch_count: fish.round().ranking().catch_count(),
+                catch_count: fish.round()!.myRanking()?.catch_count(),
             })),
             fish.canName() ? m('.Form-group', [
                 m('p', app.translator.trans(translationPrefix + 'name-help')),
                 m('label', app.translator.trans(translationPrefix + 'name')),
                 m('input.FormControl', {
                     value: this.newName,
-                    oninput: event => {
-                        this.newName = event.target.value;
+                    oninput: (event: Event) => {
+                        this.newName = (event.target as HTMLInputElement).value;
                         this.dirty = true;
                     },
                 }),
@@ -129,7 +135,7 @@ export default class CaughtFishModal extends Modal {
         ]);
     }
 
-    onsubmit(event) {
+    onsubmit(event: Event) {
         event.preventDefault();
         // Because the modal has its own form, pressing enter will submit here
         // In this case we apply the same feature as the first button

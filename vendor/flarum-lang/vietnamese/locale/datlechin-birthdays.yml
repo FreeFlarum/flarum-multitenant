@@ -6,13 +6,19 @@ datlechin-birthdays:
   admin:
     permissions:
       edit_own_birthday_label: 'Chỉnh sửa ngày sinh của chính mình'
+      view_birthday_label: 'Xem sinh nhật'
     settings:
-      date_format_help: 'Sử dụng định dạng <a>moment.js</a>. Để trống để sử dụng định dạng mặc định.'
+      date_format_help: 'Sử dụng định dạng <a>dayjs</a>. Để trống để sử dụng định dạng mặc định.'
       date_format_label: 'Định dạng ngày sinh'
       date_none_year_label: 'Định dạng ngày sinh không có năm'
+      min_age_help: 'Tuổi tối thiểu để đăng ký'
+      min_age_label: 'Tuổi tối thiểu'
+      required_help: 'Bạn cần bật tùy chọn bên trên để tùy chọn này hoạt động'
+      required_label: 'Bắt buộc nhập ngày sinh'
       set_on_registration_label: 'Cho phép đặt ngày sinh khi đăng ký'
   api:
-    invalid_dob_message: 'Ngày sinh của bạn phải nhỏ hơn 100 tuổi.'
+    invalid_age_message: 'Tuổi của bạn phải từ {minAge} tuổi trở lên.'
+    invalid_dob_message: 'Ngày sinh của bạn không hợp lệ'
   forum:
     change_dob:
       date_of_birth_text: 'Ngày sinh'

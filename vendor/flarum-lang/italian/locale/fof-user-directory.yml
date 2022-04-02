@@ -8,6 +8,7 @@ fof-user-directory:
       view_user_directory: 'Visualizzare l''Elenco Utenti'
     settings:
       default-sort: 'Ordine di Default'
+      disable-global-search-source: 'Non aggiungere Directory utente al campo di ricerca globale di Flarum'
       link: 'Aggiungi link in homepage per gli utenti col permesso di vedere l''elenco'
       use-small-cards: 'Usa riquadri piccoli'
   forum:
@@ -22,6 +23,9 @@ fof-user-directory:
     search:
       field:
         placeholder: 'Cerca tutti gli utenti'
+      kinds:
+        group: Gruppo
+        text: 'Testo libero'
       users_heading: 'Cerca tutti gli utenti con "{query}"'
   lib:
     sort:

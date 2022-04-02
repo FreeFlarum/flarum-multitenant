@@ -9,7 +9,10 @@ justoverclock-related-discussions:
     relatedLimit-help: 'Gösterilmesini istediğiniz tartışma sayısını bu alana yazınız (örn. 14)'
     relatedTitle: '"İlgili Tartışmalar" Başlığı'
     relatedTitle-help: 'İlgili tartışmalar için varsayılan başlığı kendi başlığınızla değiştirin'
+    showExcerpt: 'Özet Alıntısını Göster'
   forum:
     participants: Katılımcılar
+    postedOn: 'Şurada:'
     postnumber: 'Gönderi sayısı'
-    reldiscussion: 'İlgili Tartışmalar'
+    reldiscussion: 'Önerilen Tartışmalar:'
+    repliedOn: 'cevap verdi'

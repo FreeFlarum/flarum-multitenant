@@ -9,15 +9,25 @@ kilowhat-audit:
       pro: Pro
       title: Denetim
       upgrade: 'Pro''ya yükselt'
+    limitedSettings:
+      configure: Yapılandır
+      introduction: 'Sınırlı erişim izinlerine sahip kullanıcıların neleri görebileceğini yapılandırın'
+      requiresExtension: '{extension} uzantısı gerektirir'
+      title: 'Sınırlı erişim ayarları'
     permissions:
       view: 'Denetim günlüğünü görüntüle'
+      viewLimited: 'Sınırlı denetim günlüğünü görüntüle'
+    settings:
+      limitedIpAddress: 'IP Adresini Görüntüle'
   forum:
     link:
       actor-audit: 'Denetim günlüğü (katılımcı olarak kullanıcı)'
+      all-audit: 'Denetim günlüğü'
       discussion-audit: 'Denetim günlüğü'
       user-audit: 'Denetim günlüğü (hesap düzenlemeleri)'
     modal:
       actor-title: 'Katılımcı Denetim Günlüğü'
+      all-title: 'Denetim Günlüğü'
       discussion-title: 'Tartışma Denetim Günlüğü'
       user-title: 'Kullanıcı Denetim Günlüğü'
   lib:

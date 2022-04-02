@@ -14,8 +14,11 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
@@ -36,7 +39,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
@@ -60,12 +62,16 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
         '3c6b16bde9ee0229f373e20a9d2a286a' => __DIR__ . '/..' . '/afrux/forum-widgets-core/src/helpers.php',
         'a4ecaeafb8cfb009ad0e052c90355e98' => __DIR__ . '/..' . '/beberlei/assert/lib/Assert/functions.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '51fcf4e06c07cc00c920b44bcd900e7a' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/apc.php',
+        '288267919fedd3829a7732b5fb202197' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/array.php',
+        'a88cd08cfbf1600f7d5de6e587eee1fa' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/datetime.php',
         '47f619d9197b36cf5ab70738d7743fe2' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/libevent.php',
+        '213c1c2258e2e5aa409a0af3e993b3a9' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/password.php',
         'ea6bb8a12ef9b68f6ada99058e530760' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/mssql.php',
         '9a29089eb3ce41a446744c68a00f118c' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/stats.php',
+        'd5947c9df62650029c674c79176af68d' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/strings.php',
         '72243e5536b63e298acb6476f01f1aff' => __DIR__ . '/..' . '/thecodingmachine/safe/lib/special_cases.php',
+        '09f92ed6301edc510574c196c2b7d1af' => __DIR__ . '/..' . '/thecodingmachine/safe/deprecated/mysqli.php',
         '3f648889e687f31c52f949ba8a9d0873' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apache.php',
         'eeb4581d958421a4244aaa4167c6a575' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apcu.php',
         '04cb0b3c1dac5b5ddb23c14e3d66dbe9' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/array.php',
@@ -86,6 +92,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'fbd163fc68c5faf73d5ed4002ffd836d' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/fpm.php',
         '21b511999d61411fab0692ff8795bbed' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ftp.php',
         '85fbd73fc92365cd90526b0ea03cae3a' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/funchand.php',
+        'a2e4c6dfdbf36f56f1945ddcbd54e289' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/gettext.php',
         '51df9c146e0b7dcbdf358d8abd24dbdc' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/gmp.php',
         '93bb7fe678d7dcfb1322f8e3475a48b0' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/gnupg.php',
         'c171ba99cf316379ff66468392bf4950' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/hash.php',
@@ -95,7 +102,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'c28a05f498c01b810a714f7214b7a8da' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/image.php',
         '8063cd92acdf00fd978b5599eb7cc142' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/imap.php',
         '8bd26dbe768e9c9599edad7b198e5446' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/info.php',
-        '0c577fe603b029d4b65c84376b15dbd5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ingres-ii.php',
         'd4362910bde43c0f956b52527effd7d4' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/inotify.php',
         '696ba49197d9b55f0428a12bb5a818e1' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/json.php',
         '9818aaa99c8647c63f8ef62b7a368160' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ldap.php',
@@ -104,20 +110,14 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'bdca804bb0904ea9f53f328dfc0bb8a5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mailparse.php',
         'b0a3fcac3eaf55445796d6af26b89366' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mbstring.php',
         '98de16b8db03eb0cb4d318b4402215a6' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/misc.php',
-        'c112440003b56e243b192c11fa9d836e' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/msql.php',
         '7cefd81607cd21b8b3a15656eb6465f5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysql.php',
-        'aaf438b080089c6d0686679cd34aa72e' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysqli.php',
-        'df0ef890e9afbf95f3924feb1c7a89f3' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysqlndMs.php',
-        'db595fee5972867e45c5327010d78735' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/mysqlndQc.php',
         'cbac956836b72483dcff1ac39d5c0a0f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/network.php',
         '6c8f89dfbdc117d7871f572269363f25' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/oci8.php',
         '169a669966a45c06bf55ed029122729b' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/opcache.php',
         'def61bf4fecd4d4bca7354919cd69302' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/openssl.php',
         '26bb010649a6d32d4120181458aa6ef2' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/outcontrol.php',
-        '1212c201fe43c7492a085b2c71505e0f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/password.php',
         '002ebcb842e2c0d5b7f67fe64cc93158' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pcntl.php',
         '86df38612982dade72c7085ce7eca81f' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pcre.php',
-        '1cacc3e65f82a473fbd5507c7ce4385d' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pdf.php',
         '1fc22f445c69ea8706e82fce301c0831' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/pgsql.php',
         'c70b42561584f7144bff38cd63c4eef3' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/posix.php',
         '9923214639c32ca5173db03a177d3b63' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/ps.php',
@@ -128,7 +128,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '775b964f72f827a1bf87c65ab5b10800' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sem.php',
         '816428bd69c29ab5e1ed622af5dca0cd' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/session.php',
         '5093e233bedbefaef0df262bfbab0a5c' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/shmop.php',
-        '01352920b0151f17e671266e44b52536' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/simplexml.php',
         'b080617b1d949683c2e37f8f01dc0e15' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sockets.php',
         '2708aa182ddcfe6ce27c96acaaa40f69' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/sodium.php',
         'f1b96cb260a5baeea9a7285cda82a1ec' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/solr.php',
@@ -156,19 +155,23 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
         'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
         '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'z' => 
+        array (
+            'zequeen\\Acgembed\\' => 17,
+        ),
         'v' => 
         array (
             'voku\\' => 5,
         ),
         's' => 
         array (
+            'spekulatius\\' => 12,
             's9e\\TextFormatter\\' => 18,
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
@@ -192,7 +195,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             'Zerosonesfun\\Members\\' => 21,
             'Zerosonesfun\\InlineAudio\\' => 25,
-            'ZerosOnesFun\\Nes\\' => 17,
             'ZerosOnesFun\\DirectLinks\\' => 25,
             'ZerosOnesFun\\BBcodeButton\\' => 26,
         ),
@@ -211,11 +213,11 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
             'Webbinaro\\GpxPreview\\' => 21,
+            'Webbinaro\\AdvCalendar\\' => 22,
         ),
         'V' => 
         array (
             'V17Development\\FlarumUserBadges\\' => 32,
-            'V17Development\\FlarumThirdPartyLoginOnly\\' => 41,
             'V17Development\\FlarumSeo\\' => 25,
             'V17Development\\FlarumBlog\\' => 26,
         ),
@@ -225,7 +227,9 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Therealsujitk\\GIFs\\' => 19,
             'TheTurk\\Stickiest\\' => 18,
+            'TheTurk\\QuietEdits\\' => 19,
             'TheTurk\\MathRen\\' => 16,
+            'TheTurk\\Diff\\' => 13,
         ),
         'S' => 
         array (
@@ -242,6 +246,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\HttpClient\\' => 29,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
@@ -251,6 +256,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\HttpClient\\' => 29,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
@@ -259,6 +265,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'Symfony\\Component\\BrowserKit\\' => 29,
             'SychO\\UiKit\\' => 12,
             'SychO\\ProfileCover\\' => 19,
             'SychO\\MovePosts\\' => 16,
@@ -287,6 +294,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Psr\\Http\\Client\\' => 16,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
+            'Pdp\\' => 4,
             'ParagonIE\\ConstantTime\\' => 23,
         ),
         'O' => 
@@ -316,9 +324,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'MatthiasMullie\\Minify\\' => 22,
             'Malago\\FancyBox\\' => 16,
             'Malago\\Achievements\\' => 20,
-            'Maicol07\\SSO\\Middleware\\' => 24,
-            'Maicol07\\SSO\\Listener\\' => 22,
-            'Maicol07\\SSO\\' => 13,
         ),
         'L' => 
         array (
@@ -348,6 +353,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             'Justoverclock\\YtVideoFeed\\' => 26,
             'Justoverclock\\Welcomebox\\' => 25,
+            'Justoverclock\\UsersMapLocation\\' => 31,
             'Justoverclock\\UsernameBlacklist\\' => 32,
             'Justoverclock\\SocialCards\\' => 26,
             'Justoverclock\\Purify\\' => 21,
@@ -361,6 +367,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Justoverclock\\GeoWeather\\' => 25,
             'Justoverclock\\Feedback\\' => 23,
             'Justoverclock\\EventsCountDown\\' => 30,
+            'Justoverclock\\EditPostsButton\\' => 30,
             'Justoverclock\\DontGoAway\\' => 25,
             'Justoverclock\\CustomHtmlWidget\\' => 31,
             'Justoverclock\\CustomHeader\\' => 27,
@@ -372,6 +379,8 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Jose\\Component\\Core\\Util\\Ecc\\' => 29,
             'Jose\\Component\\Core\\' => 20,
             'JmesPath\\' => 9,
+            'Jfcherng\\Utility\\' => 17,
+            'Jfcherng\\Diff\\' => 14,
             'JSLirola\\Login2SeePlus\\' => 23,
         ),
         'I' => 
@@ -413,6 +422,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Goutte\\' => 7,
             'GlowingBlue\\PasswordStrength\\' => 29,
         ),
         'F' => 
@@ -495,6 +505,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'D' => 
         array (
+            'DonatelloZa\\RakePlus\\' => 21,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\DBAL\\' => 14,
@@ -505,7 +516,13 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Dflydev\\DotAccessData\\' => 22,
             'Dem13n\\Discussion\\Cards\\' => 24,
             'Davwheat\\CustomSidenavLinks\\' => 28,
+            'Datlechin\\SilentEdit\\' => 21,
             'Datlechin\\SignupButton\\' => 23,
+            'Datlechin\\ScrollButtons\\' => 24,
+            'Datlechin\\PostedOn\\' => 19,
+            'Datlechin\\LinkPreview\\' => 22,
+            'Datlechin\\KeyboardShortcuts\\' => 28,
+            'Datlechin\\Birthdays\\' => 20,
         ),
         'C' => 
         array (
@@ -551,12 +568,24 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
             'Afrux\\Asirem\\' => 13,
             'Acpl\\MobileTab\\' => 15,
         ),
+        ' ' => 
+        array (
+            ' \\MarkdownTables\\' => 17,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'zequeen\\Acgembed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zequeen/acgembed-remastered/src',
+        ),
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'spekulatius\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/phpscraper/src',
         ),
         's9e\\TextFormatter\\' => 
         array (
@@ -602,10 +631,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/flarum-inline-audio/src',
         ),
-        'ZerosOnesFun\\Nes\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zerosonesfun/flarum-theme-nes/src',
-        ),
         'ZerosOnesFun\\DirectLinks\\' => 
         array (
             0 => __DIR__ . '/..' . '/zerosonesfun/direct-links/src',
@@ -642,13 +667,13 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/webbinaro/gpx-preview/src',
         ),
+        'Webbinaro\\AdvCalendar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webbinaro/flarum-calendar/src',
+        ),
         'V17Development\\FlarumUserBadges\\' => 
         array (
             0 => __DIR__ . '/..' . '/v17development/flarum-user-badges/src',
-        ),
-        'V17Development\\FlarumThirdPartyLoginOnly\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/v17development/flarum-third-party-login-only/src',
         ),
         'V17Development\\FlarumSeo\\' => 
         array (
@@ -674,9 +699,17 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/the-turk/flarum-stickiest/src',
         ),
+        'TheTurk\\QuietEdits\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the-turk/flarum-quiet-edits/src',
+        ),
         'TheTurk\\MathRen\\' => 
         array (
             0 => __DIR__ . '/..' . '/the-turk/flarum-mathren/src',
+        ),
+        'TheTurk\\Diff\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the-turk/flarum-diff/src',
         ),
         'Symfony\\Polyfill\\Php81\\' => 
         array (
@@ -730,6 +763,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
         ),
+        'Symfony\\Contracts\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client-contracts',
+        ),
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
@@ -766,6 +803,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
+        'Symfony\\Component\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client',
+        ),
         'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
@@ -798,6 +839,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
         ),
+        'Symfony\\Component\\BrowserKit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/browser-kit',
+        ),
         'SychO\\UiKit\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/flarum-uikit/src',
@@ -820,7 +865,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         ),
         'Serakoi\\FlarumStaffBadge\\' => 
         array (
-            0 => __DIR__ . '/..' . '/serakoi/flarumstaffbadge/src',
+            0 => __DIR__ . '/..' . '/luceos/flarum-ext-staff-badge/src',
         ),
         'Serakoi\\FlarumDiscordTheme\\' => 
         array (
@@ -889,6 +934,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Pdp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jeremykendall/php-domain-parser/src',
         ),
         'ParagonIE\\ConstantTime\\' => 
         array (
@@ -971,18 +1020,6 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Malago\\Achievements\\' => 
         array (
             0 => __DIR__ . '/..' . '/malago/flarum-achievements/src',
-        ),
-        'Maicol07\\SSO\\Middleware\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maicol07/flarum-ext-sso/src/Middleware',
-        ),
-        'Maicol07\\SSO\\Listener\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maicol07/flarum-ext-sso/src/Listener',
-        ),
-        'Maicol07\\SSO\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maicol07/flarum-ext-sso/src',
         ),
         'League\\OAuth2\\Client\\' => 
         array (
@@ -1068,6 +1105,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-welcomebox/src',
         ),
+        'Justoverclock\\UsersMapLocation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/users-map-location/src',
+        ),
         'Justoverclock\\UsernameBlacklist\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/username-blacklist/src',
@@ -1120,6 +1161,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/justoverclock/events-countdown/src',
         ),
+        'Justoverclock\\EditPostsButton\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justoverclock/edit-posts/src',
+        ),
         'Justoverclock\\DontGoAway\\' => 
         array (
             0 => __DIR__ . '/..' . '/justoverclock/flarum-ext-dontgoaway/src',
@@ -1163,6 +1208,16 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'JmesPath\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
+        ),
+        'Jfcherng\\Utility\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jfcherng/php-color-output/src',
+            1 => __DIR__ . '/..' . '/jfcherng/php-mb-string/src',
+        ),
+        'Jfcherng\\Diff\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jfcherng/php-diff/src',
+            1 => __DIR__ . '/..' . '/jfcherng/php-sequence-matcher/src',
         ),
         'JSLirola\\Login2SeePlus\\' => 
         array (
@@ -1294,6 +1349,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Goutte\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
         ),
         'GlowingBlue\\PasswordStrength\\' => 
         array (
@@ -1587,6 +1646,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
+        'DonatelloZa\\RakePlus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/donatello-za/rake-php-plus/src',
+        ),
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
@@ -1627,9 +1690,33 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/davwheat/custom-sidenav-links/src',
         ),
+        'Datlechin\\SilentEdit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-silent-edit/src',
+        ),
         'Datlechin\\SignupButton\\' => 
         array (
             0 => __DIR__ . '/..' . '/datlechin/flarum-signup-button/src',
+        ),
+        'Datlechin\\ScrollButtons\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-scroll-buttons/src',
+        ),
+        'Datlechin\\PostedOn\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-posted-on/src',
+        ),
+        'Datlechin\\LinkPreview\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-link-preview/src',
+        ),
+        'Datlechin\\KeyboardShortcuts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-keyboard-shortcuts/src',
+        ),
+        'Datlechin\\Birthdays\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/datlechin/flarum-birthdays/src',
         ),
         'Cron\\' => 
         array (
@@ -1771,6 +1858,10 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         array (
             0 => __DIR__ . '/..' . '/acpl/mobile-tab/src',
         ),
+        ' \\MarkdownTables\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askvortsov/flarum-markdown-tables/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -1870,6 +1961,7 @@ class ComposerStaticInit71d11b4d7a49328349ea3377831e4cf0
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+        'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',
         'PusherInstance' => __DIR__ . '/..' . '/pusher/pusher-php-server/lib/Pusher.php',

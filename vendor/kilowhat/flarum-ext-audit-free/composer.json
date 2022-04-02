@@ -9,14 +9,10 @@
     "type": "flarum-extension",
     "license": "proprietary",
     "require": {
-        "flarum/core": "^1.0",
+        "flarum/core": "^1.2",
         "ext-json": "*"
     },
     "replace": {
-        "kilowhat/flarum-ext-audit": "*",
-        "kilowhat/flarum-ext-audit-pro": "*"
-    },
-    "conflict": {
         "kilowhat/flarum-ext-audit": "*",
         "kilowhat/flarum-ext-audit-pro": "*"
     },

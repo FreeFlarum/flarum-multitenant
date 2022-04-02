@@ -88,6 +88,8 @@ fof-upload:
       just-url_description: "Yalnızca URL'yi ekler. Oluşturma, otomatik bağlanma özelliğine sahip diğer uzantılar tarafından gerçekleştirilebilir. İndirme işlevi yoktur, hiçbir istatistik toplanmaz ve hotlink koruması göz ardı edilir.\n"
       markdown-image: 'Markdown resim şablonu'
       markdown-image_description: "Markdown'ı kullanarak tam görseli satır içinde gösterir. <strong>Bunun çalışması için flarum/markdown'ın kurulu ve etkinleştirilmiş olması gerekir.</strong> İndirme işlevi yoktur, istatistik toplanmaz ve hotlink koruması yok sayılır.\n"
+      text-preview: 'Metin önizlemesi'
+      text-preview_description: "Dosyanın tüm içeriğini ortaya çıkarmak için genişletme seçeneğiyle birlikte metin dosyasının bir önizlemesini (ilk 5 satır) ekler.\n"
     upload_methods:
       aws-s3: S3/Compatible
       imgur: Imgur
@@ -126,5 +128,11 @@ fof-upload:
       error: Hata
       loading: Yükleniyor
       unauthorized: 'Dosyaları indirmenize izin verilmiyor'
+    text_preview:
+      collapse: 'Önizlemeyi daralt'
+      error: "Dosya önizlenirken hata oluştu. Silinmiş olabilir veya sağlanan dosya kimliği geçersiz.\n"
+      expand: 'Önizlemeyi genişlet'
+      no_snippet: '<önizleme snippet''i yok>'
+      no_snippet_preview: '<Önizleme yayınlandıktan sonra burada görünecek>'
     validation:
       max_size: '{max} kb üzerindeki yüklemeler kabul edilmez.'

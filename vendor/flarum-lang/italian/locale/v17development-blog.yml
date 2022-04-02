@@ -18,6 +18,8 @@ v17development-flarum-blog:
       categories_heading: Categorie
       default_article_image_label: 'Immagine articolo predefinita'
       default_article_image_text: 'Seleziona un''immagine di articolo predefinita da visualizzare quando non è impostata alcuna immagine.'
+      featured_count_label: 'Post in rilievo massimi'
+      featured_count_text: 'Quanti post dovrebbero essere visualizzati in una grande griglia nella parte superiore di una pagina del blog?'
       hide_on_discussion_list_label: 'Non mostrare nell''elenco di discussione'
       hide_on_discussion_list_text: 'Nascondi i post del blog dall''elenco delle discussioni.'
       hide_tags_in_taglist_label: 'Nascondi i tag nella taglist'

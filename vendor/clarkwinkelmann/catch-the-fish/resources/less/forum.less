@@ -6,10 +6,18 @@
         padding: 5px 10px;
         text-align: left;
         border-bottom: 1px solid #eee;
+
+        & when (@config-dark-mode = true) {
+            border-bottom-color: #444;
+        }
     }
 
     tr:nth-child(odd) td {
         background: #fafafa;
+
+        & when (@config-dark-mode = true) {
+            background: rgba(255, 255, 255, 0.03);
+        }
     }
 
     img {
@@ -29,7 +37,7 @@
     bottom: 0;
     right: 0;
     width: 200px;
-    background: white;
+    background: var(--body-bg);
     border: 2px solid #aaa;
     padding: 10px;
     text-align: center;

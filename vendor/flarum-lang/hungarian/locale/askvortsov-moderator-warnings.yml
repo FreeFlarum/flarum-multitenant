@@ -15,3 +15,25 @@ askvortsov-moderator-warnings:
     user_warned:
       body: "Üdv {warnee_display_name}!\n\n{warner_display_name} figyelmeztetett {# strikes}\n\nAz alábbi okokból:\n\n---\n\n{public_comment}\n"
       subject: '{warner_display_name} figyelmeztetett  {# strike}'
+  forum:
+    notifications:
+      warning_no_strikes_text: 'Figyelmeztetést kaptál tőle: {mod_username} (no strikes)'
+      warning_text: 'Ez naplózza az értesítésekről szóló információkat a „tárhely/naplók” mappába. Általában le kell tiltani, hogy elkerüljük a naplók szükségtelen feltöltését.'
+    post:
+      warning: '{strikes, plural, one {Figyelmeztettett # strike by {mod_username}} other {Figyelmeztettett with # strikes by {mod_username}}}'
+      warning_no_strikes: 'Figyelmeztetés nélkül: {mod_username}'
+    post_controls:
+      warning_button: 'Felhasználó figyelmeztetése'
+    settings:
+      warning_notification_label: 'Egy moderátor figyelmeztetett'
+    user:
+      warnings: 'Moderátori figyelmeztetések'
+    validation:
+      public_comment_required: 'Legtöbbször nyilvános megjegyzést teszel.'
+    warning_controls:
+      delete_button: Eltávolítás
+      delete_forever_button: 'Végleges törlés'
+      restore_button: Visszaállítás
+    warning_list:
+      add_button: 'Új figyelmeztetés'
+      no_warnings: 'Úgy tűnik nincs figyelmeztetés itt.'

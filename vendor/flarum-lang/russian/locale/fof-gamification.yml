@@ -43,6 +43,7 @@ fof-gamification:
         auto_upvote: 'Авто-одобрение сообщений при отправке'
         color_holder: '#ffffff'
         discussion_page: 'Показать общее число голосов начального сообщения в списке обсуждений'
+        first_post_only: 'Разрешить голосовать "за/против" только в первом сообщении дискуссии'
         icon_help: 'Введите иконку шрифта Font-Awesome, позволяющую различать направления вверх/вниз. Например: стрелка, большой палец, нашивка'
         icon_name: 'Иконка одобрения/неодобрения'
         points_placeholder: 'Очков: '
@@ -64,6 +65,7 @@ fof-gamification:
   forum:
     mod_item: 'Просмотреть голосовавших'
     modal:
+      downvotes_label: 'Голосовавшие против:'
       title: Голосовавшие
       upvotes_label: 'Одобрившие:'
     nav:
@@ -73,6 +75,9 @@ fof-gamification:
       prefrences:
         vote: 'Когда проголосовали за/против одного из моих сообщений'
       upvote: '{username} одобрил ваше сообщение'
+    post:
+      downvote_button: 'Проголосовать "против" сообщения'
+      upvote_button: 'Проголосовать "за" сообщение'
     ranking:
       amount: Очков
       name: Пользователь
@@ -81,4 +86,8 @@ fof-gamification:
       points: 'Очков: {points}'
       rank: '{rank}'
     vote_title: 'Посмотреть проголосовавших'
+    voters:
+      label: Голосовавшие
+      label_none: 'Голосовавших нет'
+      none: 'Никто пока не проголосовал'
     votes: Голосов

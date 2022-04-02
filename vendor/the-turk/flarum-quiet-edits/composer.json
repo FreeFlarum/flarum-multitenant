@@ -1,0 +1,39 @@
+{
+  "name": "the-turk/flarum-quiet-edits",
+  "description": "Do not mark posts as Edited based on some conditions.",
+  "keywords": [
+    "flarum",
+    "edit",
+    "quiet"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [{
+    "name": "Hasan Özbey",
+    "email": "hasanoozbey@gmail.com",
+    "homepage": "https://github.com/the-turk"
+  }],
+  "support": {
+    "issues": "https://github.com/the-turk/flarum-quiet-edits/issues",
+    "source": "https://github.com/the-turk/flarum-quiet-edits"
+  },
+  "require": {
+    "flarum/core": "^1.0.2",
+    "jfcherng/php-diff": "^6.10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheTurk\\QuietEdits\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Quiet Edits",
+      "icon": {
+        "name": "fas fa-volume-mute",
+        "backgroundColor": "#b72a2a",
+        "color": "#fff"
+      }
+    }
+  }
+}

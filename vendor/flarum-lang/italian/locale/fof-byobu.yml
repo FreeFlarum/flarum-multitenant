@@ -10,9 +10,12 @@ fof-byobu:
       create_private_discussions_with_users: 'Crea discussioni private con gli utenti'
       edit_group_recipients: 'Modifica i gruppi che partecipano a discussioni private'
       edit_user_recipients: 'Modifica gli utenti che partecipano a discussioni private'
+      make_private_into_public: 'Trasforma una discussione privata in una discussione pubblica'
       view_private_discussions-when-flagged: 'Visualizza le discussioni private di altri utenti se contrassegnate'
     settings:
       badge-icon: 'Badge Discussione Byobu'
+      enable-make-public-option: 'Abilita la funzione "Rendi pubblico"'
+      enable-make-public-option-help: 'Aggiunge la possibilità per chi ha il permesso di rimuovere tutti i destinatari, assegnare un nuovo tag e rendere la discussione pubblicamente visibile (secondo le impostazioni di visibilità del tag scelto).'
       post-event-icon: 'Eventi Post Byobu'
   email:
     body:
@@ -33,12 +36,15 @@ fof-byobu:
       add_recipients: Destinatari
       cancel: Cancella
       edit_recipients: 'Modifica Destinatari'
+      make_public: 'Rendi questa discussione pubblica'
       remove_from_discussion: 'Lascia questa discussione privata'
       send_pd: 'Invia messaggio a {username}'
       submit: Ok
     composer_private_discussion:
       submit_button: 'Pubblica discussione privata'
       title_placeholder: 'Titolo discussione privata'
+    confirm:
+      make_public: 'Sei sicuro di voler rimuovere i destinatari e rendere visibile questa discussione a chiunque possa visualizzare il tag assegnato?'
     input:
       search_recipients: 'Cerca destinatario digitando i primi tre caratteri ...'
     labels:
@@ -72,6 +78,7 @@ fof-byobu:
       recipients_modified:
         added: '{username} ha aggiunto i destinatari {added}.'
         added_and_removed: '{username} ha aggiunto destinatari {added} e rimosso {removed}.'
+        made_public: '{username} ha rimosso tutti i destinatari e ha reso pubblica la discussione'
         removed: '{username} ha rimosso i destinatari {removed}.'
         removed_self: '{username} ha lasciato la discussione privata.'
     search:

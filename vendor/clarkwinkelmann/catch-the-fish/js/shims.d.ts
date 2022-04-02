@@ -36,8 +36,6 @@ declare module 'flarum/common/models/Forum' {
 
         catchTheFishCanSeeRankingsPage(): boolean
 
-        catchTheFishCanSeeProfileRankings(): boolean
-
         catchTheFishAnimateFlip(): boolean
     }
 }

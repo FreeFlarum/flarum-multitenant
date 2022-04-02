@@ -1,0 +1,54 @@
+{
+    "name": "datlechin/flarum-landing-page",
+    "description": "Allows to create a customizable landing page that non-logged in users will see.",
+    "keywords": [
+        "flarum",
+        "flarum-extension"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2"
+    },
+    "support": {
+        "source": "https://github.com/datlechin/flarum-landing-page",
+        "forum": "https://discuss.flarum.org/d/29973"
+    },
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://ngoquocdat.com",
+    "extra": {
+        "flarum-extension": {
+            "title": "Landing Page",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-home",
+                "color": "#fff",
+                "backgroundColor": "#D3241C"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}

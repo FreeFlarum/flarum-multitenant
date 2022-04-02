@@ -11,12 +11,11 @@
 
 namespace Afrux\TopPosters;
 
+use Afrux\ForumWidgets\SafeCacheRepositoryAdapter;
 use Flarum\Api\Controller\ShowForumController;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\Http\RequestUtil;
 use Flarum\User\User;
-use Illuminate\Contracts\Cache\Factory;
-use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
 
 class LoadForumTopPostersRelationship
@@ -27,11 +26,11 @@ class LoadForumTopPostersRelationship
     protected $settings;
 
     /**
-     * @var Factory
+     * @var SafeCacheRepositoryAdapter
      */
     private $cache;
 
-    public function __construct(SettingsRepositoryInterface $settings, Factory $cache, UserRepository $repository)
+    public function __construct(SettingsRepositoryInterface $settings, SafeCacheRepositoryAdapter $cache, UserRepository $repository)
     {
         $this->settings = $settings;
         $this->cache = $cache;
@@ -55,6 +54,6 @@ class LoadForumTopPostersRelationship
                 ->whereVisibleTo($actor)
                 ->whereIn('id', array_keys($counts))
                 ->get();
-        });
+        }) ?: [];
     }
 }

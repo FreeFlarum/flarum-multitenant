@@ -31,7 +31,7 @@ class RoundSerializer extends AbstractSerializer
         ];
     }
 
-    public function ranking(Round $round): ?Relationship
+    public function myRanking(Round $round): ?Relationship
     {
         $data = $round->userRanking($this->actor);
 

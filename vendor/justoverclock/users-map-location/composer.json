@@ -1,0 +1,39 @@
+{
+    "name": "justoverclock/users-map-location",
+    "description": "Add Location Attribute and a map to users settings",
+    "keywords": [
+        "users location",
+        "location map"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\UsersMapLocation\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "User Map Location",
+            "category": "features",
+            "icon": {
+                "name": "fas fa-map-marked-alt",
+                "backgroundColor": "purple",
+                "color": "white"
+            }
+        }
+    }
+}

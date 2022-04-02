@@ -2,6 +2,85 @@ CHANGELOG
 =========
 
 
+0.5.20 (2022-03-21)
+-------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`antoinefr/flarum-ext-money`](https://github.com/AntoineFr/flarum-ext-money)
+* [`justoverclock/flarum-ext-hashtag`](https://github.com/justoverclockl/flarum-ext-hashtag)
+
+
+Wszystkie zmiany: [v0.5.19...v0.5.20](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.19...v0.5.20).
+
+
+0.5.19 (2022-03-08)
+-------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`afrux/forum-widgets-core`](https://github.com/afrux/forum-widgets-core)
+* [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions)
+
+
+Wszystkie zmiany: [v0.5.18...v0.5.19](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.18...v0.5.19).
+
+
+0.5.18 (2022-02-28)
+-------------------
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/ban-ips`](https://github.com/FriendsOfFlarum/ban-ips)
+
+
+Wszystkie zmiany: [v0.5.17...v0.5.18](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.17...v0.5.18).
+
+
+0.5.17 (2022-02-14)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`blomstra/notification-deleter`](https://github.com/blomstra/flarum-ext-notification-deleter)
+* [`clarkwinkelmann/flarum-ext-post-bookmarks`](https://github.com/clarkwinkelmann/flarum-ext-post-bookmarks)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`malago/flarum-achievements`](https://github.com/malago86/flarum-achievements)
+
+
+Wszystkie zmiany: [v0.5.16...v0.5.17](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.16...v0.5.17).
+
+
+0.5.16 (2022-02-12)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`afrux/asirem`](https://github.com/afrux/asirem)
+* [`afrux/online-users-widget`](https://github.com/afrux/online-users-widget)
+* [`afrux/top-posters-widget`](https://github.com/afrux/top-posters-widget)
+* [`askvortsov/flarum-auto-moderator`](https://github.com/askvortsov1/flarum-auto-moderator)
+* [`justoverclock/hot-discussions`](https://github.com/justoverclockl/hot-discussions)
+* [`kyrne/whisper`](https://github.com/KyrneDev/whisper)
+* [`littlecxm/flarum-reply-to-see`](https://github.com/littlecxm/flarum-reply-to-see)
+* [`malago/flarum-achievements`](https://github.com/malago86/flarum-achievements)
+* [`nosun/reply-to-see`](https://github.com/nosun/flarum-ext-reply2see)
+* [`zerosonesfun/flarum-bbcode-button`](https://github.com/zerosonesfun/flarum-bbcode-button)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`antoinefr/flarum-ext-money`](https://github.com/AntoineFr/flarum-ext-money)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+
+
+Wszystkie zmiany: [v0.5.15...v0.5.16](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.15...v0.5.16).
+
+
 0.5.15 (2022-01-20)
 -------------------
 

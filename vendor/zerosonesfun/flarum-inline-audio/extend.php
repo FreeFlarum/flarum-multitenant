@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of zerosonesfun/flarum-inline-audio.
  *
@@ -9,24 +8,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Zerosonesfun\InlineAudio;
+namespace ZerosOnesFun\InlineAudio;
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
-use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
-        ->content(function (Document $document) { $document->head[] = '<script src="../assets/extensions/zerosonesfun-inline-audio/sm2.js"></script>'; })
+        ->content(function (Document $document) { $document->head[] = '<script>var observer=new MutationObserver(function(e){for(var o=0;o<e.length;o++)for(var r=0;r<e[o].addedNodes.length;r++)checkNode(e[o].addedNodes[r])});observer.observe(document.documentElement,{childList:!0,subtree:!0}),checkNode=function(e){1===e.nodeType&&e.matches(".PostStream")&&soundManager.reboot()};</script>'; })
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/resources/less/forum.less'),
-    new Extend\Locales(__DIR__ . '/resources/locale'),
-
-    (new Extend\Formatter)
-    ->configure(function (Configurator $config) {
-        $config->BBCodes->addCustom(
-            '[player]{URL}[/player]',
-            '<a href="{URL}">{URL}</a>'
-        );
-    })
 ];

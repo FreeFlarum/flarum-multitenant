@@ -4,13 +4,16 @@
 
 antoinefr-money:
   admin:
+    automoderator:
+      action_name: 'Przyznaj pieniądze'
+      metric_name: Pieniądze
     permissions:
       edit_money_label: 'Edytuj pieniądze'
     settings:
       helpextensionlikes: 'Wymaga rozszerzenia <code>flarum/likes</code>'
-      moneyfordiscussion: 'Pieniądze otrzymane za nową dyskusję'
-      moneyforlike: 'Pieniądze otrzymane, gdy post zostanie polubiony'
-      moneyforpost: 'Pieniądze otrzymane za nowy post'
+      moneyfordiscussion: 'Pieniądze przyznane za nową dyskusję'
+      moneyforlike: 'Pieniądze przyznane, gdy post zostanie polubiony'
+      moneyforpost: 'Pieniądze przyznane za nowy post'
       moneyname: 'Nazwa dla pieniędzy (np. [money] punktów)'
       noshowzero: 'Nie pokazuj, jeśli wartość to zero'
       postminimumlength: 'Minimalna długość posta kwalifikując go do otrzymania pieniędzy (ustaw 0 dla braku limitu)'

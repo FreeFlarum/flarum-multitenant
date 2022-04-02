@@ -25,6 +25,7 @@ return [
         ->css(__DIR__.'/resources/less/admin.less'),
     new Extend\Locales(__DIR__.'/resources/locale'),
     (new Extend\Settings)
+        ->serializeToForum('justoverclock-custom-header.headerBackgroundImage', 'justoverclock-custom-header.headerBackgroundImage')
         ->serializeToForum('headerTitle', 'justoverclock-custom-header.headerTitle'),
     (new Extend\Settings)
         ->serializeToForum('headerTagline', 'justoverclock-custom-header.headerTagline'),

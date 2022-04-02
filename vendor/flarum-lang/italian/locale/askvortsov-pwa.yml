@@ -9,21 +9,30 @@ askvortsov-pwa:
       pwa_text: 'Configurare Flarum per funzionare come una Progressive Web App, installabile su dispositivi mobili.'
     pwa:
       about:
+        description_label: Descrizione
         description_text: 'Puoi impostare la descrizione nella pagina ''Basics'' nella tua dashboard di amministrazione.'
         heading: 'Informazioni su'
+        long_name_label: 'Nome Lungo'
         long_name_text: 'Il nome dell''applicazione web visualizzata all''utente.'
+        short_name_label: 'Nome Corto'
         short_name_text: 'Il nome dell''applicazione visualizzato all''utente se non c''è abbastanza spazio per il nome lungo.'
       colors:
+        background_color_label: 'Colore di sfondo'
         background_color_text: 'Questo è usato come colore segnaposto per lo splash screen che viene visualizzato mentre il vostro PWA viene caricato. Non viene utilizzato quando l''app viene effettivamente caricata.'
         heading: Colori
+        theme_color_label: 'Colore Tema'
         theme_color_text: 'Questo colore è talvolta utilizzato dai dispositivi quando visualizzano la tua app, per esempio sul task switcher di Android, come il colore che circonda il sito.'
       heading: 'Configurazione dell'' App Web Progressiva'
       logo_heading: 'Loghi e icone'
       logo_size_text: 'Carica un logo che sarà scalato alla dimensione di {size} pixel per {size} pixel.'
       logo_text: "Devi caricare almeno un logo perché la tua app web progressiva sia installabile. Nota che tutti i loghi devono essere quadrati; se non lo sono, saranno ridimensionati e possibilmente allungati.\n\nCi sono un certo numero di opzioni di dimensioni disponibili qui sotto. Consiglio di provare a caricare un logo nel maggior numero possibile: questo supporta più dispositivi.\n\nTi preghiamo di notare che puoi caricare 1 logo grande per gli input per i loghi più piccoli. Per esempio, puoi caricare un logo di 1000px per 1000px in TUTTI gli input di file qui sotto. Tuttavia, se provi a caricare un logo di 50px per 50px nell'input 512x512, sarà molto allungato.\n"
       maintenance:
-        debug_label: 'Modalità di debug? Questo registrerà le informazioni sulle notifiche in `storage/logs`.'
+        debug_label: 'Modalità di debug?'
+        debug_text: 'Questo registrerà le informazioni sulle notifiche in `storage/logs`. In genere dovrebbe essere disabilitato per evitare di riempire i registri inutilmente.'
         heading: Manutenzione
+        reset_vapid_confirm: 'La reimpostazione delle chiavi VAPID rimuoverà tutte le sottoscrizioni che utilizzano le chiavi esistenti, quindi gli utenti non riceveranno alcuna notifica fino alla successiva visita del tuo sito. Questo dovrebbe essere fatto solo quando si impostano le notifiche push per la prima volta, o se le notifiche push non funzionano affatto e c''è un avviso sulle chiavi VAPID mancanti sopra.'
+        reset_vapid_success: 'Reimpostare con successo le chiavi VAPID. {count} abbonamenti sono stati reimpostati. Ricarica la pagina per vedere un rapporto di verifica dello stato aggiornato.'
+        reset_vapid_text: 'Ciò rigenererà le chiavi VAPID ed eliminerà tutte le sottoscrizioni esistenti utilizzando le chiavi VAPID correnti.'
       other:
         force_portrait_text: 'Forzare l''orientamento in modalità portrait?'
         heading: Altro
@@ -36,6 +45,7 @@ askvortsov-pwa:
       key_gen_failed: 'La generazione delle chiavi necessarie per le notifiche push è fallita. Il messaggio di errore completo è stato: {error}'
       no_logo: 'Devi caricare almeno un logo, con una dimensione di almeno 196px perché la tua app funzioni.'
       no_name: 'Devi fornire un nome completo perché la tua app funzioni.'
+      no_vapid_keys: 'Nessuna chiave VAPID trovata. Questi sono necessari per l''invio delle notifiche push. Puoi ripristinare le chiavi VAPID di seguito.'
       possible_https_disabled: 'Il tuo sito potrebbe non funzionare su HTTPS. Cancellando il cache (pagina del cruscotto di amministrazione => pulsante strumenti) potrebbe aiutare. Se lo è, ignora questo. Se non lo è, tieni presente che HTTPS è richiesto per il funzionamento delle Progressive Web Apps.'
       success: 'Nessun problema potenziale trovato!'
       suggest_gmp: 'L''estensione gmp PHP non sembra essere abilitata sul tuo server. Non è strettamente necessaria, ma può migliorare le prestazioni ed è raccomandata. Alcuni host condivisi potrebbero però non supportarla.'

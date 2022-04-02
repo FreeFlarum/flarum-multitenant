@@ -53,9 +53,11 @@ fof-gamification:
         upvotes_only: 'Pozwól jedynie na głosy pozytywne'
         vote_color: 'Kolor po zagłosowaniu'
     permissions:
+      downvote_notifications: 'Otrzymywanie powiadomień o głosach negatywnych'
       see_ranking_page: 'Przeglądanie rankingu'
       see_voters_label: 'Przeglądanie kto zagłosował'
       see_votes_label: 'Przeglądanie licznika głosów'
+      upvote_notifications: 'Otrzymywanie powiadomień o głosach pozytywnych'
       vote_label: 'Oddawanie głosów na posty'
   email:
     body:

@@ -122,7 +122,7 @@ class FishRepository
 
             $this->imageValidator->assertValid(['image' => $file]);
 
-            $image = (new ImageManager())->make($tmpFile);
+            $image = $this->imageManager()->make($tmpFile);
 
             $this->uploader->upload($fish, $image);
 
@@ -164,7 +164,7 @@ class FishRepository
 
                 $this->imageValidator->assertValid(['image' => $file]);
 
-                return (new ImageManager())->make($tmpFile);
+                return $this->imageManager()->make($tmpFile);
             })->map(function (Image $image, $index) use ($originalNames, $round) {
                 // Then we create the fishes and save the images
                 $fish = new Fish();
@@ -208,7 +208,7 @@ class FishRepository
         foreach (self::BASE_IMAGES as $index => $originalImagePath) {
             $fish = new Fish();
 
-            $image = (new ImageManager())->make(__DIR__ . '/../../resources/images/' . $originalImagePath);
+            $image = $this->imageManager()->make(__DIR__ . '/../../resources/images/' . $originalImagePath);
             $this->uploader->upload($fish, $image);
 
             $fish->round_id = $round->id;
@@ -219,5 +219,14 @@ class FishRepository
             $fish->placement_valid_since = $now;
             $fish->save();
         }
+    }
+
+    /**
+     * Resolve Intervention Image manager from container so Flarum picks driver between GD or Imagick
+     * @return ImageManager
+     */
+    protected function imageManager(): ImageManager
+    {
+        return resolve(ImageManager::class);
     }
 }

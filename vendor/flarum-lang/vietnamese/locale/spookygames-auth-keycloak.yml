@@ -5,6 +5,7 @@
 flarum-ext-auth-keycloak:
   admin:
     keycloak_settings:
+      attribute_mapping_label: 'Ánh xạ thuộc tính tùy chỉnh'
       client_id_label: 'ID khách hàng'
       client_secret_label: 'Mã bí mật khách hàng'
       delegate_avatars_label: 'Ủy quyền ảnh đại diện'

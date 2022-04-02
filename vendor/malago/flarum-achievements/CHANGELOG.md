@@ -1,3 +1,9 @@
+### 0.5.4
+- Fixed description for average words
+
+### 0.5.3
+- Added compatibility Flarum 1.2.0
+
 ### 0.5.2
 - Removed debug code
 

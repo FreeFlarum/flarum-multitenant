@@ -1,7 +1,7 @@
 .NeonChatFrame {
     position: fixed;
     bottom: 0;
-    z-index: @zindex-composer - 10;
+    z-index: @zindex-tooltip - 1;
     max-width: 100%;
     color: #000;
 
@@ -26,6 +26,38 @@
 
     .ChatInput {
         margin-top: auto;
+    }
+
+    .button-fixed-maximize {
+        display: none;
+
+        background-color: @color-chatlist-hr;
+        &:hover
+        {
+            filter: brightness(125%);
+        }
+
+        .unreaded
+        {
+            top: -5px;
+            right: -5px;
+        }
+
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        line-height: 48px;
+        text-align: center;
+
+        position: absolute;
+        right: 15px;
+        bottom: 30px;
+        padding-top: 2px;
+
+        i {
+            color: white;
+            font-size: 18pt;
+        }
     }
 
     .frame {
@@ -122,11 +154,24 @@
 
 .hidden {
     .frame {
-        .ChatViewport, .ChatList {
+        display: none;
+
+        .ChatViewport {
             display: none;
+        }
+        @media @tablet-up
+        {
+            .ChatList
+            {
+                display: none;
+            }
         }
         .ChatHeader .icon.toggle-chat {
             display: none
         }
+    }
+
+    .button-fixed-maximize {
+        display: block;
     }
 }
