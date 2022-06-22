@@ -1,0 +1,70 @@
+{
+    "name": "fof/amazon-affiliation",
+    "description": "Add your Amazon Affiliation tag to Amazon links",
+    "keywords": [
+        "extension",
+        "flarum",
+        "friendsofflarum",
+        "fof",
+        "amazon",
+        "affiliation",
+        "links"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/amazon-affiliation/issues",
+        "source": "https://github.com/FriendsOfFlarum/amazon-affiliation",
+        "forum": "https://discuss.flarum.org/d/12389"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3.3"
+    },
+    "replace": {
+        "flagrow/amazon-affiliation": "*"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winekelmann@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Christian Lopez",
+            "email": "Christian.L@redevs.org",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FoF\\AmazonAffiliation\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Amazon Affiliation",
+            "category": "feature",
+            "icon": {
+                "name": "fab fa-amazon",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+              "fof/formatting"
+            ]
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/12389"
+        }
+    }
+}

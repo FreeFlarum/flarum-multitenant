@@ -11,6 +11,7 @@ justoverclock-related-discussions:
     relatedTitle-help: 'Đổi tiêu đề mặc định thành tiêu đề cuộc thảo luận đề xuất của riêng bạn'
     showExcerpt: 'Hiện đoạn tóm tắt'
   forum:
+    hasBestAnswer: 'Đã giải quyết'
     participants: 'Người tham gia'
     postedOn: 'trên:'
     postnumber: 'Số lượng bài viết'

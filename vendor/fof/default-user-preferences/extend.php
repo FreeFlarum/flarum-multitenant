@@ -11,22 +11,30 @@
 
 namespace FoF\DefaultUserPreferences;
 
+use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Extend;
 use Flarum\User\Event\Registered;
-use Flarum\User\User;
+use FoF\DefaultUserPreferences\Providers\DefaultUserPreferencesProvider;
 
 return [
+    (new Extend\Frontend('admin'))
+        ->js(__DIR__.'/js/dist/admin.js')
+        ->css(__DIR__.'/less/admin.less'),
+
+    new Extend\Locales(__DIR__.'/locale'),
+
     (new Extend\Event())
-        ->listen(Registered::class, function (Registered $event) {
-            foreach (['post', 'user'] as $key) {
-                $event->user->setPreference(
-                    User::getNotificationPreferenceKey("{$key}Mentioned", 'email'),
-                    true
-                );
+        ->listen(Registered::class, Listeners\ApplyDefaultPreferences::class),
+
+    (new Extend\ServiceProvider())
+        ->register(DefaultUserPreferencesProvider::class),
+
+    (new Extend\ApiSerializer(ForumSerializer::class))
+        ->attributes(function (ForumSerializer $serializer, $model, array $attributes): array {
+            if ($serializer->getActor()->isAdmin()) {
+                $attributes['fof-default-user-preferences'] = resolve('fof-default-user-preferences');
             }
 
-            $event->user->setPreference('followAfterReply', true);
-
-            $event->user->save();
+            return $attributes;
         }),
 ];

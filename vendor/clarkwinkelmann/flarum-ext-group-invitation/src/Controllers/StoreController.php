@@ -20,14 +20,14 @@ class StoreController extends AbstractCreateController
         'group',
     ];
 
-    protected $validator;
+    protected InvitationValidator $validator;
 
     public function __construct(InvitationValidator $validator)
     {
         $this->validator = $validator;
     }
 
-    protected function data(ServerRequestInterface $request, Document $document)
+    protected function data(ServerRequestInterface $request, Document $document): Invitation
     {
         RequestUtil::getActor($request)->assertAdmin();
 

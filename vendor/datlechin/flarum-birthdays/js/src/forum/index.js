@@ -114,7 +114,17 @@ app.initializers.add('datlechin/flarum-birthdays', () => {
       items.add(
         'birthday',
         <div className="Form-group">
-          <input className="FormControl birthday" name="birthday" type="date" bidi={this.birthday} disabled={this.loading} />
+          <input
+            className="FormControl birthday"
+            name="birthday"
+            type="text"
+            bidi={this.birthday}
+            disabled={this.loading}
+            placeholder="Birthday"
+            onfocus={(e) => {
+              e.target.type = 'date';
+            }}
+          />
         </div>,
         20
       );

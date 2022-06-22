@@ -10,8 +10,7 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^1.2",
-        "datlechin/phpscraper": "^0.5.3"
+        "flarum/core": "^1.2"
     },
     "authors": [
         {
@@ -42,12 +41,12 @@
         },
         "flarum-cli": {
             "modules": {
-                "admin": true,
+                "admin": false,
                 "forum": true,
                 "js": true,
                 "jsCommon": false,
                 "css": true,
-                "locale": true,
+                "locale": false,
                 "gitConf": true,
                 "githubActions": true,
                 "prettier": true,

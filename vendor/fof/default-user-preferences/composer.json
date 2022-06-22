@@ -1,6 +1,6 @@
 {
   "name": "fof/default-user-preferences",
-  "description": "Enable emails for replies and mentions by default in user preferences",
+  "description": "Configure the default user preferences for new users joining your forum",
   "keywords": [
     "flarum"
   ],
@@ -19,7 +19,7 @@
     "forum": "https://discuss.flarum.org/d/18607"
   },
   "require": {
-    "flarum/core": "^1.0.0"
+    "flarum/core": "^1.3.1"
   },
   "replace": {
     "piotr-tokarczyk/flarum-user-default-preferences": "*"

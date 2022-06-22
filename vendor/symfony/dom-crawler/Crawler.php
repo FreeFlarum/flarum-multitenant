@@ -58,7 +58,7 @@ class Crawler implements \Countable, \IteratorAggregate
      */
     private bool $isHtml = true;
 
-    private $html5Parser;
+    private HTML5 $html5Parser;
 
     /**
      * @param \DOMNodeList|\DOMNode|\DOMNode[]|string|null $node A Node to use as the base for the crawling
@@ -67,7 +67,7 @@ class Crawler implements \Countable, \IteratorAggregate
     {
         $this->uri = $uri;
         $this->baseHref = $baseHref ?: $uri;
-        $this->html5Parser = class_exists(HTML5::class) ? new HTML5(['disable_html_ns' => true]) : null;
+        $this->html5Parser = new HTML5(['disable_html_ns' => true]);
         $this->cachedNamespaces = new \ArrayObject();
 
         $this->add($node);
@@ -208,7 +208,7 @@ class Crawler implements \Countable, \IteratorAggregate
     public function addXmlContent(string $content, string $charset = 'UTF-8', int $options = \LIBXML_NONET)
     {
         // remove the default namespace if it's the only namespace to make XPath expressions simpler
-        if (!preg_match('/xmlns:/', $content)) {
+        if (!str_contains($content, 'xmlns:')) {
             $content = str_replace('xmlns', 'ns', $content);
         }
 
@@ -589,7 +589,7 @@ class Crawler implements \Countable, \IteratorAggregate
         $node = $this->getNode(0);
         $owner = $node->ownerDocument;
 
-        if (null !== $this->html5Parser && '<!DOCTYPE html>' === $owner->saveXML($owner->childNodes[0])) {
+        if ('<!DOCTYPE html>' === $owner->saveXML($owner->childNodes[0])) {
             $owner = $this->html5Parser;
         }
 
@@ -610,7 +610,7 @@ class Crawler implements \Countable, \IteratorAggregate
         $node = $this->getNode(0);
         $owner = $node->ownerDocument;
 
-        if (null !== $this->html5Parser && '<!DOCTYPE html>' === $owner->saveXML($owner->childNodes[0])) {
+        if ('<!DOCTYPE html>' === $owner->saveXML($owner->childNodes[0])) {
             $owner = $this->html5Parser;
         }
 
@@ -1075,12 +1075,12 @@ class Crawler implements \Countable, \IteratorAggregate
         set_error_handler(function () { throw new \Exception(); });
 
         try {
-            return mb_encode_numericentity($htmlContent, [0x80, 0xFFFF, 0, 0xFFFF], $charset);
-        } catch (\Exception|\ValueError $e) {
+            return mb_encode_numericentity($htmlContent, [0x80, 0x10FFFF, 0, 0x1FFFFF], $charset);
+        } catch (\Exception|\ValueError) {
             try {
                 $htmlContent = iconv($charset, 'UTF-8', $htmlContent);
-                $htmlContent = mb_encode_numericentity($htmlContent, [0x80, 0xFFFF, 0, 0xFFFF], 'UTF-8');
-            } catch (\Exception|\ValueError $e) {
+                $htmlContent = mb_encode_numericentity($htmlContent, [0x80, 0x10FFFF, 0, 0x1FFFFF], 'UTF-8');
+            } catch (\Exception|\ValueError) {
             }
 
             return $htmlContent;
@@ -1178,12 +1178,10 @@ class Crawler implements \Countable, \IteratorAggregate
 
     private function canParseHtml5String(string $content): bool
     {
-        if (null === $this->html5Parser) {
-            return false;
-        }
         if (false === ($pos = stripos($content, '<!doctype html>'))) {
             return false;
         }
+
         $header = substr($content, 0, $pos);
 
         return '' === $header || $this->isValidHtml5Heading($header);

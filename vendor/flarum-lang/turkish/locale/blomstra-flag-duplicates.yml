@@ -11,9 +11,11 @@ blomstra-flag-duplicates:
     flags:
       deselect_discussion_a11y_label: 'Tartışmanın seçimini kaldır'
       duplicate_discussion: 'Yinelenen Tartışma'
+      reason_discussion_deleted: '[silinmiş tartışma]'
       reason_duplicate_label: 'Yinelenen tartışma'
       reason_duplicate_text: 'Bu tartışma bir diğerinin kopyası.'
     post_stream:
+      deleted_discussion: '[silinmiş tartışma]'
       flagged_duplicate_text: '{username}, bu tartışmayı potansiyel bir {duplicate} kopyası olarak işaretledi. Bir moderatör birazdan araştıracak.'
       not_found: Bulunamadı
 flarum-flags:

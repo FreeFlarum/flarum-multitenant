@@ -66,6 +66,7 @@ flarum-tags:
 
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
+      bypass_requirements: タグの必要数設定を無視
       choose_primary_placeholder: "{count, plural, one {プライマリタグを選択してください} other {プライマリタグを # つ選択してください}}"
       choose_secondary_placeholder: "{count, plural, one {1つ以上のタグを選択してください} other {# つ以上のタグを選択してください}}"
       edit_title: "{title}のタグを編集"

@@ -38,6 +38,7 @@ fof-oauth:
           api_key_label: 'API Anahtarı'
           api_secret_label: 'API Secret'
           description: '{link} bağlantısında bir uygulama oluşturun. Bir Hizmet Şartları bağlantısı ve Gizlilik Politikası bağlantısı belirlemeniz gerekecektir. Daha sonra istek e-posta iznini eklediğinizden emin olun.'
+    settings_accessibility_label: '{name} ayarları'
   forum:
     error:
       bad_verification_code: 'Geçersiz veya süresi dolmuş doğrulama jetonu. Lütfen tekrar deneyin.'

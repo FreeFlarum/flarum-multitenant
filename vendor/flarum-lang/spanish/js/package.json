@@ -2,7 +2,7 @@
   "private": true,
   "name": "@flarum-lang/spanish",
   "dependencies": {
-    "flarum-webpack-config": "^1.0"
+    "flarum-webpack-config": "^2.0.0"
   },
   "scripts": {
     "dev": "webpack --mode development --watch",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "flarum": "^1.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }

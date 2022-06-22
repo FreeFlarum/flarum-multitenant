@@ -55,4 +55,4 @@ I might publish simple bugfixes or compatibility updates for free.
 
 - [Packagist](https://packagist.org/packages/sycho/flarum-move-posts)
 - [GitHub](https://github.com/sycho/flarum-move-posts)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/28824-move-posts)

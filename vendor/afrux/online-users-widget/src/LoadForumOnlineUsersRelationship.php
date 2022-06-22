@@ -14,9 +14,6 @@ namespace Afrux\OnlineUsers;
 use Flarum\Api\Controller\ShowForumController;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\Http\RequestUtil;
-use Flarum\User\User;
-use Illuminate\Contracts\Cache\Factory;
-use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
 
 class LoadForumOnlineUsersRelationship
@@ -26,15 +23,9 @@ class LoadForumOnlineUsersRelationship
      */
     protected $settings;
 
-    /**
-     * @var Factory
-     */
-    private $cache;
-
-    public function __construct(SettingsRepositoryInterface $settings, Factory $cache, UserRepository $repository)
+    public function __construct(SettingsRepositoryInterface $settings, UserRepository $repository)
     {
         $this->settings = $settings;
-        $this->cache = $cache;
         $this->repository = $repository;
     }
 
@@ -49,6 +40,6 @@ class LoadForumOnlineUsersRelationship
 
         $actor = RequestUtil::getActor($request);
 
-        $data['onlineUsers'] = $this->repository->getOnlineUsers($actor);
+        $data['onlineUsers'] = $this->repository->getOnlineUsers($actor) ?: null;
     }
 }

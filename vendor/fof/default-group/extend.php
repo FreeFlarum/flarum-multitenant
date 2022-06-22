@@ -23,4 +23,7 @@ return [
 
     (new Extend\Event())
         ->listen(Activated::class, Listeners\AddDefaultGroup::class),
+
+    (new Extend\Settings())
+        ->default('fof-default-group.group', 3),
 ];

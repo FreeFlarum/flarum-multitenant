@@ -24,6 +24,7 @@ flarum-tags:
       tags_text: 'Administre a lista de tags disponíveis para organizar discussões.'
     permissions:
       allow_edit_tags_label: 'Permitir edição de Tag'
+      bypass_tag_counts_label: 'Ignorar requisitos de tag'
       restrict_by_tag_heading: 'Restringir por Tag'
       tag_discussions_label: 'Escolher Tag para discussões'
     tag_settings:
@@ -35,15 +36,19 @@ flarum-tags:
       title: 'Configurações de Tag'
     tags:
       about_tags_text: 'Tags são utilizadas para categorizar discussões. Tags primárias são como categorias tradicionais de fórum: elas podem ser organizadas numa hierarquia de dois níveis. Tags secundárias não possuem hierarquia ou ordem, e são úteis para micro-categorização.'
+      create_primary_tag_button: 'Criar Tag Principal'
+      create_secondary_tag_button: 'Criar Tag Secundária'
       primary_heading: 'Tags Primárias'
       secondary_heading: 'Tags Secundárias'
+      settings_heading: Configurações
   forum:
     all_tags:
       meta_description_text: 'Todas as Tags'
       meta_title_text: '=> flarum-tags.ref.tags'
     choose_tags:
-      choose_primary_placeholder: '{count, plural, one {Escolha uma tag primária} other {Escolha # tags primárias}}'
-      choose_secondary_placeholder: '{count, plural, one {Escolha mais 1 tag} other {Escolha mais # tags}}'
+      bypass_requirements: 'Ignorar requisitos de tag'
+      choose_primary_placeholder: 'Escolha uma tag primária|Escolha {count} tags primárias'
+      choose_secondary_placeholder: 'Escolha mais 1 tag|Escolha mais {count} tags'
       edit_title: 'Edite as Tags de {title}'
       submit_button: '=> core.ref.okay'
       title: 'Escolha Tags para Sua Discussão'
@@ -61,7 +66,7 @@ flarum-tags:
       added_and_removed_tags_text: '{username} adicionou {tagsAdded} e removeu {tagsRemoved}.'
       added_tags_text: '{username} adicionou {tagsAdded}.'
       removed_tags_text: '{username} removeu {tagsRemoved}.'
-      tags_text: '{count, plural, one {a tag {tags}} other {as tags {tags} }}'
+      tags_text: 'a tag {tags}|as tags {tags}'
     tag:
       meta_description_text: 'Todas as discussões com a tag {tag}'
   lib:

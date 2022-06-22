@@ -16,7 +16,7 @@ app.initializers.add('datlechin/flarum-posted-on', () => {
     const post = this.attrs.post;
     const user = post.user();
 
-    if (post.postedOn() === null || user.disclosePostedOn() === false) return;
+    if (user && (post.postedOn() === null || user.disclosePostedOn() === false)) return;
 
     items.add('postedOn', PostedOn.component({ post }));
   });

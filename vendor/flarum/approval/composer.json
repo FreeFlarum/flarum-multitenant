@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^1.2",
+        "flarum/core": "^1.3",
         "flarum/flags": "^1.2"
     },
     "autoload": {
@@ -29,7 +29,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev"
+            "dev-main": "1.x-dev"
         },
         "flarum-extension": {
             "title": "Approval",
@@ -57,5 +57,13 @@
                 "styleci": true
             }
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

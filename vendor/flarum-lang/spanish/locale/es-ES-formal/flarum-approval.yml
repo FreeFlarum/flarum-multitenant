@@ -1,14 +1,14 @@
 flarum-approval:
   admin:
     permissions:
-      approve_posts_label: Aprobar publicaciones
-      reply_without_approval_label: Responder discusiones sin aprobación
-      start_discussions_without_approval_label: Empezar discusiones sin aprobación
+      approve_posts_label: 'Aprobar publicaciones'
+      reply_without_approval_label: 'Responder discusiones sin aprobación'
+      start_discussions_without_approval_label: 'Empezar discusiones sin aprobación'
   forum:
     badge:
-      awaiting_approval_tooltip: => flarum-approval.ref.awaiting_approval
+      awaiting_approval_tooltip: '=> flarum-approval.ref.awaiting_approval'
     post:
-      awaiting_approval_text: => flarum-approval.ref.awaiting_approval
+      awaiting_approval_text: '=> flarum-approval.ref.awaiting_approval'
     post_controls:
       approve_button: Aprobar
   ref:

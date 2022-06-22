@@ -12,6 +12,7 @@
 
 namespace FoF\PrettyMail;
 
+use Flarum\Api\Serializer\ForumSerializer;
 use Flarum\Extend;
 use FoF\PrettyMail\Providers\MailerProvider;
 
@@ -23,4 +24,12 @@ return [
 
     (new Extend\ServiceProvider())
         ->register(MailerProvider::class),
+
+    (new Extend\ApiSerializer(ForumSerializer::class))
+        ->attributes(function (ForumSerializer $serializer, $model, array $attributes): array {
+            if ($serializer->getActor()->isAdmin()) {
+                $attributes['fof-pretty-mail.extra-template-attrs'] = array_keys(resolve('fof-pretty-mail.additional-data'));
+            }
+            return $attributes;
+        }),
 ];

@@ -130,7 +130,7 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
     const searchLabel = extractText(app.translator.trans('core.forum.header.search_placeholder'));
 
     const isActive = !!currentSearch;
-    const shouldShowResults = !!(!this.loadingSources && this.searchState.getValue() && this.hasFocus);
+    const shouldShowResults = !!(this.searchState.getValue() && this.hasFocus);
     const shouldShowClearButton = !!(!this.loadingSources && this.searchState.getValue());
 
     return (
@@ -161,6 +161,7 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
               className="Search-clear Button Button--icon Button--link"
               onclick={this.clear.bind(this)}
               aria-label={app.translator.trans('core.forum.header.search_clear_button_accessible_label')}
+              type="button"
             >
               {icon('fas fa-times-circle')}
             </button>
@@ -324,9 +325,10 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
 
   /**
    * Get the position of the currently selected search result item.
+   * Returns zero if not found.
    */
   getCurrentNumericIndex(): number {
-    return this.selectableItems().index(this.getItem(this.index));
+    return Math.max(0, this.selectableItems().index(this.getItem(this.index)));
   }
 
   /**

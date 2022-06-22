@@ -34,7 +34,7 @@ flarum-tags:
     # These translations are used in the Permissions page of the admin interface.
     permissions:
       allow_edit_tags_label: "Editarea etichetelor"
-      bypass_tag_counts_label: "Eliminarea cerințelor etichetei"
+      bypass_tag_counts_label: "Ignorarea cerințelor de etichetare"
       restrict_by_tag_heading: "Restricționare după etichetă"
       tag_discussions_label: "Etichetarea discuțiilor"
 
@@ -66,6 +66,7 @@ flarum-tags:
 
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
+      bypass_requirements: "Ignorarea cerințelor de etichetare"
       choose_primary_placeholder: "{count, plural, one {Selectați o etichetă principlă} other {Selectați # etichete principale}}"
       choose_secondary_placeholder: "{count, plural, one {Selectați o etichetă secundară} other {Selectați # etichete secundare}}"
       edit_title: "Editare etichete pentru {title}"

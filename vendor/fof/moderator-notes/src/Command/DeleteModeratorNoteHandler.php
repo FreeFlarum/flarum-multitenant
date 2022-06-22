@@ -17,11 +17,11 @@ use Illuminate\Events\Dispatcher;
 
 class DeleteModeratorNoteHandler
 {
-    protected $bus;
+    protected $events;
 
-    public function __construct(Dispatcher $bus)
+    public function __construct(Dispatcher $events)
     {
-        $this->bus = $bus;
+        $this->events = $events;
     }
 
     /**
@@ -40,7 +40,7 @@ class DeleteModeratorNoteHandler
 
         $note->delete();
 
-        $this->bus->dispatch(new ModeratorNoteDeleted($actor, $note));
+        $this->events->dispatch(new ModeratorNoteDeleted($actor, $note));
 
         return $note;
     }

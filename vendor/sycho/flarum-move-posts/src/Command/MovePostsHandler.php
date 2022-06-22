@@ -193,8 +193,6 @@ class MovePostsHandler
         $sourceDiscussion->refreshParticipantCount();
         $sourceDiscussion->refreshLastPost();
 
-        $sourceDiscussion->post_number_index = Post::query()->where('discussion_id', $sourceDiscussion->id)->max('number');
-
         if (isset($sourceDiscussion->is_locked) && $movingFirstPostOnly) {
             $sourceDiscussion->is_locked = true;
 
@@ -267,13 +265,11 @@ class MovePostsHandler
      */
     protected function simpleMove(EloquentCollection $posts, Discussion $discussion): EloquentCollection
     {
-        $numberDifference = $discussion->post_number_index - $posts->first()->number + 1;
+        $numberDifference = $discussion->posts()->max('number') - $posts->first()->number + 1;
         $posts->toQuery()->update([
             'discussion_id' => $discussion->id,
             'number' => $this->db->raw("number + $numberDifference"),
         ]);
-
-        $discussion->post_number_index = $posts->last()->number + $numberDifference;
 
         $discussion->refreshCommentCount();
         $discussion->refreshParticipantCount();
@@ -348,8 +344,6 @@ class MovePostsHandler
 
             return $post;
         });
-
-        $discussion->post_number_index += $posts->count();
 
         $discussion->refreshCommentCount();
         $discussion->refreshParticipantCount();

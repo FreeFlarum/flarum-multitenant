@@ -53,7 +53,9 @@ export default class DiscussionPage<CustomAttrs extends IDiscussionPageAttrs = I
     // page, then we don't want Mithril to redraw the whole page – if it did,
     // then the pane would redraw which would be slow and would cause problems with
     // event handlers.
-    if (app.discussions.hasItems()) {
+    // We will also enable the pane if the discussion list is empty but loading,
+    // because the DiscussionComposer refreshes the list and redirects to the new discussion at the same time.
+    if (app.discussions.hasItems() || app.discussions.isLoading()) {
       app.pane?.enable();
       app.pane?.hide();
     }
@@ -196,7 +198,7 @@ export default class DiscussionPage<CustomAttrs extends IDiscussionPageAttrs = I
     // extensions. We need to distinguish the two so we don't end up displaying
     // the wrong posts. We do so by filtering out the posts that don't have
     // the 'discussion' relationship linked, then sorting and splicing.
-    let includedPosts: (Post | undefined)[] = [];
+    let includedPosts: Post[] = [];
     if (discussion.payload && discussion.payload.included) {
       const discussionId = discussion.id();
 
@@ -209,8 +211,10 @@ export default class DiscussionPage<CustomAttrs extends IDiscussionPageAttrs = I
             !Array.isArray(record.relationships.discussion.data) &&
             record.relationships.discussion.data.id === discussionId
         )
-        .map((record) => app.store.getById<Post>('posts', record.id))
-        .sort((a?: Post, b?: Post) => (a?.createdAt()?.getTime() ?? 0) - (b?.createdAt()?.getTime() ?? 0))
+        // We can make this assertion because posts should be in the store,
+        // since they were in the discussion's payload.
+        .map((record) => app.store.getById<Post>('posts', record.id) as Post)
+        .sort((a: Post, b: Post) => a.number() - b.number())
         .slice(0, 20);
     }
 
@@ -218,7 +222,9 @@ export default class DiscussionPage<CustomAttrs extends IDiscussionPageAttrs = I
     // posts we want to display. Tell the stream to scroll down and highlight
     // the specific post that was routed to.
     this.stream = new PostStreamState(discussion, includedPosts);
-    this.stream.goToNumber(m.route.param('near') || (includedPosts[0]?.number() ?? 0), true).then(() => {
+    const rawNearParam = m.route.param('near');
+    const nearParam = rawNearParam === 'reply' ? 'reply' : parseInt(rawNearParam);
+    this.stream.goToNumber(nearParam || (includedPosts[0]?.number() ?? 0), true).then(() => {
       this.discussion = discussion;
 
       app.current.set('discussion', discussion);

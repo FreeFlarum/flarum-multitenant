@@ -1,0 +1,39 @@
+{
+    "name": "clarkwinkelmann/flarum-ext-roll-die",
+    "description": "Make die emoji roll a random number",
+    "keywords": [
+        "flarum",
+        "roll",
+        "die",
+        "dice"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/clarkwinkelmann/flarum-ext-roll-die/issues",
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-roll-die",
+        "forum": "https://discuss.flarum.org/d/29698"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Roll a Die",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-dice",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        }
+    }
+}

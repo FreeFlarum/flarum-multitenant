@@ -33,6 +33,22 @@ migratetoflarum-fake-data:
       user-count: '=> migratetoflarum-fake-data.ref.user-count'
     link:
       generate-replies: 'Generuj odpowiedzi'
+  lib:
+    generator:
+      bulk-mode: 'Tryb masowy'
+      bulk-mode-description: 'Generuje jedną losową wartość i używa jej dla wszystkich wygenerowanych rekordów'
+      date: 'Ustawienia daty'
+      date-interval-placeholder: 'Interwał (domyślnie 1 sekunda)'
+      date-start-placeholder: 'Data początkowa (domyślnie aktualna data)'
+      discussion-count: 'Liczba dyskusji do utworzenia'
+      discussion-tags: 'Tagi dla nowych dyskusji'
+      discussion-tags-none: Brak
+      discussion-tags-random: Losowo
+      post-count: 'Liczba postów do utworzenia'
+      refresh: 'Zamknij i odśwież stronę'
+      reset: 'Generowanie zakończone! Kliknij, aby zresetować'
+      send: 'Wygeneruj dane'
+      user-count: 'Liczba użytkowników do utworzenia'
   ref:
     bulk-mode: 'Tryb masowy'
     bulk-mode-description: 'Generuje jedną losową wartość i używa jej dla wszystkich wygenerowanych rekordów'

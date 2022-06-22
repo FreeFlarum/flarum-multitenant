@@ -6,8 +6,14 @@ ianm-syndication:
   admin:
     settings:
       entries-count: 'Akışta kaç gönderi olsun?'
+      forum-icons:
+        help: 'Beslemelere kolay erişim sağlamak için Tüm Tartışmalar, Etiketler ve Tartışmalarda simgeleri görüntüler.'
+        label: 'Forumda Atom/RSS besleme bağlantılarını göster'
+      forum-link-format:
+        help: 'Forumda linkler görüntülendiğinde hangi formatın (Atom veya RSS) kullanılacağını seçin.'
+        label: 'Forum besleme biçimi'
       full-text:
-        help: 'Etkisizleştirilirse, gönderiler yalnıza özet içerir ve kullanıcıların her şeyi okuyabilmesi için siteyi görüntülemeleri gerekir.'
+        help: 'Devre dışı bırakılırsa, yayınlar yalnızca yayınlardan alıntılar içerecek ve kullanıcıların her şeyi okumak için foruma gitmesi gerekecek. Forumu bir RSS toplayıcısından takip eden kişilere saygı duymak için bu seçeneği aktif bırakılması tavsiye edilir.'
         label: 'Tam Metin Akış'
         recommendation: 'Forumunuzu RSS ile takip eden kullanıcılarınız varsa bu seçeneği aktif bırakmanız tavsiye edilir.'
       html:

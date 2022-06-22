@@ -87,20 +87,38 @@ class ExtensionManager
             // We calculate and store a set of composer package names for all installed Flarum extensions,
             // so we know what is and isn't a flarum extension in `calculateDependencies`.
             // Using keys of an associative array allows us to do these checks in constant time.
-            // We do the same for enabled extensions, for optional dependencies.
             $installedSet = [];
-            $enabledIds = array_flip($this->getEnabled());
+
+            $composerJsonConfs = [];
 
             foreach ($installed as $package) {
-                if (Arr::get($package, 'type') != 'flarum-extension' || empty(Arr::get($package, 'name'))) {
+                $name = Arr::get($package, 'name');
+                if (empty($name)) {
                     continue;
                 }
 
-                $installedSet[Arr::get($package, 'name')] = true;
-
-                $path = isset($package['install-path'])
+                $packagePath = isset($package['install-path'])
                     ? $this->paths->vendor.'/composer/'.$package['install-path']
-                    : $this->paths->vendor.'/'.Arr::get($package, 'name');
+                    : $this->paths->vendor.'/'.$name;
+
+                if (Arr::get($package, 'type') === 'flarum-extension') {
+                    $composerJsonConfs[$packagePath] = $package;
+                }
+
+                if ($subextPaths = Arr::get($package, 'extra.flarum-subextensions', [])) {
+                    foreach ($subextPaths as $subExtPath) {
+                        $subPackagePath = "$packagePath/$subExtPath";
+                        $conf = json_decode($this->filesystem->get("$subPackagePath/composer.json"), true);
+
+                        if (Arr::get($conf, 'type') === 'flarum-extension') {
+                            $composerJsonConfs[$subPackagePath] = $conf;
+                        }
+                    }
+                }
+            }
+
+            foreach ($composerJsonConfs as $path => $package) {
+                $installedSet[Arr::get($package, 'name')] = true;
 
                 // Instantiates an Extension object using the package path and composer.json file.
                 $extension = new Extension($path, $package);
@@ -113,7 +131,7 @@ class ExtensionManager
             }
 
             foreach ($extensions as $extension) {
-                $extension->calculateDependencies($installedSet, $enabledIds);
+                $extension->calculateDependencies($installedSet);
             }
 
             $needsReset = false;

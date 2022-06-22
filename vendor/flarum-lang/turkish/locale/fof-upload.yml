@@ -16,7 +16,20 @@ fof-upload:
       resize: "Resimlerin yüklenmeden önce yeniden boyulandırılıp boyutlandırılmayacağını seçin. Piksel cinsinden maksimum genişlik ve yükseklik belirtebilirsiniz. Yeniden boyutlandırma işlemi görüntülerin enini ve boyunu korur.\n"
       s3_acl: "Yüklenen nesneye uygulanması gereken ACL (varsayılan: özel). Olası değerler için bkz. https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl\n"
       s3_compatible_storage: "Aşağıdaki ayarlar yalnızca S3 uyumlu depolama kullanılırken gereklidir. AWS kullanıyorsanız, bunları boş bırakabilirsiniz.\n"
+      s3_instance_profile: "Örnek profilinde kimlik bilgilerini kullanmak için anahtarı ve sırrı (secret) boş bırakın.\n"
       watermark: "Yükleme sırasında resimlere filigran (watermark) eklenip eklenmeyeceğini seçin. Filigranlar gif olmayan dosyalara eklenebilir.\n"
+    inspect-mime:
+      description: "FoF Upload, yaygın MIME türleri için <a>PHP Mime Detector</a> kitaplığını ve yedek olarak PHP Fileinfo'yu kullanır. \nFileinfo tarafından döndürülen MIME değeri sunucudan sunucuya farklı olabilir!\n"
+      guessed-extension: 'Varsayılan dosya uzantısı (orijinal beyaz listede değilse)'
+      laravel-validation: 'Laravel Dosya Doğrulaması'
+      mime-detector: 'Mime Dedektörü (birincil)'
+      mime-fileinfo: 'PHP Fileinfo (yedek)'
+      no-file-selected: 'Dosya yok'
+      not-available: 'Sonuç yok'
+      select: 'Kullanılacak değerleri incelemek için aşağıdan bir dosya seçin. Dosya kaydedilmeyecek.'
+      title: 'MIME''yi inceleyin'
+      validation-failed: 'Başarısız: {error}'
+      validation-passed: Geçti
     labels:
       aws-s3:
         acl: 'Access Control List (ACL)'
@@ -45,6 +58,8 @@ fof-upload:
       imgur:
         client_id: 'Imgur client ID'
         title: 'Imgur resim depolama ayarları'
+        tos: 'Forum kullanıcılarınızın Imgur''un <a>Hizmet Şartlarına</a> uymasını sağlamak sizin sorumluluğunuzdadır'
+      inspect-mime: 'Test dosyası MIME türü'
       local:
         cdn_url: 'İçerik teslim bağlantısı (dosyaların önekleri)'
         title: 'Yerel depolama ayarları'

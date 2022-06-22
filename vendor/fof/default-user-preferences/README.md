@@ -4,11 +4,25 @@
 
 A [Flarum](http://flarum.org) extension.
 
-Enaables the following preferences by default for all new user signing up to your forum:
+Enables the following preferences by default for all new user signing up to your forum, with toggles in the extension settings to modify your chosen defaults.:
 
 - 'Someone replies to one of my posts (email) notification'
 - 'Someone mentions me in a post (email) notification'
 - 'Follow after reply'
+
+### Extending
+
+Additional extensions may register defaults on the following way:
+
+In your extension `extend.php`
+```php
+(new \FoF\DefaultUserPreferences\Extend\RegisterUserPreferenceDefault())
+    ->register(THE PREFERENCE KEY, THE DEFAULT VALUE),
+```
+
+Be sure to include translations in the `fof-default-user-preferences.admin.settings` namespace with the key matching the `PREFERENCE KEY` provided in the extender above. For example:
+
+`fof-default-user-preferences.admin.settings.myCoolKey`
 
 ### Installation
 

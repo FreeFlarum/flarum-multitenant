@@ -1,0 +1,14 @@
+{
+    "name": "@clarkwinkelmann/roll-die",
+    "private": true,
+    "dependencies": {
+        "flarum-tsconfig": "^1.0",
+        "flarum-webpack-config": "^1.0",
+        "webpack": "^4.0",
+        "webpack-cli": "^3.0"
+    },
+    "scripts": {
+        "dev": "webpack --mode development --watch",
+        "build": "webpack --mode production"
+    }
+}

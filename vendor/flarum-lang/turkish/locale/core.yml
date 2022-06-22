@@ -451,6 +451,7 @@ core:
       username_label: '=> core.ref.username'
     error:
       dependent_extensions_message: '{extension} uzantısı şu uzantı etkisizleştirilmeden önce etkisizleştirilemez: {extensions}'
+      extension_initialiation_failed_message: '{extension} başlatılamadı, daha fazla bilgi için tarayıcı konsolunu kontrol edin.'
       generic_message: 'Oops! Bir şeyler yanlış gitti. Lütfen sayfayı yenileyin ve tekrar deneyin.'
       missing_dependencies_message: '{extension} şu uzantı aktif edilmeden önce aktif edilemez: {extensions}'
       not_found_message: 'İstenen kaynak bulunamadı.'

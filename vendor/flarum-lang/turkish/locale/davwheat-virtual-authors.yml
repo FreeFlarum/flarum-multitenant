@@ -72,5 +72,5 @@ davwheat-virtual-authors:
       title_edit: 'Sanal yazarı düzenle'
       title_new: 'Yeni sanal yazar'
   ref:
-    discussion_count: '{count, plural, one {# tartışma}, other {# tartışmalar}}'
+    discussion_count: '{count, plural, one {# tartışma}, other {# tartışma}}'
     no_description: '(açıklama seti yok)'

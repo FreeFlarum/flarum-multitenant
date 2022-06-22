@@ -16,7 +16,9 @@ use Flarum\Foundation\EventGeneratorTrait;
 use Flarum\Notification\Notification;
 use Flarum\Post\Event\Deleted;
 use Flarum\User\User;
+use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Query\Expression;
 
 /**
  * @property int $id
@@ -91,7 +93,20 @@ class Post extends AbstractModel
         // discussion.
         static::creating(function (self $post) {
             $post->type = $post::$type;
-            $post->number = ++$post->discussion->post_number_index;
+
+            /** @var ConnectionInterface $db */
+            $db = static::getConnectionResolver();
+            $post->number = new Expression('('.
+                $db->table('posts', 'pn')
+                    ->whereRaw($db->getTablePrefix().'pn.discussion_id = '.intval($post->discussion_id))
+                    // IFNULL only works on MySQL/MariaDB
+                    ->selectRaw('IFNULL(MAX('.$db->getTablePrefix().'pn.number), 0) + 1')
+                    ->toSql()
+            .')');
+        });
+
+        static::created(function (self $post) {
+            $post->refresh();
             $post->discussion->save();
         });
 

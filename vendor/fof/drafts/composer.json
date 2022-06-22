@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^1.0.0"
+        "flarum/core": "^1.2.0"
     },
     "authors": [
         {
@@ -42,7 +42,10 @@
                 "name": "fas fa-edit",
                 "backgroundColor": "#e74c3c",
                 "color": "#fff"
-            }
+            },
+            "optional-dependencies": [
+                "fof/byobu"
+            ]
         },
         "flagrow": {
             "discuss": "https://discuss.flarum.org/d/20957"

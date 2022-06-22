@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/FlarumES/lang-spanish">
-    <img src="https://flarum.es/assets/logo-qmhd7tk4.png" alt="Logo">
+    <img src="https://raw.githubusercontent.com/FlarumES/flarum.es/main/img/flarumesiso.png" width="10%" alt="FlarumES Logo">
   </a>
 
   <h3 align="center">Spanish Language Pack for <a href="https://flarum.org">Flarum</a></h3>
@@ -113,10 +113,12 @@ You can contribute to the language pack on this <a href="https://weblate.rob006.
 | [`fof/pages`](https://github.com/FriendsOfFlarum/pages) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-pages/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-pages/es/) |
 | [`fof/polls`](https://github.com/FriendsOfFlarum/polls) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-polls/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-polls/es/) |
 | [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-reactions/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-reactions/es/) |
+| [`fof/share-social`](https://github.com/FriendsOfFlarum/share-social) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-share-social/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-share-social/es/) |
 | [`fof/socialprofile`](https://github.com/FriendsOfFlarum/socialprofile) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-socialprofile/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-socialprofile/es/) |
 | [`fof/spamblock`](https://github.com/FriendsOfFlarum/spamblock) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-spamblock/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-spamblock/es/) |
 | [`fof/terms`](https://github.com/FriendsOfFlarum/terms) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-terms/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-terms/es/) |
 | [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-user-bio/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-user-bio/es/) |
+| [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/fof-user-directory/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-user-directory/es/) |
 
 <!-- fof-extensions-list-stop -->
 <!-- various-extensions-list-start -->
@@ -150,7 +152,7 @@ You can contribute to the language pack on this <a href="https://weblate.rob006.
 | [`justoverclock/flarum-ext-welcomebox`](https://github.com/justoverclockl/flarum-ext-welcomebox) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/justoverclock-welcomebox/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/justoverclock-welcomebox/es/) |
 | [`katosdev/signature`](https://github.com/katosdev/signature) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/katosdev-signature/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/katosdev-signature/es/) |
 | [`kyrne/whisper`](https://github.com/KyrneDev/whisper) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/kyrne-whisper/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/kyrne-whisper/es/) |
-| [`serakoi/flarumdiscordtheme`](https://github.com/Serakoi/flarum-discord-theme-2) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/serakoi-flarumdiscordtheme/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/serakoi-flarumdiscordtheme/es/) |
+| [`matteocontrini/flarum-imgur-upload`](https://github.com/matteocontrini/flarum-imgur-upload) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/matteocontrini-imgur-upload/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/matteocontrini-imgur-upload/es/) |
 | [`sycho/flarum-profile-cover`](https://github.com/SychO9/flarum-profile-cover) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/sycho-profile-cover/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/sycho-profile-cover/es/) |
 | [`the-turk/flarum-pallet-theme`](https://github.com/the-turk/flarum-pallet-theme) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/the-turk-pallet-theme/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/the-turk-pallet-theme/es/) |
 | [`the-turk/flarum-stickiest`](https://github.com/the-turk/flarum-stickiest) | [![Translation status](https://weblate.rob006.net/widgets/flarum/es/the-turk-stickiest/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/the-turk-stickiest/es/) |

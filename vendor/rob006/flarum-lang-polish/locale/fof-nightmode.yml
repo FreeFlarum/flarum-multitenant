@@ -2,10 +2,18 @@
 # Use https://weblate.rob006.net/projects/flarum/fof-nightmode/pl/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+fof-default-user-preferences:
+  admin:
+    settings:
+      fofNightMode: 'FoF Nightmode: Domyślny motyw forum'
+      fofNightMode-help: '0 - automatycznie, 1 - tryb dzienny, 2 - tryb nocny'
+      fofNightMode_perDevice: 'FoF Nightmode: Użyj niezależnych ustawień dla każdego urządzenia'
+      fofNightMode_perDevice-help: 'Użyj niezależnych ustawień motywu forum dla każdego urządzenia'
 fof-nightmode:
   admin:
     settings:
       modal:
+        always_show_theme_toggle_on_header: 'Zawsze pokazuj przycisk do zmiany motywu w nagłówku forum'
         default_theme: 'Domyślny motyw forum'
         default_theme_helper: 'Domyślny motyw jest automatycznie ustawiany nowym użytkownikom, gościom oraz wszystkim, którzy nie ustawili jeszcze motywu.'
         theme_auto: '=> fof-nightmode.ref.auto'

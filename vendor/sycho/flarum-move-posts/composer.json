@@ -18,7 +18,7 @@
         "source": "https://github.com/SychO9/flarum-move-posts"
     },
     "require": {
-        "flarum/core": "^1.0.0",
+        "flarum/core": "^1.3.0",
         "sycho/flarum-uikit": "^0.2.0"
     },
     "require-dev": {

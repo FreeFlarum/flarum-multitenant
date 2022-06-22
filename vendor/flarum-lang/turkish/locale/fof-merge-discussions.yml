@@ -13,6 +13,7 @@ fof-merge-discussions:
     error:
       deleting_failed: 'Boş tartışmalar silinirken bir hata oluştu.'
       fixing_posts_number_failed: 'Gönderi numaraları düzeltilemedi.'
+      fixing_posts_number_meta_failed: 'Gönderi numaraları düzeltilemedi.'
       merging_failed: 'Tartışmalar birleştirilirken bir hata oluştu.'
       updating_failed: 'Tartışma ayrıntıları güncellenirken bir hata oluştu.'
   email:

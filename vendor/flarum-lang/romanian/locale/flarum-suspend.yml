@@ -15,16 +15,26 @@ flarum-suspend:
   forum:
     # These translations are used in the suspension notifications
     notifications:
-      user_suspended_text: "{username} va suspendat pentru {timeReadable}"
-      user_unsuspended_text: "{username} a anulat suspendarea"
+      user_suspended_text: "Ați fost suspendat pentru {timeReadable}"
+      user_suspended_indefinite_text: "Ați fost suspendat pe un termen nedeterminat"
+      user_unsuspended_text: "Suspendarea Dvs. a fost anulată"
 
+    # These translations are used for the suspension reason informational modal to the suspended user.
+    suspension_info:
+      dismiss_button: "Închide"
+      indefinite: "Este o suspendare pe termen nedeterminat"
+      limited: "Suspendarea este în vigoare până la {date}"
+      title: "Acest cont este suspendat"
 
     # These translations are used in the Suspend User modal dialog (admin function).
     suspend_user:
-      indefinitely_label: "Suspendare pe o perioadă nedefinită"
+      display_message: "Afișează mesajul pentru utilizator"
+      indefinitely_label: "Suspendare pe o perioadă nedeterminată"
       limited_time_days_text: " zi(le)"
       limited_time_label: "Suspendare temporară…"
       not_suspended_label: "Nesuspendat"
+      placeholder_optional: "Opțional"
+      reason: "Motivul suspendării"
       status_heading: "Starea suspendării"
       submit_button: => core.ref.save_changes
       title: "Suspendare {username}"
@@ -36,3 +46,25 @@ flarum-suspend:
     # These translations are found on the user profile page (admin function).
     user_controls:
       suspend_button: "Suspendare"
+
+  # Translations in this namespace are used by suspension email notifications
+  email:
+    suspended:
+      subject: "Contul Dvs. a fost suspendat"
+      body: |
+        Salut {recipient_display_name},
+
+        Ați fost suspendat pentru următorul motiv:
+
+        ---
+        {suspension_message}
+        ---
+
+    unsuspended:
+      subject: "Suspendarea contului Dvs. a fost anulată"
+      body: |
+        Salut {recipient_display_name},
+
+        Suspendarea Dvs. a fost anulată. Vă puteți întoarce pe forum accesând următorul link:
+
+        {forum_url}

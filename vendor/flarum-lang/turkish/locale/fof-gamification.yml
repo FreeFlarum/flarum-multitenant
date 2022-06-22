@@ -85,6 +85,8 @@ fof-gamification:
       name: Kullanıcı
       rank: Sıra
     user:
+      card:
+        points: '{count, plural, one { {count} puan} other {{count} puan}}'
       points: 'Puan: {points}'
       rank: '{rank}'
     vote_title: 'Oy Verenleri Göster'

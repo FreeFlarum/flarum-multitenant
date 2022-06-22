@@ -25,6 +25,7 @@ use FoF\Extend\Extend\ExtensionSettings;
 use FoF\Gamification\Api\Controllers;
 use FoF\Gamification\Api\Serializers;
 use FoF\Gamification\Notification\VoteBlueprint;
+use FoF\Gamification\Provider\GamificationSortOptionsProvider;
 
 return [
     (new Extend\Frontend('admin'))
@@ -98,7 +99,12 @@ return [
         ->hasMany('ranks', Serializers\RankSerializer::class),
 
     (new Extend\ApiSerializer(Serializer\ForumSerializer::class))
-        ->hasMany('ranks', Serializers\RankSerializer::class),
+        ->hasMany('ranks', Serializers\RankSerializer::class)
+        ->attributes(function (Serializer\ForumSerializer $serializer, $forum, $attributes) {
+            $attributes['canViewRankingPage'] = $serializer->getActor()->can('fof.gamification.viewRankingPage');
+
+            return $attributes;
+        }),
 
     (new Extend\ApiController(Controller\ShowForumController::class))
         ->prepareDataForSerialization(function (Controller\ShowForumController $controller, &$data) {
@@ -119,13 +125,12 @@ return [
 
     (new Extend\ApiSerializer(Serializer\UserSerializer::class))
         ->attributes(function (Serializer\UserSerializer $serializer, User $user, array $attributes) {
-            $attributes['canViewRankingPage'] = (bool) $serializer->getActor()->can('fof.gamification.viewRankingPage');
             $attributes['points'] = $user->votes;
 
             return $attributes;
         }),
 
-    (new Extend\ApiSerializer(Serializer\DiscussionSerializer::class))
+    (new Extend\ApiSerializer(Serializer\BasicDiscussionSerializer::class))
         ->attributes(AddDiscussionData::class),
 
     (new Extend\ApiSerializer(Serializer\PostSerializer::class))
@@ -186,4 +191,7 @@ return [
 
     (new Extend\View())
         ->namespace('fof-gamification', __DIR__.'/resources/views'),
+
+    (new Extend\ServiceProvider())
+        ->register(GamificationSortOptionsProvider::class),
 ];

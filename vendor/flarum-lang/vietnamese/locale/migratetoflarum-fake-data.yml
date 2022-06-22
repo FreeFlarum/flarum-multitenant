@@ -33,6 +33,22 @@ migratetoflarum-fake-data:
       user-count: '=> migratetoflarum-fake-data.ref.user-count'
     link:
       generate-replies: 'Tạo câu trả lời giả'
+  lib:
+    generator:
+      bulk-mode: 'Chế độ hàng loạt'
+      bulk-mode-description: 'Tạo một giá trị ngẫu nhiên duy nhất và sử dụng lại nó cho mọi mục nhập'
+      date: 'Seed ngày tháng'
+      date-interval-placeholder: 'Khoảng thời gian (mặc định: 1 giây)'
+      date-start-placeholder: 'Ngày bắt đầu (mặc định: bây giờ)'
+      discussion-count: 'Số lượng cuộc thảo luận muốn tạo'
+      discussion-tags: 'Các thẻ cho các cuộc thảo luận'
+      discussion-tags-none: Không
+      discussion-tags-random: 'Ngẫu nhiên'
+      post-count: 'Số lượng bài viết muốn tạo'
+      refresh: 'Đóng và tải lại trang'
+      reset: 'Tạo thành công! Nhấn để tải lại'
+      send: 'Tạo dữ liệu'
+      user-count: 'Số lượng người dùng muốn tạo'
   ref:
     bulk-mode: 'Chế độ hàng loạt'
     bulk-mode-description: 'Tạo một giá trị ngẫu nhiên duy nhất và sử dụng lại nó cho mọi mục nhập'

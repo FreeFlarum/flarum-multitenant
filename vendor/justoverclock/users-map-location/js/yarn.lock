@@ -2245,6 +2245,11 @@ flarum-webpack-config@^1.0.0:
     typescript "^4.3.2"
     webpack-bundle-analyzer "^4.4.2"
 
+flarum@^0.1.0-beta.16:
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/flarum/-/flarum-0.1.0-beta.16.tgz#6571adfd6632ea25794ab5270a9bd8ac2f38e1d3"
+  integrity sha512-uovm+6J8TO35dfbTSRtHRH6tz71W4dnEDfB63NOKHIhOz8oRh65qyWpXtlBOjv9f1cFMkMcjGHbWetb5lAIEnQ==
+
 flush-write-stream@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/flush-write-stream/-/flush-write-stream-1.1.1.tgz#8dd7d873a1babc207d94ead0c2e0e44276ebf2e8"

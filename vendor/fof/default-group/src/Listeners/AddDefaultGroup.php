@@ -32,10 +32,10 @@ class AddDefaultGroup
 
     public function handle(Activated $event)
     {
-        $defaultGroup = $this->settings->get('fof-default-group.group');
+        $defaultGroup = Group::findOrFail($this->settings->get('fof-default-group.group'));
 
-        if ($defaultGroup != null && (int) $defaultGroup !== Group::MEMBER_ID) {
-            $event->user->groups()->attach($defaultGroup);
+        if ($defaultGroup && $defaultGroup->id !== Group::MEMBER_ID && !$event->user->groups->contains($defaultGroup)) {
+            $event->user->groups()->attach($defaultGroup->id);
         }
     }
 }

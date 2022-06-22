@@ -48,3 +48,17 @@ The following includes all items that are aligned correctly. These are important
 - [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions) **v1.0.2**
 - [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio) **v1.0.1**
 - [`ianm/level-ranks`](https://github.com/imorland/level-ranks) **v1.0.0**
+- [`fof/drafts`](https://github.com/FriendsOfFlarum/drafts) **v1.1.1**
+- [`malago86/flarum-achievements`](https://github.com/malago86/flarum-achievements) **v0.5.5**
+- [`kilowhat/flarum-ext-audit-free`](https://github.com/kilowhat/flarum-ext-audit-free) **v1.5.1**
+- [`clarkwinkelmann/flarum-ext-author-change`](https://github.com/clarkwinkelmann/flarum-ext-author-change) **v1.0.2**
+- [`ramesh-dada/bbcode-alerts`](https://github.com/ramesh-dada/bbcode-alerts) **v6.21**
+- [`datlechin/flarum-birthdays`](https://github.com/datlechin/flarum-birthdays) **v1.2.3**
+- [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog) **v0.6.1**
+- [`eddiewebb/flarum-calendar`](https://github.com/eddiewebb/flarum-calendar) **v1.0.3**
+- [`the-turk/flarum-diff`](https://github.com/the-turk/flarum-diff) **v1.1.1**
+- [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu) **v1.1.6**
+- [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions) **v1.2.3**
+- [`fof/polls`](https://github.com/FriendsOfFlarum/polls) **v1.0.5**
+- [`fof/prevent-necrobumping`](https://github.com/FriendsOfFlarum/prevent-necrobumping) **v1.0.1**
+- [`fof/share-social`](https://github.com/FriendsOfFlarum/share-social) **v1.1.0**

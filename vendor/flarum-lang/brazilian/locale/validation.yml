@@ -42,6 +42,8 @@ validation:
   ends_with: 'O :attribute deve terminar com um dos seguintes: :values.'
   exists: 'O :attribute selecionado ja existe.'
   file: 'O :attribute deve ser um arquivo.'
+  file_too_large: 'O :attribute é muito grande.'
+  file_upload_failed: 'O :attribute falhou ao carregar.'
   filled: 'O campo :attribute é exigido.'
   gt:
     array: 'O :attribute deve ter mais que :value itens.'

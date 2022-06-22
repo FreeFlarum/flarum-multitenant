@@ -38,7 +38,7 @@ return [
             // FreeFlarum's footer:
             if (isset(CONF['freeflarum']['hide_footer']) ? CONF['freeflarum']['hide_footer'] == false : (isset(CONF['freeflarum']['amount_donated']) ? CONF['freeflarum']['amount_donated'] < 7 : true)) {
                 $document->foot[] = '
-                    <hr/><p align="center" style="text-align: center !important; height: initial !important; position: initial !important; clip-path: unset !important; transform: unset !important; color: unset !important; background-color: unset !important; visibility: visible !important; display: block !important; text-align: center !important; margin: 5px 0 !important; opacity: 1.0 !important; max-height: unset !important; padding: 10px 0 !important; font-family: \'Arial\', sans-serif !important; font-size: 13px !important;">A free forum powered by <a href="https://www.freeflarum.com" target="_blank">FreeFlarum</a> (<a href="https://www.freeflarum.com/docs/faq/#can-i-pay-to-remove-the-powered-by-freeflarum-footer-for-my-or-other-forum" target="_blank">remove this footer</a>)<br/><a href="https://www.freeflarum.com/docs/legal/terms/" target="_blank">Terms & Conditions</a> | <a href="https://www.freeflarum.com/docs/legal/privacy-policy/" target="_blank">Privacy Policy</a></p></div>
+                    <hr/><p align="center" style="text-align: center !important; height: initial !important; position: initial !important; clip-path: unset !important; transform: unset !important; color: unset !important; background-color: unset !important; visibility: visible !important; display: block !important; text-align: center !important; margin: 5px 0 !important; opacity: 1.0 !important; max-height: unset !important; padding: 10px 0 !important; font-family: \'Arial\', sans-serif !important; font-size: 13px !important;">A free forum powered by <a href="https://www.freeflarum.com" target="_blank">FreeFlarum</a> (<a href="https://freeflarum.com/docs/faq/#can-i-pay-to-remove-the-powered-by-freeflarum-footer-for-my-or-other-forum" target="_blank">remove this footer</a>)<br/><a href="https://www.freeflarum.com/docs/legal/terms/" target="_blank">Terms & Conditions</a> | <a href="https://www.freeflarum.com/docs/legal/privacy-policy/" target="_blank">Privacy Policy</a></p></div>
                 ';
             };
 
@@ -48,11 +48,11 @@ return [
             };
     }),
 
-    (new Extend\Frontend('admin'))->content(function (Document $document) {
+    (new Extend\Frontend('forum'))->content(function (Document $document) {
         // Important alert on top:
         /*$document->head[] = '
-            <div style="text-align: center; padding: 0.5rem 0;">
-                <a style="color: red; font-weight: 900;" href="https://discuss.flarum.org/d/7585/2959" target="_blank">31st July 2021 - DOWNTIME - MariaDB 10.6 update</a>
+            <div style="text-align: center; background: gainsboro; padding: 0.5rem 0;">
+                <a style="color: red;" href="#">10th July 2022 - DOWNTIME - We will be migrating to a different server at around 10:00 - 11:00 UTC (the migration is expected to take ±6 hours)</a>
             </div>
         ';*/
 
@@ -84,6 +84,6 @@ return [
         //$document->foot[] = '<script>globalThis.window.document.querySelector("#header-secondary > ul > li.item-help > a[href=\"https://docs.flarum.org/troubleshoot.html\"]").setAttribute("href", "https://discuss.flarum.org/d/7585");</script>';
 
         // Remove Audit Log extension upgrade button, since we don't allow paid extensions:
-        $document->foot[] = '<script>globalThis.window.document.querySelector(".AuditUpgrade[href=\"https://kilowhat.net/flarum/extensions/audit\"]").outerHTML = null;</script>';
+        //$document->foot[] = '<script>globalThis.window.document.querySelector(".AuditUpgrade[href=\"https://kilowhat.net/flarum/extensions/audit\"]").outerHTML = null;</script>';
     })
 ];

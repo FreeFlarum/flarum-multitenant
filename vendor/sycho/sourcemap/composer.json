@@ -1,0 +1,56 @@
+{
+    "name": "sycho/sourcemap",
+    "type": "library",
+    "description": "Work with JavaScript/CSS Source Map",
+    "keywords": [
+        "sourcemap",
+        "Source Map",
+        "JavaScript",
+        "CSS"
+    ],
+    "homepage": "https://github.com/sycho9/sourcemap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Grigoriev",
+            "email": "go.vasac@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "ext-json": "*",
+        "sycho/errors": "^3.0",
+        "sycho/codecs-base64vlq": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "sycho/errors": "^3.x-dev",
+        "sycho/codecs-base64vlq": "^2.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "axy\\sourcemap\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "axy\\sourcemap\\tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../*/"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit -c phpunit.xml.dist",
+        "md": "phpmd --exclude vendor . text phpmd.xml.dist",
+        "cs": "phpcs --standard=PSR2 --encoding=utf-8 --ignore=vendor ."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.x-dev"
+        }
+    }
+}

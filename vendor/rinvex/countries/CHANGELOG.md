@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v8.1.1] - 2022-05-01
+- Fix currency validator rule to check if the key is 3 capital char string
+- Fix country validator rule to check if the key is 2 lower char string
+- Add country data protection (#217)
+- Rename Belarus country german name from Weißrussland (#214 & #211)
+
+## [v8.1.0] - 2021-10-05
+- UK is no longer a EU member state (longlist) (#179)
+- Fix letter case for language case (fix #117 & #118)
+- Fix array access on bool when retrieving short list of countries (fix #132 & #181)
+- Fix the official Portuguese name of Portugal to República Portuguesa (fix #143 - thanks @lbassuncao)
+- Update and optimize country flags
+- Update country currencies to include only the official currency (fix #52 #55 #72)
+- Fix Mexico subregion to North America Instead of Central America (fix #124)
+- If Italy native official name in shortlist (fix #192)
+- Replace not allowed integer WMO code values with null to omit php type errors
+- Replace not allowed integer DS code values with null to omit php type errors
+- Replace not allowed integer FIPS code values with null to omit php type errors
+- Replace not allowed integer IOC code values with null to omit php type errors
+- Replace not allowed integer COWC code values with null to omit php type errors
+- Replace not allowed integer AR5 code values with null to omit php type errors
+- Fix Antarctica currency to null
+- Fix issues with currencies longlist retrieval (fix #167)
+
+## [v8.0.0] - 2021-08-22
+- Drop PHP v7 support
+- Update composer dependencies
+- Upgrade to GitHub-native Dependabot (#183)
+- Fixed bug that prevents default value to be returned from get method when attribute exists but is null (#177)
+
 ## [v7.3.2] - 2020-12-25
 - Add support for PHP v8
 
@@ -139,6 +169,9 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v8.1.1]: https://github.com/rinvex/countries/compare/v8.1.0...v8.1.1
+[v8.1.0]: https://github.com/rinvex/countries/compare/v8.0.0...v8.1.0
+[v8.0.0]: https://github.com/rinvex/countries/compare/v7.3.2...v8.0.0
 [v7.3.2]: https://github.com/rinvex/countries/compare/v7.3.1...v7.3.2
 [v7.3.1]: https://github.com/rinvex/countries/compare/v7.3.0...v7.3.1
 [v7.3.0]: https://github.com/rinvex/countries/compare/v7.2.0...v7.3.0

@@ -29,7 +29,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^1.0",
+        "flarum/core": "^1.2",
         "symfony/yaml": "^5.0"
     },
     "replace": {
@@ -43,7 +43,10 @@
                 "name": "fas fa-italic",
                 "backgroundColor": "#e74c3c",
                 "color": "#fff"
-            }
+            },
+            "optional-dependencies": [
+                "flamarkt/backoffice"
+            ]
         },
         "flagrow": {
             "discuss": "https://discuss.flarum.org/d/7026"

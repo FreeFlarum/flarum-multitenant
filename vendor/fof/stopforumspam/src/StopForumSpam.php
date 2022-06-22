@@ -125,9 +125,9 @@ class StopForumSpam
 
             if ($confidence >= $requiredConfidence || $frequency >= $requiredFrequency) {
                 $this->bus->dispatch(new RegistrationBlocked(
-                    $data['username'],
-                    $data['ip'],
-                    $data['email'],
+                    Arr::get($data, 'username', 'unknown'),
+                    Arr::get($data, 'ip', 'unknown'),
+                    Arr::get($data, 'email', 'unknown'),
                     $data,
                     $provider,
                     $providerData

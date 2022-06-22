@@ -9,7 +9,7 @@ fof-socialprofile:
       editOwn: 'Edytowanie własnych linków do mediów społecznościowych'
       view: 'Przeglądanie linków do mediów społecznościowych'
     settings:
-      allow_external_favicons_label: 'Zezwalaj na używanie zewnętrznych ikon'
+      allow_external_favicons_label: 'Zezwalaj na używanie zewnętrznych ikon (wykorzystuje Favicon API od DuckDuckGo)'
   forum:
     edit:
       add: 'Dodaj linki do mediów społecznościowych'

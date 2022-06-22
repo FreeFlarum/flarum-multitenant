@@ -28,6 +28,7 @@ php flarum cache:clear
 
 * config.js (Translation for time / Traduceri pentru timp)
 * Core
+* Validation
 * Flarum Akismet
 * Flarum Approval
 * Flarum Emoji
@@ -43,7 +44,10 @@ php flarum cache:clear
 * Flarum Subscriptions
 * Flarum Suspend
 * Flarum Tags
-* Validation
+
+### Other Flarum Extensions:
+
+* FoF User Directory
 
 ## Links / Link-uri
 

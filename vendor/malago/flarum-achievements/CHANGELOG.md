@@ -1,3 +1,6 @@
+### 0.5.5
+- Fixed a bug with some extensions
+
 ### 0.5.4
 - Fixed description for average words
 

@@ -5,6 +5,7 @@
 justoverclock-hashtag:
   admin:
     settings:
+      oldregexdesc: 'Nhập biểu thức chính quy hashtag: <code>{regex}</code>'
       regexdesc: 'Ví dụ bên dưới là placeholder. Chỉ chỉnh sửa nếu bạn hiểu Biểu thức chính quy.'
       regexlabel: 'Biểu thức chính quy Hashtag'
   forum:

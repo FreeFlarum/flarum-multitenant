@@ -16,7 +16,20 @@ fof-upload:
       resize: "Qui puoi decidere se ridimensionare le tue immagini prima che vengano caricate. Puoi impostare le dimensioni massime per larghezza e altezza, in pixel. Il processo di ridimensionamento manterrà il corretto rapporto tra i due lati.\n"
       s3_acl: "L'ACL da applicare all'oggetto caricato (predefinito: privato). Per i valori possibili, vedere https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl\n"
       s3_compatible_storage: "Le seguenti impostazioni sono necessarie solo quando si utilizza l'archiviazione compatibile S3. Se utilizzi AWS, puoi lasciarli vuoti.\n"
+      s3_instance_profile: "Lascia la chiave e il segreto vuoti per utilizzare le credenziali nel profilo dell'istanza.\n"
       watermark: "Qui puoi decidere se aggiungere un Watermark alle tue immagini. Il Watermark sarà aggiunto a tutte le immagini non GIF seguendo le impostazioni che inserirai qui sotto\n"
+    inspect-mime:
+      description: "FoF Upload utilizza la libreria <a>PHP Mime Detector</a> per i tipi MIME comuni e PHP Fileinfo come fallback.\nIl valore MIME restituito da Fileinfo può essere diverso da server a server!\n"
+      guessed-extension: 'Estensione file predefinita (se l''originale non è nella whitelist)'
+      laravel-validation: 'Validazione File Laravel'
+      mime-detector: 'Mime Detector (primario)'
+      mime-fileinfo: 'PHP Fileinfo (fallback)'
+      no-file-selected: 'Nessun file'
+      not-available: 'Nessun risultato'
+      select: 'Selezionare un file di seguito per controllare i valori che verranno utilizzati. Il file non verrà salvato.'
+      title: 'Ispeziona MIME'
+      validation-failed: 'Fallito: {error}'
+      validation-passed: Passato
     labels:
       aws-s3:
         acl: 'Elenco di controllo accessi (ACL)'
@@ -45,6 +58,8 @@ fof-upload:
       imgur:
         client_id: 'Imgur client ID'
         title: 'Impostazioni storage Imgur'
+        tos: 'È tua responsabilità assicurarti che gli utenti del tuo forum aderiscano ai <a>Termini di servizio</a> di Imgur'
+      inspect-mime: 'Test file MIME type'
       local:
         cdn_url: 'URL CDN (prefisso file)'
         title: 'Impostazioni archiviazione locale'

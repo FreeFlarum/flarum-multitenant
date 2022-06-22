@@ -9,7 +9,7 @@ fof-socialprofile:
       editOwn: 'Kendi sosyal profilini düzenle'
       view: 'Sosyal profili göster'
     settings:
-      allow_external_favicons_label: 'Harici sitelerin simgelerini düzenlemeye izin ver'
+      allow_external_favicons_label: 'Harici sitelerin simgelerini düzenlemeye izin ver (DuckDuckGo''nun API''ını kullanır)'
   forum:
     edit:
       add: 'Sosyal medyana düğme ekle'

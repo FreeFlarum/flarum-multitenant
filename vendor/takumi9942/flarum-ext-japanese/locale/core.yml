@@ -535,6 +535,7 @@ core:
     # These translations are displayed as error messages.
     error:
       dependent_extensions_message: "以下の依存関係にある拡張機能を無効化するまで、{extension}を無効化できません。: {extensions}"
+      extension_initialiation_failed_message: "{extension} の初期化に失敗しました。詳細はブラウザのコンソールをご確認ください。"
       generic_message: "エラーが発生しました。ページを更新して再度お試しください。"
       missing_dependencies_message: "以下の依存関係にある拡張機能を有効化するまで、{extension}を有効化できません。: {extensions}"
       not_found_message: 要求されたリソースが見つかりませんでした。

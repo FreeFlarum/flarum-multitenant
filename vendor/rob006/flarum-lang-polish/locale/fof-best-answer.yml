@@ -36,8 +36,8 @@ fof-best-answer:
       use_alt_ui_help: 'Wyświetl opcje do ustawiania najlepszej odpowiedzi w stopce posta'
   email:
     body:
-      awarded: "Witaj {recipient_display_name},\n\nŚwietna robota, {actor_display_name} właśnie wybrał Twój post jako najlepsza odpowiedź w \"{discussion_title}\". Dzięki za pomoc!\n\nAby zobaczyć dyskusję, kliknij poniższy link:\n{discussion_url}\n"
-      ba-set: "Witaj {recipient_display_name},\n\n{actor_display_name} właśnie wybrał najlepszą odpowiedź w dyskusji \"{discussion_title}\", w której uczestniczyłeś.\n\nAby zobaczyć dyskusję, kliknij poniższy link:\n{discussion_url}\n"
+      awarded: "Witaj {recipient_display_name},\n\nŚwietna robota, {actor_display_name} właśnie wybrał Twój post jako najlepsza odpowiedź w \"{discussion_title}\". Dzięki za pomoc!\n\nAby przejść do dyskusji, kliknij poniższy link:\n{discussion_url}\n"
+      ba-set: "Witaj {recipient_display_name},\n\n{actor_display_name} właśnie wybrał najlepszą odpowiedź w dyskusji \"{discussion_title}\", w której uczestniczyłeś.\n\nAby przejść do dyskusji, kliknij poniższy link:\n{discussion_url}\n"
       select: "Witaj {recipient_display_name},\n\nTylko sprawdzamy. Powinieneś mieć już mnóstwo odpowiedzi na swoje pytanie \"{discussion_title}\". Mamy nadzieję, że jedna z nich pomogła Ci rozwiązać Twój problem.\n\nJeśli tak, wybranie najlepszej odpowiedzi bardzo pomogłoby innym użytkownikom mającym podobny problem - dzięki temu łatwiej będzie im znaleźć odpowiedź, której poszukują. Jest to też forma podziękowania użytkownikom, którzy Ci pomogli - poświęcają swój czas charytatywnie, dobrze byłoby dać im znać, że ich wysiłek nie poszedł na marne.\n\nAby przejść do dyskusji i wybrać najbardziej odpowiedni post jako najlepszą odpowiedź, kliknij poniższy link:\n{discussion_url}\n\nDzięki!\n"
     subject:
       awarded: 'Twój post został wybrany jako najlepsza odpowiedź przez {display_name}'
@@ -68,5 +68,8 @@ fof-best-answer:
       preferences:
         awarded_best_answer: 'Ktoś oznaczył mój post jako najlepsza odpowiedź'
         best_answer_in_discussion: 'Ktoś wybrał najlepszą odpowiedź w dyskusji, w której uczestniczyłem'
+        select_best_answer: 'Automatyczne przypomnienie o wybraniu najlepszej odpowiedzi w dyskusji, którą rozpocząłem'
     remove_best_answer: 'To nie jest najlepsza odpowiedź'
     this_best_answer: 'Oznacz jako najlepsza odpowiedź'
+    user:
+      best-answer-count: '{count, plural, one {{count} najlepsza odpowiedź} few {{count} najlepsze odpowiedzi} other {{count} najlepszych odpowiedzi}}'

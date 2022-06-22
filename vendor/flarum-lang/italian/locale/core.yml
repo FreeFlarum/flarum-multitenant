@@ -451,6 +451,7 @@ core:
       username_label: '=> core.ref.username'
     error:
       dependent_extensions_message: 'Non puoi disattivare l''estensione {extension} finché non disattiverai le seguenti estensioni: {extensions}'
+      extension_initialiation_failed_message: 'Impossibile inizializzare {extension}, controlla la console del browser per ulteriori informazioni.'
       generic_message: 'Oops! Qualcosa è andato storto. Aggiorna la pagina e riprova.'
       missing_dependencies_message: 'Non puoi attivare l''estensione {extension} finché non attiverai le seguenti estensioni: {extensions}'
       not_found_message: 'La risorsa richiesta non è stata trovata.'

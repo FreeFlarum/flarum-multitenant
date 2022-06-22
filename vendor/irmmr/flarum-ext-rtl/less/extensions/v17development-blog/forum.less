@@ -1,0 +1,179 @@
+// BlogSideWidget.less
+.BlogSideWidget {
+  &-item {
+    &.BlogSideWidget-item-child {
+      padding-right: 45px !important;
+      padding-left: unset !important;
+    }
+
+    span {
+      margin-left: 10px !important;
+      margin-right: auto !important;
+
+      &.BlogSideWidget-item-colored {
+        float: right !important;
+      }
+    }
+  }
+}
+
+@media @tablet-up {
+  .BlogSideWidget .sideNav {
+    margin-left: auto !important;
+    margin-right: unset !important;
+  }
+}
+
+// Composer.less
+.Flarum-Blog-Composer {
+  .TextEditor-controls {
+    border: 0;
+    margin: 0;
+    padding-right: 0 !important;
+    padding-left: unset !important;
+  }
+
+  .Flarum-Blog-Composer-tabs {
+    padding-left: unset !important;
+    padding-right: 35px !important;
+
+    .Button {
+      float: left !important;
+    }
+  }
+}
+
+.V17Blog {
+  &-ArticleImage {
+    [data-upload-enabled] {
+      input {
+        margin-left: 4px !important;
+        margin-right: auto !important;
+      }
+    }
+  }
+}
+
+// Item.less
+.BlogItemPage {
+  @media screen and (min-width: 992px) {
+    .App-composer {
+      .Composer {
+        margin-right: -20px !important;
+        margin-left: 320px !important;
+      }
+    }
+  }
+}
+
+.FlarumBlogItem {
+  .FlarumBlog-Article {
+    /* Blog Article */
+    .FlarumBlog-Article-Container {
+      @media screen and (min-width: 840px) {
+        margin-left: 25px !important;
+        margin-right: auto !important;
+      }
+
+      .FlarumBlog-Article-Content-Edit-Button {
+        .FlarumBlog-Article-Content-Edit-Dropdown {
+          margin-right: auto !important;
+          margin-left: unset !important;
+        }
+      }
+
+      .FlarumBlog-Article-Post {
+        .FlarumBlog-Article-Title {
+          i {
+            margin-right: 15px !important;
+            margin-left: auto !important;
+          }
+        }
+      }
+
+      .FlarumBlog-Article-Comments {
+        .BlogArticleSubscription {
+          float: left !important;
+        }
+      }
+    }
+  }
+}
+
+// Overview.less
+.FlarumBlogOverview {
+  .BlogOverviewButtons {
+    float: left !important;
+
+    .Button {
+      margin-right: 10px !important;
+      margin-left: auto !important;
+    }
+  }
+
+  .BlogFeatured {
+    &-list {
+      &-item {
+        &-top {
+          left: 10px !important;
+          right: auto !important;
+
+          text-align: left;
+
+          .dataItem {
+            margin-right: 5px !important;
+            margin-left: auto !important;
+          }
+        }
+
+        &-details {
+          .data {
+            span {
+              display: inline-block;
+              margin-left: 15px !important;
+              margin-right: auto !important;
+
+              i {
+                margin-left: 5px !important;
+                margin-right: auto !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .BlogScrubber {
+    // Blog items
+    .BlogList {
+      @media screen and (min-width: 768px) {
+        margin-left: 25px !important;
+        margin-right: auto !important;
+      }
+
+      &-item {
+        &-content {
+          h4 {
+            i {
+              margin-right: 10px !important;
+              margin-left: auto !important;
+            }
+          }
+
+          .data {
+            span {
+              margin-left: 15px !important;
+              margin-right: auto !important;
+
+              i {
+                margin-left: 5px !important;
+                margin-right: auto !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

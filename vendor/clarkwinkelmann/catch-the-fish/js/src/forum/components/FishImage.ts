@@ -23,6 +23,7 @@ export default class FishImage implements ClassComponent<FishImageAttrs> {
                 style: {
                     animationDuration: vnode.attrs.animationDuration || '10s',
                 },
+                draggable: false, // Without this, browsers somehow drag the image URL across windows instead of the drop data
             });
         }
 

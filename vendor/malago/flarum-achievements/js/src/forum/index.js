@@ -117,6 +117,9 @@ app.initializers.add('malago-achievements', app => {
   extend(Application.prototype, 'request', function (promise) {
     if (promise) {
       promise.then(function (data) {
+        if (typeof data.new_achievements === "string")
+          data.new_achievements = JSON.parse(data.new_achievements);
+
         if (data && data.new_achievements !== undefined && data.new_achievements !== null && data.new_achievements.length > 0) {
           app.modal.show(NewAchievementModal, { achievements: data.new_achievements });
         }

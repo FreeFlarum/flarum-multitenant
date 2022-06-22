@@ -2,6 +2,139 @@ CHANGELOG
 =========
 
 
+0.5.26 (2022-06-18)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`akr/chevereto`](https://github.com/AKR-Developers/flarum-chevereto)
+* [`cadiducho/bbcode`](https://github.com/EdorasMinecraft/BBcode)
+* [`fof/default-user-preferences`](https://github.com/FriendsOfFlarum/default-user-preferences)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+
+
+Wszystkie zmiany: [v0.5.25...v0.5.26](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.25...v0.5.26).
+
+
+0.5.25 (2022-06-12)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`fof/discussion-thumbnail`](https://github.com/FriendsOfFlarum/discussion-thumbnail)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/suspend`](https://github.com/flarum/suspend)
+* [`fof/socialprofile`](https://github.com/FriendsOfFlarum/socialprofile)
+* [`ianm/syndication`](https://github.com/imorland/syndication)
+
+
+Wszystkie zmiany: [v0.5.24...v0.5.25](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.24...v0.5.25).
+
+
+0.5.24 (2022-06-04)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`blomstra/usercard-stats`](https://github.com/blomstra/flarum-ext-usercard-stats)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/nightmode`](https://github.com/FriendsOfFlarum/nightmode)
+* [`fof/pretty-mail`](https://github.com/FriendsOfFlarum/pretty-mail)
+* [`ianm/follow-users`](https://github.com/imorland/follow-users)
+
+
+Wszystkie zmiany: [v0.5.23...v0.5.24](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.23...v0.5.24).
+
+
+0.5.23 (2022-05-21)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`blomstra/user-filter`](https://github.com/blomstra/flarum-ext-user-filter)
+* [`clarkwinkelmann/flarum-ext-follow-tags-prompt`](https://github.com/clarkwinkelmann/flarum-ext-follow-tags-prompt)
+* [`clarkwinkelmann/flarum-ext-likes-received`](https://github.com/clarkwinkelmann/flarum-ext-likes-received)
+* [`justoverclock/user-statistics`](https://github.com/justoverclockl/user-statistics)
+* [`the-turk/flarum-nodp`](https://github.com/the-turk/flarum-nodp)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory)
+* [`itnt/flarum-uitab`](https://github.com/Littlegolden/flarum-uitab)
+* [`michaelbelgium/mybb-to-flarum`](https://github.com/MichaelBelgium/mybb_to_flarum)
+* [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog)
+
+
+Wszystkie zmiany: [v0.5.22...v0.5.23](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.22...v0.5.23).
+
+
+0.5.22 (2022-05-16)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`flarum/markdown`](https://github.com/flarum/markdown)
+
+
+Wszystkie zmiany: [v0.5.21...v0.5.22](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.21...v0.5.22).
+
+
+0.5.21 (2022-05-11)
+-------------------
+
+**Ogólne usprawnienia**:
+
+* Aktualizacja tłumaczeń głównego silnika Flarum.
+
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`blomstra/mark-unread`](https://github.com/blomstra/flarum-ext-mark-unread)
+* [`clarkwinkelmann/flarum-ext-colorful-borders`](https://github.com/clarkwinkelmann/flarum-ext-colorful-borders)
+* [`datlechin/flarum-keyboard-shortcuts`](https://github.com/datlechin/flarum-keyboard-shortcuts)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`clarkwinkelmann/flarum-ext-who-read`](https://github.com/clarkwinkelmann/flarum-ext-who-read)
+* [`flarum/mentions`](https://github.com/flarum/mentions)
+* [`flarum/subscriptions`](https://github.com/flarum/subscriptions)
+* [`flarum/suspend`](https://github.com/flarum/suspend)
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/merge-discussions`](https://github.com/FriendsOfFlarum/merge-discussions)
+* [`fof/oauth`](https://github.com/FriendsOfFlarum/oauth)
+* [`fof/share-social`](https://github.com/FriendsOfFlarum/share-social)
+* [`fof/subscribed`](https://github.com/FriendsOfFlarum/subscribed)
+* [`ianm/follow-users`](https://github.com/imorland/follow-users)
+* [`migratetoflarum/fake-data`](https://github.com/migratetoflarum/fake-data)
+* [`v17development/flarum-support`](https://extiverse.com/extension/v17development/flarum-support)
+
+
+Wszystkie zmiany: [v0.5.20...v0.5.21](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.20...v0.5.21).
+
+
 0.5.20 (2022-03-21)
 -------------------
 

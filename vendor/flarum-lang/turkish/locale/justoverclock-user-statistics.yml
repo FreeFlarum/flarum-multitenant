@@ -7,5 +7,6 @@ justoverclock-user-statistics:
     joinTime: 'Kayıt Tarihi'
     likeReceived: 'Alınan Beğeni'
     likes: Beğeniler
+    totalBestAnswer: 'En İyi Cevaplar'
     totalDiscussions: 'Toplam Tartışma'
     totalPosts: 'Toplam Gönderiler'

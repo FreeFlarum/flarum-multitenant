@@ -5,7 +5,7 @@
 clarkwinkelmann-who-read:
   admin:
     permissions:
-      mark-unread: 'Oznaczanie dyskusji jako nieodczytanej'
+      mark-unread: 'Oznaczanie dyskusji jako nieodczytana'
       see-read: 'Wyświetlanie kto odczytał'
       see-subscription: 'Wyświetlanie kto obserwuje'
       see-unread: 'Wyświetlanie kto oznaczył jako nieodczytane'

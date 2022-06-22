@@ -18,7 +18,7 @@
         "docs": "https://flarum.es/p/7-docs"
     },
     "require": {
-        "flarum/core": "^1.0.0"
+        "flarum/core": "^1.2.0"
     },
     "replace": {
         "flarumes/lang-spanish": "*"

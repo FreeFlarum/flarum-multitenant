@@ -7,6 +7,20 @@ A [Flarum](http://flarum.org) extension. Make custom HTML templates for emails!
 - Configure your custom email template from the extension settings
 - This supports all emails sent by Flarum, and 3rd party extensions
 
+### Extending
+
+It is possible to make additional variables available to the templates from other extensions. For example:
+
+In your `extend.php`
+```php
+(new \FoF\PrettyMail\Extend\PrettyMail)
+    ->addTemplateData('myNewVariable', Callback\NewVariableCallback::class),
+```
+
+The callback should be an invokable class, and accept `\Flarum\Notification\Blueprint\BlueprintInterface`, returning the `string` value that should be assigned to your new variable.
+
+You should also include a translation using the key `fof-pretty-mail.admin.settings.attributes.myNewVariable`, which will be displayed in the extension settings page, so that admin users know what your new key is providing them, and were they should use it in their template.
+
 ### Installation
 
 Install with composer:

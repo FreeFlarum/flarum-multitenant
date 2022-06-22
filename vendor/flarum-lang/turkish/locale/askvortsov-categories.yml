@@ -20,7 +20,7 @@ askvortsov-categories:
       child_bare_icon: 'Küçük simgeler çerçevelensin mi?'
       compact_mobile_mode: 'Kompakt Mobil Modu'
       full_page_desktop: 'Masaüstünde tam sayfa gösterilsin mi?'
-      keep_tags_nav: 'Etiketler bağlantısını menüden kaldırılsın mı?'
+      keep_tags_nav: 'Etiketler sayfası bağlantısı gezinme kenar çubuğunda tutulsun mu?'
       parent_remove_description: 'Ana kategorilerde tartışmaları gösterilsin mi?'
       parent_remove_icon: 'Ana kategorilerde etiketlere ait simgeler gösterilsin mi?'
       parent_remove_last_discussion: 'Ana kategoride etiketteki en güncel tartışma görülsün mü?'

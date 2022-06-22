@@ -7,8 +7,8 @@ use Flarum\User\User;
 
 class UsedInvitation
 {
-    public $actor;
-    public $invitation;
+    public User $actor;
+    public Invitation $invitation;
 
     public function __construct(User $actor, Invitation $invitation)
     {

@@ -34,6 +34,12 @@ export default class Basket implements ClassComponent {
                             return;
                         }
 
+                        // Used for internal drag and drop animation
+                        app.draggedFishId = fish.id();
+
+                        // Used for cross-window drag and drop
+                        // Chrome doesn't allow reading this value in ondragover so we can't show a drop area in that situation
+                        // (we would have to show a drop area for all text drops, which is too broad)
                         event.dataTransfer.setData('text/plain', 'fish:' + fish.id());
                     },
                 }, m(FishImage, {

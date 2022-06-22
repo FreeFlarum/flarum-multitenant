@@ -16,7 +16,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class ApplyController implements RequestHandlerInterface
 {
-    protected $events;
+    protected Dispatcher $events;
 
     public function __construct(Dispatcher $events)
     {

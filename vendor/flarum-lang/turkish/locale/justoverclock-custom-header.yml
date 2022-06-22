@@ -12,6 +12,8 @@ custom-header:
     facebookIcon-help: 'Facebook sayfanızın geçerli bir bağlantısını yerleştirin'
     githubIcon: 'GitHub sayfa bağlantısı'
     githubIcon-help: 'GitHub sayfanızın geçerli bir bağlantısını yerleştirin'
+    headerBackgroundImage: 'Başlık Arkaplan Resmi'
+    headerBackgroundImage-help: 'buraya özel arka plan resminizin URL''sini yapıştırın'
     headerTagline: 'Üst Slogan'
     headerTagline-help: 'Buradan sloganı değiştirebilirsiniz'
     headerTitle: 'Üst Başlık'

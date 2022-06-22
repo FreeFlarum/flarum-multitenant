@@ -16,3 +16,16 @@ flarum-markdown:
       spoiler_tooltip: 'Chèn tóm tắt'
       strikethrough_tooltip: 'Chữ gạch ngang'
       unordered_list_tooltip: 'Danh sách đánh dấu đầu dòng'
+  lib:
+    composer:
+      bold_tooltip: 'Chữ in đậm'
+      code_tooltip: 'Mã code'
+      header_tooltip: 'Chữ lớn'
+      image_tooltip: 'Hình ảnh'
+      italic_tooltip: 'Chữ nghiêng'
+      link_tooltip: 'Liên kết'
+      ordered_list_tooltip: 'Danh sách đánh số'
+      quote_tooltip: 'Trích dẫn'
+      spoiler_tooltip: Spoiler
+      strikethrough_tooltip: 'Chữ gạch ngang'
+      unordered_list_tooltip: 'Danh sách đánh dấu'

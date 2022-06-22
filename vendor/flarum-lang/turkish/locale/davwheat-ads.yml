@@ -5,8 +5,11 @@
 davwheat:
   ads:
     admin:
+      permissions:
+        bypassAds: 'Forumdaki reklamları gizle'
       settings:
         add_script: Yeni
+        admin_bypass_warning: "Flarum'un izin sisteminin doğası gereği, Admin grubunun üyeleri forumda herhangi bir reklam görmeyecektir. \nReklamlarınızı test etmek istiyorsanız, \nlütfen forumu Gizli veya Gizli pencerede ziyaret edin.\n"
         alert:
           code_has_script: 'Reklam kodlarınızdan biri veya daha fazlası, izin verilmeyen komut dosyası etiketleri içeriyor. Bunları kaldırıp tekrar deneyin.'
           fix_errors: 'Değişiklikleri kaydetmeden önce aşağıdaki hataları giderin'

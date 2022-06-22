@@ -10,6 +10,8 @@ v17development-flarum-blog:
       auto_approve_posts: 'Publikowanie wpisów bez zatwierdzenia'
       write_articles: 'Tworzenie oraz edycja wpisów na blogu'
     settings:
+      add_hero_label: 'Wyświetl baner powitalny'
+      add_hero_text: 'Wyświetl baner powitalny na podstronach bloga (jeśli nie został jeszcze zamknięty).'
       add_sidebar_nav_label: 'Dodaj do nawigacji w sidebarze'
       add_sidebar_nav_text: 'Dodaj link do bloga w menu nawigacyjnym w sidebarze.'
       allow_comments_label: 'Pozwól na komentowanie'

@@ -12,7 +12,6 @@
 namespace FoF\ModeratorNotes\Command;
 
 use Flarum\Foundation\ValidationException;
-use Flarum\Post\Post;
 use FoF\ModeratorNotes\Events\ModeratorNoteCreated;
 use FoF\ModeratorNotes\Model\ModeratorNote;
 use Illuminate\Events\Dispatcher;
@@ -22,14 +21,14 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class CreateModeratorNoteHandler
 {
     /** @var Dispatcher */
-    protected $bus;
+    protected $events;
 
     /** @var TranslatorInterface */
     protected $translator;
 
-    public function __construct(Dispatcher $bus, TranslatorInterface $translator)
+    public function __construct(Dispatcher $events, TranslatorInterface $translator)
     {
-        $this->bus = $bus;
+        $this->events = $events;
         $this->translator = $translator;
     }
 
@@ -47,7 +46,7 @@ class CreateModeratorNoteHandler
 
         $note = new ModeratorNote();
         $note->user_id = $user_id;
-        $note->note = $formatter->parse($notecontent, new Post());
+        $note->note = $formatter->parse($notecontent);
         $note->added_by_user_id = $actor->id;
         $note->created_at = Carbon::now();
 
@@ -57,7 +56,7 @@ class CreateModeratorNoteHandler
 
         $note->save();
 
-        $this->bus->dispatch(new ModeratorNoteCreated($actor, $note));
+        $this->events->dispatch(new ModeratorNoteCreated($actor, $note));
 
         return $note;
     }

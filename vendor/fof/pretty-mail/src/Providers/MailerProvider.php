@@ -42,5 +42,9 @@ class MailerProvider extends AbstractServiceProvider
         $this->container->extend(NotificationMailer::class, function (NotificationMailer $mailer) {
             return resolve(Overrides\NotificationMailer::class);
         });
+
+        $this->container->singleton('fof-pretty-mail.additional-data', function (): array {
+            return [];
+        });
     }
 }

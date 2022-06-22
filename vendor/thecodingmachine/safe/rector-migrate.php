@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Rector\Renaming\Rector\FuncCall\RenameFunctionRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-# This file configures rector/rector to replace all PHP functions with their equivalent "safe" functions
+// This file configures rector/rector to replace all PHP functions with their equivalent "safe" functions.
 return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
@@ -24,7 +24,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'apcu_inc' => 'Safe\apcu_inc',
             'apcu_sma_info' => 'Safe\apcu_sma_info',
             'apc_fetch' => 'Safe\apc_fetch',
-            'array_combine' => 'Safe\array_combine',
             'array_replace' => 'Safe\array_replace',
             'array_replace_recursive' => 'Safe\array_replace_recursive',
             'array_walk_recursive' => 'Safe\array_walk_recursive',
@@ -266,6 +265,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'gnupg_cleardecryptkeys' => 'Safe\gnupg_cleardecryptkeys',
             'gnupg_clearencryptkeys' => 'Safe\gnupg_clearencryptkeys',
             'gnupg_clearsignkeys' => 'Safe\gnupg_clearsignkeys',
+            'gnupg_deletekey' => 'Safe\gnupg_deletekey',
             'gnupg_setarmor' => 'Safe\gnupg_setarmor',
             'gnupg_setsignmode' => 'Safe\gnupg_setsignmode',
             'gzclose' => 'Safe\gzclose',
@@ -347,6 +347,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'imagecreatefromgif' => 'Safe\imagecreatefromgif',
             'imagecreatefromjpeg' => 'Safe\imagecreatefromjpeg',
             'imagecreatefrompng' => 'Safe\imagecreatefrompng',
+            'imagecreatefromstring' => 'Safe\imagecreatefromstring',
             'imagecreatefromtga' => 'Safe\imagecreatefromtga',
             'imagecreatefromwbmp' => 'Safe\imagecreatefromwbmp',
             'imagecreatefromwebp' => 'Safe\imagecreatefromwebp',
@@ -1103,5 +1104,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'zip_entry_open' => 'Safe\zip_entry_open',
             'zip_entry_read' => 'Safe\zip_entry_read',
             'zlib_decode' => 'Safe\zlib_decode',
-]]]);
+        ]]]);
 };

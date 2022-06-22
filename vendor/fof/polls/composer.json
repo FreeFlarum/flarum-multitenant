@@ -19,13 +19,10 @@
     }
   ],
   "require": {
-    "flarum/core": "^1.0.0"
+    "flarum/core": "^1.2.0"
   },
   "replace": {
     "reflar/polls": "^1.3.4"
-  },
-  "conflict": {
-    "reflar/polls": "< 1.3.4"
   },
   "authors": [
     {

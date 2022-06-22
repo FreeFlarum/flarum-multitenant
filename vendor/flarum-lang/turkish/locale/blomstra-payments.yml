@@ -8,6 +8,10 @@ blomstra-payments:
       select-pta-product: '(PTA) Gerekli ürün'
       select-pta-product-description: "Bu seçenek ile, ödeme yaptıktan sonra gruba erişime izin verilir. Abonelik durumunda erişim, abonelik iptalinin ardından otomatik olarak son bulur. Stripe kontrol panelinizden bir ürün oluşturun ve <code>prod_</code> ile başlayan kimliği bu alana kopyalayın.\n"
     edit-tag:
+      bump-others: '(PTB) Başkalarının tartışmaları hortlatmasına izin ver'
+      bump-others-description: "Etkinleştirilirse, yalnızca tartışma yazarı değil, tartışmaları bir ödeme ile hortlatabilir.\n"
+      select-ptb-product: '(PTB) Gerekli ürün'
+      select-ptb-product-description: "Bir ürün seçmek, bir tartışmaya girmeden önce o ürünün ödenmesini gerektirir.\n"
       select-ptp-product: '(PTP) Gerekli ürün'
       select-ptp-product-description: "Bu seçenek ile, o etiketteki her tartışma için o ürünün satın alınmasını gerektirir. Gönderi başına ödeme, örneğin reklamlar için harikadır. Stripe gösterge tablonuzda \"tek ödemeli\" fiyatla bir ürün oluşturun ve <code>prod_</code> ile başlayan kimliği bu alana kopyalayın.\n"
       select-ptv-product: '(PTV) Gerekli ürün'
@@ -25,6 +29,10 @@ blomstra-payments:
       purchase: 'satın al'
     nav:
       access_portal: 'Erişim portalı'
+    pay-to-bump:
+      description: '{count, plural, one {Bu tartışma havada kaldı} other {{count} kişi tartışmayı engelledi}}.'
+      purchase-control: 'Hortlatmak için ödeme yap'
+      purchase-log-in: 'Giriş Yap ve Hortlatmak için Öde'
     pay-to-post:
       purchase: 'Yayınlamak için Satın Alın'
       purchase-control: 'Yayınlamak için Ödeme Yapın'

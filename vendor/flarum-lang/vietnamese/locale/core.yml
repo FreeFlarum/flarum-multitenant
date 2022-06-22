@@ -451,6 +451,7 @@ core:
       username_label: '=> core.ref.username'
     error:
       dependent_extensions_message: 'Không thể vô hiệu hóa {extension} cho đến khi các tiện ích mở rộng phụ thuộc sau bị vô hiệu hóa: {extensions}'
+      extension_initialiation_failed_message: 'Không thể khởi chạy {extension}, hãy kiểm tra console của trình duyệt để biết thêm thông tin.'
       generic_message: 'Úi! Đã xảy ra lỗi. Hãy tải lại trang và thử lại.'
       missing_dependencies_message: 'Không thể kích hoạt {extension} cho đến khi các tiện ích mở rộng phụ thuộc sau được kích hoạt: {extensions}'
       not_found_message: 'Không tìm thấy tài nguyên được yêu cầu.'

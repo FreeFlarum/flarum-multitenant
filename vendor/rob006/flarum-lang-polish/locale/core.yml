@@ -284,7 +284,7 @@ core:
     discussion_list:
       empty_text: 'Wygląda na to, że nie ma tutaj żadnych dyskusji.'
       load_more_button: '=> core.ref.load_more'
-      mark_as_read_tooltip: 'Oznacz jako przeczytane'
+      mark_as_read_tooltip: 'Oznacz jako odczytane'
       replied_text: '{username} odpowiedział {ago}'
       started_text: '{username} rozpoczął {ago}'
       total_replies_a11y_label: '{count, plural, one {# odpowiedź} other {# odpowiedzi}}'
@@ -339,7 +339,7 @@ core:
       discussion_renamed_text: '{username} zmienił tytuł dyskusji'
       empty_text: 'Brak powiadomień'
       mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
-      mark_as_read_tooltip: 'Oznacz jako przeczytane'
+      mark_as_read_tooltip: 'Oznacz jako odczytane'
       title: '=> core.ref.notifications'
       toggle_dropdown_accessible_label: 'Zobacz powiadomienia'
       tooltip: '=> core.ref.notifications'
@@ -451,6 +451,7 @@ core:
       username_label: '=> core.ref.username'
     error:
       dependent_extensions_message: 'Nie można wyłączyć {extension}, jeśli następujące zależne rozszerzenia są włączone: {extensions}'
+      extension_initialiation_failed_message: 'Nie udało się zainicjować rozszerzenia {extension}. Aby uzyskać więcej informacji, sprawdź konsolę przeglądarki.'
       generic_message: 'Ups! Coś poszło nie tak. Odśwież stronę i spróbuj ponownie.'
       missing_dependencies_message: 'Nie można włączyć {extension}, jeśli następujące zależności są wyłączone: {extensions}'
       not_found_message: 'Żądany zasób nie został znaleziony.'
@@ -501,7 +502,7 @@ core:
     loading: Ładowanie...
     log_in: 'Zaloguj się'
     log_out: 'Wyloguj się'
-    mark_all_as_read: 'Oznacz wszystko jako przeczytane'
+    mark_all_as_read: 'Oznacz wszystko jako odczytane'
     next_page: 'Następna strona'
     notifications: Powiadomienia
     okay: OK

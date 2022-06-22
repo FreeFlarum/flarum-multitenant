@@ -19,6 +19,7 @@ use Flarum\Api\Serializer\BasicDiscussionSerializer;
 use Flarum\Api\Serializer\BasicPostSerializer;
 use Flarum\Api\Serializer\BasicUserSerializer;
 use Flarum\Api\Serializer\DiscussionSerializer;
+use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Database\AbstractModel;
 use Flarum\Discussion\Discussion;
 use Flarum\Discussion\Event\Saving;
@@ -47,8 +48,6 @@ return [
     (new Extend\Routes('api'))
         ->post('/fof/best-answer/enable', 'fof-best-answer.enable-tags-features', Api\Controller\FeatureEnableController::class),
 
-    new DefaultSettings(),
-
     (new Extend\Model(Discussion::class))
         ->belongsTo('bestAnswerPost', Post::class, 'best_answer_post_id')
         ->belongsTo('bestAnswerUser', User::class, 'best_answer_user_id'),
@@ -57,10 +56,11 @@ return [
         ->namespace('fof-best-answer', __DIR__.'/resources/views'),
 
     (new Extend\Event())
-        ->listen(Saving::class, Listeners\SelectBestAnswer::class)
+        ->listen(Saving::class, Listeners\SaveBestAnswerToDatabase::class)
         ->listen(BestAnswerSet::class, Listeners\QueueNotificationJobs::class)
         ->listen(TagCreating::class, Listeners\TagCreating::class)
-        ->listen(TagSaving::class, Listeners\TagEditing::class),
+        ->listen(TagSaving::class, Listeners\TagEditing::class)
+        ->subscribe(Listeners\RecalculateBestAnswerCounts::class),
 
     (new Extend\Notification())
         ->type(Notification\SelectBestAnswerBlueprint::class, BasicDiscussionSerializer::class, ['alert', 'email'])
@@ -69,7 +69,7 @@ return [
 
     (new Extend\ApiSerializer(DiscussionSerializer::class))
         ->attribute('canSelectBestAnswer', function (DiscussionSerializer $serializer, Discussion $discussion) {
-            return Helpers::canSelectBestAnswer($serializer->getActor(), $discussion);
+            return resolve(BestAnswerRepository::class)->canSelectBestAnswer($serializer->getActor(), $discussion);
         }),
 
     (new Extend\ApiSerializer(BasicDiscussionSerializer::class))
@@ -86,10 +86,16 @@ return [
             return null;
         }),
 
+    (new Extend\ApiSerializer(UserSerializer::class))
+        ->attributes(UserBestAnswerCount::class),
+
     (new Extend\Settings())
         ->serializeToForum('canSelectBestAnswerOwnPost', 'fof-best-answer.allow_select_own_post', 'boolVal')
         ->serializeToForum('useAlternativeBestAnswerUi', 'fof-best-answer.use_alternative_ui', 'boolVal')
-        ->serializeToForum('showBestAnswerFilterUi', 'fof-best-answer.show_filter_dropdown', 'boolVal'),
+        ->serializeToForum('showBestAnswerFilterUi', 'fof-best-answer.show_filter_dropdown', 'boolVal')
+        ->default('fof-best-answer.schedule_on_one_server', false)
+        ->default('fof-best-answer.stop_overnight', false)
+        ->default('fof-best-answer.store_log_output', false),
 
     (new Extend\ApiController(ShowDiscussionController::class))
         ->addInclude(['bestAnswerPost', 'bestAnswerUser'])

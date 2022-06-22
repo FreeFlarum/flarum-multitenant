@@ -11,6 +11,9 @@ justoverclock-related-discussions:
     relatedTitle-help: 'İlgili tartışmalar için varsayılan başlığı kendi başlığınızla değiştirin'
     showExcerpt: 'Özet Alıntısını Göster'
   forum:
+    deleted: Silindi
+    hasBestAnswer: Çözüldü
+    hasBestAnswer-title: 'Bu tartışma çözüldü olarak işaretlendi'
     participants: Katılımcılar
     postedOn: 'Şurada:'
     postnumber: 'Gönderi sayısı'

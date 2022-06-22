@@ -12,6 +12,7 @@
 
 namespace FoF\PrettyMail\Overrides;
 
+use Flarum\Foundation\ContainerUtil;
 use Flarum\Foundation\Paths;
 use Flarum\Http\UrlGenerator;
 use Flarum\Notification\MailableInterface;
@@ -89,6 +90,11 @@ class NotificationMailer extends \Flarum\Notification\NotificationMailer
             'forumStyle' => isset($file) ? file_get_contents($this->assets_dir.reset($file)) : '',
             'settings'   => $this->settings,
         ];
+
+        foreach (resolve('fof-pretty-mail.additional-data') as $key => $cb) {
+            $callback = ContainerUtil::wrapCallback($cb, resolve('container'));
+            $data[$key] = $callback($blueprint);
+        }
 
         if (isset($template)) {
             $view = BladeCompiler::render($template, $data);

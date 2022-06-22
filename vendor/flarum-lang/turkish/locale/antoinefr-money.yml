@@ -4,6 +4,9 @@
 
 antoinefr-money:
   admin:
+    automoderator:
+      action_name: 'Para ver'
+      metric_name: Para
     permissions:
       edit_money_label: 'Tutarı Düzenle'
     settings:

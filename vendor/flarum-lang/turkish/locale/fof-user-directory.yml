@@ -20,6 +20,9 @@ fof-user-directory:
       load_more_button: '=> core.ref.load_more'
       nav: 'Kullanıcı Listesi'
       refresh_tooltip: '=> core.forum.index.refresh_tooltip'
+      usercard:
+        discussion-count: '{count, plural, one { {count} tartışma} other {{count} tartışma}}'
+        post-count: '{count, plural, one { {count} gönderi} other {{count} gönderi}}'
     search:
       field:
         placeholder: 'Tüm kullanıcılarda ara'

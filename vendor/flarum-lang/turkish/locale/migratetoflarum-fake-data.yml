@@ -33,6 +33,22 @@ migratetoflarum-fake-data:
       user-count: '=> migratetoflarum-fake-data.ref.user-count'
     link:
       generate-replies: 'Sahte yanıtlar oluşturun'
+  lib:
+    generator:
+      bulk-mode: 'Toplu mod'
+      bulk-mode-description: 'Tek bir rastgele değer üretir ve bunu her giriş için yeniden kullanır'
+      date: 'Tarih tohumu'
+      date-interval-placeholder: 'Aralık (varsayılan: 1 saniye)'
+      date-start-placeholder: 'Başlangıç tarihi (varsayılan: şimdi)'
+      discussion-count: 'Oluşturulacak tartışma sayısı'
+      discussion-tags: 'Yeni tartışmalar için etiketler'
+      discussion-tags-none: Hiçbiri
+      discussion-tags-random: Rastgele
+      post-count: 'Oluşturulacak gönderi sayısı'
+      refresh: 'Kapat ve sayfayı yenile'
+      reset: 'Nesil tamamlandı! Sıfırlamak için tıklayın'
+      send: 'Veri oluştur'
+      user-count: 'Oluşturulacak kullanıcı sayısı'
   ref:
     bulk-mode: 'Toplu mod'
     bulk-mode-description: 'Tek bir rastgele değer üretir ve her giriş için yeniden kullanır'

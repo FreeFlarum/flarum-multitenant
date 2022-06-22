@@ -39,3 +39,9 @@ declare module 'flarum/common/models/Forum' {
         catchTheFishAnimateFlip(): boolean
     }
 }
+
+declare module 'flarum/forum/ForumApplication' {
+    export default interface ForumApplication {
+        draggedFishId?: string | null
+    }
+}

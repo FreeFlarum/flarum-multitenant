@@ -8,14 +8,24 @@ clarkwinkelmann-mass-actions:
       controls: 'Toplu seçim kontrollerini görüntüleyin'
   forum:
     actions:
+      delete: 'Seçilenleri kalıcı olarak sil'
+      deleteConfirmation: '{count, plural, one {Seçili tartışmayı kalıcı olarak silmek istediğinizden emin misiniz?} other {Seçili # tartışmayı kalıcı olarak silmek istediğinizden emin misiniz?}}'
       hide: 'Silme seçildi'
       lock: 'Seçileni kilitle'
       markAsRead: 'Seçilileri okundu olarak işaretle'
       restore: 'Seçileni geri yükle'
+      sticky: 'Yapışkan seçildi'
       tags: Etiketler
       tags-add: '<em>{tag}</em> ekleyin'
       tags-edit: 'Etiketleri düzenle'
       unlock: 'Seçilenin kilidini kaldır'
+      unsticky: 'Yapışkan olmayan seçildi'
     select:
-      all: 'Tümünü seç'
-      none: 'Tümünün seçimini kaldır'
+      all: Tümü
+      hidden: 'Geçici olarak silindi'
+      locked: Kilitlendi
+      none: Hiçbiri
+      read: Oku
+      unlocked: 'Kilidi açıldı'
+      unread: Okunmadı
+      visible: Silinmedi

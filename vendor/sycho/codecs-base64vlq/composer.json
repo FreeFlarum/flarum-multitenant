@@ -1,0 +1,46 @@
+{
+    "name": "sycho/codecs-base64vlq",
+    "type": "library",
+    "description": "Codec for VLQ (variable-length quantity) Base64 algorithm",
+    "keywords": [
+        "Codec",
+        "VLQ",
+        "Variable length quantity",
+        "Base64",
+        "Source map"
+    ],
+    "homepage": "https://github.com/sycho9/codecs-base64vlq",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Grigoriev",
+            "email": "go.vasac@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "sycho/errors": "^3.0"
+    },
+    "require-dev": {
+        "sycho/errors": "^3.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "axy\\codecs\\base64vlq\\": ""
+        }
+    },
+    "archive": {
+        "exclude": ["/tests/*", "/doc/*", "/cs.sh", "/phpmd.sh", "/*.xml.dist", "/CHANGELOG.md"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.x-dev"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../*/"
+        }
+    ]
+}

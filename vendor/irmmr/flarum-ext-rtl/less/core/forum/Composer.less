@@ -1,14 +1,12 @@
 .ComposerBody-header {
-  margin: 0 auto 10px 0;
-
   > li {
-    margin-left: -4px;
+    margin-left: -8px; // change from -4, cause of shown errors!
     margin-right: auto;
   }
   h3 {
     input {
       &, &[disabled], &:focus {
-        //padding: 0 0 0 20px;
+        padding: 0 0 0 20px;
       }
     }
     .icon {
@@ -30,28 +28,39 @@
     }
   }
   .ComposerBody-header {
-    > li {
-      .normal &:first-child {
-        margin: -@header-height-phone auto 0 50px; /* calc(~"0px - var(--header-height-phone)") */
+    h3 {
+      input {
+        &,
+        &[disabled],
+        &:focus {
+          padding: 0 0 0 20px;
+        }
       }
     }
   }
 }
 
 @media @tablet-up {
-  .Composer-content {
-    //padding: 20px 0 0 20px;
+  .ComposerBody-header {
+    margin-left: 120px;
+    margin-right: auto;
+
+    .minimized & {
+      margin-right: auto;
+      margin-left: 32px;
+    }
   }
   .ComposerBody-avatar {
     float: right;
   }
   .ComposerBody-content {
-    margin-left: auto;
     margin-right: 85px;
+    margin-left: auto;
 
-    .minimized &, .fullScreen & {
-      margin-right: 0;
+    .minimized &,
+    .fullScreen & {
       margin-left: auto;
+      margin-right: 0;
     }
   }
 }

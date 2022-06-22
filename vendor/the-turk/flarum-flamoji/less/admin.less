@@ -1,0 +1,70 @@
+@import "admin/ExtensionPage";
+@import "admin/EditEmojiModal";
+@import "admin/CustomEmojiList";
+
+.Flamoji--settingsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  > div {
+    max-width: 400px;
+  }
+
+  h3 {
+    color: @muted-color;
+  }
+
+  .Form-group {
+    margin-bottom: 12px;
+
+    label {
+      font-weight: 600;
+    }
+  }
+
+  .helpText {
+    margin-bottom: 24px;
+  }
+}
+
+.Flamoji--emojiSettingsContainer,
+.Flamoji--categorySettingsContainer {
+  .Form-group:not(.specifyCategoriesGroup) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+      margin: 0;
+    }
+  }
+
+  .specifyCategoriesGroup {
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .cat-checkbox {
+      flex: 50%;
+
+      & label {
+        font-weight: 400;
+        color: @muted-color;
+        padding: 5px;
+      }
+    }
+
+    .helpText {
+      margin-bottom: 12px;
+    }
+  }
+
+  .Form-group.recentsCountGroup input {
+    max-width: 100px;
+  }
+}

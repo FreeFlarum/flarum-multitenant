@@ -38,7 +38,7 @@ fof-ban-ips:
       address_label: '=> fof-ban-ips.ref.address_label'
       ban_button: '=> fof-ban-ips.ref.ban_label'
       ban_ip_confirmation: 'Sei sicuro di voler bloccare l''utilizzo di questo indirizzo IP nel forum? Ciò impedirà agli utenti con questo indirizzo IP di accedere e registrarsi.'
-      ban_ip_users: 'L''utente {users} verrà bannato|Gli utenti {users} verranno bannati'
+      ban_ip_users: '{count, plural, one {L''utente {users} verrà bannato|}, other {Gli utenti {users} verranno bannati}}'
       check_button: Controlla
       reason_label: '=> fof-ban-ips.ref.reason_label'
       save_button: Salva
@@ -46,7 +46,7 @@ fof-ban-ips:
       unban_button: '=> fof-ban-ips.ref.unban_label'
       unban_ip_confirmation: 'Sei sicuro di voler sbloccare questo utente e tutti gli altri utenti non bannati da altri IP?'
       unban_ip_no_users: 'Nessun altro verrà bannato'
-      unban_ip_users: 'L''utente {users} verrà sbloccato|Gli utenti {users} verranno sbloccati'
+      unban_ip_users: '{count, plural, one {L''utente {users} verrà riabilitato|}, other {Gli utenti {users} verranno riabilitati}}'
       unban_options_all_ip: 'Annulla il ban di tutti gli IP utilizzati da <i> {username} </i>'
       unban_options_only_ip: 'Sblocca solo l''IP corrente (<code> {ip} </code>)'
       unban_title: '=> fof-ban-ips.ref.unban_ip_addresses'

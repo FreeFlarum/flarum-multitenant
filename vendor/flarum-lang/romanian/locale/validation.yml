@@ -28,6 +28,8 @@ validation:
   ends_with: ":attribute trebuie să sfârșească cu unul din următoarele: :values."
   exists: "Valoarea selectată pentru :attribute este nevalidă."
   file: ":attribute trebuie să fie un fișier."
+  file_too_large: ":attribute este prea mare."
+  file_upload_failed: ":attribute nu s-a putut încărca."
   filled: ":attribute este obligatoriu."
   gt:
     numeric: ":attribute trebuie să fie mai mare decât :value."

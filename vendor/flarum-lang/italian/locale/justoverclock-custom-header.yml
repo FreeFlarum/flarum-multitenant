@@ -12,6 +12,8 @@ custom-header:
     facebookIcon-help: 'Inserisci un URL valido della tua pagina Facebook'
     githubIcon: 'Link pagina GitHub'
     githubIcon-help: 'Url valido della tua pagina GitHub'
+    headerBackgroundImage: 'Immagine di background dell''header'
+    headerBackgroundImage-help: 'Immetti un URL per la tua immagine di sfondo'
     headerTagline: 'Slogan dell''header'
     headerTagline-help: 'Qui puoi modificare il testo del tuo slogan'
     headerTitle: 'Titolo Header'

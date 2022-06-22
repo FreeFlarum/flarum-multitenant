@@ -1,11 +1,18 @@
 import {extend, override} from 'flarum/common/extend';
 import app from 'flarum/forum/app';
 import ItemList from 'flarum/common/utils/ItemList';
+import SubtreeRetainer from 'flarum/common/utils/SubtreeRetainer';
 import CommentPost from 'flarum/forum/components/CommentPost';
 import UserCard from 'flarum/forum/components/UserCard';
 import DiscussionHero from 'flarum/forum/components/DiscussionHero';
 import DropArea from './components/DropArea';
 import MovingFish from './components/MovingFish';
+
+interface DragOverComponent {
+    fishDragOver: boolean
+    subtree?: SubtreeRetainer
+    attrs?: any
+}
 
 function fishIdFromEvent(event: DragEvent): string | null {
     if (!event.dataTransfer) {
@@ -19,7 +26,7 @@ function fishIdFromEvent(event: DragEvent): string | null {
     return match ? match[1] : null;
 }
 
-function movingFishContent(dragover: boolean, model) {
+function movingFishContent(dragover: boolean, model: any) {
     const content = [];
 
     if (dragover) {
@@ -53,10 +60,11 @@ function movingFishContent(dragover: boolean, model) {
     return content;
 }
 
-function addDropAttrs(attrs, modelProperty) {
-    attrs.ondrop = event => {
+function addDropAttrs(this: DragOverComponent, attrs: any, modelProperty: string) {
+    attrs.ondrop = (event: DragEvent) => {
         this.fishDragOver = false;
-        const fishId = fishIdFromEvent(event);
+
+        const fishId = app.draggedFishId || fishIdFromEvent(event);
 
         if (fishId) {
             event.preventDefault();
@@ -64,7 +72,7 @@ function addDropAttrs(attrs, modelProperty) {
             const fish = app.store.getById('catchthefish-fishes', fishId);
 
             if (fish) {
-                const placement = {};
+                const placement: any = {};
                 placement[modelProperty + '_id'] = this.attrs[modelProperty].id();
 
                 app.request({
@@ -86,30 +94,49 @@ function addDropAttrs(attrs, modelProperty) {
             }
         }
     };
-    attrs.ondragover = event => {
-        const fishId = fishIdFromEvent(event);
-
-        if (fishId) {
+    attrs.ondragover = (event: DragEvent) => {
+        if (app.draggedFishId || fishIdFromEvent(event)) {
             event.preventDefault();
-            event.dataTransfer.dropEffect = 'move';
-            this.fishDragOver = true;
+            event.dataTransfer!.dropEffect = 'move';
+
+            if (this.fishDragOver) {
+                event.redraw = false;
+            } else {
+                this.fishDragOver = true;
+                m.redraw();
+            }
+        } else {
+            // In order to still support drag and drop across windows, we will accept any text drops
+            // This is necessary because browsers don't give access to the drop value until the actual drop
+            // But if we don't call preventDefault() here the drop can't happen in the first place
+            if (event.dataTransfer && event.dataTransfer.types.includes('text/plain')) {
+                event.preventDefault();
+            }
+
+            event.redraw = false;
         }
     };
-    attrs.ondragenter = event => {
+    attrs.ondragenter = (event: DragEvent) => {
         event.preventDefault();
+        event.redraw = false;
     };
-    attrs.ondragleave = () => {
-        this.fishDragOver = false;
+    attrs.ondragleave = (event: DragEvent) => {
+        if (this.fishDragOver) {
+            this.fishDragOver = false;
+            m.redraw();
+        } else {
+            event.redraw = false;
+        }
     };
 }
 
-function addAreaToComponent(component: any, viewName: string, modelProperty: string) {
+function addAreaToComponent(component: DragOverComponent, viewName: string, modelProperty: string) {
     if (viewName === 'content') {
-        override(component, viewName, function (content) {
-            return content().concat(movingFishContent(this.fishDragOver, this.attrs[modelProperty]));
+        override(component, viewName, function (original: any) {
+            return original().concat(movingFishContent(this.fishDragOver, this.attrs[modelProperty]));
         });
     } else {
-        extend(component, viewName, function (items: ItemList) {
+        extend(component, viewName, function (items: ItemList<any>) {
             items.add('catchthefish-fish-and-drop', movingFishContent(this.fishDragOver, this.attrs[modelProperty]));
         });
     }
@@ -138,7 +165,11 @@ function addAreaToComponent(component: any, viewName: string, modelProperty: str
 }
 
 export default function () {
-    addAreaToComponent(CommentPost.prototype, 'content', 'post');
-    addAreaToComponent(UserCard.prototype, 'infoItems', 'user');
-    addAreaToComponent(DiscussionHero.prototype, 'items', 'discussion');
+    addAreaToComponent(CommentPost.prototype as any, 'content', 'post');
+    addAreaToComponent(UserCard.prototype as any, 'infoItems', 'user');
+    addAreaToComponent(DiscussionHero.prototype as any, 'items', 'discussion');
+
+    document.addEventListener('dragend', () => {
+        app.draggedFishId = null;
+    });
 }

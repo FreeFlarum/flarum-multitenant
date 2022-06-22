@@ -7,16 +7,13 @@
  *
  * - `when` - a callback returning true when the browser should prompt for
  *            confirmation before closing the window/tab
- *
- * ### Children
- *
- * NOTE: Only the first child will be rendered. (Use this component to wrap
- * another component / DOM element.)
- *
  */
 export default class ConfirmDocumentUnload extends Component<import("../Component").ComponentAttrs, undefined> {
     constructor();
     handler(): any;
+    oncreate(vnode: any): void;
     boundHandler: (() => any) | undefined;
+    onremove(vnode: any): void;
+    view(vnode: any): JSX.Element;
 }
 import Component from "../Component";

@@ -7,5 +7,6 @@ justoverclock-user-statistics:
     joinTime: 'Date d''inscription'
     likeReceived: '« J''aime » reçu'
     likes: '« J''aime »'
-    totalDiscussions: 'Discussions totales'
+    totalBestAnswer: 'Meilleures réponses'
+    totalDiscussions: 'Nombre total de discussions'
     totalPosts: 'Nombre total de messages'

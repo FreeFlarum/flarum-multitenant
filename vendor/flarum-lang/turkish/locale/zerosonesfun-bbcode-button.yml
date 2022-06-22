@@ -7,7 +7,7 @@ flarum-bbcode-button:
     settings:
       codedesc: 'Açılış ve kapanış BBCode etiketlerini yazın.'
       codelabel: 'BBC Kodu Etiketleri'
-      icondesc: 'Font Awesome sınıf adını girin. Örneğin: fas fa-palette'
+      icondesc: 'Font Awesome sınıf adını girin.'
       iconlabel: 'Düğme Simgesi'
       introdesc: 'Kullanmaya çalışmadan önce bu ayarları kurun ve kaydedin. Bu uzantı, düzenleyici araç çubuğuna yeni bir düğme ekler. Birinin özel bir BBCode eklemesine izin vermek için yapılmıştır. Ancak, hayal gücünüzü kullanmaktan çekinmeyin. Özel Markdown veya ortak bir ifade eklemek için kullanın.'
       introlabel: 'Özel BBCode Düğmesi [ ]'
