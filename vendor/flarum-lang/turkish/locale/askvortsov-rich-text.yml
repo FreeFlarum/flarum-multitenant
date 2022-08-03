@@ -19,7 +19,7 @@ askvortsov-rich-text:
       code_tooltip: 'Metin içi kod  <{modifierKey}-`>'
       header_tooltip: 'Başlığı {level} olarak değiştir <shift-{modifierKey}-{level}>'
       horizontal_rule_tooltip: 'Yatay çizgi ekle'
-      image_tooltip: 'Resim ekle'
+      image_tooltip: 'Görsel ekle'
       insert_button: Ekle
       insert_image:
         src_placeholder: Bağlantı

@@ -2,6 +2,44 @@ CHANGELOG
 =========
 
 
+0.5.28 (2022-07-16)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`datlechin/flarum-more-discussions`](https://github.com/datlechin/flarum-more-discussions)
+* [`nearata/flarum-ext-twofactor`](https://github.com/Nearata/flarum-ext-twofactor)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+* [`fof/sitemap`](https://github.com/FriendsOfFlarum/sitemap)
+* [`v17development/flarum-user-badges`](https://github.com/v17development/flarum-user-badges)
+
+
+Wszystkie zmiany: [v0.5.27...v0.5.28](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.27...v0.5.28).
+
+
+0.5.27 (2022-07-02)
+-------------------
+
+**Dodano wsparcie dla nowych rozszerzeń**:
+
+* [`datlechin/flarum-bbcode-hide-content`](https://github.com/datlechin/flarum-bbcode-hide-content)
+
+
+**Zaktualizowano tłumaczenia dla rozszerzeń**:
+
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/sitemap`](https://github.com/FriendsOfFlarum/sitemap)
+* [`ianm/syndication`](https://github.com/imorland/syndication)
+* [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog)
+
+
+Wszystkie zmiany: [v0.5.26...v0.5.27](https://github.com/rob006-software/flarum-lang-polish/compare/v0.5.26...v0.5.27).
+
+
 0.5.26 (2022-06-18)
 -------------------
 

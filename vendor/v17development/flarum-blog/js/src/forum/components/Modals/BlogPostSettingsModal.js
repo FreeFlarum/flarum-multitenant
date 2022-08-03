@@ -1,31 +1,26 @@
-import app from "flarum/forum/app";
-import Modal from "flarum/common/components/Modal";
-import Button from "flarum/common/components/Button";
-import ItemList from "flarum/common/utils/ItemList";
-import Stream from "flarum/common/utils/Stream";
-import Switch from "flarum/common/components/Switch";
-import selectFiles from "../../utils/selectFiles";
+import app from 'flarum/forum/app';
+import Modal from 'flarum/common/components/Modal';
+import Button from 'flarum/common/components/Button';
+import ItemList from 'flarum/common/utils/ItemList';
+import Stream from 'flarum/common/utils/Stream';
+import Switch from 'flarum/common/components/Switch';
+import selectFiles from '../../utils/selectFiles';
 
 export default class BlogPostSettingsModal extends Modal {
   oninit(vnode) {
     super.oninit(vnode);
 
     if (this.attrs.article) {
-      this.meta =
-        this.attrs.article && this.attrs.article.blogMeta()
-          ? this.attrs.article.blogMeta()
-          : app.store.createRecord("blogMeta");
+      this.meta = this.attrs.article && this.attrs.article.blogMeta() ? this.attrs.article.blogMeta() : app.store.createRecord('blogMeta');
     } else {
-      this.meta = this.attrs.meta
-        ? this.attrs.meta
-        : app.store.createRecord("blogMeta");
+      this.meta = this.attrs.meta ? this.attrs.meta : app.store.createRecord('blogMeta');
     }
 
     this.isNew = !this.meta.exists;
 
-    this.summary = Stream(this.meta.summary() || "");
+    this.summary = Stream(this.meta.summary() || '');
 
-    this.featuredImage = Stream(this.meta.featuredImage() || "");
+    this.featuredImage = Stream(this.meta.featuredImage() || '');
 
     this.isFeatured = Stream(this.meta.isFeatured() || false);
     this.isSized = Stream(this.meta.isSized() || false);
@@ -33,11 +28,11 @@ export default class BlogPostSettingsModal extends Modal {
   }
 
   className() {
-    return "Modal--small Support-Modal";
+    return 'Modal--small Support-Modal';
   }
 
   title() {
-    return "Blog post settings";
+    return app.translator.trans('v17development-flarum-blog.forum.article_settings.title');
   }
 
   content() {
@@ -52,38 +47,32 @@ export default class BlogPostSettingsModal extends Modal {
     const items = new ItemList();
 
     items.add(
-      "summary",
+      'summary',
       <div className="Form-group">
-        <label>Article summary:</label>
+        <label>{app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.summary.title')}:</label>
         <textarea
           className="FormControl"
           style={{
-            maxWidth: "100%",
-            minWidth: "100%",
-            width: "100%",
-            minHeight: "120px",
+            maxWidth: '100%',
+            minWidth: '100%',
+            width: '100%',
+            minHeight: '120px',
           }}
           bidi={this.summary}
-          placeholder={"Please enter a summary"}
+          placeholder={app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.summary.placeholder')}
         />
 
-        <small>
-          This summary will be visible on the blog overview page and will be
-          used for SEO purposes.
-        </small>
+        <small>{app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.summary.helper_text')}</small>
       </div>,
       30
     );
 
     let fofUploadButton = null;
 
-    if (
-      "fof-upload" in flarum.extensions &&
-      app.forum.attribute("fof-upload.canUpload")
-    ) {
+    if ('fof-upload' in flarum.extensions && app.forum.attribute('fof-upload.canUpload')) {
       const {
         components: { Uploader, FileManagerModal },
-      } = require("@fof-upload");
+      } = require('@fof-upload');
 
       const uploader = new Uploader();
 
@@ -96,7 +85,7 @@ export default class BlogPostSettingsModal extends Modal {
               {
                 uploader: uploader,
                 onSelect: (files) => {
-                  const file = app.store.getById("files", files[0]);
+                  const file = app.store.getById('files', files[0]);
 
                   this.featuredImage(file.url());
                 },
@@ -110,27 +99,22 @@ export default class BlogPostSettingsModal extends Modal {
     }
 
     items.add(
-      "image",
+      'image',
       <div className="Form-group V17Blog-ArticleImage">
-        <label>Article image URL:</label>
+        <label>{app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.image.title')}:</label>
         <div data-upload-enabled={!!fofUploadButton}>
-          <input
-            type="text"
-            className="FormControl"
-            bidi={this.featuredImage}
-            placeholder="https://"
-          />
+          <input type="text" className="FormControl" bidi={this.featuredImage} placeholder="https://" />
           {fofUploadButton}
         </div>
 
-        <small>Best image resolution for social media: 1200x630</small>
+        <small>{app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.image.helper_text')}</small>
 
-        {this.featuredImage() !== "" && (
+        {this.featuredImage() !== '' && (
           <img
             src={this.featuredImage()}
             alt="Article image"
-            title="Blog post image"
-            style={{ width: "100%", marginTop: "15px" }}
+            title={app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.image.title')}
+            style={{ width: '100%', marginTop: '15px' }}
           />
         )}
       </div>,
@@ -138,7 +122,7 @@ export default class BlogPostSettingsModal extends Modal {
     );
 
     items.add(
-      "sized",
+      'sized',
       <div className="Form-group">
         {Switch.component(
           {
@@ -148,9 +132,9 @@ export default class BlogPostSettingsModal extends Modal {
             },
           },
           [
-            <b>Highlighted post</b>,
+            <b>{app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.highlight.title')}</b>,
             <div className="helpText" style={{ fontWeight: 500 }}>
-              Give this post a big image on the blog overview page.
+              {app.translator.trans('v17development-flarum-blog.forum.article_settings.fields.highlight.helper_text')}
             </div>,
           ]
         )}
@@ -159,15 +143,15 @@ export default class BlogPostSettingsModal extends Modal {
     );
 
     items.add(
-      "submit",
+      'submit',
       <div className="Form-group">
         {Button.component(
           {
-            type: "submit",
-            className: "Button Button--primary SupportModal-save",
+            type: 'submit',
+            className: 'Button Button--primary SupportModal-save',
             loading: this.loading,
           },
-          "Update"
+          app.translator.trans('core.forum.composer_edit.submit_button')
         )}
       </div>,
       -10

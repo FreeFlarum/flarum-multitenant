@@ -42,7 +42,7 @@ class AutoMerge
     {
         $post = $event->post;
 
-        if ($post instanceof CommentPost && $post->number !== 1 && !$post->auto_mod && $this->settings->get('fof-filter.autoMergePosts') === '1') {
+        if ($post instanceof CommentPost && $post->number !== 1 && !$post->auto_mod && (bool) $this->settings->get('fof-filter.autoMergePosts')) {
             $oldPost = $this->posts->query()
                 ->where('discussion_id', '=', $post->discussion_id)
                 ->where('number', '<', $post->number)
@@ -54,7 +54,7 @@ class AutoMerge
                 return;
             }
 
-            $cooldown = $this->settings->get('fof-filter.cooldown') ?? '15';
+            $cooldown = $this->settings->get('fof-filter.cooldown');
 
             if ($oldPost->user_id == $post->user_id && strtotime("-$cooldown minutes") < strtotime($oldPost->created_at)) {
                 $oldPost->revise($oldPost->content."\n\n".$post->content, $post->user);

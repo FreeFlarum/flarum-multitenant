@@ -10,7 +10,7 @@ sycho-profile-cover:
     thumbnails: 'Küçük resimler oluştur'
   forum:
     added:
-      error: 'Resim yüklenemedi.'
+      error: 'Görsel yüklenemedi.'
       success: 'Profil kapağı güncellendi.'
     cover: Kapak
     edit_cover: 'Kapağı Düzenle'

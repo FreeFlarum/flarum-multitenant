@@ -43,6 +43,19 @@ v17development-flarum-blog:
       slug: Slug
       summary: Podsumowanie
       title: Tytuł
+    article_settings:
+      fields:
+        highlight:
+          helper_text: 'Wyświetl duży obrazek dla tego posta na podstronie przeglądu bloga.'
+          title: 'Wyróżniony post'
+        image:
+          helper_text: 'Najlepsza rozdzielczość dla mediów społecznościowych to 1200x630.'
+          title: 'Obrazek artykułu'
+        summary:
+          helper_text: 'To podsumowanie będzie widoczne na podstronie przeglądu bloga oraz będzie wykorzystywane do celów związanych z SEO.'
+          placeholder: 'Proszę wpisać podsumowanie'
+          title: 'Podsumowanie artykułu'
+      title: 'Ustawienia posta na blogu'
     blog: Blog
     categories: Kategorie
     category_empty: 'W tej kategorii nie ma jeszcze żadnych wpisów.'

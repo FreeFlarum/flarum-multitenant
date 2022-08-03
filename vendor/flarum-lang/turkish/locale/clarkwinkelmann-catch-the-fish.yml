@@ -134,7 +134,7 @@ clarkwinkelmann-catch-the-fish:
     table-fish:
       actions: Eylemler
       edit: Düzenle
-      image: Resim
+      image: Görsel
       loading: Yükleniyor...
       name: Ad
       new: 'Yeni balık'
@@ -143,7 +143,7 @@ clarkwinkelmann-catch-the-fish:
       no-user-place: Rastgele
       placement: 'Mevcut konum'
       title: 'Turdaki balıklar {name}'
-      upload: 'Yeni resim yükle'
+      upload: 'Yeni görsel yükle'
       user-name: 'En son adlandıran'
       user-place: 'En son yerleştiren'
     table-ranking:

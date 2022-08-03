@@ -35,7 +35,10 @@
                 "name": "fas fa-bookmark",
                 "backgroundColor": "#684ba6",
                 "color": "#fff"
-            }
+            },
+            "optional-dependencies": [
+                "v17development/flarum-blog"
+            ]
         },
         "flagrow": {
             "discuss": "https://discuss.flarum.org/d/25357"

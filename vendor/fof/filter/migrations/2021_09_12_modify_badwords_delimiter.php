@@ -19,7 +19,7 @@ return [
         $settings = resolve('flarum.settings');
 
         if (!empty($words = $settings->get('fof-filter.words', null))) {
-            $words = str_replace(', ', PHP_EOL, $words);
+            $words = str_replace(', ', "\n", $words);
             $settings->set('fof-filter.words', $words);
         }
     },
@@ -30,7 +30,7 @@ return [
         $settings = resolve('flarum.settings');
 
         if (!empty($words = $settings->get('fof-filter.words', null))) {
-            $words = str_replace(PHP_EOL, ', ', $words);
+            $words = str_replace(["\n", PHP_EOL], ', ', $words);
             $settings->set('fof-filter.words', $words);
         }
     },

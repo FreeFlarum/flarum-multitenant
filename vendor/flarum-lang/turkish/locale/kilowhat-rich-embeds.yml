@@ -40,7 +40,7 @@ kilowhat-rich-embeds:
       whitelist: 'URL Beyaz Listesi'
       whitelistHelp: 'Biçim için belgelere bakın. Bir değer ayarlanırsa, diğer tüm URL''ler kara listeye alınmış olarak kabul edilecektir'
       withoutOpengraph: 'OpenGraph verileri olmayan sayfalar için zengin yerleştirmeler oluşturun'
-      withoutOpengraphHelp: 'Başlık, açıklama ve resim, sayfa HTML''sinden çıkarılacaktır'
+      withoutOpengraphHelp: 'Başlık, açıklama ve görsel, sayfa HTML''sinden çıkarılacaktır'
   api:
     error:
       blacklistedUrl: 'URL {url}, yerleştirme için beyaz listeye alınmadı.'

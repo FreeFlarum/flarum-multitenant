@@ -9,5 +9,5 @@ akr-chevereto:
       url: 'Hedef Chevereto web sitesinin URL''si'
   forum:
     composer:
-      upload_button: 'Resim yükle'
+      upload_button: 'Görsel yükle'
       upload_button_details: 'Fotoğrafı yükle ve içe göm'

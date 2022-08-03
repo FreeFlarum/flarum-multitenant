@@ -41,7 +41,7 @@ class GetImageUrlController implements RequestHandlerInterface
          */
         $actor = RequestUtil::getActor($request);
 
-        $actor->assertCan('viewDiscussions');
+        $actor->assertCan('viewForum ');
 
         $imgurl = urldecode(Arr::get($request->getQueryParams(), 'imgurl'));
         $host = parse_url($imgurl, PHP_URL_HOST);

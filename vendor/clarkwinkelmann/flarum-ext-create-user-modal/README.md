@@ -22,6 +22,16 @@ A permission allows you to customize who sees the "Create new user" button.
 
     composer require clarkwinkelmann/flarum-ext-create-user-modal
 
+## Tips
+
+You can manually bring up the modal by calling
+
+```js
+app.modal.show(flarum.extensions['clarkwinkelmann-create-user-modal'].CreateUserModal)
+```
+
+You will only be able to submit it if you have the correct permissions though.
+
 ## Support
 
 This extension is under **active maintenance**.

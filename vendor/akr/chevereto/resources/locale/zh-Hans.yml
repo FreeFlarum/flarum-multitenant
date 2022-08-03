@@ -1,9 +1,0 @@
-akr-chevereto:
-    admin:
-      setting:
-        url: Chevereto 地址
-        insert_type: 图片插入类型
-    forum:
-      composer:
-        upload_button: 上传图片
-        upload_button_details: 上传并插入图片

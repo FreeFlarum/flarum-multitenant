@@ -19,7 +19,7 @@ v17development-flarum-blog:
       blog_heading: Blog
       categories_heading: Kategoriler
       default_article_image_label: 'Varsayılan makale görseli'
-      default_article_image_text: 'Resim ayarlanmadığında görüntülenecek varsayılan bir makale resmi seçin.'
+      default_article_image_text: 'Görsel ayarlanmadığında görüntülenecek varsayılan bir makale görseli seçin.'
       featured_count_label: 'Maksimum Öne Çıkan Gönderiler'
       featured_count_text: 'Bir blog sayfasının üst kısmındaki büyük bir ızgarada kaç gönderi görüntülenmelidir?'
       hide_on_discussion_list_label: 'Tartışma listesinde gösterme'
@@ -43,6 +43,12 @@ v17development-flarum-blog:
       slug: 'Adres Kısa Adı'
       summary: Özet
       title: Başlık
+    article_settings:
+      fields:
+        summary:
+          placeholder: 'Lütfen bir özet veya açıklama girin'
+          title: 'Gönderi özeti'
+      title: 'Blog gönderi ayarları'
     blog: Blog
     categories: Kategoriler
     category_empty: 'Bu kategoride bir blog gönderisi bulunmamaktadır.'

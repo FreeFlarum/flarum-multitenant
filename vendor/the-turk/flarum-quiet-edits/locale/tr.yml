@@ -1,7 +1,0 @@
-the-turk-quiet-edits:
-    admin:
-      settings:
-        grace_period_label: Ek süre (saniye)
-        grace_period_text: Mesaj gönderildikten sonra ek süre içinde yapılan düzenlemeler, düzenleme olarak sayılmaz.
-        ignore_case_differences_label: Büyük küçük harflerdeki değişiklikleri yok say
-        ignore_whitespace_differences_label: Boşluk değişikliklerini yok say

@@ -27,6 +27,8 @@ ianm-syndication:
       forum_new_discussions: 'Forumdaki yeni tartışmalar'
       tag_activity: '{tag} etiketi için etkinlikler'
       tag_new_discussions: '{tag} etiketindeki tartışmalar'
+    discussion:
+      feed_link: Akış
     feeds:
       titles:
         discussion_subtitle: 'Bu tartışmadaki son yazılar'

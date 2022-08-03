@@ -14,5 +14,5 @@ return Migration::addColumns('discussions', [
     'is_stickiest' => ['boolean', 'default' => 0],
 
     // and this indicates the tag sticky status of a discussion.
-    'is_tagSticky' => ['boolean', 'default' => 0]
+    'is_tagSticky' => ['boolean', 'default' => 0],
 ]);

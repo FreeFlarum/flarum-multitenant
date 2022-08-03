@@ -1,3 +1,9 @@
+### 1.1.2
+
+Requires Flarum v1.2.0+
+
+- **Update** dependencies.
+
 ### 1.1.1
 - **Fix** diff dropdown was closing after clicking on a deleted revision on pages those created by other extensions.
 

@@ -16,11 +16,11 @@ malago-achievements:
       delete_confirmation: 'Bu başarıyı silmek istediğinize emin misiniz?'
       description_label: Açıklama
       description_placeholder: 'Başarı Açıklaması'
-      height_label: 'Resim yüksekliği'
+      height_label: 'Görsel yüksekliği'
       height_placeholder: '32'
       hidden_label: 'Tüm başarılar listesinden gizle'
       image_label: 'Görsel Bağlantısı veya simge kodu'
-      image_placeholder: 'Görsel Resim Bağlantısı'
+      image_placeholder: 'Başarı Görsel Bağlantısı'
       name_label: İsim
       name_placeholder: 'Başarı Adı'
       points_label: 'Bu başarının puanları'
@@ -56,7 +56,7 @@ malago-achievements:
         tagposts: 'Etiketteki gönderiler'
         years: 'Kayıt olunan yıl'
       variable_label: Değişken
-      width_label: 'Resim genişliği'
+      width_label: 'Görsel genişliği'
       width_placeholder: '32'
     achievements_page:
       add_delete_users: 'Kullanıcıdan başarım ekle/kaldır'

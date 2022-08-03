@@ -15,8 +15,7 @@ import DiscussionListItem from 'flarum/common/components/DiscussionListItem';
 import DiscussionSuperStickiedPost from './components/DiscussionSuperStickiedPost';
 import addStickyBadge from './addStickyBadge';
 import addStickiestBadge from './addStickiestBadge';
-import addStickiestControl from './addStickiestControl';
-import addTagStickyControl from './addTagStickyControl';
+import addStickyControl from './addStickyControl';
 
 app.initializers.add(
   'the-turk-stickiest',
@@ -27,11 +26,11 @@ app.initializers.add(
     Discussion.prototype.isTagSticky = Model.attribute('isTagSticky');
     Discussion.prototype.canStickiest = Model.attribute('canStickiest');
     Discussion.prototype.canTagSticky = Model.attribute('canTagSticky');
+    Discussion.prototype.stickyTags = Model.hasMany('stickyTags');
 
     addStickyBadge();
     addStickiestBadge();
-    addStickiestControl();
-    addTagStickyControl();
+    addStickyControl();
 
     extend(DiscussionListItem.prototype, 'oncreate', (out, vnode) => {
       const $discussionItem = $(vnode.dom).find('.DiscussionListItem-content');
@@ -40,6 +39,7 @@ app.initializers.add(
       const $sticky = $discussionItem.find('.item-sticky');
       const $tagSticky = $discussionItem.find('.item-tag-sticky');
       const $stickiest = $discussionItem.find('.item-stickiest');
+      const $tagStickiest = $discussionItem.find('.item-tag-stickiest');
 
       if ($sticky.length) {
         $sticky.closest('.DiscussionListItem').addClass('Stickiest-stickyItem');
@@ -51,6 +51,10 @@ app.initializers.add(
 
       if ($stickiest.length) {
         $stickiest.closest('.DiscussionListItem').addClass('Stickiest-stickiestItem');
+      }
+
+      if ($tagStickiest.length) {
+        $tagStickiest.closest('.DiscussionListItem').addClass('Stickiest-tagStickiestItem');
       }
     });
   },

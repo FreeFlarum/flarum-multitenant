@@ -1,6 +1,0 @@
-flarum-ext-pwgen:
-    admin:
-        passlenght: 密碼長度
-        pwhelp: 設置要生成的安全密碼長度
-    forum:
-        generatebtn: 生成安全密碼

@@ -27,6 +27,8 @@ ianm-syndication:
       forum_new_discussions: 'Nowe dyskusje na forum'
       tag_activity: 'Aktywność dla tagu {tag}'
       tag_new_discussions: 'Dyskusje oznaczone tagiem {tag}'
+    discussion:
+      feed_link: Subskrybuj
     feeds:
       titles:
         discussion_subtitle: 'Najnowsze posty w tej dyskusji'

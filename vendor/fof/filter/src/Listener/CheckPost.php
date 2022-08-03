@@ -63,7 +63,7 @@ class CheckPost
         if ($this->checkContent($post->content)) {
             $this->flagPost($post);
 
-            if ($this->settings->get('fof-filter.emailWhenFlagged') == 1 && $post->emailed == 0) {
+            if ((bool) $this->settings->get('fof-filter.emailWhenFlagged') && $post->emailed == 0) {
                 $this->sendEmail($post);
             }
         }

@@ -120,15 +120,15 @@ class Util
         $desiredKeys = [];
 
         switch ($type) {
-        case 'bbcode':
-            $desiredKeys = ['block', 'inline'];
-            break;
-        case 'alias':
-            $desiredKeys = ['aliasBlock', 'aliasInline'];
-            break;
-        default:
-            $desiredKeys = ['block', 'inline', 'aliasBlock', 'aliasInline'];
-            break;
+            case 'bbcode':
+                $desiredKeys = ['block', 'inline'];
+                break;
+            case 'alias':
+                $desiredKeys = ['aliasBlock', 'aliasInline'];
+                break;
+            default:
+                $desiredKeys = ['block', 'inline', 'aliasBlock', 'aliasInline'];
+                break;
         }
 
         foreach ($categorizedDelimiters as $key => $delimiterArray) {

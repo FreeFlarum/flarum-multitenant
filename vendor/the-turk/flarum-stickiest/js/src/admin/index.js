@@ -16,6 +16,12 @@ app.initializers.add('the-turk-stickiest', function () {
       label: app.translator.trans('the-turk-stickiest.admin.settings.badge_icon_label'),
       help: app.translator.trans('the-turk-stickiest.admin.settings.badge_icon_text'),
     })
+    .registerSetting({
+      setting: 'the-turk-stickiest.display_tag_sticky',
+      type: 'boolean',
+      label: app.translator.trans('the-turk-stickiest.admin.settings.display_tag_sticky_label'),
+      help: app.translator.trans('the-turk-stickiest.admin.settings.display_tag_sticky_text'),
+    })
     .registerPermission(
       {
         icon: app.data.settings['the-turk-stickiest.badge_icon'],

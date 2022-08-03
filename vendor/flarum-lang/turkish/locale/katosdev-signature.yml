@@ -41,7 +41,7 @@ signature:
         description: 'İmzadaki maksimum karakter limiti (karakterler sayılır, HTML etiketleri geçerli sayılmaz)'
         placeholder: '1000 (varsayılan)'
       maximum_image_count:
-        description: 'Eklenecek maksimum resim sayısı.'
+        description: 'Eklenecek maksimum görsel sayısı.'
         placeholder: '5 (varsayılan)'
       maximum_image_height:
         description: 'Editöre eklenecek görsellerin toplam yükseklik sınırı.'
@@ -56,9 +56,9 @@ signature:
       signature: İmza
     errors:
       max_char_limit_exceed: 'Karakter sınırı aşıldı.'
-      max_image_count_exceed: 'Resim sayı sınırı aşıldı.'
-      max_image_height_exceed: 'Resim yükseklik sınırı aşıldı.'
-      max_image_width_exceed: 'Resim genişliği sınırı aşıldı.'
+      max_image_count_exceed: 'Görsel sayı sınırı aşıldı.'
+      max_image_height_exceed: 'Görsel yükseklik sınırı aşıldı.'
+      max_image_width_exceed: 'Görsel genişliği sınırı aşıldı.'
     modal:
       error:
         content: 'Hatalar listesi:'

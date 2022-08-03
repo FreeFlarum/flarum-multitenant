@@ -5,7 +5,8 @@
  * file that was distributed with this source code.
  */
 
-import EventPost from 'flarum/components/EventPost';
+import app from 'flarum/forum/app';
+import EventPost from 'flarum/forum/components/EventPost';
 
 export default class DiscussionSuperStickiedPost extends EventPost {
   icon() {

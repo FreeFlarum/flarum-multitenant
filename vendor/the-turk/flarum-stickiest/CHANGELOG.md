@@ -1,3 +1,33 @@
+### 3.0.0
+
+Requires Flarum v1.2.0+ & `flarum/tags` & `flarum/sticky`
+
+- **Add** new modal component (replaces discussion control items).
+- **Add** new option for displaying tag-stickied discussions in the "All Discussions" list.
+- **Add** new label for super-tag-stickied discussions. (+ new `Stickiest-tagStickiestItem` class for discussion list items.)
+- **Update** js dependencies and imports.
+
+Also fixes some mistakes on order logic.
+
+**!! Breaking change:** Your current tag-sticky configurations will be lost. They magically will stay as just-sticky.
+
+Don't forget to run migrations if you're upgrading from `2.0.x`
+
+```bash
+composer require the-turk/flarum-stickiest:^3.0.0
+php flarum migrate
+php flarum cache:clear
+```
+
+If you ever see an error like `General error: 1824 Failed to open the referenced table 'tags' ...` while activating this version, check if the engine for the `tags` table is InnoDB or not. If not, try switching that to the InnoDB then run and try activating again:
+
+```bash
+php flarum migrate:reset --extension the-turk-stickiest
+```
+```sql
+DROP TABLE `discussion_sticky_tag`;
+```
+
 ### 2.0.3
 
 - Separate permissions for tag sticky / stickiest discussions.

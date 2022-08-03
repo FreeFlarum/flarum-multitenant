@@ -45,7 +45,7 @@ class FormatImages
      */
     public function __invoke(Renderer $renderer, $context, string $xml)
     {
-        if ((bool) $this->settings->get('fof-secure-https.proxy', false)) {
+        if ((bool) $this->settings->get('fof-secure-https.proxy')) {
             $xml = Utils::replaceAttributes($xml, 'IMG', function ($attributes) {
                 $attributes['src'] = $this->url->to('api')->route('fof.secure-https.imgurl').'?imgurl='.urlencode($attributes['src']);
 

@@ -38,8 +38,8 @@
     "forum": "https://discuss.flarum.org/d/22779-diff-for-flarum"
   },
   "require": {
-    "flarum/core": "^1.0.2",
-    "jfcherng/php-diff": "^6.10.0",
+    "flarum/core": "^1.2.0",
+    "jfcherng/php-diff": "^6.11.6",
     "ext-json": "*"
   },
   "suggest": {

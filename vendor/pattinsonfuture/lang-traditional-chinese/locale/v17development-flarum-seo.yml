@@ -1,4 +1,0 @@
-v17development-flarum-seo:
-    forum:
-        profile_description: '{username} 的個人資料 | {discussion_count} 篇主題 | {comment_count} 條回覆'
-        profile_title: '{username} 的個人資料'

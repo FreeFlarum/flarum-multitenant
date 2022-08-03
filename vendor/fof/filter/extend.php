@@ -36,4 +36,9 @@ return [
         ->listen(SettingSaving::class, AddCensorChecks::class)
         ->listen(PostSaving::class, CheckPost::class)
         ->listen(Posted::class, AutoMerge::class),
+
+    (new Extend\Settings())
+        ->default('fof-filter.autoMergePosts', false)
+        ->default('fof-filter.cooldown', 15)
+        ->default('fof-filter.emailWhenFlagged', false),
 ];

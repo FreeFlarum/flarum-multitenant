@@ -35,8 +35,8 @@ class CreatePostWhenDiscussionIsSuperStickied
 
     /**
      * @param Discussion $discussion
-     * @param User $user
-     * @param bool $isStickiest
+     * @param User       $user
+     * @param bool       $isStickiest
      */
     protected static function stickiestChanged(Discussion $discussion, User $user, $isStickiest)
     {

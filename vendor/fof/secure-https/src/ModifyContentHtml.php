@@ -33,7 +33,7 @@ class ModifyContentHtml
 
     public function __invoke(BasicPostSerializer $serializer, Post $post, array $attributes): array
     {
-        if (!(bool) $this->settings->get('fof-secure-https.proxy', false) && isset($attributes['contentHtml'])) {
+        if (!(bool) $this->settings->get('fof-secure-https.proxy') && isset($attributes['contentHtml'])) {
             $attributes['contentHtml'] = preg_replace($this->regex, $this->subst, $attributes['contentHtml']);
         }
 

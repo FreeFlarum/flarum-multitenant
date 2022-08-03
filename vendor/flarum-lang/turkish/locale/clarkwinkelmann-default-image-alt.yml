@@ -4,5 +4,5 @@
 
 clarkwinkelmann-default-image-alt:
   api:
-    alt-text-author: '{username} tarafından yüklenen resim'
-    alt-text-generic: 'Kullanıcı tarafından oluşturulan içerikteki resim'
+    alt-text-author: '{username} tarafından yüklenen görsel'
+    alt-text-generic: 'Kullanıcı tarafından oluşturulan içerikteki görsel'

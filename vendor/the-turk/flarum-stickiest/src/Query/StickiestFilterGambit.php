@@ -39,6 +39,6 @@ class StickiestFilterGambit extends AbstractRegexGambit implements FilterInterfa
 
     protected function constrain(Builder $query, bool $negate)
     {
-        $query->where('is_stickiest', ! $negate);
+        $query->where('is_stickiest', !$negate);
     }
 }

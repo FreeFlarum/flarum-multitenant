@@ -6,7 +6,7 @@ Stick, super stick or tag stick discussions to the top of the list.
 
 Screenshots:
 
-![Super Sticky Discussion](https://i.imgur.com/1XVXPLn.png)
+![Stickiest Modal](https://i.imgur.com/Do7u5TF.png)
 
 - [Super Sticky Discussion in All Discussions List](https://i.imgur.com/ANKsbBG.png)
 - [Super Sticky & Tag Sticky Discussion in Tag's Discussion List](https://i.imgur.com/7q52yb4.png)
@@ -14,25 +14,22 @@ Screenshots:
 ## Installation
 
 ```bash
-composer require the-turk/flarum-stickiest:^2.0.1
+composer require the-turk/flarum-stickiest:^3.0.0
+```
+
+If you ever see an error like `General error: 1824 Failed to open the referenced table 'tags' ...` while activating `3.0.x`, check if the engine for the `tags` table is InnoDB or not. If not, try switching that to the InnoDB then run and try activating again:
+
+```bash
+php flarum migrate:reset --extension the-turk-stickiest
+```
+```sql
+DROP TABLE `discussion_sticky_tag`;
 ```
 
 ## Updating
 
 ```
-composer update the-turk/flarum-stickiest:^2.0.1
-php flarum cache:clear
-```
-
-___
-
-Upgrading from previous `beta` versions (thanks for the test drive, upgrading to stable will cause losing your sticky discussion configurations - I didn't want to perform extra operations to keep them as the extension was in beta phase):
-
-```
-php flarum migrate:reset --extension the-turk-stickiest
-composer remove the-turk/flarum-stickiest
-composer require flarum/sticky
-composer require the-turk/flarum-stickiest:^2.0.1
+composer update the-turk/flarum-stickiest
 php flarum cache:clear
 ```
 
@@ -40,13 +37,7 @@ php flarum cache:clear
 
 You may find this complicated in first use but I bet you'll get used to it.
 
-Enable the extension and set the permissions, choose a badge for super stickied discussions if you like. Now you have couple of options to change sticky discussion's behavior:
-
-1. Stick the discussion like you usually do and they'll behave as you're using the good ol' `flarum/sticky` extension.
-
-2. Stick the discussion and then "super stick" it from the discussion's controls. They'll stick on top of the "All Discussions" list no matter what. These type of discussions shouldn't affect the behavior of non-super-stickied (which I call "Common Sticky") discussions.
-
-3. Stick or super stick the discussion as described above, and click on the "Tag Sticky" button that located in the discussion's controls. Now the discussion should stick only to their tags and won't show up in the "All Discussions" list (even if they have unread posts). Click on the "All Sticky" button to undo it.
+Enable the extension and set the permissions, choose a badge for super stickied discussions if you like. Click on the "Sticky" button like you're using the `flarum/sticky` extension and read the descriptions within the modal.
 
 ## Links
 

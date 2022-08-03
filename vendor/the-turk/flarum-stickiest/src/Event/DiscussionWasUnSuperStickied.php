@@ -26,7 +26,7 @@ class DiscussionWasUnSuperStickied
 
     /**
      * @param Discussion $discussion
-     * @param User $user
+     * @param User       $user
      */
     public function __construct(Discussion $discussion, User $user)
     {

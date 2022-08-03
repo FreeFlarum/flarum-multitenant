@@ -63,7 +63,7 @@ return [
 
     (new Extend\ApiSerializer(Serializer\PostSerializer::class))
         ->attributes(function (Serializer\PostSerializer $serializer, AbstractModel $post, array $attributes): array {
-            $attributes['canReact'] = !$serializer->getActor()->is($post->user) && (bool) $serializer->getActor()->can('react', $post);
+            $attributes['canReact'] = (bool) $serializer->getActor()->can('react', $post);
 
             return $attributes;
         }),
@@ -80,8 +80,12 @@ return [
             $data['reactions'] = Reaction::get();
         }),
 
+    (new Extend\ApiController(ApiController\ListDiscussionsController::class))
+        ->addOptionalInclude('firstPost.reactions'),
+
     (new Extend\ApiController(ApiController\ShowDiscussionController::class))
-        ->addInclude('posts.reactions'),
+        ->addInclude('posts.reactions')
+        ->addOptionalInclude('firstPost.reactions'),
 
     (new Extend\ApiController(ApiController\ShowForumController::class))
         ->addInclude('reactions'),
@@ -97,4 +101,10 @@ return [
 
     (new Extend\ApiController(ApiController\UpdatePostController::class))
         ->addInclude('reactions'),
+
+    (new Extend\Settings())
+        ->default('fof-reactions.react_own_post', false),
+
+    (new Extend\Policy())
+        ->modelPolicy(Post::class, Access\ReactPostPolicy::class),
 ];

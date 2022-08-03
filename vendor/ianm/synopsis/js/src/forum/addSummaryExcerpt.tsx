@@ -42,11 +42,11 @@ export default function addSummaryExcerpt() {
       return;
     }
 
-    if (!excerptPost?.contentHtml?.()) return ;
+    if (!excerptPost?.contentHtml?.()) return;
     const content = richExcerpt ? m.trust(truncate(excerptPost.contentHtml(), excerptLength)) : truncate(excerptPost.contentPlain(), excerptLength);
-    
+
     if (excerptPost) {
-      const excerpt = <div inert>{content}</div>;
+      const excerpt = <div>{content}</div>;
 
       items.add(onMobile ? 'excerptM' : 'excerpt', excerpt, -100);
     }

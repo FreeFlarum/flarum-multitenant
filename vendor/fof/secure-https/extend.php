@@ -35,4 +35,7 @@ return [
 
     (new Extend\ApiSerializer(BasicPostSerializer::class))
         ->attributes(ModifyContentHtml::class),
+
+    (new Extend\Settings())
+        ->default('fof-secure-https.proxy', false),
 ];

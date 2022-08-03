@@ -21,7 +21,7 @@ reflar-recache:
         port: Port
         success: 'Redis sunucusuna başarıyla bağlanıldı.'
       switches:
-        avatar: 'Resim iyileştirmesini etkinleştir'
+        avatar: 'Görsel iyileştirmesini etkinleştir'
         cache: 'Önbelleği etkinleştir'
         lazy: 'Resimler için tembel yüklemeyi etkinleştir'
         query: 'Sorgu Önbelleğini Etkinleştir (Yalnızca Redis)'

@@ -89,6 +89,7 @@ fof-gamification:
         points: '{count, plural, one { {count} puan} other {{count} puan}}'
       points: 'Puan: {points}'
       rank: '{rank}'
+      votes_link: Oylar
     vote_title: 'Oy Verenleri Göster'
     voters:
       label: Oylayanlar

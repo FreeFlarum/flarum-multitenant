@@ -8,7 +8,7 @@ dem13n:
       actor_info: 'Yazarı göster'
       badges: 'Rozetleri göster'
       choose_tags: 'Etiketleri seç'
-      default_img: 'Varsayılan resim'
+      default_img: 'Varsayılan görsel'
       desktop_card_width: 'Masaüstü cihazlarda kartların genişliği: %{percent}'
       mark_cards: 'Okunmamış tartışmalar içeren kartları işaretleyin'
       output_on_index_page: 'Anasayfada çıktısını göster'

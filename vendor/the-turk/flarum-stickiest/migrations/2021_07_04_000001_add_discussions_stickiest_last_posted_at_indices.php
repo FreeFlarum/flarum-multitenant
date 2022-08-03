@@ -23,5 +23,5 @@ return [
             $table->dropIndex(['is_stickiest', 'last_posted_at']);
             $table->dropIndex(['is_tagSticky', 'last_posted_at']);
         });
-    }
+    },
 ];
