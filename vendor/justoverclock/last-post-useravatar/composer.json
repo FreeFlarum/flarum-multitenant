@@ -1,0 +1,40 @@
+{
+    "name": "justoverclock/last-post-useravatar",
+    "description": "Add Last Posted User Avatar to DiscussionList",
+    "keywords": [
+        "last posted user avatar",
+        "avatar",
+        "discussion list"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\LastPostUserAvatar\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Last Post UserAvatar",
+            "category": "",
+            "icon": {
+                "name": "far fa-user-circle",
+                "backgroundColor": "red",
+                "color": "white"
+            }
+        }
+    }
+}

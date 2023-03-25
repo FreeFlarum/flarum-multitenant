@@ -1,0 +1,39 @@
+{
+    "name": "clarkwinkelmann/flarum-ext-create-user-modal",
+    "description": "A modal that does the same as Sign Up, but without connecting",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/clarkwinkelmann/flarum-ext-create-user-modal/issues",
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-create-user-modal",
+        "forum": "https://discuss.flarum.org/d/22608"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Create User Modal",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-user-plus",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/22608"
+        }
+    }
+}

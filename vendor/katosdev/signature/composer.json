@@ -1,0 +1,34 @@
+{
+    "name": "katosdev/signature",
+    "description": "Adds signature support to your Flarum forum.",
+    "authors": [
+        {
+            "name": "Katos",
+            "email": "Katos@creatorswave.com"
+        }
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0",
+        "symfony/dom-crawler":"^6.0.2",
+        "symfony/css-selector":"^6.0.2",
+        "fof/components": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "katosdev\\Signature\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Signature",
+            "category": "feature",
+            "icon" : {
+                "name" : "fas fa-pen-square",
+                "backgroundColor" : "#f55c7a",
+                "color": "#ffffff"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "name": "@matteocontrini/flarum-imgur-upload",
+    "dependencies": {
+        "flarum-webpack-config": "^1.0.0",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12"
+    },
+    "scripts": {
+        "dev": "webpack --mode development --watch",
+        "build": "webpack --mode production"
+    },
+    "devDependencies": {
+        "flarum": "^1.0.0"
+    }
+}

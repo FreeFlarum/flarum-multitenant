@@ -1,0 +1,57 @@
+{
+    "name": "afrux/forum-widgets-core",
+    "description": "Core Extension for Managing Forum Widgets",
+    "keywords": [
+        "flarum", "widgets", "framework", "core"
+    ],
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://www.buymeacoffee.com/sycho"
+        }
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "homepage": "https://afrux.github.io",
+    "support": {
+      "issues": "https://github.com/afrux/forum-widgets-core/issues",
+      "source": "https://github.com/afrux/forum-widgets-core",
+      "forum": "https://discuss.flarum.org/"
+    },
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Sami Mazouz",
+            "email": "sychocouldy@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Afrux\\ForumWidgets\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Afrux\\ForumWidgets\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Forum Widgets",
+            "category": "",
+            "icon": {
+                "image": "icon.svg"
+            }
+        }
+    }
+}

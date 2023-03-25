@@ -1,0 +1,57 @@
+@keyframes invisiblyGrowFontSize {
+  0% {
+    font-size: 0;
+    opacity: 0;
+  }
+  100% {
+    font-size: 1em;
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+details {
+  padding: 0.5em 0;
+  transition: height 500ms ease-in;
+
+  summary:focus {
+    outline: none;
+  }
+
+  summary {
+    cursor: pointer;
+    display: block;
+  }
+
+  & > div {
+    padding-left: 15px;
+    margin-left: 4px;
+    border-left: 1px solid @control-bg;
+  }
+
+  &[open] > div {
+    animation-name: invisiblyGrowFontSize, fadeIn;
+    animation-duration: 500ms, 200ms;
+    animation-delay: 0ms, 500ms;
+  }
+}
+
+.no-details {
+  details {
+    summary:before {
+      content: '► ';
+      font-size: 12px;
+    }
+
+    &.open > summary:before {
+      content: '▼ ';
+    }
+  }
+}

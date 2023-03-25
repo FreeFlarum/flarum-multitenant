@@ -1,0 +1,45 @@
+{
+  "name": "zerosonesfun/flarum-member",
+  "description": "Give members more class. Adds a logged-in class to the forum's body tag. Also, includes two BBCodes. [members] & [guests]",
+  "type": "flarum-extension",
+  "keywords": ["users", "members"],
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Billy Wilcosky",
+          "homepage": "https://www.wilcosky.com",
+          "role": "Creator"
+      }
+  ],
+  "support": {
+      "issues": "https://github.com/zerosonesfun/flarum-member/issues",
+      "source": "https://github.com/zerosonesfun/flarum-member",
+      "forum": "https://discuss.flarum.org/d/26970-member-add-logged-in-class-to-body-tag"
+  },
+  "homepage": "https://www.wilcosky.com",
+  "funding": [
+      {
+          "type": "website",
+          "url": "https://www.wilcosky.com"
+      }
+  ],
+  "require": {
+      "flarum/core": "^1.2.0"
+  },
+  "autoload": {
+      "psr-4": {
+          "Zerosonesfun\\Members\\": "src/"
+      }
+  },
+  "extra": {
+      "flarum-extension": {
+          "title": "Members Class",
+          "category": "feature",
+          "icon": {
+              "name": "fas fa-users",
+              "backgroundColor": "#ddd",
+              "color": "#000"
+          }
+      }
+  }
+}

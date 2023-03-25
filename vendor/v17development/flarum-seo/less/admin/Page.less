@@ -1,0 +1,139 @@
+.FlarumSEO {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+
+  .hidden {
+      display: none;
+  }
+
+  .pull-right {
+      float: right;
+  }
+
+  .seo-menu {
+    background: @control-bg;
+    margin-bottom: 15px;
+
+
+    .Button {
+      padding: 12px 13px;
+      border-radius: 0;
+
+      &.item-selected {
+        background: darken(@control-bg, 10%);
+      }
+    }
+  }
+
+  .seo-intro {
+    line-height: 25px;
+  }
+
+  .robots-link {
+    display: inline-block;
+    margin-left: 15px;
+
+    i, svg {
+      margin-left: 10px;
+    }
+  }
+
+  .seo-check-table {
+    width: 100%;
+    margin-top: 30px;
+
+    thead {
+      tr {
+        background: #e8ecf3;
+
+        td {
+          font-weight: bold;
+          padding: 10px 10px;
+          color: #667e9c;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 15px 10px;
+
+          &.row-passed, &.row-warning, &.row-must {
+            padding: 10px 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            vertical-align: top;
+
+            i, svg {
+              width: 20px;
+              margin-right: 5px;
+            }
+          }
+
+          &.row-must {
+            background: #ffb6b6;
+            color: #8a0000;
+          }
+
+          &.row-warning {
+            background: #ffffb6;
+            color: #8a4c00;
+          }
+
+          &.row-passed {
+            background: #abf5ab;
+            color: #0c730c;
+          }
+
+          .row-not-passed-error {
+            display: block;
+            color: #c10c0c;
+            padding: 10px 0 0;
+            font-size: 14px;
+
+            .button-container {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social-media-uploader {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .FlarumSEO {
+    .FlarumSeoPage-container {
+      max-width: 600px;
+      margin: 0;
+    }
+  }
+}
+
+.FlarumSEO-DoFollowList {
+  display: flex;
+  margin: 10px 0;
+
+  input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  .Button {
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 8px 13px !important;
+
+    i {
+      margin-right: 0;
+      display: inline-block;
+    }
+  }
+}

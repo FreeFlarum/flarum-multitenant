@@ -1,0 +1,74 @@
+{
+    "name": "flarum-lang/vietnamese",
+    "description": "Vietnamese language pack for Flarum",
+    "type": "flarum-extension",
+    "keywords": [
+        "extension",
+        "flarum",
+        "vietnamese",
+        "locale",
+        "translation"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat (datlechin)",
+            "email": "datlechin@gmail.com",
+            "role": "Translator",
+            "homepage": "https://ngoquocdat.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flarum-lang/vietnamese/issues",
+        "source": "https://github.com/flarum-lang/vietnamese",
+        "forum": "https://discuss.flarum.org/d/28471"
+    },
+    "homepage": "https://ngoquocdat.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://nhantien.momo.vn/0372124043"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.4"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Vietnamese",
+            "category": "language",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#00247d",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "vi",
+            "title": "Tiếng Việt"
+        },
+        "extiverse": {
+            "discuss": "https://discuss.flarum.org/d/28471"
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": false,
+                "js": false,
+                "jsCommon": false,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}

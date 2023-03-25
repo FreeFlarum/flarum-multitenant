@@ -1,0 +1,24 @@
+ul>li[data-task-id] {
+  list-style-type: none;
+}
+
+.checklist-cross-completed {
+  li[data-task-state="checked"],
+  li[data-task-state="checked"] p {
+    text-decoration: line-through;
+  }
+}
+
+
+.ProseMirror li[data-task-id] {
+  position: relative;
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 5px;
+  }
+
+  p {
+    margin-left: 17px !important;
+  }
+}

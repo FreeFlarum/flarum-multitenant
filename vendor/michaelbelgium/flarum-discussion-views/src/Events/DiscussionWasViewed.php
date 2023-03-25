@@ -1,0 +1,38 @@
+<?php
+
+namespace Michaelbelgium\Discussionviews\Events;
+
+
+use Flarum\Discussion\Discussion;
+use Flarum\User\User;
+
+class DiscussionWasViewed
+{
+    /** @var User $viewer */
+    private $viewer;
+
+    /** @var Discussion $discussion */
+    private $discussion;
+
+    /**
+     * DiscussionWasViewed constructor.
+     *
+     * @param User $viewer
+     * @param Discussion $discussion
+     */
+    public function __construct(User $viewer, Discussion $discussion)
+    {
+        $this->viewer = $viewer;
+        $this->discussion = $discussion;
+    }
+
+    public function getViewer()
+    {
+        return $this->viewer;
+    }
+
+    public function getDiscussion()
+    {
+        return $this->discussion;
+    }
+}

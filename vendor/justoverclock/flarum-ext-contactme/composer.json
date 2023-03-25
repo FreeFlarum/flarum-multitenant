@@ -1,0 +1,44 @@
+{
+  "name": "justoverclock/flarum-ext-contactme",
+  "description": "Add Contact Us Page in sidenav",
+  "keywords": [
+    "flarum",
+    "contact form",
+    "contact"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "homepage": "https://flarum.it",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\Contactme\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Contactme",
+      "category": "feauture",
+      "icon": {
+        "name": "fas fa-at",
+        "backgroundColor": "red",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

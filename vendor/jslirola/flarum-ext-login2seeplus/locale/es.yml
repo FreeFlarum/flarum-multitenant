@@ -1,0 +1,14 @@
+jslirola-login2seeplus:
+  forum:
+    post: "{login} para ver el mensaje completo"
+    link: Inicia sesión para ver el enlace
+    image: Inicia sesión para ver la imagen
+    code: Inicia sesión para ver el código
+  admin:
+    title: Login2SeePlus
+    hide: Ocultar
+    link: Enlaces
+    image: Imágenes
+    code: Código
+    post:
+      title: Ocultar contenido que exceda esta longitud (<em>-1</em> para mostrar todo)

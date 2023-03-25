@@ -1,0 +1,41 @@
+{
+  "name": "malago/flarum-achievements",
+  "description": "Adds customized achievements to your forum.",
+  "keywords": [
+    "flarum",
+    "achievements",
+    "trophies",
+    "rewards"
+  ],
+  "type": "flarum-extension",
+  "license": "GPL-3.0-or-later",
+  "support": {
+    "issues": "https://github.com/malago86/flarum-achievements/issues",
+    "source": "https://github.com/malago86/flarum-achievements",
+    "forum": "https://discuss.flarum.org/d/26675-flarum-achievements-reward-your-users-for-participating"
+  },
+  "require": {
+    "flarum/core": "^1.1.1"
+  },
+  "authors": [
+    {
+      "name": "Miguel A. Lago",
+      "email": "miguelangel.lago@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Malago\\Achievements\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Achievements",
+      "icon": {
+        "name": "fas fa-trophy",
+        "backgroundColor": "#ffea7b",
+        "color": "#de8e00"
+      }
+    }
+  }
+}

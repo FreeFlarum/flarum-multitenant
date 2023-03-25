@@ -1,0 +1,36 @@
+{
+    "name": "jslirola/flarum-ext-login2seeplus",
+    "description": "Make posts hidden for visitors.",
+    "type": "flarum-extension",
+    "keywords": ["discussion"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JSLirola"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/jslirola/flarum-ext-login2seeplus/issues",
+        "source": "https://github.com/jslirola/flarum-ext-login2seeplus",
+        "forum": "https://discuss.flarum.org/d/24193-login-2-see-plus"
+    },
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Login2SeePlus",
+            "category": "discussion",
+            "icon": {
+                "name": "fas fa-eye",
+                "backgroundColor": "#ff1a00",
+                "color": "#fff"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "JSLirola\\Login2SeePlus\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@fof/cookie-consent",
+  "version": "0.0.0",
+  "prettier": "@flarum/prettier-config",
+  "dependencies": {
+    "@flarum/prettier-config": "^1.0.0",
+    "flarum-tsconfig": "^1.0.2",
+    "flarum-webpack-config": "^2.0.0",
+    "webpack": "^5.57.0",
+    "webpack-cli": "^4.9.2",
+    "cookieconsent": "^3.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "format": "prettier --write src",
+    "format-check": "prettier --check src"
+  }
+}

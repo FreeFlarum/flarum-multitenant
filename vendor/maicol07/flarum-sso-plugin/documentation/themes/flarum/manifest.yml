@@ -1,0 +1,34 @@
+name: flarum
+
+static:
+    'public/app.min.css': 'assets/app.min.css'
+    'public/app.min.js': 'assets/app.min.js'
+
+    'public/fonts/rezozero-sans-light-webfont.woff2': 'assets/fonts/rezozero-sans-light-webfont.woff2'
+    'public/fonts/rezozero-sans-mono-webfont.woff2': 'assets/fonts/rezozero-sans-mono-webfont.woff2'
+    'public/fonts/rezozero-sans-regular-webfont.woff2': 'assets/fonts/rezozero-sans-regular-webfont.woff2'
+
+    'public/fonts/fa-icons.eot': 'assets/fonts/fa-icons.eot'
+    'public/fonts/fa-icons.svg': 'assets/fonts/fa-icons.svg'
+    'public/fonts/fa-icons.ttf': 'assets/fonts/fa-icons.ttf'
+    'public/fonts/fa-icons.woff': 'assets/fonts/fa-icons.woff'
+    'public/fonts/fa-icons.woff2': 'assets/fonts/fa-icons.woff2'
+
+    'public/img/code.svg': 'assets/img/code.svg'
+
+global:
+    'index.twig': 'index.html'
+    'doc-index.twig': 'doc-index.html'
+    'namespaces.twig': 'namespaces.html'
+    'classes.twig': 'classes.html'
+    'interfaces.twig': 'interfaces.html'
+    'traits.twig': 'traits.html'
+    'opensearch.twig': 'opensearch.xml'
+    'search.twig': 'search.html'
+    'sami.js.twig': 'sami.js'
+
+namespace:
+    'namespace.twig': '%s.html'
+
+class:
+    'class.twig': '%s.html'

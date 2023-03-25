@@ -1,0 +1,8 @@
+composer.lock
+
+public/assets/
+storage/
+
+config.php
+php-fpm.conf
+custom_host.conf

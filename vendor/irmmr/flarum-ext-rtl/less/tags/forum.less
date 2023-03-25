@@ -1,0 +1,43 @@
+@import "common/common";
+
+@import "forum/TagCloud";
+@import "forum/TagDiscussionModal";
+@import "forum/TagHero";
+@import "forum/TagTiles";
+
+.TagLinkButton {
+  &.child {
+    margin-right: 10px;
+    margin-left: auto;
+  }
+}
+.DiscussionComposer-changeTags {
+  margin-left: 15px;
+  margin-right: auto;
+}
+.DiscussionListItem-info > .item-tags {
+  margin-left: 4px;
+  margin-right: auto;
+}
+@media @tablet-up {
+  .IndexPage, .UserPage {
+    .DiscussionListItem-title {
+      margin-left: 155px;
+      margin-right: auto;
+    }
+    .DiscussionListItem-info > .item-tags {
+      margin-left: 0;
+      margin-right: auto;
+      left: 80px;
+      right: auto;
+    }
+  }
+}
+
+@media @desktop-up {
+  .TagsPage {
+    .sideNavOffset {
+      margin: 15px 0 0; // unchanged
+    }
+  }
+}

@@ -1,0 +1,9 @@
+fof-user-bio:
+    admin:
+        permission:
+            view: Biyografiyi görüntüle
+            editOwn: Kendi biyografimi düzenle
+            editAny: Herhangi bir biyografiyi düzenle
+
+    forum:
+        userbioPlaceholder: Kendin hakkında bir şeyler yaz

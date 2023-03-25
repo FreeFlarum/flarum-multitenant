@@ -1,0 +1,55 @@
+.CommentPost {
+  .tabs {
+    position: relative;
+    min-height: 200px; /* This part sucks */
+    clear: both;
+    margin: 25px 0;
+
+    .tab {
+      float: left;
+
+      &:first-of-type label {
+        border-top-left-radius: var(--border-radius);
+      }
+
+      &:last-of-type label {
+        border-top-right-radius: var(--border-radius);
+      }
+    }
+
+    .tab label {
+      background: @body-bg;
+      padding: 10px 10px 7px;
+      border: 1px solid @muted-color;
+      margin-left: -1px;
+      position: relative;
+      left: 1px;
+    }
+    .tab [type=radio] {
+      display: none;
+    }
+    .content {
+      display: none;
+      position: absolute;
+      top: 28px;
+      left: 0;
+      background: var(--body-bg);
+      right: 0;
+      bottom: 0;
+      padding: 10px 20px;
+      border: 1px solid var(--muted-color);
+      border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+      overflow-y: auto;
+    }
+
+    [type=radio]:checked ~ label {
+      background: var(--control-bg);
+      font-weight: bold;
+      border-bottom: 1px solid var(--primary-color);
+
+    }
+    [type=radio]:checked ~ label ~ .content {
+      display: block;
+    }
+  }
+}

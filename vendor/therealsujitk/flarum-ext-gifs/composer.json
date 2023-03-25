@@ -1,0 +1,45 @@
+{
+  "name": "therealsujitk/flarum-ext-gifs",
+  "description": "Integrate your forum with GIF search engines.",
+  "keywords": [
+    "flarum",
+    "gif",
+    "giphy"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/therealsujitk/flarum-ext-gifs/issues",
+    "source": "https://github.com/therealsujitk/flarum-ext-gifs",
+    "forum": "https://discuss.flarum.org/d/23101"
+  },
+  "homepage": "https://therealsuji.tk",
+  "require": {
+    "flarum/core": "^1.0",
+    "flarum/markdown": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Sujit Kumar",
+      "role": "Developer",
+      "email": "me@therealsuji.tk"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Therealsujitk\\GIFs\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "GIFs",
+      "category": "feature",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#ff9c59",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center"
+      }
+    }
+  }
+}

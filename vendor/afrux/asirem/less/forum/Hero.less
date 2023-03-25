@@ -1,0 +1,40 @@
+.Hero {
+  z-index: 0;
+  margin: 15px auto 0;
+  max-width: @screen-desktop-hd;
+  border-radius: @border-radius;
+
+  @media @desktop {
+    max-width: @screen-desktop;
+  }
+
+  @media @tablet {
+    max-width: @screen-tablet;
+  }
+
+  @media @phone {
+    max-width: calc(~"100% - 30px");
+    margin-bottom: 15px;
+  }
+
+  &--banner {
+    --banner-position: center;
+    background-image: var(--banner-url);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: var(--banner-position);
+    color: #fff;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  + .container {
+    position: relative;
+  }
+}
+
+.darkenBackground {
+  border-radius: @border-radius;
+}

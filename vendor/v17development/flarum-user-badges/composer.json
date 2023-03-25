@@ -1,0 +1,62 @@
+{
+    "name": "v17development/flarum-user-badges",
+    "description": "Adds user badges to your Flarum community",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "V17 Development",
+            "email": "info@v17.dev"
+        }
+    ],
+    "homepage": "https://v17.dev/projects/flarum-user-badges",
+    "support": {
+        "forum": "https://discuss.flarum.org/d/26449",
+        "issues": "https://github.com/v17development/flarum-user-badges/issues",
+        "source": "https://github.com/v17development/flarum-user-badges",
+        "docs": "https://community.v17.dev/knowledgebase/category/flarum-user-badges"
+    },
+    "autoload": {
+        "psr-4": {
+            "V17Development\\FlarumUserBadges\\": "src/"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "flarum/core": "^1.3.1"
+    },
+    "suggest": {
+        "askvortsov/flarum-auto-moderator": "Allows you to automatically hand out badges to users"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "User badges",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-user-tag",
+                "backgroundColor": "#00ccb3",
+                "color": "#225650"
+            },
+            "optional-dependencies": [
+                "askvortsov/flarum-auto-moderator"
+            ]
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}

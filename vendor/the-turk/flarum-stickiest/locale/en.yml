@@ -1,0 +1,64 @@
+the-turk-stickiest:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      super_sticky_discussions_label: Super sticky discussions
+      tag_sticky_discussions_label: Tag sticky discussions
+
+    # These translations are used in the Settings page.
+    settings:
+      badge_icon_label: Super sticky badge icon
+      badge_icon_text: => core.ref.icon_text
+      display_tag_sticky_label: Show tag stickies in the "All Discussions" list
+      display_tag_sticky_text: They will be treated as regular discussions and won't stick to the top.
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      sticky_tooltip: => the-turk-stickiest.ref.sticky
+      super_sticky_tooltip: => the-turk-stickiest.ref.super_sticky
+      tag_sticky_tooltip: => the-turk-stickiest.ref.tag_sticky
+      super_tag_sticky_tooltip: => the-turk-stickiest.ref.super_tag_sticky
+
+    # These translations are used in the modal dialog.
+    stickiest_modal:
+      title: "Sticky {title}"
+      sticky_label: => flarum-sticky.ref.sticky
+      sticky_text: Sticky discussions will stick to the top in the "All Discussions" list if they are unread. When viewing a specific tag which belongs to the discussion, they will stick to the top at all times.
+      super_sticky_label: => the-turk-stickiest.ref.super_sticky
+      super_sticky_text: Super sticky discussions will stick to the uppermost no matter what.
+      tag_sticky_label: => the-turk-stickiest.ref.tag_sticky
+      tag_sticky_text: Tag stickies are hidden in the "All Discussions" list by default. They will only be shown and stick to the top when viewing a specific tag, that is one of the tags those you will choose here. This option can be combined with "Super Sticky".
+      tags_label: => flarum-tags.ref.tags
+      submit_button: => core.ref.save_changes
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      sticky_button: => flarum-sticky.forum.discussion_controls.sticky_button
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      discussion_stickied_text: => flarum-sticky.forum.post_stream.discussion_stickied_text
+      discussion_unstickied_text: => flarum-sticky.forum.post_stream.discussion_unstickied_text
+      discussion_super_stickied_text: "{username} marked the discussion as super sticky."
+      discussion_common_stickied_text: "{username} unmarked the discussion as super sticky."
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    sticky: => flarum-sticky.ref.sticky
+    super_sticky: Super Sticky
+    tag_sticky: Tag Sticky
+    super_tag_sticky: Super Tag Sticky

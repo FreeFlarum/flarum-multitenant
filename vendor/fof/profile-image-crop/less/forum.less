@@ -1,0 +1,32 @@
+@import 'libs/cropper';
+
+.FofProfileImageCropModal {
+  .cropper-view-box,
+  .cropper-face {
+    border-radius: 50%;
+  }
+
+  .Modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Image-container {
+    position: relative;
+    min-height: 100px;
+
+    .LoadingIndicator-container {
+      position: absolute;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    > img:not([ready]) {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,179 @@
+.DiscussionList {
+  @media @phone {
+    margin: 0;
+  }
+
+  &-discussions > li {
+    .asirem-border-radius(~'.Avatar');
+  }
+
+  &Item {
+    background: @control-bg;
+    margin: 0 0 4px;
+    padding: 0;
+    border-radius: @border-radius;
+
+    &-controls .Dropdown-toggle {
+      border-radius: @border-radius;
+    }
+
+    &-info {
+      font-size: 12px;
+    }
+
+    &--unapproved {
+      background-color: @unapproved-discussion-bg;
+
+      .DiscussionListItem-content {
+        opacity: 1;
+      }
+    }
+
+    &-badges {
+      .Badge {
+        --size: 20px;
+        box-shadow: -1px 1px 2px #00000038;
+        width: var(--size);
+        height: var(--size);
+        line-height: var(--size);
+
+        &-icon {
+          font-size: 10px;
+        }
+      }
+    }
+
+    &--unread &-title::after {
+      --size: 8px;
+      content: "";
+      height: var(--size);
+      width: var(--size);
+      line-height: var(--size);
+      background: @primary-color;
+      color: #fff;
+      border-radius: 100%;
+      font-size: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: text-top;
+      margin-top: 6px;
+      margin-left: 5px;
+    }
+  }
+
+  &-loadMore {
+    margin-top: 5px;
+
+    .Button {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.TagsLabel .TagLabel:not(.overspecifying__) {
+  border-radius: @border-radius;
+  margin-right: 5px;
+  font-size: 11px;
+}
+
+.App {
+  .IndexPage .DiscussionListItem,
+  .UserPage .DiscussionListItem {
+    &-info {
+      > .item-tags {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .DiscussionListItem {
+    &-info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &-title {
+      color: @text-color !important;
+    }
+
+    &-main {
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+
+    &-badges {
+      margin: 0;
+      width: auto;
+      float: none;
+      position: absolute;
+      right: -7px;
+      top: -4px;
+      display: block;
+    }
+
+    &-author {
+      float: none;
+      margin: 0;
+      display: block;
+
+      &-container {
+        margin-right: 15px;
+        position: relative;
+
+        > .tooltip {
+          width: max-content;
+        }
+      }
+
+      .Avatar {
+        .asirem-icon-block(50px, @body-bg);
+      }
+    }
+
+    &-content {
+      display: flex;
+      padding: 12px;
+    }
+
+    &-stats {
+      margin-left: 10px;
+      margin-right: 15px;
+    }
+
+    &-count {
+      margin: 0;
+      padding: 0;
+      float: none;
+      display: block;
+
+      &::before {
+        margin: 0 5px 0 0;
+        padding: 0;
+        float: none;
+      }
+    }
+  }
+}
+
+@media @phone {
+  .DiscussionListItem {
+    .unread &-count {
+      padding: 0 4px;
+    }
+  }
+}
+
+
+@media @tablet-up {
+  .DiscussionListItem {
+    .item-excerpt {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}

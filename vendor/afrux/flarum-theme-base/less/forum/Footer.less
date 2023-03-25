@@ -1,0 +1,132 @@
+.App-footer {
+  background: @control-bg;
+  color: @control-color;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.ThemeBaseFooter {
+  &-container {
+    display: flex;
+    flex-direction: column;
+
+    &::after, &::before {
+      display: none;
+    }
+  }
+
+  &-upper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &-lower {
+    --space: 40px;
+    text-align: center;
+    margin: ~"calc(var(--space) / 2)" auto 0;
+    padding-top: ~"calc(var(--space) / 2)";
+    border-top: 1px solid @body-bg;
+    min-width: 60%;
+  }
+
+  &-linkGroup {
+    &-title {
+      font-size: 11px;
+      margin: 0 0 16px;
+      color: @control-color;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    ul {
+      padding: 0 0 0 8px;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &-links {
+    display: flex;
+    gap: 62px;
+
+    &-item {
+      a {
+        color: inherit;
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+
+  &-about {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--large {
+      width: auto;
+      align-items: center;
+
+      .ThemeBaseFooter-logo-description {
+        text-align: center;
+      }
+    }
+  }
+
+  &-logo {
+    &-description {
+      text-align: justify;
+    }
+
+    img {
+      max-height: 35px;
+    }
+
+    &--large img {
+      max-height: unset;
+    }
+  }
+
+  &-bottomLine {
+    margin: 0;
+  }
+}
+
+@media @phone {
+  .App-footer {
+    margin-top: 0;
+  }
+
+  .ThemeBaseFooter {
+    &-upper {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &-about {
+      width: auto;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-logo-description {
+      text-align: center;
+    }
+
+    &-links {
+      justify-content: space-around;
+    }
+
+    &-linkGroup ul {
+      align-items: center;
+      padding: 0;
+    }
+  }
+}

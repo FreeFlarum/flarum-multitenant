@@ -1,0 +1,41 @@
+{
+  "name": "askvortsov/flarum-discussion-templates",
+  "description": "Create per-tag templates for new discussions.",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/askvortsov1/flarum-discussion-templates/issues",
+    "source": "https://github.com/askvortsov1/flarum-discussion-templates",
+    "forum": "https://discuss.flarum.org/d/23950-discussion-templates-per-tag"
+  },
+  "require": {
+    "flarum/core": "^1.0.0",
+    "flarum/tags": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Alexander Skvortsov",
+      "email": "askvortsov@flarum.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Askvortsov\\FlarumDiscussionTemplates\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Discussion Templates",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-plus-square",
+        "backgroundColor": "#6932D1",
+        "color": "#fff"
+      }
+    }
+  }
+}

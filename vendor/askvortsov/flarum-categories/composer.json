@@ -1,0 +1,41 @@
+{
+  "name": "askvortsov/flarum-categories",
+  "description": "Traditional Category Layout for Flarum",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/askvortsov1/flarum-categories/issues",
+    "source": "https://github.com/askvortsov1/flarum-categories",
+    "forum": "https://discuss.flarum.org/d/23184-flarum-categories"
+  },
+  "require": {
+    "flarum/core": "^1.2.0",
+    "flarum/tags": "^1.2.0"
+  },
+  "authors": [
+    {
+      "name": "Alexander Skvortsov",
+      "email": "askvortsov@flarum.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Askvortsov\\FlarumCategories\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Categories",
+      "category": "theme",
+      "icon": {
+        "name": "fas fa-th-list",
+        "backgroundColor": "#6932D1",
+        "color": "#fff"
+      }
+    }
+  }
+}

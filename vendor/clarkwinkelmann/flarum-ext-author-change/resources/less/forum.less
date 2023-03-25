@@ -1,0 +1,44 @@
+.Update-Author-Modal {
+    .Modal-content {
+        // Otherwise the search results dropdown is hidden when it contains many results
+        overflow: visible;
+    }
+
+    .Search {
+        input {
+            display: block;
+            width: 100%;
+        }
+
+        &.focused {
+            margin-left: inherit;
+
+            input, .Search-results {
+                width: 100%;
+            }
+        }
+    }
+
+    .SelectedUser {
+        margin-bottom: 10px;
+
+        .Avatar {
+            .Avatar--size(24px);
+            margin: -2px 10px -2px 0;
+        }
+    }
+
+    .RemoveUserButton {
+        float: right;
+        padding: 0;
+    }
+
+    .CancelButton {
+        margin-left: 5px;
+    }
+
+    // Flarum doesn't appear to have a disabled style
+    .Checkbox.disabled {
+        opacity: 0.3;
+    }
+}

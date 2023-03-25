@@ -1,0 +1,6 @@
+locale/*.md
+.vscode/
+archive/
+wiki/
+resources
+node_modules

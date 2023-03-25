@@ -1,0 +1,6 @@
+malago-fancybox:
+  forum:
+    next:  Next
+    prev:  Previous
+    close: Close
+    error: The requested content cannot be loaded.

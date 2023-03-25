@@ -1,0 +1,51 @@
+.sideNavOffset {
+  background-color: @control-bg;
+
+  .Button {
+    --control-bg: @body-bg;
+
+    &--primary {
+      --control-bg: @primary-color;
+    }
+  }
+  .Button--dashed {
+    .Button--dashed();
+  }
+
+}
+
+.Button {
+  background-color: var(--control-bg);
+  color: var(--control-color);
+
+  &--primary {
+    --control-color: @control-bg;
+    --control-bg: @primary-color;
+  }
+}
+
+@media @tablet {
+  .sideNav {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media @tablet, @phone {
+  .sideNavOffset {
+    padding-top: 15px;
+  }
+}
+
+@media @desktop-up {
+  .sideNav {
+    margin-right: 0;
+    height: 100vh;
+  }
+
+  .sideNavOffset {
+    position: relative;
+    padding-left: 1rem;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,22 @@
+.PostMention:before {
+  .fas();
+}
+
+.SelectTagList.selected {
+  .icon::before {
+    .fas();
+  }
+}
+
+@media @tablet-up {
+  .DiscussionListItem-count {
+    .unread & {
+      &:before {
+        .fas();
+      }
+      &:hover:before {
+        .fas();
+      }
+    }
+  }
+}

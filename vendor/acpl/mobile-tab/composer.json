@@ -1,0 +1,70 @@
+{
+    "name": "acpl/mobile-tab",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/android-com-pl/mobile-tab/issues",
+        "source": "https://github.com/android-com-pl/mobile-tab",
+        "forum": "https://discuss.flarum.org/d/28216-mobile-tab"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/android-com-pl"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Rafał Całka",
+            "homepage": "https://github.com/rafaucau",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Acpl\\MobileTab\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Acpl\\MobileTab\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Mobile tab",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-ellipsis-h",
+                "backgroundColor": "#0F9D58",
+                "color": "#fff"
+            }
+        },
+        "optional-dependencies": [
+            "flarum/tags"
+        ],
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true,
+                "css": true
+            }
+        }
+    }
+}

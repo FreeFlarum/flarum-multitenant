@@ -1,0 +1,53 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Create drafts
+      schedule: Schedule drafts
+    settings:
+      title: FoF Drafts
+      enable_scheduled_drafts: Enable Scheduled Drafts
+      schedule_on_one_server: Use 'onOneServer()' directive for the task scheduler (requires Redis/Memcache)
+      schedule_log_output: Append scheduler output to log storage
+  console:
+    scheduled_drafts_disabled: Scheduled drafts are currently disabled in settings.
+  ref:
+    schedule_draft: Schedule draft
+  forum:
+    composer:
+      title: Save Draft
+      saving: Saving...
+      saved: Saved!
+      exit_alert: Discard changes to draft?
+      discard_empty_draft_alert: Discard empty draft?
+    dropdown:
+      empty_text: You haven't saved any drafts
+      title: Drafts
+      delete_all_button: Delete all drafts
+      delete_button: Delete draft
+      schedule_button: => fof-drafts.ref.schedule_draft
+      scheduled_icon_tooltip: Scheduled for {datetime}
+      # String passed to dayjs.format() to generate the tooltip date-time
+      scheduled_icon_tooltip_formatter: L [at] LT
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Are you sure you want to delete your draft?
+      delete_all_alert: Are you sure you want to delete all your drafts?
+    schedule_draft_modal:
+      title: => fof-drafts.ref.schedule_draft
+      text: Schedule your draft to automatically post at a later time!
+      scheduled_text: Currently scheduled to post on {datetime}.
+      scheduled_error: "Unable to schedule draft: {error}."
+      unschedule_button: Unschedule
+      unschedule_warning: Are you sure you want to unschedule this draft?
+      reschedule_button: Reschedule
+      schedule_button: Schedule
+      schedule_time_preview: This draft will be automatically published on <b>{datetime}</b>.
+      # String passed to dayjs.format() to generate the preview
+      schedule_time_preview_formatter: LLLL
+      schedule_time_preview_invalid: Invalid date and/or time
+    user:
+      settings:
+        drafts_heading: Drafts
+        draft_autosave_enable: Enable Draft Autosave?
+        draft_autosave_interval_label: Autosave Interval (seconds)
+        draft_autosave_interval_button: Update Interval
+        draft_autosave_interval_invalid: The interval must be an integer greater than 4.

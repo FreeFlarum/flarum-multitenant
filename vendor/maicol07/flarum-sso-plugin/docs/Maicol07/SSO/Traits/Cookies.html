@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="index, follow, all" name="robots"/>
+    <title>Maicol07\SSO\Traits\Cookies | Flarum SSO PHP Plugin API Docs</title>
+
+    <link href="../../../assets/app.min.css" rel="stylesheet" type="text/css">
+    <script src="../../../assets/app.min.js"></script>
+    <script src="../../../sami.js"></script>
+    <meta content="width" name="MobileOptimized">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+
+
+</head>
+
+<body data-name="class:Maicol07_SSO_Traits_Cookies" data-root-path="../../../" id="class">
+<div id="content">
+    <nav class="navbar navbar-expand-lg" id="flarum-header">
+        <h1 class="flarum-title navbar-brand"></h1>
+
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"><a class="nav-link" href="https://flarum.org">Flarum</a></li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://discuss.flarum.org/d/21666-php-and-wordpress-single-sign-on-sso"
+                                        target="_blank">Thread</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://docs.maicol07.it/en/flarum-sso/plugins/php"
+                                        target="_blank">Docs</a></li>
+                <li class="nav-item"><a class="nav-link icon icon-github-circled"
+                                        href="https://github.com/maicol07/flarum-sso-php-plugin" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div id="left-column">
+            <div id="control-panel">
+                <script>
+                    $('option[data-version="' + window.projectVersion + '"]').prop('selected', true);
+                </script>
+                <form action="../../../search.html" id="search-form" method="GET">
+                    <span class="icon icon-search"></span>
+                    <input class="typeahead form-control" name="search" placeholder="Search" type="search">
+                </form>
+            </div>
+
+            <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+            <nav class="navbar navbar-expand" id="site-nav" role="navigation">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../classes.html">Classes</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="../../../namespaces.html">Namespaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../interfaces.html">Interfaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../traits.html">Traits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../doc-index.html">Index</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../search.html">Search</a></li>
+                </ul>
+            </nav>
+
+            <div id="page-content">
+
+                <div class="page-header">
+                    <h1>
+                        Cookies
+
+                        &nbsp;
+                        <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php"
+                           target="_blank">
+                            <img alt="See the code on Github" height="30" src="../../../assets/img/code.svg"/>
+                        </a>
+
+                    </h1>
+                </div>
+
+                <p> trait
+                    <strong>Cookies</strong></p>
+
+
+                <h2>Methods</h2>
+
+                <div class="container-fluid underlined">
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            bool
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_setRememberTokenCookie">setRememberTokenCookie</a>(string $token)
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L11"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            <abbr title="Delight\Cookie\Cookie">Cookie</abbr>
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_generateCookie">generateCookie</a>(string $name, string $value = null,
+                            <abbr title="Illuminate\Support\Carbon">Carbon</abbr> $expiry = null)
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L27"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            bool
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_deleteRememberTokenCookie">deleteRememberTokenCookie</a>()
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L40"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            bool
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_setSessionTokenCookie">setSessionTokenCookie</a>(string $token)
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L45"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            bool
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_deleteSessionTokenCookie">deleteSessionTokenCookie</a>()
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L50"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            bool
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_setLogoutCookie">setLogoutCookie</a>()
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L55"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            bool
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_deleteLogoutCookie">deleteLogoutCookie</a>()
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Traits/Cookies.php#L61"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2>Details</h2>
+
+                <div id="method-details">
+                    <div class="method-item">
+                        <h3 id="method_setRememberTokenCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L11"
+                                    target="_blank">
+                                line 11
+                            </a>
+                            </div>
+                            <code> bool
+                                <strong>setRememberTokenCookie</strong>(string $token)
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+                                <h4>Parameters</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>string</td>
+                                        <td>$token</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>bool</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_generateCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L27"
+                                    target="_blank">
+                                line 27
+                            </a>
+                            </div>
+                            <code> <abbr title="Delight\Cookie\Cookie">Cookie</abbr>
+                                <strong>generateCookie</strong>(string $name, string $value = null, <abbr
+                                        title="Illuminate\Support\Carbon">Carbon</abbr> $expiry = null)
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+                                <h4>Parameters</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>string</td>
+                                        <td>$name</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>string</td>
+                                        <td>$value</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><abbr title="Illuminate\Support\Carbon">Carbon</abbr></td>
+                                        <td>$expiry</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td><abbr title="Delight\Cookie\Cookie">Cookie</abbr></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_deleteRememberTokenCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L40"
+                                    target="_blank">
+                                line 40
+                            </a>
+                            </div>
+                            <code> bool
+                                <strong>deleteRememberTokenCookie</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>bool</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_setSessionTokenCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L45"
+                                    target="_blank">
+                                line 45
+                            </a>
+                            </div>
+                            <code> bool
+                                <strong>setSessionTokenCookie</strong>(string $token)
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+                                <h4>Parameters</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>string</td>
+                                        <td>$token</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>bool</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_deleteSessionTokenCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L50"
+                                    target="_blank">
+                                line 50
+                            </a>
+                            </div>
+                            <code> bool
+                                <strong>deleteSessionTokenCookie</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>bool</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_setLogoutCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L55"
+                                    target="_blank">
+                                line 55
+                            </a>
+                            </div>
+                            <code> bool
+                                <strong>setLogoutCookie</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>bool</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_deleteLogoutCookie">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Traits/Cookies.php#L61"
+                                    target="_blank">
+                                line 61
+                            </a>
+                            </div>
+                            <code> bool
+                                <strong>deleteLogoutCookie</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>bool</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="footer">
+                <p>Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and
+                    fork of Sami</a>.</p>
+                <p>Created by <a href="https://github.com/datitisev">@datitisev</a>. Modified by <a
+                        href="https://maicol07.it">@maicol07</a> (<a href="https://github.com/maicol07">Github</a>).
+                    Source code can be found on <a href="https://github.com/maicol07/flarum-sso-php-plugin">GitHub</a>.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

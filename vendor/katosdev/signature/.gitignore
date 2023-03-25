@@ -1,0 +1,6 @@
+.idea
+.vscode
+vendor
+composer.lock
+js/node_modules
+js/dist/*

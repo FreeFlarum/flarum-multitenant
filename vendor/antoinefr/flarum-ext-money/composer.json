@@ -1,0 +1,37 @@
+{
+    "name": "antoinefr/flarum-ext-money",
+    "description": "Give money to your users for different actions.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "forum": "https://discuss.flarum.org/d/4699-money-extension",
+        "issues": "https://github.com/AntoineFr/flarum-ext-money/issues",
+        "source": "https://github.com/AntoineFr/flarum-ext-money"
+    },
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AntoineFr\\Money\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Money",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-money-bill",
+                "backgroundColor": "#FFD700",
+                "color": "#85bb65"
+            },
+            "optional-dependencies": [
+                "flarum/likes",
+                "askvortsov/flarum-auto-moderator"
+            ]
+        }
+    }
+}

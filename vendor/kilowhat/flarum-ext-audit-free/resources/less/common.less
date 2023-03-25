@@ -1,0 +1,61 @@
+.AuditSearch {
+    padding: 20px;
+
+    .AuditSearchWrapper {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        color: @muted-color;
+
+        .FormControl {
+            width: 20em;
+            margin-right: 5px;
+        }
+
+        .Search-clear {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            width: 36px;
+            outline: none;
+        }
+    }
+}
+
+.AuditItem {
+    padding: 20px;
+    display: flex;
+    border-top: 1px solid #eee;
+
+    code, pre {
+        background: #eee;
+    }
+}
+
+.AuditItemAvatar {
+    width: 80px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    .Avatar {
+        .Avatar--size(36px);
+    }
+}
+
+.AuditItemData {
+    flex-grow: 1;
+
+    .Dropdown {
+        float: right;
+    }
+}
+
+.AuditItemRow:nth-child(2) {
+    font-weight: bold;
+}
+
+.AuditMore {
+    padding: 20px;
+}

@@ -1,0 +1,53 @@
+{
+    "name": "ianm/syndication",
+    "description": "Brings RSS and Atom feeds to Flarum",
+    "license": "CECILL-B",
+    "type": "flarum-extension",
+    "keywords": [
+        "flarum"
+    ],
+    "support": {
+        "issues": "https://github.com/imorland/syndication/issues",
+        "source": "https://github.com/imorland/syndication",
+        "forum": "https://discuss.flarum.org/d/27687"
+    },
+    "authors": [
+        {
+            "name": "Amaury Carrade",
+            "email": "amaury@carrade.eu",
+            "role": "Developer"
+        },
+        {
+            "name": "IanM",
+            "role": "Developer",
+            "homepage": "https://discuss.flarum.org/u/ianm"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.3.1"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Syndication",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-rss",
+                "backgroundColor": "#e28f12",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "flarum/tags"
+              ]
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/27687"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "IanM\\FlarumFeeds\\": "src/"
+        }
+    }
+}

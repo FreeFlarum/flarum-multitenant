@@ -1,0 +1,36 @@
+{
+    "name": "ziiven/money-transfer",
+    "description": "A Flarum extension. Allow user to transfer money to other users",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0",
+        "antoinefr/flarum-ext-money": "*"
+    },
+    "support": {
+        "issues": "https://github.com/Ziiven/ziven-money-transfer/issues",
+        "source": "https://github.com/Ziiven/ziven-money-transfer"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ziven\\transferMoney\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ziven"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "Ziven Money Transfer",
+            "icon": {
+                "name": "fas fa-exchange-alt",
+                "backgroundColor": "#238c59",
+                "color": "#fff"
+            }
+        }
+    }
+}

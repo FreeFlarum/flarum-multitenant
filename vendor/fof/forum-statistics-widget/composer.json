@@ -1,0 +1,53 @@
+{
+  "name": "fof/forum-statistics-widget",
+  "description": "Add a forum statistics widget to the sidenav section of your Flarum forum.",
+  "keywords": [
+    "flarum",
+    "forum",
+    "statistics",
+    "widget"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/FriendsOfFlarum/forum-statistics-widget/issues",
+    "source": "https://github.com/FriendsOfFlarum/forum-statistics-widget",
+    "forum": "https://discuss.flarum.org/d/22380"
+  },
+  "homepage": "https://friendsofflarum.org",
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://opencollective.com/fof/donate"
+    }
+  ],
+  "require": {
+      "flarum/core": "^1.2.0"
+  },
+  "authors": [
+    {
+      "name": "Christian Lopez",
+      "email": "me@ralkage.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\ForumStatisticsWidget\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Forum Statistics Widget",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-chart-bar",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/22380"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.TagDiscussionModal {
+  @media @tablet-up {
+    .Modal-header {
+      padding: 20px 20px 0; // unchanged
+
+      & h3 {
+        text-align: right;
+      }
+    }
+  }
+  .Modal-footer {
+    text-align: right;
+  }
+}
+
+@media @tablet, @desktop, @desktop-hd {
+  .TagDiscussionModal-form-submit {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+}
+.TagsInput-selected {
+  .TagsInput-tag {
+    margin-left: 5px;
+    margin-right: auto;
+
+    &:last-child {
+      margin-left: 10px;
+      margin-right: auto;
+    }
+  }
+}
+
+.SelectTagList {
+  > li {
+    &.child {
+      padding-right: 45px;
+      padding-left: 0;
+    }
+    .TagIcon {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}

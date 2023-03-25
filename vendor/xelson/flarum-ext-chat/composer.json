@@ -1,0 +1,53 @@
+{
+    "name": "xelson/flarum-ext-chat",
+    "description": "Realtime Chat for Flarum!",
+    "keywords": [
+        "chat",
+        "flarum",
+        "xelson",
+        "push-edx",
+        "Xelson"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/Xelson/flarum-ext-chat/issues",
+        "source": "https://github.com/Xelson/flarum-ext-chat",
+        "forum": "https://discuss.flarum.org/d/25361"
+    },
+    "authors": [
+        {
+            "name": "Juan"
+        },
+        {
+            "name": "Guillem Pascual",
+            "email": "blipi.tube@gmail.com",
+            "homepage": "http://pushedx.net"
+        },
+        {
+            "name": "Xelson",
+            "homepage": "https://neonsky.ru"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.0",
+        "flarum/markdown": "^1.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Neon Chat",
+            "category": "feature",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#ffaad4",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Xelson\\Chat\\": "src/"
+        }
+    }
+}

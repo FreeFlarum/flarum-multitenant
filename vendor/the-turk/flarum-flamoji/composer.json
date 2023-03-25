@@ -1,0 +1,44 @@
+{
+    "name": "the-turk/flarum-flamoji",
+    "description": "Simple emoji manager for Flarum.",
+    "keywords": [
+      "flarum",
+      "emoji",
+      "picker"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Hasan Özbey",
+        "email": "hasanoozbey@gmail.com",
+        "homepage": "https://github.com/the-turk"
+      }
+    ],
+    "support": {
+      "issues": "https://github.com/the-turk/flarum-flamoji/issues",
+      "source": "https://github.com/the-turk/flarum-flamoji"
+    },
+    "require": {
+      "flarum/core": "^1.0.2"
+    },
+    "conflict": {
+      "clarkwinkelmann/flarum-ext-emojionearea": "*"
+    },
+    "autoload": {
+      "psr-4": {
+        "TheTurk\\Flamoji\\": "src/"
+      }
+    },
+    "extra": {
+      "flarum-extension": {
+        "title": "Flamoji",
+        "category": "feature",
+        "icon": {
+          "name": "far fa-smile-wink",
+          "backgroundColor": "#b72a2a",
+          "color": "#fff"
+        }
+      }
+    }
+  }

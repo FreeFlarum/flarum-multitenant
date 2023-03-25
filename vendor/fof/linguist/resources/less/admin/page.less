@@ -1,0 +1,67 @@
+.FoF-Linguist-Filters {
+    display: flex;
+    padding-top: 10px;
+}
+
+.FoF-Linguist-Filters > .Button:not(:first-child),
+.FoF-Linguist-Filters > .ButtonGroup:not(:first-child) {
+    margin-left: 10px;
+}
+
+.ExtensionPage.fof-linguist-Page {
+    .ExtensionInfo {
+        margin-left: 0;
+        flex-grow: 1;
+
+        > ul {
+            flex-wrap: wrap;
+        }
+    }
+
+    .item-linguist-tabs {
+        margin-right: auto;
+        order: 99;
+        flex: 1 0 100%;
+
+        @media @desktop-up {
+            order: unset;
+            flex: 0 0 0;
+        }
+    }
+
+    .ExtensionPage-settings {
+        // So the dropdowns don't go out of stream on pages with no results
+        min-height: 400px;
+
+        // Allow horizontal scrolling for the table in coverage tab
+        overflow-x: auto;
+
+        // Disable Flarum's input max width on the settings page
+        input {
+            max-width: none;
+        }
+    }
+}
+
+.FoF-Linguist-Tabs {
+    // Needs specificity to override Flarum
+    .ExtensionPage .ExtensionPage-header & {
+        padding-top: 25px;
+
+        @media @desktop-up {
+            padding-top: 0;
+        }
+    }
+
+    a {
+        padding: 20px 10px;
+        border-radius: @border-radius @border-radius 0 0;
+        text-decoration: none;
+        font-size: 1.3em;
+        color: @text-color;
+
+        &.active, &:hover {
+            background: @body-bg;
+        }
+    }
+}

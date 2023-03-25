@@ -1,0 +1,40 @@
+flarum-ext-contactme:
+  settings:
+    emaillabel: Email alla quale inviare il modulo di contatto
+  admin:
+    settings:
+      emaillabel: Email alla quale inviare il modulo di contatto
+  forum:
+    title: Contattaci
+    messagesent: Messaggio inviato!
+    plsregister: Per favore effettua il login
+    tocontinue: per poter utilizzare questo modulo
+    backsoon: ti risponderemo il prima possibile
+    notloggedin: Effettua il login per utilizzare il form
+    placeholderName: Scrivi il tuo nome qui
+    emailfield: Scrivi il tuo indirizzo email
+    pageTitle: .Contattaci
+    subject: Messaggio dal modulo di contatto
+    sendForm: Invia Messaggio
+    textAreaField: Scrivi qui il tuo messaggio...
+    pText: |
+      <p>Compilando questo modulo di contatto potrete inviarci comunicazioni di carattere commerciale, partnership o semplicemente qualsiasi tipo di domanda, a cui seguirà risposta entro un massimo di 7 giorni.</p>
+      <p><strong>TRATTAMENTO DEI DATI PERSONALI</strong></p>
+      <p>(Privacy policy ai sensi dell’art. 13 del d.lgs. 196/2003)</p>
+      <p>La informiamo che i dati che fornirà al gestore del presente sito al momento della compilazione del “form contatti” (detto anche form mail) del sito stesso, saranno trattati nel rispetto delle disposizioni di cui al d.lgs. 196/2003, Codice in materia di protezione dei dati personali.
+         Il form contatti messo a disposizione sul sito ha il solo scopo di consentire ai visitatori del sito di contattare, qualora lo desiderino, il gestore del sito stesso, inviando tramite il suddetto form una email al gestore.
+         La presente informativa riguarda i dati personali inviati dall’utente visitatore al momento della compilazione del form contatti.</p>
+      <p>Ti preghiamo di seguire queste linee guida:</p>
+      <li>Non utilizzare il modulo di contatto per domande che possono essere fatte nel forum.</li>
+      <li>Non inviare più email riguardanti la stessa tematica.</li>
+  email:
+    contact:
+      subject: Nuovo messaggio dal modulo di contatto
+      body: |
+        Ciao!
+        
+        Hai ricevuto un nuovo messaggio da {username} (email: {email})
+
+        Il messaggio è il seguente:
+
+        {message}

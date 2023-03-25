@@ -1,0 +1,16 @@
+{
+  "name": "@v17development/flarum-seo",
+  "version": "0.0.0",
+  "dependencies": {
+    "flarum-webpack-config": "^0.1.0-beta.10"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "flarum": "^0.1.0-beta.16",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

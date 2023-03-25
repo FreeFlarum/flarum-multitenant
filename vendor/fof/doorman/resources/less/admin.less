@@ -1,0 +1,104 @@
+.Doorkey-container {
+
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  .Doorkeys-title,
+  .Doorkey-allowPublic {
+    margin-left: 8px;
+  }
+
+  .Doorkeys-new,
+  .Doorkeys-fieldLabels,
+  .Doorkey-allowPublic  {
+    margin-top: 20px;
+  }
+
+  .DoormanSettingsListItem {
+    margin-top:8px;
+  }
+
+  .Doorkeys-fieldLabels,
+  .DoormanSettingsListItem-inputs,
+  .Doorkeys-newInputs {
+    display: flex;
+    width: 730px;
+    align-items: center;
+    & > * {
+      flex-basis: 25%;
+      margin: 0 8px;
+    }
+  }
+
+  .DoormanSettingsListItem,
+  .Doorkeys-new {
+    display: flex;
+    align-items: center;
+  }
+
+  .Doorkey-switch {
+    margin-top: 3px;
+  }
+  .Doorkey-button {
+    margin-right: 18px;
+    width: 37px;
+  }
+  .Doorkey-badge {
+    background-color: #d83e3e;
+  }
+  .Doorkey-left {
+    margin: 0;
+  }
+
+  .Doorkey-allowPublic {
+    .LoadingIndicator {
+      width: 25px;
+    }
+  }
+}
+
+.InviteCodeModal {
+  .Modal-body {
+    padding-top: 5px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .emailListItem {
+    list-style: none;
+    background: @muted-color;
+    border-radius: @border-radius;
+
+    margin-bottom: 10px;
+
+    p {
+      display: inline-block;
+      color: @body-bg;
+        margin: 4px 0px 5px 50px;
+    }
+
+    button {
+      background: none;
+      height: 10px !important;
+      width: 10px;
+      line-height: 10px;
+      float: right;
+      margin: 5px 10px;
+      padding: 10px !important;
+
+      i {
+        bottom: 8px;
+        position: relative;
+        right: 3px;
+        color: @body-bg;
+      }
+    }
+  }
+}

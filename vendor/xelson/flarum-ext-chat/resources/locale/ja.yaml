@@ -1,0 +1,31 @@
+# https://github.com/Xelson/flarum-ext-chat/blob/master/resources/locale/en.yaml
+# f5e0899 4 days ago
+# 2020-2-3 21:29:49 +0800
+
+xelson-chat:
+  forum:
+    toolbar:
+      title: チャットする
+      enable_sounds: サウンドをオンにする
+      disable_sounds: 音を消す
+      enable_notifications: 通知をオンにする
+      disable_notifications: 通知を無効にする
+      minimize: 最小化
+      maximize: 最大化
+    chat:
+      placeholder: 言いたいことを入力してください...
+    errors:
+      unauthenticated: ログイン後にのみチャットできます
+      chatdenied: ユーザーグループにはチャットに参加する権限がありません
+      
+  admin:
+    permissions:
+      post: 送信
+      edit: 編集
+      delete: 削除
+      moderate:
+        delete: メッセージを削除
+
+    settings:
+      title: チャット設定
+      charlimit: 各メッセージの最大語長制限

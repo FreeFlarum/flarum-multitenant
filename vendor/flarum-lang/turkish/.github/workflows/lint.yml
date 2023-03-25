@@ -1,0 +1,14 @@
+name: Lint YAML
+
+on: [workflow_dispatch, push, pull_request]
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: ./.github/yaml-lint.yml

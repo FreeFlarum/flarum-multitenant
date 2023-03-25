@@ -1,0 +1,65 @@
+@import 'common';
+
+.AuditPage {
+    .ExtensionPage-header {
+        background: #684ba6;
+        color: white;
+        overflow: hidden;
+        position: relative;
+
+        h2 .badge {
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 5px;
+            padding: 4px;
+            margin-left: 10px;
+            margin-top: 4px;
+            font-size: 0.5em;
+            background: white;
+            color: #684ba6;
+        }
+
+        .AuditBanner {
+            font-size: 200px;
+            position: absolute;
+            right: -20px;
+            top: 20px;
+            color: fade(white, 20%);
+
+            @media @phone {
+                & {
+                    display: none;
+                }
+            }
+        }
+
+        .AuditUpgrade {
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-left: 40px;
+            font-size: 0.9em;
+            font-weight: normal;
+            color: white;
+
+            &:hover {
+                text-decoration: none;
+                background: white;
+                color: #684ba6;
+            }
+        }
+
+        h2,
+        .helpText,
+        ul > li,
+        ul > li > a,
+        .ExtensionInfo .item-authors a {
+            color: inherit;
+        }
+    }
+}
+
+.AuditPage .ExtensionPage-header .container,
+.AuditPageContainer {
+    max-width: 850px;
+}

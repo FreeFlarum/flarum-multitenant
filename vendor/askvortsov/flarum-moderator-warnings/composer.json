@@ -1,0 +1,40 @@
+{
+  "name": "askvortsov/flarum-moderator-warnings",
+  "description": "Moderator Warnings extension for flarum.",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/askvortsov1/flarum-moderator-warnings/issues",
+    "source": "https://github.com/askvortsov1/flarum-moderator-warnings",
+    "forum": "https://discuss.flarum.org/d/23228-moderator-warnings-extension"
+  },
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Alexander Skvortsov",
+      "email": "askvortsov@flarum.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Askvortsov\\FlarumWarnings\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Moderator Warnings",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-exclamation-circle",
+        "backgroundColor": "#6932D1",
+        "color": "#fff"
+      }
+    }
+  }
+}

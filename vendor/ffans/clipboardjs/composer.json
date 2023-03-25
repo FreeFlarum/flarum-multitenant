@@ -1,0 +1,46 @@
+{
+  "name": "ffans/clipboardjs",
+  "description": "Add a modern approach to copy code to clipboard with code language display.",
+  "keywords": [
+    "flarum",
+    "clipboardjs",
+    "code language"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Golden",
+      "email": "littlegoldenjin@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ffans/clipboardjs/issues",
+    "source": "https://github.com/ffans/clipboardjs",
+    "forum": "https://discuss.flarum.org/d/26415"
+  },
+  "homepage": "https://github.com/ffans",
+  "autoload": {
+    "psr-4": {
+      "FFans\\ClipboardJS\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FFans Clipboardjs",
+      "category": "feature",
+      "icon": {
+        "name": "far fa-clipboard",
+        "backgroundColor": "#f8504b",
+        "color": "#ffffff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/26408"
+    }
+  }
+}

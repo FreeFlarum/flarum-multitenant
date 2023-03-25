@@ -1,0 +1,27 @@
+.UiKit-ProgressBar {
+  height: 8px;
+  background: @control-bg;
+  border-radius: @border-radius;
+
+  &--mini {
+    display: inline-block;
+    width: 100px;
+    margin: 0 6px;
+  }
+
+  &--alternate {
+    background: @body-bg;
+  }
+
+  &--fancy {
+    .UiKit-ProgressBar-bar {
+      background: #65d137;
+    }
+  }
+
+  &-bar {
+    background: @control-color;
+    border-radius: @border-radius;
+    height: 100%;
+  }
+}

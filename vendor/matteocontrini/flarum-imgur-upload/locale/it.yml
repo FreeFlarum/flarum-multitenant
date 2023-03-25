@@ -1,0 +1,16 @@
+imgur-upload:
+  admin:
+    settings:
+      hide-markdown-image: Nascondi pulsante immagine Markdown
+      allow-paste: Consenti upload incollando un'immagine
+      embed-type:
+        title: Tipo di incorporamento
+        preview-with-link: Anteprima (1024px) con link all'immagine a risoluzione piena
+        preview-without-link: Anteprima senza link
+        full-with-link: Immagine a risoluzione piena con link
+        full-without-link: Immagine a risoluzione piena senza link
+  forum:
+    upload: Premi o incolla per caricare
+    loading: Caricamento...
+    done: Fatto!
+    error: Errore

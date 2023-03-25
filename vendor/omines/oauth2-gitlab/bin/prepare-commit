@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+cd $(dirname $0)/..
+
+php-cs-fixer fix
+vendor/bin/phpstan
+XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text
+
+[ ! -f "./infection.phar" ] && bin/install-infection
+./infection.phar --threads=4
+
+echo "All good, ready for commit!"

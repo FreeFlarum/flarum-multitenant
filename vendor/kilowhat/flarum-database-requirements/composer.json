@@ -1,0 +1,26 @@
+{
+    "name": "kilowhat/flarum-database-requirements",
+    "description": "Reusable code to ensure the database requirements of a Flarum extension are met",
+    "keywords": [
+        "flarum",
+        "database"
+    ],
+    "type": "library",
+    "license": "mit",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "homepage": "https://kilowhat.net/",
+            "email": "clark.winkelmann@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kilowhat\\DatabaseRequirements\\": "src/"
+        }
+    }
+}

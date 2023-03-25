@@ -1,0 +1,50 @@
+{
+    "name": "zerosonesfun/direct-links",
+    "description": "Adds some direct links and composer auto-fill capabilities.",
+    "type": "flarum-extension",
+    "keywords": ["discussion", "features", "links"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "homepage": "https://clarkwinkelmann.com/",
+            "role": "Creator"
+        },
+        {
+            "name": "Billy Wilcosky",
+            "homepage": "https://www.wilcosky.com/",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zerosonesfun/direct-links/issues",
+        "source": "https://github.com/zerosonesfun/direct-links",
+        "forum": "https://discuss.flarum.org"
+    },
+    "homepage": "https://www.wilcosky.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.wilcosky.com"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZerosOnesFun\\DirectLinks\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Direct Links",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-link",
+                "backgroundColor": "#ddd",
+                "color": "#000"
+            }
+        }
+    }
+}

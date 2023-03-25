@@ -1,0 +1,51 @@
+{
+    "name": "justoverclock/flarum-ext-welcomebox",
+    "description": "Add Welcome Box in sidenav with user avatar",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/justoverclockl/flarum-ext-welcomebox/issues",
+        "source": "https://github.com/justoverclockl/flarum-ext-welcomebox",
+        "forum": "https://discuss.flarum.org/d/27023"
+    },
+    "require": {
+        "flarum/core": "^1.3.0",
+        "afrux/forum-widgets-core": "^0.1.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer",
+            "homepage": "https://flarum.it"
+        }
+    ],
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.paypal.com/donate?hosted_button_id=25WSH565TJCLE"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\Welcomebox\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Welcomebox",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-user-tie",
+                "backgroundColor": "green",
+                "color": "white"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/27023"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "the-turk/flarum-stickiest",
+    "description": "Stick, super stick or tag stick discussions to the top of the list.",
+    "keywords": [
+      "flarum",
+      "discussion",
+      "pin",
+      "sticky",
+      "super-sticky"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Hasan Özbey",
+        "email": "hasanoozbey@gmail.com",
+        "homepage": "https://github.com/the-turk"
+      }
+    ],
+    "support": {
+        "issues": "https://github.com/the-turk/flarum-stickiest/issues",
+        "source": "https://github.com/the-turk/flarum-stickiest"
+    },
+    "require": {
+        "flarum/core": ">=1.2.0",
+        "flarum/sticky": "^1.0.0",
+        "flarum/tags": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TheTurk\\Stickiest\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Stickiest",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-thumbtack",
+                "backgroundColor": "#b72a2a",
+                "color": "#fff"
+            }
+        }
+    }
+}

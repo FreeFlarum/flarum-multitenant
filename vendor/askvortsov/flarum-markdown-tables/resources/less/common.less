@@ -1,0 +1,68 @@
+.open .TableDropdownMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.TableDropdownMenu {
+    li button {
+        display: block;
+    }
+}
+
+.Post-body table {
+    width: 98%;
+    margin: 1%;
+    overflow-x: auto;
+}
+.Post-body td, .Post-body th {
+    padding: 4px;
+    border: 1px solid @body-bg;
+    text-align: left;
+}
+.Post-body th {
+    background: @primary-color;
+    color: @body-bg;
+    font-weight: bold;
+}
+.Post-body tr {
+    background: fade(@primary-color, 20%);
+    color: @text-color;
+}
+.Post-body tr:nth-child(even) {
+    background: fade(@primary-color, 10%);
+}
+.Post-body tr:hover, .Post-body tr:hover td {
+    background-color: fade(@primary-color, 30%);
+}
+
+// @media @phone {
+//     .Post-body table, .Post-body thead, .Post-body tbody, .Post-body th, .Post-body td, .Post-body tr { 
+//         display: block; 
+//     }
+//     .Post-body thead tr { 
+//         position: absolute;
+//         top: -9999px;
+//         left: -9999px;
+//     }
+//     .Post-body tr {
+//         border: 1px solid @body-bg;
+//     }
+//     .Post-body td {
+//         border: none;
+//         border-bottom: 1px solid @body-bg;
+//         position: relative;
+//         padding-left: 50%;
+//         text-align: left !important;
+//     }
+//     .Post-body td:before {
+//         position: absolute;
+//         top: 6px;
+//         left: 6px;
+//         width: 45%; 
+//         padding-right: 10px; 
+//         white-space: nowrap;
+//         content: attr(data-label);
+//         color: @primary-color;
+//         font-weight: bold;
+//     }
+// }

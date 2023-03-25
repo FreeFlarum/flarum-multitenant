@@ -1,0 +1,41 @@
+{
+  "name": "justoverclock/flarum-ext-dontgoaway",
+  "description": "Show an Exit Intent Popup if a guest try to leave your site",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\DontGoAway\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Dontgoaway",
+      "category": "",
+      "icon": {
+        "name": "fas fa-door-open",
+        "backgroundColor": "red",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

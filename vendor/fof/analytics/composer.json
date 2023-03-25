@@ -1,0 +1,68 @@
+{
+    "name": "fof/analytics",
+    "description": "Tracks analytics using Google Analytics, Google Optimize/GTM and Matomo",
+    "keywords": [
+        "extension",
+        "flarum",
+        "analytics",
+        "google-analytics",
+        "gtm",
+        "matomo",
+        "piwik"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniël Klabbers",
+            "email": "daniel+flarum@klabbers.email",
+            "homepage": "http://hyn.io"
+        },
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        },
+        {
+            "name": "IanM",
+            "homepage": "https://discuss.flarum.org/u/ianm"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/analytics/issues",
+        "source": "https://github.com/FriendsOfFlarum/analytics",
+        "forum": "https://discuss.flarum.org/d/1983"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Analytics",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-chart-line",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/1983"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Analytics\\": "src/"
+        }
+    },
+    "replace": {
+        "flagrow/flarum-ext-analytics": "*"
+    }
+}

@@ -1,0 +1,50 @@
+.ComposerBody-flamojiContainer {
+  display: inline-block;
+  z-index: @zindex-dropdown;
+
+  .emoji-picker__wrapper {
+    z-index: inherit;
+  }
+
+  .emoji-picker {
+    --background-color: @body-bg;
+    --hover-color: darken(fadein(@control-bg, 5%), 5%);
+    --category-button-color: @muted-more-color;
+    --category-button-active-color: @primary-color;
+    --secondary-text-color: @muted-color;
+    --text-color: @text-color;
+    --border-color: @control-bg;
+    --search-focus-border-color: @primary-color;
+    --search-icon-color: @muted-color;
+    --font: inherit;
+    --font-size: 14px;
+    border-radius: @border-radius;
+    line-height: normal;
+    .box-shadow(0 2px 6px @shadow-color);
+
+    h2.emoji-picker__category-name {
+      text-transform: none;
+    }
+
+    input.emoji-picker__search {
+      background-color: @control-bg;
+      color: @control-color;
+      font-size: 13px;
+
+      &:focus {
+        border: 2px solid @primary-color;
+        color: @text-color;
+      }
+    }
+
+    div.emoji-picker__search-not-found h2 {
+      margin: 1.25em 0;
+    }
+  }
+}
+
+span.flamoji img {
+  height: 1.5em;
+  margin: 0 0.1em;
+  vertical-align: -0.3em;
+}

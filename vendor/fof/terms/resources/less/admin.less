@@ -1,0 +1,64 @@
+.FoF-Terms-Policies-Container {
+    border-radius: @border-radius;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.FoF-Terms-Policiy-Box {
+    position: relative;
+    padding: 10px 0 10px 50px;
+    margin: 10px 0;
+    border-left: 5px solid #eee;
+
+    .FormControl {
+        // Use same background color as :active, otherwise we can't see it against the policy body background
+        background-color: @body-bg;
+    }
+}
+
+.FoF-Terms-Policiy-Header {
+    text-align: left;
+    display: flex;
+}
+
+.FoF-Terms-Policiy-Header-Title {
+    flex-grow: 1;
+}
+
+.FoF-Terms-Policiy-Box--handle {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    cursor: move;
+    color: @muted-color;
+    font-size: 20px;
+}
+
+.FoF-Terms-Policiy-Body {
+    background-color: @control-bg;
+    padding: 10px;
+}
+
+.FoF-Terms-Export-Button {
+    .Button--color(@body-bg, #999);
+
+    font-weight: bold;
+}
+
+.FoF-Terms-Input-Group {
+    display: flex;
+
+    input {
+        flex-grow: 1;
+    }
+}
+
+.fof-terms-Page .ExtensionPage-settings .container {
+    // Constraint our whole settings area to not be too wide
+    max-width: 600px;
+
+    input {
+        // Cancel Flarum default constraint which only applies to inputs and not paragraphs/textareas
+        max-width: none;
+    }
+}

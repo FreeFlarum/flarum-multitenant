@@ -1,0 +1,42 @@
+{
+  "name": "justoverclock/flarum-ext-infocards",
+  "description": "Display 3 infocards with forum stats",
+  "keywords": [
+    "flarum", "infocards", "statistics"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer",
+      "homepage": "https://flarum.it"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\Infocards\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Infocards",
+      "category": "",
+      "icon": {
+        "name": "far fa-address-card",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

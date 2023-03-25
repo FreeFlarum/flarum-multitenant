@@ -1,0 +1,29 @@
+{
+  "name": "irmmr/flarum-ext-rtl",
+  "type": "flarum-extension",
+  "keywords": ["RTL", "flarum-rtl", "flarum"],
+  "description": "A collection of Right-to-Left (rtl) direction support for \"Flarum\" core and extensions.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "irmmr",
+      "email": "irmmr.ir@gmail.com"
+    }
+  ],
+  "require": {
+    "flarum/core": "^v1.1.1"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x.x-dev"
+    },
+    "flarum-extension": {
+      "title": "RTL Support",
+      "icon": {
+        "name": "fas fa-directions",
+        "backgroundColor": "#192a56",
+        "color": "#fff"
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+
+.transferMoneyButton--gray {background-color:#ddd;color:var(--button-color);padding-left:20px;padding-right:20px;}
+.transferMoneyButton--gray:focus {background-color:#ddd;color:var(--button-color)}
+.transferMoneyButton--gray:hover {background-color:#c6c6c6;}
+.transferMoneyButton--gray:active {background-color:#c6c6c6;}
+.transferMoneyButton--gray:disabled {background-color:#eee;}
+
+#avatarClone{
+    right:-7px;
+    .username{
+        display:none;
+    }
+}
+
+.clientCustomizeTransferMoneyButtonContainer{
+    position: absolute;
+    left: 45px;
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color: var(--header-color);
+}
+
+.clientCustomizeTransferMoneyHeaderText{
+    max-width: 141px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0px 6px 0px 10px;
+    display: inline-block;
+}
+
+.clientCustomizeTransferMoneyHeaderItems{
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.clientCustomizeTransferMoneyHeaderTansferMoney{ 
+    background: rgba(255,255,255,.15);
+    border-radius: 14px;
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-left: 8px;
+}
+
+.clientCustomizeTransferMoneyHeaderIcon{
+    display: inline-block;
+    background: orange;
+    padding: 4px;
+    border-radius: 14px;
+    width: 34px;
+    text-align: center;
+}
+
+.clientCustomizeTransferMoneyHeaderUser{
+    margin-left: 2px;
+}
+
+.clientCustomizeTransferMoneyHeaderTotalMoney{
+    background: rgba(255,255,255,.15);
+    border-radius: 14px;
+    font-size: 12px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.transferHistoryUser {
+	.Avatar {
+	  .Avatar--size(24px);
+	  vertical-align: middle;
+	  margin-right: 5px;
+	}
+}
+
+.transferHistoryContainer {
+  border: 1px dotted var(--control-color);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.transferSearchUserContainer{
+    display:inline-block;
+    padding-right: 10px;
+    cursor: pointer;
+    padding-bottom:10px;
+}
+
+.transferSearchUser{
+    .Avatar {
+      .Avatar--size(24px);
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+}
+
+.TransferMoneyModal-form {
+    .RecipientsInput-selected {
+        margin-bottom: 10px;
+    }
+
+    .Search-results {
+        position: relative;
+        display: block;
+        max-height: 70vh;
+        overflow: auto;
+        left: 0;
+        right: 0;
+
+        > li > a {
+            white-space: normal;
+        }
+
+        .SearchResult .Avatar {
+            .Avatar--size(24px);
+            margin: -2px 10px -2px 0;
+        }
+
+        mark {
+            background: none;
+            padding: 0;
+            font-weight: bold;
+            color: inherit;
+            box-shadow: none;
+        }
+    }
+
+    .RecipientsInput {
+        overflow: hidden;
+    }
+}
+
+.AddRecipientModal {
+    &-form-input {
+        input.RecipientsInput {
+            width: 100% !important;
+        }
+
+        ul.Search-results.fade:not(.in) {
+            display: none;
+        }
+    }
+
+    &-form-submit {
+        margin-top: 1em;
+
+        .Button--cancel.hasIcon {
+            .Button-icon {
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    label[for^="byobu-addrecipient-search-input"] {
+        color: @control-color;
+        display: block;
+        margin-bottom: 4px;
+        margin-top: 1.5em;
+    }
+
+    .Button--cancel {
+        margin-left: 8px;
+    }
+}

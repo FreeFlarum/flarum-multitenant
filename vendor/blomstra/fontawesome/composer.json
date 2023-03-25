@@ -1,0 +1,64 @@
+{
+    "name": "blomstra/fontawesome",
+    "description": "Upgrade Font Awesome on your forum to version 6 (Free or Pro)",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "homepage": "https://blomstra.net",
+    "support": {
+        "issues": "https://github.com/blomstra/flarum-ext-fontawesome/issues",
+        "source": "https://github.com/blomstra/flarum-ext-fontawesome",
+        "forum": "https://discuss.flarum.org/d/31219-blomstra-font-awesome-6"
+    },
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "Team Blomstra",
+            "email": "development@blomstra.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Blomstra\\FontAwesome\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Font Awesome 6",
+            "category": "feature",
+            "icon": {
+                "name": "fab fa-font-awesome-flag",
+                "color": "#3a98d0",
+                "backgroundColor": "#ebf1fd"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        },
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

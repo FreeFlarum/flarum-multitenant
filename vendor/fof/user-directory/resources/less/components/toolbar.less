@@ -1,0 +1,96 @@
+.User--directory .IndexPage-toolbar {
+    @media @phone {
+        display: flex;
+        flex-direction: column;
+
+        .IndexPage-toolbar-view,
+        .IndexPage-toolbar-action {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .IndexPage-toolbar-view {
+            flex-wrap: wrap-reverse;
+            margin-bottom: 5px;
+
+            & > li {
+                margin-right: 0;
+            }
+        }
+
+        .IndexPage-toolbar-action {
+            & > li {
+                margin-left: 0;
+            }
+            li.item-refresh {
+                margin-left: auto;
+            }
+        }
+    }
+    @media screen and (max-width: 370px) {
+        .IndexPage-toolbar-view {
+            & > li {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.item-filterGroups {
+    margin-left: 15px;
+
+    @media screen and (max-width: 370px) {
+        margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 320px) {
+        margin-left: 0;
+    }
+
+    @media @phone {
+        margin-left: auto;
+    }
+
+    .ButtonGroup {
+        button {
+            @media @phone {
+                padding-top: 4px;
+            }
+        }
+    }
+
+    .GroupFilterButton {
+        display: flex;
+
+        .Button-label {
+            width: 100%;
+        }
+        .ButtonCheck {
+            margin-left: 10px;
+        }
+    }
+}
+
+.item-search {
+    vertical-align: bottom;
+
+    @media @phone {
+        margin-top: 5px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+@media @tablet-up {
+    .IndexPage-toolbar-action {
+        .item-clarkwinkelmann-mailing {
+            .Button {
+                & > .Button-icon {
+                    margin-right: 0;
+                }
+                & > .Button-label {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+ziven-transfer-money:
+  forum:
+    transfer-list-load-more: 读取更多
+    transfer-list-empty: 没有找到转账记录
+    transfer-list-id: ID
+    transfer-list-type: 类型
+    transfer-list-from-user: 转账用户
+    transfer-list-target-user: 目标用户
+    transfer-list-assign-at: 转账日期
+    transfer-list-transfer-amount: 转账金额
+    transfer-list-transfer-notes: 附言
+    transfer-list-transfer-notes-none: 无
+    transfer-money: 转账
+    transfer-money-to-user: 转账给用户（点击移除已添加用户）
+    transfer-money-no-user-selected: 还未添加用户
+    transfer-money-search-user: 添加用户
+    transfer-money-success: 转账成功
+    transfer-money-history: 转账历史
+    transfer-money-to: "向 {username} 转账"
+    transfer-money-in: 转入
+    transfer-money-out: 转出
+    transfer-money-notes: 附言（选填）
+    transfer-money-search-user-placeholder: 请输入用户名（至少前3位）
+    transfer-money-search-user-empty: 没有找到用户
+    transfer-money-input-placeholder: 请输入转账金额
+    transfered-money-to: "转了{money}给"
+    current-money-amount: 当前拥有：
+    need-money-amount: 总共需要：
+    search_user_header: 用户
+    ok: 确定
+    cancel: 取消
+    transfer-error: 转账错误
+    transfer-error-no-permission: 您没有权限
+    transfer-error-insufficient-fund: 您的资金不足
+    transfer-error-no-target-user-selected: 请选择转账的目标用户
+    receive-transfer-from-user: 收到其他用户转账
+    notifications:
+      user-transfer-money-to-you: "{username} 向您转账"
+      user-transfer-money-details: "向您支付 {cost}，转账ID：{id}"
+  admin:
+    transfer-money-timezone: 时区设置
+    transfer-money-timezone-help: 设置时区。默认为 "Asia/Shanghai"
+    transfer-money-timezone-default: Asia/Shanghai
+    transfer-money-client-customization: 客户定制功能
+    transfer-money-client-customization-help: 为客户定制的专属功能。其他用户激活可能会出现未知错误。
+    permission:
+      allow_use_transfer_money: 允许使用转账

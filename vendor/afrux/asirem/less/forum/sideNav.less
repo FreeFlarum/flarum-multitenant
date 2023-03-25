@@ -1,0 +1,77 @@
+.sideNavOffset, .sideNav > ul {
+  margin-top: 0;
+}
+
+.AfruxWidgets-sideNavAlt {
+  padding-top: 0;
+}
+
+@media @desktop-up {
+  .sideNav {
+    .Dropdown--select .Dropdown-menu {
+      > li {
+        margin: 2px 0;
+
+        > a {
+          --icon-size: 30px;
+          padding: 6px;
+          display: grid;
+          grid-template-columns: var(--icon-size) 1fr;
+          align-items: center;
+          border-radius: 25px;
+          transition: background-color 0.4s, color 0.4s;
+          font-size: 14px;
+          grid-gap: 10px;
+
+          .Button-icon {
+            .asirem-icon-block(var(--icon-size));
+            float: none;
+            margin: 0;
+            border-radius: 100%;
+            transition: background-color 0.4s;
+          }
+
+          .Button-label {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        &.active {
+          > a {
+            background-color: @primary-bg;
+
+            .Button-icon {
+              background-color: @body-bg;
+            }
+          }
+        }
+
+        &:hover {
+          > a {
+            background-color: @control-bg;
+            color: @text-color;
+
+            .Button-icon {
+              background-color: @body-bg;
+            }
+          }
+        }
+      }
+      > li[class^="item-tag"]:not(.item-tags) a {
+        font-size: 13px;
+
+        .icon {
+          --size: 24px;
+        }
+      }
+      > .Dropdown-separator {
+        margin: 12px 0;
+      }
+    }
+  }
+
+  .sideNavContainer {
+    margin-top: 30px;
+  }
+}

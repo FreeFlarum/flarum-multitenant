@@ -1,0 +1,51 @@
+// --pane-width
+// right: calc(~"-6px - var(--pane-width)");
+
+@media @tablet-up {
+  .DiscussionPage-nav {
+    float: left;
+  }
+}
+
+@media @tablet-up {
+  .DiscussionPage-stream {
+    margin-left: 225px;
+    margin-right: auto;
+  }
+}
+
+@media @tablet-up {
+  .DiscussionPage-list {
+    right: -406px;
+    transition: right 0.2s !important;
+
+    .paneShowing & {
+      right: 0;
+      left: auto;
+    }
+    .DiscussionListItem-content {
+      padding-right: 52px + 15px;
+      padding-left: 65px + 15px;
+    }
+    .DiscussionListItem-relevantPosts {
+      margin-right: -52px;
+      margin-left: -65px;
+    }
+  }
+}
+
+@media @desktop-hd {
+  .DiscussionPage-list {
+    .panePinned & {
+      right: 0;
+      left: auto;
+    }
+  }
+  // When the pane is pinned, move the other page content inwards
+  .App-content, .App-footer {
+    .hasPane.panePinned & {
+      margin-right: @pane-width;
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.ExtensionPage {
+  &-customFlamoji {
+    > .container {
+      overflow-x: auto;
+      padding-bottom: 25vh;
+    }
+
+    &-header {
+      background: @control-bg;
+      margin: 20px 0 20px;
+      padding: 5px 0;
+
+      .ExtensionTitle {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0 15px;
+      }
+
+      h2 {
+        color: @muted-color;
+
+        span {
+          font-size: 13px;
+          color: @muted-color;
+          font-weight: normal;
+        }
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        > li {
+          display: inline;
+          color: @muted-color;
+          margin-left: 13px;
+
+          > .icon {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      &TopItems {
+        margin-left: auto;
+      }
+
+      @media (max-width: @screen-phone-max) {
+        &TopItems {
+          float: right;
+          position: relative;
+        }
+      }
+    }
+  }
+}

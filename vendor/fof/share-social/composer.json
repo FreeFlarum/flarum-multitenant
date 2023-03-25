@@ -1,0 +1,53 @@
+{
+    "name": "fof/share-social",
+    "description": "Add a button to share discussions through social networks",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/share-social/issues",
+        "source": "https://github.com/FriendsOfFlarum/share-social",
+        "forum": "https://discuss.flarum.org/d/20401"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "replace": {
+        "avatar4eg/flarum-ext-share-social": "*"
+    },
+    "authors": [
+        {
+            "name": "David Sevilla Martín",
+            "email": "me+fof@datitisev.me",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FoF\\ShareSocial\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Share Social",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-share-alt",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/20401"
+        }
+    }
+}

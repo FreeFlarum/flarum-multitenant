@@ -1,0 +1,144 @@
+.PermissionsPage {
+  &-groups {
+    padding: 0;
+    overflow: visible;
+  }
+
+  &-permissions {
+    overflow: unset;
+    padding-bottom: 30px;
+
+    &-overflow {
+      overflow: auto;
+      padding-bottom: 200px;
+      max-height: 85vh;
+    }
+  }
+}
+
+.Group {
+  padding: 15px 15px 10px;
+  width: unset;
+  min-width: 90px;
+  margin-right: 5px;
+  .asirem-border-radius(~'.Group-icon');
+
+  &, .Button-label {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--add {
+    margin: 0;
+  }
+
+  &--add &-icon {
+    margin: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  &-icon {
+    .asirem-icon-block(60px, false);
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, 19%), transparent);
+  }
+
+  &-icon .icon, & &-icon {
+    font-size: 18px;
+  }
+
+  .icon.fa-caret-down {
+    display: none;
+  }
+}
+
+.PermissionGrid td, .PermissionGrid th {
+  background: @body-bg;
+  padding: 10px 15px;
+}
+
+.PermissionGrid {
+  border-collapse: separate;
+  border-spacing: 0 1px;
+  min-width: 100%;
+
+  &-section {
+    td, th {
+      background: @control-bg-light;
+    }
+  }
+
+  td {
+    padding: 0;
+
+    .Button {
+      padding: 10px 15px;
+      height: auto;
+      border: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      border-radius: 0;
+    }
+  }
+
+  tbody .Button .Badge {
+    margin: 0;
+  }
+
+  tbody .Button-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  thead {
+    td:first-child {
+      border-top-left-radius: 14px;
+    }
+    th:last-child {
+      border-top-right-radius: 14px;
+    }
+  }
+  tbody:last-child {
+    tr:last-child {
+      th:first-child {
+        border-bottom-left-radius: 14px;
+      }
+      td:last-child {
+        border-bottom-right-radius: 14px;
+      }
+    }
+  }
+
+  thead td:first-child, tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-image: linear-gradient(to left, rgba(0,0,0,.1), transparent 3%);
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-image: linear-gradient(to top, rgba(0,0,0,.07), transparent 13%);
+  }
+}
+
+.Asirem-PermissionsPage-scopes {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 14px;
+  margin-bottom: 15px;
+
+  &-controls {
+    margin-left: auto;
+
+    .Button {
+      margin-left: 4px;
+    }
+  }
+}

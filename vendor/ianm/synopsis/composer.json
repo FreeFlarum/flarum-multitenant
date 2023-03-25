@@ -1,0 +1,75 @@
+{
+    "name": "ianm/synopsis",
+    "description": "Show summary excerpts on discussion lists.",
+    "type": "flarum-extension",
+    "keywords": [
+        "flarum",
+        "discussion",
+        "summary",
+        "summaries",
+        "excerpt",
+        "excerpts",
+        "synopsis"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IanM",
+            "homepage": "https://discuss.flarum.org/u/ianm"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/imorland/synopsis/issues",
+        "source": "https://github.com/imorland/synopsis",
+        "forum": "https://discuss.flarum.org/d/25772"
+    },
+    "require": {
+        "flarum/core": "^1.2.0",
+        "flarum/tags": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "IanM\\Synopsis\\": "src/"
+        }
+    },
+    "conflict": {
+        "jordanjay29/flarum-ext-summaries": "*"
+    },
+    "extra": {
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/25772"
+        },
+        "flarum-extension": {
+            "title": "Synopsis",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-comment-dots",
+                "backgroundColor": "#0072e3",
+                "color": "#fff"
+            }
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "require-dev": {
+      "flarum/core": "*@dev",
+      "flarum/testing": "^1.0.0",
+      "symfony/var-dumper": "*"
+    },
+    "config": {
+      "sort-packages": true
+    }
+}

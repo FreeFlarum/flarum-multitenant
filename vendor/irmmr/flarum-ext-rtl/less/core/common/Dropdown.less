@@ -1,0 +1,38 @@
+.Dropdown-menu {
+  right: 0;
+  left: auto;
+
+  > li {
+    > a, > button, > span {
+      &.hasIcon {
+        padding-right: 40px;
+        padding-left: 0;
+      }
+
+      .Button-icon {
+        float: right;
+        margin-right: -25px;
+        margin-left: auto;
+      }
+    }
+  }
+}
+.Dropdown-menu--right {
+  right: auto;
+  left: 0;
+}
+
+@media @phone {
+  > li {
+    > a, > button {
+      &.hasIcon {
+        padding-right: 50px;
+        padding-left: 0;
+      }
+      .Button-icon {
+        margin-right: -30px;
+        margin-left: auto;
+      }
+    }
+  }
+}

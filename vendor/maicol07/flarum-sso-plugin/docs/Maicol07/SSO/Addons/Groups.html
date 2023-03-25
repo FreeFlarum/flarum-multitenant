@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="index, follow, all" name="robots"/>
+    <title>Maicol07\SSO\Addons\Groups | Flarum SSO PHP Plugin API Docs</title>
+
+    <link href="../../../assets/app.min.css" rel="stylesheet" type="text/css">
+    <script src="../../../assets/app.min.js"></script>
+    <script src="../../../sami.js"></script>
+    <meta content="width" name="MobileOptimized">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+
+
+</head>
+
+<body data-name="class:Maicol07_SSO_Addons_Groups" data-root-path="../../../" id="class">
+<div id="content">
+    <nav class="navbar navbar-expand-lg" id="flarum-header">
+        <h1 class="flarum-title navbar-brand"></h1>
+
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"><a class="nav-link" href="https://flarum.org">Flarum</a></li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://discuss.flarum.org/d/21666-php-and-wordpress-single-sign-on-sso"
+                                        target="_blank">Thread</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://docs.maicol07.it/en/flarum-sso/plugins/php"
+                                        target="_blank">Docs</a></li>
+                <li class="nav-item"><a class="nav-link icon icon-github-circled"
+                                        href="https://github.com/maicol07/flarum-sso-php-plugin"
+                                        target="_blank"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div id="left-column">
+            <div id="control-panel">
+                <script>
+                    $('option[data-version="' + window.projectVersion + '"]').prop('selected', true);
+                </script>
+                <form action="../../../search.html" id="search-form" method="GET">
+                    <span class="icon icon-search"></span>
+                    <input class="typeahead form-control" name="search" placeholder="Search" type="search">
+                </form>
+            </div>
+
+            <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+            <nav class="navbar navbar-expand" id="site-nav" role="navigation">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../classes.html">Classes</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="../../../namespaces.html">Namespaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../interfaces.html">Interfaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../traits.html">Traits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../doc-index.html">Index</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../search.html">Search</a></li>
+                </ul>
+            </nav>
+
+            <div id="page-content">
+
+                <div class="page-header">
+                    <h1>
+                        Groups
+
+                        &nbsp;
+                        <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php"
+                           target="_blank">
+                            <img alt="See the code on Github" height="30" src="../../../assets/img/code.svg"/>
+                        </a>
+
+                    </h1>
+                </div>
+
+                <p> class
+                    <strong>Groups</strong> extends <a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                            title="Maicol07\SSO\Addons\Core">Core</abbr></a></p>
+
+
+                <h2>Properties</h2>
+
+                <table class="table table-condensed">
+                    <tr>
+                        <td class="type" id="property_hooks">
+                            protected
+                        </td>
+                        <td>$hooks</td>
+                        <td class="last"></td>
+                        <td><small>from&nbsp;<a href="../../../Maicol07/SSO/Addons/Core.html#property_hooks"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></td>
+                        <td width="24px"><a
+                                href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L15"
+                                target="_blank">
+                            <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="type" id="property_actions">
+                            protected
+                        </td>
+                        <td>$actions</td>
+                        <td class="last"></td>
+                        <td></td>
+                        <td width="24px"><a
+                                href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L12"
+                                target="_blank">
+                            <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="type" id="property_filters">
+                            protected
+                        </td>
+                        <td>$filters</td>
+                        <td class="last"></td>
+                        <td><small>from&nbsp;<a href="../../../Maicol07/SSO/Addons/Core.html#property_filters"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></td>
+                        <td width="24px"><a
+                                href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L21"
+                                target="_blank">
+                            <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="type" id="property_required">
+                            protected
+                        </td>
+                        <td>$required</td>
+                        <td class="last"></td>
+                        <td><small>from&nbsp;<a href="../../../Maicol07/SSO/Addons/Core.html#property_required"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></td>
+                        <td width="24px"><a
+                                href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L24"
+                                target="_blank">
+                            <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="type" id="property_flarum">
+                            protected
+                        </td>
+                        <td>$flarum</td>
+                        <td class="last"></td>
+                        <td><small>from&nbsp;<a href="../../../Maicol07/SSO/Addons/Core.html#property_flarum"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></td>
+                        <td width="24px"><a
+                                href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L27"
+                                target="_blank">
+                            <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                        </a>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <h2>Methods</h2>
+
+                <div class="container-fluid underlined">
+                    <div class="row">
+                        <div class="col-md-2 type">
+
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method___construct">__construct</a>(<abbr title="Hooks\Hooks">Hooks</abbr> $hooks,
+                            <a href="../../../Maicol07/SSO/Flarum.html"><abbr title="Maicol07\SSO\Flarum">Flarum</abbr></a>
+                            $flarum)
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"><small>from&nbsp;<a
+                                href="../../../Maicol07/SSO/Addons/Core.html#method___construct"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L29"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            <a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_load">load</a>()
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"><small>from&nbsp;<a
+                                href="../../../Maicol07/SSO/Addons/Core.html#method_load"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L41"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            <a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_unload">unload</a>()
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"><small>from&nbsp;<a
+                                href="../../../Maicol07/SSO/Addons/Core.html#method_unload"><abbr
+                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></small></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L80"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+                            void
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_setGroups">setGroups</a>()
+
+                            <p>Sets groups to a user</p></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L21"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 type">
+
+                        </div>
+                        <div class="col-md-6 type">
+                            <a href="#method_createGroup">createGroup</a>(string $group)
+
+                            <p class="no-description">No description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 text-right" style="padding-right: 5px;">
+                            <a href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/Addons/Groups.php#L73"
+                               target="_blank">
+                                <img alt="See the code on Github" height="18" src="../../../assets/img/code.svg"/>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2>Details</h2>
+
+                <div id="method-details">
+                    <div class="method-item">
+                        <h3 id="method___construct">
+                            <div class="location">
+                                in <a href="../../../Maicol07/SSO/Addons/Core.html#method___construct"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Addons/Core.php#L29"
+                                    target="_blank">
+                                line 29
+                            </a>
+                            </div>
+                            <code>
+                                <strong>__construct</strong>(<abbr title="Hooks\Hooks">Hooks</abbr> $hooks, <a
+                                    href="../../../Maicol07/SSO/Flarum.html"><abbr
+                                    title="Maicol07\SSO\Flarum">Flarum</abbr></a> $flarum)
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+                                <h4>Parameters</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td><abbr title="Hooks\Hooks">Hooks</abbr></td>
+                                        <td>$hooks</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../../../Maicol07/SSO/Flarum.html"><abbr
+                                                title="Maicol07\SSO\Flarum">Flarum</abbr></a></td>
+                                        <td>$flarum</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_load">
+                            <div class="location">
+                                in <a href="../../../Maicol07/SSO/Addons/Core.html#method_load"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Addons/Core.php#L41"
+                                    target="_blank">
+                                line 41
+                            </a>
+                            </div>
+                            <code> <a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                                <strong>load</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td><a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_unload">
+                            <div class="location">
+                                in <a href="../../../Maicol07/SSO/Addons/Core.html#method_unload"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Addons/Core.php#L80"
+                                    target="_blank">
+                                line 80
+                            </a>
+                            </div>
+                            <code> <a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                                    title="Maicol07\SSO\Addons\Core">Core</abbr></a>
+                                <strong>unload</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td><a href="../../../Maicol07/SSO/Addons/Core.html"><abbr
+                                                title="Maicol07\SSO\Addons\Core">Core</abbr></a></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_setGroups">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Addons/Groups.php#L21"
+                                    target="_blank">
+                                line 21
+                            </a>
+                            </div>
+                            <code> void
+                                <strong>setGroups</strong>()
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="method-description">
+                                <p>Sets groups to a user</p></div>
+                            <div class="tags">
+
+                                <h4>Return Value</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>void</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="method-item">
+                        <h3 id="method_createGroup">
+                            <div class="location">
+                                at <a
+                                    href="https://github.com/maicol07/flarum-sso-php-plugin/blob/master/src/SSO/Addons/Groups.php#L73"
+                                    target="_blank">
+                                line 73
+                            </a>
+                            </div>
+                            <code>
+                                <strong>createGroup</strong>(string $group)
+                            </code>
+                        </h3>
+                        <div class="details">
+
+
+                            <div class="tags">
+                                <h4>Parameters</h4>
+
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>string</td>
+                                        <td>$group</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="footer">
+                <p>Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and
+                    fork of
+                    Sami</a>.</p>
+                <p>Created by <a href="https://github.com/datitisev">@datitisev</a>. Modified by <a
+                        href="https://maicol07.it">@maicol07</a>
+                    (<a href="https://github.com/maicol07">Github</a>). Source code can be found on <a
+                            href="https://github.com/maicol07/flarum-sso-php-plugin">GitHub</a>.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+v17development-flarum-seo:
+  forum:
+    profile_title: "{username} kullanıcısının profili"
+    profile_description: "{username} kullanıcısının profili | {discussion_count} tartışmalar | {comment_count} gönderiler"

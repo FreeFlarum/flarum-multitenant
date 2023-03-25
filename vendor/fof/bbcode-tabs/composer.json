@@ -1,0 +1,50 @@
+{
+  "name": "fof/bbcode-tabs",
+  "description": "Add tabs to your posts by using BBCode tags",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/FriendsOfFlarum/bbcode-tabs/issues",
+    "source": "https://github.com/FriendsOfFlarum/bbcode-tabs",
+    "forum": "https://discuss.flarum.org/d/21033"
+  },
+  "homepage": "https://friendsofflarum.org",
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://opencollective.com/fof/donate"
+    }
+  ],
+  "require": {
+    "flarum/core": "^1.2.0"
+  },
+  "authors": [
+    {
+      "name": "David Sevilla Martin",
+      "email": "me@datitisev.me",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\BBCodeTabs\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF BBCode Tabs",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-border-none",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/21033"
+    }
+  }
+}

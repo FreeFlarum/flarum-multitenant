@@ -1,0 +1,40 @@
+{
+    "name": "justoverclock/christmas-snow-effect",
+    "description": "It&#39;s christmas time also for Flarum!",
+    "keywords": [
+        "christmas",
+        "snow",
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justoverclock\\ChristmasSnowEffect\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Christmas Time!",
+            "category": "",
+            "icon": {
+                "name": "fas fa-tree",
+                "backgroundColor": "red",
+                "color": "green"
+            }
+        }
+    }
+}

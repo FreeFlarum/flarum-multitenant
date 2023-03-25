@@ -1,0 +1,33 @@
+{
+    "name": "dem13n/discussion-cards",
+    "description": "Output of discussions in form of cards",
+    "type": "flarum-extension",
+    "keywords": ["discussion"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dem13n",
+            "email": "idem13n@gmail.com"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.0",
+        "flarum/tags": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dem13n\\Discussion\\Cards\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Discussion Сards",
+            "category": "discussion",
+            "icon": {
+                "name": "fas fa-border-all",
+                "backgroundColor": "#2B6205",
+                "color": "#fff"
+            }
+        }
+    }
+}

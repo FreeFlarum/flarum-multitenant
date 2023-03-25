@@ -1,0 +1,54 @@
+{
+    "authors": [
+        {
+            "email": "maicolbattistini@live.it",
+            "homepage": "https://maicol07.it",
+            "name": "Maicol Battistini"
+        },
+        {
+            "email": "daniel+flarum@klabbers.email",
+            "homepage": "http://hyn.io",
+            "name": "Daniël Klabbers"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Maicol07\\Flarum\\Api\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Maicol07\\Flarum\\Api\\Tests\\": "tests"
+        }
+    },
+    "description": "Standalone package for calling the API of a Flarum installation.",
+    "keywords": [
+        "api",
+        "flarum",
+        "flagrow",
+        "maicol07",
+        "client"
+    ],
+    "license": "MIT",
+    "name": "maicol07/flarum-api-client",
+    "require": {
+        "php": ">=7.3|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7",
+        "illuminate/cache": "^6|^8|^9",
+        "illuminate/support": "^6|^8|^9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "roave/security-advisories": "dev-master",
+        "vlucas/phpdotenv": "^5",
+        "phpoption/phpoption": "^1"
+    },
+    "suggest": {
+        "vlucas/phpdotenv": "Required for running tests with Laravel 6 (^3.3) or Laravel 7 (^4). If you use Laravel 8 this package is already installed"
+    },
+    "support": {
+        "issues": "https://github.com/maicol07/flarum-api-client/issues",
+        "source": "https://github.com/maicol07/flarum-api-client"
+    }
+}

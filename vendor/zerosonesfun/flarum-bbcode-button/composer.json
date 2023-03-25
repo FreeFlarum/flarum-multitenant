@@ -1,0 +1,47 @@
+{
+    "name": "zerosonesfun/flarum-bbcode-button",
+    "description": "Adds custom BBCode buttons to the composer toolbar.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Billy Wilcosky",
+            "email": "billy@wilcosky.com",
+            "role": "Creator"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zerosonesfun/flarum-bbcode-button/issues",
+        "source": "https://github.com/zerosonesfun/flarum-bbcode-button",
+        "forum": "https://discuss.flarum.org/d/29425-bbcode-button"
+    },
+    "homepage": "https://www.wilcosky.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.wilcosky.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZerosOnesFun\\BBcodeButton\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "BBCode Button",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-magic",
+                "backgroundColor": "#ddd",
+                "color": "#000"
+            }
+        }
+    }
+}

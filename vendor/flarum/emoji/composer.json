@@ -1,0 +1,62 @@
+{
+    "name": "flarum/emoji",
+    "description": "Convert text and unicode emoji into Twemoji.",
+    "type": "flarum-extension",
+    "keywords": [
+        "formatting"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/flarum/framework/issues",
+        "source": "https://github.com/flarum/emoji",
+        "forum": "https://discuss.flarum.org"
+    },
+    "homepage": "https://flarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://flarum.org/donate/"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.7"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Emoji",
+            "category": "feature",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#FECC4D"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

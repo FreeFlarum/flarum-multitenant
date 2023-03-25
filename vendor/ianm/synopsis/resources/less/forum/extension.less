@@ -1,0 +1,43 @@
+.DiscussionListItem-info .item-excerpt {
+  margin-top: 8px;
+  margin-right: 20px;
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: @muted-more-color;
+  display: block;
+
+  // Fallback for `inert` HTML attribute
+  // Prevents interactivity with items within the excerpt
+  pointer-events: none;
+
+  * {
+    max-width: 100%
+  }
+
+  .DiscussionPage-list & {
+    display: none;
+  }
+
+  @media @phone {
+    display: none;
+  }
+}
+
+.DiscussionListItem-info .item-excerptM {
+  margin-top: 8px;
+  margin-right: 20px;
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: @muted-more-color;
+  display: block;
+
+  * {
+    max-width: 100%
+  }
+
+  .DiscussionPage-list & {
+    display: none;
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "name": "blomstra/welcome-login",
+    "description": "Add signup and login buttons to the WelcomeHero banner",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "homepage": "https://blomstra.net",
+    "support": {
+        "issues": "https://github.com/blomstra/flarum-ext-welcome-login/issues",
+        "source": "https://github.com/blomstra/flarum-ext-welcome-login"
+    },
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "Team Blomstra",
+            "email": "development@blomstra.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Blomstra\\MobileLogin\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Welcome Login",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-user",
+                "backgroundColor": "#EBF1FD",
+                "color": "#3a98d0"
+            }
+        }
+    }
+}

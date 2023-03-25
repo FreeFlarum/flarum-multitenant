@@ -1,0 +1,117 @@
+fof-oauth:
+  admin:
+    # This is used by extensions which extend fof/oauth to add additional providers
+    configure_button_label: Configure with FoF OAuth
+    settings_accessibility_label: "{name} settings"
+
+    settings:
+      only_icons_label: Only show the Log In Button icons (alternative layout)
+
+      providers:
+        callback_url_text: If necessary, set the callback URL to {url}.
+
+        discord:
+          description: Create an app at {link}. Add the redirect URL in the OAuth2 tab.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        facebook:
+          description: Create an app at {link}.
+
+          app_id_label: => fof-oauth.ref.settings.app_id
+          app_secret_label: => fof-oauth.ref.settings.app_secret
+
+        github:
+          description: Create an OAuth app at {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        gitlab:
+          description: Create an application at {link}. Give the application the <code>read_user</code> scope.
+
+          client_id_label: => fof-oauth.ref.settings.app_id
+          client_secret_label: => fof-oauth.ref.settings.app_secret
+          domain_label: GitLab Domain
+
+        twitter:
+          description: Create an app at {link}. You will need to set a Terms of Service URL and a Privacy Policy URL. Make sure to then add the request email permission.
+
+          api_key_label: API Key
+          api_secret_label: API Secret
+
+        google:
+          description: Create an application at {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        linkedin:
+          description: Create an application at {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+  forum:
+    log_in:
+      with_button: Log In with {provider}
+
+      # Modify these if your provider requires specific wording.
+      # You may use {provider} in the translation.
+      with_discord_button: '=> fof-oauth.forum.log_in.with_button'
+      with_facebook_button: '=> fof-oauth.forum.log_in.with_button'
+      with_github_button: '=> fof-oauth.forum.log_in.with_button'
+      with_gitlab_button: '=> fof-oauth.forum.log_in.with_button'
+      with_google_button: '=> fof-oauth.forum.log_in.with_button'
+      with_linkedin_button: '=> fof-oauth.forum.log_in.with_button'
+      with_twitter_button: '=> fof-oauth.forum.log_in.with_button'
+
+    user:
+      settings:
+        linked-account:
+          label: Linked accounts
+          last-used-label: Last used
+          link-created-label: Link created
+          orphaned-account: You have signed in through this provider previously, but this forum has disabled sign-in with this method since.
+          help: These linked accounts allow you to sign into the forum using other providers.
+          identifier-label: "{provider} ID"
+          unlink-confirm: Are you sure you want to remove the link with {provider}? You will no longer be able to sign in to this forum unless you re-authenticate in the future.
+    # Modify these if you need to change how the provider name
+    # appears in the log in button.
+    providers:
+      discord: '=> fof-oauth.lib.providers.discord'
+      facebook: '=> fof-oauth.lib.providers.facebook'
+      github: '=> fof-oauth.lib.providers.github'
+      gitlab: '=> fof-oauth.lib.providers.gitlab'
+      google: '=> fof-oauth.lib.providers.google'
+      linkedin: '=> fof-oauth.lib.providers.linkedin'
+      twitter: '=> fof-oauth.lib.providers.twitter'
+
+    signup:
+      username_help: Please choose a username to be known by here
+
+    unlink: Remove link
+
+    error:
+      bad_verification_code: Invalid or expired verification token. Please try again.
+      invalid_state: Invalid state. Please try again.
+
+  lib:
+    providers:
+      discord: Discord
+      facebook: Facebook
+      github: GitHub
+      gitlab: GitLab
+      twitter: Twitter
+      google: Google
+      linkedin: LinkedIn
+
+  ref:
+    settings:
+      app_id: App ID
+      app_secret: App Secret
+
+      client_id: Client ID
+      client_secret: Client Secret
+

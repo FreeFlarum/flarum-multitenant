@@ -1,0 +1,63 @@
+// DiffList.less
+.DiffList-container .DiffList-content {
+    & > ul {
+      & > li.Diff {
+        & > a,
+        & > button,
+        & > span {
+          text-align: right !important;
+        }
+
+        & > button > i.Button-caret {
+          margin-right: 0 !important;
+          margin-left: 5px !important;
+        }
+
+        .Avatar {
+          margin-right: unset !important;
+        }
+      }
+    }
+}
+
+// DiffModal.less
+.DiffModal {
+    .Modal-header {
+      text-align: right !important;
+
+      // .Avatar {        // removed cause of error in avatar position
+      //   margin: -2px -6px -2px 5px !important;
+      // }
+    }
+  
+    @media @tablet-up {
+        .diffCotrollerDropdown {
+          left: 50px !important;
+          right: auto !important;
+        }
+      }
+  
+    // need to check !!!
+    @media @phone {
+      .Modal-header {
+        .Avatar {
+          margin-right: 6px !important;
+          margin-left: 6px !important; // first-check: auto
+        }
+      }
+    }
+}
+
+// Add
+.Modal.DiffModal .Modal-content .Modal-header h3 {
+  text-align: right !important;
+}
+
+.DiffDropdown {
+  margin-top: auto !important;
+  margin-bottom: -4px !important;
+
+  .Dropdown-menu .DiffList-header {
+    text-align: right !important;
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "name": "ianm/level-ranks",
+    "description": "Add a level/experience bar to your flarum Forum.",
+    "keywords": [
+        "extension",
+        "flarum",
+        "experience",
+        "level",
+        "xp"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shahiem Seymor",
+            "email": "s.seymor@live.nl",
+            "homepage": "http://shahiemseymor.com/"
+        },
+        {
+            "name": "IanM",
+            "homepage": "https://discuss.flarum.org/u/ianm",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/imorland/level-ranks/issues",
+        "source": "https://github.com/imorland/level-ranks",
+        "forum": "https://discuss.flarum.org/d/27869"
+    },
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "replace": {
+        "reflar/level-ranks": "*"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Level Ranks",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-percent",
+                "backgroundColor": "#0072e3",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/27869"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "IanM\\LevelRanks\\": "src/"
+        }
+    }
+}

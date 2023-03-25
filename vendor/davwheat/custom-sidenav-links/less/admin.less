@@ -1,0 +1,124 @@
+.davwheat-custom-sidenav-links-Page {
+  .davwheat-ext-settings {
+    padding: 0 16px;
+    max-width: 900px;
+    margin: 32px auto;
+  }
+
+  .davwheat-sidenav-addlink {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-btn {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 16px 0;
+  }
+
+  main {
+    width: 100%;
+    min-width: 680px;
+    margin: 16px 0;
+
+    display: grid;
+    grid-template-columns: minmax(10px, auto) minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 3fr) minmax(10px, auto) minmax(10px, auto);
+    gap: 8px;
+    column-gap: 16px;
+
+    @media (max-width: 767px) {
+      column-gap: 8px;
+    }
+
+    // first 6 elements (header)
+    div:nth-child(-n + 6) {
+      font-weight: bold;
+    }
+
+    // Center delete button and internal switch
+    :nth-child(6n + 5),
+    :nth-child(6n + 6) {
+      text-align: center;
+      margin: auto;
+    }
+
+    [data-column='icon'] {
+      display: flex;
+      align-items: center;
+
+      .icon-preview {
+        font-size: 18px;
+        margin-right: 6px;
+      }
+    }
+
+    [data-column='position'] > button:first-child {
+      margin-right: 4px;
+    }
+
+    .sidenav-input--invalid {
+      border-color: #f00 !important;
+    }
+  }
+
+  .davwheat-custom-sidenav-links--display-options {
+    display: block;
+    margin-bottom: 32px;
+
+    label {
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      > * {
+        font-weight: initial;
+      }
+
+      > :first-child {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.davwheat-sidenav-AddLinkModal {
+  .icon-preview-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-preview {
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+  .Form-group {
+    > * {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    label:not(.Checkbox) input {
+      margin-top: 4px;
+    }
+
+    .Checkbox {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  label {
+    display: block;
+  }
+}

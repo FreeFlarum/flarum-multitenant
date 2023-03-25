@@ -1,0 +1,88 @@
+malago-achievements:
+  forum:
+    achievement_points: Puntos
+    new_achievement_title: ¡Nuevo logro!
+    new_achievement_name: Logro
+    new_achievement_close: ¡Entendido!
+    list_heading: Logros
+    achievement_total_points: Total
+    your_achievements: Tus logros
+    other_achievements: Otros logros
+    hidden_achievements: Logros ocultos
+  admin:
+    achievement_modal:
+      title: Crear logro
+      name_label: Nombre
+      name_placeholder: Nombre del logro
+      active_label: Activo
+      hidden_label: Ocultar de la lista de logros
+      description_label: Descripción
+      description_placeholder: Descripción del logro
+      variable_label: Variable
+      computation_label: |
+        Variable a calcular: mensajes, me gustas, me gustas recibidos, discusiones, comentarios, ediciones...:
+      computation_placeholder: Número
+      points_label: Puntos para este logro
+      points_placeholder: |
+        0
+      image_label: URL de la imagen o código del icono
+      image_placeholder: URL de la imagen
+      row_label: Fila
+      row_placeholder: 0
+      col_label: Columna
+      col_placeholder: 0
+      width_label: Ancho de la imagen
+      width_placeholder: 32
+      height_label: Altura de la imagen
+      height_placeholder: 32
+      submit_button: => core.ref.save_changes
+      delete_button: Borrar logro
+      delete_confirmation: ¿Seguro que quieres borrar este logro?
+      add_delete_title: Añadir o borrar un logro de un usuario
+      username: Nombre de usuario
+      username_placeholder: Nombre de usuario
+      add_delete_instructions: Si el usuario no tiene este logro, se le añadirá. Si el usuario ya tiene este logro, se le eliminará.
+      variable:
+        manual: Manual
+        posts: Mensajes
+        likes: Me gusta dados
+        selflikes: Me gusta recibidos
+        discussions: Discusiones
+        edits: Mensajes editados
+        avatar: Avatar subido
+        contains: El mensaje contiene
+        comments: Respuestas recibidas en una discusión
+        years: Años registrado
+        meanwords: Media de palabras
+        tagposts: Mensajes en una etiqueta
+      tooltip:
+          posts: Mínimo número de mensajes (ej. 10) o un rango inclusivo (ej. 10,19)
+          likes: Mínimo número de me gustas dados (ej. 10) o un rango inclusivo (ej. 10,19)
+          selflikes: Mínimo número de me gustas recibidos (ej. 10) o un rango inclusivo (ej. 10,19)
+          discussions: Mínimo número de discusiones creadas (ej. 10) o un rango inclusivo (ej. 10,19)
+          edits: Mínimo número de mensajes editados (ej. 10) o un rango inclusivo (ej. 10,19)
+          contains: Palabra o palabras y número mínimo de mensajes que las contienen (ej. pollo,10) o un rango inclusivo (ej. pollo,10,19)
+          comments: Número mínimo de respuestas recibidas en una discusión (ej. 10) o un rango inclusivo (ej. 10,19)
+          years:  Número mínimo de años registrado (ej. 10) o un rango inclusivo (ej. 10,19)
+          meanwords: Media de palabras escritas en mensajes, mínimo 10 (ej. 10) o un rango inclusivo (ej. 10,19)
+          tagposts: Slug de la etiqueta a buscar y número mínimo de mensajes en ella (ej. off-topic,10) o un rango inclusivo (ej. off-topic,10,19)
+    achievements_page:
+      list_heading: Logros
+      create_achievement_button: Crear logro nuevo
+      instructions_header: Instrucciones
+      instructions_text: |
+        <li>To create an achievement, you must introduce a name.</li>
+        <li>Description is optional.</li>
+        <li>Choose which variable you want to calculate for this achievement from the list.</li>
+        <li>Introduce the threshold for the achievement to be activated. You can introduce two numbers separated with a comma (,) to indicate a minimum threshold and a maximum threshold (both numbers are inclusive).</li>
+        <li>Achievements with two threshold will be removed if the count is beyond the upper threshold.</li>
+        <li>For the "Message contains" achievement, you must introduce the specified word and then the threshold, separated by a comma (e.g. "spinach,5" or "spinach,5,10" for minimum and maximum threshold.)</li>
+        <li>Introduce the image URL with the icon to be used for this achievement.</li>
+        <li>Introduce the width and height of the icon.</li>
+        <li>Optional: If the image has more than one achievement icon, you can select which row and column to show for the icon.</li>
+      add_delete_users: Añadir/Borrar logros de usuarios
+      show: Mostrar lista de logros:
+    settings:
+      show-post-footer: Al pie de cada mensaje
+      show-user-card: En la tarjeta de usuario
+      link-left-column: Añadir enlace a Logros en la barra lateral

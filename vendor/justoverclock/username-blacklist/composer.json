@@ -1,0 +1,41 @@
+{
+  "name": "justoverclock/username-blacklist",
+  "description": "Add a blacklist for certain username during registration",
+  "keywords": [
+    "username blacklist"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\UsernameBlacklist\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "UsernameBlacklist",
+      "category": "",
+      "icon": {
+        "name": "fas fa-ban",
+        "backgroundColor": "red",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

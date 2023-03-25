@@ -1,0 +1,55 @@
+{
+    "name": "fof/filter",
+    "description": "Filter out words and phrases from forum posts",
+    "type": "flarum-extension",
+    "keywords": [
+        "moderation"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Charlie K",
+            "email": "charlie.k@redevs.org"
+        },
+        {
+            "name": "Katos",
+            "email": "katos@flarum.org"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/friendsofflarum/filter/issues",
+        "source": "https://github.com/friendsofflarum/filter",
+        "forum": "https://discuss.flarum.org/d/5131"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.2.0",
+        "flarum/approval": "*",
+        "flarum/flags": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Filter\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Filter",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-filter",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/5131"
+        }
+    }
+}

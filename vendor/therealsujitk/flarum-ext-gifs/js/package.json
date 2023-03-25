@@ -1,0 +1,18 @@
+{
+  "name": "@therealsujitk/flarum-ext-gifs",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "flarum-webpack-config": "^1.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.8.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "lint": "prettier --single-quote --trailing-comma none --print-width 120 --tab-width 4 --write src"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  }
+}

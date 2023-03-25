@@ -1,0 +1,51 @@
+.item-discussion-views {
+  font-size: 14px;
+  float: right;
+  margin-right: -65px;
+  width: 50px;
+  color: var(--muted-color);
+
+  ::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: inherit;
+    content: "\f06e";
+    margin-right: 5px;
+  }
+}
+
+@media @phone {
+  .item-discussion-views {
+    float: none;
+    background: var(--control-bg);
+    color: var(--control-color);
+    border-radius: var(--border-radius);
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    width: auto;
+  }
+}
+
+fieldset.LastDiscussionUsers {
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    div.item-lastUser-content {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: 5px;
+
+        span.lastUser-visited {
+          font-size: .8em;
+        }
+      }
+    }
+  }
+}

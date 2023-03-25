@@ -1,0 +1,80 @@
+.UserCard-avatar {
+    position: relative;
+}
+
+.UserCard-avatar .ext_staffbadge {
+    background: rgb(70, 209, 96);
+    color: #fff;
+    position: absolute;
+    padding: 0 10px;
+    line-height: 23px;
+    border-radius: 25px;
+    font-weight: 800;
+    transform: translateX(50%);
+    bottom: -5px;
+    right: 50%;
+    height: 25px;
+    white-space: nowrap;
+    font-size: 13px;
+    user-select: none;
+}
+
+/**
+color: rgb(255, 255, 255);
+    background-color: rgb(19, 72, 249);
+    display: inline-block;
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(50%);
+}
+*/
+
+
+
+@media (min-width: 768px) {
+    .PostUser .badgeHolder {
+        margin-left: -87.5px;
+        margin-bottom: -37px;
+        float: left;
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) {
+    .PostUser .badgeHolder {
+        display: none;
+    }
+}
+
+.PostUser .badgeHolder .ext_staffbadge_sm {
+    background: #46d160;
+    color: #fff;
+    content: "STAFF";
+    position: absolute;
+    padding: 0 10px;
+    line-height: 20px;
+    border-radius: 25px;
+    font-weight: 800;
+    top: 54px;
+    left: 20%;
+    transform: translateX(20%);
+    height: 19px;
+    white-space: nowrap;
+    font-size: 10px;
+    user-select: none;
+}
+
+.UserCard-info {
+    .userTags {
+        display: block;
+        margin-top: 20px;
+    }
+    .userTags .userTag {
+        padding: 0 4px; 
+        border: 1.5px solid #fff;
+        border-radius: 5px;
+        margin-left: 4px;
+        font-weight: 500;
+    }
+}

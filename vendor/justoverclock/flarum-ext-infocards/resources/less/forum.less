@@ -1,0 +1,166 @@
+.containersocial{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+div.container6 p {
+  margin: 0 }
+.card{
+  display:inline-block;
+  float:left;
+  margin: 10px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+  width: 340px;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+  font-weight: 600;
+}
+
+.card img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-2{
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100px;
+}
+.fontic2::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f044";
+  float: right;
+  margin-right: -55px;
+  font-size: 50px;
+  color: #e8ecf3;
+}
+div#time.time {
+  margin-top: -15px;
+}
+.fontic3::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f06e";
+  float: right;
+  margin-right: -55px;
+  font-size: 50px;
+  color: #e8ecf3;
+}
+icocont{
+  text-align: center;
+}
+.numbercount{
+  width: 80%;
+  background-color: #4d698e;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.avataric{
+.AvatarEditor {
+  span.Avatar {
+    height: 80px;
+    position: relative;
+    width: 80px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+  }
+}
+}
+.avataric {
+  .AvatarEditor {
+    height: 80px;
+    position: relative;
+    width: 80px;
+    float: right;
+    margin-right: -65px;
+    margin-top: -60px;
+  }
+}
+.avataric img {
+  border-radius: 9999px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+@media screen and (max-width: 700px) {
+  .containersocial {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+.iconbadge{
+  display: inline-flex;
+  li {
+    margin-right: 3px;
+      list-style-type: none;
+
+  }
+}
+.textone{
+  margin-right: 28px;
+}
+.avataric {
+   .Dropdown-toggle {
+     margin-left: -15px;
+     margin-bottom: -20px;
+     margin-top: 20px;
+     display: grid;
+    font-size: 30px;
+    padding: 15px;
+    color: #fcfcfc;
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border: 5px white solid;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+     z-index: 100;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+body when (@config-dark-mode = true) {
+  .textone{
+    color: #ffffff;
+  }
+  .numbercount{
+    background-color: #6d6d6d;
+  }
+  .card{
+    background-color: #14191f;
+  }
+}

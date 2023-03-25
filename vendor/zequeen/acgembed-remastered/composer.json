@@ -1,0 +1,33 @@
+{
+  "name": "zequeen/acgembed-remastered",
+  "description": "Add acfun.cn and bilibili.com in mediaembed;remastered from LCinHK",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "zequeen",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "zequeen\\Acgembed\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Acgembed",
+      "icon": {
+        "name": "fas fa-play",
+        "backgroundColor": "#fd4c5b",
+        "color": "#FFFFFF"
+      }
+    }
+  }
+}

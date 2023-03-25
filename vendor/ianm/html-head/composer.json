@@ -1,0 +1,42 @@
+{
+  "name": "ianm/html-head",
+  "description": "Add custom items to the HTML <head> attributes",
+  "keywords": [
+    "flarum", "headers", "html", "head", "custom"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/imorland/html-head/issues",
+    "source": "https://github.com/imorland/html-head",
+    "forum": "https://discuss.flarum.org/d/25907"
+  },
+  "require": {
+    "flarum/core": "^1.2.0"
+  },
+  "authors": [
+    {
+      "name": "IanM",
+      "homepage": "https://discuss.flarum.org/u/ianm"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "IanM\\HtmlHead\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "HTML Head Items",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-heading",
+        "backgroundColor": "#0072e3",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/25907"
+    }
+  }
+}

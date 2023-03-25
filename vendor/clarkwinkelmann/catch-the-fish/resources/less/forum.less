@@ -1,0 +1,205 @@
+.catchthefish-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        padding: 5px 10px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+
+        & when (@config-dark-mode = true) {
+            border-bottom-color: #444;
+        }
+    }
+
+    tr:nth-child(odd) td {
+        background: #fafafa;
+
+        & when (@config-dark-mode = true) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+    }
+
+    img {
+        max-height: 40px;
+    }
+
+    .Avatar {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+.catchthefish-basket {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background: var(--body-bg);
+    border: 2px solid #aaa;
+    padding: 10px;
+    text-align: center;
+}
+
+.catchthefish-basket-title {
+    font-weight: bold;
+}
+
+.catchthefish-basket-fish {
+    cursor: move;
+    max-width: 150px;
+}
+
+.catchthefish-drop-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 4px dashed #dedede;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dedede;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.catchthefish-moving-fish {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 140px;
+    opacity: 0.9;
+    animation: 14s swim linear infinite;
+    cursor: pointer;
+
+    &.catchthefish-animate-flip .catchthefish-image {
+        animation: 14s flip linear infinite;
+    }
+
+    &.catchthefish-animate-reverse {
+        animation-name: swim-reverse;
+
+        &.catchthefish-animate-flip .catchthefish-image {
+            animation-name: flip-reverse;
+        }
+    }
+}
+
+.UserCard,
+.DiscussionHero {
+    // For the absolute positioning to work
+    position: relative;
+}
+
+.catchthefish-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.catchthefish-image {
+    max-width: 100%;
+}
+
+.catchthefish-no-image {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.catchthefish-catch-modal {
+    text-align: center;
+
+    .catchthefish-image {
+        display: block;
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    .Avatar {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(-200px);
+    }
+    48% {
+        transform: translateX(200px);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    98% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+
+@keyframes swim-reverse {
+    0% {
+        transform: translateX(200px);
+    }
+    48% {
+        transform: translateX(-200px);
+    }
+    50% {
+        transform: translateX(-200px);
+    }
+    98% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleX(-1);
+    }
+    48% {
+        transform: scaleX(-1);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    98% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes flip-reverse {
+    0% {
+        transform: scaleX(1);
+    }
+    48% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+    98% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}

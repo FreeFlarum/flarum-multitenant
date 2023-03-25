@@ -1,0 +1,49 @@
+{
+    "name": "flarum-lang/spanish",
+    "type": "flarum-extension",
+    "description": "Spanish Language Pack.",
+    "keywords": ["extension", "flarum", "language", "locale", "spanish", "translation"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FlarumES",
+            "email": "hola@flarum.es",
+            "homepage": "https://flarum.es"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flarum-lang/spanish/issues",
+        "source": "https://github.com/flarum-lang/spanish",
+        "forum": "https://flarum.es",
+        "docs": "https://flarum.es/p/7-docs"
+    },
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "replace": {
+        "flarumes/lang-spanish": "*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+    },
+        "flarum-extension": {
+            "title": "Spanish",
+            "category": "language",
+            "info": {
+                "website": "https://flarum.es",
+                "support": "https://github.com/flarum-lang/spanish/issues"
+            },
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#fff",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "es",
+            "title": "Español"
+        }
+    }
+}

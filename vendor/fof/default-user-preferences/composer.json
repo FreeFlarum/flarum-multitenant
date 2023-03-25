@@ -1,0 +1,53 @@
+{
+  "name": "fof/default-user-preferences",
+  "description": "Configure the default user preferences for new users joining your forum",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "homepage": "https://friendsofflarum.org",
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://opencollective.com/fof/donate"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/FriendsOfFlarum/default-user-preferences/issues",
+    "source": "https://github.com/FriendsOfFlarum/default-user-preferences",
+    "forum": "https://discuss.flarum.org/d/18607"
+  },
+  "require": {
+    "flarum/core": "^1.6.2"
+  },
+  "replace": {
+    "piotr-tokarczyk/flarum-user-default-preferences": "*"
+  },
+  "authors": [
+    {
+      "name": "FoF Team",
+      "email": "team@friendsofflarum.org",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FoF\\DefaultUserPreferences\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "FoF Default User Preferences",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-reply-all",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/18607"
+    }
+  }
+}

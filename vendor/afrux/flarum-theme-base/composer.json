@@ -1,0 +1,32 @@
+{
+  "name": "afrux/flarum-theme-base",
+  "description": "Base package for shared code between Afrux themes",
+  "keywords": [
+    "flarum", "themes", "base"
+  ],
+  "type": "flarum-library",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "suggest": {
+    "sycho/flarum-advanced-extension-categories": "Allows different categorization for dashboard extensions."
+  },
+  "authors": [
+    {
+      "name": "Sami Mazouz",
+      "email": "ilyasmazouz@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Afrux\\ThemeBase\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
+}

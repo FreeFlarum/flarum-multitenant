@@ -1,0 +1,40 @@
+{
+  "name": "ramesh-dada/bbcode-alerts",
+  "description": "Add visual alerts / warnings to Flarum posts",
+  "keywords": [
+    "bbcode",
+    "flarum",
+    "1Dot",
+    "alerts",
+    "warnings",
+    "notifications"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "RameshDada Premium",
+      "homepage": "https://discuss.flarum.org/u/1Dot"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ramesh-dada/bbcode-alerts/issues",
+    "source": "https://github.com/ramesh-dada/bbcode-alerts"
+  },
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "BBCode Alerts",
+      "icon": {
+        "name": "fas fa-exclamation",
+        "backgroundColor": "#000",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/28080"
+    }
+  }
+}

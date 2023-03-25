@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="index, follow, all" name="robots"/>
+    <title>Search | Flarum SSO PHP Plugin API Docs</title>
+
+    <link href="assets/app.min.css" rel="stylesheet" type="text/css">
+    <script src="assets/app.min.js"></script>
+    <script src="sami.js"></script>
+    <meta content="width" name="MobileOptimized">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+
+
+</head>
+
+<body data-name="" data-root-path="" id="search-page">
+<div id="content">
+    <nav class="navbar navbar-expand-lg" id="flarum-header">
+        <h1 class="flarum-title navbar-brand"></h1>
+
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"><a class="nav-link" href="https://flarum.org">Flarum</a></li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://discuss.flarum.org/d/21666-php-and-wordpress-single-sign-on-sso"
+                                        target="_blank">Thread</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://docs.maicol07.it/en/flarum-sso/plugins/php"
+                                        target="_blank">Docs</a></li>
+                <li class="nav-item"><a class="nav-link icon icon-github-circled"
+                                        href="https://github.com/maicol07/flarum-sso-php-plugin"
+                                        target="_blank"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div id="left-column">
+            <div id="control-panel">
+                <script>
+                    $('option[data-version="' + window.projectVersion + '"]').prop('selected', true);
+                </script>
+                <form action="search.html" id="search-form" method="GET">
+                    <span class="icon icon-search"></span>
+                    <input class="typeahead form-control" name="search" placeholder="Search" type="search">
+                </form>
+            </div>
+
+            <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+            <nav class="navbar navbar-expand" id="site-nav" role="navigation">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="namespaces.html">Namespaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="interfaces.html">Interfaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="traits.html">Traits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doc-index.html">Index</a></li>
+                    <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+                </ul>
+            </nav>
+
+            <div id="page-content">
+
+                <div class="page-header">
+                    <h1>Search</h1>
+                </div>
+
+                <p>This page allows you to search through the API documentation for specific terms. Enter your search
+                    words into the
+                    box below and click "submit". The search will be performed on namespaces, classes, interfaces,
+                    traits,
+                    functions, and methods.</p>
+
+                <br>
+
+                <form action="search.html" class="form-inline" method="GET" role="form">
+                    <div class="input-group">
+                        <input class="form-control" id="search" name="search" placeholder="Search" type="search"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-dark" type="submit">
+                                <i class="icon icon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <h2>Search Results</h2>
+
+                <div class="container-fluid">
+                    <ul class="search-results"></ul>
+                </div>
+
+                <script type="text/javascript">
+
+                    (function () {
+                        var term = Sami.cleanSearchTerm();
+
+                        if (!term) {
+                            $('h2').hide();
+                            return;
+                        }
+
+                        $('#search').val(term);
+                        var container = $('.search-results');
+                        var results = Sami.search(term);
+                        var len = results.length;
+
+                        if (len == 0) {
+                            container.html('No results were found');
+                            return;
+                        }
+
+                        for (var i = 0, text_content = ''; i < len; i++) {
+
+                            var ele = results[i];
+                            var contents = '<li><h2 class="clearfix">';
+                            var class_name = Sami.getSearchClass(ele.type);
+                            contents += '<a href="' + ele.link + '">' + ele.name + '</a>';
+                            contents += '<div class="search-type type-' + ele.type + '"><span class="pull-right label ' + class_name + '">' + ele.type + '</span></div>';
+                            contents += '</h2>';
+
+                            if (ele.fromName && ele.fromLink) {
+                                contents += '<div class="search-from">from <a href="' + ele.fromLink + '">' + ele.fromName + '</a></div>';
+                            }
+
+                            contents += '<div class="search-description">';
+
+                            // Add description, decode entities, and strip wrapping quotes
+                            if (ele.doc) {
+                                text_content = $('<p>' + ele.doc + '</p>').text();
+                                if (text_content[0] == '"') {
+                                    text_content = text_content.substring(1);
+                                }
+                                if (text_content[text_content.length - 1] == '"') {
+                                    text_content = text_content.substring(0, text_content.length - 1);
+                                }
+                                contents += text_content;
+                            }
+
+                            contents += '</div></li>';
+                            container.append($(contents));
+                        }
+                    })();
+                </script>
+
+
+            </div>
+            <div id="footer">
+                <p>Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and
+                    fork of
+                    Sami</a>.</p>
+                <p>Created by <a href="https://github.com/datitisev">@datitisev</a>. Modified by <a
+                        href="https://maicol07.it">@maicol07</a>
+                    (<a href="https://github.com/maicol07">Github</a>). Source code can be found on <a
+                            href="https://github.com/maicol07/flarum-sso-php-plugin">GitHub</a>.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

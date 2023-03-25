@@ -1,0 +1,45 @@
+.UiKit-TagSelector {
+  position: relative;
+
+  .FormControl {
+    display: flex;
+    border-radius: @border-radius @border-radius 0 0;
+  }
+
+  .Dropdown-menu {
+    width: 100%;
+
+    > li > a {
+      display: flex;
+    }
+  }
+
+  &-selectedTags {
+    height: auto;
+
+    &.FormControl {
+      border-radius: 0 0 @border-radius @border-radius;
+      background-color: @uikit-secondary-control-bg;
+    }
+    > .UiKit-Label {
+      margin: 0 1px;
+    }
+  }
+
+  &-item {
+    &-icon {
+      width: 6%;
+      text-align: center;
+    }
+    &-description {
+      opacity: 0.5;
+    }
+
+    &--selected > a {
+      font-weight: 600 !important;
+    }
+  }
+  &-item-check {
+    margin-left: auto;
+  }
+}

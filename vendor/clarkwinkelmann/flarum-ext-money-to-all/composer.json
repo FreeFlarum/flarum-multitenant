@@ -1,0 +1,42 @@
+{
+    "name": "clarkwinkelmann/flarum-ext-money-to-all",
+    "description": "Give money to all users on the forum",
+    "keywords": [
+        "flarum",
+        "money"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2",
+        "antoinefr/flarum-ext-money": "*"
+    },
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "homepage": "https://clarkwinkelmann.com/",
+            "email": "clark.winkelmann@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-money-to-all",
+        "forum": "https://discuss.flarum.org/d/31843"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClarkWinkelmann\\MoneyToAll\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Money To All",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-money-bill",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        }
+    }
+}

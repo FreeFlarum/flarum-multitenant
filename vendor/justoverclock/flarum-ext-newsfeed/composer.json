@@ -1,0 +1,41 @@
+{
+  "name": "justoverclock/flarum-ext-newsfeed",
+  "description": "Add a Box that retrieve latest article from a RSS feed",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Justoverclock\\NewsFeed\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "NewsFeed",
+      "category": "",
+      "icon": {
+        "name": "fas fa-rss-square",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

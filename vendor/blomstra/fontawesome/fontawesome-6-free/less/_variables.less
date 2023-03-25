@@ -1,0 +1,3612 @@
+// variables
+// --------------------------
+
+@fa-css-prefix: fa;
+@fa-style: 900;
+@fa-style-family: "Font Awesome 6 Free";
+
+@fa-display: inline-block;
+
+@fa-fw-width: (20em / 16);
+@fa-inverse: #fff;
+
+@fa-border-color: #eee;
+@fa-border-padding: 0.2em 0.25em 0.15em;
+@fa-border-radius: 0.1em;
+@fa-border-style: solid;
+@fa-border-width: 0.08em;
+
+@fa-size-scale-2xs: 10;
+@fa-size-scale-xs: 12;
+@fa-size-scale-sm: 14;
+@fa-size-scale-base: 16;
+@fa-size-scale-lg: 20;
+@fa-size-scale-xl: 24;
+@fa-size-scale-2xl: 32;
+
+.fa-sizes() {
+  2xs: @fa-size-scale-2xs;
+  xs: @fa-size-scale-xs;
+  sm: @fa-size-scale-sm;
+  lg: @fa-size-scale-lg;
+  xl: @fa-size-scale-xl;
+  2xl: @fa-size-scale-2xl;
+}
+
+@fa-li-width: 2em;
+@fa-li-margin: (@fa-li-width * 5/4);
+
+@fa-pull-margin: 0.3em;
+
+@fa-primary-opacity: 1;
+@fa-secondary-opacity: 0.4;
+
+@fa-stack-vertical-align: middle;
+@fa-stack-width: (@fa-fw-width * 2);
+@fa-stack-z-index: auto;
+
+@fa-font-display: block;
+
+@fa-var-0: "\30";
+@fa-var-1: "\31";
+@fa-var-2: "\32";
+@fa-var-3: "\33";
+@fa-var-4: "\34";
+@fa-var-5: "\35";
+@fa-var-6: "\36";
+@fa-var-7: "\37";
+@fa-var-8: "\38";
+@fa-var-9: "\39";
+@fa-var-a: "\41";
+@fa-var-address-book: "\f2b9";
+@fa-var-contact-book: "\f2b9";
+@fa-var-address-card: "\f2bb";
+@fa-var-contact-card: "\f2bb";
+@fa-var-vcard: "\f2bb";
+@fa-var-align-center: "\f037";
+@fa-var-align-justify: "\f039";
+@fa-var-align-left: "\f036";
+@fa-var-align-right: "\f038";
+@fa-var-anchor: "\f13d";
+@fa-var-anchor-circle-check: "\e4aa";
+@fa-var-anchor-circle-exclamation: "\e4ab";
+@fa-var-anchor-circle-xmark: "\e4ac";
+@fa-var-anchor-lock: "\e4ad";
+@fa-var-angle-down: "\f107";
+@fa-var-angle-left: "\f104";
+@fa-var-angle-right: "\f105";
+@fa-var-angle-up: "\f106";
+@fa-var-angles-down: "\f103";
+@fa-var-angle-double-down: "\f103";
+@fa-var-angles-left: "\f100";
+@fa-var-angle-double-left: "\f100";
+@fa-var-angles-right: "\f101";
+@fa-var-angle-double-right: "\f101";
+@fa-var-angles-up: "\f102";
+@fa-var-angle-double-up: "\f102";
+@fa-var-ankh: "\f644";
+@fa-var-apple-whole: "\f5d1";
+@fa-var-apple-alt: "\f5d1";
+@fa-var-archway: "\f557";
+@fa-var-arrow-down: "\f063";
+@fa-var-arrow-down-1-9: "\f162";
+@fa-var-sort-numeric-asc: "\f162";
+@fa-var-sort-numeric-down: "\f162";
+@fa-var-arrow-down-9-1: "\f886";
+@fa-var-sort-numeric-desc: "\f886";
+@fa-var-sort-numeric-down-alt: "\f886";
+@fa-var-arrow-down-a-z: "\f15d";
+@fa-var-sort-alpha-asc: "\f15d";
+@fa-var-sort-alpha-down: "\f15d";
+@fa-var-arrow-down-long: "\f175";
+@fa-var-long-arrow-down: "\f175";
+@fa-var-arrow-down-short-wide: "\f884";
+@fa-var-sort-amount-desc: "\f884";
+@fa-var-sort-amount-down-alt: "\f884";
+@fa-var-arrow-down-up-across-line: "\e4af";
+@fa-var-arrow-down-up-lock: "\e4b0";
+@fa-var-arrow-down-wide-short: "\f160";
+@fa-var-sort-amount-asc: "\f160";
+@fa-var-sort-amount-down: "\f160";
+@fa-var-arrow-down-z-a: "\f881";
+@fa-var-sort-alpha-desc: "\f881";
+@fa-var-sort-alpha-down-alt: "\f881";
+@fa-var-arrow-left: "\f060";
+@fa-var-arrow-left-long: "\f177";
+@fa-var-long-arrow-left: "\f177";
+@fa-var-arrow-pointer: "\f245";
+@fa-var-mouse-pointer: "\f245";
+@fa-var-arrow-right: "\f061";
+@fa-var-arrow-right-arrow-left: "\f0ec";
+@fa-var-exchange: "\f0ec";
+@fa-var-arrow-right-from-bracket: "\f08b";
+@fa-var-sign-out: "\f08b";
+@fa-var-arrow-right-long: "\f178";
+@fa-var-long-arrow-right: "\f178";
+@fa-var-arrow-right-to-bracket: "\f090";
+@fa-var-sign-in: "\f090";
+@fa-var-arrow-right-to-city: "\e4b3";
+@fa-var-arrow-rotate-left: "\f0e2";
+@fa-var-arrow-left-rotate: "\f0e2";
+@fa-var-arrow-rotate-back: "\f0e2";
+@fa-var-arrow-rotate-backward: "\f0e2";
+@fa-var-undo: "\f0e2";
+@fa-var-arrow-rotate-right: "\f01e";
+@fa-var-arrow-right-rotate: "\f01e";
+@fa-var-arrow-rotate-forward: "\f01e";
+@fa-var-redo: "\f01e";
+@fa-var-arrow-trend-down: "\e097";
+@fa-var-arrow-trend-up: "\e098";
+@fa-var-arrow-turn-down: "\f149";
+@fa-var-level-down: "\f149";
+@fa-var-arrow-turn-up: "\f148";
+@fa-var-level-up: "\f148";
+@fa-var-arrow-up: "\f062";
+@fa-var-arrow-up-1-9: "\f163";
+@fa-var-sort-numeric-up: "\f163";
+@fa-var-arrow-up-9-1: "\f887";
+@fa-var-sort-numeric-up-alt: "\f887";
+@fa-var-arrow-up-a-z: "\f15e";
+@fa-var-sort-alpha-up: "\f15e";
+@fa-var-arrow-up-from-bracket: "\e09a";
+@fa-var-arrow-up-from-ground-water: "\e4b5";
+@fa-var-arrow-up-from-water-pump: "\e4b6";
+@fa-var-arrow-up-long: "\f176";
+@fa-var-long-arrow-up: "\f176";
+@fa-var-arrow-up-right-dots: "\e4b7";
+@fa-var-arrow-up-right-from-square: "\f08e";
+@fa-var-external-link: "\f08e";
+@fa-var-arrow-up-short-wide: "\f885";
+@fa-var-sort-amount-up-alt: "\f885";
+@fa-var-arrow-up-wide-short: "\f161";
+@fa-var-sort-amount-up: "\f161";
+@fa-var-arrow-up-z-a: "\f882";
+@fa-var-sort-alpha-up-alt: "\f882";
+@fa-var-arrows-down-to-line: "\e4b8";
+@fa-var-arrows-down-to-people: "\e4b9";
+@fa-var-arrows-left-right: "\f07e";
+@fa-var-arrows-h: "\f07e";
+@fa-var-arrows-left-right-to-line: "\e4ba";
+@fa-var-arrows-rotate: "\f021";
+@fa-var-refresh: "\f021";
+@fa-var-sync: "\f021";
+@fa-var-arrows-spin: "\e4bb";
+@fa-var-arrows-split-up-and-left: "\e4bc";
+@fa-var-arrows-to-circle: "\e4bd";
+@fa-var-arrows-to-dot: "\e4be";
+@fa-var-arrows-to-eye: "\e4bf";
+@fa-var-arrows-turn-right: "\e4c0";
+@fa-var-arrows-turn-to-dots: "\e4c1";
+@fa-var-arrows-up-down: "\f07d";
+@fa-var-arrows-v: "\f07d";
+@fa-var-arrows-up-down-left-right: "\f047";
+@fa-var-arrows: "\f047";
+@fa-var-arrows-up-to-line: "\e4c2";
+@fa-var-asterisk: "\2a";
+@fa-var-at: "\40";
+@fa-var-atom: "\f5d2";
+@fa-var-audio-description: "\f29e";
+@fa-var-austral-sign: "\e0a9";
+@fa-var-award: "\f559";
+@fa-var-b: "\42";
+@fa-var-baby: "\f77c";
+@fa-var-baby-carriage: "\f77d";
+@fa-var-carriage-baby: "\f77d";
+@fa-var-backward: "\f04a";
+@fa-var-backward-fast: "\f049";
+@fa-var-fast-backward: "\f049";
+@fa-var-backward-step: "\f048";
+@fa-var-step-backward: "\f048";
+@fa-var-bacon: "\f7e5";
+@fa-var-bacteria: "\e059";
+@fa-var-bacterium: "\e05a";
+@fa-var-bag-shopping: "\f290";
+@fa-var-shopping-bag: "\f290";
+@fa-var-bahai: "\f666";
+@fa-var-baht-sign: "\e0ac";
+@fa-var-ban: "\f05e";
+@fa-var-cancel: "\f05e";
+@fa-var-ban-smoking: "\f54d";
+@fa-var-smoking-ban: "\f54d";
+@fa-var-bandage: "\f462";
+@fa-var-band-aid: "\f462";
+@fa-var-barcode: "\f02a";
+@fa-var-bars: "\f0c9";
+@fa-var-navicon: "\f0c9";
+@fa-var-bars-progress: "\f828";
+@fa-var-tasks-alt: "\f828";
+@fa-var-bars-staggered: "\f550";
+@fa-var-reorder: "\f550";
+@fa-var-stream: "\f550";
+@fa-var-baseball: "\f433";
+@fa-var-baseball-ball: "\f433";
+@fa-var-baseball-bat-ball: "\f432";
+@fa-var-basket-shopping: "\f291";
+@fa-var-shopping-basket: "\f291";
+@fa-var-basketball: "\f434";
+@fa-var-basketball-ball: "\f434";
+@fa-var-bath: "\f2cd";
+@fa-var-bathtub: "\f2cd";
+@fa-var-battery-empty: "\f244";
+@fa-var-battery-0: "\f244";
+@fa-var-battery-full: "\f240";
+@fa-var-battery: "\f240";
+@fa-var-battery-5: "\f240";
+@fa-var-battery-half: "\f242";
+@fa-var-battery-3: "\f242";
+@fa-var-battery-quarter: "\f243";
+@fa-var-battery-2: "\f243";
+@fa-var-battery-three-quarters: "\f241";
+@fa-var-battery-4: "\f241";
+@fa-var-bed: "\f236";
+@fa-var-bed-pulse: "\f487";
+@fa-var-procedures: "\f487";
+@fa-var-beer-mug-empty: "\f0fc";
+@fa-var-beer: "\f0fc";
+@fa-var-bell: "\f0f3";
+@fa-var-bell-concierge: "\f562";
+@fa-var-concierge-bell: "\f562";
+@fa-var-bell-slash: "\f1f6";
+@fa-var-bezier-curve: "\f55b";
+@fa-var-bicycle: "\f206";
+@fa-var-binoculars: "\f1e5";
+@fa-var-biohazard: "\f780";
+@fa-var-bitcoin-sign: "\e0b4";
+@fa-var-blender: "\f517";
+@fa-var-blender-phone: "\f6b6";
+@fa-var-blog: "\f781";
+@fa-var-bold: "\f032";
+@fa-var-bolt: "\f0e7";
+@fa-var-zap: "\f0e7";
+@fa-var-bolt-lightning: "\e0b7";
+@fa-var-bomb: "\f1e2";
+@fa-var-bone: "\f5d7";
+@fa-var-bong: "\f55c";
+@fa-var-book: "\f02d";
+@fa-var-book-atlas: "\f558";
+@fa-var-atlas: "\f558";
+@fa-var-book-bible: "\f647";
+@fa-var-bible: "\f647";
+@fa-var-book-bookmark: "\e0bb";
+@fa-var-book-journal-whills: "\f66a";
+@fa-var-journal-whills: "\f66a";
+@fa-var-book-medical: "\f7e6";
+@fa-var-book-open: "\f518";
+@fa-var-book-open-reader: "\f5da";
+@fa-var-book-reader: "\f5da";
+@fa-var-book-quran: "\f687";
+@fa-var-quran: "\f687";
+@fa-var-book-skull: "\f6b7";
+@fa-var-book-dead: "\f6b7";
+@fa-var-bookmark: "\f02e";
+@fa-var-border-all: "\f84c";
+@fa-var-border-none: "\f850";
+@fa-var-border-top-left: "\f853";
+@fa-var-border-style: "\f853";
+@fa-var-bore-hole: "\e4c3";
+@fa-var-bottle-droplet: "\e4c4";
+@fa-var-bottle-water: "\e4c5";
+@fa-var-bowl-food: "\e4c6";
+@fa-var-bowl-rice: "\e2eb";
+@fa-var-bowling-ball: "\f436";
+@fa-var-box: "\f466";
+@fa-var-box-archive: "\f187";
+@fa-var-archive: "\f187";
+@fa-var-box-open: "\f49e";
+@fa-var-box-tissue: "\e05b";
+@fa-var-boxes-packing: "\e4c7";
+@fa-var-boxes-stacked: "\f468";
+@fa-var-boxes: "\f468";
+@fa-var-boxes-alt: "\f468";
+@fa-var-braille: "\f2a1";
+@fa-var-brain: "\f5dc";
+@fa-var-brazilian-real-sign: "\e46c";
+@fa-var-bread-slice: "\f7ec";
+@fa-var-bridge: "\e4c8";
+@fa-var-bridge-circle-check: "\e4c9";
+@fa-var-bridge-circle-exclamation: "\e4ca";
+@fa-var-bridge-circle-xmark: "\e4cb";
+@fa-var-bridge-lock: "\e4cc";
+@fa-var-bridge-water: "\e4ce";
+@fa-var-briefcase: "\f0b1";
+@fa-var-briefcase-medical: "\f469";
+@fa-var-broom: "\f51a";
+@fa-var-broom-ball: "\f458";
+@fa-var-quidditch: "\f458";
+@fa-var-quidditch-broom-ball: "\f458";
+@fa-var-brush: "\f55d";
+@fa-var-bucket: "\e4cf";
+@fa-var-bug: "\f188";
+@fa-var-bug-slash: "\e490";
+@fa-var-bugs: "\e4d0";
+@fa-var-building: "\f1ad";
+@fa-var-building-circle-arrow-right: "\e4d1";
+@fa-var-building-circle-check: "\e4d2";
+@fa-var-building-circle-exclamation: "\e4d3";
+@fa-var-building-circle-xmark: "\e4d4";
+@fa-var-building-columns: "\f19c";
+@fa-var-bank: "\f19c";
+@fa-var-institution: "\f19c";
+@fa-var-museum: "\f19c";
+@fa-var-university: "\f19c";
+@fa-var-building-flag: "\e4d5";
+@fa-var-building-lock: "\e4d6";
+@fa-var-building-ngo: "\e4d7";
+@fa-var-building-shield: "\e4d8";
+@fa-var-building-un: "\e4d9";
+@fa-var-building-user: "\e4da";
+@fa-var-building-wheat: "\e4db";
+@fa-var-bullhorn: "\f0a1";
+@fa-var-bullseye: "\f140";
+@fa-var-burger: "\f805";
+@fa-var-hamburger: "\f805";
+@fa-var-burst: "\e4dc";
+@fa-var-bus: "\f207";
+@fa-var-bus-simple: "\f55e";
+@fa-var-bus-alt: "\f55e";
+@fa-var-business-time: "\f64a";
+@fa-var-briefcase-clock: "\f64a";
+@fa-var-c: "\43";
+@fa-var-cake-candles: "\f1fd";
+@fa-var-birthday-cake: "\f1fd";
+@fa-var-cake: "\f1fd";
+@fa-var-calculator: "\f1ec";
+@fa-var-calendar: "\f133";
+@fa-var-calendar-check: "\f274";
+@fa-var-calendar-day: "\f783";
+@fa-var-calendar-days: "\f073";
+@fa-var-calendar-alt: "\f073";
+@fa-var-calendar-minus: "\f272";
+@fa-var-calendar-plus: "\f271";
+@fa-var-calendar-week: "\f784";
+@fa-var-calendar-xmark: "\f273";
+@fa-var-calendar-times: "\f273";
+@fa-var-camera: "\f030";
+@fa-var-camera-alt: "\f030";
+@fa-var-camera-retro: "\f083";
+@fa-var-camera-rotate: "\e0d8";
+@fa-var-campground: "\f6bb";
+@fa-var-candy-cane: "\f786";
+@fa-var-cannabis: "\f55f";
+@fa-var-capsules: "\f46b";
+@fa-var-car: "\f1b9";
+@fa-var-automobile: "\f1b9";
+@fa-var-car-battery: "\f5df";
+@fa-var-battery-car: "\f5df";
+@fa-var-car-burst: "\f5e1";
+@fa-var-car-crash: "\f5e1";
+@fa-var-car-on: "\e4dd";
+@fa-var-car-rear: "\f5de";
+@fa-var-car-alt: "\f5de";
+@fa-var-car-side: "\f5e4";
+@fa-var-car-tunnel: "\e4de";
+@fa-var-caravan: "\f8ff";
+@fa-var-caret-down: "\f0d7";
+@fa-var-caret-left: "\f0d9";
+@fa-var-caret-right: "\f0da";
+@fa-var-caret-up: "\f0d8";
+@fa-var-carrot: "\f787";
+@fa-var-cart-arrow-down: "\f218";
+@fa-var-cart-flatbed: "\f474";
+@fa-var-dolly-flatbed: "\f474";
+@fa-var-cart-flatbed-suitcase: "\f59d";
+@fa-var-luggage-cart: "\f59d";
+@fa-var-cart-plus: "\f217";
+@fa-var-cart-shopping: "\f07a";
+@fa-var-shopping-cart: "\f07a";
+@fa-var-cash-register: "\f788";
+@fa-var-cat: "\f6be";
+@fa-var-cedi-sign: "\e0df";
+@fa-var-cent-sign: "\e3f5";
+@fa-var-certificate: "\f0a3";
+@fa-var-chair: "\f6c0";
+@fa-var-chalkboard: "\f51b";
+@fa-var-blackboard: "\f51b";
+@fa-var-chalkboard-user: "\f51c";
+@fa-var-chalkboard-teacher: "\f51c";
+@fa-var-champagne-glasses: "\f79f";
+@fa-var-glass-cheers: "\f79f";
+@fa-var-charging-station: "\f5e7";
+@fa-var-chart-area: "\f1fe";
+@fa-var-area-chart: "\f1fe";
+@fa-var-chart-bar: "\f080";
+@fa-var-bar-chart: "\f080";
+@fa-var-chart-column: "\e0e3";
+@fa-var-chart-gantt: "\e0e4";
+@fa-var-chart-line: "\f201";
+@fa-var-line-chart: "\f201";
+@fa-var-chart-pie: "\f200";
+@fa-var-pie-chart: "\f200";
+@fa-var-chart-simple: "\e473";
+@fa-var-check: "\f00c";
+@fa-var-check-double: "\f560";
+@fa-var-check-to-slot: "\f772";
+@fa-var-vote-yea: "\f772";
+@fa-var-cheese: "\f7ef";
+@fa-var-chess: "\f439";
+@fa-var-chess-bishop: "\f43a";
+@fa-var-chess-board: "\f43c";
+@fa-var-chess-king: "\f43f";
+@fa-var-chess-knight: "\f441";
+@fa-var-chess-pawn: "\f443";
+@fa-var-chess-queen: "\f445";
+@fa-var-chess-rook: "\f447";
+@fa-var-chevron-down: "\f078";
+@fa-var-chevron-left: "\f053";
+@fa-var-chevron-right: "\f054";
+@fa-var-chevron-up: "\f077";
+@fa-var-child: "\f1ae";
+@fa-var-child-dress: "\e59c";
+@fa-var-child-reaching: "\e59d";
+@fa-var-child-rifle: "\e4e0";
+@fa-var-children: "\e4e1";
+@fa-var-church: "\f51d";
+@fa-var-circle: "\f111";
+@fa-var-circle-arrow-down: "\f0ab";
+@fa-var-arrow-circle-down: "\f0ab";
+@fa-var-circle-arrow-left: "\f0a8";
+@fa-var-arrow-circle-left: "\f0a8";
+@fa-var-circle-arrow-right: "\f0a9";
+@fa-var-arrow-circle-right: "\f0a9";
+@fa-var-circle-arrow-up: "\f0aa";
+@fa-var-arrow-circle-up: "\f0aa";
+@fa-var-circle-check: "\f058";
+@fa-var-check-circle: "\f058";
+@fa-var-circle-chevron-down: "\f13a";
+@fa-var-chevron-circle-down: "\f13a";
+@fa-var-circle-chevron-left: "\f137";
+@fa-var-chevron-circle-left: "\f137";
+@fa-var-circle-chevron-right: "\f138";
+@fa-var-chevron-circle-right: "\f138";
+@fa-var-circle-chevron-up: "\f139";
+@fa-var-chevron-circle-up: "\f139";
+@fa-var-circle-dollar-to-slot: "\f4b9";
+@fa-var-donate: "\f4b9";
+@fa-var-circle-dot: "\f192";
+@fa-var-dot-circle: "\f192";
+@fa-var-circle-down: "\f358";
+@fa-var-arrow-alt-circle-down: "\f358";
+@fa-var-circle-exclamation: "\f06a";
+@fa-var-exclamation-circle: "\f06a";
+@fa-var-circle-h: "\f47e";
+@fa-var-hospital-symbol: "\f47e";
+@fa-var-circle-half-stroke: "\f042";
+@fa-var-adjust: "\f042";
+@fa-var-circle-info: "\f05a";
+@fa-var-info-circle: "\f05a";
+@fa-var-circle-left: "\f359";
+@fa-var-arrow-alt-circle-left: "\f359";
+@fa-var-circle-minus: "\f056";
+@fa-var-minus-circle: "\f056";
+@fa-var-circle-nodes: "\e4e2";
+@fa-var-circle-notch: "\f1ce";
+@fa-var-circle-pause: "\f28b";
+@fa-var-pause-circle: "\f28b";
+@fa-var-circle-play: "\f144";
+@fa-var-play-circle: "\f144";
+@fa-var-circle-plus: "\f055";
+@fa-var-plus-circle: "\f055";
+@fa-var-circle-question: "\f059";
+@fa-var-question-circle: "\f059";
+@fa-var-circle-radiation: "\f7ba";
+@fa-var-radiation-alt: "\f7ba";
+@fa-var-circle-right: "\f35a";
+@fa-var-arrow-alt-circle-right: "\f35a";
+@fa-var-circle-stop: "\f28d";
+@fa-var-stop-circle: "\f28d";
+@fa-var-circle-up: "\f35b";
+@fa-var-arrow-alt-circle-up: "\f35b";
+@fa-var-circle-user: "\f2bd";
+@fa-var-user-circle: "\f2bd";
+@fa-var-circle-xmark: "\f057";
+@fa-var-times-circle: "\f057";
+@fa-var-xmark-circle: "\f057";
+@fa-var-city: "\f64f";
+@fa-var-clapperboard: "\e131";
+@fa-var-clipboard: "\f328";
+@fa-var-clipboard-check: "\f46c";
+@fa-var-clipboard-list: "\f46d";
+@fa-var-clipboard-question: "\e4e3";
+@fa-var-clipboard-user: "\f7f3";
+@fa-var-clock: "\f017";
+@fa-var-clock-four: "\f017";
+@fa-var-clock-rotate-left: "\f1da";
+@fa-var-history: "\f1da";
+@fa-var-clone: "\f24d";
+@fa-var-closed-captioning: "\f20a";
+@fa-var-cloud: "\f0c2";
+@fa-var-cloud-arrow-down: "\f0ed";
+@fa-var-cloud-download: "\f0ed";
+@fa-var-cloud-download-alt: "\f0ed";
+@fa-var-cloud-arrow-up: "\f0ee";
+@fa-var-cloud-upload: "\f0ee";
+@fa-var-cloud-upload-alt: "\f0ee";
+@fa-var-cloud-bolt: "\f76c";
+@fa-var-thunderstorm: "\f76c";
+@fa-var-cloud-meatball: "\f73b";
+@fa-var-cloud-moon: "\f6c3";
+@fa-var-cloud-moon-rain: "\f73c";
+@fa-var-cloud-rain: "\f73d";
+@fa-var-cloud-showers-heavy: "\f740";
+@fa-var-cloud-showers-water: "\e4e4";
+@fa-var-cloud-sun: "\f6c4";
+@fa-var-cloud-sun-rain: "\f743";
+@fa-var-clover: "\e139";
+@fa-var-code: "\f121";
+@fa-var-code-branch: "\f126";
+@fa-var-code-commit: "\f386";
+@fa-var-code-compare: "\e13a";
+@fa-var-code-fork: "\e13b";
+@fa-var-code-merge: "\f387";
+@fa-var-code-pull-request: "\e13c";
+@fa-var-coins: "\f51e";
+@fa-var-colon-sign: "\e140";
+@fa-var-comment: "\f075";
+@fa-var-comment-dollar: "\f651";
+@fa-var-comment-dots: "\f4ad";
+@fa-var-commenting: "\f4ad";
+@fa-var-comment-medical: "\f7f5";
+@fa-var-comment-slash: "\f4b3";
+@fa-var-comment-sms: "\f7cd";
+@fa-var-sms: "\f7cd";
+@fa-var-comments: "\f086";
+@fa-var-comments-dollar: "\f653";
+@fa-var-compact-disc: "\f51f";
+@fa-var-compass: "\f14e";
+@fa-var-compass-drafting: "\f568";
+@fa-var-drafting-compass: "\f568";
+@fa-var-compress: "\f066";
+@fa-var-computer: "\e4e5";
+@fa-var-computer-mouse: "\f8cc";
+@fa-var-mouse: "\f8cc";
+@fa-var-cookie: "\f563";
+@fa-var-cookie-bite: "\f564";
+@fa-var-copy: "\f0c5";
+@fa-var-copyright: "\f1f9";
+@fa-var-couch: "\f4b8";
+@fa-var-cow: "\f6c8";
+@fa-var-credit-card: "\f09d";
+@fa-var-credit-card-alt: "\f09d";
+@fa-var-crop: "\f125";
+@fa-var-crop-simple: "\f565";
+@fa-var-crop-alt: "\f565";
+@fa-var-cross: "\f654";
+@fa-var-crosshairs: "\f05b";
+@fa-var-crow: "\f520";
+@fa-var-crown: "\f521";
+@fa-var-crutch: "\f7f7";
+@fa-var-cruzeiro-sign: "\e152";
+@fa-var-cube: "\f1b2";
+@fa-var-cubes: "\f1b3";
+@fa-var-cubes-stacked: "\e4e6";
+@fa-var-d: "\44";
+@fa-var-database: "\f1c0";
+@fa-var-delete-left: "\f55a";
+@fa-var-backspace: "\f55a";
+@fa-var-democrat: "\f747";
+@fa-var-desktop: "\f390";
+@fa-var-desktop-alt: "\f390";
+@fa-var-dharmachakra: "\f655";
+@fa-var-diagram-next: "\e476";
+@fa-var-diagram-predecessor: "\e477";
+@fa-var-diagram-project: "\f542";
+@fa-var-project-diagram: "\f542";
+@fa-var-diagram-successor: "\e47a";
+@fa-var-diamond: "\f219";
+@fa-var-diamond-turn-right: "\f5eb";
+@fa-var-directions: "\f5eb";
+@fa-var-dice: "\f522";
+@fa-var-dice-d20: "\f6cf";
+@fa-var-dice-d6: "\f6d1";
+@fa-var-dice-five: "\f523";
+@fa-var-dice-four: "\f524";
+@fa-var-dice-one: "\f525";
+@fa-var-dice-six: "\f526";
+@fa-var-dice-three: "\f527";
+@fa-var-dice-two: "\f528";
+@fa-var-disease: "\f7fa";
+@fa-var-display: "\e163";
+@fa-var-divide: "\f529";
+@fa-var-dna: "\f471";
+@fa-var-dog: "\f6d3";
+@fa-var-dollar-sign: "\24";
+@fa-var-dollar: "\24";
+@fa-var-usd: "\24";
+@fa-var-dolly: "\f472";
+@fa-var-dolly-box: "\f472";
+@fa-var-dong-sign: "\e169";
+@fa-var-door-closed: "\f52a";
+@fa-var-door-open: "\f52b";
+@fa-var-dove: "\f4ba";
+@fa-var-down-left-and-up-right-to-center: "\f422";
+@fa-var-compress-alt: "\f422";
+@fa-var-down-long: "\f309";
+@fa-var-long-arrow-alt-down: "\f309";
+@fa-var-download: "\f019";
+@fa-var-dragon: "\f6d5";
+@fa-var-draw-polygon: "\f5ee";
+@fa-var-droplet: "\f043";
+@fa-var-tint: "\f043";
+@fa-var-droplet-slash: "\f5c7";
+@fa-var-tint-slash: "\f5c7";
+@fa-var-drum: "\f569";
+@fa-var-drum-steelpan: "\f56a";
+@fa-var-drumstick-bite: "\f6d7";
+@fa-var-dumbbell: "\f44b";
+@fa-var-dumpster: "\f793";
+@fa-var-dumpster-fire: "\f794";
+@fa-var-dungeon: "\f6d9";
+@fa-var-e: "\45";
+@fa-var-ear-deaf: "\f2a4";
+@fa-var-deaf: "\f2a4";
+@fa-var-deafness: "\f2a4";
+@fa-var-hard-of-hearing: "\f2a4";
+@fa-var-ear-listen: "\f2a2";
+@fa-var-assistive-listening-systems: "\f2a2";
+@fa-var-earth-africa: "\f57c";
+@fa-var-globe-africa: "\f57c";
+@fa-var-earth-americas: "\f57d";
+@fa-var-earth: "\f57d";
+@fa-var-earth-america: "\f57d";
+@fa-var-globe-americas: "\f57d";
+@fa-var-earth-asia: "\f57e";
+@fa-var-globe-asia: "\f57e";
+@fa-var-earth-europe: "\f7a2";
+@fa-var-globe-europe: "\f7a2";
+@fa-var-earth-oceania: "\e47b";
+@fa-var-globe-oceania: "\e47b";
+@fa-var-egg: "\f7fb";
+@fa-var-eject: "\f052";
+@fa-var-elevator: "\e16d";
+@fa-var-ellipsis: "\f141";
+@fa-var-ellipsis-h: "\f141";
+@fa-var-ellipsis-vertical: "\f142";
+@fa-var-ellipsis-v: "\f142";
+@fa-var-envelope: "\f0e0";
+@fa-var-envelope-circle-check: "\e4e8";
+@fa-var-envelope-open: "\f2b6";
+@fa-var-envelope-open-text: "\f658";
+@fa-var-envelopes-bulk: "\f674";
+@fa-var-mail-bulk: "\f674";
+@fa-var-equals: "\3d";
+@fa-var-eraser: "\f12d";
+@fa-var-ethernet: "\f796";
+@fa-var-euro-sign: "\f153";
+@fa-var-eur: "\f153";
+@fa-var-euro: "\f153";
+@fa-var-exclamation: "\21";
+@fa-var-expand: "\f065";
+@fa-var-explosion: "\e4e9";
+@fa-var-eye: "\f06e";
+@fa-var-eye-dropper: "\f1fb";
+@fa-var-eye-dropper-empty: "\f1fb";
+@fa-var-eyedropper: "\f1fb";
+@fa-var-eye-low-vision: "\f2a8";
+@fa-var-low-vision: "\f2a8";
+@fa-var-eye-slash: "\f070";
+@fa-var-f: "\46";
+@fa-var-face-angry: "\f556";
+@fa-var-angry: "\f556";
+@fa-var-face-dizzy: "\f567";
+@fa-var-dizzy: "\f567";
+@fa-var-face-flushed: "\f579";
+@fa-var-flushed: "\f579";
+@fa-var-face-frown: "\f119";
+@fa-var-frown: "\f119";
+@fa-var-face-frown-open: "\f57a";
+@fa-var-frown-open: "\f57a";
+@fa-var-face-grimace: "\f57f";
+@fa-var-grimace: "\f57f";
+@fa-var-face-grin: "\f580";
+@fa-var-grin: "\f580";
+@fa-var-face-grin-beam: "\f582";
+@fa-var-grin-beam: "\f582";
+@fa-var-face-grin-beam-sweat: "\f583";
+@fa-var-grin-beam-sweat: "\f583";
+@fa-var-face-grin-hearts: "\f584";
+@fa-var-grin-hearts: "\f584";
+@fa-var-face-grin-squint: "\f585";
+@fa-var-grin-squint: "\f585";
+@fa-var-face-grin-squint-tears: "\f586";
+@fa-var-grin-squint-tears: "\f586";
+@fa-var-face-grin-stars: "\f587";
+@fa-var-grin-stars: "\f587";
+@fa-var-face-grin-tears: "\f588";
+@fa-var-grin-tears: "\f588";
+@fa-var-face-grin-tongue: "\f589";
+@fa-var-grin-tongue: "\f589";
+@fa-var-face-grin-tongue-squint: "\f58a";
+@fa-var-grin-tongue-squint: "\f58a";
+@fa-var-face-grin-tongue-wink: "\f58b";
+@fa-var-grin-tongue-wink: "\f58b";
+@fa-var-face-grin-wide: "\f581";
+@fa-var-grin-alt: "\f581";
+@fa-var-face-grin-wink: "\f58c";
+@fa-var-grin-wink: "\f58c";
+@fa-var-face-kiss: "\f596";
+@fa-var-kiss: "\f596";
+@fa-var-face-kiss-beam: "\f597";
+@fa-var-kiss-beam: "\f597";
+@fa-var-face-kiss-wink-heart: "\f598";
+@fa-var-kiss-wink-heart: "\f598";
+@fa-var-face-laugh: "\f599";
+@fa-var-laugh: "\f599";
+@fa-var-face-laugh-beam: "\f59a";
+@fa-var-laugh-beam: "\f59a";
+@fa-var-face-laugh-squint: "\f59b";
+@fa-var-laugh-squint: "\f59b";
+@fa-var-face-laugh-wink: "\f59c";
+@fa-var-laugh-wink: "\f59c";
+@fa-var-face-meh: "\f11a";
+@fa-var-meh: "\f11a";
+@fa-var-face-meh-blank: "\f5a4";
+@fa-var-meh-blank: "\f5a4";
+@fa-var-face-rolling-eyes: "\f5a5";
+@fa-var-meh-rolling-eyes: "\f5a5";
+@fa-var-face-sad-cry: "\f5b3";
+@fa-var-sad-cry: "\f5b3";
+@fa-var-face-sad-tear: "\f5b4";
+@fa-var-sad-tear: "\f5b4";
+@fa-var-face-smile: "\f118";
+@fa-var-smile: "\f118";
+@fa-var-face-smile-beam: "\f5b8";
+@fa-var-smile-beam: "\f5b8";
+@fa-var-face-smile-wink: "\f4da";
+@fa-var-smile-wink: "\f4da";
+@fa-var-face-surprise: "\f5c2";
+@fa-var-surprise: "\f5c2";
+@fa-var-face-tired: "\f5c8";
+@fa-var-tired: "\f5c8";
+@fa-var-fan: "\f863";
+@fa-var-faucet: "\e005";
+@fa-var-faucet-drip: "\e006";
+@fa-var-fax: "\f1ac";
+@fa-var-feather: "\f52d";
+@fa-var-feather-pointed: "\f56b";
+@fa-var-feather-alt: "\f56b";
+@fa-var-ferry: "\e4ea";
+@fa-var-file: "\f15b";
+@fa-var-file-arrow-down: "\f56d";
+@fa-var-file-download: "\f56d";
+@fa-var-file-arrow-up: "\f574";
+@fa-var-file-upload: "\f574";
+@fa-var-file-audio: "\f1c7";
+@fa-var-file-circle-check: "\e493";
+@fa-var-file-circle-exclamation: "\e4eb";
+@fa-var-file-circle-minus: "\e4ed";
+@fa-var-file-circle-plus: "\e4ee";
+@fa-var-file-circle-question: "\e4ef";
+@fa-var-file-circle-xmark: "\e494";
+@fa-var-file-code: "\f1c9";
+@fa-var-file-contract: "\f56c";
+@fa-var-file-csv: "\f6dd";
+@fa-var-file-excel: "\f1c3";
+@fa-var-file-export: "\f56e";
+@fa-var-arrow-right-from-file: "\f56e";
+@fa-var-file-image: "\f1c5";
+@fa-var-file-import: "\f56f";
+@fa-var-arrow-right-to-file: "\f56f";
+@fa-var-file-invoice: "\f570";
+@fa-var-file-invoice-dollar: "\f571";
+@fa-var-file-lines: "\f15c";
+@fa-var-file-alt: "\f15c";
+@fa-var-file-text: "\f15c";
+@fa-var-file-medical: "\f477";
+@fa-var-file-pdf: "\f1c1";
+@fa-var-file-pen: "\f31c";
+@fa-var-file-edit: "\f31c";
+@fa-var-file-powerpoint: "\f1c4";
+@fa-var-file-prescription: "\f572";
+@fa-var-file-shield: "\e4f0";
+@fa-var-file-signature: "\f573";
+@fa-var-file-video: "\f1c8";
+@fa-var-file-waveform: "\f478";
+@fa-var-file-medical-alt: "\f478";
+@fa-var-file-word: "\f1c2";
+@fa-var-file-zipper: "\f1c6";
+@fa-var-file-archive: "\f1c6";
+@fa-var-fill: "\f575";
+@fa-var-fill-drip: "\f576";
+@fa-var-film: "\f008";
+@fa-var-filter: "\f0b0";
+@fa-var-filter-circle-dollar: "\f662";
+@fa-var-funnel-dollar: "\f662";
+@fa-var-filter-circle-xmark: "\e17b";
+@fa-var-fingerprint: "\f577";
+@fa-var-fire: "\f06d";
+@fa-var-fire-burner: "\e4f1";
+@fa-var-fire-extinguisher: "\f134";
+@fa-var-fire-flame-curved: "\f7e4";
+@fa-var-fire-alt: "\f7e4";
+@fa-var-fire-flame-simple: "\f46a";
+@fa-var-burn: "\f46a";
+@fa-var-fish: "\f578";
+@fa-var-fish-fins: "\e4f2";
+@fa-var-flag: "\f024";
+@fa-var-flag-checkered: "\f11e";
+@fa-var-flag-usa: "\f74d";
+@fa-var-flask: "\f0c3";
+@fa-var-flask-vial: "\e4f3";
+@fa-var-floppy-disk: "\f0c7";
+@fa-var-save: "\f0c7";
+@fa-var-florin-sign: "\e184";
+@fa-var-folder: "\f07b";
+@fa-var-folder-blank: "\f07b";
+@fa-var-folder-closed: "\e185";
+@fa-var-folder-minus: "\f65d";
+@fa-var-folder-open: "\f07c";
+@fa-var-folder-plus: "\f65e";
+@fa-var-folder-tree: "\f802";
+@fa-var-font: "\f031";
+@fa-var-football: "\f44e";
+@fa-var-football-ball: "\f44e";
+@fa-var-forward: "\f04e";
+@fa-var-forward-fast: "\f050";
+@fa-var-fast-forward: "\f050";
+@fa-var-forward-step: "\f051";
+@fa-var-step-forward: "\f051";
+@fa-var-franc-sign: "\e18f";
+@fa-var-frog: "\f52e";
+@fa-var-futbol: "\f1e3";
+@fa-var-futbol-ball: "\f1e3";
+@fa-var-soccer-ball: "\f1e3";
+@fa-var-g: "\47";
+@fa-var-gamepad: "\f11b";
+@fa-var-gas-pump: "\f52f";
+@fa-var-gauge: "\f624";
+@fa-var-dashboard: "\f624";
+@fa-var-gauge-med: "\f624";
+@fa-var-tachometer-alt-average: "\f624";
+@fa-var-gauge-high: "\f625";
+@fa-var-tachometer-alt: "\f625";
+@fa-var-tachometer-alt-fast: "\f625";
+@fa-var-gauge-simple: "\f629";
+@fa-var-gauge-simple-med: "\f629";
+@fa-var-tachometer-average: "\f629";
+@fa-var-gauge-simple-high: "\f62a";
+@fa-var-tachometer: "\f62a";
+@fa-var-tachometer-fast: "\f62a";
+@fa-var-gavel: "\f0e3";
+@fa-var-legal: "\f0e3";
+@fa-var-gear: "\f013";
+@fa-var-cog: "\f013";
+@fa-var-gears: "\f085";
+@fa-var-cogs: "\f085";
+@fa-var-gem: "\f3a5";
+@fa-var-genderless: "\f22d";
+@fa-var-ghost: "\f6e2";
+@fa-var-gift: "\f06b";
+@fa-var-gifts: "\f79c";
+@fa-var-glass-water: "\e4f4";
+@fa-var-glass-water-droplet: "\e4f5";
+@fa-var-glasses: "\f530";
+@fa-var-globe: "\f0ac";
+@fa-var-golf-ball-tee: "\f450";
+@fa-var-golf-ball: "\f450";
+@fa-var-gopuram: "\f664";
+@fa-var-graduation-cap: "\f19d";
+@fa-var-mortar-board: "\f19d";
+@fa-var-greater-than: "\3e";
+@fa-var-greater-than-equal: "\f532";
+@fa-var-grip: "\f58d";
+@fa-var-grip-horizontal: "\f58d";
+@fa-var-grip-lines: "\f7a4";
+@fa-var-grip-lines-vertical: "\f7a5";
+@fa-var-grip-vertical: "\f58e";
+@fa-var-group-arrows-rotate: "\e4f6";
+@fa-var-guarani-sign: "\e19a";
+@fa-var-guitar: "\f7a6";
+@fa-var-gun: "\e19b";
+@fa-var-h: "\48";
+@fa-var-hammer: "\f6e3";
+@fa-var-hamsa: "\f665";
+@fa-var-hand: "\f256";
+@fa-var-hand-paper: "\f256";
+@fa-var-hand-back-fist: "\f255";
+@fa-var-hand-rock: "\f255";
+@fa-var-hand-dots: "\f461";
+@fa-var-allergies: "\f461";
+@fa-var-hand-fist: "\f6de";
+@fa-var-fist-raised: "\f6de";
+@fa-var-hand-holding: "\f4bd";
+@fa-var-hand-holding-dollar: "\f4c0";
+@fa-var-hand-holding-usd: "\f4c0";
+@fa-var-hand-holding-droplet: "\f4c1";
+@fa-var-hand-holding-water: "\f4c1";
+@fa-var-hand-holding-hand: "\e4f7";
+@fa-var-hand-holding-heart: "\f4be";
+@fa-var-hand-holding-medical: "\e05c";
+@fa-var-hand-lizard: "\f258";
+@fa-var-hand-middle-finger: "\f806";
+@fa-var-hand-peace: "\f25b";
+@fa-var-hand-point-down: "\f0a7";
+@fa-var-hand-point-left: "\f0a5";
+@fa-var-hand-point-right: "\f0a4";
+@fa-var-hand-point-up: "\f0a6";
+@fa-var-hand-pointer: "\f25a";
+@fa-var-hand-scissors: "\f257";
+@fa-var-hand-sparkles: "\e05d";
+@fa-var-hand-spock: "\f259";
+@fa-var-handcuffs: "\e4f8";
+@fa-var-hands: "\f2a7";
+@fa-var-sign-language: "\f2a7";
+@fa-var-signing: "\f2a7";
+@fa-var-hands-asl-interpreting: "\f2a3";
+@fa-var-american-sign-language-interpreting: "\f2a3";
+@fa-var-asl-interpreting: "\f2a3";
+@fa-var-hands-american-sign-language-interpreting: "\f2a3";
+@fa-var-hands-bound: "\e4f9";
+@fa-var-hands-bubbles: "\e05e";
+@fa-var-hands-wash: "\e05e";
+@fa-var-hands-clapping: "\e1a8";
+@fa-var-hands-holding: "\f4c2";
+@fa-var-hands-holding-child: "\e4fa";
+@fa-var-hands-holding-circle: "\e4fb";
+@fa-var-hands-praying: "\f684";
+@fa-var-praying-hands: "\f684";
+@fa-var-handshake: "\f2b5";
+@fa-var-handshake-angle: "\f4c4";
+@fa-var-hands-helping: "\f4c4";
+@fa-var-handshake-simple: "\f4c6";
+@fa-var-handshake-alt: "\f4c6";
+@fa-var-handshake-simple-slash: "\e05f";
+@fa-var-handshake-alt-slash: "\e05f";
+@fa-var-handshake-slash: "\e060";
+@fa-var-hanukiah: "\f6e6";
+@fa-var-hard-drive: "\f0a0";
+@fa-var-hdd: "\f0a0";
+@fa-var-hashtag: "\23";
+@fa-var-hat-cowboy: "\f8c0";
+@fa-var-hat-cowboy-side: "\f8c1";
+@fa-var-hat-wizard: "\f6e8";
+@fa-var-head-side-cough: "\e061";
+@fa-var-head-side-cough-slash: "\e062";
+@fa-var-head-side-mask: "\e063";
+@fa-var-head-side-virus: "\e064";
+@fa-var-heading: "\f1dc";
+@fa-var-header: "\f1dc";
+@fa-var-headphones: "\f025";
+@fa-var-headphones-simple: "\f58f";
+@fa-var-headphones-alt: "\f58f";
+@fa-var-headset: "\f590";
+@fa-var-heart: "\f004";
+@fa-var-heart-circle-bolt: "\e4fc";
+@fa-var-heart-circle-check: "\e4fd";
+@fa-var-heart-circle-exclamation: "\e4fe";
+@fa-var-heart-circle-minus: "\e4ff";
+@fa-var-heart-circle-plus: "\e500";
+@fa-var-heart-circle-xmark: "\e501";
+@fa-var-heart-crack: "\f7a9";
+@fa-var-heart-broken: "\f7a9";
+@fa-var-heart-pulse: "\f21e";
+@fa-var-heartbeat: "\f21e";
+@fa-var-helicopter: "\f533";
+@fa-var-helicopter-symbol: "\e502";
+@fa-var-helmet-safety: "\f807";
+@fa-var-hard-hat: "\f807";
+@fa-var-hat-hard: "\f807";
+@fa-var-helmet-un: "\e503";
+@fa-var-highlighter: "\f591";
+@fa-var-hill-avalanche: "\e507";
+@fa-var-hill-rockslide: "\e508";
+@fa-var-hippo: "\f6ed";
+@fa-var-hockey-puck: "\f453";
+@fa-var-holly-berry: "\f7aa";
+@fa-var-horse: "\f6f0";
+@fa-var-horse-head: "\f7ab";
+@fa-var-hospital: "\f0f8";
+@fa-var-hospital-alt: "\f0f8";
+@fa-var-hospital-wide: "\f0f8";
+@fa-var-hospital-user: "\f80d";
+@fa-var-hot-tub-person: "\f593";
+@fa-var-hot-tub: "\f593";
+@fa-var-hotdog: "\f80f";
+@fa-var-hotel: "\f594";
+@fa-var-hourglass: "\f254";
+@fa-var-hourglass-2: "\f254";
+@fa-var-hourglass-half: "\f254";
+@fa-var-hourglass-empty: "\f252";
+@fa-var-hourglass-end: "\f253";
+@fa-var-hourglass-3: "\f253";
+@fa-var-hourglass-start: "\f251";
+@fa-var-hourglass-1: "\f251";
+@fa-var-house: "\f015";
+@fa-var-home: "\f015";
+@fa-var-home-alt: "\f015";
+@fa-var-home-lg-alt: "\f015";
+@fa-var-house-chimney: "\e3af";
+@fa-var-home-lg: "\e3af";
+@fa-var-house-chimney-crack: "\f6f1";
+@fa-var-house-damage: "\f6f1";
+@fa-var-house-chimney-medical: "\f7f2";
+@fa-var-clinic-medical: "\f7f2";
+@fa-var-house-chimney-user: "\e065";
+@fa-var-house-chimney-window: "\e00d";
+@fa-var-house-circle-check: "\e509";
+@fa-var-house-circle-exclamation: "\e50a";
+@fa-var-house-circle-xmark: "\e50b";
+@fa-var-house-crack: "\e3b1";
+@fa-var-house-fire: "\e50c";
+@fa-var-house-flag: "\e50d";
+@fa-var-house-flood-water: "\e50e";
+@fa-var-house-flood-water-circle-arrow-right: "\e50f";
+@fa-var-house-laptop: "\e066";
+@fa-var-laptop-house: "\e066";
+@fa-var-house-lock: "\e510";
+@fa-var-house-medical: "\e3b2";
+@fa-var-house-medical-circle-check: "\e511";
+@fa-var-house-medical-circle-exclamation: "\e512";
+@fa-var-house-medical-circle-xmark: "\e513";
+@fa-var-house-medical-flag: "\e514";
+@fa-var-house-signal: "\e012";
+@fa-var-house-tsunami: "\e515";
+@fa-var-house-user: "\e1b0";
+@fa-var-home-user: "\e1b0";
+@fa-var-hryvnia-sign: "\f6f2";
+@fa-var-hryvnia: "\f6f2";
+@fa-var-hurricane: "\f751";
+@fa-var-i: "\49";
+@fa-var-i-cursor: "\f246";
+@fa-var-ice-cream: "\f810";
+@fa-var-icicles: "\f7ad";
+@fa-var-icons: "\f86d";
+@fa-var-heart-music-camera-bolt: "\f86d";
+@fa-var-id-badge: "\f2c1";
+@fa-var-id-card: "\f2c2";
+@fa-var-drivers-license: "\f2c2";
+@fa-var-id-card-clip: "\f47f";
+@fa-var-id-card-alt: "\f47f";
+@fa-var-igloo: "\f7ae";
+@fa-var-image: "\f03e";
+@fa-var-image-portrait: "\f3e0";
+@fa-var-portrait: "\f3e0";
+@fa-var-images: "\f302";
+@fa-var-inbox: "\f01c";
+@fa-var-indent: "\f03c";
+@fa-var-indian-rupee-sign: "\e1bc";
+@fa-var-indian-rupee: "\e1bc";
+@fa-var-inr: "\e1bc";
+@fa-var-industry: "\f275";
+@fa-var-infinity: "\f534";
+@fa-var-info: "\f129";
+@fa-var-italic: "\f033";
+@fa-var-j: "\4a";
+@fa-var-jar: "\e516";
+@fa-var-jar-wheat: "\e517";
+@fa-var-jedi: "\f669";
+@fa-var-jet-fighter: "\f0fb";
+@fa-var-fighter-jet: "\f0fb";
+@fa-var-jet-fighter-up: "\e518";
+@fa-var-joint: "\f595";
+@fa-var-jug-detergent: "\e519";
+@fa-var-k: "\4b";
+@fa-var-kaaba: "\f66b";
+@fa-var-key: "\f084";
+@fa-var-keyboard: "\f11c";
+@fa-var-khanda: "\f66d";
+@fa-var-kip-sign: "\e1c4";
+@fa-var-kit-medical: "\f479";
+@fa-var-first-aid: "\f479";
+@fa-var-kitchen-set: "\e51a";
+@fa-var-kiwi-bird: "\f535";
+@fa-var-l: "\4c";
+@fa-var-land-mine-on: "\e51b";
+@fa-var-landmark: "\f66f";
+@fa-var-landmark-dome: "\f752";
+@fa-var-landmark-alt: "\f752";
+@fa-var-landmark-flag: "\e51c";
+@fa-var-language: "\f1ab";
+@fa-var-laptop: "\f109";
+@fa-var-laptop-code: "\f5fc";
+@fa-var-laptop-file: "\e51d";
+@fa-var-laptop-medical: "\f812";
+@fa-var-lari-sign: "\e1c8";
+@fa-var-layer-group: "\f5fd";
+@fa-var-leaf: "\f06c";
+@fa-var-left-long: "\f30a";
+@fa-var-long-arrow-alt-left: "\f30a";
+@fa-var-left-right: "\f337";
+@fa-var-arrows-alt-h: "\f337";
+@fa-var-lemon: "\f094";
+@fa-var-less-than: "\3c";
+@fa-var-less-than-equal: "\f537";
+@fa-var-life-ring: "\f1cd";
+@fa-var-lightbulb: "\f0eb";
+@fa-var-lines-leaning: "\e51e";
+@fa-var-link: "\f0c1";
+@fa-var-chain: "\f0c1";
+@fa-var-link-slash: "\f127";
+@fa-var-chain-broken: "\f127";
+@fa-var-chain-slash: "\f127";
+@fa-var-unlink: "\f127";
+@fa-var-lira-sign: "\f195";
+@fa-var-list: "\f03a";
+@fa-var-list-squares: "\f03a";
+@fa-var-list-check: "\f0ae";
+@fa-var-tasks: "\f0ae";
+@fa-var-list-ol: "\f0cb";
+@fa-var-list-1-2: "\f0cb";
+@fa-var-list-numeric: "\f0cb";
+@fa-var-list-ul: "\f0ca";
+@fa-var-list-dots: "\f0ca";
+@fa-var-litecoin-sign: "\e1d3";
+@fa-var-location-arrow: "\f124";
+@fa-var-location-crosshairs: "\f601";
+@fa-var-location: "\f601";
+@fa-var-location-dot: "\f3c5";
+@fa-var-map-marker-alt: "\f3c5";
+@fa-var-location-pin: "\f041";
+@fa-var-map-marker: "\f041";
+@fa-var-location-pin-lock: "\e51f";
+@fa-var-lock: "\f023";
+@fa-var-lock-open: "\f3c1";
+@fa-var-locust: "\e520";
+@fa-var-lungs: "\f604";
+@fa-var-lungs-virus: "\e067";
+@fa-var-m: "\4d";
+@fa-var-magnet: "\f076";
+@fa-var-magnifying-glass: "\f002";
+@fa-var-search: "\f002";
+@fa-var-magnifying-glass-arrow-right: "\e521";
+@fa-var-magnifying-glass-chart: "\e522";
+@fa-var-magnifying-glass-dollar: "\f688";
+@fa-var-search-dollar: "\f688";
+@fa-var-magnifying-glass-location: "\f689";
+@fa-var-search-location: "\f689";
+@fa-var-magnifying-glass-minus: "\f010";
+@fa-var-search-minus: "\f010";
+@fa-var-magnifying-glass-plus: "\f00e";
+@fa-var-search-plus: "\f00e";
+@fa-var-manat-sign: "\e1d5";
+@fa-var-map: "\f279";
+@fa-var-map-location: "\f59f";
+@fa-var-map-marked: "\f59f";
+@fa-var-map-location-dot: "\f5a0";
+@fa-var-map-marked-alt: "\f5a0";
+@fa-var-map-pin: "\f276";
+@fa-var-marker: "\f5a1";
+@fa-var-mars: "\f222";
+@fa-var-mars-and-venus: "\f224";
+@fa-var-mars-and-venus-burst: "\e523";
+@fa-var-mars-double: "\f227";
+@fa-var-mars-stroke: "\f229";
+@fa-var-mars-stroke-right: "\f22b";
+@fa-var-mars-stroke-h: "\f22b";
+@fa-var-mars-stroke-up: "\f22a";
+@fa-var-mars-stroke-v: "\f22a";
+@fa-var-martini-glass: "\f57b";
+@fa-var-glass-martini-alt: "\f57b";
+@fa-var-martini-glass-citrus: "\f561";
+@fa-var-cocktail: "\f561";
+@fa-var-martini-glass-empty: "\f000";
+@fa-var-glass-martini: "\f000";
+@fa-var-mask: "\f6fa";
+@fa-var-mask-face: "\e1d7";
+@fa-var-mask-ventilator: "\e524";
+@fa-var-masks-theater: "\f630";
+@fa-var-theater-masks: "\f630";
+@fa-var-mattress-pillow: "\e525";
+@fa-var-maximize: "\f31e";
+@fa-var-expand-arrows-alt: "\f31e";
+@fa-var-medal: "\f5a2";
+@fa-var-memory: "\f538";
+@fa-var-menorah: "\f676";
+@fa-var-mercury: "\f223";
+@fa-var-message: "\f27a";
+@fa-var-comment-alt: "\f27a";
+@fa-var-meteor: "\f753";
+@fa-var-microchip: "\f2db";
+@fa-var-microphone: "\f130";
+@fa-var-microphone-lines: "\f3c9";
+@fa-var-microphone-alt: "\f3c9";
+@fa-var-microphone-lines-slash: "\f539";
+@fa-var-microphone-alt-slash: "\f539";
+@fa-var-microphone-slash: "\f131";
+@fa-var-microscope: "\f610";
+@fa-var-mill-sign: "\e1ed";
+@fa-var-minimize: "\f78c";
+@fa-var-compress-arrows-alt: "\f78c";
+@fa-var-minus: "\f068";
+@fa-var-subtract: "\f068";
+@fa-var-mitten: "\f7b5";
+@fa-var-mobile: "\f3ce";
+@fa-var-mobile-android: "\f3ce";
+@fa-var-mobile-phone: "\f3ce";
+@fa-var-mobile-button: "\f10b";
+@fa-var-mobile-retro: "\e527";
+@fa-var-mobile-screen: "\f3cf";
+@fa-var-mobile-android-alt: "\f3cf";
+@fa-var-mobile-screen-button: "\f3cd";
+@fa-var-mobile-alt: "\f3cd";
+@fa-var-money-bill: "\f0d6";
+@fa-var-money-bill-1: "\f3d1";
+@fa-var-money-bill-alt: "\f3d1";
+@fa-var-money-bill-1-wave: "\f53b";
+@fa-var-money-bill-wave-alt: "\f53b";
+@fa-var-money-bill-transfer: "\e528";
+@fa-var-money-bill-trend-up: "\e529";
+@fa-var-money-bill-wave: "\f53a";
+@fa-var-money-bill-wheat: "\e52a";
+@fa-var-money-bills: "\e1f3";
+@fa-var-money-check: "\f53c";
+@fa-var-money-check-dollar: "\f53d";
+@fa-var-money-check-alt: "\f53d";
+@fa-var-monument: "\f5a6";
+@fa-var-moon: "\f186";
+@fa-var-mortar-pestle: "\f5a7";
+@fa-var-mosque: "\f678";
+@fa-var-mosquito: "\e52b";
+@fa-var-mosquito-net: "\e52c";
+@fa-var-motorcycle: "\f21c";
+@fa-var-mound: "\e52d";
+@fa-var-mountain: "\f6fc";
+@fa-var-mountain-city: "\e52e";
+@fa-var-mountain-sun: "\e52f";
+@fa-var-mug-hot: "\f7b6";
+@fa-var-mug-saucer: "\f0f4";
+@fa-var-coffee: "\f0f4";
+@fa-var-music: "\f001";
+@fa-var-n: "\4e";
+@fa-var-naira-sign: "\e1f6";
+@fa-var-network-wired: "\f6ff";
+@fa-var-neuter: "\f22c";
+@fa-var-newspaper: "\f1ea";
+@fa-var-not-equal: "\f53e";
+@fa-var-note-sticky: "\f249";
+@fa-var-sticky-note: "\f249";
+@fa-var-notes-medical: "\f481";
+@fa-var-o: "\4f";
+@fa-var-object-group: "\f247";
+@fa-var-object-ungroup: "\f248";
+@fa-var-oil-can: "\f613";
+@fa-var-oil-well: "\e532";
+@fa-var-om: "\f679";
+@fa-var-otter: "\f700";
+@fa-var-outdent: "\f03b";
+@fa-var-dedent: "\f03b";
+@fa-var-p: "\50";
+@fa-var-pager: "\f815";
+@fa-var-paint-roller: "\f5aa";
+@fa-var-paintbrush: "\f1fc";
+@fa-var-paint-brush: "\f1fc";
+@fa-var-palette: "\f53f";
+@fa-var-pallet: "\f482";
+@fa-var-panorama: "\e209";
+@fa-var-paper-plane: "\f1d8";
+@fa-var-paperclip: "\f0c6";
+@fa-var-parachute-box: "\f4cd";
+@fa-var-paragraph: "\f1dd";
+@fa-var-passport: "\f5ab";
+@fa-var-paste: "\f0ea";
+@fa-var-file-clipboard: "\f0ea";
+@fa-var-pause: "\f04c";
+@fa-var-paw: "\f1b0";
+@fa-var-peace: "\f67c";
+@fa-var-pen: "\f304";
+@fa-var-pen-clip: "\f305";
+@fa-var-pen-alt: "\f305";
+@fa-var-pen-fancy: "\f5ac";
+@fa-var-pen-nib: "\f5ad";
+@fa-var-pen-ruler: "\f5ae";
+@fa-var-pencil-ruler: "\f5ae";
+@fa-var-pen-to-square: "\f044";
+@fa-var-edit: "\f044";
+@fa-var-pencil: "\f303";
+@fa-var-pencil-alt: "\f303";
+@fa-var-people-arrows-left-right: "\e068";
+@fa-var-people-arrows: "\e068";
+@fa-var-people-carry-box: "\f4ce";
+@fa-var-people-carry: "\f4ce";
+@fa-var-people-group: "\e533";
+@fa-var-people-line: "\e534";
+@fa-var-people-pulling: "\e535";
+@fa-var-people-robbery: "\e536";
+@fa-var-people-roof: "\e537";
+@fa-var-pepper-hot: "\f816";
+@fa-var-percent: "\25";
+@fa-var-percentage: "\25";
+@fa-var-person: "\f183";
+@fa-var-male: "\f183";
+@fa-var-person-arrow-down-to-line: "\e538";
+@fa-var-person-arrow-up-from-line: "\e539";
+@fa-var-person-biking: "\f84a";
+@fa-var-biking: "\f84a";
+@fa-var-person-booth: "\f756";
+@fa-var-person-breastfeeding: "\e53a";
+@fa-var-person-burst: "\e53b";
+@fa-var-person-cane: "\e53c";
+@fa-var-person-chalkboard: "\e53d";
+@fa-var-person-circle-check: "\e53e";
+@fa-var-person-circle-exclamation: "\e53f";
+@fa-var-person-circle-minus: "\e540";
+@fa-var-person-circle-plus: "\e541";
+@fa-var-person-circle-question: "\e542";
+@fa-var-person-circle-xmark: "\e543";
+@fa-var-person-digging: "\f85e";
+@fa-var-digging: "\f85e";
+@fa-var-person-dots-from-line: "\f470";
+@fa-var-diagnoses: "\f470";
+@fa-var-person-dress: "\f182";
+@fa-var-female: "\f182";
+@fa-var-person-dress-burst: "\e544";
+@fa-var-person-drowning: "\e545";
+@fa-var-person-falling: "\e546";
+@fa-var-person-falling-burst: "\e547";
+@fa-var-person-half-dress: "\e548";
+@fa-var-person-harassing: "\e549";
+@fa-var-person-hiking: "\f6ec";
+@fa-var-hiking: "\f6ec";
+@fa-var-person-military-pointing: "\e54a";
+@fa-var-person-military-rifle: "\e54b";
+@fa-var-person-military-to-person: "\e54c";
+@fa-var-person-praying: "\f683";
+@fa-var-pray: "\f683";
+@fa-var-person-pregnant: "\e31e";
+@fa-var-person-rays: "\e54d";
+@fa-var-person-rifle: "\e54e";
+@fa-var-person-running: "\f70c";
+@fa-var-running: "\f70c";
+@fa-var-person-shelter: "\e54f";
+@fa-var-person-skating: "\f7c5";
+@fa-var-skating: "\f7c5";
+@fa-var-person-skiing: "\f7c9";
+@fa-var-skiing: "\f7c9";
+@fa-var-person-skiing-nordic: "\f7ca";
+@fa-var-skiing-nordic: "\f7ca";
+@fa-var-person-snowboarding: "\f7ce";
+@fa-var-snowboarding: "\f7ce";
+@fa-var-person-swimming: "\f5c4";
+@fa-var-swimmer: "\f5c4";
+@fa-var-person-through-window: "\e433";
+@fa-var-person-walking: "\f554";
+@fa-var-walking: "\f554";
+@fa-var-person-walking-arrow-loop-left: "\e551";
+@fa-var-person-walking-arrow-right: "\e552";
+@fa-var-person-walking-dashed-line-arrow-right: "\e553";
+@fa-var-person-walking-luggage: "\e554";
+@fa-var-person-walking-with-cane: "\f29d";
+@fa-var-blind: "\f29d";
+@fa-var-peseta-sign: "\e221";
+@fa-var-peso-sign: "\e222";
+@fa-var-phone: "\f095";
+@fa-var-phone-flip: "\f879";
+@fa-var-phone-alt: "\f879";
+@fa-var-phone-slash: "\f3dd";
+@fa-var-phone-volume: "\f2a0";
+@fa-var-volume-control-phone: "\f2a0";
+@fa-var-photo-film: "\f87c";
+@fa-var-photo-video: "\f87c";
+@fa-var-piggy-bank: "\f4d3";
+@fa-var-pills: "\f484";
+@fa-var-pizza-slice: "\f818";
+@fa-var-place-of-worship: "\f67f";
+@fa-var-plane: "\f072";
+@fa-var-plane-arrival: "\f5af";
+@fa-var-plane-circle-check: "\e555";
+@fa-var-plane-circle-exclamation: "\e556";
+@fa-var-plane-circle-xmark: "\e557";
+@fa-var-plane-departure: "\f5b0";
+@fa-var-plane-lock: "\e558";
+@fa-var-plane-slash: "\e069";
+@fa-var-plane-up: "\e22d";
+@fa-var-plant-wilt: "\e43b";
+@fa-var-plate-wheat: "\e55a";
+@fa-var-play: "\f04b";
+@fa-var-plug: "\f1e6";
+@fa-var-plug-circle-bolt: "\e55b";
+@fa-var-plug-circle-check: "\e55c";
+@fa-var-plug-circle-exclamation: "\e55d";
+@fa-var-plug-circle-minus: "\e55e";
+@fa-var-plug-circle-plus: "\e55f";
+@fa-var-plug-circle-xmark: "\e560";
+@fa-var-plus: "\2b";
+@fa-var-add: "\2b";
+@fa-var-plus-minus: "\e43c";
+@fa-var-podcast: "\f2ce";
+@fa-var-poo: "\f2fe";
+@fa-var-poo-storm: "\f75a";
+@fa-var-poo-bolt: "\f75a";
+@fa-var-poop: "\f619";
+@fa-var-power-off: "\f011";
+@fa-var-prescription: "\f5b1";
+@fa-var-prescription-bottle: "\f485";
+@fa-var-prescription-bottle-medical: "\f486";
+@fa-var-prescription-bottle-alt: "\f486";
+@fa-var-print: "\f02f";
+@fa-var-pump-medical: "\e06a";
+@fa-var-pump-soap: "\e06b";
+@fa-var-puzzle-piece: "\f12e";
+@fa-var-q: "\51";
+@fa-var-qrcode: "\f029";
+@fa-var-question: "\3f";
+@fa-var-quote-left: "\f10d";
+@fa-var-quote-left-alt: "\f10d";
+@fa-var-quote-right: "\f10e";
+@fa-var-quote-right-alt: "\f10e";
+@fa-var-r: "\52";
+@fa-var-radiation: "\f7b9";
+@fa-var-radio: "\f8d7";
+@fa-var-rainbow: "\f75b";
+@fa-var-ranking-star: "\e561";
+@fa-var-receipt: "\f543";
+@fa-var-record-vinyl: "\f8d9";
+@fa-var-rectangle-ad: "\f641";
+@fa-var-ad: "\f641";
+@fa-var-rectangle-list: "\f022";
+@fa-var-list-alt: "\f022";
+@fa-var-rectangle-xmark: "\f410";
+@fa-var-rectangle-times: "\f410";
+@fa-var-times-rectangle: "\f410";
+@fa-var-window-close: "\f410";
+@fa-var-recycle: "\f1b8";
+@fa-var-registered: "\f25d";
+@fa-var-repeat: "\f363";
+@fa-var-reply: "\f3e5";
+@fa-var-mail-reply: "\f3e5";
+@fa-var-reply-all: "\f122";
+@fa-var-mail-reply-all: "\f122";
+@fa-var-republican: "\f75e";
+@fa-var-restroom: "\f7bd";
+@fa-var-retweet: "\f079";
+@fa-var-ribbon: "\f4d6";
+@fa-var-right-from-bracket: "\f2f5";
+@fa-var-sign-out-alt: "\f2f5";
+@fa-var-right-left: "\f362";
+@fa-var-exchange-alt: "\f362";
+@fa-var-right-long: "\f30b";
+@fa-var-long-arrow-alt-right: "\f30b";
+@fa-var-right-to-bracket: "\f2f6";
+@fa-var-sign-in-alt: "\f2f6";
+@fa-var-ring: "\f70b";
+@fa-var-road: "\f018";
+@fa-var-road-barrier: "\e562";
+@fa-var-road-bridge: "\e563";
+@fa-var-road-circle-check: "\e564";
+@fa-var-road-circle-exclamation: "\e565";
+@fa-var-road-circle-xmark: "\e566";
+@fa-var-road-lock: "\e567";
+@fa-var-road-spikes: "\e568";
+@fa-var-robot: "\f544";
+@fa-var-rocket: "\f135";
+@fa-var-rotate: "\f2f1";
+@fa-var-sync-alt: "\f2f1";
+@fa-var-rotate-left: "\f2ea";
+@fa-var-rotate-back: "\f2ea";
+@fa-var-rotate-backward: "\f2ea";
+@fa-var-undo-alt: "\f2ea";
+@fa-var-rotate-right: "\f2f9";
+@fa-var-redo-alt: "\f2f9";
+@fa-var-rotate-forward: "\f2f9";
+@fa-var-route: "\f4d7";
+@fa-var-rss: "\f09e";
+@fa-var-feed: "\f09e";
+@fa-var-ruble-sign: "\f158";
+@fa-var-rouble: "\f158";
+@fa-var-rub: "\f158";
+@fa-var-ruble: "\f158";
+@fa-var-rug: "\e569";
+@fa-var-ruler: "\f545";
+@fa-var-ruler-combined: "\f546";
+@fa-var-ruler-horizontal: "\f547";
+@fa-var-ruler-vertical: "\f548";
+@fa-var-rupee-sign: "\f156";
+@fa-var-rupee: "\f156";
+@fa-var-rupiah-sign: "\e23d";
+@fa-var-s: "\53";
+@fa-var-sack-dollar: "\f81d";
+@fa-var-sack-xmark: "\e56a";
+@fa-var-sailboat: "\e445";
+@fa-var-satellite: "\f7bf";
+@fa-var-satellite-dish: "\f7c0";
+@fa-var-scale-balanced: "\f24e";
+@fa-var-balance-scale: "\f24e";
+@fa-var-scale-unbalanced: "\f515";
+@fa-var-balance-scale-left: "\f515";
+@fa-var-scale-unbalanced-flip: "\f516";
+@fa-var-balance-scale-right: "\f516";
+@fa-var-school: "\f549";
+@fa-var-school-circle-check: "\e56b";
+@fa-var-school-circle-exclamation: "\e56c";
+@fa-var-school-circle-xmark: "\e56d";
+@fa-var-school-flag: "\e56e";
+@fa-var-school-lock: "\e56f";
+@fa-var-scissors: "\f0c4";
+@fa-var-cut: "\f0c4";
+@fa-var-screwdriver: "\f54a";
+@fa-var-screwdriver-wrench: "\f7d9";
+@fa-var-tools: "\f7d9";
+@fa-var-scroll: "\f70e";
+@fa-var-scroll-torah: "\f6a0";
+@fa-var-torah: "\f6a0";
+@fa-var-sd-card: "\f7c2";
+@fa-var-section: "\e447";
+@fa-var-seedling: "\f4d8";
+@fa-var-sprout: "\f4d8";
+@fa-var-server: "\f233";
+@fa-var-shapes: "\f61f";
+@fa-var-triangle-circle-square: "\f61f";
+@fa-var-share: "\f064";
+@fa-var-arrow-turn-right: "\f064";
+@fa-var-mail-forward: "\f064";
+@fa-var-share-from-square: "\f14d";
+@fa-var-share-square: "\f14d";
+@fa-var-share-nodes: "\f1e0";
+@fa-var-share-alt: "\f1e0";
+@fa-var-sheet-plastic: "\e571";
+@fa-var-shekel-sign: "\f20b";
+@fa-var-ils: "\f20b";
+@fa-var-shekel: "\f20b";
+@fa-var-sheqel: "\f20b";
+@fa-var-sheqel-sign: "\f20b";
+@fa-var-shield: "\f132";
+@fa-var-shield-blank: "\f132";
+@fa-var-shield-cat: "\e572";
+@fa-var-shield-dog: "\e573";
+@fa-var-shield-halved: "\f3ed";
+@fa-var-shield-alt: "\f3ed";
+@fa-var-shield-heart: "\e574";
+@fa-var-shield-virus: "\e06c";
+@fa-var-ship: "\f21a";
+@fa-var-shirt: "\f553";
+@fa-var-t-shirt: "\f553";
+@fa-var-tshirt: "\f553";
+@fa-var-shoe-prints: "\f54b";
+@fa-var-shop: "\f54f";
+@fa-var-store-alt: "\f54f";
+@fa-var-shop-lock: "\e4a5";
+@fa-var-shop-slash: "\e070";
+@fa-var-store-alt-slash: "\e070";
+@fa-var-shower: "\f2cc";
+@fa-var-shrimp: "\e448";
+@fa-var-shuffle: "\f074";
+@fa-var-random: "\f074";
+@fa-var-shuttle-space: "\f197";
+@fa-var-space-shuttle: "\f197";
+@fa-var-sign-hanging: "\f4d9";
+@fa-var-sign: "\f4d9";
+@fa-var-signal: "\f012";
+@fa-var-signal-5: "\f012";
+@fa-var-signal-perfect: "\f012";
+@fa-var-signature: "\f5b7";
+@fa-var-signs-post: "\f277";
+@fa-var-map-signs: "\f277";
+@fa-var-sim-card: "\f7c4";
+@fa-var-sink: "\e06d";
+@fa-var-sitemap: "\f0e8";
+@fa-var-skull: "\f54c";
+@fa-var-skull-crossbones: "\f714";
+@fa-var-slash: "\f715";
+@fa-var-sleigh: "\f7cc";
+@fa-var-sliders: "\f1de";
+@fa-var-sliders-h: "\f1de";
+@fa-var-smog: "\f75f";
+@fa-var-smoking: "\f48d";
+@fa-var-snowflake: "\f2dc";
+@fa-var-snowman: "\f7d0";
+@fa-var-snowplow: "\f7d2";
+@fa-var-soap: "\e06e";
+@fa-var-socks: "\f696";
+@fa-var-solar-panel: "\f5ba";
+@fa-var-sort: "\f0dc";
+@fa-var-unsorted: "\f0dc";
+@fa-var-sort-down: "\f0dd";
+@fa-var-sort-desc: "\f0dd";
+@fa-var-sort-up: "\f0de";
+@fa-var-sort-asc: "\f0de";
+@fa-var-spa: "\f5bb";
+@fa-var-spaghetti-monster-flying: "\f67b";
+@fa-var-pastafarianism: "\f67b";
+@fa-var-spell-check: "\f891";
+@fa-var-spider: "\f717";
+@fa-var-spinner: "\f110";
+@fa-var-splotch: "\f5bc";
+@fa-var-spoon: "\f2e5";
+@fa-var-utensil-spoon: "\f2e5";
+@fa-var-spray-can: "\f5bd";
+@fa-var-spray-can-sparkles: "\f5d0";
+@fa-var-air-freshener: "\f5d0";
+@fa-var-square: "\f0c8";
+@fa-var-square-arrow-up-right: "\f14c";
+@fa-var-external-link-square: "\f14c";
+@fa-var-square-caret-down: "\f150";
+@fa-var-caret-square-down: "\f150";
+@fa-var-square-caret-left: "\f191";
+@fa-var-caret-square-left: "\f191";
+@fa-var-square-caret-right: "\f152";
+@fa-var-caret-square-right: "\f152";
+@fa-var-square-caret-up: "\f151";
+@fa-var-caret-square-up: "\f151";
+@fa-var-square-check: "\f14a";
+@fa-var-check-square: "\f14a";
+@fa-var-square-envelope: "\f199";
+@fa-var-envelope-square: "\f199";
+@fa-var-square-full: "\f45c";
+@fa-var-square-h: "\f0fd";
+@fa-var-h-square: "\f0fd";
+@fa-var-square-minus: "\f146";
+@fa-var-minus-square: "\f146";
+@fa-var-square-nfi: "\e576";
+@fa-var-square-parking: "\f540";
+@fa-var-parking: "\f540";
+@fa-var-square-pen: "\f14b";
+@fa-var-pen-square: "\f14b";
+@fa-var-pencil-square: "\f14b";
+@fa-var-square-person-confined: "\e577";
+@fa-var-square-phone: "\f098";
+@fa-var-phone-square: "\f098";
+@fa-var-square-phone-flip: "\f87b";
+@fa-var-phone-square-alt: "\f87b";
+@fa-var-square-plus: "\f0fe";
+@fa-var-plus-square: "\f0fe";
+@fa-var-square-poll-horizontal: "\f682";
+@fa-var-poll-h: "\f682";
+@fa-var-square-poll-vertical: "\f681";
+@fa-var-poll: "\f681";
+@fa-var-square-root-variable: "\f698";
+@fa-var-square-root-alt: "\f698";
+@fa-var-square-rss: "\f143";
+@fa-var-rss-square: "\f143";
+@fa-var-square-share-nodes: "\f1e1";
+@fa-var-share-alt-square: "\f1e1";
+@fa-var-square-up-right: "\f360";
+@fa-var-external-link-square-alt: "\f360";
+@fa-var-square-virus: "\e578";
+@fa-var-square-xmark: "\f2d3";
+@fa-var-times-square: "\f2d3";
+@fa-var-xmark-square: "\f2d3";
+@fa-var-staff-aesculapius: "\e579";
+@fa-var-rod-asclepius: "\e579";
+@fa-var-rod-snake: "\e579";
+@fa-var-staff-snake: "\e579";
+@fa-var-stairs: "\e289";
+@fa-var-stamp: "\f5bf";
+@fa-var-star: "\f005";
+@fa-var-star-and-crescent: "\f699";
+@fa-var-star-half: "\f089";
+@fa-var-star-half-stroke: "\f5c0";
+@fa-var-star-half-alt: "\f5c0";
+@fa-var-star-of-david: "\f69a";
+@fa-var-star-of-life: "\f621";
+@fa-var-sterling-sign: "\f154";
+@fa-var-gbp: "\f154";
+@fa-var-pound-sign: "\f154";
+@fa-var-stethoscope: "\f0f1";
+@fa-var-stop: "\f04d";
+@fa-var-stopwatch: "\f2f2";
+@fa-var-stopwatch-20: "\e06f";
+@fa-var-store: "\f54e";
+@fa-var-store-slash: "\e071";
+@fa-var-street-view: "\f21d";
+@fa-var-strikethrough: "\f0cc";
+@fa-var-stroopwafel: "\f551";
+@fa-var-subscript: "\f12c";
+@fa-var-suitcase: "\f0f2";
+@fa-var-suitcase-medical: "\f0fa";
+@fa-var-medkit: "\f0fa";
+@fa-var-suitcase-rolling: "\f5c1";
+@fa-var-sun: "\f185";
+@fa-var-sun-plant-wilt: "\e57a";
+@fa-var-superscript: "\f12b";
+@fa-var-swatchbook: "\f5c3";
+@fa-var-synagogue: "\f69b";
+@fa-var-syringe: "\f48e";
+@fa-var-t: "\54";
+@fa-var-table: "\f0ce";
+@fa-var-table-cells: "\f00a";
+@fa-var-th: "\f00a";
+@fa-var-table-cells-large: "\f009";
+@fa-var-th-large: "\f009";
+@fa-var-table-columns: "\f0db";
+@fa-var-columns: "\f0db";
+@fa-var-table-list: "\f00b";
+@fa-var-th-list: "\f00b";
+@fa-var-table-tennis-paddle-ball: "\f45d";
+@fa-var-ping-pong-paddle-ball: "\f45d";
+@fa-var-table-tennis: "\f45d";
+@fa-var-tablet: "\f3fb";
+@fa-var-tablet-android: "\f3fb";
+@fa-var-tablet-button: "\f10a";
+@fa-var-tablet-screen-button: "\f3fa";
+@fa-var-tablet-alt: "\f3fa";
+@fa-var-tablets: "\f490";
+@fa-var-tachograph-digital: "\f566";
+@fa-var-digital-tachograph: "\f566";
+@fa-var-tag: "\f02b";
+@fa-var-tags: "\f02c";
+@fa-var-tape: "\f4db";
+@fa-var-tarp: "\e57b";
+@fa-var-tarp-droplet: "\e57c";
+@fa-var-taxi: "\f1ba";
+@fa-var-cab: "\f1ba";
+@fa-var-teeth: "\f62e";
+@fa-var-teeth-open: "\f62f";
+@fa-var-temperature-arrow-down: "\e03f";
+@fa-var-temperature-down: "\e03f";
+@fa-var-temperature-arrow-up: "\e040";
+@fa-var-temperature-up: "\e040";
+@fa-var-temperature-empty: "\f2cb";
+@fa-var-temperature-0: "\f2cb";
+@fa-var-thermometer-0: "\f2cb";
+@fa-var-thermometer-empty: "\f2cb";
+@fa-var-temperature-full: "\f2c7";
+@fa-var-temperature-4: "\f2c7";
+@fa-var-thermometer-4: "\f2c7";
+@fa-var-thermometer-full: "\f2c7";
+@fa-var-temperature-half: "\f2c9";
+@fa-var-temperature-2: "\f2c9";
+@fa-var-thermometer-2: "\f2c9";
+@fa-var-thermometer-half: "\f2c9";
+@fa-var-temperature-high: "\f769";
+@fa-var-temperature-low: "\f76b";
+@fa-var-temperature-quarter: "\f2ca";
+@fa-var-temperature-1: "\f2ca";
+@fa-var-thermometer-1: "\f2ca";
+@fa-var-thermometer-quarter: "\f2ca";
+@fa-var-temperature-three-quarters: "\f2c8";
+@fa-var-temperature-3: "\f2c8";
+@fa-var-thermometer-3: "\f2c8";
+@fa-var-thermometer-three-quarters: "\f2c8";
+@fa-var-tenge-sign: "\f7d7";
+@fa-var-tenge: "\f7d7";
+@fa-var-tent: "\e57d";
+@fa-var-tent-arrow-down-to-line: "\e57e";
+@fa-var-tent-arrow-left-right: "\e57f";
+@fa-var-tent-arrow-turn-left: "\e580";
+@fa-var-tent-arrows-down: "\e581";
+@fa-var-tents: "\e582";
+@fa-var-terminal: "\f120";
+@fa-var-text-height: "\f034";
+@fa-var-text-slash: "\f87d";
+@fa-var-remove-format: "\f87d";
+@fa-var-text-width: "\f035";
+@fa-var-thermometer: "\f491";
+@fa-var-thumbs-down: "\f165";
+@fa-var-thumbs-up: "\f164";
+@fa-var-thumbtack: "\f08d";
+@fa-var-thumb-tack: "\f08d";
+@fa-var-ticket: "\f145";
+@fa-var-ticket-simple: "\f3ff";
+@fa-var-ticket-alt: "\f3ff";
+@fa-var-timeline: "\e29c";
+@fa-var-toggle-off: "\f204";
+@fa-var-toggle-on: "\f205";
+@fa-var-toilet: "\f7d8";
+@fa-var-toilet-paper: "\f71e";
+@fa-var-toilet-paper-slash: "\e072";
+@fa-var-toilet-portable: "\e583";
+@fa-var-toilets-portable: "\e584";
+@fa-var-toolbox: "\f552";
+@fa-var-tooth: "\f5c9";
+@fa-var-torii-gate: "\f6a1";
+@fa-var-tornado: "\f76f";
+@fa-var-tower-broadcast: "\f519";
+@fa-var-broadcast-tower: "\f519";
+@fa-var-tower-cell: "\e585";
+@fa-var-tower-observation: "\e586";
+@fa-var-tractor: "\f722";
+@fa-var-trademark: "\f25c";
+@fa-var-traffic-light: "\f637";
+@fa-var-trailer: "\e041";
+@fa-var-train: "\f238";
+@fa-var-train-subway: "\f239";
+@fa-var-subway: "\f239";
+@fa-var-train-tram: "\f7da";
+@fa-var-tram: "\f7da";
+@fa-var-transgender: "\f225";
+@fa-var-transgender-alt: "\f225";
+@fa-var-trash: "\f1f8";
+@fa-var-trash-arrow-up: "\f829";
+@fa-var-trash-restore: "\f829";
+@fa-var-trash-can: "\f2ed";
+@fa-var-trash-alt: "\f2ed";
+@fa-var-trash-can-arrow-up: "\f82a";
+@fa-var-trash-restore-alt: "\f82a";
+@fa-var-tree: "\f1bb";
+@fa-var-tree-city: "\e587";
+@fa-var-triangle-exclamation: "\f071";
+@fa-var-exclamation-triangle: "\f071";
+@fa-var-warning: "\f071";
+@fa-var-trophy: "\f091";
+@fa-var-trowel: "\e589";
+@fa-var-trowel-bricks: "\e58a";
+@fa-var-truck: "\f0d1";
+@fa-var-truck-arrow-right: "\e58b";
+@fa-var-truck-droplet: "\e58c";
+@fa-var-truck-fast: "\f48b";
+@fa-var-shipping-fast: "\f48b";
+@fa-var-truck-field: "\e58d";
+@fa-var-truck-field-un: "\e58e";
+@fa-var-truck-front: "\e2b7";
+@fa-var-truck-medical: "\f0f9";
+@fa-var-ambulance: "\f0f9";
+@fa-var-truck-monster: "\f63b";
+@fa-var-truck-moving: "\f4df";
+@fa-var-truck-pickup: "\f63c";
+@fa-var-truck-plane: "\e58f";
+@fa-var-truck-ramp-box: "\f4de";
+@fa-var-truck-loading: "\f4de";
+@fa-var-tty: "\f1e4";
+@fa-var-teletype: "\f1e4";
+@fa-var-turkish-lira-sign: "\e2bb";
+@fa-var-try: "\e2bb";
+@fa-var-turkish-lira: "\e2bb";
+@fa-var-turn-down: "\f3be";
+@fa-var-level-down-alt: "\f3be";
+@fa-var-turn-up: "\f3bf";
+@fa-var-level-up-alt: "\f3bf";
+@fa-var-tv: "\f26c";
+@fa-var-television: "\f26c";
+@fa-var-tv-alt: "\f26c";
+@fa-var-u: "\55";
+@fa-var-umbrella: "\f0e9";
+@fa-var-umbrella-beach: "\f5ca";
+@fa-var-underline: "\f0cd";
+@fa-var-universal-access: "\f29a";
+@fa-var-unlock: "\f09c";
+@fa-var-unlock-keyhole: "\f13e";
+@fa-var-unlock-alt: "\f13e";
+@fa-var-up-down: "\f338";
+@fa-var-arrows-alt-v: "\f338";
+@fa-var-up-down-left-right: "\f0b2";
+@fa-var-arrows-alt: "\f0b2";
+@fa-var-up-long: "\f30c";
+@fa-var-long-arrow-alt-up: "\f30c";
+@fa-var-up-right-and-down-left-from-center: "\f424";
+@fa-var-expand-alt: "\f424";
+@fa-var-up-right-from-square: "\f35d";
+@fa-var-external-link-alt: "\f35d";
+@fa-var-upload: "\f093";
+@fa-var-user: "\f007";
+@fa-var-user-astronaut: "\f4fb";
+@fa-var-user-check: "\f4fc";
+@fa-var-user-clock: "\f4fd";
+@fa-var-user-doctor: "\f0f0";
+@fa-var-user-md: "\f0f0";
+@fa-var-user-gear: "\f4fe";
+@fa-var-user-cog: "\f4fe";
+@fa-var-user-graduate: "\f501";
+@fa-var-user-group: "\f500";
+@fa-var-user-friends: "\f500";
+@fa-var-user-injured: "\f728";
+@fa-var-user-large: "\f406";
+@fa-var-user-alt: "\f406";
+@fa-var-user-large-slash: "\f4fa";
+@fa-var-user-alt-slash: "\f4fa";
+@fa-var-user-lock: "\f502";
+@fa-var-user-minus: "\f503";
+@fa-var-user-ninja: "\f504";
+@fa-var-user-nurse: "\f82f";
+@fa-var-user-pen: "\f4ff";
+@fa-var-user-edit: "\f4ff";
+@fa-var-user-plus: "\f234";
+@fa-var-user-secret: "\f21b";
+@fa-var-user-shield: "\f505";
+@fa-var-user-slash: "\f506";
+@fa-var-user-tag: "\f507";
+@fa-var-user-tie: "\f508";
+@fa-var-user-xmark: "\f235";
+@fa-var-user-times: "\f235";
+@fa-var-users: "\f0c0";
+@fa-var-users-between-lines: "\e591";
+@fa-var-users-gear: "\f509";
+@fa-var-users-cog: "\f509";
+@fa-var-users-line: "\e592";
+@fa-var-users-rays: "\e593";
+@fa-var-users-rectangle: "\e594";
+@fa-var-users-slash: "\e073";
+@fa-var-users-viewfinder: "\e595";
+@fa-var-utensils: "\f2e7";
+@fa-var-cutlery: "\f2e7";
+@fa-var-v: "\56";
+@fa-var-van-shuttle: "\f5b6";
+@fa-var-shuttle-van: "\f5b6";
+@fa-var-vault: "\e2c5";
+@fa-var-vector-square: "\f5cb";
+@fa-var-venus: "\f221";
+@fa-var-venus-double: "\f226";
+@fa-var-venus-mars: "\f228";
+@fa-var-vest: "\e085";
+@fa-var-vest-patches: "\e086";
+@fa-var-vial: "\f492";
+@fa-var-vial-circle-check: "\e596";
+@fa-var-vial-virus: "\e597";
+@fa-var-vials: "\f493";
+@fa-var-video: "\f03d";
+@fa-var-video-camera: "\f03d";
+@fa-var-video-slash: "\f4e2";
+@fa-var-vihara: "\f6a7";
+@fa-var-virus: "\e074";
+@fa-var-virus-covid: "\e4a8";
+@fa-var-virus-covid-slash: "\e4a9";
+@fa-var-virus-slash: "\e075";
+@fa-var-viruses: "\e076";
+@fa-var-voicemail: "\f897";
+@fa-var-volcano: "\f770";
+@fa-var-volleyball: "\f45f";
+@fa-var-volleyball-ball: "\f45f";
+@fa-var-volume-high: "\f028";
+@fa-var-volume-up: "\f028";
+@fa-var-volume-low: "\f027";
+@fa-var-volume-down: "\f027";
+@fa-var-volume-off: "\f026";
+@fa-var-volume-xmark: "\f6a9";
+@fa-var-volume-mute: "\f6a9";
+@fa-var-volume-times: "\f6a9";
+@fa-var-vr-cardboard: "\f729";
+@fa-var-w: "\57";
+@fa-var-walkie-talkie: "\f8ef";
+@fa-var-wallet: "\f555";
+@fa-var-wand-magic: "\f0d0";
+@fa-var-magic: "\f0d0";
+@fa-var-wand-magic-sparkles: "\e2ca";
+@fa-var-magic-wand-sparkles: "\e2ca";
+@fa-var-wand-sparkles: "\f72b";
+@fa-var-warehouse: "\f494";
+@fa-var-water: "\f773";
+@fa-var-water-ladder: "\f5c5";
+@fa-var-ladder-water: "\f5c5";
+@fa-var-swimming-pool: "\f5c5";
+@fa-var-wave-square: "\f83e";
+@fa-var-weight-hanging: "\f5cd";
+@fa-var-weight-scale: "\f496";
+@fa-var-weight: "\f496";
+@fa-var-wheat-awn: "\e2cd";
+@fa-var-wheat-alt: "\e2cd";
+@fa-var-wheat-awn-circle-exclamation: "\e598";
+@fa-var-wheelchair: "\f193";
+@fa-var-wheelchair-move: "\e2ce";
+@fa-var-wheelchair-alt: "\e2ce";
+@fa-var-whiskey-glass: "\f7a0";
+@fa-var-glass-whiskey: "\f7a0";
+@fa-var-wifi: "\f1eb";
+@fa-var-wifi-3: "\f1eb";
+@fa-var-wifi-strong: "\f1eb";
+@fa-var-wind: "\f72e";
+@fa-var-window-maximize: "\f2d0";
+@fa-var-window-minimize: "\f2d1";
+@fa-var-window-restore: "\f2d2";
+@fa-var-wine-bottle: "\f72f";
+@fa-var-wine-glass: "\f4e3";
+@fa-var-wine-glass-empty: "\f5ce";
+@fa-var-wine-glass-alt: "\f5ce";
+@fa-var-won-sign: "\f159";
+@fa-var-krw: "\f159";
+@fa-var-won: "\f159";
+@fa-var-worm: "\e599";
+@fa-var-wrench: "\f0ad";
+@fa-var-x: "\58";
+@fa-var-x-ray: "\f497";
+@fa-var-xmark: "\f00d";
+@fa-var-close: "\f00d";
+@fa-var-multiply: "\f00d";
+@fa-var-remove: "\f00d";
+@fa-var-times: "\f00d";
+@fa-var-xmarks-lines: "\e59a";
+@fa-var-y: "\59";
+@fa-var-yen-sign: "\f157";
+@fa-var-cny: "\f157";
+@fa-var-jpy: "\f157";
+@fa-var-rmb: "\f157";
+@fa-var-yen: "\f157";
+@fa-var-yin-yang: "\f6ad";
+@fa-var-z: "\5a";
+
+@fa-var-42-group: "\e080";
+@fa-var-innosoft: "\e080";
+@fa-var-500px: "\f26e";
+@fa-var-accessible-icon: "\f368";
+@fa-var-accusoft: "\f369";
+@fa-var-adn: "\f170";
+@fa-var-adversal: "\f36a";
+@fa-var-affiliatetheme: "\f36b";
+@fa-var-airbnb: "\f834";
+@fa-var-algolia: "\f36c";
+@fa-var-alipay: "\f642";
+@fa-var-amazon: "\f270";
+@fa-var-amazon-pay: "\f42c";
+@fa-var-amilia: "\f36d";
+@fa-var-android: "\f17b";
+@fa-var-angellist: "\f209";
+@fa-var-angrycreative: "\f36e";
+@fa-var-angular: "\f420";
+@fa-var-app-store: "\f36f";
+@fa-var-app-store-ios: "\f370";
+@fa-var-apper: "\f371";
+@fa-var-apple: "\f179";
+@fa-var-apple-pay: "\f415";
+@fa-var-artstation: "\f77a";
+@fa-var-asymmetrik: "\f372";
+@fa-var-atlassian: "\f77b";
+@fa-var-audible: "\f373";
+@fa-var-autoprefixer: "\f41c";
+@fa-var-avianex: "\f374";
+@fa-var-aviato: "\f421";
+@fa-var-aws: "\f375";
+@fa-var-bandcamp: "\f2d5";
+@fa-var-battle-net: "\f835";
+@fa-var-behance: "\f1b4";
+@fa-var-behance-square: "\f1b5";
+@fa-var-bilibili: "\e3d9";
+@fa-var-bimobject: "\f378";
+@fa-var-bitbucket: "\f171";
+@fa-var-bitcoin: "\f379";
+@fa-var-bity: "\f37a";
+@fa-var-black-tie: "\f27e";
+@fa-var-blackberry: "\f37b";
+@fa-var-blogger: "\f37c";
+@fa-var-blogger-b: "\f37d";
+@fa-var-bluetooth: "\f293";
+@fa-var-bluetooth-b: "\f294";
+@fa-var-bootstrap: "\f836";
+@fa-var-bots: "\e340";
+@fa-var-btc: "\f15a";
+@fa-var-buffer: "\f837";
+@fa-var-buromobelexperte: "\f37f";
+@fa-var-buy-n-large: "\f8a6";
+@fa-var-buysellads: "\f20d";
+@fa-var-canadian-maple-leaf: "\f785";
+@fa-var-cc-amazon-pay: "\f42d";
+@fa-var-cc-amex: "\f1f3";
+@fa-var-cc-apple-pay: "\f416";
+@fa-var-cc-diners-club: "\f24c";
+@fa-var-cc-discover: "\f1f2";
+@fa-var-cc-jcb: "\f24b";
+@fa-var-cc-mastercard: "\f1f1";
+@fa-var-cc-paypal: "\f1f4";
+@fa-var-cc-stripe: "\f1f5";
+@fa-var-cc-visa: "\f1f0";
+@fa-var-centercode: "\f380";
+@fa-var-centos: "\f789";
+@fa-var-chrome: "\f268";
+@fa-var-chromecast: "\f838";
+@fa-var-cloudflare: "\e07d";
+@fa-var-cloudscale: "\f383";
+@fa-var-cloudsmith: "\f384";
+@fa-var-cloudversify: "\f385";
+@fa-var-cmplid: "\e360";
+@fa-var-codepen: "\f1cb";
+@fa-var-codiepie: "\f284";
+@fa-var-confluence: "\f78d";
+@fa-var-connectdevelop: "\f20e";
+@fa-var-contao: "\f26d";
+@fa-var-cotton-bureau: "\f89e";
+@fa-var-cpanel: "\f388";
+@fa-var-creative-commons: "\f25e";
+@fa-var-creative-commons-by: "\f4e7";
+@fa-var-creative-commons-nc: "\f4e8";
+@fa-var-creative-commons-nc-eu: "\f4e9";
+@fa-var-creative-commons-nc-jp: "\f4ea";
+@fa-var-creative-commons-nd: "\f4eb";
+@fa-var-creative-commons-pd: "\f4ec";
+@fa-var-creative-commons-pd-alt: "\f4ed";
+@fa-var-creative-commons-remix: "\f4ee";
+@fa-var-creative-commons-sa: "\f4ef";
+@fa-var-creative-commons-sampling: "\f4f0";
+@fa-var-creative-commons-sampling-plus: "\f4f1";
+@fa-var-creative-commons-share: "\f4f2";
+@fa-var-creative-commons-zero: "\f4f3";
+@fa-var-critical-role: "\f6c9";
+@fa-var-css3: "\f13c";
+@fa-var-css3-alt: "\f38b";
+@fa-var-cuttlefish: "\f38c";
+@fa-var-d-and-d: "\f38d";
+@fa-var-d-and-d-beyond: "\f6ca";
+@fa-var-dailymotion: "\e052";
+@fa-var-dashcube: "\f210";
+@fa-var-deezer: "\e077";
+@fa-var-delicious: "\f1a5";
+@fa-var-deploydog: "\f38e";
+@fa-var-deskpro: "\f38f";
+@fa-var-dev: "\f6cc";
+@fa-var-deviantart: "\f1bd";
+@fa-var-dhl: "\f790";
+@fa-var-diaspora: "\f791";
+@fa-var-digg: "\f1a6";
+@fa-var-digital-ocean: "\f391";
+@fa-var-discord: "\f392";
+@fa-var-discourse: "\f393";
+@fa-var-dochub: "\f394";
+@fa-var-docker: "\f395";
+@fa-var-draft2digital: "\f396";
+@fa-var-dribbble: "\f17d";
+@fa-var-dribbble-square: "\f397";
+@fa-var-dropbox: "\f16b";
+@fa-var-drupal: "\f1a9";
+@fa-var-dyalog: "\f399";
+@fa-var-earlybirds: "\f39a";
+@fa-var-ebay: "\f4f4";
+@fa-var-edge: "\f282";
+@fa-var-edge-legacy: "\e078";
+@fa-var-elementor: "\f430";
+@fa-var-ello: "\f5f1";
+@fa-var-ember: "\f423";
+@fa-var-empire: "\f1d1";
+@fa-var-envira: "\f299";
+@fa-var-erlang: "\f39d";
+@fa-var-ethereum: "\f42e";
+@fa-var-etsy: "\f2d7";
+@fa-var-evernote: "\f839";
+@fa-var-expeditedssl: "\f23e";
+@fa-var-facebook: "\f09a";
+@fa-var-facebook-f: "\f39e";
+@fa-var-facebook-messenger: "\f39f";
+@fa-var-facebook-square: "\f082";
+@fa-var-fantasy-flight-games: "\f6dc";
+@fa-var-fedex: "\f797";
+@fa-var-fedora: "\f798";
+@fa-var-figma: "\f799";
+@fa-var-firefox: "\f269";
+@fa-var-firefox-browser: "\e007";
+@fa-var-first-order: "\f2b0";
+@fa-var-first-order-alt: "\f50a";
+@fa-var-firstdraft: "\f3a1";
+@fa-var-flickr: "\f16e";
+@fa-var-flipboard: "\f44d";
+@fa-var-fly: "\f417";
+@fa-var-font-awesome: "\f2b4";
+@fa-var-font-awesome-flag: "\f2b4";
+@fa-var-font-awesome-logo-full: "\f2b4";
+@fa-var-fonticons: "\f280";
+@fa-var-fonticons-fi: "\f3a2";
+@fa-var-fort-awesome: "\f286";
+@fa-var-fort-awesome-alt: "\f3a3";
+@fa-var-forumbee: "\f211";
+@fa-var-foursquare: "\f180";
+@fa-var-free-code-camp: "\f2c5";
+@fa-var-freebsd: "\f3a4";
+@fa-var-fulcrum: "\f50b";
+@fa-var-galactic-republic: "\f50c";
+@fa-var-galactic-senate: "\f50d";
+@fa-var-get-pocket: "\f265";
+@fa-var-gg: "\f260";
+@fa-var-gg-circle: "\f261";
+@fa-var-git: "\f1d3";
+@fa-var-git-alt: "\f841";
+@fa-var-git-square: "\f1d2";
+@fa-var-github: "\f09b";
+@fa-var-github-alt: "\f113";
+@fa-var-github-square: "\f092";
+@fa-var-gitkraken: "\f3a6";
+@fa-var-gitlab: "\f296";
+@fa-var-gitter: "\f426";
+@fa-var-glide: "\f2a5";
+@fa-var-glide-g: "\f2a6";
+@fa-var-gofore: "\f3a7";
+@fa-var-golang: "\e40f";
+@fa-var-goodreads: "\f3a8";
+@fa-var-goodreads-g: "\f3a9";
+@fa-var-google: "\f1a0";
+@fa-var-google-drive: "\f3aa";
+@fa-var-google-pay: "\e079";
+@fa-var-google-play: "\f3ab";
+@fa-var-google-plus: "\f2b3";
+@fa-var-google-plus-g: "\f0d5";
+@fa-var-google-plus-square: "\f0d4";
+@fa-var-google-wallet: "\f1ee";
+@fa-var-gratipay: "\f184";
+@fa-var-grav: "\f2d6";
+@fa-var-gripfire: "\f3ac";
+@fa-var-grunt: "\f3ad";
+@fa-var-guilded: "\e07e";
+@fa-var-gulp: "\f3ae";
+@fa-var-hacker-news: "\f1d4";
+@fa-var-hacker-news-square: "\f3af";
+@fa-var-hackerrank: "\f5f7";
+@fa-var-hashnode: "\e499";
+@fa-var-hips: "\f452";
+@fa-var-hire-a-helper: "\f3b0";
+@fa-var-hive: "\e07f";
+@fa-var-hooli: "\f427";
+@fa-var-hornbill: "\f592";
+@fa-var-hotjar: "\f3b1";
+@fa-var-houzz: "\f27c";
+@fa-var-html5: "\f13b";
+@fa-var-hubspot: "\f3b2";
+@fa-var-ideal: "\e013";
+@fa-var-imdb: "\f2d8";
+@fa-var-instagram: "\f16d";
+@fa-var-instagram-square: "\e055";
+@fa-var-instalod: "\e081";
+@fa-var-intercom: "\f7af";
+@fa-var-internet-explorer: "\f26b";
+@fa-var-invision: "\f7b0";
+@fa-var-ioxhost: "\f208";
+@fa-var-itch-io: "\f83a";
+@fa-var-itunes: "\f3b4";
+@fa-var-itunes-note: "\f3b5";
+@fa-var-java: "\f4e4";
+@fa-var-jedi-order: "\f50e";
+@fa-var-jenkins: "\f3b6";
+@fa-var-jira: "\f7b1";
+@fa-var-joget: "\f3b7";
+@fa-var-joomla: "\f1aa";
+@fa-var-js: "\f3b8";
+@fa-var-js-square: "\f3b9";
+@fa-var-jsfiddle: "\f1cc";
+@fa-var-kaggle: "\f5fa";
+@fa-var-keybase: "\f4f5";
+@fa-var-keycdn: "\f3ba";
+@fa-var-kickstarter: "\f3bb";
+@fa-var-kickstarter-k: "\f3bc";
+@fa-var-korvue: "\f42f";
+@fa-var-laravel: "\f3bd";
+@fa-var-lastfm: "\f202";
+@fa-var-lastfm-square: "\f203";
+@fa-var-leanpub: "\f212";
+@fa-var-less: "\f41d";
+@fa-var-line: "\f3c0";
+@fa-var-linkedin: "\f08c";
+@fa-var-linkedin-in: "\f0e1";
+@fa-var-linode: "\f2b8";
+@fa-var-linux: "\f17c";
+@fa-var-lyft: "\f3c3";
+@fa-var-magento: "\f3c4";
+@fa-var-mailchimp: "\f59e";
+@fa-var-mandalorian: "\f50f";
+@fa-var-markdown: "\f60f";
+@fa-var-mastodon: "\f4f6";
+@fa-var-maxcdn: "\f136";
+@fa-var-mdb: "\f8ca";
+@fa-var-medapps: "\f3c6";
+@fa-var-medium: "\f23a";
+@fa-var-medium-m: "\f23a";
+@fa-var-medrt: "\f3c8";
+@fa-var-meetup: "\f2e0";
+@fa-var-megaport: "\f5a3";
+@fa-var-mendeley: "\f7b3";
+@fa-var-microblog: "\e01a";
+@fa-var-microsoft: "\f3ca";
+@fa-var-mix: "\f3cb";
+@fa-var-mixcloud: "\f289";
+@fa-var-mixer: "\e056";
+@fa-var-mizuni: "\f3cc";
+@fa-var-modx: "\f285";
+@fa-var-monero: "\f3d0";
+@fa-var-napster: "\f3d2";
+@fa-var-neos: "\f612";
+@fa-var-nfc-directional: "\e530";
+@fa-var-nfc-symbol: "\e531";
+@fa-var-nimblr: "\f5a8";
+@fa-var-node: "\f419";
+@fa-var-node-js: "\f3d3";
+@fa-var-npm: "\f3d4";
+@fa-var-ns8: "\f3d5";
+@fa-var-nutritionix: "\f3d6";
+@fa-var-octopus-deploy: "\e082";
+@fa-var-odnoklassniki: "\f263";
+@fa-var-odnoklassniki-square: "\f264";
+@fa-var-old-republic: "\f510";
+@fa-var-opencart: "\f23d";
+@fa-var-openid: "\f19b";
+@fa-var-opera: "\f26a";
+@fa-var-optin-monster: "\f23c";
+@fa-var-orcid: "\f8d2";
+@fa-var-osi: "\f41a";
+@fa-var-padlet: "\e4a0";
+@fa-var-page4: "\f3d7";
+@fa-var-pagelines: "\f18c";
+@fa-var-palfed: "\f3d8";
+@fa-var-patreon: "\f3d9";
+@fa-var-paypal: "\f1ed";
+@fa-var-perbyte: "\e083";
+@fa-var-periscope: "\f3da";
+@fa-var-phabricator: "\f3db";
+@fa-var-phoenix-framework: "\f3dc";
+@fa-var-phoenix-squadron: "\f511";
+@fa-var-php: "\f457";
+@fa-var-pied-piper: "\f2ae";
+@fa-var-pied-piper-alt: "\f1a8";
+@fa-var-pied-piper-hat: "\f4e5";
+@fa-var-pied-piper-pp: "\f1a7";
+@fa-var-pied-piper-square: "\e01e";
+@fa-var-pinterest: "\f0d2";
+@fa-var-pinterest-p: "\f231";
+@fa-var-pinterest-square: "\f0d3";
+@fa-var-pix: "\e43a";
+@fa-var-playstation: "\f3df";
+@fa-var-product-hunt: "\f288";
+@fa-var-pushed: "\f3e1";
+@fa-var-python: "\f3e2";
+@fa-var-qq: "\f1d6";
+@fa-var-quinscape: "\f459";
+@fa-var-quora: "\f2c4";
+@fa-var-r-project: "\f4f7";
+@fa-var-raspberry-pi: "\f7bb";
+@fa-var-ravelry: "\f2d9";
+@fa-var-react: "\f41b";
+@fa-var-reacteurope: "\f75d";
+@fa-var-readme: "\f4d5";
+@fa-var-rebel: "\f1d0";
+@fa-var-red-river: "\f3e3";
+@fa-var-reddit: "\f1a1";
+@fa-var-reddit-alien: "\f281";
+@fa-var-reddit-square: "\f1a2";
+@fa-var-redhat: "\f7bc";
+@fa-var-renren: "\f18b";
+@fa-var-replyd: "\f3e6";
+@fa-var-researchgate: "\f4f8";
+@fa-var-resolving: "\f3e7";
+@fa-var-rev: "\f5b2";
+@fa-var-rocketchat: "\f3e8";
+@fa-var-rockrms: "\f3e9";
+@fa-var-rust: "\e07a";
+@fa-var-safari: "\f267";
+@fa-var-salesforce: "\f83b";
+@fa-var-sass: "\f41e";
+@fa-var-schlix: "\f3ea";
+@fa-var-screenpal: "\e570";
+@fa-var-scribd: "\f28a";
+@fa-var-searchengin: "\f3eb";
+@fa-var-sellcast: "\f2da";
+@fa-var-sellsy: "\f213";
+@fa-var-servicestack: "\f3ec";
+@fa-var-shirtsinbulk: "\f214";
+@fa-var-shopify: "\e057";
+@fa-var-shopware: "\f5b5";
+@fa-var-simplybuilt: "\f215";
+@fa-var-sistrix: "\f3ee";
+@fa-var-sith: "\f512";
+@fa-var-sitrox: "\e44a";
+@fa-var-sketch: "\f7c6";
+@fa-var-skyatlas: "\f216";
+@fa-var-skype: "\f17e";
+@fa-var-slack: "\f198";
+@fa-var-slack-hash: "\f198";
+@fa-var-slideshare: "\f1e7";
+@fa-var-snapchat: "\f2ab";
+@fa-var-snapchat-ghost: "\f2ab";
+@fa-var-snapchat-square: "\f2ad";
+@fa-var-soundcloud: "\f1be";
+@fa-var-sourcetree: "\f7d3";
+@fa-var-speakap: "\f3f3";
+@fa-var-speaker-deck: "\f83c";
+@fa-var-spotify: "\f1bc";
+@fa-var-square-font-awesome: "\f425";
+@fa-var-square-font-awesome-stroke: "\f35c";
+@fa-var-font-awesome-alt: "\f35c";
+@fa-var-squarespace: "\f5be";
+@fa-var-stack-exchange: "\f18d";
+@fa-var-stack-overflow: "\f16c";
+@fa-var-stackpath: "\f842";
+@fa-var-staylinked: "\f3f5";
+@fa-var-steam: "\f1b6";
+@fa-var-steam-square: "\f1b7";
+@fa-var-steam-symbol: "\f3f6";
+@fa-var-sticker-mule: "\f3f7";
+@fa-var-strava: "\f428";
+@fa-var-stripe: "\f429";
+@fa-var-stripe-s: "\f42a";
+@fa-var-studiovinari: "\f3f8";
+@fa-var-stumbleupon: "\f1a4";
+@fa-var-stumbleupon-circle: "\f1a3";
+@fa-var-superpowers: "\f2dd";
+@fa-var-supple: "\f3f9";
+@fa-var-suse: "\f7d6";
+@fa-var-swift: "\f8e1";
+@fa-var-symfony: "\f83d";
+@fa-var-teamspeak: "\f4f9";
+@fa-var-telegram: "\f2c6";
+@fa-var-telegram-plane: "\f2c6";
+@fa-var-tencent-weibo: "\f1d5";
+@fa-var-the-red-yeti: "\f69d";
+@fa-var-themeco: "\f5c6";
+@fa-var-themeisle: "\f2b2";
+@fa-var-think-peaks: "\f731";
+@fa-var-tiktok: "\e07b";
+@fa-var-trade-federation: "\f513";
+@fa-var-trello: "\f181";
+@fa-var-tumblr: "\f173";
+@fa-var-tumblr-square: "\f174";
+@fa-var-twitch: "\f1e8";
+@fa-var-twitter: "\f099";
+@fa-var-twitter-square: "\f081";
+@fa-var-typo3: "\f42b";
+@fa-var-uber: "\f402";
+@fa-var-ubuntu: "\f7df";
+@fa-var-uikit: "\f403";
+@fa-var-umbraco: "\f8e8";
+@fa-var-uncharted: "\e084";
+@fa-var-uniregistry: "\f404";
+@fa-var-unity: "\e049";
+@fa-var-unsplash: "\e07c";
+@fa-var-untappd: "\f405";
+@fa-var-ups: "\f7e0";
+@fa-var-usb: "\f287";
+@fa-var-usps: "\f7e1";
+@fa-var-ussunnah: "\f407";
+@fa-var-vaadin: "\f408";
+@fa-var-viacoin: "\f237";
+@fa-var-viadeo: "\f2a9";
+@fa-var-viadeo-square: "\f2aa";
+@fa-var-viber: "\f409";
+@fa-var-vimeo: "\f40a";
+@fa-var-vimeo-square: "\f194";
+@fa-var-vimeo-v: "\f27d";
+@fa-var-vine: "\f1ca";
+@fa-var-vk: "\f189";
+@fa-var-vnv: "\f40b";
+@fa-var-vuejs: "\f41f";
+@fa-var-watchman-monitoring: "\e087";
+@fa-var-waze: "\f83f";
+@fa-var-weebly: "\f5cc";
+@fa-var-weibo: "\f18a";
+@fa-var-weixin: "\f1d7";
+@fa-var-whatsapp: "\f232";
+@fa-var-whatsapp-square: "\f40c";
+@fa-var-whmcs: "\f40d";
+@fa-var-wikipedia-w: "\f266";
+@fa-var-windows: "\f17a";
+@fa-var-wirsindhandwerk: "\e2d0";
+@fa-var-wsh: "\e2d0";
+@fa-var-wix: "\f5cf";
+@fa-var-wizards-of-the-coast: "\f730";
+@fa-var-wodu: "\e088";
+@fa-var-wolf-pack-battalion: "\f514";
+@fa-var-wordpress: "\f19a";
+@fa-var-wordpress-simple: "\f411";
+@fa-var-wpbeginner: "\f297";
+@fa-var-wpexplorer: "\f2de";
+@fa-var-wpforms: "\f298";
+@fa-var-wpressr: "\f3e4";
+@fa-var-xbox: "\f412";
+@fa-var-xing: "\f168";
+@fa-var-xing-square: "\f169";
+@fa-var-y-combinator: "\f23b";
+@fa-var-yahoo: "\f19e";
+@fa-var-yammer: "\f840";
+@fa-var-yandex: "\f413";
+@fa-var-yandex-international: "\f414";
+@fa-var-yarn: "\f7e3";
+@fa-var-yelp: "\f1e9";
+@fa-var-yoast: "\f2b1";
+@fa-var-youtube: "\f167";
+@fa-var-youtube-square: "\f431";
+@fa-var-zhihu: "\f63f";
+
+@normal-icons: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, address-book, contact-book,
+  address-card, contact-card, vcard, align-center, align-justify, align-left,
+  align-right, anchor, anchor-circle-check, anchor-circle-exclamation,
+  anchor-circle-xmark, anchor-lock, angle-down, angle-left, angle-right,
+  angle-up, angles-down, angle-double-down, angles-left, angle-double-left,
+  angles-right, angle-double-right, angles-up, angle-double-up, ankh,
+  apple-whole, apple-alt, archway, arrow-down, arrow-down-1-9, sort-numeric-asc,
+  sort-numeric-down, arrow-down-9-1, sort-numeric-desc, sort-numeric-down-alt,
+  arrow-down-a-z, sort-alpha-asc, sort-alpha-down, arrow-down-long,
+  long-arrow-down, arrow-down-short-wide, sort-amount-desc, sort-amount-down-alt,
+  arrow-down-up-across-line, arrow-down-up-lock, arrow-down-wide-short,
+  sort-amount-asc, sort-amount-down, arrow-down-z-a, sort-alpha-desc,
+  sort-alpha-down-alt, arrow-left, arrow-left-long, long-arrow-left,
+  arrow-pointer, mouse-pointer, arrow-right, arrow-right-arrow-left, exchange,
+  arrow-right-from-bracket, sign-out, arrow-right-long, long-arrow-right,
+  arrow-right-to-bracket, sign-in, arrow-right-to-city, arrow-rotate-left,
+  arrow-left-rotate, arrow-rotate-back, arrow-rotate-backward, undo,
+  arrow-rotate-right, arrow-right-rotate, arrow-rotate-forward, redo,
+  arrow-trend-down, arrow-trend-up, arrow-turn-down, level-down, arrow-turn-up,
+  level-up, arrow-up, arrow-up-1-9, sort-numeric-up, arrow-up-9-1,
+  sort-numeric-up-alt, arrow-up-a-z, sort-alpha-up, arrow-up-from-bracket,
+  arrow-up-from-ground-water, arrow-up-from-water-pump, arrow-up-long,
+  long-arrow-up, arrow-up-right-dots, arrow-up-right-from-square, external-link,
+  arrow-up-short-wide, sort-amount-up-alt, arrow-up-wide-short, sort-amount-up,
+  arrow-up-z-a, sort-alpha-up-alt, arrows-down-to-line, arrows-down-to-people,
+  arrows-left-right, arrows-h, arrows-left-right-to-line, arrows-rotate, refresh,
+  sync, arrows-spin, arrows-split-up-and-left, arrows-to-circle, arrows-to-dot,
+  arrows-to-eye, arrows-turn-right, arrows-turn-to-dots, arrows-up-down,
+  arrows-v, arrows-up-down-left-right, arrows, arrows-up-to-line, asterisk, at,
+  atom, audio-description, austral-sign, award, b, baby, baby-carriage,
+  carriage-baby, backward, backward-fast, fast-backward, backward-step,
+  step-backward, bacon, bacteria, bacterium, bag-shopping, shopping-bag, bahai,
+  baht-sign, ban, cancel, ban-smoking, smoking-ban, bandage, band-aid, barcode,
+  bars, navicon, bars-progress, tasks-alt, bars-staggered, reorder, stream,
+  baseball, baseball-ball, baseball-bat-ball, basket-shopping, shopping-basket,
+  basketball, basketball-ball, bath, bathtub, battery-empty, battery-0,
+  battery-full, battery, battery-5, battery-half, battery-3, battery-quarter,
+  battery-2, battery-three-quarters, battery-4, bed, bed-pulse, procedures,
+  beer-mug-empty, beer, bell, bell-concierge, concierge-bell, bell-slash,
+  bezier-curve, bicycle, binoculars, biohazard, bitcoin-sign, blender,
+  blender-phone, blog, bold, bolt, zap, bolt-lightning, bomb, bone, bong, book,
+  book-atlas, atlas, book-bible, bible, book-bookmark, book-journal-whills,
+  journal-whills, book-medical, book-open, book-open-reader, book-reader,
+  book-quran, quran, book-skull, book-dead, bookmark, border-all, border-none,
+  border-top-left, border-style, bore-hole, bottle-droplet, bottle-water,
+  bowl-food, bowl-rice, bowling-ball, box, box-archive, archive, box-open,
+  box-tissue, boxes-packing, boxes-stacked, boxes, boxes-alt, braille, brain,
+  brazilian-real-sign, bread-slice, bridge, bridge-circle-check,
+  bridge-circle-exclamation, bridge-circle-xmark, bridge-lock, bridge-water,
+  briefcase, briefcase-medical, broom, broom-ball, quidditch,
+  quidditch-broom-ball, brush, bucket, bug, bug-slash, bugs, building,
+  building-circle-arrow-right, building-circle-check,
+  building-circle-exclamation, building-circle-xmark, building-columns, bank,
+  institution, museum, university, building-flag, building-lock, building-ngo,
+  building-shield, building-un, building-user, building-wheat, bullhorn,
+  bullseye, burger, hamburger, burst, bus, bus-simple, bus-alt, business-time,
+  briefcase-clock, c, cake-candles, birthday-cake, cake, calculator, calendar,
+  calendar-check, calendar-day, calendar-days, calendar-alt, calendar-minus,
+  calendar-plus, calendar-week, calendar-xmark, calendar-times, camera,
+  camera-alt, camera-retro, camera-rotate, campground, candy-cane, cannabis,
+  capsules, car, automobile, car-battery, battery-car, car-burst, car-crash,
+  car-on, car-rear, car-alt, car-side, car-tunnel, caravan, caret-down,
+  caret-left, caret-right, caret-up, carrot, cart-arrow-down, cart-flatbed,
+  dolly-flatbed, cart-flatbed-suitcase, luggage-cart, cart-plus, cart-shopping,
+  shopping-cart, cash-register, cat, cedi-sign, cent-sign, certificate, chair,
+  chalkboard, blackboard, chalkboard-user, chalkboard-teacher, champagne-glasses,
+  glass-cheers, charging-station, chart-area, area-chart, chart-bar, bar-chart,
+  chart-column, chart-gantt, chart-line, line-chart, chart-pie, pie-chart,
+  chart-simple, check, check-double, check-to-slot, vote-yea, cheese, chess,
+  chess-bishop, chess-board, chess-king, chess-knight, chess-pawn, chess-queen,
+  chess-rook, chevron-down, chevron-left, chevron-right, chevron-up, child,
+  child-dress, child-reaching, child-rifle, children, church, circle,
+  circle-arrow-down, arrow-circle-down, circle-arrow-left, arrow-circle-left,
+  circle-arrow-right, arrow-circle-right, circle-arrow-up, arrow-circle-up,
+  circle-check, check-circle, circle-chevron-down, chevron-circle-down,
+  circle-chevron-left, chevron-circle-left, circle-chevron-right,
+  chevron-circle-right, circle-chevron-up, chevron-circle-up,
+  circle-dollar-to-slot, donate, circle-dot, dot-circle, circle-down,
+  arrow-alt-circle-down, circle-exclamation, exclamation-circle, circle-h,
+  hospital-symbol, circle-half-stroke, adjust, circle-info, info-circle,
+  circle-left, arrow-alt-circle-left, circle-minus, minus-circle, circle-nodes,
+  circle-notch, circle-pause, pause-circle, circle-play, play-circle,
+  circle-plus, plus-circle, circle-question, question-circle, circle-radiation,
+  radiation-alt, circle-right, arrow-alt-circle-right, circle-stop, stop-circle,
+  circle-up, arrow-alt-circle-up, circle-user, user-circle, circle-xmark,
+  times-circle, xmark-circle, city, clapperboard, clipboard, clipboard-check,
+  clipboard-list, clipboard-question, clipboard-user, clock, clock-four,
+  clock-rotate-left, history, clone, closed-captioning, cloud, cloud-arrow-down,
+  cloud-download, cloud-download-alt, cloud-arrow-up, cloud-upload,
+  cloud-upload-alt, cloud-bolt, thunderstorm, cloud-meatball, cloud-moon,
+  cloud-moon-rain, cloud-rain, cloud-showers-heavy, cloud-showers-water,
+  cloud-sun, cloud-sun-rain, clover, code, code-branch, code-commit,
+  code-compare, code-fork, code-merge, code-pull-request, coins, colon-sign,
+  comment, comment-dollar, comment-dots, commenting, comment-medical,
+  comment-slash, comment-sms, sms, comments, comments-dollar, compact-disc,
+  compass, compass-drafting, drafting-compass, compress, computer,
+  computer-mouse, mouse, cookie, cookie-bite, copy, copyright, couch, cow,
+  credit-card, credit-card-alt, crop, crop-simple, crop-alt, cross, crosshairs,
+  crow, crown, crutch, cruzeiro-sign, cube, cubes, cubes-stacked, d, database,
+  delete-left, backspace, democrat, desktop, desktop-alt, dharmachakra,
+  diagram-next, diagram-predecessor, diagram-project, project-diagram,
+  diagram-successor, diamond, diamond-turn-right, directions, dice, dice-d20,
+  dice-d6, dice-five, dice-four, dice-one, dice-six, dice-three, dice-two,
+  disease, display, divide, dna, dog, dollar-sign, dollar, usd, dolly, dolly-box,
+  dong-sign, door-closed, door-open, dove, down-left-and-up-right-to-center,
+  compress-alt, down-long, long-arrow-alt-down, download, dragon, draw-polygon,
+  droplet, tint, droplet-slash, tint-slash, drum, drum-steelpan, drumstick-bite,
+  dumbbell, dumpster, dumpster-fire, dungeon, e, ear-deaf, deaf, deafness,
+  hard-of-hearing, ear-listen, assistive-listening-systems, earth-africa,
+  globe-africa, earth-americas, earth, earth-america, globe-americas, earth-asia,
+  globe-asia, earth-europe, globe-europe, earth-oceania, globe-oceania, egg,
+  eject, elevator, ellipsis, ellipsis-h, ellipsis-vertical, ellipsis-v, envelope,
+  envelope-circle-check, envelope-open, envelope-open-text, envelopes-bulk,
+  mail-bulk, equals, eraser, ethernet, euro-sign, eur, euro, exclamation, expand,
+  explosion, eye, eye-dropper, eye-dropper-empty, eyedropper, eye-low-vision,
+  low-vision, eye-slash, f, face-angry, angry, face-dizzy, dizzy, face-flushed,
+  flushed, face-frown, frown, face-frown-open, frown-open, face-grimace, grimace,
+  face-grin, grin, face-grin-beam, grin-beam, face-grin-beam-sweat,
+  grin-beam-sweat, face-grin-hearts, grin-hearts, face-grin-squint, grin-squint,
+  face-grin-squint-tears, grin-squint-tears, face-grin-stars, grin-stars,
+  face-grin-tears, grin-tears, face-grin-tongue, grin-tongue,
+  face-grin-tongue-squint, grin-tongue-squint, face-grin-tongue-wink,
+  grin-tongue-wink, face-grin-wide, grin-alt, face-grin-wink, grin-wink,
+  face-kiss, kiss, face-kiss-beam, kiss-beam, face-kiss-wink-heart,
+  kiss-wink-heart, face-laugh, laugh, face-laugh-beam, laugh-beam,
+  face-laugh-squint, laugh-squint, face-laugh-wink, laugh-wink, face-meh, meh,
+  face-meh-blank, meh-blank, face-rolling-eyes, meh-rolling-eyes, face-sad-cry,
+  sad-cry, face-sad-tear, sad-tear, face-smile, smile, face-smile-beam,
+  smile-beam, face-smile-wink, smile-wink, face-surprise, surprise, face-tired,
+  tired, fan, faucet, faucet-drip, fax, feather, feather-pointed, feather-alt,
+  ferry, file, file-arrow-down, file-download, file-arrow-up, file-upload,
+  file-audio, file-circle-check, file-circle-exclamation, file-circle-minus,
+  file-circle-plus, file-circle-question, file-circle-xmark, file-code,
+  file-contract, file-csv, file-excel, file-export, arrow-right-from-file,
+  file-image, file-import, arrow-right-to-file, file-invoice,
+  file-invoice-dollar, file-lines, file-alt, file-text, file-medical, file-pdf,
+  file-pen, file-edit, file-powerpoint, file-prescription, file-shield,
+  file-signature, file-video, file-waveform, file-medical-alt, file-word,
+  file-zipper, file-archive, fill, fill-drip, film, filter, filter-circle-dollar,
+  funnel-dollar, filter-circle-xmark, fingerprint, fire, fire-burner,
+  fire-extinguisher, fire-flame-curved, fire-alt, fire-flame-simple, burn, fish,
+  fish-fins, flag, flag-checkered, flag-usa, flask, flask-vial, floppy-disk,
+  save, florin-sign, folder, folder-blank, folder-closed, folder-minus,
+  folder-open, folder-plus, folder-tree, font, football, football-ball, forward,
+  forward-fast, fast-forward, forward-step, step-forward, franc-sign, frog,
+  futbol, futbol-ball, soccer-ball, g, gamepad, gas-pump, gauge, dashboard,
+  gauge-med, tachometer-alt-average, gauge-high, tachometer-alt,
+  tachometer-alt-fast, gauge-simple, gauge-simple-med, tachometer-average,
+  gauge-simple-high, tachometer, tachometer-fast, gavel, legal, gear, cog, gears,
+  cogs, gem, genderless, ghost, gift, gifts, glass-water, glass-water-droplet,
+  glasses, globe, golf-ball-tee, golf-ball, gopuram, graduation-cap,
+  mortar-board, greater-than, greater-than-equal, grip, grip-horizontal,
+  grip-lines, grip-lines-vertical, grip-vertical, group-arrows-rotate,
+  guarani-sign, guitar, gun, h, hammer, hamsa, hand, hand-paper, hand-back-fist,
+  hand-rock, hand-dots, allergies, hand-fist, fist-raised, hand-holding,
+  hand-holding-dollar, hand-holding-usd, hand-holding-droplet,
+  hand-holding-water, hand-holding-hand, hand-holding-heart,
+  hand-holding-medical, hand-lizard, hand-middle-finger, hand-peace,
+  hand-point-down, hand-point-left, hand-point-right, hand-point-up,
+  hand-pointer, hand-scissors, hand-sparkles, hand-spock, handcuffs, hands,
+  sign-language, signing, hands-asl-interpreting,
+  american-sign-language-interpreting, asl-interpreting,
+  hands-american-sign-language-interpreting, hands-bound, hands-bubbles,
+  hands-wash, hands-clapping, hands-holding, hands-holding-child,
+  hands-holding-circle, hands-praying, praying-hands, handshake, handshake-angle,
+  hands-helping, handshake-simple, handshake-alt, handshake-simple-slash,
+  handshake-alt-slash, handshake-slash, hanukiah, hard-drive, hdd, hashtag,
+  hat-cowboy, hat-cowboy-side, hat-wizard, head-side-cough,
+  head-side-cough-slash, head-side-mask, head-side-virus, heading, header,
+  headphones, headphones-simple, headphones-alt, headset, heart,
+  heart-circle-bolt, heart-circle-check, heart-circle-exclamation,
+  heart-circle-minus, heart-circle-plus, heart-circle-xmark, heart-crack,
+  heart-broken, heart-pulse, heartbeat, helicopter, helicopter-symbol,
+  helmet-safety, hard-hat, hat-hard, helmet-un, highlighter, hill-avalanche,
+  hill-rockslide, hippo, hockey-puck, holly-berry, horse, horse-head, hospital,
+  hospital-alt, hospital-wide, hospital-user, hot-tub-person, hot-tub, hotdog,
+  hotel, hourglass, hourglass-2, hourglass-half, hourglass-empty, hourglass-end,
+  hourglass-3, hourglass-start, hourglass-1, house, home, home-alt, home-lg-alt,
+  house-chimney, home-lg, house-chimney-crack, house-damage,
+  house-chimney-medical, clinic-medical, house-chimney-user,
+  house-chimney-window, house-circle-check, house-circle-exclamation,
+  house-circle-xmark, house-crack, house-fire, house-flag, house-flood-water,
+  house-flood-water-circle-arrow-right, house-laptop, laptop-house, house-lock,
+  house-medical, house-medical-circle-check, house-medical-circle-exclamation,
+  house-medical-circle-xmark, house-medical-flag, house-signal, house-tsunami,
+  house-user, home-user, hryvnia-sign, hryvnia, hurricane, i, i-cursor,
+  ice-cream, icicles, icons, heart-music-camera-bolt, id-badge, id-card,
+  drivers-license, id-card-clip, id-card-alt, igloo, image, image-portrait,
+  portrait, images, inbox, indent, indian-rupee-sign, indian-rupee, inr,
+  industry, infinity, info, italic, j, jar, jar-wheat, jedi, jet-fighter,
+  fighter-jet, jet-fighter-up, joint, jug-detergent, k, kaaba, key, keyboard,
+  khanda, kip-sign, kit-medical, first-aid, kitchen-set, kiwi-bird, l,
+  land-mine-on, landmark, landmark-dome, landmark-alt, landmark-flag, language,
+  laptop, laptop-code, laptop-file, laptop-medical, lari-sign, layer-group, leaf,
+  left-long, long-arrow-alt-left, left-right, arrows-alt-h, lemon, less-than,
+  less-than-equal, life-ring, lightbulb, lines-leaning, link, chain, link-slash,
+  chain-broken, chain-slash, unlink, lira-sign, list, list-squares, list-check,
+  tasks, list-ol, list-1-2, list-numeric, list-ul, list-dots, litecoin-sign,
+  location-arrow, location-crosshairs, location, location-dot, map-marker-alt,
+  location-pin, map-marker, location-pin-lock, lock, lock-open, locust, lungs,
+  lungs-virus, m, magnet, magnifying-glass, search, magnifying-glass-arrow-right,
+  magnifying-glass-chart, magnifying-glass-dollar, search-dollar,
+  magnifying-glass-location, search-location, magnifying-glass-minus,
+  search-minus, magnifying-glass-plus, search-plus, manat-sign, map,
+  map-location, map-marked, map-location-dot, map-marked-alt, map-pin, marker,
+  mars, mars-and-venus, mars-and-venus-burst, mars-double, mars-stroke,
+  mars-stroke-right, mars-stroke-h, mars-stroke-up, mars-stroke-v, martini-glass,
+  glass-martini-alt, martini-glass-citrus, cocktail, martini-glass-empty,
+  glass-martini, mask, mask-face, mask-ventilator, masks-theater, theater-masks,
+  mattress-pillow, maximize, expand-arrows-alt, medal, memory, menorah, mercury,
+  message, comment-alt, meteor, microchip, microphone, microphone-lines,
+  microphone-alt, microphone-lines-slash, microphone-alt-slash, microphone-slash,
+  microscope, mill-sign, minimize, compress-arrows-alt, minus, subtract, mitten,
+  mobile, mobile-android, mobile-phone, mobile-button, mobile-retro,
+  mobile-screen, mobile-android-alt, mobile-screen-button, mobile-alt,
+  money-bill, money-bill-1, money-bill-alt, money-bill-1-wave,
+  money-bill-wave-alt, money-bill-transfer, money-bill-trend-up, money-bill-wave,
+  money-bill-wheat, money-bills, money-check, money-check-dollar,
+  money-check-alt, monument, moon, mortar-pestle, mosque, mosquito, mosquito-net,
+  motorcycle, mound, mountain, mountain-city, mountain-sun, mug-hot, mug-saucer,
+  coffee, music, n, naira-sign, network-wired, neuter, newspaper, not-equal,
+  note-sticky, sticky-note, notes-medical, o, object-group, object-ungroup,
+  oil-can, oil-well, om, otter, outdent, dedent, p, pager, paint-roller,
+  paintbrush, paint-brush, palette, pallet, panorama, paper-plane, paperclip,
+  parachute-box, paragraph, passport, paste, file-clipboard, pause, paw, peace,
+  pen, pen-clip, pen-alt, pen-fancy, pen-nib, pen-ruler, pencil-ruler,
+  pen-to-square, edit, pencil, pencil-alt, people-arrows-left-right,
+  people-arrows, people-carry-box, people-carry, people-group, people-line,
+  people-pulling, people-robbery, people-roof, pepper-hot, percent, percentage,
+  person, male, person-arrow-down-to-line, person-arrow-up-from-line,
+  person-biking, biking, person-booth, person-breastfeeding, person-burst,
+  person-cane, person-chalkboard, person-circle-check, person-circle-exclamation,
+  person-circle-minus, person-circle-plus, person-circle-question,
+  person-circle-xmark, person-digging, digging, person-dots-from-line, diagnoses,
+  person-dress, female, person-dress-burst, person-drowning, person-falling,
+  person-falling-burst, person-half-dress, person-harassing, person-hiking,
+  hiking, person-military-pointing, person-military-rifle,
+  person-military-to-person, person-praying, pray, person-pregnant, person-rays,
+  person-rifle, person-running, running, person-shelter, person-skating, skating,
+  person-skiing, skiing, person-skiing-nordic, skiing-nordic,
+  person-snowboarding, snowboarding, person-swimming, swimmer,
+  person-through-window, person-walking, walking, person-walking-arrow-loop-left,
+  person-walking-arrow-right, person-walking-dashed-line-arrow-right,
+  person-walking-luggage, person-walking-with-cane, blind, peseta-sign,
+  peso-sign, phone, phone-flip, phone-alt, phone-slash, phone-volume,
+  volume-control-phone, photo-film, photo-video, piggy-bank, pills, pizza-slice,
+  place-of-worship, plane, plane-arrival, plane-circle-check,
+  plane-circle-exclamation, plane-circle-xmark, plane-departure, plane-lock,
+  plane-slash, plane-up, plant-wilt, plate-wheat, play, plug, plug-circle-bolt,
+  plug-circle-check, plug-circle-exclamation, plug-circle-minus,
+  plug-circle-plus, plug-circle-xmark, plus, add, plus-minus, podcast, poo,
+  poo-storm, poo-bolt, poop, power-off, prescription, prescription-bottle,
+  prescription-bottle-medical, prescription-bottle-alt, print, pump-medical,
+  pump-soap, puzzle-piece, q, qrcode, question, quote-left, quote-left-alt,
+  quote-right, quote-right-alt, r, radiation, radio, rainbow, ranking-star,
+  receipt, record-vinyl, rectangle-ad, ad, rectangle-list, list-alt,
+  rectangle-xmark, rectangle-times, times-rectangle, window-close, recycle,
+  registered, repeat, reply, mail-reply, reply-all, mail-reply-all, republican,
+  restroom, retweet, ribbon, right-from-bracket, sign-out-alt, right-left,
+  exchange-alt, right-long, long-arrow-alt-right, right-to-bracket, sign-in-alt,
+  ring, road, road-barrier, road-bridge, road-circle-check,
+  road-circle-exclamation, road-circle-xmark, road-lock, road-spikes, robot,
+  rocket, rotate, sync-alt, rotate-left, rotate-back, rotate-backward, undo-alt,
+  rotate-right, redo-alt, rotate-forward, route, rss, feed, ruble-sign, rouble,
+  rub, ruble, rug, ruler, ruler-combined, ruler-horizontal, ruler-vertical,
+  rupee-sign, rupee, rupiah-sign, s, sack-dollar, sack-xmark, sailboat,
+  satellite, satellite-dish, scale-balanced, balance-scale, scale-unbalanced,
+  balance-scale-left, scale-unbalanced-flip, balance-scale-right, school,
+  school-circle-check, school-circle-exclamation, school-circle-xmark,
+  school-flag, school-lock, scissors, cut, screwdriver, screwdriver-wrench,
+  tools, scroll, scroll-torah, torah, sd-card, section, seedling, sprout, server,
+  shapes, triangle-circle-square, share, arrow-turn-right, mail-forward,
+  share-from-square, share-square, share-nodes, share-alt, sheet-plastic,
+  shekel-sign, ils, shekel, sheqel, sheqel-sign, shield, shield-blank,
+  shield-cat, shield-dog, shield-halved, shield-alt, shield-heart, shield-virus,
+  ship, shirt, t-shirt, tshirt, shoe-prints, shop, store-alt, shop-lock,
+  shop-slash, store-alt-slash, shower, shrimp, shuffle, random, shuttle-space,
+  space-shuttle, sign-hanging, sign, signal, signal-5, signal-perfect, signature,
+  signs-post, map-signs, sim-card, sink, sitemap, skull, skull-crossbones, slash,
+  sleigh, sliders, sliders-h, smog, smoking, snowflake, snowman, snowplow, soap,
+  socks, solar-panel, sort, unsorted, sort-down, sort-desc, sort-up, sort-asc,
+  spa, spaghetti-monster-flying, pastafarianism, spell-check, spider, spinner,
+  splotch, spoon, utensil-spoon, spray-can, spray-can-sparkles, air-freshener,
+  square, square-arrow-up-right, external-link-square, square-caret-down,
+  caret-square-down, square-caret-left, caret-square-left, square-caret-right,
+  caret-square-right, square-caret-up, caret-square-up, square-check,
+  check-square, square-envelope, envelope-square, square-full, square-h,
+  h-square, square-minus, minus-square, square-nfi, square-parking, parking,
+  square-pen, pen-square, pencil-square, square-person-confined, square-phone,
+  phone-square, square-phone-flip, phone-square-alt, square-plus, plus-square,
+  square-poll-horizontal, poll-h, square-poll-vertical, poll,
+  square-root-variable, square-root-alt, square-rss, rss-square,
+  square-share-nodes, share-alt-square, square-up-right,
+  external-link-square-alt, square-virus, square-xmark, times-square,
+  xmark-square, staff-aesculapius, rod-asclepius, rod-snake, staff-snake, stairs,
+  stamp, star, star-and-crescent, star-half, star-half-stroke, star-half-alt,
+  star-of-david, star-of-life, sterling-sign, gbp, pound-sign, stethoscope, stop,
+  stopwatch, stopwatch-20, store, store-slash, street-view, strikethrough,
+  stroopwafel, subscript, suitcase, suitcase-medical, medkit, suitcase-rolling,
+  sun, sun-plant-wilt, superscript, swatchbook, synagogue, syringe, t, table,
+  table-cells, th, table-cells-large, th-large, table-columns, columns,
+  table-list, th-list, table-tennis-paddle-ball, ping-pong-paddle-ball,
+  table-tennis, tablet, tablet-android, tablet-button, tablet-screen-button,
+  tablet-alt, tablets, tachograph-digital, digital-tachograph, tag, tags, tape,
+  tarp, tarp-droplet, taxi, cab, teeth, teeth-open, temperature-arrow-down,
+  temperature-down, temperature-arrow-up, temperature-up, temperature-empty,
+  temperature-0, thermometer-0, thermometer-empty, temperature-full,
+  temperature-4, thermometer-4, thermometer-full, temperature-half,
+  temperature-2, thermometer-2, thermometer-half, temperature-high,
+  temperature-low, temperature-quarter, temperature-1, thermometer-1,
+  thermometer-quarter, temperature-three-quarters, temperature-3, thermometer-3,
+  thermometer-three-quarters, tenge-sign, tenge, tent, tent-arrow-down-to-line,
+  tent-arrow-left-right, tent-arrow-turn-left, tent-arrows-down, tents, terminal,
+  text-height, text-slash, remove-format, text-width, thermometer, thumbs-down,
+  thumbs-up, thumbtack, thumb-tack, ticket, ticket-simple, ticket-alt, timeline,
+  toggle-off, toggle-on, toilet, toilet-paper, toilet-paper-slash,
+  toilet-portable, toilets-portable, toolbox, tooth, torii-gate, tornado,
+  tower-broadcast, broadcast-tower, tower-cell, tower-observation, tractor,
+  trademark, traffic-light, trailer, train, train-subway, subway, train-tram,
+  tram, transgender, transgender-alt, trash, trash-arrow-up, trash-restore,
+  trash-can, trash-alt, trash-can-arrow-up, trash-restore-alt, tree, tree-city,
+  triangle-exclamation, exclamation-triangle, warning, trophy, trowel,
+  trowel-bricks, truck, truck-arrow-right, truck-droplet, truck-fast,
+  shipping-fast, truck-field, truck-field-un, truck-front, truck-medical,
+  ambulance, truck-monster, truck-moving, truck-pickup, truck-plane,
+  truck-ramp-box, truck-loading, tty, teletype, turkish-lira-sign, try,
+  turkish-lira, turn-down, level-down-alt, turn-up, level-up-alt, tv, television,
+  tv-alt, u, umbrella, umbrella-beach, underline, universal-access, unlock,
+  unlock-keyhole, unlock-alt, up-down, arrows-alt-v, up-down-left-right,
+  arrows-alt, up-long, long-arrow-alt-up, up-right-and-down-left-from-center,
+  expand-alt, up-right-from-square, external-link-alt, upload, user,
+  user-astronaut, user-check, user-clock, user-doctor, user-md, user-gear,
+  user-cog, user-graduate, user-group, user-friends, user-injured, user-large,
+  user-alt, user-large-slash, user-alt-slash, user-lock, user-minus, user-ninja,
+  user-nurse, user-pen, user-edit, user-plus, user-secret, user-shield,
+  user-slash, user-tag, user-tie, user-xmark, user-times, users,
+  users-between-lines, users-gear, users-cog, users-line, users-rays,
+  users-rectangle, users-slash, users-viewfinder, utensils, cutlery, v,
+  van-shuttle, shuttle-van, vault, vector-square, venus, venus-double,
+  venus-mars, vest, vest-patches, vial, vial-circle-check, vial-virus, vials,
+  video, video-camera, video-slash, vihara, virus, virus-covid,
+  virus-covid-slash, virus-slash, viruses, voicemail, volcano, volleyball,
+  volleyball-ball, volume-high, volume-up, volume-low, volume-down, volume-off,
+  volume-xmark, volume-mute, volume-times, vr-cardboard, w, walkie-talkie,
+  wallet, wand-magic, magic, wand-magic-sparkles, magic-wand-sparkles,
+  wand-sparkles, warehouse, water, water-ladder, ladder-water, swimming-pool,
+  wave-square, weight-hanging, weight-scale, weight, wheat-awn, wheat-alt,
+  wheat-awn-circle-exclamation, wheelchair, wheelchair-move, wheelchair-alt,
+  whiskey-glass, glass-whiskey, wifi, wifi-3, wifi-strong, wind, window-maximize,
+  window-minimize, window-restore, wine-bottle, wine-glass, wine-glass-empty,
+  wine-glass-alt, won-sign, krw, won, worm, wrench, x, x-ray, xmark, close,
+  multiply, remove, times, xmarks-lines, y, yen-sign, cny, jpy, rmb, yen,
+  yin-yang, z;
+
+@normal-icon-refs: @fa-var-0, @fa-var-1, @fa-var-2, @fa-var-3, @fa-var-4,
+  @fa-var-5, @fa-var-6, @fa-var-7, @fa-var-8, @fa-var-9, @fa-var-a,
+  @fa-var-address-book, @fa-var-contact-book, @fa-var-address-card,
+  @fa-var-contact-card, @fa-var-vcard, @fa-var-align-center,
+  @fa-var-align-justify, @fa-var-align-left, @fa-var-align-right, @fa-var-anchor,
+  @fa-var-anchor-circle-check, @fa-var-anchor-circle-exclamation,
+  @fa-var-anchor-circle-xmark, @fa-var-anchor-lock, @fa-var-angle-down,
+  @fa-var-angle-left, @fa-var-angle-right, @fa-var-angle-up, @fa-var-angles-down,
+  @fa-var-angle-double-down, @fa-var-angles-left, @fa-var-angle-double-left,
+  @fa-var-angles-right, @fa-var-angle-double-right, @fa-var-angles-up,
+  @fa-var-angle-double-up, @fa-var-ankh, @fa-var-apple-whole, @fa-var-apple-alt,
+  @fa-var-archway, @fa-var-arrow-down, @fa-var-arrow-down-1-9,
+  @fa-var-sort-numeric-asc, @fa-var-sort-numeric-down, @fa-var-arrow-down-9-1,
+  @fa-var-sort-numeric-desc, @fa-var-sort-numeric-down-alt,
+  @fa-var-arrow-down-a-z, @fa-var-sort-alpha-asc, @fa-var-sort-alpha-down,
+  @fa-var-arrow-down-long, @fa-var-long-arrow-down,
+  @fa-var-arrow-down-short-wide, @fa-var-sort-amount-desc,
+  @fa-var-sort-amount-down-alt, @fa-var-arrow-down-up-across-line,
+  @fa-var-arrow-down-up-lock, @fa-var-arrow-down-wide-short,
+  @fa-var-sort-amount-asc, @fa-var-sort-amount-down, @fa-var-arrow-down-z-a,
+  @fa-var-sort-alpha-desc, @fa-var-sort-alpha-down-alt, @fa-var-arrow-left,
+  @fa-var-arrow-left-long, @fa-var-long-arrow-left, @fa-var-arrow-pointer,
+  @fa-var-mouse-pointer, @fa-var-arrow-right, @fa-var-arrow-right-arrow-left,
+  @fa-var-exchange, @fa-var-arrow-right-from-bracket, @fa-var-sign-out,
+  @fa-var-arrow-right-long, @fa-var-long-arrow-right,
+  @fa-var-arrow-right-to-bracket, @fa-var-sign-in, @fa-var-arrow-right-to-city,
+  @fa-var-arrow-rotate-left, @fa-var-arrow-left-rotate,
+  @fa-var-arrow-rotate-back, @fa-var-arrow-rotate-backward, @fa-var-undo,
+  @fa-var-arrow-rotate-right, @fa-var-arrow-right-rotate,
+  @fa-var-arrow-rotate-forward, @fa-var-redo, @fa-var-arrow-trend-down,
+  @fa-var-arrow-trend-up, @fa-var-arrow-turn-down, @fa-var-level-down,
+  @fa-var-arrow-turn-up, @fa-var-level-up, @fa-var-arrow-up,
+  @fa-var-arrow-up-1-9, @fa-var-sort-numeric-up, @fa-var-arrow-up-9-1,
+  @fa-var-sort-numeric-up-alt, @fa-var-arrow-up-a-z, @fa-var-sort-alpha-up,
+  @fa-var-arrow-up-from-bracket, @fa-var-arrow-up-from-ground-water,
+  @fa-var-arrow-up-from-water-pump, @fa-var-arrow-up-long, @fa-var-long-arrow-up,
+  @fa-var-arrow-up-right-dots, @fa-var-arrow-up-right-from-square,
+  @fa-var-external-link, @fa-var-arrow-up-short-wide, @fa-var-sort-amount-up-alt,
+  @fa-var-arrow-up-wide-short, @fa-var-sort-amount-up, @fa-var-arrow-up-z-a,
+  @fa-var-sort-alpha-up-alt, @fa-var-arrows-down-to-line,
+  @fa-var-arrows-down-to-people, @fa-var-arrows-left-right, @fa-var-arrows-h,
+  @fa-var-arrows-left-right-to-line, @fa-var-arrows-rotate, @fa-var-refresh,
+  @fa-var-sync, @fa-var-arrows-spin, @fa-var-arrows-split-up-and-left,
+  @fa-var-arrows-to-circle, @fa-var-arrows-to-dot, @fa-var-arrows-to-eye,
+  @fa-var-arrows-turn-right, @fa-var-arrows-turn-to-dots, @fa-var-arrows-up-down,
+  @fa-var-arrows-v, @fa-var-arrows-up-down-left-right, @fa-var-arrows,
+  @fa-var-arrows-up-to-line, @fa-var-asterisk, @fa-var-at, @fa-var-atom,
+  @fa-var-audio-description, @fa-var-austral-sign, @fa-var-award, @fa-var-b,
+  @fa-var-baby, @fa-var-baby-carriage, @fa-var-carriage-baby, @fa-var-backward,
+  @fa-var-backward-fast, @fa-var-fast-backward, @fa-var-backward-step,
+  @fa-var-step-backward, @fa-var-bacon, @fa-var-bacteria, @fa-var-bacterium,
+  @fa-var-bag-shopping, @fa-var-shopping-bag, @fa-var-bahai, @fa-var-baht-sign,
+  @fa-var-ban, @fa-var-cancel, @fa-var-ban-smoking, @fa-var-smoking-ban,
+  @fa-var-bandage, @fa-var-band-aid, @fa-var-barcode, @fa-var-bars,
+  @fa-var-navicon, @fa-var-bars-progress, @fa-var-tasks-alt,
+  @fa-var-bars-staggered, @fa-var-reorder, @fa-var-stream, @fa-var-baseball,
+  @fa-var-baseball-ball, @fa-var-baseball-bat-ball, @fa-var-basket-shopping,
+  @fa-var-shopping-basket, @fa-var-basketball, @fa-var-basketball-ball,
+  @fa-var-bath, @fa-var-bathtub, @fa-var-battery-empty, @fa-var-battery-0,
+  @fa-var-battery-full, @fa-var-battery, @fa-var-battery-5, @fa-var-battery-half,
+  @fa-var-battery-3, @fa-var-battery-quarter, @fa-var-battery-2,
+  @fa-var-battery-three-quarters, @fa-var-battery-4, @fa-var-bed,
+  @fa-var-bed-pulse, @fa-var-procedures, @fa-var-beer-mug-empty, @fa-var-beer,
+  @fa-var-bell, @fa-var-bell-concierge, @fa-var-concierge-bell,
+  @fa-var-bell-slash, @fa-var-bezier-curve, @fa-var-bicycle, @fa-var-binoculars,
+  @fa-var-biohazard, @fa-var-bitcoin-sign, @fa-var-blender,
+  @fa-var-blender-phone, @fa-var-blog, @fa-var-bold, @fa-var-bolt, @fa-var-zap,
+  @fa-var-bolt-lightning, @fa-var-bomb, @fa-var-bone, @fa-var-bong, @fa-var-book,
+  @fa-var-book-atlas, @fa-var-atlas, @fa-var-book-bible, @fa-var-bible,
+  @fa-var-book-bookmark, @fa-var-book-journal-whills, @fa-var-journal-whills,
+  @fa-var-book-medical, @fa-var-book-open, @fa-var-book-open-reader,
+  @fa-var-book-reader, @fa-var-book-quran, @fa-var-quran, @fa-var-book-skull,
+  @fa-var-book-dead, @fa-var-bookmark, @fa-var-border-all, @fa-var-border-none,
+  @fa-var-border-top-left, @fa-var-border-style, @fa-var-bore-hole,
+  @fa-var-bottle-droplet, @fa-var-bottle-water, @fa-var-bowl-food,
+  @fa-var-bowl-rice, @fa-var-bowling-ball, @fa-var-box, @fa-var-box-archive,
+  @fa-var-archive, @fa-var-box-open, @fa-var-box-tissue, @fa-var-boxes-packing,
+  @fa-var-boxes-stacked, @fa-var-boxes, @fa-var-boxes-alt, @fa-var-braille,
+  @fa-var-brain, @fa-var-brazilian-real-sign, @fa-var-bread-slice,
+  @fa-var-bridge, @fa-var-bridge-circle-check, @fa-var-bridge-circle-exclamation,
+  @fa-var-bridge-circle-xmark, @fa-var-bridge-lock, @fa-var-bridge-water,
+  @fa-var-briefcase, @fa-var-briefcase-medical, @fa-var-broom,
+  @fa-var-broom-ball, @fa-var-quidditch, @fa-var-quidditch-broom-ball,
+  @fa-var-brush, @fa-var-bucket, @fa-var-bug, @fa-var-bug-slash, @fa-var-bugs,
+  @fa-var-building, @fa-var-building-circle-arrow-right,
+  @fa-var-building-circle-check, @fa-var-building-circle-exclamation,
+  @fa-var-building-circle-xmark, @fa-var-building-columns, @fa-var-bank,
+  @fa-var-institution, @fa-var-museum, @fa-var-university, @fa-var-building-flag,
+  @fa-var-building-lock, @fa-var-building-ngo, @fa-var-building-shield,
+  @fa-var-building-un, @fa-var-building-user, @fa-var-building-wheat,
+  @fa-var-bullhorn, @fa-var-bullseye, @fa-var-burger, @fa-var-hamburger,
+  @fa-var-burst, @fa-var-bus, @fa-var-bus-simple, @fa-var-bus-alt,
+  @fa-var-business-time, @fa-var-briefcase-clock, @fa-var-c,
+  @fa-var-cake-candles, @fa-var-birthday-cake, @fa-var-cake, @fa-var-calculator,
+  @fa-var-calendar, @fa-var-calendar-check, @fa-var-calendar-day,
+  @fa-var-calendar-days, @fa-var-calendar-alt, @fa-var-calendar-minus,
+  @fa-var-calendar-plus, @fa-var-calendar-week, @fa-var-calendar-xmark,
+  @fa-var-calendar-times, @fa-var-camera, @fa-var-camera-alt,
+  @fa-var-camera-retro, @fa-var-camera-rotate, @fa-var-campground,
+  @fa-var-candy-cane, @fa-var-cannabis, @fa-var-capsules, @fa-var-car,
+  @fa-var-automobile, @fa-var-car-battery, @fa-var-battery-car,
+  @fa-var-car-burst, @fa-var-car-crash, @fa-var-car-on, @fa-var-car-rear,
+  @fa-var-car-alt, @fa-var-car-side, @fa-var-car-tunnel, @fa-var-caravan,
+  @fa-var-caret-down, @fa-var-caret-left, @fa-var-caret-right, @fa-var-caret-up,
+  @fa-var-carrot, @fa-var-cart-arrow-down, @fa-var-cart-flatbed,
+  @fa-var-dolly-flatbed, @fa-var-cart-flatbed-suitcase, @fa-var-luggage-cart,
+  @fa-var-cart-plus, @fa-var-cart-shopping, @fa-var-shopping-cart,
+  @fa-var-cash-register, @fa-var-cat, @fa-var-cedi-sign, @fa-var-cent-sign,
+  @fa-var-certificate, @fa-var-chair, @fa-var-chalkboard, @fa-var-blackboard,
+  @fa-var-chalkboard-user, @fa-var-chalkboard-teacher, @fa-var-champagne-glasses,
+  @fa-var-glass-cheers, @fa-var-charging-station, @fa-var-chart-area,
+  @fa-var-area-chart, @fa-var-chart-bar, @fa-var-bar-chart, @fa-var-chart-column,
+  @fa-var-chart-gantt, @fa-var-chart-line, @fa-var-line-chart, @fa-var-chart-pie,
+  @fa-var-pie-chart, @fa-var-chart-simple, @fa-var-check, @fa-var-check-double,
+  @fa-var-check-to-slot, @fa-var-vote-yea, @fa-var-cheese, @fa-var-chess,
+  @fa-var-chess-bishop, @fa-var-chess-board, @fa-var-chess-king,
+  @fa-var-chess-knight, @fa-var-chess-pawn, @fa-var-chess-queen,
+  @fa-var-chess-rook, @fa-var-chevron-down, @fa-var-chevron-left,
+  @fa-var-chevron-right, @fa-var-chevron-up, @fa-var-child, @fa-var-child-dress,
+  @fa-var-child-reaching, @fa-var-child-rifle, @fa-var-children, @fa-var-church,
+  @fa-var-circle, @fa-var-circle-arrow-down, @fa-var-arrow-circle-down,
+  @fa-var-circle-arrow-left, @fa-var-arrow-circle-left,
+  @fa-var-circle-arrow-right, @fa-var-arrow-circle-right,
+  @fa-var-circle-arrow-up, @fa-var-arrow-circle-up, @fa-var-circle-check,
+  @fa-var-check-circle, @fa-var-circle-chevron-down, @fa-var-chevron-circle-down,
+  @fa-var-circle-chevron-left, @fa-var-chevron-circle-left,
+  @fa-var-circle-chevron-right, @fa-var-chevron-circle-right,
+  @fa-var-circle-chevron-up, @fa-var-chevron-circle-up,
+  @fa-var-circle-dollar-to-slot, @fa-var-donate, @fa-var-circle-dot,
+  @fa-var-dot-circle, @fa-var-circle-down, @fa-var-arrow-alt-circle-down,
+  @fa-var-circle-exclamation, @fa-var-exclamation-circle, @fa-var-circle-h,
+  @fa-var-hospital-symbol, @fa-var-circle-half-stroke, @fa-var-adjust,
+  @fa-var-circle-info, @fa-var-info-circle, @fa-var-circle-left,
+  @fa-var-arrow-alt-circle-left, @fa-var-circle-minus, @fa-var-minus-circle,
+  @fa-var-circle-nodes, @fa-var-circle-notch, @fa-var-circle-pause,
+  @fa-var-pause-circle, @fa-var-circle-play, @fa-var-play-circle,
+  @fa-var-circle-plus, @fa-var-plus-circle, @fa-var-circle-question,
+  @fa-var-question-circle, @fa-var-circle-radiation, @fa-var-radiation-alt,
+  @fa-var-circle-right, @fa-var-arrow-alt-circle-right, @fa-var-circle-stop,
+  @fa-var-stop-circle, @fa-var-circle-up, @fa-var-arrow-alt-circle-up,
+  @fa-var-circle-user, @fa-var-user-circle, @fa-var-circle-xmark,
+  @fa-var-times-circle, @fa-var-xmark-circle, @fa-var-city, @fa-var-clapperboard,
+  @fa-var-clipboard, @fa-var-clipboard-check, @fa-var-clipboard-list,
+  @fa-var-clipboard-question, @fa-var-clipboard-user, @fa-var-clock,
+  @fa-var-clock-four, @fa-var-clock-rotate-left, @fa-var-history, @fa-var-clone,
+  @fa-var-closed-captioning, @fa-var-cloud, @fa-var-cloud-arrow-down,
+  @fa-var-cloud-download, @fa-var-cloud-download-alt, @fa-var-cloud-arrow-up,
+  @fa-var-cloud-upload, @fa-var-cloud-upload-alt, @fa-var-cloud-bolt,
+  @fa-var-thunderstorm, @fa-var-cloud-meatball, @fa-var-cloud-moon,
+  @fa-var-cloud-moon-rain, @fa-var-cloud-rain, @fa-var-cloud-showers-heavy,
+  @fa-var-cloud-showers-water, @fa-var-cloud-sun, @fa-var-cloud-sun-rain,
+  @fa-var-clover, @fa-var-code, @fa-var-code-branch, @fa-var-code-commit,
+  @fa-var-code-compare, @fa-var-code-fork, @fa-var-code-merge,
+  @fa-var-code-pull-request, @fa-var-coins, @fa-var-colon-sign, @fa-var-comment,
+  @fa-var-comment-dollar, @fa-var-comment-dots, @fa-var-commenting,
+  @fa-var-comment-medical, @fa-var-comment-slash, @fa-var-comment-sms,
+  @fa-var-sms, @fa-var-comments, @fa-var-comments-dollar, @fa-var-compact-disc,
+  @fa-var-compass, @fa-var-compass-drafting, @fa-var-drafting-compass,
+  @fa-var-compress, @fa-var-computer, @fa-var-computer-mouse, @fa-var-mouse,
+  @fa-var-cookie, @fa-var-cookie-bite, @fa-var-copy, @fa-var-copyright,
+  @fa-var-couch, @fa-var-cow, @fa-var-credit-card, @fa-var-credit-card-alt,
+  @fa-var-crop, @fa-var-crop-simple, @fa-var-crop-alt, @fa-var-cross,
+  @fa-var-crosshairs, @fa-var-crow, @fa-var-crown, @fa-var-crutch,
+  @fa-var-cruzeiro-sign, @fa-var-cube, @fa-var-cubes, @fa-var-cubes-stacked,
+  @fa-var-d, @fa-var-database, @fa-var-delete-left, @fa-var-backspace,
+  @fa-var-democrat, @fa-var-desktop, @fa-var-desktop-alt, @fa-var-dharmachakra,
+  @fa-var-diagram-next, @fa-var-diagram-predecessor, @fa-var-diagram-project,
+  @fa-var-project-diagram, @fa-var-diagram-successor, @fa-var-diamond,
+  @fa-var-diamond-turn-right, @fa-var-directions, @fa-var-dice, @fa-var-dice-d20,
+  @fa-var-dice-d6, @fa-var-dice-five, @fa-var-dice-four, @fa-var-dice-one,
+  @fa-var-dice-six, @fa-var-dice-three, @fa-var-dice-two, @fa-var-disease,
+  @fa-var-display, @fa-var-divide, @fa-var-dna, @fa-var-dog, @fa-var-dollar-sign,
+  @fa-var-dollar, @fa-var-usd, @fa-var-dolly, @fa-var-dolly-box,
+  @fa-var-dong-sign, @fa-var-door-closed, @fa-var-door-open, @fa-var-dove,
+  @fa-var-down-left-and-up-right-to-center, @fa-var-compress-alt,
+  @fa-var-down-long, @fa-var-long-arrow-alt-down, @fa-var-download,
+  @fa-var-dragon, @fa-var-draw-polygon, @fa-var-droplet, @fa-var-tint,
+  @fa-var-droplet-slash, @fa-var-tint-slash, @fa-var-drum, @fa-var-drum-steelpan,
+  @fa-var-drumstick-bite, @fa-var-dumbbell, @fa-var-dumpster,
+  @fa-var-dumpster-fire, @fa-var-dungeon, @fa-var-e, @fa-var-ear-deaf,
+  @fa-var-deaf, @fa-var-deafness, @fa-var-hard-of-hearing, @fa-var-ear-listen,
+  @fa-var-assistive-listening-systems, @fa-var-earth-africa,
+  @fa-var-globe-africa, @fa-var-earth-americas, @fa-var-earth,
+  @fa-var-earth-america, @fa-var-globe-americas, @fa-var-earth-asia,
+  @fa-var-globe-asia, @fa-var-earth-europe, @fa-var-globe-europe,
+  @fa-var-earth-oceania, @fa-var-globe-oceania, @fa-var-egg, @fa-var-eject,
+  @fa-var-elevator, @fa-var-ellipsis, @fa-var-ellipsis-h,
+  @fa-var-ellipsis-vertical, @fa-var-ellipsis-v, @fa-var-envelope,
+  @fa-var-envelope-circle-check, @fa-var-envelope-open,
+  @fa-var-envelope-open-text, @fa-var-envelopes-bulk, @fa-var-mail-bulk,
+  @fa-var-equals, @fa-var-eraser, @fa-var-ethernet, @fa-var-euro-sign,
+  @fa-var-eur, @fa-var-euro, @fa-var-exclamation, @fa-var-expand,
+  @fa-var-explosion, @fa-var-eye, @fa-var-eye-dropper, @fa-var-eye-dropper-empty,
+  @fa-var-eyedropper, @fa-var-eye-low-vision, @fa-var-low-vision,
+  @fa-var-eye-slash, @fa-var-f, @fa-var-face-angry, @fa-var-angry,
+  @fa-var-face-dizzy, @fa-var-dizzy, @fa-var-face-flushed, @fa-var-flushed,
+  @fa-var-face-frown, @fa-var-frown, @fa-var-face-frown-open, @fa-var-frown-open,
+  @fa-var-face-grimace, @fa-var-grimace, @fa-var-face-grin, @fa-var-grin,
+  @fa-var-face-grin-beam, @fa-var-grin-beam, @fa-var-face-grin-beam-sweat,
+  @fa-var-grin-beam-sweat, @fa-var-face-grin-hearts, @fa-var-grin-hearts,
+  @fa-var-face-grin-squint, @fa-var-grin-squint, @fa-var-face-grin-squint-tears,
+  @fa-var-grin-squint-tears, @fa-var-face-grin-stars, @fa-var-grin-stars,
+  @fa-var-face-grin-tears, @fa-var-grin-tears, @fa-var-face-grin-tongue,
+  @fa-var-grin-tongue, @fa-var-face-grin-tongue-squint,
+  @fa-var-grin-tongue-squint, @fa-var-face-grin-tongue-wink,
+  @fa-var-grin-tongue-wink, @fa-var-face-grin-wide, @fa-var-grin-alt,
+  @fa-var-face-grin-wink, @fa-var-grin-wink, @fa-var-face-kiss, @fa-var-kiss,
+  @fa-var-face-kiss-beam, @fa-var-kiss-beam, @fa-var-face-kiss-wink-heart,
+  @fa-var-kiss-wink-heart, @fa-var-face-laugh, @fa-var-laugh,
+  @fa-var-face-laugh-beam, @fa-var-laugh-beam, @fa-var-face-laugh-squint,
+  @fa-var-laugh-squint, @fa-var-face-laugh-wink, @fa-var-laugh-wink,
+  @fa-var-face-meh, @fa-var-meh, @fa-var-face-meh-blank, @fa-var-meh-blank,
+  @fa-var-face-rolling-eyes, @fa-var-meh-rolling-eyes, @fa-var-face-sad-cry,
+  @fa-var-sad-cry, @fa-var-face-sad-tear, @fa-var-sad-tear, @fa-var-face-smile,
+  @fa-var-smile, @fa-var-face-smile-beam, @fa-var-smile-beam,
+  @fa-var-face-smile-wink, @fa-var-smile-wink, @fa-var-face-surprise,
+  @fa-var-surprise, @fa-var-face-tired, @fa-var-tired, @fa-var-fan,
+  @fa-var-faucet, @fa-var-faucet-drip, @fa-var-fax, @fa-var-feather,
+  @fa-var-feather-pointed, @fa-var-feather-alt, @fa-var-ferry, @fa-var-file,
+  @fa-var-file-arrow-down, @fa-var-file-download, @fa-var-file-arrow-up,
+  @fa-var-file-upload, @fa-var-file-audio, @fa-var-file-circle-check,
+  @fa-var-file-circle-exclamation, @fa-var-file-circle-minus,
+  @fa-var-file-circle-plus, @fa-var-file-circle-question,
+  @fa-var-file-circle-xmark, @fa-var-file-code, @fa-var-file-contract,
+  @fa-var-file-csv, @fa-var-file-excel, @fa-var-file-export,
+  @fa-var-arrow-right-from-file, @fa-var-file-image, @fa-var-file-import,
+  @fa-var-arrow-right-to-file, @fa-var-file-invoice, @fa-var-file-invoice-dollar,
+  @fa-var-file-lines, @fa-var-file-alt, @fa-var-file-text, @fa-var-file-medical,
+  @fa-var-file-pdf, @fa-var-file-pen, @fa-var-file-edit, @fa-var-file-powerpoint,
+  @fa-var-file-prescription, @fa-var-file-shield, @fa-var-file-signature,
+  @fa-var-file-video, @fa-var-file-waveform, @fa-var-file-medical-alt,
+  @fa-var-file-word, @fa-var-file-zipper, @fa-var-file-archive, @fa-var-fill,
+  @fa-var-fill-drip, @fa-var-film, @fa-var-filter, @fa-var-filter-circle-dollar,
+  @fa-var-funnel-dollar, @fa-var-filter-circle-xmark, @fa-var-fingerprint,
+  @fa-var-fire, @fa-var-fire-burner, @fa-var-fire-extinguisher,
+  @fa-var-fire-flame-curved, @fa-var-fire-alt, @fa-var-fire-flame-simple,
+  @fa-var-burn, @fa-var-fish, @fa-var-fish-fins, @fa-var-flag,
+  @fa-var-flag-checkered, @fa-var-flag-usa, @fa-var-flask, @fa-var-flask-vial,
+  @fa-var-floppy-disk, @fa-var-save, @fa-var-florin-sign, @fa-var-folder,
+  @fa-var-folder-blank, @fa-var-folder-closed, @fa-var-folder-minus,
+  @fa-var-folder-open, @fa-var-folder-plus, @fa-var-folder-tree, @fa-var-font,
+  @fa-var-football, @fa-var-football-ball, @fa-var-forward, @fa-var-forward-fast,
+  @fa-var-fast-forward, @fa-var-forward-step, @fa-var-step-forward,
+  @fa-var-franc-sign, @fa-var-frog, @fa-var-futbol, @fa-var-futbol-ball,
+  @fa-var-soccer-ball, @fa-var-g, @fa-var-gamepad, @fa-var-gas-pump,
+  @fa-var-gauge, @fa-var-dashboard, @fa-var-gauge-med,
+  @fa-var-tachometer-alt-average, @fa-var-gauge-high, @fa-var-tachometer-alt,
+  @fa-var-tachometer-alt-fast, @fa-var-gauge-simple, @fa-var-gauge-simple-med,
+  @fa-var-tachometer-average, @fa-var-gauge-simple-high, @fa-var-tachometer,
+  @fa-var-tachometer-fast, @fa-var-gavel, @fa-var-legal, @fa-var-gear,
+  @fa-var-cog, @fa-var-gears, @fa-var-cogs, @fa-var-gem, @fa-var-genderless,
+  @fa-var-ghost, @fa-var-gift, @fa-var-gifts, @fa-var-glass-water,
+  @fa-var-glass-water-droplet, @fa-var-glasses, @fa-var-globe,
+  @fa-var-golf-ball-tee, @fa-var-golf-ball, @fa-var-gopuram,
+  @fa-var-graduation-cap, @fa-var-mortar-board, @fa-var-greater-than,
+  @fa-var-greater-than-equal, @fa-var-grip, @fa-var-grip-horizontal,
+  @fa-var-grip-lines, @fa-var-grip-lines-vertical, @fa-var-grip-vertical,
+  @fa-var-group-arrows-rotate, @fa-var-guarani-sign, @fa-var-guitar, @fa-var-gun,
+  @fa-var-h, @fa-var-hammer, @fa-var-hamsa, @fa-var-hand, @fa-var-hand-paper,
+  @fa-var-hand-back-fist, @fa-var-hand-rock, @fa-var-hand-dots,
+  @fa-var-allergies, @fa-var-hand-fist, @fa-var-fist-raised,
+  @fa-var-hand-holding, @fa-var-hand-holding-dollar, @fa-var-hand-holding-usd,
+  @fa-var-hand-holding-droplet, @fa-var-hand-holding-water,
+  @fa-var-hand-holding-hand, @fa-var-hand-holding-heart,
+  @fa-var-hand-holding-medical, @fa-var-hand-lizard, @fa-var-hand-middle-finger,
+  @fa-var-hand-peace, @fa-var-hand-point-down, @fa-var-hand-point-left,
+  @fa-var-hand-point-right, @fa-var-hand-point-up, @fa-var-hand-pointer,
+  @fa-var-hand-scissors, @fa-var-hand-sparkles, @fa-var-hand-spock,
+  @fa-var-handcuffs, @fa-var-hands, @fa-var-sign-language, @fa-var-signing,
+  @fa-var-hands-asl-interpreting, @fa-var-american-sign-language-interpreting,
+  @fa-var-asl-interpreting, @fa-var-hands-american-sign-language-interpreting,
+  @fa-var-hands-bound, @fa-var-hands-bubbles, @fa-var-hands-wash,
+  @fa-var-hands-clapping, @fa-var-hands-holding, @fa-var-hands-holding-child,
+  @fa-var-hands-holding-circle, @fa-var-hands-praying, @fa-var-praying-hands,
+  @fa-var-handshake, @fa-var-handshake-angle, @fa-var-hands-helping,
+  @fa-var-handshake-simple, @fa-var-handshake-alt,
+  @fa-var-handshake-simple-slash, @fa-var-handshake-alt-slash,
+  @fa-var-handshake-slash, @fa-var-hanukiah, @fa-var-hard-drive, @fa-var-hdd,
+  @fa-var-hashtag, @fa-var-hat-cowboy, @fa-var-hat-cowboy-side,
+  @fa-var-hat-wizard, @fa-var-head-side-cough, @fa-var-head-side-cough-slash,
+  @fa-var-head-side-mask, @fa-var-head-side-virus, @fa-var-heading,
+  @fa-var-header, @fa-var-headphones, @fa-var-headphones-simple,
+  @fa-var-headphones-alt, @fa-var-headset, @fa-var-heart,
+  @fa-var-heart-circle-bolt, @fa-var-heart-circle-check,
+  @fa-var-heart-circle-exclamation, @fa-var-heart-circle-minus,
+  @fa-var-heart-circle-plus, @fa-var-heart-circle-xmark, @fa-var-heart-crack,
+  @fa-var-heart-broken, @fa-var-heart-pulse, @fa-var-heartbeat,
+  @fa-var-helicopter, @fa-var-helicopter-symbol, @fa-var-helmet-safety,
+  @fa-var-hard-hat, @fa-var-hat-hard, @fa-var-helmet-un, @fa-var-highlighter,
+  @fa-var-hill-avalanche, @fa-var-hill-rockslide, @fa-var-hippo,
+  @fa-var-hockey-puck, @fa-var-holly-berry, @fa-var-horse, @fa-var-horse-head,
+  @fa-var-hospital, @fa-var-hospital-alt, @fa-var-hospital-wide,
+  @fa-var-hospital-user, @fa-var-hot-tub-person, @fa-var-hot-tub, @fa-var-hotdog,
+  @fa-var-hotel, @fa-var-hourglass, @fa-var-hourglass-2, @fa-var-hourglass-half,
+  @fa-var-hourglass-empty, @fa-var-hourglass-end, @fa-var-hourglass-3,
+  @fa-var-hourglass-start, @fa-var-hourglass-1, @fa-var-house, @fa-var-home,
+  @fa-var-home-alt, @fa-var-home-lg-alt, @fa-var-house-chimney, @fa-var-home-lg,
+  @fa-var-house-chimney-crack, @fa-var-house-damage,
+  @fa-var-house-chimney-medical, @fa-var-clinic-medical,
+  @fa-var-house-chimney-user, @fa-var-house-chimney-window,
+  @fa-var-house-circle-check, @fa-var-house-circle-exclamation,
+  @fa-var-house-circle-xmark, @fa-var-house-crack, @fa-var-house-fire,
+  @fa-var-house-flag, @fa-var-house-flood-water,
+  @fa-var-house-flood-water-circle-arrow-right, @fa-var-house-laptop,
+  @fa-var-laptop-house, @fa-var-house-lock, @fa-var-house-medical,
+  @fa-var-house-medical-circle-check, @fa-var-house-medical-circle-exclamation,
+  @fa-var-house-medical-circle-xmark, @fa-var-house-medical-flag,
+  @fa-var-house-signal, @fa-var-house-tsunami, @fa-var-house-user,
+  @fa-var-home-user, @fa-var-hryvnia-sign, @fa-var-hryvnia, @fa-var-hurricane,
+  @fa-var-i, @fa-var-i-cursor, @fa-var-ice-cream, @fa-var-icicles, @fa-var-icons,
+  @fa-var-heart-music-camera-bolt, @fa-var-id-badge, @fa-var-id-card,
+  @fa-var-drivers-license, @fa-var-id-card-clip, @fa-var-id-card-alt,
+  @fa-var-igloo, @fa-var-image, @fa-var-image-portrait, @fa-var-portrait,
+  @fa-var-images, @fa-var-inbox, @fa-var-indent, @fa-var-indian-rupee-sign,
+  @fa-var-indian-rupee, @fa-var-inr, @fa-var-industry, @fa-var-infinity,
+  @fa-var-info, @fa-var-italic, @fa-var-j, @fa-var-jar, @fa-var-jar-wheat,
+  @fa-var-jedi, @fa-var-jet-fighter, @fa-var-fighter-jet, @fa-var-jet-fighter-up,
+  @fa-var-joint, @fa-var-jug-detergent, @fa-var-k, @fa-var-kaaba, @fa-var-key,
+  @fa-var-keyboard, @fa-var-khanda, @fa-var-kip-sign, @fa-var-kit-medical,
+  @fa-var-first-aid, @fa-var-kitchen-set, @fa-var-kiwi-bird, @fa-var-l,
+  @fa-var-land-mine-on, @fa-var-landmark, @fa-var-landmark-dome,
+  @fa-var-landmark-alt, @fa-var-landmark-flag, @fa-var-language, @fa-var-laptop,
+  @fa-var-laptop-code, @fa-var-laptop-file, @fa-var-laptop-medical,
+  @fa-var-lari-sign, @fa-var-layer-group, @fa-var-leaf, @fa-var-left-long,
+  @fa-var-long-arrow-alt-left, @fa-var-left-right, @fa-var-arrows-alt-h,
+  @fa-var-lemon, @fa-var-less-than, @fa-var-less-than-equal, @fa-var-life-ring,
+  @fa-var-lightbulb, @fa-var-lines-leaning, @fa-var-link, @fa-var-chain,
+  @fa-var-link-slash, @fa-var-chain-broken, @fa-var-chain-slash, @fa-var-unlink,
+  @fa-var-lira-sign, @fa-var-list, @fa-var-list-squares, @fa-var-list-check,
+  @fa-var-tasks, @fa-var-list-ol, @fa-var-list-1-2, @fa-var-list-numeric,
+  @fa-var-list-ul, @fa-var-list-dots, @fa-var-litecoin-sign,
+  @fa-var-location-arrow, @fa-var-location-crosshairs, @fa-var-location,
+  @fa-var-location-dot, @fa-var-map-marker-alt, @fa-var-location-pin,
+  @fa-var-map-marker, @fa-var-location-pin-lock, @fa-var-lock, @fa-var-lock-open,
+  @fa-var-locust, @fa-var-lungs, @fa-var-lungs-virus, @fa-var-m, @fa-var-magnet,
+  @fa-var-magnifying-glass, @fa-var-search, @fa-var-magnifying-glass-arrow-right,
+  @fa-var-magnifying-glass-chart, @fa-var-magnifying-glass-dollar,
+  @fa-var-search-dollar, @fa-var-magnifying-glass-location,
+  @fa-var-search-location, @fa-var-magnifying-glass-minus, @fa-var-search-minus,
+  @fa-var-magnifying-glass-plus, @fa-var-search-plus, @fa-var-manat-sign,
+  @fa-var-map, @fa-var-map-location, @fa-var-map-marked,
+  @fa-var-map-location-dot, @fa-var-map-marked-alt, @fa-var-map-pin,
+  @fa-var-marker, @fa-var-mars, @fa-var-mars-and-venus,
+  @fa-var-mars-and-venus-burst, @fa-var-mars-double, @fa-var-mars-stroke,
+  @fa-var-mars-stroke-right, @fa-var-mars-stroke-h, @fa-var-mars-stroke-up,
+  @fa-var-mars-stroke-v, @fa-var-martini-glass, @fa-var-glass-martini-alt,
+  @fa-var-martini-glass-citrus, @fa-var-cocktail, @fa-var-martini-glass-empty,
+  @fa-var-glass-martini, @fa-var-mask, @fa-var-mask-face,
+  @fa-var-mask-ventilator, @fa-var-masks-theater, @fa-var-theater-masks,
+  @fa-var-mattress-pillow, @fa-var-maximize, @fa-var-expand-arrows-alt,
+  @fa-var-medal, @fa-var-memory, @fa-var-menorah, @fa-var-mercury,
+  @fa-var-message, @fa-var-comment-alt, @fa-var-meteor, @fa-var-microchip,
+  @fa-var-microphone, @fa-var-microphone-lines, @fa-var-microphone-alt,
+  @fa-var-microphone-lines-slash, @fa-var-microphone-alt-slash,
+  @fa-var-microphone-slash, @fa-var-microscope, @fa-var-mill-sign,
+  @fa-var-minimize, @fa-var-compress-arrows-alt, @fa-var-minus, @fa-var-subtract,
+  @fa-var-mitten, @fa-var-mobile, @fa-var-mobile-android, @fa-var-mobile-phone,
+  @fa-var-mobile-button, @fa-var-mobile-retro, @fa-var-mobile-screen,
+  @fa-var-mobile-android-alt, @fa-var-mobile-screen-button, @fa-var-mobile-alt,
+  @fa-var-money-bill, @fa-var-money-bill-1, @fa-var-money-bill-alt,
+  @fa-var-money-bill-1-wave, @fa-var-money-bill-wave-alt,
+  @fa-var-money-bill-transfer, @fa-var-money-bill-trend-up,
+  @fa-var-money-bill-wave, @fa-var-money-bill-wheat, @fa-var-money-bills,
+  @fa-var-money-check, @fa-var-money-check-dollar, @fa-var-money-check-alt,
+  @fa-var-monument, @fa-var-moon, @fa-var-mortar-pestle, @fa-var-mosque,
+  @fa-var-mosquito, @fa-var-mosquito-net, @fa-var-motorcycle, @fa-var-mound,
+  @fa-var-mountain, @fa-var-mountain-city, @fa-var-mountain-sun, @fa-var-mug-hot,
+  @fa-var-mug-saucer, @fa-var-coffee, @fa-var-music, @fa-var-n,
+  @fa-var-naira-sign, @fa-var-network-wired, @fa-var-neuter, @fa-var-newspaper,
+  @fa-var-not-equal, @fa-var-note-sticky, @fa-var-sticky-note,
+  @fa-var-notes-medical, @fa-var-o, @fa-var-object-group, @fa-var-object-ungroup,
+  @fa-var-oil-can, @fa-var-oil-well, @fa-var-om, @fa-var-otter, @fa-var-outdent,
+  @fa-var-dedent, @fa-var-p, @fa-var-pager, @fa-var-paint-roller,
+  @fa-var-paintbrush, @fa-var-paint-brush, @fa-var-palette, @fa-var-pallet,
+  @fa-var-panorama, @fa-var-paper-plane, @fa-var-paperclip,
+  @fa-var-parachute-box, @fa-var-paragraph, @fa-var-passport, @fa-var-paste,
+  @fa-var-file-clipboard, @fa-var-pause, @fa-var-paw, @fa-var-peace, @fa-var-pen,
+  @fa-var-pen-clip, @fa-var-pen-alt, @fa-var-pen-fancy, @fa-var-pen-nib,
+  @fa-var-pen-ruler, @fa-var-pencil-ruler, @fa-var-pen-to-square, @fa-var-edit,
+  @fa-var-pencil, @fa-var-pencil-alt, @fa-var-people-arrows-left-right,
+  @fa-var-people-arrows, @fa-var-people-carry-box, @fa-var-people-carry,
+  @fa-var-people-group, @fa-var-people-line, @fa-var-people-pulling,
+  @fa-var-people-robbery, @fa-var-people-roof, @fa-var-pepper-hot,
+  @fa-var-percent, @fa-var-percentage, @fa-var-person, @fa-var-male,
+  @fa-var-person-arrow-down-to-line, @fa-var-person-arrow-up-from-line,
+  @fa-var-person-biking, @fa-var-biking, @fa-var-person-booth,
+  @fa-var-person-breastfeeding, @fa-var-person-burst, @fa-var-person-cane,
+  @fa-var-person-chalkboard, @fa-var-person-circle-check,
+  @fa-var-person-circle-exclamation, @fa-var-person-circle-minus,
+  @fa-var-person-circle-plus, @fa-var-person-circle-question,
+  @fa-var-person-circle-xmark, @fa-var-person-digging, @fa-var-digging,
+  @fa-var-person-dots-from-line, @fa-var-diagnoses, @fa-var-person-dress,
+  @fa-var-female, @fa-var-person-dress-burst, @fa-var-person-drowning,
+  @fa-var-person-falling, @fa-var-person-falling-burst,
+  @fa-var-person-half-dress, @fa-var-person-harassing, @fa-var-person-hiking,
+  @fa-var-hiking, @fa-var-person-military-pointing,
+  @fa-var-person-military-rifle, @fa-var-person-military-to-person,
+  @fa-var-person-praying, @fa-var-pray, @fa-var-person-pregnant,
+  @fa-var-person-rays, @fa-var-person-rifle, @fa-var-person-running,
+  @fa-var-running, @fa-var-person-shelter, @fa-var-person-skating,
+  @fa-var-skating, @fa-var-person-skiing, @fa-var-skiing,
+  @fa-var-person-skiing-nordic, @fa-var-skiing-nordic,
+  @fa-var-person-snowboarding, @fa-var-snowboarding, @fa-var-person-swimming,
+  @fa-var-swimmer, @fa-var-person-through-window, @fa-var-person-walking,
+  @fa-var-walking, @fa-var-person-walking-arrow-loop-left,
+  @fa-var-person-walking-arrow-right,
+  @fa-var-person-walking-dashed-line-arrow-right, @fa-var-person-walking-luggage,
+  @fa-var-person-walking-with-cane, @fa-var-blind, @fa-var-peseta-sign,
+  @fa-var-peso-sign, @fa-var-phone, @fa-var-phone-flip, @fa-var-phone-alt,
+  @fa-var-phone-slash, @fa-var-phone-volume, @fa-var-volume-control-phone,
+  @fa-var-photo-film, @fa-var-photo-video, @fa-var-piggy-bank, @fa-var-pills,
+  @fa-var-pizza-slice, @fa-var-place-of-worship, @fa-var-plane,
+  @fa-var-plane-arrival, @fa-var-plane-circle-check,
+  @fa-var-plane-circle-exclamation, @fa-var-plane-circle-xmark,
+  @fa-var-plane-departure, @fa-var-plane-lock, @fa-var-plane-slash,
+  @fa-var-plane-up, @fa-var-plant-wilt, @fa-var-plate-wheat, @fa-var-play,
+  @fa-var-plug, @fa-var-plug-circle-bolt, @fa-var-plug-circle-check,
+  @fa-var-plug-circle-exclamation, @fa-var-plug-circle-minus,
+  @fa-var-plug-circle-plus, @fa-var-plug-circle-xmark, @fa-var-plus, @fa-var-add,
+  @fa-var-plus-minus, @fa-var-podcast, @fa-var-poo, @fa-var-poo-storm,
+  @fa-var-poo-bolt, @fa-var-poop, @fa-var-power-off, @fa-var-prescription,
+  @fa-var-prescription-bottle, @fa-var-prescription-bottle-medical,
+  @fa-var-prescription-bottle-alt, @fa-var-print, @fa-var-pump-medical,
+  @fa-var-pump-soap, @fa-var-puzzle-piece, @fa-var-q, @fa-var-qrcode,
+  @fa-var-question, @fa-var-quote-left, @fa-var-quote-left-alt,
+  @fa-var-quote-right, @fa-var-quote-right-alt, @fa-var-r, @fa-var-radiation,
+  @fa-var-radio, @fa-var-rainbow, @fa-var-ranking-star, @fa-var-receipt,
+  @fa-var-record-vinyl, @fa-var-rectangle-ad, @fa-var-ad, @fa-var-rectangle-list,
+  @fa-var-list-alt, @fa-var-rectangle-xmark, @fa-var-rectangle-times,
+  @fa-var-times-rectangle, @fa-var-window-close, @fa-var-recycle,
+  @fa-var-registered, @fa-var-repeat, @fa-var-reply, @fa-var-mail-reply,
+  @fa-var-reply-all, @fa-var-mail-reply-all, @fa-var-republican,
+  @fa-var-restroom, @fa-var-retweet, @fa-var-ribbon, @fa-var-right-from-bracket,
+  @fa-var-sign-out-alt, @fa-var-right-left, @fa-var-exchange-alt,
+  @fa-var-right-long, @fa-var-long-arrow-alt-right, @fa-var-right-to-bracket,
+  @fa-var-sign-in-alt, @fa-var-ring, @fa-var-road, @fa-var-road-barrier,
+  @fa-var-road-bridge, @fa-var-road-circle-check,
+  @fa-var-road-circle-exclamation, @fa-var-road-circle-xmark, @fa-var-road-lock,
+  @fa-var-road-spikes, @fa-var-robot, @fa-var-rocket, @fa-var-rotate,
+  @fa-var-sync-alt, @fa-var-rotate-left, @fa-var-rotate-back,
+  @fa-var-rotate-backward, @fa-var-undo-alt, @fa-var-rotate-right,
+  @fa-var-redo-alt, @fa-var-rotate-forward, @fa-var-route, @fa-var-rss,
+  @fa-var-feed, @fa-var-ruble-sign, @fa-var-rouble, @fa-var-rub, @fa-var-ruble,
+  @fa-var-rug, @fa-var-ruler, @fa-var-ruler-combined, @fa-var-ruler-horizontal,
+  @fa-var-ruler-vertical, @fa-var-rupee-sign, @fa-var-rupee, @fa-var-rupiah-sign,
+  @fa-var-s, @fa-var-sack-dollar, @fa-var-sack-xmark, @fa-var-sailboat,
+  @fa-var-satellite, @fa-var-satellite-dish, @fa-var-scale-balanced,
+  @fa-var-balance-scale, @fa-var-scale-unbalanced, @fa-var-balance-scale-left,
+  @fa-var-scale-unbalanced-flip, @fa-var-balance-scale-right, @fa-var-school,
+  @fa-var-school-circle-check, @fa-var-school-circle-exclamation,
+  @fa-var-school-circle-xmark, @fa-var-school-flag, @fa-var-school-lock,
+  @fa-var-scissors, @fa-var-cut, @fa-var-screwdriver, @fa-var-screwdriver-wrench,
+  @fa-var-tools, @fa-var-scroll, @fa-var-scroll-torah, @fa-var-torah,
+  @fa-var-sd-card, @fa-var-section, @fa-var-seedling, @fa-var-sprout,
+  @fa-var-server, @fa-var-shapes, @fa-var-triangle-circle-square, @fa-var-share,
+  @fa-var-arrow-turn-right, @fa-var-mail-forward, @fa-var-share-from-square,
+  @fa-var-share-square, @fa-var-share-nodes, @fa-var-share-alt,
+  @fa-var-sheet-plastic, @fa-var-shekel-sign, @fa-var-ils, @fa-var-shekel,
+  @fa-var-sheqel, @fa-var-sheqel-sign, @fa-var-shield, @fa-var-shield-blank,
+  @fa-var-shield-cat, @fa-var-shield-dog, @fa-var-shield-halved,
+  @fa-var-shield-alt, @fa-var-shield-heart, @fa-var-shield-virus, @fa-var-ship,
+  @fa-var-shirt, @fa-var-t-shirt, @fa-var-tshirt, @fa-var-shoe-prints,
+  @fa-var-shop, @fa-var-store-alt, @fa-var-shop-lock, @fa-var-shop-slash,
+  @fa-var-store-alt-slash, @fa-var-shower, @fa-var-shrimp, @fa-var-shuffle,
+  @fa-var-random, @fa-var-shuttle-space, @fa-var-space-shuttle,
+  @fa-var-sign-hanging, @fa-var-sign, @fa-var-signal, @fa-var-signal-5,
+  @fa-var-signal-perfect, @fa-var-signature, @fa-var-signs-post,
+  @fa-var-map-signs, @fa-var-sim-card, @fa-var-sink, @fa-var-sitemap,
+  @fa-var-skull, @fa-var-skull-crossbones, @fa-var-slash, @fa-var-sleigh,
+  @fa-var-sliders, @fa-var-sliders-h, @fa-var-smog, @fa-var-smoking,
+  @fa-var-snowflake, @fa-var-snowman, @fa-var-snowplow, @fa-var-soap,
+  @fa-var-socks, @fa-var-solar-panel, @fa-var-sort, @fa-var-unsorted,
+  @fa-var-sort-down, @fa-var-sort-desc, @fa-var-sort-up, @fa-var-sort-asc,
+  @fa-var-spa, @fa-var-spaghetti-monster-flying, @fa-var-pastafarianism,
+  @fa-var-spell-check, @fa-var-spider, @fa-var-spinner, @fa-var-splotch,
+  @fa-var-spoon, @fa-var-utensil-spoon, @fa-var-spray-can,
+  @fa-var-spray-can-sparkles, @fa-var-air-freshener, @fa-var-square,
+  @fa-var-square-arrow-up-right, @fa-var-external-link-square,
+  @fa-var-square-caret-down, @fa-var-caret-square-down,
+  @fa-var-square-caret-left, @fa-var-caret-square-left,
+  @fa-var-square-caret-right, @fa-var-caret-square-right,
+  @fa-var-square-caret-up, @fa-var-caret-square-up, @fa-var-square-check,
+  @fa-var-check-square, @fa-var-square-envelope, @fa-var-envelope-square,
+  @fa-var-square-full, @fa-var-square-h, @fa-var-h-square, @fa-var-square-minus,
+  @fa-var-minus-square, @fa-var-square-nfi, @fa-var-square-parking,
+  @fa-var-parking, @fa-var-square-pen, @fa-var-pen-square, @fa-var-pencil-square,
+  @fa-var-square-person-confined, @fa-var-square-phone, @fa-var-phone-square,
+  @fa-var-square-phone-flip, @fa-var-phone-square-alt, @fa-var-square-plus,
+  @fa-var-plus-square, @fa-var-square-poll-horizontal, @fa-var-poll-h,
+  @fa-var-square-poll-vertical, @fa-var-poll, @fa-var-square-root-variable,
+  @fa-var-square-root-alt, @fa-var-square-rss, @fa-var-rss-square,
+  @fa-var-square-share-nodes, @fa-var-share-alt-square, @fa-var-square-up-right,
+  @fa-var-external-link-square-alt, @fa-var-square-virus, @fa-var-square-xmark,
+  @fa-var-times-square, @fa-var-xmark-square, @fa-var-staff-aesculapius,
+  @fa-var-rod-asclepius, @fa-var-rod-snake, @fa-var-staff-snake, @fa-var-stairs,
+  @fa-var-stamp, @fa-var-star, @fa-var-star-and-crescent, @fa-var-star-half,
+  @fa-var-star-half-stroke, @fa-var-star-half-alt, @fa-var-star-of-david,
+  @fa-var-star-of-life, @fa-var-sterling-sign, @fa-var-gbp, @fa-var-pound-sign,
+  @fa-var-stethoscope, @fa-var-stop, @fa-var-stopwatch, @fa-var-stopwatch-20,
+  @fa-var-store, @fa-var-store-slash, @fa-var-street-view, @fa-var-strikethrough,
+  @fa-var-stroopwafel, @fa-var-subscript, @fa-var-suitcase,
+  @fa-var-suitcase-medical, @fa-var-medkit, @fa-var-suitcase-rolling,
+  @fa-var-sun, @fa-var-sun-plant-wilt, @fa-var-superscript, @fa-var-swatchbook,
+  @fa-var-synagogue, @fa-var-syringe, @fa-var-t, @fa-var-table,
+  @fa-var-table-cells, @fa-var-th, @fa-var-table-cells-large, @fa-var-th-large,
+  @fa-var-table-columns, @fa-var-columns, @fa-var-table-list, @fa-var-th-list,
+  @fa-var-table-tennis-paddle-ball, @fa-var-ping-pong-paddle-ball,
+  @fa-var-table-tennis, @fa-var-tablet, @fa-var-tablet-android,
+  @fa-var-tablet-button, @fa-var-tablet-screen-button, @fa-var-tablet-alt,
+  @fa-var-tablets, @fa-var-tachograph-digital, @fa-var-digital-tachograph,
+  @fa-var-tag, @fa-var-tags, @fa-var-tape, @fa-var-tarp, @fa-var-tarp-droplet,
+  @fa-var-taxi, @fa-var-cab, @fa-var-teeth, @fa-var-teeth-open,
+  @fa-var-temperature-arrow-down, @fa-var-temperature-down,
+  @fa-var-temperature-arrow-up, @fa-var-temperature-up,
+  @fa-var-temperature-empty, @fa-var-temperature-0, @fa-var-thermometer-0,
+  @fa-var-thermometer-empty, @fa-var-temperature-full, @fa-var-temperature-4,
+  @fa-var-thermometer-4, @fa-var-thermometer-full, @fa-var-temperature-half,
+  @fa-var-temperature-2, @fa-var-thermometer-2, @fa-var-thermometer-half,
+  @fa-var-temperature-high, @fa-var-temperature-low, @fa-var-temperature-quarter,
+  @fa-var-temperature-1, @fa-var-thermometer-1, @fa-var-thermometer-quarter,
+  @fa-var-temperature-three-quarters, @fa-var-temperature-3,
+  @fa-var-thermometer-3, @fa-var-thermometer-three-quarters, @fa-var-tenge-sign,
+  @fa-var-tenge, @fa-var-tent, @fa-var-tent-arrow-down-to-line,
+  @fa-var-tent-arrow-left-right, @fa-var-tent-arrow-turn-left,
+  @fa-var-tent-arrows-down, @fa-var-tents, @fa-var-terminal, @fa-var-text-height,
+  @fa-var-text-slash, @fa-var-remove-format, @fa-var-text-width,
+  @fa-var-thermometer, @fa-var-thumbs-down, @fa-var-thumbs-up, @fa-var-thumbtack,
+  @fa-var-thumb-tack, @fa-var-ticket, @fa-var-ticket-simple, @fa-var-ticket-alt,
+  @fa-var-timeline, @fa-var-toggle-off, @fa-var-toggle-on, @fa-var-toilet,
+  @fa-var-toilet-paper, @fa-var-toilet-paper-slash, @fa-var-toilet-portable,
+  @fa-var-toilets-portable, @fa-var-toolbox, @fa-var-tooth, @fa-var-torii-gate,
+  @fa-var-tornado, @fa-var-tower-broadcast, @fa-var-broadcast-tower,
+  @fa-var-tower-cell, @fa-var-tower-observation, @fa-var-tractor,
+  @fa-var-trademark, @fa-var-traffic-light, @fa-var-trailer, @fa-var-train,
+  @fa-var-train-subway, @fa-var-subway, @fa-var-train-tram, @fa-var-tram,
+  @fa-var-transgender, @fa-var-transgender-alt, @fa-var-trash,
+  @fa-var-trash-arrow-up, @fa-var-trash-restore, @fa-var-trash-can,
+  @fa-var-trash-alt, @fa-var-trash-can-arrow-up, @fa-var-trash-restore-alt,
+  @fa-var-tree, @fa-var-tree-city, @fa-var-triangle-exclamation,
+  @fa-var-exclamation-triangle, @fa-var-warning, @fa-var-trophy, @fa-var-trowel,
+  @fa-var-trowel-bricks, @fa-var-truck, @fa-var-truck-arrow-right,
+  @fa-var-truck-droplet, @fa-var-truck-fast, @fa-var-shipping-fast,
+  @fa-var-truck-field, @fa-var-truck-field-un, @fa-var-truck-front,
+  @fa-var-truck-medical, @fa-var-ambulance, @fa-var-truck-monster,
+  @fa-var-truck-moving, @fa-var-truck-pickup, @fa-var-truck-plane,
+  @fa-var-truck-ramp-box, @fa-var-truck-loading, @fa-var-tty, @fa-var-teletype,
+  @fa-var-turkish-lira-sign, @fa-var-try, @fa-var-turkish-lira,
+  @fa-var-turn-down, @fa-var-level-down-alt, @fa-var-turn-up,
+  @fa-var-level-up-alt, @fa-var-tv, @fa-var-television, @fa-var-tv-alt,
+  @fa-var-u, @fa-var-umbrella, @fa-var-umbrella-beach, @fa-var-underline,
+  @fa-var-universal-access, @fa-var-unlock, @fa-var-unlock-keyhole,
+  @fa-var-unlock-alt, @fa-var-up-down, @fa-var-arrows-alt-v,
+  @fa-var-up-down-left-right, @fa-var-arrows-alt, @fa-var-up-long,
+  @fa-var-long-arrow-alt-up, @fa-var-up-right-and-down-left-from-center,
+  @fa-var-expand-alt, @fa-var-up-right-from-square, @fa-var-external-link-alt,
+  @fa-var-upload, @fa-var-user, @fa-var-user-astronaut, @fa-var-user-check,
+  @fa-var-user-clock, @fa-var-user-doctor, @fa-var-user-md, @fa-var-user-gear,
+  @fa-var-user-cog, @fa-var-user-graduate, @fa-var-user-group,
+  @fa-var-user-friends, @fa-var-user-injured, @fa-var-user-large,
+  @fa-var-user-alt, @fa-var-user-large-slash, @fa-var-user-alt-slash,
+  @fa-var-user-lock, @fa-var-user-minus, @fa-var-user-ninja, @fa-var-user-nurse,
+  @fa-var-user-pen, @fa-var-user-edit, @fa-var-user-plus, @fa-var-user-secret,
+  @fa-var-user-shield, @fa-var-user-slash, @fa-var-user-tag, @fa-var-user-tie,
+  @fa-var-user-xmark, @fa-var-user-times, @fa-var-users,
+  @fa-var-users-between-lines, @fa-var-users-gear, @fa-var-users-cog,
+  @fa-var-users-line, @fa-var-users-rays, @fa-var-users-rectangle,
+  @fa-var-users-slash, @fa-var-users-viewfinder, @fa-var-utensils,
+  @fa-var-cutlery, @fa-var-v, @fa-var-van-shuttle, @fa-var-shuttle-van,
+  @fa-var-vault, @fa-var-vector-square, @fa-var-venus, @fa-var-venus-double,
+  @fa-var-venus-mars, @fa-var-vest, @fa-var-vest-patches, @fa-var-vial,
+  @fa-var-vial-circle-check, @fa-var-vial-virus, @fa-var-vials, @fa-var-video,
+  @fa-var-video-camera, @fa-var-video-slash, @fa-var-vihara, @fa-var-virus,
+  @fa-var-virus-covid, @fa-var-virus-covid-slash, @fa-var-virus-slash,
+  @fa-var-viruses, @fa-var-voicemail, @fa-var-volcano, @fa-var-volleyball,
+  @fa-var-volleyball-ball, @fa-var-volume-high, @fa-var-volume-up,
+  @fa-var-volume-low, @fa-var-volume-down, @fa-var-volume-off,
+  @fa-var-volume-xmark, @fa-var-volume-mute, @fa-var-volume-times,
+  @fa-var-vr-cardboard, @fa-var-w, @fa-var-walkie-talkie, @fa-var-wallet,
+  @fa-var-wand-magic, @fa-var-magic, @fa-var-wand-magic-sparkles,
+  @fa-var-magic-wand-sparkles, @fa-var-wand-sparkles, @fa-var-warehouse,
+  @fa-var-water, @fa-var-water-ladder, @fa-var-ladder-water,
+  @fa-var-swimming-pool, @fa-var-wave-square, @fa-var-weight-hanging,
+  @fa-var-weight-scale, @fa-var-weight, @fa-var-wheat-awn, @fa-var-wheat-alt,
+  @fa-var-wheat-awn-circle-exclamation, @fa-var-wheelchair,
+  @fa-var-wheelchair-move, @fa-var-wheelchair-alt, @fa-var-whiskey-glass,
+  @fa-var-glass-whiskey, @fa-var-wifi, @fa-var-wifi-3, @fa-var-wifi-strong,
+  @fa-var-wind, @fa-var-window-maximize, @fa-var-window-minimize,
+  @fa-var-window-restore, @fa-var-wine-bottle, @fa-var-wine-glass,
+  @fa-var-wine-glass-empty, @fa-var-wine-glass-alt, @fa-var-won-sign,
+  @fa-var-krw, @fa-var-won, @fa-var-worm, @fa-var-wrench, @fa-var-x,
+  @fa-var-x-ray, @fa-var-xmark, @fa-var-close, @fa-var-multiply, @fa-var-remove,
+  @fa-var-times, @fa-var-xmarks-lines, @fa-var-y, @fa-var-yen-sign, @fa-var-cny,
+  @fa-var-jpy, @fa-var-rmb, @fa-var-yen, @fa-var-yin-yang, @fa-var-z;
+
+@brand-icons: 42-group, innosoft, 500px, accessible-icon, accusoft, adn,
+  adversal, affiliatetheme, airbnb, algolia, alipay, amazon, amazon-pay, amilia,
+  android, angellist, angrycreative, angular, app-store, app-store-ios, apper,
+  apple, apple-pay, artstation, asymmetrik, atlassian, audible, autoprefixer,
+  avianex, aviato, aws, bandcamp, battle-net, behance, behance-square, bilibili,
+  bimobject, bitbucket, bitcoin, bity, black-tie, blackberry, blogger, blogger-b,
+  bluetooth, bluetooth-b, bootstrap, bots, btc, buffer, buromobelexperte,
+  buy-n-large, buysellads, canadian-maple-leaf, cc-amazon-pay, cc-amex,
+  cc-apple-pay, cc-diners-club, cc-discover, cc-jcb, cc-mastercard, cc-paypal,
+  cc-stripe, cc-visa, centercode, centos, chrome, chromecast, cloudflare,
+  cloudscale, cloudsmith, cloudversify, cmplid, codepen, codiepie, confluence,
+  connectdevelop, contao, cotton-bureau, cpanel, creative-commons,
+  creative-commons-by, creative-commons-nc, creative-commons-nc-eu,
+  creative-commons-nc-jp, creative-commons-nd, creative-commons-pd,
+  creative-commons-pd-alt, creative-commons-remix, creative-commons-sa,
+  creative-commons-sampling, creative-commons-sampling-plus,
+  creative-commons-share, creative-commons-zero, critical-role, css3, css3-alt,
+  cuttlefish, d-and-d, d-and-d-beyond, dailymotion, dashcube, deezer, delicious,
+  deploydog, deskpro, dev, deviantart, dhl, diaspora, digg, digital-ocean,
+  discord, discourse, dochub, docker, draft2digital, dribbble, dribbble-square,
+  dropbox, drupal, dyalog, earlybirds, ebay, edge, edge-legacy, elementor, ello,
+  ember, empire, envira, erlang, ethereum, etsy, evernote, expeditedssl,
+  facebook, facebook-f, facebook-messenger, facebook-square,
+  fantasy-flight-games, fedex, fedora, figma, firefox, firefox-browser,
+  first-order, first-order-alt, firstdraft, flickr, flipboard, fly, font-awesome,
+  font-awesome-flag, font-awesome-logo-full, fonticons, fonticons-fi,
+  fort-awesome, fort-awesome-alt, forumbee, foursquare, free-code-camp, freebsd,
+  fulcrum, galactic-republic, galactic-senate, get-pocket, gg, gg-circle, git,
+  git-alt, git-square, github, github-alt, github-square, gitkraken, gitlab,
+  gitter, glide, glide-g, gofore, golang, goodreads, goodreads-g, google,
+  google-drive, google-pay, google-play, google-plus, google-plus-g,
+  google-plus-square, google-wallet, gratipay, grav, gripfire, grunt, guilded,
+  gulp, hacker-news, hacker-news-square, hackerrank, hashnode, hips,
+  hire-a-helper, hive, hooli, hornbill, hotjar, houzz, html5, hubspot, ideal,
+  imdb, instagram, instagram-square, instalod, intercom, internet-explorer,
+  invision, ioxhost, itch-io, itunes, itunes-note, java, jedi-order, jenkins,
+  jira, joget, joomla, js, js-square, jsfiddle, kaggle, keybase, keycdn,
+  kickstarter, kickstarter-k, korvue, laravel, lastfm, lastfm-square, leanpub,
+  less, line, linkedin, linkedin-in, linode, linux, lyft, magento, mailchimp,
+  mandalorian, markdown, mastodon, maxcdn, mdb, medapps, medium, medium-m, medrt,
+  meetup, megaport, mendeley, microblog, microsoft, mix, mixcloud, mixer, mizuni,
+  modx, monero, napster, neos, nfc-directional, nfc-symbol, nimblr, node,
+  node-js, npm, ns8, nutritionix, octopus-deploy, odnoklassniki,
+  odnoklassniki-square, old-republic, opencart, openid, opera, optin-monster,
+  orcid, osi, padlet, page4, pagelines, palfed, patreon, paypal, perbyte,
+  periscope, phabricator, phoenix-framework, phoenix-squadron, php, pied-piper,
+  pied-piper-alt, pied-piper-hat, pied-piper-pp, pied-piper-square, pinterest,
+  pinterest-p, pinterest-square, pix, playstation, product-hunt, pushed, python,
+  qq, quinscape, quora, r-project, raspberry-pi, ravelry, react, reacteurope,
+  readme, rebel, red-river, reddit, reddit-alien, reddit-square, redhat, renren,
+  replyd, researchgate, resolving, rev, rocketchat, rockrms, rust, safari,
+  salesforce, sass, schlix, screenpal, scribd, searchengin, sellcast, sellsy,
+  servicestack, shirtsinbulk, shopify, shopware, simplybuilt, sistrix, sith,
+  sitrox, sketch, skyatlas, skype, slack, slack-hash, slideshare, snapchat,
+  snapchat-ghost, snapchat-square, soundcloud, sourcetree, speakap, speaker-deck,
+  spotify, square-font-awesome, square-font-awesome-stroke, font-awesome-alt,
+  squarespace, stack-exchange, stack-overflow, stackpath, staylinked, steam,
+  steam-square, steam-symbol, sticker-mule, strava, stripe, stripe-s,
+  studiovinari, stumbleupon, stumbleupon-circle, superpowers, supple, suse,
+  swift, symfony, teamspeak, telegram, telegram-plane, tencent-weibo,
+  the-red-yeti, themeco, themeisle, think-peaks, tiktok, trade-federation,
+  trello, tumblr, tumblr-square, twitch, twitter, twitter-square, typo3, uber,
+  ubuntu, uikit, umbraco, uncharted, uniregistry, unity, unsplash, untappd, ups,
+  usb, usps, ussunnah, vaadin, viacoin, viadeo, viadeo-square, viber, vimeo,
+  vimeo-square, vimeo-v, vine, vk, vnv, vuejs, watchman-monitoring, waze, weebly,
+  weibo, weixin, whatsapp, whatsapp-square, whmcs, wikipedia-w, windows,
+  wirsindhandwerk, wsh, wix, wizards-of-the-coast, wodu, wolf-pack-battalion,
+  wordpress, wordpress-simple, wpbeginner, wpexplorer, wpforms, wpressr, xbox,
+  xing, xing-square, y-combinator, yahoo, yammer, yandex, yandex-international,
+  yarn, yelp, yoast, youtube, youtube-square, zhihu;
+
+@brand-icon-refs: @fa-var-42-group, @fa-var-innosoft, @fa-var-500px,
+  @fa-var-accessible-icon, @fa-var-accusoft, @fa-var-adn, @fa-var-adversal,
+  @fa-var-affiliatetheme, @fa-var-airbnb, @fa-var-algolia, @fa-var-alipay,
+  @fa-var-amazon, @fa-var-amazon-pay, @fa-var-amilia, @fa-var-android,
+  @fa-var-angellist, @fa-var-angrycreative, @fa-var-angular, @fa-var-app-store,
+  @fa-var-app-store-ios, @fa-var-apper, @fa-var-apple, @fa-var-apple-pay,
+  @fa-var-artstation, @fa-var-asymmetrik, @fa-var-atlassian, @fa-var-audible,
+  @fa-var-autoprefixer, @fa-var-avianex, @fa-var-aviato, @fa-var-aws,
+  @fa-var-bandcamp, @fa-var-battle-net, @fa-var-behance, @fa-var-behance-square,
+  @fa-var-bilibili, @fa-var-bimobject, @fa-var-bitbucket, @fa-var-bitcoin,
+  @fa-var-bity, @fa-var-black-tie, @fa-var-blackberry, @fa-var-blogger,
+  @fa-var-blogger-b, @fa-var-bluetooth, @fa-var-bluetooth-b, @fa-var-bootstrap,
+  @fa-var-bots, @fa-var-btc, @fa-var-buffer, @fa-var-buromobelexperte,
+  @fa-var-buy-n-large, @fa-var-buysellads, @fa-var-canadian-maple-leaf,
+  @fa-var-cc-amazon-pay, @fa-var-cc-amex, @fa-var-cc-apple-pay,
+  @fa-var-cc-diners-club, @fa-var-cc-discover, @fa-var-cc-jcb,
+  @fa-var-cc-mastercard, @fa-var-cc-paypal, @fa-var-cc-stripe, @fa-var-cc-visa,
+  @fa-var-centercode, @fa-var-centos, @fa-var-chrome, @fa-var-chromecast,
+  @fa-var-cloudflare, @fa-var-cloudscale, @fa-var-cloudsmith,
+  @fa-var-cloudversify, @fa-var-cmplid, @fa-var-codepen, @fa-var-codiepie,
+  @fa-var-confluence, @fa-var-connectdevelop, @fa-var-contao,
+  @fa-var-cotton-bureau, @fa-var-cpanel, @fa-var-creative-commons,
+  @fa-var-creative-commons-by, @fa-var-creative-commons-nc,
+  @fa-var-creative-commons-nc-eu, @fa-var-creative-commons-nc-jp,
+  @fa-var-creative-commons-nd, @fa-var-creative-commons-pd,
+  @fa-var-creative-commons-pd-alt, @fa-var-creative-commons-remix,
+  @fa-var-creative-commons-sa, @fa-var-creative-commons-sampling,
+  @fa-var-creative-commons-sampling-plus, @fa-var-creative-commons-share,
+  @fa-var-creative-commons-zero, @fa-var-critical-role, @fa-var-css3,
+  @fa-var-css3-alt, @fa-var-cuttlefish, @fa-var-d-and-d, @fa-var-d-and-d-beyond,
+  @fa-var-dailymotion, @fa-var-dashcube, @fa-var-deezer, @fa-var-delicious,
+  @fa-var-deploydog, @fa-var-deskpro, @fa-var-dev, @fa-var-deviantart,
+  @fa-var-dhl, @fa-var-diaspora, @fa-var-digg, @fa-var-digital-ocean,
+  @fa-var-discord, @fa-var-discourse, @fa-var-dochub, @fa-var-docker,
+  @fa-var-draft2digital, @fa-var-dribbble, @fa-var-dribbble-square,
+  @fa-var-dropbox, @fa-var-drupal, @fa-var-dyalog, @fa-var-earlybirds,
+  @fa-var-ebay, @fa-var-edge, @fa-var-edge-legacy, @fa-var-elementor,
+  @fa-var-ello, @fa-var-ember, @fa-var-empire, @fa-var-envira, @fa-var-erlang,
+  @fa-var-ethereum, @fa-var-etsy, @fa-var-evernote, @fa-var-expeditedssl,
+  @fa-var-facebook, @fa-var-facebook-f, @fa-var-facebook-messenger,
+  @fa-var-facebook-square, @fa-var-fantasy-flight-games, @fa-var-fedex,
+  @fa-var-fedora, @fa-var-figma, @fa-var-firefox, @fa-var-firefox-browser,
+  @fa-var-first-order, @fa-var-first-order-alt, @fa-var-firstdraft,
+  @fa-var-flickr, @fa-var-flipboard, @fa-var-fly, @fa-var-font-awesome,
+  @fa-var-font-awesome-flag, @fa-var-font-awesome-logo-full, @fa-var-fonticons,
+  @fa-var-fonticons-fi, @fa-var-fort-awesome, @fa-var-fort-awesome-alt,
+  @fa-var-forumbee, @fa-var-foursquare, @fa-var-free-code-camp, @fa-var-freebsd,
+  @fa-var-fulcrum, @fa-var-galactic-republic, @fa-var-galactic-senate,
+  @fa-var-get-pocket, @fa-var-gg, @fa-var-gg-circle, @fa-var-git,
+  @fa-var-git-alt, @fa-var-git-square, @fa-var-github, @fa-var-github-alt,
+  @fa-var-github-square, @fa-var-gitkraken, @fa-var-gitlab, @fa-var-gitter,
+  @fa-var-glide, @fa-var-glide-g, @fa-var-gofore, @fa-var-golang,
+  @fa-var-goodreads, @fa-var-goodreads-g, @fa-var-google, @fa-var-google-drive,
+  @fa-var-google-pay, @fa-var-google-play, @fa-var-google-plus,
+  @fa-var-google-plus-g, @fa-var-google-plus-square, @fa-var-google-wallet,
+  @fa-var-gratipay, @fa-var-grav, @fa-var-gripfire, @fa-var-grunt,
+  @fa-var-guilded, @fa-var-gulp, @fa-var-hacker-news, @fa-var-hacker-news-square,
+  @fa-var-hackerrank, @fa-var-hashnode, @fa-var-hips, @fa-var-hire-a-helper,
+  @fa-var-hive, @fa-var-hooli, @fa-var-hornbill, @fa-var-hotjar, @fa-var-houzz,
+  @fa-var-html5, @fa-var-hubspot, @fa-var-ideal, @fa-var-imdb, @fa-var-instagram,
+  @fa-var-instagram-square, @fa-var-instalod, @fa-var-intercom,
+  @fa-var-internet-explorer, @fa-var-invision, @fa-var-ioxhost, @fa-var-itch-io,
+  @fa-var-itunes, @fa-var-itunes-note, @fa-var-java, @fa-var-jedi-order,
+  @fa-var-jenkins, @fa-var-jira, @fa-var-joget, @fa-var-joomla, @fa-var-js,
+  @fa-var-js-square, @fa-var-jsfiddle, @fa-var-kaggle, @fa-var-keybase,
+  @fa-var-keycdn, @fa-var-kickstarter, @fa-var-kickstarter-k, @fa-var-korvue,
+  @fa-var-laravel, @fa-var-lastfm, @fa-var-lastfm-square, @fa-var-leanpub,
+  @fa-var-less, @fa-var-line, @fa-var-linkedin, @fa-var-linkedin-in,
+  @fa-var-linode, @fa-var-linux, @fa-var-lyft, @fa-var-magento,
+  @fa-var-mailchimp, @fa-var-mandalorian, @fa-var-markdown, @fa-var-mastodon,
+  @fa-var-maxcdn, @fa-var-mdb, @fa-var-medapps, @fa-var-medium, @fa-var-medium-m,
+  @fa-var-medrt, @fa-var-meetup, @fa-var-megaport, @fa-var-mendeley,
+  @fa-var-microblog, @fa-var-microsoft, @fa-var-mix, @fa-var-mixcloud,
+  @fa-var-mixer, @fa-var-mizuni, @fa-var-modx, @fa-var-monero, @fa-var-napster,
+  @fa-var-neos, @fa-var-nfc-directional, @fa-var-nfc-symbol, @fa-var-nimblr,
+  @fa-var-node, @fa-var-node-js, @fa-var-npm, @fa-var-ns8, @fa-var-nutritionix,
+  @fa-var-octopus-deploy, @fa-var-odnoklassniki, @fa-var-odnoklassniki-square,
+  @fa-var-old-republic, @fa-var-opencart, @fa-var-openid, @fa-var-opera,
+  @fa-var-optin-monster, @fa-var-orcid, @fa-var-osi, @fa-var-padlet,
+  @fa-var-page4, @fa-var-pagelines, @fa-var-palfed, @fa-var-patreon,
+  @fa-var-paypal, @fa-var-perbyte, @fa-var-periscope, @fa-var-phabricator,
+  @fa-var-phoenix-framework, @fa-var-phoenix-squadron, @fa-var-php,
+  @fa-var-pied-piper, @fa-var-pied-piper-alt, @fa-var-pied-piper-hat,
+  @fa-var-pied-piper-pp, @fa-var-pied-piper-square, @fa-var-pinterest,
+  @fa-var-pinterest-p, @fa-var-pinterest-square, @fa-var-pix,
+  @fa-var-playstation, @fa-var-product-hunt, @fa-var-pushed, @fa-var-python,
+  @fa-var-qq, @fa-var-quinscape, @fa-var-quora, @fa-var-r-project,
+  @fa-var-raspberry-pi, @fa-var-ravelry, @fa-var-react, @fa-var-reacteurope,
+  @fa-var-readme, @fa-var-rebel, @fa-var-red-river, @fa-var-reddit,
+  @fa-var-reddit-alien, @fa-var-reddit-square, @fa-var-redhat, @fa-var-renren,
+  @fa-var-replyd, @fa-var-researchgate, @fa-var-resolving, @fa-var-rev,
+  @fa-var-rocketchat, @fa-var-rockrms, @fa-var-rust, @fa-var-safari,
+  @fa-var-salesforce, @fa-var-sass, @fa-var-schlix, @fa-var-screenpal,
+  @fa-var-scribd, @fa-var-searchengin, @fa-var-sellcast, @fa-var-sellsy,
+  @fa-var-servicestack, @fa-var-shirtsinbulk, @fa-var-shopify, @fa-var-shopware,
+  @fa-var-simplybuilt, @fa-var-sistrix, @fa-var-sith, @fa-var-sitrox,
+  @fa-var-sketch, @fa-var-skyatlas, @fa-var-skype, @fa-var-slack,
+  @fa-var-slack-hash, @fa-var-slideshare, @fa-var-snapchat,
+  @fa-var-snapchat-ghost, @fa-var-snapchat-square, @fa-var-soundcloud,
+  @fa-var-sourcetree, @fa-var-speakap, @fa-var-speaker-deck, @fa-var-spotify,
+  @fa-var-square-font-awesome, @fa-var-square-font-awesome-stroke,
+  @fa-var-font-awesome-alt, @fa-var-squarespace, @fa-var-stack-exchange,
+  @fa-var-stack-overflow, @fa-var-stackpath, @fa-var-staylinked, @fa-var-steam,
+  @fa-var-steam-square, @fa-var-steam-symbol, @fa-var-sticker-mule,
+  @fa-var-strava, @fa-var-stripe, @fa-var-stripe-s, @fa-var-studiovinari,
+  @fa-var-stumbleupon, @fa-var-stumbleupon-circle, @fa-var-superpowers,
+  @fa-var-supple, @fa-var-suse, @fa-var-swift, @fa-var-symfony,
+  @fa-var-teamspeak, @fa-var-telegram, @fa-var-telegram-plane,
+  @fa-var-tencent-weibo, @fa-var-the-red-yeti, @fa-var-themeco,
+  @fa-var-themeisle, @fa-var-think-peaks, @fa-var-tiktok,
+  @fa-var-trade-federation, @fa-var-trello, @fa-var-tumblr,
+  @fa-var-tumblr-square, @fa-var-twitch, @fa-var-twitter, @fa-var-twitter-square,
+  @fa-var-typo3, @fa-var-uber, @fa-var-ubuntu, @fa-var-uikit, @fa-var-umbraco,
+  @fa-var-uncharted, @fa-var-uniregistry, @fa-var-unity, @fa-var-unsplash,
+  @fa-var-untappd, @fa-var-ups, @fa-var-usb, @fa-var-usps, @fa-var-ussunnah,
+  @fa-var-vaadin, @fa-var-viacoin, @fa-var-viadeo, @fa-var-viadeo-square,
+  @fa-var-viber, @fa-var-vimeo, @fa-var-vimeo-square, @fa-var-vimeo-v,
+  @fa-var-vine, @fa-var-vk, @fa-var-vnv, @fa-var-vuejs,
+  @fa-var-watchman-monitoring, @fa-var-waze, @fa-var-weebly, @fa-var-weibo,
+  @fa-var-weixin, @fa-var-whatsapp, @fa-var-whatsapp-square, @fa-var-whmcs,
+  @fa-var-wikipedia-w, @fa-var-windows, @fa-var-wirsindhandwerk, @fa-var-wsh,
+  @fa-var-wix, @fa-var-wizards-of-the-coast, @fa-var-wodu,
+  @fa-var-wolf-pack-battalion, @fa-var-wordpress, @fa-var-wordpress-simple,
+  @fa-var-wpbeginner, @fa-var-wpexplorer, @fa-var-wpforms, @fa-var-wpressr,
+  @fa-var-xbox, @fa-var-xing, @fa-var-xing-square, @fa-var-y-combinator,
+  @fa-var-yahoo, @fa-var-yammer, @fa-var-yandex, @fa-var-yandex-international,
+  @fa-var-yarn, @fa-var-yelp, @fa-var-yoast, @fa-var-youtube,
+  @fa-var-youtube-square, @fa-var-zhihu;

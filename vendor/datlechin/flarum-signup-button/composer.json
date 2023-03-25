@@ -1,0 +1,59 @@
+{
+    "name": "datlechin/flarum-signup-button",
+    "description": "Adds a Signup button to the homepage, and replace the Start a discussion icon with the Signin icon.",
+    "keywords": [
+        "flarum",
+        "flarum-extension",
+        "signup"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/datlechin/flarum-signup-button",
+        "forum": "https://discuss.flarum.org/d/29762"
+    },
+    "homepage": "https://ngoquocdat.com",
+    "autoload": {
+        "psr-4": {
+            "Datlechin\\SignupButton\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Signup Button",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-sign-in-alt",
+                "backgroundColor": "#D3241C",
+                "color": "#fff"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}

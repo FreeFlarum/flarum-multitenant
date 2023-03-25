@@ -1,0 +1,18 @@
+{
+    "extends": "flarum-tsconfig",
+    "include": [
+        "../vendor/flarum/core/js/dist-typings/@types/global.d.ts",
+        "src/**/*"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "flarum/tags/*": [
+                "../vendor/flarum/tags/js/dist-typings/*"
+            ],
+            "flarum/*": [
+                "../vendor/flarum/core/js/dist-typings/*"
+            ]
+        }
+    }
+}
