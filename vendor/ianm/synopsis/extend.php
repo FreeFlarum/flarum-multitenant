@@ -31,9 +31,11 @@ return [
         ->default('ianm-synopsis.excerpt_length', 200)
         ->default('ianm-synopsis.rich-excerpts', false)
         ->default('ianm-synopsis.excerpt-type', 'first')
+        ->default('ianm-synopsis.disable-when-searching', true)
         ->serializeToForum('synopsis.excerpt_length', 'ianm-synopsis.excerpt_length', 'intVal')
         ->serializeToForum('synopsis.rich_excerpts', 'ianm-synopsis.rich-excerpts', 'boolVal')
-        ->serializeToForum('synopsis.excerpt_type', 'ianm-synopsis.excerpt-type'),
+        ->serializeToForum('synopsis.excerpt_type', 'ianm-synopsis.excerpt-type')
+        ->serializeToForum('synopsis.disable_when_searching', 'ianm-synopsis.disable-when-searching', 'boolval'),
 
     (new Extend\ApiController(ListDiscussionsController::class))
         ->prepareDataForSerialization(LoadRelations::class),

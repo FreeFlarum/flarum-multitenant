@@ -14,6 +14,7 @@ core:
       custom_footer_text: '=> core.ref.custom_footer_text'
       custom_header_heading: 'Header personalizzato'
       custom_header_text: '=> core.ref.custom_header_text'
+      custom_styles_cannot_use_less_features: 'Le funzionalità @import e data-uri non sono consentite in LESS personalizzato.'
       custom_styles_heading: 'Stili personalizzati'
       custom_styles_text: 'Personalizza l''aspetto del tuo forum aggiungendo codice LESS/CSS da applicare sulla parte superiore degli <a>stili predefiniti</a> di Flarum.'
       dark_mode_label: 'Modalità scura'
@@ -48,6 +49,15 @@ core:
       clear_cache_button: 'Pulisci cache'
       description: 'Il tuo forum a colpo d''occhio.'
       io_error_message: 'Impossibile scrivere nel filesystem. Controlla i permessi del tuo filesystem e riprova. Oppure prova a eseguire dalla riga di comando.'
+      status:
+        headers:
+          queue-driver: 'Driver Code'
+          scheduler-status: 'Azioni programmate'
+          session-driver: 'Driver Sessione'
+        scheduler:
+          active: Attivo
+          inactive: Inattivo
+          never-run: 'Mai partito'
       title: Dashboard
       tools_button: Strumenti
     debug-warning:
@@ -155,6 +165,7 @@ core:
     permissions:
       allow_post_editing_label: 'Consenti modifica del messaggio'
       allow_renaming_label: 'Consenti ridenominazione'
+      create_access_token_label: 'Crea token di accesso'
       create_heading: Creazione
       delete_discussions_forever_label: 'Elimina le discussioni per sempre'
       delete_discussions_label: 'Elimina discussioni'
@@ -166,6 +177,7 @@ core:
       edit_users_groups_label: 'Modifica gruppi utente'
       edit_users_label: 'Modifica attributi utente'
       global_heading: Globale
+      moderate_access_tokens_label: 'Modera Token di Accesso'
       moderate_heading: Moderazione
       new_group_button: 'Nuovo Gruppo'
       participate_heading: Partecipazione
@@ -173,7 +185,7 @@ core:
       read_heading: Lettura
       rename_discussions_label: 'Rinomina discussioni'
       reply_to_discussions_label: 'Rispondere alle discussioni'
-      search_users_label: 'Cerca utenti'
+      search_users_label: '=> core.ref.search_users'
       sign_up_label: Registrazione
       start_discussions_label: 'Iniziare una discussione'
       title: Permessi
@@ -200,6 +212,8 @@ core:
       description: 'Un elenco impaginato di tutti gli utenti sul tuo forum.'
       grid:
         columns:
+          display_name:
+            title: 'Mostra nome'
           edit_user:
             button: '=> core.ref.edit'
             title: '=> core.ref.edit_user'
@@ -221,8 +235,12 @@ core:
         invalid_column_content: 'Non valido'
       pagination:
         back_button: 'Pagina precedente'
+        first_button: 'Vai alla pagina iniziale'
+        go_to_page_textbox_a11y_label: 'Vai direttamente al numero di pagina'
+        last_button: 'Vai all''ultima pagina'
         next_button: 'Pagina successiva'
         page_counter: 'Pagina {current} di {total}'
+      search_placeholder: '=> core.ref.search_users'
       title: '=> core.ref.users'
       total_users: 'Utenti totali: {count}'
   api:
@@ -370,7 +388,7 @@ core:
       viewing_text: '{count, plural, one {{index} di {formattedCount} post} other {{index} di {formattedCount} post}}'
     post_stream:
       discussion_renamed_old_tooltip: 'Il vecchio titolo era: "{old}"'
-      discussion_renamed_text: '{username} ha cambiato il titolo in {new}.'
+      discussion_renamed_text: '{username} ha cambiato il titolo in {new} {time}.'
       load_more_button: '=> core.ref.load_more'
       reply_placeholder: '=> core.ref.write_a_reply'
       time_lapsed_text: '{period} dopo'
@@ -381,6 +399,38 @@ core:
       all_discussions_button: 'Cerca tutte le discussioni per "{query}"'
       discussions_heading: '=> core.ref.discussions'
       users_heading: '=> core.ref.users'
+    security:
+      browser_on_operating_system: '{browser} su {os}'
+      cannot_terminate_current_session: 'Impossibile terminare la sessione corrente. Effettua un Log out invece.'
+      created: Creato
+      current_active_session: 'Sessioni attive correnti'
+      developer_tokens_heading: 'Token sviluppatori'
+      empty_text: 'Sembra non ci sia niente da visualizzare qui.'
+      global_logout:
+        heading: 'Logout globale'
+        help_text: 'Cancella la sessione corrente del cookie, termina tutte le sessioni, revoca i token dello sviluppatore e invalida qualsiasi email di conferma o reimpostazione della password.'
+        log_out_button: '=> core.ref.log_out'
+      hide_access_token: 'Nascondi Token'
+      last_activity: 'Ultima attività'
+      never: Mai
+      new_access_token_button: '=> core.ref.new_token'
+      new_access_token_modal:
+        submit_button: 'Crea Token'
+        title: '=> core.ref.new_token'
+        title_placeholder: Titolo
+      revoke_access_token: Revoca
+      revoke_access_token_confirmation: '=> core.ref.generic_confirmation_message'
+      session_terminated: '{count, plural, one {Sessione terminatea} other {# Sessioni terminate}}.'
+      session_termination_failed: 'Si è verificato un errore durante la chiusura delle sessioni.'
+      sessions_heading: 'Sessioni Attive'
+      show_access_token: 'Guarda Token'
+      terminate_all_other_sessions: 'Termina tutte le altre sessioni'
+      terminate_all_other_sessions_confirmation: '=> core.ref.generic_confirmation_message'
+      terminate_session: Termina
+      title: '=> core.ref.security'
+      token_item_title: '{title} - {token}'
+      token_revoked: 'Token revocato.'
+      token_title_placeholder: /
     settings:
       account_heading: Account
       change_email_button: '=> core.ref.change_email'
@@ -413,6 +463,7 @@ core:
       posts_empty_text: 'Non ci sono messaggi.'
       posts_link: '=> core.ref.posts'
       posts_load_more_button: '=> core.ref.load_more'
+      security_link: '=> core.ref.security'
       settings_link: '=> core.ref.settings'
     user_controls:
       button: Controlli
@@ -442,6 +493,8 @@ core:
       dismiss_a11y_label: 'Ignora avviso'
     badge:
       hidden_tooltip: Nascosto
+    data_segment:
+      label: '{label}:'
     debug_button: Debug
     dropdown:
       toggle_dropdown_accessible_label: 'Attiva/disattiva il menu a discesa'
@@ -461,6 +514,7 @@ core:
     error:
       dependent_extensions_message: 'Non puoi disattivare l''estensione {extension} finché non disattiverai le seguenti estensioni: {extensions}'
       extension_initialiation_failed_message: 'Impossibile inizializzare {extension}, controlla la console del browser per ulteriori informazioni.'
+      generic_cross_origin_message: 'Ops! Qualcosa è andato storto durante una richiesta cross-origin. Ricarica la pagina e riprova.'
       generic_message: 'Oops! Qualcosa è andato storto. Aggiorna la pagina e riprova.'
       missing_dependencies_message: 'Non puoi attivare l''estensione {extension} finché non attiverai le seguenti estensioni: {extensions}'
       not_found_message: 'La risorsa richiesta non è stata trovata.'
@@ -505,6 +559,7 @@ core:
     edit_user: 'Modifica Utente'
     email: E-mail
     extensions: Estensioni
+    generic_confirmation_message: 'Sei sicuro di voler procedere? Questa azione non può essere annullata.'
     icon: Icona
     icon_text: 'Inserisci il nome di una qualsiasi icona di <a>FontAwesome</a>, <em>includendo</em> il prefisso <code>fas fa-</code>.'
     load_more: 'Carica di più'
@@ -512,6 +567,7 @@ core:
     log_in: Accedi
     log_out: Esci
     mark_all_as_read: 'Segna tutto come letto'
+    new_token: 'Nuovo Token'
     next_page: 'Pagina successiva'
     notifications: Notifiche
     okay: OK
@@ -524,6 +580,8 @@ core:
     reset_your_password: 'Ripristina la password'
     restore: Ripristina
     save_changes: 'Salva cambiamenti'
+    search_users: 'Cerca utenti'
+    security: Sicurezza
     settings: Impostazioni
     sign_up: Registrati
     some_others: '{count, plural, one {# altro} other {# altri}}'

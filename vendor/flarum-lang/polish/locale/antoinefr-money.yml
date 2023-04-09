@@ -7,9 +7,14 @@ antoinefr-money:
     automoderator:
       action_name: 'Przyznaj pieniądze'
       metric_name: Pieniądze
+    autoremove:
+      - 'Nigdy nie odbieraj pieniędzy'
+      - 'Gdy post lub dyskusja zostaje ukryta lub przywrócona (domyślne)'
+      - 'Gdy post lub dyskusja zostaje usunięta'
     permissions:
       edit_money_label: 'Edytuj pieniądze'
     settings:
+      autoremove: 'Automatycznie aktualizuj saldo'
       helpextensionlikes: 'Wymaga rozszerzenia <code>flarum/likes</code>'
       moneyfordiscussion: 'Pieniądze przyznane za nową dyskusję'
       moneyforlike: 'Pieniądze przyznane, gdy post zostanie polubiony'
@@ -24,4 +29,4 @@ antoinefr-money:
       submit_button: '=> core.ref.save_changes'
       title: 'Pieniądze użytkownika {username}'
     user_controls:
-      money_button: 'Edytuj pieniądze'
+      money_button: 'Edytuj saldo'

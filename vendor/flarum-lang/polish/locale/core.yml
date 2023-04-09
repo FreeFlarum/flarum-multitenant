@@ -50,6 +50,10 @@ core:
       description: 'Podstawowe informacje dotyczące forum.'
       io_error_message: 'Zapis do systemu plików się nie powiódł. Sprawdź uprawnienia systemu plików i spróbuj ponownie, lub spróbuj wykonać tę akcję z poziomu wiersza poleceń.'
       status:
+        headers:
+          queue-driver: 'Sterownik kolejki'
+          scheduler-status: Harmonogram
+          session-driver: 'Sterownik sesji'
         scheduler:
           active: Aktywny
           inactive: Nieaktywny

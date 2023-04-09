@@ -31,6 +31,12 @@ app.initializers.add('ianm-synopsis', () => {
       setting: 'ianm-synopsis.excerpt-type',
       options: typeOptions(),
       type: 'select',
+    })
+    .registerSetting({
+      label: app.translator.trans('ianm-synopsis.admin.settings.disable-when-searching.label'),
+      help: app.translator.trans('ianm-synopsis.admin.settings.disable-when-searching.help'),
+      setting: 'ianm-synopsis.disable-when-searching',
+      type: 'switch',
     });
 
   extendEditTagModal();

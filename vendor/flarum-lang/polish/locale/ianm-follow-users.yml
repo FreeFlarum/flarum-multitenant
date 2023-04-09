@@ -23,8 +23,8 @@ ianm-follow-users:
         lurk: 'Obserwujesz wszystko od tego użytkownika'
     filter:
       following: 'Obserwowani użytkownicy'
-    followed: Obserwowani
-    followers: Obserwujący
+    followed: '{count, plural, one {Obserwowany} other {Obserwowanych}}'
+    followers: '{count, plural, one {Obserwujący} other {Obserwujących}}'
     index:
       follow_tag_button: '=> ianm-follow-users.lib.follow'
       unfollow_tag_button: '=> ianm-follow-users.lib.change_follow_type'

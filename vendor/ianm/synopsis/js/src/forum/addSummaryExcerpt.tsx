@@ -20,6 +20,10 @@ export default function addSummaryExcerpt() {
   });
 
   extend(DiscussionListItem.prototype, 'infoItems', function (items: ItemList) {
+    // Skip if we are searching to preserve most relevant post content as excerpt,
+    // that way we also preserve highlighting of search terms in the most relevant post.
+    if (app.forum.attribute('synopsis.disable_when_searching') && app.discussions.params.q) return;
+
     const discussion = this.attrs.discussion;
 
     if (app.session.user && !app.session.user.preferences().showSynopsisExcerpts) {

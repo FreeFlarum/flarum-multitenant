@@ -10,7 +10,8 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^1.2"
+        "flarum/core": "^v1.6",
+        "spekulatius/phpscraper": "^1.0.2"
     },
     "authors": [
         {
@@ -20,7 +21,7 @@
         }
     ],
     "support": {
-        "source": "https://github.com/datlechin/flarum-birthdays",
+        "source": "https://github.com/datlechin/flarum-link-preview",
         "forum": "https://discuss.flarum.org/d/30011"
     },
     "autoload": {
@@ -28,7 +29,7 @@
             "Datlechin\\LinkPreview\\": "src/"
         }
     },
-    "homepage": "https://ngoquocdat.com",
+    "homepage": "https://ngoquocdat.dev",
     "extra": {
         "flarum-extension": {
             "title": "Link Preview",
@@ -41,12 +42,12 @@
         },
         "flarum-cli": {
             "modules": {
-                "admin": false,
+                "admin": true,
                 "forum": true,
                 "js": true,
                 "jsCommon": false,
                 "css": true,
-                "locale": false,
+                "locale": true,
                 "gitConf": true,
                 "githubActions": true,
                 "prettier": true,

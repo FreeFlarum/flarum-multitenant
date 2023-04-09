@@ -5,8 +5,21 @@
 ianm-synopsis:
   admin:
     settings:
+      disable-when-searching:
+        help: 'Jeśli włączone, fragment najbardziej trafnego posta będzie użyty zamiast podsumowania.'
+        label: 'Wyłącz podsumowanie w wynikach wyszukiwania'
+      excerpt-length:
+        help: 'Liczba znaków, które powinny być wykorzystane do wygenerowania podsumowania posta.'
+        label: 'Długość podsumowania'
+      excerpt-type:
+        help: 'Wybierz, który post powinien być wykorzystany jako treść podsumowania.'
+        label: 'Który post powinien być wyświetlany w podsumowaniu?'
       first-label: 'Pierwszy post'
       last-label: 'Ostatni post'
+      rich-excerpts:
+        help: 'Jeśli włączone, obrazki, osadzone media oraz inne nietekstowe elementy będą zawarte w podsumowaniu.'
+        label: 'Włącz zaawansowane formatowanie treści dla podsumowań'
+      tags-enabled: 'Masz włączone rozszerzenie <code>flarum/tags</code>. Te ustawienia będą traktowane jako domyślne i poszczególne tagi mogą je nadpisać.'
   forum:
     user:
       settings:

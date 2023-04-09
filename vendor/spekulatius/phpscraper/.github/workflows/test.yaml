@@ -1,0 +1,20 @@
+name: Tests
+on: [pull_request]
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: [7.4, 8.0, 8.1, 8.2]
+        composer-flags: [null]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+          extensions: intl curl
+      - run: php -v
+      - run: composer update ${{ matrix.composer-flags }} --no-interaction --no-progress --prefer-dist --ansi
+      - run: ./vendor/bin/phpunit --color=always

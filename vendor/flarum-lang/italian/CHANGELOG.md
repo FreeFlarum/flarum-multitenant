@@ -2,6 +2,30 @@ CHANGELOG
 =========
 
 
+1.11.0 (2023-03-25)
+-------------------
+
+**Cambiamenti generali**:
+
+* Aggiornate le traduzioni principali di Flarum.
+
+
+**Aggiunto supporto a nuove estensioni**:
+
+* [`justoverclock/be-active-user-indicator`](https://github.com/justoverclockl/active-user-indicator)
+
+
+**Traduzioni aggiornate per le estensioni**:
+
+* [`flarum/lock`](https://github.com/flarum/lock)
+* [`flarum/sticky`](https://github.com/flarum/sticky)
+* [`flarum/tags`](https://github.com/flarum/tags)
+* [`justoverclock/steam-api`](https://extiverse.com/extension/justoverclock/steam-api)
+
+
+Cambiamenti: [1.10.0...1.11.0](https://github.com/flarum-lang/italian/compare/1.10.0...1.11.0).
+
+
 1.10.0 (2023-01-15)
 -------------------
 

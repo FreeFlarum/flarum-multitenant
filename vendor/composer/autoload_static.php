@@ -160,6 +160,7 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\HttpClient\\' => 29,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
@@ -169,6 +170,7 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\HttpClient\\' => 29,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
@@ -177,10 +179,12 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'Symfony\\Component\\BrowserKit\\' => 29,
             'SychO\\UiKit\\' => 12,
             'SychO\\ProfileCover\\' => 19,
             'SychO\\MovePosts\\' => 16,
             'SychO\\LiteYouTube\\' => 18,
+            'Spekulatius\\PHPScraper\\' => 23,
             'SoftCreatR\\MimeDetector\\' => 24,
             'Serakoi\\FlarumStaffBadge\\' => 25,
             'SSNepenthe\\ColorUtils\\' => 22,
@@ -240,6 +244,7 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         ),
         'L' => 
         array (
+            'League\\Uri\\' => 11,
             'League\\OAuth2\\Client\\' => 21,
             'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
@@ -329,6 +334,7 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Goutte\\' => 7,
             'GlowingBlue\\PasswordStrength\\' => 29,
         ),
         'F' => 
@@ -410,6 +416,7 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         ),
         'D' => 
         array (
+            'DonatelloZa\\RakePlus\\' => 21,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\DBAL\\' => 14,
@@ -682,6 +689,10 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
         ),
+        'Symfony\\Contracts\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client-contracts',
+        ),
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
@@ -718,6 +729,10 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
+        'Symfony\\Component\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client',
+        ),
         'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
@@ -750,6 +765,10 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
         ),
+        'Symfony\\Component\\BrowserKit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/browser-kit',
+        ),
         'SychO\\UiKit\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/flarum-uikit/src',
@@ -765,6 +784,10 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         'SychO\\LiteYouTube\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/flarum-lite-youtube/src',
+        ),
+        'Spekulatius\\PHPScraper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spekulatius/phpscraper/src',
         ),
         'SoftCreatR\\MimeDetector\\' => 
         array (
@@ -934,6 +957,11 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         'Maicol07\\Flarum\\Api\\' => 
         array (
             0 => __DIR__ . '/..' . '/maicol07/flarum-api-client/src',
+        ),
+        'League\\Uri\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/uri-interfaces/src',
+            1 => __DIR__ . '/..' . '/league/uri/src',
         ),
         'League\\OAuth2\\Client\\' => 
         array (
@@ -1240,6 +1268,10 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'Goutte\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
+        ),
         'GlowingBlue\\PasswordStrength\\' => 
         array (
             0 => __DIR__ . '/..' . '/glowingblue/password-strength/src',
@@ -1527,6 +1559,10 @@ class ComposerStaticInit3556216b2fa59d912c191655b5cafded
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
+        ),
+        'DonatelloZa\\RakePlus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/donatello-za/rake-php-plus/src',
         ),
         'Doctrine\\Inflector\\' => 
         array (

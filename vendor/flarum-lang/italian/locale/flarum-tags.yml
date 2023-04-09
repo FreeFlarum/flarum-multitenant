@@ -27,6 +27,8 @@ flarum-tags:
       bypass_tag_counts_label: 'Ignora i requisiti dei tag'
       restrict_by_tag_heading: 'Limita per etichetta'
       tag_discussions_label: 'Etichette delle discussioni'
+    settings:
+      button_text: '=> flarum-tags.ref.choose_tags'
     tag_settings:
       range_separator_text: ' a '
       required_primary_heading: 'Numero richiesto di etichette primarie'
@@ -53,7 +55,7 @@ flarum-tags:
       submit_button: '=> core.ref.okay'
       title: 'Scegli le etichette per la tua discussione'
     composer_discussion:
-      choose_tags_link: 'Scegli Etichette'
+      choose_tags_link: '=> flarum-tags.ref.choose_tags'
     discussion_controls:
       edit_tags_button: 'Modifica Etichette'
     header:
@@ -63,14 +65,23 @@ flarum-tags:
       tags_link: '=> flarum-tags.ref.tags'
       untagged_link: 'Senza etichetta'
     post_stream:
-      added_and_removed_tags_text: '{username} ha aggiunto {tagsAdded} e rimosso {tagsRemoved}.'
-      added_tags_text: '{username} ha aggiunto {tagsAdded}.'
-      removed_tags_text: '{username} ha rimosso {tagsRemoved}.'
+      added_and_removed_tags_text: '{username} ha aggiunto {tagsAdded} e rimosso {tagsRemoved} {time}.'
+      added_tags_text: '{username} ha aggiunto {tagsAdded} {time}.'
+      removed_tags_text: '{username} ha rimosso {tagsRemoved} {time}.'
       tags_text: '{count, plural, one {{tags} tag} other {{tags} tag}}'
     tag:
       meta_description_text: 'Tutte le discussioni con il tag {tag}'
   lib:
     deleted_tag_text: Eliminata
+    tag_selection_modal:
+      bypass_requirements: 'Bypassa requisiti tag'
+      choose_primary_placeholder: '{count, plural, one {Scegli tag primario} other {Scegli # tag primari}}'
+      choose_secondary_placeholder: '=> flarum-tags.ref.choose_tags_placeholder'
+      choose_tags_placeholder: '=> flarum-tags.ref.choose_tags_placeholder'
+      submit_button: '=> core.ref.okay'
+      title: '=> flarum-tags.ref.choose_tags'
   ref:
+    choose_tags: 'Scegli Tags'
+    choose_tags_placeholder: '{count, plural, one {Scegli ancora un tag} other {Scegli ancora # tag}}'
     name: Nome
     tags: Etichette

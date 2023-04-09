@@ -31,7 +31,7 @@ fof-reactions:
             Label: 'Konwertuj reakcje na polubienia'
             legend: Polubienia
           warning: 'Ta sama reakcja <strong>nie może</strong> być przekonwertowana na polubienie <strong>oraz</strong> głos pozytywny'
-        react_own_posts_help: 'Gdy włączone, w zależności od uprawnień, użytkownicy mogą reagować na swoje własne posty na forum. Wyłącz tę opcję, jeśli chcesz uniknąć reakcji użytkowników na swoje własne posty.'
+        react_own_posts_help: 'Jeśli włączone, w zależności od uprawnień, użytkownicy mogą reagować na swoje własne posty na forum. Wyłącz tę opcję, jeśli chcesz uniknąć reakcji użytkowników na swoje własne posty.'
         react_own_posts_label: 'Użytkownicy mogą reagować na swoje własne posty'
         save_settings: 'Zapisz ustawienia'
     permissions:

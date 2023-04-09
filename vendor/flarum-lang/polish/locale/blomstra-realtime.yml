@@ -7,16 +7,22 @@ blomstra-realtime:
     permission:
       view-who-types: 'Podglądanie kto pisze'
     settings:
+      release-discussion-updates: 'Aktualizacja listy dyskusji'
+      release-discussion-updates-help: 'Jeśli włączone, nowe dyskusje będą wstrzyknięte w listę dyskusji używając zdefiniowanego interwału.'
+      release-discussion-updates-interval: 'Interwał automatycznego wczytywania nowej aktywności na liście dyskusji'
+      release-discussion-updates-interval-help: 'W sekundach. 0 oznacza brak automatycznego odświeżania.'
       typing-indicator: 'Wskaźnik pisania'
+      typing-indicator-help: 'Jeśli włączone, zależnie od uprawnień, użytkownicy mogą zobaczyć liczbę innych użytkowników piszących w tej samej dyskusji. Jeśli wyłączone, wskaźnik pisania zostaje usunięty z interfejsu i danych przesyłanych websocketem.'
   forum:
     push:
       discussion-list-new-activity: '{count, plural, one {Pokaż # zaktualizowaną dyskusję} few {Pokaż # zaktualizowane dyskusje} other {Pokaż # zaktualizowanych dyskusji}}'
       discussion-list-new-activity-with-auto-release: '{count, plural, one {# dyskusja posiada nową aktywność i zostanie ponownie wczytana} few {# dyskusje posiadają nową aktywność i zostaną ponownie wczytane}} other {# dyskusji posiada nową aktywność i zostaną ponownie wczytane}}} za {releaseTimeout, plural, one {# sekundę} few {# sekundy} other {# sekund}}. Kliknij, aby wczytać od razu.'
     typing-indicator:
-      anonymous-user: '[Anonim]'
+      anonymous-user: '[Anonimowy]'
       no-activity: 'Nikt nie pisze'
       people-are-typing: '{number, plural, one {# osoba pisze} few {# osoby piszą} other {# osób pisze}}'
     user:
       settings:
+        heading: Realtime
         typing-indicator-type:
           label: 'Pokazuj kto pisze'
