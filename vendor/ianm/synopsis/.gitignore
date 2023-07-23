@@ -1,7 +1,0 @@
-.idea
-node_modules
-vendor
-composer.lock
-*.sublime-workspace
-.jshintrc
-.phpunit.result.cache

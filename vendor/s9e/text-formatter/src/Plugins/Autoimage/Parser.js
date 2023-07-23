@@ -1,1 +1,0 @@
-const tagPriority = 2;

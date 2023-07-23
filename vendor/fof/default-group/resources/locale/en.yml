@@ -1,4 +1,0 @@
-fof-default-group:
-  admin:
-    settings:
-      info: Below you can select the group to assign a user when their account is activated.

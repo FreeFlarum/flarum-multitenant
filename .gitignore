@@ -1,7 +1,6 @@
-composer.lock
-
 public/assets/
 storage/
+vendor/
 
 config.php
 php-fpm.conf

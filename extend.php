@@ -24,6 +24,10 @@ $extenders = [
         if ($GLOBALS['this_forum']['donated_amount'] < 7) {
             $document->foot[] = '<p style="text-align: center; padding: 5px 0; line-height: 1.4rem;">Powered by <a href="https://freeflarum.com">FreeFlarum</a>.<br/>(<a href="https://freeflarum.com/donate">remove this footer</a>)</p>';
         };
+    }),
+
+    (new Extend\Frontend('admin'))->content(function (Document $document) {
+        $document->head[] = '<style>.AuditUpgrade { display: none !important; }</style>';
     })
 ];
 

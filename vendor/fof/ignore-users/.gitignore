@@ -1,7 +1,0 @@
-.DS_Store
-Thumbs.db
-node_modules
-.php_cs.cache
-js/dist
-vendor
-composer.lock
