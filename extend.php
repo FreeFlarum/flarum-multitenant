@@ -32,7 +32,7 @@ $extenders = [
 ];
 
 
-if (!$GLOBALS['this_forum']['is_og_donor'] and ($GLOBALS['this_forum']['donated_amount'] < 0 || $GLOBALS['fof_upload_size_mb'] > $GLOBALS['max_fof_upload_size'])) {
+if ($GLOBALS['this_forum']['donated_amount'] < 0 || $GLOBALS['fof_upload_size_mb'] > $GLOBALS['max_fof_upload_size']) {
     $extenders[] = (new \FoF\Upload\Extend\Adapters())->disable('local');
 };
 
