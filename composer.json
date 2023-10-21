@@ -32,7 +32,6 @@
         "afrux/forum-widgets-core": "*",
         "antoinefr/flarum-ext-money": "*",
         "antoinefr/flarum-ext-online": "*",
-        "askvortsov/flarum-auto-moderator": "*",
         "askvortsov/flarum-categories": "*",
         "askvortsov/flarum-checklist": "*",
         "askvortsov/flarum-discussion-templates": "*",
@@ -230,11 +229,6 @@
         "webbinaro/flarum-calendar": "*",
         "xelson/flarum-ext-chat": "*",
         "yannisme/oxotheme": "*",
-        "zerosonesfun/direct-links": "*",
-        "zerosonesfun/flarum-bbcode-button": "*",
-        "zerosonesfun/flarum-bbcode-iframe": "*",
-        "zerosonesfun/flarum-inline-audio": "*",
-        "zerosonesfun/flarum-member": "*",
         "ziiven/money-transfer": "*"
     },
     "config": {
