@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "784d02d811c3801dbf895f33688fba85",
+    "content-hash": "41b249a5dc41c6f0d04c8c92d23621cd",
     "packages": [
         {
             "name": "2nrwls/audio",
@@ -788,70 +788,6 @@
                 "source": "https://github.com/AntoineFr/flarum-ext-online"
             },
             "time": "2021-06-05T13:05:02+00:00"
-        },
-        {
-            "name": "askvortsov/flarum-auto-moderator",
-            "version": "v0.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/askvortsov1/flarum-automod.git",
-                "reference": "be8389ff9870d48bb8ef0c737173882f5085a75e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/askvortsov1/flarum-automod/zipball/be8389ff9870d48bb8ef0c737173882f5085a75e",
-                "reference": "be8389ff9870d48bb8ef0c737173882f5085a75e",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.0.0"
-            },
-            "require-dev": {
-                "askvortsov/flarum-moderator-warnings": "*@dev",
-                "flarum/likes": "*@dev",
-                "flarum/suspend": "*@dev",
-                "flarum/testing": "*@dev",
-                "fof/best-answer": "*@dev"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "Auto Moderator",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-robot",
-                        "backgroundColor": "#6932D1",
-                        "color": "#fff"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Askvortsov\\AutoModerator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Skvortsov",
-                    "email": "askvortsov@flarum.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Automatically assign groups based on activity.",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/27306-flarum-automoderator",
-                "issues": "https://github.com/askvortsov1/flarum-auto-moderator/issues",
-                "source": "https://github.com/askvortsov1/flarum-auto-moderator"
-            },
-            "abandoned": "askvortsov/flarum-automod",
-            "time": "2023-09-05T10:59:11+00:00"
         },
         {
             "name": "askvortsov/flarum-categories",
