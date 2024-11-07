@@ -10,12 +10,7 @@ $size = fgets($io, 4096);
 $GLOBALS['fof_upload_size_mb'] = intval(substr($size, 0, strpos($size, "\t")));
 pclose($io);
 
-
-if ($GLOBALS['this_forum']['donated_amount'] >= 20 and $GLOBALS['this_forum']['is_og_donor']) {
-    $GLOBALS['max_fof_upload_size'] = 1000;
-} else {
-    $GLOBALS['max_fof_upload_size'] = 500;
-};
+$GLOBALS['max_fof_upload_size'] = 5000;
 
 
 // Footer selectors randomization
@@ -51,7 +46,7 @@ $extenders = [
 ];
 
 
-if ($GLOBALS['this_forum']['donated_amount'] < 0 || $GLOBALS['fof_upload_size_mb'] > $GLOBALS['max_fof_upload_size']) {
+if ($GLOBALS['fof_upload_size_mb'] > $GLOBALS['max_fof_upload_size']) {
     $extenders[] = (new \FoF\Upload\Extend\Adapters())->disable('local');
 };
 
